@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>品川区議会DB</title>
+  <style>
+    /* ===== 基調カラー（背景 #e6eef4 / メイン #5081b5 / カード #ffffff） ===== */
+    :root {
+      --c-main: #5081b5;
+      --c-main-dark: #406791;
+      --c-bg: #e6eef4;
+      --c-card: #ffffff;
+      --c-ink: #1f2937;
+      --c-ink-soft: #4b5563;
+      --c-border: #c3d3e0;
+      /* 機能別の色分け */
+      --c-video-bg: #fff1f2;      /* 録画リンク＝赤系 */
+      --c-video-border: #fecaca;
+      --c-video-text: #be123c;
+      --c-minutes-bg: #f0fdf4;    /* 議事録リンク＝緑系 */
+      --c-minutes-border: #bbf7d0;
+      --c-minutes-text: #15803d;
+      --c-result-bg: #fef3c7;     /* 議決結果タグ＝黄系 */
+      --c-result-text: #92400e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: var(--c-bg);
+      color: var(--c-ink);
+    }
+
+    a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    /* ===== ヒーロー ===== */
+    .hero {
+      padding: 56px 0 36px;
+      background: linear-gradient(90deg, rgba(80, 129, 181, 0.18), rgba(255, 255, 255, 0.85)), var(--c-bg);
+    }
+    .hero h1 { margin: 0 0 16px; font-size: clamp(34px, 7vw, 72px); line-height: 1.05; }
+    .hero .lead { max-width: 780px; margin: 0; font-size: 18px; line-height: 1.9; }
+    .disclaimer {
+      margin-top: 24px; max-width: 840px; padding: 14px 16px;
+      border: 1px solid rgba(80, 129, 181, 0.5); border-radius: 8px;
+      background: var(--c-card); font-size: 14px; line-height: 1.7;
+    }
+    .hero-links { margin: 16px 0 0; }
+
+    /* ===== 統計カード ===== */
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 28px; }
+    .stat { border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card); padding: 16px; }
+    .stat strong { display: block; color: var(--c-main); font-size: 28px; line-height: 1.1; }
+    .stat span { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
+
+    /* ===== セクション共通 ===== */
+    section { padding: 40px 0; }
+    h2 { margin: 0 0 20px; font-size: 24px; }
+    h2.sub { margin-top: 36px; }
+    h3.group-title { margin: 32px 0 12px; }
+    .section-lead { max-width: 760px; margin: -8px 0 24px; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+
+    /* ===== リンクピル（種類別に色分け） ===== */
+    .pill {
+      display: inline-flex; align-items: center; margin: 14px 6px 0 0;
+      border: 1px solid rgba(80, 129, 181, 0.35); border-radius: 999px;
+      background: var(--c-card); padding: 6px 12px;
+      color: var(--c-main-dark); font-size: 13px; font-weight: 800;
+    }
+    .pill--video { border-color: var(--c-video-border); background: var(--c-video-bg); color: var(--c-video-text); }
+    .pill--minutes { border-color: var(--c-minutes-border); background: var(--c-minutes-bg); color: var(--c-minutes-text); }
+
+    /* ===== タグ ===== */
+    .tag {
+      display: inline-flex; margin: 0 8px 12px 0; border-radius: 999px;
+      background: rgba(80, 129, 181, 0.15); padding: 4px 10px;
+      color: var(--c-main-dark); font-size: 12px; font-weight: 800;
+    }
+    .tag--result { background: var(--c-result-bg); color: var(--c-result-text); }
+    .chip {
+      display: inline-flex; margin-bottom: 10px; border-radius: 999px;
+      background: #f3f4f6; padding: 4px 10px; color: #374151; font-size: 12px; font-weight: 800;
+    }
+
+    /* ===== 年切り替え ===== */
+    .year-row { display: flex; align-items: center; gap: 12px; margin: 0 0 20px; }
+    .year-row label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; }
+    #year-select {
+      width: min(100%, 320px); border: 1px solid var(--c-border); border-radius: 8px;
+      background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: 15px; font-weight: 800;
+    }
+    .year-summary {
+      border: 1px solid rgba(80, 129, 181, 0.35); border-radius: 8px;
+      background: var(--c-card); padding: 18px; margin-bottom: 18px;
+    }
+    .year-summary h3 { margin: 0 0 8px; font-size: 18px; }
+    .year-summary p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+
+    /* ===== 会議カード ===== */
+    .meeting-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+    .meeting-card { border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card); padding: 18px; }
+    .meeting-card h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.45; }
+    .meeting-card p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.75; }
+
+    /* ===== タイムライン ===== */
+    .timeline { display: grid; gap: 12px; }
+    .timeline-item {
+      display: grid; grid-template-columns: 120px 1fr; gap: 16px;
+      border-left: 4px solid var(--c-main); border-radius: 8px;
+      background: var(--c-card); padding: 16px;
+    }
+    .timeline-item time { color: var(--c-main); font-weight: 800; }
+    .timeline-item p { margin: 6px 0 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.75; }
+
+    /* ===== カードグリッド（議案・質問） ===== */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card-grid.pushed { margin-top: 20px; }
+    .card { border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card); padding: 20px; }
+    .card h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.5; }
+    .card p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .card ul { margin: 0; padding-left: 20px; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .card.q h3 { font-size: 16px; }
+
+    /* ===== 一覧行（請願・会議録） ===== */
+    .rows { display: grid; gap: 10px; }
+    .rows .row {
+      display: grid; grid-template-columns: minmax(150px, 210px) 1fr auto; gap: 12px; align-items: start;
+      border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card);
+      padding: 14px; font-size: 14px;
+    }
+    .row .key { color: var(--c-main-dark); font-weight: 800; }
+    .row .result {
+      border-radius: 999px; background: var(--c-result-bg); color: var(--c-result-text);
+      padding: 4px 10px; font-size: 12px; font-weight: 800; white-space: nowrap;
+    }
+    .row .pill { margin-top: 0; }
+
+    /* ===== 注意書き・補足 ===== */
+    .notice {
+      margin: 0 0 20px; padding: 14px 16px;
+      border: 1px solid rgba(80, 129, 181, 0.5); border-radius: 8px;
+      background: var(--c-card); font-size: 14px; line-height: 1.7;
+    }
+    .fine-print { margin: 10px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.7; }
+
+    /* ===== 参照元・フッター ===== */
+    .sources { border-top: 1px solid var(--c-border); background: var(--c-card); }
+    .sources ul { margin: 0; padding-left: 20px; line-height: 1.9; }
+    footer {
+      border-top: 1px solid var(--c-border);
+      background: linear-gradient(90deg, var(--c-main), var(--c-bg));
+      padding: 32px 0; text-align: center; font-size: 13px; line-height: 1.8; color: #fff;
+    }
+
+    /* ===== エラー表示 ===== */
+    .load-error {
+      margin: 40px auto; max-width: 720px; padding: 20px;
+      border: 1px solid var(--c-video-border); border-radius: 8px;
+      background: var(--c-video-bg); font-size: 14px; line-height: 1.9;
+    }
+    .load-error code { background: #fff; padding: 2px 6px; border-radius: 4px; }
+
+    @media (max-width: 640px) {
+      .timeline-item, .rows .row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- ヒーロー：サイト名・説明・免責・統計（JSで描画） -->
+    <div class="hero">
+      <div class="container" id="hero-root"></div>
+    </div>
+
+    <!-- 年切り替え＋年間の流れ -->
+    <section>
+      <div class="container">
+        <h2>年別に見る</h2>
+        <div class="year-row">
+          <label for="year-select">表示する年</label>
+          <select id="year-select" aria-label="表示する年を選択"></select>
+        </div>
+        <div id="year-overview"></div>
+      </div>
+    </section>
+
+    <!-- 各会議の詳細・議案・請願陳情・質問・会議録（JSで描画） -->
+    <div id="detail-root"></div>
+
+    <!-- 参照元 -->
+    <section class="sources">
+      <div class="container" id="sources-root"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" id="footer-root"></div>
+  </footer>
+
+  <!-- データ読み込み（script形式なので file:// のダブルクリックでも動く） -->
+  <script src="data/site.js"></script>
+  <script src="data/r08.js"></script>
+
+  <script>
+    "use strict";
+
+    /* ---------- ユーティリティ ---------- */
+
+    // HTMLエスケープ（データ由来の文字列は必ずこれを通す）
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, (c) => (
+        { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+      ));
+    }
+
+    // 年データを取得する。data/*.js が window.SHINAGAWA_DB に登録する方式なので、
+    // ローカルでダブルクリックして開いても（file://）動作する
+    function loadYearData(meta) {
+      const db = window.SHINAGAWA_DB;
+      if (db.years[meta.id]) return Promise.resolve(db.years[meta.id]);
+      // 未読み込みの年は <script> タグを動的に追加して取得する
+      return new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = meta.file;
+        s.onload = () => {
+          const year = db.years[meta.id];
+          if (year) resolve(year);
+          else reject(new Error(`${meta.file} に ${meta.id} のデータが見つかりません`));
+        };
+        s.onerror = () => reject(new Error(`${meta.file} の読み込みに失敗しました`));
+        document.head.appendChild(s);
+      });
+    }
+
+    /* ---------- 部品の描画 ---------- */
+
+    // リンクの種類ごとの色クラス（official=青 / video=赤 / minutes・minutesDraft=緑）
+    const PILL_CLASS = {
+      official: "pill",
+      video: "pill pill--video",
+      minutes: "pill pill--minutes",
+      minutesDraft: "pill pill--minutes"
+    };
+
+    // リンクピル1個分のHTML
+    function pillHtml(link) {
+      const cls = PILL_CLASS[link.type] || "pill";
+      const isAnchor = String(link.url).startsWith("#");
+      const target = isAnchor ? "" : ' target="_blank" rel="noopener"';
+      return `<a class="${cls}" href="${esc(link.url)}"${target}>${esc(link.label)}</a>`;
+    }
+
+    // リンク一覧のHTML。校正原稿PDFが含まれる場合は案内文を自動で添える
+    function pillsHtml(links, site) {
+      if (!links || links.length === 0) return "";
+      let html = links.map(pillHtml).join("\n");
+      if (links.some((l) => l.type === "minutesDraft")) {
+        html += `<p class="fine-print">※${esc(site.draftPdfNote)}
+          <a href="https://kaigiroku.city.shinagawa.tokyo.jp/index.php/" target="_blank" rel="noopener">会議録検索システムを開く</a></p>`;
+      }
+      return html;
+    }
+
+    // タグ列（分野タグ＋議決結果タグ）のHTML
+    function tagsHtml(tags, result) {
+      const t = (tags || []).map((tag) => `<span class="tag">${esc(tag)}</span>`).join("");
+      const r = result ? `<span class="tag tag--result">${esc(result)}</span>` : "";
+      return t + r;
+    }
+
+    /* ---------- セクションの描画 ---------- */
+
+    // ヒーロー（サイト名・説明・免責・入口リンク・統計）
+    function renderHero(site, year) {
+      const stats = (year.stats || []).map((s) =>
+        `<div class="stat"><strong>${esc(s.value)}</strong><span>${esc(s.label)}</span></div>`
+      ).join("");
+      document.getElementById("hero-root").innerHTML = `
+        <h1>${esc(site.siteName)}</h1>
+        <p class="lead">${esc(site.lead)}</p>
+        <div class="disclaimer">${esc(site.disclaimer)}</div>
+        <p class="hero-links">${(site.heroLinks || []).map(pillHtml).join("\n")}</p>
+        <div class="stats">${stats}</div>`;
+    }
+
+    // 年セレクトボックス
+    function renderYearSelect(site, currentId) {
+      const sel = document.getElementById("year-select");
+      sel.innerHTML = (site.years || []).map((y) =>
+        `<option value="${esc(y.id)}"${y.available ? "" : " disabled"}${y.id === currentId ? " selected" : ""}>${esc(y.label)}</option>`
+      ).join("");
+    }
+
+    // 年の概要＋会議カード一覧
+    function renderYearOverview(year, site) {
+      const cards = (year.meetings || []).map((m) => `
+        <article class="meeting-card">
+          <span class="chip">${esc(m.monthLabel)}</span>
+          <h3>${esc(m.name)}</h3>
+          <p>${esc(m.summary)}</p>
+          ${pillsHtml(m.links, site)}
+        </article>`).join("");
+      document.getElementById("year-overview").innerHTML = `
+        <div class="year-summary">
+          <h3>${esc(year.yearSummary.title)}</h3>
+          <p>${esc(year.yearSummary.text)}</p>
+        </div>
+        <div class="meeting-grid">${cards}</div>`;
+    }
+
+    // タイムライン（日付ごとの出来事）
+    function timelineHtml(events, site) {
+      const items = events.map((ev) => `
+        <div class="timeline-item">
+          <time>${esc(ev.date)}</time>
+          <div>
+            <strong>${esc(ev.title)}</strong>
+            <p>${esc(ev.description)}</p>
+            ${pillsHtml(ev.links, site)}
+            ${ev.note ? `<p class="fine-print">${esc(ev.note)}</p>` : ""}
+          </div>
+        </div>`).join("");
+      return `<div class="timeline">${items}</div>`;
+    }
+
+    // 議案カード
+    function billCardHtml(bill, site) {
+      return `
+        <article class="card">
+          ${tagsHtml(bill.tags, bill.result)}
+          <h3>${esc(bill.title)}</h3>
+          <p>${esc(bill.summary)}</p>
+          ${pillsHtml(bill.links, site)}
+        </article>`;
+    }
+
+    // 請願・陳情の行
+    function petitionRowHtml(p, site) {
+      return `
+        <div class="row">
+          <span class="key">${esc(p.number)}</span>
+          <span>${esc(p.title)}<br />${pillsHtml(p.links, site)}</span>
+          <span class="result">${esc(p.result)}</span>
+        </div>`;
+    }
+
+    // 質問カード（議員名・会派・テーマ）
+    function questionCardHtml(q, site) {
+      const topics = (q.topics || []).map((t) => `<li>${esc(t)}</li>`).join("");
+      return `
+        <div class="card q">
+          <h3>${esc(q.member)}（${esc(q.party)}）</h3>
+          <ul>${topics}</ul>
+          ${pillsHtml(q.links, site)}
+        </div>`;
+    }
+
+    // 会議1件分の詳細セクション（タイムライン＋関連する議案・請願・質問）
+    function meetingSectionHtml(meeting, year, site) {
+      const bills = (year.bills || []).filter((b) => b.meetingId === meeting.id);
+      const petitions = (year.petitions || []).filter((p) => p.meetingId === meeting.id);
+      const questions = (year.questions || []).filter((q) => q.meetingId === meeting.id);
+
+      let html = `<section><div class="container">
+        <h2>${esc(meeting.detailTitle || meeting.name)}</h2>
+        <p class="section-lead">${esc(meeting.detailLead || meeting.summary)}</p>
+        ${timelineHtml(meeting.events, site)}`;
+
+      // 注目議案（見出し付き／見出しなしのグリッド両対応）
+      if (bills.length > 0) {
+        const sec = meeting.billsSection || {};
+        if (sec.title) {
+          html += `<h2 class="sub">${esc(sec.title)}</h2>`;
+          if (sec.lead) html += `<p class="section-lead">${esc(sec.lead)}</p>`;
+          html += `<div class="card-grid">${bills.map((b) => billCardHtml(b, site)).join("")}</div>`;
+        } else {
+          html += `<div class="card-grid pushed">${bills.map((b) => billCardHtml(b, site)).join("")}</div>`;
+        }
+      }
+
+      // 請願・陳情
+      if (petitions.length > 0) {
+        const sec = meeting.petitionsSection || {};
+        html += `<h2 class="sub">${esc(sec.title || "請願・陳情")}</h2>`;
+        if (sec.lead) html += `<p class="section-lead">${esc(sec.lead)}</p>`;
+        html += `<div class="rows">${petitions.map((p) => petitionRowHtml(p, site)).join("")}</div>`;
+      }
+
+      // 代表質問・一般質問
+      if (questions.length > 0) {
+        const sec = meeting.questionsSection || {};
+        html += `<h2 class="sub">${esc(sec.title || "一般質問")}</h2>`;
+        if (sec.lead) html += `<p class="section-lead">${esc(sec.lead)}</p>`;
+        if (sec.links && sec.links.length > 0) html += `<p>${pillsHtml(sec.links, site)}</p>`;
+        html += `<div class="card-grid">${questions.map((q) => questionCardHtml(q, site)).join("")}</div>`;
+      }
+
+      html += `</div></section>`;
+      return html;
+    }
+
+    // 会議録（議事録）コーナー
+    function minutesSectionHtml(minutes, site) {
+      const official = minutes.officialLists.map((o) => `
+        <div class="row">
+          <span class="key">${esc(o.category)}</span>
+          <span>${esc(o.title)}</span>
+          <a class="pill pill--minutes" href="${esc(o.url)}" target="_blank" rel="noopener">一覧を開く</a>
+        </div>`).join("");
+
+      const groups = minutes.draftGroups.map((g) => `
+        <h3 class="group-title">${esc(g.title)}</h3>
+        <div class="rows">${g.items.map((item) => `
+          <div class="row">
+            <span class="key">${esc(item.date)}</span>
+            <span>${esc(item.meeting)}</span>
+            <a class="pill pill--minutes" href="${esc(item.url)}" target="_blank" rel="noopener">PDFで読む</a>
+          </div>`).join("")}</div>`).join("");
+
+      return `<section id="minutes"><div class="container">
+        <h2>会議録（議事録）を読む</h2>
+        <p class="section-lead">${esc(minutes.lead)}</p>
+        <div class="notice">${esc(minutes.notice)}</div>
+        <p>${(minutes.searchLinks || []).map(pillHtml).join("\n")}</p>
+        <h3 class="group-title" id="minutes-official">${esc(minutes.officialTitle)}</h3>
+        <p class="section-lead">${esc(minutes.officialLead)}</p>
+        <div class="rows">${official}</div>
+        ${groups}
+        <p class="fine-print">${esc(minutes.asOfNote)}</p>
+      </div></section>`;
+    }
+
+    // 参照元
+    function renderSources(site) {
+      const items = (site.sources || []).map((s) =>
+        `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`
+      ).join("");
+      document.getElementById("sources-root").innerHTML = `
+        <h2>参照元</h2>
+        <ul>${items}</ul>
+        <p class="fine-print">${esc(site.sourcesNote)}</p>`;
+    }
+
+    // フッター（免責の再掲＋更新日）
+    function renderFooter(site, year) {
+      document.getElementById("footer-root").innerHTML =
+        `${esc(site.siteName)} — ${esc(site.disclaimer)}<br />データ最終更新日: ${esc(year.updatedAt)}`;
+    }
+
+    // 年データ全体の描画（会議の並び順のまま詳細を出し、指定位置に会議録コーナーを挟む）
+    function renderYear(year, site) {
+      renderHero(site, year);
+      renderYearOverview(year, site);
+
+      let html = "";
+      let minutesRendered = false;
+      for (const meeting of year.meetings || []) {
+        if (meeting.events && meeting.events.length > 0) {
+          html += meetingSectionHtml(meeting, year, site);
+        }
+        if (year.minutes && year.minutes.afterMeetingId === meeting.id) {
+          html += minutesSectionHtml(year.minutes, site);
+          minutesRendered = true;
+        }
+      }
+      // 挿入位置の指定がない・一致しない場合は末尾に置く
+      if (year.minutes && !minutesRendered) html += minutesSectionHtml(year.minutes, site);
+
+      document.getElementById("detail-root").innerHTML = html;
+      renderFooter(site, year);
+    }
+
+    /* ---------- 初期化 ---------- */
+
+    // 読み込み失敗時の案内
+    function showLoadError(err) {
+      document.getElementById("detail-root").innerHTML = `
+        <div class="load-error container">
+          <strong>データを読み込めませんでした。</strong><br />
+          ${esc(err.message)}<br /><br />
+          <code>index.html</code> と同じ場所に <code>data</code> フォルダ（data/site.js、data/r08.js など）が
+          あるか確認してください。フォルダごと移動・コピーすれば、そのまま動きます。
+        </div>`;
+    }
+
+    async function init() {
+      const db = window.SHINAGAWA_DB;
+      if (!db || !db.site) {
+        showLoadError(new Error("data/site.js が読み込まれていません"));
+        return;
+      }
+      const site = db.site;
+      renderSources(site);
+
+      const sel = document.getElementById("year-select");
+
+      // 指定された年のデータを読み込んで描画する
+      async function showYear(yearId) {
+        const meta = site.years.find((y) => y.id === yearId && y.available);
+        if (!meta) return;
+        try {
+          const year = await loadYearData(meta);
+          renderYearSelect(site, yearId);
+          renderYear(year, site);
+        } catch (err) {
+          showLoadError(err);
+        }
+      }
+
+      sel.addEventListener("change", () => showYear(sel.value));
+      await showYear(site.defaultYear);
+    }
+
+    init();
+  </script>
+</body>
+</html>
