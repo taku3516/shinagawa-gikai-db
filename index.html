@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#5081b5" />
   <title>品川区議会DB</title>
   <style>
     /* ===== 基調カラー（背景 #e6eef4 / メイン #5081b5 / カード #ffffff） ===== */
@@ -27,11 +28,20 @@
 
     * { box-sizing: border-box; }
 
+    html {
+      /* スマホの画面回転時に文字サイズが勝手に拡大されるのを防ぐ */
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
       background: var(--c-bg);
       color: var(--c-ink);
+      /* 長いURL・英数字の連続でも画面外にはみ出さないよう折り返す */
+      overflow-wrap: break-word;
     }
 
     a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
@@ -89,11 +99,12 @@
     }
 
     /* ===== 年切り替え ===== */
-    .year-row { display: flex; align-items: center; gap: 12px; margin: 0 0 20px; }
-    .year-row label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; }
+    .year-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 20px; }
+    .year-row label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; white-space: nowrap; }
     #year-select {
+      /* 16px未満だとiOSがフォーカス時に画面を自動ズームするため16pxにする */
       width: min(100%, 320px); border: 1px solid var(--c-border); border-radius: 8px;
-      background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: 15px; font-weight: 800;
+      background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: 16px; font-weight: 800;
     }
     .year-summary {
       border: 1px solid rgba(80, 129, 181, 0.35); border-radius: 8px;
@@ -166,8 +177,25 @@
     }
     .load-error code { background: #fff; padding: 2px 6px; border-radius: 4px; }
 
+    /* アンカーリンク（#minutes など）で飛んだとき見出しが画面上端に貼り付かないよう余白を取る */
+    section[id] { scroll-margin-top: 16px; }
+
+    /* ===== スマホ向け調整 ===== */
     @media (max-width: 640px) {
-      .timeline-item, .rows .row { grid-template-columns: 1fr; }
+      .timeline-item, .rows .row { grid-template-columns: 1fr; gap: 8px; }
+      /* 議決結果タグが横幅いっぱいに伸びないようにする */
+      .row .result { justify-self: start; }
+
+      /* 余白を詰めて1画面の情報量を確保する */
+      .hero { padding: 36px 0 28px; }
+      section { padding: 28px 0; }
+      .hero .lead { font-size: 16px; line-height: 1.8; }
+      h2 { font-size: 21px; }
+      .card { padding: 16px; }
+      .meeting-card { padding: 16px; }
+
+      /* 指でタップしやすいようリンクピルを大きくする */
+      .pill { padding: 9px 14px; font-size: 14px; }
     }
   </style>
 </head>
