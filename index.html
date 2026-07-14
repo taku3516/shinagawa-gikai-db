@@ -63,8 +63,9 @@
     }
     .hero-links { margin: 16px 0 0; }
 
-    /* ===== 統計カード ===== */
+    /* ===== 統計カード（定例会ごとの会期・議案数） ===== */
     .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 28px; }
+    .stats--section { margin: 0 0 24px; }
     .stat { border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card); padding: 16px; }
     .stat strong { display: block; color: var(--c-main); font-size: 28px; line-height: 1.1; }
     .stat span { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
@@ -304,17 +305,23 @@
 
     /* ---------- セクションの描画 ---------- */
 
-    // ヒーロー（サイト名・説明・免責・入口リンク・統計）
-    function renderHero(site, year) {
-      const stats = (year.stats || []).map((s) =>
-        `<div class="stat"><strong>${esc(s.value)}</strong><span>${esc(s.label)}</span></div>`
-      ).join("");
+    // ヒーロー（サイト名・説明・免責・入口リンク）
+    // ※会期・議案数などの統計は年間で共通ではないため、各定例会のセクションに表示する
+    function renderHero(site) {
       document.getElementById("hero-root").innerHTML = `
         <h1>${esc(site.siteName)}</h1>
         <p class="lead">${esc(site.lead)}</p>
         <div class="disclaimer">${esc(site.disclaimer)}</div>
-        <p class="hero-links">${(site.heroLinks || []).map(pillHtml).join("\n")}</p>
-        <div class="stats">${stats}</div>`;
+        <p class="hero-links">${(site.heroLinks || []).map(pillHtml).join("\n")}</p>`;
+    }
+
+    // 統計カード（会期・議案数など。meeting.stats を持つ会議のセクション冒頭に出す）
+    function statsHtml(stats) {
+      if (!stats || stats.length === 0) return "";
+      const cells = stats.map((s) =>
+        `<div class="stat"><strong>${esc(s.value)}</strong><span>${esc(s.label)}</span></div>`
+      ).join("");
+      return `<div class="stats stats--section">${cells}</div>`;
     }
 
     // 年セレクトボックス
@@ -398,6 +405,7 @@
       let html = `<section><div class="container">
         <h2>${esc(meeting.detailTitle || meeting.name)}</h2>
         <p class="section-lead">${esc(meeting.detailLead || meeting.summary)}</p>
+        ${statsHtml(meeting.stats)}
         ${timelineHtml(meeting.events, site)}`;
 
       // 注目議案（見出し付き／見出しなしのグリッド両対応）
@@ -483,7 +491,7 @@
 
     // 年データ全体の描画（会議の並び順のまま詳細を出し、指定位置に会議録コーナーを挟む）
     function renderYear(year, site) {
-      renderHero(site, year);
+      renderHero(site);
       renderYearOverview(year, site);
 
       let html = "";

@@ -8,24 +8,6 @@ window.SHINAGAWA_DB.years["r08"] = {
     "title": "令和8年の流れ",
     "text": "第1回定例会で施政方針・代表質問・予算審査、第1回臨時会で本会議、第2回定例会で一般質問・議案審査、秋の第3回定例会で決算審査が予定されています。月例の常任委員会・特別委員会も並行して開かれます。"
   },
-  "stats": [
-    {
-      "value": "15日",
-      "label": "会期 2026/6/25〜7/9"
-    },
-    {
-      "value": "30件",
-      "label": "区長提出議案"
-    },
-    {
-      "value": "2件",
-      "label": "議員提出議案"
-    },
-    {
-      "value": "12件",
-      "label": "請願・陳情"
-    }
-  ],
   "meetings": [
     {
       "id": "r08-m01",
@@ -309,7 +291,21 @@ window.SHINAGAWA_DB.years["r08"] = {
             "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
           }
         ]
-      }
+      },
+      "stats": [
+        {
+          "value": "38日間",
+          "label": "会期 2026/2/18〜3/27"
+        },
+        {
+          "value": "55件",
+          "label": "区長提出議案（第1号〜第55号）"
+        },
+        {
+          "value": "13件",
+          "label": "請願・陳情"
+        }
+      ]
     },
     {
       "id": "r08-yosan",
@@ -608,7 +604,17 @@ window.SHINAGAWA_DB.years["r08"] = {
           ]
         }
       ],
-      "billsSection": {}
+      "billsSection": {},
+      "stats": [
+        {
+          "value": "1日",
+          "label": "会期 2026/5/27"
+        },
+        {
+          "value": "3件",
+          "label": "区長提出議案（第56号〜第58号）"
+        }
+      ]
     },
     {
       "id": "r08-m06",
@@ -843,7 +849,25 @@ window.SHINAGAWA_DB.years["r08"] = {
       "questionsSection": {
         "title": "一般質問の主なテーマ",
         "lead": "公式の一般質問者・発言事項ページから、住民が追いやすいテーマとして整理しています。"
-      }
+      },
+      "stats": [
+        {
+          "value": "15日間",
+          "label": "会期 2026/6/25〜7/9"
+        },
+        {
+          "value": "25件",
+          "label": "区長提出議案（第59号〜第83号）"
+        },
+        {
+          "value": "2件",
+          "label": "議員提出議案"
+        },
+        {
+          "value": "20件",
+          "label": "請願・陳情"
+        }
+      ]
     },
     {
       "id": "r08-m0708",
@@ -988,7 +1012,17 @@ window.SHINAGAWA_DB.years["r08"] = {
           ]
         }
       ],
-      "billsSection": {}
+      "billsSection": {},
+      "stats": [
+        {
+          "value": "37日間",
+          "label": "会期 2026/9/17〜10/23（予定）"
+        },
+        {
+          "value": "公開待ち",
+          "label": "提出議案・請願・陳情"
+        }
+      ]
     }
   ],
   "bills": [
