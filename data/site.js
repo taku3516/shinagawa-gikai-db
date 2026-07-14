@@ -40,15 +40,45 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "id": "r07",
-      "label": "令和7年（準備中）",
+      "label": "令和7年（概要のみ）",
       "file": "data/r07.js",
-      "available": false
+      "available": true
     },
     {
       "id": "r06",
-      "label": "令和6年（準備中）",
+      "label": "令和6年（概要のみ）",
       "file": "data/r06.js",
-      "available": false
+      "available": true
+    },
+    {
+      "id": "r05",
+      "label": "令和5年（概要のみ）",
+      "file": "data/r05.js",
+      "available": true
+    },
+    {
+      "id": "r04",
+      "label": "令和4年（概要のみ）",
+      "file": "data/r04.js",
+      "available": true
+    },
+    {
+      "id": "r03",
+      "label": "令和3年（概要のみ）",
+      "file": "data/r03.js",
+      "available": true
+    },
+    {
+      "id": "r02",
+      "label": "令和2年（概要のみ）",
+      "file": "data/r02.js",
+      "available": true
+    },
+    {
+      "id": "r01",
+      "label": "令和元年（概要のみ）",
+      "file": "data/r01.js",
+      "available": true
     }
   ],
   "defaultYear": "r08",
