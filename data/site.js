@@ -24,6 +24,11 @@ window.SHINAGAWA_DB.site = {
       "type": "minutes",
       "label": "会議録（議事録）を読む",
       "url": "#minutes"
+    },
+    {
+      "type": "official",
+      "label": "議員名簿を見る",
+      "url": "giin.html"
     }
   ],
   "years": [
@@ -52,6 +57,10 @@ window.SHINAGAWA_DB.site = {
     {
       "label": "区議会の日程一覧",
       "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/result"
+    },
+    {
+      "label": "議員紹介（議員名簿 五十音順）",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/profile/50on"
     },
     {
       "label": "品川区議会インターネット中継",

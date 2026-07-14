@@ -276,11 +276,11 @@
       minutesDraft: "pill pill--minutes"
     };
 
-    // リンクピル1個分のHTML
+    // リンクピル1個分のHTML（外部サイトのみ新しいタブで開く。#アンカーやサイト内ページはそのまま遷移）
     function pillHtml(link) {
       const cls = PILL_CLASS[link.type] || "pill";
-      const isAnchor = String(link.url).startsWith("#");
-      const target = isAnchor ? "" : ' target="_blank" rel="noopener"';
+      const isExternal = /^https?:/.test(String(link.url));
+      const target = isExternal ? ' target="_blank" rel="noopener"' : "";
       return `<a class="${cls}" href="${esc(link.url)}"${target}>${esc(link.label)}</a>`;
     }
 
