@@ -70,13 +70,13 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "id": "r02",
-      "label": "令和2年（概要のみ）",
+      "label": "令和2年",
       "file": "data/r02.js",
       "available": true
     },
     {
       "id": "r01",
-      "label": "令和元年（概要のみ）",
+      "label": "令和元年",
       "file": "data/r01.js",
       "available": true
     }

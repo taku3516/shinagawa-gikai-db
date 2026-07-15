@@ -10,6 +10,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r07"
@@ -21,6 +23,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -34,6 +38,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r04",
         "r05",
         "r06",
@@ -47,6 +53,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -73,6 +81,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r05",
         "r06",
@@ -98,6 +108,8 @@ window.SHINAGAWA_DB.peopleData = {
         "木村けんご"
       ],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -112,6 +124,7 @@ window.SHINAGAWA_DB.peopleData = {
         "小芝新"
       ],
       "seenIn": [
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -126,6 +139,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -151,6 +166,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -164,6 +181,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -178,6 +197,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r02",
         "r03",
         "r05",
         "r06",
@@ -201,6 +221,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -214,6 +236,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
         "r03",
         "r04",
         "r05",
@@ -238,6 +261,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
         "r05",
         "r06",
         "r07"
@@ -249,6 +273,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r05",
         "r06",
         "r07"
@@ -260,6 +286,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -273,6 +300,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r05"
       ]
@@ -283,6 +312,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
         "r03",
         "r04",
         "r05",
@@ -297,6 +327,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -309,6 +341,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -323,6 +357,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -337,6 +373,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -352,6 +389,8 @@ window.SHINAGAWA_DB.peopleData = {
         "松澤和昌"
       ],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -379,6 +418,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -424,6 +465,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r04",
         "r05",
         "r06",
@@ -436,6 +479,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -450,6 +495,8 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05",
@@ -501,6 +548,8 @@ window.SHINAGAWA_DB.peopleData = {
         "芹澤裕次郎"
       ],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r06"
@@ -513,6 +562,8 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04",
         "r05"
@@ -525,6 +576,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r01",
         "r03",
         "r04",
         "r05"
@@ -537,6 +589,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r02",
         "r03",
         "r05"
       ]
@@ -548,6 +601,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r02",
         "r03",
         "r04"
       ]
@@ -559,6 +613,8 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04"
       ]
@@ -581,6 +637,8 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03",
         "r04"
       ]
@@ -592,6 +650,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r02",
         "r03",
         "r04"
       ]
@@ -603,7 +662,31 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r01",
+        "r02",
         "r03"
+      ]
+    },
+    {
+      "id": "x-abe-yumiko",
+      "name": "あべ 祐美子",
+      "status": "元職",
+      "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "r01",
+        "r02"
+      ]
+    },
+    {
+      "id": "x-honda-takenobu",
+      "name": "本多 健信",
+      "status": "元職",
+      "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "r01",
+        "r02"
       ]
     }
   ]

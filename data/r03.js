@@ -85,7 +85,7 @@ window.SHINAGAWA_DB.years["r03"] = {
           "label": "議員提出議案"
         },
         {
-          "value": "12件",
+          "value": "19件",
           "label": "請願・陳情"
         }
       ],
@@ -564,6 +564,97 @@ window.SHINAGAWA_DB.years["r03"] = {
     }
   ],
   "petitions": [
+    {
+      "meetingId": "r03-1t",
+      "number": "令和元年陳情 第17号",
+      "title": "羽田増便による新飛行ルートの「教室型説明会」を引き続き開催することに関する陳情",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "審議状況ページを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/lobbying/15915.html"
+        }
+      ]
+    },
+    {
+      "meetingId": "r03-1t",
+      "number": "令和元年陳情 第34号",
+      "title": "羽田増便による新飛行ルートの＜教室型説明会＞を引き続き開催することに関する陳情",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "審議状況ページを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/lobbying/15915.html"
+        }
+      ]
+    },
+    {
+      "meetingId": "r03-1t",
+      "number": "令和2年陳情 第19号",
+      "title": "羽田新飛行ルート実施延期と説明会開催に関する陳情",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "審議状況ページを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/lobbying/11281.html"
+        }
+      ]
+    },
+    {
+      "meetingId": "r03-1t",
+      "number": "令和2年陳情 第25号",
+      "title": "羽田増便による新飛行ルートの説明会に関する陳情",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "審議状況ページを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/lobbying/11281.html"
+        }
+      ]
+    },
+    {
+      "meetingId": "r03-1t",
+      "number": "令和2年陳情 第59号",
+      "title": "生活介護の事業所運営法人を現在より減らすことがないことを求める陳情",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "審議状況ページを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/lobbying/11281.html"
+        }
+      ]
+    },
+    {
+      "meetingId": "r03-1t",
+      "number": "令和2年陳情 第61号",
+      "title": "品川区障害福祉計画・品川区障害児福祉計画素案の区民説明会開催を求める陳情",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "審議状況ページを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/lobbying/11281.html"
+        }
+      ]
+    },
+    {
+      "meetingId": "r03-1t",
+      "number": "令和2年陳情 第62号",
+      "title": "目黒川沿いに設置されている喫煙所撤去に関する陳情",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "審議状況ページを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/lobbying/11281.html"
+        }
+      ]
+    },
     {
       "meetingId": "r03-1t",
       "number": "令和3年請願 第1号",
