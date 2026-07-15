@@ -497,7 +497,10 @@
       let html = "";
       let minutesRendered = false;
       for (const meeting of year.meetings || []) {
-        if (meeting.events && meeting.events.length > 0) {
+        // タイムラインが無くても、議案・請願・質問が紐づく会議は詳細セクションを出す
+        const hasRelated = ["bills", "petitions", "questions"].some((key) =>
+          (year[key] || []).some((item) => item.meetingId === meeting.id));
+        if ((meeting.events && meeting.events.length > 0) || hasRelated) {
           html += meetingSectionHtml(meeting, year, site);
         }
         if (year.minutes && year.minutes.afterMeetingId === meeting.id) {
