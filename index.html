@@ -120,6 +120,63 @@
     .meeting-card h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.45; }
     .meeting-card p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.75; }
 
+    /* ===== 会議ごとの折りたたみ ===== */
+    .accordion-controls {
+      position: sticky; top: 0; z-index: 20;
+      border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border);
+      background: rgba(230, 238, 244, 0.96); padding: 10px 0;
+      box-shadow: 0 4px 12px rgba(31, 41, 55, 0.08);
+      backdrop-filter: blur(8px);
+    }
+    .accordion-controls__inner { display: flex; align-items: center; gap: 8px; }
+    .accordion-controls__label { margin-right: auto; font-size: 14px; font-weight: 800; }
+    .accordion-controls__status { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .accordion-button {
+      min-height: 40px; border: 1px solid var(--c-main); border-radius: 8px;
+      background: var(--c-card); padding: 8px 14px; color: var(--c-main-dark);
+      font: inherit; font-size: 13px; font-weight: 800; cursor: pointer;
+    }
+    .accordion-button:hover { background: rgba(80, 129, 181, 0.1); }
+    .accordion-button:focus-visible, .meeting-accordion > summary:focus-visible {
+      outline: 3px solid #f59e0b; outline-offset: 3px;
+    }
+    .accordion-button:disabled { opacity: 0.45; cursor: default; }
+    .accordion-list { display: grid; gap: 16px; padding: 24px 0 40px; }
+    .meeting-accordion {
+      overflow: clip; border: 1px solid var(--c-border); border-radius: 10px;
+      background: var(--c-card); scroll-margin-top: 76px;
+    }
+    .meeting-accordion[open] { box-shadow: 0 8px 22px rgba(31, 41, 55, 0.08); }
+    .meeting-accordion > summary {
+      display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center;
+      min-height: 88px; padding: 18px 20px; cursor: pointer; list-style: none;
+    }
+    .meeting-accordion > summary::-webkit-details-marker { display: none; }
+    .meeting-accordion > summary:hover { background: rgba(80, 129, 181, 0.08); }
+    .meeting-accordion[open] > summary {
+      border-bottom: 1px solid var(--c-border); background: rgba(80, 129, 181, 0.08);
+    }
+    .meeting-accordion__heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+    .meeting-accordion__heading .chip { margin: 0; }
+    .meeting-accordion__title { font-size: 21px; font-weight: 800; line-height: 1.35; }
+    .meeting-accordion__summary {
+      grid-column: 1 / -1; margin: 2px 0 0; color: var(--c-ink-soft);
+      font-size: 14px; line-height: 1.7;
+    }
+    .meeting-accordion__counts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .meeting-accordion__count {
+      border-radius: 999px; background: #f3f4f6; padding: 3px 9px;
+      color: #374151; font-size: 12px; font-weight: 800;
+    }
+    .meeting-accordion__icon {
+      display: inline-grid; place-items: center; width: 36px; height: 36px;
+      border-radius: 999px; background: var(--c-main); color: #fff;
+      font-size: 22px; font-weight: 800; line-height: 1;
+    }
+    .meeting-accordion__icon::before { content: "+"; }
+    .meeting-accordion[open] .meeting-accordion__icon::before { content: "−"; }
+    .meeting-accordion__content section { padding: 32px 0 40px; }
+
     /* ===== タイムライン ===== */
     .timeline { display: grid; gap: 12px; }
     .timeline-item {
@@ -178,8 +235,8 @@
     }
     .load-error code { background: #fff; padding: 2px 6px; border-radius: 4px; }
 
-    /* アンカーリンク（#minutes など）で飛んだとき見出しが画面上端に貼り付かないよう余白を取る */
-    section[id] { scroll-margin-top: 16px; }
+    /* アンカーリンクで飛んだとき固定操作バーの下に見出しが収まるよう余白を取る */
+    section[id], h2[id], h3[id] { scroll-margin-top: 76px; }
 
     /* ===== スマホ向け調整 ===== */
     @media (max-width: 640px) {
@@ -195,8 +252,24 @@
       .card { padding: 16px; }
       .meeting-card { padding: 16px; }
 
+      .accordion-controls__inner { flex-wrap: wrap; }
+      .accordion-controls__label { width: 100%; }
+      .accordion-controls__status { margin-right: auto; }
+      .accordion-button { min-height: 44px; padding: 9px 12px; }
+      .accordion-list { padding-top: 16px; }
+      .meeting-accordion > summary { grid-template-columns: 1fr auto; min-height: 96px; padding: 16px; }
+      .meeting-accordion__title { font-size: 18px; }
+      .meeting-accordion__summary { font-size: 13px; }
+
       /* 指でタップしやすいようリンクピルを大きくする */
       .pill { padding: 9px 14px; font-size: 14px; }
+    }
+
+    @media print {
+      .accordion-controls { display: none; }
+      .meeting-accordion { break-inside: avoid; }
+      .meeting-accordion > summary { border-bottom: 1px solid var(--c-border); }
+      .meeting-accordion > :not(summary) { display: block !important; }
     }
   </style>
 </head>
@@ -218,6 +291,16 @@
         <div id="year-overview"></div>
       </div>
     </section>
+
+    <!-- 全会議の開閉操作（スクロール中も上部に固定） -->
+    <div class="accordion-controls" id="accordion-controls" hidden>
+      <div class="container accordion-controls__inner">
+        <span class="accordion-controls__label">会議の詳細</span>
+        <span class="accordion-controls__status" id="accordion-status" aria-live="polite"></span>
+        <button class="accordion-button" id="open-all" type="button">すべて開く</button>
+        <button class="accordion-button" id="close-all" type="button">すべて閉じる</button>
+      </div>
+    </div>
 
     <!-- 各会議の詳細・議案・請願陳情・質問・会議録（JSで描画） -->
     <div id="detail-root"></div>
@@ -332,6 +415,49 @@
       ).join("");
     }
 
+    // 会議に紐づく議案・請願・質問をまとめて取得する
+    function relatedItems(meeting, year) {
+      return {
+        bills: (year.bills || []).filter((b) => b.meetingId === meeting.id),
+        petitions: (year.petitions || []).filter((p) => p.meetingId === meeting.id),
+        questions: (year.questions || []).filter((q) => q.meetingId === meeting.id)
+      };
+    }
+
+    // タイムラインまたは関連情報を持つ会議だけ詳細を表示する
+    function hasMeetingDetails(meeting, year) {
+      const related = relatedItems(meeting, year);
+      return (meeting.events && meeting.events.length > 0) ||
+        related.bills.length > 0 || related.petitions.length > 0 || related.questions.length > 0;
+    }
+
+    // 予定だけの会議より、議案・質問・録画・会議録が公開済みの会議を「最新」として優先する
+    function hasPublishedContent(meeting, year) {
+      const related = relatedItems(meeting, year);
+      const publishedBills = related.bills.filter((item) => !(item.tags || []).includes("公開待ち"));
+      const links = (meeting.links || []).concat(
+        (meeting.events || []).flatMap((event) => event.links || []),
+        publishedBills.flatMap((item) => item.links || []),
+        related.petitions.flatMap((item) => item.links || []),
+        related.questions.flatMap((item) => item.links || [])
+      );
+      const hasResult = publishedBills.some((item) => item.result) ||
+        related.petitions.some((item) => item.result);
+      return hasResult || links.some((link) => ["video", "minutes", "minutesDraft"].includes(link.type));
+    }
+
+    // 折りたたみ見出しに表示する件数
+    function meetingCountsHtml(meeting, related) {
+      const counts = [];
+      if (meeting.events && meeting.events.length > 0) counts.push(`日程 ${meeting.events.length}件`);
+      if (related.bills.length > 0) counts.push(`議案 ${related.bills.length}件`);
+      if (related.petitions.length > 0) counts.push(`請願・陳情 ${related.petitions.length}件`);
+      if (related.questions.length > 0) counts.push(`質問者 ${related.questions.length}名`);
+      if (counts.length === 0) return "";
+      return `<span class="meeting-accordion__counts">${counts.map((count) =>
+        `<span class="meeting-accordion__count">${esc(count)}</span>`).join("")}</span>`;
+    }
+
     // 年の概要＋会議カード一覧
     function renderYearOverview(year, site) {
       const cards = (year.meetings || []).map((m) => `
@@ -340,6 +466,7 @@
           <h3>${esc(m.name)}</h3>
           <p>${esc(m.summary)}</p>
           ${pillsHtml(m.links, site)}
+          ${hasMeetingDetails(m, year) ? `<a class="pill" href="#meeting-${esc(m.id)}">この会議の詳細へ</a>` : ""}
         </article>`).join("");
       document.getElementById("year-overview").innerHTML = `
         <div class="year-summary">
@@ -351,7 +478,7 @@
 
     // タイムライン（日付ごとの出来事）
     function timelineHtml(events, site) {
-      const items = events.map((ev) => `
+      const items = (events || []).map((ev) => `
         <div class="timeline-item">
           <time>${esc(ev.date)}</time>
           <div>
@@ -397,12 +524,23 @@
     }
 
     // 会議1件分の詳細セクション（タイムライン＋関連する議案・請願・質問）
-    function meetingSectionHtml(meeting, year, site) {
-      const bills = (year.bills || []).filter((b) => b.meetingId === meeting.id);
-      const petitions = (year.petitions || []).filter((p) => p.meetingId === meeting.id);
-      const questions = (year.questions || []).filter((q) => q.meetingId === meeting.id);
+    function meetingSectionHtml(meeting, year, site, isLatest) {
+      const related = relatedItems(meeting, year);
+      const { bills, petitions, questions } = related;
 
-      let html = `<section><div class="container">
+      let html = `<details class="meeting-accordion" id="meeting-${esc(meeting.id)}" data-meeting-id="${esc(meeting.id)}"${isLatest ? " open" : ""}>
+        <summary>
+          <span>
+            <span class="meeting-accordion__heading">
+              <span class="chip">${esc(meeting.monthLabel)}</span>
+              <span class="meeting-accordion__title">${esc(meeting.name)}</span>
+            </span>
+            <span class="meeting-accordion__summary">${esc(meeting.summary)}</span>
+            ${meetingCountsHtml(meeting, related)}
+          </span>
+          <span class="meeting-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="meeting-accordion__content"><section><div class="container">
         <h2>${esc(meeting.detailTitle || meeting.name)}</h2>
         <p class="section-lead">${esc(meeting.detailLead || meeting.summary)}</p>
         ${statsHtml(meeting.stats)}
@@ -437,7 +575,7 @@
         html += `<div class="card-grid">${questions.map((q) => questionCardHtml(q, site)).join("")}</div>`;
       }
 
-      html += `</div></section>`;
+      html += `</div></section></div></details>`;
       return html;
     }
 
@@ -459,7 +597,18 @@
             <a class="pill pill--minutes" href="${esc(item.url)}" target="_blank" rel="noopener">PDFで読む</a>
           </div>`).join("")}</div>`).join("");
 
-      return `<section id="minutes"><div class="container">
+      return `<details class="meeting-accordion minutes-accordion" id="minutes">
+        <summary>
+          <span>
+            <span class="meeting-accordion__heading">
+              <span class="chip">資料</span>
+              <span class="meeting-accordion__title">会議録（議事録）を読む</span>
+            </span>
+            <span class="meeting-accordion__summary">正式な会議録と、直近の校正原稿PDFをまとめて確認できます。</span>
+          </span>
+          <span class="meeting-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="meeting-accordion__content"><section><div class="container">
         <h2>会議録（議事録）を読む</h2>
         <p class="section-lead">${esc(minutes.lead)}</p>
         <div class="notice">${esc(minutes.notice)}</div>
@@ -469,7 +618,55 @@
         <div class="rows">${official}</div>
         ${groups}
         <p class="fine-print">${esc(minutes.asOfNote)}</p>
-      </div></section>`;
+      </div></section></div></details>`;
+    }
+
+    // 現在表示中の折りたたみ要素
+    function accordions() {
+      return [...document.querySelectorAll("#detail-root .meeting-accordion")];
+    }
+
+    // 全開閉ボタンの状態と読み上げ用の件数を更新する
+    function updateAccordionControls() {
+      const items = accordions();
+      const controls = document.getElementById("accordion-controls");
+      controls.hidden = items.length === 0;
+      if (items.length === 0) return;
+      const openCount = items.filter((item) => item.open).length;
+      document.getElementById("accordion-status").textContent = `${openCount} / ${items.length}件を表示中`;
+      document.getElementById("open-all").disabled = openCount === items.length;
+      document.getElementById("close-all").disabled = openCount === 0;
+    }
+
+    function setAllAccordions(open) {
+      for (const item of accordions()) item.open = open;
+      updateAccordionControls();
+    }
+
+    function decodedHashId() {
+      try {
+        return decodeURIComponent(location.hash.slice(1));
+      } catch (err) {
+        return "";
+      }
+    }
+
+    // アンカー先が閉じた会議内にある場合は、先にその会議を開く
+    function openAccordionForHash(shouldScroll) {
+      if (!location.hash) return false;
+      const target = document.getElementById(decodedHashId());
+      if (!target) return false;
+      const accordion = target.matches(".meeting-accordion") ? target : target.closest(".meeting-accordion");
+      if (accordion) accordion.open = true;
+      updateAccordionControls();
+      if (shouldScroll) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+      return true;
+    }
+
+    function setupAccordions() {
+      for (const item of accordions()) item.addEventListener("toggle", updateAccordionControls);
+      updateAccordionControls();
+      openAccordionForHash(false);
     }
 
     // 参照元
@@ -494,14 +691,14 @@
       renderHero(site);
       renderYearOverview(year, site);
 
-      let html = "";
+      let html = `<div class="container accordion-list">`;
       let minutesRendered = false;
+      const meetingsWithDetails = (year.meetings || []).filter((meeting) => hasMeetingDetails(meeting, year));
+      const latestMeeting = [...meetingsWithDetails].reverse().find((meeting) =>
+        hasPublishedContent(meeting, year)) || meetingsWithDetails[meetingsWithDetails.length - 1];
       for (const meeting of year.meetings || []) {
-        // タイムラインが無くても、議案・請願・質問が紐づく会議は詳細セクションを出す
-        const hasRelated = ["bills", "petitions", "questions"].some((key) =>
-          (year[key] || []).some((item) => item.meetingId === meeting.id));
-        if ((meeting.events && meeting.events.length > 0) || hasRelated) {
-          html += meetingSectionHtml(meeting, year, site);
+        if (hasMeetingDetails(meeting, year)) {
+          html += meetingSectionHtml(meeting, year, site, meeting === latestMeeting);
         }
         if (year.minutes && year.minutes.afterMeetingId === meeting.id) {
           html += minutesSectionHtml(year.minutes, site);
@@ -510,8 +707,10 @@
       }
       // 挿入位置の指定がない・一致しない場合は末尾に置く
       if (year.minutes && !minutesRendered) html += minutesSectionHtml(year.minutes, site);
+      html += `</div>`;
 
       document.getElementById("detail-root").innerHTML = html;
+      setupAccordions();
       renderFooter(site, year);
     }
 
@@ -539,6 +738,9 @@
 
       const sel = document.getElementById("year-select");
 
+      document.getElementById("open-all").addEventListener("click", () => setAllAccordions(true));
+      document.getElementById("close-all").addEventListener("click", () => setAllAccordions(false));
+
       // 指定された年のデータを読み込んで描画する
       async function showYear(yearId) {
         const meta = site.years.find((y) => y.id === yearId && y.available);
@@ -552,8 +754,22 @@
         }
       }
 
+      // 別の年の会議アンカーへ移動した場合は、年も切り替えてから対象を開く
+      async function showHashTarget() {
+        const hashId = decodedHashId();
+        const hashYear = site.years.find((y) => hashId.startsWith(`meeting-${y.id}-`) && y.available);
+        if (hashYear && sel.value !== hashYear.id) await showYear(hashYear.id);
+        openAccordionForHash(true);
+      }
+
       sel.addEventListener("change", () => showYear(sel.value));
-      await showYear(site.defaultYear);
+      window.addEventListener("hashchange", showHashTarget);
+
+      // 会議アンカーが指定されていれば、その会議が属する年を最初に表示する
+      const hashId = decodedHashId();
+      const hashYear = site.years.find((y) => hashId.startsWith(`meeting-${y.id}-`) && y.available);
+      await showYear(hashYear ? hashYear.id : site.defaultYear);
+      openAccordionForHash(true);
     }
 
     init();
