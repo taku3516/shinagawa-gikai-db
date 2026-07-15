@@ -10,6 +10,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r07"
       ]
     },
@@ -19,6 +20,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07"
@@ -30,6 +32,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -42,6 +45,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07"
@@ -86,8 +90,11 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "kengo_kimura",
       "name": "木村　健悟",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "木村けんご"
+      ],
       "seenIn": [
+        "r04",
         "r05",
         "r07"
       ]
@@ -96,8 +103,11 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "arata_koshiba",
       "name": "こしば　新",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "小芝新"
+      ],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -110,6 +120,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -133,6 +144,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07"
@@ -144,6 +156,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -178,6 +191,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07"
@@ -189,6 +203,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r08"
@@ -233,6 +248,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07"
@@ -253,6 +269,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -265,6 +282,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r07"
       ]
@@ -275,6 +293,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -287,6 +306,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -299,6 +319,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07"
@@ -308,8 +329,11 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "kazumasa_matsuzawa",
       "name": "まつざわ　和昌",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "松澤和昌"
+      ],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -322,6 +346,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -334,6 +359,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07"
@@ -377,6 +403,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07"
@@ -388,6 +415,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -400,6 +428,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05",
         "r06",
         "r07",
@@ -414,6 +443,7 @@ window.SHINAGAWA_DB.peopleData = {
         "渡辺裕一"
       ],
       "seenIn": [
+        "r04",
         "r05"
       ]
     },
@@ -443,8 +473,11 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "せりざわ 裕次郎",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "芹澤裕次郎"
+      ],
       "seenIn": [
+        "r04",
         "r06"
       ]
     },
@@ -455,6 +488,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05"
       ]
     },
@@ -465,6 +499,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r04",
         "r05"
       ]
     },
@@ -476,6 +511,56 @@ window.SHINAGAWA_DB.peopleData = {
       "aliases": [],
       "seenIn": [
         "r05"
+      ]
+    },
+    {
+      "id": "x-okuno-shinji",
+      "name": "おくの 晋治",
+      "status": "元職",
+      "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "r04"
+      ]
+    },
+    {
+      "id": "x-yuzawa-kazutaka",
+      "name": "湯澤 一貴",
+      "status": "元職",
+      "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "r04"
+      ]
+    },
+    {
+      "id": "x-takeuchi-shinobu",
+      "name": "たけうち 忍",
+      "status": "元職",
+      "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "r04"
+      ]
+    },
+    {
+      "id": "x-suzuki-masumi",
+      "name": "鈴木 真澄",
+      "status": "元職",
+      "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "r04"
+      ]
+    },
+    {
+      "id": "x-suzuki-hiroshi",
+      "name": "鈴木 博",
+      "status": "元職",
+      "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "r04"
       ]
     }
   ]

@@ -58,7 +58,7 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "id": "r04",
-      "label": "令和4年（概要のみ）",
+      "label": "令和4年",
       "file": "data/r04.js",
       "available": true
     },
