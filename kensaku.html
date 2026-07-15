@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#5081b5" />
+  <title>横断検索 | 品川区議会DB</title>
+  <style>
+    :root {
+      --c-main: #5081b5; --c-main-dark: #406791; --c-bg: #e6eef4; --c-card: #ffffff;
+      --c-ink: #1f2937; --c-ink-soft: #4b5563; --c-border: #c3d3e0;
+      --c-video-bg: #fff1f2; --c-video-border: #fecaca; --c-video-text: #be123c;
+      --c-minutes-bg: #f0fdf4; --c-minutes-border: #bbf7d0; --c-minutes-text: #15803d;
+      --c-result-bg: #fef3c7; --c-result-text: #92400e;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+           background: var(--c-bg); color: var(--c-ink); overflow-wrap: break-word; }
+    a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero { padding: 40px 0 24px; background: linear-gradient(90deg, rgba(80,129,181,.18), rgba(255,255,255,.85)), var(--c-bg); }
+    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
+    h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 44px); line-height: 1.1; }
+    .lead { max-width: 780px; margin: 0; font-size: 15px; line-height: 1.9; }
+    .notice { margin-top: 16px; max-width: 840px; padding: 12px 16px; border: 1px solid rgba(80,129,181,.5);
+              border-radius: 8px; background: var(--c-card); font-size: 13px; line-height: 1.7; }
+    section { padding: 24px 0 48px; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 6px; }
+    #q { flex: 1 1 280px; max-width: 460px; border: 1px solid var(--c-border); border-radius: 8px;
+         background: var(--c-card); padding: 12px 14px; font-size: 16px; color: var(--c-ink); }
+    select { border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card);
+             padding: 10px 12px; font-size: 15px; font-weight: 800; color: var(--c-ink); }
+    #hit { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
+    .type-chips { margin: 8px 0 16px; }
+    .chip-btn { display: inline-flex; margin: 0 6px 6px 0; border: 1px solid var(--c-border); border-radius: 999px;
+                background: var(--c-card); padding: 6px 14px; font-size: 13px; font-weight: 800;
+                color: var(--c-ink-soft); cursor: pointer; }
+    .chip-btn.on { background: var(--c-main); border-color: var(--c-main); color: #fff; }
+    .rows { display: grid; gap: 10px; }
+    .hitrow { border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card); padding: 14px 16px; }
+    .hitrow h2 { margin: 0 0 6px; font-size: 16px; line-height: 1.5; }
+    .hitrow p { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.7; }
+    .badge { display: inline-flex; margin: 0 6px 6px 0; border-radius: 999px; padding: 3px 10px;
+             font-size: 12px; font-weight: 800; background: rgba(80,129,181,.15); color: var(--c-main-dark); }
+    .badge--year { background: #f3f4f6; color: #374151; }
+    .badge--result { background: var(--c-result-bg); color: var(--c-result-text); }
+    .pill { display: inline-flex; align-items: center; margin: 8px 6px 0 0; border: 1px solid rgba(80,129,181,.35);
+            border-radius: 999px; background: var(--c-card); padding: 5px 11px; color: var(--c-main-dark);
+            font-size: 12px; font-weight: 800; }
+    .pill--video { border-color: var(--c-video-border); background: var(--c-video-bg); color: var(--c-video-text); }
+    .pill--minutes { border-color: var(--c-minutes-border); background: var(--c-minutes-bg); color: var(--c-minutes-text); }
+    .guide { color: var(--c-ink-soft); font-size: 14px; line-height: 1.9; padding: 24px 0; }
+    footer { border-top: 1px solid var(--c-border); background: linear-gradient(90deg, var(--c-main), var(--c-bg));
+             padding: 28px 0; text-align: center; font-size: 13px; color: #fff; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+        <h1>横断検索</h1>
+        <p class="lead">
+          令和元年〜令和8年の議案・請願陳情・質問テーマ・議員名・会議を、まとめて検索できます。スペース区切りで絞り込み（AND検索）。
+        </p>
+        <div class="notice">
+          <strong>発言の全文</strong>（会議録の本文）はこのサイトには収録していません。発言内容そのものを検索する場合は、公式の
+          <a href="https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-phrase" target="_blank" rel="noopener">会議録検索システム「ことばで探す」</a>
+          を使ってください。
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="controls">
+          <input id="q" type="search" placeholder="例: 羽田 / インボイス / 石田ちひろ / 補正予算" autofocus />
+          <select id="year-filter"><option value="">すべての年</option></select>
+          <span id="hit"></span>
+        </div>
+        <div class="type-chips" id="type-chips"></div>
+        <div id="results" class="rows"></div>
+        <div id="guide" class="guide"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">品川区議会DB — これは品川区が運営しているものではありません。正確な情報は品川区議会公式サイトを確認してください。</div>
+  </footer>
+
+  <!-- 全データを読み込む（script形式なので file:// でも動く） -->
+  <script src="data/site.js"></script>
+  <script src="data/members.js"></script>
+  <script src="data/r01.js"></script>
+  <script src="data/r02.js"></script>
+  <script src="data/r03.js"></script>
+  <script src="data/r04.js"></script>
+  <script src="data/r05.js"></script>
+  <script src="data/r06.js"></script>
+  <script src="data/r07.js"></script>
+  <script src="data/r08.js"></script>
+
+  <script>
+    "use strict";
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, (c) => (
+        { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+    const PILL_CLASS = { official: "pill", video: "pill pill--video", minutes: "pill pill--minutes", minutesDraft: "pill pill--minutes" };
+    function pillsHtml(links) {
+      return (links || []).map((l) => {
+        const target = /^https?:/.test(l.url) ? ' target="_blank" rel="noopener"' : "";
+        return `<a class="${PILL_CLASS[l.type] || "pill"}" href="${esc(l.url)}"${target}>${esc(l.label)}</a>`;
+      }).join("");
+    }
+
+    /* ---------- 検索インデックスの構築 ---------- */
+    const TYPES = ["議案", "請願・陳情", "質問", "議員", "会議"];
+    const INDEX = [];
+    const db = window.SHINAGAWA_DB;
+    const yearIds = Object.keys(db.years).sort().reverse();  // 新しい年を先に
+
+    for (const yid of yearIds) {
+      const y = db.years[yid];
+      const yearLabel = y.label;
+      const meetingName = {};
+      for (const m of y.meetings || []) {
+        meetingName[m.id] = m.name;
+        INDEX.push({ type: "会議", year: yearLabel, title: m.name,
+          body: `${m.monthLabel || ""} ${m.summary || ""}`,
+          hay: `${m.name} ${m.monthLabel} ${m.type} ${m.summary}`,
+          badges: [m.type], links: m.links });
+      }
+      for (const b of y.bills || []) {
+        INDEX.push({ type: "議案", year: yearLabel, title: b.title,
+          body: `${meetingName[b.meetingId] || ""}／${b.summary || ""}`,
+          hay: `${b.title} ${b.summary} ${(b.tags || []).join(" ")} ${b.result || ""} ${b.proposer || ""} ${meetingName[b.meetingId] || ""}`,
+          badges: (b.tags || []), result: b.result, links: b.links });
+      }
+      for (const p of y.petitions || []) {
+        INDEX.push({ type: "請願・陳情", year: yearLabel, title: `${p.number} ${p.title}`,
+          body: meetingName[p.meetingId] || "",
+          hay: `${p.number} ${p.title} ${p.result || ""} ${meetingName[p.meetingId] || ""}`,
+          result: p.result, badges: [], links: p.links });
+      }
+      for (const q of y.questions || []) {
+        INDEX.push({ type: "質問", year: yearLabel, title: `${q.member}（${q.party}）`,
+          body: `${meetingName[q.meetingId] || ""}・${q.kind || "一般質問"}／${(q.topics || []).join("、")}`,
+          hay: `${q.member} ${q.party} ${q.kind || ""} ${(q.topics || []).join(" ")} ${meetingName[q.meetingId] || ""}`,
+          badges: [q.kind || "一般質問"], links: q.links });
+      }
+    }
+    for (const m of (db.membersData ? db.membersData.members : [])) {
+      INDEX.push({ type: "議員", year: "現職名簿", title: `${m.name}（${m.party || ""}）`,
+        body: [m.kana, m.standingCommittee, m.specialCommittee].filter(Boolean).join("／"),
+        hay: `${m.name} ${m.kana} ${m.party} ${m.standingCommittee || ""} ${m.specialCommittee || ""} ${m.occupation || ""}`,
+        badges: ["現職"],
+        links: [{ type: "official", label: "議員名簿で見る", url: "giin.html" },
+                { type: "official", label: "公式プロフィール", url: m.profileUrl }] });
+    }
+
+    /* ---------- 絞り込みと描画 ---------- */
+    const activeTypes = new Set(TYPES);
+    const qEl = document.getElementById("q");
+    const yEl = document.getElementById("year-filter");
+
+    // 年フィルタの選択肢（データから生成）
+    const yearLabels = [...new Set(INDEX.map((i) => i.year))];
+    yEl.innerHTML = `<option value="">すべての年</option>` +
+      yearLabels.map((l) => `<option value="${esc(l)}">${esc(l)}</option>`).join("");
+
+    // 種類チップ
+    const chipsEl = document.getElementById("type-chips");
+    chipsEl.innerHTML = TYPES.map((t) =>
+      `<button class="chip-btn on" data-type="${esc(t)}">${esc(t)}</button>`).join("");
+    chipsEl.addEventListener("click", (ev) => {
+      const btn = ev.target.closest(".chip-btn");
+      if (!btn) return;
+      const t = btn.dataset.type;
+      if (activeTypes.has(t) && activeTypes.size === 1) return;  // 最後の1個は消さない
+      activeTypes.has(t) ? activeTypes.delete(t) : activeTypes.add(t);
+      btn.classList.toggle("on");
+      render();
+    });
+
+    function rowHtml(item) {
+      const badges = [`<span class="badge badge--year">${esc(item.year)}</span>`,
+                      `<span class="badge">${esc(item.type)}</span>`]
+        .concat((item.badges || []).map((b) => `<span class="badge">${esc(b)}</span>`));
+      if (item.result) badges.push(`<span class="badge badge--result">${esc(item.result)}</span>`);
+      return `<article class="hitrow">
+        <div>${badges.join("")}</div>
+        <h2>${esc(item.title)}</h2>
+        ${item.body ? `<p>${esc(item.body)}</p>` : ""}
+        ${pillsHtml(item.links)}
+      </article>`;
+    }
+
+    const MAX_SHOW = 150;
+    function render() {
+      const terms = qEl.value.trim().toLowerCase().split(/[ 　]+/).filter(Boolean);
+      const yearSel = yEl.value;
+      const resEl = document.getElementById("results");
+      const guideEl = document.getElementById("guide");
+      if (terms.length === 0) {
+        resEl.innerHTML = "";
+        document.getElementById("hit").textContent = `全${INDEX.length}件からキーワードで検索`;
+        guideEl.innerHTML = `検索の例:
+          <a href="?q=羽田">羽田</a> ／ <a href="?q=インボイス">インボイス</a> ／
+          <a href="?q=再開発">再開発</a> ／ <a href="?q=石田ちひろ">石田ちひろ</a> ／
+          <a href="?q=補正予算 令和6年">補正予算 令和6年</a>`;
+        return;
+      }
+      guideEl.innerHTML = "";
+      const hits = INDEX.filter((i) => {
+        if (!activeTypes.has(i.type)) return false;
+        if (yearSel && i.year !== yearSel) return false;
+        const hay = (i.hay + " " + i.year).toLowerCase().replace(/[ 　]/g, "");
+        return terms.every((t) => hay.includes(t.replace(/[ 　]/g, "")));
+      });
+      document.getElementById("hit").textContent =
+        `${hits.length}件ヒット` + (hits.length > MAX_SHOW ? `（先頭${MAX_SHOW}件を表示）` : "");
+      resEl.innerHTML = hits.slice(0, MAX_SHOW).map(rowHtml).join("");
+    }
+
+    let timer = null;
+    qEl.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(render, 150); });
+    yEl.addEventListener("change", render);
+
+    // URLの ?q= に対応（検索結果を共有できる）
+    const initQ = new URLSearchParams(location.search).get("q");
+    if (initQ) qEl.value = initQ;
+    render();
+  </script>
+</body>
+</html>

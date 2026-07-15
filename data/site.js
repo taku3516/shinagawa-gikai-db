@@ -29,6 +29,11 @@ window.SHINAGAWA_DB.site = {
       "type": "official",
       "label": "議員名簿を見る",
       "url": "giin.html"
+    },
+    {
+      "type": "official",
+      "label": "横断検索",
+      "url": "kensaku.html"
     }
   ],
   "years": [
