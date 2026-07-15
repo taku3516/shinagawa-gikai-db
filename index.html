@@ -195,6 +195,25 @@
     .card p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
     .card ul { margin: 0; padding-left: 20px; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
     .card.q h3 { font-size: 16px; }
+    .question-card-grid--summaries { grid-template-columns: 1fr; }
+    .q__topics-label {
+      margin: 0 0 4px !important; color: var(--c-ink) !important;
+      font-size: 13px !important; font-weight: 800;
+    }
+    .qa-summaries {
+      display: grid; gap: 12px; margin-top: 20px; padding-top: 18px;
+      border-top: 1px solid var(--c-border);
+    }
+    .qa-summaries > h4 { margin: 0; font-size: 15px; }
+    .qa-summary {
+      border-left: 4px solid var(--c-main); border-radius: 6px;
+      background: rgba(80, 129, 181, 0.07); padding: 14px 16px;
+    }
+    .qa-summary h5 { margin: 0 0 10px; font-size: 15px; line-height: 1.55; }
+    .qa-summary dl { display: grid; grid-template-columns: 5em 1fr; gap: 8px 12px; margin: 0; }
+    .qa-summary dt { color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
+    .qa-summary dd { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .qa-summary-note { margin-top: 14px !important; }
 
     /* ===== 一覧行（請願・会議録） ===== */
     .rows { display: grid; gap: 10px; }
@@ -236,7 +255,7 @@
     .load-error code { background: #fff; padding: 2px 6px; border-radius: 4px; }
 
     /* アンカーリンクで飛んだとき固定操作バーの下に見出しが収まるよう余白を取る */
-    section[id], h2[id], h3[id] { scroll-margin-top: 76px; }
+    section[id], h2[id], h3[id], .card.q[id] { scroll-margin-top: 76px; }
 
     /* ===== スマホ向け調整 ===== */
     @media (max-width: 640px) {
@@ -251,6 +270,9 @@
       h2 { font-size: 21px; }
       .card { padding: 16px; }
       .meeting-card { padding: 16px; }
+      .qa-summary { padding: 13px 14px; }
+      .qa-summary dl { grid-template-columns: 1fr; gap: 4px; }
+      .qa-summary dd + dt { margin-top: 6px; }
 
       .accordion-controls__inner { flex-wrap: wrap; }
       .accordion-controls__label { width: 100%; }
@@ -500,12 +522,28 @@
     // 質問カード（議員名・会派・テーマ）
     function questionCardHtml(q, site) {
       const topics = (q.topics || []).map((t) => `<li>${esc(t)}</li>`).join("");
+      const qaSummaries = (q.qaSummaries || []).map((item) => `
+        <div class="qa-summary">
+          <h5>${esc(item.title)}</h5>
+          <dl>
+            <dt>質問の要約</dt>
+            <dd>${esc(item.question)}</dd>
+            <dt>答弁の要約</dt>
+            <dd>${esc(item.answer)}</dd>
+          </dl>
+        </div>`).join("");
       return `
-        <div class="card q">
+        <article class="card q" id="question-${esc(q.meetingId)}-${esc(q.memberId)}">
           <h3>${esc(q.member)}（${esc(q.party)}）</h3>
+          <p class="q__topics-label">質問項目</p>
           <ul>${topics}</ul>
+          ${qaSummaries ? `<div class="qa-summaries" aria-label="${esc(q.member)}議員の質問と答弁の要約">
+            <h4>会議録からの要約</h4>
+            ${qaSummaries}
+          </div>
+          <p class="fine-print qa-summary-note">※質問・答弁の要点を本サイトで要約しています。正確な発言は公式の会議録をご確認ください。</p>` : ""}
           ${pillsHtml(q.links, site)}
-        </div>`;
+        </article>`;
     }
 
     // 会議1件分の詳細セクション（タイムライン＋関連する議案・請願・質問）
@@ -557,7 +595,8 @@
         html += `<h2 class="sub">${esc(sec.title || "一般質問")}</h2>`;
         if (sec.lead) html += `<p class="section-lead">${esc(sec.lead)}</p>`;
         if (sec.links && sec.links.length > 0) html += `<p>${pillsHtml(sec.links, site)}</p>`;
-        html += `<div class="card-grid">${questions.map((q) => questionCardHtml(q, site)).join("")}</div>`;
+        const hasQaSummaries = questions.some((q) => (q.qaSummaries || []).length > 0);
+        html += `<div class="card-grid${hasQaSummaries ? " question-card-grid--summaries" : ""}">${questions.map((q) => questionCardHtml(q, site)).join("")}</div>`;
       }
 
       html += `</div></section></div></details>`;
