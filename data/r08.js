@@ -154,7 +154,7 @@ window.SHINAGAWA_DB.years["r08"] = {
         {
           "date": "2月18日",
           "title": "施政方針説明・代表質問",
-          "description": "区長の施政方針に対し、会派を代表する議員が質問します。",
+          "description": "区長の施政方針に対し、会派を代表する議員が質問します。質問者: まつざわ 和昌、山本 やすゆき、若林 ひろき。",
           "links": [
             {
               "type": "official",
@@ -181,7 +181,7 @@ window.SHINAGAWA_DB.years["r08"] = {
         {
           "date": "2月19日",
           "title": "代表質問・一般質問",
-          "description": "代表質問に続き、各議員の一般質問が行われました。",
+          "description": "代表質問に続き、各議員の一般質問が行われました。質問者: 石田 ちひろ、せお 麻里、おぎの あやか、鈴木 ひろ子、ゆきた 政春、高橋 伸明。",
           "links": [
             {
               "type": "official",
@@ -203,7 +203,7 @@ window.SHINAGAWA_DB.years["r08"] = {
         {
           "date": "2月20日",
           "title": "一般質問・議案上程・予算特別委員会設置",
-          "description": "一般質問の後、議案が上程され、予算特別委員会の設置へ進みます。",
+          "description": "一般質問の後、議案が上程され、予算特別委員会の設置へ進みます。質問者: やなぎさわ 聡、石田 秀男。",
           "links": [
             {
               "type": "official",
@@ -756,7 +756,7 @@ window.SHINAGAWA_DB.years["r08"] = {
         {
           "date": "6月25日",
           "title": "一般質問",
-          "description": "地域交通、子育て支援、高齢者支援、まちづくりなど。",
+          "description": "地域交通、子育て支援、高齢者支援、まちづくりなど。質問者: 松永 よしひろ、澤田 えみこ、のだて 稔史、新妻 さえ子、吉田 ゆみこ。",
           "links": [
             {
               "type": "official",
@@ -778,7 +778,7 @@ window.SHINAGAWA_DB.years["r08"] = {
         {
           "date": "6月26日",
           "title": "一般質問・議案上程",
-          "description": "議案が本会議に上程されます。",
+          "description": "議案が本会議に上程されます。質問者: こしば 新、西本 たか子、こんの 孝子。",
           "links": [
             {
               "type": "official",

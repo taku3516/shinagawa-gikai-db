@@ -20,6 +20,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "本会議資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
         }
       ],
       "events": [
@@ -32,6 +37,11 @@ window.SHINAGAWA_DB.years["r07"] = {
               "type": "official",
               "label": "質問者・発言事項を見る",
               "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
+            },
+            {
+              "type": "video",
+              "label": "録画を見る",
+              "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
             },
             {
               "type": "minutes",
@@ -51,6 +61,11 @@ window.SHINAGAWA_DB.years["r07"] = {
               "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
             },
             {
+              "type": "video",
+              "label": "録画を見る",
+              "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
+            },
+            {
               "type": "minutes",
               "label": "会議録を発言者名で探す",
               "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -66,6 +81,11 @@ window.SHINAGAWA_DB.years["r07"] = {
               "type": "official",
               "label": "質問者・発言事項を見る",
               "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
+            },
+            {
+              "type": "video",
+              "label": "録画を見る",
+              "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
             },
             {
               "type": "minutes",
@@ -115,6 +135,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "本会議資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01r"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=158"
         }
       ],
       "events": [],
@@ -142,6 +167,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "本会議資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
         }
       ],
       "events": [
@@ -154,6 +184,11 @@ window.SHINAGAWA_DB.years["r07"] = {
               "type": "official",
               "label": "質問者・発言事項を見る",
               "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
+            },
+            {
+              "type": "video",
+              "label": "録画を見る",
+              "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
             },
             {
               "type": "minutes",
@@ -171,6 +206,11 @@ window.SHINAGAWA_DB.years["r07"] = {
               "type": "official",
               "label": "質問者・発言事項を見る",
               "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
+            },
+            {
+              "type": "video",
+              "label": "録画を見る",
+              "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
             },
             {
               "type": "minutes",
@@ -216,6 +256,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "本会議資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
         }
       ],
       "events": [
@@ -228,6 +273,11 @@ window.SHINAGAWA_DB.years["r07"] = {
               "type": "official",
               "label": "質問者・発言事項を見る",
               "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
+            },
+            {
+              "type": "video",
+              "label": "録画を見る",
+              "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
             },
             {
               "type": "minutes",
@@ -245,6 +295,11 @@ window.SHINAGAWA_DB.years["r07"] = {
               "type": "official",
               "label": "質問者・発言事項を見る",
               "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
+            },
+            {
+              "type": "video",
+              "label": "録画を見る",
+              "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
             },
             {
               "type": "minutes",
@@ -294,6 +349,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "本会議資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
         }
       ],
       "events": [
@@ -306,6 +366,11 @@ window.SHINAGAWA_DB.years["r07"] = {
               "type": "official",
               "label": "質問者・発言事項を見る",
               "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
+            },
+            {
+              "type": "video",
+              "label": "録画を見る",
+              "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
             },
             {
               "type": "minutes",
@@ -323,6 +388,11 @@ window.SHINAGAWA_DB.years["r07"] = {
               "type": "official",
               "label": "質問者・発言事項を見る",
               "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
+            },
+            {
+              "type": "video",
+              "label": "録画を見る",
+              "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
             },
             {
               "type": "minutes",
@@ -372,6 +442,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "本会議資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02r"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=163"
         }
       ],
       "events": [],
@@ -1742,6 +1817,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -1777,6 +1857,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -1800,6 +1885,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
         },
         {
           "type": "minutes",
@@ -1829,6 +1919,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -1851,6 +1946,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
         },
         {
           "type": "minutes",
@@ -1878,6 +1978,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -1900,6 +2005,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
         },
         {
           "type": "minutes",
@@ -1927,6 +2037,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -1949,6 +2064,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
         },
         {
           "type": "minutes",
@@ -1974,6 +2094,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -1996,6 +2121,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
         },
         {
           "type": "minutes",
@@ -2024,6 +2154,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2047,6 +2182,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_01t/r07_01t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
         },
         {
           "type": "minutes",
@@ -2077,6 +2217,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2101,6 +2246,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
         },
         {
           "type": "minutes",
@@ -2128,6 +2278,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2153,6 +2308,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2176,6 +2336,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
         },
         {
           "type": "minutes",
@@ -2204,6 +2369,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2227,6 +2397,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
         },
         {
           "type": "minutes",
@@ -2254,6 +2429,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2277,6 +2457,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
         },
         {
           "type": "minutes",
@@ -2303,6 +2488,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_02t/r07_02t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=159"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2324,6 +2514,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
         },
         {
           "type": "minutes",
@@ -2348,6 +2543,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
         },
         {
           "type": "minutes",
@@ -2375,6 +2575,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2400,6 +2605,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2422,6 +2632,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
         },
         {
           "type": "minutes",
@@ -2450,6 +2665,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2472,6 +2692,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
         },
         {
           "type": "minutes",
@@ -2499,6 +2724,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_03t/r07_03t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2524,6 +2754,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2546,6 +2781,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
         },
         {
           "type": "minutes",
@@ -2576,6 +2816,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2600,6 +2845,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
         },
         {
           "type": "minutes",
@@ -2627,6 +2877,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2652,6 +2907,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2675,6 +2935,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
         },
         {
           "type": "minutes",
@@ -2703,6 +2968,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
         },
         {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
+        },
+        {
           "type": "minutes",
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
@@ -2725,6 +2995,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
         },
         {
           "type": "minutes",
@@ -2750,6 +3025,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "official",
           "label": "公式資料を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r07_04t/r07_04t2"
+        },
+        {
+          "type": "video",
+          "label": "録画を見る",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=162"
         },
         {
           "type": "minutes",
