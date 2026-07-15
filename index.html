@@ -431,21 +431,6 @@
         related.bills.length > 0 || related.petitions.length > 0 || related.questions.length > 0;
     }
 
-    // 予定だけの会議より、議案・質問・録画・会議録が公開済みの会議を「最新」として優先する
-    function hasPublishedContent(meeting, year) {
-      const related = relatedItems(meeting, year);
-      const publishedBills = related.bills.filter((item) => !(item.tags || []).includes("公開待ち"));
-      const links = (meeting.links || []).concat(
-        (meeting.events || []).flatMap((event) => event.links || []),
-        publishedBills.flatMap((item) => item.links || []),
-        related.petitions.flatMap((item) => item.links || []),
-        related.questions.flatMap((item) => item.links || [])
-      );
-      const hasResult = publishedBills.some((item) => item.result) ||
-        related.petitions.some((item) => item.result);
-      return hasResult || links.some((link) => ["video", "minutes", "minutesDraft"].includes(link.type));
-    }
-
     // 折りたたみ見出しに表示する件数
     function meetingCountsHtml(meeting, related) {
       const counts = [];
@@ -524,11 +509,11 @@
     }
 
     // 会議1件分の詳細セクション（タイムライン＋関連する議案・請願・質問）
-    function meetingSectionHtml(meeting, year, site, isLatest) {
+    function meetingSectionHtml(meeting, year, site) {
       const related = relatedItems(meeting, year);
       const { bills, petitions, questions } = related;
 
-      let html = `<details class="meeting-accordion" id="meeting-${esc(meeting.id)}" data-meeting-id="${esc(meeting.id)}"${isLatest ? " open" : ""}>
+      let html = `<details class="meeting-accordion" id="meeting-${esc(meeting.id)}" data-meeting-id="${esc(meeting.id)}">
         <summary>
           <span>
             <span class="meeting-accordion__heading">
@@ -693,12 +678,9 @@
 
       let html = `<div class="container accordion-list">`;
       let minutesRendered = false;
-      const meetingsWithDetails = (year.meetings || []).filter((meeting) => hasMeetingDetails(meeting, year));
-      const latestMeeting = [...meetingsWithDetails].reverse().find((meeting) =>
-        hasPublishedContent(meeting, year)) || meetingsWithDetails[meetingsWithDetails.length - 1];
       for (const meeting of year.meetings || []) {
         if (hasMeetingDetails(meeting, year)) {
-          html += meetingSectionHtml(meeting, year, site, meeting === latestMeeting);
+          html += meetingSectionHtml(meeting, year, site);
         }
         if (year.minutes && year.minutes.afterMeetingId === meeting.id) {
           html += minutesSectionHtml(year.minutes, site);
