@@ -52,8 +52,8 @@ def table_bills(html_part: str) -> list:
         result = cells[3] if len(cells) >= 4 else cells[2]
         out.append({
             "n": int(m.group(1)),
-            "title": re.sub(r"（ ?\.pdf.*?）", "", cells[1]).strip(),
-            "naiyo": re.sub(r"（ ?\.pdf.*?）", "", naiyo).strip()[:90],
+            "title": re.sub(r"[（(] ?\.pdf.*?[）)]", "", cells[1]).strip(),
+            "naiyo": re.sub(r"[（(] ?\.pdf.*?[）)]", "", naiyo).strip()[:90],
             "result": result.strip()[:8],
         })
     return out
@@ -77,7 +77,7 @@ def parse_petitions(html: str) -> list:
     out = []
     pat = r"令和(\d+)年(請願|陳情) ?第?(\d+)号 ?(.{4,70}?) ?(採択|不採択|一部採択|継続審査|取り下げ|撤回|審議未了)"
     for m in re.finditer(pat, t.split("請願・陳情", 1)[1]):
-        title = re.sub(r"（ ?\.pdf.*?）", "", m.group(4)).replace("趣旨", "").strip()
+        title = re.sub(r"[（(] ?\.pdf.*?[）)]", "", m.group(4)).replace("趣旨", "").strip()
         out.append({
             "number": f"令和{m.group(1)}年{m.group(2)} 第{m.group(3)}号",
             "title": title,

@@ -10,6 +10,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r07"
       ]
@@ -20,6 +21,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -45,6 +47,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -70,6 +73,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r05",
         "r06",
         "r07"
@@ -94,6 +98,7 @@ window.SHINAGAWA_DB.peopleData = {
         "木村けんご"
       ],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r07"
@@ -107,6 +112,7 @@ window.SHINAGAWA_DB.peopleData = {
         "小芝新"
       ],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -120,6 +126,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -144,6 +151,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -156,6 +164,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -169,6 +178,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r05",
         "r06",
         "r08"
@@ -191,6 +201,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -203,6 +214,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -248,6 +260,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -260,6 +273,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r05"
       ]
     },
@@ -269,6 +283,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -282,6 +297,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r07"
@@ -293,6 +309,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -306,6 +323,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -319,6 +337,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -333,6 +352,7 @@ window.SHINAGAWA_DB.peopleData = {
         "松澤和昌"
       ],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -359,6 +379,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -415,6 +436,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -428,6 +450,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05",
         "r06",
@@ -443,6 +466,7 @@ window.SHINAGAWA_DB.peopleData = {
         "渡辺裕一"
       ],
       "seenIn": [
+        "r03",
         "r04",
         "r05"
       ]
@@ -477,6 +501,7 @@ window.SHINAGAWA_DB.peopleData = {
         "芹澤裕次郎"
       ],
       "seenIn": [
+        "r03",
         "r04",
         "r06"
       ]
@@ -488,6 +513,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05"
       ]
@@ -499,6 +525,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04",
         "r05"
       ]
@@ -510,6 +537,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r05"
       ]
     },
@@ -520,6 +548,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04"
       ]
     },
@@ -530,6 +559,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04"
       ]
     },
@@ -540,6 +570,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04"
       ]
     },
@@ -550,6 +581,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04"
       ]
     },
@@ -560,7 +592,18 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "r03",
         "r04"
+      ]
+    },
+    {
+      "id": "x-osawa-shinichi",
+      "name": "大沢 真一",
+      "status": "元職",
+      "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "r03"
       ]
     }
   ]
