@@ -123,8 +123,8 @@ def main() -> None:
         sys.exit(1)
     y = int(sys.argv[1])
     result = {}
-    # 定例会1〜4回・臨時会1〜2回を試し、存在するものだけ解析する
-    for kind, nmax in [("t", 4), ("r", 2)]:
+    # 定例会1〜4回・臨時会1〜3回を試し、存在するものだけ解析する（令和6年は臨時会3回）
+    for kind, nmax in [("t", 4), ("r", 3)]:
         for n in range(1, nmax + 1):
             slug = f"r{y:02d}_{n:02d}{kind}"
             try:
