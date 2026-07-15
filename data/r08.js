@@ -1531,7 +1531,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=164"
         }
-      ]
+      ],
+      "memberId": "kazumasa_matsuzawa"
     },
     {
       "meetingId": "r08-1t",
@@ -1554,7 +1555,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=164"
         }
-      ]
+      ],
+      "memberId": "yasuyuki_yamamoto"
     },
     {
       "meetingId": "r08-1t",
@@ -1577,7 +1579,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=164"
         }
-      ]
+      ],
+      "memberId": "hiroki_wakabayashi"
     },
     {
       "meetingId": "r08-1t",
@@ -1600,7 +1603,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=164"
         }
-      ]
+      ],
+      "memberId": "chihiro_ishida"
     },
     {
       "meetingId": "r08-1t",
@@ -1623,7 +1627,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=164"
         }
-      ]
+      ],
+      "memberId": "mari_seo"
     },
     {
       "meetingId": "r08-1t",
@@ -1646,7 +1651,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=164"
         }
-      ]
+      ],
+      "memberId": "ayaka_ogino"
     },
     {
       "meetingId": "r08-1t",
@@ -1669,7 +1675,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=164"
         }
-      ]
+      ],
+      "memberId": "hiroko_suzuki"
     },
     {
       "meetingId": "r08-1t",
@@ -1692,7 +1699,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=164"
         }
-      ]
+      ],
+      "memberId": "nobuaki_takahashi"
     },
     {
       "meetingId": "r08-2t",
@@ -1718,7 +1726,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "会議録を読む（6月25日・校正原稿PDF）",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.06.25t1.pdf"
         }
-      ]
+      ],
+      "memberId": "yoshihiro_matsunaga"
     },
     {
       "meetingId": "r08-2t",
@@ -1746,7 +1755,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "会議録を読む（6月25日・校正原稿PDF）",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.06.25t1.pdf"
         }
-      ]
+      ],
+      "memberId": "emiko_sawada"
     },
     {
       "meetingId": "r08-2t",
@@ -1774,7 +1784,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "会議録を読む（6月25日・校正原稿PDF）",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.06.25t1.pdf"
         }
-      ]
+      ],
+      "memberId": "toshifumi_nodate"
     },
     {
       "meetingId": "r08-2t",
@@ -1801,7 +1812,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "会議録を読む（6月25日・校正原稿PDF）",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.06.25t1.pdf"
         }
-      ]
+      ],
+      "memberId": "saeko_niizuma"
     },
     {
       "meetingId": "r08-2t",
@@ -1828,7 +1840,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "会議録を読む（6月25日・校正原稿PDF）",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.06.25t1.pdf"
         }
-      ]
+      ],
+      "memberId": "yumiko_yoshida"
     },
     {
       "meetingId": "r08-2t",
@@ -1858,7 +1871,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "会議録を読む（6月26日・校正原稿PDF）",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.06.26t2.pdf"
         }
-      ]
+      ],
+      "memberId": "arata_koshiba"
     },
     {
       "meetingId": "r08-2t",
@@ -1887,7 +1901,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "会議録を読む（6月26日・校正原稿PDF）",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.06.26t2.pdf"
         }
-      ]
+      ],
+      "memberId": "takako_nishimoto"
     },
     {
       "meetingId": "r08-2t",
@@ -1916,7 +1931,8 @@ window.SHINAGAWA_DB.years["r08"] = {
           "label": "会議録を読む（6月26日・校正原稿PDF）",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.06.26t2.pdf"
         }
-      ]
+      ],
+      "memberId": "takako_konno"
     }
   ],
   "minutes": {

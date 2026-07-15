@@ -52,7 +52,7 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "id": "r05",
-      "label": "令和5年（概要のみ）",
+      "label": "令和5年",
       "file": "data/r05.js",
       "available": true
     },

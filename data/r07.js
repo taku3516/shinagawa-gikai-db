@@ -1896,7 +1896,8 @@ window.SHINAGAWA_DB.years["r07"] = {
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
         }
-      ]
+      ],
+      "memberId": "takahiro_okura"
     },
     {
       "meetingId": "r07-1t",
@@ -1987,7 +1988,8 @@ window.SHINAGAWA_DB.years["r07"] = {
           "label": "会議録を発言者名で探す",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-speaker"
         }
-      ]
+      ],
+      "memberId": "x-higashi-yuki"
     },
     {
       "meetingId": "r07-1t",
