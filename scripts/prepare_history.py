@@ -295,6 +295,24 @@ def parse_minutes_voices(raw_html: str) -> list[dict]:
     return voices
 
 
+def question_start_score(voice: dict, topics: list[str]) -> float:
+    text = voice.get("text", "")
+    compact_text = normalized(text)
+    score = min(len(text), 10000) / 100
+    if "一般質問" in text or "代表質問" in text:
+        score += 1000
+    if "質問を行" in text or "質問いた" in text:
+        score += 300
+    if "提案理由" in text or "討論を行" in text:
+        score -= 1000
+    for topic in topics:
+        for term in re.findall(r"[一-龠々ァ-ヶーぁ-んA-Za-z0-9]{2,}", topic):
+            term = normalized(re.sub(r"について$", "", term))
+            if len(term) >= 2 and term in compact_text:
+                score += min(len(term), 20)
+    return score
+
+
 def attach_contexts(queue: list[dict], refresh: bool = False) -> None:
     groups: dict[str, list[dict]] = defaultdict(list)
     for item in queue:
@@ -307,7 +325,12 @@ def attach_contexts(queue: list[dict], refresh: bool = False) -> None:
         starts: list[tuple[int, dict]] = []
         for item in items:
             target = normalized(item["member"])
-            found = next((index for index, voice in enumerate(voices) if target and target in normalized(voice["speaker"])), None)
+            candidates = [
+                (question_start_score(voice, item["topics"]), index)
+                for index, voice in enumerate(voices)
+                if target and target in normalized(voice["speaker"])
+            ]
+            found = max(candidates)[1] if candidates else None
             if found is None:
                 # 質問通告後に取り下げられた場合、本人の発言はなく議長発言に氏名が残る。
                 found = next((
