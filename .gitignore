@@ -12,3 +12,4 @@ build/
 *~
 scripts/out/
 scripts/cache/
+.playwright-cli/
