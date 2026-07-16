@@ -47,6 +47,7 @@ window.SHINAGAWA_DB.site = {
       "id": "r07",
       "label": "令和7年",
       "file": "data/r07.js",
+      "supplement": "data/r07-complete.js",
       "available": true
     },
     {
