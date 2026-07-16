@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#5081b5" />
+  <meta name="theme-color" content="#1f4e79" />
   <title>品川区議会DB</title>
   <style>
-    /* ===== 基調カラー（背景 #e6eef4 / メイン #5081b5 / カード #ffffff） ===== */
+    /* ===== 基調カラー：深い青と生成りを使った、公文書・資料庫を思わせる配色 ===== */
     :root {
-      --c-main: #5081b5;
-      --c-main-dark: #406791;
-      --c-bg: #e6eef4;
-      --c-card: #ffffff;
-      --c-ink: #1f2937;
-      --c-ink-soft: #4b5563;
-      --c-border: #c3d3e0;
+      --c-main: #1f4e79;
+      --c-main-dark: #173a5e;
+      --c-main-pale: #e7eef4;
+      --c-bg: #f4f1e8;
+      --c-card: #fffdf8;
+      --c-ink: #17212b;
+      --c-ink-soft: #4f5d68;
+      --c-border: #b9c3cc;
+      --c-rule: #d8d2c4;
       /* 機能別の色分け */
       --c-video-bg: #fff1f2;      /* 録画リンク＝赤系 */
       --c-video-border: #fecaca;
@@ -44,21 +46,21 @@
       overflow-wrap: break-word;
     }
 
-    a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: var(--c-main-dark); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
 
     .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
 
     /* ===== ヒーロー ===== */
     .hero {
-      padding: 56px 0 36px;
-      background: linear-gradient(90deg, rgba(80, 129, 181, 0.18), rgba(255, 255, 255, 0.85)), var(--c-bg);
+      padding: 46px 0 34px; border-top: 6px solid var(--c-main); border-bottom: 1px solid var(--c-rule);
+      background: var(--c-card);
     }
-    .hero h1 { margin: 0 0 16px; font-size: clamp(34px, 7vw, 72px); line-height: 1.05; }
+    .hero h1 { margin: 0 0 16px; color: var(--c-main-dark); font-size: clamp(34px, 6vw, 60px); line-height: 1.08; letter-spacing: -0.025em; }
     .hero .lead { max-width: 780px; margin: 0; font-size: 18px; line-height: 1.9; }
     .disclaimer {
       margin-top: 24px; max-width: 840px; padding: 14px 16px;
-      border: 1px solid rgba(80, 129, 181, 0.5); border-radius: 8px;
+      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); font-size: 14px; line-height: 1.7;
     }
     .hero-links { margin: 16px 0 0; }
@@ -66,7 +68,7 @@
     /* ===== 統計カード（定例会ごとの会期・議案数） ===== */
     .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 28px; }
     .stats--section { margin: 0 0 24px; }
-    .stat { border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card); padding: 16px; }
+    .stat { border: 1px solid var(--c-border); border-top: 3px solid var(--c-main); border-radius: 3px; background: var(--c-card); padding: 16px; }
     .stat strong { display: block; color: var(--c-main); font-size: 28px; line-height: 1.1; }
     .stat span { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
 
@@ -80,7 +82,7 @@
     /* ===== リンクピル（種類別に色分け） ===== */
     .pill {
       display: inline-flex; align-items: center; margin: 14px 6px 0 0;
-      border: 1px solid rgba(80, 129, 181, 0.35); border-radius: 999px;
+      border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 6px 12px;
       color: var(--c-main-dark); font-size: 13px; font-weight: 800;
     }
@@ -89,14 +91,14 @@
 
     /* ===== タグ ===== */
     .tag {
-      display: inline-flex; margin: 0 8px 12px 0; border-radius: 999px;
-      background: rgba(80, 129, 181, 0.15); padding: 4px 10px;
+      display: inline-flex; margin: 0 8px 12px 0; border-radius: 3px;
+      background: var(--c-main-pale); padding: 4px 9px;
       color: var(--c-main-dark); font-size: 12px; font-weight: 800;
     }
     .tag--result { background: var(--c-result-bg); color: var(--c-result-text); }
     .chip {
-      display: inline-flex; margin-bottom: 10px; border-radius: 999px;
-      background: #f3f4f6; padding: 4px 10px; color: #374151; font-size: 12px; font-weight: 800;
+      display: inline-flex; margin-bottom: 10px; border: 1px solid var(--c-border); border-radius: 3px;
+      background: #f6f4ed; padding: 3px 9px; color: #334452; font-size: 12px; font-weight: 800;
     }
 
     /* ===== 年切り替え ===== */
@@ -104,11 +106,11 @@
     .year-row label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; white-space: nowrap; }
     #year-select {
       /* 16px未満だとiOSがフォーカス時に画面を自動ズームするため16pxにする */
-      width: min(100%, 320px); border: 1px solid var(--c-border); border-radius: 8px;
+      width: min(100%, 320px); border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: 16px; font-weight: 800;
     }
     .year-summary {
-      border: 1px solid rgba(80, 129, 181, 0.35); border-radius: 8px;
+      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 18px; margin-bottom: 18px;
     }
     .year-summary h3 { margin: 0 0 8px; font-size: 18px; }
@@ -116,7 +118,7 @@
 
     /* ===== 会議カード ===== */
     .meeting-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
-    .meeting-card { border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card); padding: 18px; }
+    .meeting-card { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 18px; }
     .meeting-card h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.45; }
     .meeting-card p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.75; }
 
@@ -124,37 +126,38 @@
     .accordion-controls {
       position: sticky; top: 0; z-index: 20;
       border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border);
-      background: rgba(230, 238, 244, 0.96); padding: 10px 0;
-      box-shadow: 0 4px 12px rgba(31, 41, 55, 0.08);
+      background: rgba(244, 241, 232, 0.97); padding: 8px 0;
+      box-shadow: 0 2px 5px rgba(23, 33, 43, 0.1);
       backdrop-filter: blur(8px);
     }
     .accordion-controls__inner { display: flex; align-items: center; gap: 8px; }
     .accordion-controls__label { margin-right: auto; font-size: 14px; font-weight: 800; }
     .accordion-controls__status { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
     .accordion-button {
-      min-height: 40px; border: 1px solid var(--c-main); border-radius: 8px;
+      min-height: 40px; border: 1px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 8px 14px; color: var(--c-main-dark);
       font: inherit; font-size: 13px; font-weight: 800; cursor: pointer;
     }
-    .accordion-button:hover { background: rgba(80, 129, 181, 0.1); }
-    .accordion-button:focus-visible, .meeting-accordion > summary:focus-visible {
+    .accordion-button:hover { background: var(--c-main-pale); }
+    .accordion-button:focus-visible, .meeting-accordion > summary:focus-visible,
+    .record-section > summary:focus-visible, .card.q > summary:focus-visible {
       outline: 3px solid #f59e0b; outline-offset: 3px;
     }
     .accordion-button:disabled { opacity: 0.45; cursor: default; }
     .accordion-list { display: grid; gap: 16px; padding: 24px 0 40px; }
     .meeting-accordion {
-      overflow: clip; border: 1px solid var(--c-border); border-radius: 10px;
+      overflow: clip; border: 1px solid var(--c-border); border-radius: 4px;
       background: var(--c-card); scroll-margin-top: 76px;
     }
-    .meeting-accordion[open] { box-shadow: 0 8px 22px rgba(31, 41, 55, 0.08); }
+    .meeting-accordion[open] { box-shadow: 0 3px 10px rgba(23, 33, 43, 0.08); }
     .meeting-accordion > summary {
       display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center;
       min-height: 88px; padding: 18px 20px; cursor: pointer; list-style: none;
     }
     .meeting-accordion > summary::-webkit-details-marker { display: none; }
-    .meeting-accordion > summary:hover { background: rgba(80, 129, 181, 0.08); }
+    .meeting-accordion > summary:hover { background: var(--c-main-pale); }
     .meeting-accordion[open] > summary {
-      border-bottom: 1px solid var(--c-border); background: rgba(80, 129, 181, 0.08);
+      border-bottom: 1px solid var(--c-border); background: var(--c-main-pale);
     }
     .meeting-accordion__heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
     .meeting-accordion__heading .chip { margin: 0; }
@@ -165,12 +168,12 @@
     }
     .meeting-accordion__counts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
     .meeting-accordion__count {
-      border-radius: 999px; background: #f3f4f6; padding: 3px 9px;
+      border: 1px solid var(--c-border); border-radius: 3px; background: #f6f4ed; padding: 3px 9px;
       color: #374151; font-size: 12px; font-weight: 800;
     }
     .meeting-accordion__icon {
       display: inline-grid; place-items: center; width: 36px; height: 36px;
-      border-radius: 999px; background: var(--c-main); color: #fff;
+      border-radius: 3px; background: var(--c-main); color: #fff;
       font-size: 22px; font-weight: 800; line-height: 1;
     }
     .meeting-accordion__icon::before { content: "+"; }
@@ -181,7 +184,7 @@
     .timeline { display: grid; gap: 12px; }
     .timeline-item {
       display: grid; grid-template-columns: 120px 1fr; gap: 16px;
-      border-left: 4px solid var(--c-main); border-radius: 8px;
+      border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 16px;
     }
     .timeline-item time { color: var(--c-main); font-weight: 800; }
@@ -190,11 +193,20 @@
     /* ===== カードグリッド（議案・質問） ===== */
     .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
     .card-grid.pushed { margin-top: 20px; }
-    .card { border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card); padding: 20px; }
+    .card { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 20px; }
     .card h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.5; }
     .card p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
     .card ul { margin: 0; padding-left: 20px; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
-    .card.q h3 { font-size: 16px; }
+    .card.q { padding: 0; overflow: clip; }
+    .card.q > summary { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 14px 16px; cursor: pointer; list-style: none; }
+    .card.q > summary::-webkit-details-marker { display: none; }
+    .card.q > summary:hover, .card.q[open] > summary { background: var(--c-main-pale); }
+    .card.q > summary h3 { flex: 1; margin: 0; font-size: 16px; }
+    .q__count { color: var(--c-ink-soft); font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .q__icon { color: var(--c-main); font-size: 20px; font-weight: 900; }
+    .q__icon::before { content: "+"; }
+    .card.q[open] .q__icon::before { content: "−"; }
+    .q__content { border-top: 1px solid var(--c-border); padding: 18px 20px 20px; }
     .question-card-grid--summaries { grid-template-columns: 1fr; }
     .q__topics-label {
       margin: 0 0 4px !important; color: var(--c-ink) !important;
@@ -206,8 +218,8 @@
     }
     .qa-summaries > h4 { margin: 0; font-size: 15px; }
     .qa-summary {
-      border-left: 4px solid var(--c-main); border-radius: 6px;
-      background: rgba(80, 129, 181, 0.07); padding: 14px 16px;
+      border-left: 4px solid var(--c-main); border-radius: 2px;
+      background: #f3f6f8; padding: 14px 16px;
     }
     .qa-summary h5 { margin: 0 0 10px; font-size: 15px; line-height: 1.55; }
     .qa-summary dl { display: grid; grid-template-columns: 5em 1fr; gap: 8px 12px; margin: 0; }
@@ -219,12 +231,12 @@
     .rows { display: grid; gap: 10px; }
     .rows .row {
       display: grid; grid-template-columns: minmax(150px, 210px) 1fr auto; gap: 12px; align-items: start;
-      border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-card);
+      border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
       padding: 14px; font-size: 14px;
     }
     .row .key { color: var(--c-main-dark); font-weight: 800; }
     .row .result {
-      border-radius: 999px; background: var(--c-result-bg); color: var(--c-result-text);
+      border-radius: 3px; background: var(--c-result-bg); color: var(--c-result-text);
       padding: 4px 10px; font-size: 12px; font-weight: 800; white-space: nowrap;
     }
     .row .pill { margin-top: 0; }
@@ -232,7 +244,7 @@
     /* ===== 注意書き・補足 ===== */
     .notice {
       margin: 0 0 20px; padding: 14px 16px;
-      border: 1px solid rgba(80, 129, 181, 0.5); border-radius: 8px;
+      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); font-size: 14px; line-height: 1.7;
     }
     .fine-print { margin: 10px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.7; }
@@ -242,7 +254,7 @@
     .sources ul { margin: 0; padding-left: 20px; line-height: 1.9; }
     footer {
       border-top: 1px solid var(--c-border);
-      background: linear-gradient(90deg, var(--c-main), var(--c-bg));
+      background: var(--c-main-dark);
       padding: 32px 0; text-align: center; font-size: 13px; line-height: 1.8; color: #fff;
     }
 
@@ -255,7 +267,21 @@
     .load-error code { background: #fff; padding: 2px 6px; border-radius: 4px; }
 
     /* アンカーリンクで飛んだとき固定操作バーの下に見出しが収まるよう余白を取る */
-    section[id], h2[id], h3[id], .card.q[id] { scroll-margin-top: 76px; }
+    section[id], h2[id], h3[id], .card.q[id], .record-section[id] { scroll-margin-top: 76px; }
+
+    /* ===== 件数の多い資料種別をまとめる内側の折りたたみ ===== */
+    .record-section { margin-top: 30px; border: 1px solid var(--c-border); border-top: 3px solid var(--c-main); border-radius: 3px; background: #faf9f4; }
+    .record-section > summary { display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 13px 16px; cursor: pointer; list-style: none; }
+    .record-section > summary::-webkit-details-marker { display: none; }
+    .record-section > summary:hover, .record-section[open] > summary { background: var(--c-main-pale); }
+    .record-section__title { flex: 1; }
+    .record-section__title strong { display: block; color: var(--c-main-dark); font-size: 18px; }
+    .record-section__title span { display: block; margin-top: 3px; color: var(--c-ink-soft); font-size: 13px; line-height: 1.55; }
+    .record-section__count { color: var(--c-main-dark); font-size: 13px; font-weight: 900; white-space: nowrap; }
+    .record-section__icon { color: var(--c-main); font-size: 22px; font-weight: 900; }
+    .record-section__icon::before { content: "+"; }
+    .record-section[open] .record-section__icon::before { content: "−"; }
+    .record-section__content { border-top: 1px solid var(--c-border); padding: 18px; }
 
     /* ===== スマホ向け調整 ===== */
     @media (max-width: 640px) {
@@ -269,19 +295,25 @@
       .hero .lead { font-size: 16px; line-height: 1.8; }
       h2 { font-size: 21px; }
       .card { padding: 16px; }
+      .card.q { padding: 0; }
       .meeting-card { padding: 16px; }
       .qa-summary { padding: 13px 14px; }
       .qa-summary dl { grid-template-columns: 1fr; gap: 4px; }
       .qa-summary dd + dt { margin-top: 6px; }
 
-      .accordion-controls__inner { flex-wrap: wrap; }
-      .accordion-controls__label { width: 100%; }
+      .accordion-controls__inner { flex-wrap: nowrap; gap: 6px; }
+      .accordion-controls__label { display: none; }
       .accordion-controls__status { margin-right: auto; }
-      .accordion-button { min-height: 44px; padding: 9px 12px; }
+      .accordion-button { min-height: 44px; padding: 8px 9px; font-size: 12px; }
       .accordion-list { padding-top: 16px; }
       .meeting-accordion > summary { grid-template-columns: 1fr auto; min-height: 96px; padding: 16px; }
       .meeting-accordion__title { font-size: 18px; }
       .meeting-accordion__summary { font-size: 13px; }
+      .record-section { margin-top: 22px; }
+      .record-section > summary { min-height: 64px; padding: 12px; }
+      .record-section__title strong { font-size: 16px; }
+      .record-section__content { padding: 12px; }
+      .q__content { padding: 16px; }
 
       /* 指でタップしやすいようリンクピルを大きくする */
       .pill { padding: 9px 14px; font-size: 14px; }
@@ -292,6 +324,7 @@
       .meeting-accordion { break-inside: avoid; }
       .meeting-accordion > summary { border-bottom: 1px solid var(--c-border); }
       .meeting-accordion > :not(summary) { display: block !important; }
+      .record-section > :not(summary), .card.q > :not(summary) { display: block !important; }
     }
   </style>
 </head>
@@ -340,6 +373,7 @@
   <!-- データ読み込み（script形式なので file:// のダブルクリックでも動く） -->
   <script src="data/site.js"></script>
   <script src="data/r08.js"></script>
+  <script src="data/r08-complete.js"></script>
 
   <script>
     "use strict";
@@ -519,6 +553,21 @@
         </div>`;
     }
 
+    // 件数の多い資料を、件数と説明が閉じた状態でも分かる内側の折りたたみにする
+    function recordSectionHtml({ id, title, lead, countLabel, content, open = false }) {
+      return `<details class="record-section" id="${esc(id)}"${open ? " open" : ""}>
+        <summary>
+          <span class="record-section__title">
+            <strong>${esc(title)}</strong>
+            ${lead ? `<span>${esc(lead)}</span>` : ""}
+          </span>
+          <span class="record-section__count">${esc(countLabel)}</span>
+          <span class="record-section__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="record-section__content">${content}</div>
+      </details>`;
+    }
+
     // 質問カード（議員名・会派・テーマ）
     function questionCardHtml(q, site) {
       const topics = (q.topics || []).map((t) => `<li>${esc(t)}</li>`).join("");
@@ -533,17 +582,23 @@
           </dl>
         </div>`).join("");
       return `
-        <article class="card q" id="question-${esc(q.meetingId)}-${esc(q.memberId)}">
-          <h3>${esc(q.member)}（${esc(q.party)}）</h3>
-          <p class="q__topics-label">質問項目</p>
-          <ul>${topics}</ul>
-          ${qaSummaries ? `<div class="qa-summaries" aria-label="${esc(q.member)}議員の質問と答弁の要約">
+        <details class="card q" id="question-${esc(q.meetingId)}-${esc(q.memberId)}">
+          <summary>
+            <h3>${esc(q.member)}（${esc(q.party)}）</h3>
+            <span class="q__count">質問 ${esc((q.topics || []).length)}項目</span>
+            <span class="q__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="q__content">
+            <p class="q__topics-label">質問項目（全件）</p>
+            <ul>${topics}</ul>
+            ${qaSummaries ? `<div class="qa-summaries" aria-label="${esc(q.member)}議員の質問と答弁の要約">
             <h4>会議録からの要約</h4>
             ${qaSummaries}
           </div>
           <p class="fine-print qa-summary-note">※質問・答弁の要点を本サイトで要約しています。正確な発言は公式の会議録をご確認ください。</p>` : ""}
-          ${pillsHtml(q.links, site)}
-        </article>`;
+            ${pillsHtml(q.links, site)}
+          </div>
+        </details>`;
     }
 
     // 会議1件分の詳細セクション（タイムライン＋関連する議案・請願・質問）
@@ -572,31 +627,42 @@
       // 注目議案（見出し付き／見出しなしのグリッド両対応）
       if (bills.length > 0) {
         const sec = meeting.billsSection || {};
-        if (sec.title) {
-          html += `<h2 class="sub">${esc(sec.title)}</h2>`;
-          if (sec.lead) html += `<p class="section-lead">${esc(sec.lead)}</p>`;
-          html += `<div class="card-grid">${bills.map((b) => billCardHtml(b, site)).join("")}</div>`;
-        } else {
-          html += `<div class="card-grid pushed">${bills.map((b) => billCardHtml(b, site)).join("")}</div>`;
-        }
+        html += recordSectionHtml({
+          id: `bills-${meeting.id}`,
+          title: sec.title || "議案",
+          lead: sec.lead || "公式の提出議案ページに掲載された議案を全件表示します。",
+          countLabel: `${bills.length}件`,
+          content: `<div class="card-grid">${bills.map((b) => billCardHtml(b, site)).join("")}</div>`,
+          open: bills.length <= 6
+        });
       }
 
       // 請願・陳情
       if (petitions.length > 0) {
         const sec = meeting.petitionsSection || {};
-        html += `<h2 class="sub">${esc(sec.title || "請願・陳情")}</h2>`;
-        if (sec.lead) html += `<p class="section-lead">${esc(sec.lead)}</p>`;
-        html += `<div class="rows">${petitions.map((p) => petitionRowHtml(p, site)).join("")}</div>`;
+        html += recordSectionHtml({
+          id: `petitions-${meeting.id}`,
+          title: sec.title || "請願・陳情",
+          lead: sec.lead || "公式の提出議案ページに掲載された請願・陳情を全件表示します。",
+          countLabel: `${petitions.length}件`,
+          content: `<div class="rows">${petitions.map((p) => petitionRowHtml(p, site)).join("")}</div>`,
+          open: petitions.length <= 6
+        });
       }
 
       // 代表質問・一般質問
       if (questions.length > 0) {
         const sec = meeting.questionsSection || {};
-        html += `<h2 class="sub">${esc(sec.title || "一般質問")}</h2>`;
-        if (sec.lead) html += `<p class="section-lead">${esc(sec.lead)}</p>`;
-        if (sec.links && sec.links.length > 0) html += `<p>${pillsHtml(sec.links, site)}</p>`;
         const hasQaSummaries = questions.some((q) => (q.qaSummaries || []).length > 0);
-        html += `<div class="card-grid${hasQaSummaries ? " question-card-grid--summaries" : ""}">${questions.map((q) => questionCardHtml(q, site)).join("")}</div>`;
+        const links = sec.links && sec.links.length > 0 ? `<p>${pillsHtml(sec.links, site)}</p>` : "";
+        html += recordSectionHtml({
+          id: `questions-${meeting.id}`,
+          title: sec.title || "代表質問・一般質問",
+          lead: sec.lead || "公式の発言項目を省略せず掲載し、会議録から質問と答弁を要約しています。",
+          countLabel: `${questions.length}名`,
+          content: `${links}<div class="card-grid${hasQaSummaries ? " question-card-grid--summaries" : ""}">${questions.map((q) => questionCardHtml(q, site)).join("")}</div>`,
+          open: questions.length <= 6
+        });
       }
 
       html += `</div></section></div></details>`;
@@ -667,6 +733,24 @@
       updateAccordionControls();
     }
 
+    // details/summary の開閉状態を読み上げ可能にし、Enter・Space操作を明示的に保証する
+    function setupDetailsAccessibility() {
+      for (const details of document.querySelectorAll("#detail-root details")) {
+        const summary = [...details.children].find((child) => child.tagName === "SUMMARY");
+        if (!summary) continue;
+        summary.setAttribute("role", "button");
+        summary.setAttribute("aria-expanded", String(details.open));
+        details.addEventListener("toggle", () => {
+          summary.setAttribute("aria-expanded", String(details.open));
+        });
+        summary.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          details.open = !details.open;
+        });
+      }
+    }
+
     function decodedHashId() {
       try {
         return decodeURIComponent(location.hash.slice(1));
@@ -675,19 +759,29 @@
       }
     }
 
-    // アンカー先が閉じた会議内にある場合は、先にその会議を開く
+    function hashBelongsToYear(hashId, yearId) {
+      return ["meeting", "question", "bills", "petitions"]
+        .some((prefix) => hashId.startsWith(`${prefix}-${yearId}-`));
+    }
+
+    // アンカー先が閉じた会議・資料種別・質問者の内側にある場合は、祖先をすべて開く
     function openAccordionForHash(shouldScroll) {
       if (!location.hash) return false;
       const target = document.getElementById(decodedHashId());
       if (!target) return false;
-      const accordion = target.matches(".meeting-accordion") ? target : target.closest(".meeting-accordion");
-      if (accordion) accordion.open = true;
+      if (target.matches("details")) target.open = true;
+      let ancestor = target.parentElement && target.parentElement.closest("details");
+      while (ancestor) {
+        ancestor.open = true;
+        ancestor = ancestor.parentElement && ancestor.parentElement.closest("details");
+      }
       updateAccordionControls();
       if (shouldScroll) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
       return true;
     }
 
     function setupAccordions() {
+      setupDetailsAccessibility();
       for (const item of accordions()) item.addEventListener("toggle", updateAccordionControls);
       updateAccordionControls();
       openAccordionForHash(false);
@@ -778,7 +872,7 @@
       // 別の年の会議アンカーへ移動した場合は、年も切り替えてから対象を開く
       async function showHashTarget() {
         const hashId = decodedHashId();
-        const hashYear = site.years.find((y) => hashId.startsWith(`meeting-${y.id}-`) && y.available);
+        const hashYear = site.years.find((y) => hashBelongsToYear(hashId, y.id) && y.available);
         if (hashYear && sel.value !== hashYear.id) await showYear(hashYear.id);
         openAccordionForHash(true);
       }
@@ -788,7 +882,7 @@
 
       // 会議アンカーが指定されていれば、その会議が属する年を最初に表示する
       const hashId = decodedHashId();
-      const hashYear = site.years.find((y) => hashId.startsWith(`meeting-${y.id}-`) && y.available);
+      const hashYear = site.years.find((y) => hashBelongsToYear(hashId, y.id) && y.available);
       await showYear(hashYear ? hashYear.id : site.defaultYear);
       openAccordionForHash(true);
     }
