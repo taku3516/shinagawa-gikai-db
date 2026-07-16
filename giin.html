@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f4e79" />
   <title>議員名簿 | 品川区議会DB</title>
   <style>
     /* ===== index.html と同じ基調カラー ===== */
     :root {
-      --c-main: #5081b5;
-      --c-main-dark: #406791;
-      --c-bg: #e6eef4;
-      --c-card: #ffffff;
-      --c-ink: #1f2937;
-      --c-ink-soft: #4b5563;
-      --c-border: #c3d3e0;
+      --c-main: #1f4e79;
+      --c-main-dark: #173a5e;
+      --c-bg: #f4f1e8;
+      --c-card: #fffdf8;
+      --c-ink: #17212b;
+      --c-ink-soft: #4f5d68;
+      --c-border: #b9c3cc;
       --c-video-bg: #fff1f2;
       --c-video-border: #fecaca;
       --c-video-text: #be123c;
@@ -39,15 +40,15 @@
     .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
 
     .hero {
-      padding: 40px 0 28px;
-      background: linear-gradient(90deg, rgba(80, 129, 181, 0.18), rgba(255, 255, 255, 0.85)), var(--c-bg);
+      padding: 40px 0 28px; border-top: 6px solid var(--c-main); border-bottom: 1px solid #d8d2c4;
+      background: var(--c-card);
     }
     .breadcrumb { margin: 0 0 12px; font-size: 14px; }
     .hero h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 48px); line-height: 1.1; }
     .hero .lead { max-width: 780px; margin: 0; font-size: 16px; line-height: 1.9; }
     .disclaimer {
       margin-top: 18px; max-width: 840px; padding: 14px 16px;
-      border: 1px solid rgba(80, 129, 181, 0.5); border-radius: 8px;
+      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); font-size: 14px; line-height: 1.7;
     }
 
@@ -60,7 +61,7 @@
     }
     .controls label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; }
     #search-box, #party-select {
-      border: 1px solid var(--c-border); border-radius: 8px;
+      border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 10px 12px;
       color: var(--c-ink); font-size: 15px;
     }
@@ -74,7 +75,7 @@
       gap: 16px; margin-top: 20px;
     }
     .member-card {
-      border: 1px solid var(--c-border); border-radius: 8px;
+      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 20px;
       display: flex; flex-direction: column; gap: 8px;
     }
@@ -82,12 +83,12 @@
     .member-card .kana { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
 
     .tag {
-      display: inline-flex; margin: 0 6px 4px 0; border-radius: 999px;
-      background: rgba(80, 129, 181, 0.15); padding: 4px 10px;
+      display: inline-flex; margin: 0 6px 4px 0; border-radius: 3px;
+      background: #e7eef4; padding: 4px 10px;
       color: var(--c-main-dark); font-size: 12px; font-weight: 800;
     }
     .chip {
-      display: inline-flex; margin: 0 6px 4px 0; border-radius: 999px;
+      display: inline-flex; margin: 0 6px 4px 0; border-radius: 3px;
       background: #f3f4f6; padding: 4px 10px; color: #374151;
       font-size: 12px; font-weight: 800;
     }
@@ -97,7 +98,7 @@
 
     .pill {
       display: inline-flex; align-items: center; margin: 4px 6px 0 0;
-      border: 1px solid rgba(80, 129, 181, 0.35); border-radius: 999px;
+      border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 6px 12px;
       color: var(--c-main-dark); font-size: 13px; font-weight: 800;
     }
@@ -106,7 +107,7 @@
     .extra-slot { font-size: 13px; line-height: 1.9; }
     .extra-slot .slot-name { color: var(--c-ink); font-weight: 800; }
     .pending {
-      display: inline-flex; border-radius: 999px; background: #f3f4f6;
+      display: inline-flex; border-radius: 3px; background: #f3f4f6;
       padding: 2px 10px; color: #6b7280; font-size: 12px; font-weight: 700;
     }
 
@@ -122,7 +123,7 @@
       text-align: left; vertical-align: top; line-height: 1.7;
     }
     .detail-table th {
-      width: 34%; background: rgba(80, 129, 181, 0.08);
+      width: 34%; background: #e7eef4;
       color: var(--c-ink); font-weight: 800; white-space: nowrap;
     }
     .detail-table td { color: var(--c-ink-soft); }
@@ -131,7 +132,7 @@
 
     footer {
       border-top: 1px solid var(--c-border);
-      background: linear-gradient(90deg, var(--c-main), var(--c-bg));
+      background: var(--c-main-dark);
       padding: 32px 0; text-align: center; font-size: 13px; line-height: 1.8; color: #fff;
     }
 
