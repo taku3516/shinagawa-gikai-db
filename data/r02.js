@@ -361,6 +361,46 @@ window.SHINAGAWA_DB.years["r02"] = {
         "title": "第4回定例会の一般質問",
         "lead": "公式の質問者・発言事項ページの全質問者です。質問と答弁の全文は会議録検索システムで読めます。"
       }
+    },
+    {
+      "id": "r02-3r",
+      "monthLabel": "12月",
+      "name": "令和2年第3回臨時会",
+      "type": "臨時会",
+      "summary": "羽田新飛行経路の運用の賛否を問う区民投票条例を審議しました。",
+      "links": [
+        {
+          "type": "official",
+          "label": "本会議資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r02_03r"
+        }
+      ],
+      "events": [
+        {
+          "date": "12月23日〜25日",
+          "title": "第3回臨時会",
+          "description": "羽田新飛行経路の運用の賛否を問う品川区民投票条例を審議。",
+          "links": [
+            {
+              "type": "official",
+              "label": "提出議案を見る",
+              "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r02_03r/r02_03r"
+            }
+          ]
+        }
+      ],
+      "stats": [
+        {
+          "value": "1件",
+          "label": "区長提出議案（第99号）"
+        }
+      ],
+      "detailTitle": "令和2年第3回臨時会の詳細",
+      "detailLead": "公式の提出議案ページから整理しています。",
+      "billsSection": {
+        "title": "提出議案（全件）",
+        "lead": "公式ページに掲載された区長提出議案1件を掲載します。"
+      }
     }
   ],
   "bills": [
