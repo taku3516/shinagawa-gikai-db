@@ -11,3 +11,4 @@ build/
 *.swo
 *~
 scripts/out/
+scripts/cache/
