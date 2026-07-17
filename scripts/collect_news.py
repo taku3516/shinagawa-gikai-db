@@ -9,6 +9,7 @@ import html
 import json
 import re
 import sys
+import time
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
@@ -86,13 +87,26 @@ def iso_date(value: str | None) -> str:
     return ""
 
 
-def fetch(url: str, timeout: int = 12) -> tuple[bytes, str]:
+def fetch(url: str, timeout: int = 12, attempts: int = 3) -> tuple[bytes, str]:
     request = Request(
         url,
         headers={"User-Agent": USER_AGENT, "Accept": "application/rss+xml, application/xml, text/html;q=0.9, */*;q=0.7"},
     )
-    with urlopen(request, timeout=timeout) as response:
-        return response.read(), response.headers.get_content_charset() or "utf-8"
+    last_error: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            with urlopen(request, timeout=timeout) as response:
+                return response.read(), response.headers.get_content_charset() or "utf-8"
+        except HTTPError as error:
+            last_error = error
+            if error.code < 500 and error.code != 429:
+                raise
+        except (URLError, TimeoutError, OSError) as error:
+            last_error = error
+        if attempt + 1 < attempts:
+            time.sleep(1.5 * (attempt + 1))
+    assert last_error is not None
+    raise last_error
 
 
 def decode(payload: bytes, charset: str) -> str:
@@ -275,7 +289,7 @@ def article_details(url: str) -> dict[str, str]:
 
 
 def html_index_items(source: dict, known_ids: set[str]) -> list[dict[str, str]]:
-    payload, charset = fetch(source["url"])
+    payload, charset = fetch(source["url"], timeout=25)
     parser = IndexParser(
         source["url"],
         source.get("requiredAncestorClass", ""),
