@@ -4,7 +4,7 @@
  * OAuth クライアントシークレット、サービスアカウント鍵、秘密鍵は絶対に置かないでください。
  */
 window.SHINAGAWA_FIREBASE_SYNC = Object.freeze({
-  enabled: true,
+  enabled: false,
   sdkVersion: "12.16.0",
   firebaseConfig: Object.freeze({
     apiKey: "AIzaSyDKunFu9m1bkjD0JMIBxPa7iEbLS2ku-xo",
