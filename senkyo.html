@@ -33,7 +33,7 @@
     }
     main section { padding: 32px 0 48px; }
     .reference-panel {
-      margin-bottom: 24px; padding: 20px;
+      margin-top: 32px; padding: 20px;
       border: 1px solid var(--c-border); border-top: 4px solid var(--c-main);
       border-radius: 3px; background: var(--c-card);
     }
@@ -141,11 +141,6 @@
 
     <section>
       <div class="container">
-        <aside class="reference-panel" aria-labelledby="reference-title">
-          <h2 id="reference-title">参考にするサイト</h2>
-          <p>今後、個別の選挙情報を確認・追加するときに参照するサイトです。現時点では参照先のみを登録しています。</p>
-          <div id="reference-sites"></div>
-        </aside>
         <div class="controls" aria-label="選挙の絞り込み">
           <label for="type-filter">選挙の種類</label>
           <select id="type-filter"><option value="">すべての選挙</option></select>
@@ -155,6 +150,11 @@
         </div>
         <div id="election-root" class="election-list"></div>
         <p class="fine-print" id="as-of-note"></p>
+        <aside class="reference-panel" aria-labelledby="reference-title">
+          <h2 id="reference-title">参考にするサイト</h2>
+          <p>今後、個別の選挙情報を確認・追加するときに参照するサイトです。現時点では参照先のみを登録しています。</p>
+          <div id="reference-sites"></div>
+        </aside>
       </div>
     </section>
   </main>
