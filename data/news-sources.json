@@ -81,6 +81,38 @@
       "enabled": true
     },
     {
+      "id": "ntv-news",
+      "name": "日テレNEWS NNN",
+      "url": "https://news.ntv.co.jp/rss/index.rdf",
+      "scope": "national",
+      "minScore": 8,
+      "enabled": true
+    },
+    {
+      "id": "asahi-news",
+      "name": "朝日新聞",
+      "url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf",
+      "scope": "national",
+      "minScore": 8,
+      "enabled": true
+    },
+    {
+      "id": "fnn-news",
+      "name": "FNNプライムオンライン",
+      "url": "https://www.fnn.jp/list/feed/rss?station=FNN",
+      "scope": "national",
+      "minScore": 8,
+      "enabled": true
+    },
+    {
+      "id": "jiji-ranking",
+      "name": "時事ドットコム アクセスランキング",
+      "url": "https://www.jiji.com/rss/ranking.rdf",
+      "scope": "national",
+      "minScore": 8,
+      "enabled": true
+    },
+    {
       "id": "pr-times",
       "name": "PR TIMES",
       "url": "https://prtimes.jp/index.rdf",
