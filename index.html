@@ -228,6 +228,29 @@
     .qa-summary dd { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
     .qa-summary-note { margin-top: 14px !important; }
 
+    /* ===== 委員会の質疑・答弁（試験掲載） ===== */
+    .committee-session {
+      border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 20px;
+    }
+    .committee-session__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .committee-session__head .tag { margin: 0; }
+    .committee-session h3 { width: 100%; margin: 4px 0 0; font-size: 20px; }
+    .committee-session__meta { margin: 0 0 12px; color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
+    .committee-session__overview { margin: 0 0 20px; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .committee-topics { display: grid; gap: 18px; }
+    .committee-topic { border-top: 1px solid var(--c-rule); padding-top: 18px; }
+    .committee-topic h4 { margin: 0 0 4px; color: var(--c-main-dark); font-size: 17px; }
+    .committee-topic__agenda { margin: 0 0 12px; color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .committee-exchanges { display: grid; gap: 12px; }
+    .committee-exchange { border-left: 4px solid var(--c-main); border-radius: 2px; background: #f3f6f8; padding: 14px 16px; }
+    .committee-exchange__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .committee-exchange__head h5 { margin: 0; font-size: 15px; }
+    .committee-exchange__kind { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 2px 7px; color: var(--c-main-dark); font-size: 11px; font-weight: 800; }
+    .committee-exchange dl { display: grid; grid-template-columns: 8em 1fr; gap: 8px 12px; margin: 0; }
+    .committee-exchange dt { color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
+    .committee-exchange dd { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .committee-session__links { margin-top: 18px; }
+
     /* ===== 一覧行（請願・会議録） ===== */
     .rows { display: grid; gap: 10px; }
     .rows .row {
@@ -268,7 +291,8 @@
     .load-error code { background: #fff; padding: 2px 6px; border-radius: 4px; }
 
     /* アンカーリンクで飛んだとき固定操作バーの下に見出しが収まるよう余白を取る */
-    section[id], h2[id], h3[id], .card.q[id], .record-section[id] { scroll-margin-top: 76px; }
+    section[id], h2[id], h3[id], .card.q[id], .record-section[id],
+    .committee-session[id], .committee-topic[id], .committee-exchange[id] { scroll-margin-top: 76px; }
 
     /* ===== 件数の多い資料種別をまとめる内側の折りたたみ ===== */
     .record-section { margin-top: 30px; border: 1px solid var(--c-border); border-top: 3px solid var(--c-main); border-radius: 3px; background: #faf9f4; }
@@ -302,6 +326,10 @@
       .qa-summary { padding: 13px 14px; }
       .qa-summary dl { grid-template-columns: 1fr; gap: 4px; }
       .qa-summary dd + dt { margin-top: 6px; }
+      .committee-session { padding: 16px; }
+      .committee-exchange { padding: 13px 14px; }
+      .committee-exchange dl { grid-template-columns: 1fr; gap: 4px; }
+      .committee-exchange dd + dt { margin-top: 6px; }
 
       .accordion-controls__inner { flex-wrap: nowrap; gap: 6px; }
       .accordion-controls__label { display: none; }
@@ -376,6 +404,7 @@
   <script src="data/site.js"></script>
   <script src="data/r08.js"></script>
   <script src="data/r08-complete.js"></script>
+  <script src="data/r08-committee-test.js"></script>
 
   <script>
     "use strict";
@@ -486,7 +515,8 @@
       return {
         bills: (year.bills || []).filter((b) => b.meetingId === meeting.id),
         petitions: (year.petitions || []).filter((p) => p.meetingId === meeting.id),
-        questions: (year.questions || []).filter((q) => q.meetingId === meeting.id)
+        questions: (year.questions || []).filter((q) => q.meetingId === meeting.id),
+        committeeSessions: (year.committeeSessions || []).filter((session) => session.meetingId === meeting.id)
       };
     }
 
@@ -494,7 +524,8 @@
     function hasMeetingDetails(meeting, year) {
       const related = relatedItems(meeting, year);
       return (meeting.events && meeting.events.length > 0) ||
-        related.bills.length > 0 || related.petitions.length > 0 || related.questions.length > 0;
+        related.bills.length > 0 || related.petitions.length > 0 || related.questions.length > 0 ||
+        related.committeeSessions.length > 0;
     }
 
     // 折りたたみ見出しに表示する件数
@@ -504,6 +535,9 @@
       if (related.bills.length > 0) counts.push(`議案 ${related.bills.length}件`);
       if (related.petitions.length > 0) counts.push(`請願・陳情 ${related.petitions.length}件`);
       if (related.questions.length > 0) counts.push(`質問者 ${related.questions.length}名`);
+      const committeeExchangeCount = related.committeeSessions.reduce((total, session) =>
+        total + (session.topics || []).reduce((topicTotal, topic) => topicTotal + (topic.exchanges || []).length, 0), 0);
+      if (committeeExchangeCount > 0) counts.push(`委員会質疑 ${committeeExchangeCount}件`);
       if (counts.length === 0) return "";
       return `<span class="meeting-accordion__counts">${counts.map((count) =>
         `<span class="meeting-accordion__count">${esc(count)}</span>`).join("")}</span>`;
@@ -611,10 +645,49 @@
         </details>`;
     }
 
+    // 委員会の質問・答弁。明確な答弁がない意見・要望も、回答を補わず会議録どおりに示す
+    function committeeSessionsHtml(sessions, site) {
+      return sessions.map((session) => {
+        const topics = (session.topics || []).map((topic) => {
+          const exchanges = (topic.exchanges || []).map((item) => `
+            <article class="committee-exchange" id="committee-${esc(session.id)}-${esc(item.id)}">
+              <div class="committee-exchange__head">
+                <h5>${esc(item.speaker)}</h5>
+                <span class="committee-exchange__kind">${esc(item.kind || "質問")}</span>
+              </div>
+              <dl>
+                <dt>質問・意見の要点</dt>
+                <dd>${esc(item.question)}</dd>
+                <dt>答弁・対応の要点</dt>
+                <dd>${esc(item.answer)}</dd>
+                ${item.respondent ? `<dt>答弁・対応者</dt><dd>${esc(item.respondent)}</dd>` : ""}
+              </dl>
+            </article>`).join("");
+          return `<section class="committee-topic" id="committee-${esc(session.id)}-${esc(topic.id)}">
+            <h4>${esc(topic.title)}</h4>
+            ${topic.agenda ? `<p class="committee-topic__agenda">議題：${esc(topic.agenda)}</p>` : ""}
+            <div class="committee-exchanges">${exchanges}</div>
+          </section>`;
+        }).join("");
+
+        return `<article class="committee-session" id="committee-${esc(session.id)}">
+          <div class="committee-session__head">
+            <span class="tag">${esc(session.status || "委員会質疑")}</span>
+            <h3>${esc(session.date)} ${esc(session.committee)}</h3>
+          </div>
+          ${session.time ? `<p class="committee-session__meta">開催時間：${esc(session.time)}</p>` : ""}
+          <p class="committee-session__overview">${esc(session.overview)}</p>
+          <div class="committee-topics">${topics}</div>
+          <p class="fine-print qa-summary-note">※質問・答弁の要点を本サイトで要約しています。明確な回答が記録されていない発言には、その旨を記載しています。正確な発言は公式の会議録をご確認ください。</p>
+          <div class="committee-session__links">${pillsHtml(session.links, site)}</div>
+        </article>`;
+      }).join("");
+    }
+
     // 会議1件分の詳細セクション（タイムライン＋関連する議案・請願・質問）
     function meetingSectionHtml(meeting, year, site) {
       const related = relatedItems(meeting, year);
-      const { bills, petitions, questions } = related;
+      const { bills, petitions, questions, committeeSessions } = related;
 
       let html = `<details class="meeting-accordion" id="meeting-${esc(meeting.id)}" data-meeting-id="${esc(meeting.id)}">
         <summary>
@@ -633,6 +706,20 @@
         <p class="section-lead">${esc(meeting.detailLead || meeting.summary)}</p>
         ${statsHtml(meeting.stats)}
         ${timelineHtml(meeting.events, site)}`;
+
+      // 委員会の質疑・答弁（現在は令和8年6月12日の試験掲載）
+      if (committeeSessions.length > 0) {
+        const exchangeCount = committeeSessions.reduce((total, session) =>
+          total + (session.topics || []).reduce((topicTotal, topic) => topicTotal + (topic.exchanges || []).length, 0), 0);
+        html += recordSectionHtml({
+          id: `committee-qa-${meeting.id}`,
+          title: "委員会での質疑・答弁（試験掲載）",
+          lead: "委員会録から、質問・確認・要望と、それに対する答弁・対応を議題別に整理しています。",
+          countLabel: `${committeeSessions.length}会議・${exchangeCount}件`,
+          content: committeeSessionsHtml(committeeSessions, site),
+          open: true
+        });
+      }
 
       // 注目議案（見出し付き／見出しなしのグリッド両対応）
       if (bills.length > 0) {
@@ -770,7 +857,7 @@
     }
 
     function hashBelongsToYear(hashId, yearId) {
-      return ["meeting", "question", "bills", "petitions"]
+      return ["meeting", "question", "committee", "bills", "petitions"]
         .some((prefix) => hashId.startsWith(`${prefix}-${yearId}-`));
     }
 
