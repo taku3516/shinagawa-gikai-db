@@ -2,8 +2,8 @@ name: 品川区ニュースを収集
 
 on:
   schedule:
-    # 日本時間 0時15分、6時15分、12時15分、18時15分
-    - cron: "15 3,9,15,21 * * *"
+    # 日本時間の毎時00分（GitHub側の混雑時は開始が遅れる場合がある）
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -29,7 +29,7 @@ jobs:
       - name: ニュースを収集
         run: python scripts/collect_news.py
 
-      - name: 更新があれば保存
+      - name: 記事の更新があれば保存
         run: |
           if git diff --quiet -- data/news-items.js; then
             echo "新しい記事はありません"
