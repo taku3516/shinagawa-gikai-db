@@ -1,5 +1,5 @@
 // 品川区議会DB データファイル（品川区の選挙アーカイブ）
-// 具体的な選挙名・得票数・参考リンクは、情報源の共有・確認後に追加する。
+// 具体的な選挙名・得票数は、情報源の確認後に追加する。
 // elections の想定項目:
 // id, type, subtype, title, electionDate, noticeDate, district, seats,
 // candidateCount, electorate, voters, turnout, previousTurnout, summary,
@@ -14,6 +14,18 @@ window.SHINAGAWA_DB.electionsData = {
     { "id": "ward-mayor", "label": "品川区長選挙" },
     { "id": "tokyo-assembly", "label": "東京都議会議員選挙" },
     { "id": "house", "label": "衆議院議員選挙" }
+  ],
+  "referenceSites": [
+    {
+      "label": "品川区公式サイト「過去の選挙結果」",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html",
+      "role": "一次情報"
+    },
+    {
+      "label": "選挙ドットコム「東京都品川区の選挙一覧」",
+      "url": "https://go2senkyo.com/local/jichitai/1193",
+      "role": "一覧・確認補助"
+    }
   ],
   "elections": []
 };
