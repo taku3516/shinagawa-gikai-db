@@ -1,0 +1,198 @@
+{
+  "baseTerms": ["品川区", "品川区役所"],
+  "areas": [
+    "東五反田", "上大崎", "北品川", "東品川", "南品川", "西品川", "広町", "大崎", "西五反田",
+    "豊町", "二葉", "中延", "東中延", "西中延", "旗の台", "荏原", "小山", "小山台", "平塚",
+    "大井", "東大井", "南大井", "西大井", "勝島", "八潮", "東八潮", "戸越", "東中延", "西中延"
+  ],
+  "stations": [
+    "目黒駅", "五反田駅", "大崎駅", "西大井駅", "不動前駅", "武蔵小山駅", "西小山駅", "大崎広小路駅",
+    "戸越銀座駅", "荏原中延駅", "旗の台駅", "大井町駅", "下神明駅", "戸越公園駅", "中延駅", "荏原町駅",
+    "北品川駅", "新馬場駅", "青物横丁駅", "鮫洲駅", "立会川駅", "大森海岸駅", "戸越駅",
+    "天王洲アイル駅", "品川シーサイド駅", "大井競馬場前駅"
+  ],
+  "landmarks": [
+    "天王洲アイル", "大井競馬場", "しながわ水族館", "戸越銀座商店街", "武蔵小山商店街",
+    "パルム商店街", "品川区役所", "品川区議会", "大井ふ頭中央海浜公園", "しながわ中央公園",
+    "戸越公園", "林試の森公園", "品川歴史館", "きゅりあん", "スクエア荏原", "エコルとごし",
+    "品川シーサイド", "天王洲", "大崎ニューシティ", "ゲートシティ大崎"
+  ],
+  "relatedTerms": [
+    "再開発", "事故", "火災", "事件", "選挙", "区議会", "都議会", "予算", "保育園", "学校",
+    "高齢者", "災害", "マンション", "工事", "開店", "閉店", "行政", "補助金", "条例", "陳情",
+    "請願", "公共施設", "子ども", "防災", "防犯", "避難所", "給付", "物価高", "インフラ", "道路",
+    "公園", "医療", "介護", "福祉", "不登校", "待機児童", "観光", "地域イベント", "運休", "通行止め",
+    "募集", "講座", "祭り", "まちづくり", "都市計画", "浸水", "停電", "断水"
+  ],
+  "tagRules": {
+    "事件事故": ["事故", "火災", "事件", "逮捕", "死亡", "負傷", "災害", "避難", "救急"],
+    "行政": ["品川区役所", "行政", "条例", "発表", "手続き", "補助金", "区長", "区政"],
+    "子育て教育": ["保育園", "幼稚園", "学校", "児童", "教育", "待機児童", "子ども", "子育て"],
+    "福祉": ["高齢者", "障害", "介護", "福祉", "医療", "支援", "生活困窮"],
+    "都市開発": ["再開発", "マンション", "工事", "建設", "都市計画", "インフラ", "まちづくり"],
+    "交通": ["駅", "路線", "バス", "道路", "渋滞", "運休", "通行止め", "鉄道"],
+    "選挙政治": ["選挙", "区議会", "都議会", "議員", "予算", "請願", "陳情", "議案"],
+    "地域イベント": ["祭り", "イベント", "商店街", "開催", "催し", "講座", "展示"],
+    "経済": ["企業", "雇用", "景気", "物価", "助成", "事業者", "商業"],
+    "店舗開店閉店": ["開店", "閉店", "オープン", "新店舗", "撤退", "リニューアル"]
+  },
+  "rssFeeds": [
+    {
+      "id": "shinagawa-council",
+      "name": "品川区議会",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/feed?cat=1%2C2",
+      "scope": "local",
+      "minScore": 0,
+      "trustedLocal": true,
+      "enabled": true
+    },
+    {
+      "id": "shinagawa-keizai",
+      "name": "品川経済新聞",
+      "url": "https://shinagawa.keizai.biz/rss.xml",
+      "scope": "regional",
+      "minScore": 4,
+      "enabled": true
+    },
+    {
+      "id": "keishicho",
+      "name": "警視庁",
+      "url": "https://www.keishicho.metro.tokyo.lg.jp/rss_news.xml",
+      "scope": "tokyo",
+      "minScore": 8,
+      "extraTerms": ["品川警察署", "大井警察署", "大崎警察署", "荏原警察署"],
+      "enabled": true
+    },
+    {
+      "id": "tokyo-fire",
+      "name": "東京消防庁",
+      "url": "https://www.tfd.metro.tokyo.lg.jp/inf/rss/tfd.xml",
+      "scope": "tokyo",
+      "minScore": 8,
+      "extraTerms": ["品川消防署", "大井消防署", "荏原消防署"],
+      "enabled": true
+    },
+    {
+      "id": "nhk",
+      "name": "NHK NEWS",
+      "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
+      "scope": "national",
+      "minScore": 10,
+      "enabled": true
+    },
+    {
+      "id": "pr-times",
+      "name": "PR TIMES",
+      "url": "https://prtimes.jp/index.rdf",
+      "scope": "national",
+      "minScore": 10,
+      "enabled": true
+    },
+    {
+      "id": "tokyu-news",
+      "name": "東急ニュースリリース",
+      "url": "https://www.tokyu.co.jp/rss_news.xml",
+      "scope": "regional",
+      "minScore": 8,
+      "enabled": true
+    },
+    {
+      "id": "tokyu-information",
+      "name": "東急からのお知らせ",
+      "url": "https://www.tokyu.co.jp/rss_infomation.xml",
+      "scope": "regional",
+      "minScore": 8,
+      "enabled": true
+    },
+    {
+      "id": "gesui-press",
+      "name": "東京都下水道局 報道発表",
+      "url": "https://www.gesui.metro.tokyo.lg.jp/index.html/-/asset_publisher/iiqu/rss",
+      "scope": "tokyo",
+      "minScore": 8,
+      "enabled": true
+    },
+    {
+      "id": "gesui-topics",
+      "name": "東京都下水道局 トピックス",
+      "url": "https://www.gesui.metro.tokyo.lg.jp/index.html/-/asset_publisher/amez/rss",
+      "scope": "tokyo",
+      "minScore": 8,
+      "enabled": true
+    },
+    {
+      "id": "gesui-events",
+      "name": "東京都下水道局 イベント",
+      "url": "https://www.gesui.metro.tokyo.lg.jp/index.html/-/asset_publisher/uuse/rss",
+      "scope": "tokyo",
+      "minScore": 8,
+      "enabled": true
+    },
+    {
+      "id": "tokyo-metropolitan",
+      "name": "東京都公式サイト",
+      "url": "https://www.metro.tokyo.lg.jp/index.html/-/asset_publisher/knkg/rss",
+      "scope": "tokyo",
+      "minScore": 8,
+      "requiresApproval": true,
+      "enabled": false,
+      "note": "再配信を伴う利用は東京都への事前申請が必要なため、承認取得後に有効化する"
+    }
+  ],
+  "htmlSources": [
+    {
+      "id": "shinagawa-city-new",
+      "name": "品川区 新着情報",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/re_direct/hpg000016838.html",
+      "scope": "local",
+      "trustedLocal": true,
+      "minScore": 0,
+      "sameHostOnly": true,
+      "requiredAncestorClass": "news-list-txt",
+      "dateAncestorClass": "news-list-date",
+      "maxItems": 40,
+      "detailMaxItems": 12,
+      "enabled": true
+    },
+    {
+      "id": "shinagawa-city-community",
+      "name": "品川区 地域センター新着情報",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/hpg000016394.html",
+      "scope": "local",
+      "trustedLocal": true,
+      "minScore": 0,
+      "sameHostOnly": true,
+      "requiredAncestorClass": "news-list-txt",
+      "dateAncestorClass": "news-list-date",
+      "maxItems": 30,
+      "detailMaxItems": 10,
+      "enabled": true
+    },
+    {
+      "id": "shinagawa-shakyo",
+      "name": "品川区社会福祉協議会",
+      "url": "https://shinashakyo.jp/news",
+      "scope": "local",
+      "trustedLocal": true,
+      "minScore": 0,
+      "sameHostOnly": true,
+      "includeUrlRegex": "/news/[0-9]{4}/[0-9]{2}/post-[0-9]+\\.html$",
+      "maxItems": 30,
+      "detailMaxItems": 10,
+      "enabled": true
+    },
+    {
+      "id": "shinagawa-tourism",
+      "name": "しながわ観光協会",
+      "url": "https://shinagawa-kanko.or.jp/event/",
+      "scope": "local",
+      "trustedLocal": true,
+      "minScore": 0,
+      "sameHostOnly": true,
+      "includeUrlRegex": "/event/[^/?#]+$",
+      "maxItems": 30,
+      "detailMaxItems": 10,
+      "enabled": true
+    }
+  ]
+}
