@@ -44,7 +44,7 @@
 - `data/news-sources.json` — 地域語・タグ規則・RSS・RSSのない公式サイトの設定
 - `data/news-items.js` — 収集済みニュース（自動生成）
 - `scripts/collect_news.py` — RSSと公開Webページの収集、重複排除、関連度判定、タグ付け
-- `.github/workflows/collect-news.yml` — GitHub Actionsで1日4回、自動収集結果を保存
+- `.github/workflows/collect-news.yml` — GitHub Actionsで毎時00分に確認し、記事に変更がある場合だけ収集結果を保存
 
 ローカルで収集を試す場合は、追加ライブラリなしで次を実行できます。
 

@@ -370,16 +370,20 @@ class Classifier:
 
 
 def read_existing(path: Path) -> list[dict]:
+    return read_existing_payload(path).get("items", [])
+
+
+def read_existing_payload(path: Path) -> dict:
     if not path.exists():
-        return []
+        return {}
     text = path.read_text(encoding="utf-8")
     match = re.search(r"window\.SHINAGAWA_NEWS\s*=\s*(\{.*\});?\s*$", text, re.S)
     if not match:
-        return []
+        return {}
     try:
-        return json.loads(match.group(1)).get("items", [])
+        return json.loads(match.group(1))
     except json.JSONDecodeError:
-        return []
+        return {}
 
 
 def build_item(raw: dict[str, str], source: dict, classifier: Classifier, collected_at: str) -> dict | None:
@@ -446,6 +450,9 @@ def collect(config: dict, existing: list[dict]) -> tuple[list[dict], list[dict]]
                         item["collectedAt"] = previous.get("collectedAt", item["collectedAt"])
                         if not item["summary"]:
                             item["summary"] = previous.get("summary", "")
+                            item["tags"] = previous.get("tags", item["tags"])
+                            item["locations"] = previous.get("locations", item["locations"])
+                            item["relevanceScore"] = previous.get("relevanceScore", item["relevanceScore"])
                         if not raw.get("publishedAt"):
                             item["publishedAt"] = previous.get("publishedAt", item["publishedAt"])
                             item["dateKind"] = previous.get("dateKind", item["dateKind"])
@@ -475,7 +482,7 @@ def collect(config: dict, existing: list[dict]) -> tuple[list[dict], list[dict]]
     return items, reports
 
 
-def write_output(path: Path, config: dict, items: list[dict], reports: list[dict]) -> None:
+def write_output(path: Path, config: dict, items: list[dict], reports: list[dict]) -> bool:
     public_sources = []
     for key, source_type in (("rssFeeds", "rss"), ("htmlSources", "html")):
         for source in config.get(key, []):
@@ -490,6 +497,10 @@ def write_output(path: Path, config: dict, items: list[dict], reports: list[dict
                     "note": source.get("note", ""),
                 }
             )
+    existing = read_existing_payload(path)
+    if existing.get("items") == items and existing.get("sources") == public_sources:
+        return False
+
     payload = {
         "generatedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "items": items,
@@ -499,6 +510,7 @@ def write_output(path: Path, config: dict, items: list[dict], reports: list[dict
     path.parent.mkdir(parents=True, exist_ok=True)
     body = json.dumps(payload, ensure_ascii=False, indent=2)
     path.write_text("// 自動生成ファイル。scripts/collect_news.py で更新する。\nwindow.SHINAGAWA_NEWS = " + body + ";\n", encoding="utf-8")
+    return True
 
 
 def main() -> int:
@@ -511,10 +523,11 @@ def main() -> int:
     config = json.loads(args.config.read_text(encoding="utf-8"))
     existing = [] if args.fresh else read_existing(args.output)
     items, reports = collect(config, existing)
-    write_output(args.output, config, items, reports)
+    changed = write_output(args.output, config, items, reports)
     ok_count = sum(report["status"] == "ok" for report in reports)
     error_count = sum(report["status"] == "error" for report in reports)
-    print(f"sources: {ok_count} ok / {error_count} errors, archive: {len(items)} items")
+    update_status = "updated" if changed else "no article changes"
+    print(f"sources: {ok_count} ok / {error_count} errors, archive: {len(items)} items, {update_status}")
     return 1 if ok_count == 0 and error_count else 0
 
 
