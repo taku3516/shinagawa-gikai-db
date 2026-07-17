@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-17T06:01:34.898908Z",
+  "generatedAt": "2026-07-17T06:04:55.152875Z",
   "items": [
     {
       "id": "fb51362c1ec19c7c13fc",
@@ -2652,9 +2652,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "品川区 新着情報",
-      "status": "ok",
-      "scanned": 40,
-      "accepted": 40
+      "status": "error",
+      "accepted": 0,
+      "message": "The read operation timed out"
     },
     {
       "source": "品川区 地域センター新着情報",
