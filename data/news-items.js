@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-17T06:09:01.880724Z",
+  "generatedAt": "2026-07-17T07:20:15.340311Z",
   "items": [
+    {
+      "id": "a93cf1f23460bf74704f",
+      "title": "ニュース「さわやかさん」更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/07/post-61661.html",
+      "publishedAt": "2026-07-17T07:19:54.181675Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-07-17T07:19:54.181675Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "64c104c0a343265f4e23",
+      "title": "ファミサポ通信更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/07/post-61669.html",
+      "publishedAt": "2026-07-17T07:19:54.181675Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-07-17T07:19:54.181675Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "fb51362c1ec19c7c13fc",
       "title": "【品川介護福祉専門学校】6月20日オープンキャンパス「福祉用具（ボタンエイド）づくり」を行いました！！",
@@ -369,7 +403,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "666a0ed2174fe48f02b4",
       "title": "ニュース「さわやかさん」更新しました！",
-      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -525,7 +559,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "0b5a75d7b59e625b306b",
       "title": "ファミサポ通信更新しました！",
-      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -2613,7 +2647,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
