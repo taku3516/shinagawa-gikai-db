@@ -32,6 +32,11 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "type": "official",
+      "label": "品川区の選挙を見る",
+      "url": "senkyo.html"
+    },
+    {
+      "type": "official",
       "label": "横断検索",
       "url": "kensaku.html"
     }
