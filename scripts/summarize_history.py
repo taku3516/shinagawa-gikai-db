@@ -34,6 +34,42 @@ BOILERPLATE = (
 # 自動照合では同じ答弁ブロック内の別見出しを選びやすかった項目を、
 # 公式会議録で個別確認した上で固定する。
 ANSWER_OVERRIDES = {
+    ("r01-2t", "吉田ゆみこ", "羽田新飛行ルート計画に対する「品川区としての地元の意見」 のまとめ方について"):
+        "区議会の決議や区民から寄せられた声を踏まえ、落下物・騒音対策、丁寧な説明、飛行ルートを固定化しない検討を国に求めます。連絡会での発言内容は、必要に応じて適切な方法で公開する方針です。",
+    ("r02-1t", "大 沢 真 一", "若者の政治参加について"):
+        "若年層の低投票率を課題と捉え、区内大学との連携や小中学生の模擬選挙を進めています。若者会議の展開を研究し、市民科・社会科での主権者教育や電子的手法を含む啓発の充実を図ります。",
+    ("r02-1t", "若 林 ひろき", "ＳＤＧｓ・貧困の連鎖解消等について"):
+        "子どもの相対的貧困率は国の調査で13.9％とされ、区は学習・経済・就労・食の支援を実施しています。フードパントリー支援なども加え、貧困の連鎖を断つ取組を充実させます。",
+    ("r02-1t", "若 林 ひろき", "ＳＤＧｓ・がん対策について"):
+        "品川区がん対策推進計画に基づき、正しい知識の普及、肺がん検診未受診者への受診勧奨、夜間相談窓口などを進め、がん対策を総合的・計画的に推進します。",
+    ("r02-1t", "若 林 ひろき", "ＳＤＧｓ・障がい児者支援について"):
+        "相談支援と地域生活支援を充実させ、グループホーム整備への公有地取得や助成拡充を予定しています。事業者間の連携を深め、心身障害者福祉会館の老朽化も総合的に検討します。",
+    ("r02-1t", "若 林 ひろき", "ＳＤＧｓ・安全なトイレについて"):
+        "学校トイレは洋式化90％の早期達成を目指し、公衆・公園トイレも全便器の洋式化を進めます。洗浄便座の検証や、非常用ボタン・手すり・外開き扉など安全面の改善も継続します。",
+    ("r02-1t", "若 林 ひろき", "ＳＤＧｓ・中小企業等支援について"):
+        "小規模事業者向け融資や事業承継支援に加え、自動化・ロボット化による生産性向上を支援しています。高齢者や障害者の就労支援、最低制限価格の課題にも取り組みます。",
+    ("r02-1t", "若 林 ひろき", "ＳＤＧｓ・公共交通インフラについて"):
+        "地域特性や高齢者を含む利用者の利便性を踏まえてコミュニティバスのルート等を検討し、民間のノウハウで持続性を確保します。舟運やＭａａＳの活用も関係会議で検討します。",
+    ("r02-1t", "芹 澤 裕次郎", "バリアフリーについて"):
+        "手話を聴覚障害者の重要なコミュニケーション手段と捉え、手話言語条例は他自治体の状況も参考に検討します。障害の有無にかかわらず楽しめるボッチャなどの普及にも取り組みます。",
+    ("r02-1t", "藤 原 正 則", "待機児童対策について"):
+        "認可保育園の申請増に対し、認証保育所や年間保育を活用して待機児童は実質的に解消できる見込みとしました。今後も保育需要の増加を踏まえた整備計画を進めます。",
+    ("r02-2t", "鈴 木 博", "品川区の教育について"):
+        "区立学校版の感染症予防ガイドラインに基づき、発達段階に応じた感染予防教育と差別防止、検温・手洗い・換気などを実施します。市民科を中心にメディアリテラシー教育も充実させます。",
+    ("r03-1t", "中 塚 亮", "新型コロナ危機から住民の命と暮らしを守り抜くため、緊急に検査体制、医療及び事業所の支援強化を"):
+        "感染が疑われる施設では無症状者にも検査を行い、高齢者・障害者施設の従事者検査を再実施します。中小企業には融資あっせんや区独自助成を進め、給付金や消費税は国で議論すべき事項としました。",
+    ("r03-1t", "中 塚 亮", "実効性ある首都直下大震災及び豪雨災害への対策を直ちに"):
+        "不燃化特区と感震ブレーカー助成の対象地域を拡大し、当面は対象地域の防災性向上を重点的に進めます。避難所環境は備蓄資機材と国・都・民間からの調達を組み合わせ、避難から生活支援までを含む個別計画を作成します。",
+    ("r03-1t", "大 沢 真 一", "施政方針について"):
+        "区民の声と状況を把握し、生活安定に向けた施策を実行することが区長の役割とし、区政運営を進めます。ワクチンや感染症対策は動画なども活用して区民に届く情報発信に努めます。",
+    ("r03-1t", "大 沢 真 一", "新長期基本計画について"):
+        "コロナ禍と自然災害の同時発生に備え、避難所運営や救命・インフラ復旧を国・都と連携して検討します。行政手続のオンライン化、心のケア、子育て環境なども各担当で進めます。",
+    ("r03-1t", "大 沢 真 一", "新型コロナウイルス関連支援について"):
+        "飲食店等への支援は国・都制度に加えて区独自助成や融資を案内し、生活困窮者には相談・住居確保給付金・貸付等を組み合わせて支援します。ワクチン接種や大会時の感染防止体制も関係機関と調整します。",
+    ("r03-1t", "須 貝 行 宏", "東京五輪の延期を要請するべきでは"):
+        "国・東京都・大会組織委員会などが安心・安全な開催に向けたルールと体制を検討しているとして、区から大会延期を要請する考えはないと答弁しました。",
+    ("r03-4t", "小 芝 新", "衆院選の投票と主権者教育について"):
+        "投票所の混雑時は適切な誘導に努め、若年層への啓発方法を大学生との意見交換も踏まえて検討します。学校では模擬選挙や議場見学に加え、政治ニュースとＩＣＴを活用した主権者教育を充実させます。",
     ("r04-1t", "若 林 ひろき", "子育て等について"):
         "保育士等の処遇改善を国の補助制度で実施し、産後の家事育児支援を拡充します。子育て世帯への臨時給付金は迅速なシステム改修などにより年内支給を実現しました。",
     ("r04-1t", "つ る 伸一郎", "品川区のSDGsの取り組みについて"):
@@ -232,6 +268,30 @@ def ngrams(value: str, size: int = 2) -> set[str]:
     return {text[index:index + size] for index in range(max(0, len(text) - size + 1))}
 
 
+def set_similarity(left: set[str], right: set[str]) -> float:
+    """長い答弁ブロックだけが有利にならないよう集合長を補正した類似度。"""
+    if not left or not right:
+        return 0.0
+    return len(left & right) / math.sqrt(len(left) * len(right))
+
+
+def topic_keywords(value: str) -> list[str]:
+    """助詞で自然に分かれる漢字・かな・カナ語を照合用の語として取り出す。"""
+    ignored = {
+        "について", "における", "に関する", "および", "及び", "ため", "品川区",
+        "取組", "取り組み", "推進", "対応", "対策", "支援", "実現", "現状",
+    }
+    words = re.findall(r"[一-龠々ァ-ヶーA-Za-zＡ-Ｚａ-ｚ0-9０-９]{2,}|[ぁ-ん]{2,}", value)
+    result = []
+    for word in words:
+        key = normalized(word)
+        if len(key) < 2 or key in {normalized(item) for item in ignored}:
+            continue
+        if key not in result:
+            result.append(key)
+    return result
+
+
 def parse_context(path: Path, member: str) -> tuple[list[str], list[dict]]:
     text = path.read_text(encoding="utf-8")
     excerpt = text.split("会議録抜粋:", 1)[-1]
@@ -401,9 +461,17 @@ def answer_selection(
     topic_terms = ngrams(topic_core(topic))
     # 「教育」「防災」など広い大項目名より、実際に選ばれた具体的な質問文を
     # 優先する。大項目名は担当答弁ブロックを探す補助として残す。
-    topic_weight = 1.0 if not question_hint else 0.35
+    topic_weight = 1.0
     hint_terms = ngrams(question_hint, 3)
     context_terms = ngrams(question_context, 3)
+    keywords = topic_keywords(topic)
+    keyword_frequency = {
+        keyword: sum(
+            keyword in normalized(" ".join(block["sentences"]))
+            for block in blocks
+        )
+        for keyword in keywords
+    }
     ranked_blocks = []
     for block_index, block in enumerate(blocks):
         sentences = block["sentences"]
@@ -414,6 +482,21 @@ def answer_selection(
         body_terms = ngrams(body)
         speaker_terms = ngrams(block["speaker"])
         hint_bigrams = ngrams(question_hint, 2)
+        body_trigrams = ngrams(body, 3)
+        topic_similarity = set_similarity(topic_terms, body_terms)
+        hint_similarity = set_similarity(hint_terms, body_trigrams)
+        context_similarity = set_similarity(context_terms, body_trigrams)
+        keyword_score = sum(
+            min(10, len(keyword))
+            * (1 + math.log((len(blocks) + 1) / (keyword_frequency[keyword] + 1)))
+            for keyword in keywords
+            if keyword in normalized(body)
+        )
+        intro_keyword_score = sum(
+            min(10, len(keyword))
+            for keyword in keywords
+            if keyword in normalized(intro)
+        )
         heading_affinity = max((
             len(hint_bigrams & ngrams(heading, 2))
             + 12 * len(hint_bigrams & ngrams(heading, 2)) / max(1, len(ngrams(heading, 2)))
@@ -426,15 +509,18 @@ def answer_selection(
             # 選ばれた具体的な質問文を最優先し、その項目の発言全体を補助に使う。
             # これにより「愛の手帳」「防災教材」などの固有語を落とさず、短い
             # 題名だけで別の担当答弁を選ぶことを防ぐ。
-            + min(60, len(hint_terms & ngrams(body, 3))) * 0.50
-            + min(120, len(context_terms & ngrams(body, 3))) * 0.02
+            + topic_similarity * 45
+            + hint_similarity * 120
+            + context_similarity * 180
+            + keyword_score * 2.8
+            + intro_keyword_score * 2.2
             + heading_affinity * 1.5
             - block_index * 0.002
         )
         if core and core in normalized(body):
-            score += 6
+            score += 55
         if core and core in normalized(intro):
-            score += 4
+            score += 90
         ranked_blocks.append((score, -block_index, block))
     block_score, _, selected_block = max(ranked_blocks)
     block_sentences = selected_block["sentences"]
@@ -467,9 +553,15 @@ def answer_selection(
     ranked_sentences = []
     for index, sentence in enumerate(substantive):
         base = sentence_score(topic, sentence, ANSWER_CUES, index, len(substantive))
-        hint_bonus = min(24, len(hint_terms & ngrams(sentence, 3))) * 0.9
-        context_bonus = min(24, len(context_terms & ngrams(sentence, 3))) * 0.04
-        ranked_sentences.append((base + hint_bonus + context_bonus, -index, sentence))
+        sentence_terms = ngrams(sentence, 3)
+        hint_bonus = set_similarity(hint_terms, sentence_terms) * 85
+        context_bonus = set_similarity(context_terms, sentence_terms) * 55
+        keyword_bonus = sum(
+            min(10, len(keyword)) * 2.5
+            for keyword in keywords
+            if keyword in normalized(sentence)
+        )
+        ranked_sentences.append((base + hint_bonus + context_bonus + keyword_bonus, -index, sentence))
     score, _, sentence = max(ranked_sentences)
     return clean_sentence(sentence), score + block_score * 0.03
 
