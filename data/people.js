@@ -1,7 +1,7 @@
 // 品川区議会DB データファイル（人物台帳: 質問者の名寄せ用。名簿ページには使わない）
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.peopleData = {
-  "updatedAt": "2026-07-15",
+  "updatedAt": "2026-07-22",
   "note": "質問者と議員を紐付けるための人物台帳。元職は表示に使わず、裏のデータとしてのみ蓄積する。",
   "people": [
     {
@@ -10,6 +10,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -23,6 +24,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -38,6 +40,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r04",
@@ -53,6 +56,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -81,6 +85,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -108,6 +113,7 @@ window.SHINAGAWA_DB.peopleData = {
         "木村けんご"
       ],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -166,6 +172,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -181,6 +188,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -221,6 +229,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -236,6 +245,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r03",
         "r04",
@@ -261,6 +271,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r05",
         "r06",
@@ -273,6 +284,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r05",
@@ -286,6 +298,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r02",
         "r03",
         "r04",
@@ -312,6 +325,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r03",
         "r04",
@@ -339,8 +353,11 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "takako_nishimoto",
       "name": "西本　たか子",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "西本貴子"
+      ],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -357,6 +374,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -373,6 +391,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r02",
         "r03",
         "r04",
@@ -405,6 +424,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r04",
         "r05",
         "r06",
@@ -465,6 +485,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r04",
@@ -479,6 +500,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -495,6 +517,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "現職",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -513,6 +536,7 @@ window.SHINAGAWA_DB.peopleData = {
         "渡辺裕一"
       ],
       "seenIn": [
+        "h30",
         "r03",
         "r04",
         "r05"
@@ -536,6 +560,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r06"
       ]
     },
@@ -562,6 +587,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -576,6 +602,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r03",
         "r04",
@@ -601,6 +628,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r02",
         "r03",
         "r04"
@@ -626,6 +654,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r03",
         "r04"
       ]
@@ -637,6 +666,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03",
@@ -650,6 +680,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r02",
         "r03",
         "r04"
@@ -662,6 +693,7 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02",
         "r03"
@@ -685,8 +717,59 @@ window.SHINAGAWA_DB.peopleData = {
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [],
       "seenIn": [
+        "h30",
         "r01",
         "r02"
+      ]
+    },
+    {
+      "id": "x-minami-keiko",
+      "name": "南 恵子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h30"
+      ]
+    },
+    {
+      "id": "x-iinuma-masako",
+      "name": "飯沼 雅子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h30"
+      ]
+    },
+    {
+      "id": "x-ito-masahiro",
+      "name": "伊藤 昌宏",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h30"
+      ]
+    },
+    {
+      "id": "x-asano-hiroyuki",
+      "name": "浅野 ひろゆき",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h30"
+      ]
+    },
+    {
+      "id": "x-inagawa-takayuki",
+      "name": "いながわ 貴之",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h30"
       ]
     }
   ]

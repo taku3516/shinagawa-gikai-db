@@ -101,6 +101,12 @@ window.SHINAGAWA_DB.site = {
       "file": "data/r01.js",
       "supplement": "data/r01-complete.js",
       "available": true
+    },
+    {
+      "id": "h30",
+      "label": "平成30年（会議録から抽出）",
+      "file": "data/h30.js",
+      "available": true
     }
   ],
   "defaultYear": "r08",
