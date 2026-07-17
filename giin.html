@@ -51,6 +51,17 @@
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); font-size: 14px; line-height: 1.7;
     }
+    .roster-switch {
+      display: inline-flex; gap: 4px; margin-top: 18px; padding: 4px;
+      border: 1px solid var(--c-border); border-radius: 4px; background: #eef1f3;
+    }
+    .roster-switch a {
+      min-height: 40px; display: inline-flex; align-items: center; justify-content: center;
+      padding: 8px 16px; border-radius: 3px; color: var(--c-main-dark); font-size: 14px;
+    }
+    .roster-switch a[aria-current="page"] {
+      background: var(--c-main); color: #fff; text-decoration: none;
+    }
 
     section { padding: 32px 0 48px; }
 
@@ -141,6 +152,12 @@
       border: 1px solid var(--c-video-border); border-radius: 8px;
       background: var(--c-video-bg); font-size: 14px; line-height: 1.9;
     }
+    .empty-state {
+      grid-column: 1 / -1; padding: 28px; border: 1px dashed var(--c-border);
+      border-radius: 3px; background: var(--c-card); line-height: 1.9;
+    }
+    .empty-state h2 { margin: 0 0 8px; font-size: 20px; }
+    .empty-state p { margin: 0; color: var(--c-ink-soft); }
 
     @media (max-width: 640px) {
       .member-grid { grid-template-columns: 1fr; }
@@ -152,13 +169,17 @@
     <div class="hero">
       <div class="container">
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
-        <h1>議員名簿</h1>
-        <p class="lead">
+        <h1 id="page-title">議員名簿</h1>
+        <p class="lead" id="page-lead">
           品川区議会の議員紹介ページを基に、議員の情報を一覧できるようにしたページです。名前・会派・委員会で検索できます。過去の選挙・得票履歴は、出典確認後に追加できるよう項目を準備しています。
         </p>
-        <div class="disclaimer">
+        <div class="disclaimer" id="page-disclaimer">
           これは品川区が運営しているものではありません。掲載情報は品川区議会公式サイトからの転記です。最新かつ正確な情報は必ず<a href="https://gikai.city.shinagawa.tokyo.jp/profile/50on" target="_blank" rel="noopener">公式の議員紹介ページ</a>を確認してください。
         </div>
+        <nav class="roster-switch" aria-label="議員名簿の切り替え">
+          <a id="current-roster-link" href="giin.html">現職議員</a>
+          <a id="former-roster-link" href="giin.html?view=former">元職議員</a>
+        </nav>
       </div>
     </div>
 
@@ -183,6 +204,7 @@
 
   <!-- データ読み込み（script形式なので file:// のダブルクリックでも動く） -->
   <script src="data/members.js"></script>
+  <script src="data/former-members.js"></script>
 
   <script>
     "use strict";
@@ -226,7 +248,9 @@
 
     function memberCardHtml(m) {
       // 外部リンク（公式プロフィール・議員HP・メール）
-      let links = `<a class="pill" href="${esc(m.profileUrl)}" target="_blank" rel="noopener">公式プロフィール</a>`;
+      let links = m.profileUrl
+        ? `<a class="pill" href="${esc(m.profileUrl)}" target="_blank" rel="noopener">公式プロフィール</a>`
+        : "";
       if (m.websiteUrl) links += `<a class="pill" href="${esc(m.websiteUrl)}" target="_blank" rel="noopener">議員ホームページ</a>`;
       if (m.email) links += `<a class="pill" href="mailto:${esc(m.email)}">メール</a>`;
 
@@ -235,17 +259,17 @@
       if (m.specialCommittee) committees.push(`<strong>特別:</strong> ${multiline(m.specialCommittee)}`);
 
       return `
-        <article class="member-card" data-party="${esc(partyName(m))}">
+        <article class="member-card" id="member-${esc(m.id)}" data-party="${esc(partyName(m))}">
           <div>
             <h2>${esc(m.name)}</h2>
             <span class="kana">${esc(m.kana)}</span>
           </div>
           <div>
-            <span class="tag">${esc(m.party)}</span>
+            <span class="tag">${esc(m.party || m.statusLabel || "元職")}</span>
             ${m.elections ? `<span class="chip">当選${esc(m.elections)}</span>` : ""}
           </div>
           ${committees.length ? `<p class="committee">${committees.join("<br />")}</p>` : ""}
-          <div>${links}</div>
+          ${links ? `<div>${links}</div>` : ""}
           ${extraSlotHtml("SNS", m.sns)}
           ${extraSlotHtml("過去の選挙・得票履歴", m.electionHistory)}
           ${extraSlotHtml("政治資金収支報告書", m.fundReports)}
@@ -261,6 +285,8 @@
               ${detailRow("附属機関委員等", m.affiliated, true)}
               ${detailRow("職業", m.occupation, true)}
               ${detailRow("主な履歴", m.career, true)}
+              ${detailRow("在職・発言確認期間", m.serviceHistory, true)}
+              ${detailRow("品川区議会DBの発言年度", m.questionYears, true)}
               ${detailRow("趣味", m.hobby, true)}
             </table>
           </details>
@@ -285,16 +311,28 @@
 
     function init() {
       const db = window.SHINAGAWA_DB;
-      if (!db || !db.membersData) {
+      const formerMode = new URLSearchParams(window.location.search).get("view") === "former";
+      const data = db && (formerMode ? db.formerMembersData : db.membersData);
+      if (!data) {
         document.getElementById("member-root").innerHTML = `
           <div class="load-error">
             <strong>データを読み込めませんでした。</strong><br />
-            <code>giin.html</code> と同じ場所に <code>data/members.js</code> があるか確認してください。
+            議員名簿のデータファイルが正しく配置されているか確認してください。
           </div>`;
         return;
       }
-      const data = db.membersData;
       const members = data.members;
+
+      document.title = `${formerMode ? "元職議員名簿" : "議員名簿"} | 品川区議会DB`;
+      document.getElementById("page-title").textContent = formerMode ? "元職議員名簿" : "議員名簿";
+      document.getElementById("page-lead").textContent = formerMode
+        ? "過去に品川区議会議員を務めた方を、在職時の議会活動とともに確認できる名簿です。具体的な人物情報は出典確認後に掲載します。"
+        : "品川区議会の議員紹介ページを基に、議員の情報を一覧できるようにしたページです。名前・会派・委員会で検索できます。過去の選挙・得票履歴は、出典確認後に追加できるよう項目を準備しています。";
+      document.getElementById("page-disclaimer").innerHTML = formerMode
+        ? "これは品川区が運営しているものではありません。元職議員については、在職を確認できる公式資料と確認日を明記した上で掲載します。現在は枠組みのみ準備しています。"
+        : "これは品川区が運営しているものではありません。掲載情報は品川区議会公式サイトからの転記です。最新かつ正確な情報は必ず<a href=\"https://gikai.city.shinagawa.tokyo.jp/profile/50on\" target=\"_blank\" rel=\"noopener\">公式の議員紹介ページ</a>を確認してください。";
+      document.getElementById(formerMode ? "former-roster-link" : "current-roster-link")
+        .setAttribute("aria-current", "page");
 
       // 会派の選択肢をデータから自動生成（掲載順を保ちつつ重複排除）
       const parties = [...new Set(members.map(partyName))];
@@ -304,7 +342,14 @@
 
       function render() {
         const list = applyFilter(members);
-        document.getElementById("member-root").innerHTML = list.map(memberCardHtml).join("");
+        document.getElementById("member-root").innerHTML = list.length
+          ? list.map(memberCardHtml).join("")
+          : `<div class="empty-state" role="status">
+              <h2>${formerMode ? "元職議員名簿は準備中です" : "該当する議員はいません"}</h2>
+              <p>${formerMode
+                ? "人物名、在職期間、当時の会派、議会での発言、選挙履歴を、参考資料の確認後に追加します。"
+                : "検索条件を変更して、もう一度お試しください。"}</p>
+            </div>`;
         document.getElementById("hit-count").textContent = `${list.length}名 / 全${members.length}名`;
       }
 
