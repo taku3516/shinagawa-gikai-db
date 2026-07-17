@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f4e79" />
-  <title>議員名簿 | 品川区議会DB</title>
+  <title>現職区議名簿 | 品川区議会DB</title>
   <style>
     /* ===== index.html と同じ基調カラー ===== */
     :root {
@@ -52,7 +52,8 @@
       background: var(--c-card); font-size: 14px; line-height: 1.7;
     }
     .roster-switch {
-      display: inline-flex; gap: 4px; margin-top: 18px; padding: 4px;
+      display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 4px; width: min(100%, 840px); margin-top: 18px; padding: 4px;
       border: 1px solid var(--c-border); border-radius: 4px; background: #eef1f3;
     }
     .roster-switch a {
@@ -160,6 +161,7 @@
     .empty-state p { margin: 0; color: var(--c-ink-soft); }
 
     @media (max-width: 640px) {
+      .roster-switch { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .member-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -169,16 +171,22 @@
     <div class="hero">
       <div class="container">
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
-        <h1 id="page-title">議員名簿</h1>
+        <h1 id="page-title">現職品川区議会議員名簿</h1>
         <p class="lead" id="page-lead">
           品川区議会の議員紹介ページを基に、議員の情報を一覧できるようにしたページです。名前・会派・委員会で検索できます。過去の選挙・得票履歴は、出典確認後に追加できるよう項目を準備しています。
         </p>
         <div class="disclaimer" id="page-disclaimer">
           これは品川区が運営しているものではありません。掲載情報は品川区議会公式サイトからの転記です。最新かつ正確な情報は必ず<a href="https://gikai.city.shinagawa.tokyo.jp/profile/50on" target="_blank" rel="noopener">公式の議員紹介ページ</a>を確認してください。
         </div>
-        <nav class="roster-switch" aria-label="議員名簿の切り替え">
-          <a id="current-roster-link" href="giin.html">現職議員</a>
-          <a id="former-roster-link" href="giin.html?view=former">元職議員</a>
+        <nav class="roster-switch" aria-label="政治家名簿の切り替え">
+          <a data-roster="current-ward" href="giin.html">現職区議</a>
+          <a data-roster="former-ward" href="giin.html?view=former-ward">元職区議</a>
+          <a data-roster="current-tokyo" href="giin.html?view=current-tokyo">現職都議</a>
+          <a data-roster="former-tokyo" href="giin.html?view=former-tokyo">元職都議</a>
+          <a data-roster="current-house" href="giin.html?view=current-house">現職衆議</a>
+          <a data-roster="former-house" href="giin.html?view=former-house">元職衆議</a>
+          <a data-roster="current-mayor" href="giin.html?view=current-mayor">現職区長</a>
+          <a data-roster="former-mayor" href="giin.html?view=former-mayor">元職区長</a>
         </nav>
       </div>
     </div>
@@ -187,8 +195,8 @@
       <div class="container">
         <div class="controls">
           <label for="search-box">検索</label>
-          <input id="search-box" type="search" placeholder="名前・ふりがな・委員会など" />
-          <label for="party-select">会派</label>
+          <input id="search-box" type="search" placeholder="名前・ふりがな・会派・役職など" />
+          <label for="party-select">会派・政党</label>
           <select id="party-select"><option value="">すべて</option></select>
           <span id="hit-count"></span>
         </div>
@@ -205,6 +213,7 @@
   <!-- データ読み込み（script形式なので file:// のダブルクリックでも動く） -->
   <script src="data/members.js"></script>
   <script src="data/former-members.js"></script>
+  <script src="data/politicians.js"></script>
 
   <script>
     "use strict";
@@ -265,7 +274,7 @@
             <span class="kana">${esc(m.kana)}</span>
           </div>
           <div>
-            <span class="tag">${esc(m.party || m.statusLabel || "元職")}</span>
+            <span class="tag">${esc(m.party || m.office || m.statusLabel || "掲載準備中")}</span>
             ${m.elections ? `<span class="chip">当選${esc(m.elections)}</span>` : ""}
           </div>
           ${committees.length ? `<p class="committee">${committees.join("<br />")}</p>` : ""}
@@ -277,6 +286,9 @@
           <details>
             <summary>詳しい情報を見る</summary>
             <table class="detail-table">
+              ${detailRow("役職", m.office)}
+              ${detailRow("選挙区", m.electoralDistrict)}
+              ${detailRow("任期", m.term)}
               ${detailRow("生年月日", m.birth)}
               ${detailRow("住所または事務所の所在地", m.address)}
               ${detailRow("出身地", m.birthplace)}
@@ -301,7 +313,7 @@
       return members.filter((m) => {
         if (party && partyName(m) !== party) return false;
         if (!q) return true;
-        const haystack = [m.name, m.kana, m.party, m.standingCommittee, m.specialCommittee, m.occupation]
+        const haystack = [m.name, m.kana, m.party, m.office, m.electoralDistrict, m.standingCommittee, m.specialCommittee, m.occupation]
           .join(" ").toLowerCase();
         return haystack.includes(q);
       });
@@ -309,10 +321,74 @@
 
     /* ---------- 初期化 ---------- */
 
+    const ROSTER_CONFIG = {
+      "current-ward": {
+        label: "現職区議",
+        title: "現職品川区議会議員名簿",
+        lead: "品川区議会の現職区議を一覧できるページです。名前・会派・委員会などで検索できます。過去の選挙・得票履歴は、出典確認後に追加できるよう項目を準備しています。"
+      },
+      "former-ward": {
+        label: "元職区議",
+        title: "元職品川区議会議員名簿",
+        lead: "過去に品川区議会議員を務めた方を、在職時の議会活動とともに確認するための名簿です。具体的な人物情報は出典確認後に掲載します。"
+      },
+      "current-tokyo": {
+        label: "現職都議",
+        title: "現職東京都議会議員名簿（品川区選出）",
+        lead: "品川区選挙区から選出された現職の東京都議会議員を確認するための名簿です。現在は掲載枠のみ準備しています。"
+      },
+      "former-tokyo": {
+        label: "元職都議",
+        title: "元職東京都議会議員名簿（品川区選出）",
+        lead: "過去に品川区選挙区から選出された東京都議会議員を確認するための名簿です。現在は掲載枠のみ準備しています。"
+      },
+      "current-house": {
+        label: "現職衆議",
+        title: "現職衆議院議員名簿（品川区選出）",
+        lead: "品川区を含む選挙区から選出された現職の衆議院議員を確認するための名簿です。現在は掲載枠のみ準備しています。"
+      },
+      "former-house": {
+        label: "元職衆議",
+        title: "元職衆議院議員名簿（品川区選出）",
+        lead: "過去に品川区を含む選挙区から選出された衆議院議員を確認するための名簿です。現在は掲載枠のみ準備しています。"
+      },
+      "current-mayor": {
+        label: "現職区長",
+        title: "現職品川区長名簿",
+        lead: "現職の品川区長に関する情報を確認するための名簿です。現在は掲載枠のみ準備しています。"
+      },
+      "former-mayor": {
+        label: "元職区長",
+        title: "元職品川区長名簿",
+        lead: "過去に品川区長を務めた方を確認するための名簿です。現在は掲載枠のみ準備しています。"
+      }
+    };
+
+    function selectedRosterId() {
+      const value = new URLSearchParams(window.location.search).get("view") || "current-ward";
+      if (value === "former") return "former-ward";
+      return ROSTER_CONFIG[value] ? value : "current-ward";
+    }
+
+    function rosterData(db, rosterId) {
+      if (!db) return null;
+      if (rosterId === "current-ward") return db.membersData;
+      if (rosterId === "former-ward") return db.formerMembersData;
+      const collection = db.politiciansData;
+      const roster = collection && collection.rosters && collection.rosters[rosterId];
+      if (!roster) return null;
+      return {
+        updatedAt: collection.updatedAt,
+        note: collection.note,
+        members: roster.members || []
+      };
+    }
+
     function init() {
       const db = window.SHINAGAWA_DB;
-      const formerMode = new URLSearchParams(window.location.search).get("view") === "former";
-      const data = db && (formerMode ? db.formerMembersData : db.membersData);
+      const rosterId = selectedRosterId();
+      const config = ROSTER_CONFIG[rosterId];
+      const data = rosterData(db, rosterId);
       if (!data) {
         document.getElementById("member-root").innerHTML = `
           <div class="load-error">
@@ -323,21 +399,18 @@
       }
       const members = data.members;
 
-      document.title = `${formerMode ? "元職議員名簿" : "議員名簿"} | 品川区議会DB`;
-      document.getElementById("page-title").textContent = formerMode ? "元職議員名簿" : "議員名簿";
-      document.getElementById("page-lead").textContent = formerMode
-        ? "過去に品川区議会議員を務めた方を、在職時の議会活動とともに確認できる名簿です。具体的な人物情報は出典確認後に掲載します。"
-        : "品川区議会の議員紹介ページを基に、議員の情報を一覧できるようにしたページです。名前・会派・委員会で検索できます。過去の選挙・得票履歴は、出典確認後に追加できるよう項目を準備しています。";
-      document.getElementById("page-disclaimer").innerHTML = formerMode
-        ? "これは品川区が運営しているものではありません。元職議員については、在職を確認できる公式資料と確認日を明記した上で掲載します。現在は枠組みのみ準備しています。"
-        : "これは品川区が運営しているものではありません。掲載情報は品川区議会公式サイトからの転記です。最新かつ正確な情報は必ず<a href=\"https://gikai.city.shinagawa.tokyo.jp/profile/50on\" target=\"_blank\" rel=\"noopener\">公式の議員紹介ページ</a>を確認してください。";
-      document.getElementById(formerMode ? "former-roster-link" : "current-roster-link")
-        .setAttribute("aria-current", "page");
+      document.title = `${config.title} | 品川区議会DB`;
+      document.getElementById("page-title").textContent = config.title;
+      document.getElementById("page-lead").textContent = config.lead;
+      document.getElementById("page-disclaimer").innerHTML = rosterId === "current-ward"
+        ? "これは品川区が運営しているものではありません。現職区議の掲載情報は品川区議会公式サイトからの転記です。最新かつ正確な情報は必ず<a href=\"https://gikai.city.shinagawa.tokyo.jp/profile/50on\" target=\"_blank\" rel=\"noopener\">公式の議員紹介ページ</a>を確認してください。"
+        : `これは品川区が運営しているものではありません。${esc(config.label)}については、在職・選出を確認できる公式資料と確認日を明記した上で掲載します。現在は枠組みのみ準備しています。`;
+      document.querySelector(`[data-roster="${rosterId}"]`).setAttribute("aria-current", "page");
 
       // 会派の選択肢をデータから自動生成（掲載順を保ちつつ重複排除）
       const parties = [...new Set(members.map(partyName))];
       const sel = document.getElementById("party-select");
-      sel.innerHTML = `<option value="">すべての会派</option>` +
+      sel.innerHTML = `<option value="">すべての会派・政党</option>` +
         parties.map((p) => `<option value="${esc(p)}">${esc(p)}</option>`).join("");
 
       function render() {
@@ -345,10 +418,10 @@
         document.getElementById("member-root").innerHTML = list.length
           ? list.map(memberCardHtml).join("")
           : `<div class="empty-state" role="status">
-              <h2>${formerMode ? "元職議員名簿は準備中です" : "該当する議員はいません"}</h2>
-              <p>${formerMode
-                ? "人物名、在職期間、当時の会派、議会での発言、選挙履歴を、参考資料の確認後に追加します。"
-                : "検索条件を変更して、もう一度お試しください。"}</p>
+              <h2>${members.length ? "該当する人物はいません" : `${esc(config.label)}名簿は準備中です`}</h2>
+              <p>${members.length
+                ? "検索条件を変更して、もう一度お試しください。"
+                : "人物名、在職・選出期間、会派・政党、選挙履歴などを、参考資料の確認後に追加します。"}</p>
             </div>`;
         document.getElementById("hit-count").textContent = `${list.length}名 / 全${members.length}名`;
       }
@@ -358,7 +431,7 @@
 
       document.getElementById("as-of-note").textContent = `${data.note}（データ取得日: ${data.updatedAt}）`;
       document.getElementById("footer-root").textContent =
-        "品川区議会DB — これは品川区が運営しているものではありません。正確な情報は品川区議会公式サイトを確認してください。";
+        "品川区議会DB — これは品川区が運営しているものではありません。正確な情報は各機関の公式資料を確認してください。";
 
       render();
     }
