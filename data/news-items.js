@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-17T13:05:57.334295Z",
+  "generatedAt": "2026-07-17T23:43:16.710337Z",
   "items": [
+    {
+      "id": "b74252e82496dafe6f61",
+      "title": "マイナンバーカードに関する各手続きについて（紛失、暗証番号ロック、電子証明書、住所・氏名変更など）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/mynumbercard/202401268888.html",
+      "publishedAt": "2026-07-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "bd93f5a3fa1f5e212b8e",
       "title": "大井町で「マツケンサンバコンサート」開催へ 品川区民がダンサー出演",
@@ -1940,23 +1957,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "b74252e82496dafe6f61",
-      "title": "マイナンバーカードに関する各手続きについて（紛失、暗証番号ロック、電子証明書、住所・氏名変更など）",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/mynumbercard/202401268888.html",
-      "publishedAt": "2026-06-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "62e909e9cbd9625d1e96",
       "title": "【受付は終了しました】令和8年度(9年度採用)品川区立学校学校教育職員採用候補者選考の実施について",
       "summary": "",
@@ -2703,7 +2703,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 599,
+      "scanned": 587,
       "accepted": 0
     },
     {
