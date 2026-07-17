@@ -27,7 +27,7 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "type": "official",
-      "label": "議員名簿を見る",
+      "label": "議員・政治家名簿を見る",
       "url": "giin.html"
     },
     {
