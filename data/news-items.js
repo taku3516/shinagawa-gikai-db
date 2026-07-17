@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-17T07:20:15.340311Z",
+  "generatedAt": "2026-07-17T07:38:58.897516Z",
   "items": [
     {
       "id": "a93cf1f23460bf74704f",
@@ -2513,6 +2513,42 @@ window.SHINAGAWA_NEWS = {
       "note": ""
     },
     {
+      "id": "ntv-news",
+      "name": "日テレNEWS NNN",
+      "url": "https://news.ntv.co.jp/rss/index.rdf",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "note": ""
+    },
+    {
+      "id": "asahi-news",
+      "name": "朝日新聞",
+      "url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "note": ""
+    },
+    {
+      "id": "fnn-news",
+      "name": "FNNプライムオンライン",
+      "url": "https://www.fnn.jp/list/feed/rss?station=FNN",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "note": ""
+    },
+    {
+      "id": "jiji-ranking",
+      "name": "時事ドットコム アクセスランキング",
+      "url": "https://www.jiji.com/rss/ranking.rdf",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "note": ""
+    },
+    {
       "id": "pr-times",
       "name": "PR TIMES",
       "url": "https://prtimes.jp/index.rdf",
@@ -2641,6 +2677,30 @@ window.SHINAGAWA_NEWS = {
       "source": "NHK NEWS",
       "status": "ok",
       "scanned": 7,
+      "accepted": 0
+    },
+    {
+      "source": "日テレNEWS NNN",
+      "status": "ok",
+      "scanned": 569,
+      "accepted": 0
+    },
+    {
+      "source": "朝日新聞",
+      "status": "ok",
+      "scanned": 40,
+      "accepted": 0
+    },
+    {
+      "source": "FNNプライムオンライン",
+      "status": "ok",
+      "scanned": 50,
+      "accepted": 0
+    },
+    {
+      "source": "時事ドットコム アクセスランキング",
+      "status": "ok",
+      "scanned": 10,
       "accepted": 0
     },
     {
