@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-17T05:43:37.994998Z",
+  "generatedAt": "2026-07-17T06:01:34.898908Z",
   "items": [
     {
       "id": "fb51362c1ec19c7c13fc",
@@ -140,10 +140,8 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "その他"
       ],
-      "locations": [
-        "大井"
-      ],
-      "relevanceScore": 14
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "b9848cbf2c11a1812e7c",
@@ -363,7 +361,6 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "子育て教育",
         "福祉",
-        "地域イベント",
         "店舗開店閉店"
       ],
       "locations": [],
@@ -554,12 +551,10 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "collected",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "子育て教育",
-        "福祉",
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 0
     },
     {
       "id": "02c132d71c33d8903d41",
@@ -590,11 +585,27 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "collected",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "子育て教育",
-        "地域イベント"
+        "その他"
       ],
       "locations": [],
-      "relevanceScore": 4
+      "relevanceScore": 2
+    },
+    {
+      "id": "f0e278e4b4cd89b275ad",
+      "title": "オルビス、ジャパンハートの活動に協賛し小児がんと向き合う子どもたちとそのご家族を職業体験施設へ招待",
+      "summary": "[オルビス株式会社] オルビス株式会社（本社：東京都品川区、代表取締役社長：山口裕絵、以下：オルビス）は、サステナビリティ活動「ORBIS ペンギンリング プロジェクト」の取り組みの一環として、特定非営利活動法人ジャパンハー...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000726.000002061.html",
+      "publishedAt": "2026-07-17T05:41:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T06:01:15.006857Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "c7e7bab70f9af99fecc3",
@@ -612,6 +623,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "ad20e0f04985fa2e6ea7",
+      "title": "「品川区AIオンデマンド交通（大崎地区）の運賃について」ご意見募集中",
+      "summary": "地域交通政策課 電話：03-5742-7138 FAX：03-5742-6887",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-chiikikokyokotsu/20260717114036.html",
+      "publishedAt": "2026-07-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T06:01:15.006857Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大崎"
       ],
       "relevanceScore": 14
     },
@@ -664,13 +694,10 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "地域イベント"
+        "その他"
       ],
-      "locations": [
-        "小山",
-        "武蔵小山商店街"
-      ],
-      "relevanceScore": 8
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "dd23a1adc4453e6b0c3d",
@@ -731,7 +758,7 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 8
+      "relevanceScore": 0
     },
     {
       "id": "6f29b8df0827f646ccb9",
@@ -745,10 +772,10 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "事件事故"
+        "その他"
       ],
       "locations": [],
-      "relevanceScore": 12
+      "relevanceScore": 2
     },
     {
       "id": "361545ddec0f11b12db6",
@@ -779,10 +806,10 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "行政"
+        "その他"
       ],
       "locations": [],
-      "relevanceScore": 4
+      "relevanceScore": 2
     },
     {
       "id": "8e1760f94aeeef99d203",
@@ -855,10 +882,10 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "福祉"
+        "その他"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 0
     },
     {
       "id": "73c6c402cd5199a9637a",
@@ -897,7 +924,7 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 8
+      "relevanceScore": 0
     },
     {
       "id": "5864ea0f7e0170662883",
@@ -911,14 +938,12 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "地域イベント",
-        "経済"
+        "その他"
       ],
       "locations": [
-        "大井",
-        "大井競馬場"
+        "大井"
       ],
-      "relevanceScore": 8
+      "relevanceScore": 4
     },
     {
       "id": "35f5aad70494b8ee96dc",
@@ -990,11 +1015,10 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "子育て教育",
-        "福祉"
+        "子育て教育"
       ],
       "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 2
     },
     {
       "id": "4fee21b1381bbac1a891",
@@ -1008,10 +1032,10 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "地域イベント"
+        "その他"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 0
     },
     {
       "id": "3dc9119c7e9163bba125",
@@ -1029,7 +1053,7 @@ window.SHINAGAWA_NEWS = {
         "経済"
       ],
       "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 2
     },
     {
       "id": "c0aa882c6409cfd3625e",
@@ -1083,7 +1107,7 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 12
+      "relevanceScore": 10
     },
     {
       "id": "0cf497d5044dfc907f1c",
@@ -1150,13 +1174,10 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "交通",
-        "地域イベント"
+        "その他"
       ],
-      "locations": [
-        "新馬場駅"
-      ],
-      "relevanceScore": 4
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "0e04e9da6208f916483d",
@@ -1267,10 +1288,8 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "その他"
       ],
-      "locations": [
-        "大井"
-      ],
-      "relevanceScore": 4
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "b9010c31cd94fc778929",
@@ -1403,7 +1422,7 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "地域イベント"
+        "その他"
       ],
       "locations": [
         "荏原",
@@ -1603,10 +1622,8 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "その他"
       ],
-      "locations": [
-        "天王洲"
-      ],
-      "relevanceScore": 14
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "964d117ffb414badb3d6",
@@ -1984,14 +2001,12 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "子育て教育",
-        "福祉",
         "地域イベント"
       ],
       "locations": [
         "大井"
       ],
-      "relevanceScore": 8
+      "relevanceScore": 4
     },
     {
       "id": "e295e88bb87d51298849",
@@ -2026,10 +2041,8 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "その他"
       ],
-      "locations": [
-        "大崎"
-      ],
-      "relevanceScore": 4
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "9c7c417f75c5793c3763",
@@ -2081,8 +2094,7 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
-        "交通",
-        "地域イベント"
+        "交通"
       ],
       "locations": [
         "大井",
@@ -2601,7 +2613,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
