@@ -1,0 +1,34 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner(userId) {
+      return request.auth != null
+        && request.auth.uid == userId
+        && request.auth.token.firebase.sign_in_provider == 'google.com';
+    }
+
+    match /users/{userId}/favorites/{newsId} {
+      allow read, delete: if isOwner(userId);
+      allow create, update: if isOwner(userId)
+        && newsId.size() <= 80
+        && request.resource.data.keys().hasOnly(['savedAt', 'schemaVersion'])
+        && request.resource.data.schemaVersion == 1
+        && request.resource.data.savedAt == request.time;
+    }
+
+    match /users/{userId}/preferences/news {
+      allow read, delete: if isOwner(userId);
+      allow create, update: if isOwner(userId)
+        && request.resource.data.keys().hasOnly(['hiddenSources', 'updatedAt', 'schemaVersion'])
+        && request.resource.data.schemaVersion == 1
+        && request.resource.data.hiddenSources is list
+        && request.resource.data.hiddenSources.size() <= 100
+        && request.resource.data.updatedAt == request.time;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

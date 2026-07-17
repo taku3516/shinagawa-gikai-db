@@ -70,6 +70,27 @@
     .source-option input { width: 20px; height: 20px; margin: 0; accent-color: var(--main); }
     .source-count { color: var(--soft); font-size: 12px; font-variant-numeric: tabular-nums; }
     main { padding: 28px 0 56px; }
+    .sync-panel {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 18px; align-items: center;
+      margin-bottom: 22px; border: 1px solid var(--border); border-left: 4px solid var(--main);
+      border-radius: 4px; background: var(--card); padding: 14px 16px;
+    }
+    .sync-panel[hidden] { display: none; }
+    .sync-copy { min-width: 0; }
+    .sync-title { margin: 0 0 4px; color: var(--main-dark); font-size: 15px; font-weight: 900; }
+    .sync-status { margin: 0; color: var(--soft); font-size: 12px; line-height: 1.6; }
+    .sync-status[data-error="true"] { color: #9f2d20; font-weight: 800; }
+    .sync-account { color: var(--ink); font-weight: 800; }
+    .sync-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; align-items: center; }
+    .sync-remember { display: inline-flex; gap: 6px; align-items: center; color: var(--soft); font-size: 12px; font-weight: 700; }
+    .sync-remember input { width: 18px; height: 18px; margin: 0; accent-color: var(--main); }
+    .sync-button {
+      min-height: 40px; border: 1px solid var(--main); border-radius: 3px; background: var(--main);
+      padding: 7px 12px; color: #fff; font-size: 13px; font-weight: 800; cursor: pointer;
+    }
+    .sync-button.secondary { background: var(--card); color: var(--main-dark); }
+    .sync-button.danger { border-color: #a33a2a; background: var(--card); color: #8b2d20; }
+    .sync-button:disabled { cursor: wait; opacity: .55; }
     .summary-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: baseline; margin-bottom: 18px; }
     .summary-row h2 { margin: 0; font-size: 21px; }
     #result-status { color: var(--soft); font-size: 13px; font-weight: 700; }
@@ -91,7 +112,7 @@
       font-size: 23px; line-height: 1; cursor: pointer;
     }
     .star-button[aria-pressed="true"] { border-color: #d6a44b; background: #fff7d6; color: var(--star); }
-    .star-button:focus-visible, .view-button:focus-visible, .source-filter-button:focus-visible, .source-filter-actions button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+    .star-button:focus-visible, .view-button:focus-visible, .source-filter-button:focus-visible, .source-filter-actions button:focus-visible, .sync-button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
     .empty { border: 1px dashed var(--border); border-radius: 4px; background: var(--card); padding: 42px 20px; text-align: center; color: var(--soft); line-height: 1.8; }
     .load-more { display: block; min-height: 44px; margin: 22px auto 0; border: 1px solid var(--main); border-radius: 3px; background: var(--card); padding: 9px 22px; color: var(--main-dark); font-weight: 800; cursor: pointer; }
     .load-more[hidden] { display: none; }
@@ -109,6 +130,8 @@
       .view-switch { justify-content: stretch; }
       .view-switch { grid-column: 1 / -1; }
       .view-button { flex: 1; padding-inline: 8px; }
+      .sync-panel { grid-template-columns: 1fr; }
+      .sync-actions { justify-content: flex-start; }
       .news-card { padding: 15px; gap: 10px; }
       .news-card h3 { font-size: 16px; }
       .source-list { columns: 1; }
@@ -147,6 +170,20 @@
   </div>
 
   <main class="container">
+    <section id="news-sync-panel" class="sync-panel" aria-labelledby="sync-title" hidden>
+      <div class="sync-copy">
+        <h2 id="sync-title" class="sync-title">保存内容を端末間で同期</h2>
+        <p id="sync-status" class="sync-status" role="status" aria-live="polite">この端末だけに保存中。ログインは任意です。</p>
+        <div id="sync-account" class="sync-account" aria-live="polite"></div>
+      </div>
+      <div class="sync-actions">
+        <label class="sync-remember"><input id="sync-remember" type="checkbox" />この端末でログイン状態を維持</label>
+        <button id="sync-login" class="sync-button" type="button">Googleで同期</button>
+        <button id="sync-logout" class="sync-button secondary" type="button" hidden>ログアウト</button>
+        <button id="sync-remove-account" class="sync-button danger" type="button" hidden>同期データと連携を削除</button>
+      </div>
+    </section>
+
     <div class="summary-row">
       <h2 id="list-title">新着ニュース</h2>
       <div id="result-status" role="status" aria-live="polite"></div>
@@ -164,11 +201,13 @@
   <footer><div class="container">品川区議会DB — ニュースの正確な内容は、必ず各発信元のページで確認してください。</div></footer>
 
   <script src="data/news-items.js"></script>
+  <script src="data/firebase-config.js"></script>
   <script>
     (() => {
       const data = window.SHINAGAWA_NEWS || { items: [], sources: [] };
       const storageKey = "shinagawa-news-favorites-v1";
       const sourceStorageKey = "shinagawa-news-hidden-sources-v1";
+      let cloudActive = false;
       const state = { savedOnly: false, visible: 40, favorites: loadFavorites(), hiddenSources: loadHiddenSources() };
       const elements = {
         search: document.getElementById("search"), tag: document.getElementById("tag-filter"),
@@ -185,14 +224,18 @@
         catch (_) { return new Set(); }
       }
       function saveFavorites() {
-        localStorage.setItem(storageKey, JSON.stringify([...state.favorites]));
+        if (cloudActive) return;
+        try { localStorage.setItem(storageKey, JSON.stringify([...state.favorites])); }
+        catch (_) { /* 保存できない環境では画面内だけで保持する */ }
       }
       function loadHiddenSources() {
         try { return new Set(JSON.parse(localStorage.getItem(sourceStorageKey) || "[]")); }
         catch (_) { return new Set(); }
       }
       function saveHiddenSources() {
-        localStorage.setItem(sourceStorageKey, JSON.stringify([...state.hiddenSources]));
+        if (cloudActive) return;
+        try { localStorage.setItem(sourceStorageKey, JSON.stringify([...state.hiddenSources])); }
+        catch (_) { /* 保存できない環境では画面内だけで保持する */ }
       }
       function escapeHtml(value) {
         return String(value || "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"})[c]);
@@ -253,10 +296,9 @@
         return counts;
       }, new Map());
       const availableSources = [...sourceCounts.keys()].sort((a, b) => a.localeCompare(b, "ja"));
-      state.hiddenSources = new Set([...state.hiddenSources].filter(source => availableSources.includes(source)));
 
       function renderSourceOptions() {
-        const visibleCount = availableSources.length - state.hiddenSources.size;
+        const visibleCount = availableSources.filter(source => !state.hiddenSources.has(source)).length;
         elements.sourceButton.textContent = visibleCount === availableSources.length
           ? "取得元・配信元：すべて"
           : `取得元・配信元：${visibleCount}/${availableSources.length}`;
@@ -269,13 +311,42 @@
         elements.sourcePanel.hidden = !open;
         elements.sourceButton.setAttribute("aria-expanded", String(open));
       }
-      function applySourceSelection(hiddenSources) {
+      function applySourceSelection(hiddenSources, notifyCloud = true) {
         state.hiddenSources = hiddenSources;
         state.visible = 40;
         saveHiddenSources();
+        if (notifyCloud && cloudActive) {
+          window.SHINAGAWA_NEWS_CLOUD?.preferencesChanged([...state.hiddenSources]);
+        }
         renderSourceOptions();
         render();
       }
+
+      window.SHINAGAWA_NEWS_SYNC_BRIDGE = Object.freeze({
+        getGuestState: () => ({
+          favorites: [...loadFavorites()],
+          hiddenSources: [...loadHiddenSources()]
+        }),
+        getCurrentState: () => ({
+          favorites: [...state.favorites],
+          hiddenSources: [...state.hiddenSources]
+        }),
+        setCloudActive: value => { cloudActive = Boolean(value); },
+        applyCloudState: next => {
+          if (Array.isArray(next?.favorites)) state.favorites = new Set(next.favorites);
+          if (Array.isArray(next?.hiddenSources)) state.hiddenSources = new Set(next.hiddenSources);
+          state.visible = 40;
+          renderSourceOptions();
+          render();
+        },
+        restoreGuestState: () => {
+          state.favorites = loadFavorites();
+          state.hiddenSources = loadHiddenSources();
+          state.visible = 40;
+          renderSourceOptions();
+          render();
+        }
+      });
 
       const tags = [...new Set(data.items.flatMap(item => item.tags || []))].sort((a, b) => a.localeCompare(b, "ja"));
       elements.tag.insertAdjacentHTML("beforeend", tags.map(tag => `<option value="${escapeHtml(tag)}">${escapeHtml(tag)}</option>`).join(""));
@@ -315,10 +386,14 @@
         if (!button) return;
         const id = button.dataset.id;
         state.favorites.has(id) ? state.favorites.delete(id) : state.favorites.add(id);
-        saveFavorites(); render();
+        const isSaved = state.favorites.has(id);
+        saveFavorites();
+        if (cloudActive) window.SHINAGAWA_NEWS_CLOUD?.favoriteChanged(id, isSaved);
+        render();
       });
       render();
     })();
   </script>
+  <script type="module" src="news-sync.js"></script>
 </body>
 </html>
