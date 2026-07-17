@@ -421,6 +421,7 @@
   <script src="data/r07-complete.js"></script>
   <script src="data/r08.js"></script>
   <script src="data/r08-complete.js"></script>
+  <script src="data/r08-committee-test.js"></script>
   <script src="data/news-items.js"></script>
 
   <script>
@@ -599,6 +600,28 @@
           });
         });
       }
+
+      for (const session of yearData.committeeSessions || []) {
+        for (const topic of session.topics || []) {
+          for (const exchange of topic.exchanges || []) {
+            addItem({
+              id: `committee-${session.id}-${exchange.id}`,
+              category: "council",
+              type: "委員会質疑・答弁",
+              year,
+              date: session.dateIso || "",
+              title: topic.title,
+              meta: [exchange.speaker, exchange.respondent, yearData.label, session.date, session.committee, exchange.kind].filter(Boolean).join("／"),
+              question: exchange.question || "",
+              answer: exchange.answer || "",
+              primary: [exchange.speaker, exchange.respondent, session.committee, meetingNames[session.meetingId]],
+              tags: [exchange.kind || "質問", session.committee],
+              links: [{ type: "internal", label: "DB内で委員会質疑を開く", url: `index.html#committee-${session.id}-${exchange.id}` }].concat(session.links || [])
+            });
+          }
+        }
+      }
+
     }
 
     function addPerson(person, type, extra = {}) {
@@ -772,7 +795,7 @@
         item.result ? `<span class="badge badge--result">${esc(item.result)}</span>` : ""
       ].concat(visibleTags.slice(0, 3).map((tag) => `<span class="badge">${highlight(tag, terms)}</span>`));
       let body = "";
-      if (item.type === "質問・答弁") {
+      if (item.type === "質問・答弁" || item.type === "委員会質疑・答弁") {
         body = `<dl class="qa-summary">
           <dt>質問の要約</dt><dd>${item.question ? highlight(trimText(item.question), terms) : "要約準備中"}</dd>
           <dt>答弁の要約</dt><dd>${item.answer ? highlight(trimText(item.answer), terms) : "要約準備中"}</dd>
