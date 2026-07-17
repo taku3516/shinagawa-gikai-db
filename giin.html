@@ -103,7 +103,7 @@
       color: var(--c-main-dark); font-size: 13px; font-weight: 800;
     }
 
-    /* 後から情報を入れる枠（SNS・政治資金収支報告書・政務活動費） */
+    /* 後から情報を入れる枠（SNS・選挙履歴・政治資金収支報告書・政務活動費） */
     .extra-slot { font-size: 13px; line-height: 1.9; }
     .extra-slot .slot-name { color: var(--c-ink); font-weight: 800; }
     .pending {
@@ -154,7 +154,7 @@
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
         <h1>議員名簿</h1>
         <p class="lead">
-          品川区議会の議員紹介ページを基に、議員の情報を一覧できるようにしたページです。名前・会派・委員会で検索できます。
+          品川区議会の議員紹介ページを基に、議員の情報を一覧できるようにしたページです。名前・会派・委員会で検索できます。過去の選挙・得票履歴は、出典確認後に追加できるよう項目を準備しています。
         </p>
         <div class="disclaimer">
           これは品川区が運営しているものではありません。掲載情報は品川区議会公式サイトからの転記です。最新かつ正確な情報は必ず<a href="https://gikai.city.shinagawa.tokyo.jp/profile/50on" target="_blank" rel="noopener">公式の議員紹介ページ</a>を確認してください。
@@ -247,6 +247,7 @@
           ${committees.length ? `<p class="committee">${committees.join("<br />")}</p>` : ""}
           <div>${links}</div>
           ${extraSlotHtml("SNS", m.sns)}
+          ${extraSlotHtml("過去の選挙・得票履歴", m.electionHistory)}
           ${extraSlotHtml("政治資金収支報告書", m.fundReports)}
           ${extraSlotHtml("政務活動費", m.activityExpenses)}
           <details>
