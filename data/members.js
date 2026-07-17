@@ -1,9 +1,9 @@
 // 品川区議会DB データファイル（議員名簿）
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.membersData = {
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-17",
   "sourceUrl": "https://gikai.city.shinagawa.tokyo.jp/profile/50on",
-  "note": "議員情報は品川区議会公式サイトの議員紹介ページから転記。SNS・政治資金収支報告書・政務活動費は今後追加予定の枠。",
+  "note": "議員情報は品川区議会公式サイトの議員紹介ページから転記。SNS・過去の選挙・得票履歴・政治資金収支報告書・政務活動費は、出典確認後に追加するための準備中の枠。",
   "members": [
     {
       "id": "hiroo_akutsu",
