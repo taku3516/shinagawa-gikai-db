@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-17T07:38:58.897516Z",
+  "generatedAt": "2026-07-17T13:05:57.334295Z",
   "items": [
+    {
+      "id": "bd93f5a3fa1f5e212b8e",
+      "title": "大井町で「マツケンサンバコンサート」開催へ 品川区民がダンサー出演",
+      "summary": "きゅりあん（品川区東大井5）で10月10日に開催される品川文化振興事業団40周年記念公演「マツケンサンバコンサート2026」のチケット販売が、7月21日に始まる。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5041",
+      "publishedAt": "2026-07-17T11:25:58Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T13:05:33.202759Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "東大井",
+        "きゅりあん"
+      ],
+      "relevanceScore": 20
+    },
     {
       "id": "a93cf1f23460bf74704f",
       "title": "ニュース「さわやかさん」更新しました！",
@@ -2682,7 +2703,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 569,
+      "scanned": 599,
       "accepted": 0
     },
     {
