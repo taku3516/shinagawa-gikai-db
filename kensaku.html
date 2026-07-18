@@ -428,16 +428,6 @@
   <script src="data/r08-committees-part-04.js"></script>
   <script src="data/r08-committees-part-05.js"></script>
   <script src="data/r08-committees-part-06.js"></script>
-  <script src="data/r08-committees-part-07.js"></script>
-  <script src="data/r08-committees-part-08.js"></script>
-  <script src="data/r08-committees-part-09.js"></script>
-  <script src="data/r08-committees-part-10.js"></script>
-  <script src="data/r08-committees-part-11.js"></script>
-  <script src="data/r08-committees-part-12.js"></script>
-  <script src="data/r08-committees-part-13.js"></script>
-  <script src="data/r08-committees-part-14.js"></script>
-  <script src="data/r08-committees-part-15.js"></script>
-  <script src="data/r08-committees-part-16.js"></script>
   <script src="data/news-items.js"></script>
 
   <script>
@@ -626,7 +616,7 @@
               type: "委員会質疑・答弁",
               year,
               date: session.dateIso || "",
-              title: topic.title,
+              title: exchange.title || topic.title,
               meta: [exchange.speaker, exchange.respondent, yearData.label, session.date, session.committee, exchange.kind].filter(Boolean).join("／"),
               question: exchange.question || "",
               answer: exchange.answer || "",

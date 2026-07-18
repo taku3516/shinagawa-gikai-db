@@ -259,6 +259,7 @@
     .committee-exchange { border-left: 4px solid var(--c-main); border-radius: 2px; background: #f3f6f8; padding: 14px 16px; }
     .committee-exchange__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
     .committee-exchange__head h5 { margin: 0; font-size: 15px; }
+    .committee-exchange__speaker { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
     .committee-exchange__kind { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 2px 7px; color: var(--c-main-dark); font-size: 11px; font-weight: 800; }
     .committee-exchange dl { display: grid; grid-template-columns: 8em 1fr; gap: 8px 12px; margin: 0; }
     .committee-exchange dt { color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
@@ -431,16 +432,6 @@
   <script src="data/r08-committees-part-04.js"></script>
   <script src="data/r08-committees-part-05.js"></script>
   <script src="data/r08-committees-part-06.js"></script>
-  <script src="data/r08-committees-part-07.js"></script>
-  <script src="data/r08-committees-part-08.js"></script>
-  <script src="data/r08-committees-part-09.js"></script>
-  <script src="data/r08-committees-part-10.js"></script>
-  <script src="data/r08-committees-part-11.js"></script>
-  <script src="data/r08-committees-part-12.js"></script>
-  <script src="data/r08-committees-part-13.js"></script>
-  <script src="data/r08-committees-part-14.js"></script>
-  <script src="data/r08-committees-part-15.js"></script>
-  <script src="data/r08-committees-part-16.js"></script>
 
   <script>
     "use strict";
@@ -715,7 +706,8 @@
       const exchanges = (topic.exchanges || []).map((item) => `
         <article class="committee-exchange" id="committee-${esc(session.id)}-${esc(item.id)}">
           <div class="committee-exchange__head">
-            <h5>${esc(item.speaker)}</h5>
+            <h5>${esc(item.title || item.speaker)}</h5>
+            ${item.title ? `<span class="committee-exchange__speaker">${esc(item.speaker)}</span>` : ""}
             <span class="committee-exchange__kind">${esc(item.kind || "質問")}</span>
           </div>
           <dl>

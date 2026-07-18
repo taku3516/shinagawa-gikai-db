@@ -66,7 +66,7 @@
 | 2026-05-14 | 議会運営委員会 | 校正原稿・正式会議録ではない | 17ページ | 19 | 実装・自動検証済み | [公式](https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.05.14gu.pdf) |
 | 2026-05-21 | 議会運営委員会 | 校正原稿・正式会議録ではない | 5ページ | 0 | 実装・自動検証済み | [公式](https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.05.21gu.pdf) |
 | 2026-05-26 | 議会運営委員会 | 校正原稿・正式会議録ではない | 10ページ | 4 | 実装・自動検証済み | [公式](https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.05.26gu.pdf) |
-| 2026-05-27 | 区民委員会 | 校正原稿・正式会議録ではない | 16ページ | 22 | 実装・自動検証済み | [公式](https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.05.27ku.pdf) |
+| 2026-05-27 | 区民委員会 | 校正原稿・正式会議録ではない | 16ページ | 21 | 実装・自動検証済み | [公式](https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.05.27ku.pdf) |
 | 2026-05-27 | 厚生委員会 | 校正原稿・正式会議録ではない | 12ページ | 12 | 実装・自動検証済み | [公式](https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.05.27ko.pdf) |
 | 2026-05-27 | 総務委員会 | 校正原稿・正式会議録ではない | 25ページ | 35 | 実装・自動検証済み | [公式](https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.05.27so.pdf) |
 | 2026-05-27 | 議会運営委員会 | 校正原稿・正式会議録ではない | 4ページ | 0 | 実装・自動検証済み | [公式](https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.05.27gu.pdf) |
@@ -144,7 +144,7 @@
 ## 集計
 
 - 実装済み会議: 71件
-- 質疑・答弁: 2919件
+- 質疑・答弁: 2918件
 - 正式会議録: 47会議
 - 校正原稿: 24会議
 - 公開待ち・開催予定: 56件
@@ -155,7 +155,7 @@
 |---|---:|
 | まちづくり・公共交通推進特別委員会 | 121 |
 | 予算特別委員会 | 1124 |
-| 区民委員会 | 160 |
+| 区民委員会 | 159 |
 | 厚生委員会 | 257 |
 | 子ども若者支援・共生社会推進特別委員会 | 56 |
 | 建設委員会 | 366 |
@@ -172,7 +172,7 @@
 | 2026-02 | 720 |
 | 2026-03 | 1156 |
 | 2026-04 | 336 |
-| 2026-05 | 268 |
+| 2026-05 | 267 |
 | 2026-06 | 127 |
 
 ## 自動検証

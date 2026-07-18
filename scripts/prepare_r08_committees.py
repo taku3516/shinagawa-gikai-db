@@ -370,30 +370,270 @@ def is_substantive(text: str) -> bool:
 
 def sentence_list(text: str) -> list[str]:
     cleaned = compact(text)
+    # HTML/PDFの段組みにより次の議題本文まで同一発言へ結合された場合は、
+    # 議題終了の定型句より後を要約へ混ぜない。
+    cleaned = re.split(
+        r"(?:─{6,}|ほかにご発言がない|以上で(?:本件|報告事項|所管事務調査)|"
+        r"次の議題に移ります|\s[０-９\d]+\s+(?:所管事務調査|報告事項|議案審査))",
+        cleaned,
+        maxsplit=1,
+    )[0]
     parts = re.split(r"(?<=[。！？])", cleaned)
     return [compact(p) for p in parts if compact(p) and not any(term in p for term in PROCEDURAL)]
 
 
-def extractive_summary(text: str, cues: tuple[str, ...], limit: int) -> str:
-    sentences = sentence_list(text)
+def clean_spoken_style(value: str) -> str:
+    """会議録の意味を変えず、要約に不要な話し言葉を整える。"""
+    text = compact(value)
+    text = re.sub(
+        r"^(?:(?:ご)?説明(?:を)?ありがとうございます[。 ]*|ありがとうございます[。 ]*|"
+        r"よろしくお願いいたします[。 ]*|(?:それでは|まず|あと|また)[、 ]*)+",
+        "",
+        text,
+    )
+    replacements = (
+        ("しているというところでございます", "しています"),
+        ("というところでございます", "です"),
+        ("ということでございます", "です"),
+        ("となってございます", "となっています"),
+        ("してございます", "しています"),
+        ("しているところでございます", "しています"),
+        ("させていただいております", "しています"),
+        ("させていただきます", "します"),
+        ("させていただく", "する"),
+        ("と思っております", "と考えています"),
+        ("と考えてございます", "と考えています"),
+        ("でございますが", "ですが"),
+        ("でございます", "です"),
+        ("ございますが", "ありますが"),
+        ("ございます", "あります"),
+    )
+    for source, replacement in replacements:
+        text = text.replace(source, replacement)
+    text = re.sub(r"^私(?:も|から)?[^。]{0,50}?質問させてほしいと求めました[。 ]*", "", text)
+    text = re.sub(r"^(?:最後に)?意見として[。 、]*", "", text)
+    text = re.sub(r"^(?:まず)?状況をもう少しお聞きしたいと思うのですが[、 ]*", "", text)
+    text = re.sub(r"^どうしても所用があって伺えなかったのですけれども[、 ]*", "", text)
+    text = re.sub(r"(?<=[ぁ-んァ-ヶ一-龥々]) (?=[ぁ-んァ-ヶ一-龥々])", "", text)
+    text = re.sub(r"^は、\s*", "", text)
+    return compact(text)
+
+
+def clip_at_clause(value: str, limit: int) -> str:
+    text = compact(value)
+    if len(text) <= limit:
+        return text
+    floor = max(50, int(limit * 0.58))
+    positions = [match.end() for match in re.finditer(r"[。！？、]", text[:limit + 1])]
+    cut = max((position for position in positions if position >= floor), default=limit)
+    clipped = text[:cut].rstrip("、 ")
+    return clipped[:limit - 1].rstrip("、 ") + "…"
+
+
+def condense_sentence(value: str, cues: tuple[str, ...], limit: int, mode: str) -> str:
+    """長い一文から、結論・数字・対応を示す節だけを残す。"""
+    sentence = clean_spoken_style(value)
+    if len(sentence) <= limit:
+        return sentence
+    clauses = [compact(part) for part in re.split(r"(?<=、)", sentence) if compact(part)]
+    if len(clauses) <= 1:
+        return clip_at_clause(sentence, limit)
+    ranked = []
+    for index, clause in enumerate(clauses):
+        score = sum(2 for cue in cues if cue in clause)
+        if re.search(r"\d|[０-９]", clause):
+            score += 2
+        if mode == "question" and re.search(r"(?:ですか|でしょうか|伺|尋ね|確認|求め|要望|提案|教えて|ほしい)", clause):
+            score += 5
+        if mode == "answer" and re.search(r"(?:実施|予定|検討|対応|方針|説明|回答|認識|見込|開始|継続|変更|設置|支援)", clause):
+            score += 4
+        if index == len(clauses) - 1:
+            score += 3
+        ranked.append((score, index, clause))
+
+    selected_indexes = []
+    total = 0
+    for _, index, clause in sorted(ranked, reverse=True):
+        if index in selected_indexes:
+            continue
+        if selected_indexes and total + len(clause) > limit:
+            continue
+        selected_indexes.append(index)
+        total += len(clause)
+        if len(selected_indexes) >= 3:
+            break
+    result = "".join(clauses[index] for index in sorted(selected_indexes))
+    result = re.sub(r"^(?:それで|そこで|そのため|一方|また|あと|ということで)[、 ]*", "", result)
+    result = compact(result or clauses[-1]).rstrip("、 ")
+    if result and result[-1] not in "。！？…":
+        result += "。"
+    return clip_at_clause(result, limit)
+
+
+def reported_question(value: str, kind: str) -> str:
+    """質問文の語尾を、短い第三者要約として読みやすくする。"""
+    text = compact(value)
+    text = text.replace("いただければと思います", "ほしいと求めました")
+    text = text.replace("いただきたいと思います", "ほしいと求めました")
+    text = re.sub(r"(?:ので、)?よろしく(?:お願いいたします|お願いします)[。 ]*$", "", text)
+    text = re.sub(r"(?:教えて|お聞かせ|説明して)(?:いただければと思います|いただきたいと思います|ください)[。 ]*$", "説明を求めました。", text)
+    text = re.sub(r"(?:でしょうか|ですか)[。 ]*$", "か尋ねました。", text)
+    text = re.sub(r"という認識でよろしいのか[。 ]*$", "との認識でよいか確認しました。", text)
+    if kind in ("意見", "提案") and not re.search(r"(?:述べました|提案しました|求めました|尋ねました|確認しました)[。 ]*$", text):
+        text = text.rstrip("。") + "との意見を述べました。"
+    text = text.replace("ととの意見を述べました", "との意見を述べました")
+    if text and text[-1] not in "。！？…":
+        text += "。"
+    return compact(text)
+
+
+def concise_summary(text: str, cues: tuple[str, ...], limit: int, mode: str, kind: str = "") -> str:
+    """重要文を選び、質問・答弁を短い読み言葉に整える。"""
+    raw_sentences = sentence_list(text)
+    sentences = []
+    for sentence in raw_sentences:
+        cleaned = clean_spoken_style(sentence)
+        if not cleaned:
+            continue
+        if re.fullmatch(r"(?:はい|承知しました|ありがとうございます)[。！ ]*", cleaned):
+            continue
+        sentences.append(cleaned)
     if not sentences:
         return ""
-    selected = []
+
+    scored = []
     for index, sentence in enumerate(sentences):
-        important = any(cue in sentence for cue in cues) or bool(re.search(r"\d|[０-９]", sentence))
-        if index == 0 or important:
-            selected.append(sentence)
-    if len("".join(selected)) < min(180, len(text) // 3):
-        selected = sentences
+        score = sum(2 for cue in cues if cue in sentence)
+        if re.search(r"\d|[０-９]", sentence):
+            score += 2
+        if mode == "question" and re.search(r"(?:ですか|でしょうか|伺|尋ね|確認|求め|要望|提案|ほしい)", sentence):
+            score += 4
+        if mode == "answer" and re.search(r"(?:実施|予定|検討|対応|方針|説明|回答|認識|見込|開始|継続|変更|できない|難しい)", sentence):
+            score += 4
+        if index == len(sentences) - 1:
+            score += 2
+        scored.append((score, index, sentence))
+
+    # 質問は結論に近い文、答弁は結論・数字・対応方針を優先する。
+    wanted = 2
+    chosen_indexes = sorted(index for _, index, _ in sorted(scored, reverse=True)[:wanted])
+    sentence_limit = max(70, limit // max(1, len(chosen_indexes)))
+    selected = [condense_sentence(sentences[index], cues, sentence_limit, mode) for index in chosen_indexes]
     result = "".join(selected)
-    if len(result) <= limit:
-        return result
-    clipped = ""
-    for sentence in selected:
-        if clipped and len(clipped) + len(sentence) > limit:
+    if not result:
+        result = sentences[-1] if mode == "question" else sentences[0]
+    result = clip_at_clause(result, limit)
+    return clip_at_clause(reported_question(result, kind), limit) if mode == "question" else result
+
+
+def normalize_agenda_title(value: str, fallback: str = "委員会での質疑") -> str:
+    """議事進行の文言を除き、画面用の自然で短い題名にする。"""
+    title = compact(value).replace("実 施", "実施").replace("委員 会", "委員会")
+    if "予算特別委員会を開きます" in title:
+        if "令和８年度品川区一般会計予算" in title:
+            return "令和８年度品川区一般会計予算"
+        return "予算特別委員会"
+    if "調査事項概要" in title:
+        return "調査事項概要"
+    if "今後の委員会運営" in title:
+        return "今後の委員会運営"
+    if re.search(r"最後に[、 ]*[（(]?4[）)]?その他", title):
+        return "その他"
+
+    title = re.sub(r"^.*?(?=令和[０-９\d]+年(?:請願|陳情)第)", "", title)
+    prefixes = (
+        r"報告事項を聴取いたします[。 、]*",
+        r"議案審査を行います[。 、]*",
+        r"請願・陳情審査を行います[。 、]*",
+        r"特定事件調査を行います[。 、]*",
+        r"その他を行います[。 、]*",
+        r"所管事務調査を行います[。 、]*",
+        r"査を行います[。 、]*",
+        r"少し配付物がございますので、少しお待ちください[。 、]*",
+        r"(?:初めに|まず|次に|続いて|最後に|それでは)[、 ]*",
+    )
+    changed = True
+    while changed:
+        changed = False
+        for prefix in prefixes:
+            cleaned = re.sub("^" + prefix, "", title)
+            if cleaned != title:
+                title = cleaned
+                changed = True
+    title = re.sub(r"^[（(]?\s*[０-９\d]+\s*[）)]\s*", "", title)
+    title = re.sub(r"^[⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽]\s*", "", title)
+    title = re.sub(r"^予定(?:表)?[０-９\d、 ]*[。 、]*", "", title)
+    title = re.sub(r"(?:を議題に供します|についてを議題に供します)[。 ]*$", "", title)
+    title = compact(title).strip("、。 「」『』")
+
+    if title.startswith("請願・陳情審査および"):
+        title = "請願・陳情審査および報告事項"
+    if title.startswith("その他、") and "所管質問" in title:
+        title = "所管質問"
+    if "の順番を入れ替え" in title and "第４０号議案" in title:
+        title = "第４０号議案、電線共同溝等工事（競馬場通り）委託契約の変更"
+    title = re.sub(r"^報告事項[、 ]*", "", title)
+    if "第一回臨時総会定足数規約違反" in title:
+        title = "再開発準備組合の運営等に関する陳情"
+    if title.startswith("法律の施行に伴う関係条例の整備"):
+        title = "関係条例の整備等（3議案）"
+    if title.startswith("特別養護老人ホーム条例の一部を改正"):
+        title = "福祉施設関係条例の改正等（4議案）"
+    if title.startswith("品川区立障害児者総合支援施設条例"):
+        title = "障害福祉関係条例の改正等（3議案）"
+    if title.startswith("第１９号議案") and "第２１号議案" in title:
+        title = "第１９号・第２１号議案（児童センター・保育所条例）"
+    if title.startswith("第２２号議案") and "第２３号議案" in title:
+        title = "第２２号・第２３号議案（乳児等通園支援事業）"
+    if title.startswith("特定事件調査") and "まとめ" in title:
+        title = "特定事件調査のまとめ"
+    petition_short_titles = {
+        "令和７年陳情第５８号": "令和７年陳情第５８号（品川浦南地区再開発）",
+        "令和８年陳情第１２号": "令和８年陳情第１２号（監査実施判断と弁護士相談費用）",
+        "令和８年陳情第１３号": "令和８年陳情第１３号（品川浦周辺地区まちづくりガイドライン）",
+    }
+    for prefix, short_title in petition_short_titles.items():
+        if title.startswith(prefix):
+            title = short_title
             break
-        clipped += sentence
-    return clipped or result[:limit].rstrip() + "…"
+    if title.count("」") > title.count("「"):
+        title = "「" + title
+    if title.count("「") > title.count("」"):
+        title += "」"
+    if not title or len(title) < 2:
+        title = fallback
+    return clip_at_clause(title, 80)
+
+
+GENERIC_TOPIC_TITLES = {
+    "その他", "委員会での質疑", "所管事務調査", "所管質問", "予算特別委員会",
+    "事務事業概要", "特定事件調査", "特定事件調査のまとめ",
+}
+
+
+def exchange_display_title(question: str, topic_title: str, previous: str = "") -> str:
+    """大項目が抽象的な場合だけ、質疑内容から短い小見出しを付ける。"""
+    if topic_title not in GENERIC_TOPIC_TITLES:
+        return ""
+    text = compact(question)
+    rules = (
+        (r"一般質問.*原稿|原稿.*差し替え", "一般質問原稿の差し替え"),
+        (r"議員研修|研修会|亀井会長", "議員研修会の内容と所要時間"),
+        (r"大井町トラックス|高輪ゲートウェイ|品川圏", "議員研修会の内容"),
+        (r"議員バッジ.*(?:価格|費用|金製|レプリカ)", "議員バッジの価格"),
+        (r"議員バッジ.*(?:改選|紛失|購入|対象)", "議員バッジの見直し対象"),
+        (r"議員バッジ", "議員バッジの仕様見直し"),
+        (r"しながわ電気・ガス料金緊急支援事業|電気・ガス料金", "電気・ガス料金緊急支援事業"),
+        (r"町会・自治会|町会長|地域連絡調整員", "町会・自治会支援"),
+    )
+    for pattern, title in rules:
+        if re.search(pattern, text):
+            return title
+
+    referential = re.match(r"^(?:内容|その点|その辺|その中|今の話|現状|もう一点|分かりました|そういった|できれば)", text)
+    if referential and previous:
+        return previous
+    return ""
 
 
 def classify_kind(text: str) -> str:
@@ -403,7 +643,9 @@ def classify_kind(text: str) -> str:
         return "質問・要望"
     if "確認" in text:
         return "確認"
-    if any(cue in text for cue in ("伺", "質問", "お聞き", "ですか", "でしょうか")):
+    if any(cue in text for cue in ("伺", "質問", "お聞き", "教えて", "ですか", "でしょうか")):
+        return "質問"
+    if "お願いします" in text and any(cue in text for cue in ("答弁", "評価", "見解", "説明", "内訳", "理由")):
         return "質問"
     return "意見"
 
@@ -442,7 +684,8 @@ def chair_is_response(text: str) -> bool:
 def chair_closes_exchange(text: str) -> bool:
     return any(term in text for term in (
         "以上で本件", "ほかにございます", "ほかにありません", "次に、予定表", "次の予定",
-        "その他を議題", "説明が終わりました", "理事者の皆様、どうぞよろしく",
+        "ほかにご発言がない", "以上で報告事項", "その他を議題", "説明が終わりました",
+        "理事者の皆様、どうぞよろしく",
     ))
 
 
@@ -471,30 +714,35 @@ def make_topics(voices: list[dict], session_id: str) -> list[dict]:
                     continue
                 if chair_has_substantive_question(following_text):
                     break
+                if chair_closes_exchange(following_text):
+                    break
                 if chair_is_response(following_text):
                     answer_voices.append(following)
                     continue
-                if chair_closes_exchange(following_text) or not answer_voices:
-                    break
+                break
                 continue
             answer_voices.append(following)
         respondents = []
         answer_parts = []
+        per_answer_limit = max(70, min(130, 220 // max(1, len(answer_voices))))
         for answer_voice in answer_voices:
             respondent = normalize_name(answer_voice.get("speaker", ""))
             if respondent and respondent not in respondents:
                 respondents.append(respondent)
-            summary = extractive_summary(answer_voice.get("text", ""), ANSWER_CUES, 900)
+            summary = concise_summary(
+                answer_voice.get("text", ""), ANSWER_CUES, per_answer_limit, "answer"
+            )
             if summary:
                 answer_parts.append(summary)
-        question = extractive_summary(text, QUESTION_CUES, 1200)
-        answer = "".join(answer_parts)
+        kind = classify_kind(text)
+        question = concise_summary(text, QUESTION_CUES, 140, "question", kind)
+        answer = clip_at_clause(" ".join(answer_parts), 240)
         if not answer:
             answer = "この発言に対する個別の答弁・回答は、会議録に記録されていません。"
         exchanges.append({
             "agenda": agenda,
             "speaker": speaker,
-            "kind": classify_kind(text),
+            "kind": kind,
             "question": question,
             "respondent": "、".join(respondents),
             "answer": answer,
@@ -502,13 +750,19 @@ def make_topics(voices: list[dict], session_id: str) -> list[dict]:
 
     grouped: OrderedDict[str, list[dict]] = OrderedDict()
     for item in exchanges:
-        grouped.setdefault(item.pop("agenda"), []).append(item)
+        title = normalize_agenda_title(item.pop("agenda"))
+        grouped.setdefault(title, []).append(item)
     topics = []
     sequence = 0
     for topic_index, (title, items) in enumerate(grouped.items(), start=1):
+        previous_display_title = ""
         for item in items:
             sequence += 1
             item["id"] = f"exchange-{sequence:03d}"
+            display_title = exchange_display_title(item["question"], title, previous_display_title)
+            if display_title:
+                item["title"] = display_title
+                previous_display_title = display_title
         topics.append({
             "id": f"topic-{topic_index:02d}", "title": title, "agenda": title,
             "exchanges": items,
@@ -655,15 +909,22 @@ def validate(sessions: list[dict]) -> None:
         # その会議自体を台帳から落とさないため、0件を正当な状態として扱う。
         for topic in session["topics"]:
             assert topic["exchanges"]
+            assert 2 <= len(topic["title"]) <= 81
+            assert not any(term in topic["title"] for term in (
+                "報告事項を聴取いたします", "議案審査を行います", "請願・陳情審査を行います",
+            ))
             for item in topic["exchanges"]:
                 assert item["id"] not in exchange_ids, f"duplicate exchange id: {session['id']} {item['id']}"
                 exchange_ids.add(item["id"])
                 assert item["speaker"] and item["question"] and item["answer"]
+                assert not item.get("title") or len(item["title"]) <= 44
                 assert not re.match(r"^[0-9０-９]+[:：]", item["question"])
-                assert len(item["question"]) <= 1250
-                # 予算特別委員会では、一度の質問に複数部局が順番に答えるため長くなる。
-                # 答弁者ごとの要点を落とさないことを優先し、十分な上限を設ける。
-                assert len(item["answer"]) <= 30000
+                assert len(item["question"]) <= 141, (
+                    session["id"], topic["title"], item["id"], len(item["question"]), item["question"]
+                )
+                assert len(item["answer"]) <= 241, (
+                    session["id"], topic["title"], item["id"], len(item["answer"]), item["answer"]
+                )
 
 
 def main() -> None:
