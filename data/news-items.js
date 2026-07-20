@@ -1,7 +1,29 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-17T23:43:16.710337Z",
+  "generatedAt": "2026-07-20T23:49:23.414358Z",
   "items": [
+    {
+      "id": "96e6f7de3550ee4926bb",
+      "title": "えばさんものがたり103号 2026年(令和8年)7月発行",
+      "summary": "1面 タニコー株式会社と平塚二丁目町会との地域連携 ～区民まつりをきっかけとしたつながり～ 2面・3面 朝ごはん、ちゃんと食べていますか？ ～くすのき朝ごはん食堂～ 4面 駅直結！アクセス抜群の品川区役所新庁舎 1面(PDF : 294KB) 2面(PDF : 166KB) 3面(PDF : 268KB) 4面(PDF : 399KB) 全面(PDF : 2MB) 音声読み上げ用 (WORD : 25KB) 荏原第三地域センター 電話：03-3783-2000 FAX：03…",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba3/shisetsu-kuyakusyo-chiiki-eba3-monogatari/20260721.html",
+      "publishedAt": "2026-07-21T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-20T23:47:41.301266Z",
+      "tags": [
+        "行政",
+        "交通"
+      ],
+      "locations": [
+        "荏原",
+        "平塚",
+        "品川区役所"
+      ],
+      "relevanceScore": 28
+    },
     {
       "id": "b74252e82496dafe6f61",
       "title": "マイナンバーカードに関する各手続きについて（紛失、暗証番号ロック、電子証明書、住所・氏名変更など）",
@@ -2685,7 +2707,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 5,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -2702,9 +2724,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 587,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1745, column 67"
     },
     {
       "source": "朝日新聞",
@@ -2785,9 +2807,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
