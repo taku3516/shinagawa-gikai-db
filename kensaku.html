@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f4e79" />
   <title>横断検索 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
   <style>
     :root {
       --c-main: #1f4e79;
@@ -330,6 +331,7 @@
           <a href="https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=search-phrase" target="_blank" rel="noopener">会議録検索システム「ことばで探す」</a>
           をご利用ください。
         </div>
+        <nav data-site-nav></nav>
       </div>
     </header>
 
@@ -400,6 +402,7 @@
 
   <!-- 静的なデータファイルを読み込むため、GitHub Pagesとローカル表示の両方で動作する -->
   <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
   <script src="data/people.js"></script>
   <script src="data/members.js"></script>
   <script src="data/former-members.js"></script>

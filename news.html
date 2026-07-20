@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#1f4e79" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231f4e79'/%3E%3Cpath d='M8 9h16v3H8zm0 6h16v3H8zm0 6h11v3H8z' fill='white'/%3E%3C/svg%3E" />
   <title>品川区ニュース | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
   <style>
     :root {
       --main: #1f4e79; --main-dark: #173a5e; --main-pale: #e7eef4;
@@ -145,6 +146,7 @@
       <h1>品川区ニュース</h1>
       <p class="lead">品川区に関係する行政、議会、地域、防災、交通などの情報を、複数の公開情報源から自動収集して整理します。</p>
       <div class="notice">記事の本文は各発信元に帰属します。このページにはタイトルと短い概要のみを掲載しています。内容・日時は、必ず「元の記事を読む」から発信元をご確認ください。</div>
+      <nav data-site-nav></nav>
     </div>
   </header>
 
@@ -200,6 +202,8 @@
 
   <footer><div class="container">品川区議会DB — ニュースの正確な内容は、必ず各発信元のページで確認してください。</div></footer>
 
+  <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
   <script src="data/news-items.js"></script>
   <script src="data/firebase-config.js"></script>
   <script>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f4e79" />
   <title>品川区の選挙アーカイブ | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
   <style>
     :root {
       --c-main: #1f4e79; --c-main-dark: #173a5e; --c-bg: #f4f1e8;
@@ -136,6 +137,7 @@
         <div class="disclaimer">
           現在は画面とデータ形式、参考にするサイトのみ準備しています。選挙名、候補者、得票数、投票率などの個別情報はまだ掲載していません。
         </div>
+        <nav data-site-nav></nav>
       </div>
     </div>
 
@@ -161,6 +163,8 @@
 
   <footer><div class="container">品川区議会DB — 選挙結果は、掲載時に必ず一次情報へのリンクを併記します。</div></footer>
 
+  <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
   <script src="data/elections.js"></script>
   <script>
     "use strict";

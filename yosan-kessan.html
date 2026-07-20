@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f4e79" />
   <title>予算・決算 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
   <style>
     :root {
       --c-main: #1f4e79; --c-main-dark: #173a5e; --c-main-pale: #e7eef4;
@@ -96,6 +97,7 @@
         <div class="warn" style="border-left-color: var(--c-main); background: var(--c-main-pale); border-color: var(--c-border);">
           これは品川区が運営しているものではありません。金額・内容は品川区公式サイトからの転記です。正確な情報は必ず各リンク先の公式資料を確認してください。
         </div>
+        <nav data-site-nav></nav>
       </div>
     </div>
     <section>
@@ -110,6 +112,8 @@
   </main>
   <footer><div class="container">品川区議会DB — 予算・決算の一次情報は品川区公式サイトです。</div></footer>
 
+  <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
   <script src="data/fiscal.js"></script>
   <script>
     "use strict";

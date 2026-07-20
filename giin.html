@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f4e79" />
   <title>現職区議名簿 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
   <style>
     /* ===== index.html と同じ基調カラー ===== */
     :root {
@@ -178,6 +179,7 @@
         <div class="disclaimer" id="page-disclaimer">
           これは品川区が運営しているものではありません。掲載情報は品川区議会公式サイトからの転記です。最新かつ正確な情報は必ず<a href="https://gikai.city.shinagawa.tokyo.jp/profile/50on" target="_blank" rel="noopener">公式の議員紹介ページ</a>を確認してください。
         </div>
+        <nav data-site-nav></nav>
         <nav class="roster-switch" aria-label="政治家名簿の切り替え">
           <a data-roster="current-ward" href="giin.html">現職区議</a>
           <a data-roster="former-ward" href="giin.html?view=former-ward">元職区議</a>
@@ -211,6 +213,8 @@
   </footer>
 
   <!-- データ読み込み（script形式なので file:// のダブルクリックでも動く） -->
+  <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
   <script src="data/members.js"></script>
   <script src="data/former-members.js"></script>
   <script src="data/politicians.js"></script>

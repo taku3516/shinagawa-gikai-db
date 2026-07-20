@@ -1,0 +1,108 @@
+.site-function-nav {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #d8d2c4;
+}
+
+.site-function-nav__label {
+  margin: 0 0 10px;
+  color: #4f5d68;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.site-function-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.site-function-nav__link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #b9c3cc;
+  border-radius: 3px;
+  background: #fffdf8;
+  padding: 8px 12px;
+  color: #173a5e;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.site-function-nav__link:hover {
+  background: #e7eef4;
+  text-decoration-thickness: 2px;
+}
+
+.site-function-nav__link--video {
+  border-color: #fecaca;
+  background: #fff1f2;
+  color: #be123c;
+}
+
+.site-function-nav__link--video:hover { background: #ffe4e6; }
+
+.site-function-nav__link--minutes {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.site-function-nav__link--minutes:hover { background: #dcfce7; }
+
+.site-function-nav__link[aria-current="page"] {
+  border-color: #173a5e;
+  background: #173a5e;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 1px #fffdf8;
+}
+
+.site-function-nav__link:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.site-function-nav__external-mark {
+  flex: 0 0 auto;
+  font-size: .9em;
+  text-decoration: none;
+}
+
+.site-function-nav__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .site-function-nav__links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .site-function-nav__link {
+    width: 100%;
+    padding-inline: 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 340px) {
+  .site-function-nav__links { grid-template-columns: 1fr; }
+}
