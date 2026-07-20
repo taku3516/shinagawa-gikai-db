@@ -253,6 +253,11 @@
       return `<div class="extra-slot"><span class="slot-name">${esc(slotName)}:</span> ${body}</div>`;
     }
 
+    function activityExpenseSlotHtml(items) {
+      if (items && items.length > 0) return extraSlotHtml("政務活動費", items);
+      return `<div class="extra-slot"><span class="slot-name">政務活動費:</span> <a class="pill" href="seimu.html">年度別の公式資料を見る</a></div>`;
+    }
+
     // 詳細テーブルの1行（値が空の項目は行ごと省略する）
     function detailRow(label, value, isMultiline) {
       if (!value) return "";
@@ -286,7 +291,7 @@
           ${extraSlotHtml("SNS", m.sns)}
           ${extraSlotHtml("過去の選挙・得票履歴", m.electionHistory)}
           ${extraSlotHtml("政治資金収支報告書", m.fundReports)}
-          ${extraSlotHtml("政務活動費", m.activityExpenses)}
+          ${activityExpenseSlotHtml(m.activityExpenses)}
           <details>
             <summary>詳しい情報を見る</summary>
             <table class="detail-table">

@@ -3,7 +3,7 @@ window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.membersData = {
   "updatedAt": "2026-07-17",
   "sourceUrl": "https://gikai.city.shinagawa.tokyo.jp/profile/50on",
-  "note": "現職区議の情報は品川区議会公式サイトの議員紹介ページから転記。SNS・過去の選挙・得票履歴・政治資金収支報告書・政務活動費は、出典確認後に追加するための準備中の枠。",
+  "note": "現職区議の情報は品川区議会公式サイトの議員紹介ページから転記。SNS・過去の選挙・得票履歴・政治資金収支報告書は、出典確認後に追加するための準備中の枠。政務活動費は年度別の公式資料ページへ案内しています。",
   "members": [
     {
       "id": "hiroo_akutsu",

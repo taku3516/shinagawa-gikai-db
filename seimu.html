@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f4e79" />
+  <title>政務活動費 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
+  <style>
+    :root {
+      --c-main: #1f4e79; --c-main-dark: #173a5e; --c-main-pale: #e7eef4;
+      --c-bg: #f4f1e8; --c-card: #fffdf8; --c-ink: #17212b; --c-ink-soft: #4f5d68;
+      --c-border: #b9c3cc; --c-rule: #d8d2c4; --c-focus: #f59e0b;
+      --c-expense: #7c3f14; --c-expense-pale: #fff7ed; --c-expense-border: #fed7aa;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--c-bg); color: var(--c-ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      overflow-wrap: break-word;
+    }
+    a { color: var(--c-main-dark); font-weight: 700; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    button, input, select { font: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--c-focus); outline-offset: 2px;
+    }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero {
+      padding: 40px 0 28px; border-top: 6px solid var(--c-main); border-bottom: 1px solid var(--c-rule);
+      background: var(--c-card);
+    }
+    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
+    h1 { margin: 0 0 12px; color: var(--c-main-dark); font-size: clamp(30px, 5vw, 50px); line-height: 1.12; }
+    .lead { max-width: 840px; margin: 0; color: var(--c-ink-soft); font-size: 16px; line-height: 1.9; }
+    .notice {
+      margin-top: 18px; padding: 14px 16px; border: 1px solid var(--c-border); border-left: 4px solid var(--c-main);
+      border-radius: 3px; background: #f8fafc; font-size: 13px; line-height: 1.8;
+    }
+    main > section { padding: 32px 0 52px; }
+    .overview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .overview-card {
+      border: 1px solid var(--c-border); border-top: 4px solid var(--c-main); border-radius: 4px;
+      background: var(--c-card); padding: 16px;
+    }
+    .overview-card strong { display: block; margin-bottom: 5px; color: var(--c-main-dark); font-size: 19px; }
+    .overview-card span { color: var(--c-ink-soft); font-size: 13px; line-height: 1.7; }
+    .rules {
+      margin-bottom: 24px; border: 1px solid var(--c-expense-border); border-left: 4px solid var(--c-expense);
+      border-radius: 4px; background: var(--c-expense-pale); padding: 16px;
+    }
+    .rules h2 { margin: 0 0 8px; font-size: 18px; }
+    .rules p { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .rule-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .controls {
+      display: grid; grid-template-columns: minmax(190px, 280px) minmax(240px, 1fr); gap: 10px;
+      margin-bottom: 18px; padding: 14px; border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card);
+    }
+    .field { display: grid; gap: 5px; }
+    .field label { color: var(--c-ink-soft); font-size: 12px; font-weight: 800; }
+    .field select, .field input {
+      width: 100%; min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px;
+      background: #fff; padding: 8px 11px; color: var(--c-ink); font-size: 16px;
+    }
+    .status-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 12px; color: var(--c-ink-soft); font-size: 13px; }
+    .year-card { margin-bottom: 20px; scroll-margin-top: 16px; }
+    .year-heading { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: baseline; margin: 0 0 10px; }
+    .year-heading h2 { margin: 0; color: var(--c-main-dark); font-size: 25px; }
+    .count-badge {
+      display: inline-flex; border-radius: 999px; background: var(--c-main-pale); padding: 3px 10px;
+      color: var(--c-main-dark); font-size: 12px; font-weight: 800;
+    }
+    .period-card {
+      margin-bottom: 12px; border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card);
+      scroll-margin-top: 16px; overflow: hidden;
+    }
+    .period-card > summary {
+      display: flex; min-height: 58px; align-items: center; gap: 10px; padding: 12px 16px;
+      color: var(--c-main-dark); font-weight: 900; cursor: pointer; list-style: none;
+    }
+    .period-card > summary::-webkit-details-marker { display: none; }
+    .period-card > summary::before { content: "＋"; flex: 0 0 auto; width: 1.25em; font-size: 18px; }
+    .period-card[open] > summary::before { content: "−"; }
+    .period-card > summary:hover { background: var(--c-main-pale); }
+    .period-summary { display: flex; flex: 1 1 auto; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; align-items: baseline; }
+    .period-summary small { color: var(--c-ink-soft); font-size: 12px; }
+    .period-body { border-top: 1px solid var(--c-border); padding: 16px; }
+    .document-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .doc-link {
+      display: inline-flex; min-height: 42px; align-items: center; justify-content: center;
+      border: 1px solid var(--c-border); border-radius: 3px; background: #fff; padding: 7px 11px;
+      color: var(--c-main-dark); font-size: 12px; font-weight: 800; text-align: center;
+    }
+    .doc-link--primary { border-color: var(--c-main); background: var(--c-main); color: #fff; }
+    .doc-link--source { background: var(--c-main-pale); }
+    .recipient-list { display: grid; gap: 8px; }
+    .recipient {
+      display: grid; grid-template-columns: minmax(210px, 1fr) minmax(250px, auto); gap: 10px 16px; align-items: center;
+      border-top: 1px solid var(--c-rule); padding: 12px 0; scroll-margin-top: 18px;
+    }
+    .recipient:first-child { border-top: 0; }
+    .recipient-name { margin: 0; font-size: 14px; line-height: 1.6; }
+    .recipient-name span { display: inline-flex; margin-right: 7px; color: var(--c-ink-soft); font-size: 11px; }
+    .recipient-docs { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+    .empty {
+      border: 1px dashed var(--c-border); border-radius: 4px; background: var(--c-card);
+      padding: 34px 18px; color: var(--c-ink-soft); text-align: center; line-height: 1.8;
+    }
+    .fine-print { margin: 18px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }
+    footer {
+      padding: 30px 0; border-top: 1px solid var(--c-border); background: var(--c-main-dark);
+      color: #fff; text-align: center; font-size: 13px; line-height: 1.8;
+    }
+    @media (max-width: 720px) {
+      .overview-grid, .controls { grid-template-columns: 1fr; }
+      .recipient { grid-template-columns: 1fr; }
+      .recipient-docs { justify-content: flex-start; }
+      .doc-link { flex: 1 1 145px; min-height: 44px; }
+      .period-body { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+        <h1>政務活動費</h1>
+        <p class="lead">品川区議会が公開している政務活動費の収支一覧と、会派・議員ごとの活動概要・収支報告書を年度別にまとめています。</p>
+        <div class="notice">これは品川区が運営しているものではありません。金額や活動内容は転記せず、品川区議会が公開する公式PDFへ直接案内しています。正確な内容は必ずリンク先の原資料をご確認ください。</div>
+        <nav data-site-nav></nav>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div id="overview-root" class="overview-grid"></div>
+        <aside id="rules-root" class="rules" aria-labelledby="rules-title"></aside>
+
+        <div class="controls" aria-label="政務活動費資料の絞り込み">
+          <div class="field">
+            <label for="year-select">表示する年度</label>
+            <select id="year-select"></select>
+          </div>
+          <div class="field">
+            <label for="recipient-search">会派名・議員名で検索</label>
+            <input id="recipient-search" type="search" placeholder="会派名または議員名" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="status-row">
+          <span id="result-status" role="status" aria-live="polite"></span>
+          <a id="official-index-link" target="_blank" rel="noopener">品川区議会の政務活動費ページ ↗</a>
+        </div>
+        <div id="years-root"></div>
+        <p class="fine-print">「政務活動のあらまし」「収支報告書」は、各会派・議員から提出された原文を品川区議会が掲載したものです。令和5年度は議員改選に伴い、4月分と5月〜翌3月分に分かれています。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">品川区議会DB — 政務活動費の一次情報は品川区議会公式サイトです。</div></footer>
+
+  <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
+  <script src="data/seimu.js"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const data = window.SHINAGAWA_SEIMU;
+      const elements = {
+        overview: document.getElementById("overview-root"),
+        rules: document.getElementById("rules-root"),
+        year: document.getElementById("year-select"),
+        search: document.getElementById("recipient-search"),
+        status: document.getElementById("result-status"),
+        official: document.getElementById("official-index-link"),
+        years: document.getElementById("years-root")
+      };
+
+      function esc(value) {
+        return String(value ?? "").replace(/[&<>"']/g, char => (
+          { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]
+        ));
+      }
+
+      function normalize(value) {
+        return String(value || "").normalize("NFKC").toLocaleLowerCase("ja").replace(/[\s・･()（）]/g, "");
+      }
+
+      function externalLink(document, className = "doc-link") {
+        return `<a class="${className}" href="${esc(document.url)}" target="_blank" rel="noopener">${esc(document.label)} ↗</a>`;
+      }
+
+      function yearForHash(hash) {
+        const target = String(hash || "").replace(/^#seimu-/, "");
+        return data.fiscalYears.find(year => year.periods.some(period => target.startsWith(period.id)))?.id || "";
+      }
+
+      const params = new URLSearchParams(location.search);
+      const hashYear = yearForHash(location.hash);
+      const validYear = value => data.fiscalYears.some(year => year.id === value);
+      let selectedYear = validYear(hashYear) ? hashYear : validYear(params.get("year")) ? params.get("year") : data.fiscalYears[0].id;
+
+      elements.overview.innerHTML = `
+        <div class="overview-card"><strong>月額19万円</strong><span>${esc(data.overview.memberRule)}</span></div>
+        <div class="overview-card"><strong>会派または議員へ交付</strong><span>${esc(data.overview.caucusRule)}</span></div>
+        <div class="overview-card"><strong>令和7〜3年度</strong><span>公式公開分を年度別に掲載</span></div>`;
+      elements.rules.innerHTML = `<h2 id="rules-title">制度と使途基準</h2><p>${esc(data.overview.description)}</p><div class="rule-links">${data.rules.map(rule => externalLink(rule)).join("")}</div>`;
+      elements.official.href = data.officialUrl;
+      elements.year.innerHTML = data.fiscalYears.map(year => `<option value="${esc(year.id)}">${esc(year.label)}</option>`).join("") + '<option value="all">すべての年度</option>';
+      elements.year.value = selectedYear;
+
+      function renderRecipient(recipient) {
+        return `<article class="recipient" id="seimu-${esc(recipient.id)}">
+          <h3 class="recipient-name"><span>${esc(recipient.kind)}</span>${esc(recipient.name)}</h3>
+          <div class="recipient-docs">${recipient.documents.map(document => externalLink(document)).join("")}</div>
+        </article>`;
+      }
+
+      function renderPeriod(period, query, shouldOpen) {
+        const recipients = period.recipients.filter(recipient => !query || normalize(recipient.name).includes(query));
+        if (query && !recipients.length) return "";
+        const documentCount = 1 + recipients.reduce((sum, recipient) => sum + recipient.documents.length, 0);
+        return `<details class="period-card" id="seimu-${esc(period.id)}"${shouldOpen || query || location.hash.startsWith(`#seimu-${period.id}`) ? " open" : ""}>
+          <summary><span class="period-summary"><span>${esc(period.label)}</span><small>${recipients.length}会派・議員／${documentCount}資料</small></span></summary>
+          <div class="period-body">
+            <div class="document-actions">
+              ${externalLink(period.summaryDocument, "doc-link doc-link--primary")}
+              <a class="doc-link doc-link--source" href="${esc(period.sourceUrl)}" target="_blank" rel="noopener">公式の年度ページ ↗</a>
+            </div>
+            <div class="recipient-list">${recipients.map(renderRecipient).join("")}</div>
+          </div>
+        </details>`;
+      }
+
+      function render() {
+        const query = normalize(elements.search.value);
+        const visibleYears = elements.year.value === "all"
+          ? data.fiscalYears
+          : data.fiscalYears.filter(year => year.id === elements.year.value);
+        let recipientCount = 0;
+        let periodCount = 0;
+        const html = visibleYears.map(year => {
+          const periods = year.periods.map((period, index) => {
+            const periodHtml = renderPeriod(period, query, index === 0 && visibleYears.length === 1);
+            if (periodHtml) {
+              periodCount += 1;
+              recipientCount += period.recipients.filter(recipient => !query || normalize(recipient.name).includes(query)).length;
+            }
+            return periodHtml;
+          }).join("");
+          if (!periods) return "";
+          return `<section class="year-card" id="seimu-year-${esc(year.id)}">
+            <div class="year-heading"><h2>${esc(year.label)}</h2><span class="count-badge">公式資料 ${year.documentCount}件</span></div>
+            ${periods}
+          </section>`;
+        }).join("");
+
+        elements.years.innerHTML = html || '<div class="empty">該当する会派・議員の資料は見つかりませんでした。</div>';
+        elements.status.textContent = query
+          ? `${recipientCount}件の会派・議員が該当`
+          : `${visibleYears.length}年度・${periodCount}区分を表示`;
+        const nextParams = new URLSearchParams();
+        if (elements.year.value !== data.fiscalYears[0].id) nextParams.set("year", elements.year.value);
+        const nextQuery = nextParams.toString();
+        history.replaceState(null, "", `${location.pathname}${nextQuery ? `?${nextQuery}` : ""}${location.hash}`);
+      }
+
+      elements.year.addEventListener("change", render);
+      elements.search.addEventListener("input", render);
+      render();
+
+      if (location.hash) {
+        requestAnimationFrame(() => {
+          const target = document.getElementById(location.hash.slice(1));
+          if (!target) return;
+          target.closest("details")?.setAttribute("open", "");
+          target.scrollIntoView({ block: "start" });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

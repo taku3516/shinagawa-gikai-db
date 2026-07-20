@@ -214,6 +214,7 @@
     }
     .hitrow[data-category="ニュース"] { border-left-color: #2f855a; }
     .hitrow[data-category="選挙"] { border-left-color: #7c3aed; }
+    .hitrow[data-category="政務活動費"] { border-left-color: #b45309; }
     .hitrow h2 { margin: 1px 0 7px; font-size: 17px; line-height: 1.55; }
     .meta { margin: 0 0 7px; color: var(--c-main-dark); font-size: 12px; font-weight: 800; line-height: 1.6; }
     .summary { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.75; }
@@ -242,6 +243,7 @@
     .badge--result { background: var(--c-result-bg); color: var(--c-result-text); }
     .badge--news { background: var(--c-news-bg); color: var(--c-news-text); }
     .badge--election { background: var(--c-election-bg); color: var(--c-election-text); }
+    .badge--expense { background: #fff7ed; color: #9a3412; }
     .pill {
       display: inline-flex;
       align-items: center;
@@ -324,7 +326,7 @@
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
         <h1>横断検索</h1>
         <p class="lead">
-          令和元年〜令和8年の議会情報に加え、人物・選挙・品川区ニュースをまとめて検索できます。複数の言葉はスペースで区切ると、すべてを含む結果に絞り込めます。
+          令和元年〜令和8年の議会情報に加え、人物・選挙・政務活動費・品川区ニュースをまとめて検索できます。複数の言葉はスペースで区切ると、すべてを含む結果に絞り込めます。
         </p>
         <div class="notice">
           本サイトに収録している質問・答弁は要約です。発言全文を検索する場合は、公式の
@@ -433,6 +435,7 @@
   <script src="data/r08-committees-part-04.js"></script>
   <script src="data/r08-committees-part-05.js"></script>
   <script src="data/r08-committees-part-06.js"></script>
+  <script src="data/seimu.js"></script>
   <script src="data/news-items.js"></script>
 
   <script>
@@ -443,6 +446,7 @@
       { id: "council", label: "議会" },
       { id: "people", label: "人物" },
       { id: "elections", label: "選挙" },
+      { id: "expenses", label: "政務活動費" },
       { id: "news", label: "ニュース" }
     ];
     const CATEGORY_LABELS = Object.fromEntries(CATEGORY_DEFS.map((item) => [item.id, item.label]));
@@ -707,6 +711,47 @@
       }
     }
 
+    const expenseData = window.SHINAGAWA_SEIMU || { fiscalYears: [] };
+    for (const fiscalYear of expenseData.fiscalYears || []) {
+      for (const period of fiscalYear.periods || []) {
+        const periodLabel = period.label === "通年" ? "" : `（${period.label}）`;
+        const year = Number(fiscalYear.year) || null;
+        addItem({
+          id: `expense-summary-${period.id}`,
+          category: "expenses",
+          type: "政務活動費収支一覧",
+          year,
+          title: `${fiscalYear.label}${periodLabel} 政務活動費収支一覧`,
+          meta: [fiscalYear.label, period.label, `${period.recipients.length}会派・議員`].filter(Boolean).join("／"),
+          body: "会派・議員への交付額、支出額、調査研究費・研修費・会議費・資料費・広報活動費・事務費・人件費の内訳を確認できる公式資料です。",
+          source: "品川区議会",
+          primary: ["政務活動費", "政活費", "収支一覧"].concat(period.recipients.map(recipient => recipient.name)),
+          tags: ["政務活動費", "収支一覧"],
+          links: [
+            { type: "internal", label: "政務活動費ページで見る", url: `seimu.html?year=${fiscalYear.id}#seimu-${period.id}` },
+            { type: "official", label: period.summaryDocument.label, url: period.summaryDocument.url },
+            { type: "official", label: "公式の年度ページ", url: period.sourceUrl }
+          ]
+        });
+
+        for (const recipient of period.recipients || []) {
+          addItem({
+            id: `expense-${recipient.id}`,
+            category: "expenses",
+            type: "政務活動費収支報告",
+            year,
+            title: recipient.name,
+            meta: [fiscalYear.label, period.label, recipient.kind, "政務活動費"].filter(Boolean).join("／"),
+            body: `${recipient.name}が品川区議会へ提出した政務活動の概要と収支報告書です。`,
+            source: "品川区議会",
+            primary: [recipient.name, "政務活動費", "政活費", "収支報告書"],
+            tags: ["政務活動費", "収支報告", recipient.kind],
+            links: [{ type: "internal", label: "政務活動費ページで見る", url: `seimu.html?year=${fiscalYear.id}#seimu-${recipient.id}` }].concat(recipient.documents || [])
+          });
+        }
+      }
+    }
+
     const newsData = window.SHINAGAWA_NEWS || { items: [] };
     for (const news of newsData.items || []) {
       const year = dateYear(news.publishedAt || news.collectedAt);
@@ -736,6 +781,7 @@
       ["高齢者", "介護", "福祉"],
       ["再開発", "まちづくり", "都市計画"],
       ["選挙", "投票", "主権者"],
+      ["政務活動費", "政活費", "政務調査費"],
       ["ごみ", "廃棄物", "リサイクル"],
       ["学校", "教育"],
       ["商店", "店舗", "商店街"]
@@ -803,7 +849,7 @@
       const visibleTags = item.tags.filter((tag) => tag !== item.type && tag !== item.result);
       const badges = [
         item.year ? `<span class="badge badge--year">${esc(eraLabel(item.year))}</span>` : "",
-        `<span class="badge${item.category === "news" ? " badge--news" : item.category === "elections" ? " badge--election" : ""}">${esc(categoryLabel)}</span>`,
+        `<span class="badge${item.category === "news" ? " badge--news" : item.category === "elections" ? " badge--election" : item.category === "expenses" ? " badge--expense" : ""}">${esc(categoryLabel)}</span>`,
         `<span class="badge">${esc(item.type)}</span>`,
         item.result ? `<span class="badge badge--result">${esc(item.result)}</span>` : ""
       ].concat(visibleTags.slice(0, 3).map((tag) => `<span class="badge">${highlight(tag, terms)}</span>`));
@@ -928,7 +974,7 @@
       renderCategoryTabs();
 
       if (!browseMode) {
-        elements.hit.textContent = `議会・人物・選挙・ニュースの全${INDEX.length.toLocaleString("ja-JP")}件から検索`;
+        elements.hit.textContent = `議会・人物・選挙・政務活動費・ニュースの全${INDEX.length.toLocaleString("ja-JP")}件から検索`;
         elements.results.innerHTML = "";
         elements.guide.hidden = false;
         elements.guide.innerHTML = `<h2>検索する内容を入力してください</h2>
