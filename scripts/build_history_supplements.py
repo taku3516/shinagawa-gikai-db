@@ -23,14 +23,23 @@ ROOT = Path(__file__).resolve().parents[1]
 HISTORY_DIR = ROOT / "scripts/out/history"
 
 
+def year_id(year: int) -> str:
+    return "h30" if year == 0 else f"r{year:02d}"
+
+
+def year_label(year: int) -> str:
+    return "平成30年" if year == 0 else ("令和元年" if year == 1 else f"令和{year}年")
+
+
 def normalized(value: str) -> str:
     return re.sub(r"[\s　◯○・]", "", value or "").lower()
 
 
 def load_current(year: int) -> dict:
-    path = ROOT / f"data/r{year:02d}.js"
+    identifier = year_id(year)
+    path = ROOT / f"data/{identifier}.js"
     source = path.read_text(encoding="utf-8")
-    marker = f'years["r{year:02d}"] = '
+    marker = f'years["{identifier}"] = '
     start = source.index(marker) + len(marker)
     return json.loads(source[start:source.rfind("};") + 1])
 
@@ -40,7 +49,7 @@ def js_json(value) -> str:
 
 
 def validate_year(year: int, official: dict, queue: list[dict], current: dict) -> list[str]:
-    year_id = f"r{year:02d}"
+    identifier = year_id(year)
     errors: list[str] = []
     current_meeting_ids = {item.get("id") for item in current.get("meetings", [])}
     official_meeting_ids = {
@@ -56,7 +65,7 @@ def validate_year(year: int, official: dict, queue: list[dict], current: dict) -
 
     for index, (item, current_question) in enumerate(zip(queue, current_questions)):
         prefix = f"質問者{index + 1} {item.get('member', '')}"
-        if item.get("yearId") != year_id:
+        if item.get("yearId") != identifier:
             errors.append(f"{prefix}: yearId が不一致")
         if item.get("meetingId") != current_question.get("meetingId"):
             errors.append(f"{prefix}: meetingId が不一致")
@@ -83,7 +92,8 @@ def validate_year(year: int, official: dict, queue: list[dict], current: dict) -
 
 
 def build_js(year: int, official: dict, queue: list[dict]) -> str:
-    year_id = f"r{year:02d}"
+    identifier = year_id(year)
+    label = year_label(year)
     question_patches = [{
         "meetingId": item["meetingId"],
         "memberId": item["memberId"],
@@ -93,11 +103,11 @@ def build_js(year: int, official: dict, queue: list[dict]) -> str:
         "minutesUrl": item["minutesUrl"],
     } for item in queue]
 
-    return f'''/* 令和{year}年の全件表示用補足データ。prepare_history.py の監査を通過して生成。 */
+    return f'''/* {label}の全件表示用補足データ。prepare_history.py の監査を通過して生成。 */
 (() => {{
   "use strict";
-  const year = window.SHINAGAWA_DB && window.SHINAGAWA_DB.years && window.SHINAGAWA_DB.years.{year_id};
-  if (!year) throw new Error("令和{year}年データの読み込み後に {year_id}-complete.js を読み込んでください");
+  const year = window.SHINAGAWA_DB && window.SHINAGAWA_DB.years && window.SHINAGAWA_DB.years.{identifier};
+  if (!year) throw new Error("{label}データの読み込み後に {identifier}-complete.js を読み込んでください");
 
   year.bills = {js_json(official["bills"])};
   year.petitions = {js_json(official["petitions"])};
@@ -147,24 +157,24 @@ def main() -> None:
     prepared: list[tuple[int, dict, list[dict]]] = []
 
     for year in args.years:
-        year_id = f"r{year:02d}"
-        official_path = HISTORY_DIR / f"{year_id}_official.json"
+        identifier = year_id(year)
+        official_path = HISTORY_DIR / f"{identifier}_official.json"
         if not official_path.exists():
-            print(f"{year_id}: 公式データがありません")
+            print(f"{identifier}: 公式データがありません")
             failed = True
             continue
         official = json.loads(official_path.read_text(encoding="utf-8"))
-        queue = [item for item in all_queue if item.get("yearId") == year_id]
+        queue = [item for item in all_queue if item.get("yearId") == identifier]
         errors = validate_year(year, official, queue, load_current(year))
         if errors:
             failed = True
-            print(f"{year_id}: 未完了（{len(errors)}件）")
+            print(f"{identifier}: 未完了（{len(errors)}件）")
             for error in errors[:12]:
                 print(f"  - {error}")
             if len(errors) > 12:
                 print(f"  - ほか {len(errors) - 12}件")
         else:
-            print(f"{year_id}: 検証完了（質問者{len(queue)}名）")
+            print(f"{identifier}: 検証完了（質問者{len(queue)}名）")
             prepared.append((year, official, queue))
 
     if failed:
@@ -172,7 +182,7 @@ def main() -> None:
         raise SystemExit(1)
     if args.write:
         for year, official, queue in prepared:
-            path = ROOT / f"data/r{year:02d}-complete.js"
+            path = ROOT / f"data/{year_id(year)}-complete.js"
             path.write_text(build_js(year, official, queue), encoding="utf-8")
             print(f"出力: {path.relative_to(ROOT)}")
     else:

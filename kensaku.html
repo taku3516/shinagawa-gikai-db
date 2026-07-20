@@ -405,6 +405,8 @@
   <script src="data/former-members.js"></script>
   <script src="data/politicians.js"></script>
   <script src="data/elections.js"></script>
+  <script src="data/h30.js"></script>
+  <script src="data/h30-complete.js"></script>
   <script src="data/r01.js"></script>
   <script src="data/r01-complete.js"></script>
   <script src="data/r02.js"></script>
@@ -466,10 +468,12 @@
         const reiwa = numericYear - 2018;
         return `令和${reiwa === 1 ? "元" : reiwa}年（${numericYear}年）`;
       }
+      if (numericYear === 2018) return "平成30年（2018年）";
       return `${numericYear}年`;
     }
 
     function yearFromId(yearId) {
+      if (/^h30$/i.test(String(yearId))) return 2018;
       const match = String(yearId).match(/r(\d{2})/i);
       return match ? 2018 + Number(match[1]) : null;
     }

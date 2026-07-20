@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""令和元年〜7年の全件化に必要な公式データと会議録要約キューを生成する。
+"""平成30年〜令和7年の全件化に必要な公式データと会議録要約キューを生成する。
 
 実行例:
   python3 scripts/prepare_history.py
@@ -36,6 +36,18 @@ UA = {"User-Agent": "Mozilla/5.0 (shinagawa-gikai-db history preparation)"}
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_DIR = ROOT / "scripts/cache/history"
 OUT_DIR = ROOT / "scripts/out/history"
+
+
+def year_id(year: int) -> str:
+    return "h30" if year == 0 else f"r{year:02d}"
+
+
+def year_label(year: int) -> str:
+    return "平成30年" if year == 0 else ("令和元年" if year == 1 else f"令和{year}年")
+
+
+def western_year(year: int) -> int:
+    return 2018 if year == 0 else 2018 + year
 
 
 def compact(text: str) -> str:
@@ -223,9 +235,12 @@ def parse_questions(raw_html: str, meeting_id: str, page_url: str) -> list[dict]
 
 
 def load_current_year(year: int) -> dict:
-    path = ROOT / f"data/r{year:02d}.js"
+    identifier = year_id(year)
+    path = ROOT / f"data/{identifier}.js"
+    if not path.exists():
+        return {"id": identifier, "label": year_label(year), "meetings": [], "questions": []}
     source = path.read_text(encoding="utf-8")
-    marker = f'years["r{year:02d}"] = '
+    marker = f'years["{identifier}"] = '
     start = source.index(marker) + len(marker)
     end = source.rfind("};") + 1
     return json.loads(source[start:end])
@@ -267,7 +282,7 @@ def iso_question_date(year: int, date_label: str) -> str:
     match = re.search(r"(\d+)月(\d+)日", date_label)
     if not match:
         return ""
-    return date(2018 + year, int(match.group(1)), int(match.group(2))).isoformat()
+    return date(western_year(year), int(match.group(1)), int(match.group(2))).isoformat()
 
 
 def find_minutes_url(index: dict[str, list[dict]], iso_date: str) -> str:
@@ -383,6 +398,7 @@ def compare_topics(official: list[dict], current: list[dict]) -> list[dict]:
 
 def prepare_year(year: int, refresh: bool = False) -> tuple[dict, list[dict]]:
     current = load_current_year(year)
+    identifier = year_id(year)
     meetings: dict[str, dict] = {}
     all_bills: list[dict] = []
     all_petitions: list[dict] = []
@@ -390,10 +406,21 @@ def prepare_year(year: int, refresh: bool = False) -> tuple[dict, list[dict]]:
 
     for kind, maximum in (("t", 4), ("r", 3)):
         for number in range(1, maximum + 1):
-            slug = f"r{year:02d}_{number:02d}{kind}"
-            meeting_id = f"r{year:02d}-{number}{kind}"
+            if year == 0:
+                # 平成30年ページは、フォルダー名に t/r がなく、本文ページ名に付く。
+                folder = f"h30_{number:02d}"
+                slug = f"h30_{number:02d}{kind}"
+                meeting_id = f"h30-{number}{kind}"
+                def candidates(page_number: int) -> list[str]:
+                    suffix = slug if page_number == 1 else f"{slug}{page_number}"
+                    return [f"{COUNCIL_BASE}{folder}/{suffix}"]
+            else:
+                slug = f"r{year:02d}_{number:02d}{kind}"
+                meeting_id = f"r{year:02d}-{number}{kind}"
+                def candidates(page_number: int) -> list[str]:
+                    return page_candidates(slug, page_number, year)
             try:
-                page1, page1_url = fetch_first(page_candidates(slug, 1, year), refresh)
+                page1, page1_url = fetch_first(candidates(1), refresh)
             except Exception:
                 continue
             bills, petitions = parse_proposals_and_petitions(page1, page1_url, meeting_id)
@@ -401,7 +428,7 @@ def prepare_year(year: int, refresh: bool = False) -> tuple[dict, list[dict]]:
             page2_url = ""
             if kind == "t":
                 try:
-                    page2, page2_url = fetch_first(page_candidates(slug, 2, year), refresh)
+                    page2, page2_url = fetch_first(candidates(2), refresh)
                     questions = parse_questions(page2, meeting_id, page2_url)
                 except Exception:
                     questions = []
@@ -430,8 +457,8 @@ def prepare_year(year: int, refresh: bool = False) -> tuple[dict, list[dict]]:
         current_match = current_questions[question_index] if question_index < len(current_questions) else {}
         iso_date = iso_question_date(year, question.get("date", ""))
         queue.append({
-            "yearId": f"r{year:02d}",
-            "yearLabel": current.get("label", f"令和{year}年"),
+            "yearId": identifier,
+            "yearLabel": current.get("label", year_label(year)),
             "meetingId": question["meetingId"],
             "questionIndex": question_index,
             "member": question["member"],
@@ -448,7 +475,7 @@ def prepare_year(year: int, refresh: bool = False) -> tuple[dict, list[dict]]:
         })
 
     manifest = {
-        "yearId": f"r{year:02d}",
+        "yearId": identifier,
         "yearLabel": current.get("label"),
         "official": {
             "meetings": len(meetings),
@@ -502,9 +529,9 @@ def main() -> None:
     manifests = []
     queue: list[dict] = []
     for year in args.years:
-        print(f"令和{year}年を収集中...")
+        print(f"{year_label(year)}を収集中...")
         payload, year_queue = prepare_year(year, args.refresh)
-        path = OUT_DIR / f"r{year:02d}_official.json"
+        path = OUT_DIR / f"{year_id(year)}_official.json"
         path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         manifests.append(payload["year"])
         queue.extend(year_queue)
@@ -532,9 +559,9 @@ def main() -> None:
     batch_dir = OUT_DIR / "batches"
     batch_dir.mkdir(parents=True, exist_ok=True)
     for year in args.years:
-        year_id = f"r{year:02d}"
-        year_queue = [item for item in queue if item["yearId"] == year_id]
-        (batch_dir / f"{year_id}.json").write_text(
+        identifier = year_id(year)
+        year_queue = [item for item in queue if item["yearId"] == identifier]
+        (batch_dir / f"{identifier}.json").write_text(
             json.dumps(year_queue, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
