@@ -24,6 +24,8 @@
       --c-news-text: #166534;
       --c-election-bg: #f5f3ff;
       --c-election-text: #6d28d9;
+      --c-fund-bg: #fff8dd;
+      --c-fund-text: #6b4f1d;
     }
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
@@ -215,6 +217,7 @@
     .hitrow[data-category="ニュース"] { border-left-color: #2f855a; }
     .hitrow[data-category="選挙"] { border-left-color: #7c3aed; }
     .hitrow[data-category="政務活動費"] { border-left-color: #b45309; }
+    .hitrow[data-category="政治資金"] { border-left-color: #8a6b24; }
     .hitrow h2 { margin: 1px 0 7px; font-size: 17px; line-height: 1.55; }
     .meta { margin: 0 0 7px; color: var(--c-main-dark); font-size: 12px; font-weight: 800; line-height: 1.6; }
     .summary { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.75; }
@@ -244,6 +247,7 @@
     .badge--news { background: var(--c-news-bg); color: var(--c-news-text); }
     .badge--election { background: var(--c-election-bg); color: var(--c-election-text); }
     .badge--expense { background: #fff7ed; color: #9a3412; }
+    .badge--fund { background: var(--c-fund-bg); color: var(--c-fund-text); }
     .pill {
       display: inline-flex;
       align-items: center;
@@ -326,7 +330,7 @@
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
         <h1>横断検索</h1>
         <p class="lead">
-          令和元年〜令和8年の議会情報に加え、人物・選挙・政務活動費・品川区ニュースをまとめて検索できます。複数の言葉はスペースで区切ると、すべてを含む結果に絞り込めます。
+          令和元年〜令和8年の議会情報に加え、人物・選挙・政務活動費・政治資金・品川区ニュースをまとめて検索できます。複数の言葉はスペースで区切ると、すべてを含む結果に絞り込めます。
         </p>
         <div class="notice">
           本サイトに収録している質問・答弁は要約です。発言全文を検索する場合は、公式の
@@ -371,8 +375,8 @@
               <select id="result-filter"><option value="">すべての結果</option></select>
             </div>
             <div class="filter-field">
-              <label for="source-filter">ニュース配信元</label>
-              <select id="source-filter"><option value="">すべての配信元</option></select>
+              <label for="source-filter">情報源・配信元</label>
+              <select id="source-filter"><option value="">すべての情報源</option></select>
             </div>
             <div class="filter-field">
               <label for="tag-filter">タグ・分野</label>
@@ -436,6 +440,7 @@
   <script src="data/r08-committees-part-05.js"></script>
   <script src="data/r08-committees-part-06.js"></script>
   <script src="data/seimu.js"></script>
+  <script src="data/seijishikin.js"></script>
   <script src="data/news-items.js"></script>
 
   <script>
@@ -447,6 +452,7 @@
       { id: "people", label: "人物" },
       { id: "elections", label: "選挙" },
       { id: "expenses", label: "政務活動費" },
+      { id: "political-funds", label: "政治資金" },
       { id: "news", label: "ニュース" }
     ];
     const CATEGORY_LABELS = Object.fromEntries(CATEGORY_DEFS.map((item) => [item.id, item.label]));
@@ -752,6 +758,28 @@
       }
     }
 
+    const politicalFundData = window.SHINAGAWA_SEIJISHIKIN || { organizations: [], categories: [], sources: {} };
+    const politicalFundCategoryLabels = Object.fromEntries((politicalFundData.categories || []).map(item => [item.id, item.label]));
+    for (const organization of politicalFundData.organizations || []) {
+      const fundLevels = organization.fundManagement || [];
+      addItem({
+        id: `political-fund-${organization.id}`,
+        category: "political-funds",
+        type: politicalFundCategoryLabels[organization.category] || "政治団体",
+        title: organization.name,
+        meta: [politicalFundCategoryLabels[organization.category], fundLevels.length ? `資金管理団体（${fundLevels.join("・")}）` : ""].filter(Boolean).join("／"),
+        body: organization.nameNote || "政治団体名簿と政治資金収支報告書の公式掲載先を確認できます。",
+        source: "東京都選挙管理委員会・総務省",
+        primary: [organization.name].concat(organization.aliases || []).concat(["政治資金", "政治団体", "収支報告書"]),
+        tags: [politicalFundCategoryLabels[organization.category]].concat(fundLevels.length ? ["資金管理団体"].concat(fundLevels) : []),
+        links: [
+          { type: "internal", label: "政治資金ページで見る", url: `seijishikin.html#organization-${organization.id}` },
+          politicalFundData.sources.tokyoReports ? { type: "official", label: "東京都の収支報告書", url: politicalFundData.sources.tokyoReports.url } : null,
+          politicalFundData.sources.ministryReports ? { type: "official", label: "総務省の収支報告書", url: politicalFundData.sources.ministryReports.url } : null
+        ]
+      });
+    }
+
     const newsData = window.SHINAGAWA_NEWS || { items: [] };
     for (const news of newsData.items || []) {
       const year = dateYear(news.publishedAt || news.collectedAt);
@@ -782,6 +810,7 @@
       ["再開発", "まちづくり", "都市計画"],
       ["選挙", "投票", "主権者"],
       ["政務活動費", "政活費", "政務調査費"],
+      ["政治資金", "政治資金収支報告書", "収支報告書", "政治団体", "資金管理団体"],
       ["ごみ", "廃棄物", "リサイクル"],
       ["学校", "教育"],
       ["商店", "店舗", "商店街"]
@@ -849,7 +878,7 @@
       const visibleTags = item.tags.filter((tag) => tag !== item.type && tag !== item.result);
       const badges = [
         item.year ? `<span class="badge badge--year">${esc(eraLabel(item.year))}</span>` : "",
-        `<span class="badge${item.category === "news" ? " badge--news" : item.category === "elections" ? " badge--election" : item.category === "expenses" ? " badge--expense" : ""}">${esc(categoryLabel)}</span>`,
+        `<span class="badge${item.category === "news" ? " badge--news" : item.category === "elections" ? " badge--election" : item.category === "expenses" ? " badge--expense" : item.category === "political-funds" ? " badge--fund" : ""}">${esc(categoryLabel)}</span>`,
         `<span class="badge">${esc(item.type)}</span>`,
         item.result ? `<span class="badge badge--result">${esc(item.result)}</span>` : ""
       ].concat(visibleTags.slice(0, 3).map((tag) => `<span class="badge">${highlight(tag, terms)}</span>`));
@@ -915,7 +944,7 @@
       populateSelect(elements.type, types, "すべての種類");
       populateSelect(elements.year, years, "すべての年", eraLabel);
       populateSelect(elements.result, results, "すべての結果");
-      populateSelect(elements.source, sources, "すべての配信元");
+      populateSelect(elements.source, sources, "すべての情報源");
       populateSelect(elements.tag, tags, "すべてのタグ");
     }
 
@@ -974,7 +1003,7 @@
       renderCategoryTabs();
 
       if (!browseMode) {
-        elements.hit.textContent = `議会・人物・選挙・政務活動費・ニュースの全${INDEX.length.toLocaleString("ja-JP")}件から検索`;
+        elements.hit.textContent = `議会・人物・選挙・政務活動費・政治資金・ニュースの全${INDEX.length.toLocaleString("ja-JP")}件から検索`;
         elements.results.innerHTML = "";
         elements.guide.hidden = false;
         elements.guide.innerHTML = `<h2>検索する内容を入力してください</h2>

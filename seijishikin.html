@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f4e79" />
+  <title>政治資金収支報告書 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
+  <style>
+    :root {
+      --c-main: #1f4e79; --c-main-dark: #173a5e; --c-main-pale: #e7eef4;
+      --c-bg: #f4f1e8; --c-card: #fffdf8; --c-ink: #17212b; --c-ink-soft: #4f5d68;
+      --c-border: #b9c3cc; --c-rule: #d8d2c4; --c-focus: #f59e0b;
+      --c-fund: #6b4f1d; --c-fund-pale: #fff8dd; --c-fund-border: #ddc77b;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--c-bg); color: var(--c-ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      overflow-wrap: break-word;
+    }
+    a { color: var(--c-main-dark); font-weight: 700; text-underline-offset: 3px; }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--c-focus); outline-offset: 2px;
+    }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero {
+      padding: 40px 0 28px; border-top: 6px solid var(--c-main); border-bottom: 1px solid var(--c-rule);
+      background: var(--c-card);
+    }
+    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
+    h1 { margin: 0 0 12px; color: var(--c-main-dark); font-size: clamp(30px, 5vw, 50px); line-height: 1.12; }
+    .lead { max-width: 880px; margin: 0; color: var(--c-ink-soft); font-size: 16px; line-height: 1.9; }
+    .notice {
+      margin-top: 18px; padding: 14px 16px; border: 1px solid var(--c-border); border-left: 4px solid var(--c-main);
+      border-radius: 3px; background: #f8fafc; font-size: 13px; line-height: 1.8;
+    }
+    main > section { padding: 32px 0 52px; }
+    .overview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
+    .overview-card {
+      border: 1px solid var(--c-border); border-top: 4px solid var(--c-main); border-radius: 4px;
+      background: var(--c-card); padding: 16px;
+    }
+    .overview-card strong { display: block; margin-bottom: 5px; color: var(--c-main-dark); font-size: 23px; }
+    .overview-card span { color: var(--c-ink-soft); font-size: 13px; line-height: 1.65; }
+    .source-guide {
+      margin-bottom: 22px; border: 1px solid var(--c-fund-border); border-left: 4px solid var(--c-fund);
+      border-radius: 4px; background: var(--c-fund-pale); padding: 16px;
+    }
+    .source-guide h2 { margin: 0 0 7px; font-size: 18px; }
+    .source-guide p { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .source-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .source-link, .card-link, .compact-button {
+      display: inline-flex; min-height: 42px; align-items: center; justify-content: center;
+      border: 1px solid var(--c-border); border-radius: 3px; background: #fff; padding: 7px 11px;
+      color: var(--c-main-dark); font-size: 12px; font-weight: 800; text-align: center;
+    }
+    .source-link--primary { border-color: var(--c-main); background: var(--c-main); color: #fff; }
+    .filter-sticky {
+      position: sticky; top: 0; z-index: 12; margin: 0 0 16px; border: 1px solid var(--c-border);
+      border-radius: 4px; background: rgba(255, 253, 248, .97); box-shadow: 0 2px 8px rgba(23, 33, 43, .08);
+      backdrop-filter: blur(8px); padding: 13px;
+    }
+    .controls { display: grid; grid-template-columns: minmax(240px, 1.5fr) repeat(2, minmax(170px, 1fr)); gap: 10px; }
+    .field { display: grid; gap: 5px; }
+    .field label { color: var(--c-ink-soft); font-size: 12px; font-weight: 800; }
+    .field input, .field select {
+      width: 100%; min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px;
+      background: #fff; padding: 8px 11px; color: var(--c-ink); font-size: 16px;
+    }
+    .filter-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-top: 10px; }
+    .check-label {
+      display: inline-flex; min-height: 42px; align-items: center; gap: 8px; color: var(--c-main-dark);
+      font-size: 13px; font-weight: 800; cursor: pointer;
+    }
+    .check-label input { width: 20px; height: 20px; accent-color: var(--c-main); }
+    .button-row { display: flex; flex-wrap: wrap; gap: 7px; }
+    .compact-button { min-height: 40px; background: var(--c-main-pale); cursor: pointer; }
+    .status-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 12px; color: var(--c-ink-soft); font-size: 13px; }
+    .category-section {
+      margin-bottom: 14px; border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card);
+      overflow: hidden;
+    }
+    .category-section > summary {
+      display: flex; min-height: 60px; align-items: center; gap: 10px; padding: 13px 16px;
+      color: var(--c-main-dark); font-weight: 900; cursor: pointer; list-style: none;
+    }
+    .category-section > summary::-webkit-details-marker { display: none; }
+    .category-section > summary::before { content: "＋"; flex: 0 0 auto; width: 1.25em; font-size: 18px; }
+    .category-section[open] > summary::before { content: "−"; }
+    .category-section > summary:hover { background: var(--c-main-pale); }
+    .category-heading { display: flex; flex: 1 1 auto; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; align-items: baseline; }
+    .category-heading small { color: var(--c-ink-soft); font-size: 12px; }
+    .organization-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+      border-top: 1px solid var(--c-border); padding: 14px;
+    }
+    .organization-card {
+      border: 1px solid var(--c-rule); border-left: 4px solid var(--c-main); border-radius: 3px;
+      background: #fff; padding: 14px; scroll-margin-top: 150px;
+    }
+    .organization-card:target { outline: 4px solid var(--c-focus); outline-offset: 2px; }
+    .organization-card h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.55; }
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .badge {
+      display: inline-flex; border-radius: 3px; background: var(--c-main-pale); padding: 3px 9px;
+      color: var(--c-main-dark); font-size: 11px; font-weight: 800;
+    }
+    .badge--fund { background: var(--c-fund-pale); color: var(--c-fund); border: 1px solid var(--c-fund-border); }
+    .name-note { margin: 0 0 10px; color: #7c2d12; font-size: 12px; line-height: 1.65; }
+    .card-actions { display: flex; flex-wrap: wrap; gap: 7px; }
+    .card-link { min-height: 40px; text-decoration: none; }
+    button.card-link { color: var(--c-main-dark); }
+    .card-link--official { background: var(--c-main-pale); }
+    .empty {
+      border: 1px dashed var(--c-border); border-radius: 4px; background: var(--c-card);
+      padding: 34px 18px; color: var(--c-ink-soft); text-align: center; line-height: 1.8;
+    }
+    .fine-print { margin: 18px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }
+    footer {
+      padding: 30px 0; border-top: 1px solid var(--c-border); background: var(--c-main-dark);
+      color: #fff; text-align: center; font-size: 13px; line-height: 1.8;
+    }
+    @media (max-width: 760px) {
+      .overview-grid, .controls, .organization-grid { grid-template-columns: 1fr; }
+      .filter-sticky { position: relative; }
+      .filter-actions { display: grid; grid-template-columns: 1fr; }
+      .button-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .compact-button, .source-link, .card-link { min-height: 44px; }
+      .organization-card { scroll-margin-top: 16px; }
+    }
+    @media (max-width: 440px) {
+      .container { width: min(100% - 22px, 1120px); }
+      .button-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+        <h1>政治資金収支報告書</h1>
+        <p class="lead">品川区内の政治団体を、政党支部とその他の政治団体に分けて一覧化しました。資金管理団体に該当する団体は、対象となる役職区分をタグで確認できます。</p>
+        <div class="notice">これは品川区・東京都・総務省が運営しているものではありません。団体名や資金管理団体の指定状況は変わる場合があります。正確な団体情報と収支報告書は、必ずリンク先の公式資料をご確認ください。</div>
+        <nav data-site-nav></nav>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div id="overview-root" class="overview-grid"></div>
+
+        <aside class="source-guide" aria-labelledby="source-title">
+          <h2 id="source-title">公式の収支報告書を確認する方法</h2>
+          <p>収支報告書は所管と公表年によって掲載先が分かれます。団体名をコピーして、東京都選挙管理委員会または総務省の公式ページ内で該当年度の資料を確認してください。このページでは、団体ごとのPDF URLを推測して掲載していません。</p>
+          <div id="source-links" class="source-links"></div>
+        </aside>
+
+        <div class="filter-sticky" aria-label="政治団体の絞り込み">
+          <div class="controls">
+            <div class="field">
+              <label for="organization-search">団体名で検索</label>
+              <input id="organization-search" type="search" placeholder="団体名・候補者名など" autocomplete="off" />
+            </div>
+            <div class="field">
+              <label for="category-select">主分類</label>
+              <select id="category-select"><option value="all">すべて</option></select>
+            </div>
+            <div class="field">
+              <label for="level-select">資金管理団体の区分</label>
+              <select id="level-select"><option value="all">すべて</option></select>
+            </div>
+          </div>
+          <div class="filter-actions">
+            <label class="check-label"><input id="fund-only" type="checkbox" /> 資金管理団体のみ表示</label>
+            <div class="button-row">
+              <button id="reset-filters" class="compact-button" type="button">条件をリセット</button>
+              <button id="open-all" class="compact-button" type="button">分類をすべて開く</button>
+              <button id="close-all" class="compact-button" type="button">分類をすべて閉じる</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-row">
+          <span id="result-status" role="status" aria-live="polite"></span>
+          <span id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <div id="organizations-root"></div>
+        <p class="fine-print" id="checked-note"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">品川区議会DB — 政治資金の一次情報は東京都選挙管理委員会・総務省の公式資料です。</div></footer>
+
+  <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
+  <script src="data/seijishikin.js"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const data = window.SHINAGAWA_SEIJISHIKIN;
+      const elements = {
+        overview: document.getElementById("overview-root"),
+        sourceLinks: document.getElementById("source-links"),
+        search: document.getElementById("organization-search"),
+        category: document.getElementById("category-select"),
+        level: document.getElementById("level-select"),
+        fundOnly: document.getElementById("fund-only"),
+        reset: document.getElementById("reset-filters"),
+        openAll: document.getElementById("open-all"),
+        closeAll: document.getElementById("close-all"),
+        status: document.getElementById("result-status"),
+        copyStatus: document.getElementById("copy-status"),
+        root: document.getElementById("organizations-root"),
+        checked: document.getElementById("checked-note")
+      };
+
+      function esc(value) {
+        return String(value ?? "").replace(/[&<>"']/g, char => (
+          { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]
+        ));
+      }
+
+      function normalize(value) {
+        return String(value || "").normalize("NFKC").toLocaleLowerCase("ja")
+          .replace(/[ァ-ヶ]/g, char => String.fromCharCode(char.charCodeAt(0) - 0x60))
+          .replace(/[\s・･_\-‐‑–—―,，.。/／()（）「」『』【】\[\]“”\"']+/g, "");
+      }
+
+      const categoryLabels = Object.fromEntries(data.categories.map(item => [item.id, item.label]));
+      const categoryCounts = Object.fromEntries(data.categories.map(item => [
+        item.id, data.organizations.filter(org => org.category === item.id).length
+      ]));
+      const fundOrganizations = data.organizations.filter(org => (org.fundManagement || []).length);
+
+      elements.overview.innerHTML = `
+        <div class="overview-card"><strong>${categoryCounts["party-branch"]}団体</strong><span>政党支部</span></div>
+        <div class="overview-card"><strong>${categoryCounts.other}団体</strong><span>その他の政治団体</span></div>
+        <div class="overview-card"><strong>${fundOrganizations.length}団体</strong><span>うち資金管理団体（主分類との重複を除いた団体数）</span></div>`;
+
+      elements.sourceLinks.innerHTML = [
+        [data.sources.registry, "source-link source-link--primary"],
+        [data.sources.tokyoReports, "source-link"],
+        [data.sources.ministryReports, "source-link"]
+      ].map(([source, className]) => `<a class="${className}" href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.label)} ↗</a>`).join("");
+
+      elements.category.innerHTML += data.categories.map(item =>
+        `<option value="${esc(item.id)}">${esc(item.label)}（${categoryCounts[item.id]}）</option>`
+      ).join("");
+      elements.level.innerHTML += data.fundManagementLevels.map(level =>
+        `<option value="${esc(level)}">${esc(level)}</option>`
+      ).join("");
+      elements.checked.textContent = `${data.note}（一覧確認日: ${data.checkedAt}）`;
+
+      function matches(org) {
+        if (elements.category.value !== "all" && org.category !== elements.category.value) return false;
+        if (elements.fundOnly.checked && !(org.fundManagement || []).length) return false;
+        if (elements.level.value !== "all" && !(org.fundManagement || []).includes(elements.level.value)) return false;
+        const query = normalize(elements.search.value);
+        return !query || normalize([org.name].concat(org.aliases || []).join(" ")).includes(query);
+      }
+
+      function organizationHtml(org) {
+        const fundBadges = (org.fundManagement || []).map(level =>
+          `<span class="badge badge--fund">資金管理団体（${esc(level)}）</span>`
+        ).join("");
+        return `<article class="organization-card" id="organization-${esc(org.id)}">
+          <h3>${esc(org.name)}</h3>
+          <div class="badges"><span class="badge">${esc(categoryLabels[org.category])}</span>${fundBadges}</div>
+          ${org.nameNote ? `<p class="name-note">${esc(org.nameNote)}</p>` : ""}
+          <div class="card-actions">
+            <button class="card-link" type="button" data-copy-name="${esc(org.name)}">団体名をコピー</button>
+            <a class="card-link card-link--official" href="${esc(data.sources.tokyoReports.url)}" target="_blank" rel="noopener">東京都の報告書を探す ↗</a>
+            <a class="card-link" href="${esc(data.sources.ministryReports.url)}" target="_blank" rel="noopener">総務省所管を確認 ↗</a>
+          </div>
+        </article>`;
+      }
+
+      function updateUrl() {
+        const params = new URLSearchParams();
+        if (elements.search.value.trim()) params.set("q", elements.search.value.trim());
+        if (elements.category.value !== "all") params.set("category", elements.category.value);
+        if (elements.fundOnly.checked) params.set("fund", "1");
+        if (elements.level.value !== "all") params.set("level", elements.level.value);
+        const query = params.toString();
+        history.replaceState(null, "", `${location.pathname}${query ? `?${query}` : ""}${location.hash}`);
+      }
+
+      function render() {
+        const visible = data.organizations.filter(matches);
+        const searching = Boolean(elements.search.value.trim() || elements.category.value !== "all" || elements.fundOnly.checked || elements.level.value !== "all");
+        const html = data.categories.map((category, index) => {
+          const organizations = visible.filter(org => org.category === category.id);
+          if (!organizations.length) return "";
+          const shouldOpen = searching || index === 0 || location.hash.startsWith("#organization-");
+          return `<details class="category-section" data-category-section="${esc(category.id)}"${shouldOpen ? " open" : ""}>
+            <summary><span class="category-heading"><span>${esc(category.label)}</span><small>${organizations.length}団体</small></span></summary>
+            <div class="organization-grid">${organizations.map(organizationHtml).join("")}</div>
+          </details>`;
+        }).join("");
+        elements.root.innerHTML = html || `<div class="empty"><strong>該当する団体がありません。</strong><br />検索語や絞り込み条件を変更してください。</div>`;
+        elements.status.textContent = `${visible.length}団体を表示（全${data.organizations.length}団体）`;
+        updateUrl();
+      }
+
+      async function copyName(name) {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(name);
+          } else {
+            const area = document.createElement("textarea");
+            area.value = name; area.setAttribute("readonly", "");
+            area.style.position = "fixed"; area.style.opacity = "0";
+            document.body.append(area); area.select(); document.execCommand("copy"); area.remove();
+          }
+          elements.copyStatus.textContent = `「${name}」をコピーしました`;
+        } catch (_) {
+          elements.copyStatus.textContent = "コピーできませんでした。団体名を選択してコピーしてください。";
+        }
+      }
+
+      const params = new URLSearchParams(location.search);
+      const validCategory = value => value === "all" || data.categories.some(item => item.id === value);
+      const validLevel = value => value === "all" || data.fundManagementLevels.includes(value);
+      elements.search.value = params.get("q") || "";
+      elements.category.value = validCategory(params.get("category")) ? params.get("category") : "all";
+      elements.fundOnly.checked = params.get("fund") === "1";
+      elements.level.value = validLevel(params.get("level")) ? params.get("level") : "all";
+
+      const targetId = location.hash.replace(/^#organization-/, "");
+      const targetOrg = data.organizations.find(org => org.id === targetId);
+      if (targetOrg) {
+        elements.search.value = targetOrg.name;
+        elements.category.value = "all";
+        elements.fundOnly.checked = false;
+        elements.level.value = "all";
+      }
+
+      let timer = null;
+      elements.search.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(render, 100); });
+      [elements.category, elements.level, elements.fundOnly].forEach(element => element.addEventListener("change", render));
+      elements.reset.addEventListener("click", () => {
+        elements.search.value = ""; elements.category.value = "all";
+        elements.level.value = "all"; elements.fundOnly.checked = false;
+        history.replaceState(null, "", location.pathname); render(); elements.search.focus();
+      });
+      elements.openAll.addEventListener("click", () => document.querySelectorAll(".category-section").forEach(detail => { detail.open = true; }));
+      elements.closeAll.addEventListener("click", () => document.querySelectorAll(".category-section").forEach(detail => { detail.open = false; }));
+      elements.root.addEventListener("click", event => {
+        const button = event.target.closest("[data-copy-name]");
+        if (button) copyName(button.dataset.copyName);
+      });
+
+      render();
+      if (targetOrg) requestAnimationFrame(() => document.getElementById(`organization-${targetOrg.id}`)?.scrollIntoView({ block: "center" }));
+    })();
+  </script>
+</body>
+</html>

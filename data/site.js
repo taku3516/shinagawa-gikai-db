@@ -52,6 +52,11 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "type": "official",
+      "label": "政治資金収支報告書を見る",
+      "url": "seijishikin.html"
+    },
+    {
+      "type": "official",
       "label": "横断検索",
       "url": "kensaku.html"
     }
