@@ -25,6 +25,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=156"
+        },
+        {
+          "type": "official",
+          "label": "令和7年度の予算・決算まとめ",
+          "url": "yosan-kessan.html#fy-r07"
         }
       ],
       "events": [
@@ -261,6 +266,11 @@ window.SHINAGAWA_DB.years["r07"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=160"
+        },
+        {
+          "type": "official",
+          "label": "令和6年度の予算・決算まとめ",
+          "url": "yosan-kessan.html#fy-r06"
         }
       ],
       "events": [

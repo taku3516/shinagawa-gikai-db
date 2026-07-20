@@ -146,6 +146,11 @@ window.SHINAGAWA_DB.years["r08"] = {
           "type": "minutes",
           "label": "会議録を読む（全5日分）",
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?QueryType=new&Template=list&Cabinet=1&TermStart=2026-02-18&TermEnd=2026-03-27"
+        },
+        {
+          "type": "official",
+          "label": "令和8年度の予算・決算まとめ",
+          "url": "yosan-kessan.html#fy-r08"
         }
       ],
       "detailTitle": "令和8年第1回定例会の流れ",
@@ -946,6 +951,11 @@ window.SHINAGAWA_DB.years["r08"] = {
           "type": "official",
           "label": "日程を見る",
           "url": "https://gikai.city.shinagawa.tokyo.jp/schedule/20551.html"
+        },
+        {
+          "type": "official",
+          "label": "令和7年度の予算・決算まとめ",
+          "url": "yosan-kessan.html#fy-r07"
         }
       ],
       "detailTitle": "令和8年第3回定例会の詳細",

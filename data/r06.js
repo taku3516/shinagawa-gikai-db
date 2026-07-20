@@ -25,6 +25,11 @@ window.SHINAGAWA_DB.years["r06"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=147"
+        },
+        {
+          "type": "official",
+          "label": "令和6年度の予算・決算まとめ",
+          "url": "yosan-kessan.html#fy-r06"
         }
       ],
       "events": [

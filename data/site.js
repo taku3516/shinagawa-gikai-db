@@ -42,6 +42,11 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "type": "official",
+      "label": "予算・決算を見る",
+      "url": "yosan-kessan.html"
+    },
+    {
+      "type": "official",
       "label": "横断検索",
       "url": "kensaku.html"
     }
@@ -139,6 +144,14 @@ window.SHINAGAWA_DB.site = {
     {
       "label": "品川区議会 会議録検索システム（平成13年5月以降の正式な会議録）",
       "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/"
+    },
+    {
+      "label": "品川区 予算（公式）",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+    },
+    {
+      "label": "品川区 決算（公式）",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/index.html"
     }
   ],
   "sourcesNote": "このサイトの内容は上記の公式ページのみを一次情報としています。要約・言い換えには誤りが含まれる可能性があるため、必ずリンク先の一次情報を確認してください。"

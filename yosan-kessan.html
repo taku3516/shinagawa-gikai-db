@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f4e79" />
+  <title>予算・決算 | 品川区議会DB</title>
+  <style>
+    :root {
+      --c-main: #1f4e79; --c-main-dark: #173a5e; --c-main-pale: #e7eef4;
+      --c-bg: #f4f1e8; --c-card: #fffdf8; --c-ink: #17212b; --c-ink-soft: #4f5d68;
+      --c-border: #b9c3cc; --c-rule: #d8d2c4;
+      /* 年度（予算・決算）のアクセント＝橙系。議会（暦年）の青と区別する */
+      --c-fiscal: #b45309; --c-fiscal-bg: #fff7ed; --c-fiscal-border: #fcd9b6;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+    body { margin: 0; background: var(--c-bg); color: var(--c-ink);
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+           overflow-wrap: break-word; }
+    a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero { padding: 40px 0 26px; border-top: 6px solid var(--c-fiscal); border-bottom: 1px solid var(--c-rule); background: var(--c-card); }
+    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
+    h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 48px); line-height: 1.15; }
+    .lead { max-width: 820px; margin: 0; font-size: 16px; line-height: 1.9; }
+    .warn {
+      max-width: 900px; margin-top: 18px; padding: 14px 16px;
+      border: 1px solid var(--c-fiscal-border); border-left: 4px solid var(--c-fiscal);
+      border-radius: 3px; background: var(--c-fiscal-bg); font-size: 14px; line-height: 1.8;
+    }
+    .warn strong { color: var(--c-fiscal); }
+    section { padding: 34px 0; }
+    .fy-card {
+      margin-bottom: 26px; border: 1px solid var(--c-border); border-top: 4px solid var(--c-fiscal);
+      border-radius: 4px; background: var(--c-card); padding: 22px; scroll-margin-top: 16px;
+    }
+    .fy-head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; margin-bottom: 4px; }
+    .fy-card h2 { margin: 0; font-size: 24px; }
+    .fy-period { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
+    .fy-status {
+      display: inline-flex; border-radius: 3px; background: var(--c-fiscal-bg);
+      border: 1px solid var(--c-fiscal-border); padding: 3px 10px;
+      color: var(--c-fiscal); font-size: 12px; font-weight: 800;
+    }
+    h3 { margin: 22px 0 10px; font-size: 16px; border-left: 4px solid var(--c-fiscal); padding-left: 10px; }
+    .amount-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; }
+    .amount {
+      border: 1px solid var(--c-border); border-radius: 3px; background: #fff;
+      padding: 14px 18px; min-width: 240px;
+    }
+    .amount strong { display: block; color: var(--c-fiscal); font-size: 26px; line-height: 1.2; }
+    .amount span { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .pill {
+      display: inline-flex; align-items: center; margin: 8px 6px 0 0;
+      border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
+      padding: 6px 12px; color: var(--c-main-dark); font-size: 13px; font-weight: 800;
+    }
+    .pill--fiscal { border-color: var(--c-fiscal-border); background: var(--c-fiscal-bg); color: var(--c-fiscal); }
+    .pill--council { border-color: var(--c-main); background: var(--c-main-pale); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .col-box { border: 1px solid var(--c-rule); border-radius: 3px; background: #fffdf6; padding: 12px 14px; }
+    .col-box h4 { margin: 0 0 8px; font-size: 13px; color: var(--c-ink-soft); }
+    .col-box ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 2; }
+    .status-note { color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; margin: 6px 0 0; }
+    .fine-print { margin-top: 20px; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }
+    footer { padding: 30px 0; border-top: 1px solid var(--c-border); background: var(--c-main-dark);
+             color: #fff; text-align: center; font-size: 13px; line-height: 1.8; }
+    .load-error { padding: 24px; border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-card); }
+    @media (max-width: 700px) {
+      .two-col { grid-template-columns: 1fr; }
+      .fy-card { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+        <h1>品川区の予算・決算</h1>
+        <p class="lead">品川区のお金の流れ（当初予算・補正予算・決算）を年度ごとにまとめ、それを審議した議会へのリンクとあわせて掲載しています。</p>
+        <div class="warn">
+          <strong>「年」と「年度」は別物です。</strong>このページの情報は<strong>年度</strong>（4月〜翌年3月）単位です。
+          議会のページは<strong>暦年</strong>（1月〜12月）単位のため、例えば「令和8年<strong>度</strong>予算」を審議したのは「令和8年<strong>第1回定例会</strong>（2026年2月〜3月）」、
+          「令和6年<strong>度</strong>決算」を審査したのは「令和7年<strong>第3回定例会</strong>（2025年秋）」です。
+        </div>
+        <div class="warn" style="border-left-color: var(--c-main); background: var(--c-main-pale); border-color: var(--c-border);">
+          これは品川区が運営しているものではありません。金額・内容は品川区公式サイトからの転記です。正確な情報は必ず各リンク先の公式資料を確認してください。
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="container" id="fy-root"></div>
+    </section>
+  </main>
+  <footer><div class="container">品川区議会DB — 予算・決算の一次情報は品川区公式サイトです。</div></footer>
+
+  <script src="data/fiscal.js"></script>
+  <script>
+    "use strict";
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, (c) => (
+        { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+    function pill(label, url, cls) {
+      const target = /^https?:/.test(url) ? ' target="_blank" rel="noopener"' : "";
+      return `<a class="pill ${cls || ""}" href="${esc(url)}"${target}>${esc(label)}</a>`;
+    }
+
+    function fyHtml(fy) {
+      const ini = fy.initial;
+      const iniLinks = ini.links.map((l) => pill(l.label, l.url, "pill--fiscal")).join("")
+        + ini.council.map((l) => pill(l.label, l.url, "pill--council")).join("");
+      const supOfficial = fy.supplements.official.length
+        ? `<ul>${fy.supplements.official.map((s) =>
+            `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join("")}</ul>`
+        : `<p class="status-note">公式ページの掲載はまだありません。</p>`;
+      const supCouncil = fy.supplements.council.length
+        ? `<ul>${fy.supplements.council.map((s) =>
+            `<li><a href="${esc(s.url)}">${esc(s.label)}</a></li>`).join("")}</ul>`
+        : `<p class="status-note">該当する議案はまだありません。</p>`;
+      const setLinks = (fy.settlement.links || []).map((l) => pill(l.label, l.url, "pill--fiscal")).join("")
+        + (fy.settlement.council || []).map((l) => pill(l.label, l.url, "pill--council")).join("");
+      return `
+      <article class="fy-card" id="${esc(fy.id)}">
+        <div class="fy-head">
+          <h2>${esc(fy.label)}</h2>
+          <span class="fy-period">${esc(fy.period)}</span>
+          <span class="fy-status">${esc(fy.status)}</span>
+        </div>
+        <h3>当初予算</h3>
+        <div class="amount-row">
+          <div class="amount"><strong>${esc(ini.amount)}</strong><span>一般会計・${esc(ini.change)}</span></div>
+        </div>
+        <div>${iniLinks}</div>
+        <h3>補正予算</h3>
+        <div class="two-col">
+          <div class="col-box"><h4>公式の補正予算ページ</h4>${supOfficial}</div>
+          <div class="col-box"><h4>議会で審議された補正予算議案（当サイト内）</h4>${supCouncil}</div>
+        </div>
+        <h3>決算</h3>
+        <p class="status-note">${esc(fy.settlement.status)}</p>
+        <div>${setLinks}</div>
+      </article>`;
+    }
+
+    (function init() {
+      const data = window.SHINAGAWA_DB && window.SHINAGAWA_DB.fiscalData;
+      const root = document.getElementById("fy-root");
+      if (!data) {
+        root.innerHTML = `<div class="load-error">データを読み込めませんでした。data/fiscal.js を確認してください。</div>`;
+        return;
+      }
+      root.innerHTML = data.fiscalYears.map(fyHtml).join("")
+        + `<p class="fine-print">${esc(data.note)}（更新日: ${esc(data.updatedAt)}）<br />`
+        + `参照元: ${data.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(" ／ ")}</p>`;
+      if (location.hash) {
+        const el = document.querySelector(location.hash);
+        if (el) el.scrollIntoView();
+      }
+    })();
+  </script>
+</body>
+</html>
