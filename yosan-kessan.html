@@ -32,6 +32,13 @@
     }
     .warn strong { color: var(--c-fiscal); }
     section { padding: 34px 0; }
+    /* 年度切り替えプルダウン */
+    .fy-select-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 24px; }
+    .fy-select-row label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; white-space: nowrap; }
+    #fy-select {
+      width: min(100%, 320px); border: 1px solid var(--c-border); border-radius: 3px;
+      background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: 16px; font-weight: 800;
+    }
     .fy-card {
       margin-bottom: 26px; border: 1px solid var(--c-border); border-top: 4px solid var(--c-fiscal);
       border-radius: 4px; background: var(--c-card); padding: 22px; scroll-margin-top: 16px;
@@ -92,7 +99,13 @@
       </div>
     </div>
     <section>
-      <div class="container" id="fy-root"></div>
+      <div class="container">
+        <div class="fy-select-row">
+          <label for="fy-select">表示する年度</label>
+          <select id="fy-select" aria-label="表示する年度を選択"></select>
+        </div>
+        <div id="fy-root"></div>
+      </div>
     </section>
   </main>
   <footer><div class="container">品川区議会DB — 予算・決算の一次情報は品川区公式サイトです。</div></footer>
@@ -146,6 +159,33 @@
       </article>`;
     }
 
+    function renderYearSelect(data, selectedId) {
+      const sel = document.getElementById("fy-select");
+      if (!sel) return;
+      let options = data.fiscalYears.map((fy) => {
+        const startYear = fy.period ? fy.period.split('〜')[0] : '';
+        const yearLabel = startYear ? ` (${esc(startYear)}〜)` : '';
+        return `<option value="${esc(fy.id)}"${fy.id === selectedId ? " selected" : ""}>${esc(fy.label)}${yearLabel}</option>`;
+      }).join("");
+      options += `<option value="all"${selectedId === "all" ? " selected" : ""}>すべての年度を表示</option>`;
+      sel.innerHTML = options;
+    }
+
+    function renderFiscalYears(data, selectedId) {
+      const root = document.getElementById("fy-root");
+      if (!root) return;
+      let yearsToRender = data.fiscalYears;
+      if (selectedId !== "all") {
+        const filtered = data.fiscalYears.filter((fy) => fy.id === selectedId);
+        if (filtered.length > 0) {
+          yearsToRender = filtered;
+        }
+      }
+      root.innerHTML = yearsToRender.map(fyHtml).join("")
+        + `<p class="fine-print">${esc(data.note)}（更新日: ${esc(data.updatedAt)}）<br />`
+        + `参照元: ${data.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(" ／ ")}</p>`;
+    }
+
     (function init() {
       const data = window.SHINAGAWA_DB && window.SHINAGAWA_DB.fiscalData;
       const root = document.getElementById("fy-root");
@@ -153,13 +193,40 @@
         root.innerHTML = `<div class="load-error">データを読み込めませんでした。data/fiscal.js を確認してください。</div>`;
         return;
       }
-      root.innerHTML = data.fiscalYears.map(fyHtml).join("")
-        + `<p class="fine-print">${esc(data.note)}（更新日: ${esc(data.updatedAt)}）<br />`
-        + `参照元: ${data.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(" ／ ")}</p>`;
-      if (location.hash) {
-        const el = document.querySelector(location.hash);
-        if (el) el.scrollIntoView();
+
+      function getSelectedIdFromHash() {
+        if (!location.hash) return null;
+        const hash = location.hash.slice(1);
+        const match = data.fiscalYears.find((fy) => fy.id === hash);
+        return match ? match.id : null;
       }
+
+      let currentId = getSelectedIdFromHash() || data.fiscalYears[0].id;
+
+      renderYearSelect(data, currentId);
+      renderFiscalYears(data, currentId);
+
+      const sel = document.getElementById("fy-select");
+      if (sel) {
+        sel.addEventListener("change", () => {
+          currentId = sel.value;
+          renderFiscalYears(data, currentId);
+          if (currentId !== "all") {
+            history.replaceState(null, "", `#${currentId}`);
+          } else {
+            history.replaceState(null, "", location.pathname + location.search);
+          }
+        });
+      }
+
+      window.addEventListener("hashchange", () => {
+        const hashId = getSelectedIdFromHash();
+        if (hashId && hashId !== currentId) {
+          currentId = hashId;
+          renderYearSelect(data, currentId);
+          renderFiscalYears(data, currentId);
+        }
+      });
     })();
   </script>
 </body>
