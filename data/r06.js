@@ -30,6 +30,11 @@ window.SHINAGAWA_DB.years["r06"] = {
           "type": "official",
           "label": "令和6年度の予算・決算まとめ",
           "url": "yosan-kessan.html#fy-r06"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r06_01t_s.pdf"
         }
       ],
       "events": [
@@ -145,6 +150,11 @@ window.SHINAGAWA_DB.years["r06"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=149"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r06_01r_s.pdf"
         }
       ],
       "events": [],
@@ -181,6 +191,11 @@ window.SHINAGAWA_DB.years["r06"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=150"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r06_02r_s.pdf"
         }
       ],
       "events": [],
@@ -213,6 +228,11 @@ window.SHINAGAWA_DB.years["r06"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=151"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r06_02t_s.pdf"
         }
       ],
       "events": [
@@ -306,6 +326,11 @@ window.SHINAGAWA_DB.years["r06"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=152"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r06_03t_s.pdf"
         }
       ],
       "events": [
@@ -399,6 +424,11 @@ window.SHINAGAWA_DB.years["r06"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=154"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r06_04t_s.pdf"
         }
       ],
       "events": [
@@ -488,6 +518,11 @@ window.SHINAGAWA_DB.years["r06"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=155"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r06_03r_s.pdf"
         }
       ],
       "events": [],

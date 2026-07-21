@@ -151,6 +151,11 @@ window.SHINAGAWA_DB.years["r08"] = {
           "type": "official",
           "label": "令和8年度の予算・決算まとめ",
           "url": "yosan-kessan.html#fy-r08"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_01t_s.pdf"
         }
       ],
       "detailTitle": "令和8年第1回定例会の流れ",
@@ -559,6 +564,11 @@ window.SHINAGAWA_DB.years["r08"] = {
           "type": "minutesDraft",
           "label": "会議録を読む（校正原稿PDF）",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2026.05.27r1.pdf"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_01r_s.pdf"
         }
       ],
       "detailTitle": "令和8年第1回臨時会の詳細",
@@ -753,6 +763,11 @@ window.SHINAGAWA_DB.years["r08"] = {
           "type": "video",
           "label": "録画を見る",
           "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=167"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_02t_s.pdf"
         }
       ],
       "detailTitle": "令和8年第2回定例会の流れ",
@@ -956,6 +971,11 @@ window.SHINAGAWA_DB.years["r08"] = {
           "type": "official",
           "label": "令和7年度の予算・決算まとめ",
           "url": "yosan-kessan.html#fy-r07"
+        },
+        {
+          "type": "official",
+          "label": "各議員の賛否の状況（公式PDF）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_s.pdf"
         }
       ],
       "detailTitle": "令和8年第3回定例会の詳細",
