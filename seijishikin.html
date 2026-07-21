@@ -156,7 +156,7 @@
 
         <aside class="source-guide" aria-labelledby="source-title">
           <h2 id="source-title">公式の収支報告書を確認する方法</h2>
-          <p>収支報告書は所管と公表年によって掲載先が分かれます。団体名をコピーして、東京都選挙管理委員会または総務省の公式ページ内で該当年度の資料を確認してください。このページでは、団体ごとのPDF URLを推測して掲載していません。</p>
+          <p>収支報告書は所管と公表年によって掲載先が分かれます。各団体のリンクから、東京都選挙管理委員会または総務省の公式ページで該当年度の資料を確認してください。このページでは、団体ごとのPDF URLを推測して掲載していません。</p>
           <div id="source-links" class="source-links"></div>
         </aside>
 
@@ -187,7 +187,6 @@
 
         <div class="status-row">
           <span id="result-status" role="status" aria-live="polite"></span>
-          <span id="copy-status" role="status" aria-live="polite"></span>
         </div>
         <div id="organizations-root"></div>
         <p class="fine-print" id="checked-note"></p>
@@ -216,7 +215,6 @@
         openAll: document.getElementById("open-all"),
         closeAll: document.getElementById("close-all"),
         status: document.getElementById("result-status"),
-        copyStatus: document.getElementById("copy-status"),
         root: document.getElementById("organizations-root"),
         checked: document.getElementById("checked-note")
       };
@@ -275,7 +273,6 @@
           <div class="badges"><span class="badge">${esc(categoryLabels[org.category])}</span>${fundBadges}</div>
           ${org.nameNote ? `<p class="name-note">${esc(org.nameNote)}</p>` : ""}
           <div class="card-actions">
-            <button class="card-link" type="button" data-copy-name="${esc(org.name)}">団体名をコピー</button>
             <a class="card-link card-link--official" href="${esc(data.sources.tokyoReports.url)}" target="_blank" rel="noopener">東京都の報告書を探す ↗</a>
             <a class="card-link" href="${esc(data.sources.ministryReports.url)}" target="_blank" rel="noopener">総務省所管を確認 ↗</a>
           </div>
@@ -309,22 +306,6 @@
         updateUrl();
       }
 
-      async function copyName(name) {
-        try {
-          if (navigator.clipboard && window.isSecureContext) {
-            await navigator.clipboard.writeText(name);
-          } else {
-            const area = document.createElement("textarea");
-            area.value = name; area.setAttribute("readonly", "");
-            area.style.position = "fixed"; area.style.opacity = "0";
-            document.body.append(area); area.select(); document.execCommand("copy"); area.remove();
-          }
-          elements.copyStatus.textContent = `「${name}」をコピーしました`;
-        } catch (_) {
-          elements.copyStatus.textContent = "コピーできませんでした。団体名を選択してコピーしてください。";
-        }
-      }
-
       const params = new URLSearchParams(location.search);
       const validCategory = value => value === "all" || data.categories.some(item => item.id === value);
       const validLevel = value => value === "all" || data.fundManagementLevels.includes(value);
@@ -352,11 +333,6 @@
       });
       elements.openAll.addEventListener("click", () => document.querySelectorAll(".category-section").forEach(detail => { detail.open = true; }));
       elements.closeAll.addEventListener("click", () => document.querySelectorAll(".category-section").forEach(detail => { detail.open = false; }));
-      elements.root.addEventListener("click", event => {
-        const button = event.target.closest("[data-copy-name]");
-        if (button) copyName(button.dataset.copyName);
-      });
-
       render();
       if (targetOrg) requestAnimationFrame(() => document.getElementById(`organization-${targetOrg.id}`)?.scrollIntoView({ block: "center" }));
     })();

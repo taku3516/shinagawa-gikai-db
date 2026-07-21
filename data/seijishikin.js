@@ -112,7 +112,7 @@ window.SHINAGAWA_SEIJISHIKIN = {
     { id: "other-067", name: "西本貴子後援会“ｔａ－ｋｏサポターズ”", category: "other", fundManagement: ["区議・区長"], aliases: ["西本貴子後援会 ta-koサポターズ"] },
     { id: "other-068", name: "日本共産党品川区後援会", category: "other" },
     { id: "other-069", name: "ひがしゆき後援会", category: "other", fundManagement: ["区議・区長"] },
-    { id: "other-070", name: "藤原正即の会", category: "other", fundManagement: ["区議・区長"], aliases: ["藤原正則の会"], nameNote: "提供一覧内に「藤原正即の会」「藤原正則の会」の表記差があります。公式名簿で確認してください。" },
+    { id: "other-070", name: "藤原正則の会", category: "other", fundManagement: ["区議・区長"], aliases: ["藤原正即の会"] },
     { id: "other-071", name: "まつざわ和昌後援会", category: "other" },
     { id: "other-072", name: "松永よしひろ後援会", category: "other", fundManagement: ["区議・区長"] },
     { id: "other-073", name: "松本ときひろ後援会", category: "other", fundManagement: ["区議・区長"] },
