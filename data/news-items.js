@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-20T23:49:23.414358Z",
+  "generatedAt": "2026-07-21T01:47:57.621899Z",
   "items": [
+    {
+      "id": "985dfc9489bb861b501d",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年7月21日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年7月21日号(令和8年7月13日～令和8年7月20日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/07/post-61728.html",
+      "publishedAt": "2026-07-21T01:47:34.543305Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-07-21T01:47:34.543305Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "96e6f7de3550ee4926bb",
       "title": "えばさんものがたり103号 2026年(令和8年)7月発行",
@@ -2726,7 +2743,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1745, column 67"
+      "message": "not well-formed (invalid token): line 1780, column 67"
     },
     {
       "source": "朝日新聞",
@@ -2807,9 +2824,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
