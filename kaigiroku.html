@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f4e79" />
-  <title>品川区議会DB</title>
+  <title>会議録を見る | 品川区議会DB</title>
   <style>
     /* ===== 基調カラー：深い青と生成りを使った、公文書・資料庫を思わせる配色 ===== */
     :root {
@@ -50,6 +50,8 @@
     a:hover { text-decoration-thickness: 2px; }
 
     .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .breadcrumb { margin: 0 0 14px; font-size: 14px; }
 
     /* ===== ヒーロー ===== */
     .hero {
@@ -383,8 +385,36 @@
   <main>
     <!-- ヒーロー：サイト名・説明・免責・統計（JSで描画） -->
     <div class="hero">
-      <div class="container" id="hero-root"></div>
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+        <div id="hero-root"></div>
+      </div>
     </div>
+
+    <!-- 年切り替え＋年間の流れ -->
+    <section>
+      <div class="container">
+        <h2>年別に見る</h2>
+        <div class="year-row">
+          <label for="year-select">表示する年</label>
+          <select id="year-select" aria-label="表示する年を選択"></select>
+        </div>
+        <div id="year-overview"></div>
+      </div>
+    </section>
+
+    <!-- 全会議の開閉操作（スクロール中も上部に固定） -->
+    <div class="accordion-controls" id="accordion-controls" hidden>
+      <div class="container accordion-controls__inner">
+        <span class="accordion-controls__label">会議の詳細</span>
+        <span class="accordion-controls__status" id="accordion-status" aria-live="polite"></span>
+        <button class="accordion-button" id="open-all" type="button">すべて開く</button>
+        <button class="accordion-button" id="close-all" type="button">すべて閉じる</button>
+      </div>
+    </div>
+
+    <!-- 各会議の詳細・議案・請願陳情・質問・会議録（JSで描画） -->
+    <div id="detail-root"></div>
 
     <!-- 参照元 -->
     <section class="sources">
@@ -422,7 +452,34 @@
 
     // 年データを取得する。data/*.js が window.SHINAGAWA_DB に登録する方式なので、
     // ローカルでダブルクリックして開いても（file://）動作する
-    // リンクの種類ごとの色クラス（official=青 / video=赤 / minutes=緑）
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = src;
+        s.onload = resolve;
+        s.onerror = () => reject(new Error(`${src} の読み込みに失敗しました`));
+        document.head.appendChild(s);
+      });
+    }
+
+    async function loadYearData(meta) {
+      const db = window.SHINAGAWA_DB;
+      if (!db.years[meta.id]) await loadScript(meta.file);
+      const year = db.years[meta.id];
+      if (!year) throw new Error(`${meta.file} に ${meta.id} のデータが見つかりません`);
+
+      // 全件表示用の補足データがある年は、基礎データの後に一度だけ読み込む。
+      db.loadedSupplements = db.loadedSupplements || {};
+      if (meta.supplement && !db.loadedSupplements[meta.supplement]) {
+        await loadScript(meta.supplement);
+        db.loadedSupplements[meta.supplement] = true;
+      }
+      return year;
+    }
+
+    /* ---------- 部品の描画 ---------- */
+
+    // リンクの種類ごとの色クラス（official=青 / video=赤 / minutes・minutesDraft=緑）
     const PILL_CLASS = {
       official: "pill",
       video: "pill pill--video",
@@ -450,6 +507,14 @@
     }
 
     // タグ列（分野タグ＋議決結果タグ）のHTML
+    function tagsHtml(tags, result) {
+      const t = (tags || []).map((tag) => `<span class="tag">${esc(tag)}</span>`).join("");
+      const r = result ? `<span class="tag tag--result">${esc(result)}</span>` : "";
+      return t + r;
+    }
+
+    /* ---------- セクションの描画 ---------- */
+
     // ヒーロー（サイト名・説明・免責・入口リンク）
     // ※会期・議案数などの統計は年間で共通ではないため、各定例会のセクションに表示する
     function renderHero(site) {
@@ -461,23 +526,455 @@
     }
 
     // 統計カード（会期・議案数など。meeting.stats を持つ会議のセクション冒頭に出す）
+    function statsHtml(stats) {
+      if (!stats || stats.length === 0) return "";
+      const cells = stats.map((s) =>
+        `<div class="stat"><strong>${esc(s.value)}</strong><span>${esc(s.label)}</span></div>`
+      ).join("");
+      return `<div class="stats stats--section">${cells}</div>`;
+    }
+
     // 年セレクトボックス
+    function renderYearSelect(site, currentId) {
+      const sel = document.getElementById("year-select");
+      sel.innerHTML = (site.years || []).map((y) =>
+        `<option value="${esc(y.id)}"${y.available ? "" : " disabled"}${y.id === currentId ? " selected" : ""}>${esc(y.label)}</option>`
+      ).join("");
+    }
+
     // 会議に紐づく議案・請願・質問をまとめて取得する
+    function relatedItems(meeting, year) {
+      return {
+        bills: (year.bills || []).filter((b) => b.meetingId === meeting.id),
+        petitions: (year.petitions || []).filter((p) => p.meetingId === meeting.id),
+        questions: (year.questions || []).filter((q) => q.meetingId === meeting.id),
+        committeeSessions: (year.committeeSessions || []).filter((session) => session.meetingId === meeting.id),
+        committeePending: (year.committeePending || []).filter((session) => session.meetingId === meeting.id)
+      };
+    }
+
     // タイムラインまたは関連情報を持つ会議だけ詳細を表示する
+    function hasMeetingDetails(meeting, year) {
+      const related = relatedItems(meeting, year);
+      return (meeting.events && meeting.events.length > 0) ||
+        related.bills.length > 0 || related.petitions.length > 0 || related.questions.length > 0 ||
+        related.committeeSessions.length > 0 || related.committeePending.length > 0;
+    }
+
     // 折りたたみ見出しに表示する件数
+    function meetingCountsHtml(meeting, related) {
+      const counts = [];
+      if (meeting.events && meeting.events.length > 0) counts.push(`日程 ${meeting.events.length}件`);
+      if (related.bills.length > 0) counts.push(`議案 ${related.bills.length}件`);
+      if (related.petitions.length > 0) counts.push(`請願・陳情 ${related.petitions.length}件`);
+      if (related.questions.length > 0) counts.push(`質問者 ${related.questions.length}名`);
+      const committeeExchangeCount = related.committeeSessions.reduce((total, session) =>
+        total + (session.topics || []).reduce((topicTotal, topic) => topicTotal + (topic.exchanges || []).length, 0), 0);
+      if (committeeExchangeCount > 0) counts.push(`委員会質疑 ${committeeExchangeCount}件`);
+      if (related.committeePending.length > 0) counts.push(`会議録待ち ${related.committeePending.length}会議`);
+      if (counts.length === 0) return "";
+      return `<span class="meeting-accordion__counts">${counts.map((count) =>
+        `<span class="meeting-accordion__count">${esc(count)}</span>`).join("")}</span>`;
+    }
+
     // 年の概要＋会議カード一覧
+    function renderYearOverview(year, site) {
+      const cards = (year.meetings || []).map((m) => `
+        <article class="meeting-card">
+          <span class="chip">${esc(m.monthLabel)}</span>
+          <h3>${esc(m.name)}</h3>
+          <p>${esc(m.summary)}</p>
+          ${pillsHtml(m.links, site)}
+          ${hasMeetingDetails(m, year) ? `<a class="pill" href="#meeting-${esc(m.id)}">この会議の詳細へ</a>` : ""}
+        </article>`).join("");
+      document.getElementById("year-overview").innerHTML = `
+        <div class="year-summary">
+          <h3>${esc(year.yearSummary.title)}</h3>
+          <p>${esc(year.yearSummary.text)}</p>
+        </div>
+        <div class="meeting-grid">${cards}</div>`;
+    }
+
     // タイムライン（日付ごとの出来事）
+    function timelineHtml(events, site) {
+      const items = (events || []).map((ev) => `
+        <div class="timeline-item">
+          <time>${esc(ev.date)}</time>
+          <div>
+            <strong>${esc(ev.title)}</strong>
+            <p>${esc(ev.description)}</p>
+            ${pillsHtml(ev.links, site)}
+            ${ev.note ? `<p class="fine-print">${esc(ev.note)}</p>` : ""}
+          </div>
+        </div>`).join("");
+      return `<div class="timeline">${items}</div>`;
+    }
+
     // 議案カード
+    function billCardHtml(bill, site) {
+      return `
+        <article class="card">
+          ${tagsHtml(bill.tags, bill.result)}
+          <h3>${esc(bill.title)}</h3>
+          <p>${esc(bill.summary)}</p>
+          ${pillsHtml(bill.links, site)}
+        </article>`;
+    }
+
     // 請願・陳情の行
+    function petitionRowHtml(p, site) {
+      return `
+        <div class="row">
+          <span class="key">${esc(p.number)}</span>
+          <span>${esc(p.title)}<br />${pillsHtml(p.links, site)}</span>
+          <span class="result">${esc(p.result)}</span>
+        </div>`;
+    }
+
     // 件数の多い資料を、件数と説明が閉じた状態でも分かる内側の折りたたみにする
+    function recordSectionHtml({ id, title, lead, countLabel, content, open = false }) {
+      return `<details class="record-section" id="${esc(id)}"${open ? " open" : ""}>
+        <summary>
+          <span class="record-section__title">
+            <strong>${esc(title)}</strong>
+            ${lead ? `<span>${esc(lead)}</span>` : ""}
+          </span>
+          <span class="record-section__count">${esc(countLabel)}</span>
+          <span class="record-section__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="record-section__content">${content}</div>
+      </details>`;
+    }
+
     // 質問カード（議員名・会派・テーマ）
+    function questionCardHtml(q, site) {
+      const topics = (q.topics || []).map((t) => `<li>${esc(t)}</li>`).join("");
+      const qaSummaries = (q.qaSummaries || []).map((item) => `
+        <div class="qa-summary">
+          <h5>${esc(item.title)}</h5>
+          <dl>
+            <dt>質問の要約</dt>
+            <dd>${esc(item.question)}</dd>
+            <dt>答弁の要約</dt>
+            <dd>${esc(item.answer)}</dd>
+          </dl>
+        </div>`).join("");
+      return `
+        <details class="card q" id="question-${esc(q.meetingId)}-${esc(q.memberId)}">
+          <summary>
+            <h3>${esc(q.member)}（${esc(q.party)}）</h3>
+            <span class="q__count">質問 ${esc((q.topics || []).length)}項目</span>
+            <span class="q__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="q__content">
+            <p class="q__topics-label">質問項目（全件）</p>
+            <ul>${topics}</ul>
+            ${qaSummaries ? `<div class="qa-summaries" aria-label="${esc(q.member)}議員の質問と答弁の要約">
+            <h4>会議録からの要約</h4>
+            ${qaSummaries}
+          </div>
+          <p class="fine-print qa-summary-note">※質問・答弁の要点を本サイトで要約しています。正確な発言は公式の会議録をご確認ください。</p>` : ""}
+            ${pillsHtml(q.links, site)}
+          </div>
+        </details>`;
+    }
+
+    function committeeExchangeCount(session) {
+      return (session.topics || []).reduce((total, topic) => total + (topic.exchanges || []).length, 0);
+    }
+
     // 初期DOMを軽くするため、会議見出しだけを先に描画し、開いた会議の中身だけを生成する。
+    function committeeSessionsHtml(sessions, pending) {
+      const published = sessions.map((session) => `<details class="committee-session" id="committee-${esc(session.id)}" data-session-id="${esc(session.id)}">
+        <summary>
+          <span class="committee-session__summary-main">
+            <span class="committee-session__head">
+              <span class="tag">${esc(session.status || "委員会質疑")}</span>
+              <h3>${esc(session.date)} ${esc(session.committee)}</h3>
+            </span>
+            <span class="committee-session__overview">${esc(session.overview)}</span>
+          </span>
+          <span class="committee-session__count">${committeeExchangeCount(session)}件</span>
+          <span class="committee-toggle-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="committee-session__content" data-session-content></div>
+      </details>`).join("");
+      const waiting = pending.map((session) => `<article class="committee-pending" id="committee-${esc(session.id)}">
+        <strong>${esc(session.date)} ${esc(session.committee)}</strong>
+        <p>${esc(session.status)} — 会議録が公開されるまで要約は作成しません。
+          ${session.officialUrl ? `<a href="${esc(session.officialUrl)}" target="_blank" rel="noopener">公式カレンダーを確認</a>` : ""}</p>
+      </article>`).join("");
+      return `<div class="committee-topics">${published}${waiting}</div>`;
+    }
+
+    function committeeTopicHtml(session, topic) {
+      const exchanges = (topic.exchanges || []).map((item) => `
+        <article class="committee-exchange" id="committee-${esc(session.id)}-${esc(item.id)}">
+          <div class="committee-exchange__head">
+            <h5>${esc(item.title || item.speaker)}</h5>
+            ${item.title ? `<span class="committee-exchange__speaker">${esc(item.speaker)}</span>` : ""}
+            <span class="committee-exchange__kind">${esc(item.kind || "質問")}</span>
+          </div>
+          <dl>
+            <dt>質問・意見の要点</dt>
+            <dd>${esc(item.question)}</dd>
+            <dt>答弁・対応の要点</dt>
+            <dd>${esc(item.answer)}</dd>
+            ${item.respondent ? `<dt>答弁・対応者</dt><dd>${esc(item.respondent)}</dd>` : ""}
+          </dl>
+        </article>`).join("");
+      return `<details class="committee-topic" id="committee-${esc(session.id)}-${esc(topic.id)}">
+        <summary>
+          <span class="committee-topic__summary-main"><h4>${esc(topic.title)}</h4></span>
+          <span class="committee-topic__count">${(topic.exchanges || []).length}件</span>
+          <span class="committee-toggle-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="committee-topic__content">
+          ${topic.agenda ? `<p class="committee-topic__agenda">議題：${esc(topic.agenda)}</p>` : ""}
+          <div class="committee-exchanges">${exchanges}</div>
+        </div>
+      </details>`;
+    }
+
+    let activeYear = null;
+    let activeSite = null;
+
+    function renderCommitteeSession(details) {
+      if (!details || details.dataset.rendered === "true" || !activeYear) return;
+      const session = (activeYear.committeeSessions || []).find((item) => item.id === details.dataset.sessionId);
+      const content = details.querySelector("[data-session-content]");
+      if (!session || !content) return;
+      content.innerHTML = `
+        ${session.time ? `<p class="committee-session__meta">開催時間：${esc(session.time)}</p>` : ""}
+        <div class="committee-topics">${(session.topics || []).map((topic) => committeeTopicHtml(session, topic)).join("")}</div>
+        <p class="fine-print qa-summary-note">※質問・答弁の要点を本サイトで要約しています。明確な回答が記録されていない発言には、その旨を記載しています。正確な発言は公式の会議録をご確認ください。</p>
+        <div class="committee-session__links">${pillsHtml(session.links, activeSite)}</div>`;
+      details.dataset.rendered = "true";
+      setupDetailsAccessibility(content);
+    }
+
     // 会議1件分の詳細セクション（タイムライン＋関連する議案・請願・質問）
+    function meetingSectionHtml(meeting, year, site) {
+      const related = relatedItems(meeting, year);
+      const { bills, petitions, questions, committeeSessions, committeePending } = related;
+
+      let html = `<details class="meeting-accordion" id="meeting-${esc(meeting.id)}" data-meeting-id="${esc(meeting.id)}">
+        <summary>
+          <span>
+            <span class="meeting-accordion__heading">
+              <span class="chip">${esc(meeting.monthLabel)}</span>
+              <span class="meeting-accordion__title">${esc(meeting.name)}</span>
+            </span>
+            <span class="meeting-accordion__summary">${esc(meeting.summary)}</span>
+            ${meetingCountsHtml(meeting, related)}
+          </span>
+          <span class="meeting-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="meeting-accordion__content"><section><div class="container">
+        <h2>${esc(meeting.detailTitle || meeting.name)}</h2>
+        <p class="section-lead">${esc(meeting.detailLead || meeting.summary)}</p>
+        ${statsHtml(meeting.stats)}
+        ${timelineHtml(meeting.events, site)}`;
+
+      // 公開済み委員会の質疑・答弁と、会議録公開待ちの台帳
+      if (committeeSessions.length > 0 || committeePending.length > 0) {
+        const exchangeCount = committeeSessions.reduce((total, session) =>
+          total + (session.topics || []).reduce((topicTotal, topic) => topicTotal + (topic.exchanges || []).length, 0), 0);
+        html += recordSectionHtml({
+          id: `committee-qa-${meeting.id}`,
+          title: "委員会での質疑・答弁",
+          lead: "公式会議録または校正原稿から、質問・確認・意見・要望と答弁・対応を議題別に整理しています。",
+          countLabel: `${committeeSessions.length}会議・${exchangeCount}件${committeePending.length ? `／公開待ち等${committeePending.length}会議` : ""}`,
+          content: committeeSessionsHtml(committeeSessions, committeePending),
+          open: false
+        });
+      }
+
+      // 注目議案（見出し付き／見出しなしのグリッド両対応）
+      if (bills.length > 0) {
+        const sec = meeting.billsSection || {};
+        html += recordSectionHtml({
+          id: `bills-${meeting.id}`,
+          title: sec.title || "議案",
+          lead: sec.lead || "公式の提出議案ページに掲載された議案を全件表示します。",
+          countLabel: `${bills.length}件`,
+          content: `<div class="card-grid">${bills.map((b) => billCardHtml(b, site)).join("")}</div>`,
+          open: bills.length <= 6
+        });
+      }
+
+      // 請願・陳情
+      if (petitions.length > 0) {
+        const sec = meeting.petitionsSection || {};
+        html += recordSectionHtml({
+          id: `petitions-${meeting.id}`,
+          title: sec.title || "請願・陳情",
+          lead: sec.lead || "公式の提出議案ページに掲載された請願・陳情を全件表示します。",
+          countLabel: `${petitions.length}件`,
+          content: `<div class="rows">${petitions.map((p) => petitionRowHtml(p, site)).join("")}</div>`,
+          open: petitions.length <= 6
+        });
+      }
+
+      // 代表質問・一般質問
+      if (questions.length > 0) {
+        const sec = meeting.questionsSection || {};
+        const hasQaSummaries = questions.some((q) => (q.qaSummaries || []).length > 0);
+        const links = sec.links && sec.links.length > 0 ? `<p>${pillsHtml(sec.links, site)}</p>` : "";
+        html += recordSectionHtml({
+          id: `questions-${meeting.id}`,
+          title: sec.title || "代表質問・一般質問",
+          lead: sec.lead || "公式の発言項目を省略せず掲載し、会議録から質問と答弁を要約しています。",
+          countLabel: `${questions.length}名`,
+          content: `${links}<div class="card-grid${hasQaSummaries ? " question-card-grid--summaries" : ""}">${questions.map((q) => questionCardHtml(q, site)).join("")}</div>`,
+          open: questions.length <= 6
+        });
+      }
+
+      html += `</div></section></div></details>`;
+      return html;
+    }
+
     // 会議録（議事録）コーナー
+    function minutesSectionHtml(minutes, site) {
+      const official = minutes.officialLists.map((o) => `
+        <div class="row">
+          <span class="key">${esc(o.category)}</span>
+          <span>${esc(o.title)}</span>
+          <a class="pill pill--minutes" href="${esc(o.url)}" target="_blank" rel="noopener">一覧を開く</a>
+        </div>`).join("");
+
+      const groups = minutes.draftGroups.map((g) => `
+        <h3 class="group-title">${esc(g.title)}</h3>
+        <div class="rows">${g.items.map((item) => `
+          <div class="row">
+            <span class="key">${esc(item.date)}</span>
+            <span>${esc(item.meeting)}</span>
+            <a class="pill pill--minutes" href="${esc(item.url)}" target="_blank" rel="noopener">PDFで読む</a>
+          </div>`).join("")}</div>`).join("");
+
+      return `<details class="meeting-accordion minutes-accordion" id="minutes">
+        <summary>
+          <span>
+            <span class="meeting-accordion__heading">
+              <span class="chip">資料</span>
+              <span class="meeting-accordion__title">会議録（議事録）を読む</span>
+            </span>
+            <span class="meeting-accordion__summary">正式な会議録と、直近の校正原稿PDFをまとめて確認できます。</span>
+          </span>
+          <span class="meeting-accordion__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="meeting-accordion__content"><section><div class="container">
+        <h2>会議録（議事録）を読む</h2>
+        <p class="section-lead">${esc(minutes.lead)}</p>
+        <div class="notice">${esc(minutes.notice)}</div>
+        <p>${(minutes.searchLinks || []).map(pillHtml).join("\n")}</p>
+        <h3 class="group-title" id="minutes-official">${esc(minutes.officialTitle)}</h3>
+        <p class="section-lead">${esc(minutes.officialLead)}</p>
+        <div class="rows">${official}</div>
+        ${groups}
+        <p class="fine-print">${esc(minutes.asOfNote)}</p>
+      </div></section></div></details>`;
+    }
+
     // 現在表示中の折りたたみ要素
+    function accordions() {
+      return [...document.querySelectorAll("#detail-root .meeting-accordion")];
+    }
+
     // 全開閉ボタンの状態と読み上げ用の件数を更新する
+    function updateAccordionControls() {
+      const items = accordions();
+      const controls = document.getElementById("accordion-controls");
+      controls.hidden = items.length === 0;
+      if (items.length === 0) return;
+      const openCount = items.filter((item) => item.open).length;
+      document.getElementById("accordion-status").textContent = `${openCount} / ${items.length}件を表示中`;
+      document.getElementById("open-all").disabled = openCount === items.length;
+      document.getElementById("close-all").disabled = openCount === 0;
+    }
+
+    function setAllAccordions(open) {
+      for (const item of accordions()) item.open = open;
+      if (open) {
+        for (const details of document.querySelectorAll("#detail-root .committee-session")) {
+          renderCommitteeSession(details);
+        }
+      }
+      for (const details of document.querySelectorAll("#detail-root .record-section, #detail-root .card.q, #detail-root .committee-session, #detail-root .committee-topic")) {
+        details.open = open;
+      }
+      updateAccordionControls();
+    }
+
     // details/summary の開閉状態を読み上げ可能にし、Enter・Space操作を明示的に保証する
+    function setupDetailsAccessibility(root = document.getElementById("detail-root")) {
+      for (const details of root.querySelectorAll("details")) {
+        if (details.dataset.a11yReady === "true") continue;
+        const summary = [...details.children].find((child) => child.tagName === "SUMMARY");
+        if (!summary) continue;
+        details.dataset.a11yReady = "true";
+        summary.setAttribute("role", "button");
+        summary.setAttribute("aria-expanded", String(details.open));
+        details.addEventListener("toggle", () => {
+          summary.setAttribute("aria-expanded", String(details.open));
+          if (details.matches(".committee-session") && details.open) renderCommitteeSession(details);
+        });
+        summary.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          details.open = !details.open;
+        });
+      }
+    }
+
+    function decodedHashId() {
+      try {
+        return decodeURIComponent(location.hash.slice(1));
+      } catch (err) {
+        return "";
+      }
+    }
+
+    function hashBelongsToYear(hashId, yearId) {
+      return ["meeting", "question", "committee", "bills", "petitions"]
+        .some((prefix) => hashId.startsWith(`${prefix}-${yearId}-`));
+    }
+
     // アンカー先が閉じた会議・資料種別・質問者の内側にある場合は、祖先をすべて開く
+    function openAccordionForHash(shouldScroll) {
+      if (!location.hash) return false;
+      const hashId = decodedHashId();
+      let target = document.getElementById(hashId);
+      if (!target && hashId.startsWith("committee-") && activeYear) {
+        const session = (activeYear.committeeSessions || []).find((item) =>
+          hashId === `committee-${item.id}` || hashId.startsWith(`committee-${item.id}-`));
+        const details = session && document.getElementById(`committee-${session.id}`);
+        if (details) {
+          renderCommitteeSession(details);
+          details.open = true;
+          target = document.getElementById(hashId);
+        }
+      }
+      if (!target) return false;
+      if (target.matches("details")) target.open = true;
+      let ancestor = target.parentElement && target.parentElement.closest("details");
+      while (ancestor) {
+        ancestor.open = true;
+        ancestor = ancestor.parentElement && ancestor.parentElement.closest("details");
+      }
+      updateAccordionControls();
+      if (shouldScroll) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+      return true;
+    }
+
+    function setupAccordions() {
+      setupDetailsAccessibility();
+      for (const item of accordions()) item.addEventListener("toggle", updateAccordionControls);
+      updateAccordionControls();
+      openAccordionForHash(false);
+    }
+
     // 参照元
     function renderSources(site) {
       const items = (site.sources || []).map((s) =>
@@ -490,7 +987,34 @@
     }
 
     // フッター（免責の再掲＋更新日）
+    function renderFooter(site, year) {
+      document.getElementById("footer-root").innerHTML =
+        `${esc(site.siteName)} — ${esc(site.disclaimer)}<br />データ最終更新日: ${esc(year.updatedAt)}`;
+    }
+
     // 年データ全体の描画（会議をすべて並べた後、会議録コーナーを必ず最後尾に置く）
+    function renderYear(year, site) {
+      activeYear = year;
+      activeSite = site;
+      renderHero(site);
+      renderYearOverview(year, site);
+
+      let html = `<div class="container accordion-list">`;
+      for (const meeting of year.meetings || []) {
+        if (hasMeetingDetails(meeting, year)) {
+          html += meetingSectionHtml(meeting, year, site);
+        }
+      }
+      if (year.minutes) html += minutesSectionHtml(year.minutes, site);
+      html += `</div>`;
+
+      document.getElementById("detail-root").innerHTML = html;
+      setupAccordions();
+      renderFooter(site, year);
+    }
+
+    /* ---------- 初期化 ---------- */
+
     // 読み込み失敗時の案内
     function showLoadError(err) {
       document.getElementById("detail-root").innerHTML = `
@@ -502,35 +1026,49 @@
         </div>`;
     }
 
-    // フッター（トップは年データを読まないため、免責のみ表示する）
-    function renderFooterSimple(site) {
-      document.getElementById("footer-root").innerHTML =
-        `${esc(site.siteName)} — ${esc(site.disclaimer)}`;
-    }
-
-    // 旧URL（index.html#meeting-... / #minutes）で来た場合は会議録ページへ転送する
-    function redirectLegacyHash() {
-      const hash = location.hash;
-      if (!hash) return false;
-      if (/^#(meeting-|minutes|question-)/.test(decodeURIComponent(hash))) {
-        location.replace("kaigiroku.html" + hash);
-        return true;
-      }
-      return false;
-    }
-
-    function init() {
-      if (redirectLegacyHash()) return;
+    async function init() {
       const db = window.SHINAGAWA_DB;
       if (!db || !db.site) {
         showLoadError(new Error("data/site.js が読み込まれていません"));
         return;
       }
       const site = db.site;
-      renderHero(site);
       renderSources(site);
-      renderFooterSimple(site);
-      window.addEventListener("hashchange", redirectLegacyHash);
+
+      const sel = document.getElementById("year-select");
+
+      document.getElementById("open-all").addEventListener("click", () => setAllAccordions(true));
+      document.getElementById("close-all").addEventListener("click", () => setAllAccordions(false));
+
+      // 指定された年のデータを読み込んで描画する
+      async function showYear(yearId) {
+        const meta = site.years.find((y) => y.id === yearId && y.available);
+        if (!meta) return;
+        try {
+          const year = await loadYearData(meta);
+          renderYearSelect(site, yearId);
+          renderYear(year, site);
+        } catch (err) {
+          showLoadError(err);
+        }
+      }
+
+      // 別の年の会議アンカーへ移動した場合は、年も切り替えてから対象を開く
+      async function showHashTarget() {
+        const hashId = decodedHashId();
+        const hashYear = site.years.find((y) => hashBelongsToYear(hashId, y.id) && y.available);
+        if (hashYear && sel.value !== hashYear.id) await showYear(hashYear.id);
+        openAccordionForHash(true);
+      }
+
+      sel.addEventListener("change", () => showYear(sel.value));
+      window.addEventListener("hashchange", showHashTarget);
+
+      // 会議アンカーが指定されていれば、その会議が属する年を最初に表示する
+      const hashId = decodedHashId();
+      const hashYear = site.years.find((y) => hashBelongsToYear(hashId, y.id) && y.available);
+      await showYear(hashYear ? hashYear.id : site.defaultYear);
+      openAccordionForHash(true);
     }
 
     init();

@@ -6,6 +6,11 @@ window.SHINAGAWA_DB.site = {
   "disclaimer": "これは品川区が運営しているものではありません。正確な議決結果・日程・資料は必ず品川区議会公式サイトを確認してください。",
   "heroLinks": [
     {
+      "type": "official",
+      "label": "会議録を見る",
+      "url": "kaigiroku.html"
+    },
+    {
       "type": "video",
       "label": "品川区議会インターネット中継へ",
       "url": "https://gikaichukei.city.shinagawa.tokyo.jp/"
@@ -23,7 +28,7 @@ window.SHINAGAWA_DB.site = {
     {
       "type": "minutes",
       "label": "会議録（議事録）を読む",
-      "url": "#minutes"
+      "url": "kaigiroku.html#minutes"
     },
     {
       "type": "official",
