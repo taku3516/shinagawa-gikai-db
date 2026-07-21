@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-21T01:47:57.621899Z",
+  "generatedAt": "2026-07-21T05:00:37.724078Z",
   "items": [
     {
       "id": "985dfc9489bb861b501d",
@@ -18,6 +18,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "20bb2950b7bda51e088d",
+      "title": "感染性胃腸炎について",
+      "summary": "品川区保健所保健予防課感染症保健担当 電話：03-5742-7836 FAX：03-5742-9158",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/20231213124112.html",
+      "publishedAt": "2026-07-21T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T05:00:15.438506Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "96e6f7de3550ee4926bb",
@@ -738,9 +755,43 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
+      "id": "abea3866fef64d514615",
+      "title": "第12回品川区地域公共交通会議の開催について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-chiikikokyokotsu/hpg000032257.html",
+      "publishedAt": "2026-07-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T05:00:15.438506Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "132b66e9e99d191315a9",
+      "title": "品川区運賃協議会の開催について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-chiikikokyokotsu/20250313190123.html",
+      "publishedAt": "2026-07-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T05:00:15.438506Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
       "id": "ad20e0f04985fa2e6ea7",
       "title": "「品川区AIオンデマンド交通（大崎地区）の運賃について」ご意見募集中",
-      "summary": "地域交通政策課 電話：03-5742-7138 FAX：03-5742-6887",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -2743,12 +2794,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1780, column 67"
+      "message": "not well-formed (invalid token): line 1932, column 67"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 38,
       "accepted": 0
     },
     {
