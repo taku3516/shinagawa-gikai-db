@@ -64,7 +64,9 @@
       background: var(--c-card); font-size: clamp(11px, 1.25vw, 14px); line-height: 1.7;
       white-space: nowrap;
     }
-    .hero-links { margin: 16px 0 0; }
+    .hero-links { margin: 16px 0 0; display: flex; flex-direction: column; gap: 8px; }
+    .hero-links-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+    .hero-links-row .pill { margin: 0; padding: 6px 10px; font-size: 13px; }
 
     /* ===== 統計カード（定例会ごとの会期・議案数） ===== */
     .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 28px; }
@@ -453,11 +455,28 @@
     // ヒーロー（サイト名・説明・免責・入口リンク）
     // ※会期・議案数などの統計は年間で共通ではないため、各定例会のセクションに表示する
     function renderHero(site) {
+      const row1 = site.heroRow1 || [];
+      const row2 = site.heroRow2 || [];
+
+      const row1Html = row1.map(pillHtml).join("\n");
+      const row2Html = row2.map(pillHtml).join("\n");
+
+      let linksHtml = "";
+      if (row1.length > 0 || row2.length > 0) {
+        linksHtml = `
+          <div class="hero-links">
+            <div class="hero-links-row">${row1Html}</div>
+            <div class="hero-links-row">${row2Html}</div>
+          </div>`;
+      } else {
+        linksHtml = `<div class="hero-links"><div class="hero-links-row">${(site.heroLinks || []).map(pillHtml).join("\n")}</div></div>`;
+      }
+
       document.getElementById("hero-root").innerHTML = `
         <h1>${esc(site.siteName)}</h1>
         <p class="lead">${esc(site.lead)}</p>
         <div class="disclaimer">${esc(site.disclaimer)}</div>
-        <p class="hero-links">${(site.heroLinks || []).map(pillHtml).join("\n")}</p>`;
+        ${linksHtml}`;
     }
 
     // 統計カード（会期・議案数など。meeting.stats を持つ会議のセクション冒頭に出す）

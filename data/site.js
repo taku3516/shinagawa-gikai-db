@@ -4,11 +4,11 @@ window.SHINAGAWA_DB.site = {
   "siteName": "品川区議会DB",
   "lead": "品川区議会の公式情報を基に、住民が読みやすい形に整理したページです。",
   "disclaimer": "これは品川区が運営しているものではありません。正確な議決結果・日程・資料は必ず品川区議会公式サイトを確認してください。",
-  "heroLinks": [
+  "heroRow1": [
     {
-      "type": "official",
-      "label": "会議録を見る",
-      "url": "kaigiroku.html"
+      "type": "minutes",
+      "label": "一次情報となる会議録(議事録)を読む",
+      "url": "#minutes"
     },
     {
       "type": "video",
@@ -24,11 +24,18 @@ window.SHINAGAWA_DB.site = {
       "type": "video",
       "label": "録画を議員名で探す",
       "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=speaker_list"
+    }
+  ],
+  "heroRow2": [
+    {
+      "type": "official",
+      "label": "会議録を見る",
+      "url": "#minutes"
     },
     {
-      "type": "minutes",
-      "label": "会議録（議事録）を読む",
-      "url": "kaigiroku.html#minutes"
+      "type": "official",
+      "label": "予算・決算を見る",
+      "url": "yosan-kessan.html"
     },
     {
       "type": "official",
@@ -42,23 +49,18 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "type": "official",
-      "label": "品川区ニュースを見る",
-      "url": "news.html"
-    },
-    {
-      "type": "official",
-      "label": "予算・決算を見る",
-      "url": "yosan-kessan.html"
-    },
-    {
-      "type": "official",
       "label": "政務活動費を見る",
-      "url": "seimu.html"
+      "url": "https://www.city.shinagawa.tokyo.jp/kugikai/seimu/index.html"
     },
     {
       "type": "official",
       "label": "政治資金収支報告書を見る",
-      "url": "seijishikin.html"
+      "url": "https://www.senkyo.metro.tokyo.lg.jp/shuushi/"
+    },
+    {
+      "type": "official",
+      "label": "品川区ニュースを見る",
+      "url": "news.html"
     },
     {
       "type": "official",
