@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-21T14:56:02.136756Z",
+  "generatedAt": "2026-07-21T16:17:46.971463Z",
   "items": [
+    {
+      "id": "a4bda8559655bfcae374",
+      "title": "「ミーツカンパニー」がブランドロゴを刷新。より見やすく、より親しみやすく。学生と企業をつなぐブランドへ",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営する新卒就職支...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000504.000027235.html",
+      "publishedAt": "2026-07-21T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T16:17:24.961798Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "4b4e92dc6ee6c683b271",
       "title": "【新商品】夏休み、子どもの語彙力が急上昇!? ギャグ×国語学習の決定版『マンガでなるほど 語彙力ブ～スト』新発売！",
@@ -2886,7 +2904,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2852, column 18"
+      "message": "not well-formed (invalid token): line 2855, column 18"
     },
     {
       "source": "朝日新聞",
@@ -2933,7 +2951,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 23,
+      "scanned": 22,
       "accepted": 0
     },
     {
