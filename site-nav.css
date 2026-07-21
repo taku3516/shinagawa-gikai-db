@@ -1,108 +1,114 @@
-.site-function-nav {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid #d8d2c4;
+/* ===== 共通ナビゲーションコンテナ ===== */
+.hero-links {
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.site-function-nav__label {
-  margin: 0 0 10px;
-  color: #4f5d68;
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.site-function-nav__links {
+.hero-links-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 10px;
+  align-items: center;
+  gap: 6px 8px;
 }
 
+/* ===== リンクピル（共通・標準ボタン） ===== */
+.hero-links-row .pill,
 .site-function-nav__link {
   display: inline-flex;
-  min-height: 44px;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  border: 1px solid #b9c3cc;
+  margin: 0;
+  border: 1px solid var(--c-border, #b9c3cc);
   border-radius: 3px;
-  background: #fffdf8;
-  padding: 8px 12px;
-  color: #173a5e;
+  background: var(--c-card, #fffdf8);
+  padding: 6px 10px;
+  color: var(--c-main-dark, #173a5e);
   font-size: 13px;
   font-weight: 800;
   line-height: 1.35;
-  text-align: center;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  transition: all 0.15s ease;
+  position: relative;
 }
 
+.hero-links-row .pill:hover,
 .site-function-nav__link:hover {
-  background: #e7eef4;
+  background: var(--c-main-pale, #e7eef4);
   text-decoration-thickness: 2px;
 }
 
-.site-function-nav__link--video {
-  border-color: #fecaca;
-  background: #fff1f2;
-  color: #be123c;
+/* 動画（赤系） */
+.hero-links-row .pill--video {
+  border-color: var(--c-video-border, #fecaca);
+  background: var(--c-video-bg, #fff1f2);
+  color: var(--c-video-text, #be123c);
+}
+.hero-links-row .pill--video:hover {
+  background: #ffe4e6;
 }
 
-.site-function-nav__link--video:hover { background: #ffe4e6; }
-
-.site-function-nav__link--minutes {
-  border-color: #bbf7d0;
-  background: #f0fdf4;
-  color: #15803d;
+/* 議事録（緑系） */
+.hero-links-row .pill--minutes {
+  border-color: var(--c-minutes-border, #bbf7d0);
+  background: var(--c-minutes-bg, #f0fdf4);
+  color: var(--c-minutes-text, #15803d);
+}
+.hero-links-row .pill--minutes:hover {
+  background: #dcfce7;
 }
 
-.site-function-nav__link--minutes:hover { background: #dcfce7; }
-
-.site-function-nav__link[aria-current="page"] {
-  border-color: #173a5e;
-  background: #173a5e;
-  color: #fff;
-  text-decoration: none;
-  box-shadow: inset 0 0 0 1px #fffdf8;
+/* ===== 現在地（アクティブ）ボタンのハイライトスタイル ===== */
+.hero-links-row .pill[aria-current="page"],
+.hero-links-row .pill.is-active,
+.site-function-nav__link[aria-current="page"],
+.site-function-nav__link.is-active {
+  background: var(--c-main-dark, #173a5e) !important;
+  color: #ffffff !important;
+  border-color: var(--c-main-dark, #173a5e) !important;
+  text-decoration: none !important;
+  box-shadow: 0 0 0 2px #ffffff, 0 3px 8px rgba(23, 58, 94, 0.35);
+  font-weight: 900;
 }
 
-.site-function-nav__link:focus-visible {
-  outline: 3px solid #f59e0b;
-  outline-offset: 2px;
+/* 緑系のアクティブ時 */
+.hero-links-row .pill--minutes[aria-current="page"],
+.hero-links-row .pill--minutes.is-active {
+  background: #15803d !important;
+  color: #ffffff !important;
+  border-color: #166534 !important;
+  box-shadow: 0 0 0 2px #ffffff, 0 3px 8px rgba(21, 128, 61, 0.35);
 }
 
-.site-function-nav__external-mark {
-  flex: 0 0 auto;
-  font-size: .9em;
-  text-decoration: none;
+/* 赤系のアクティブ時 */
+.hero-links-row .pill--video[aria-current="page"],
+.hero-links-row .pill--video.is-active {
+  background: #be123c !important;
+  color: #ffffff !important;
+  border-color: #9f1239 !important;
+  box-shadow: 0 0 0 2px #ffffff, 0 3px 8px rgba(190, 18, 60, 0.35);
 }
 
-.site-function-nav__sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+/* 現在地を示すバッジ */
+.nav-active-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 5px;
+  background: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 640px) {
-  .site-function-nav__links {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+  .hero-links-row .pill {
+    padding: 7px 10px;
+    font-size: 13px;
   }
-
-  .site-function-nav__link {
-    width: 100%;
-    padding-inline: 8px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 340px) {
-  .site-function-nav__links { grid-template-columns: 1fr; }
 }

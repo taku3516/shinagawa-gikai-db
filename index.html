@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f4e79" />
   <title>品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
   <style>
     /* ===== 基調カラー：深い青と生成りを使った、公文書・資料庫を思わせる配色 ===== */
     :root {
@@ -455,28 +456,11 @@
     // ヒーロー（サイト名・説明・免責・入口リンク）
     // ※会期・議案数などの統計は年間で共通ではないため、各定例会のセクションに表示する
     function renderHero(site) {
-      const row1 = site.heroRow1 || [];
-      const row2 = site.heroRow2 || [];
-
-      const row1Html = row1.map(pillHtml).join("\n");
-      const row2Html = row2.map(pillHtml).join("\n");
-
-      let linksHtml = "";
-      if (row1.length > 0 || row2.length > 0) {
-        linksHtml = `
-          <div class="hero-links">
-            <div class="hero-links-row">${row1Html}</div>
-            <div class="hero-links-row">${row2Html}</div>
-          </div>`;
-      } else {
-        linksHtml = `<div class="hero-links"><div class="hero-links-row">${(site.heroLinks || []).map(pillHtml).join("\n")}</div></div>`;
-      }
-
       document.getElementById("hero-root").innerHTML = `
         <h1>${esc(site.siteName)}</h1>
         <p class="lead">${esc(site.lead)}</p>
         <div class="disclaimer">${esc(site.disclaimer)}</div>
-        ${linksHtml}`;
+        <nav data-site-nav></nav>`;
     }
 
     // 統計カード（会期・議案数など。meeting.stats を持つ会議のセクション冒頭に出す）
@@ -554,5 +538,6 @@
 
     init();
   </script>
+  <script src="site-nav.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1f4e79" />
   <title>会議録を見る | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
   <style>
     /* ===== 基調カラー：深い青と生成りを使った、公文書・資料庫を思わせる配色 ===== */
     :root {
@@ -522,7 +523,7 @@
         <h1>${esc(site.siteName)}</h1>
         <p class="lead">${esc(site.lead)}</p>
         <div class="disclaimer">${esc(site.disclaimer)}</div>
-        <p class="hero-links">${(site.heroLinks || []).map(pillHtml).join("\n")}</p>`;
+        <nav data-site-nav></nav>`;
     }
 
     // 統計カード（会期・議案数など。meeting.stats を持つ会議のセクション冒頭に出す）
@@ -1073,5 +1074,6 @@
 
     init();
   </script>
+  <script src="site-nav.js"></script>
 </body>
 </html>
