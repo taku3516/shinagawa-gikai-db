@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-21T16:17:46.971463Z",
+  "generatedAt": "2026-07-21T18:10:31.779788Z",
   "items": [
+    {
+      "id": "49aa4ac48783e68eb802",
+      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
+      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
+      "publishedAt": "2026-07-21T16:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T10:56:36.711431Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "a4bda8559655bfcae374",
       "title": "「ミーツカンパニー」がブランドロゴを刷新。より見やすく、より親しみやすく。学生と企業をつなぐブランドへ",
@@ -33,24 +51,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-21T14:55:40.256172Z",
       "tags": [
         "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "49aa4ac48783e68eb802",
-      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
-      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
-      "publishedAt": "2026-07-21T10:15:16Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T10:56:36.711431Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -2904,7 +2904,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2855, column 18"
+      "message": "not well-formed (invalid token): line 2854, column 18"
     },
     {
       "source": "朝日新聞",
