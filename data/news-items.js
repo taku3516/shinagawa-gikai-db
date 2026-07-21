@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-21T10:56:59.522741Z",
+  "generatedAt": "2026-07-21T14:56:02.136756Z",
   "items": [
+    {
+      "id": "4b4e92dc6ee6c683b271",
+      "title": "【新商品】夏休み、子どもの語彙力が急上昇!? ギャグ×国語学習の決定版『マンガでなるほど 語彙力ブ～スト』新発売！",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月21日に『マンガでなるほど 語彙力ブ～スト...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009234.000002535.html",
+      "publishedAt": "2026-07-21T14:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T14:55:40.256172Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "49aa4ac48783e68eb802",
       "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
@@ -2869,7 +2886,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2538, column 18"
+      "message": "not well-formed (invalid token): line 2852, column 18"
     },
     {
       "source": "朝日新聞",
