@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-21T22:47:23.417869Z",
+  "generatedAt": "2026-07-21T23:48:32.030379Z",
   "items": [
+    {
+      "id": "141bbb2b714a15ff5e66",
+      "title": "避暑シェルターのご利用について",
+      "summary": "総務課 総務係 電話：03-5742-6625 FAX：03-3774-3656",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/hpg000022596.html",
+      "publishedAt": "2026-07-22T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "49aa4ac48783e68eb802",
       "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
@@ -1416,23 +1433,6 @@ window.SHINAGAWA_NEWS = {
         "小山"
       ],
       "relevanceScore": 12
-    },
-    {
-      "id": "141bbb2b714a15ff5e66",
-      "title": "避暑シェルターのご利用について",
-      "summary": "総務課 総務係 電話：03-5742-6625 FAX：03-3774-3656",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/hpg000022596.html",
-      "publishedAt": "2026-07-08T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "14183f14905591512744",
@@ -2904,7 +2904,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2980, column 18"
+      "message": "not well-formed (invalid token): line 3024, column 18"
     },
     {
       "source": "朝日新聞",
