@@ -23,8 +23,8 @@
     { type: "official", label: "予算・決算を見る", url: "yosan-kessan.html" },
     { type: "official", label: "議員・政治家名簿を見る", url: "giin.html" },
     { type: "official", label: "品川区の選挙を見る", url: "senkyo.html" },
-    { type: "official", label: "政務活動費を見る", url: "https://www.city.shinagawa.tokyo.jp/kugikai/seimu/index.html" },
-    { type: "official", label: "政治資金収支報告書を見る", url: "https://www.senkyo.metro.tokyo.lg.jp/shuushi/" },
+    { type: "official", label: "政務活動費を見る", url: "seimu.html" },
+    { type: "official", label: "政治資金収支報告書を見る", url: "seijishikin.html" },
     { type: "official", label: "品川区ニュースを見る", url: "news.html" },
     { type: "official", label: "横断検索", url: "kensaku.html" }
   ];

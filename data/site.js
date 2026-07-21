@@ -50,12 +50,12 @@ window.SHINAGAWA_DB.site = {
     {
       "type": "official",
       "label": "政務活動費を見る",
-      "url": "https://www.city.shinagawa.tokyo.jp/kugikai/seimu/index.html"
+      "url": "seimu.html"
     },
     {
       "type": "official",
       "label": "政治資金収支報告書を見る",
-      "url": "https://www.senkyo.metro.tokyo.lg.jp/shuushi/"
+      "url": "seijishikin.html"
     },
     {
       "type": "official",
