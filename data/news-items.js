@@ -1,7 +1,46 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-21T08:08:51.546018Z",
+  "generatedAt": "2026-07-21T10:56:59.522741Z",
   "items": [
+    {
+      "id": "49aa4ac48783e68eb802",
+      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
+      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
+      "publishedAt": "2026-07-21T10:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T10:56:36.711431Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "2a10bcdcb2867b32e311",
+      "title": "武蔵小山で「明和電機 オモチャができるまで展」 大型トイなど展示100点超",
+      "summary": "「明和電機 オモチャができるまで展」が7月19日、武蔵小山商店街パルム内のイベントスペース（品川区荏原3）で始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5042",
+      "publishedAt": "2026-07-21T09:27:28Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T10:56:36.711431Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原",
+        "小山",
+        "武蔵小山商店街"
+      ],
+      "relevanceScore": 20
+    },
     {
       "id": "985dfc9489bb861b501d",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年7月21日号）を公開しました‼",
@@ -18,6 +57,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "887c5a1b6bcbcd9505eb",
+      "title": "【清掃一組からのお知らせ】大田清掃工場で「区民との意見交換会」開催",
+      "summary": "品川区清掃事務所 庶務係 電話：03-3490-7705 FAX：03-3490-7041",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/gomi-keihatu/20260218133625.html",
+      "publishedAt": "2026-07-21T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T10:56:36.711431Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "20bb2950b7bda51e088d",
@@ -2813,7 +2869,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1994, column 18"
+      "message": "not well-formed (invalid token): line 2538, column 18"
     },
     {
       "source": "朝日新聞",
@@ -2837,7 +2893,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
