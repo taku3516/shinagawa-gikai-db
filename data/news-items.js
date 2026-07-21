@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-21T05:00:37.724078Z",
+  "generatedAt": "2026-07-21T08:08:51.546018Z",
   "items": [
     {
       "id": "985dfc9489bb861b501d",
@@ -883,6 +883,25 @@ window.SHINAGAWA_NEWS = {
         "戸越銀座駅"
       ],
       "relevanceScore": 24
+    },
+    {
+      "id": "0c964b32671e1f1c9a31",
+      "title": "第1回品川区特別支援教育推進計画検討委員会の開催について",
+      "summary": "教育総合支援センター 特別支援教育担当 電話：03-3490-8202 FAX：03-3490-2007",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-sesaku/20260716125556.html",
+      "publishedAt": "2026-07-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T08:08:25.204546Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "d46e42579d0333c62b17",
@@ -2794,7 +2813,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1932, column 67"
+      "message": "not well-formed (invalid token): line 1994, column 18"
     },
     {
       "source": "朝日新聞",
