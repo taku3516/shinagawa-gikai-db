@@ -7,8 +7,8 @@ window.SHINAGAWA_DB.site = {
   "heroRow1": [
     {
       "type": "minutes",
-      "label": "一次情報となる会議録(議事録)を読む",
-      "url": "#minutes"
+      "label": "会議録を読む",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/search"
     },
     {
       "type": "video",
@@ -30,7 +30,7 @@ window.SHINAGAWA_DB.site = {
     {
       "type": "official",
       "label": "会議録を見る",
-      "url": "#minutes"
+      "url": "kaigiroku.html"
     },
     {
       "type": "official",

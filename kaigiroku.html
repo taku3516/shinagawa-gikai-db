@@ -389,6 +389,7 @@
       <div class="container">
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
         <div id="hero-root"></div>
+        <nav data-site-nav></nav>
       </div>
     </div>
 
@@ -522,8 +523,7 @@
       document.getElementById("hero-root").innerHTML = `
         <h1>${esc(site.siteName)}</h1>
         <p class="lead">${esc(site.lead)}</p>
-        <div class="disclaimer">${esc(site.disclaimer)}</div>
-        <nav data-site-nav></nav>`;
+        <div class="disclaimer">${esc(site.disclaimer)}</div>`;
     }
 
     // 統計カード（会期・議案数など。meeting.stats を持つ会議のセクション冒頭に出す）

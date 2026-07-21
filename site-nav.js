@@ -12,14 +12,14 @@
   const currentFile = (decodeURIComponent(window.location.pathname).split("/").pop() || "index.html").toLowerCase();
 
   const row1Data = (site && Array.isArray(site.heroRow1)) ? site.heroRow1 : [
-    { type: "minutes", label: "一次情報となる会議録(議事録)を読む", url: "#minutes" },
+    { type: "minutes", label: "会議録を読む", url: "https://gikai.city.shinagawa.tokyo.jp/search" },
     { type: "video", label: "品川区議会インターネット中継へ", url: "https://gikaichukei.city.shinagawa.tokyo.jp/" },
     { type: "video", label: "録画を会議名で探す", url: "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_list" },
     { type: "video", label: "録画を議員名で探す", url: "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=speaker_list" }
   ];
 
   const row2Data = (site && Array.isArray(site.heroRow2)) ? site.heroRow2 : [
-    { type: "official", label: "会議録を見る", url: "#minutes" },
+    { type: "official", label: "会議録を見る", url: "kaigiroku.html" },
     { type: "official", label: "予算・決算を見る", url: "yosan-kessan.html" },
     { type: "official", label: "議員・政治家名簿を見る", url: "giin.html" },
     { type: "official", label: "品川区の選挙を見る", url: "senkyo.html" },
@@ -60,7 +60,7 @@
     if (currentFile === "kensaku.html" && label === "横断検索") return true;
     if (currentFile === "seimu.html" && label === "政務活動費を見る") return true;
     if (currentFile === "seijishikin.html" && label === "政治資金収支報告書を見る") return true;
-    if (currentFile === "kaigiroku.html" && (label === "会議録を見る" || label === "一次情報となる会議録(議事録)を読む")) return true;
+    if (currentFile === "kaigiroku.html" && label === "会議録を見る") return true;
 
     return false;
   }
