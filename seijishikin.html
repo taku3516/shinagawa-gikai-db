@@ -110,6 +110,13 @@
       color: var(--c-main-dark); font-size: 11px; font-weight: 800;
     }
     .badge--fund { background: var(--c-fund-pale); color: var(--c-fund); border: 1px solid var(--c-fund-border); }
+    .org-detail {
+      display: grid; grid-template-columns: 7.5em 1fr; gap: 4px 10px;
+      margin: 0 0 12px; font-size: 13px; line-height: 1.7;
+    }
+    .org-detail dt { color: var(--c-ink-soft); font-weight: 800; }
+    .org-detail dd { margin: 0; }
+    @media (max-width: 480px) { .org-detail { grid-template-columns: 1fr; gap: 1px 0; } .org-detail dt { margin-top: 6px; } }
     .name-note { margin: 0 0 10px; color: #7c2d12; font-size: 12px; line-height: 1.65; }
     .card-actions { display: flex; flex-wrap: wrap; gap: 7px; }
     .card-link { min-height: 40px; text-decoration: none; }
@@ -219,6 +226,12 @@
         checked: document.getElementById("checked-note")
       };
 
+      function formatDate(iso) {
+        if (!iso) return "―";
+        const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+        return m ? `${m[1]}年${Number(m[2])}月${Number(m[3])}日` : iso;
+      }
+
       function esc(value) {
         return String(value ?? "").replace(/[&<>"']/g, char => (
           { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]
@@ -272,6 +285,12 @@
           <h3>${esc(org.name)}</h3>
           <div class="badges"><span class="badge">${esc(categoryLabels[org.category])}</span>${fundBadges}</div>
           ${org.nameNote ? `<p class="name-note">${esc(org.nameNote)}</p>` : ""}
+          ${org.office ? `<dl class="org-detail">
+            <dt>事務所の所在地</dt><dd>${esc(org.office)}</dd>
+            <dt>代表者</dt><dd>${esc(org.representative || "―")}</dd>
+            <dt>会計責任者</dt><dd>${esc(org.accountant || "―")}</dd>
+            <dt>設立届出日</dt><dd>${esc(formatDate(org.registeredOn))}</dd>
+          </dl>` : ""}
           <div class="card-actions">
             <a class="card-link card-link--official" href="${esc(data.sources.tokyoReports.url)}" target="_blank" rel="noopener">東京都の報告書を探す ↗</a>
             <a class="card-link" href="${esc(data.sources.ministryReports.url)}" target="_blank" rel="noopener">総務省所管を確認 ↗</a>
