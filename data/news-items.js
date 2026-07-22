@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-22T07:36:49.638989Z",
+  "generatedAt": "2026-07-22T12:22:16.458743Z",
   "items": [
+    {
+      "id": "49aa4ac48783e68eb802",
+      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
+      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
+      "publishedAt": "2026-07-22T12:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T10:56:36.711431Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "a933b87484944ba7f516",
+      "title": "チエル、在留外国人向け多言語対応日本語学習サービス『ABLish(R) 日本へGO！』を新発売",
+      "summary": "[チエル株式会社] 学校教育向けにICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）は2026年10月、在留外国人向けの多言語対応日本語学習サービス『ABLish(R) 日本へGO！（エイブリッシュ にほんへゴ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000182.000067516.html",
+      "publishedAt": "2026-07-22T08:15:17Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T12:21:51.783821Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "17c291be5bbf8b8ba38d",
       "title": "容器文化ミュージアム（東京都品川区）小学生向け夏休みイベントを8月5日（水）・６日（木）に開催",
@@ -95,24 +131,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "49aa4ac48783e68eb802",
-      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
-      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
-      "publishedAt": "2026-07-21T22:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T10:56:36.711431Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "a4bda8559655bfcae374",
@@ -2976,7 +2994,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 9
+      "accepted": 8
     },
     {
       "source": "警視庁",
@@ -2987,7 +3005,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 136,
+      "scanned": 137,
       "accepted": 0
     },
     {
@@ -3000,12 +3018,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2436, column 24"
+      "message": "not well-formed (invalid token): line 2750, column 24"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 38,
+      "scanned": 39,
       "accepted": 0
     },
     {
@@ -3024,7 +3042,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
