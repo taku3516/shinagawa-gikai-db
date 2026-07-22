@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-22T12:22:16.458743Z",
+  "generatedAt": "2026-07-22T14:57:04.544384Z",
   "items": [
+    {
+      "id": "bda627e21d33fb2ab315",
+      "title": "QuizKnockとKEKが制作した動画が「第67回科学技術映像祭」にて文部科学大臣賞を受賞！ 子どもや若い世代の科学技術への興味・関心を高める作品として評価されました",
+      "summary": "[株式会社baton] QuizKnockを運営する株式会社baton（東京都品川区、代表取締役 衣川洋佑）と大学共同利用機関法人高エネルギー加速器研究機構（茨城県つくば市、機構長 浅井祥仁、以下KEK）が制作した動画「QuizKnock・須貝が...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000389.000012901.html",
+      "publishedAt": "2026-07-22T14:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T14:56:41.774111Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "49aa4ac48783e68eb802",
       "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
@@ -3018,7 +3035,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2750, column 24"
+      "message": "not well-formed (invalid token): line 2140, column 50"
     },
     {
       "source": "朝日新聞",
@@ -3042,7 +3059,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
