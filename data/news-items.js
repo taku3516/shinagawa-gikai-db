@@ -1,7 +1,61 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-22T14:57:04.544384Z",
+  "generatedAt": "2026-07-22T20:07:21.559185Z",
   "items": [
+    {
+      "id": "999becf2d88735d82866",
+      "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
+      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
+      "publishedAt": "2026-07-22T19:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T20:06:59.005014Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "980bad541c8e978a445b",
+      "title": "AI時代の経営資産「開発資本」が優れた企業を表彰する「Findy Team+ Award 2026」募集開始【締切：2026年9月末】",
+      "summary": "[ファインディ] エンジニアプラットフォームを提供するファインディ株式会社（東京都品川区、代表取締役：山田 裕一朗、以下「当社」）は、経営と開発現場をつなぐAI時代の開発資本プラットフォーム「Findy Team+」を通じて、開...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000254.000045379.html",
+      "publishedAt": "2026-07-22T18:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T01:46:19.238621Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "49aa4ac48783e68eb802",
+      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
+      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
+      "publishedAt": "2026-07-22T18:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T10:56:36.711431Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "bda627e21d33fb2ab315",
       "title": "QuizKnockとKEKが制作した動画が「第67回科学技術映像祭」にて文部科学大臣賞を受賞！ 子どもや若い世代の科学技術への興味・関心を高める作品として評価されました",
@@ -15,24 +69,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-22T14:56:41.774111Z",
       "tags": [
         "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "49aa4ac48783e68eb802",
-      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
-      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
-      "publishedAt": "2026-07-22T12:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T10:56:36.711431Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -74,23 +110,6 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "980bad541c8e978a445b",
-      "title": "AI時代の経営資産「開発資本」が優れた企業を表彰する「Findy Team+ Award 2026」募集開始【締切：2026年9月末】",
-      "summary": "[ファインディ] エンジニアプラットフォームを提供するファインディ株式会社（東京都品川区、代表取締役：山田 裕一朗、以下「当社」）は、経営と開発現場をつなぐAI時代の開発資本プラットフォーム「Findy Team+」を通じて、開...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000254.000045379.html",
-      "publishedAt": "2026-07-22T01:40:49Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-22T01:46:19.238621Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "d263b166319461865e56",
@@ -3035,12 +3054,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2140, column 50"
+      "message": "not well-formed (invalid token): line 2175, column 50"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
@@ -3059,7 +3078,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 3
     },
     {
       "source": "東急ニュースリリース",
