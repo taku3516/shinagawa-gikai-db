@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-21T23:48:32.030379Z",
+  "generatedAt": "2026-07-22T01:46:47.652614Z",
   "items": [
+    {
+      "id": "980bad541c8e978a445b",
+      "title": "AI時代の経営資産「開発資本」が優れた企業を表彰する「Findy Team+ Award 2026」募集開始【締切：2026年9月末】",
+      "summary": "[ファインディ] エンジニアプラットフォームを提供するファインディ株式会社（東京都品川区、代表取締役：山田 裕一朗、以下「当社」）は、経営と開発現場をつなぐAI時代の開発資本プラットフォーム「Findy Team+」を通じて、開...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000254.000045379.html",
+      "publishedAt": "2026-07-22T01:40:49Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T01:46:19.238621Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "ff2c48ac44bcf2b7da93",
+      "title": "目黒川夢まつり 2026 夏",
+      "summary": "2026年8月21日（金）、22日（土）、品川区立五反田ふれあい水辺広場にて「目黒川夢まつり 2026 夏」が開催されます。 夏の目黒川の風物詩となったプロジェクションマッピング。今年、目黒川の護岸と水面を彩るのは品川区立日野学園、品川女子学院中等部・高等部、清泉女子大学の3校の作品。 当日は19:00～21:00の間、素敵な作品が繰り返し上映されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/meguroyume2026",
+      "publishedAt": "2026-07-22T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T01:46:19.238621Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "141bbb2b714a15ff5e66",
       "title": "避暑シェルターのご利用について",
@@ -109,6 +143,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "3b02c62cbde230a675f7",
+      "title": "令和8年度庁舎広告(壁面ポスター)の第2次募集開始",
+      "summary": "掲載箇所は、下記ファイル(庁舎広告掲載箇所のご案内)をご覧ください。 庁舎広告掲載箇所のご案内（品川区役所3階平面図）(PDF : 723KB) 掲載場所の空き状況は、下記ファイルよりご確認ください。(令和8年7月21日現在) R8庁舎内広告受付状況(PDF : 44KB) 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
+      "publishedAt": "2026-07-21T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T01:46:19.238621Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 22
     },
     {
       "id": "887c5a1b6bcbcd9505eb",
@@ -2904,7 +2957,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3024, column 18"
+      "message": "not well-formed (invalid token): line 3074, column 18"
     },
     {
       "source": "朝日新聞",
