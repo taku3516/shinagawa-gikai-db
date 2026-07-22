@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-22T01:46:47.652614Z",
+  "generatedAt": "2026-07-22T07:36:49.638989Z",
   "items": [
+    {
+      "id": "17c291be5bbf8b8ba38d",
+      "title": "容器文化ミュージアム（東京都品川区）小学生向け夏休みイベントを8月5日（水）・６日（木）に開催",
+      "summary": "[東洋製罐グループホールディングス株式会社] 東洋製罐グループが運営する容器文化ミュージアム（住所：東京都品川区東五反田2-18-1 大崎フォレストビルディング1階）は、2026年8月5日（水）・6日（木）に小学生向けの夏休みイベントを開催します。 本イベン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000194.000049660.html",
+      "publishedAt": "2026-07-22T06:45:17Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T07:36:26.068524Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東五反田",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "980bad541c8e978a445b",
       "title": "AI時代の経営資産「開発資本」が優れた企業を表彰する「Findy Team+ Award 2026」募集開始【締切：2026年9月末】",
@@ -18,6 +38,29 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "d263b166319461865e56",
+      "title": "西大井「駅前PORTマルシェ」",
+      "summary": "2026年7月26日、（日）、西大井駅前のJタワー広場にて「駅前PORTマルシェ」が開催されます。 「駅前PORTマルシェ」は、 品川区立西大井創業支援センター が主催し、品川区在住・在学の小・中学生・大学生と、西大井周辺の人気店がコラボするマルシェイベントです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/portmarche",
+      "publishedAt": "2026-07-22T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T07:36:26.068524Z",
+      "tags": [
+        "福祉",
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "西大井",
+        "西大井駅"
+      ],
+      "relevanceScore": 20
     },
     {
       "id": "ff2c48ac44bcf2b7da93",
@@ -2944,7 +2987,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 135,
+      "scanned": 136,
       "accepted": 0
     },
     {
@@ -2957,7 +3000,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3074, column 18"
+      "message": "not well-formed (invalid token): line 2436, column 24"
     },
     {
       "source": "朝日新聞",
@@ -3004,7 +3047,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 22,
+      "scanned": 23,
       "accepted": 0
     },
     {
