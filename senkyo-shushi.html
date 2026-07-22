@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f4e79" />
+  <title>選挙収支報告書を読む | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
+  <style>
+    :root {
+      --c-main: #1f4e79; --c-main-dark: #173a5e; --c-main-pale: #e7eef4;
+      --c-bg: #f4f1e8; --c-card: #fffdf8; --c-ink: #17212b; --c-ink-soft: #4f5d68;
+      --c-border: #b9c3cc; --c-rule: #d8d2c4; --c-focus: #f59e0b;
+      --c-accent: #74521b; --c-accent-pale: #fff8dd; --c-accent-border: #ddc77b;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--c-bg); color: var(--c-ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      overflow-wrap: break-word;
+    }
+    a { color: var(--c-main-dark); font-weight: 700; text-underline-offset: 3px; }
+    button, input, select { font: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--c-focus); outline-offset: 2px;
+    }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero {
+      padding: 40px 0 28px; border-top: 6px solid var(--c-main); border-bottom: 1px solid var(--c-rule);
+      background: var(--c-card);
+    }
+    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
+    h1 { margin: 0 0 12px; color: var(--c-main-dark); font-size: clamp(30px, 5vw, 50px); line-height: 1.12; }
+    .lead { max-width: 900px; margin: 0; color: var(--c-ink-soft); font-size: 16px; line-height: 1.9; }
+    .notice {
+      margin-top: 18px; max-width: 920px; padding: 14px 16px; border: 1px solid var(--c-border);
+      border-left: 4px solid var(--c-main); border-radius: 3px; background: #f8fafc; font-size: 13px; line-height: 1.8;
+    }
+    main > section { padding: 32px 0 52px; }
+    .difference-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
+    .difference-card {
+      border: 1px solid var(--c-border); border-top: 4px solid var(--c-main); border-radius: 4px;
+      background: var(--c-card); padding: 17px;
+    }
+    .difference-card:nth-child(2) { border-top-color: var(--c-accent); }
+    .difference-card h2 { margin: 0 0 7px; font-size: 18px; }
+    .difference-card p { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .difference-card a { display: inline-flex; min-height: 40px; align-items: center; margin-top: 10px; }
+    .source-guide {
+      margin-bottom: 22px; border: 1px solid var(--c-accent-border); border-left: 4px solid var(--c-accent);
+      border-radius: 4px; background: var(--c-accent-pale); padding: 16px;
+    }
+    .source-guide h2 { margin: 0 0 7px; font-size: 18px; }
+    .source-guide p { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .source-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .source-link, .report-link {
+      display: inline-flex; min-height: 42px; align-items: center; justify-content: center;
+      border: 1px solid var(--c-border); border-radius: 3px; background: #fff; padding: 7px 11px;
+      color: var(--c-main-dark); font-size: 12px; font-weight: 800; text-align: center;
+    }
+    .source-link:first-child { border-color: var(--c-main); background: var(--c-main); color: #fff; }
+    .filter-panel {
+      margin-bottom: 16px; border: 1px solid var(--c-border); border-radius: 4px;
+      background: var(--c-card); padding: 14px;
+    }
+    .controls { display: grid; grid-template-columns: minmax(240px, 1.4fr) repeat(3, minmax(160px, 1fr)); gap: 10px; }
+    .field { display: grid; gap: 5px; }
+    .field label { color: var(--c-ink-soft); font-size: 12px; font-weight: 800; }
+    .field input, .field select {
+      width: 100%; min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px;
+      background: #fff; padding: 8px 11px; color: var(--c-ink); font-size: 16px;
+    }
+    .status-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 12px; color: var(--c-ink-soft); font-size: 13px; }
+    .report-list { display: grid; gap: 12px; }
+    .report-card {
+      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 4px;
+      background: var(--c-card); padding: 16px; scroll-margin-top: 20px;
+    }
+    .report-card:target { outline: 4px solid var(--c-focus); outline-offset: 2px; }
+    .report-card h2 { margin: 0 0 6px; font-size: 19px; }
+    .report-meta { margin: 0 0 12px; color: var(--c-ink-soft); font-size: 13px; line-height: 1.7; }
+    .badge { display: inline-flex; margin-right: 5px; border-radius: 3px; background: var(--c-main-pale); padding: 3px 9px; color: var(--c-main-dark); font-size: 11px; font-weight: 800; }
+    .report-actions { display: flex; flex-wrap: wrap; gap: 7px; }
+    .empty {
+      border: 1px dashed var(--c-border); border-radius: 4px; background: var(--c-card);
+      padding: 34px 18px; color: var(--c-ink-soft); text-align: center; line-height: 1.8;
+    }
+    .empty strong { display: block; margin-bottom: 6px; color: var(--c-ink); font-size: 18px; }
+    .empty a { display: inline-flex; min-height: 44px; align-items: center; margin: 8px 4px 0; }
+    .fine-print { margin: 18px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }
+    footer { padding: 30px 0; border-top: 1px solid var(--c-border); background: var(--c-main-dark); color: #fff; text-align: center; font-size: 13px; line-height: 1.8; }
+    @media (max-width: 820px) {
+      .controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .container { width: min(100% - 22px, 1120px); }
+      .hero { padding-top: 28px; }
+      .difference-grid, .controls { grid-template-columns: 1fr; }
+      .source-link, .report-link { min-height: 44px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+        <h1>選挙収支報告書を読む</h1>
+        <p class="lead">品川区に関係する選挙の「選挙運動費用収支報告書」を、選挙名・執行日・候補者から探すためのページです。</p>
+        <div class="notice">これは品川区・東京都が運営しているものではありません。公式に公表されている資料の範囲と名称を確認して掲載します。要旨と報告書全文を区別し、正確な内容は必ずリンク先の公式資料をご確認ください。</div>
+        <nav data-site-nav></nav>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="difference-grid" aria-label="二つの収支報告書の違い">
+          <article class="difference-card">
+            <h2>選挙運動費用収支報告書</h2>
+            <p>一つの選挙について、候補者の選挙運動に関する収入と支出を確認する資料です。このページで案内します。</p>
+          </article>
+          <article class="difference-card">
+            <h2>政治資金収支報告書</h2>
+            <p>政治団体が年ごとに提出する収支報告書です。選挙運動費用の報告書とは別の制度です。</p>
+            <a href="seijishikin.html">政治資金収支報告書を見る →</a>
+          </article>
+        </div>
+
+        <aside class="source-guide" aria-labelledby="source-title">
+          <h2 id="source-title">公式資料の確認先</h2>
+          <p>候補者別の資料は、公式の公表ページと資料名を確認したものから追加します。PDFのURLを推測して掲載することはしません。</p>
+          <div id="source-links" class="source-links"></div>
+        </aside>
+
+        <div class="filter-panel" aria-label="選挙収支報告書の絞り込み">
+          <div class="controls">
+            <div class="field">
+              <label for="candidate-search">候補者名</label>
+              <input id="candidate-search" type="search" placeholder="人物名で検索" autocomplete="off" />
+            </div>
+            <div class="field">
+              <label for="type-select">選挙の種類</label>
+              <select id="type-select"><option value="all">すべて</option></select>
+            </div>
+            <div class="field">
+              <label for="year-select">実施年</label>
+              <select id="year-select"><option value="all">すべて</option></select>
+            </div>
+            <div class="field">
+              <label for="status-select">公開状況</label>
+              <select id="status-select"><option value="all">すべて</option></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-row">
+          <span id="result-status" role="status" aria-live="polite"></span>
+          <a href="giin.html">政治家名簿から探す</a>
+        </div>
+        <div id="report-root" class="report-list"></div>
+        <p id="as-of-note" class="fine-print"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">品川区議会DB — 選挙収支の正確な内容は、必ず選挙管理委員会が公表する公式資料を確認してください。</div></footer>
+
+  <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
+  <script src="data/senkyo-shushi.js"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const data = window.SHINAGAWA_SENKYO_SHUSHI;
+      const elements = {
+        search: document.getElementById("candidate-search"),
+        type: document.getElementById("type-select"),
+        year: document.getElementById("year-select"),
+        status: document.getElementById("status-select"),
+        resultStatus: document.getElementById("result-status"),
+        root: document.getElementById("report-root"),
+        sourceLinks: document.getElementById("source-links"),
+        note: document.getElementById("as-of-note")
+      };
+
+      function esc(value) {
+        return String(value ?? "").replace(/[&<>"']/g, char => (
+          { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]
+        ));
+      }
+
+      function normalize(value) {
+        return String(value || "").normalize("NFKC").toLocaleLowerCase("ja").replace(/[\s・･()（）]/g, "");
+      }
+
+      function labelFor(list, id) {
+        return list.find(item => item.id === id)?.label || id || "―";
+      }
+
+      function reportHtml(report) {
+        const links = [
+          report.summaryUrl ? { label: "公式の要旨を読む ↗", url: report.summaryUrl } : null,
+          report.fullReportUrl ? { label: "公式の報告書を読む ↗", url: report.fullReportUrl } : null,
+          report.sourceUrl ? { label: report.sourceLabel || "公式掲載ページ ↗", url: report.sourceUrl } : null
+        ].filter(Boolean);
+        const rosterUrl = report.personId
+          ? `giin.html?person=${encodeURIComponent(report.personId)}&q=${encodeURIComponent(report.candidateName || "")}`
+          : `giin.html?q=${encodeURIComponent(report.candidateName || "")}`;
+        return `<article class="report-card" id="report-${esc(report.id)}">
+          <h2>${esc(report.candidateName)}</h2>
+          <p class="report-meta">${esc(report.electionDate || "実施日確認中")}／${esc(report.electionName || labelFor(data.electionTypes, report.electionType))}</p>
+          <div><span class="badge">${esc(labelFor(data.statuses, report.status))}</span><span class="badge">${esc(report.reportKind || "資料種別確認中")}</span></div>
+          ${report.note ? `<p>${esc(report.note)}</p>` : ""}
+          <div class="report-actions">${links.map(link => `<a class="report-link" href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>`).join("")}<a class="report-link" href="${esc(rosterUrl)}">政治家名簿を見る</a></div>
+        </article>`;
+      }
+
+      if (!data) {
+        elements.root.innerHTML = '<div class="empty" role="alert"><strong>データを読み込めませんでした</strong>data/senkyo-shushi.js を確認してください。</div>';
+        return;
+      }
+
+      elements.sourceLinks.innerHTML = data.sources.map(source =>
+        `<a class="source-link" href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.label)} ↗</a>`
+      ).join("");
+      elements.type.innerHTML = '<option value="all">すべての選挙</option>' + data.electionTypes.map(item => `<option value="${esc(item.id)}">${esc(item.label)}</option>`).join("");
+      elements.status.innerHTML = '<option value="all">すべての公開状況</option>' + data.statuses.map(item => `<option value="${esc(item.id)}">${esc(item.label)}</option>`).join("");
+      const years = [...new Set(data.reports.map(report => String(report.electionDate || "").slice(0, 4)).filter(Boolean))].sort().reverse();
+      elements.year.innerHTML = '<option value="all">すべての年</option>' + years.map(year => `<option value="${esc(year)}">${esc(year)}年</option>`).join("");
+
+      const params = new URLSearchParams(location.search);
+      elements.search.value = params.get("q") || "";
+      if ([...elements.type.options].some(option => option.value === params.get("type"))) elements.type.value = params.get("type");
+      if ([...elements.year.options].some(option => option.value === params.get("year"))) elements.year.value = params.get("year");
+      if ([...elements.status.options].some(option => option.value === params.get("status"))) elements.status.value = params.get("status");
+
+      function render() {
+        const query = normalize(elements.search.value);
+        const reports = data.reports.filter(report => {
+          if (query && !normalize(report.candidateName).includes(query)) return false;
+          if (elements.type.value !== "all" && report.electionType !== elements.type.value) return false;
+          if (elements.year.value !== "all" && !String(report.electionDate || "").startsWith(elements.year.value)) return false;
+          if (elements.status.value !== "all" && report.status !== elements.status.value) return false;
+          return true;
+        });
+        elements.root.innerHTML = reports.length
+          ? reports.map(reportHtml).join("")
+          : `<div class="empty"><strong>${query ? `「${esc(elements.search.value.trim())}」の登録資料はまだありません` : "候補者別の資料は現在登録準備中です"}</strong>公式の公表ページと資料名を確認できたものから追加します。<br /><a href="senkyo.html${elements.search.value.trim() ? `?q=${encodeURIComponent(elements.search.value.trim())}` : ""}">選挙結果を見る</a><a href="giin.html${elements.search.value.trim() ? `?q=${encodeURIComponent(elements.search.value.trim())}` : ""}">政治家名簿を見る</a></div>`;
+        elements.resultStatus.textContent = `${reports.length}件を表示（登録済み${data.reports.length}件）`;
+        const nextParams = new URLSearchParams();
+        if (elements.search.value.trim()) nextParams.set("q", elements.search.value.trim());
+        if (params.get("person")) nextParams.set("person", params.get("person"));
+        if (elements.type.value !== "all") nextParams.set("type", elements.type.value);
+        if (elements.year.value !== "all") nextParams.set("year", elements.year.value);
+        if (elements.status.value !== "all") nextParams.set("status", elements.status.value);
+        const nextQuery = nextParams.toString();
+        history.replaceState(null, "", `${location.pathname}${nextQuery ? `?${nextQuery}` : ""}${location.hash}`);
+      }
+
+      elements.search.addEventListener("input", render);
+      elements.type.addEventListener("change", render);
+      elements.year.addEventListener("change", render);
+      elements.status.addEventListener("change", render);
+      elements.note.textContent = `${data.note}（確認日: ${data.checkedAt}）`;
+      render();
+    })();
+  </script>
+</body>
+</html>

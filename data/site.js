@@ -39,7 +39,7 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "type": "official",
-      "label": "議員・政治家名簿を見る",
+      "label": "政治家名簿を見る",
       "url": "giin.html"
     },
     {
@@ -56,6 +56,11 @@ window.SHINAGAWA_DB.site = {
       "type": "official",
       "label": "政治資金収支報告書を見る",
       "url": "seijishikin.html"
+    },
+    {
+      "type": "official",
+      "label": "選挙収支報告書を読む",
+      "url": "senkyo-shushi.html"
     },
     {
       "type": "official",

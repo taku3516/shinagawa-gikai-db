@@ -56,10 +56,11 @@
       margin-bottom: 18px;
     }
     .controls label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; }
-    select {
+    select, #candidate-search {
       min-height: 42px; border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 8px 12px; color: var(--c-ink); font-size: 15px;
     }
+    #candidate-search { width: min(100%, 240px); }
     #hit-count { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
     .election-list { display: grid; gap: 16px; }
     .election-card {
@@ -148,6 +149,8 @@
           <select id="type-filter"><option value="">すべての選挙</option></select>
           <label for="year-filter">実施年</label>
           <select id="year-filter"><option value="">すべての年</option></select>
+          <label for="candidate-search">候補者名</label>
+          <input id="candidate-search" type="search" placeholder="人物名で検索" autocomplete="off" />
           <span id="hit-count" aria-live="polite"></span>
         </div>
         <div id="election-root" class="election-list"></div>
@@ -179,6 +182,10 @@
       return data.types.find((item) => item.id === type)?.label || type || "選挙";
     }
 
+    function normalize(value) {
+      return String(value || "").normalize("NFKC").toLocaleLowerCase("ja").replace(/[\s・･()（）]/g, "");
+    }
+
     function statHtml(label, value, suffix = "") {
       if (value === "" || value === null || value === undefined) return "";
       return `<div class="stat"><dt>${esc(label)}</dt><dd>${esc(value)}${esc(suffix)}</dd></div>`;
@@ -191,6 +198,12 @@
       ).join("");
     }
 
+    function personHref(candidate) {
+      if (!candidate.personUrl) return "";
+      const separator = candidate.personUrl.includes("?") ? "&" : "?";
+      return `${candidate.personUrl}${separator}q=${encodeURIComponent(candidate.name || "")}`;
+    }
+
     function referenceSitesHtml(sites) {
       if (!sites || !sites.length) return `<p class="fine-print">参考にするサイトは準備中です。</p>`;
       return `<ul class="reference-list">${sites.map((site) => `<li><a href="${esc(site.url)}" target="_blank" rel="noopener">
@@ -198,8 +211,8 @@
       </a></li>`).join("")}</ul><p class="fine-print">外部サイトが開きます。掲載内容を追加する際は、品川区公式サイトを一次情報として確認します。</p>`;
     }
 
-    function candidatesHtml(election) {
-      const candidates = election.candidates || [];
+    function candidatesHtml(election, query) {
+      const candidates = (election.candidates || []).filter(candidate => !query || normalize(candidate.name).includes(query));
       if (!candidates.length) return `<p><span class="tag">候補者・得票情報準備中</span></p>`;
       return `<div class="table-wrap"><table>
         <caption class="visually-hidden">${esc(election.title)}の候補者別結果</caption>
@@ -208,7 +221,7 @@
           <td class="number">${esc(candidate.rank)}</td>
           <td>${esc(candidate.result)}</td>
           <td>${candidate.personUrl
-            ? `<a href="${esc(candidate.personUrl)}">${esc(candidate.name)}</a>`
+            ? `<a href="${esc(personHref(candidate))}">${esc(candidate.name)}</a>`
             : esc(candidate.name)}</td>
           <td>${esc(candidate.party)}</td>
           <td class="number">${esc(candidate.votesDisplay)}</td>
@@ -232,14 +245,14 @@
       </table></div>`;
     }
 
-    function electionHtml(data, election) {
+    function electionHtml(data, election, shouldOpen, query) {
       const meta = [
         election.turnout !== undefined ? `投票率 ${election.turnout}%` : "",
         election.candidateCount !== undefined ? `候補者 ${election.candidateCount}人` : "",
         election.seats !== undefined ? `定数 ${election.seats}` : ""
       ].filter(Boolean).join("・");
       return `<article class="election-card" id="election-${esc(election.id)}">
-        <details>
+        <details${shouldOpen ? " open" : ""}>
           <summary>
             <span class="summary-main"><span class="date">${esc(election.electionDate)}</span><span>${esc(election.title)}</span><span class="tag">${esc(typeLabel(data, election.type))}</span>${election.subtype ? `<span class="tag">${esc(election.subtype)}</span>` : ""}</span>
             ${meta ? `<span class="summary-meta">${esc(meta)}</span>` : ""}
@@ -255,7 +268,7 @@
               ${statHtml("前回投票率", election.previousTurnout, "%")}
             </dl>
             <h3>候補者別結果</h3>
-            ${candidatesHtml(election)}
+            ${candidatesHtml(election, query)}
             ${proportionalResultsHtml(election)}
             <h3>公式資料・参考リンク</h3>
             <div>${sourceLinksHtml(election.sources)}</div>
@@ -274,26 +287,36 @@
       }
       const typeSelect = document.getElementById("type-filter");
       const yearSelect = document.getElementById("year-filter");
+      const candidateSearch = document.getElementById("candidate-search");
+      const params = new URLSearchParams(location.search);
       document.getElementById("reference-sites").innerHTML = referenceSitesHtml(data.referenceSites);
       typeSelect.innerHTML = `<option value="">すべての選挙</option>` +
         data.types.map((item) => `<option value="${esc(item.id)}">${esc(item.label)}</option>`).join("");
       const years = [...new Set(data.elections.map((item) => String(item.electionDate || "").slice(0, 4)).filter(Boolean))].sort().reverse();
       yearSelect.innerHTML = `<option value="">すべての年</option>` +
         years.map((year) => `<option value="${esc(year)}">${esc(year)}年</option>`).join("");
+      candidateSearch.value = params.get("q") || "";
 
       function render() {
         const type = typeSelect.value;
         const year = yearSelect.value;
+        const query = normalize(candidateSearch.value);
         const list = data.elections
           .filter((item) => (!type || item.type === type) && (!year || String(item.electionDate).startsWith(year)))
+          .filter((item) => !query || (item.candidates || []).some(candidate => normalize(candidate.name).includes(query)))
           .sort((a, b) => String(b.electionDate).localeCompare(String(a.electionDate)));
         root.innerHTML = list.length
-          ? list.map((item) => electionHtml(data, item)).join("")
+          ? list.map((item) => electionHtml(data, item, Boolean(query), query)).join("")
           : `<div class="empty-state" role="status"><h2>選挙情報は準備中です</h2><p>個別の選挙情報はまだ掲載していません。資料を確認後、新しい選挙から順に追加できる枠組みです。</p></div>`;
         document.getElementById("hit-count").textContent = `${list.length}件`;
+        const nextParams = new URLSearchParams();
+        if (candidateSearch.value.trim()) nextParams.set("q", candidateSearch.value.trim());
+        const nextQuery = nextParams.toString();
+        history.replaceState(null, "", `${location.pathname}${nextQuery ? `?${nextQuery}` : ""}${location.hash}`);
       }
       typeSelect.addEventListener("change", render);
       yearSelect.addEventListener("change", render);
+      candidateSearch.addEventListener("input", render);
       document.getElementById("as-of-note").textContent = `${data.note}（更新日: ${data.updatedAt}）`;
       render();
     }

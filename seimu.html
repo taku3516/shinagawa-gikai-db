@@ -202,6 +202,7 @@
       const hashYear = yearForHash(location.hash);
       const validYear = value => data.fiscalYears.some(year => year.id === value);
       let selectedYear = validYear(hashYear) ? hashYear : validYear(params.get("year")) ? params.get("year") : data.fiscalYears[0].id;
+      elements.search.value = params.get("q") || "";
 
       elements.overview.innerHTML = `
         <div class="overview-card"><strong>月額19万円</strong><span>${esc(data.overview.memberRule)}</span></div>
@@ -264,6 +265,7 @@
           : `${visibleYears.length}年度・${periodCount}区分を表示`;
         const nextParams = new URLSearchParams();
         if (elements.year.value !== data.fiscalYears[0].id) nextParams.set("year", elements.year.value);
+        if (elements.search.value.trim()) nextParams.set("q", elements.search.value.trim());
         const nextQuery = nextParams.toString();
         history.replaceState(null, "", `${location.pathname}${nextQuery ? `?${nextQuery}` : ""}${location.hash}`);
       }

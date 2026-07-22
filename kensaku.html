@@ -441,6 +441,7 @@
   <script src="data/r08-committees-part-06.js"></script>
   <script src="data/seimu.js"></script>
   <script src="data/seijishikin.js"></script>
+  <script src="data/senkyo-shushi.js"></script>
   <script src="data/news-items.js"></script>
 
   <script>
@@ -715,6 +716,31 @@
           links: [{ type: "internal", label: "選挙アーカイブで見る", url: `senkyo.html#election-${election.id}` }].concat(election.sources || [])
         });
       }
+    }
+
+    const electionFinanceData = window.SHINAGAWA_SENKYO_SHUSHI || { reports: [], electionTypes: [], statuses: [] };
+    const electionFinanceTypeLabels = Object.fromEntries((electionFinanceData.electionTypes || []).map(item => [item.id, item.label]));
+    const electionFinanceStatusLabels = Object.fromEntries((electionFinanceData.statuses || []).map(item => [item.id, item.label]));
+    for (const report of electionFinanceData.reports || []) {
+      addItem({
+        id: `election-finance-${report.id}`,
+        category: "elections",
+        type: "選挙収支報告書",
+        year: dateYear(report.electionDate),
+        date: report.electionDate,
+        title: report.candidateName,
+        meta: [report.electionName || electionFinanceTypeLabels[report.electionType], report.electionDate, electionFinanceStatusLabels[report.status]].filter(Boolean).join("／"),
+        body: report.note || "候補者の選挙運動費用収支報告書に関する公式資料です。",
+        source: report.sourceLabel || "選挙管理委員会",
+        primary: [report.candidateName, report.electionName, "選挙運動費用", "選挙収支報告書"],
+        tags: ["選挙収支報告書", report.reportKind, electionFinanceStatusLabels[report.status]].filter(Boolean),
+        links: [
+          { type: "internal", label: "選挙収支報告書ページで見る", url: `senkyo-shushi.html#report-${report.id}` },
+          report.summaryUrl ? { type: "official", label: "公式の要旨", url: report.summaryUrl } : null,
+          report.fullReportUrl ? { type: "official", label: "公式の報告書", url: report.fullReportUrl } : null,
+          report.sourceUrl ? { type: "official", label: report.sourceLabel || "公式掲載ページ", url: report.sourceUrl } : null
+        ]
+      });
     }
 
     const expenseData = window.SHINAGAWA_SEIMU || { fiscalYears: [] };
