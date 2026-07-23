@@ -24,7 +24,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "taisaku_ando",
       "name": "安藤　たい作",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "安藤泰作"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -527,7 +529,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "hiroki_wakabayashi",
       "name": "若林　ひろき",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "若林広毅"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -918,6 +922,106 @@ window.SHINAGAWA_DB.peopleData = {
       "aliases": [],
       "seenIn": [
         "h24"
+      ]
+    },
+    {
+      "id": "x-miyazaki-katsutoshi",
+      "name": "宮崎 克俊",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h23"
+      ]
+    },
+    {
+      "id": "x-yamaji-yoshinari",
+      "name": "山路 良成",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h23"
+      ]
+    },
+    {
+      "id": "x-ichikawa-kazuko",
+      "name": "市川 和子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h23"
+      ]
+    },
+    {
+      "id": "x-igeta-atsuko",
+      "name": "井桁 敦子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h22"
+      ]
+    },
+    {
+      "id": "x-doi-yoichi",
+      "name": "土井 洋一",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h22"
+      ]
+    },
+    {
+      "id": "x-sakai-naotaka",
+      "name": "堺 直隆",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h22"
+      ]
+    },
+    {
+      "id": "x-kawanishi-kinuko",
+      "name": "川西 絹子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h22"
+      ]
+    },
+    {
+      "id": "x-honma-takashi",
+      "name": "本間 隆",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h22"
+      ]
+    },
+    {
+      "id": "x-hayashi-hiroshi",
+      "name": "林 宏",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h22"
+      ]
+    },
+    {
+      "id": "x-kikuchi-teiji",
+      "name": "菊地 貞二",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h22"
       ]
     }
   ]

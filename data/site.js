@@ -171,6 +171,24 @@ window.SHINAGAWA_DB.site = {
       "label": "平成24年",
       "file": "data/h24.js",
       "available": true
+    },
+    {
+      "id": "h23",
+      "label": "平成23年",
+      "file": "data/h23.js",
+      "available": true
+    },
+    {
+      "id": "h22",
+      "label": "平成22年",
+      "file": "data/h22.js",
+      "available": true
+    },
+    {
+      "id": "h21",
+      "label": "平成21年",
+      "file": "data/h21.js",
+      "available": true
     }
   ],
   "defaultYear": "r08",
