@@ -8,7 +8,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "hiroo_akutsu",
       "name": "あくつ　広王",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "阿久津広王"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -83,7 +85,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "takahiro_okura",
       "name": "大倉　たかひろ",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "大倉考裕"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -143,7 +147,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "takako_konno",
       "name": "こんの　孝子",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "金野孝子"
+      ],
       "seenIn": [
         "r01",
         "r02",
@@ -227,7 +233,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "shinji_takahashi",
       "name": "高橋　しんじ",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "高橋慎司"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -298,7 +306,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "shinichiro_tsuru",
       "name": "つる　伸一郎",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "鶴伸一郎"
+      ],
       "seenIn": [
         "h30",
         "r02",
@@ -708,7 +718,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "あべ 祐美子",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "阿部祐美子"
+      ],
       "seenIn": [
         "r01",
         "r02"
@@ -886,6 +898,26 @@ window.SHINAGAWA_DB.peopleData = {
       "aliases": [],
       "seenIn": [
         "h25"
+      ]
+    },
+    {
+      "id": "x-yamamoto-keiko2",
+      "name": "山元 敬子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h24"
+      ]
+    },
+    {
+      "id": "x-yamauchi-akira",
+      "name": "山内 晃",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h24"
       ]
     }
   ]
