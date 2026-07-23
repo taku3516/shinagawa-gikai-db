@@ -1023,6 +1023,116 @@ window.SHINAGAWA_DB.peopleData = {
       "seenIn": [
         "h22"
       ]
+    },
+    {
+      "id": "x-mikami-hiroshi",
+      "name": "三上 博志",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h19"
+      ]
+    },
+    {
+      "id": "x-hayashi-kazuya",
+      "name": "林 和也",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h19"
+      ]
+    },
+    {
+      "id": "x-sawada-eiji",
+      "name": "沢田 英次",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h19"
+      ]
+    },
+    {
+      "id": "x-fujita-jiro",
+      "name": "藤田 二郎",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h19"
+      ]
+    },
+    {
+      "id": "x-mimura-ritsuko",
+      "name": "三村 りつ子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h18"
+      ]
+    },
+    {
+      "id": "x-nakajima-mie",
+      "name": "中島 美恵",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h18"
+      ]
+    },
+    {
+      "id": "x-hara-masami",
+      "name": "原 雅美",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h18"
+      ]
+    },
+    {
+      "id": "x-yamamura-akitsugu",
+      "name": "山村 明嗣",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h18"
+      ]
+    },
+    {
+      "id": "x-kinoshita-fuminori",
+      "name": "木下 史典",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h18"
+      ]
+    },
+    {
+      "id": "x-honda-giichi",
+      "name": "本田 義一",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h18"
+      ]
+    },
+    {
+      "id": "x-tsukidate-takeo",
+      "name": "築舘 武雄",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h18"
+      ]
     }
   ]
 };
