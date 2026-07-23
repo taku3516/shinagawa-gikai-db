@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-22T20:07:21.559185Z",
+  "generatedAt": "2026-07-23T01:53:54.759617Z",
   "items": [
+    {
+      "id": "5c1aba8e7df17de9a7fb",
+      "title": "【新店オープン】品川区小山に「わかば薬局武蔵小山店」／待ち時間を短縮できるスマート薬局が2026年8月1日開局、7/27よりオープンセール",
+      "summary": "[株式会社わかば] [画像1: https://prcdn.freetls.fastly.net/release_image/135158/6/135158-6-4113305a1b5df49303ee9e9aaa91d8e7-2400x1600.png?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000006.000135158.html",
+      "publishedAt": "2026-07-23T01:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-23T01:53:33.844235Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "999becf2d88735d82866",
       "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
@@ -10,7 +29,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
-      "publishedAt": "2026-07-22T19:40:02Z",
+      "publishedAt": "2026-07-23T01:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-07-22T20:06:59.005014Z",
       "tags": [
@@ -20,6 +39,23 @@ window.SHINAGAWA_NEWS = {
         "西五反田"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "cc8b302affa7fccd9503",
+      "title": "食育に関するお知らせ",
+      "summary": "生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20220908152604.html",
+      "publishedAt": "2026-07-23T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-23T01:53:33.844235Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "980bad541c8e978a445b",
@@ -3054,7 +3090,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2175, column 50"
+      "message": "not well-formed (invalid token): line 2076, column 48"
     },
     {
       "source": "朝日新聞",
@@ -3078,7 +3114,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 3
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
