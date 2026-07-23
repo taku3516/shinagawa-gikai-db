@@ -1133,6 +1133,46 @@ window.SHINAGAWA_DB.peopleData = {
       "seenIn": [
         "h18"
       ]
+    },
+    {
+      "id": "x-tsukamoto-toshimitsu",
+      "name": "塚本 利光",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h17"
+      ]
+    },
+    {
+      "id": "x-takahoshi-masatoshi",
+      "name": "高星 正利",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h17"
+      ]
+    },
+    {
+      "id": "x-shima-kuniko",
+      "name": "嶋 邦子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h16"
+      ]
+    },
+    {
+      "id": "x-tanaka-go",
+      "name": "田中 豪",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h16"
+      ]
     }
   ]
 };

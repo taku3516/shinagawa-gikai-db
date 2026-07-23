@@ -65,6 +65,22 @@ def fetch_questions(hy, cache):
                 raw = re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)
                 if not tds:
                     continue
+                # 議員名セル（class="giin"）がある年: 「姓 名<br>（会派）」を直接読む
+                gm = re.search(r'<td[^>]*class="giin"[^>]*>(.*?)</td>', tr, re.S)
+                if gm:
+                    gtxt = cell(gm.group(1))
+                    wm3 = re.match(r'(.+?)\s*[（(]([^）)]+)[）)]', gtxt)
+                    tp = [cell(x) for x in re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)]
+                    tp = [t for t in tp if t and t != gtxt
+                          and not re.fullmatch(r'[０-９0-9一二三四五六七八九十]+[．.]?', t)
+                          and t not in ("順序", "発言事項", "議員名")]
+                    body_topics = pending + tp
+                    if wm3 and body_topics:
+                        qs.append({"date": last_date, "kind": kind,
+                                   "member": re.sub(r'\s+', '', wm3.group(1)),
+                                   "party": wm3.group(2).strip(), "topics": body_topics, "url": u})
+                    pending = []
+                    continue
                 # 新形式: <li>で項目が並び、3列目が議員名
                 if len(raw) >= 3 and re.search(r'<li', raw[1]):
                     topics = [cell(li) for li in re.findall(r'<li[^>]*>(.*?)</li>', raw[1], re.S)]
@@ -105,11 +121,37 @@ def fetch_questions(hy, cache):
                     pend = [r for r in rows if r and not re.fullmatch(r'[０-９0-9一二三四五六七八九十]+[．.]?', r)
                             and r not in ("順序", "発言事項", "議員名")]
                 else:
-                    wm2 = re.search(r'([^\s０-９0-9]{2,10})\s*（([^）]{1,8})）', plain)
+                    # 姓と名がタグで分断される年に備え、括弧直前の連続文字をまとめて拾う
+                    wm2 = re.search(r'([^\s０-９0-9、。：:／/]{2,12})\s*[（(]([^）)]{1,8})[）)]', plain)
                     if wm2 and pend:
                         qs.append({"date": cur_date, "kind": cur_kind, "member": wm2.group(1).strip(),
                                    "party": wm2.group(2).strip(), "topics": pend, "url": u})
                         pend = []
+        # 入れ子テーブルの年（h16など）: giinセルを起点に、直前の項目表とペアにする
+        if any(x for x in qs if len(x["member"]) <= 3) or not qs:
+            body3 = re.sub(r'<!--.*?-->', ' ', h, flags=re.S)
+            body3 = body3[body3.find("entry-content"):]
+            cell3 = lambda x: re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', x))).strip()
+            gi = list(re.finditer(r'<td[^>]*class="giin"[^>]*>(.*?)</td>', body3, re.S))
+            if gi:
+                fixed, prev_end = [], 0
+                for g in gi:
+                    chunk = body3[prev_end:g.start()]
+                    prev_end = g.end()
+                    dm3 = re.findall(r'(\d+)月(\d+)日', cell3(chunk))
+                    if dm3:
+                        last_date = f"{dm3[-1][0]}月{dm3[-1][1]}日"
+                    kind3 = "代表質問" if "代表質問" in cell3(chunk)[-400:] else kind
+                    topics3 = [cell3(x) for x in re.findall(r'<td[^>]*>(.*?)</td>', chunk, re.S)]
+                    topics3 = [t for t in topics3 if t and not re.fullmatch(r'[０-９0-9一二三四五六七八九十]+[．.]?', t)
+                               and t not in ("順序", "発言事項", "議員名") and len(t) > 3]
+                    wm3 = re.match(r'(.+?)\s*[（(]([^）)]+)[）)]', cell3(g.group(1)))
+                    if wm3 and topics3:
+                        fixed.append({"date": last_date, "kind": kind3,
+                                      "member": re.sub(r'\s+', '', wm3.group(1)),
+                                      "party": wm3.group(2).strip(), "topics": topics3, "url": u})
+                if len(fixed) >= len(qs):
+                    qs = fixed
         out[f"h{hy}-{n}t"] = qs
         time.sleep(0.4)
     return out
