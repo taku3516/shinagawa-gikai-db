@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-23T20:16:09.641469Z",
+  "generatedAt": "2026-07-23T21:57:31.158487Z",
   "items": [
     {
       "id": "5afbd747be3cb63cb314",
@@ -19,6 +19,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "999becf2d88735d82866",
+      "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
+      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
+      "publishedAt": "2026-07-23T21:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T20:06:59.005014Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
     },
     {
       "id": "49aa4ac48783e68eb802",
@@ -54,25 +73,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "東五反田"
-      ],
-      "relevanceScore": 12
-    },
-    {
-      "id": "999becf2d88735d82866",
-      "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
-      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
-      "publishedAt": "2026-07-23T15:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-22T20:06:59.005014Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "西五反田"
       ],
       "relevanceScore": 12
     },
@@ -3167,7 +3167,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1636, column 40"
+      "message": "not well-formed (invalid token): line 1640, column 40"
     },
     {
       "source": "朝日新聞",
@@ -3191,7 +3191,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
