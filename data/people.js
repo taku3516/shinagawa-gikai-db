@@ -791,6 +791,26 @@ window.SHINAGAWA_DB.peopleData = {
       "seenIn": [
         "h29"
       ]
+    },
+    {
+      "id": "x-hara-kozo",
+      "name": "原 浩三",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h27"
+      ]
+    },
+    {
+      "id": "x-yamamoto-keiko",
+      "name": "山元 けい子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h27"
+      ]
     }
   ]
 };
