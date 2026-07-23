@@ -292,8 +292,9 @@
             <dt>設立届出日</dt><dd>${esc(formatDate(org.registeredOn))}</dd>
           </dl>` : ""}
           <div class="card-actions">
-            <a class="card-link card-link--official" href="${esc(data.sources.tokyoReports.url)}" target="_blank" rel="noopener">東京都の報告書を探す ↗</a>
-            <a class="card-link" href="${esc(data.sources.ministryReports.url)}" target="_blank" rel="noopener">総務省所管を確認 ↗</a>
+            ${(org.reports && org.reports.length)
+              ? org.reports.map(r => `<a class="card-link card-link--official" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.year)}の収支報告書 ↗</a>`).join("")
+              : `<a class="card-link card-link--official" href="${esc(data.sources.tokyoReports.url)}" target="_blank" rel="noopener">東京都の報告書を探す ↗</a>`}
           </div>
         </article>`;
       }
