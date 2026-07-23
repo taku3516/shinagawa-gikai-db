@@ -1173,6 +1173,66 @@ window.SHINAGAWA_DB.peopleData = {
       "seenIn": [
         "h16"
       ]
+    },
+    {
+      "id": "x-sato-yajiro",
+      "name": "佐藤 弥二郎",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h15"
+      ]
+    },
+    {
+      "id": "x-kitano-tomie",
+      "name": "北野 富江",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h15"
+      ]
+    },
+    {
+      "id": "x-yokoyama-hiroshi",
+      "name": "横山 宏",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h15"
+      ]
+    },
+    {
+      "id": "x-tsuru-hisashi",
+      "name": "鶴 尚",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h15"
+      ]
+    },
+    {
+      "id": "x-funanami-keiko",
+      "name": "船波 恵子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h14"
+      ]
+    },
+    {
+      "id": "x-kanetaka-masao",
+      "name": "金高 政男",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h14"
+      ]
     }
   ]
 };
