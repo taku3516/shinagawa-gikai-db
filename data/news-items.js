@@ -1,7 +1,44 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-23T13:25:29.588744Z",
+  "generatedAt": "2026-07-23T15:48:21.866311Z",
   "items": [
+    {
+      "id": "5afbd747be3cb63cb314",
+      "title": "区民と共に進める政策デザイン「しながわオープントーク」",
+      "summary": "行政評価とは 、区民の皆様からお預かりした大切な税金が、 本当に必要なところへ無駄なく届いているかを検証し、より良いサービスへと育てていく仕組みです。 今回は、見直しのタイミングを迎えている 5つのテーマについて区民の皆様と一緒に考えていきたいです。 「区民の幸福（しあわせ） 」を最優先に、品川区政そのものをバージョンアップさせるため、 前向きなアイデアや率直なご意見をお寄せください。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/20250829182718.html",
+      "publishedAt": "2026-07-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-23T15:47:58.231874Z",
+      "tags": [
+        "行政",
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "999becf2d88735d82866",
+      "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
+      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
+      "publishedAt": "2026-07-23T15:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T20:06:59.005014Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "36ce439794a0bf7caf58",
       "title": "外国語の電話、AIが受けて日本語で記録。AIコールセンター「ContactX」、英語・中国語・韓国語など50以上の言語のリアルタイム書き起こし・翻訳に対応",
@@ -75,25 +112,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "小山"
-      ],
-      "relevanceScore": 12
-    },
-    {
-      "id": "999becf2d88735d82866",
-      "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
-      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
-      "publishedAt": "2026-07-23T01:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-22T20:06:59.005014Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "西五反田"
       ],
       "relevanceScore": 12
     },
@@ -3130,7 +3148,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 4,
+      "scanned": 3,
       "accepted": 0
     },
     {
@@ -3149,7 +3167,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1681, column 40"
+      "message": "not well-formed (invalid token): line 1635, column 40"
     },
     {
       "source": "朝日新聞",
