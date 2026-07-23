@@ -1233,6 +1233,56 @@ window.SHINAGAWA_DB.peopleData = {
       "seenIn": [
         "h14"
       ]
+    },
+    {
+      "id": "x-ueyama-hirofumi",
+      "name": "上山 弘文",
+      "status": "元職",
+      "note": "公式会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h14"
+      ]
+    },
+    {
+      "id": "x-sakurai-keiko",
+      "name": "桜井 恵子",
+      "status": "元職",
+      "note": "公式会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h14"
+      ]
+    },
+    {
+      "id": "x-tsuji-yukio",
+      "name": "辻 幸雄",
+      "status": "元職",
+      "note": "公式会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h14"
+      ]
+    },
+    {
+      "id": "x-takagi-akira",
+      "name": "高木 明",
+      "status": "元職",
+      "note": "公式会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h14"
+      ]
+    },
+    {
+      "id": "x-kanke-hideo",
+      "name": "菅家 秀夫",
+      "status": "元職",
+      "note": "公式会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h13"
+      ]
     }
   ]
 };
