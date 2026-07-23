@@ -44,24 +44,72 @@ def fetch_questions(hy, cache):
         h = get(u)
         body = re.sub(r'<!--.*?-->', ' ', h, flags=re.S)
         body = body[body.find("entry-content"):]
+        # 最初の表が<h3>より前にある年（h25第1回など）に対応: 冒頭の日付見出しを補う
+        first_h3 = body.find("<h3>")
+        head_text = re.sub(r"<[^>]+>", " ", body[:first_h3] if first_h3 > 0 else "")
+        lead = re.search(r"(\d+)月(\d+)日[^【]*【([^】]+)】", head_text)
+        if lead and first_h3 > 0 and "<tr" in body[:first_h3]:
+            body = f"<h3>{lead.group(1)}月{lead.group(2)}日 【{lead.group(3)}】</h3>" + body
         qs, parts = [], re.split(r'<h3>([^<]+)</h3>', body)
+        last_date = ""
         for i in range(1, len(parts), 2):
             head, seg = parts[i].strip(), parts[i + 1]
             dm = re.search(r'(\d+)月(\d+)日', head)
+            if dm:
+                last_date = f"{dm.group(1)}月{dm.group(2)}日"
             kind = "代表質問" if "代表質問" in head else "一般質問"
+            cell = lambda x: re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', x))).strip()
+            pending = []          # 旧形式（項目が行ごとに分かれる年）用のバッファ
             for tr in re.findall(r'<tr.*?</tr>', seg, re.S):
-                tds = re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)
-                if len(tds) < 3:
+                tds = [cell(x) for x in re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)]
+                raw = re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)
+                if not tds:
                     continue
-                topics = [re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', '', li))).strip()
-                          for li in re.findall(r'<li[^>]*>(.*?)</li>', tds[1], re.S)]
-                who = re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', '', tds[2]))).strip()
-                wm = re.match(r'(.+?) ?（(.+?)）', who)
-                if not wm or not topics:
+                # 新形式: <li>で項目が並び、3列目が議員名
+                if len(raw) >= 3 and re.search(r'<li', raw[1]):
+                    topics = [cell(li) for li in re.findall(r'<li[^>]*>(.*?)</li>', raw[1], re.S)]
+                    wm = re.match(r'(.+?) ?（(.+?)）', tds[2])
+                    if wm and topics:
+                        qs.append({"date": last_date, "kind": kind, "member": wm.group(1).strip(),
+                                   "party": wm.group(2).strip(), "topics": topics, "url": u})
                     continue
-                qs.append({"date": f"{dm.group(1)}月{dm.group(2)}日" if dm else "", "kind": kind,
-                           "member": wm.group(1).strip(), "party": wm.group(2).strip(),
-                           "topics": topics, "url": u})
+                # 旧形式: 「順序/1./項目」で始まり、議員名セルが現れるまで項目を積む
+                texts = [t for t in tds if t and not re.fullmatch(r'[０-９0-9一二三四五六七八九十]+[．.]?', t)]
+                who = next((t for t in texts if re.match(r'.+ ?（.+?）$', t)), None)
+                if who:
+                    wm = re.match(r'(.+?) ?（(.+?)）', who)
+                    body_topics = pending + [t for t in texts if t != who]
+                    if wm and body_topics:
+                        qs.append({"date": last_date, "kind": kind, "member": wm.group(1).strip(),
+                                   "party": wm.group(2).strip(), "topics": body_topics, "url": u})
+                    pending = []
+                else:
+                    pending += [t for t in texts if t not in ("順序", "発言事項", "議員名")]
+        # 表の外に議員名が置かれる年（h25第1回など）: table直後のテキストから補完する
+        if not qs:
+            body2 = re.sub(r'<!--.*?-->', ' ', h, flags=re.S)
+            body2 = body2[body2.find("entry-content"):]
+            blocks = re.split(r'(<table.*?</table>)', body2, flags=re.S)
+            cell = lambda x: re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', x))).strip()
+            cur_date, cur_kind, pend = "", "一般質問", []
+            for blk in blocks:
+                plain = cell(blk)
+                dm2 = re.search(r'(\d+)月(\d+)日', plain)
+                if dm2 and "<table" not in blk:
+                    cur_date = f"{dm2.group(1)}月{dm2.group(2)}日"
+                if "代表質問" in plain: cur_kind = "代表質問"
+                elif "一般質問" in plain: cur_kind = "一般質問"
+                if blk.startswith("<table"):
+                    rows = [cell(x) for tr in re.findall(r'<tr.*?</tr>', blk, re.S)
+                            for x in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', tr, re.S)]
+                    pend = [r for r in rows if r and not re.fullmatch(r'[０-９0-9一二三四五六七八九十]+[．.]?', r)
+                            and r not in ("順序", "発言事項", "議員名")]
+                else:
+                    wm2 = re.search(r'([^\s０-９0-9]{2,10})\s*（([^）]{1,8})）', plain)
+                    if wm2 and pend:
+                        qs.append({"date": cur_date, "kind": cur_kind, "member": wm2.group(1).strip(),
+                                   "party": wm2.group(2).strip(), "topics": pend, "url": u})
+                        pend = []
         out[f"h{hy}-{n}t"] = qs
         time.sleep(0.4)
     return out

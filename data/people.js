@@ -269,7 +269,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "yoshihiro_tsukamoto",
       "name": "塚本　よしひろ",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "塚本芳弘"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -558,7 +560,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "石田 しんご",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "石田慎吾"
+      ],
       "seenIn": [
         "h30",
         "r06"
@@ -767,7 +771,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "いながわ 貴之",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "稲川貴之"
+      ],
       "seenIn": [
         "h30"
       ]
@@ -810,6 +816,76 @@ window.SHINAGAWA_DB.peopleData = {
       "aliases": [],
       "seenIn": [
         "h27"
+      ]
+    },
+    {
+      "id": "x-inoue-yaeko",
+      "name": "井上 八重子",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h26"
+      ]
+    },
+    {
+      "id": "x-yoshida-atsumi",
+      "name": "吉田 あつみ",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h26"
+      ]
+    },
+    {
+      "id": "x-mukai-megumi",
+      "name": "向 めぐ美",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h26"
+      ]
+    },
+    {
+      "id": "x-suto-yasumichi",
+      "name": "須藤 安通",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h26"
+      ]
+    },
+    {
+      "id": "x-onishi-mitsuhiro",
+      "name": "大西 光広",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h25"
+      ]
+    },
+    {
+      "id": "x-takeuchi-shinobu2",
+      "name": "武内 忍",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h25"
+      ]
+    },
+    {
+      "id": "x-asano-hiroyuki2",
+      "name": "浅野 浩之",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h25"
       ]
     }
   ]
