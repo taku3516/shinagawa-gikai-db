@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-23T11:01:09.995580Z",
+  "generatedAt": "2026-07-23T13:25:29.588744Z",
   "items": [
+    {
+      "id": "36ce439794a0bf7caf58",
+      "title": "外国語の電話、AIが受けて日本語で記録。AIコールセンター「ContactX」、英語・中国語・韓国語など50以上の言語のリアルタイム書き起こし・翻訳に対応",
+      "summary": "[X-HACK] ITシステムの受託開発と生成AI・Local LLM導入支援を手がける株式会社X-HACK（本社：東京都品川区東五反田2-5-2 THE CASK GOTANDA 702、代表：松田信介）は、2026年7月23日、AIコールセンター支援サービス「Conta...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000031.000036760.html",
+      "publishedAt": "2026-07-23T13:10:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-23T13:25:07.808953Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "0a80df57f9739ed3a7e4",
       "title": "大井町トラックスで夏イベント 「発見の旅」テーマに、スタンプラリーを展開",
@@ -3130,7 +3149,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1687, column 40"
+      "message": "not well-formed (invalid token): line 1681, column 40"
     },
     {
       "source": "朝日新聞",
@@ -3154,7 +3173,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
