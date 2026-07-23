@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-23T08:13:03.022454Z",
+  "generatedAt": "2026-07-23T11:01:09.995580Z",
   "items": [
+    {
+      "id": "0a80df57f9739ed3a7e4",
+      "title": "大井町トラックスで夏イベント 「発見の旅」テーマに、スタンプラリーを展開",
+      "summary": "複合施設「OIMACHI TRACKS」（品川区広町2）で7月18日、夏イベント「OIMACHI TRACKS SUMMER DISCOVERY 2026 -まだまだ知らない海のこと-」が始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5044",
+      "publishedAt": "2026-07-23T08:05:12Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-23T11:00:50.145904Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "広町",
+        "大井"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "49aa4ac48783e68eb802",
       "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
@@ -3110,7 +3130,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2534, column 48"
+      "message": "not well-formed (invalid token): line 1687, column 40"
     },
     {
       "source": "朝日新聞",
@@ -3134,7 +3154,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
