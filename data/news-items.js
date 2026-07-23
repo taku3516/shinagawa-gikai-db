@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-23T01:53:54.759617Z",
+  "generatedAt": "2026-07-23T08:13:03.022454Z",
   "items": [
+    {
+      "id": "49aa4ac48783e68eb802",
+      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
+      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
+      "publishedAt": "2026-07-23T07:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T10:56:36.711431Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "5c1aba8e7df17de9a7fb",
       "title": "【新店オープン】品川区小山に「わかば薬局武蔵小山店」／待ち時間を短縮できるスマート薬局が2026年8月1日開局、7/27よりオープンセール",
@@ -41,6 +59,26 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
+      "id": "8f86d5848e0a159065d5",
+      "title": "令和8年 大井町駅前中央通り社会実験",
+      "summary": "雨天中止の場合は道路でのマルシェ等の出店はございません。 当日の実施状況等については社会実験「エンジョイ大井町～この道、実験中。～」のSNSアカウントをご確認ください。 都市開発課 都市開発担当 TEL 03-5742-7652 FAX 03-5742-6942",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-project/202510251114.html",
+      "publishedAt": "2026-07-23T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-23T08:12:38.929564Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 10
+    },
+    {
       "id": "cc8b302affa7fccd9503",
       "title": "食育に関するお知らせ",
       "summary": "生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
@@ -70,24 +108,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-22T01:46:19.238621Z",
       "tags": [
         "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "49aa4ac48783e68eb802",
-      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
-      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
-      "publishedAt": "2026-07-22T18:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T10:56:36.711431Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -3077,7 +3097,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 137,
+      "scanned": 136,
       "accepted": 0
     },
     {
@@ -3090,7 +3110,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2076, column 48"
+      "message": "not well-formed (invalid token): line 2534, column 48"
     },
     {
       "source": "朝日新聞",
@@ -3114,7 +3134,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
