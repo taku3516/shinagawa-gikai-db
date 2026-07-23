@@ -135,6 +135,12 @@ window.SHINAGAWA_DB.site = {
       "file": "data/h30.js",
       "supplement": "data/h30-complete.js",
       "available": true
+    },
+    {
+      "id": "h29",
+      "label": "平成29年",
+      "file": "data/h29.js",
+      "available": true
     }
   ],
   "defaultYear": "r08",

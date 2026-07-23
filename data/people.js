@@ -1,7 +1,7 @@
 // 品川区議会DB データファイル（人物台帳: 質問者の名寄せ用。名簿ページには使わない）
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.peopleData = {
-  "updatedAt": "2026-07-22",
+  "updatedAt": "2026-07-30",
   "note": "質問者と議員を紐付けるための人物台帳。元職は表示に使わず、裏のデータとしてのみ蓄積する。",
   "people": [
     {
@@ -770,6 +770,26 @@ window.SHINAGAWA_DB.peopleData = {
       "aliases": [],
       "seenIn": [
         "h30"
+      ]
+    },
+    {
+      "id": "x-matsuzawa-toshiyuki",
+      "name": "松澤 利行",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h29"
+      ]
+    },
+    {
+      "id": "x-sawada-hirokazu",
+      "name": "沢田 洋和",
+      "status": "元職",
+      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
+      "aliases": [],
+      "seenIn": [
+        "h29"
       ]
     }
   ]
