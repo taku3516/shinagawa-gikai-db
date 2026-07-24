@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-24T05:12:29.090784Z",
+  "generatedAt": "2026-07-24T10:54:25.940103Z",
   "items": [
+    {
+      "id": "999becf2d88735d82866",
+      "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
+      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
+      "publishedAt": "2026-07-24T10:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T20:06:59.005014Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "f7e77e4507a67e26a338",
       "title": "セーフィー、建設・製造現場の労働災害を防ぐ不安全行動検知AI「Ailytics（SF）」の本格提供を開始",
@@ -59,6 +78,25 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
+      "id": "7afde930b9d735fda152",
+      "title": "令和8年度「大井第三地区総合防災訓練」の実施",
+      "summary": "",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260722160841.html",
+      "publishedAt": "2026-07-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-24T10:54:00.690356Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 6
+    },
+    {
       "id": "5afbd747be3cb63cb314",
       "title": "区民と共に進める政策デザイン「しながわオープントーク」",
       "summary": "行政評価とは 、区民の皆様からお預かりした大切な税金が、 本当に必要なところへ無駄なく届いているかを検証し、より良いサービスへと育てていく仕組みです。 今回は、見直しのタイミングを迎えている 5つのテーマについて区民の皆様と一緒に考えていきたいです。 「区民の幸福（しあわせ） 」を最優先に、品川区政そのものをバージョンアップさせるため、 前向きなアイデアや率直なご意見をお寄せください。",
@@ -75,25 +113,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "999becf2d88735d82866",
-      "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
-      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
-      "publishedAt": "2026-07-23T21:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-22T20:06:59.005014Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "西五反田"
-      ],
-      "relevanceScore": 12
     },
     {
       "id": "36ce439794a0bf7caf58",
@@ -1850,7 +1869,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "dcdd09272c76b2c15138",
       "title": "地域ニュース『お～い』令和8年7月号 No.262",
-      "summary": "大井第三地域センター 電話：03-3773-2000 FAX：03-3771-3735",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -1867,7 +1886,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "b9010c31cd94fc778929",
       "title": "大井第三地区「映画会」開催のお知らせ",
-      "summary": "大井第三地域センター 電話：03-3773-2000 FAX：03-3771-3735",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -3203,9 +3222,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 1729, column 40"
+      "status": "ok",
+      "scanned": 634,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
