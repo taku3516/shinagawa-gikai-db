@@ -1,7 +1,31 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-24T10:54:25.940103Z",
+  "generatedAt": "2026-07-24T12:14:35.117452Z",
   "items": [
+    {
+      "id": "bf9f6fc3e62c90c976cb",
+      "title": "荏原中延にカフェ「スルメトーキョー」 札幌から移転、自家焙煎コーヒー提供",
+      "summary": "カフェ「surume.tokyo（スルメ トーキョー）」（品川区西中延2）が、荏原中延駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5045",
+      "publishedAt": "2026-07-24T10:52:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-24T12:12:58.016732Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "中延",
+        "西中延",
+        "荏原",
+        "荏原中延駅",
+        "中延駅"
+      ],
+      "relevanceScore": 32
+    },
     {
       "id": "999becf2d88735d82866",
       "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
@@ -3223,7 +3247,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 634,
+      "scanned": 615,
       "accepted": 0
     },
     {
@@ -3305,9 +3329,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
