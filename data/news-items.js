@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-24T18:11:47.882515Z",
+  "generatedAt": "2026-07-24T20:11:10.938865Z",
   "items": [
+    {
+      "id": "7f4a1414e28c90a3e657",
+      "title": "YouTube登録者数74万人超！ 大人気作家さとうみつろう氏のエッセンスを凝縮した短編ベストセレクション、待望の第5弾、『神さまのとっておき さとうみつろう短編集5』が、徳間書店より発売！",
+      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、さとうみつろう氏の『神さまのとっておき さとうみつろう短編集5』（https://www.tokuma.jp/book/b678929.html）を8月1日（土）に...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001091.000016935.html",
+      "publishedAt": "2026-07-24T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-24T20:10:50.228032Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "999becf2d88735d82866",
       "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
@@ -3248,7 +3268,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2256, column 15"
+      "message": "not well-formed (invalid token): line 2255, column 15"
     },
     {
       "source": "朝日新聞",
@@ -3272,7 +3292,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
