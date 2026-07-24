@@ -1,7 +1,44 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-24T20:11:10.938865Z",
+  "generatedAt": "2026-07-24T21:56:57.003183Z",
   "items": [
+    {
+      "id": "36ce439794a0bf7caf58",
+      "title": "外国語の電話、AIが受けて日本語で記録。AIコールセンター「ContactX」、英語・中国語・韓国語など50以上の言語のリアルタイム書き起こし・翻訳に対応",
+      "summary": "[X-HACK] ITシステムの受託開発と生成AI・Local LLM導入支援を手がける株式会社X-HACK（本社：東京都品川区東五反田2-5-2 THE CASK GOTANDA 702、代表：松田信介）は、2026年7月23日、AIコールセンター支援サービス「Conta...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000031.000036760.html",
+      "publishedAt": "2026-07-24T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-23T13:25:07.808953Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "49aa4ac48783e68eb802",
+      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
+      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
+      "publishedAt": "2026-07-24T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T10:56:36.711431Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "7f4a1414e28c90a3e657",
       "title": "YouTube登録者数74万人超！ 大人気作家さとうみつろう氏のエッセンスを凝縮した短編ベストセレクション、待望の第5弾、『神さまのとっておき さとうみつろう短編集5』が、徳間書店より発売！",
@@ -38,25 +75,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "西五反田"
-      ],
-      "relevanceScore": 12
-    },
-    {
-      "id": "36ce439794a0bf7caf58",
-      "title": "外国語の電話、AIが受けて日本語で記録。AIコールセンター「ContactX」、英語・中国語・韓国語など50以上の言語のリアルタイム書き起こし・翻訳に対応",
-      "summary": "[X-HACK] ITシステムの受託開発と生成AI・Local LLM導入支援を手がける株式会社X-HACK（本社：東京都品川区東五反田2-5-2 THE CASK GOTANDA 702、代表：松田信介）は、2026年7月23日、AIコールセンター支援サービス「Conta...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000031.000036760.html",
-      "publishedAt": "2026-07-24T14:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-23T13:25:07.808953Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [
-        "東五反田"
       ],
       "relevanceScore": 12
     },
@@ -121,24 +139,6 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "49aa4ac48783e68eb802",
-      "title": "『ドルフィンウェーブ』 海の日はドルウェブの日！ ペア総選挙で1位のドルフィンが登場！＆無料10連ガチャ開催！",
-      "summary": "[マーベラス] 株式会社HONEY∞PARADE GAMES（代表取締役 三浦 徹朗/所在地：東京都品川区）は、爽快ジェットバトルゲーム『ドルフィンウェーブ』(以下：ドルウェブ)について、本日7月20日(月)よりドルウェブの日記念イベントを...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000002294.000016719.html",
-      "publishedAt": "2026-07-24T01:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T10:56:36.711431Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "7afde930b9d735fda152",
@@ -3268,7 +3268,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2255, column 15"
+      "message": "not well-formed (invalid token): line 2267, column 15"
     },
     {
       "source": "朝日新聞",
