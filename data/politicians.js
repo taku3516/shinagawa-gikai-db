@@ -159,6 +159,7 @@ window.SHINAGAWA_DB.politiciansData = {
         {
           "id": "t-baba-yuko",
           "name": "馬場 裕子",
+          "kana": "ばば ゆうこ",
           "party": "民主党（当時）",
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
@@ -167,6 +168,7 @@ window.SHINAGAWA_DB.politiciansData = {
         {
           "id": "t-sato-hirohiko",
           "name": "佐藤 裕彦",
+          "kana": "さとう ひろひこ",
           "party": "自由民主党",
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
@@ -201,9 +203,73 @@ window.SHINAGAWA_DB.politiciansData = {
         }
       ]
     },
-    "current-house": { "members": [] },
-    "former-house": { "members": [] },
-    "current-mayor": { "members": [] },
+    "current-house": {
+      "members": [
+        {
+          "id": "h-ishihara-hirotaka",
+          "name": "石原 宏高",
+          "kana": "いしはら ひろたか",
+          "party": "自由民主党",
+          "statusLabel": "現職衆議",
+          "electoralDistrict": "東京都第3区（品川区・伊豆諸島・小笠原諸島）",
+          "serviceHistory": "平成17年 初当選（東京都第3区）",
+          "websiteUrl": "https://www.ishihara-hirotaka.com/",
+          "career": "平成17年に東京都第3区で初当選。内閣総理大臣補佐官などを歴任。令和6年・令和8年の総選挙で当選し現職。"
+        }
+      ]
+    },
+    "former-house": {
+      "members": [
+        {
+          "id": "x-abe-yumiko",
+          "name": "あべ 祐美子",
+          "party": "中道改革連合（前 立憲民主党）",
+          "statusLabel": "元職衆議（元区議・元都議）",
+          "electoralDistrict": "東京都第3区（品川区）",
+          "serviceHistory": "令和6年〜令和8年（衆議1期・比例東京）",
+          "career": "品川区議会議員（平成18年〜令和2年）・東京都議会議員（令和3年〜令和7年）を経て、令和6年の総選挙で衆議院議員に当選（東京都第3区で立候補し比例東京ブロックで復活当選）。令和8年の総選挙で落選。"
+        },
+        {
+          "id": "h-matsubara-hitoshi",
+          "name": "松原 仁",
+          "kana": "まつばら ひとし",
+          "party": "立憲民主党（元 民主党）",
+          "statusLabel": "元職衆議",
+          "electoralDistrict": "東京都第3区（品川区）",
+          "serviceHistory": "平成12年・平成15年・平成21年・令和3年ほか当選（東京都第3区・比例東京）",
+          "career": "東京都議会議員を経て衆議院議員。東京都第3区（品川区）で複数期当選。国家公安委員長・拉致問題担当大臣などを歴任。"
+        },
+        {
+          "id": "h-kurimoto-shinichiro",
+          "name": "栗本 慎一郎",
+          "kana": "くりもと しんいちろう",
+          "party": "自由民主党（当時）",
+          "statusLabel": "元職衆議",
+          "electoralDistrict": "東京都第3区（品川区）",
+          "serviceHistory": "平成8年 当選（東京都第3区、1期）",
+          "career": "経済人類学者・大学教授を経て、平成8年の総選挙で東京都第3区から衆議院議員に当選（1期）。"
+        }
+      ]
+    },
+    "current-mayor": {
+      "members": [
+        {
+          "id": "t-morisawa-kyoko",
+          "name": "森沢 きょうこ",
+          "kana": "もりさわ きょうこ",
+          "party": "無所属",
+          "statusLabel": "現職区長（元都議）",
+          "office": "品川区長",
+          "birth": "昭和53年11月16日",
+          "term": "令和4年12月4日〜（区長1期）",
+          "serviceHistory": "令和4年12月〜（品川区長）",
+          "aliases": ["森沢恭子", "森澤恭子"],
+          "profileUrl": "https://www.city.shinagawa.tokyo.jp/PC/kucho/index.html",
+          "websiteUrl": "https://kyokomorisawa.jp/",
+          "career": "日本テレビ記者、森ビル勤務を経て、平成29年に東京都議会議員に当選（2期）。令和4年12月の品川区長選挙（再選挙）で当選し、品川区長に就任。選挙により「森沢 恭子」表記もある。"
+        }
+      ]
+    },
     "former-mayor": { "members": [] }
   }
 };
