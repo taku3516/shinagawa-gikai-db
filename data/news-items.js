@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-24T01:49:41.174135Z",
+  "generatedAt": "2026-07-24T05:12:29.090784Z",
   "items": [
+    {
+      "id": "f7e77e4507a67e26a338",
+      "title": "セーフィー、建設・製造現場の労働災害を防ぐ不安全行動検知AI「Ailytics（SF）」の本格提供を開始",
+      "summary": "[セーフィー株式会社] クラウド録画サービスシェアNo.1（※1）のセーフィー株式会社（東京都品川区：代表取締役社長CEO 佐渡島隆平、以下「セーフィー」）は、映像AI解析を開発・提供するシンガポール発スタートアップAilytics Pte Lt...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000366.000017641.html",
+      "publishedAt": "2026-07-24T02:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-24T05:12:06.188075Z",
+      "tags": [
+        "事件事故",
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "4dfe8c953ccd1085e7ee",
       "title": "7月27日開催の委員会の予定を掲載。",
@@ -3168,7 +3186,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 3,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -3187,7 +3205,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1655, column 40"
+      "message": "not well-formed (invalid token): line 1729, column 40"
     },
     {
       "source": "朝日新聞",
