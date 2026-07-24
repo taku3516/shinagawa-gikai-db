@@ -332,6 +332,7 @@
           ${committees.length ? `<p class="committee">${committees.join("<br />")}</p>` : ""}
           ${links ? `<div>${links}</div>` : ""}
           ${extraSlotHtml("SNS", m.sns)}
+          ${m.speechSearchUrl ? `<div class="extra-slot"><span class="slot-name">会議録での発言:</span> <a class="pill" href="${esc(m.speechSearchUrl)}">発言を横断検索で見る</a></div>` : ""}
           ${electionSlotHtml(m)}
           ${electionFinanceSlotHtml(m)}
           ${politicalFundSlotHtml(m)}
