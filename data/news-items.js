@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-24T12:14:35.117452Z",
+  "generatedAt": "2026-07-24T14:47:06.049105Z",
   "items": [
+    {
+      "id": "36ce439794a0bf7caf58",
+      "title": "外国語の電話、AIが受けて日本語で記録。AIコールセンター「ContactX」、英語・中国語・韓国語など50以上の言語のリアルタイム書き起こし・翻訳に対応",
+      "summary": "[X-HACK] ITシステムの受託開発と生成AI・Local LLM導入支援を手がける株式会社X-HACK（本社：東京都品川区東五反田2-5-2 THE CASK GOTANDA 702、代表：松田信介）は、2026年7月23日、AIコールセンター支援サービス「Conta...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000031.000036760.html",
+      "publishedAt": "2026-07-24T14:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-23T13:25:07.808953Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "bf9f6fc3e62c90c976cb",
       "title": "荏原中延にカフェ「スルメトーキョー」 札幌から移転、自家焙煎コーヒー提供",
@@ -137,25 +156,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "36ce439794a0bf7caf58",
-      "title": "外国語の電話、AIが受けて日本語で記録。AIコールセンター「ContactX」、英語・中国語・韓国語など50以上の言語のリアルタイム書き起こし・翻訳に対応",
-      "summary": "[X-HACK] ITシステムの受託開発と生成AI・Local LLM導入支援を手がける株式会社X-HACK（本社：東京都品川区東五反田2-5-2 THE CASK GOTANDA 702、代表：松田信介）は、2026年7月23日、AIコールセンター支援サービス「Conta...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000031.000036760.html",
-      "publishedAt": "2026-07-23T19:10:03Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-23T13:25:07.808953Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [
-        "東五反田"
-      ],
-      "relevanceScore": 12
     },
     {
       "id": "0a80df57f9739ed3a7e4",
@@ -3246,9 +3246,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 615,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2263, column 15"
     },
     {
       "source": "朝日新聞",
