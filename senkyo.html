@@ -170,6 +170,7 @@
   <script src="site-nav.js"></script>
   <script src="data/elections.js"></script>
   <script src="data/people.js"></script>
+  <script src="data/politicians.js"></script>
   <script>
     "use strict";
 
@@ -190,10 +191,21 @@
     // 人物台帳から、その人物の全表記（正式名＋エイリアス）を正規化して返す。
     // 選挙アーカイブは同一人物が年ごとに別表記で載る（例: あべ祐美子＝阿部祐美子、
     // 西本たか子＝西本貴子）ため、名簿からの person リンクではこれで名寄せする。
+    // 人物IDから台帳エントリを引く。まず質問者台帳(people.js)、無ければ政治家名簿
+    // (politicians.js の都議・衆議・区長ロスター)を探す。区議・区長と都議で同一人物は
+    // 同じ id を共有するため、どちらのソースでもエイリアスを拾える。
     function personRecord(personId) {
       if (!personId) return null;
-      const people = (window.SHINAGAWA_DB.peopleData && window.SHINAGAWA_DB.peopleData.people) || [];
-      return people.find((p) => p.id === personId) || null;
+      const db = window.SHINAGAWA_DB || {};
+      const people = (db.peopleData && db.peopleData.people) || [];
+      const inPeople = people.find((p) => p.id === personId);
+      if (inPeople) return inPeople;
+      const rosters = (db.politiciansData && db.politiciansData.rosters) || {};
+      for (const key of Object.keys(rosters)) {
+        const found = (rosters[key].members || []).find((m) => m.id === personId);
+        if (found) return found;
+      }
+      return null;
     }
 
     function personVariants(person) {

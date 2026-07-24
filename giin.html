@@ -399,12 +399,12 @@
       "current-tokyo": {
         label: "現職都議",
         title: "現職東京都議会議員名簿（品川区選出）",
-        lead: "品川区選挙区から選出された現職の東京都議会議員を確認するための名簿です。現在は掲載枠のみ準備しています。"
+        lead: "品川区選挙区から選出された現職の東京都議会議員です。東京都議会公式サイトと選挙アーカイブを基に作成しています。会議録での発言・選挙履歴などは各カードのリンクから確認できます。"
       },
       "former-tokyo": {
         label: "元職都議",
         title: "元職東京都議会議員名簿（品川区選出）",
-        lead: "過去に品川区選挙区から選出された東京都議会議員を確認するための名簿です。現在は掲載枠のみ準備しています。"
+        lead: "過去に品川区選挙区から選出された東京都議会議員です。都議選アーカイブ（1997年〜）の当選者を基に作成しています。区議・区長を兼ねた方は同一人物として選挙・発言を横断できます。"
       },
       "current-house": {
         label: "現職衆議",
@@ -469,7 +469,13 @@
       document.getElementById("page-lead").textContent = config.lead;
       document.getElementById("page-disclaimer").innerHTML = rosterId === "current-ward"
         ? "これは品川区が運営しているものではありません。現職区議の掲載情報は品川区議会公式サイトからの転記です。最新かつ正確な情報は必ず<a href=\"https://gikai.city.shinagawa.tokyo.jp/profile/50on\" target=\"_blank\" rel=\"noopener\">公式の議員紹介ページ</a>を確認してください。"
-        : `これは品川区が運営しているものではありません。${esc(config.label)}については、在職・選出を確認できる公式資料と確認日を明記した上で掲載します。現在は枠組みのみ準備しています。`;
+        : rosterId === "current-tokyo"
+          ? "これは品川区・東京都が運営しているものではありません。現職都議の掲載情報は<a href=\"https://www.gikai.metro.tokyo.lg.jp/membership/\" target=\"_blank\" rel=\"noopener\">東京都議会公式サイト</a>からの転記です。最新かつ正確な情報は必ず公式サイトを確認してください。"
+          : rosterId === "former-tokyo"
+            ? "これは品川区・東京都が運営しているものではありません。元職都議は、品川区選挙区の選挙結果（選挙アーカイブ）を基に作成しています。在職期間には選挙結果からの推定を含みます。"
+            : members.length
+              ? `これは品川区が運営しているものではありません。${esc(config.label)}の情報は、公開されている公式資料を基に作成しています。正確な情報は各公式サイトをご確認ください。`
+              : `これは品川区が運営しているものではありません。${esc(config.label)}については、在職・選出を確認できる公式資料と確認日を明記した上で掲載します。現在は枠組みのみ準備しています。`;
       document.querySelector(`[data-roster="${rosterId}"]`).setAttribute("aria-current", "page");
       document.getElementById("search-box").value = params.get("q") || "";
 
