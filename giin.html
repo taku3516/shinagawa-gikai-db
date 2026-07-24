@@ -290,10 +290,20 @@
       return `<div class="extra-slot"><span class="slot-name">政治資金収支報告書:</span> <a class="pill" href="seijishikin.html?q=${query}">団体名簿で検索</a></div>`;
     }
 
-    function electionSlotHtml(member) {
-      if (member.electionHistory && member.electionHistory.length > 0) return extraSlotHtml("過去の選挙・得票履歴", member.electionHistory);
+    // 会議録での発言（横断検索へ）。kensakuが質問インデックスに人物台帳のエイリアスを含めるため、
+    // 名簿の表示名で検索リンクを作れば漢字・かなの表記揺れは自動で吸収される。
+    function speechSlotHtml(member) {
       const query = encodeURIComponent(personSearchName(member));
-      return `<div class="extra-slot"><span class="slot-name">過去の選挙・得票履歴:</span> <a class="pill" href="senkyo.html?q=${query}">選挙アーカイブで探す</a></div>`;
+      return `<div class="extra-slot"><span class="slot-name">会議録での発言:</span> <a class="pill" href="kensaku.html?q=${query}&category=council">発言を横断検索で見る</a></div>`;
+    }
+
+    // 過去の選挙・得票履歴（選挙アーカイブへ）。person で人物IDを渡し、senkyo側で
+    // 人物台帳のエイリアス（改姓・かな/漢字などの別表記）も名寄せ照合させる。
+    // q は台帳未収録者向けのフォールバック兼、検索欄の表示用。
+    function electionSlotHtml(member) {
+      const query = encodeURIComponent(personSearchName(member));
+      const personParam = member.id ? `person=${encodeURIComponent(member.id)}&` : "";
+      return `<div class="extra-slot"><span class="slot-name">過去の選挙・得票履歴:</span> <a class="pill" href="senkyo.html?${personParam}q=${query}">選挙アーカイブで探す</a></div>`;
     }
 
     function electionFinanceSlotHtml(member) {
@@ -332,7 +342,7 @@
           ${committees.length ? `<p class="committee">${committees.join("<br />")}</p>` : ""}
           ${links ? `<div>${links}</div>` : ""}
           ${extraSlotHtml("SNS", m.sns)}
-          ${m.speechSearchUrl ? `<div class="extra-slot"><span class="slot-name">会議録での発言:</span> <a class="pill" href="${esc(m.speechSearchUrl)}">発言を横断検索で見る</a></div>` : ""}
+          ${speechSlotHtml(m)}
           ${electionSlotHtml(m)}
           ${electionFinanceSlotHtml(m)}
           ${politicalFundSlotHtml(m)}
