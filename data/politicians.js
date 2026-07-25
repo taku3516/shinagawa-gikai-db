@@ -149,8 +149,9 @@ window.SHINAGAWA_DB.politiciansData = {
           "career": "品川区議会議員を経て、東京都議会議員（平成17年〜平成29年、3期）。"
         },
         {
-          "id": "t-kanno-yoshihiro",
+          "id": "t-kamino-yoshihiro",
           "name": "神野 吉弘",
+          "kana": "かみの よしひろ",
           "party": "民主党（当時）",
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
@@ -270,6 +271,30 @@ window.SHINAGAWA_DB.politiciansData = {
         }
       ]
     },
-    "former-mayor": { "members": [] }
+    "former-mayor": {
+      "members": [
+        {
+          "id": "m-hamano-ken",
+          "name": "濱野 健",
+          "kana": "はまの けん",
+          "party": "無所属",
+          "statusLabel": "元職区長",
+          "office": "品川区長",
+          "serviceHistory": "平成18年〜令和4年（区長4期）",
+          "aliases": ["浜野健", "はまの健"],
+          "career": "品川区職員・副区長を経て、前区長の死去に伴う平成18年10月の区長選挙で初当選。4期16年務め、令和4年10月に退任。令和5年に旭日重光章。選挙により「浜野 健」「はまの 健」表記もある。"
+        },
+        {
+          "id": "m-takahashi-kyuji",
+          "name": "高橋 久二",
+          "kana": "たかはし きゅうじ",
+          "party": "無所属",
+          "statusLabel": "元職区長",
+          "office": "品川区長",
+          "serviceHistory": "昭和62年〜平成18年（区長5期）",
+          "career": "昭和62年に品川区長へ初当選し、5期目の在任中の平成18年8月に死去。全国初の公立小中一貫校（品川区立日野学園）を開校。"
+        }
+      ]
+    }
   }
 };
