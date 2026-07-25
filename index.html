@@ -511,11 +511,11 @@
         `${esc(site.siteName)} — ${esc(site.disclaimer)}`;
     }
 
-    // 旧URL（index.html#meeting-... / #minutes）で来た場合は会議録ページへ転送する
+    // 旧URL（index.html#meeting-... / #bills-... / #minutes など）で来た場合は会議録ページへ転送する
     function redirectLegacyHash() {
       const hash = location.hash;
       if (!hash) return false;
-      if (/^#(meeting-|minutes|question-)/.test(decodeURIComponent(hash))) {
+      if (/^#(meeting-|minutes|question-|bills-|petitions-|committee-)/.test(decodeURIComponent(hash))) {
         location.replace("kaigiroku.html" + hash);
         return true;
       }

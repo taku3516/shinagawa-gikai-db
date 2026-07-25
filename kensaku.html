@@ -206,6 +206,8 @@
       margin-bottom: 12px;
     }
     #hit { color: var(--c-ink-soft); font-size: 13px; font-weight: 800; }
+    .loading-status { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .loading-status[hidden] { display: none; }
     .rows { display: grid; gap: 11px; }
     .hitrow {
       border: 1px solid var(--c-border);
@@ -330,7 +332,7 @@
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
         <h1>横断検索</h1>
         <p class="lead">
-          令和元年〜令和8年の議会情報に加え、人物・選挙・政務活動費・政治資金・品川区ニュースをまとめて検索できます。複数の言葉はスペースで区切ると、すべてを含む結果に絞り込めます。
+          平成13年〜令和8年の議会情報に加え、人物・選挙・政務活動費・政治資金・品川区ニュースをまとめて検索できます。複数の言葉はスペースで区切ると、すべてを含む結果に絞り込めます。
         </p>
         <div class="notice">
           本サイトに収録している質問・答弁は要約です。発言全文を検索する場合は、公式の
@@ -394,6 +396,7 @@
       <div class="container">
         <div class="status-row">
           <span id="hit" aria-live="polite"></span>
+          <span id="loading-status" class="loading-status" role="status" hidden></span>
         </div>
         <div id="results" class="rows"></div>
         <div id="guide" class="guide"></div>
@@ -414,31 +417,7 @@
   <script src="data/former-members.js"></script>
   <script src="data/politicians.js"></script>
   <script src="data/elections.js"></script>
-  <script src="data/h30.js"></script>
-  <script src="data/h30-complete.js"></script>
-  <script src="data/r01.js"></script>
-  <script src="data/r01-complete.js"></script>
-  <script src="data/r02.js"></script>
-  <script src="data/r02-complete.js"></script>
-  <script src="data/r03.js"></script>
-  <script src="data/r03-complete.js"></script>
-  <script src="data/r04.js"></script>
-  <script src="data/r04-complete.js"></script>
-  <script src="data/r05.js"></script>
-  <script src="data/r05-complete.js"></script>
-  <script src="data/r06.js"></script>
-  <script src="data/r06-complete.js"></script>
-  <script src="data/r07.js"></script>
-  <script src="data/r07-complete.js"></script>
-  <script src="data/r08.js"></script>
-  <script src="data/r08-complete.js"></script>
-  <script src="data/r08-committees.js"></script>
-  <script src="data/r08-committees-part-01.js"></script>
-  <script src="data/r08-committees-part-02.js"></script>
-  <script src="data/r08-committees-part-03.js"></script>
-  <script src="data/r08-committees-part-04.js"></script>
-  <script src="data/r08-committees-part-05.js"></script>
-  <script src="data/r08-committees-part-06.js"></script>
+  <!-- 年ごとの議会データ（平成13年〜令和8年）は量が多いため、表示後に新しい年から順に読み込む -->
   <script src="data/seimu.js"></script>
   <script src="data/seijishikin.js"></script>
   <script src="data/senkyo-shushi.js"></script>
@@ -482,14 +461,16 @@
         const reiwa = numericYear - 2018;
         return `令和${reiwa === 1 ? "元" : reiwa}年（${numericYear}年）`;
       }
-      if (numericYear === 2018) return "平成30年（2018年）";
+      if (numericYear >= 1989) return `平成${numericYear - 1988}年（${numericYear}年）`;
       return `${numericYear}年`;
     }
 
+    // 年ID（h13〜h30 / r01〜r08）を西暦に直す。平成N年＝1988+N、令和N年＝2018+N。
     function yearFromId(yearId) {
-      if (/^h30$/i.test(String(yearId))) return 2018;
-      const match = String(yearId).match(/r(\d{2})/i);
-      return match ? 2018 + Number(match[1]) : null;
+      const heisei = String(yearId).match(/^h(\d{2})$/i);
+      if (heisei) return 1988 + Number(heisei[1]);
+      const reiwa = String(yearId).match(/^r(\d{2})$/i);
+      return reiwa ? 2018 + Number(reiwa[1]) : null;
     }
 
     function dateYear(value) {
@@ -524,14 +505,15 @@
         tags: normalizeText(tags.join(" ")),
         body: normalizeText([item.meta, item.body, item.question, item.answer].join(" "))
       };
-      fields.all = [fields.title, fields.primary, fields.tags, fields.body].join(" ");
       INDEX.push({
         id: item.id || `result-${INDEX.length + 1}`,
         category: item.category,
         type: item.type,
         year: item.year || null,
         date: item.date || "",
-        sortDate: item.sortDate || (item.date ? Date.parse(item.date) || 0 : (item.year || 0) * 10000000000),
+        // 日付が分かるものは実日付、年しか分からないものはその年の1月1日で揃える。
+        // 両者を同じ尺度（エポックミリ秒）にしないと、並び替えで年単位の項目が常に外側へ寄る。
+        sortDate: item.sortDate || (item.date ? Date.parse(item.date) || 0 : (item.year ? Date.UTC(item.year, 0, 1) : 0)),
         title: item.title || "名称未設定",
         meta: item.meta || "",
         body: item.body || "",
@@ -550,9 +532,9 @@
       ((db.peopleData && db.peopleData.people) || []).map((person) => [person.id, person.aliases || []])
     );
 
-    const yearIds = Object.keys(db.years || {}).sort().reverse();
-    for (const yearId of yearIds) {
-      const yearData = db.years[yearId];
+    // 1年分の議会データ（会議・議案・請願陳情・質問・委員会質疑）を検索インデックスに加える。
+    // 年データは後から順次読み込むため、読み込みが終わった年ごとにこの関数を呼ぶ。
+    function indexYear(yearId, yearData) {
       const year = yearFromId(yearId);
       const meetingNames = {};
       for (const meeting of yearData.meetings || []) {
@@ -567,7 +549,7 @@
           body: meeting.summary || "",
           primary: [meeting.name, meeting.type],
           tags: [meeting.type],
-          links: [{ type: "internal", label: "DB内で会議を開く", url: `index.html#meeting-${meeting.id}` }].concat(meeting.links || [])
+          links: [{ type: "internal", label: "DB内で会議を開く", url: `kaigiroku.html#meeting-${meeting.id}` }].concat(meeting.links || [])
         });
       }
 
@@ -583,7 +565,7 @@
           result: bill.result || "",
           primary: [bill.number, bill.proposer, meetingNames[bill.meetingId]],
           tags: bill.tags || [],
-          links: [{ type: "internal", label: "DB内で議案を開く", url: `index.html#bills-${bill.meetingId}` }].concat(bill.links || [])
+          links: [{ type: "internal", label: "DB内で議案を開く", url: `kaigiroku.html#bills-${bill.meetingId}` }].concat(bill.links || [])
         });
       }
 
@@ -599,7 +581,7 @@
           result: petition.result || "",
           primary: [petition.number, meetingNames[petition.meetingId]],
           tags: petition.tags || [],
-          links: [{ type: "internal", label: "DB内で請願・陳情を開く", url: `index.html#petitions-${petition.meetingId}` }].concat(petition.links || [])
+          links: [{ type: "internal", label: "DB内で請願・陳情を開く", url: `kaigiroku.html#petitions-${petition.meetingId}` }].concat(petition.links || [])
         });
       }
 
@@ -620,7 +602,7 @@
             answer: summary.answer || "",
             primary: [questioner.member, questioner.party, questioner.kind, meetingNames[questioner.meetingId]].concat(memberAliases),
             tags: [questioner.kind || "一般質問"],
-            links: [{ type: "internal", label: "DB内で質問と答弁を開く", url: `index.html#question-${questioner.meetingId}-${questioner.memberId}` }].concat(questioner.links || [])
+            links: [{ type: "internal", label: "DB内で質問と答弁を開く", url: `kaigiroku.html#question-${questioner.meetingId}-${questioner.memberId}` }].concat(questioner.links || [])
           });
         });
       }
@@ -640,7 +622,7 @@
               answer: exchange.answer || "",
               primary: [exchange.speaker, exchange.respondent, session.committee, meetingNames[session.meetingId]],
               tags: [exchange.kind || "質問", session.committee],
-              links: [{ type: "internal", label: "DB内で委員会質疑を開く", url: `index.html#committee-${session.id}-${exchange.id}` }].concat(session.links || [])
+              links: [{ type: "internal", label: "DB内で委員会質疑を開く", url: `kaigiroku.html#committee-${session.id}-${exchange.id}` }].concat(session.links || [])
             });
           }
         }
@@ -868,8 +850,13 @@
       return score + Math.min(20, item.relevanceScore) * .05;
     }
 
+    // 4つの検索フィールドを個別に見る。normalizeText が各フィールド内の空白を除いているため、
+    // 検索語がフィールドの境界をまたいで一致することはない。
     function itemMatchesTerms(item, terms) {
-      return terms.every((term) => variantsForTerm(term).some((variant) => item.fields.all.includes(variant)));
+      const fields = item.fields;
+      return terms.every((term) => variantsForTerm(term).some((variant) =>
+        fields.title.includes(variant) || fields.primary.includes(variant)
+        || fields.tags.includes(variant) || fields.body.includes(variant)));
     }
 
     function escapeRegExp(value) {
@@ -939,6 +926,7 @@
       reset: document.getElementById("reset-search"),
       filterPanel: document.getElementById("filter-panel"),
       hit: document.getElementById("hit"),
+      loadingStatus: document.getElementById("loading-status"),
       results: document.getElementById("results"),
       guide: document.getElementById("guide"),
       pagination: document.getElementById("pagination")
@@ -1098,45 +1086,142 @@
     elements.query.value = params.get("q") || "";
     elements.sort.value = ["relevance", "newest", "oldest"].includes(params.get("sort")) ? params.get("sort") : "relevance";
     refreshFilterOptions();
-    const initialValues = {
+    // URLで指定された絞り込みのうち、まだ選択肢が存在しないものは保留し、
+    // 該当する年のデータが読み込まれた時点で反映する。
+    const pendingFilters = new Map(Object.entries({
       type: params.get("type") || "",
       year: params.get("year") || "",
       result: params.get("result") || "",
       source: params.get("source") || "",
       tag: params.get("tag") || ""
-    };
-    for (const [key, value] of Object.entries(initialValues)) {
-      if ([...elements[key].options].some((option) => option.value === value)) elements[key].value = value;
+    }).filter(([, value]) => value));
+
+    function applyPendingFilters() {
+      let applied = false;
+      for (const [key, value] of [...pendingFilters]) {
+        if (![...elements[key].options].some((option) => option.value === value)) continue;
+        elements[key].value = value;
+        pendingFilters.delete(key);
+        applied = true;
+      }
+      if (applied) elements.filterPanel.open = hasDetailedFilter();
     }
+
+    applyPendingFilters();
     state.page = Math.max(1, Number(params.get("page")) || 1);
+    // URLで指定されたページは、対象の年が読み込まれるまで存在しないことがある。
+    // 読み込みが終わった時点で一度だけ復元する（利用者が操作したら復元しない）。
+    let pageToRestore = state.page;
+    const cancelPageRestore = () => { pageToRestore = 0; };
     elements.filterPanel.open = hasDetailedFilter();
 
     let inputTimer = null;
     elements.query.addEventListener("input", () => {
+      cancelPageRestore();
       clearTimeout(inputTimer);
       inputTimer = setTimeout(() => render(true), 120);
     });
     elements.clear.addEventListener("click", () => {
+      cancelPageRestore();
       elements.query.value = "";
       render(true);
       elements.query.focus();
     });
     elements.categoryTabs.addEventListener("click", (event) => {
       const button = event.target.closest("[data-category]");
-      if (button) setCategory(button.dataset.category);
+      if (!button) return;
+      cancelPageRestore();
+      setCategory(button.dataset.category);
     });
     [elements.type, elements.year, elements.result, elements.source, elements.tag, elements.sort]
-      .forEach((element) => element.addEventListener("change", () => render(true)));
-    elements.reset.addEventListener("click", resetSearch);
+      .forEach((element) => element.addEventListener("change", () => {
+        cancelPageRestore();
+        render(true);
+      }));
+    elements.reset.addEventListener("click", () => {
+      cancelPageRestore();
+      resetSearch();
+    });
     elements.pagination.addEventListener("click", (event) => {
       const button = event.target.closest("[data-page]");
       if (!button || button.disabled) return;
+      cancelPageRestore();
       state.page = Number(button.dataset.page);
       render();
       document.querySelector(".content-section").scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
     render();
+
+    /* ---------- 年ごとの議会データを表示後に読み込む ---------- */
+
+    // 年データは data/*.js が window.SHINAGAWA_DB に登録する方式なので、
+    // script タグを足すだけで読み込める（file:// でダブルクリックしても動く）。
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = src;
+        s.onload = resolve;
+        s.onerror = () => reject(new Error(`${src} の読み込みに失敗しました`));
+        document.head.appendChild(s);
+      });
+    }
+
+    // 令和8年の委員会データは data/site.js の years に含まれないため、ここで順番を持つ。
+    // r08.js・r08-complete.js の後に読み込む必要がある（未読み込みだと各ファイルが例外を投げる）。
+    const COMMITTEE_FILES = {
+      r08: [
+        "data/r08-committees.js",
+        "data/r08-committees-part-01.js",
+        "data/r08-committees-part-02.js",
+        "data/r08-committees-part-03.js",
+        "data/r08-committees-part-04.js",
+        "data/r08-committees-part-05.js",
+        "data/r08-committees-part-06.js"
+      ]
+    };
+
+    function showLoadingStatus(text) {
+      elements.loadingStatus.textContent = text;
+      elements.loadingStatus.hidden = !text;
+    }
+
+    async function loadYearFiles(meta) {
+      if (!db.years[meta.id]) await loadScript(meta.file);
+      if (!db.years[meta.id]) throw new Error(`${meta.file} に ${meta.id} のデータが見つかりません`);
+      db.loadedSupplements = db.loadedSupplements || {};
+      if (meta.supplement && !db.loadedSupplements[meta.supplement]) {
+        await loadScript(meta.supplement);
+        db.loadedSupplements[meta.supplement] = true;
+      }
+      for (const file of COMMITTEE_FILES[meta.id] || []) await loadScript(file);
+      return db.years[meta.id];
+    }
+
+    // 新しい年から順に読み込み、1年終わるごとに検索インデックスと画面を更新する。
+    async function loadAllYears() {
+      const yearList = (db.site.years || []).filter((meta) => meta.available);
+      const failed = [];
+      for (const [position, meta] of yearList.entries()) {
+        showLoadingStatus(`${meta.label}まで読み込み中… ${position + 1}/${yearList.length}年`);
+        try {
+          indexYear(meta.id, await loadYearFiles(meta));
+        } catch (err) {
+          failed.push(meta.label);
+          console.error(err);
+        }
+        refreshFilterOptions();
+        applyPendingFilters();
+        render();
+      }
+      if (pageToRestore > 1 && state.page !== pageToRestore) {
+        state.page = pageToRestore;
+        render();
+      }
+      showLoadingStatus(failed.length ? `次の年を読み込めませんでした: ${failed.join("・")}` : "");
+    }
+
+    loadAllYears();
   </script>
 </body>
 </html>
