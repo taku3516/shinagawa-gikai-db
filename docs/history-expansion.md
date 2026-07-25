@@ -47,3 +47,44 @@
 7. ローカル表示で全件数、開閉、検索、公式リンクを確認してから公開する。
 
 `build_history_supplements.py` は、要約の不足、質問項目との順序違い、空欄、会議録URL不足、会議メタデータ不足が1件でもある場合はファイルを生成しません。部分的な状態を誤って公開しないための安全策です。
+
+## 平成13年〜29年の議案・請願陳情
+
+平成13〜29年は、質問・答弁要約は収録済みですが**議案と請願・陳情が0件**です。
+`scripts/build_heisei_year.py` が本会議資料ページを見ておらず、`bills` と `petitions` を
+空のまま出力していたためです。
+
+`build_heisei_year.py` は本会議資料ページ（`hXX_NN/hXX_NNt`）も取得し、
+`prepare_history.py` の `parse_proposals_and_petitions()` で議案・請願陳情を組み立てます。
+平成のページはフォルダー名に `t`/`r` が付かず、本文ページ名にだけ付く点が令和と異なります
+（例: `h20_01/h20_01t`）。
+
+```bash
+python3 scripts/build_heisei_year.py 20   # 平成20年を再生成
+```
+
+実行すると回ごとの件数が表示されます。
+
+```
+h20: 議案・請願陳情を取得中...
+  第1回: 議案25件 請願陳情8件
+  ...
+h20: 会議4 議案98 請願陳情41 質問44名 項目176 答弁抽出…
+```
+
+### 注意
+
+- **公式サイトに到達できる環境でのみ実行できます。** 収集処理は
+  `gikai.city.shinagawa.tokyo.jp` へ直接アクセスします。
+- 平成13〜29年の資料ページの構成は年によって差があります。件数が0件で終わった年は、
+  表示される確認用URLを開いて表の構成を確かめてください。0件のときは
+  `bills`・`petitions` を空のまま出力するので、誤った部分データは入りません。
+- 取得したHTMLは `scripts/cache/hXX/billsNN.html` に保存され、次回以降は再利用されます。
+  取り直す場合はこのファイルを削除してください。
+- 年ID指定は `prepare_history.py` と `build_history_supplements.py` でも
+  `h13`〜`h30` / `r01`〜`r08` の形式が使えます（数値だけの旧指定も引き続き有効）。
+
+  ```bash
+  python3 scripts/prepare_history.py --years h20 h19 --with-contexts
+  python3 scripts/build_history_supplements.py --years h20 --write
+  ```
