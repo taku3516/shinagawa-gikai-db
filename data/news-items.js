@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-26T14:38:18.349548Z",
+  "generatedAt": "2026-07-26T15:57:12.586882Z",
   "items": [
+    {
+      "id": "fa3cae7a0a275e978d61",
+      "title": "休日・夜間（平日・土曜日）の診療",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
+      "publishedAt": "2026-07-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "999becf2d88735d82866",
+      "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
+      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
+      "publishedAt": "2026-07-26T15:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T20:06:59.005014Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "36ce439794a0bf7caf58",
       "title": "外国語の電話、AIが受けて日本語で記録。AIコールセンター「ContactX」、英語・中国語・韓国語など50以上の言語のリアルタイム書き起こし・翻訳に対応",
@@ -18,25 +54,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "東五反田"
-      ],
-      "relevanceScore": 12
-    },
-    {
-      "id": "999becf2d88735d82866",
-      "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
-      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
-      "publishedAt": "2026-07-26T09:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-22T20:06:59.005014Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "西五反田"
       ],
       "relevanceScore": 12
     },
@@ -2522,23 +2539,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "fa3cae7a0a275e978d61",
-      "title": "休日・夜間（平日・土曜日）の診療",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
-      "publishedAt": "2026-06-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "62e909e9cbd9625d1e96",
       "title": "【受付は終了しました】令和8年度(9年度採用)品川区立学校学校教育職員採用候補者選考の実施について",
       "summary": "",
@@ -3286,7 +3286,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1237, column 46"
+      "message": "not well-formed (invalid token): line 1199, column 46"
     },
     {
       "source": "朝日新聞",
