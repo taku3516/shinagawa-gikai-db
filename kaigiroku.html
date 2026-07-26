@@ -588,9 +588,37 @@
         `<span class="meeting-accordion__count">${esc(count)}</span>`).join("")}</span>`;
     }
 
+    // 令和7年以前は、委員会データを後から読み込むため、そのままでは委員会カードが
+    // 定例会・臨時会の後ろにまとまってしまう。令和8年と同じ考え方で、開催月ごとに
+    // 「月例委員会 → 本会議 → 予算・決算特別委員会」の順に並べる。
+    function orderedMeetings(year) {
+      const meetings = year.meetings || [];
+      if (year.id === "r08") return meetings;
+
+      const firstMonth = (meeting) => {
+        const match = String(meeting.monthLabel || "").match(/\d{1,2}/);
+        return match ? Number(match[0]) : 99;
+      };
+      const meetingKindOrder = (meeting) => {
+        const id = String(meeting.id || "");
+        const name = String(meeting.name || "");
+        if (/月の委員会/.test(name) || /-cm\d+$/.test(id)) return 0;
+        if (/予算特別委員会|決算特別委員会/.test(name) || /-c-(?:budget|settlement)$/.test(id)) return 2;
+        return 1;
+      };
+
+      return meetings
+        .map((meeting, index) => ({ meeting, index }))
+        .sort((a, b) =>
+          firstMonth(a.meeting) - firstMonth(b.meeting) ||
+          meetingKindOrder(a.meeting) - meetingKindOrder(b.meeting) ||
+          a.index - b.index)
+        .map(({ meeting }) => meeting);
+    }
+
     // 年の概要＋会議カード一覧
     function renderYearOverview(year, site) {
-      const cards = (year.meetings || []).map((m) => `
+      const cards = orderedMeetings(year).map((m) => `
         <article class="meeting-card">
           <span class="chip">${esc(m.monthLabel)}</span>
           <h3>${esc(m.name)}</h3>
@@ -1011,7 +1039,7 @@
       renderYearOverview(year, site);
 
       let html = `<div class="container accordion-list">`;
-      for (const meeting of year.meetings || []) {
+      for (const meeting of orderedMeetings(year)) {
         if (hasMeetingDetails(meeting, year)) {
           html += meetingSectionHtml(meeting, year, site);
         }
