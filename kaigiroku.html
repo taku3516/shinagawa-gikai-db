@@ -476,6 +476,16 @@
         await loadScript(meta.supplement);
         db.loadedSupplements[meta.supplement] = true;
       }
+
+      // 委員会データは容量が大きいため、対象年を選んだときだけ分割ファイルを読み込む。
+      db.loadedCommitteeYears = db.loadedCommitteeYears || {};
+      if (meta.committees && !db.loadedCommitteeYears[meta.id]) {
+        await loadScript(`data/${meta.id}-committees.js`);
+        for (const part of year.committeeDataParts || []) {
+          await loadScript(`data/${part}`);
+        }
+        db.loadedCommitteeYears[meta.id] = true;
+      }
       return year;
     }
 

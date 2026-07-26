@@ -307,6 +307,395 @@ window.SHINAGAWA_DB.fiscalData = {
           }
         ]
       }
+    },
+    {
+      "id": "fy-r05",
+      "label": "令和5年度",
+      "period": "2023年4月〜2024年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,987億9,400万円",
+        "change": "前年度比 +5.1％",
+        "detail": "一般会計 198,794,000,000円",
+        "links": [
+          {
+            "type": "official",
+            "label": "令和5年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20230208174032.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 令和5年第1回定例会",
+            "url": "kaigiroku.html#meeting-r05-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "第1号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230427144154.html"
+          },
+          {
+            "label": "第2号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230524135008.html"
+          },
+          {
+            "label": "第3号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230620185121.html"
+          },
+          {
+            "label": "第4号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230912090108.html"
+          },
+          {
+            "label": "第5号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20231108174541.html"
+          },
+          {
+            "label": "第6号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20231211182007.html"
+          },
+          {
+            "label": "第7号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20231226085742.html"
+          },
+          {
+            "label": "最終補正予算（一般会計・特別会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20240208155539.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "認定済み（令和6年第3回定例会・決算特別委員会で審査）",
+        "links": [
+          {
+            "type": "official",
+            "label": "令和5年度 歳入歳出決算書1（PDF・13MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_15.pdf"
+          },
+          {
+            "type": "official",
+            "label": "決算書2（PDF・23MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_16.pdf"
+          },
+          {
+            "type": "official",
+            "label": "決算書3（PDF・10MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_17.pdf"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 令和6年第3回定例会",
+            "url": "kaigiroku.html#meeting-r06-3t"
+          },
+          {
+            "label": "議会公式の提出議案・決算資料",
+            "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r06_03t/r06_03t1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-r04",
+      "label": "令和4年度",
+      "period": "2022年4月〜2023年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,890億7,200万円",
+        "change": "前年度比 +3.6％",
+        "detail": "一般会計 189,072,000,000円",
+        "links": [
+          {
+            "type": "official",
+            "label": "令和4年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20220210190000.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 令和4年第1回定例会",
+            "url": "kaigiroku.html#meeting-r04-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "第1号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20220525135239.html"
+          },
+          {
+            "label": "第2号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20220613132606.html"
+          },
+          {
+            "label": "第3号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20221017132110.html"
+          },
+          {
+            "label": "第4号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20221209201020.html"
+          },
+          {
+            "label": "第5号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230110185330.html"
+          },
+          {
+            "label": "最終補正予算（一般会計・特別会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230208171732.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "認定済み（令和5年第3回定例会・決算特別委員会で審査）",
+        "links": [
+          {
+            "type": "official",
+            "label": "令和4年度 歳入歳出決算書1（PDF・8MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_9.pdf"
+          },
+          {
+            "type": "official",
+            "label": "決算書2（PDF・15MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_10.pdf"
+          },
+          {
+            "type": "official",
+            "label": "決算書3（PDF・5MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_11.pdf"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 令和5年第3回定例会",
+            "url": "kaigiroku.html#meeting-r05-3t"
+          },
+          {
+            "label": "議会公式の提出議案・決算資料",
+            "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r05_03t/r05_03t1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-r03",
+      "label": "令和3年度",
+      "period": "2021年4月〜2022年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,824億8,000万円",
+        "change": "前年度比 -3.1％",
+        "detail": "一般会計 182,480,000,000円",
+        "links": [
+          {
+            "type": "official",
+            "label": "令和3年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20210121100139.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 令和3年第1回定例会",
+            "url": "kaigiroku.html#meeting-r03-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "第1号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20210416192925.html"
+          },
+          {
+            "label": "第2号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200325140104.html"
+          },
+          {
+            "label": "第3号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20210615190353.html"
+          },
+          {
+            "label": "第4号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20210825190810.html"
+          },
+          {
+            "label": "第5号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20211117190456.html"
+          },
+          {
+            "label": "第6号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20211210095625.html"
+          },
+          {
+            "label": "第7号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20211224095649.html"
+          },
+          {
+            "label": "第8号補正予算（一般会計・特別会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20220210170255.html"
+          },
+          {
+            "label": "第9号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20220221181419.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "認定済み（令和4年第3回定例会・決算特別委員会で審査）",
+        "links": [
+          {
+            "type": "official",
+            "label": "令和3年度 各会計歳入歳出決算書（PDF）",
+            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_12.pdf"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 令和4年第3回定例会",
+            "url": "kaigiroku.html#meeting-r04-3t"
+          },
+          {
+            "label": "議会公式の提出議案・決算資料",
+            "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r04_03t/r04_03t1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-r02",
+      "label": "令和2年度",
+      "period": "2020年4月〜2021年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,883億2,500万円",
+        "change": "前年度比 +0.3％",
+        "detail": "一般会計 188,325,000,000円",
+        "links": [
+          {
+            "type": "official",
+            "label": "令和2年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200326154523.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 令和2年第1回定例会",
+            "url": "kaigiroku.html#meeting-r02-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "第1号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20211012175155.html"
+          },
+          {
+            "label": "第1号補正予算（国民健康保険事業会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200424170734.html"
+          },
+          {
+            "label": "第2号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200508131837.html"
+          },
+          {
+            "label": "第3号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200612110703.html"
+          },
+          {
+            "label": "第4号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200903154733.html"
+          },
+          {
+            "label": "第5号補正予算（一般会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20201116110957.html"
+          },
+          {
+            "label": "最終補正予算（一般会計・特別会計）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20210120154035.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "認定済み（令和3年第3回定例会・決算特別委員会で審査）",
+        "links": [
+          {
+            "type": "official",
+            "label": "令和2年度 各会計歳入歳出決算書（PDF）",
+            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_5.pdf"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 令和3年第3回定例会",
+            "url": "kaigiroku.html#meeting-r03-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-r01",
+      "label": "令和元年度",
+      "period": "2019年4月〜2020年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,877億5,400万円",
+        "change": "前年度比 +7.5％",
+        "detail": "一般会計 187,754,000,000円",
+        "links": [
+          {
+            "type": "official",
+            "label": "令和元年度（平成31年度）当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20190326141350.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 令和元年第1回臨時会",
+            "url": "kaigiroku.html#meeting-r01-1r"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "6月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20190710133704.html"
+          },
+          {
+            "label": "9月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20191023174449.html"
+          },
+          {
+            "label": "最終補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200306085840.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "認定済み（令和2年第3回定例会・決算特別委員会で審査）",
+        "links": [
+          {
+            "type": "official",
+            "label": "議会公式の提出議案・令和元年度決算資料",
+            "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r02_03t/r02_03t1"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 令和2年第3回定例会",
+            "url": "kaigiroku.html#meeting-r02-3t"
+          }
+        ]
+      }
     }
   ],
   "sources": [

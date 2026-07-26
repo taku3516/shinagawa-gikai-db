@@ -1,4 +1,4 @@
-/* 令和8年の全委員会 質問・答弁要約データ。scripts/prepare_r08_committees.py で生成。 */
+/* 令和8年の全委員会 質問・答弁要約データ。scripts/prepare_committees.py で生成。 */
 (() => {
   "use strict";
   const year = window.SHINAGAWA_DB && window.SHINAGAWA_DB.years && window.SHINAGAWA_DB.years.r08;

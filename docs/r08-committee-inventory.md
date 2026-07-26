@@ -2,7 +2,7 @@
 
 更新日: 2026-07-18
 
-この台帳は `scripts/prepare_r08_committees.py` で再生成できます。校正原稿は正式会議録ではありません。
+この台帳は `python3 scripts/prepare_committees.py --year 2026` で再生成できます。校正原稿は正式会議録ではありません。
 
 ## 実装済み
 
