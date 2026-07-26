@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-26T15:57:12.586882Z",
+  "generatedAt": "2026-07-26T17:56:44.637825Z",
   "items": [
     {
       "id": "fa3cae7a0a275e978d61",
@@ -13,6 +13,23 @@ window.SHINAGAWA_NEWS = {
       "publishedAt": "2026-07-27T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "df72cd728c73806c0afc",
+      "title": "ボラミニ情報更新しました！",
+      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/07/post-61787.html",
+      "publishedAt": "2026-07-26T17:55:00.066458Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-07-26T17:55:00.066458Z",
       "tags": [
         "その他"
       ],
@@ -3286,7 +3303,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1199, column 46"
+      "message": "not well-formed (invalid token): line 1244, column 46"
     },
     {
       "source": "朝日新聞",
