@@ -109,6 +109,7 @@ window.SHINAGAWA_DB.site = {
       "label": "令和4年",
       "file": "data/r04.js",
       "supplement": "data/r04-complete.js",
+      "committees": true,
       "available": true
     },
     {
