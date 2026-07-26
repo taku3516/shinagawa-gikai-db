@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-26T05:23:07.297233Z",
+  "generatedAt": "2026-07-26T10:29:57.368867Z",
   "items": [
     {
       "id": "999becf2d88735d82866",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
-      "publishedAt": "2026-07-26T04:10:01Z",
+      "publishedAt": "2026-07-26T09:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-07-22T20:06:59.005014Z",
       "tags": [
@@ -29,7 +29,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000031.000036760.html",
-      "publishedAt": "2026-07-26T02:10:02Z",
+      "publishedAt": "2026-07-26T08:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-07-23T13:25:07.808953Z",
       "tags": [
@@ -173,6 +173,24 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "行政",
         "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "6d64625b81cb3912e415",
+      "title": "全国的な災害級の暑さに備える。7月25日・26日、横浜赤レンガ倉庫で開催される野外フェス「ムロフェス 2026」スタッフの熱中症対策をファンクロがサポート",
+      "summary": "[株式会社ファンクロ] 「暑さを我慢しない、おしゃれもあきらめない」をコンセプトに、女性向け空調ブルゾンブランド『fanqlo』を展開する株式会社ファンクロ（本社：東京都品川区、代表取締役：齋藤あゆみ、以下、ファンクロ）は、202...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000006.000149237.html",
+      "publishedAt": "2026-07-23T09:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-26T10:29:33.635843Z",
+      "tags": [
+        "事件事故",
+        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -3266,9 +3284,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 288,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 975, column 46"
     },
     {
       "source": "朝日新聞",
@@ -3292,7 +3310,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 3
     },
     {
       "source": "東急ニュースリリース",
