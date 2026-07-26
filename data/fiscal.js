@@ -658,8 +658,8 @@ window.SHINAGAWA_DB.fiscalData = {
         ],
         "council": [
           {
-            "label": "審議: 令和元年第1回臨時会",
-            "url": "kaigiroku.html#meeting-r01-1r"
+            "label": "審議: 平成31年第1回定例会（議会公式）",
+            "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h31_01/h31_01t"
           }
         ]
       },
