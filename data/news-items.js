@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-26T17:56:44.637825Z",
+  "generatedAt": "2026-07-26T21:50:54.838948Z",
   "items": [
     {
       "id": "fa3cae7a0a275e978d61",
@@ -20,23 +20,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "df72cd728c73806c0afc",
-      "title": "ボラミニ情報更新しました！",
-      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
-      "source": "品川区社会福祉協議会",
-      "sourceId": "shinagawa-shakyo",
-      "sourceType": "html",
-      "url": "https://shinashakyo.jp/news/2026/07/post-61787.html",
-      "publishedAt": "2026-07-26T17:55:00.066458Z",
-      "dateKind": "collected",
-      "collectedAt": "2026-07-26T17:55:00.066458Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "999becf2d88735d82866",
       "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
       "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
@@ -44,7 +27,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000023.000100855.html",
-      "publishedAt": "2026-07-26T15:40:02Z",
+      "publishedAt": "2026-07-26T21:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-07-22T20:06:59.005014Z",
       "tags": [
@@ -63,7 +46,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000031.000036760.html",
-      "publishedAt": "2026-07-26T14:10:02Z",
+      "publishedAt": "2026-07-26T20:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-07-23T13:25:07.808953Z",
       "tags": [
@@ -73,6 +56,23 @@ window.SHINAGAWA_NEWS = {
         "東五反田"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "df72cd728c73806c0afc",
+      "title": "ボラミニ情報更新しました！",
+      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/07/post-61787.html",
+      "publishedAt": "2026-07-26T17:55:00.066458Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-07-26T17:55:00.066458Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "49aa4ac48783e68eb802",
@@ -3303,7 +3303,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1244, column 46"
+      "message": "not well-formed (invalid token): line 1343, column 46"
     },
     {
       "source": "朝日新聞",
@@ -3384,9 +3384,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
