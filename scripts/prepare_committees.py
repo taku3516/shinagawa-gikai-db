@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""令和8年の委員会会議録を収集し、台帳と画面用データを生成する。
+"""指定年の委員会会議録を収集し、台帳と画面用データを生成する。
 
 正式会議録（会議録検索システムのHTML）と直近の校正原稿PDFを同じ形式に
 そろえる。要約は外部AIへ送らず、発言録から質問・要望を含む文と答弁・対応を
@@ -25,6 +25,10 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
+YEAR = 2026
+REIWA_YEAR = 8
+YEAR_ID = "r08"
+YEAR_LABEL = "令和8年"
 CACHE = ROOT / "scripts/cache/r08-committees"
 OUT = ROOT / "scripts/out/r08-committees"
 DATA_PATH = ROOT / "data/r08-committees.js"
@@ -37,6 +41,23 @@ CALENDAR_URL = "https://gikai.city.shinagawa.tokyo.jp/calendar_list"
 PDFINFO = Path("/Users/apple/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdfinfo")
 PDFTOTEXT = Path("/Users/apple/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/poppler/bin/pdftotext")
 OPENER = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+
+
+def configure_year(year: int) -> None:
+    """出力先と識別子を対象年へ切り替える。令和元年以降を対象とする。"""
+    global YEAR, REIWA_YEAR, YEAR_ID, YEAR_LABEL
+    global CACHE, OUT, DATA_PATH, DATA_PART_PATTERN, LEDGER_PATH
+    if year < 2019:
+        raise ValueError("このスクリプトは令和元年（2019年）以降に対応しています")
+    YEAR = year
+    REIWA_YEAR = year - 2018
+    YEAR_ID = f"r{REIWA_YEAR:02d}"
+    YEAR_LABEL = "令和元年" if REIWA_YEAR == 1 else f"令和{REIWA_YEAR}年"
+    CACHE = ROOT / f"scripts/cache/{YEAR_ID}-committees"
+    OUT = ROOT / f"scripts/out/{YEAR_ID}-committees"
+    DATA_PATH = ROOT / f"data/{YEAR_ID}-committees.js"
+    DATA_PART_PATTERN = f"{YEAR_ID}-committees-part-*.js"
+    LEDGER_PATH = ROOT / f"docs/{YEAR_ID}-committee-inventory.md"
 
 CABINETS = OrderedDict([
     (3, "予算特別委員会"),
@@ -155,13 +176,44 @@ def absolute_url(url: str, base: str = MINUTES_BASE) -> str:
 
 
 def parse_iso_date(value: str) -> str:
-    match = re.search(r"(2026)[./年-](\d{1,2})[./月-](\d{1,2})", value)
+    match = re.search(rf"({YEAR})[./年-](\d{{1,2}})[./月-](\d{{1,2}})", value)
     return f"{match.group(1)}-{int(match.group(2)):02d}-{int(match.group(3)):02d}" if match else ""
+
+
+def cabinets_for_year(refresh: bool) -> OrderedDict[int, str]:
+    """公式の「会議録の閲覧」ページから、その年に存在した委員会分類を取得する。"""
+    library_url = f"{MINUTES_BASE}?Template=search-library"
+    soup = BeautifulSoup(fetch(library_url, refresh=refresh).decode("utf-8", "replace"), "html.parser")
+    result: OrderedDict[int, str] = OrderedDict()
+    for anchor in soup.select('a[href*="Cabinet="][href*="TermStart="]'):
+        href = absolute_url(anchor.get("href", ""), library_url)
+        parsed = urllib.parse.urlparse(href)
+        query = urllib.parse.parse_qs(parsed.query)
+        term_start = (query.get("TermStart") or [""])[0]
+        cabinet_raw = (query.get("Cabinet") or [""])[0]
+        if not term_start.startswith(f"{YEAR}-") or not cabinet_raw.isdigit():
+            continue
+        cabinet = int(cabinet_raw)
+        if cabinet in (1, 2):
+            continue
+        committee = compact(anchor.get_text(" ", strip=True))
+        committee = re.sub(r"（令和[^）]+年度）$", "", committee)
+        if committee:
+            result[cabinet] = committee
+    if not result:
+        return CABINETS.copy()
+    return result
 
 
 def meeting_id_for(iso_date: str, committee: str) -> str:
     month = int(iso_date[5:7])
     day = int(iso_date[8:10])
+    if YEAR != 2026:
+        if committee == "予算特別委員会":
+            return f"{YEAR_ID}-c-budget"
+        if committee == "決算特別委員会":
+            return f"{YEAR_ID}-c-settlement"
+        return f"{YEAR_ID}-cm{month:02d}"
     if committee == "予算特別委員会":
         return "r08-yosan"
     if committee == "決算特別委員会":
@@ -185,8 +237,8 @@ def meeting_id_for(iso_date: str, committee: str) -> str:
 
 def discover_formal(refresh: bool) -> list[dict]:
     documents: list[dict] = []
-    for cabinet, committee in CABINETS.items():
-        url = f"{MINUTES_BASE}?QueryType=new&Template=list&Cabinet={cabinet}&TermStart=2026-01-01&TermEnd=2026-12-31"
+    for cabinet, committee in cabinets_for_year(refresh).items():
+        url = f"{MINUTES_BASE}?QueryType=new&Template=list&Cabinet={cabinet}&TermStart={YEAR}-01-01&TermEnd={YEAR}-12-31"
         raw_pages = [fetch(url, refresh=refresh)]
         first_soup = BeautifulSoup(raw_pages[0].decode("utf-8", "replace"), "html.parser")
         pager = first_soup.select_one("nav.pagination form")
@@ -223,7 +275,7 @@ def discover_formal(refresh: bool) -> list[dict]:
 
 def committee_from_pdf(url: str, label: str) -> str:
     filename = urllib.parse.urlparse(url).path.rsplit("/", 1)[-1]
-    match = re.search(r"2026\.\d{2}\.\d{2}([a-z]+)\.pdf", filename, re.I)
+    match = re.search(rf"{YEAR}\.\d{{2}}\.\d{{2}}([a-z]+)\.pdf", filename, re.I)
     if match and match.group(1).lower() in PDF_CODES:
         return PDF_CODES[match.group(1).lower()]
     for committee in CABINETS.values():
@@ -233,6 +285,9 @@ def committee_from_pdf(url: str, label: str) -> str:
 
 
 def discover_drafts(refresh: bool) -> list[dict]:
+    # 校正原稿の一覧は直近年だけを掲載するため、過年度は正式会議録のみを取得する。
+    if YEAR != date.today().year:
+        return []
     soup = BeautifulSoup(fetch(DRAFT_INDEX, refresh=refresh).decode("utf-8", "replace"), "html.parser")
     documents: list[dict] = []
     heading = next((h for h in soup.find_all(["h2", "h3"]) if compact(h.get_text()) == "委員会"), None)
@@ -568,6 +623,14 @@ def normalize_agenda_title(value: str, fallback: str = "委員会での質疑") 
 
     if title.startswith("請願・陳情審査および"):
         title = "請願・陳情審査および報告事項"
+    if "順番を入れ替え" in title and "報告事項を聴取いたします" in title:
+        title = "請願・陳情審査および報告事項" if "請願・陳情審査" in title else "報告事項"
+    for procedure in ("報告事項を聴取いたします", "議案審査を行います", "請願・陳情審査を行います"):
+        if procedure in title:
+            title = title.rsplit(procedure, 1)[-1]
+            title = re.sub(r"^[。 、]*(?:初めに|まず|次に|続いて|最後に)?[、 ]*", "", title)
+            title = re.sub(r"^[（(]?\s*[０-９\d]+\s*[）)]\s*", "", title)
+            title = compact(title).strip("、。 「」『』")
     if title.startswith("その他、") and "所管質問" in title:
         title = "所管質問"
     if "の順番を入れ替え" in title and "第４０号議案" in title:
@@ -782,14 +845,14 @@ def process_document(document: dict, refresh: bool) -> dict:
         voices, meeting_time = parse_html_voices(raw)
         pages = 0
     cabinet = document.get("cabinet") or next((key for key, name in CABINETS.items() if name == committee), 0)
-    session_id = f"r08-{iso_date.replace('-', '')}-{cabinet or 'committee'}"
+    session_id = f"{YEAR_ID}-{iso_date.replace('-', '')}-{cabinet or 'committee'}"
     topics = make_topics(voices, session_id)
     exchange_count = sum(len(topic["exchanges"]) for topic in topics)
     status = "正式会議録" if source_type == "formal" else "校正原稿・正式会議録ではない"
     return {
         "id": session_id,
         "meetingId": meeting_id_for(iso_date, committee),
-        "date": f"2026年{int(iso_date[5:7])}月{int(iso_date[8:10])}日",
+        "date": f"{YEAR}年{int(iso_date[5:7])}月{int(iso_date[8:10])}日",
         "dateIso": iso_date,
         "committee": committee,
         "time": meeting_time,
@@ -807,18 +870,69 @@ def process_document(document: dict, refresh: bool) -> dict:
     }
 
 
-def js_payload(pending: list[dict], part_files: list[str]) -> str:
+def meeting_shells_for(sessions: list[dict]) -> list[dict]:
+    """過年度の委員会を、既存の定例会とは別の開閉単位として月別に配置する。"""
+    if YEAR == 2026:
+        return []
+    grouped: OrderedDict[str, list[dict]] = OrderedDict()
+    for session in sessions:
+        grouped.setdefault(session["meetingId"], []).append(session)
+    shells = []
+    for meeting_id, items in grouped.items():
+        first = min(item["dateIso"] for item in items)
+        last = max(item["dateIso"] for item in items)
+        exchange_count = sum(
+            len(topic["exchanges"]) for item in items for topic in item["topics"]
+        )
+        if meeting_id.endswith("-c-budget"):
+            name = "予算特別委員会"
+            month_label = "2〜3月"
+        elif meeting_id.endswith("-c-settlement"):
+            name = "決算特別委員会"
+            month_label = "9〜10月"
+        else:
+            month = int(first[5:7])
+            name = f"{month}月の委員会"
+            month_label = f"{month}月"
+        first_month, first_day = int(first[5:7]), int(first[8:10])
+        last_month, last_day = int(last[5:7]), int(last[8:10])
+        if first == last:
+            period = f"{YEAR}年{first_month}月{first_day}日"
+        elif first_month == last_month:
+            period = f"{YEAR}年{first_month}月{first_day}日〜{last_day}日"
+        else:
+            period = f"{YEAR}年{first_month}月{first_day}日〜{last_month}月{last_day}日"
+        shells.append({
+            "id": meeting_id,
+            "monthLabel": month_label,
+            "name": name,
+            "summary": f"{period}に開催された委員会の質疑・答弁{exchange_count}件を掲載しています。",
+            "detailTitle": f"{YEAR_LABEL} {name}",
+            "detailLead": "公式会議録から、実質的な質問・確認・意見・要望と答弁・対応を議題別に整理しています。",
+            "events": [],
+            "links": [
+                {"type": "official", "label": "公式の会議録検索", "url": "https://gikai.city.shinagawa.tokyo.jp/search"}
+            ],
+        })
+    return shells
+
+
+def js_payload(pending: list[dict], part_files: list[str], meeting_shells: list[dict]) -> str:
     pending_json = json.dumps(pending, ensure_ascii=False, separators=(",", ":"))
     parts_json = json.dumps(part_files, ensure_ascii=False, separators=(",", ":"))
-    return f'''/* 令和8年の全委員会 質問・答弁要約データ。scripts/prepare_r08_committees.py で生成。 */
+    meetings_json = json.dumps(meeting_shells, ensure_ascii=False, separators=(",", ":"))
+    return f'''/* {YEAR_LABEL}の全委員会 質問・答弁要約データ。scripts/prepare_committees.py で生成。 */
 (() => {{
   "use strict";
-  const year = window.SHINAGAWA_DB && window.SHINAGAWA_DB.years && window.SHINAGAWA_DB.years.r08;
-  if (!year) throw new Error("令和8年データの読み込み後に r08-committees.js を読み込んでください");
+  const year = window.SHINAGAWA_DB && window.SHINAGAWA_DB.years && window.SHINAGAWA_DB.years.{YEAR_ID};
+  if (!year) throw new Error("{YEAR_LABEL}データの読み込み後に {YEAR_ID}-committees.js を読み込んでください");
   year.updatedAt = "{date.today().isoformat()}";
   year.committeeSessions = [];
   year.committeePending = {pending_json};
   year.committeeDataParts = {parts_json};
+  const committeeMeetings = {meetings_json};
+  const knownMeetingIds = new Set((year.meetings || []).map((meeting) => meeting.id));
+  year.meetings = (year.meetings || []).concat(committeeMeetings.filter((meeting) => !knownMeetingIds.has(meeting.id)));
 }})();
 '''
 
@@ -843,23 +957,23 @@ def write_js_files(sessions: list[dict], pending: list[dict], max_bytes: int = 4
         old_part.unlink()
     part_files = []
     for index, chunk in enumerate(chunks, start=1):
-        filename = f"r08-committees-part-{index:02d}.js"
+        filename = f"{YEAR_ID}-committees-part-{index:02d}.js"
         part_files.append(filename)
         payload = json.dumps(chunk, ensure_ascii=False, separators=(",", ":"))
         (DATA_PATH.parent / filename).write_text(
-            "/* 令和8年委員会データ（自動生成・分割ファイル） */\n"
-            "window.SHINAGAWA_DB.years.r08.committeeSessions.push(..." + payload + ");\n",
+            f"/* {YEAR_LABEL}委員会データ（自動生成・分割ファイル） */\n"
+            f"window.SHINAGAWA_DB.years.{YEAR_ID}.committeeSessions.push(..." + payload + ");\n",
             encoding="utf-8",
         )
-    DATA_PATH.write_text(js_payload(pending, part_files), encoding="utf-8")
+    DATA_PATH.write_text(js_payload(pending, part_files, meeting_shells_for(sessions)), encoding="utf-8")
     return part_files
 
 
 def ledger_markdown(sessions: list[dict], pending: list[dict]) -> str:
     lines = [
-        "# 令和8年 委員会会議録・実装台帳", "",
+        f"# {YEAR_LABEL} 委員会会議録・実装台帳", "",
         f"更新日: {date.today().isoformat()}", "",
-        "この台帳は `scripts/prepare_r08_committees.py` で再生成できます。校正原稿は正式会議録ではありません。", "",
+        f"この台帳は `python3 scripts/prepare_committees.py --year {YEAR}` で再生成できます。校正原稿は正式会議録ではありません。", "",
         "## 実装済み", "",
         "| 開催日 | 委員会 | 出典 | 分量 | 質疑件数 | 状態 | 公式URL |", "|---|---|---|---:|---:|---|---|",
     ]
@@ -901,7 +1015,7 @@ def validate(sessions: list[dict]) -> None:
     for session in sessions:
         assert session["id"] not in ids, f"duplicate session id: {session['id']}"
         ids.add(session["id"])
-        assert session["dateIso"].startswith("2026-")
+        assert session["dateIso"].startswith(f"{YEAR}-")
         assert session["status"] in ("正式会議録", "校正原稿・正式会議録ではない")
         assert session["links"] and session["links"][0]["url"].startswith("https://")
         exchange_ids = set()
@@ -912,7 +1026,7 @@ def validate(sessions: list[dict]) -> None:
             assert 2 <= len(topic["title"]) <= 81
             assert not any(term in topic["title"] for term in (
                 "報告事項を聴取いたします", "議案審査を行います", "請願・陳情審査を行います",
-            ))
+            )), (session["id"], topic["title"])
             for item in topic["exchanges"]:
                 assert item["id"] not in exchange_ids, f"duplicate exchange id: {session['id']} {item['id']}"
                 exchange_ids.add(item["id"])
@@ -929,9 +1043,11 @@ def validate(sessions: list[dict]) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--year", type=int, default=date.today().year)
     parser.add_argument("--refresh", action="store_true")
     parser.add_argument("--inventory-only", action="store_true")
     args = parser.parse_args()
+    configure_year(args.year)
     OUT.mkdir(parents=True, exist_ok=True)
     formal = discover_formal(args.refresh)
     drafts = discover_drafts(args.refresh)
@@ -953,11 +1069,12 @@ def main() -> None:
         sessions.append(process_document(document, args.refresh))
     validate(sessions)
     implemented = {(item["dateIso"], item["committee"]) for item in sessions}
+    pending_source = KNOWN_PENDING if YEAR == 2026 else []
     pending = [
         {"id": f"pending-{iso.replace('-', '')}-{index:02d}", "dateIso": iso,
-         "date": f"2026年{int(iso[5:7])}月{int(iso[8:10])}日", "committee": committee,
+         "date": f"{YEAR}年{int(iso[5:7])}月{int(iso[8:10])}日", "committee": committee,
          "meetingId": meeting_id, "status": status, "officialUrl": CALENDAR_URL}
-        for index, (iso, committee, meeting_id, status) in enumerate(KNOWN_PENDING, start=1)
+        for index, (iso, committee, meeting_id, status) in enumerate(pending_source, start=1)
         if (iso, committee) not in implemented
     ]
     part_files = write_js_files(sessions, pending)

@@ -85,6 +85,7 @@ window.SHINAGAWA_DB.site = {
       "label": "令和7年",
       "file": "data/r07.js",
       "supplement": "data/r07-complete.js",
+      "committees": true,
       "available": true
     },
     {
@@ -92,6 +93,7 @@ window.SHINAGAWA_DB.site = {
       "label": "令和6年",
       "file": "data/r06.js",
       "supplement": "data/r06-complete.js",
+      "committees": true,
       "available": true
     },
     {
