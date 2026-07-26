@@ -101,6 +101,7 @@ window.SHINAGAWA_DB.site = {
       "label": "令和5年",
       "file": "data/r05.js",
       "supplement": "data/r05-complete.js",
+      "committees": true,
       "available": true
     },
     {

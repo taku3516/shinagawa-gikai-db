@@ -799,6 +799,11 @@ def make_topics(voices: list[dict], session_id: str) -> list[dict]:
                 answer_parts.append(summary)
         kind = classify_kind(text)
         question = concise_summary(text, QUESTION_CUES, 140, "question", kind)
+        # 副委員長が進行を代行する会議では、議題提示や説明要求が通常の委員発言と
+        # 同じ発言者区分で記録されることがある。要約対象となる本文が残らない
+        # 進行発言は、質問・意見として掲載しない。
+        if not question:
+            continue
         answer = clip_at_clause(" ".join(answer_parts), 240)
         if not answer:
             answer = "この発言に対する個別の答弁・回答は、会議録に記録されていません。"
