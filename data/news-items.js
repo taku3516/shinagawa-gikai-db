@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-27T05:56:49.285423Z",
+  "generatedAt": "2026-07-27T12:51:25.151343Z",
   "items": [
+    {
+      "id": "28c8cf3d7517a9d19593",
+      "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月27日に『シュワッとかいけつ！ たんていソ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009250.000002535.html",
+      "publishedAt": "2026-07-27T11:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T12:51:03.221990Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "e76fa48274979225c681",
       "title": "鳥取市とコドモン 公立保育園・幼稚園全23施設でオンライン研修導入 ～山陰地方で初、移動負担をなくし研修機会格差を解消～",
@@ -296,6 +313,23 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "事件事故",
         "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "4cfeac42f5ee0fa22460",
+      "title": "物価高の夏休み・お盆に「旅先で働く」おてつたび利用者が急増｜50代以上のミドル・シニア層の申込数が前年同月比2.1倍に",
+      "summary": "[株式会社おてつたび] お手伝いと旅を掛け合わせた人材マッチングサービス「おてつたび」を運営する株式会社おてつたび（本社：東京都品川区、代表取締役CEO：永岡里菜、以下「おてつたび」）では、物価高や旅行費用の上昇が続く今夏、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000212.000036175.html",
+      "publishedAt": "2026-07-23T08:15:15Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T12:51:03.221990Z",
+      "tags": [
+        "経済"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -3391,7 +3425,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1090, column 18"
+      "message": "not well-formed (invalid token): line 2174, column 56"
     },
     {
       "source": "朝日新聞",
@@ -3415,7 +3449,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
@@ -3472,9 +3506,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
