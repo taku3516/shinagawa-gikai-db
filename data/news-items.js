@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-27T21:03:19.474237Z",
+  "generatedAt": "2026-07-27T23:56:00.359956Z",
   "items": [
+    {
+      "id": "28c8cf3d7517a9d19593",
+      "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月27日に『シュワッとかいけつ！ たんていソ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009250.000002535.html",
+      "publishedAt": "2026-07-27T23:10:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T12:51:03.221990Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "36ce439794a0bf7caf58",
       "title": "外国語の電話、AIが受けて日本語で記録。AIコールセンター「ContactX」、英語・中国語・韓国語など50以上の言語のリアルタイム書き起こし・翻訳に対応",
@@ -20,23 +37,6 @@ window.SHINAGAWA_NEWS = {
         "東五反田"
       ],
       "relevanceScore": 12
-    },
-    {
-      "id": "28c8cf3d7517a9d19593",
-      "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
-      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月27日に『シュワッとかいけつ！ たんていソ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000009250.000002535.html",
-      "publishedAt": "2026-07-27T17:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-27T12:51:03.221990Z",
-      "tags": [
-        "事件事故"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "e76fa48274979225c681",
@@ -91,6 +91,23 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "ab1b3a0279bedcd257da",
+      "title": "公園における花火の使用",
+      "summary": "公園課 公園維持担当 電話：03-5742-6789 FAX：03-5742-9127",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-park/20250703120141.html",
+      "publishedAt": "2026-07-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T23:55:43.879919Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "1cbad4981952da923fb9",
@@ -3425,7 +3442,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2347, column 56"
+      "message": "not well-formed (invalid token): line 2070, column 30"
     },
     {
       "source": "朝日新聞",
