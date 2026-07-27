@@ -1,7 +1,61 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-26T21:50:54.838948Z",
+  "generatedAt": "2026-07-27T02:00:54.257102Z",
   "items": [
+    {
+      "id": "2b7d5264aae9e2e1877c",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年7月27日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年7月27日号(令和8年7月21日～令和8年7月26日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/07/post-61897.html",
+      "publishedAt": "2026-07-27T02:00:04.964019Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-07-27T02:00:04.964019Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "2033881046567486c66b",
+      "title": "7月28日開催の委員会の予定を掲載。",
+      "summary": "7月28日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20674.html",
+      "publishedAt": "2026-07-27T01:38:07Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T02:00:04.964019Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "1cbad4981952da923fb9",
+      "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
+      "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
+      "publishedAt": "2026-07-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T02:00:04.964019Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "fa3cae7a0a275e978d61",
       "title": "休日・夜間（平日・土曜日）の診療",
@@ -3031,6 +3085,23 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
+      "id": "c63fcbdd34fee4c86797",
+      "title": "AppGuard、2026年4月1日より製品・商品体系を全面刷新 OT向け新商品『AppGuard OT』を市場投入～「止めてはいけない」重要インフラや工場の旧型OSを要塞化し、サイバー攻撃から保護～",
+      "summary": "[株式会社AppGuard] 株式会社Blue Planet-works（2026年4月1日付で「株式会社AppGuard」へ商号変更予定）（本社：東京都品川区、代表取締役社長：坂尻 浩孝、以下当社）は、2026年4月1日より、サイバーセキュリティ製「AppGuard」の...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000036.000040798.html",
+      "publishedAt": "2026-02-18T07:45:15Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T02:00:04.964019Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
       "id": "92d19e6f487fc186a9a5",
       "title": "令和7年度大井第二地区委員会 親子参加事業「スキー・スノボ＆雪あそび」を開催",
       "summary": "",
@@ -3303,7 +3374,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1343, column 46"
+      "message": "not well-formed (invalid token): line 1472, column 46"
     },
     {
       "source": "朝日新聞",
@@ -3327,7 +3398,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 3
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
