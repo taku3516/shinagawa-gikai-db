@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-27T02:00:54.257102Z",
+  "generatedAt": "2026-07-27T05:56:49.285423Z",
   "items": [
+    {
+      "id": "e76fa48274979225c681",
+      "title": "鳥取市とコドモン 公立保育園・幼稚園全23施設でオンライン研修導入 ～山陰地方で初、移動負担をなくし研修機会格差を解消～",
+      "summary": "[株式会社コドモン] 鳥取県鳥取市（市長：深澤義彦、以下 鳥取市）と株式会社コドモン（本社：東京都品川区、代表取締役CEO：小池義則、以下 コドモン）は、2026年8月3日より保育者の資質および専門性の向上を目的としたオンライン研...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000046.000040113.html",
+      "publishedAt": "2026-07-27T02:40:43Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T05:55:08.126288Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "2b7d5264aae9e2e1877c",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年7月27日号）を公開しました‼",
@@ -3374,7 +3391,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1472, column 46"
+      "message": "not well-formed (invalid token): line 1090, column 18"
     },
     {
       "source": "朝日新聞",
@@ -3455,9 +3472,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
