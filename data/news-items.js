@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-28T15:12:54.857065Z",
+  "generatedAt": "2026-07-28T19:08:49.555503Z",
   "items": [
+    {
+      "id": "28c8cf3d7517a9d19593",
+      "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月27日に『シュワッとかいけつ！ たんていソ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009250.000002535.html",
+      "publishedAt": "2026-07-28T18:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T12:51:03.221990Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "ddc162e1c3e7b749030e",
       "title": "南国ムードあふれるトロピカルフラワーで夏を満喫！物価高の夏は、おうちでリゾート気分。猛暑の夏を元気に彩る！暑さに強く長く楽しめる鮮やかな花々",
@@ -15,23 +32,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-28T04:55:39.586214Z",
       "tags": [
         "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "28c8cf3d7517a9d19593",
-      "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
-      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月27日に『シュワッとかいけつ！ たんていソ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000009250.000002535.html",
-      "publishedAt": "2026-07-28T12:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-27T12:51:03.221990Z",
-      "tags": [
-        "事件事故"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -3607,7 +3607,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3670, column 30"
+      "message": "not well-formed (invalid token): line 3796, column 30"
     },
     {
       "source": "朝日新聞",
