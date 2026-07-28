@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-28T07:34:04.141417Z",
+  "generatedAt": "2026-07-28T12:48:46.012465Z",
   "items": [
+    {
+      "id": "28c8cf3d7517a9d19593",
+      "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月27日に『シュワッとかいけつ！ たんていソ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009250.000002535.html",
+      "publishedAt": "2026-07-28T12:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T12:51:03.221990Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "3925bd187b556bfdd382",
       "title": "しな水で「エリック・カール」展 日本語版「はらぺこあおむし」50周年で",
@@ -203,23 +220,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "28c8cf3d7517a9d19593",
-      "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
-      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月27日に『シュワッとかいけつ！ たんていソ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000009250.000002535.html",
-      "publishedAt": "2026-07-27T23:10:01Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-27T12:51:03.221990Z",
-      "tags": [
-        "事件事故"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "36ce439794a0bf7caf58",
@@ -3594,7 +3594,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 136,
+      "scanned": 135,
       "accepted": 0
     },
     {
@@ -3607,12 +3607,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2479, column 30"
+      "message": "not well-formed (invalid token): line 3449, column 30"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 39,
       "accepted": 0
     },
     {
@@ -3631,7 +3631,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
