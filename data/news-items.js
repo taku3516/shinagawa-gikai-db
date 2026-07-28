@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-28T12:48:46.012465Z",
+  "generatedAt": "2026-07-28T15:12:54.857065Z",
   "items": [
+    {
+      "id": "ddc162e1c3e7b749030e",
+      "title": "南国ムードあふれるトロピカルフラワーで夏を満喫！物価高の夏は、おうちでリゾート気分。猛暑の夏を元気に彩る！暑さに強く長く楽しめる鮮やかな花々",
+      "summary": "[第一園芸株式会社] 花と緑に関する事業を展開する第一園芸株式会社（本社：東京都品川区、代表取締役社長：山村勝治、三井不動産グループ）は、8月のおすすめの花「トロピカルフラワー」のフェアを8月1日（土）から第一園芸・ビアン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000354.000028146.html",
+      "publishedAt": "2026-07-28T14:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T04:55:39.586214Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "28c8cf3d7517a9d19593",
       "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
@@ -38,23 +55,6 @@ window.SHINAGAWA_NEWS = {
         "しながわ水族館"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "ddc162e1c3e7b749030e",
-      "title": "南国ムードあふれるトロピカルフラワーで夏を満喫！物価高の夏は、おうちでリゾート気分。猛暑の夏を元気に彩る！暑さに強く長く楽しめる鮮やかな花々",
-      "summary": "[第一園芸株式会社] 花と緑に関する事業を展開する第一園芸株式会社（本社：東京都品川区、代表取締役社長：山村勝治、三井不動産グループ）は、8月のおすすめの花「トロピカルフラワー」のフェアを8月1日（土）から第一園芸・ビアン...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000354.000028146.html",
-      "publishedAt": "2026-07-28T04:40:41Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-28T04:55:39.586214Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "97364a2cbe01b6b3f137",
@@ -3607,7 +3607,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3449, column 30"
+      "message": "not well-formed (invalid token): line 3670, column 30"
     },
     {
       "source": "朝日新聞",
