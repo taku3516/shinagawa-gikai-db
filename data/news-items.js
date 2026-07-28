@@ -1,7 +1,101 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-27T23:56:00.359956Z",
+  "generatedAt": "2026-07-28T04:56:07.057121Z",
   "items": [
+    {
+      "id": "ddc162e1c3e7b749030e",
+      "title": "南国ムードあふれるトロピカルフラワーで夏を満喫！物価高の夏は、おうちでリゾート気分。猛暑の夏を元気に彩る！暑さに強く長く楽しめる鮮やかな花々",
+      "summary": "[第一園芸株式会社] 花と緑に関する事業を展開する第一園芸株式会社（本社：東京都品川区、代表取締役社長：山村勝治、三井不動産グループ）は、8月のおすすめの花「トロピカルフラワー」のフェアを8月1日（土）から第一園芸・ビアン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000354.000028146.html",
+      "publishedAt": "2026-07-28T04:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T04:55:39.586214Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "97364a2cbe01b6b3f137",
+      "title": "英語授業お助けAIアプリ「TOC-ME！assistant（トクミーアシスタント）」に新機能！ スピーキングテスト「スピチャレ」をリリース",
+      "summary": "[光村図書出版株式会社] 小・中・高等学校向けの教科書を発行する光村図書出版株式会社（所在地：東京都品川区、代表取締役社長：吉田直樹）は、英語授業にフォーカスしたAIアプリ「TOC-ME！assistant」（以下、トクミーアシスタント）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000080.000073231.html",
+      "publishedAt": "2026-07-28T04:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T04:55:39.586214Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "4dfe8c953ccd1085e7ee",
+      "title": "7月27日開催の委員会の結果を掲載。",
+      "summary": "7月27日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20667.html",
+      "publishedAt": "2026-07-28T04:35:05Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-24T01:49:17.074439Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "3fd65a37a4a251089daa",
+      "title": "7月29日開催の委員会の予定を掲載。",
+      "summary": "7月29日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20678.html",
+      "publishedAt": "2026-07-28T03:03:12Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T04:55:39.586214Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "0e38ff3b5f693bbe6a6d",
+      "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 8月",
+      "summary": "「Tokyo City Flea Market」は毎週土曜日・日曜日に大井競馬場第一駐車場で開催される都内最大級のフリーマーケットです。 （※8月15日(土)、16日(日）の開催はありません） 専門的なお店も多数出店。バラエティ豊かな品揃えで、地元客だけでなく海外からの観光客も訪れます。週末は、大井競馬場でお宝探しはいかがでしょう。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyo-city-flea-market-202608",
+      "publishedAt": "2026-07-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T04:55:39.586214Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 10
+    },
     {
       "id": "28c8cf3d7517a9d19593",
       "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
@@ -258,26 +352,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "4dfe8c953ccd1085e7ee",
-      "title": "7月27日開催の委員会の予定を掲載。",
-      "summary": "7月27日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20667.html",
-      "publishedAt": "2026-07-24T01:46:05Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-24T01:49:17.074439Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "7afde930b9d735fda152",
@@ -3442,7 +3516,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2070, column 30"
+      "message": "not well-formed (invalid token): line 2251, column 30"
     },
     {
       "source": "朝日新聞",
