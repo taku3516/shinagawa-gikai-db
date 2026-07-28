@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-28T04:56:07.057121Z",
+  "generatedAt": "2026-07-28T07:34:04.141417Z",
   "items": [
+    {
+      "id": "3925bd187b556bfdd382",
+      "title": "しな水で「エリック・カール」展 日本語版「はらぺこあおむし」50周年で",
+      "summary": "特別展「エリック・カールといのちの色－同じ世界で、ちがう色－」が7月25日、しながわ水族館（品川区勝島3）で始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5046",
+      "publishedAt": "2026-07-28T06:21:08Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T07:33:40.750778Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "勝島",
+        "しながわ水族館"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "ddc162e1c3e7b749030e",
       "title": "南国ムードあふれるトロピカルフラワーで夏を満喫！物価高の夏は、おうちでリゾート気分。猛暑の夏を元気に彩る！暑さに強く長く楽しめる鮮やかな花々",
@@ -77,6 +97,77 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
+      "id": "f46e495579755d10506e",
+      "title": "第30回記念 目黒のさんま祭り「目黒のさんま寄席」",
+      "summary": "2026年9月13日（日）、目黒セントラルスクエアにて第30回記念 目黒のさんま祭り「目黒のさんま寄席」が開かれます。 「目黒のさんま寄席」は『目黒のさんま抽選会』応募券配布開始のオープニングイベントとして開催。落語「目黒のさんま」はもちろん、落語や漫才などがお楽しみいただけます。 （二部制・完全入替制、木戸無料）",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/meguronosanmamatsuri2026",
+      "publishedAt": "2026-07-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T07:33:40.750778Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "6a2ac1d3abcdc2ed961a",
+      "title": "容器文化ミュージアム 「夏休みイベント ～身近な容器を使って、工作や遊びを楽しもう！～」",
+      "summary": "2026年8月5日（水）・6日（木）、容器文化ミュージアムにて 小学生向けの夏休みイベント が開催されます。 ミュージアム内を巡りながら挑戦するクイズラリーや容器を使った工作・遊び体験など、容器について楽しく学べるイベントとなっています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/packagemuseum2608",
+      "publishedAt": "2026-07-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T07:33:40.750778Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "497c6b2e566d6e050ee8",
+      "title": "FUNFUNスクール",
+      "summary": "2026年8月2日（日）、きゅりあん小ホールにて「FUNFUNスクール」が開催されます。 NHKちゅらさんなどの音楽監督を手がけた音楽家 丸山先生のビアノコンサート＆山口ともさんを慕い集まったfun fun音楽団による演奏会。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/funfun260802",
+      "publishedAt": "2026-07-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T07:33:40.750778Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "きゅりあん"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "463472f552ac5242a13b",
+      "title": "手話体験講座開催のお知らせ",
+      "summary": "品川区立障害児者総合支援施設 地域活動支援センター 電話：03-6712-4406 FAX：03-5460-5303",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20250812155505.html",
+      "publishedAt": "2026-07-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T07:33:40.750778Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
       "id": "0e38ff3b5f693bbe6a6d",
       "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 8月",
       "summary": "「Tokyo City Flea Market」は毎週土曜日・日曜日に大井競馬場第一駐車場で開催される都内最大級のフリーマーケットです。 （※8月15日(土)、16日(日）の開催はありません） 専門的なお店も多数出店。バラエティ豊かな品揃えで、地元客だけでなく海外からの観光客も訪れます。週末は、大井競馬場でお宝探しはいかがでしょう。",
@@ -95,6 +186,23 @@ window.SHINAGAWA_NEWS = {
         "大井競馬場"
       ],
       "relevanceScore": 10
+    },
+    {
+      "id": "1e6eef794530f6c56cdc",
+      "title": "「あなた」と「しながわ」をつなぐふるさと納税",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/hpg000029194.html",
+      "publishedAt": "2026-07-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "28c8cf3d7517a9d19593",
@@ -2786,23 +2894,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "1e6eef794530f6c56cdc",
-      "title": "「あなた」と「しながわ」をつなぐふるさと納税",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/hpg000029194.html",
-      "publishedAt": "2026-06-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "0fa40ee5175e45d402f6",
       "title": "介護をしている家族への支援",
       "summary": "",
@@ -3516,7 +3607,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2251, column 30"
+      "message": "not well-formed (invalid token): line 2479, column 30"
     },
     {
       "source": "朝日新聞",
@@ -3540,7 +3631,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
