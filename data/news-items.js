@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-28T19:08:49.555503Z",
+  "generatedAt": "2026-07-28T21:00:42.835299Z",
   "items": [
+    {
+      "id": "97364a2cbe01b6b3f137",
+      "title": "英語授業お助けAIアプリ「TOC-ME！assistant（トクミーアシスタント）」に新機能！ スピーキングテスト「スピチャレ」をリリース",
+      "summary": "[光村図書出版株式会社] 小・中・高等学校向けの教科書を発行する光村図書出版株式会社（所在地：東京都品川区、代表取締役社長：吉田直樹）は、英語授業にフォーカスしたAIアプリ「TOC-ME！assistant」（以下、トクミーアシスタント）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000080.000073231.html",
+      "publishedAt": "2026-07-28T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T04:55:39.586214Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "28c8cf3d7517a9d19593",
       "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
@@ -55,23 +72,6 @@ window.SHINAGAWA_NEWS = {
         "しながわ水族館"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "97364a2cbe01b6b3f137",
-      "title": "英語授業お助けAIアプリ「TOC-ME！assistant（トクミーアシスタント）」に新機能！ スピーキングテスト「スピチャレ」をリリース",
-      "summary": "[光村図書出版株式会社] 小・中・高等学校向けの教科書を発行する光村図書出版株式会社（所在地：東京都品川区、代表取締役社長：吉田直樹）は、英語授業にフォーカスしたAIアプリ「TOC-ME！assistant」（以下、トクミーアシスタント）...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000080.000073231.html",
-      "publishedAt": "2026-07-28T04:40:41Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-28T04:55:39.586214Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "4dfe8c953ccd1085e7ee",
@@ -3607,7 +3607,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3796, column 30"
+      "message": "not well-formed (invalid token): line 3856, column 30"
     },
     {
       "source": "朝日新聞",
@@ -3688,9 +3688,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
