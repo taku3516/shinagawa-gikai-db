@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-28T21:00:42.835299Z",
+  "generatedAt": "2026-07-28T23:52:09.305697Z",
   "items": [
+    {
+      "id": "064c6abf260eca5e4ffe",
+      "title": "ウェルビーイング・ＳＤＧｓ推進ファンド事業",
+      "summary": "ウェルビーイング・ＳＤＧｓ推進事業実行委員会事務局 （品川区企画経営部企画課内） 電話：03-5742-7864 FAX：03-5742-6870 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/sdgs/sdgsfundzigyou.html",
+      "publishedAt": "2026-07-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T23:51:47.393458Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "97364a2cbe01b6b3f137",
       "title": "英語授業お助けAIアプリ「TOC-ME！assistant（トクミーアシスタント）」に新機能！ スピーキングテスト「スピチャレ」をリリース",
@@ -3605,14 +3622,14 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 3856, column 30"
+      "status": "ok",
+      "scanned": 620,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
@@ -3631,7 +3648,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -3688,9 +3705,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
