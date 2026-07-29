@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-29T18:58:36.906323Z",
+  "generatedAt": "2026-07-29T23:53:59.348955Z",
   "items": [
+    {
+      "id": "9f2c02f2f75d60694bd0",
+      "title": "「こんにちは国保基本健診」",
+      "summary": "国保医療年金課保健指導係 電話：03-5742-6902 FAX：03-5742-6876",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20241205110439.html",
+      "publishedAt": "2026-07-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T23:53:33.829433Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
     {
       "id": "28c8cf3d7517a9d19593",
       "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
@@ -3750,7 +3767,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 612,
+      "scanned": 608,
       "accepted": 0
     },
     {
@@ -3775,7 +3792,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
