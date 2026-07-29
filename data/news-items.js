@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-29T08:21:35.063341Z",
+  "generatedAt": "2026-07-29T13:47:53.064189Z",
   "items": [
+    {
+      "id": "7370833d44efe9f6704e",
+      "title": "西五反田にイタリアンバル「ソスタ」 ソースと具材が選べるカスタムピザも",
+      "summary": "イタリアンバル「SOSTA ～pizzeria & legame～ （ソスタ ピッツァ アンド レガーメ）」（品川区西五反田1）が7月15日、西五反田エリアにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5048",
+      "publishedAt": "2026-07-29T10:57:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T13:46:10.252502Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "f961f1117195d6912161",
       "title": "【開催報告】元三菱東京UFJ銀行 代表取締役専務 長田忠千代氏が登壇。「格差社会とリスクを取れる社会」をテーマに、挑戦する経営者へのエールと日本経済への提言",
@@ -3712,7 +3731,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 607,
+      "scanned": 629,
       "accepted": 0
     },
     {
@@ -3794,9 +3813,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
