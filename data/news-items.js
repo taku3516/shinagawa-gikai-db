@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-28T23:52:09.305697Z",
+  "generatedAt": "2026-07-29T01:44:57.513592Z",
   "items": [
+    {
+      "id": "6563d3f9359a1a8d8d07",
+      "title": "7月30日開催の委員会の予定を掲載。",
+      "summary": "7月30日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20692.html",
+      "publishedAt": "2026-07-29T01:41:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T01:44:34.446179Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "064c6abf260eca5e4ffe",
       "title": "ウェルビーイング・ＳＤＧｓ推進ファンド事業",
@@ -3623,7 +3643,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 620,
+      "scanned": 638,
       "accepted": 0
     },
     {
