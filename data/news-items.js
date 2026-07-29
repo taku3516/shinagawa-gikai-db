@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-29T15:44:43.492633Z",
+  "generatedAt": "2026-07-29T17:04:54.864359Z",
   "items": [
+    {
+      "id": "8af7782d743ade2eb6ec",
+      "title": "【先着限定50名様】エネルギー業界の経営層コミュニティ「エナジーCxO」が「蓄電池活用の全体像と実践｜系統用の未来展望太陽光/需要家併設蓄電池の最前線」セミナーを開催",
+      "summary": "[グッドフェローズ] 株式会社グッドフェローズ（本社：東京都品川区西五反田7-13-5 DK五反田ビル8階、代表取締役：長尾 泰広）は、同社が運営するエネルギー業界の経営者・事業責任者向けクローズドコミュニティ「エナジーCxO」の活...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000086.000025653.html",
+      "publishedAt": "2026-07-29T15:15:29Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T15:44:19.062919Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "f961f1117195d6912161",
       "title": "【開催報告】元三菱東京UFJ銀行 代表取締役専務 長田忠千代氏が登壇。「格差社会とリスクを取れる社会」をテーマに、挑戦する経営者へのエールと日本経済への提言",
@@ -50,25 +69,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-29T13:46:10.252502Z",
       "tags": [
         "店舗開店閉店"
-      ],
-      "locations": [
-        "西五反田"
-      ],
-      "relevanceScore": 12
-    },
-    {
-      "id": "8af7782d743ade2eb6ec",
-      "title": "【先着限定50名様】エネルギー業界の経営層コミュニティ「エナジーCxO」が「蓄電池活用の全体像と実践｜系統用の未来展望太陽光/需要家併設蓄電池の最前線」セミナーを開催",
-      "summary": "[グッドフェローズ] 株式会社グッドフェローズ（本社：東京都品川区西五反田7-13-5 DK五反田ビル8階、代表取締役：長尾 泰広）は、同社が運営するエネルギー業界の経営者・事業責任者向けクローズドコミュニティ「エナジーCxO」の活...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000086.000025653.html",
-      "publishedAt": "2026-07-29T03:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-29T15:44:19.062919Z",
-      "tags": [
-        "地域イベント"
       ],
       "locations": [
         "西五反田"
@@ -3750,7 +3750,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 612,
+      "scanned": 613,
       "accepted": 0
     },
     {
@@ -3775,7 +3775,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 3
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
