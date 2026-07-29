@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-29T13:47:53.064189Z",
+  "generatedAt": "2026-07-29T15:44:43.492633Z",
   "items": [
+    {
+      "id": "f961f1117195d6912161",
+      "title": "【開催報告】元三菱東京UFJ銀行 代表取締役専務 長田忠千代氏が登壇。「格差社会とリスクを取れる社会」をテーマに、挑戦する経営者へのエールと日本経済への提言",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年7月24日（...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000507.000027235.html",
+      "publishedAt": "2026-07-29T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T05:00:13.997606Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "f679ef3be51659cb302d",
+      "title": "トリファ、名鉄観光サービスと販売提携を締結。全国の名鉄観光サービスで海外eSIMアプリ「トリファ」の取り扱いを開始",
+      "summary": "[トリファ] 株式会社トリファ（本社：東京都品川区、代表取締役：嘉名 雅俊、以下「当社」）は、名鉄観光サービス株式会社（本社：愛知県名古屋市、代表取締役社長：岩切 道郎、以下「名鉄観光サービス」）と販売パートナ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000062.000085027.html",
+      "publishedAt": "2026-07-29T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T05:00:13.997606Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "7370833d44efe9f6704e",
       "title": "西五反田にイタリアンバル「ソスタ」 ソースと具材が選べるカスタムピザも",
@@ -22,39 +57,23 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "f961f1117195d6912161",
-      "title": "【開催報告】元三菱東京UFJ銀行 代表取締役専務 長田忠千代氏が登壇。「格差社会とリスクを取れる社会」をテーマに、挑戦する経営者へのエールと日本経済への提言",
-      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年7月24日（...",
+      "id": "8af7782d743ade2eb6ec",
+      "title": "【先着限定50名様】エネルギー業界の経営層コミュニティ「エナジーCxO」が「蓄電池活用の全体像と実践｜系統用の未来展望太陽光/需要家併設蓄電池の最前線」セミナーを開催",
+      "summary": "[グッドフェローズ] 株式会社グッドフェローズ（本社：東京都品川区西五反田7-13-5 DK五反田ビル8階、代表取締役：長尾 泰広）は、同社が運営するエネルギー業界の経営者・事業責任者向けクローズドコミュニティ「エナジーCxO」の活...",
       "source": "PR TIMES",
       "sourceId": "pr-times",
       "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000507.000027235.html",
-      "publishedAt": "2026-07-29T04:40:39Z",
+      "url": "https://prtimes.jp/main/html/rd/p/000000086.000025653.html",
+      "publishedAt": "2026-07-29T03:00:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-07-29T05:00:13.997606Z",
+      "collectedAt": "2026-07-29T15:44:19.062919Z",
       "tags": [
-        "福祉",
         "地域イベント"
       ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "f679ef3be51659cb302d",
-      "title": "トリファ、名鉄観光サービスと販売提携を締結。全国の名鉄観光サービスで海外eSIMアプリ「トリファ」の取り扱いを開始",
-      "summary": "[トリファ] 株式会社トリファ（本社：東京都品川区、代表取締役：嘉名 雅俊、以下「当社」）は、名鉄観光サービス株式会社（本社：愛知県名古屋市、代表取締役社長：岩切 道郎、以下「名鉄観光サービス」）と販売パートナ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000062.000085027.html",
-      "publishedAt": "2026-07-29T04:15:16Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-29T05:00:13.997606Z",
-      "tags": [
-        "その他"
+      "locations": [
+        "西五反田"
       ],
-      "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 12
     },
     {
       "id": "2033881046567486c66b",
@@ -3731,7 +3750,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 629,
+      "scanned": 612,
       "accepted": 0
     },
     {
@@ -3756,7 +3775,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 3
     },
     {
       "source": "東急ニュースリリース",
@@ -3813,9 +3832,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
