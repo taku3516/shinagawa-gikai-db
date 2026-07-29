@@ -1,7 +1,62 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-29T01:44:57.513592Z",
+  "generatedAt": "2026-07-29T05:00:37.450300Z",
   "items": [
+    {
+      "id": "f961f1117195d6912161",
+      "title": "【開催報告】元三菱東京UFJ銀行 代表取締役専務 長田忠千代氏が登壇。「格差社会とリスクを取れる社会」をテーマに、挑戦する経営者へのエールと日本経済への提言",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年7月24日（...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000507.000027235.html",
+      "publishedAt": "2026-07-29T04:40:39Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T05:00:13.997606Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "f679ef3be51659cb302d",
+      "title": "トリファ、名鉄観光サービスと販売提携を締結。全国の名鉄観光サービスで海外eSIMアプリ「トリファ」の取り扱いを開始",
+      "summary": "[トリファ] 株式会社トリファ（本社：東京都品川区、代表取締役：嘉名 雅俊、以下「当社」）は、名鉄観光サービス株式会社（本社：愛知県名古屋市、代表取締役社長：岩切 道郎、以下「名鉄観光サービス」）と販売パートナ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000062.000085027.html",
+      "publishedAt": "2026-07-29T04:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T05:00:13.997606Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "2033881046567486c66b",
+      "title": "7月28日開催の委員会の結果を掲載。",
+      "summary": "7月28日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20674.html",
+      "publishedAt": "2026-07-29T01:50:07Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T02:00:04.964019Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "6563d3f9359a1a8d8d07",
       "title": "7月30日開催の委員会の予定を掲載。",
@@ -21,6 +76,23 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "723d4081724162cad7ed",
+      "title": "品川区住民税非課税世帯エアコン購入費等助成事業【締切間近】",
+      "summary": "経済的な理由によりエアコンを設置することが難しい住民税非課税世帯に対し、エアコンの購入等に要する費用を助成します。 エアコン助成事業のご案内(PDF : 259KB) ※ 助成金の交付決定前に購入したエアコンは助成対象外となりますので、必ず購入前に訪問調査の申請をお願いします。 7月31日が申請期限となりますので、お早めにお申し込みください。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/20230428084925.html",
+      "publishedAt": "2026-07-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T05:00:13.997606Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "064c6abf260eca5e4ffe",
@@ -310,26 +382,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "2033881046567486c66b",
-      "title": "7月28日開催の委員会の予定を掲載。",
-      "summary": "7月28日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20674.html",
-      "publishedAt": "2026-07-27T01:38:07Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-27T02:00:04.964019Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "ab1b3a0279bedcd257da",
@@ -3643,7 +3695,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 638,
+      "scanned": 647,
       "accepted": 0
     },
     {
@@ -3668,7 +3720,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
