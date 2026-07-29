@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-29T05:00:37.450300Z",
+  "generatedAt": "2026-07-29T08:21:35.063341Z",
   "items": [
     {
       "id": "f961f1117195d6912161",
@@ -76,6 +76,23 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "36fd47db4758176599f2",
+      "title": "令和8年熊本地震災害義援金の受付",
+      "summary": "総務課 電話:03-5742-6624 FAX:03-3774-6356",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260729151707.html",
+      "publishedAt": "2026-07-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T08:21:12.534425Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "723d4081724162cad7ed",
@@ -3695,7 +3712,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 647,
+      "scanned": 607,
       "accepted": 0
     },
     {
@@ -3720,7 +3737,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
