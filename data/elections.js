@@ -7,7 +7,7 @@
 // proportionalResults[{ name, votesDisplay, votesValue }], sources[{ label, url }], verifiedAt
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.electionsData = {
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-07-25",
   "note": "品川区に関わる選挙（区議選・区議補選・区長選・都議選・都議補選の品川区選挙区）を1997年まで遡って掲載しています。得票数・得票率・党派は選挙ドットコムの公表データ、投票率・有権者数は各選挙の公式発表に基づきます。得票数に小数があるものは、選挙管理委員会発表に準拠した按分票です。",
   "types": [
     {
@@ -29,6 +29,10 @@ window.SHINAGAWA_DB.electionsData = {
     {
       "id": "tokyo-assembly-by",
       "label": "東京都議会議員補欠選挙（品川区選挙区）"
+    },
+    {
+      "id": "house",
+      "label": "衆議院議員総選挙（東京都第3区）"
     }
   ],
   "referenceSites": [
@@ -44,6 +48,72 @@ window.SHINAGAWA_DB.electionsData = {
     }
   ],
   "elections": [
+    {
+      "id": "shugi-51-tokyo3",
+      "type": "house",
+      "title": "衆議院議員総選挙（東京都第3区）",
+      "electionDate": "2026-02-08",
+      "district": "東京都第3区（品川区・伊豆諸島・小笠原諸島）",
+      "seats": 1,
+      "candidateCount": 5,
+      "electorate": "364,905",
+      "turnout": "61.28",
+      "previousTurnout": "56.83",
+      "summary": "第51回衆議院議員総選挙。得票は選挙区全体（品川区と伊豆諸島・小笠原諸島）の確定得票です。品川区内だけの開票結果は品川区の公式ページで公表されています。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "石原 ひろたか",
+          "party": "自由民主党",
+          "votesDisplay": "93,158.548票",
+          "voteShare": "42.6%"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "あべ 祐美子",
+          "party": "中道改革連合",
+          "votesDisplay": "53,584票",
+          "voteShare": "24.5%"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "石田 しんご",
+          "party": "国民民主党",
+          "votesDisplay": "34,805票",
+          "voteShare": "15.9%"
+        },
+        {
+          "result": "落選",
+          "rank": 4,
+          "name": "石崎 とおる",
+          "party": "日本維新の会",
+          "votesDisplay": "19,403票",
+          "voteShare": "8.9%"
+        },
+        {
+          "result": "落選",
+          "rank": 5,
+          "name": "植木 ひろたか",
+          "party": "参政党",
+          "votesDisplay": "17,544.450票",
+          "voteShare": "8.0%"
+        }
+      ],
+      "sources": [
+        {
+          "label": "選挙ドットコム（得票数・得票率）",
+          "url": "https://go2senkyo.com/shugiin/28030/senkyoku/51264"
+        },
+        {
+          "label": "品川区 衆議院議員選挙の結果（公式・品川区分）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/r8shuugi/index.html"
+        }
+      ],
+      "verifiedAt": "2026-07-25"
+    },
     {
       "id": "go2-23023",
       "type": "tokyo-assembly",
@@ -149,6 +219,87 @@ window.SHINAGAWA_DB.electionsData = {
         }
       ],
       "verifiedAt": "2026-07-30"
+    },
+    {
+      "id": "shugi-50-tokyo3",
+      "type": "house",
+      "title": "衆議院議員総選挙（東京都第3区）",
+      "electionDate": "2024-10-27",
+      "district": "東京都第3区（品川区・伊豆諸島・小笠原諸島）",
+      "seats": 1,
+      "candidateCount": 7,
+      "turnout": "56.83",
+      "previousTurnout": "59.87",
+      "summary": "第50回衆議院議員総選挙。得票は選挙区全体（品川区と伊豆諸島・小笠原諸島）の確定得票です。品川区内だけの開票結果は品川区の公式ページで公表されています。あべ祐美子は小選挙区では次点でしたが、比例代表東京ブロックで復活当選しました。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "石原 ひろたか",
+          "party": "自由民主党",
+          "votesDisplay": "61,660.983票",
+          "voteShare": "30.5%"
+        },
+        {
+          "result": "比例復活",
+          "rank": 2,
+          "name": "あべ 祐美子",
+          "party": "立憲民主党",
+          "votesDisplay": "54,178票",
+          "voteShare": "26.8%"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "おくもと ゆり",
+          "party": "国民民主党",
+          "votesDisplay": "30,351票",
+          "voteShare": "15.0%"
+        },
+        {
+          "result": "落選",
+          "rank": 4,
+          "name": "吉平 としたか",
+          "party": "日本維新の会",
+          "votesDisplay": "25,745票",
+          "voteShare": "12.7%"
+        },
+        {
+          "result": "落選",
+          "rank": 5,
+          "name": "香西 かつ介",
+          "party": "日本共産党",
+          "votesDisplay": "12,056票",
+          "voteShare": "5.9%"
+        },
+        {
+          "result": "落選",
+          "rank": 6,
+          "name": "かわぐち めぐみ",
+          "party": "無所属",
+          "votesDisplay": "8,822票",
+          "voteShare": "4.3%"
+        },
+        {
+          "result": "落選",
+          "rank": 7,
+          "name": "植木 ひろたか",
+          "party": "参政党",
+          "votesDisplay": "8,731.013票",
+          "voteShare": "4.3%"
+        }
+      ],
+      "sources": [
+        {
+          "label": "選挙ドットコム（得票数・得票率）",
+          "url": "https://shugiin.go2senkyo.com/50/senkyoku/44115"
+        },
+        {
+          "label": "品川区 衆議院議員選挙の結果（公式・品川区分）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/syugi/index.html"
+        }
+      ],
+      "verifiedAt": "2026-07-25"
     },
     {
       "id": "go2-25897",
