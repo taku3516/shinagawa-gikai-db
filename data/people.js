@@ -106,7 +106,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "ayaka_ogino",
       "name": "おぎの　あやか",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "荻野綾香"
+      ],
       "seenIn": [
         "r05",
         "r07",
@@ -230,7 +232,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "mao_seraku",
       "name": "せらく　真央",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "瀬楽真央"
+      ],
       "seenIn": [
         "r05",
         "r06",
@@ -242,7 +246,8 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "高橋　しんじ",
       "status": "現職",
       "aliases": [
-        "高橋慎司"
+        "高橋慎司",
+        "髙橋慎司"
       ],
       "seenIn": [
         "h30",
@@ -457,7 +462,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "yoshihiro_matsunaga",
       "name": "松永　よしひろ",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "松永吉洋"
+      ],
       "seenIn": [
         "h30",
         "r04",
@@ -471,7 +478,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "tokihiro_matsumoto",
       "name": "松本　ときひろ",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "松本常広"
+      ],
       "seenIn": [
         "r01",
         "r02",
@@ -486,7 +495,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "satoshi_yanagisawa",
       "name": "やなぎさわ　聡",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "栁澤聡"
+      ],
       "seenIn": [
         "r06",
         "r07"
@@ -587,7 +598,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "ひがし ゆき",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "東由貴"
+      ],
       "seenIn": [
         "r06",
         "r07"

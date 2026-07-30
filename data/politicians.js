@@ -35,6 +35,9 @@ window.SHINAGAWA_DB.politiciansData = {
           "electionHistory": [
             "2025 東京都議会議員選挙：当選（40,465票・25.0%）",
             "2024 東京都議会議員補欠選挙：当選（60,094票・32.5%）"
+          ],
+          "aliases": [
+            "篠原里佳"
           ]
         },
         {
@@ -431,7 +434,7 @@ window.SHINAGAWA_DB.politiciansData = {
           "statusLabel": "元職衆議",
           "electoralDistrict": "東京都第3区（品川区）",
           "serviceHistory": "平成12年・平成15年・平成21年・令和3年ほか当選（東京都第3区・比例東京）",
-          "career": "東京都議会議員を経て衆議院議員。東京都第3区（品川区）で複数期当選。国家公安委員長・拉致問題担当大臣などを歴任。"
+          "career": "東京都議会議員（大田区選挙区・平成元年〜平成8年、2期）を経て衆議院議員。東京都第3区（品川区）で複数期当選。国家公安委員長・拉致問題担当大臣などを歴任。"
         },
         {
           "id": "h-kurimoto-shinichiro",
