@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-30T15:04:36.237006Z",
+  "generatedAt": "2026-07-30T17:15:44.139821Z",
   "items": [
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-07-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "69838780f455a4d81dc4",
+      "title": "2026-001「品川区新型インフルエンザ等対策行動計画」に関する結果公表",
+      "summary": "「品川区新型インフルエンザ等対策行動計画」の 作成に当たり、計画案に対する意見募集を行ったところ、5人の方から7件のご意見をいただきました。 令和8年4月15日(水)から令和8年5月14日(木)まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20260727164220.html",
+      "publishedAt": "2026-07-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "28c8cf3d7517a9d19593",
       "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
@@ -3884,7 +3918,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2333, column 55"
+      "message": "not well-formed (invalid token): line 2397, column 55"
     },
     {
       "source": "朝日新聞",
@@ -3908,7 +3942,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -3965,9 +3999,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
