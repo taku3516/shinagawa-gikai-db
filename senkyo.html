@@ -188,29 +188,38 @@
       return String(value || "").normalize("NFKC").toLocaleLowerCase("ja").replace(/[\s・･()（）]/g, "");
     }
 
-    // 人物台帳から、その人物の全表記（正式名＋エイリアス）を正規化して返す。
-    // 選挙アーカイブは同一人物が年ごとに別表記で載る（例: あべ祐美子＝阿部祐美子、
-    // 西本たか子＝西本貴子）ため、名簿からの person リンクではこれで名寄せする。
-    // 人物IDから台帳エントリを引く。まず質問者台帳(people.js)、無ければ政治家名簿
-    // (politicians.js の都議・衆議・区長ロスター)を探す。区議・区長と都議で同一人物は
-    // 同じ id を共有するため、どちらのソースでもエイリアスを拾える。
-    function personRecord(personId) {
-      if (!personId) return null;
+    // 同じ人物IDを持つエントリを全ソースから集める。質問者台帳(people.js)と
+    // 政治家名簿(politicians.js の都議・衆議・区長ロスター)は同一人物に同じ id を使うため、
+    // 片方だけを見るとエイリアスを取り落とす（例: 森沢きょうこは元職都議と現職区長に在籍）。
+    function personEntries(personId) {
+      if (!personId) return [];
       const db = window.SHINAGAWA_DB || {};
-      const people = (db.peopleData && db.peopleData.people) || [];
-      const inPeople = people.find((p) => p.id === personId);
-      if (inPeople) return inPeople;
+      const found = ((db.peopleData && db.peopleData.people) || []).filter((p) => p.id === personId);
       const rosters = (db.politiciansData && db.politiciansData.rosters) || {};
       for (const key of Object.keys(rosters)) {
-        const found = (rosters[key].members || []).find((m) => m.id === personId);
-        if (found) return found;
+        for (const member of rosters[key].members || []) {
+          if (member.id === personId) found.push(member);
+        }
       }
-      return null;
+      return found;
     }
 
-    function personVariants(person) {
-      if (!person) return [];
-      return [person.name, ...(person.aliases || [])].map(normalize).filter(Boolean);
+    function personRecord(personId) {
+      return personEntries(personId)[0] || null;
+    }
+
+    // その人物の全表記（正式名＋エイリアス）を正規化して返す。選挙アーカイブは同一人物が
+    // 年ごとに別表記で載る（例: あべ祐美子＝阿部祐美子、松澤利行＝松沢利行）ため、
+    // 名簿からの person リンクではこれで名寄せする。
+    function personVariants(personId) {
+      const names = [];
+      for (const entry of personEntries(personId)) {
+        for (const name of [entry.name, ...(entry.aliases || [])]) {
+          const normalized = normalize(name);
+          if (normalized && !names.includes(normalized)) names.push(normalized);
+        }
+      }
+      return names;
     }
 
     // 候補者名が人物の別表記いずれかと一致するか（正規化済みの部分一致で表記の細部差を吸収）
@@ -330,7 +339,7 @@
         years.map((year) => `<option value="${esc(year)}">${esc(year)}年</option>`).join("");
       const personId = params.get("person") || "";
       const person = personRecord(personId);
-      const personNameVariants = personVariants(person);
+      const personNameVariants = personVariants(personId);
       // person リンク（名簿の「選挙アーカイブで探す」）なら、検索欄には人物の表示名を入れておく
       candidateSearch.value = params.get("q") || (person ? person.name : "");
       const personInitialQuery = candidateSearch.value.trim();

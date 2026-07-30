@@ -1,7 +1,7 @@
 // 品川区議会DB データファイル（人物台帳: 質問者の名寄せ用。名簿ページには使わない）
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.peopleData = {
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-07-25",
   "note": "質問者と議員を紐付けるための人物台帳。元職は表示に使わず、裏のデータとしてのみ蓄積する。",
   "people": [
     {
@@ -58,7 +58,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "hideo_ishida",
       "name": "石田　秀男",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "石田ひでお"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -167,7 +169,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "emiko_sawada",
       "name": "澤田　えみこ",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "沢田えみこ"
+      ],
       "seenIn": [
         "r05",
         "r07",
@@ -178,7 +182,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "yukihiro_sugai",
       "name": "須貝　行宏",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "須貝ゆきひろ"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -253,7 +259,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "nobuaki_takahashi",
       "name": "高橋　伸明",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "高橋のぶあき"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -268,7 +276,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "takeshi_tanaka",
       "name": "田中　たけし",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "田中たけし"
+      ],
       "seenIn": [
         "r05",
         "r06",
@@ -294,7 +304,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "tsutsui_yosuke",
       "name": "筒井　ようすけ",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "筒井洋介"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -325,7 +337,10 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "ryo_nakatsuka",
       "name": "中塚　亮",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "なかつかりょう",
+        "なかつか亮"
+      ],
       "seenIn": [
         "r01",
         "r02",
@@ -353,7 +368,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "naoko_nishimura",
       "name": "西村　直子",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "西村なおこ"
+      ],
       "seenIn": [
         "r01",
         "r02",
@@ -403,7 +420,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "masanori_fujiwara",
       "name": "藤原　正則",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "ふじわら正則"
+      ],
       "seenIn": [
         "h30",
         "r02",
@@ -497,7 +516,9 @@ window.SHINAGAWA_DB.peopleData = {
       "id": "yukari_yokoyama",
       "name": "横山　由香理",
       "status": "現職",
-      "aliases": [],
+      "aliases": [
+        "横山ゆかり"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -549,6 +570,7 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "渡辺　ゆういち",
       "status": "現職",
       "aliases": [
+        "わたなべ裕一",
         "渡辺裕一"
       ],
       "seenIn": [
@@ -588,6 +610,7 @@ window.SHINAGAWA_DB.peopleData = {
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
       "aliases": [
+        "芹沢裕次郎",
         "芹澤裕次郎"
       ],
       "seenIn": [
@@ -618,7 +641,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "渡部 茂",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "わたべ茂"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -644,7 +669,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "おくの 晋治",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "奥野晋治"
+      ],
       "seenIn": [
         "h30",
         "r02",
@@ -657,7 +684,10 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "湯澤 一貴",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "ゆざわ一貴",
+        "湯沢一貴"
+      ],
       "seenIn": [
         "r01",
         "r02",
@@ -670,8 +700,12 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "たけうち 忍",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "武内 忍",
+        "武内忍"
+      ],
       "seenIn": [
+        "h25",
         "h30",
         "r03",
         "r04"
@@ -682,7 +716,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "鈴木 真澄",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "鈴木ますみ"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -709,7 +745,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "大沢 真一",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "大沢しんいち"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -735,7 +773,10 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "本多 健信",
       "status": "元職",
       "note": "公式の質問者ページに登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "ほんだたけのぶ",
+        "本多たけのぶ"
+      ],
       "seenIn": [
         "h30",
         "r01",
@@ -757,7 +798,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "飯沼 雅子",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "いいぬま雅子"
+      ],
       "seenIn": [
         "h30"
       ]
@@ -767,7 +810,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "伊藤 昌宏",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "いとう昌宏"
+      ],
       "seenIn": [
         "h30"
       ]
@@ -777,8 +822,12 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "浅野 ひろゆき",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "浅野 浩之",
+        "浅野浩之"
+      ],
       "seenIn": [
+        "h25",
         "h30"
       ]
     },
@@ -799,7 +848,10 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "松澤 利行",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "まつざわ利行",
+        "松沢利行"
+      ],
       "seenIn": [
         "h29"
       ]
@@ -809,7 +861,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "沢田 洋和",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "沢田ひろかず"
+      ],
       "seenIn": [
         "h29"
       ]
@@ -819,7 +873,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "原 浩三",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "はらこうぞう"
+      ],
       "seenIn": [
         "h27"
       ]
@@ -829,8 +885,12 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "山元 けい子",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "山元 敬子",
+        "山元敬子"
+      ],
       "seenIn": [
+        "h24",
         "h27"
       ]
     },
@@ -839,7 +899,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "井上 八重子",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "井上やえ子"
+      ],
       "seenIn": [
         "h26"
       ]
@@ -849,7 +911,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "吉田 あつみ",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "よしだあつみ"
+      ],
       "seenIn": [
         "h26"
       ]
@@ -859,7 +923,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "向 めぐ美",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "むこうめぐみ"
+      ],
       "seenIn": [
         "h26"
       ]
@@ -869,7 +935,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "須藤 安通",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "すどう安通"
+      ],
       "seenIn": [
         "h26"
       ]
@@ -879,39 +947,12 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "大西 光広",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "おおにし光広",
+        "大西みつひろ"
+      ],
       "seenIn": [
         "h25"
-      ]
-    },
-    {
-      "id": "x-takeuchi-shinobu2",
-      "name": "武内 忍",
-      "status": "元職",
-      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
-      "seenIn": [
-        "h25"
-      ]
-    },
-    {
-      "id": "x-asano-hiroyuki2",
-      "name": "浅野 浩之",
-      "status": "元職",
-      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
-      "seenIn": [
-        "h25"
-      ]
-    },
-    {
-      "id": "x-yamamoto-keiko2",
-      "name": "山元 敬子",
-      "status": "元職",
-      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
-      "seenIn": [
-        "h24"
       ]
     },
     {
@@ -919,7 +960,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "山内 晃",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "山内あきら"
+      ],
       "seenIn": [
         "h24"
       ]
@@ -929,7 +972,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "宮崎 克俊",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "みやざき克俊"
+      ],
       "seenIn": [
         "h23"
       ]
@@ -939,7 +984,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "山路 良成",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "やまじ良成"
+      ],
       "seenIn": [
         "h23"
       ]
@@ -959,7 +1006,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "井桁 敦子",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "いげたあつこ"
+      ],
       "seenIn": [
         "h22"
       ]
@@ -979,7 +1028,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "堺 直隆",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "さかい直隆"
+      ],
       "seenIn": [
         "h22"
       ]
@@ -999,7 +1050,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "本間 隆",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "本間たかし"
+      ],
       "seenIn": [
         "h22"
       ]
@@ -1009,7 +1062,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "林 宏",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "林こう"
+      ],
       "seenIn": [
         "h22"
       ]
@@ -1029,7 +1084,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "三上 博志",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "三上ひろし"
+      ],
       "seenIn": [
         "h19"
       ]
@@ -1079,7 +1136,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "中島 美恵",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "中島みえ"
+      ],
       "seenIn": [
         "h18"
       ]
@@ -1089,7 +1148,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "原 雅美",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "原まさみ"
+      ],
       "seenIn": [
         "h18"
       ]
@@ -1099,7 +1160,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "山村 明嗣",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "山村てるつぐ"
+      ],
       "seenIn": [
         "h18"
       ]
@@ -1129,7 +1192,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "築舘 武雄",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "つきだて武雄"
+      ],
       "seenIn": [
         "h18"
       ]
@@ -1139,7 +1204,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "塚本 利光",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "つかもと利光"
+      ],
       "seenIn": [
         "h17"
       ]
@@ -1159,7 +1226,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "嶋 邦子",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "島くに子"
+      ],
       "seenIn": [
         "h16"
       ]
@@ -1179,7 +1248,10 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "佐藤 弥二郎",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "佐藤やじろう",
+        "佐藤彌二郎"
+      ],
       "seenIn": [
         "h15"
       ]
@@ -1189,7 +1261,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "北野 富江",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "北野とみえ"
+      ],
       "seenIn": [
         "h15"
       ]
@@ -1199,7 +1273,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "横山 宏",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "横山ひろし"
+      ],
       "seenIn": [
         "h15"
       ]
@@ -1209,7 +1285,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "鶴 尚",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "つる尚"
+      ],
       "seenIn": [
         "h15"
       ]
@@ -1229,7 +1307,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "金高 政男",
       "status": "元職",
       "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "かねたか政男"
+      ],
       "seenIn": [
         "h14"
       ]
@@ -1259,7 +1339,9 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "辻 幸雄",
       "status": "元職",
       "note": "公式会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "辻ゆきお"
+      ],
       "seenIn": [
         "h14"
       ]
@@ -1279,10 +1361,28 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "菅家 秀夫",
       "status": "元職",
       "note": "公式会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
+      "aliases": [
+        "かんけ秀夫"
+      ],
       "seenIn": [
         "h13"
       ]
+    },
+    {
+      "id": "x-inagaki-takako",
+      "name": "稲垣 孝子",
+      "status": "元職",
+      "aliases": [
+        "いながき孝子"
+      ],
+      "seenIn": []
+    },
+    {
+      "id": "x-watanabe-akemi",
+      "name": "渡辺 あけみ",
+      "status": "元職",
+      "aliases": [],
+      "seenIn": []
     }
   ]
 };

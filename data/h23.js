@@ -642,7 +642,7 @@ window.SHINAGAWA_DB.years["h23"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=292#one"
         }
       ],
-      "memberId": "x-takeuchi-shinobu2"
+      "memberId": "x-takeuchi-shinobu"
     },
     {
       "meetingId": "h23-1t",
@@ -1039,7 +1039,7 @@ window.SHINAGAWA_DB.years["h23"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=300#one"
         }
       ],
-      "memberId": "x-yamamoto-keiko2"
+      "memberId": "x-yamamoto-keiko"
     },
     {
       "meetingId": "h23-2t",
@@ -1249,7 +1249,7 @@ window.SHINAGAWA_DB.years["h23"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=302#one"
         }
       ],
-      "memberId": "x-asano-hiroyuki2"
+      "memberId": "x-asano-hiroyuki"
     },
     {
       "meetingId": "h23-2t",
@@ -2287,7 +2287,7 @@ window.SHINAGAWA_DB.years["h23"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=314#one"
         }
       ],
-      "memberId": "x-yamamoto-keiko2"
+      "memberId": "x-yamamoto-keiko"
     }
   ]
 };

@@ -2063,7 +2063,7 @@ window.SHINAGAWA_DB.years["h15"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=74#one"
         }
       ],
-      "memberId": "x-takeuchi-shinobu2"
+      "memberId": "x-takeuchi-shinobu"
     },
     {
       "meetingId": "h15-4t",

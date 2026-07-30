@@ -372,7 +372,7 @@ window.SHINAGAWA_DB.years["h25"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=348#one"
         }
       ],
-      "memberId": "x-takeuchi-shinobu2"
+      "memberId": "x-takeuchi-shinobu"
     },
     {
       "meetingId": "h25-1t",
@@ -960,7 +960,7 @@ window.SHINAGAWA_DB.years["h25"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=352#one"
         }
       ],
-      "memberId": "x-asano-hiroyuki2"
+      "memberId": "x-asano-hiroyuki"
     },
     {
       "meetingId": "h25-2t",

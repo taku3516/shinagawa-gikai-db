@@ -2513,7 +2513,7 @@ window.SHINAGAWA_DB.electionsData = {
       "noticeDate": "2011-04-17",
       "district": "品川区全域",
       "seats": 40,
-      "candidateCount": 54,
+      "candidateCount": 55,
       "electorate": "296,585",
       "turnout": "40.58",
       "previousTurnout": "41.59",
@@ -2822,6 +2822,14 @@ window.SHINAGAWA_DB.electionsData = {
         {
           "result": "当選",
           "rank": 37,
+          "name": "原 浩三",
+          "party": "",
+          "votesDisplay": "1,774票",
+          "voteShare": ""
+        },
+        {
+          "result": "当選",
+          "rank": 38,
           "name": "井上 八重子",
           "party": "品川・生活者ネットワーク",
           "votesDisplay": "1,734票",
@@ -2829,7 +2837,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 38,
+          "rank": 39,
           "name": "稲川 貴之",
           "party": "民主党",
           "votesDisplay": "1,713票",
@@ -2837,7 +2845,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 39,
+          "rank": 40,
           "name": "よしだ あつみ",
           "party": "みんなの党",
           "votesDisplay": "1,681.090票",
@@ -2845,7 +2853,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 40,
+          "rank": 41,
           "name": "安藤 泰作",
           "party": "日本共産党",
           "votesDisplay": "1,669票",
@@ -2853,7 +2861,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 41,
+          "rank": 42,
           "name": "本間 隆",
           "party": "民主党",
           "votesDisplay": "1,668票",
@@ -2861,7 +2869,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 42,
+          "rank": 43,
           "name": "林 宏",
           "party": "自由民主党",
           "votesDisplay": "1,618票",
@@ -2869,7 +2877,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 43,
+          "rank": 44,
           "name": "吉田 せいしろう",
           "party": "自由民主党",
           "votesDisplay": "1,588.360票",
@@ -2877,7 +2885,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 44,
+          "rank": 45,
           "name": "小林 誠",
           "party": "みんなの党",
           "votesDisplay": "1,552.140票",
@@ -2885,7 +2893,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 45,
+          "rank": 46,
           "name": "吉田 楽",
           "party": "みんなの党",
           "votesDisplay": "1,457.550票",
@@ -2893,7 +2901,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 46,
+          "rank": 47,
           "name": "いとう 優太",
           "party": "みんなの党",
           "votesDisplay": "1,444.980票",
@@ -2901,7 +2909,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 47,
+          "rank": 48,
           "name": "小林 けさみ",
           "party": "品川・生活者ネットワーク",
           "votesDisplay": "1,415.860票",
@@ -2909,7 +2917,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 48,
+          "rank": 49,
           "name": "奥山 晃",
           "party": "民主党",
           "votesDisplay": "1,128票",
@@ -2917,7 +2925,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 49,
+          "rank": 50,
           "name": "川西 和弘",
           "party": "社会民主党",
           "votesDisplay": "1,115票",
@@ -2925,7 +2933,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 50,
+          "rank": 51,
           "name": "やば 亮一",
           "party": "民主党",
           "votesDisplay": "1,084票",
@@ -2933,7 +2941,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 51,
+          "rank": 52,
           "name": "藤川 美穂",
           "party": "幸福実現党",
           "votesDisplay": "914票",
@@ -2941,7 +2949,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 52,
+          "rank": 53,
           "name": "ながおか 義男",
           "party": "無所属",
           "votesDisplay": "414票",
@@ -2949,7 +2957,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 53,
+          "rank": 54,
           "name": "かすや しゅんじ",
           "party": "無所属",
           "votesDisplay": "408票",
@@ -2957,7 +2965,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 54,
+          "rank": 55,
           "name": "杉森 正春",
           "party": "無所属",
           "votesDisplay": "178票",
@@ -2972,6 +2980,10 @@ window.SHINAGAWA_DB.electionsData = {
         {
           "label": "品川区 過去の選挙結果（公式）",
           "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+        },
+        {
+          "label": "品川区 開票結果（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/kuseizyoho-senkyo-kekka-230424/hpg000015470.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -3210,7 +3222,7 @@ window.SHINAGAWA_DB.electionsData = {
       "noticeDate": "2007-04-15",
       "district": "品川区全域",
       "seats": 40,
-      "candidateCount": 52,
+      "candidateCount": 53,
       "electorate": "285,643",
       "turnout": "41.59",
       "previousTurnout": "43.18",
@@ -3414,6 +3426,14 @@ window.SHINAGAWA_DB.electionsData = {
         {
           "result": "当選",
           "rank": 25,
+          "name": "原 浩三",
+          "party": "",
+          "votesDisplay": "2,268.596票",
+          "voteShare": ""
+        },
+        {
+          "result": "当選",
+          "rank": 26,
           "name": "石田 秀男",
           "party": "自由民主党",
           "votesDisplay": "2,219.550票",
@@ -3422,7 +3442,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 26,
+          "rank": 27,
           "name": "本間 隆",
           "party": "民主党",
           "votesDisplay": "2,211票",
@@ -3430,7 +3450,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 27,
+          "rank": 28,
           "name": "伊藤 昌宏",
           "party": "自由民主党",
           "votesDisplay": "2,200票",
@@ -3438,7 +3458,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 28,
+          "rank": 29,
           "name": "安藤 泰作",
           "party": "日本共産党",
           "votesDisplay": "2,196票",
@@ -3446,7 +3466,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 29,
+          "rank": 30,
           "name": "藤原 正則",
           "party": "無所属",
           "votesDisplay": "2,153票",
@@ -3455,7 +3475,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 30,
+          "rank": 31,
           "name": "西本 貴子",
           "party": "無所属",
           "votesDisplay": "2,104票",
@@ -3464,7 +3484,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 31,
+          "rank": 32,
           "name": "土井 洋一",
           "party": "民主党",
           "votesDisplay": "2,099票",
@@ -3472,7 +3492,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 32,
+          "rank": 33,
           "name": "大沢 真一",
           "party": "自由民主党",
           "votesDisplay": "2,093票",
@@ -3480,7 +3500,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 33,
+          "rank": 34,
           "name": "須藤 安通",
           "party": "自由民主党",
           "votesDisplay": "2,061票",
@@ -3488,7 +3508,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 34,
+          "rank": 35,
           "name": "井上 八重子",
           "party": "品川・生活者ネットワーク",
           "votesDisplay": "2,010票",
@@ -3496,7 +3516,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 35,
+          "rank": 36,
           "name": "菊地 貞二",
           "party": "日本共産党",
           "votesDisplay": "1,996票",
@@ -3504,7 +3524,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 36,
+          "rank": 37,
           "name": "林 宏",
           "party": "自由民主党",
           "votesDisplay": "1,854.780票",
@@ -3512,7 +3532,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 37,
+          "rank": 38,
           "name": "川西 絹子",
           "party": "社会民主党",
           "votesDisplay": "1,735票",
@@ -3520,7 +3540,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 38,
+          "rank": 39,
           "name": "井桁 敦子",
           "party": "無所属",
           "votesDisplay": "1,551票",
@@ -3528,7 +3548,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "当選",
-          "rank": 39,
+          "rank": 40,
           "name": "市川 和子",
           "party": "品川・生活者ネットワーク",
           "votesDisplay": "1,540票",
@@ -3536,7 +3556,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 40,
+          "rank": 41,
           "name": "原 雅美",
           "party": "自由民主党",
           "votesDisplay": "1,514.400票",
@@ -3544,7 +3564,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 41,
+          "rank": 42,
           "name": "塚本 利光",
           "party": "自由民主党",
           "votesDisplay": "1,497票",
@@ -3552,7 +3572,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 42,
+          "rank": 43,
           "name": "林 和香",
           "party": "自由民主党",
           "votesDisplay": "1,477.220票",
@@ -3560,7 +3580,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 43,
+          "rank": 44,
           "name": "奥山 晃",
           "party": "民主党",
           "votesDisplay": "1,456票",
@@ -3568,7 +3588,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 44,
+          "rank": 45,
           "name": "加藤 孝",
           "party": "社会民主党",
           "votesDisplay": "1,380票",
@@ -3576,7 +3596,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 45,
+          "rank": 46,
           "name": "佐藤 彌二郎",
           "party": "無所属",
           "votesDisplay": "1,350.540票",
@@ -3584,7 +3604,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 46,
+          "rank": 47,
           "name": "木下 史典",
           "party": "無所属",
           "votesDisplay": "1,251票",
@@ -3592,7 +3612,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 47,
+          "rank": 48,
           "name": "大西 光広",
           "party": "民主党",
           "votesDisplay": "1,177票",
@@ -3600,7 +3620,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 48,
+          "rank": 49,
           "name": "山本 佳子",
           "party": "無所属",
           "votesDisplay": "929票",
@@ -3608,7 +3628,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 49,
+          "rank": 50,
           "name": "佐藤 完二",
           "party": "無所属",
           "votesDisplay": "433.460票",
@@ -3616,7 +3636,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 50,
+          "rank": 51,
           "name": "小山 弘樹",
           "party": "無所属",
           "votesDisplay": "400.110票",
@@ -3624,7 +3644,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 51,
+          "rank": 52,
           "name": "糟谷 啓輔",
           "party": "無所属",
           "votesDisplay": "313票",
@@ -3632,7 +3652,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 52,
+          "rank": 53,
           "name": "原田 生也",
           "party": "無所属",
           "votesDisplay": "240票",
@@ -3647,6 +3667,10 @@ window.SHINAGAWA_DB.electionsData = {
         {
           "label": "品川区 過去の選挙結果（公式）",
           "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+        },
+        {
+          "label": "品川区 開票結果（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/kuseizyoho-senkyo-kekka-190422/hpg000001901.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -3725,7 +3749,7 @@ window.SHINAGAWA_DB.electionsData = {
       "noticeDate": "2006-10-01",
       "district": "品川区全域",
       "seats": 4,
-      "candidateCount": 8,
+      "candidateCount": 9,
       "electorate": "287,005",
       "turnout": "33.9",
       "previousTurnout": "43.18",
@@ -3749,6 +3773,14 @@ window.SHINAGAWA_DB.electionsData = {
         {
           "result": "当選",
           "rank": 3,
+          "name": "原 浩三",
+          "party": "",
+          "votesDisplay": "13,437票",
+          "voteShare": ""
+        },
+        {
+          "result": "当選",
+          "rank": 4,
           "name": "山内 晃",
           "party": "自由民主党",
           "votesDisplay": "12,799票",
@@ -3756,7 +3788,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 4,
+          "rank": 5,
           "name": "渡辺 裕一",
           "party": "自由民主党",
           "votesDisplay": "10,798票",
@@ -3765,7 +3797,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 5,
+          "rank": 6,
           "name": "稲川 貴之",
           "party": "民主党",
           "votesDisplay": "10,398票",
@@ -3773,7 +3805,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 6,
+          "rank": 7,
           "name": "石田 慎吾",
           "party": "民主党",
           "votesDisplay": "9,960票",
@@ -3781,7 +3813,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 7,
+          "rank": 8,
           "name": "井桁 敦子",
           "party": "無所属",
           "votesDisplay": "3,329票",
@@ -3789,7 +3821,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "result": "落選",
-          "rank": 8,
+          "rank": 9,
           "name": "山本 佳子",
           "party": "無所属",
           "votesDisplay": "3,240票",
@@ -3804,6 +3836,10 @@ window.SHINAGAWA_DB.electionsData = {
         {
           "label": "品川区 過去の選挙結果（公式）",
           "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+        },
+        {
+          "label": "品川区 開票結果（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/kuseizyoho-senkyo-kekka-181008/hpg000001756.html"
         }
       ],
       "verifiedAt": "2026-07-30"

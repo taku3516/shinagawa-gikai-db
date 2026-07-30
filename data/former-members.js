@@ -1,8 +1,8 @@
 // 品川区議会DB データファイル（元職区議名簿。人物台帳・会議録・選挙結果から自動集約）
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.formerMembersData = {
-  "updatedAt": "2026-07-30",
-  "note": "元職区議は、品川区議会DBに収録している会議録（平成13年〜）・選挙結果から在職や発言を確認できた方を掲載しています。現職名簿より情報は限られます。発言の詳細は各カードの「発言を横断検索で見る」から、正確な情報は公式の会議録・選挙結果をご確認ください。",
+  "updatedAt": "2026-07-25",
+  "note": "元職区議は、品川区議会DBに収録している会議録（平成13年〜）と選挙結果から在職を確認できた方を掲載しています。現職名簿より情報は限られます。発言の詳細は各カードの「発言を横断検索で見る」、選挙・得票は「選挙アーカイブで探す」からご確認ください。会議録と選挙結果で氏名の表記が異なる方は、同一人物として名寄せしています。",
   "members": [
     {
       "id": "x-abe-yumiko",
@@ -20,8 +20,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2011 品川区議会議員選挙：当選（2,673票）",
         "2007 品川区議会議員選挙：当選（5,397票）",
         "2006 品川区議会議員補欠選挙：当選（13,985票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=あべ 祐美子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-inagawa-takayuki",
@@ -37,8 +36,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2011 品川区議会議員選挙：当選（1,713票）",
         "2007 品川区議会議員選挙：当選（3,984票）",
         "2006 品川区議会議員補欠選挙：落選（10,398票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=いながわ 貴之&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-okuno-shinji",
@@ -47,12 +45,12 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "共産",
       "serviceHistory": "令和2年〜令和4年",
       "questionYears": "令和4年、令和3年、令和2年",
-      "elections": "1回",
+      "elections": "2回",
       "electionHistory": [
         "2023 品川区議会議員選挙：落選（1,521票・1.2%）",
-        "2019 品川区議会議員選挙：当選（2,588票・2.1%）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=おくの 晋治&category=%E8%B3%AA%E5%95%8F"
+        "2019 品川区議会議員選挙：当選（2,588票・2.1%）",
+        "2018 品川区議会議員補欠選挙：当選（25,354票・25.4%）"
+      ]
     },
     {
       "id": "x-kuniba-yudai",
@@ -65,8 +63,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "electionHistory": [
         "2023 品川区議会議員選挙：落選（1,101票・0.8%）",
         "2019 品川区議会議員選挙：当選（2,532票・2.0%）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=くにば 雄大&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-serizawa-yujiro",
@@ -75,28 +72,34 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自民",
       "serviceHistory": "令和元年〜令和6年",
       "questionYears": "令和6年、令和4年、令和3年、令和2年、令和元年",
-      "elections": "3回",
+      "elections": "4回",
       "electionHistory": [
         "2025 東京都議会議員選挙：当選（19,125票・11.8%）",
         "2024 東京都議会議員補欠選挙：落選（57,641票・31.2%）",
         "2023 品川区議会議員選挙：当選（1,886票・1.4%）",
         "2019 品川区議会議員選挙：当選（2,896票・2.3%）",
+        "2018 品川区議会議員補欠選挙：当選（34,377票・34.5%）",
         "2015 品川区議会議員選挙：落選（770票・0.6%）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=せりざわ 裕次郎&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-takeuchi-shinobu",
       "name": "たけうち 忍",
       "statusLabel": "元職（区議会DB収録範囲で在職確認）",
       "party": "公明",
-      "serviceHistory": "平成27年〜令和4年",
-      "questionYears": "令和4年、令和3年、平成29年、平成28年、平成27年",
-      "elections": "1回",
+      "serviceHistory": "平成15年〜令和4年",
+      "questionYears": "令和4年、令和3年、平成29年、平成28年、平成27年、平成25年、平成24年、平成23年、平成22年、平成21年、平成20年、平成19年、平成18年、平成17年、平成16年、平成15年",
+      "elections": "5回",
       "electionHistory": [
-        "2019 品川区議会議員選挙：当選（2,162票・1.7%）"
+        "2019 品川区議会議員選挙：当選（2,162票・1.7%）",
+        "2015 品川区議会議員選挙：当選（2,261票・1.9%）",
+        "2011 品川区議会議員選挙：当選（2,257票）",
+        "2007 品川区議会議員選挙：当選（2,348票）",
+        "2003 品川区議会議員選挙：当選（2,542票）"
       ],
-      "speechSearchUrl": "kensaku.html?q=たけうち 忍&category=%E8%B3%AA%E5%95%8F"
+      "aliases": [
+        "武内 忍"
+      ]
     },
     {
       "id": "x-higashi-yuki",
@@ -109,8 +112,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "electionHistory": [
         "2025 東京都議会議員選挙：当選（18,418票・11.4%）",
         "2023 品川区議会議員選挙：当選（4,676票・3.5%）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=ひがし ゆき&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-mikami-hiroshi",
@@ -124,8 +126,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（2,688票）",
         "2003 品川区議会議員選挙：当選（3,170票）",
         "1999 品川区議会議員選挙：当選（2,979票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=三上 博志&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-mimura-ritsuko",
@@ -137,8 +138,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "elections": "1回",
       "electionHistory": [
         "2003 品川区議会議員選挙：当選（1,837票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=三村 りつ子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-ueyama-hirofumi",
@@ -151,8 +151,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "electionHistory": [
         "2003 品川区議会議員選挙：落選（1,435票）",
         "1999 品川区議会議員選挙：当選（1,853票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=上山 弘文&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-nakajima-mie",
@@ -161,7 +160,11 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "公明",
       "serviceHistory": "平成13年〜平成18年",
       "questionYears": "平成18年、平成17年、平成16年、平成15年、平成14年、平成13年",
-      "speechSearchUrl": "kensaku.html?q=中島 美恵&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2003 品川区議会議員選挙：当選（2,647票）",
+        "1999 品川区議会議員選挙：当選（2,714票）"
+      ],
+      "elections": "2回"
     },
     {
       "id": "x-inoue-yaeko",
@@ -175,8 +178,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2011 品川区議会議員選挙：当選（1,734票）",
         "2007 品川区議会議員選挙：当選（2,010票）",
         "2003 品川区議会議員選挙：当選（2,185票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=井上 八重子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-igeta-atsuko",
@@ -189,8 +191,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "electionHistory": [
         "2007 品川区議会議員選挙：当選（1,551票）",
         "2006 品川区議会議員補欠選挙：落選（3,329票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=井桁 敦子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-ito-masahiro",
@@ -199,14 +200,15 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自・未",
       "serviceHistory": "平成14年〜平成29年",
       "questionYears": "平成29年、平成28年、平成27年、平成26年、平成25年、平成24年、平成23年、平成22年、平成21年、平成18年、平成16年、平成15年、平成14年",
-      "elections": "4回",
+      "elections": "5回",
       "electionHistory": [
+        "2019 品川区議会議員選挙：落選（1,843.501票・1.5%）",
         "2015 品川区議会議員選挙：当選（1,985票・1.7%）",
+        "2011 品川区議会議員選挙：当選（2,922.010票）",
         "2007 品川区議会議員選挙：当選（2,200票）",
         "2003 品川区議会議員選挙：当選（2,582票）",
         "1999 品川区議会議員選挙：当選（2,441票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=伊藤 昌宏&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-sato-yajiro",
@@ -215,7 +217,12 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "合同",
       "serviceHistory": "平成14年〜平成15年",
       "questionYears": "平成15年、平成14年",
-      "speechSearchUrl": "kensaku.html?q=佐藤 弥二郎&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2007 品川区議会議員選挙：落選（1,350.540票）",
+        "2003 品川区議会議員選挙：落選（1,305票）",
+        "1999 品川区議会議員選挙：当選（1,984票）"
+      ],
+      "elections": "1回"
     },
     {
       "id": "x-kitano-tomie",
@@ -224,7 +231,10 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "合同",
       "serviceHistory": "平成13年〜平成15年",
       "questionYears": "平成15年、平成14年、平成13年",
-      "speechSearchUrl": "kensaku.html?q=北野 富江&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "1999 品川区議会議員選挙：当選（3,335票）"
+      ],
+      "elections": "1回"
     },
     {
       "id": "x-minami-keiko",
@@ -240,8 +250,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（2,876票）",
         "2003 品川区議会議員選挙：当選（3,357票）",
         "1999 品川区議会議員選挙：当選（3,388.370票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=南 恵子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-hara-kozo",
@@ -250,7 +259,12 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "無所属",
       "serviceHistory": "平成19年〜平成27年",
       "questionYears": "平成27年、平成25年、平成24年、平成22年、平成21年、平成20年、平成19年",
-      "speechSearchUrl": "kensaku.html?q=原 浩三&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2011 品川区議会議員選挙：当選（1,774票）",
+        "2007 品川区議会議員選挙：当選（2,268.596票）",
+        "2006 品川区議会議員補欠選挙：当選（13,437票）"
+      ],
+      "elections": "3回"
     },
     {
       "id": "x-hara-masami",
@@ -264,8 +278,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：落選（1,514.400票）",
         "2003 品川区議会議員選挙：当選（2,893.240票）",
         "1999 品川区議会議員選挙：当選（2,585票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=原 雅美&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-yoshida-atsumi",
@@ -275,9 +288,12 @@ window.SHINAGAWA_DB.formerMembersData = {
       "serviceHistory": "平成24年〜平成26年",
       "questionYears": "平成26年、平成25年、平成24年",
       "electionHistory": [
-        "2018 品川区議会議員補欠選挙：落選（10,814票・10.9%）"
+        "2019 品川区議会議員選挙：落選（871.136票・0.7%）",
+        "2018 品川区議会議員補欠選挙：落選（10,814票・10.9%）",
+        "2015 品川区議会議員選挙：落選（752票・0.6%）",
+        "2011 品川区議会議員選挙：当選（1,681.090票）"
       ],
-      "speechSearchUrl": "kensaku.html?q=吉田 あつみ&category=%E8%B3%AA%E5%95%8F"
+      "elections": "1回"
     },
     {
       "id": "x-mukai-megumi",
@@ -286,7 +302,10 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "民・改",
       "serviceHistory": "平成23年〜平成26年",
       "questionYears": "平成26年、平成25年、平成24年、平成23年",
-      "speechSearchUrl": "kensaku.html?q=向 めぐ美&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2011 品川区議会議員選挙：当選（1,954票）"
+      ],
+      "elections": "1回"
     },
     {
       "id": "x-doi-yoichi",
@@ -300,8 +319,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（2,099票）",
         "2003 品川区議会議員選挙：当選（2,090票）",
         "1999 品川区議会議員選挙：当選（2,768票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=土井 洋一&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-sakai-naotaka",
@@ -315,8 +333,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（2,502票）",
         "2003 品川区議会議員選挙：当選（2,998票）",
         "1999 品川区議会議員選挙：当選（2,710票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=堺 直隆&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-tsukamoto-toshimitsu",
@@ -330,8 +347,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：落選（1,497票）",
         "2003 品川区議会議員選挙：当選（2,223票）",
         "1999 品川区議会議員選挙：当選（1,985票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=塚本 利光&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-osawa-shinichi",
@@ -340,15 +356,15 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自・無",
       "serviceHistory": "平成16年〜令和3年",
       "questionYears": "令和3年、令和2年、令和元年、平成29年、平成26年、平成25年、平成24年、平成23年、平成22年、平成21年、平成20年、平成19年、平成18年、平成17年、平成16年",
-      "elections": "4回",
+      "elections": "5回",
       "electionHistory": [
+        "2019 品川区議会議員選挙：当選（1,932票・1.5%）",
         "2015 品川区議会議員選挙：当選（2,358票・2.0%）",
         "2011 品川区議会議員選挙：当選（2,380票）",
         "2007 品川区議会議員選挙：当選（2,093票）",
         "2003 品川区議会議員選挙：当選（2,180票）",
         "1999 品川区議会議員選挙：落選（1,737票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=大沢 真一&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-onishi-mitsuhiro",
@@ -359,12 +375,14 @@ window.SHINAGAWA_DB.formerMembersData = {
       "questionYears": "平成25年、平成23年、平成18年、平成16年、平成15年",
       "elections": "3回",
       "electionHistory": [
+        "2023 品川区議会議員選挙：落選（649票・0.5%）",
+        "2022 品川区議会議員補欠選挙：落選（11,083票・10.9%）",
+        "2022 品川区長選挙：落選（7,821票・6.9%）",
         "2011 品川区議会議員選挙：当選（2,134票）",
         "2010 品川区議会議員補欠選挙：当選（15,193票）",
         "2007 品川区議会議員選挙：落選（1,177票）",
         "2003 品川区議会議員選挙：当選（1,914票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=大西 光広&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-miyazaki-katsutoshi",
@@ -379,31 +397,23 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（2,346票）",
         "2003 品川区議会議員選挙：当選（1,999票）",
         "1999 品川区議会議員選挙：当選（2,423票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=宮崎 克俊&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-yamamoto-keiko",
       "name": "山元 けい子",
       "statusLabel": "元職（区議会DB収録範囲で在職確認）",
       "party": "公明",
-      "serviceHistory": "平成25年〜平成27年",
-      "questionYears": "平成27年、平成25年",
-      "speechSearchUrl": "kensaku.html?q=山元 けい子&category=%E8%B3%AA%E5%95%8F"
-    },
-    {
-      "id": "x-yamamoto-keiko2",
-      "name": "山元 敬子",
-      "statusLabel": "元職（区議会DB収録範囲で在職確認）",
-      "party": "公明",
-      "serviceHistory": "平成19年〜平成24年",
-      "questionYears": "平成24年、平成23年、平成22年、平成21年、平成20年、平成19年",
-      "elections": "2回",
+      "serviceHistory": "平成19年〜平成27年",
+      "questionYears": "平成27年、平成25年、平成24年、平成23年、平成22年、平成21年、平成20年、平成19年",
+      "aliases": [
+        "山元 敬子"
+      ],
       "electionHistory": [
         "2011 品川区議会議員選挙：当選（2,742票）",
         "2007 品川区議会議員選挙：当選（3,161票）"
       ],
-      "speechSearchUrl": "kensaku.html?q=山元 敬子&category=%E8%B3%AA%E5%95%8F"
+      "elections": "2回"
     },
     {
       "id": "x-yamauchi-akira",
@@ -419,8 +429,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2011 品川区議会議員選挙：当選（2,248票）",
         "2007 品川区議会議員選挙：当選（2,813票）",
         "2006 品川区議会議員補欠選挙：当選（12,799票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=山内 晃&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-yamamura-akitsugu",
@@ -429,7 +438,10 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "区民",
       "serviceHistory": "平成16年〜平成18年",
       "questionYears": "平成18年、平成17年、平成16年",
-      "speechSearchUrl": "kensaku.html?q=山村 明嗣&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2003 品川区議会議員選挙：当選（1,768票）"
+      ],
+      "elections": "1回"
     },
     {
       "id": "x-yamaji-yoshinari",
@@ -443,8 +455,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（2,574票）",
         "2003 品川区議会議員選挙：当選（2,632票）",
         "1999 品川区議会議員選挙：当選（2,480票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=山路 良成&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-shima-kuniko",
@@ -453,7 +464,11 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "公明",
       "serviceHistory": "平成13年〜平成16年",
       "questionYears": "平成16年、平成15年、平成14年、平成13年",
-      "speechSearchUrl": "kensaku.html?q=嶋 邦子&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2003 品川区議会議員選挙：当選（3,032票）",
+        "1999 品川区議会議員選挙：当選（3,054票）"
+      ],
+      "elections": "2回"
     },
     {
       "id": "x-kawanishi-kinuko",
@@ -467,8 +482,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（1,735票）",
         "2003 品川区議会議員選挙：当選（2,000票）",
         "1999 品川区議会議員選挙：当選（2,553票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=川西 絹子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-ichikawa-kazuko",
@@ -480,8 +494,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "elections": "1回",
       "electionHistory": [
         "2007 品川区議会議員選挙：当選（1,540票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=市川 和子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-kinoshita-fuminori",
@@ -495,8 +508,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：落選（1,251票）",
         "2003 品川区議会議員選挙：当選（1,636票）",
         "1999 品川区議会議員選挙：落選（1,186票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=木下 史典&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-honda-takenobu",
@@ -505,15 +517,16 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自民",
       "serviceHistory": "平成13年〜令和2年",
       "questionYears": "令和2年、令和元年、平成29年、平成28年、平成27年、平成26年、平成25年、平成24年、平成23年、平成20年、平成19年、平成18年、平成17年、平成15年、平成14年、平成13年",
-      "elections": "5回",
+      "elections": "6回",
       "electionHistory": [
+        "2023 品川区議会議員選挙：落選（1,448票・1.1%）",
+        "2019 品川区議会議員選挙：当選（2,203票・1.8%）",
         "2015 品川区議会議員選挙：当選（2,352票・2.0%）",
         "2011 品川区議会議員選挙：当選（2,422票）",
         "2007 品川区議会議員選挙：当選（2,418票）",
         "2003 品川区議会議員選挙：当選（2,241.540票）",
         "1999 品川区議会議員選挙：当選（2,420.520票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=本多 健信&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-honda-giichi",
@@ -526,8 +539,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "electionHistory": [
         "2003 品川区議会議員選挙：当選（1,869.460票）",
         "1999 品川区議会議員選挙：当選（2,242.480票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=本田 義一&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-honma-takashi",
@@ -542,8 +554,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（2,211票）",
         "2003 品川区議会議員選挙：当選（2,882票）",
         "1999 品川区議会議員選挙：当選（1,823票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=本間 隆&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-matsuzawa-toshiyuki",
@@ -552,7 +563,14 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自・未",
       "serviceHistory": "平成13年〜平成29年",
       "questionYears": "平成29年、平成28年、平成27年、平成26年、平成25年、平成24年、平成23年、平成21年、平成20年、平成19年、平成18年、平成17年、平成15年、平成14年、平成13年",
-      "speechSearchUrl": "kensaku.html?q=松澤 利行&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2015 品川区議会議員選挙：当選（3,161票・2.7%）",
+        "2011 品川区議会議員選挙：当選（3,019票）",
+        "2007 品川区議会議員選挙：当選（3,176票）",
+        "2003 品川区議会議員選挙：当選（3,648票）",
+        "1999 品川区議会議員選挙：当選（3,532票）"
+      ],
+      "elections": "5回"
     },
     {
       "id": "x-hayashi-kazuya",
@@ -565,8 +583,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "electionHistory": [
         "2003 品川区議会議員選挙：当選（2,506.340票）",
         "1999 品川区議会議員選挙：当選（2,669.330票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=林 和也&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-hayashi-hiroshi",
@@ -581,8 +598,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（1,854.780票）",
         "2003 品川区議会議員選挙：当選（2,236.660票）",
         "1999 品川区議会議員選挙：当選（2,460.170票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=林 宏&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-sakurai-keiko",
@@ -596,8 +612,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2006 品川区長選挙：落選（20,088票）",
         "2003 品川区長選挙：落選（19,794票）",
         "1999 品川区議会議員選挙：当選（3,383.370票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=桜井 恵子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-yokoyama-hiroshi",
@@ -606,23 +621,10 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自民",
       "serviceHistory": "平成14年〜平成15年",
       "questionYears": "平成15年、平成14年",
-      "speechSearchUrl": "kensaku.html?q=横山 宏&category=%E8%B3%AA%E5%95%8F"
-    },
-    {
-      "id": "x-takeuchi-shinobu2",
-      "name": "武内 忍",
-      "statusLabel": "元職（区議会DB収録範囲で在職確認）",
-      "party": "公明",
-      "serviceHistory": "平成15年〜平成25年",
-      "questionYears": "平成25年、平成24年、平成23年、平成22年、平成21年、平成20年、平成19年、平成18年、平成17年、平成16年、平成15年",
-      "elections": "4回",
       "electionHistory": [
-        "2015 品川区議会議員選挙：当選（2,261票・1.9%）",
-        "2011 品川区議会議員選挙：当選（2,257票）",
-        "2007 品川区議会議員選挙：当選（2,348票）",
-        "2003 品川区議会議員選挙：当選（2,542票）"
+        "1999 品川区議会議員選挙：当選（2,427.500票）"
       ],
-      "speechSearchUrl": "kensaku.html?q=武内 忍&category=%E8%B3%AA%E5%95%8F"
+      "elections": "1回"
     },
     {
       "id": "x-sawada-hirokazu",
@@ -633,12 +635,12 @@ window.SHINAGAWA_DB.formerMembersData = {
       "questionYears": "平成29年、平成28年、平成27年、平成26年、平成25年、平成24年、平成23年",
       "elections": "3回",
       "electionHistory": [
+        "2021 東京都議会議員選挙：落選（16,610票・11.7%）",
         "2017 東京都議会議員選挙：落選（15,807票・9.7%）",
         "2015 品川区議会議員選挙：当選（2,925票・2.5%）",
         "2011 品川区議会議員選挙：当選（2,964票）",
         "2010 品川区議会議員補欠選挙：当選（28,159票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=沢田 洋和&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-sawada-eiji",
@@ -652,32 +654,36 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2010 品川区長選挙：落選（25,716票）",
         "2003 品川区議会議員選挙：当選（2,376票）",
         "1999 品川区議会議員選挙：当選（3,035票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=沢田 英次&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-asano-hiroyuki",
       "name": "浅野 ひろゆき",
       "statusLabel": "元職（区議会DB収録範囲で在職確認）",
       "party": "公明",
-      "serviceHistory": "平成26年〜平成29年",
-      "questionYears": "平成29年、平成27年、平成26年",
-      "speechSearchUrl": "kensaku.html?q=浅野 ひろゆき&category=%E8%B3%AA%E5%95%8F"
-    },
-    {
-      "id": "x-asano-hiroyuki2",
-      "name": "浅野 浩之",
-      "statusLabel": "元職（区議会DB収録範囲で在職確認）",
-      "party": "公明",
-      "serviceHistory": "平成19年〜平成25年",
-      "questionYears": "平成25年、平成24年、平成23年、平成22年、平成21年、平成20年、平成19年",
-      "elections": "3回",
+      "serviceHistory": "平成19年〜平成29年",
+      "questionYears": "平成29年、平成27年、平成26年、平成25年、平成24年、平成23年、平成22年、平成21年、平成20年、平成19年",
+      "aliases": [
+        "浅野 浩之"
+      ],
       "electionHistory": [
         "2015 品川区議会議員選挙：当選（2,164票・1.8%）",
         "2011 品川区議会議員選挙：当選（2,247票）",
         "2007 品川区議会議員選挙：当選（2,509票）"
       ],
-      "speechSearchUrl": "kensaku.html?q=浅野 浩之&category=%E8%B3%AA%E5%95%8F"
+      "elections": "3回"
+    },
+    {
+      "id": "x-watanabe-akemi",
+      "name": "渡辺 あけみ",
+      "statusLabel": "元職（選挙結果で当選確認・会議録に発言記録なし）",
+      "party": "民主党（当時）",
+      "serviceHistory": "平成11年〜平成15年（区議1期）",
+      "electionHistory": [
+        "2001 東京都議会議員選挙：落選（5,101票）",
+        "1999 品川区議会議員選挙：当選（3,282票）"
+      ],
+      "elections": "1回"
     },
     {
       "id": "x-watabe-shigeru",
@@ -686,13 +692,14 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自民",
       "serviceHistory": "平成19年〜令和5年",
       "questionYears": "令和5年、令和4年、令和3年、令和元年、平成29年、平成28年、平成27年、平成26年、平成25年、平成24年、平成23年、平成21年、平成20年、平成19年",
-      "elections": "3回",
+      "elections": "4回",
       "electionHistory": [
+        "2023 品川区議会議員選挙：落選（1,318票・1.0%）",
+        "2019 品川区議会議員選挙：当選（2,109票・1.7%）",
         "2015 品川区議会議員選挙：当選（2,362票・2.0%）",
         "2011 品川区議会議員選挙：当選（1,803票）",
         "2007 品川区議会議員選挙：当選（2,516票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=渡部 茂&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-yuzawa-kazutaka",
@@ -701,7 +708,11 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自民",
       "serviceHistory": "令和元年〜令和4年",
       "questionYears": "令和4年、令和3年、令和2年、令和元年",
-      "speechSearchUrl": "kensaku.html?q=湯澤 一貴&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2023 品川区議会議員選挙：落選（1,338票・1.0%）",
+        "2019 品川区議会議員選挙：当選（2,200票・1.8%）"
+      ],
+      "elections": "1回"
     },
     {
       "id": "x-tanaka-sayaka",
@@ -715,8 +726,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2023 品川区議会議員選挙：落選（1,525.338票・1.2%）",
         "2019 品川区議会議員選挙：当選（2,134票・1.7%）",
         "2015 品川区議会議員選挙：当選（1,993票・1.7%）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=田中 さやか&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-tanaka-go",
@@ -733,8 +743,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2005 東京都議会議員選挙：当選（21,075票）",
         "2003 品川区議会議員選挙：当選（5,383票）",
         "1999 品川区議会議員選挙：当選（3,666票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=田中 豪&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-ishida-shingo",
@@ -753,8 +762,23 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2011 品川区議会議員選挙：当選（2,080.780票）",
         "2007 品川区議会議員選挙：当選（4,115.440票）",
         "2006 品川区議会議員補欠選挙：落選（9,960票）"
+      ]
+    },
+    {
+      "id": "x-inagaki-takako",
+      "name": "稲垣 孝子",
+      "statusLabel": "元職（選挙結果で当選確認・会議録に発言記録なし）",
+      "party": "生活者ネット",
+      "serviceHistory": "令和4年12月〜令和5年4月（区議補欠選挙で当選）",
+      "aliases": [
+        "いながき孝子"
       ],
-      "speechSearchUrl": "kensaku.html?q=石田 しんご&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2023 品川区議会議員選挙：落選（1,547.125票・1.2%）",
+        "2022 品川区議会議員補欠選挙：当選（17,808票・17.6%）",
+        "2022 品川区議会議員補欠選挙：落選（13,360票・11.9%）"
+      ],
+      "elections": "1回"
     },
     {
       "id": "x-tsukidate-takeo",
@@ -763,7 +787,11 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自民",
       "serviceHistory": "平成13年〜平成18年",
       "questionYears": "平成18年、平成17年、平成16年、平成14年、平成13年",
-      "speechSearchUrl": "kensaku.html?q=築舘 武雄&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2003 品川区議会議員選挙：当選（2,074票）",
+        "1999 品川区議会議員選挙：当選（2,135票）"
+      ],
+      "elections": "2回"
     },
     {
       "id": "x-funanami-keiko",
@@ -776,8 +804,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "electionHistory": [
         "2003 品川区長選挙：落選（6,648票）",
         "1999 品川区議会議員選挙：当選（2,390.260票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=船波 恵子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-kanke-hideo",
@@ -786,7 +813,10 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "民主",
       "serviceHistory": "平成13年",
       "questionYears": "平成13年",
-      "speechSearchUrl": "kensaku.html?q=菅家 秀夫&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "1999 品川区議会議員選挙：当選（1,939票）"
+      ],
+      "elections": "1回"
     },
     {
       "id": "x-kikuchi-teiji",
@@ -800,8 +830,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（1,996票）",
         "2003 品川区議会議員選挙：当選（1,962票）",
         "1999 品川区議会議員選挙：当選（2,033票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=菊地 貞二&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-fujita-jiro",
@@ -814,8 +843,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "electionHistory": [
         "2003 品川区議会議員選挙：当選（2,905票）",
         "1999 品川区議会議員選挙：当選（2,853票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=藤田 二郎&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-tsuji-yukio",
@@ -824,7 +852,10 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "公明",
       "serviceHistory": "平成13年〜平成14年",
       "questionYears": "平成14年、平成13年",
-      "speechSearchUrl": "kensaku.html?q=辻 幸雄&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "1999 品川区議会議員選挙：当選（2,763票）"
+      ],
+      "elections": "1回"
     },
     {
       "id": "x-kanetaka-masao",
@@ -833,7 +864,11 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "民主",
       "serviceHistory": "平成13年〜平成14年",
       "questionYears": "平成14年、平成13年",
-      "speechSearchUrl": "kensaku.html?q=金高 政男&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "2003 品川区議会議員選挙：当選（2,446票）",
+        "1999 品川区議会議員選挙：当選（2,125票）"
+      ],
+      "elections": "2回"
     },
     {
       "id": "x-suzuki-hiroshi",
@@ -847,8 +882,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2019 品川区議会議員選挙：当選（2,427.766票・1.9%）",
         "2015 品川区議会議員選挙：当選（2,513票・2.1%）",
         "2011 品川区議会議員選挙：当選（2,632.410票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=鈴木 博&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-suzuki-masumi",
@@ -857,15 +891,15 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "自民",
       "serviceHistory": "平成13年〜令和4年",
       "questionYears": "令和4年、令和3年、令和2年、令和元年、平成29年、平成28年、平成27年、平成26年、平成25年、平成22年、平成21年、平成20年、平成19年、平成18年、平成17年、平成16年、平成15年、平成14年、平成13年",
-      "elections": "5回",
+      "elections": "6回",
       "electionHistory": [
+        "2019 品川区議会議員選挙：当選（2,910.630票・2.3%）",
         "2015 品川区議会議員選挙：当選（2,642票・2.2%）",
         "2011 品川区議会議員選挙：当選（3,070.970票）",
         "2007 品川区議会議員選挙：当選（2,570.120票）",
         "2003 品川区議会議員選挙：当選（2,698.440票）",
         "1999 品川区議会議員選挙：当選（2,306.140票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=鈴木 真澄&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-suto-yasumichi",
@@ -880,8 +914,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（2,061票）",
         "2003 品川区議会議員選挙：当選（2,563票）",
         "1999 品川区議会議員選挙：当選（2,784票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=須藤 安通&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-iinuma-masako",
@@ -897,8 +930,7 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2007 品川区議会議員選挙：当選（2,621票）",
         "2003 品川区議会議員選挙：当選（2,544票）",
         "1999 品川区議会議員選挙：当選（2,668票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=飯沼 雅子&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-takahoshi-masatoshi",
@@ -911,8 +943,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "electionHistory": [
         "2003 品川区議会議員選挙：当選（2,064票）",
         "1999 品川区議会議員選挙：当選（1,892票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=高星 正利&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-takagi-akira",
@@ -924,8 +955,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "elections": "1回",
       "electionHistory": [
         "1999 品川区議会議員選挙：当選（2,739票）"
-      ],
-      "speechSearchUrl": "kensaku.html?q=高木 明&category=%E8%B3%AA%E5%95%8F"
+      ]
     },
     {
       "id": "x-tsuru-hisashi",
@@ -934,7 +964,10 @@ window.SHINAGAWA_DB.formerMembersData = {
       "party": "公明",
       "serviceHistory": "平成13年〜平成15年",
       "questionYears": "平成15年、平成14年、平成13年",
-      "speechSearchUrl": "kensaku.html?q=鶴 尚&category=%E8%B3%AA%E5%95%8F"
+      "electionHistory": [
+        "1999 品川区議会議員選挙：当選（2,737票）"
+      ],
+      "elections": "1回"
     }
   ]
 };

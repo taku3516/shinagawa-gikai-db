@@ -8,7 +8,7 @@
 // career, aliases, sns, fundReports, activityExpenses, sources
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.politiciansData = {
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-07-25",
   "note": "区議以外の政治家名簿。現職都議は東京都議会公式サイトからの転記、元職都議は都議選アーカイブ（品川区選挙区・1997年〜）の当選者を基に作成しています。元職の在職期間は選挙結果からの推定を含みます。",
   "rosters": {
     "current-tokyo": {
@@ -31,7 +31,11 @@ window.SHINAGAWA_DB.politiciansData = {
           "career": "令和6年7月の東京都議会議員補欠選挙で初当選。令和7年に再選。",
           "sns": [],
           "fundReports": [],
-          "activityExpenses": []
+          "activityExpenses": [],
+          "electionHistory": [
+            "2025 東京都議会議員選挙：当選（40,465票・25.0%）",
+            "2024 東京都議会議員補欠選挙：当選（60,094票・32.5%）"
+          ]
         },
         {
           "id": "t-ito-koichi",
@@ -48,11 +52,21 @@ window.SHINAGAWA_DB.politiciansData = {
           "tel": "03-3776-6784",
           "profileUrl": "https://www.gikai.metro.tokyo.lg.jp/membership/num021.html",
           "websiteUrl": "https://www.koichi-ito.net/",
-          "aliases": ["伊藤興一"],
+          "aliases": [
+            "伊藤興一"
+          ],
           "career": "平成17年から連続当選。選挙公報等では「伊藤 興一」表記の年もある。",
           "sns": [],
           "fundReports": [],
-          "activityExpenses": []
+          "activityExpenses": [],
+          "electionHistory": [
+            "2025 東京都議会議員選挙：当選（19,351票・12.0%）",
+            "2021 東京都議会議員選挙：当選（23,188票・16.4%）",
+            "2017 東京都議会議員選挙：当選（26,184票・16.0%）",
+            "2013 東京都議会議員選挙：当選（21,016票）",
+            "2009 東京都議会議員選挙：当選（25,322票）",
+            "2005 東京都議会議員選挙：当選（27,729票）"
+          ]
         },
         {
           "id": "x-serizawa-yujiro",
@@ -72,7 +86,15 @@ window.SHINAGAWA_DB.politiciansData = {
           "career": "品川区議会議員（令和元年〜令和6年、1期）を経て、令和7年に東京都議会議員へ初当選。",
           "sns": [],
           "fundReports": [],
-          "activityExpenses": []
+          "activityExpenses": [],
+          "electionHistory": [
+            "2025 東京都議会議員選挙：当選（19,125票・11.8%）",
+            "2024 東京都議会議員補欠選挙：落選（57,641票・31.2%）",
+            "2023 品川区議会議員選挙：当選（1,886票・1.4%）",
+            "2019 品川区議会議員選挙：当選（2,896票・2.3%）",
+            "2018 品川区議会議員補欠選挙：当選（34,377票・34.5%）",
+            "2015 品川区議会議員選挙：落選（770票・0.6%）"
+          ]
         },
         {
           "id": "x-higashi-yuki",
@@ -93,7 +115,11 @@ window.SHINAGAWA_DB.politiciansData = {
           "career": "品川区議会議員（令和6年〜令和7年）を経て、令和7年に東京都議会議員へ初当選。",
           "sns": [],
           "fundReports": [],
-          "activityExpenses": []
+          "activityExpenses": [],
+          "electionHistory": [
+            "2025 東京都議会議員選挙：当選（18,418票・11.4%）",
+            "2023 品川区議会議員選挙：当選（4,676票・3.5%）"
+          ]
         }
       ]
     },
@@ -107,8 +133,17 @@ window.SHINAGAWA_DB.politiciansData = {
           "statusLabel": "元職都議（現・品川区長）",
           "electoralDistrict": "品川区選挙区",
           "serviceHistory": "平成29年〜令和4年（都議2期）",
-          "aliases": ["森沢恭子"],
-          "career": "東京都議会議員（平成29年〜令和4年）を経て、令和4年から品川区長。選挙により「森沢 恭子」表記の年もある。"
+          "aliases": [
+            "森沢恭子"
+          ],
+          "career": "東京都議会議員（平成29年〜令和4年）を経て、令和4年から品川区長。選挙により「森沢 恭子」表記の年もある。",
+          "electionHistory": [
+            "2022 品川区長再選挙：当選（40,695票・38.6%）",
+            "2022 品川区長選挙：落選（27,759票・24.5%）",
+            "2021 東京都議会議員選挙：当選（22,413票・15.8%）",
+            "2017 東京都議会議員選挙：当選（32,261票・19.8%）"
+          ],
+          "elections": "2回"
         },
         {
           "id": "x-abe-yumiko",
@@ -117,7 +152,17 @@ window.SHINAGAWA_DB.politiciansData = {
           "statusLabel": "元職都議（元・品川区議）",
           "electoralDistrict": "品川区選挙区",
           "serviceHistory": "令和3年〜令和7年（都議1期）",
-          "career": "品川区議会議員（平成18年〜令和2年）を経て、令和3年に東京都議会議員へ当選（1期）。"
+          "career": "品川区議会議員（平成18年〜令和2年）を経て、令和3年に東京都議会議員へ当選（1期）。",
+          "electionHistory": [
+            "2021 東京都議会議員選挙：当選（20,087票・14.2%）",
+            "2019 品川区議会議員選挙：当選（6,069票・4.8%）",
+            "2017 東京都議会議員選挙：落選（17,612票・10.8%）",
+            "2015 品川区議会議員選挙：当選（3,039票・2.6%）",
+            "2011 品川区議会議員選挙：当選（2,673票）",
+            "2007 品川区議会議員選挙：当選（5,397票）",
+            "2006 品川区議会議員補欠選挙：当選（13,985票）"
+          ],
+          "elections": "1回"
         },
         {
           "id": "t-shiraishi-tamio",
@@ -127,8 +172,17 @@ window.SHINAGAWA_DB.politiciansData = {
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
           "serviceHistory": "平成25年〜令和7年（都議3期）",
-          "aliases": ["白石民男"],
-          "career": "平成25年から3期連続当選。選挙により「白石 民男」表記の年もある。"
+          "aliases": [
+            "白石民男"
+          ],
+          "career": "平成25年から3期連続当選。選挙により「白石 民男」表記の年もある。",
+          "electionHistory": [
+            "2025 東京都議会議員選挙：落選（14,478票・8.9%）",
+            "2021 東京都議会議員選挙：当選（20,552票・14.5%）",
+            "2017 東京都議会議員選挙：当選（23,176票・14.2%）",
+            "2013 東京都議会議員選挙：当選（15,338票）"
+          ],
+          "elections": "3回"
         },
         {
           "id": "x-yamauchi-akira",
@@ -137,7 +191,15 @@ window.SHINAGAWA_DB.politiciansData = {
           "statusLabel": "元職都議（元・品川区議）",
           "electoralDistrict": "品川区選挙区",
           "serviceHistory": "平成25年〜令和3年（都議2期）",
-          "career": "品川区議会議員（平成19年〜平成24年）を経て、東京都議会議員（平成25年〜令和3年、2期）。"
+          "career": "品川区議会議員（平成19年〜平成24年）を経て、東京都議会議員（平成25年〜令和3年、2期）。",
+          "electionHistory": [
+            "2017 東京都議会議員選挙：当選（28,591票・17.5%）",
+            "2013 東京都議会議員選挙：当選（22,862票）",
+            "2011 品川区議会議員選挙：当選（2,248票）",
+            "2007 品川区議会議員選挙：当選（2,813票）",
+            "2006 品川区議会議員補欠選挙：当選（12,799票）"
+          ],
+          "elections": "2回"
         },
         {
           "id": "x-tanaka-go",
@@ -146,7 +208,16 @@ window.SHINAGAWA_DB.politiciansData = {
           "statusLabel": "元職都議（元・品川区議）",
           "electoralDistrict": "品川区選挙区",
           "serviceHistory": "平成17年〜平成29年（都議3期）",
-          "career": "品川区議会議員を経て、東京都議会議員（平成17年〜平成29年、3期）。"
+          "career": "品川区議会議員を経て、東京都議会議員（平成17年〜平成29年、3期）。",
+          "electionHistory": [
+            "2017 東京都議会議員選挙：落選（19,546票・12.0%）",
+            "2013 東京都議会議員選挙：当選（25,140票）",
+            "2009 東京都議会議員選挙：当選（22,853票）",
+            "2005 東京都議会議員選挙：当選（21,075票）",
+            "2003 品川区議会議員選挙：当選（5,383票）",
+            "1999 品川区議会議員選挙：当選（3,666票）"
+          ],
+          "elections": "3回"
         },
         {
           "id": "t-kamino-yoshihiro",
@@ -155,7 +226,14 @@ window.SHINAGAWA_DB.politiciansData = {
           "party": "民主党（当時）",
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
-          "serviceHistory": "平成21年〜平成25年（都議1期）"
+          "serviceHistory": "平成21年〜平成25年（都議1期）",
+          "electionHistory": [
+            "2013 東京都議会議員選挙：落選（12,951票）",
+            "2009 東京都議会議員選挙：当選（42,221票）",
+            "2005 東京都議会議員選挙：落選（17,467票）",
+            "2003 品川区長選挙：落選（4,830票）"
+          ],
+          "elections": "1回"
         },
         {
           "id": "t-baba-yuko",
@@ -164,7 +242,15 @@ window.SHINAGAWA_DB.politiciansData = {
           "party": "民主党（当時）",
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
-          "serviceHistory": "平成9年〜平成25年（都議4期）"
+          "serviceHistory": "平成9年〜平成25年（都議4期）",
+          "electionHistory": [
+            "2013 東京都議会議員選挙：落選（12,478票）",
+            "2009 東京都議会議員選挙：当選（28,073票）",
+            "2005 東京都議会議員選挙：当選（20,542票）",
+            "2001 東京都議会議員選挙：当選（17,771票）",
+            "1997 東京都議会議員選挙：当選（12,278票）"
+          ],
+          "elections": "4回"
         },
         {
           "id": "t-sato-hirohiko",
@@ -173,7 +259,14 @@ window.SHINAGAWA_DB.politiciansData = {
           "party": "自由民主党",
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
-          "serviceHistory": "平成9年〜平成21年（都議3期）"
+          "serviceHistory": "平成9年〜平成21年（都議3期）",
+          "electionHistory": [
+            "2018 品川区長選挙：落選（37,607票・36.2%）",
+            "2005 東京都議会議員選挙：当選（20,120票）",
+            "2001 東京都議会議員選挙：当選（41,319票）",
+            "1997 東京都議会議員選挙：当選（14,794票）"
+          ],
+          "elections": "3回"
         },
         {
           "id": "t-nakayama-hideo",
@@ -182,7 +275,12 @@ window.SHINAGAWA_DB.politiciansData = {
           "party": "公明党",
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
-          "serviceHistory": "平成9年〜平成17年（都議2期）"
+          "serviceHistory": "平成9年〜平成17年（都議2期）",
+          "electionHistory": [
+            "2001 東京都議会議員選挙：当選（24,312票）",
+            "1997 東京都議会議員選挙：当選（24,192票）"
+          ],
+          "elections": "2回"
         },
         {
           "id": "t-akita-kakuo",
@@ -191,7 +289,12 @@ window.SHINAGAWA_DB.politiciansData = {
           "party": "日本共産党",
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
-          "serviceHistory": "平成9年〜平成17年（都議2期）"
+          "serviceHistory": "平成9年〜平成17年（都議2期）",
+          "electionHistory": [
+            "2001 東京都議会議員選挙：当選（19,725票）",
+            "1997 東京都議会議員選挙：当選（22,466票）"
+          ],
+          "elections": "2回"
         },
         {
           "id": "t-naito-sho",
@@ -200,7 +303,11 @@ window.SHINAGAWA_DB.politiciansData = {
           "party": "自由民主党",
           "statusLabel": "元職都議",
           "electoralDistrict": "品川区選挙区",
-          "serviceHistory": "平成9年〜平成13年（都議1期）"
+          "serviceHistory": "平成9年〜平成13年（都議1期）",
+          "electionHistory": [
+            "1997 東京都議会議員選挙：当選（16,479票）"
+          ],
+          "elections": "1回"
         }
       ]
     },
@@ -264,7 +371,10 @@ window.SHINAGAWA_DB.politiciansData = {
           "birth": "昭和53年11月16日",
           "term": "令和4年12月4日〜（区長1期）",
           "serviceHistory": "令和4年12月〜（品川区長）",
-          "aliases": ["森沢恭子", "森澤恭子"],
+          "aliases": [
+            "森沢恭子",
+            "森澤恭子"
+          ],
           "profileUrl": "https://www.city.shinagawa.tokyo.jp/PC/kucho/index.html",
           "websiteUrl": "https://kyokomorisawa.jp/",
           "career": "日本テレビ記者、森ビル勤務を経て、平成29年に東京都議会議員に当選（2期）。令和4年12月の品川区長選挙（再選挙）で当選し、品川区長に就任。選挙により「森沢 恭子」表記もある。"
@@ -281,7 +391,10 @@ window.SHINAGAWA_DB.politiciansData = {
           "statusLabel": "元職区長",
           "office": "品川区長",
           "serviceHistory": "平成18年〜令和4年（区長4期）",
-          "aliases": ["浜野健", "はまの健"],
+          "aliases": [
+            "浜野健",
+            "はまの健"
+          ],
           "career": "品川区職員・副区長を経て、前区長の死去に伴う平成18年10月の区長選挙で初当選。4期16年務め、令和4年10月に退任。令和5年に旭日重光章。選挙により「浜野 健」「はまの 健」表記もある。"
         },
         {
