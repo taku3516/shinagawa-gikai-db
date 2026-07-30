@@ -3,7 +3,7 @@ window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.membersData = {
   "updatedAt": "2026-07-25",
   "sourceUrl": "https://gikai.city.shinagawa.tokyo.jp/profile/50on",
-  "note": "現職区議の情報は品川区議会公式サイトの議員紹介ページから転記。SNSは議員本人のホームページに掲載されているアカウントのうち、本人のものと確認できたものを掲載しています。政務活動費は年度別の公式資料ページへ案内しています。",
+  "note": "現職区議の情報は品川区議会公式サイトの議員紹介ページから転記。SNSは議員本人のホームページ、または選挙ドットコムの本人ページに掲載されているアカウントのうち、本人のものと確認できたものを掲載しています。政務活動費は年度別の公式資料ページへ案内しています。",
   "members": [
     {
       "id": "hiroo_akutsu",
@@ -25,7 +25,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員、特定行政書士、マンション管理士、宅地建物取引士、賃貸不動産経営管理士",
       "career": "民間企業（発電設備）、国会議員秘書（衆・参）を経て平成２３年、品川区議会議員に初当選、現在４期目。区議会公明党　筆頭副幹事長・政調会長、区議会副議長、監査委員、各委員長（建設・文教・行財政改革特別・決算特別）、副委員長（総務、厚生、予算特別）等を歴任。",
       "hobby": "読書、映画鑑賞、等",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/a_hiroo"
+        }
+      ],
       "fundReports": [
         {
           "label": "阿久津広王後援会（2024年分）",
@@ -59,7 +64,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "区議会議員",
       "career": "文教委員、区民委員、厚生委員会（副委員長）、災害・環境対策特別委員会（委員長）",
       "hobby": "少年ジャンプを読むこと、レトロゲーム、まち歩き",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/andotaisaku"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -155,7 +165,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "会社役員",
       "career": "荏原三丁目町会町会長、三谷八幡神社総代会副会長、武蔵小山パルム商店街理事、品川区校区教育協働委員会委員、品川区保護司会保護司、品川区立荏原平塚学園元PTA会長、都立大森高等学校元PTA会長、エバヒラおやじの会親父魂元会長",
       "hobby": "お祭り(武蔵小山パルム神輿會元会長）、ランニング（フルマラソン3時間49分10秒）、野球（品川区軟式野球連盟）、音楽鑑賞、読書",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/enoshita635"
+        }
+      ],
       "fundReports": [
         {
           "label": "自由民主党東京都品川区第三十七支部（2024年分）",
@@ -278,7 +293,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "元新日本プロレスレスラー、建設委員会（副委員長）、震災対策特別委員会、文教委員会 、予算特別委員会（副委員長）、オリンピック・パラリンピック推進特別委員会（委員長、副委員長）",
       "hobby": "ゴルフ",
-      "sns": [],
+      "sns": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/kengo.kimura.33"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -354,7 +374,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "副議長、品川区監査委員、総務委員会（副委員長）、区民委員会（副委員長）、建設委員会（委員長・副委員長）、文教委員会（委員長）、行財政改革特別委員会（委員長）、SDGｓ推進・行財政改革特別委員会（副委員長）、予算特別委員会（副委員長）、決算特別委員会（委員長）、品川区議会公明党（副幹事長、政調会長）",
       "hobby": "音楽鑑賞、写真鑑賞",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/konno_takako"
+        }
+      ],
       "fundReports": [
         {
           "label": "金野孝子後援会（2024年分）",
@@ -628,7 +653,20 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "東京都議会議員（３期）、警察消防委員長（都議会）、公営企業委員長（都議会）、各会計決算特別委員長（都議会）、厚生委員長（区議会）。区議・都議時代は「田中 豪」名義（平成11年・平成15年に区議、平成17年から都議3期）。",
       "hobby": "スポーツ観戦、鉄道、ゴルフ、読書",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/gambaretanaka"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/takeshi.tanaka.9421"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/tanaka.takeshi.page"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -664,7 +702,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "区議会副議長、建設委員会（委員長）、文教委員会（委員長）、総務委員会（副委員長）、区民委員会（副委員長）、予算特別委員会（副委員長）、決算特別委員会（委員長、副委員長）、オリンピック・パラリンピック推進特別委員会（副委員長）、行財政改革特別委員会（副委員長）、監査委員、区議会公明党（副幹事長、政調会長）",
       "hobby": "読書、映画鑑賞、サッカー・相撲・ボクシング観戦",
-      "sns": [],
+      "sns": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/yoshihiro.tsukamoto.56"
+        }
+      ],
       "fundReports": [
         {
           "label": "塚本芳弘後援会（2024年分）",
@@ -745,7 +788,16 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "文教委員会（委員長）、総務委員会（副委員長）、区民委員会（副委員長）、行財政改革特別委員会（委員長）、予算特別委員会（委員長）、議会運営委員会、区議会公明党（政調会長・副幹事長）、監査委員",
       "hobby": "読書、テニス",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/t_shinichiro"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/shinichiro.tsuru.3"
+        }
+      ],
       "fundReports": [
         {
           "label": "鶴伸一郎後援会（2024年分）",
@@ -808,7 +860,20 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "建設委員会・文教委員会（委員長）、総務委員会・区民委員会（副委員長）、決算特別委員会（委員長）、予算・決算特別委員会（副委員長）、品川区議会公明党（副幹事長・政調会長）",
       "hobby": "音楽鑑賞、コーラス",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/niizuma14828"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/saekoniizuma"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/saeko.niizuma"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -879,7 +944,16 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "区議会議員、保護司",
       "career": "区民委員会（委員長）、総務委員会、建設委員会、文教委員会、厚生委員会、議会運営委員会、行財政改革特別委員会、街づくり特別委員会（副委員長）、環境対策特別委員会（副委員長）",
       "hobby": "観劇",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/NTakako1124"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/takako.nishimoto2525"
+        }
+      ],
       "fundReports": [
         {
           "label": "西本貴子後援会“ｔａ－ｋｏサポターズ”（2024年分）",
@@ -917,7 +991,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "建設委員会（副委員長）、厚生委員会、文教委員会、区民委員会、まちづくり・公共交通推進特別委員会（委員長）、災害・環境対策特別委員会（副委員長）、行財政改革特別委員会（副委員長）、青少年問題協議会委員、都市計画審議会委員",
       "hobby": "バドミントン、テニス、映画鑑賞",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/nodate_jcp"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -1023,7 +1102,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "厚生委員会（委員長）、SDGｓ推進・行財政改革特別委員会（委員長）、建設委員会（副委員長）、決算特別委員会（副委員長）、予算特別委員会（副委員長）、総務委員会、区民委員会、文教委員会、オリンピック・パラリンピック特別委員会、行財政改革特別委員会、消防団運営委員会委員、青少年問題協議会委員、国際友好協会評議員",
       "hobby": "囲碁、釣り、茶道（表千家）、ソフトテニス、ソフトボール",
-      "sns": [],
+      "sns": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/matsunaga.mj"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -1166,7 +1250,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "元東京消防庁消防官、災害・環境対策特別委員会（副委員長）",
       "hobby": "アメリカンフットボール、ランニング",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/Yukita_Masaharu"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -1258,7 +1347,16 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "区議会副議長、建設・文教委員会（委員長）、予算特別委員会（委員長）",
       "hobby": "落語",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/wakabayashi_h"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/hiroki.wakabayashi.14"
+        }
+      ],
       "fundReports": [
         {
           "label": "若林広毅後援会（2024年分）",
