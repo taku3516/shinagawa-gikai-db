@@ -1,7 +1,51 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-30T04:50:36.110037Z",
+  "generatedAt": "2026-07-30T07:28:15.182378Z",
   "items": [
+    {
+      "id": "3fd65a37a4a251089daa",
+      "title": "7月29日開催の委員会の結果を掲載。",
+      "summary": "7月29日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20678.html",
+      "publishedAt": "2026-07-30T05:00:12Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T04:55:39.586214Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "74d79939a36b6cfaf706",
+      "title": "西品川の住宅街にカフェ「22nd」 18時までランチメニューを提供",
+      "summary": "カフェ「22nd（トゥエンティーセカンド）」（品川区西品川1）が、大崎駅と大井町駅間の住宅街にオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5049",
+      "publishedAt": "2026-07-30T04:32:43Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T07:27:51.811393Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西品川",
+        "大崎",
+        "大井",
+        "大崎駅",
+        "大井町駅"
+      ],
+      "relevanceScore": 28
+    },
     {
       "id": "6522202d4735de0ffdf8",
       "title": "freeeが展開する個人事業主向け金融・保険サービス「FREENANCE by freee」が債権管理基盤の強化に向けて「Lectoプラットフォーム」を導入",
@@ -301,26 +345,6 @@ window.SHINAGAWA_NEWS = {
       "publishedAt": "2026-07-28T04:35:05Z",
       "dateKind": "published",
       "collectedAt": "2026-07-24T01:49:17.074439Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
-    },
-    {
-      "id": "3fd65a37a4a251089daa",
-      "title": "7月29日開催の委員会の予定を掲載。",
-      "summary": "7月29日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20678.html",
-      "publishedAt": "2026-07-28T03:03:12Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-28T04:55:39.586214Z",
       "tags": [
         "選挙政治",
         "地域イベント"
@@ -3803,7 +3827,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 601,
+      "scanned": 594,
       "accepted": 0
     },
     {
@@ -3828,7 +3852,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -3885,9 +3909,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
