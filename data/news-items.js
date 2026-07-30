@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-30T10:13:26.903930Z",
+  "generatedAt": "2026-07-30T12:24:04.159222Z",
   "items": [
     {
       "id": "312a98f9b2b14a2d2f9b",
@@ -101,6 +101,24 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "7f8fed3bfe331bd4872e",
+      "title": "知的・精神障害者（児）移動支援従業者養成研修の受講生募集",
+      "summary": "障害者支援課 事業者支援担当 電話：03-5742-7844 FAX：03-3775-2000",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20240709164401.html",
+      "publishedAt": "2026-07-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T12:23:43.393816Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "91c2c51e193aee6d7d67",
@@ -3865,7 +3883,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 628,
+      "scanned": 622,
       "accepted": 0
     },
     {
