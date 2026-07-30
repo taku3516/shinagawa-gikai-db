@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-29T23:53:59.348955Z",
+  "generatedAt": "2026-07-30T01:29:17.204771Z",
   "items": [
+    {
+      "id": "975b0e23ac10967fcaa1",
+      "title": "品川成年後見センター活動実績を更新しました",
+      "summary": "「品川成年後見センター活動実績（令和８年６月３０日現在）」を掲載しました。 品川成年後見センターの取組｜品川成年後見センター｜社会福祉法人 品川区社会福祉協議会 （別ページに移動します）",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/07/post-61933.html",
+      "publishedAt": "2026-07-30T01:27:41.036348Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-07-30T01:27:41.036348Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "9f2c02f2f75d60694bd0",
       "title": "「こんにちは国保基本健診」",
@@ -3767,7 +3784,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 608,
+      "scanned": 602,
       "accepted": 0
     },
     {
@@ -3849,9 +3866,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
