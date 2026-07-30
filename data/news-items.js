@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-30T12:24:04.159222Z",
+  "generatedAt": "2026-07-30T15:04:36.237006Z",
   "items": [
+    {
+      "id": "28c8cf3d7517a9d19593",
+      "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月27日に『シュワッとかいけつ！ たんていソ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009250.000002535.html",
+      "publishedAt": "2026-07-30T14:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T12:51:03.221990Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "312a98f9b2b14a2d2f9b",
       "title": "データセクション、次世代AIプラットフォーム「TAIZA」発表記者会見を8月6日に開催 -AIインフラ企業からAI経済の中核企業へ。日本のAI主権を支える新戦略-",
@@ -154,23 +171,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
-    },
-    {
-      "id": "28c8cf3d7517a9d19593",
-      "title": "山火事の犯人はだれ？ 事件を追って見えてくる地球温暖化の真実――。『シュワッとかいけつ！ たんていソーダ じけんぼ３.』新発売！",
-      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年7月27日に『シュワッとかいけつ！ たんていソ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000009250.000002535.html",
-      "publishedAt": "2026-07-29T18:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-27T12:51:03.221990Z",
-      "tags": [
-        "事件事故"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "8af7782d743ade2eb6ec",
@@ -3871,7 +3871,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 135,
+      "scanned": 137,
       "accepted": 0
     },
     {
@@ -3882,9 +3882,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 622,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2333, column 55"
     },
     {
       "source": "朝日新聞",
@@ -3965,9 +3965,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
