@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-30T01:29:17.204771Z",
+  "generatedAt": "2026-07-30T04:50:36.110037Z",
   "items": [
+    {
+      "id": "6522202d4735de0ffdf8",
+      "title": "freeeが展開する個人事業主向け金融・保険サービス「FREENANCE by freee」が債権管理基盤の強化に向けて「Lectoプラットフォーム」を導入",
+      "summary": "[Lecto株式会社] 債権管理業務のDXを推進するLecto株式会社（本社：東京都渋谷区、代表取締役社長：小山裕、以下「Lecto（レクト）」）は、freee株式会社（本社：東京都品川区、CEO：佐々木 大輔）が運営するフリーランス・個人事...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000062.000074780.html",
+      "publishedAt": "2026-07-30T03:40:46Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T04:48:53.606493Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "小山"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "975b0e23ac10967fcaa1",
       "title": "品川成年後見センター活動実績を更新しました",
@@ -3784,7 +3803,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 602,
+      "scanned": 601,
       "accepted": 0
     },
     {
@@ -3809,7 +3828,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
