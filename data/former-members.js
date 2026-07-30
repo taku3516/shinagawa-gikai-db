@@ -759,33 +759,6 @@ window.SHINAGAWA_DB.formerMembersData = {
       ]
     },
     {
-      "id": "x-tanaka-go",
-      "name": "田中 豪",
-      "statusLabel": "元職（区議会DB収録範囲で在職確認）",
-      "party": "自民",
-      "serviceHistory": "平成13年〜平成16年",
-      "questionYears": "平成16年、平成15年、平成13年",
-      "elections": "5回",
-      "electionHistory": [
-        "2017 東京都議会議員選挙：落選（19,546票・12.0%）",
-        "2013 東京都議会議員選挙：当選（25,140票）",
-        "2009 東京都議会議員選挙：当選（22,853票）",
-        "2005 東京都議会議員選挙：当選（21,075票）",
-        "2003 品川区議会議員選挙：当選（5,383票）",
-        "1999 品川区議会議員選挙：当選（3,666票）"
-      ],
-      "fundReports": [
-        {
-          "label": "田中たけし後援会（2024年分）",
-          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-ta_54"
-        },
-        {
-          "label": "都区政策研究会（2024年分）",
-          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-to_227"
-        }
-      ]
-    },
-    {
       "id": "x-ishida-shingo",
       "name": "石田 しんご",
       "statusLabel": "元職（区議会DB収録範囲で在職確認）",

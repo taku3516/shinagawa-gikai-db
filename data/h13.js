@@ -811,7 +811,7 @@ window.SHINAGAWA_DB.years["h13"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=10#one"
         }
       ],
-      "memberId": "x-tanaka-go"
+      "memberId": "takeshi_tanaka"
     },
     {
       "meetingId": "h13-3t",

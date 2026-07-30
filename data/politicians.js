@@ -228,14 +228,16 @@ window.SHINAGAWA_DB.politiciansData = {
           "elections": "2回"
         },
         {
-          "id": "x-tanaka-go",
-          "name": "田中 豪",
+          "id": "takeshi_tanaka",
+          "name": "田中 たけし",
           "party": "自由民主党",
-          "statusLabel": "元職都議（元・品川区議）",
+          "statusLabel": "元職都議（現・品川区議）",
           "electoralDistrict": "品川区選挙区",
           "serviceHistory": "平成17年〜平成29年（都議3期）",
-          "career": "品川区議会議員を経て、東京都議会議員（平成17年〜平成29年、3期）。",
+          "career": "品川区議会議員（平成11年〜平成16年）を経て、東京都議会議員（平成17年〜平成29年、3期）。令和5年に品川区議会議員へ復帰。都議時代は「田中 豪」名義。",
           "electionHistory": [
+            "2023 品川区議会議員選挙：当選（3,040.661票・2.3%）",
+            "2021 東京都議会議員選挙：落選（18,281票・12.9%）",
             "2017 東京都議会議員選挙：落選（19,546票・12.0%）",
             "2013 東京都議会議員選挙：当選（25,140票）",
             "2009 東京都議会議員選挙：当選（22,853票）",
@@ -253,6 +255,10 @@ window.SHINAGAWA_DB.politiciansData = {
               "label": "都区政策研究会（2024年分）",
               "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-to_227"
             }
+          ],
+          "kana": "たなか たけし",
+          "aliases": [
+            "田中豪"
           ]
         },
         {

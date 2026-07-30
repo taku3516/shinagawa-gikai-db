@@ -1222,7 +1222,7 @@ window.SHINAGAWA_DB.years["h16"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=92#one"
         }
       ],
-      "memberId": "x-tanaka-go"
+      "memberId": "takeshi_tanaka"
     },
     {
       "meetingId": "h16-2t",

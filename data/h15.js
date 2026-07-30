@@ -833,7 +833,7 @@ window.SHINAGAWA_DB.years["h15"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=54#one"
         }
       ],
-      "memberId": "x-tanaka-go"
+      "memberId": "takeshi_tanaka"
     },
     {
       "meetingId": "h15-1t",
@@ -1067,7 +1067,7 @@ window.SHINAGAWA_DB.years["h15"] = {
           "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=60#one"
         }
       ],
-      "memberId": "x-tanaka-go"
+      "memberId": "takeshi_tanaka"
     },
     {
       "meetingId": "h15-2t",

@@ -277,9 +277,11 @@ window.SHINAGAWA_DB.peopleData = {
       "name": "田中　たけし",
       "status": "現職",
       "aliases": [
+        "田中 豪",
         "田中たけし"
       ],
       "seenIn": [
+        "h16",
         "r05",
         "r06",
         "r07"
@@ -1229,16 +1231,6 @@ window.SHINAGAWA_DB.peopleData = {
       "aliases": [
         "島くに子"
       ],
-      "seenIn": [
-        "h16"
-      ]
-    },
-    {
-      "id": "x-tanaka-go",
-      "name": "田中 豪",
-      "status": "元職",
-      "note": "公式の質問者ページ・会議録に登場（現在の議員名簿には非掲載）",
-      "aliases": [],
       "seenIn": [
         "h16"
       ]

@@ -585,7 +585,7 @@ window.SHINAGAWA_DB.membersData = {
       "email": "tanakatakeshi1@yahoo.co.jp",
       "websiteUrl": "/profile/jump?gid=15885",
       "occupation": "品川区議会議員",
-      "career": "東京都議会議員（３期）、警察消防委員長（都議会）、公営企業委員長（都議会）、各会計決算特別委員長（都議会）、厚生委員長（区議会）",
+      "career": "東京都議会議員（３期）、警察消防委員長（都議会）、公営企業委員長（都議会）、各会計決算特別委員長（都議会）、厚生委員長（区議会）。区議・都議時代は「田中 豪」名義（平成11年・平成15年に区議、平成17年から都議3期）。",
       "hobby": "スポーツ観戦、鉄道、ゴルフ、読書",
       "sns": [],
       "fundReports": [],
@@ -598,6 +598,9 @@ window.SHINAGAWA_DB.membersData = {
           "label": "令和7年度（無所属議員（田中たけし議員））",
           "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/t_takeshi_r070601_02.pdf"
         }
+      ],
+      "aliases": [
+        "田中豪"
       ]
     },
     {
