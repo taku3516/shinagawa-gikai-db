@@ -261,6 +261,9 @@
       return esc(s).replace(/\n/g, "<br />");
     }
 
+    // 表示中の名簿（区議／都議／衆議／区長）。枠ごとに案内先が違う制度の判定に使う
+    let currentRosterId = "current-ward";
+
     // 会派名から役職を除いた部分（絞り込み用）
     function partyName(member) {
       return (member.party || "").replace(/（.*$/, "");
@@ -282,8 +285,34 @@
       return `<div class="extra-slot"><span class="slot-name">${esc(slotName)}:</span> ${body}</div>`;
     }
 
+    // 政務活動費は議会ごとの制度。DB内の資料（data/seimu.js）は品川区議会の会派が対象なので、
+    // 都議は東京都議会の公開ページへ案内し、区長・国会議員は制度の対象外であることを示す。
+    const ACTIVITY_EXPENSE_POLICY = {
+      "current-tokyo": {
+        kind: "external",
+        label: "東京都議会の公開ページへ",
+        url: "https://www.gikai.metro.tokyo.lg.jp/informationdisclosure/expenditure/list.html"
+      },
+      "former-tokyo": {
+        kind: "external",
+        label: "東京都議会の公開ページへ",
+        url: "https://www.gikai.metro.tokyo.lg.jp/informationdisclosure/expenditure/list.html"
+      },
+      "current-house": { kind: "none", note: "国会議員は制度の対象外" },
+      "former-house": { kind: "none", note: "国会議員は制度の対象外" },
+      "current-mayor": { kind: "none", note: "区長は制度の対象外" },
+      "former-mayor": { kind: "none", note: "区長は制度の対象外" }
+    };
+
     function activityExpenseSlotHtml(member) {
       if (member.activityExpenses && member.activityExpenses.length > 0) return extraSlotHtml("政務活動費", member.activityExpenses);
+      const policy = ACTIVITY_EXPENSE_POLICY[currentRosterId];
+      if (policy && policy.kind === "none") {
+        return `<div class="extra-slot"><span class="slot-name">政務活動費:</span> <span class="pending">${esc(policy.note)}</span></div>`;
+      }
+      if (policy && policy.kind === "external") {
+        return `<div class="extra-slot"><span class="slot-name">政務活動費:</span> <a class="pill" href="${esc(policy.url)}" target="_blank" rel="noopener">${esc(policy.label)}</a></div>`;
+      }
       const query = encodeURIComponent(partyName(member) || member.name || "");
       return `<div class="extra-slot"><span class="slot-name">政務活動費:</span> <a class="pill" href="seimu.html?q=${query}">所属会派・議員名で探す</a></div>`;
     }
@@ -455,6 +484,7 @@
     function init() {
       const db = window.SHINAGAWA_DB;
       const rosterId = selectedRosterId();
+      currentRosterId = rosterId;
       const config = ROSTER_CONFIG[rosterId];
       const data = rosterData(db, rosterId);
       if (!data) {
