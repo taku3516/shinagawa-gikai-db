@@ -744,6 +744,494 @@ window.SHINAGAWA_DB.fiscalData = {
           "note": "前年度分として同意見書に記載された額"
         }
       }
+    },
+    {
+      "id": "fy-h30",
+      "label": "平成30年度",
+      "period": "2018年4月〜2019年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,745億7,800万円",
+        "change": "前年度比 +6.1％",
+        "links": [
+          {
+            "type": "official",
+            "label": "平成30年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/hpg000033344.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成30年第1回定例会",
+            "url": "index.html#meeting-h30-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "10月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20190204095831.html"
+          },
+          {
+            "label": "6月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20180711170836.html"
+          },
+          {
+            "label": "最終補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20190305114825.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "links": [
+          {
+            "type": "official",
+            "label": "決算書の公式ページ",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 令和元年第3回定例会",
+            "url": "index.html#meeting-r01-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h29",
+      "label": "平成29年度",
+      "period": "2017年4月〜2018年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,645億3,600万円",
+        "change": "前年度比 -2％",
+        "links": [
+          {
+            "type": "official",
+            "label": "平成29年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/hpg000030788.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成29年第1回定例会",
+            "url": "index.html#meeting-h29-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "7月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000031536.html"
+          },
+          {
+            "label": "9月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000032097.html"
+          },
+          {
+            "label": "9月補正予算（衆議院議員選挙費）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000032057.html"
+          },
+          {
+            "label": "最終補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000033119.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "links": [
+          {
+            "type": "official",
+            "label": "決算書の公式ページ",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 平成30年第3回定例会",
+            "url": "index.html#meeting-h30-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h28",
+      "label": "平成28年度",
+      "period": "2016年4月〜2017年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,678億9,850万円",
+        "change": "前年度比 +11.2％",
+        "links": [
+          {
+            "type": "official",
+            "label": "平成28年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/hpg000027827.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成28年第1回定例会",
+            "url": "index.html#meeting-h28-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "12月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000029967.html"
+          },
+          {
+            "label": "6月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000028664.html"
+          },
+          {
+            "label": "6月補正予算（都知事選挙費）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000028663.html"
+          },
+          {
+            "label": "9月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000029643.html"
+          },
+          {
+            "label": "最終補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000030484.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "links": [
+          {
+            "type": "official",
+            "label": "決算書の公式ページ",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 平成29年第3回定例会",
+            "url": "index.html#meeting-h29-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h27",
+      "label": "平成27年度",
+      "period": "2015年4月〜2016年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,510億3,890万円",
+        "change": "前年度比 +3.3％",
+        "links": [
+          {
+            "type": "official",
+            "label": "平成27年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/hpg000024988.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成27年第1回定例会",
+            "url": "index.html#meeting-h27-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "12月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000027079.html"
+          },
+          {
+            "label": "5月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000025469.html"
+          },
+          {
+            "label": "6月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000025710.html"
+          },
+          {
+            "label": "9月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000026432.html"
+          },
+          {
+            "label": "最終補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000027644.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "links": [
+          {
+            "type": "official",
+            "label": "決算書の公式ページ",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 平成28年第3回定例会",
+            "url": "index.html#meeting-h28-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h26",
+      "label": "平成26年度",
+      "period": "2014年4月〜2015年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,462億3,673万6千円",
+        "change": "前年度比 +9.8％",
+        "links": [
+          {
+            "type": "official",
+            "label": "平成26年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200928155106.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成26年第1回定例会",
+            "url": "index.html#meeting-h26-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "10月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000023866.html"
+          },
+          {
+            "label": "11月補正予算（衆議院議員選挙執行費）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000023961.html"
+          },
+          {
+            "label": "6月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000022460.html"
+          },
+          {
+            "label": "最終補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000024806.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "links": [
+          {
+            "type": "official",
+            "label": "決算書の公式ページ",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 平成27年第3回定例会",
+            "url": "index.html#meeting-h27-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h25",
+      "label": "平成25年度",
+      "period": "2013年4月〜2014年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,331億5,438万5千円",
+        "change": "前年度比 +0.4％",
+        "links": [
+          {
+            "type": "official",
+            "label": "平成25年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200928155010.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成25年第1回定例会",
+            "url": "index.html#meeting-h25-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "12月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000021100.html"
+          },
+          {
+            "label": "12月補正予算（都知事選挙費）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000021214.html"
+          },
+          {
+            "label": "6月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000019862.html"
+          },
+          {
+            "label": "9月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000020721.html"
+          },
+          {
+            "label": "最終補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000021503.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "links": [
+          {
+            "type": "official",
+            "label": "決算書の公式ページ",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 平成26年第3回定例会",
+            "url": "index.html#meeting-h26-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h24",
+      "label": "平成24年度",
+      "period": "2012年4月〜2013年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,325億9,756万4千円",
+        "change": "前年度比 -3.8％",
+        "links": [
+          {
+            "type": "official",
+            "label": "平成24年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200928155539.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成24年第1回定例会",
+            "url": "index.html#meeting-h24-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "11月補正予算（衆議院議員選挙費）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000018289.html"
+          },
+          {
+            "label": "11月補正予算（都知事選挙費）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000018046.html"
+          },
+          {
+            "label": "6月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000017310.html"
+          },
+          {
+            "label": "9月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000017862.html"
+          },
+          {
+            "label": "最終補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000019125.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "links": [
+          {
+            "type": "official",
+            "label": "決算書の公式ページ",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 平成25年第3回定例会",
+            "url": "index.html#meeting-h25-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h23",
+      "label": "平成23年度",
+      "period": "2011年4月〜2012年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "1,378億8,516万1千円",
+        "change": "前年度比 -0.9％",
+        "links": [
+          {
+            "type": "official",
+            "label": "平成23年度当初予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200928155325.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成23年第1回定例会",
+            "url": "index.html#meeting-h23-1t"
+          }
+        ]
+      },
+      "supplements": {
+        "official": [
+          {
+            "label": "6月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000014458.html"
+          },
+          {
+            "label": "9月補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000015156.html"
+          },
+          {
+            "label": "最終補正予算",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000016168.html"
+          }
+        ],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "links": [
+          {
+            "type": "official",
+            "label": "決算書の公式ページ",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審査: 平成24年第3回定例会",
+            "url": "index.html#meeting-h24-3t"
+          }
+        ]
+      }
     }
   ],
   "sources": [
