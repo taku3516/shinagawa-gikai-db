@@ -2,7 +2,7 @@
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.fiscalData = {
   "updatedAt": "2026-07-25",
-  "note": "予算・決算は「年度」（4月〜翌年3月）の情報です。議会の情報（暦年）と対象期間が異なります。金額・内容は品川区公式サイトからの転記で、正確な情報は必ずリンク先の公式資料を確認してください。　決算額（歳入・歳出総額と実質収支）は品川区監査委員の決算審査意見書によります。",
+  "note": "予算・決算は「年度」（4月〜翌年3月）の情報です。議会の情報（暦年）と対象期間が異なります。金額・内容は品川区公式サイトからの転記で、正確な情報は必ずリンク先の公式資料を確認してください。　決算額（歳入・歳出総額と実質収支）は品川区監査委員の決算審査意見書によります。　平成年度の決算額は総務省の決算カード（普通会計）によるもので、令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
   "fiscalYears": [
     {
       "id": "fy-r08",
@@ -785,7 +785,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "council": []
       },
       "settlement": {
-        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
         "links": [
           {
             "type": "official",
@@ -798,7 +798,16 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 令和元年第3回定例会",
             "url": "index.html#meeting-r01-3t"
           }
-        ]
+        ],
+        "revenue": "1,716億8,802万円",
+        "expenditure": "1,665億3万円",
+        "realBalance": "51億8,798万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        }
       }
     },
     {
@@ -845,7 +854,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "council": []
       },
       "settlement": {
-        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
         "links": [
           {
             "type": "official",
@@ -858,7 +867,16 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 平成30年第3回定例会",
             "url": "index.html#meeting-h30-3t"
           }
-        ]
+        ],
+        "revenue": "1,681億7,349万円",
+        "expenditure": "1,619億7,168万円",
+        "realBalance": "62億181万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        }
       }
     },
     {
@@ -909,7 +927,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "council": []
       },
       "settlement": {
-        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
         "links": [
           {
             "type": "official",
@@ -922,7 +940,16 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 平成29年第3回定例会",
             "url": "index.html#meeting-h29-3t"
           }
-        ]
+        ],
+        "revenue": "1,645億4,336万円",
+        "expenditure": "1,592億4,690万円",
+        "realBalance": "44億8,755万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        }
       }
     },
     {
@@ -973,7 +1000,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "council": []
       },
       "settlement": {
-        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
         "links": [
           {
             "type": "official",
@@ -986,7 +1013,16 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 平成28年第3回定例会",
             "url": "index.html#meeting-h28-3t"
           }
-        ]
+        ],
+        "revenue": "1,490億6,410万円",
+        "expenditure": "1,440億1,384万円",
+        "realBalance": "46億7,676万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        }
       }
     },
     {
@@ -1033,7 +1069,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "council": []
       },
       "settlement": {
-        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
         "links": [
           {
             "type": "official",
@@ -1046,7 +1082,16 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 平成27年第3回定例会",
             "url": "index.html#meeting-h27-3t"
           }
-        ]
+        ],
+        "revenue": "1,437億5,255万円",
+        "expenditure": "1,397億7,108万円",
+        "realBalance": "37億2,847万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        }
       }
     },
     {
@@ -1097,7 +1142,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "council": []
       },
       "settlement": {
-        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
         "links": [
           {
             "type": "official",
@@ -1110,7 +1155,16 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 平成26年第3回定例会",
             "url": "index.html#meeting-h26-3t"
           }
-        ]
+        ],
+        "revenue": "1,330億8,939万円",
+        "expenditure": "1,297億4,404万円",
+        "realBalance": "31億8,269万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        }
       }
     },
     {
@@ -1161,7 +1215,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "council": []
       },
       "settlement": {
-        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
         "links": [
           {
             "type": "official",
@@ -1174,7 +1228,16 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 平成25年第3回定例会",
             "url": "index.html#meeting-h25-3t"
           }
-        ]
+        ],
+        "revenue": "1,325億2,832万円",
+        "expenditure": "1,288億8,148万円",
+        "realBalance": "30億5,240万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        }
       }
     },
     {
@@ -1217,7 +1280,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "council": []
       },
       "settlement": {
-        "status": "決算は認定済みですが、決算額の数値は監査委員の決算審査意見書が令和2年度以降しか公表されていないため未収録です。決算書は公式ページで確認できます。",
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
         "links": [
           {
             "type": "official",
@@ -1230,7 +1293,16 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 平成24年第3回定例会",
             "url": "index.html#meeting-h24-3t"
           }
-        ]
+        ],
+        "revenue": "1,332億6,066万円",
+        "expenditure": "1,294億1,587万円",
+        "realBalance": "29億8,834万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        }
       }
     }
   ],
