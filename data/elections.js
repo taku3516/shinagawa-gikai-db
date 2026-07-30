@@ -1209,6 +1209,52 @@ window.SHINAGAWA_DB.electionsData = {
       "verifiedAt": "2026-07-30"
     },
     {
+      "id": "shugi-49-tokyo3",
+      "type": "house",
+      "title": "衆議院議員総選挙（東京都第3区）",
+      "electionDate": "2021-10-31",
+      "district": "品川区の一部と大田区の一部（当時の区割り。品川区は分割されていた）",
+      "seats": 1,
+      "candidateCount": 3,
+      "electorate": "470,083",
+      "turnout": "59.87",
+      "summary": "第49回衆議院議員総選挙。得票は選挙区全体の確定得票です。令和4年の区割り改定より前の東京都第3区は現在と区域が異なります。石原宏高は小選挙区では次点でしたが、比例代表東京ブロックで復活当選しました。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "まつばら 仁",
+          "party": "立憲民主党",
+          "votesDisplay": "124,961票",
+          "voteShare": "45.9%"
+        },
+        {
+          "result": "比例復活",
+          "rank": 2,
+          "name": "石原 ひろたか",
+          "party": "自由民主党",
+          "votesDisplay": "116,753票",
+          "voteShare": "42.9%"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "香西 克介",
+          "party": "日本共産党",
+          "votesDisplay": "30,648票",
+          "voteShare": "11.3%"
+        }
+      ],
+      "sources": [
+        {
+          "label": "選挙ドットコム（得票数・得票率）",
+          "url": "https://go2senkyo.com/shugiin/19607/senkyoku/38855"
+        }
+      ],
+      "verifiedAt": "2026-07-25",
+      "previousTurnout": "55.86"
+    },
+    {
       "id": "go2-20334",
       "type": "tokyo-assembly",
       "title": "東京都議会議員選挙（品川区選挙区）",
@@ -1881,6 +1927,52 @@ window.SHINAGAWA_DB.electionsData = {
       "verifiedAt": "2026-07-30"
     },
     {
+      "id": "shugi-48-tokyo3",
+      "type": "house",
+      "title": "衆議院議員総選挙（東京都第3区）",
+      "electionDate": "2017-10-22",
+      "district": "品川区の一部と大田区の一部（当時の区割り。品川区は分割されていた）",
+      "seats": 1,
+      "candidateCount": 3,
+      "electorate": "458,242",
+      "turnout": "55.86",
+      "summary": "第48回衆議院議員総選挙。得票は選挙区全体の確定得票です。令和4年の区割り改定より前の東京都第3区は現在と区域が異なります。松原仁は小選挙区では次点でしたが、比例代表東京ブロックで復活当選しました。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "石原 宏高",
+          "party": "自由民主党",
+          "votesDisplay": "107,708票",
+          "voteShare": "43.6%"
+        },
+        {
+          "result": "比例復活",
+          "rank": 2,
+          "name": "松原 仁",
+          "party": "希望の党",
+          "votesDisplay": "94,380票",
+          "voteShare": "38.2%"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "香西 克介",
+          "party": "日本共産党",
+          "votesDisplay": "45,088票",
+          "voteShare": "18.2%"
+        }
+      ],
+      "sources": [
+        {
+          "label": "選挙ドットコム（得票数・得票率）",
+          "url": "https://go2senkyo.com/shugiin/15530/senkyoku/25067"
+        }
+      ],
+      "verifiedAt": "2026-07-25",
+      "previousTurnout": "55.46"
+    },
+    {
       "id": "go2-15497",
       "type": "tokyo-assembly",
       "title": "東京都議会議員選挙（品川区選挙区）",
@@ -2438,6 +2530,51 @@ window.SHINAGAWA_DB.electionsData = {
         }
       ],
       "verifiedAt": "2026-07-30"
+    },
+    {
+      "id": "shugi-47-tokyo3",
+      "type": "house",
+      "title": "衆議院議員総選挙（東京都第3区）",
+      "electionDate": "2014-12-14",
+      "district": "品川区全域と大田区の一部（当時の区割り）",
+      "seats": 1,
+      "candidateCount": 3,
+      "electorate": "486,466",
+      "turnout": "55.46",
+      "summary": "第47回衆議院議員総選挙。得票は選挙区全体の確定得票です。令和4年の区割り改定より前の東京都第3区は現在と区域が異なります。松原仁は小選挙区では次点でしたが、比例代表東京ブロックで復活当選しました。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "石原 宏高",
+          "party": "自由民主党",
+          "votesDisplay": "115,623票",
+          "voteShare": "44.3%"
+        },
+        {
+          "result": "比例復活",
+          "rank": 2,
+          "name": "松原 仁",
+          "party": "民主党",
+          "votesDisplay": "111,353票",
+          "voteShare": "42.6%"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "香西 克介",
+          "party": "日本共産党",
+          "votesDisplay": "34,295票",
+          "voteShare": "13.1%"
+        }
+      ],
+      "sources": [
+        {
+          "label": "選挙ドットコム（得票数・得票率）",
+          "url": "https://go2senkyo.com/shugiin/49/senkyoku/1922"
+        }
+      ],
+      "verifiedAt": "2026-07-25"
     },
     {
       "id": "go2-6317",
