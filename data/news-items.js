@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-30T20:56:43.591224Z",
+  "generatedAt": "2026-07-30T23:54:08.464831Z",
   "items": [
     {
       "id": "d72bf6216af184430233",
@@ -35,6 +35,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "731f59c4cd817ae0a070",
+      "title": "NHKで品川成年後見センターが紹介されます（再放送）",
+      "summary": "7/4（土）NHK番組「NEWSおはよう日本」で紹介された内容が再放送されます！ 日時：８月4日（火）午後３時10分～６時10分 ※放映時間は未定",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/07/post-62001.html",
+      "publishedAt": "2026-07-30T23:53:50.889593Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-07-30T23:53:50.889593Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "28c8cf3d7517a9d19593",
@@ -3918,7 +3935,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2385, column 55"
+      "message": "not well-formed (invalid token): line 2444, column 55"
     },
     {
       "source": "朝日新聞",
@@ -3942,7 +3959,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
