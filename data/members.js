@@ -3,7 +3,7 @@ window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.membersData = {
   "updatedAt": "2026-07-25",
   "sourceUrl": "https://gikai.city.shinagawa.tokyo.jp/profile/50on",
-  "note": "現職区議の情報は品川区議会公式サイトの議員紹介ページから転記。SNS・過去の選挙・得票履歴・政治資金収支報告書は、出典確認後に追加するための準備中の枠。政務活動費は年度別の公式資料ページへ案内しています。",
+  "note": "現職区議の情報は品川区議会公式サイトの議員紹介ページから転記。SNSは議員本人のホームページに掲載されているアカウントのうち、本人のものと確認できたものを掲載しています。政務活動費は年度別の公式資料ページへ案内しています。",
   "members": [
     {
       "id": "hiroo_akutsu",
@@ -193,7 +193,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "監査委員、決算特別委員会（委員長・副委員長）、行財政改革特別委員会(委員長）、建設委員会（副委員長）、オリンピック・パラリンピック推進特別委員会、震災対策特別委員会、総務委員会、区民委員会、厚生委員会、文教委員会",
       "hobby": "剣道、野球、サッカー、お祭り",
-      "sns": [],
+      "sns": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/okuratakahiro"
+        }
+      ],
       "fundReports": [
         {
           "label": "大倉たかひろ後援会（2024年分）",
@@ -231,7 +236,16 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "薬剤師",
       "career": "厚生委員会委員、区民委員会委員、予算特別委員会（副委員長）、議会運営委員会委員、自衛官募集相談員",
       "hobby": "旅行、読書、街歩き",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/oginoayaka_5"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/ogino.ayaka"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -293,7 +307,16 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "区議会議員",
       "career": "国会議員公設秘書、大井滝王子町会副会長、大井消防団第４分団班長、品川区保護司、自衛隊募集相談員、日台友好品川区議会議員連盟会長",
       "hobby": "登山、卓球、読書、映画鑑賞、旅行",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/koshiba_arata"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/arata.koshiba"
+        }
+      ],
       "fundReports": [
         {
           "label": "自由民主党東京都品川区第三十四支部（2024年分）",
@@ -491,7 +514,20 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "Webエンジニア",
       "hobby": "アウトドア、料理、散歩",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/mao_seraku"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/mao.seraku"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@serakumao"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -520,7 +556,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "東大研究員、教師（早実高,都立日比谷高・青山高・大森高ほか）、厚生委員会、建設委員会、区民委員会、文教委員会、行財政改革特別委員会、環境対策特別委員会、震災対策特別委員会、廃棄物減量等推進審議会、表彰審査会委員、消防団運営委員会委員、民生委員推薦会委員",
       "hobby": "野球、読書、スポーツ観戦",
-      "sns": [],
+      "sns": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/takahashi.shinji.shinagawa"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -657,7 +698,20 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "建設委員会、文教委員会（副委員長）、決算特別委員会（副委員長）、オリンピック・パラリンピック推進特別委員会、行財政改革特別委員会、しながわシティラン実行委員",
       "hobby": "ダイビング、HIPHOPダンス、ビートメイク、サッカー、ゴルフ、格闘技、食べ歩き、カラオケ",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/tsutsuiyousuke"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/yousuke.tsutsui.tokyo"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/yousuketsutsui"
+        }
+      ],
       "fundReports": [
         {
           "label": "都民ファーストの会筒井ようすけ後援会（2024年分）",
@@ -783,7 +837,20 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "女性の転職コンサルタント",
       "career": "元リクルート、チャイルドファミリーコンサルタント、自衛隊募集相談員、区民委員会（委員長）、予算特別委員会（委員長）",
       "hobby": "アロマ、犬、ヨガ、旅行",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/NNaoko_official"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/nishimuranaoko77official"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/nishimura_naoko_official"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -913,7 +980,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "議会運営委員会（委員長・3期）、予算特別委員会（委員長）、品川区議会自民党・無所属の会（幹事長・3期）",
       "hobby": "神輿、銭湯巡り、野球、ラグビー",
-      "sns": [],
+      "sns": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/kazumasa1054"
+        }
+      ],
       "fundReports": [
         {
           "label": "自由民主党東京都品川区第三十六支部（2024年分）",
@@ -980,7 +1052,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員、弁護士",
       "career": "武蔵小山法律事務所代表弁護士、参議院議員政策担当秘書",
       "hobby": "旅行、漫画・アニメ視聴、散歩",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/matsumoto_toki"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -1009,7 +1086,20 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "介護職員",
       "career": "あけぼの幼稚園、立会小学校、浜川中学校、都立城南高等学校、立正大学、トレーディア、厚生委員会（令和5年～）",
       "hobby": "野球(元立会キングス）、音楽鑑賞（ザ・ブルーハーツ）、ジョギング、アニメ鑑賞",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://x.com/reiwayanagisawa"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@reiwayanagisawa2"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@reiwayanagisawa"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -1038,7 +1128,16 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "三菱UFJ銀行（21年間勤務）、議会運営委員会（副委員長）、予算特別委員会（副委員長）、文教委員会（副委員長）、総務委員会、区民委員会、行財政改革特別委員会、SDGｓ推進・行財政改革特別委員会、議会改革推進会議（副座長）、区民と議会の交流会議（サブリーダー）、都市計画審議会、スポーツ協会（評議員）、しながわ未来（幹事長・政調会長）",
       "hobby": "バスケットボール、卓球、アウトドア",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/yamamoto_sngw"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/yamamoto_sngw"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
@@ -1193,7 +1292,12 @@ window.SHINAGAWA_DB.membersData = {
       "occupation": "品川区議会議員",
       "career": "区議会議長、区民委員会（委員長）、厚生委員会（委員長）、予算特別委員会（委員長）、文教委員会（副委員長）、厚生委員会委員、オリンピック・パラリンピック推進特別委員会（委員長）、議会運営委員会委員（委員長） 、品川区議会自民党（幹事長、政調会長）",
       "hobby": "サッカー（少年指導・観戦・イベント運営）、ダンス(観戦・イベント運営)",
-      "sns": [],
+      "sns": [
+        {
+          "label": "X",
+          "url": "https://twitter.com/y_watanabe0424"
+        }
+      ],
       "fundReports": [],
       "activityExpenses": [
         {
