@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-30T07:28:15.182378Z",
+  "generatedAt": "2026-07-30T10:13:26.903930Z",
   "items": [
+    {
+      "id": "312a98f9b2b14a2d2f9b",
+      "title": "データセクション、次世代AIプラットフォーム「TAIZA」発表記者会見を8月6日に開催 -AIインフラ企業からAI経済の中核企業へ。日本のAI主権を支える新戦略-",
+      "summary": "[データセクション株式会社] データセクション株式会社（本社：東京都品川区、代表取締役社長執行役員CEO：石原紀彦、東証グロース：3905、以下「当社」）は、2026年8月6日（木）に、当社が開発するAIプラットフォーム「TAIZA」の新戦略およ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000086.000036921.html",
+      "publishedAt": "2026-07-30T09:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T10:13:03.196425Z",
+      "tags": [
+        "行政",
+        "都市開発",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "3fd65a37a4a251089daa",
       "title": "7月29日開催の委員会の結果を掲載。",
@@ -25,7 +45,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "74d79939a36b6cfaf706",
       "title": "西品川の住宅街にカフェ「22nd」 18時までランチメニューを提供",
-      "summary": "カフェ「22nd（トゥエンティーセカンド）」（品川区西品川1）が、大崎駅と大井町駅間の住宅街にオープンして1カ月がたった。 #品川経済新聞",
+      "summary": "カフェ「22nd-TWENTY SECOND-（トゥエンティーセカンド）」（品川区西品川1）が、大崎駅と大井町駅間の住宅街にオープンして1カ月がたった。 #品川経済新聞",
       "source": "品川経済新聞",
       "sourceId": "shinagawa-keizai",
       "sourceType": "rss",
@@ -78,6 +98,24 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-30T01:27:41.036348Z",
       "tags": [
         "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "91c2c51e193aee6d7d67",
+      "title": "品川区における障害者就労施設等からの物品等の調達方針",
+      "summary": "障害者就労施設で就労する障害者や在宅で就業する障害者の経済的な自立を進めるためには、障害者雇用を推進するための仕組みを整えるとともに、障害者が就労する施設等が供給する物品やサービスを優先的・積極的に調達することが重要です。 このため、国等による障害者就労施設等からの物品等の調達の推進等に関する法律に基づき、「品川区における障害者就労施設等からの物品等の調達方針」を策定しました。区は、この調達方針に基づき障害者就労施設等からの物品等の調達に努めます。 福祉部障害者支援課障害者…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/hpg000018674.html",
+      "publishedAt": "2026-07-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T10:13:03.196425Z",
+      "tags": [
+        "福祉",
+        "経済"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -3827,7 +3865,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 594,
+      "scanned": 628,
       "accepted": 0
     },
     {
@@ -3852,7 +3890,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
