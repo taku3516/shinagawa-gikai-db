@@ -240,10 +240,74 @@
       ).join("");
     }
 
-    function personHref(candidate) {
-      if (!candidate.personUrl) return "";
-      const separator = candidate.personUrl.includes("?") ? "&" : "?";
-      return `${candidate.personUrl}${separator}q=${encodeURIComponent(candidate.name || "")}`;
+    // ───── 候補者名 → 議員名簿の逆リンク ─────
+    // 選挙結果の氏名は名簿と表記が違うことが多い（松沢利行／松澤利行など）ため、
+    // 名前で検索させるのではなく人物IDを解決して #member-<id> で直接指す。
+    const ROSTER_URL = { "current-ward": "giin.html", "former-ward": "giin.html?view=former-ward" };
+
+    // 選挙の種類ごとに、優先してリンクする名簿（同一人物が区議・都議・区長を兼ねる場合の解決用）
+    const ROSTER_BY_TYPE = {
+      "ward-assembly": ["current-ward", "former-ward"],
+      "ward-assembly-by": ["current-ward", "former-ward"],
+      "tokyo-assembly": ["current-tokyo", "former-tokyo"],
+      "tokyo-assembly-by": ["current-tokyo", "former-tokyo"],
+      "ward-mayor": ["current-mayor", "former-mayor"]
+    };
+
+    let personIndexCache = null;
+
+    // 全表記（正式名＋エイリアス）から {id, roster} を引ける索引を作る。
+    // 区議は people.js の status で現職／元職を判定し、都議・衆議・区長は politicians.js のロスター名を使う。
+    function personIndex() {
+      if (personIndexCache) return personIndexCache;
+      const db = window.SHINAGAWA_DB || {};
+      const index = new Map();
+      const add = (name, id, roster) => {
+        const key = normalize(name);
+        if (!key) return;
+        const list = index.get(key) || [];
+        if (!list.some((item) => item.id === id && item.roster === roster)) list.push({ id, roster });
+        index.set(key, list);
+      };
+      for (const person of (db.peopleData && db.peopleData.people) || []) {
+        const roster = person.status === "現職" ? "current-ward" : "former-ward";
+        for (const name of [person.name, ...(person.aliases || [])]) add(name, person.id, roster);
+      }
+      const rosters = (db.politiciansData && db.politiciansData.rosters) || {};
+      for (const key of Object.keys(rosters)) {
+        for (const member of rosters[key].members || []) {
+          for (const name of [member.name, ...(member.aliases || [])]) add(name, member.id, key);
+        }
+      }
+      personIndexCache = index;
+      return index;
+    }
+
+    function personMatches(name) {
+      const index = personIndex();
+      const key = normalize(name);
+      if (!key) return [];
+      const exact = index.get(key);
+      if (exact) return exact;
+      // 表記の細部が違う場合の保険（部分一致）。索引に無い綴りでも人物に辿れるようにする
+      for (const [indexed, list] of index) {
+        if (indexed.includes(key) || key.includes(indexed)) return list;
+      }
+      return [];
+    }
+
+    function personHref(candidate, election) {
+      const matches = personMatches(candidate && candidate.name);
+      if (!matches.length) return "";
+      const preferred = ROSTER_BY_TYPE[election && election.type] || [];
+      const picked = matches.find((item) => preferred.includes(item.roster)) || matches[0];
+      const base = ROSTER_URL[picked.roster] || `giin.html?view=${picked.roster}`;
+      return `${base}#member-${encodeURIComponent(picked.id)}`;
+    }
+
+    function candidateNameHtml(candidate, election) {
+      const href = personHref(candidate, election);
+      return href ? `<a href="${esc(href)}">${esc(candidate.name)}</a>` : esc(candidate.name);
     }
 
     function referenceSitesHtml(sites) {
@@ -262,9 +326,7 @@
         <tbody>${candidates.map((candidate) => `<tr>
           <td class="number">${esc(candidate.rank)}</td>
           <td>${esc(candidate.result)}</td>
-          <td>${candidate.personUrl
-            ? `<a href="${esc(personHref(candidate))}">${esc(candidate.name)}</a>`
-            : esc(candidate.name)}</td>
+          <td>${candidateNameHtml(candidate, election)}</td>
           <td>${esc(candidate.party)}</td>
           <td class="number">${esc(candidate.votesDisplay)}</td>
           <td class="number">${esc(candidate.voteShare)}</td>

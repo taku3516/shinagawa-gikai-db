@@ -103,6 +103,10 @@
       background: var(--c-card); padding: 20px;
       display: flex; flex-direction: column; gap: 8px;
     }
+    /* 選挙アーカイブなど他ページから #member-<id> で指定された人物を目立たせる */
+    .member-card.is-focused {
+      border-left-color: #b45309; box-shadow: 0 0 0 3px rgba(180, 83, 9, .25);
+    }
     .member-card h2 { margin: 0; font-size: 20px; line-height: 1.4; }
     .member-card .kana { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
 
@@ -506,6 +510,19 @@
         "品川区議会DB — これは品川区が運営しているものではありません。正確な情報は各機関の公式資料を確認してください。";
 
       render();
+      focusHashTarget();
+    }
+
+    // #member-<id> で指定された人物カードまでスクロールして目立たせる。
+    // カードはJSで描画するためブラウザ標準の自動スクロールが間に合わないので、描画後に自分で解決する。
+    function focusHashTarget() {
+      const targetId = decodeURIComponent(String(window.location.hash || "").replace(/^#/, ""));
+      if (!targetId) return;
+      const target = document.getElementById(targetId);
+      if (!target || !target.classList.contains("member-card")) return;
+      target.classList.add("is-focused");
+      // ブラウザ標準のハッシュジャンプ（上端揃え）が後から走るため、1フレーム待って中央に寄せ直す
+      requestAnimationFrame(() => target.scrollIntoView({ block: "center" }));
     }
 
     init();
