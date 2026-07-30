@@ -57,7 +57,16 @@ window.SHINAGAWA_DB.politiciansData = {
           ],
           "career": "平成17年から連続当選。選挙公報等では「伊藤 興一」表記の年もある。",
           "sns": [],
-          "fundReports": [],
+          "fundReports": [
+            {
+              "label": "公明党品川総支部（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-koumei_20"
+            },
+            {
+              "label": "伊藤興一後援会（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-i_52"
+            }
+          ],
           "activityExpenses": [],
           "electionHistory": [
             "2025 東京都議会議員選挙：当選（19,351票・12.0%）",
@@ -85,7 +94,12 @@ window.SHINAGAWA_DB.politiciansData = {
           "websiteUrl": "https://www.yujiro-s.com/",
           "career": "品川区議会議員（令和元年〜令和6年、1期）を経て、令和7年に東京都議会議員へ初当選。",
           "sns": [],
-          "fundReports": [],
+          "fundReports": [
+            {
+              "label": "せりざわ裕次郎を育てる会（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-se_063"
+            }
+          ],
           "activityExpenses": [],
           "electionHistory": [
             "2025 東京都議会議員選挙：当選（19,125票・11.8%）",
@@ -164,7 +178,17 @@ window.SHINAGAWA_DB.politiciansData = {
             "2007 品川区議会議員選挙：当選（5,397票）",
             "2006 品川区議会議員補欠選挙：当選（13,985票）"
           ],
-          "elections": "1回"
+          "elections": "1回",
+          "fundReports": [
+            {
+              "label": "立憲民主党東京都第３区総支部（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-rikken_05"
+            },
+            {
+              "label": "あべ祐美子後援会（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-a_41"
+            }
+          ]
         },
         {
           "id": "t-shiraishi-tamio",
@@ -219,7 +243,17 @@ window.SHINAGAWA_DB.politiciansData = {
             "2003 品川区議会議員選挙：当選（5,383票）",
             "1999 品川区議会議員選挙：当選（3,666票）"
           ],
-          "elections": "3回"
+          "elections": "3回",
+          "fundReports": [
+            {
+              "label": "田中たけし後援会（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-ta_54"
+            },
+            {
+              "label": "都区政策研究会（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-to_227"
+            }
+          ]
         },
         {
           "id": "t-kamino-yoshihiro",
@@ -332,7 +366,21 @@ window.SHINAGAWA_DB.politiciansData = {
             "2026 衆議院議員総選挙：当選（93,158.548票・42.6%）",
             "2024 衆議院議員総選挙：当選（61,660.983票・30.5%）"
           ],
-          "elections": "2回"
+          "elections": "2回",
+          "fundReports": [
+            {
+              "label": "自由民主党東京都第三選挙区支部（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06kai_015"
+            },
+            {
+              "label": "自由民主党品川総支部（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-jimin_188"
+            },
+            {
+              "label": "石原ひろたかの会（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-i_38"
+            }
+          ]
         }
       ]
     },
@@ -357,7 +405,17 @@ window.SHINAGAWA_DB.politiciansData = {
             "2007 品川区議会議員選挙：当選（5,397票）",
             "2006 品川区議会議員補欠選挙：当選（13,985票）"
           ],
-          "elections": "1回"
+          "elections": "1回",
+          "fundReports": [
+            {
+              "label": "立憲民主党東京都第３区総支部（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-rikken_05"
+            },
+            {
+              "label": "あべ祐美子後援会（2024年分）",
+              "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-a_41"
+            }
+          ]
         },
         {
           "id": "h-matsubara-hitoshi",

@@ -1,7 +1,7 @@
 // 品川区議会DB データファイル（現職区議名簿）
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.membersData = {
-  "updatedAt": "2026-07-17",
+  "updatedAt": "2026-07-25",
   "sourceUrl": "https://gikai.city.shinagawa.tokyo.jp/profile/50on",
   "note": "現職区議の情報は品川区議会公式サイトの議員紹介ページから転記。SNS・過去の選挙・得票履歴・政治資金収支報告書は、出典確認後に追加するための準備中の枠。政務活動費は年度別の公式資料ページへ案内しています。",
   "members": [
@@ -26,8 +26,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "民間企業（発電設備）、国会議員秘書（衆・参）を経て平成２３年、品川区議会議員に初当選、現在４期目。区議会公明党　筆頭副幹事長・政調会長、区議会副議長、監査委員、各委員長（建設・文教・行財政改革特別・決算特別）、副委員長（総務、厚生、予算特別）等を歴任。",
       "hobby": "読書、映画鑑賞、等",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "阿久津広王後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-a_24"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会公明党）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/komei_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "taisaku_ando",
@@ -51,7 +61,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "少年ジャンプを読むこと、レトロゲーム、まち歩き",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（日本共産党品川区議団）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/kyosan_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "chihiro_ishida",
@@ -75,7 +90,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "スノーボード、音楽鑑賞",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（日本共産党品川区議団）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/kyosan_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "hideo_ishida",
@@ -98,8 +118,22 @@ window.SHINAGAWA_DB.membersData = {
       "career": "品川区議会議長、総務委員会(委員長)、厚生委員会(委員長)、議会運営委員会(委員長)、自治制度特別委員会(委員長)、品川区議会自民党(幹事長)、監査委員",
       "hobby": "野球、ゴルフ、スポーツ観戦、神輿、太鼓、纏",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "自由民主党東京都品川区第十七支部（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-jimin_191"
+        },
+        {
+          "label": "石田秀男後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-i_029"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会自民党・無所属の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/jimin_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "masato_enoshita",
@@ -122,8 +156,22 @@ window.SHINAGAWA_DB.membersData = {
       "career": "荏原三丁目町会町会長、三谷八幡神社総代会副会長、武蔵小山パルム商店街理事、品川区校区教育協働委員会委員、品川区保護司会保護司、品川区立荏原平塚学園元PTA会長、都立大森高等学校元PTA会長、エバヒラおやじの会親父魂元会長",
       "hobby": "お祭り(武蔵小山パルム神輿會元会長）、ランニング（フルマラソン3時間49分10秒）、野球（品川区軟式野球連盟）、音楽鑑賞、読書",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "自由民主党東京都品川区第三十七支部（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-jimin_197"
+        },
+        {
+          "label": "えのした正人後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-e_09"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会自民党・無所属の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/jimin_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "takahiro_okura",
@@ -146,8 +194,22 @@ window.SHINAGAWA_DB.membersData = {
       "career": "監査委員、決算特別委員会（委員長・副委員長）、行財政改革特別委員会(委員長）、建設委員会（副委員長）、オリンピック・パラリンピック推進特別委員会、震災対策特別委員会、総務委員会、区民委員会、厚生委員会、文教委員会",
       "hobby": "剣道、野球、サッカー、お祭り",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "大倉たかひろ後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-o_09"
+        },
+        {
+          "label": "しながわ無所属の会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-si_034"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（しながわ未来）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/mirai_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "ayaka_ogino",
@@ -171,7 +233,16 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "旅行、読書、街歩き",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（しながわ未来）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/mirai_r070601_02.pdf"
+        },
+        {
+          "label": "令和7年度（無所属議員（おぎのあやか議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/ogino_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "kengo_kimura",
@@ -195,7 +266,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "ゴルフ",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（しながわ未来）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/mirai_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "arata_koshiba",
@@ -218,8 +294,22 @@ window.SHINAGAWA_DB.membersData = {
       "career": "国会議員公設秘書、大井滝王子町会副会長、大井消防団第４分団班長、品川区保護司、自衛隊募集相談員、日台友好品川区議会議員連盟会長",
       "hobby": "登山、卓球、読書、映画鑑賞、旅行",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "自由民主党東京都品川区第三十四支部（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-jimin_194"
+        },
+        {
+          "label": "こしば新後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-ko_084"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会自民党・無所属の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/jimin_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "takako_konno",
@@ -242,8 +332,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "副議長、品川区監査委員、総務委員会（副委員長）、区民委員会（副委員長）、建設委員会（委員長・副委員長）、文教委員会（委員長）、行財政改革特別委員会（委員長）、SDGｓ推進・行財政改革特別委員会（副委員長）、予算特別委員会（副委員長）、決算特別委員会（委員長）、品川区議会公明党（副幹事長、政調会長）",
       "hobby": "音楽鑑賞、写真鑑賞",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "金野孝子後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-ko_55"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会公明党）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/komei_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "emiko_sawada",
@@ -266,8 +366,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "一般企業勤務、医療法人理事、総務委員会、建設委員会、行財政改革特別委員会（副委員長）",
       "hobby": "お菓子作り、食べ歩き、猫を愛でる",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "沢田えみこ後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-sa_60"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会自民党・無所属の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/jimin_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "yukihiro_sugai",
@@ -290,8 +400,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "品川区立小山小学校、平塚中学校、慶應義塾高等学校、慶應義塾大学法学部政治学科卒業、現在は（有）須貝無線製作所代表取締役、荏原5丁目町会相談役、同町会の幸寿会副会長、少年サッカー小山クラブ代表、わかたけ会副幹事長",
       "hobby": "サッカー、テニス、陸上",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "須貝ゆきひろ後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-su_03"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（無所属議員（須貝行宏議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/sugai_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "hiroko_suzuki",
@@ -315,7 +435,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "山登り",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（日本共産党品川区議団）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/kyosan_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "mari_seo",
@@ -339,7 +464,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "野球観戦",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会自民党・無所属の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/jimin_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "mao_seraku",
@@ -363,7 +493,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "アウトドア、料理、散歩",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会日本維新の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/ishin_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "shinji_takahashi",
@@ -387,7 +522,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "野球、読書、スポーツ観戦",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（無所属議員（高橋しんじ議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/s_takahashi_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "nobuaki_takahashi",
@@ -410,8 +550,22 @@ window.SHINAGAWA_DB.membersData = {
       "career": "",
       "hobby": "スポーツ全般　特にサーフィン、読書、音楽鑑賞、ドライブ",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "自由民主党東京都品川区第二十八支部（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-jimin_192"
+        },
+        {
+          "label": "ＪＭ品川区議団（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-si_003"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（無所属議員（高橋伸明議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/n_takahashi_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "takeshi_tanaka",
@@ -435,7 +589,16 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "スポーツ観戦、鉄道、ゴルフ、読書",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（しながわ未来）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/mirai_r070601_02.pdf"
+        },
+        {
+          "label": "令和7年度（無所属議員（田中たけし議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/t_takeshi_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "yoshihiro_tsukamoto",
@@ -458,8 +621,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "区議会副議長、建設委員会（委員長）、文教委員会（委員長）、総務委員会（副委員長）、区民委員会（副委員長）、予算特別委員会（副委員長）、決算特別委員会（委員長、副委員長）、オリンピック・パラリンピック推進特別委員会（副委員長）、行財政改革特別委員会（副委員長）、監査委員、区議会公明党（副幹事長、政調会長）",
       "hobby": "読書、映画鑑賞、サッカー・相撲・ボクシング観戦",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "塚本芳弘後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-tu_05"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会公明党）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/komei_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "tsutsui_yosuke",
@@ -482,8 +655,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "建設委員会、文教委員会（副委員長）、決算特別委員会（副委員長）、オリンピック・パラリンピック推進特別委員会、行財政改革特別委員会、しながわシティラン実行委員",
       "hobby": "ダイビング、HIPHOPダンス、ビートメイク、サッカー、ゴルフ、格闘技、食べ歩き、カラオケ",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "都民ファーストの会筒井ようすけ後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-to_51"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（しながわ未来）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/mirai_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "shinichiro_tsuru",
@@ -506,8 +689,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "文教委員会（委員長）、総務委員会（副委員長）、区民委員会（副委員長）、行財政改革特別委員会（委員長）、予算特別委員会（委員長）、議会運営委員会、区議会公明党（政調会長・副幹事長）、監査委員",
       "hobby": "読書、テニス",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "鶴伸一郎後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-tu_18"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会公明党）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/komei_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "ryo_nakatsuka",
@@ -531,7 +724,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "イタリア料理、演劇鑑賞",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（無所属議員（中塚亮議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/nakatsuka_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "saeko_niizuma",
@@ -555,7 +753,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "音楽鑑賞、コーラス",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会公明党）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/komei_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "naoko_nishimura",
@@ -579,7 +782,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "アロマ、犬、ヨガ、旅行",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会自民党・無所属の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/jimin_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "takako_nishimoto",
@@ -602,8 +810,22 @@ window.SHINAGAWA_DB.membersData = {
       "career": "区民委員会（委員長）、総務委員会、建設委員会、文教委員会、厚生委員会、議会運営委員会、行財政改革特別委員会、街づくり特別委員会（副委員長）、環境対策特別委員会（副委員長）",
       "hobby": "観劇",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "西本貴子後援会“ｔａ－ｋｏサポターズ”（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-ni_09"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（しながわ未来）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/mirai_r070601_02.pdf"
+        },
+        {
+          "label": "令和7年度（無所属議員（西本たか子議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/nishimoto_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "toshifumi_nodate",
@@ -627,7 +849,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "バドミントン、テニス、映画鑑賞",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（日本共産党品川区議団）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/kyosan_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "masanori_fujiwara",
@@ -650,8 +877,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "行財政改革特別委員会（副委員長）、清掃・リサイクル特別委員会（副委員長）、無所属の会（政調会長）",
       "hobby": "",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "藤原正則の会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-hu_18"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（しながわ未来）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/mirai_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "kazumasa_matsuzawa",
@@ -674,8 +911,22 @@ window.SHINAGAWA_DB.membersData = {
       "career": "議会運営委員会（委員長・3期）、予算特別委員会（委員長）、品川区議会自民党・無所属の会（幹事長・3期）",
       "hobby": "神輿、銭湯巡り、野球、ラグビー",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "自由民主党東京都品川区第三十六支部（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-jimin_196"
+        },
+        {
+          "label": "まつざわ和昌後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-ma_026"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会自民党・無所属の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/jimin_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "yoshihiro_matsunaga",
@@ -699,7 +950,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "囲碁、釣り、茶道（表千家）、ソフトテニス、ソフトボール",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（しながわ未来）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/mirai_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "tokihiro_matsumoto",
@@ -723,7 +979,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "旅行、漫画・アニメ視聴、散歩",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会日本維新の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/ishin_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "satoshi_yanagisawa",
@@ -747,7 +1008,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "野球(元立会キングス）、音楽鑑賞（ザ・ブルーハーツ）、ジョギング、アニメ鑑賞",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（無所属議員（やなぎさわ聡議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/yanagisawa_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "yasuyuki_yamamoto",
@@ -771,7 +1037,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "バスケットボール、卓球、アウトドア",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（しながわ未来）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/mirai_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "masaharu_yukita",
@@ -795,7 +1066,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "アメリカンフットボール、ランニング",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会公明党）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/komei_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "yukari_yokoyama",
@@ -818,8 +1094,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "監査委員、総務委員会、区民委員会、厚生委員会、建設委員会、文教委員会、行財政改革特別委員会、議会運営委員会",
       "hobby": "自主制作映画、ピラティス、ヨガ、英会話、スポーツ観戦、フラワーアレンジメント等",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "横山ゆかり政策研究会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-yo_007"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（無所属議員（横山由香理議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/yokoyama_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "yumiko_yoshida",
@@ -843,7 +1129,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "読書、ウォーキング、植物を育てること",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（無所属議員（吉田ゆみこ議員））",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/yoshida_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "hiroki_wakabayashi",
@@ -866,8 +1157,18 @@ window.SHINAGAWA_DB.membersData = {
       "career": "区議会副議長、建設・文教委員会（委員長）、予算特別委員会（委員長）",
       "hobby": "落語",
       "sns": [],
-      "fundReports": [],
-      "activityExpenses": []
+      "fundReports": [
+        {
+          "label": "若林広毅後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-wa_04"
+        }
+      ],
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会公明党）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/komei_r070601_02.pdf"
+        }
+      ]
     },
     {
       "id": "yuichi_watanabe",
@@ -891,7 +1192,12 @@ window.SHINAGAWA_DB.membersData = {
       "hobby": "サッカー（少年指導・観戦・イベント運営）、ダンス(観戦・イベント運営)",
       "sns": [],
       "fundReports": [],
-      "activityExpenses": []
+      "activityExpenses": [
+        {
+          "label": "令和7年度（品川区議会自民党・無所属の会）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/jimin_r070601_02.pdf"
+        }
+      ]
     }
   ]
 };

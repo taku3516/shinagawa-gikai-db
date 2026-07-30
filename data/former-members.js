@@ -22,6 +22,16 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2011 品川区議会議員選挙：当選（2,673票）",
         "2007 品川区議会議員選挙：当選（5,397票）",
         "2006 品川区議会議員補欠選挙：当選（13,985票）"
+      ],
+      "fundReports": [
+        {
+          "label": "立憲民主党東京都第３区総支部（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-rikken_05"
+        },
+        {
+          "label": "あべ祐美子後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-a_41"
+        }
       ]
     },
     {
@@ -38,6 +48,12 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2011 品川区議会議員選挙：当選（1,713票）",
         "2007 品川区議会議員選挙：当選（3,984票）",
         "2006 品川区議会議員補欠選挙：落選（10,398票）"
+      ],
+      "fundReports": [
+        {
+          "label": "いながわ貴之後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-i_68"
+        }
       ]
     },
     {
@@ -82,6 +98,12 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2019 品川区議会議員選挙：当選（2,896票・2.3%）",
         "2018 品川区議会議員補欠選挙：当選（34,377票・34.5%）",
         "2015 品川区議会議員選挙：落選（770票・0.6%）"
+      ],
+      "fundReports": [
+        {
+          "label": "せりざわ裕次郎を育てる会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-se_063"
+        }
       ]
     },
     {
@@ -295,7 +317,13 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2015 品川区議会議員選挙：落選（752票・0.6%）",
         "2011 品川区議会議員選挙：当選（1,681.090票）"
       ],
-      "elections": "1回"
+      "elections": "1回",
+      "fundReports": [
+        {
+          "label": "吉田あつみの会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-yo_011"
+        }
+      ]
     },
     {
       "id": "x-mukai-megumi",
@@ -745,6 +773,16 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2005 東京都議会議員選挙：当選（21,075票）",
         "2003 品川区議会議員選挙：当選（5,383票）",
         "1999 品川区議会議員選挙：当選（3,666票）"
+      ],
+      "fundReports": [
+        {
+          "label": "田中たけし後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-ta_54"
+        },
+        {
+          "label": "都区政策研究会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-to_227"
+        }
       ]
     },
     {
@@ -765,6 +803,12 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2011 品川区議会議員選挙：当選（2,080.780票）",
         "2007 品川区議会議員選挙：当選（4,115.440票）",
         "2006 品川区議会議員補欠選挙：落選（9,960票）"
+      ],
+      "fundReports": [
+        {
+          "label": "石田しんご後援会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-i_35"
+        }
       ]
     },
     {
@@ -781,7 +825,13 @@ window.SHINAGAWA_DB.formerMembersData = {
         "2022 品川区議会議員補欠選挙：当選（17,808票・17.6%）",
         "2022 品川区議会議員補欠選挙：落選（13,360票・11.9%）"
       ],
-      "elections": "1回"
+      "elections": "1回",
+      "fundReports": [
+        {
+          "label": "いながき孝子とまちの暮らしを考える会（2024年分）",
+          "url": "https://www.senkyo.metro.tokyo.lg.jp/documents/d/senkyo/06teiki-shikin-i_66"
+        }
+      ]
     },
     {
       "id": "x-tsukidate-takeo",
