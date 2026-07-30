@@ -1304,6 +1304,471 @@ window.SHINAGAWA_DB.fiscalData = {
           "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
         }
       }
+    },
+    {
+      "id": "fy-h22",
+      "label": "平成22年度",
+      "period": "2010年4月〜2011年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成22年第1回定例会",
+            "url": "index.html#meeting-h22-1t"
+          }
+        ],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,361億6,899万円",
+        "expenditure": "1,320億9,455万円",
+        "realBalance": "29億6,432万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成23年第3回定例会",
+            "url": "index.html#meeting-h23-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h21",
+      "label": "平成21年度",
+      "period": "2009年4月〜2010年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成21年第1回定例会",
+            "url": "index.html#meeting-h21-1t"
+          }
+        ],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,435億1,175万円",
+        "expenditure": "1,402億2,636万円",
+        "realBalance": "28億9,809万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成22年第3回定例会",
+            "url": "index.html#meeting-h22-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h20",
+      "label": "平成20年度",
+      "period": "2008年4月〜2009年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成20年第1回定例会",
+            "url": "index.html#meeting-h20-1t"
+          }
+        ],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,369億2,241万円",
+        "expenditure": "1,337億8,692万円",
+        "realBalance": "28億3,214万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成21年第3回定例会",
+            "url": "index.html#meeting-h21-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h19",
+      "label": "平成19年度",
+      "period": "2007年4月〜2008年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成19年第1回定例会",
+            "url": "index.html#meeting-h19-1t"
+          }
+        ],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,291億4,491万円",
+        "expenditure": "1,261億8,500万円",
+        "realBalance": "27億9,882万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成20年第3回定例会",
+            "url": "index.html#meeting-h20-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h18",
+      "label": "平成18年度",
+      "period": "2006年4月〜2007年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成18年第1回定例会",
+            "url": "index.html#meeting-h18-1t"
+          }
+        ],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,359億8,586万円",
+        "expenditure": "1,332億3,182万円",
+        "realBalance": "26億9,752万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成19年第3回定例会",
+            "url": "index.html#meeting-h19-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h17",
+      "label": "平成17年度",
+      "period": "2005年4月〜2006年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成17年第1回定例会",
+            "url": "index.html#meeting-h17-1t"
+          }
+        ],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,265億903万円",
+        "expenditure": "1,238億4,356万円",
+        "realBalance": "26億3,448万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成18年第3回定例会",
+            "url": "index.html#meeting-h18-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h16",
+      "label": "平成16年度",
+      "period": "2004年4月〜2005年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成16年第1回定例会",
+            "url": "index.html#meeting-h16-1t"
+          }
+        ],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,171億3,526万円",
+        "expenditure": "1,143億3,445万円",
+        "realBalance": "25億5,273万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成17年第3回定例会",
+            "url": "index.html#meeting-h17-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h15",
+      "label": "平成15年度",
+      "period": "2003年4月〜2004年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成15年第1回定例会",
+            "url": "index.html#meeting-h15-1t"
+          }
+        ],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,241億846万円",
+        "expenditure": "1,209億4,138万円",
+        "realBalance": "25億259万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成16年第3回定例会",
+            "url": "index.html#meeting-h16-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h14",
+      "label": "平成14年度",
+      "period": "2002年4月〜2003年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [
+          {
+            "label": "審議: 平成14年第1回定例会",
+            "url": "index.html#meeting-h14-1t"
+          }
+        ],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,204億645万円",
+        "expenditure": "1,176億3,099万円",
+        "realBalance": "24億2,352万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成15年第3回定例会",
+            "url": "index.html#meeting-h15-3t"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fy-h13",
+      "label": "平成13年度",
+      "period": "2001年4月〜2002年3月",
+      "status": "決算認定済み",
+      "initial": {
+        "amount": "",
+        "change": "",
+        "links": [
+          {
+            "type": "official",
+            "label": "品川区 予算（公式）",
+            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+          }
+        ],
+        "council": [],
+        "note": "当初予算額は品川区公式サイトでの公開が平成23年度分からのため未収録です。 平成13年第1回定例会は会議録の収録開始（平成13年5月）より前のため、審議した議会へのリンクはありません。"
+      },
+      "supplements": {
+        "official": [],
+        "council": []
+      },
+      "settlement": {
+        "status": "決算認定済み。決算額は総務省の決算カード（普通会計）によります。令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
+        "revenue": "1,193億5,745万円",
+        "expenditure": "1,166億414万円",
+        "realBalance": "23億54万円の黒字",
+        "accountBasis": "普通会計",
+        "amountSource": {
+          "label": "総務省 市町村決算カード（東京都・品川区）",
+          "url": "https://www.soumu.go.jp/iken/zaisei/card.html",
+          "note": "普通会計ベース。品川区の決算書・監査委員の意見書は平成年度分が公表されていないため"
+        },
+        "links": [],
+        "council": [
+          {
+            "label": "審査: 平成14年第3回定例会",
+            "url": "index.html#meeting-h14-3t"
+          }
+        ]
+      }
     }
   ],
   "sources": [

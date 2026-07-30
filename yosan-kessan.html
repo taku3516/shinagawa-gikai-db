@@ -160,9 +160,11 @@
           <span class="fy-status">${esc(fy.status)}</span>
         </div>
         <h3>当初予算</h3>
-        <div class="amount-row">
-          <div class="amount"><strong>${esc(ini.amount)}</strong><span>一般会計・${esc(ini.change)}</span></div>
-        </div>
+        ${ini.amount
+          ? `<div class="amount-row">
+               <div class="amount"><strong>${esc(ini.amount)}</strong><span>一般会計・${esc(ini.change)}</span></div>
+             </div>`
+          : `<p class="status-note">${esc(ini.note || "当初予算額は未収録です。")}</p>`}
         <div>${iniLinks}</div>
         <h3>補正予算</h3>
         <div class="two-col">
