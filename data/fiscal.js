@@ -1,8 +1,8 @@
 // 品川区議会DB データファイル（年度ごとの予算・決算。議会の暦年データとは別軸）
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.fiscalData = {
-  "updatedAt": "2026-07-29",
-  "note": "予算・決算は「年度」（4月〜翌年3月）の情報です。議会の情報（暦年）と対象期間が異なります。金額・内容は品川区公式サイトからの転記で、正確な情報は必ずリンク先の公式資料を確認してください。",
+  "updatedAt": "2026-07-25",
+  "note": "予算・決算は「年度」（4月〜翌年3月）の情報です。議会の情報（暦年）と対象期間が異なります。金額・内容は品川区公式サイトからの転記で、正確な情報は必ずリンク先の公式資料を確認してください。　決算額（歳入・歳出総額と実質収支）は品川区監査委員の決算審査意見書によります。",
   "fiscalYears": [
     {
       "id": "fy-r08",
@@ -305,7 +305,15 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "令和7年決算特別委員会の録画",
             "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=161"
           }
-        ]
+        ],
+        "revenue": "2,164億4,488万円",
+        "expenditure": "2,097億31万円",
+        "realBalance": "66億646万円の黒字",
+        "amountSource": {
+          "label": "品川区監査委員 決算審査意見書（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
+        }
       }
     },
     {
@@ -396,7 +404,15 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "議会公式の提出議案・決算資料",
             "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r06_03t/r06_03t1"
           }
-        ]
+        ],
+        "revenue": "2,005億2,931万円",
+        "expenditure": "1,941億5,557万円",
+        "realBalance": "58億9,419万円の黒字",
+        "amountSource": {
+          "label": "品川区監査委員 決算審査意見書（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
+        }
       }
     },
     {
@@ -479,7 +495,15 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "議会公式の提出議案・決算資料",
             "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r05_03t/r05_03t1"
           }
-        ]
+        ],
+        "revenue": "1,959億1,638万円",
+        "expenditure": "1,893億3,839万円",
+        "realBalance": "62億6,078万円の黒字",
+        "amountSource": {
+          "label": "品川区監査委員 決算審査意見書（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
+        }
       }
     },
     {
@@ -564,7 +588,15 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "議会公式の提出議案・決算資料",
             "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r04_03t/r04_03t1"
           }
-        ]
+        ],
+        "revenue": "1,938億6,108万円",
+        "expenditure": "1,868億5,591万円",
+        "realBalance": "69億4,381万円の黒字",
+        "amountSource": {
+          "label": "品川区監査委員 決算審査意見書（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
+        }
       }
     },
     {
@@ -637,7 +669,15 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 令和3年第3回定例会",
             "url": "kaigiroku.html#meeting-r03-3t"
           }
-        ]
+        ],
+        "revenue": "2,399億7,867万円",
+        "expenditure": "2,363億1,670万円",
+        "realBalance": "35億548万円の黒字",
+        "amountSource": {
+          "label": "品川区監査委員 決算審査意見書（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
+        }
       }
     },
     {
@@ -694,7 +734,15 @@ window.SHINAGAWA_DB.fiscalData = {
             "label": "審査: 令和2年第3回定例会",
             "url": "kaigiroku.html#meeting-r02-3t"
           }
-        ]
+        ],
+        "revenue": "1,841億5,706万円",
+        "expenditure": "1,790億4,435万円",
+        "realBalance": "50億7,509万円の黒字",
+        "amountSource": {
+          "label": "品川区監査委員 決算審査意見書（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "note": "前年度分として同意見書に記載された額"
+        }
       }
     }
   ],

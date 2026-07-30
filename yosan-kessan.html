@@ -140,6 +140,16 @@
         : `<p class="status-note">該当する議案はまだありません。</p>`;
       const setLinks = (fy.settlement.links || []).map((l) => pill(l.label, l.url, "pill--fiscal")).join("")
         + (fy.settlement.council || []).map((l) => pill(l.label, l.url, "pill--council")).join("");
+      // 決算額（歳入・歳出の総額と実質収支）。監査委員の決算審査意見書に載る確定額
+      const set = fy.settlement;
+      const setAmounts = set.revenue
+        ? `<div class="amount-row">
+             <div class="amount"><strong>${esc(set.revenue)}</strong><span>歳入総額（一般会計）</span></div>
+             <div class="amount"><strong>${esc(set.expenditure)}</strong><span>歳出総額（一般会計）</span></div>
+             ${set.realBalance ? `<div class="amount"><strong>${esc(set.realBalance)}</strong><span>実質収支</span></div>` : ""}
+           </div>
+           ${set.amountSource ? `<p class="status-note">決算額の出典: <a href="${esc(set.amountSource.url)}" target="_blank" rel="noopener">${esc(set.amountSource.label)}</a>（${esc(set.amountSource.note)}）</p>` : ""}`
+        : "";
       return `
       <article class="fy-card" id="${esc(fy.id)}">
         <div class="fy-head">
@@ -159,6 +169,7 @@
         </div>
         <h3>決算</h3>
         <p class="status-note">${esc(fy.settlement.status)}</p>
+        ${setAmounts}
         <div>${setLinks}</div>
       </article>`;
     }
