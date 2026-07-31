@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f4e79" />
+  <title>行政評価（事務事業評価） | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
+  <style>
+    :root {
+      --c-main: #1f4e79; --c-main-dark: #173a5e; --c-main-pale: #e7eef4;
+      --c-bg: #f4f1e8; --c-card: #fffdf8; --c-ink: #17212b; --c-ink-soft: #4f5d68;
+      --c-border: #b9c3cc; --c-rule: #d8d2c4;
+      /* 年度で見る情報なので、予算・決算ページと同じ橙系アクセントに合わせる */
+      --c-fiscal: #b45309; --c-fiscal-bg: #fff7ed; --c-fiscal-border: #fcd9b6;
+      /* 評価区分の色分け（A拡大＝緑 / B継続＝青 / C改善＝橙 / D廃止＝赤） */
+      --c-a: #15803d; --c-a-bg: #f0fdf4; --c-a-border: #bbf7d0;
+      --c-b: #1f4e79; --c-b-bg: #e7eef4; --c-b-border: #b9c3cc;
+      --c-c: #b45309; --c-c-bg: #fff7ed; --c-c-border: #fcd9b6;
+      --c-d: #be123c; --c-d-bg: #fff1f2; --c-d-border: #fecaca;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+    body { margin: 0; background: var(--c-bg); color: var(--c-ink);
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+           overflow-wrap: break-word; }
+    a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero { padding: 40px 0 26px; border-top: 6px solid var(--c-fiscal); border-bottom: 1px solid var(--c-rule); background: var(--c-card); }
+    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
+    h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 48px); line-height: 1.15; }
+    .lead { max-width: 860px; margin: 0; font-size: 16px; line-height: 1.9; }
+    .warn {
+      max-width: 900px; margin-top: 18px; padding: 14px 16px;
+      border: 1px solid var(--c-fiscal-border); border-left: 4px solid var(--c-fiscal);
+      border-radius: 3px; background: var(--c-fiscal-bg); font-size: 14px; line-height: 1.8;
+    }
+    .warn strong { color: var(--c-fiscal); }
+    section { padding: 34px 0; }
+    h2.section-title { margin: 0 0 14px; font-size: 20px; border-left: 5px solid var(--c-fiscal); padding-left: 12px; }
+    /* 制度の説明 */
+    .about { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); padding: 20px; margin-bottom: 30px; }
+    .about ul { margin: 0; padding-left: 20px; font-size: 14px; line-height: 2; }
+    .criteria { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 16px; }
+    .criterion { border: 1px solid var(--c-border); border-radius: 3px; background: #fff; padding: 12px 14px; }
+    .criterion .code { display: inline-flex; align-items: center; justify-content: center;
+      width: 26px; height: 26px; border-radius: 3px; font-size: 15px; font-weight: 900; color: #fff; }
+    .criterion[data-code="A"] .code { background: var(--c-a); }
+    .criterion[data-code="B"] .code { background: var(--c-b); }
+    .criterion[data-code="C"] .code { background: var(--c-c); }
+    .criterion[data-code="D"] .code { background: var(--c-d); }
+    .criterion h3 { margin: 8px 0 4px; font-size: 15px; border: 0; padding: 0; }
+    .criterion p { margin: 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }
+    /* 年度切り替え */
+    .fy-select-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 24px; }
+    .fy-select-row label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; white-space: nowrap; }
+    #fy-select {
+      width: min(100%, 340px); border: 1px solid var(--c-border); border-radius: 3px;
+      background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: 16px; font-weight: 800;
+    }
+    .fy-card {
+      margin-bottom: 26px; border: 1px solid var(--c-border); border-top: 4px solid var(--c-fiscal);
+      border-radius: 4px; background: var(--c-card); padding: 22px; scroll-margin-top: 16px;
+    }
+    .fy-head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; margin-bottom: 4px; }
+    .fy-card h2 { margin: 0; font-size: 24px; }
+    .fy-status {
+      display: inline-flex; border-radius: 3px; background: var(--c-fiscal-bg);
+      border: 1px solid var(--c-fiscal-border); padding: 3px 10px;
+      color: var(--c-fiscal); font-size: 12px; font-weight: 800;
+    }
+    .fy-card h3 { margin: 22px 0 10px; font-size: 16px; border-left: 4px solid var(--c-fiscal); padding-left: 10px; }
+    .amount-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; }
+    .amount { border: 1px solid var(--c-border); border-radius: 3px; background: #fff; padding: 14px 18px; min-width: 220px; }
+    .amount strong { display: block; color: var(--c-fiscal); font-size: 26px; line-height: 1.2; }
+    .amount span { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .pill {
+      display: inline-flex; align-items: center; margin: 8px 6px 0 0;
+      border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
+      padding: 6px 12px; color: var(--c-main-dark); font-size: 13px; font-weight: 800;
+    }
+    .pill--fiscal { border-color: var(--c-fiscal-border); background: var(--c-fiscal-bg); color: var(--c-fiscal); }
+    .pill .kind { margin-left: 8px; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .col-box { border: 1px solid var(--c-rule); border-radius: 3px; background: #fffdf6; padding: 12px 14px; }
+    .col-box h4 { margin: 0 0 8px; font-size: 13px; color: var(--c-ink-soft); }
+    .status-note { color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; margin: 6px 0 0; }
+    .fine-print { margin-top: 20px; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }
+    footer { padding: 30px 0; border-top: 1px solid var(--c-border); background: var(--c-main-dark);
+             color: #fff; text-align: center; font-size: 13px; line-height: 1.8; }
+    .load-error { padding: 24px; border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-card); }
+    @media (max-width: 700px) {
+      .two-col { grid-template-columns: 1fr; }
+      .fy-card { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+        <h1>品川区の行政評価</h1>
+        <p class="lead">品川区が区の事業を自ら点検している「行政評価（事務事業評価・政策評価）」の結果を、年度ごとにまとめています。どの事業を拡大・継続・改善・廃止と判断したかが分かる公式資料への入口です。</p>
+        <div class="warn">
+          <strong>「年」と「年度」は別物です。</strong>このページの情報は<strong>年度</strong>（4月〜翌年3月）単位です。
+          また、評価は<strong>前年度の予算事務事業</strong>を対象に行われます（例：令和7年度の評価は令和6年度予算の事務事業が対象）。
+        </div>
+        <div class="warn" style="border-left-color: var(--c-main); background: var(--c-main-pale); border-color: var(--c-border);">
+          これは品川区が運営しているものではありません。評価結果は品川区公式サイトのPDF等で公開されています。正確な情報は必ず各リンク先の公式資料を確認してください。
+        </div>
+        <nav data-site-nav></nav>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">行政評価のしくみ</h2>
+        <div class="about" id="about-root"></div>
+
+        <h2 class="section-title">年度ごとの評価結果</h2>
+        <div class="fy-select-row">
+          <label for="fy-select">表示する年度</label>
+          <select id="fy-select" aria-label="表示する年度を選択"></select>
+        </div>
+        <div id="fy-root"></div>
+        <p class="fine-print" id="source-note"></p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">品川区議会DB — 行政評価の一次情報は品川区公式サイトです。</div></footer>
+
+  <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
+  <script src="data/gyosei.js"></script>
+  <script>
+    "use strict";
+
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, (c) => (
+        { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    const KIND_LABEL = { pdf: "PDF", excel: "Excel", text: "テキスト", page: "" };
+
+    // 資料リンク1件。外部サイトは新しいタブで開く
+    function linkPill(link) {
+      const target = /^https?:/.test(link.url) ? ' target="_blank" rel="noopener"' : "";
+      const kind = KIND_LABEL[link.kind] || "";
+      const meta = [kind, link.size].filter(Boolean).join(" ");
+      const cls = link.kind === "page" ? "pill" : "pill pill--fiscal";
+      return `<a class="${cls}" href="${esc(link.url)}"${target}>${esc(link.label)}`
+        + (meta ? `<span class="kind">${esc(meta)}</span>` : "") + `</a>`;
+    }
+
+    function linksHtml(links) {
+      if (!links || !links.length) return `<p class="status-note">掲載資料はありません。</p>`;
+      return links.map(linkPill).join("\n");
+    }
+
+    // 制度の説明（評価の考え方と、A〜Dの判断区分）
+    function renderAbout(data) {
+      const rules = (data.framework || []).map((t) => `<li>${esc(t)}</li>`).join("");
+      const criteria = (data.criteria || []).map((c) => `
+        <div class="criterion" data-code="${esc(c.code)}">
+          <span class="code">${esc(c.code)}</span>
+          <h3>${esc(c.label)}</h3>
+          <p>${esc(c.detail)}</p>
+        </div>`).join("");
+      document.getElementById("about-root").innerHTML = `
+        <ul>${rules}</ul>
+        <div class="criteria">${criteria}</div>`;
+    }
+
+    // 年度カード。評価シートは部局別に分かれるため、結果ページの資料としてまとめて出す
+    function fyHtml(fy) {
+      const counts = [];
+      if (fy.projects) {
+        counts.push(`<div class="amount"><strong>${esc(fy.projects.toLocaleString())}</strong><span>評価した事務事業の数</span></div>`);
+      }
+      if (fy.targetFiscalYear) {
+        counts.push(`<div class="amount"><strong style="font-size:18px">${esc(fy.targetFiscalYear)}</strong><span>評価の対象</span></div>`);
+      }
+      const sheets = fy.sheets && fy.sheets.length
+        ? `<h3>事務事業評価の結果（部局別の評価シートを含む）</h3>
+           <div>${linksHtml(fy.sheets)}</div>`
+        : "";
+      return `
+      <article class="fy-card" id="${esc(fy.id)}">
+        <div class="fy-head">
+          <h2>${esc(fy.label)}</h2>
+          <span class="fy-status">${esc(fy.status)}</span>
+        </div>
+        ${fy.note ? `<p class="status-note">${esc(fy.note)}</p>` : ""}
+        ${counts.length ? `<div class="amount-row" style="margin-top:14px">${counts.join("")}</div>` : ""}
+        <h3>公式ページ・資料</h3>
+        <div>${linkPill({ label: `${fy.label}行政評価（公式ページ）`, url: fy.officialUrl, kind: "page" })}
+             ${linksHtml(fy.links)}</div>
+        ${sheets}
+      </article>`;
+    }
+
+    function init() {
+      const data = window.SHINAGAWA_GYOSEI;
+      const root = document.getElementById("fy-root");
+      if (!data || !data.fiscalYears) {
+        root.innerHTML = `<div class="load-error"><strong>データを読み込めませんでした。</strong><br />data/gyosei.js を確認してください。</div>`;
+        return;
+      }
+      renderAbout(data);
+      document.getElementById("source-note").innerHTML =
+        esc(data.note) + " "
+        + (data.sources || []).map((s) =>
+            `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(" / ")
+        + `（データ取得日: ${esc(data.updatedAt)}）`;
+
+      const select = document.getElementById("fy-select");
+      select.innerHTML = data.fiscalYears.map((fy) =>
+        `<option value="${esc(fy.id)}">${esc(fy.label)}</option>`).join("")
+        + `<option value="all">すべての年度を表示</option>`;
+
+      function render() {
+        const value = select.value;
+        const list = value === "all" ? data.fiscalYears : data.fiscalYears.filter((fy) => fy.id === value);
+        root.innerHTML = list.map(fyHtml).join("");
+        const params = new URLSearchParams();
+        if (value && value !== data.fiscalYears[0].id) params.set("fy", value);
+        const query = params.toString();
+        history.replaceState(null, "", `${location.pathname}${query ? `?${query}` : ""}${location.hash}`);
+      }
+
+      const requested = new URLSearchParams(location.search).get("fy");
+      if (requested && (requested === "all" || data.fiscalYears.some((fy) => fy.id === requested))) {
+        select.value = requested;
+      }
+      select.addEventListener("change", render);
+      render();
+    }
+
+    init();
+  </script>
+</body>
+</html>

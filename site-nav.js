@@ -21,6 +21,7 @@
   const row2Data = (site && Array.isArray(site.heroRow2)) ? site.heroRow2 : [
     { type: "official", label: "会議録を見る", url: "kaigiroku.html" },
     { type: "official", label: "予算・決算を見る", url: "yosan-kessan.html" },
+    { type: "official", label: "行政評価を見る", url: "gyosei.html" },
     { type: "official", label: "政治家名簿を見る", url: "giin.html" },
     { type: "official", label: "品川区の選挙を見る", url: "senkyo.html" },
     { type: "official", label: "政務活動費を見る", url: "seimu.html" },
@@ -58,6 +59,7 @@
     if (currentFile === "senkyo.html" && label === "品川区の選挙を見る") return true;
     if (currentFile === "news.html" && label === "品川区ニュースを見る") return true;
     if (currentFile === "yosan-kessan.html" && label === "予算・決算を見る") return true;
+    if (currentFile === "gyosei.html" && label === "行政評価を見る") return true;
     if (currentFile === "kensaku.html" && label === "横断検索") return true;
     if (currentFile === "seimu.html" && label === "政務活動費を見る") return true;
     if (currentFile === "seijishikin.html" && label === "政治資金収支報告書を見る") return true;

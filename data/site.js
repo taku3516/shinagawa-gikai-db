@@ -39,6 +39,11 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "type": "official",
+      "label": "行政評価を見る",
+      "url": "gyosei.html"
+    },
+    {
+      "type": "official",
       "label": "政治家名簿を見る",
       "url": "giin.html"
     },
