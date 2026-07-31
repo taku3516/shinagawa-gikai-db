@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-31T05:27:19.633361Z",
+  "generatedAt": "2026-07-31T08:35:27.764077Z",
   "items": [
+    {
+      "id": "236991e4588a4fc91ae2",
+      "title": "DYM MESSENGERS、CONVERSEの「CONS ACCELERATOR LOW」を着用したストリートムービーを7月30日に公開",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000508.000027235.html",
+      "publishedAt": "2026-07-31T07:50:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T08:35:02.289088Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "a0cc92ea49484aba119b",
+      "title": "西五反田に「湘南の魚とワインの店 ヒラツカ」 横浜に続く2号店",
+      "summary": "「湘南の魚とワインの店 ヒラツカ 五反田店」が7月13日、五反田駅近くの「西五反田タテイシビル」（品川区西五反田1）地下にオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5050",
+      "publishedAt": "2026-07-31T07:33:33Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T08:35:02.289088Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "ca1ee6c54f2c9f15fc4c",
       "title": "【配信開始】『ビットとラチェの魔法学校』電子コミック第1巻が発売！",
@@ -38,6 +76,45 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "eadc8c2bedad2ec109e0",
+      "title": "令和8年熊本地震 熊本県氷川町へのふるさと納税による災害支援の代理寄附を開始",
+      "summary": "税務課 ふるさと納税担当 電話03-5742-3857 FAX03-5742-7108",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260731110406.html",
+      "publishedAt": "2026-07-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T08:35:02.289088Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "a7bfff2890998cdbf0ac",
+      "title": "第4回品川区大井町駅周辺地区バリアフリー計画改定協議会の開催",
+      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-barrier_free/hpg000032257.html",
+      "publishedAt": "2026-07-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T08:35:02.289088Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 16
     },
     {
       "id": "f6bb985bfd5c48aa47e2",
@@ -125,6 +202,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "19413da7c891952f8507",
+      "title": "羽田空港の機能強化について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/haneda/hpg000023398.html",
+      "publishedAt": "2026-07-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "731f59c4cd817ae0a070",
@@ -3207,23 +3301,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "19413da7c891952f8507",
-      "title": "羽田空港の機能強化について",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/haneda/hpg000023398.html",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "62e909e9cbd9625d1e96",
       "title": "【受付は終了しました】令和8年度(9年度採用)品川区立学校学校教育職員採用候補者選考の実施について",
       "summary": "",
@@ -3952,7 +4029,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 3,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -3971,7 +4048,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2571, column 55"
+      "message": "not well-formed (invalid token): line 2801, column 55"
     },
     {
       "source": "朝日新聞",
