@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-31T15:54:59.478688Z",
+  "generatedAt": "2026-07-31T19:09:23.618254Z",
   "items": [
     {
       "id": "c5475cf4b9e0f03867fc",
@@ -125,6 +125,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "621b3a155515f002bec2",
+      "title": "新しいビジネスへの挑戦や地域課題の解決に取り組むビジネスプランを募集開始！「ふくしまベンチャーアワード2026」（主催:福島県,企画運営：エイチタス株式会社）",
+      "summary": "[エイチタス株式会社] エイチタス株式会社（本社：東京都品川区、代表取締役：原 亮／小澤 剛）は、福島県が主催する「ふくしまベンチャーアワード2026」の企画運営を担当し、このたび、福島県内において新しいビジネスへの挑戦や地域...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000338.000023448.html",
+      "publishedAt": "2026-07-31T18:10:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T19:09:04.650321Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "236991e4588a4fc91ae2",
@@ -4156,7 +4173,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2320, column 29"
+      "message": "not well-formed (invalid token): line 2347, column 29"
     },
     {
       "source": "朝日新聞",
@@ -4180,7 +4197,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
