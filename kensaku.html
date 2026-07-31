@@ -206,6 +206,12 @@
       margin-bottom: 12px;
     }
     #hit { color: var(--c-ink-soft); font-size: 13px; font-weight: 800; }
+    .loading-status {
+      color: var(--c-main-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .loading-status[hidden] { display: none; }
     .rows { display: grid; gap: 11px; }
     .hitrow {
       border: 1px solid var(--c-border);
@@ -330,7 +336,7 @@
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
         <h1>横断検索</h1>
         <p class="lead">
-          令和元年〜令和8年の議会情報に加え、人物・選挙・政務活動費・政治資金・品川区ニュースをまとめて検索できます。複数の言葉はスペースで区切ると、すべてを含む結果に絞り込めます。
+          平成13年〜令和8年の議会情報に加え、人物・選挙・政務活動費・政治資金・品川区ニュースをまとめて検索できます。複数の言葉はスペースで区切ると、すべてを含む結果に絞り込めます。
         </p>
         <div class="notice">
           本サイトに収録している質問・答弁は要約です。発言全文を検索する場合は、公式の
@@ -394,6 +400,7 @@
       <div class="container">
         <div class="status-row">
           <span id="hit" aria-live="polite"></span>
+          <span id="loading-status" class="loading-status" role="status" aria-live="polite" hidden></span>
         </div>
         <div id="results" class="rows"></div>
         <div id="guide" class="guide"></div>
@@ -414,86 +421,7 @@
   <script src="data/former-members.js"></script>
   <script src="data/politicians.js"></script>
   <script src="data/elections.js"></script>
-  <script src="data/h30.js"></script>
-  <script src="data/h30-complete.js"></script>
-  <script src="data/r01.js"></script>
-  <script src="data/r01-complete.js"></script>
-  <script src="data/r02.js"></script>
-  <script src="data/r02-complete.js"></script>
-  <script src="data/r03.js"></script>
-  <script src="data/r03-complete.js"></script>
-  <script src="data/r04.js"></script>
-  <script src="data/r04-complete.js"></script>
-  <script src="data/r04-committees.js"></script>
-  <script src="data/r04-committees-part-01.js"></script>
-  <script src="data/r04-committees-part-02.js"></script>
-  <script src="data/r04-committees-part-03.js"></script>
-  <script src="data/r04-committees-part-04.js"></script>
-  <script src="data/r04-committees-part-05.js"></script>
-  <script src="data/r04-committees-part-06.js"></script>
-  <script src="data/r04-committees-part-07.js"></script>
-  <script src="data/r04-committees-part-08.js"></script>
-  <script src="data/r04-committees-part-09.js"></script>
-  <script src="data/r04-committees-part-10.js"></script>
-  <script src="data/r04-committees-part-11.js"></script>
-  <script src="data/r04-committees-part-12.js"></script>
-  <script src="data/r05.js"></script>
-  <script src="data/r05-complete.js"></script>
-  <script src="data/r05-committees.js"></script>
-  <script src="data/r05-committees-part-01.js"></script>
-  <script src="data/r05-committees-part-02.js"></script>
-  <script src="data/r05-committees-part-03.js"></script>
-  <script src="data/r05-committees-part-04.js"></script>
-  <script src="data/r05-committees-part-05.js"></script>
-  <script src="data/r05-committees-part-06.js"></script>
-  <script src="data/r05-committees-part-07.js"></script>
-  <script src="data/r05-committees-part-08.js"></script>
-  <script src="data/r05-committees-part-09.js"></script>
-  <script src="data/r05-committees-part-10.js"></script>
-  <script src="data/r05-committees-part-11.js"></script>
-  <script src="data/r05-committees-part-12.js"></script>
-  <script src="data/r06.js"></script>
-  <script src="data/r06-complete.js"></script>
-  <script src="data/r06-committees.js"></script>
-  <script src="data/r06-committees-part-01.js"></script>
-  <script src="data/r06-committees-part-02.js"></script>
-  <script src="data/r06-committees-part-03.js"></script>
-  <script src="data/r06-committees-part-04.js"></script>
-  <script src="data/r06-committees-part-05.js"></script>
-  <script src="data/r06-committees-part-06.js"></script>
-  <script src="data/r06-committees-part-07.js"></script>
-  <script src="data/r06-committees-part-08.js"></script>
-  <script src="data/r06-committees-part-09.js"></script>
-  <script src="data/r06-committees-part-10.js"></script>
-  <script src="data/r06-committees-part-11.js"></script>
-  <script src="data/r06-committees-part-12.js"></script>
-  <script src="data/r06-committees-part-13.js"></script>
-  <script src="data/r06-committees-part-14.js"></script>
-  <script src="data/r07.js"></script>
-  <script src="data/r07-complete.js"></script>
-  <script src="data/r07-committees.js"></script>
-  <script src="data/r07-committees-part-01.js"></script>
-  <script src="data/r07-committees-part-02.js"></script>
-  <script src="data/r07-committees-part-03.js"></script>
-  <script src="data/r07-committees-part-04.js"></script>
-  <script src="data/r07-committees-part-05.js"></script>
-  <script src="data/r07-committees-part-06.js"></script>
-  <script src="data/r07-committees-part-07.js"></script>
-  <script src="data/r07-committees-part-08.js"></script>
-  <script src="data/r07-committees-part-09.js"></script>
-  <script src="data/r07-committees-part-10.js"></script>
-  <script src="data/r07-committees-part-11.js"></script>
-  <script src="data/r07-committees-part-12.js"></script>
-  <script src="data/r07-committees-part-13.js"></script>
-  <script src="data/r08.js"></script>
-  <script src="data/r08-complete.js"></script>
-  <script src="data/r08-committees.js"></script>
-  <script src="data/r08-committees-part-01.js"></script>
-  <script src="data/r08-committees-part-02.js"></script>
-  <script src="data/r08-committees-part-03.js"></script>
-  <script src="data/r08-committees-part-04.js"></script>
-  <script src="data/r08-committees-part-05.js"></script>
-  <script src="data/r08-committees-part-06.js"></script>
+  <!-- 年別の議会データは、検索を始めた後に必要な年から読み込む。 -->
   <script src="data/seimu.js"></script>
   <script src="data/seijishikin.js"></script>
   <script src="data/senkyo-shushi.js"></script>
@@ -537,14 +465,15 @@
         const reiwa = numericYear - 2018;
         return `令和${reiwa === 1 ? "元" : reiwa}年（${numericYear}年）`;
       }
-      if (numericYear === 2018) return "平成30年（2018年）";
+      if (numericYear >= 1989) return `平成${numericYear - 1988}年（${numericYear}年）`;
       return `${numericYear}年`;
     }
 
     function yearFromId(yearId) {
-      if (/^h30$/i.test(String(yearId))) return 2018;
-      const match = String(yearId).match(/r(\d{2})/i);
-      return match ? 2018 + Number(match[1]) : null;
+      const heisei = String(yearId).match(/^h(\d{2})$/i);
+      if (heisei) return 1988 + Number(heisei[1]);
+      const reiwa = String(yearId).match(/^r(\d{2})$/i);
+      return reiwa ? 2018 + Number(reiwa[1]) : null;
     }
 
     function dateYear(value) {
@@ -579,14 +508,13 @@
         tags: normalizeText(tags.join(" ")),
         body: normalizeText([item.meta, item.body, item.question, item.answer].join(" "))
       };
-      fields.all = [fields.title, fields.primary, fields.tags, fields.body].join(" ");
       INDEX.push({
         id: item.id || `result-${INDEX.length + 1}`,
         category: item.category,
         type: item.type,
         year: item.year || null,
         date: item.date || "",
-        sortDate: item.sortDate || (item.date ? Date.parse(item.date) || 0 : (item.year || 0) * 10000000000),
+        sortDate: item.sortDate || (item.date ? Date.parse(item.date) || 0 : (item.year ? Date.UTC(item.year, 0, 1) : 0)),
         title: item.title || "名称未設定",
         meta: item.meta || "",
         body: item.body || "",
@@ -604,10 +532,18 @@
     const aliasById = new Map(
       ((db.peopleData && db.peopleData.people) || []).map((person) => [person.id, person.aliases || []])
     );
+    const yearMetas = ((db.site && db.site.years) || [])
+      .filter((meta) => meta && meta.available && meta.id && meta.file);
+    const yearMetaByCalendarYear = new Map(
+      yearMetas.map((meta) => [String(yearFromId(meta.id)), meta])
+    );
+    const councilTypes = ["会議", "議案", "請願・陳情", "質問・答弁", "委員会質疑・答弁"];
+    const loadedYearIds = new Set();
+    const failedYearIds = new Set();
+    const scriptPromises = new Map();
+    let loadQueue = Promise.resolve();
 
-    const yearIds = Object.keys(db.years || {}).sort().reverse();
-    for (const yearId of yearIds) {
-      const yearData = db.years[yearId];
+    function indexYear(yearId, yearData) {
       const year = yearFromId(yearId);
       const meetingNames = {};
       for (const meeting of yearData.meetings || []) {
@@ -622,7 +558,7 @@
           body: meeting.summary || "",
           primary: [meeting.name, meeting.type],
           tags: [meeting.type],
-          links: [{ type: "internal", label: "DB内で会議を開く", url: `index.html#meeting-${meeting.id}` }].concat(meeting.links || [])
+          links: [{ type: "internal", label: "DB内で会議を開く", url: `kaigiroku.html#meeting-${meeting.id}` }].concat(meeting.links || [])
         });
       }
 
@@ -638,7 +574,7 @@
           result: bill.result || "",
           primary: [bill.number, bill.proposer, meetingNames[bill.meetingId]],
           tags: bill.tags || [],
-          links: [{ type: "internal", label: "DB内で議案を開く", url: `index.html#bills-${bill.meetingId}` }].concat(bill.links || [])
+          links: [{ type: "internal", label: "DB内で議案を開く", url: `kaigiroku.html#bills-${bill.meetingId}` }].concat(bill.links || [])
         });
       }
 
@@ -654,7 +590,7 @@
           result: petition.result || "",
           primary: [petition.number, meetingNames[petition.meetingId]],
           tags: petition.tags || [],
-          links: [{ type: "internal", label: "DB内で請願・陳情を開く", url: `index.html#petitions-${petition.meetingId}` }].concat(petition.links || [])
+          links: [{ type: "internal", label: "DB内で請願・陳情を開く", url: `kaigiroku.html#petitions-${petition.meetingId}` }].concat(petition.links || [])
         });
       }
 
@@ -675,7 +611,7 @@
             answer: summary.answer || "",
             primary: [questioner.member, questioner.party, questioner.kind, meetingNames[questioner.meetingId]].concat(memberAliases),
             tags: [questioner.kind || "一般質問"],
-            links: [{ type: "internal", label: "DB内で質問と答弁を開く", url: `index.html#question-${questioner.meetingId}-${questioner.memberId}` }].concat(questioner.links || [])
+            links: [{ type: "internal", label: "DB内で質問と答弁を開く", url: `kaigiroku.html#question-${questioner.meetingId}-${questioner.memberId}` }].concat(questioner.links || [])
           });
         });
       }
@@ -700,7 +636,108 @@
           }
         }
       }
+    }
 
+    function loadScript(src) {
+      if (scriptPromises.has(src)) return scriptPromises.get(src);
+      const promise = new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.async = true;
+        script.addEventListener("load", () => {
+          script.remove();
+          resolve();
+        }, { once: true });
+        script.addEventListener("error", () => {
+          script.remove();
+          scriptPromises.delete(src);
+          reject(new Error(`${src} を読み込めませんでした`));
+        }, { once: true });
+        document.head.appendChild(script);
+      });
+      scriptPromises.set(src, promise);
+      return promise;
+    }
+
+    async function loadAndIndexYear(meta) {
+      if (loadedYearIds.has(meta.id)) return;
+      await loadScript(meta.file);
+      if (meta.supplement) await loadScript(meta.supplement);
+      const yearData = db.years && db.years[meta.id];
+      if (!yearData) throw new Error(`${meta.label}のデータが登録されませんでした`);
+      if (meta.committees) {
+        await loadScript(`data/${meta.id}-committees.js`);
+        await Promise.all((yearData.committeeDataParts || []).map((part) => loadScript(`data/${part}`)));
+      }
+      indexYear(meta.id, yearData);
+      loadedYearIds.add(meta.id);
+      failedYearIds.delete(meta.id);
+      delete db.years[meta.id];
+    }
+
+    function nextFrame() {
+      return new Promise((resolve) => setTimeout(resolve, 0));
+    }
+
+    async function loadYearList(metas) {
+      const targets = metas.filter((meta) => !loadedYearIds.has(meta.id));
+      if (!targets.length) {
+        updateLoadingStatus();
+        return;
+      }
+      for (let index = 0; index < targets.length; index += 1) {
+        const meta = targets[index];
+        elements.loadingStatus.hidden = false;
+        elements.loadingStatus.textContent = `${meta.label}の議会情報を読み込み中（${index + 1}/${targets.length}年）`;
+        try {
+          await loadAndIndexYear(meta);
+        } catch (error) {
+          failedYearIds.add(meta.id);
+          console.error(error);
+        }
+        refreshFilterOptions();
+        render();
+        await nextFrame();
+      }
+      updateLoadingStatus();
+    }
+
+    function updateLoadingStatus() {
+      if (!elements || !elements.loadingStatus) return;
+      const loaded = loadedYearIds.size;
+      const total = yearMetas.length;
+      if (failedYearIds.size) {
+        elements.loadingStatus.hidden = false;
+        elements.loadingStatus.textContent = `議会情報 ${loaded}/${total}年を読み込み済み（${failedYearIds.size}年は再読み込みが必要です）`;
+      } else if (loaded) {
+        elements.loadingStatus.hidden = false;
+        elements.loadingStatus.textContent = `議会情報 ${loaded}/${total}年を読み込み済み`;
+      } else {
+        elements.loadingStatus.hidden = true;
+        elements.loadingStatus.textContent = "";
+      }
+    }
+
+    function requestedYearMetas() {
+      if (state.category !== "all" && state.category !== "council") return [];
+      if (elements.source.value) return [];
+      if (elements.type.value && !councilTypes.includes(elements.type.value)) return [];
+      const selectedYear = elements.year.value;
+      if (selectedYear) {
+        const meta = yearMetaByCalendarYear.get(selectedYear);
+        return meta ? [meta] : [];
+      }
+      const needsCouncilData = state.category === "council"
+        || Boolean(elements.query.value.trim())
+        || Boolean(elements.type.value || elements.result.value || elements.tag.value);
+      return needsCouncilData ? yearMetas : [];
+    }
+
+    function requestCouncilData() {
+      const metas = requestedYearMetas();
+      if (!metas.length) return Promise.resolve();
+      loadQueue = loadQueue.then(() => loadYearList(metas));
+      return loadQueue;
     }
 
     function addPerson(person, type, extra = {}) {
@@ -924,7 +961,10 @@
     }
 
     function itemMatchesTerms(item, terms) {
-      return terms.every((term) => variantsForTerm(term).some((variant) => item.fields.all.includes(variant)));
+      const fields = [item.fields.title, item.fields.primary, item.fields.tags, item.fields.body];
+      return terms.every((term) =>
+        variantsForTerm(term).some((variant) => fields.some((field) => field.includes(variant)))
+      );
     }
 
     function escapeRegExp(value) {
@@ -994,6 +1034,7 @@
       reset: document.getElementById("reset-search"),
       filterPanel: document.getElementById("filter-panel"),
       hit: document.getElementById("hit"),
+      loadingStatus: document.getElementById("loading-status"),
       results: document.getElementById("results"),
       guide: document.getElementById("guide"),
       pagination: document.getElementById("pagination")
@@ -1017,8 +1058,11 @@
 
     function refreshFilterOptions() {
       const items = availableItemsForCategory();
-      const types = [...new Set(items.map((item) => item.type).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ja"));
-      const years = [...new Set(items.map((item) => item.year).filter(Boolean))].sort((a, b) => b - a);
+      const includesCouncil = state.category === "all" || state.category === "council";
+      const types = [...new Set(items.map((item) => item.type).filter(Boolean)
+        .concat(includesCouncil ? councilTypes : []))].sort((a, b) => a.localeCompare(b, "ja"));
+      const catalogYears = includesCouncil ? yearMetas.map((meta) => yearFromId(meta.id)).filter(Boolean) : [];
+      const years = [...new Set(items.map((item) => item.year).filter(Boolean).concat(catalogYears))].sort((a, b) => b - a);
       const results = [...new Set(items.map((item) => item.result).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ja"));
       const sources = [...new Set(items.map((item) => item.source).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ja"));
       const tags = [...new Set(items.flatMap((item) => item.tags).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ja"));
@@ -1035,11 +1079,14 @@
         map[item.category] = (map[item.category] || 0) + 1;
         return map;
       }, { all: 0 });
-      elements.categoryTabs.innerHTML = CATEGORY_DEFS.map((category) =>
-        `<button class="category-button" type="button" data-category="${category.id}" aria-pressed="${state.category === category.id}">
-          ${esc(category.label)}<span class="category-count">${Number(counts[category.id] || 0).toLocaleString("ja-JP")}</span>
-        </button>`
-      ).join("");
+      const councilDataIsPartial = loadedYearIds.size < yearMetas.length;
+      elements.categoryTabs.innerHTML = CATEGORY_DEFS.map((category) => {
+        const isPartial = councilDataIsPartial && (category.id === "all" || category.id === "council");
+        const count = Number(counts[category.id] || 0).toLocaleString("ja-JP");
+        return `<button class="category-button" type="button" data-category="${category.id}" aria-pressed="${state.category === category.id}">
+          ${esc(category.label)}<span class="category-count" aria-label="${isPartial ? `${count}件以上` : `${count}件`}">${count}${isPartial ? "+" : ""}</span>
+        </button>`;
+      }).join("");
     }
 
     function hasDetailedFilter() {
@@ -1084,7 +1131,7 @@
       renderCategoryTabs();
 
       if (!browseMode) {
-        elements.hit.textContent = `議会・人物・選挙・政務活動費・政治資金・ニュースの全${INDEX.length.toLocaleString("ja-JP")}件から検索`;
+        elements.hit.textContent = `人物・選挙・政務活動費・政治資金・ニュースの${INDEX.length.toLocaleString("ja-JP")}件と、平成13年〜令和8年の議会情報から検索`;
         elements.results.innerHTML = "";
         elements.guide.hidden = false;
         elements.guide.innerHTML = `<h2>検索する内容を入力してください</h2>
@@ -1131,6 +1178,7 @@
       state.category = CATEGORY_DEFS.some((item) => item.id === category) ? category : "all";
       refreshFilterOptions();
       render(resetPage);
+      requestCouncilData();
     }
 
     function resetSearch() {
@@ -1163,13 +1211,17 @@
     for (const [key, value] of Object.entries(initialValues)) {
       if ([...elements[key].options].some((option) => option.value === value)) elements[key].value = value;
     }
-    state.page = Math.max(1, Number(params.get("page")) || 1);
+    const initialPage = Math.max(1, Number(params.get("page")) || 1);
+    state.page = 1;
     elements.filterPanel.open = hasDetailedFilter();
 
     let inputTimer = null;
     elements.query.addEventListener("input", () => {
       clearTimeout(inputTimer);
-      inputTimer = setTimeout(() => render(true), 120);
+      inputTimer = setTimeout(() => {
+        render(true);
+        requestCouncilData();
+      }, 180);
     });
     elements.clear.addEventListener("click", () => {
       elements.query.value = "";
@@ -1181,7 +1233,10 @@
       if (button) setCategory(button.dataset.category);
     });
     [elements.type, elements.year, elements.result, elements.source, elements.tag, elements.sort]
-      .forEach((element) => element.addEventListener("change", () => render(true)));
+      .forEach((element) => element.addEventListener("change", () => {
+        render(true);
+        requestCouncilData();
+      }));
     elements.reset.addEventListener("click", resetSearch);
     elements.pagination.addEventListener("click", (event) => {
       const button = event.target.closest("[data-page]");
@@ -1192,6 +1247,16 @@
     });
 
     render();
+    const initialTargets = requestedYearMetas();
+    if (initialTargets.length) {
+      requestCouncilData().then(() => {
+        state.page = initialPage;
+        render();
+      });
+    } else if (initialPage > 1) {
+      state.page = initialPage;
+      render();
+    }
   </script>
 </body>
 </html>

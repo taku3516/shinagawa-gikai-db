@@ -83,6 +83,8 @@ window.SHINAGAWA_DB.site = {
       "id": "r08",
       "label": "令和8年",
       "file": "data/r08.js",
+      "supplement": "data/r08-complete.js",
+      "committees": true,
       "available": true
     },
     {
