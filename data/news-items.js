@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-31T08:35:27.764077Z",
+  "generatedAt": "2026-07-31T11:21:29.815162Z",
   "items": [
     {
       "id": "236991e4588a4fc91ae2",
@@ -479,6 +479,25 @@ window.SHINAGAWA_NEWS = {
         "西五反田"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "0ce4f8a236aa803b33a0",
+      "title": "区議会だより表紙等に掲載する写真の応募を終了しました。",
+      "summary": "区議会だより表紙等に掲載する写真の応募を終了しました。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20707.html",
+      "publishedAt": "2026-07-29T10:00:47Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T11:21:04.927907Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
     },
     {
       "id": "2033881046567486c66b",
@@ -4048,7 +4067,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2801, column 55"
+      "message": "not well-formed (invalid token): line 3338, column 55"
     },
     {
       "source": "朝日新聞",
@@ -4072,7 +4091,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
