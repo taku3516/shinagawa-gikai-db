@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-31T22:57:20.334341Z",
+  "generatedAt": "2026-07-31T23:58:08.054603Z",
   "items": [
+    {
+      "id": "b2c6581f58bc18105d71",
+      "title": "【品川区健康推進部保健センター】専門職職員（歯科衛生士）募集",
+      "summary": "品川区健康推進部荏原保健センター 電話：03-3788-7015（歯科担当直通） FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260610161057.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T23:57:41.605121Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "5be050056a568efa2213",
+      "title": "品川区職員再採用選考（カムバック採用）募集",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260703160842.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T23:57:41.605121Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "c5475cf4b9e0f03867fc",
       "title": "しなカレント講座 第3回「気象災害から身を守る」（9月10日(木)実施）",
@@ -4210,7 +4246,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2336, column 65"
+      "message": "not well-formed (invalid token): line 2380, column 65"
     },
     {
       "source": "朝日新聞",
