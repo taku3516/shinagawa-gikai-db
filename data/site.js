@@ -162,31 +162,36 @@ window.SHINAGAWA_DB.site = {
       "id": "h27",
       "label": "平成27年",
       "file": "data/h27.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "h26",
       "label": "平成26年",
       "file": "data/h26.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "h25",
       "label": "平成25年",
       "file": "data/h25.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "h24",
       "label": "平成24年",
       "file": "data/h24.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "h23",
       "label": "平成23年",
       "file": "data/h23.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "h22",
