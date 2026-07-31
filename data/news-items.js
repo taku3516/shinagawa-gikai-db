@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-31T11:21:29.815162Z",
+  "generatedAt": "2026-07-31T13:41:55.631636Z",
   "items": [
     {
       "id": "236991e4588a4fc91ae2",
@@ -219,6 +219,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "0fa40ee5175e45d402f6",
+      "title": "介護をしている家族への支援",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kaigo1/hpg000002404.html",
+      "publishedAt": "2026-07-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "731f59c4cd817ae0a070",
@@ -3354,23 +3371,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "0fa40ee5175e45d402f6",
-      "title": "介護をしている家族への支援",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kaigo1/hpg000002404.html",
-      "publishedAt": "2026-06-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "7107b878121b5dc6aa31",
       "title": "6月24日開催の委員会の結果を掲載。",
       "summary": "6月24日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
@@ -4065,9 +4065,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 3338, column 55"
+      "status": "ok",
+      "scanned": 640,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
