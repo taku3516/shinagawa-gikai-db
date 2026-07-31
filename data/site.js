@@ -141,19 +141,22 @@ window.SHINAGAWA_DB.site = {
       "label": "平成30年",
       "file": "data/h30.js",
       "supplement": "data/h30-complete.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "h29",
       "label": "平成29年",
       "file": "data/h29.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "h28",
       "label": "平成28年",
       "file": "data/h28.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "h27",
