@@ -1,7 +1,131 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-31T13:41:55.631636Z",
+  "generatedAt": "2026-07-31T15:54:59.478688Z",
   "items": [
+    {
+      "id": "c5475cf4b9e0f03867fc",
+      "title": "しなカレント講座 第3回「気象災害から身を守る」（9月10日(木)実施）",
+      "summary": "生涯にわたるまなびのきっかけづくりとして、気軽に参加しやすい1回限りで実施する学びの場です。 品川シルバー大学ふれあいアカデミーふれあいコースの講座を一般公開いたします。 詳しくは チラシpdf(PDF : 2MB) をご覧ください。 第4回 「魚と海から考える日本の国の姿」 については こちら をご覧ください。 往復はがきもしくは電子申請にてお申し込みください。 申込期間 令和8年8月1日(土)～令和8年8月14日(金) 必着",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/shinakarento003.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "事件事故",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
+    {
+      "id": "b6922c7e5ccd940d1bbe",
+      "title": "しなカレント講座 第4回「魚と海から考える日本の国の姿」（10月22日(木)実施）",
+      "summary": "しなカレント講座 第4回「魚と海から考える日本の国の姿」 生涯にわたるまなびのきっかけづくりとして、気軽に参加しやすい1回限りで実施する学びの場です。 品川シルバー大学ふれあいアカデミーふれあいコースの講座を一般公開いたします。 詳しくは チラシpdf(PDF : 2MB) をご覧ください。 第3回「気象災害から身を守る」については こちら をご覧ください。 （申込締切8月14日（金）の翌日以降は表示されません。）",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/shinakarento002.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "事件事故",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
+    {
+      "id": "877e45ac9a8423466279",
+      "title": "グリーフケア電話相談・遺族のつどい",
+      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/shinagawagriefcare.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "64080d59b64e7e43348a",
+      "title": "「細街路拡幅整備協議書（様式）」等の変更（令和8年7月1日から適用）",
+      "summary": "建築課 細街路担当 電話 03-5742-6772 FAX 03-5742-6898",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/kankyo-toshiseibi-shien-saigairokakuhuku/kankyo-toshiseibi-shien-saigairokakuhuku-yoko/20260728155902.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "04d381d9ef912d30d4cc",
+      "title": "2026-004「第12次品川区交通安全計画（素案）」に対する意見募集",
+      "summary": "区では、区内の交通安全対策を総合的・計画的に推進し、交通安全の更なる向上を図るため、「第12次品川区交通安全計画」を策定します。 本計画は、交通安全対策基本法に基づく計画であり、令和8年度から令和12年度までの5か年において、品川区および区内を管轄する関係行政機関等が実施する交通安全関連施策の大綱となるものです。 区民の皆さんから頂いたご意見を踏まえ、令和8年12月頃結果を公表する予定です。 「第12次品川区交通安全計画（素案）」の全文は、品川区ホームページ、地域交通政策課…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20260727122823.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "4e9c4ce1aa25196522e2",
+      "title": "女性相談員による総合相談（法律・DV・カウンセリング）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000021243.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "3dc9119c7e9163bba125",
+      "title": "高齢者のスマートフォン購入費助成",
+      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
     {
       "id": "236991e4588a4fc91ae2",
       "title": "DYM MESSENGERS、CONVERSEの「CONS ACCELERATOR LOW」を着用したストリートムービーを7月30日に公開",
@@ -2558,24 +2682,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "3dc9119c7e9163bba125",
-      "title": "高齢者のスマートフォン購入費助成",
-      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
-      "publishedAt": "2026-07-10T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉",
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "c0aa882c6409cfd3625e",
       "title": "東五反田に「ラーメンチューン」と焼き鳥店「希哲」 昼と夜で2ブランド展開",
       "summary": "ラーメン店「RAMEN TUNE（ラーメンチューン）」（品川区東五反田1、TEL 03-6277-3050）と焼き鳥店「希哲」（同）が、東五反田にオープンして1カ月がたつ。 #品川経済新聞",
@@ -3195,23 +3301,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
-    },
-    {
-      "id": "4e9c4ce1aa25196522e2",
-      "title": "女性相談員による総合相談（法律・DV・カウンセリング）",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000021243.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "4bf29be04e78cf91970e",
@@ -4065,9 +4154,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 640,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2320, column 29"
     },
     {
       "source": "朝日新聞",
