@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-31T20:54:24.323400Z",
+  "generatedAt": "2026-07-31T22:57:20.334341Z",
   "items": [
     {
       "id": "c5475cf4b9e0f03867fc",
@@ -125,6 +125,26 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "e22328178d9f5f9cf435",
+      "title": "成年後見制度啓発講座を開催します。",
+      "summary": "「かかりつけ医との上手な付き合い方」を開催します。 場 所 ／品川区社会福祉協議会3階会議室（大井1-14-1）",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-61948.html",
+      "publishedAt": "2026-07-31T22:56:52.089434Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-07-31T22:56:52.089434Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 16
     },
     {
       "id": "28c8cf3d7517a9d19593",
@@ -4190,7 +4210,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2343, column 29"
+      "message": "not well-formed (invalid token): line 2336, column 65"
     },
     {
       "source": "朝日新聞",
@@ -4214,7 +4234,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
