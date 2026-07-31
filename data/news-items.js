@@ -1,7 +1,44 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-31T01:55:08.001945Z",
+  "generatedAt": "2026-07-31T05:27:19.633361Z",
   "items": [
+    {
+      "id": "ca1ee6c54f2c9f15fc4c",
+      "title": "【配信開始】『ビットとラチェの魔法学校』電子コミック第1巻が発売！",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、同社が運営する漫画サイト「コミックノーラ(https://...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009262.000002535.html",
+      "publishedAt": "2026-07-31T02:45:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T05:26:57.234039Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "6563d3f9359a1a8d8d07",
+      "title": "7月30日開催の委員会の結果を掲載。",
+      "summary": "7月30日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20692.html",
+      "publishedAt": "2026-07-31T02:30:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T01:44:34.446179Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "f6bb985bfd5c48aa47e2",
       "title": "しながわ水族館「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」",
@@ -54,6 +91,40 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "36fd47db4758176599f2",
+      "title": "令和8年熊本地震災害義援金の受付",
+      "summary": "総務課 電話:03-5742-6624 FAX:03-3774-6356",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260729151707.html",
+      "publishedAt": "2026-07-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T08:21:12.534425Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "f71d621ea9ccb1a8c63d",
+      "title": "平成25年生活扶助基準改定に係る最高裁判決を踏まえた保護費の追加給付",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/20260330161446.html",
+      "publishedAt": "2026-07-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "731f59c4cd817ae0a070",
@@ -334,43 +405,6 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "6563d3f9359a1a8d8d07",
-      "title": "7月30日開催の委員会の予定を掲載。",
-      "summary": "7月30日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20692.html",
-      "publishedAt": "2026-07-29T01:41:40Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-29T01:44:34.446179Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
-    },
-    {
-      "id": "36fd47db4758176599f2",
-      "title": "令和8年熊本地震災害義援金の受付",
-      "summary": "総務課 電話:03-5742-6624 FAX:03-3774-6356",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260729151707.html",
-      "publishedAt": "2026-07-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-29T08:21:12.534425Z",
-      "tags": [
-        "事件事故"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "723d4081724162cad7ed",
@@ -2808,23 +2842,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "f71d621ea9ccb1a8c63d",
-      "title": "平成25年生活扶助基準改定に係る最高裁判決を踏まえた保護費の追加給付について",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/20260330161446.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "dbe3cd7369c456dd28f3",
       "title": "しながわ電気・ガス料金緊急支援事業について",
       "summary": "",
@@ -3954,7 +3971,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2349, column 55"
+      "message": "not well-formed (invalid token): line 2571, column 55"
     },
     {
       "source": "朝日新聞",
@@ -3978,7 +3995,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
