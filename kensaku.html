@@ -222,6 +222,7 @@
     }
     .hitrow[data-category="ニュース"] { border-left-color: #2f855a; }
     .hitrow[data-category="選挙"] { border-left-color: #7c3aed; }
+    .hitrow[data-category="行政評価"] { border-left-color: #0f766e; }
     .hitrow[data-category="政務活動費"] { border-left-color: #b45309; }
     .hitrow[data-category="政治資金"] { border-left-color: #8a6b24; }
     .hitrow h2 { margin: 1px 0 7px; font-size: 17px; line-height: 1.55; }
@@ -422,6 +423,7 @@
   <script src="data/politicians.js"></script>
   <script src="data/elections.js"></script>
   <!-- 年別の議会データは、検索を始めた後に必要な年から読み込む。 -->
+  <script src="data/gyosei.js"></script>
   <script src="data/seimu.js"></script>
   <script src="data/seijishikin.js"></script>
   <script src="data/senkyo-shushi.js"></script>
@@ -435,6 +437,7 @@
       { id: "council", label: "議会" },
       { id: "people", label: "人物" },
       { id: "elections", label: "選挙" },
+      { id: "gyosei", label: "行政評価" },
       { id: "expenses", label: "政務活動費" },
       { id: "political-funds", label: "政治資金" },
       { id: "news", label: "ニュース" }
@@ -835,6 +838,41 @@
           report.fullReportUrl ? { type: "official", label: "公式の報告書", url: report.fullReportUrl } : null,
           report.sourceUrl ? { type: "official", label: report.sourceLabel || "公式掲載ページ", url: report.sourceUrl } : null
         ]
+      });
+    }
+
+    // 行政評価（事務事業評価・政策評価）。年度ごとに1件、評価シート等の資料は links にまとめる
+    const gyoseiData = window.SHINAGAWA_GYOSEI || { fiscalYears: [] };
+    for (const fiscalYear of gyoseiData.fiscalYears || []) {
+      const era = String(fiscalYear.label).match(/(令和|平成)\s*(元|\d+)/);
+      let year = null;
+      if (era) {
+        const n = era[2] === "元" ? 1 : Number(era[2]);
+        year = era[1] === "令和" ? 2018 + n : 1988 + n;
+      }
+      const documents = (fiscalYear.sheets || []).concat(fiscalYear.links || []);
+      const detail = [
+        fiscalYear.projects ? `評価した事務事業は${fiscalYear.projects}件です。` : "",
+        fiscalYear.targetFiscalYear ? `評価の対象は${fiscalYear.targetFiscalYear}です。` : "",
+        fiscalYear.note || ""
+      ].filter(Boolean).join(" ");
+      addItem({
+        id: `gyosei-${fiscalYear.id}`,
+        category: "gyosei",
+        type: "行政評価",
+        year,
+        title: `${fiscalYear.label} 行政評価（事務事業評価・政策評価）`,
+        meta: [fiscalYear.label, fiscalYear.status,
+               fiscalYear.projects ? `${fiscalYear.projects}事業` : "",
+               `資料${documents.length}件`].filter(Boolean).join("／"),
+        body: detail,
+        source: "品川区",
+        primary: ["行政評価", "事務事業評価", "政策評価", fiscalYear.label,
+                  fiscalYear.targetFiscalYear].filter(Boolean)
+          .concat(documents.map((document) => document.label)),
+        tags: ["行政評価", fiscalYear.status].filter(Boolean),
+        links: [{ type: "internal", label: "行政評価ページで見る", url: `gyosei.html?fy=${fiscalYear.id}` }]
+          .concat(documents.map((document) => ({ type: "official", label: document.label, url: document.url })))
       });
     }
 
