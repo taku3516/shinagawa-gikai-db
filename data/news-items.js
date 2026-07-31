@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-30T23:54:08.464831Z",
+  "generatedAt": "2026-07-31T01:55:08.001945Z",
   "items": [
+    {
+      "id": "f6bb985bfd5c48aa47e2",
+      "title": "しながわ水族館「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」",
+      "summary": "2026年7月25日（土）～12月25日（金）、 しながわ水族館 にて「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」が開催されます。 今年10月に開館35周年を迎えるしながわ水族館と、世界的ベストセラー絵本「はらぺこあおむし」日本語版刊行50周年をあわせて記念する特別展。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinasuillc2026",
+      "publishedAt": "2026-07-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T01:54:41.519535Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "しながわ水族館"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "d72bf6216af184430233",
       "title": "品川区世論調査の回答について",
@@ -3922,7 +3941,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 137,
+      "scanned": 138,
       "accepted": 0
     },
     {
@@ -3935,7 +3954,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2444, column 55"
+      "message": "not well-formed (invalid token): line 2349, column 55"
     },
     {
       "source": "朝日新聞",
