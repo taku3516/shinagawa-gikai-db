@@ -117,7 +117,8 @@ window.SHINAGAWA_DB.site = {
       "label": "令和3年",
       "file": "data/r03.js",
       "supplement": "data/r03-complete.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "r02",
