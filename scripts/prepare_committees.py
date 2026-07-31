@@ -44,15 +44,25 @@ OPENER = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.coo
 
 
 def configure_year(year: int) -> None:
-    """出力先と識別子を対象年へ切り替える。令和元年以降を対象とする。"""
+    """出力先と識別子を対象年へ切り替える。会議録検索システムの下限に合わせて平成13年以降を対象とする。
+
+    平成13年〜平成30年は h13〜h30、令和元年以降は r01〜 の識別子を使う。
+    """
     global YEAR, REIWA_YEAR, YEAR_ID, YEAR_LABEL
     global CACHE, OUT, DATA_PATH, DATA_PART_PATTERN, LEDGER_PATH
-    if year < 2019:
-        raise ValueError("このスクリプトは令和元年（2019年）以降に対応しています")
+    if year < 2001:
+        raise ValueError("会議録検索システムの収録は平成13年（2001年）からです")
     YEAR = year
-    REIWA_YEAR = year - 2018
-    YEAR_ID = f"r{REIWA_YEAR:02d}"
-    YEAR_LABEL = "令和元年" if REIWA_YEAR == 1 else f"令和{REIWA_YEAR}年"
+    if year >= 2019:
+        REIWA_YEAR = year - 2018
+        YEAR_ID = f"r{REIWA_YEAR:02d}"
+        YEAR_LABEL = "令和元年" if REIWA_YEAR == 1 else f"令和{REIWA_YEAR}年"
+    else:
+        # 平成31年は4月まで。平成年としては2019年より前だけを扱う
+        heisei = year - 1988
+        REIWA_YEAR = 0
+        YEAR_ID = f"h{heisei:02d}"
+        YEAR_LABEL = f"平成{heisei}年"
     CACHE = ROOT / f"scripts/cache/{YEAR_ID}-committees"
     OUT = ROOT / f"scripts/out/{YEAR_ID}-committees"
     DATA_PATH = ROOT / f"data/{YEAR_ID}-committees.js"
@@ -197,7 +207,7 @@ def cabinets_for_year(refresh: bool) -> OrderedDict[int, str]:
         if cabinet in (1, 2):
             continue
         committee = compact(anchor.get_text(" ", strip=True))
-        committee = re.sub(r"（令和[^）]+年度）$", "", committee)
+        committee = re.sub(r"（(?:令和|平成)[^）]+年度）$", "", committee)
         if committee:
             result[cabinet] = committee
     if not result:
@@ -585,8 +595,9 @@ def normalize_agenda_title(value: str, fallback: str = "委員会での質疑") 
     """議事進行の文言を除き、画面用の自然で短い題名にする。"""
     title = compact(value).replace("実 施", "実施").replace("委員 会", "委員会")
     if "予算特別委員会を開きます" in title:
-        if "令和８年度品川区一般会計予算" in title:
-            return "令和８年度品川区一般会計予算"
+        budget = re.search(r"(?:令和|平成)[０-９\d]+年度品川区一般会計予算", title)
+        if budget:
+            return budget.group(0)
         return "予算特別委員会"
     if "調査事項概要" in title:
         return "調査事項概要"
@@ -595,7 +606,7 @@ def normalize_agenda_title(value: str, fallback: str = "委員会での質疑") 
     if re.search(r"最後に[、 ]*[（(]?4[）)]?その他", title):
         return "その他"
 
-    title = re.sub(r"^.*?(?=令和[０-９\d]+年(?:請願|陳情)第)", "", title)
+    title = re.sub(r"^.*?(?=(?:令和|平成)[０-９\d]+年(?:請願|陳情)第)", "", title)
     prefixes = (
         r"報告事項を聴取いたします[。 、]*",
         r"議案審査を行います[。 、]*",

@@ -125,14 +125,16 @@ window.SHINAGAWA_DB.site = {
       "label": "令和2年",
       "file": "data/r02.js",
       "supplement": "data/r02-complete.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "r01",
       "label": "令和元年",
       "file": "data/r01.js",
       "supplement": "data/r01-complete.js",
-      "available": true
+      "available": true,
+      "committees": true
     },
     {
       "id": "h30",
