@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-07-31T23:58:08.054603Z",
+  "generatedAt": "2026-08-01T05:46:40.529974Z",
   "items": [
+    {
+      "id": "0e6611abc3b198320c7d",
+      "title": "区登録文化財制度スタート",
+      "summary": "区では、地域の歴史や文化を未来へ受け継いでいくため、「区登録文化財制度」を創設しました。 区内には、地域の歴史や文化を伝える貴重な文化財が数多くあります。その中には、区指定文化財には至らないものの、地域にとって大切な価値を持つ文化財も少なくありません。区登録文化財制度は、このような身近な文化財を登録し、その魅力や価値を広く知っていただくとともに、保護と活用を進めていく制度です。 また、本制度では、区民や文化財所有者などが登録を希望する文化財について区へ申し出ることができる「…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunkazai/20260713160320.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-01T05:46:15.873427Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "b2c6581f58bc18105d71",
       "title": "【品川区健康推進部保健センター】専門職職員（歯科衛生士）募集",
@@ -4246,7 +4263,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2380, column 65"
+      "message": "not well-formed (invalid token): line 2423, column 65"
     },
     {
       "source": "朝日新聞",
