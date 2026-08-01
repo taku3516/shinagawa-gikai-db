@@ -1,7 +1,44 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-01T05:46:40.529974Z",
+  "generatedAt": "2026-08-01T13:02:33.473983Z",
   "items": [
+    {
+      "id": "621b3a155515f002bec2",
+      "title": "新しいビジネスへの挑戦や地域課題の解決に取り組むビジネスプランを募集開始！「ふくしまベンチャーアワード2026」（主催:福島県,企画運営：エイチタス株式会社）",
+      "summary": "[エイチタス株式会社] エイチタス株式会社（本社：東京都品川区、代表取締役：原 亮／小澤 剛）は、福島県が主催する「ふくしまベンチャーアワード2026」の企画運営を担当し、このたび、福島県内において新しいビジネスへの挑戦や地域...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000338.000023448.html",
+      "publishedAt": "2026-08-01T12:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T19:09:04.650321Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "f3a474921048ceac47fa",
+      "title": "宮城 大崎 鬼首 中山東 中山西の537世帯1031人に避難指示",
+      "summary": "レベル4土砂災害危険警報が発表されている宮城県大崎市は、土砂災害のおそれがあるとして1日午後8時15分、鬼首地区、中山東行政区、中山西行政区の合わせて537世帯1031人を対象に避難指示を出しました。大崎市は、鳴子公民館・鳴子スポーツセンターと鬼首地区公民館の2か所を避難所として開設しました。",
+      "source": "NHK NEWS",
+      "sourceId": "nhk",
+      "sourceType": "rss",
+      "url": "http://www3.nhk.or.jp/news/html/20260801/k10015193801000.html",
+      "publishedAt": "2026-08-01T11:52:58Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-01T13:02:10.142571Z",
+      "tags": [
+        "事件事故",
+        "行政"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 10
+    },
     {
       "id": "0e6611abc3b198320c7d",
       "title": "区登録文化財制度スタート",
@@ -229,23 +266,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-31T20:54:00.107929Z",
       "tags": [
         "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "621b3a155515f002bec2",
-      "title": "新しいビジネスへの挑戦や地域課題の解決に取り組むビジネスプランを募集開始！「ふくしまベンチャーアワード2026」（主催:福島県,企画運営：エイチタス株式会社）",
-      "summary": "[エイチタス株式会社] エイチタス株式会社（本社：東京都品川区、代表取締役：原 亮／小澤 剛）は、福島県が主催する「ふくしまベンチャーアワード2026」の企画運営を担当し、このたび、福島県内において新しいビジネスへの挑戦や地域...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000338.000023448.html",
-      "publishedAt": "2026-07-31T18:10:03Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T19:09:04.650321Z",
-      "tags": [
-        "その他"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -4257,13 +4277,13 @@ window.SHINAGAWA_NEWS = {
       "source": "NHK NEWS",
       "status": "ok",
       "scanned": 7,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2423, column 65"
+      "message": "not well-formed (invalid token): line 1154, column 53"
     },
     {
       "source": "朝日新聞",
@@ -4287,7 +4307,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
