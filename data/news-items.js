@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-02T11:56:06.853218Z",
+  "generatedAt": "2026-08-02T15:54:15.334990Z",
   "items": [
+    {
+      "id": "ae3f935605c56566602c",
+      "title": "飼い猫の不妊・去勢手術費の一部助成",
+      "summary": "品川区保健所生活衛生課管理係 電話：03-5742-9132 FAX：03-5742-9104 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-pet/neko/hpg000000916.html",
+      "publishedAt": "2026-08-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-02T15:53:54.098065Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "621b3a155515f002bec2",
       "title": "新しいビジネスへの挑戦や地域課題の解決に取り組むビジネスプランを募集開始！「ふくしまベンチャーアワード2026」（主催:福島県,企画運営：エイチタス株式会社）",
@@ -4283,7 +4300,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 970, column 36"
+      "message": "not well-formed (invalid token): line 983, column 36"
     },
     {
       "source": "朝日新聞",
@@ -4307,7 +4324,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -4364,9 +4381,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
