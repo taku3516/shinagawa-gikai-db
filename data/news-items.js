@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-02T17:54:23.937317Z",
+  "generatedAt": "2026-08-02T23:52:18.554868Z",
   "items": [
     {
       "id": "ae3f935605c56566602c",
@@ -20,6 +20,42 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
+      "id": "dbe3cd7369c456dd28f3",
+      "title": "しながわ電気・ガス料金緊急支援事業について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
+      "publishedAt": "2026-08-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "fe7d5de31e242e795221",
+      "title": "令和8年度品川区市民後見人養成講座 受講者募集します",
+      "summary": "市民後見人とは、判断能力が低下した高齢者や障害のある方に寄り添い、金銭管理や福祉サービス契約手続き等の“本人が決めること”をお手伝いする地域住民のことです。 成年後見制度の知識や実務を学んで、市民後見人として活動してみませんか？",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-61850.html",
+      "publishedAt": "2026-08-02T23:50:35.499800Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-02T23:50:35.499800Z",
+      "tags": [
+        "行政",
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 14
+    },
+    {
       "id": "621b3a155515f002bec2",
       "title": "新しいビジネスへの挑戦や地域課題の解決に取り組むビジネスプランを募集開始！「ふくしまベンチャーアワード2026」（主催:福島県,企画運営：エイチタス株式会社）",
       "summary": "[エイチタス株式会社] エイチタス株式会社（本社：東京都品川区、代表取締役：原 亮／小澤 剛）は、福島県が主催する「ふくしまベンチャーアワード2026」の企画運営を担当し、このたび、福島県内において新しいビジネスへの挑戦や地域...",
@@ -27,7 +63,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000338.000023448.html",
-      "publishedAt": "2026-08-02T17:40:02Z",
+      "publishedAt": "2026-08-02T23:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-07-31T19:09:04.650321Z",
       "tags": [
@@ -3222,23 +3258,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "dbe3cd7369c456dd28f3",
-      "title": "しながわ電気・ガス料金緊急支援事業について",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "b9f20bc7abb09cdfa856",
       "title": "【8月3日（月）開催】しながわシティ公式戦に親子25組50人をご招待",
       "summary": "",
@@ -4300,7 +4319,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 993, column 36"
+      "message": "not well-formed (invalid token): line 1086, column 36"
     },
     {
       "source": "朝日新聞",
@@ -4381,9 +4400,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
