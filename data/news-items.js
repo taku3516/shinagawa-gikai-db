@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-03T21:59:46.960207Z",
+  "generatedAt": "2026-08-03T23:02:46.652083Z",
   "items": [
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "c75e34bf5b442f374efc",
+      "title": "前田道路×うんこドリル「道路のひみつ」発刊について",
+      "summary": "[前田道路株式会社] 〈概 要〉 前田道路株式会社（本社：東京都品川区、代表取締役社長：富安敏明、以下「当社」）は、株式会社文響社（本社：東京都港区、代表取締役社長：山本周嗣）とコラボレーションして制作した小学生向けの...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000008.000166752.html",
+      "publishedAt": "2026-08-03T22:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T17:46:28.250918Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "621b3a155515f002bec2",
       "title": "新しいビジネスへの挑戦や地域課題の解決に取り組むビジネスプランを募集開始！「ふくしまベンチャーアワード2026」（主催:福島県,企画運営：エイチタス株式会社）",
@@ -15,23 +49,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-31T19:09:04.650321Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "c75e34bf5b442f374efc",
-      "title": "前田道路×うんこドリル「道路のひみつ」発刊について",
-      "summary": "[前田道路株式会社] 〈概 要〉 前田道路株式会社（本社：東京都品川区、代表取締役社長：富安敏明、以下「当社」）は、株式会社文響社（本社：東京都港区、代表取締役社長：山本周嗣）とコラボレーションして制作した小学生向けの...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000008.000166752.html",
-      "publishedAt": "2026-08-03T16:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-03T17:46:28.250918Z",
-      "tags": [
-        "交通"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -181,23 +198,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-03T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "dbe3cd7369c456dd28f3",
@@ -4466,7 +4466,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2158, column 42"
+      "message": "not well-formed (invalid token): line 2212, column 42"
     },
     {
       "source": "朝日新聞",
@@ -4490,7 +4490,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
