@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-03T17:46:50.977491Z",
+  "generatedAt": "2026-08-03T21:59:46.960207Z",
   "items": [
+    {
+      "id": "621b3a155515f002bec2",
+      "title": "新しいビジネスへの挑戦や地域課題の解決に取り組むビジネスプランを募集開始！「ふくしまベンチャーアワード2026」（主催:福島県,企画運営：エイチタス株式会社）",
+      "summary": "[エイチタス株式会社] エイチタス株式会社（本社：東京都品川区、代表取締役：原 亮／小澤 剛）は、福島県が主催する「ふくしまベンチャーアワード2026」の企画運営を担当し、このたび、福島県内において新しいビジネスへの挑戦や地域...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000338.000023448.html",
+      "publishedAt": "2026-08-03T21:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T19:09:04.650321Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "c75e34bf5b442f374efc",
       "title": "前田道路×うんこドリル「道路のひみつ」発刊について",
@@ -217,23 +234,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 14
-    },
-    {
-      "id": "621b3a155515f002bec2",
-      "title": "新しいビジネスへの挑戦や地域課題の解決に取り組むビジネスプランを募集開始！「ふくしまベンチャーアワード2026」（主催:福島県,企画運営：エイチタス株式会社）",
-      "summary": "[エイチタス株式会社] エイチタス株式会社（本社：東京都品川区、代表取締役：原 亮／小澤 剛）は、福島県が主催する「ふくしまベンチャーアワード2026」の企画運営を担当し、このたび、福島県内において新しいビジネスへの挑戦や地域...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000338.000023448.html",
-      "publishedAt": "2026-08-02T23:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T19:09:04.650321Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "f3a474921048ceac47fa",
@@ -4466,7 +4466,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2106, column 42"
+      "message": "not well-formed (invalid token): line 2158, column 42"
     },
     {
       "source": "朝日新聞",
