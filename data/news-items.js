@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-03T09:22:50.282463Z",
+  "generatedAt": "2026-08-03T12:50:08.046168Z",
   "items": [
+    {
+      "id": "5f9da350599bfe794d25",
+      "title": "【＋328円で焼きたてピッツァ食べ放題！】ついにPISOLA全店でスタート！セレクトランチ限定オプション「ピッツァ食べ放題」を開始",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）のグループ会社である株式会社ピソラ（本社：滋賀県草津市、代表取締役：鬼界 友則）は、近畿・東海・関東エリ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000615.000027839.html",
+      "publishedAt": "2026-08-03T08:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T12:49:49.442382Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "36c78e3708ac2e00f303",
       "title": "青物横丁に「定食のまる大」 前店「庄や」を業態変更、23区内2店目",
@@ -4430,7 +4449,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1324, column 35"
+      "message": "not well-formed (invalid token): line 1990, column 42"
     },
     {
       "source": "朝日新聞",
@@ -4454,7 +4473,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
