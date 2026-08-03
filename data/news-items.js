@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-03T12:50:08.046168Z",
+  "generatedAt": "2026-08-03T17:46:50.977491Z",
   "items": [
+    {
+      "id": "c75e34bf5b442f374efc",
+      "title": "前田道路×うんこドリル「道路のひみつ」発刊について",
+      "summary": "[前田道路株式会社] 〈概 要〉 前田道路株式会社（本社：東京都品川区、代表取締役社長：富安敏明、以下「当社」）は、株式会社文響社（本社：東京都港区、代表取締役社長：山本周嗣）とコラボレーションして制作した小学生向けの...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000008.000166752.html",
+      "publishedAt": "2026-08-03T16:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T17:46:28.250918Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "5f9da350599bfe794d25",
       "title": "【＋328円で焼きたてピッツァ食べ放題！】ついにPISOLA全店でスタート！セレクトランチ限定オプション「ピッツァ食べ放題」を開始",
@@ -4449,7 +4466,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1990, column 42"
+      "message": "not well-formed (invalid token): line 2106, column 42"
     },
     {
       "source": "朝日新聞",
