@@ -1,7 +1,61 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-03T01:55:46.994477Z",
+  "generatedAt": "2026-08-03T05:33:21.477568Z",
   "items": [
+    {
+      "id": "f35da8b882d9c41e90f4",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月3日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年8月3日号(令和8年7月27日～令和8年8月2日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62051.html",
+      "publishedAt": "2026-08-03T05:32:58.168975Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-03T05:32:58.168975Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "e816e7ee7a41d33640e3",
+      "title": "大井町トラックス「SUMMER DISCOVERY 2026 -まだまだ知らない海のこと-」",
+      "summary": "2026年7 月18 日（土）～8月31日（月）、OIMACHI TRACKS SHOPS & RESTAURANTSにて「OIMACHI TRACKS SUMMER DISCOVERY 2026 -まだまだ知らない海のこと-」が開催されます。 今夏、OIMACHI TRACKS SHOPS & RESTAURANTS では、知的好奇心を刺激する「発見の旅」をテーマとした、夏の体験型エデュテインメント（教育＋エンターテインメント）の企画が開催されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/summerdiscovery",
+      "publishedAt": "2026-08-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T05:32:58.168975Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "6d2064646574bbea4f96",
+      "title": "エシカルカフェ第2回【夏休みの自由課題に】「おいしい」をずっと楽しむために、あなたの“推し”エシカルをプリマハム＆日本アクセスと見つけよう！",
+      "summary": "消費者センター 電話：03-6421-6136 FAX：03-6421-6132",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260727143628.html",
+      "publishedAt": "2026-08-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T05:32:58.168975Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "ae3f935605c56566602c",
       "title": "飼い猫の不妊・去勢手術費の一部助成",
@@ -15,6 +69,23 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-02T15:53:54.098065Z",
       "tags": [
         "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
       ],
       "locations": [],
       "relevanceScore": 8
@@ -455,23 +526,6 @@ window.SHINAGAWA_NEWS = {
         "しながわ水族館"
       ],
       "relevanceScore": 4
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-07-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "69838780f455a4d81dc4",
@@ -4300,7 +4354,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 5,
+      "scanned": 6,
       "accepted": 0
     },
     {
@@ -4319,13 +4373,13 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1146, column 36"
+      "message": "not well-formed (invalid token): line 1432, column 36"
     },
     {
       "source": "朝日新聞",
-      "status": "ok",
-      "scanned": 40,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "FNNプライムオンライン",
@@ -4347,15 +4401,15 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "東急ニュースリリース",
-      "status": "ok",
-      "scanned": 10,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "東急からのお知らせ",
-      "status": "ok",
-      "scanned": 10,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "東京都下水道局 報道発表",
@@ -4400,9 +4454,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
