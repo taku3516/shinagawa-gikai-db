@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-02T23:52:18.554868Z",
+  "generatedAt": "2026-08-03T01:55:46.994477Z",
   "items": [
     {
       "id": "ae3f935605c56566602c",
@@ -2346,7 +2346,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "02b214b9c7a50ce2320e",
-      "title": "「ファミリーボランティアワークショップ」まだまだ参加者募集してます！",
+      "title": "「ファミリーボランティアワークショップ」まだまだ参加者募集してます！ （終了しました）",
       "summary": "ファミリーボランティアワークショップを開催します！ 地域のボランティア活動や日常生活、学校の自由研究・お盆休みで帰省した時にも活かせる内容となっています。親子・兄弟姉妹・お孫さんと一緒になど家族で参加していただける方を募集します。",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
@@ -4300,7 +4300,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 4,
+      "scanned": 5,
       "accepted": 0
     },
     {
@@ -4319,7 +4319,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1086, column 36"
+      "message": "not well-formed (invalid token): line 1146, column 36"
     },
     {
       "source": "朝日新聞",
@@ -4343,7 +4343,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -4366,7 +4366,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 23,
+      "scanned": 25,
       "accepted": 0
     },
     {
