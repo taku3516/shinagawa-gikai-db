@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-03T05:33:21.477568Z",
+  "generatedAt": "2026-08-03T09:22:50.282463Z",
   "items": [
+    {
+      "id": "36c78e3708ac2e00f303",
+      "title": "青物横丁に「定食のまる大」 前店「庄や」を業態変更、23区内2店目",
+      "summary": "「定食のまる大 青物横丁店」（品川区南品川3、TEL 03-5460-7091）が青物横丁駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5051",
+      "publishedAt": "2026-08-03T05:43:57Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T09:22:28.623619Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "南品川",
+        "青物横丁駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "f35da8b882d9c41e90f4",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月3日号）を公開しました‼",
@@ -18,6 +39,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "50fbfbe9c4eabbd15233",
+      "title": "【令和8年11月1日以降採用予定】令和8年度会計年度任用職員（福祉専門員）募集",
+      "summary": "生活福祉課 保護事務係 電話：03-5742-6713 FAX：03-5742-6798",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260731162210.html",
+      "publishedAt": "2026-08-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T09:22:28.623619Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 4
     },
     {
       "id": "e816e7ee7a41d33640e3",
@@ -72,6 +110,24 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
+    },
+    {
+      "id": "eadc8c2bedad2ec109e0",
+      "title": "令和8年熊本地震 ふるさと納税による災害支援の代理寄附を開始",
+      "summary": "税務課 ふるさと納税担当 電話03-5742-3857 FAX03-5742-7108",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260731110406.html",
+      "publishedAt": "2026-08-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T08:35:02.289088Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "d72bf6216af184430233",
@@ -162,6 +218,25 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 10
+    },
+    {
+      "id": "5ec7be4997a108ed82b0",
+      "title": "グリーフケア電話相談・遺族のつどい",
+      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/shinagawagriefcare2.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T09:22:28.623619Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "0e6611abc3b198320c7d",
@@ -468,24 +543,6 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "eadc8c2bedad2ec109e0",
-      "title": "令和8年熊本地震 熊本県氷川町へのふるさと納税による災害支援の代理寄附を開始",
-      "summary": "税務課 ふるさと納税担当 電話03-5742-3857 FAX03-5742-7108",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260731110406.html",
-      "publishedAt": "2026-07-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T08:35:02.289088Z",
-      "tags": [
-        "事件事故",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "a7bfff2890998cdbf0ac",
@@ -4373,13 +4430,13 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1432, column 36"
+      "message": "not well-formed (invalid token): line 1324, column 35"
     },
     {
       "source": "朝日新聞",
-      "status": "error",
-      "accepted": 0,
-      "message": "HTTP Error 403: Forbidden"
+      "status": "ok",
+      "scanned": 40,
+      "accepted": 0
     },
     {
       "source": "FNNプライムオンライン",
@@ -4401,15 +4458,15 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "東急ニュースリリース",
-      "status": "error",
-      "accepted": 0,
-      "message": "HTTP Error 403: Forbidden"
+      "status": "ok",
+      "scanned": 10,
+      "accepted": 0
     },
     {
       "source": "東急からのお知らせ",
-      "status": "error",
-      "accepted": 0,
-      "message": "HTTP Error 403: Forbidden"
+      "status": "ok",
+      "scanned": 10,
+      "accepted": 0
     },
     {
       "source": "東京都下水道局 報道発表",
