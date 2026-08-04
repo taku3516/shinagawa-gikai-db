@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-04T04:55:15.004255Z",
+  "generatedAt": "2026-08-04T07:32:12.523021Z",
   "items": [
+    {
+      "id": "fb2d04cf4e411e3a8f66",
+      "title": "令和８年熊本地震被災者支援のための街頭募金活動にご協力をお願いいたします",
+      "summary": "７月２８日に発生した熊本地震により、熊本県を中心に甚大な被害が発生いたしました。品川ボランティアセンターでは「令和８年熊本地震 被災者支援街頭募金活動」を下記の通り実施することとなりました。 ここ大井町から被災地熊本へ皆様の温かいお気持ちを届けます。皆様の温かいお気持ちとご協力をお願いいたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62066.html",
+      "publishedAt": "2026-08-04T07:30:32.139620Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-04T07:30:32.139620Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "7583d99ec02b14252d5f",
       "title": "【赤い羽根共同募金】地域配分（B配分）申請受付",
@@ -4517,7 +4536,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2528, column 42"
+      "message": "not well-formed (invalid token): line 2712, column 42"
     },
     {
       "source": "朝日新聞",
@@ -4598,9 +4617,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
