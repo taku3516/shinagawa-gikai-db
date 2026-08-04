@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-03T23:02:46.652083Z",
+  "generatedAt": "2026-08-04T01:29:10.808888Z",
   "items": [
+    {
+      "id": "7583d99ec02b14252d5f",
+      "title": "【赤い羽根共同募金】地域配分（B配分）申請受付",
+      "summary": "東京都共同募金会では、赤い羽根共同募金による地域福祉の向上を目的として、地域配分（B配分）の申請を受け付けています。 ・ 申請要領 ・ 申請書（様式および記入例） ・ 申請書作成要領（申請書の記入について）",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62117.html",
+      "publishedAt": "2026-08-04T01:28:44.858804Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-04T01:28:44.858804Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
     {
       "id": "d72bf6216af184430233",
       "title": "品川区世論調査の回答について",
@@ -4466,7 +4483,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2212, column 42"
+      "message": "not well-formed (invalid token): line 2196, column 42"
     },
     {
       "source": "朝日新聞",
@@ -4490,7 +4507,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
