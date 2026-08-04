@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-04T01:29:10.808888Z",
+  "generatedAt": "2026-08-04T04:55:15.004255Z",
   "items": [
     {
       "id": "7583d99ec02b14252d5f",
@@ -18,6 +18,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "e5807aa4641521cca495",
+      "title": "令和8年度第1回品川区公契約審議会の開催について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-keiyaku/kuseizyoho-siryo-keiyaku-keiyakukakarikara/202508191042009.html",
+      "publishedAt": "2026-08-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T04:54:52.692408Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "d72bf6216af184430233",
@@ -271,6 +288,23 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 10
+    },
+    {
+      "id": "5f1544a68f321fef43c0",
+      "title": "品川シルバー大学うるおい塾（秋期）受講生募集(令和8年8月13日午後5時まで)",
+      "summary": "何か新しいことを始めたい、仲間と趣味を楽しみたい方など大募集 うるおい塾では、初心者向けの入門教室（各教室全10回）を開催します。 下記「令和8年度品川シルバー大学 うるおい塾（秋期）募集案内」「プログラム一覧」にて詳細をご確認の上、ご応募ください。 区内在住で、令和8年9月1日現在60歳以上の方 各教室20人程度（抽選） ※定員は教室によって異なります。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20260209162601.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T04:54:52.692408Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "5ec7be4997a108ed82b0",
@@ -4483,7 +4517,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2196, column 42"
+      "message": "not well-formed (invalid token): line 2528, column 42"
     },
     {
       "source": "朝日新聞",
