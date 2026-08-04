@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-04T10:27:48.048107Z",
+  "generatedAt": "2026-08-04T12:53:33.503351Z",
   "items": [
+    {
+      "id": "3a870ffde9c86dc4c5c2",
+      "title": "戸越銀座商店街の街路灯に「銀六エリア」紹介マップを掲示 店主らの発案で",
+      "summary": "戸越銀座商店街・銀六会ゾーンの店舗を紹介するマップが7月19日、同エリアの街路灯に掲出された。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5052",
+      "publishedAt": "2026-08-04T10:35:59Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T12:53:09.583642Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "8c49055db298f2f75b44",
+      "title": "大人向け本格DIYから子どもの自由研究まで【DCM DIY place】8月の特別講座を開催",
+      "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社：東京都品川区、代表取締役社長 兼 CEO：石黒 靖規）の グループ会社であるＤＣＭ株式会社（代表取締役社長：神谷 浩邦）が運営する体験型店舗「DCM DIY place」は、2026年...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000428.000022024.html",
+      "publishedAt": "2026-08-04T10:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T10:27:17.898259Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
     {
       "id": "5fcda7ea2f040e651bff",
       "title": "「ドミノ冷涼化計画」プロジェクト発表会開催あばれる君が初代「CCO(チーフ・クール・オフィサー)」就任！",
@@ -684,24 +722,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "8c49055db298f2f75b44",
-      "title": "大人向け本格DIYから子どもの自由研究まで【DCM DIY place】8月の特別講座を開催",
-      "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社：東京都品川区、代表取締役社長 兼 CEO：石黒 靖規）の グループ会社であるＤＣＭ株式会社（代表取締役社長：神谷 浩邦）が運営する体験型店舗「DCM DIY place」は、2026年...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000428.000022024.html",
-      "publishedAt": "2026-07-31T02:36:12Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-04T10:27:17.898259Z",
-      "tags": [
-        "子育て教育",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 12
     },
     {
       "id": "6563d3f9359a1a8d8d07",
@@ -4609,7 +4629,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2383, column 48"
+      "message": "not well-formed (invalid token): line 2455, column 48"
     },
     {
       "source": "朝日新聞",
