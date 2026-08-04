@@ -1,7 +1,49 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-04T22:53:10.401122Z",
+  "generatedAt": "2026-08-04T23:55:37.370088Z",
   "items": [
+    {
+      "id": "8fe7f0e92a45a393f2af",
+      "title": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業および鉄道付属街路事業と戸越公園駅の交通広場整備事業",
+      "summary": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業及び鉄道付属街路事業と戸越公園駅交通広場整備事業について、用地補償説明会を開催いたします。 日程 令和8年8月28日（金） 午後7時00分～午後8時30分（開場午後6時30分） 令和8年8月29日（土） 午後1時30分～午後3時00分（開場午後1時00分） ※両日とも説明内容は同じです。 会場 荏原第五地域センター第一集会室 （品川区二葉1丁目1番2号） 定員 各回100名 ※事前申し込み制となっております。 用地補償説明会…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shigaichi/togoshirenritsu.html",
+      "publishedAt": "2026-08-05T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T23:55:10.934887Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "二葉",
+        "荏原",
+        "大井",
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
+      ],
+      "relevanceScore": 34
+    },
+    {
+      "id": "81876b44e4956718ddac",
+      "title": "【児童相談所】会計年度任用職員募集（一時保護所日中児童指導員・令和8年10月1日以降採用）",
+      "summary": "※ 令和8年10月1日以降の採用になりますので、ご了承ください。 令和8年8月5日（水）～令和8年8月19日（水）午後5時 電子申請による申込みを受け付けています。 （※郵送での申込みは受け付けていません。） 品川区電子申請サービスはこちら(別ウィンドウ表示)",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260805.html",
+      "publishedAt": "2026-08-05T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T23:55:10.934887Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "d72bf6216af184430233",
       "title": "品川区世論調査の回答について",
@@ -4629,7 +4671,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2688, column 48"
+      "message": "not well-formed (invalid token): line 2703, column 48"
     },
     {
       "source": "朝日新聞",
