@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-04T07:32:12.523021Z",
+  "generatedAt": "2026-08-04T10:27:48.048107Z",
   "items": [
+    {
+      "id": "5fcda7ea2f040e651bff",
+      "title": "「ドミノ冷涼化計画」プロジェクト発表会開催あばれる君が初代「CCO(チーフ・クール・オフィサー)」就任！",
+      "summary": "[株式会社ドミノ・ピザ ジャパン] 株式会社ドミノ・ピザ ジャパン（代表取締役兼CEO：ディーター・ハーベル、本社：東京都品川区上大崎2-13-30、以下「ドミノ・ピザ」）は、2026年8月4日（火）、東京都大田区ドミノ・ピザ南馬込店にて「ドミノ冷涼...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000526.000029053.html",
+      "publishedAt": "2026-08-04T08:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T10:27:17.898259Z",
+      "tags": [
+        "行政",
+        "地域イベント"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "fb2d04cf4e411e3a8f66",
       "title": "令和８年熊本地震被災者支援のための街頭募金活動にご協力をお願いいたします",
@@ -39,6 +60,40 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
+      "id": "fbea1a6dca20027a595c",
+      "title": "ドコモ・バイクシェアのサービス提供一時停止のお知らせ（品川区シェアサイクル事業）",
+      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/20250313190123.html",
+      "publishedAt": "2026-08-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T10:27:17.898259Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "28b0f0021212a321755b",
+      "title": "五反田宇宙ミュージアム2026",
+      "summary": "2026年9月12日（土）・13日（日）、五反田文化センター プラネタリウムにて「五反田宇宙ミュージアム」が開催されます。 番組上映や展示、講演、ワークショップなど、 盛りだくさんの内容です。入場無料。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/planetarium_museum2026",
+      "publishedAt": "2026-08-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T10:27:17.898259Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
       "id": "e5807aa4641521cca495",
       "title": "令和8年度第1回品川区公契約審議会の開催について",
       "summary": "",
@@ -54,6 +109,24 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
+    },
+    {
+      "id": "eadc8c2bedad2ec109e0",
+      "title": "令和8年熊本地震 ふるさと納税による災害支援の代理寄附を開始",
+      "summary": "税務課 ふるさと納税担当 電話03-5742-3857 FAX03-5742-7108",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260731110406.html",
+      "publishedAt": "2026-08-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T08:35:02.289088Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "d72bf6216af184430233",
@@ -233,24 +306,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "eadc8c2bedad2ec109e0",
-      "title": "令和8年熊本地震 ふるさと納税による災害支援の代理寄附を開始",
-      "summary": "税務課 ふるさと納税担当 電話03-5742-3857 FAX03-5742-7108",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260731110406.html",
-      "publishedAt": "2026-08-03T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T08:35:02.289088Z",
-      "tags": [
-        "事件事故",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "dbe3cd7369c456dd28f3",
@@ -629,6 +684,24 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "8c49055db298f2f75b44",
+      "title": "大人向け本格DIYから子どもの自由研究まで【DCM DIY place】8月の特別講座を開催",
+      "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社：東京都品川区、代表取締役社長 兼 CEO：石黒 靖規）の グループ会社であるＤＣＭ株式会社（代表取締役社長：神谷 浩邦）が運営する体験型店舗「DCM DIY place」は、2026年...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000428.000022024.html",
+      "publishedAt": "2026-07-31T02:36:12Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T10:27:17.898259Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
     },
     {
       "id": "6563d3f9359a1a8d8d07",
@@ -4536,7 +4609,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2712, column 42"
+      "message": "not well-formed (invalid token): line 2383, column 48"
     },
     {
       "source": "朝日新聞",
@@ -4560,7 +4633,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
@@ -4617,9 +4690,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
