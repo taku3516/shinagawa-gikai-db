@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-05T19:15:20.655341Z",
+  "generatedAt": "2026-08-05T20:58:13.237819Z",
   "items": [
+    {
+      "id": "3f4df165a67e1881fcc1",
+      "title": "『エレガンス』で「このミス」8位ランクインの石川智健氏、最新書下し長篇『ストーリーランド』、徳間書店より8/28発売！ 発売前に冒頭部分、特別無料公開中！",
+      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、石川智健氏の長篇小説『ストーリーランド』（https://www.tokuma.jp/book/b679235.html）を8月28日（金）に発売いたします。また、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001098.000016935.html",
+      "publishedAt": "2026-08-05T19:10:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T20:57:53.120243Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "6c59b640c7ac6d8b6bdd",
       "title": "兵庫県芦屋市と単元開発した環境学習プログラムを小学校の探究学習として半年間にわたり実施",
@@ -4901,7 +4921,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2329, column 28"
+      "message": "not well-formed (invalid token): line 2330, column 28"
     },
     {
       "source": "朝日新聞",
