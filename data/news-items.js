@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-05T04:56:42.371205Z",
+  "generatedAt": "2026-08-05T07:34:58.633233Z",
   "items": [
     {
       "id": "46ff1d40ed78bd50d10c",
@@ -598,6 +598,23 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 10
+    },
+    {
+      "id": "b89ae5af8cd1c50a029b",
+      "title": "高齢者歯科健康診査",
+      "summary": "令和元年度から6年度までの後期高齢者歯科健診の結果から、口腔に関する意識の向上や口腔健康の維持がフレイル予防に 極めて有効であることが確認されました。フレイルとは、加齢とともに筋力や運動機能、認知機能などの活力が低下する状態です。 【関連記事】オーラルフレイル フッ化物入り歯みがき剤を使用している人はフレイルになりにくい結果が出ています。 ご自分の歯を健康に保つためには、歯質を強化することが大切です。 日常のケアとして、フッ化物入りの歯みがき剤を取り入れましょう。 フッ化物…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-koukikoureisyairyo/hpg11111111.html",
+      "publishedAt": "2026-08-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T07:34:37.995725Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "5f1544a68f321fef43c0",
@@ -4827,7 +4844,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2958, column 48"
+      "message": "not well-formed (invalid token): line 3117, column 48"
     },
     {
       "source": "朝日新聞",
@@ -4851,7 +4868,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
