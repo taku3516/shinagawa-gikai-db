@@ -1,7 +1,86 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-04T23:55:37.370088Z",
+  "generatedAt": "2026-08-05T01:44:04.345296Z",
   "items": [
+    {
+      "id": "3046a4105f97df459871",
+      "title": "8月6日開催の委員会の予定を掲載。",
+      "summary": "8月6日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20717.html",
+      "publishedAt": "2026-08-05T01:28:26Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T01:43:44.908185Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "a565f128501aebcd0378",
+      "title": "第38回議員研修会を開催しました。",
+      "summary": "令和8年7月10日、第38回議員研修会を開催しました。 「OIMACHI TRACKS PROJECT～JR東日本が目指す広域品川圏のまちづくり～」と題して、東日本旅客鉄道株式会社マーケット戦略部マネージャー... 第38回議員研修会を開催しました。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20713.html",
+      "publishedAt": "2026-08-05T01:19:06Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T01:43:44.908185Z",
+      "tags": [
+        "都市開発",
+        "交通",
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "0c16b94854b0a603a784",
+      "title": "第37回議員研修会を開催しました。",
+      "summary": "令和8年7月10日、第37回議員研修会を開催しました。 「商店街の今後について」と題して、品川区商店街連合会会長の亀井 哲郎氏にご講演いただきました。 第37回議員研修会を開催しました。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20711.html",
+      "publishedAt": "2026-08-05T01:18:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T01:43:44.908185Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "6c59b640c7ac6d8b6bdd",
+      "title": "兵庫県芦屋市と単元開発した環境学習プログラムを小学校の探究学習として半年間にわたり実施",
+      "summary": "[株式会社日本総合研究所] 株式会社日本総合研究所（本社：東京都品川区、代表取締役社長：内川淳、以下「日本総研」）は、芦屋市教育委員会および芦屋市立岩園小学校（以下「岩園小学校」）と協働し、日々の買い物や暮らしの中での選択...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000208.000068011.html",
+      "publishedAt": "2026-08-05T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T01:43:44.908185Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "8fe7f0e92a45a393f2af",
       "title": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業および鉄道付属街路事業と戸越公園駅の交通広場整備事業",
@@ -155,6 +234,27 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "8fc3b441ac399866d406",
+      "title": "令和8年11月15日執行品川区長選挙における立候補予定者説明会開催のご案内",
+      "summary": "令和8年11月15日(日)執行の品川区長選挙に立候補を予定している方を対象に、説明会を開催します。 日時：令和8年9月2日(水）午前10時から 場所：品川区役所第二庁舎6階 261会議室 配布物：立候補の届出等に必要な書類一式 その他：出席者は1候補者につき2人までです。 配布する資料は、候補者1人分のみです。 選挙管理委員会事務局 電話：03-5742-6845 FAX：03-5742-6894",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kutyokugirikkouho/hpg000030941.html",
+      "publishedAt": "2026-08-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T01:43:44.908185Z",
+      "tags": [
+        "行政",
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 22
     },
     {
       "id": "fbea1a6dca20027a595c",
@@ -4671,7 +4771,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2703, column 48"
+      "message": "not well-formed (invalid token): line 2788, column 48"
     },
     {
       "source": "朝日新聞",
