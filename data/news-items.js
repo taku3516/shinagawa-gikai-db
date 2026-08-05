@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-05T10:25:53.474123Z",
+  "generatedAt": "2026-08-05T12:47:55.944521Z",
   "items": [
+    {
+      "id": "6c59b640c7ac6d8b6bdd",
+      "title": "兵庫県芦屋市と単元開発した環境学習プログラムを小学校の探究学習として半年間にわたり実施",
+      "summary": "[株式会社日本総合研究所] 株式会社日本総合研究所（本社：東京都品川区、代表取締役社長：内川淳、以下「日本総研」）は、芦屋市教育委員会および芦屋市立岩園小学校（以下「岩園小学校」）と協働し、日々の買い物や暮らしの中での選択...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000208.000068011.html",
+      "publishedAt": "2026-08-05T12:10:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T01:43:44.908185Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "27b18e3be2c9dbba3da1",
+      "title": "しながわ防災学校×立正大学×損保ジャパン 産官学連携による「しながわ防災学校」の開催について",
+      "summary": "[ＳＯＭＰＯホールディングス株式会社] 損害保険ジャパン株式会社（代表取締役社長：石川 耕治、以下「損保ジャパン」）は、品川区防災課、 立正大学（学長：北村 行伸）と連携し、地域防災のモデル事業として「しながわ防災学校」を２０２６年７月２...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000180.000159136.html",
+      "publishedAt": "2026-08-05T08:15:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T12:47:36.437481Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
     {
       "id": "eaae94b21db47ca44ea1",
       "title": "大崎広小路にランチ限定「魚沼しょうが焼き食堂・弁当」 店主はお笑い芸人",
@@ -155,23 +190,6 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "子育て教育",
         "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "6c59b640c7ac6d8b6bdd",
-      "title": "兵庫県芦屋市と単元開発した環境学習プログラムを小学校の探究学習として半年間にわたり実施",
-      "summary": "[株式会社日本総合研究所] 株式会社日本総合研究所（本社：東京都品川区、代表取締役社長：内川淳、以下「日本総研」）は、芦屋市教育委員会および芦屋市立岩園小学校（以下「岩園小学校」）と協働し、日々の買い物や暮らしの中での選択...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000208.000068011.html",
-      "publishedAt": "2026-08-05T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-05T01:43:44.908185Z",
-      "tags": [
-        "子育て教育"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -4881,9 +4899,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 576,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2161, column 28"
     },
     {
       "source": "朝日新聞",
@@ -4907,7 +4925,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
