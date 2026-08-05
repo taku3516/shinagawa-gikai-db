@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-05T01:44:04.345296Z",
+  "generatedAt": "2026-08-05T04:56:42.371205Z",
   "items": [
+    {
+      "id": "46ff1d40ed78bd50d10c",
+      "title": "「感覚を重ね、自分と出会う場所」へ 新ジュエリーブランド「⁺Aiii festaria（アイ フェスタリア）」誕生",
+      "summary": "[フェスタリアホールディングス株式会社] フェスタリアホールディングス株式会社（本社：東京都品川区西五反田七丁目20番9号、代表取締役社長：貞松 隆弥）は、新ジュエリーブランド「⁺Aiii festaria（アイ フェスタリア）」を2026年9月10日（木）にロー...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000105.000017694.html",
+      "publishedAt": "2026-08-05T04:40:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T04:56:20.960588Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "173813b5b49ade785614",
+      "title": "事務職向け無期雇用派遣サービス「Ready Career」各拠点で夏の大規模交流イベントを開催！社員同士の「交流の場（サードプレイス）」を創出。",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）の子会社で、人材派遣...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000509.000027235.html",
+      "publishedAt": "2026-08-05T04:40:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T04:56:20.960588Z",
+      "tags": [
+        "福祉",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "3046a4105f97df459871",
       "title": "8月6日開催の委員会の予定を掲載。",
@@ -63,6 +101,24 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "34a389453b93d61f6b2e",
+      "title": "令和8年度第1回家庭教育講演会＜品川区教育委員会＞",
+      "summary": "品川区教育委員会からのお知らせです。 教育委員会主催の令和8年度第1回家庭教育講演会の動画を「品川区公式チャンネルしながわネットTV（YouTube）」にて公開しています。 講師：堀内祐子さん（『ゆるみ子育て』代表、自閉症スペクトラム支援士） 期間：令和8年8月1日（土）午前9時～令和8年8月31日（月）正午 テーマ：「本人の意思を尊重する子育て～なんとかしなくちゃを手放したら子どもは自分から動き出す～」 配信期間を過ぎると映像は見られなくなりますので、期間内にご覧ください…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/20260803174855.html",
+      "publishedAt": "2026-08-05T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T04:56:20.960588Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "6c59b640c7ac6d8b6bdd",
@@ -4752,7 +4808,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 6,
+      "scanned": 5,
       "accepted": 0
     },
     {
@@ -4771,7 +4827,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2788, column 48"
+      "message": "not well-formed (invalid token): line 2958, column 48"
     },
     {
       "source": "朝日新聞",
@@ -4795,7 +4851,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
