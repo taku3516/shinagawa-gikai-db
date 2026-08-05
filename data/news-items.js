@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-05T07:34:58.633233Z",
+  "generatedAt": "2026-08-05T10:25:53.474123Z",
   "items": [
+    {
+      "id": "eaae94b21db47ca44ea1",
+      "title": "大崎広小路にランチ限定「魚沼しょうが焼き食堂・弁当」 店主はお笑い芸人",
+      "summary": "「魚沼しょうが焼き食堂・弁当」（品川区大崎4）が7月6日、大崎広小路駅近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5053",
+      "publishedAt": "2026-08-05T08:04:30Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T10:25:28.215624Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大崎",
+        "大崎広小路駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "46ff1d40ed78bd50d10c",
       "title": "「感覚を重ね、自分と出会う場所」へ 新ジュエリーブランド「⁺Aiii festaria（アイ フェスタリア）」誕生",
@@ -101,6 +122,24 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "2b5a86e4f2cebdbb45e5",
+      "title": "アイルしながわ・喜多能楽堂「武士の学校 2026」",
+      "summary": "2026年8月29日（土）、30日（日）、2027年2月23日（火・祝）、アイルしながわおよび喜多能楽堂にて「武士の学校 2026」が開催されます。 小笠原清基先生と小笠原一門による武士の礼法と弓馬術の特別授業。 徳川家も学んだ今に続く伝統文化の面白さや奥深さを、子どもから大人まで楽しく体験できるイベントです。詳しくは こちら",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bushinogakko",
+      "publishedAt": "2026-08-05T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T10:25:28.215624Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 4
     },
     {
       "id": "34a389453b93d61f6b2e",
@@ -4820,7 +4859,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 8
+      "accepted": 9
     },
     {
       "source": "警視庁",
@@ -4842,9 +4881,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 3117, column 48"
+      "status": "ok",
+      "scanned": 576,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
