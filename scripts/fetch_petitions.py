@@ -199,8 +199,22 @@ YEAR_LINK_RE = re.compile(r"^(平成|令和)(元|\d{1,2})年(請願|陳情)$")
 # 表の番号欄（例: 第1号 / 第48-2号）
 CELL_NUMBER_RE = re.compile(r"第\s*(\d{1,3})(?:-(\d{1,2}))?\s*号")
 # 4つの日付が1つのセルにまとまっているため、ラベルで切り分ける
-DATE_LABELS = ("受理年月日", "付託年月日", "委員会採決年月日", "本会議採決年月日")
+# 日付欄のラベル。令和元年以降と平成31年以前で呼び方が違う。
+DATE_LABELS = (
+    "受理年月日", "付託年月日",
+    "委員会採決年月日", "本会議採決年月日",  # 令和元年〜
+    "審査年月日", "議決年月日",              # 〜平成31年
+)
 DATE_SPLIT_RE = re.compile(r"(" + "|".join(DATE_LABELS) + r")\s*[：:]")
+# 新旧のラベルを同じ項目名に寄せる
+DATE_ALIASES = {
+    "受理年月日": "receivedDate",
+    "付託年月日": "referredDate",
+    "委員会採決年月日": "committeeVoteDate",
+    "審査年月日": "committeeVoteDate",
+    "本会議採決年月日": "plenaryVoteDate",
+    "議決年月日": "plenaryVoteDate",
+}
 # 和暦の日付（公式ページは「令和 8年 2月10日」のように空白が入ることがある）
 JP_DATE_RE = re.compile(r"(平成|令和)\s*(\d{1,2})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
 ERA_BASE = {"平成": 1988, "令和": 2018}
@@ -319,7 +333,18 @@ def parse_year_page(page: dict, markup: str, verbose: bool = False) -> list[dict
             date_index = next(
                 (i for i, cell in enumerate(header) if "受理年月日" in cell), None
             )
-            dates = split_labeled(row[date_index]) if date_index is not None and date_index < len(row) else {}
+            labeled = split_labeled(row[date_index]) if date_index is not None and date_index < len(row) else {}
+            dates = {DATE_ALIASES[label]: value for label, value in labeled.items() if label in DATE_ALIASES}
+            # 議決結果の欄は、令和元年以降が「委員会審査」「本会議結果」の2列、
+            # 平成31年以前は「結果」の1列。1列だけの年は本会議の議決結果として扱う。
+            committee_result = next(
+                (v for k, v in values.items() if "委員会" in k and "審査" in k), ""
+            )
+            plenary_result = next(
+                (v for k, v in values.items() if "本会議" in k and "結果" in k), ""
+            )
+            if not committee_result and not plenary_result:
+                plenary_result = values.get("結果", "")
             records.append({
                 "kind": page["kind"],
                 "era": page["era"],
@@ -328,17 +353,13 @@ def parse_year_page(page: dict, markup: str, verbose: bool = False) -> list[dict
                 "branch": number_match.group(2),
                 "title": values.get("件名", ""),
                 "committee": values.get("付託委員会", ""),
-                "receivedDate": dates.get("受理年月日", ""),
-                "receivedDateIso": date_to_iso(dates.get("受理年月日", "")),
-                "referredDate": dates.get("付託年月日", ""),
-                "committeeVoteDate": dates.get("委員会採決年月日", ""),
-                "plenaryVoteDate": dates.get("本会議採決年月日", ""),
-                "committeeResult": next(
-                    (v for k, v in values.items() if "委員会" in k and "審査" in k), ""
-                ),
-                "plenaryResult": next(
-                    (v for k, v in values.items() if "本会議" in k and "結果" in k), ""
-                ),
+                "receivedDate": dates.get("receivedDate", ""),
+                "receivedDateIso": date_to_iso(dates.get("receivedDate", "")),
+                "referredDate": dates.get("referredDate", ""),
+                "committeeVoteDate": dates.get("committeeVoteDate", ""),
+                "plenaryVoteDate": dates.get("plenaryVoteDate", ""),
+                "committeeResult": committee_result,
+                "plenaryResult": plenary_result,
                 "note": values.get("備考", ""),
                 "sourceUrl": page["url"],
             })
