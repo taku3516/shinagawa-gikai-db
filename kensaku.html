@@ -7,6 +7,7 @@
   <title>横断検索 | 品川区議会DB</title>
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-mobile.css" />
+  <link rel="stylesheet" href="site-a11y.css" />
   <style>
     :root {
       --c-main: #1f4e79;
@@ -430,6 +431,7 @@
   <script src="data/seijishikin.js"></script>
   <script src="data/senkyo-shushi.js"></script>
   <script src="data/news-items.js"></script>
+  <script src="data/resolutions.js"></script>
 
   <script>
     "use strict";
@@ -442,6 +444,7 @@
       { id: "gyosei", label: "行政評価" },
       { id: "expenses", label: "政務活動費" },
       { id: "political-funds", label: "政治資金" },
+      { id: "resolutions", label: "意見書・決議等" },
       { id: "news", label: "ニュース" }
     ];
     const CATEGORY_LABELS = Object.fromEntries(CATEGORY_DEFS.map((item) => [item.id, item.label]));
@@ -580,7 +583,10 @@
           body: meeting.summary || "",
           primary: [meeting.name, meeting.type],
           tags: [meeting.type],
-          links: [{ type: "internal", label: "DB内で会議を開く", url: `kaigiroku.html#meeting-${meeting.id}` }].concat(meeting.links || [])
+          links: [
+            { type: "internal", label: "会議を1ページで見る", url: `kaigi.html?year=${yearId}&meeting=${meeting.id}` },
+            { type: "internal", label: "年別会議録で開く", url: `kaigiroku.html#meeting-${meeting.id}` }
+          ].concat(meeting.links || [])
         });
       }
 
@@ -639,7 +645,10 @@
             answer: entry.answer || "",
             primary: [questioner.member, questioner.party, questioner.kind, meetingNames[questioner.meetingId]].concat(memberAliases).concat(topics),
             tags: [questioner.kind || "一般質問"],
-            links: [{ type: "internal", label: "DB内で質問と答弁を開く", url: `kaigiroku.html#question-${questioner.meetingId}-${questioner.memberId}` }].concat(questioner.links || [])
+            links: [
+              { type: "internal", label: "会議ページで質問と答弁を開く", url: `kaigi.html?year=${yearId}&meeting=${questioner.meetingId}#question-${questioner.meetingId}-${questioner.memberId}` },
+              { type: "internal", label: "年別会議録で開く", url: `kaigiroku.html#question-${questioner.meetingId}-${questioner.memberId}` }
+            ].concat(questioner.links || [])
           });
         });
       }
@@ -659,7 +668,10 @@
               answer: exchange.answer || "",
               primary: [exchange.speaker, exchange.respondent, session.committee, meetingNames[session.meetingId]],
               tags: [exchange.kind || "質問", session.committee],
-              links: [{ type: "internal", label: "DB内で委員会質疑を開く", url: `kaigiroku.html#committee-${session.id}-${exchange.id}` }].concat(session.links || [])
+              links: [
+                { type: "internal", label: "会議ページで委員会質疑を開く", url: `kaigi.html?year=${yearId}&meeting=${session.meetingId}#committee-${session.id}-${exchange.id}` },
+                { type: "internal", label: "年別会議録で開く", url: `kaigiroku.html#committee-${session.id}-${exchange.id}` }
+              ].concat(session.links || [])
             });
           }
         }
@@ -959,6 +971,27 @@
           { type: "internal", label: "政治資金ページで見る", url: `seijishikin.html#organization-${organization.id}` },
           politicalFundData.sources.tokyoReports ? { type: "official", label: "東京都の収支報告書", url: politicalFundData.sources.tokyoReports.url } : null,
           politicalFundData.sources.ministryReports ? { type: "official", label: "総務省の収支報告書", url: politicalFundData.sources.ministryReports.url } : null
+        ]
+      });
+    }
+
+    const resolutionData = window.SHINAGAWA_RESOLUTIONS || { items: [] };
+    for (const resolution of resolutionData.items || []) {
+      addItem({
+        id: resolution.id,
+        category: "resolutions",
+        type: resolution.category || "意見書・決議等",
+        year: resolution.year,
+        date: resolution.dateIso,
+        title: resolution.title,
+        meta: [resolution.dateLabel, resolution.meetingLabel, resolution.category].filter(Boolean).join("／"),
+        body: "品川区議会が可決または提出した意見書・決議等です。本文は公式ページで確認できます。",
+        source: "品川区議会",
+        primary: [resolution.meetingLabel, resolution.category, "意見書", "決議", "要望書"],
+        tags: [resolution.category],
+        links: [
+          { type: "internal", label: "意見書・決議等の一覧で見る", url: `ikensho.html#${resolution.id}` },
+          { type: "official", label: "公式ページで本文を読む", url: resolution.url }
         ]
       });
     }
@@ -1323,5 +1356,6 @@
       render();
     }
   </script>
+  <script src="site-a11y.js"></script>
 </body>
 </html>

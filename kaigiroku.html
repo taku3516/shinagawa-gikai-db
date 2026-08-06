@@ -7,6 +7,7 @@
   <title>会議録を見る | 品川区議会DB</title>
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-mobile.css" />
+  <link rel="stylesheet" href="site-a11y.css" />
   <style>
     /* ===== 基調カラー：深い青と生成りを使った、公文書・資料庫を思わせる配色 ===== */
     :root {
@@ -235,6 +236,7 @@
     .qa-summary dt { color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
     .qa-summary dd { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
     .qa-summary-note { margin-top: 14px !important; }
+    .video-connection { margin-top: 10px; padding-top: 9px; border-top: 1px dashed var(--c-border); }
 
     /* ===== 委員会の質疑・答弁 ===== */
     .committee-session {
@@ -630,6 +632,7 @@
           <h3>${esc(m.name)}</h3>
           <p>${esc(m.summary)}</p>
           ${pillsHtml(m.links, site)}
+          <a class="pill" href="kaigi.html?year=${esc(year.id)}&meeting=${esc(m.id)}">会議を1ページで見る</a>
           ${hasMeetingDetails(m, year) ? `<a class="pill" href="#meeting-${esc(m.id)}">この会議の詳細へ</a>` : ""}
         </article>`).join("");
       document.getElementById("year-overview").innerHTML = `
@@ -712,6 +715,7 @@
     // 質問カード（議員名・会派・テーマ）
     function questionCardHtml(q, site) {
       const topics = (q.topics || []).map((t) => `<li>${esc(t)}</li>`).join("");
+      const questionVideo = (q.links || []).find((link) => link.type === "video");
       const qaSummaries = (q.qaSummaries || []).map((item) => `
         <div class="qa-summary">
           <h5>${esc(item.title)}</h5>
@@ -721,6 +725,10 @@
             <dt>答弁の要約</dt>
             <dd>${esc(item.answer)}</dd>
           </dl>
+          ${questionVideo ? `<div class="video-connection">${pillHtml({
+            ...questionVideo,
+            label: "この質問者の公式録画で確認"
+          })}</div>` : ""}
         </div>`).join("");
       return `
         <details class="card q" id="question-${esc(q.meetingId)}-${esc(q.memberId)}">
@@ -836,6 +844,7 @@
         <div class="meeting-accordion__content"><section><div class="container">
         <h2>${esc(meeting.detailTitle || meeting.name)}</h2>
         <p class="section-lead">${esc(meeting.detailLead || meeting.summary)}</p>
+        <p><a class="pill" href="kaigi.html?year=${esc(year.id)}&meeting=${esc(meeting.id)}">この会議を1ページで見る</a></p>
         ${statsHtml(meeting.stats)}
         ${timelineHtml(meeting.events, site)}`;
 
@@ -1137,5 +1146,6 @@
     init();
   </script>
   <script src="site-nav.js"></script>
+  <script src="site-a11y.js"></script>
 </body>
 </html>

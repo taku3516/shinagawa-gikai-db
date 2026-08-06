@@ -29,8 +29,18 @@ window.SHINAGAWA_DB.site = {
   "heroRow2": [
     {
       "type": "official",
+      "label": "会議をまとめて見る",
+      "url": "kaigi.html"
+    },
+    {
+      "type": "official",
       "label": "会議録を見る",
       "url": "kaigiroku.html"
+    },
+    {
+      "type": "official",
+      "label": "意見書・決議等を見る",
+      "url": "ikensho.html"
     },
     {
       "type": "official",
@@ -306,6 +316,10 @@ window.SHINAGAWA_DB.site = {
     {
       "label": "品川区議会 会議録検索システム（平成13年5月以降の正式な会議録）",
       "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/"
+    },
+    {
+      "label": "品川区議会 意見書・決議等",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/pass"
     },
     {
       "label": "品川区 予算（公式）",

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f4e79" />
+  <title>意見書・決議等を見る | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
+  <link rel="stylesheet" href="site-a11y.css" />
+  <style>
+    :root {
+      --c-main:#1f4e79; --c-main-dark:#173a5e; --c-main-pale:#e7eef4;
+      --c-bg:#f4f1e8; --c-card:#fffdf8; --c-ink:#17212b; --c-ink-soft:#4f5d68;
+      --c-border:#b9c3cc; --c-rule:#d8d2c4; --c-accent:#6b3f21; --c-accent-pale:#f8eee5;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+    body { margin:0; background:var(--c-bg); color:var(--c-ink); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif; overflow-wrap:anywhere; }
+    a { color:var(--c-main-dark); font-weight:750; text-underline-offset:3px; }
+    .container { width:min(1120px,calc(100% - 32px)); margin:auto; }
+    .hero { border-top:6px solid var(--c-accent); border-bottom:1px solid var(--c-rule); background:var(--c-card); padding:40px 0 26px; }
+    .breadcrumb { margin:0 0 12px; font-size:14px; }
+    h1 { margin:0 0 12px; font-size:clamp(30px,5vw,50px); line-height:1.15; }
+    .lead { max-width:900px; margin:0; line-height:1.9; }
+    .notice { margin-top:18px; border:1px solid #d6b99f; border-left:4px solid var(--c-accent); border-radius:4px; background:var(--c-accent-pale); padding:13px 15px; font-size:13px; line-height:1.8; }
+    main section { padding:32px 0 44px; }
+    .stats { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; }
+    .stat { flex:1 1 150px; border:1px solid var(--c-border); border-top:3px solid var(--c-accent); border-radius:4px; background:var(--c-card); padding:14px; }
+    .stat strong { display:block; color:var(--c-accent); font-size:25px; }
+    .stat span { color:var(--c-ink-soft); font-size:12px; font-weight:800; }
+    .filters { border:1px solid var(--c-border); border-radius:5px; background:var(--c-card); padding:16px; margin-bottom:20px; }
+    .filter-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:12px; }
+    .field label { display:block; margin-bottom:5px; color:var(--c-ink-soft); font-size:12px; font-weight:900; }
+    input,select { width:100%; min-height:44px; border:1px solid var(--c-border); border-radius:4px; background:#fff; padding:8px 10px; color:var(--c-ink); font:inherit; font-size:16px; }
+    .filter-foot { display:flex; align-items:center; gap:12px; margin-top:12px; }
+    .reset { min-height:44px; border:1px solid var(--c-main); border-radius:4px; background:#fff; padding:8px 14px; color:var(--c-main-dark); font:inherit; font-weight:850; cursor:pointer; }
+    .count { color:var(--c-ink-soft); font-size:13px; font-weight:850; }
+    .groups { display:grid; gap:14px; }
+    details.year { border:1px solid var(--c-border); border-radius:5px; background:var(--c-card); overflow:clip; }
+    details.year > summary { display:grid; grid-template-columns:1fr auto auto; gap:12px; align-items:center; min-height:62px; padding:14px 16px; list-style:none; cursor:pointer; }
+    details.year > summary::-webkit-details-marker { display:none; }
+    details.year > summary:hover,details.year[open] > summary { background:var(--c-main-pale); }
+    .year-title { font-size:19px; font-weight:900; }
+    .toggle { display:grid; place-items:center; width:34px; height:34px; border-radius:4px; background:var(--c-main); color:#fff; font-size:20px; font-weight:900; }
+    .toggle::before { content:"+"; } details[open] > summary .toggle::before { content:"−"; }
+    .year-body { border-top:1px solid var(--c-border); padding:14px; display:grid; gap:10px; }
+    .item { border:1px solid var(--c-rule); border-left:4px solid var(--c-accent); border-radius:4px; background:#fff; padding:14px 16px; scroll-margin-top:16px; }
+    .item-head { display:flex; flex-wrap:wrap; gap:7px; align-items:center; }
+    .tag { display:inline-flex; border:1px solid #d6b99f; border-radius:999px; background:var(--c-accent-pale); padding:3px 9px; color:var(--c-accent); font-size:11px; font-weight:900; }
+    .date { color:var(--c-ink-soft); font-size:12px; font-weight:800; }
+    .item h3 { margin:8px 0 6px; font-size:16px; line-height:1.6; }
+    .meta { margin:0; color:var(--c-ink-soft); font-size:13px; }
+    .pill { display:inline-flex; align-items:center; min-height:44px; margin-top:10px; border:1px solid var(--c-main); border-radius:4px; background:#fff; padding:7px 12px; font-size:13px; }
+    .empty { border:1px dashed var(--c-border); border-radius:4px; background:var(--c-card); padding:24px; color:var(--c-ink-soft); }
+    footer { border-top:1px solid var(--c-border); background:var(--c-main-dark); padding:28px 0; color:#fff; text-align:center; font-size:13px; line-height:1.8; }
+    @media(max-width:700px) { .filter-grid{grid-template-columns:1fr;} .filter-foot{align-items:flex-start;flex-direction:column;} }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero"><div class="container">
+      <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+      <h1>意見書・決議等を見る</h1>
+      <p class="lead">品川区議会が可決・提出した意見書、決議、要望書、抗議文などを、年・種類・キーワードから探せます。</p>
+      <div class="notice"><strong>掲載内容は品川区議会公式「意見書・決議等」ページから取得しています。</strong> 本文と正確な日付は各項目の公式ページで確認してください。</div>
+      <nav data-site-nav></nav>
+    </div></header>
+    <section><div class="container">
+      <div class="stats" id="stats"></div>
+      <form class="filters" id="filters">
+        <div class="filter-grid">
+          <div class="field"><label for="query">キーワード</label><input id="query" type="search" placeholder="例：税、空港、福祉" /></div>
+          <div class="field"><label for="category">種類</label><select id="category"><option value="">すべて</option></select></div>
+          <div class="field"><label for="year">年</label><select id="year"><option value="">すべて</option></select></div>
+        </div>
+        <div class="filter-foot"><button class="reset" type="reset">条件をリセット</button><span class="count" id="hit-count" aria-live="polite"></span></div>
+      </form>
+      <div class="groups" id="list"></div>
+    </div></section>
+  </main>
+  <footer><div class="container">品川区議会DB — 意見書・決議等の本文は品川区議会公式サイトで確認してください。</div></footer>
+  <script src="data/site.js"></script>
+  <script src="data/resolutions.js"></script>
+  <script>
+    "use strict";
+    const DATA=window.SHINAGAWA_RESOLUTIONS||{items:[]};
+    const items=DATA.items||[];
+    const esc=(v)=>String(v??"").replace(/[&<>"']/g,(c)=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    const normalize=(v)=>String(v??"").normalize("NFKC").toLocaleLowerCase("ja").replace(/\s+/g,"");
+    const q=document.getElementById("query"), category=document.getElementById("category"), year=document.getElementById("year");
+    const categories=[...new Set(items.map((x)=>x.category))];
+    const years=[...new Set(items.map((x)=>x.year).filter(Boolean))].sort((a,b)=>b-a);
+    category.innerHTML += categories.map((x)=>`<option value="${esc(x)}">${esc(x)}</option>`).join("");
+    year.innerHTML += years.map((x)=>`<option value="${x}">${x}年</option>`).join("");
+    document.getElementById("stats").innerHTML=`<div class="stat"><strong>${items.length}</strong><span>掲載件数</span></div>${categories.map((c)=>`<div class="stat"><strong>${items.filter((x)=>x.category===c).length}</strong><span>${esc(c)}</span></div>`).join("")}`;
+    function render() {
+      const key=normalize(q.value);
+      const filtered=items.filter((x)=>(!category.value||x.category===category.value)&&(!year.value||String(x.year)===year.value)&&(!key||normalize([x.title,x.meetingLabel,x.category,x.dateLabel].join(" ")).includes(key)));
+      document.getElementById("hit-count").textContent=`${filtered.length}件を表示`;
+      const groups=new Map();
+      filtered.forEach((item)=>{const label=item.year?`${item.year}年`:"年不明";if(!groups.has(label))groups.set(label,[]);groups.get(label).push(item);});
+      document.getElementById("list").innerHTML=filtered.length?[...groups].map(([label,group],index)=>`<details class="year"${index<2?" open":""}><summary><span class="year-title">${esc(label)}</span><span class="count">${group.length}件</span><span class="toggle" aria-hidden="true"></span></summary><div class="year-body">${group.map((x)=>`<article class="item" id="${esc(x.id)}"><div class="item-head"><span class="tag">${esc(x.category)}</span><time class="date" datetime="${esc(x.dateIso)}">${esc(x.dateLabel)}</time></div><h3>${esc(x.title)}</h3><p class="meta">${esc(x.meetingLabel)}</p><a class="pill" href="${esc(x.url)}" target="_blank" rel="noopener">公式ページで本文を読む</a></article>`).join("")}</div></details>`).join(""):'<div class="empty">条件に一致する項目はありません。</div>';
+      openHash();
+    }
+    function openHash(){if(!location.hash)return;const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!target)return;const parent=target.closest("details");if(parent)parent.open=true;requestAnimationFrame(()=>target.scrollIntoView({block:"start"}));}
+    let timer;
+    q.addEventListener("input",()=>{clearTimeout(timer);timer=setTimeout(render,150);});
+    category.addEventListener("change",render); year.addEventListener("change",render);
+    document.getElementById("filters").addEventListener("reset",()=>setTimeout(render,0));
+    window.addEventListener("hashchange",openHash);
+    render();
+  </script>
+  <script src="site-nav.js"></script>
+  <script src="site-a11y.js"></script>
+</body>
+</html>
