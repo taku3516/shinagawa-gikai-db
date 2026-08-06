@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-06T01:43:12.551530Z",
+  "generatedAt": "2026-08-06T04:56:58.482048Z",
   "items": [
     {
       "id": "3f4df165a67e1881fcc1",
@@ -21,6 +21,23 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 16
+    },
+    {
+      "id": "b8cd1d793bde3d9d15c3",
+      "title": "八幡神社 例大祭 (鮫洲)",
+      "summary": "2026年8月13日（木）～16日（日）、鮫洲八幡神社 例大祭が行われます。（8月13日は例大祭式典となり神社総代のみで執り行われます） 鮫洲八幡神社 例大祭の特徴は、深夜に行われる大神輿の宮出しです。15日（土）の3時から宮出しが行われます。大神輿は約4時間、朝7時までかけて御旅所まで担がれます。大神輿の宮納めは、翌16日（日）午後3時から。御旅所を発御し、午後6時に無事神社へ帰社されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/samezureitaisai2026",
+      "publishedAt": "2026-08-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-06T04:56:37.838139Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "4937041db3db77764d2a",
@@ -4938,7 +4955,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2582, column 28"
+      "message": "not well-formed (invalid token): line 2788, column 28"
     },
     {
       "source": "朝日新聞",
@@ -4962,7 +4979,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
