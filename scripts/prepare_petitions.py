@@ -497,6 +497,23 @@ def ledger_markdown(summary: dict, items: list[dict], meetings: dict, dropped: l
         for entry in dropped:
             lines.append(f"| {entry['reason']} | {(entry['record'].get('title') or '')[:60]} |")
 
+    lines += [
+        "",
+        "## 残っている作業（公式サイトへ接続できる環境で実施）",
+        "",
+        "このスクリプトはリポジトリ内のデータだけを読むため、公式ページにしかない項目は入っていません。",
+        "次の作業には、品川区議会公式サイトへ到達できる環境（ネットワークを許可した環境）が必要です。",
+        "",
+        "| 残作業 | 参照先 |",
+        "|---|---|",
+        "| 提出者・受理日・付託委員会の取り込み | https://gikai.city.shinagawa.tokyo.jp/katsudou/petition |",
+        "| 平成30年・令和元年の議決結果の補完（上記「受理年が未確定の案件」と結果未収録分） | 各定例会の公式ページ |",
+        "| 平成13〜29年の請願・陳情の収集 | `scripts/build_heisei_year.py`（[実装準備・監査手順](history-expansion.md)） |",
+        "",
+        "必要なドメイン: `gikai.city.shinagawa.tokyo.jp` / `kaigiroku.city.shinagawa.tokyo.jp`",
+        "",
+    ]
+
     return "\n".join(lines) + "\n"
 
 
