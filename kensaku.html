@@ -500,6 +500,22 @@
       return accepted.test(result) ? result : "";
     }
 
+    // 請願・陳情ページの個別URL。受理番号（例: 令和5年 陳情第31号）から作る。
+    // 番号が読み取れない行（公式ページの取り込みで列がずれた平成30年など）は件名で検索させる。
+    function petitionDetailUrl(petition) {
+      const number = String(petition.number || "")
+        .replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
+        .replace(/\s+/g, "");
+      const parts = /^(平成|令和)(元|\d{1,2})年(請願|陳情)第(\d{1,3})(?:-(\d{1,2}))?号$/.exec(number);
+      if (!parts) {
+        return petition.title ? `seigan.html?q=${encodeURIComponent(petition.title)}` : "seigan.html";
+      }
+      const era = parts[1] === "平成" ? "h" : "r";
+      const eraYear = String(parts[2] === "元" ? 1 : Number(parts[2])).padStart(2, "0");
+      const kind = parts[3] === "請願" ? "s" : "c";
+      return `seigan.html#p-${era}${eraYear}-${kind}${Number(parts[4])}${parts[5] ? `-${parts[5]}` : ""}`;
+    }
+
     function addItem(item) {
       const tags = [...new Set((item.tags || [])
         .filter(Boolean)
@@ -594,7 +610,10 @@
           result: petition.result || "",
           primary: [petition.number, meetingNames[petition.meetingId]],
           tags: petition.tags || [],
-          links: [{ type: "internal", label: "DB内で請願・陳情を開く", url: `kaigiroku.html#petitions-${petition.meetingId}` }].concat(petition.links || [])
+          links: [
+            { type: "internal", label: "この請願・陳情の経過を見る", url: petitionDetailUrl(petition) },
+            { type: "internal", label: "会議録ページで定例会ごとに見る", url: `kaigiroku.html#petitions-${petition.meetingId}` }
+          ].concat(petition.links || [])
         });
       }
 
