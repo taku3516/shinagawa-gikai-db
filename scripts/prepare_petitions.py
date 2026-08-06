@@ -142,10 +142,11 @@ def number_label(era: str, year_number: int, kind: str, number: int, branch: str
     return f"{era_label(era, year_number)}{kind}第{number}{suffix}号"
 
 
-def result_status(result: str) -> str:
-    """議決結果を「審議終了 / 継続審査 / 結果未収録」に束ねる。"""
+def result_status(result: str, reference: bool = False) -> str:
+    """議決結果を「審議終了 / 継続審査 / 参考送付 / 結果未収録」に束ねる。"""
     if not result:
-        return "結果未収録"
+        # 参考送付は委員会に付託されず議決もされない。未収録とは分けて扱う。
+        return "参考送付" if reference else "結果未収録"
     if any(word in result for word in PENDING_RESULTS):
         return "継続審査"
     if any(word in result for word in CLOSED_RESULTS):
@@ -384,6 +385,7 @@ def build_meetings(records: list[dict]) -> "OrderedDict[str, dict]":
 OFFICIAL_FIELDS = (
     "committee", "receivedDate", "receivedDateIso", "referredDate",
     "committeeVoteDate", "plenaryVoteDate", "committeeResult", "plenaryResult", "note",
+    "reference",
 )
 
 
@@ -499,7 +501,7 @@ def build_items(records: list[dict], references: list[dict], official: list[dict
             item["firstMeetingLabel"] = official_data.get("referredDate", "") or "公式ページのみ"
             item["latestMeetingLabel"] = official_data.get("plenaryVoteDate", "") or "公式ページのみ"
             item["latestResult"] = official_data.get("plenaryResult") or official_data.get("committeeResult") or ""
-            item["status"] = result_status(item["latestResult"])
+            item["status"] = result_status(item["latestResult"], official_data.get("reference", False))
             item["meetingCount"] = 0
             item["yearIds"] = []
             referred = committee_name(official_data.get("committee", ""))
@@ -526,7 +528,9 @@ def build_items(records: list[dict], references: list[dict], official: list[dict
                     note for note in item["notes"]
                     if "議決結果は未収録" not in note
                 ] + ["議決結果は公式ページの一覧から補いました。"]
-        item["status"] = result_status(item["latestResult"])
+        item["status"] = result_status(
+            item["latestResult"], item.get("official", {}).get("reference", False)
+        )
         item["meetingCount"] = len(item["history"])
         item["yearIds"] = sorted({entry["yearId"] for entry in item["history"]})
         # 定例会の名前とリンクは meetings 表から引く。件名が定例会ごとに違う場合だけ残す。
