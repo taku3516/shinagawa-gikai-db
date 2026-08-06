@@ -361,6 +361,9 @@ def parse_year_page(page: dict, markup: str, verbose: bool = False) -> list[dict
                 "committeeResult": committee_result,
                 "plenaryResult": plenary_result,
                 "note": values.get("備考", ""),
+                # 「〇〇委員会へ参考送付」の案件は付託も議決もされない。
+                # 結果が空なのは未収録ではなくそういう扱いだと分かるようにする。
+                "reference": "参考送付" in values.get("備考", ""),
                 "sourceUrl": page["url"],
             })
             if verbose and unresolved_sample is None and not records[-1]["committeeResult"] \
