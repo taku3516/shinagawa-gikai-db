@@ -152,6 +152,21 @@
       return `<details class="block" id="${esc(id)}"${open?" open":""}><summary><span class="block-title">${esc(title)}</span><span class="count">${esc(count)}</span><span class="toggle" aria-hidden="true"></span></summary><div class="block-body">${body}</div></details>`;
     }
     function videoLink(links) { return (links||[]).find((link)=>link.type==="video"); }
+    // 請願・陳情ページの個別URL。受理番号（例: 令和5年 陳情第31号）から作る。
+    // 番号が読み取れない行（公式ページの取り込みで列がずれた平成30年など）は件名で検索させる。
+    function petitionDetailUrl(petition) {
+      const number = String(petition.number || "")
+        .replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
+        .replace(/\s+/g, "");
+      const parts = /^(平成|令和)(元|\d{1,2})年(請願|陳情)第(\d{1,3})(?:-(\d{1,2}))?号$/.exec(number);
+      if (!parts) {
+        return petition.title ? `seigan.html?q=${encodeURIComponent(petition.title)}` : "seigan.html";
+      }
+      const era = parts[1] === "平成" ? "h" : "r";
+      const eraYear = String(parts[2] === "元" ? 1 : Number(parts[2])).padStart(2, "0");
+      const kind = parts[3] === "請願" ? "s" : "c";
+      return `seigan.html#p-${era}${eraYear}-${kind}${Number(parts[4])}${parts[5] ? `-${parts[5]}` : ""}`;
+    }
     function meetingRelated(year,meeting) {
       return {
         bills:(year.bills||[]).filter((x)=>x.meetingId===meeting.id),
@@ -193,7 +208,7 @@
       let sections="";
       if ((meeting.events||[]).length) sections+=block(`timeline-${meeting.id}`,"日程・タイムライン",`${meeting.events.length}件`,timelineHtml(meeting.events),true);
       if (related.bills.length) sections+=block(`bills-${meeting.id}`,"議案",`${related.bills.length}件`,`<div class="cards">${related.bills.map((x)=>`<article class="card"><h3>${esc(x.title)}</h3><p>${esc(x.summary||"")}</p>${pills(x.links)}</article>`).join("")}</div>`);
-      if (related.petitions.length) sections+=block(`petitions-${meeting.id}`,"請願・陳情",`${related.petitions.length}件`,`<div class="cards">${related.petitions.map((x)=>`<article class="card"><h3>${esc([x.number,x.title].filter(Boolean).join(" "))}</h3><p>${esc(x.summary||x.result||"")}</p>${pills(x.links)}</article>`).join("")}</div>`);
+      if (related.petitions.length) sections+=block(`petitions-${meeting.id}`,"請願・陳情",`${related.petitions.length}件`,`<div class="cards">${related.petitions.map((x)=>`<article class="card"><h3>${esc([x.number,x.title].filter(Boolean).join(" "))}</h3><p>${esc(x.summary||x.result||"")}</p><div class="pills"><a class="pill" href="${esc(petitionDetailUrl(x))}">この請願・陳情の経過を見る</a></div>${pills(x.links)}</article>`).join("")}</div>`);
       if (related.questions.length) sections+=block(`questions-${meeting.id}`,"代表質問・一般質問",`${related.questions.length}名`,questionsHtml(related.questions,meeting),true);
       if (related.sessions.length||related.pending.length) sections+=block(`committees-${meeting.id}`,"委員会の質問・答弁",`${related.sessions.length}会議・${committeeCount}件`,sessionsHtml(related.sessions,related.pending));
       if (!sections) sections='<div class="loading">この会議に紐づく詳細データは掲載準備中です。公式リンクをご確認ください。</div>';
