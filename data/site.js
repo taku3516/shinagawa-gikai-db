@@ -34,6 +34,11 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "type": "official",
+      "label": "請願・陳情を見る",
+      "url": "seigan.html"
+    },
+    {
+      "type": "official",
       "label": "予算・決算を見る",
       "url": "yosan-kessan.html"
     },

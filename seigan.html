@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f4e79" />
+  <title>請願・陳情 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-nav.css" />
+  <style>
+    :root {
+      --c-main: #1f4e79; --c-main-dark: #173a5e; --c-main-pale: #e7eef4;
+      --c-bg: #f4f1e8; --c-card: #fffdf8; --c-ink: #17212b; --c-ink-soft: #4f5d68;
+      --c-border: #b9c3cc; --c-rule: #d8d2c4;
+      /* 住民から出された声をまとめるページなので、議案（青）とは別の緑系アクセントにする */
+      --c-seigan: #0f766e; --c-seigan-bg: #ecfdf5; --c-seigan-border: #99e2d0;
+      /* 議決結果の色分け（採択＝緑 / 不採択＝赤 / 継続審査＝橙 / それ以外＝灰） */
+      --c-pass: #15803d; --c-pass-bg: #f0fdf4; --c-pass-border: #bbf7d0;
+      --c-fail: #be123c; --c-fail-bg: #fff1f2; --c-fail-border: #fecaca;
+      --c-hold: #b45309; --c-hold-bg: #fff7ed; --c-hold-border: #fcd9b6;
+      --c-none: #52606d; --c-none-bg: #f1f3f5; --c-none-border: #d5dade;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+    body { margin: 0; background: var(--c-bg); color: var(--c-ink);
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+           overflow-wrap: break-word; }
+    a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero { padding: 40px 0 26px; border-top: 6px solid var(--c-seigan); border-bottom: 1px solid var(--c-rule); background: var(--c-card); }
+    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
+    h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 48px); line-height: 1.15; }
+    .lead { max-width: 880px; margin: 0; font-size: 16px; line-height: 1.9; }
+    .warn {
+      max-width: 900px; margin-top: 18px; padding: 14px 16px;
+      border: 1px solid var(--c-seigan-border); border-left: 4px solid var(--c-seigan);
+      border-radius: 3px; background: var(--c-seigan-bg); font-size: 14px; line-height: 1.8;
+    }
+    .warn strong { color: var(--c-seigan); }
+    section { padding: 34px 0; }
+    h2.section-title { margin: 0 0 14px; font-size: 20px; border-left: 5px solid var(--c-seigan); padding-left: 12px; }
+    /* 制度の説明 */
+    .about { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); padding: 20px; margin-bottom: 26px; }
+    .about h3 { margin: 0 0 6px; font-size: 15px; }
+    .about p { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.9; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .about-box { border: 1px solid var(--c-rule); border-radius: 3px; background: #fff; padding: 14px 16px; }
+    .about-note { margin: 16px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.9; }
+    /* 集計 */
+    .stat-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+    .stat { flex: 1 1 150px; border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 13px 16px; }
+    .stat strong { display: block; color: var(--c-seigan); font-size: 26px; line-height: 1.2; }
+    .stat span { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    /* 絞り込み */
+    .filters { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); padding: 16px 18px; margin-bottom: 20px; }
+    .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px 14px; }
+    .filter label { display: block; margin-bottom: 5px; color: var(--c-ink-soft); font-size: 12px; font-weight: 800; }
+    .filter select, .filter input {
+      width: 100%; border: 1px solid var(--c-border); border-radius: 3px; background: #fff;
+      padding: 9px 11px; color: var(--c-ink); font-size: 15px; font-weight: 700;
+    }
+    .filter-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 14px; }
+    .filter-actions button {
+      border: 1px solid var(--c-border); border-radius: 3px; background: #fff;
+      padding: 8px 14px; color: var(--c-main-dark); font-size: 13px; font-weight: 800; cursor: pointer;
+    }
+    .filter-actions button:hover { background: var(--c-main-pale); }
+    .hit-count { color: var(--c-ink-soft); font-size: 13px; font-weight: 800; }
+    /* 一覧 */
+    .list { display: grid; gap: 10px; }
+    .petition {
+      border: 1px solid var(--c-border); border-left: 4px solid var(--c-seigan);
+      border-radius: 3px; background: var(--c-card); padding: 14px 16px; scroll-margin-top: 16px;
+    }
+    .petition__head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+    .petition__number { color: var(--c-seigan); font-size: 13px; font-weight: 900; }
+    .petition h3 { margin: 7px 0 6px; font-size: 16px; line-height: 1.6; }
+    .petition h3 a { color: var(--c-ink); }
+    .petition__meta { margin: 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.9; }
+    .tag {
+      display: inline-flex; align-items: center; border: 1px solid var(--c-none-border); border-radius: 3px;
+      background: var(--c-none-bg); padding: 2px 8px; color: var(--c-none); font-size: 11px; font-weight: 800;
+    }
+    .tag[data-result="採択"], .tag[data-result="趣旨採択"] { border-color: var(--c-pass-border); background: var(--c-pass-bg); color: var(--c-pass); }
+    .tag[data-result="不採択"] { border-color: var(--c-fail-border); background: var(--c-fail-bg); color: var(--c-fail); }
+    .tag[data-result="継続審査"] { border-color: var(--c-hold-border); background: var(--c-hold-bg); color: var(--c-hold); }
+    .tag--kind { border-color: var(--c-seigan-border); background: var(--c-seigan-bg); color: var(--c-seigan); }
+    .empty { border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-card); padding: 24px; color: var(--c-ink-soft); }
+    .more-row { margin-top: 16px; text-align: center; }
+    .more-row button {
+      border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
+      padding: 11px 22px; color: var(--c-main-dark); font-size: 14px; font-weight: 800; cursor: pointer;
+    }
+    /* 個別表示 */
+    .detail { border: 1px solid var(--c-border); border-top: 4px solid var(--c-seigan); border-radius: 4px; background: var(--c-card); padding: 24px; }
+    .detail__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .detail h2 { margin: 10px 0 14px; font-size: clamp(20px, 3.4vw, 28px); line-height: 1.5; }
+    .detail h3 { margin: 26px 0 10px; font-size: 16px; border-left: 4px solid var(--c-seigan); padding-left: 10px; }
+    .facts { display: grid; grid-template-columns: 9em 1fr; gap: 8px 14px; margin: 0; }
+    .facts dt { color: var(--c-seigan); font-size: 13px; font-weight: 800; }
+    .facts dd { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .timeline { border-left: 3px solid var(--c-seigan-border); margin-left: 6px; padding-left: 16px; display: grid; gap: 14px; }
+    .timeline-item { position: relative; }
+    .timeline-item::before {
+      content: ""; position: absolute; left: -22px; top: 6px; width: 10px; height: 10px;
+      border: 2px solid var(--c-seigan); border-radius: 50%; background: var(--c-card);
+    }
+    .timeline-item strong { display: block; font-size: 15px; }
+    .timeline-item p { margin: 4px 0 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .committee-item { border: 1px solid var(--c-rule); border-radius: 3px; background: #fff; padding: 12px 14px; margin-bottom: 10px; }
+    .committee-item strong { display: block; font-size: 14px; }
+    .committee-item p { margin: 4px 0 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .pill {
+      display: inline-flex; align-items: center; margin: 8px 6px 0 0;
+      border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
+      padding: 6px 12px; color: var(--c-main-dark); font-size: 13px; font-weight: 800;
+    }
+    .pill--seigan { border-color: var(--c-seigan-border); background: var(--c-seigan-bg); color: var(--c-seigan); }
+    .note-box {
+      margin-top: 16px; border: 1px solid var(--c-hold-border); border-left: 4px solid var(--c-hold);
+      border-radius: 3px; background: var(--c-hold-bg); padding: 12px 14px; color: var(--c-hold);
+      font-size: 13px; line-height: 1.8;
+    }
+    .fine-print { margin-top: 20px; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }
+    footer { padding: 30px 0; border-top: 1px solid var(--c-border); background: var(--c-main-dark);
+             color: #fff; text-align: center; font-size: 13px; line-height: 1.8; }
+    .load-error { padding: 24px; border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-card); }
+    @media (max-width: 700px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .facts { grid-template-columns: 1fr; gap: 2px 0; }
+      .facts dd + dt { margin-top: 10px; }
+      .detail { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+        <h1>請願・陳情</h1>
+        <p class="lead">区民や団体から品川区議会に出された請願・陳情を、1件ずつ追えるようにまとめています。
+          会議録ページでは定例会ごとの一覧として並んでいますが、ここでは同じ受理番号の案件をひとまとめにし、
+          継続審査で定例会をまたいだ場合の経過と、委員会でどう審査されたかを1つのページで確認できます。</p>
+        <div class="warn">
+          <strong>一次情報は品川区議会公式サイトです。</strong>
+          正確な受理日・提出者・付託委員会・審査結果は、公式の
+          <a href="https://gikai.city.shinagawa.tokyo.jp/katsudou/petition" target="_blank" rel="noopener">請願・陳情のページ</a>
+          と各定例会の資料をご確認ください。このページは公式に掲載された情報を並べ替えたものです。
+        </div>
+        <nav data-site-nav></nav>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div id="page-root"></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">品川区議会DB — 請願・陳情の一次情報は品川区議会公式サイトです。</div></footer>
+
+  <script src="data/site.js"></script>
+  <script src="site-nav.js"></script>
+  <script src="data/petitions.js"></script>
+  <script>
+    "use strict";
+
+    function esc(s) {
+      return String(s ?? "").replace(/[&<>"']/g, (c) => (
+        { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    // 検索用に全角英数を半角へそろえ、空白と区切り記号を落とす
+    function searchKey(value) {
+      return String(value ?? "")
+        .replace(/[Ａ-Ｚａ-ｚ０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
+        .replace(/[\s、。，．,.・「」『』（）()［］\[\]〔〕【】第号]/g, "")
+        .toLowerCase();
+    }
+
+    const DATA = window.SHINAGAWA_PETITIONS;
+    const MEETINGS = (DATA && DATA.meetings) || {};
+    const PAGE_SIZE = 60;
+
+    function meetingOf(meetingId) {
+      return MEETINGS[meetingId] || { name: meetingId, yearLabel: "", links: [] };
+    }
+
+    function resultLabel(result) {
+      return result || "結果未収録";
+    }
+
+    function linkPill(link, extraClass) {
+      const isExternal = /^https?:/i.test(link.url || "");
+      const target = isExternal ? ' target="_blank" rel="noopener"' : "";
+      return `<a class="pill${extraClass ? " " + extraClass : ""}" href="${esc(link.url)}"${target}>${esc(link.label)}</a>`;
+    }
+
+    /* ---------- 一覧 ---------- */
+
+    function petitionCardHtml(item) {
+      const meta = [];
+      meta.push(item.meetingCount > 1
+        ? `${esc(item.firstMeetingLabel)}に付託 → ${esc(item.latestMeetingLabel)}まで ${item.meetingCount}回の定例会で審査`
+        : `${esc(item.firstMeetingLabel)}で審査`);
+      if (item.committeeNames.length) {
+        meta.push(`委員会審査：${esc(item.committeeNames.join("・"))}（会議録の質疑${item.exchangeCount}件）`);
+      }
+      return `
+        <article class="petition" id="card-${esc(item.id)}">
+          <div class="petition__head">
+            <span class="petition__number">${esc(item.numberLabel)}</span>
+            <span class="tag tag--kind">${esc(item.kind)}</span>
+            <span class="tag" data-result="${esc(item.latestResult)}">${esc(resultLabel(item.latestResult))}</span>
+          </div>
+          <h3><a href="#${esc(item.id)}">${esc(item.title)}</a></h3>
+          <p class="petition__meta">${meta.join("<br />")}</p>
+        </article>`;
+    }
+
+    // 絞り込みの選択肢は、実際に収録されている値から作る
+    function optionsHtml(values, selected, allLabel) {
+      return [`<option value="">${esc(allLabel)}</option>`]
+        .concat(values.map((v) => `<option value="${esc(v)}"${v === selected ? " selected" : ""}>${esc(v)}</option>`))
+        .join("");
+    }
+
+    function currentFilters() {
+      const params = new URLSearchParams(location.search);
+      return {
+        q: params.get("q") || "",
+        kind: params.get("kind") || "",
+        year: params.get("year") || "",
+        result: params.get("result") || "",
+        committee: params.get("committee") || ""
+      };
+    }
+
+    function matches(item, filters) {
+      if (filters.kind && item.kind !== filters.kind) return false;
+      if (filters.year && item.acceptedYear !== filters.year) return false;
+      if (filters.result && resultLabel(item.latestResult) !== filters.result) return false;
+      if (filters.committee && !item.committeeNames.includes(filters.committee)) return false;
+      if (filters.q) {
+        const key = searchKey(filters.q);
+        if (!key) return true;
+        const haystack = searchKey([
+          item.numberLabel, item.title, item.kind, item.latestResult,
+          item.committeeNames.join(""),
+          item.history.map((h) => meetingOf(h.meetingId).name).join("")
+        ].join(" "));
+        if (!haystack.includes(key)) return false;
+      }
+      return true;
+    }
+
+    let shownCount = PAGE_SIZE;
+
+    function renderList() {
+      const filters = currentFilters();
+      const years = [...new Set(DATA.items.map((i) => i.acceptedYear).filter(Boolean))];
+      const results = [...new Set(DATA.items.map((i) => resultLabel(i.latestResult)))];
+      const committees = [...new Set(DATA.items.flatMap((i) => i.committeeNames))].sort();
+      const hits = DATA.items.filter((item) => matches(item, filters));
+      const visible = hits.slice(0, shownCount);
+      const summary = DATA.summary || {};
+      const yearLabels = (summary.yearsCovered || [])
+        .map((yearId) => (Object.values(MEETINGS).find((m) => m.yearId === yearId) || {}).yearLabel)
+        .filter(Boolean);
+      const coverage = yearLabels.length
+        ? `${yearLabels[yearLabels.length - 1]}〜${yearLabels[0]}`
+        : "収録年は data/petitions.js を参照";
+
+      document.getElementById("page-root").innerHTML = `
+        <h2 class="section-title">請願・陳情とは</h2>
+        <div class="about">
+          <div class="about-grid">
+            <div class="about-box">
+              <h3>請願</h3>
+              <p>区議会議員の紹介を受けて提出するものです。区議会は所管の委員会に付託して審査し、本会議で採択・不採択などを議決します。</p>
+            </div>
+            <div class="about-box">
+              <h3>陳情</h3>
+              <p>議員の紹介がなくても提出できます。品川区議会では、請願に準じて委員会に付託し審査する取り扱いがされています。</p>
+            </div>
+          </div>
+          <p class="about-note">
+            採択された請願・陳情は区長など関係機関に送付され、処理の経過や結果の報告を求めることがあります。
+            結論が出ないまま会期が終わる場合は「継続審査」となり、次の定例会へ引き継がれます。
+            制度の詳しい説明と提出方法は
+            <a href="https://gikai.city.shinagawa.tokyo.jp/katsudou/petition" target="_blank" rel="noopener">公式の請願・陳情のページ</a>
+            をご覧ください。
+          </p>
+        </div>
+
+        <h2 class="section-title">収録状況</h2>
+        <div class="stat-row">
+          <div class="stat"><strong>${esc((summary.itemCount || DATA.items.length).toLocaleString())}</strong><span>収録している案件</span></div>
+          <div class="stat"><strong>${esc((summary.recordCount || 0).toLocaleString())}</strong><span>延べ審査件数（定例会ごと）</span></div>
+          <div class="stat"><strong>${esc((summary.withCommittee || 0).toLocaleString())}</strong><span>委員会の質疑を紐付けた案件</span></div>
+          <div class="stat"><strong style="font-size:19px">${esc(coverage)}</strong><span>収録している年（${esc((summary.yearsCovered || []).length)}年分）</span></div>
+        </div>
+
+        <h2 class="section-title">案件をさがす</h2>
+        <div class="filters">
+          <div class="filter-grid">
+            <div class="filter">
+              <label for="f-q">キーワード（件名・受理番号・委員会）</label>
+              <input id="f-q" type="search" value="${esc(filters.q)}" placeholder="例：羽田、インボイス、陳情31" autocomplete="off" />
+            </div>
+            <div class="filter">
+              <label for="f-kind">種別</label>
+              <select id="f-kind">${optionsHtml(["請願", "陳情"], filters.kind, "すべて")}</select>
+            </div>
+            <div class="filter">
+              <label for="f-year">受理年</label>
+              <select id="f-year">${optionsHtml(years, filters.year, "すべて")}</select>
+            </div>
+            <div class="filter">
+              <label for="f-result">議決結果（最新）</label>
+              <select id="f-result">${optionsHtml(results, filters.result, "すべて")}</select>
+            </div>
+            <div class="filter">
+              <label for="f-committee">審査した委員会</label>
+              <select id="f-committee">${optionsHtml(committees, filters.committee, "すべて")}</select>
+            </div>
+          </div>
+          <div class="filter-actions">
+            <button type="button" id="f-reset">絞り込みを解除</button>
+            <span class="hit-count">${esc(hits.length.toLocaleString())}件 / 全${esc(DATA.items.length.toLocaleString())}件</span>
+          </div>
+        </div>
+
+        ${hits.length === 0
+          ? `<div class="empty">条件に合う請願・陳情は見つかりませんでした。キーワードを短くするか、絞り込みを解除してください。</div>`
+          : `<div class="list">${visible.map(petitionCardHtml).join("")}</div>
+             ${hits.length > visible.length
+               ? `<div class="more-row"><button type="button" id="more">残り${esc((hits.length - visible.length).toLocaleString())}件を表示</button></div>`
+               : ""}`}
+
+        <p class="fine-print">
+          件名・受理番号・議決結果は、品川区議会公式サイトの各定例会のページに掲載された内容をそのまま採録しています。
+          委員会での審査は、会議録の議題名に受理番号が現れるものを機械的に紐付けたものです（データ生成日：${esc(DATA.generatedAt)}）。
+          どこまで収録できているかは、リポジトリの <code>docs/petition-inventory.md</code> に記録しています。
+        </p>`;
+
+      bindFilters();
+    }
+
+    function updateQuery(patch) {
+      const params = new URLSearchParams(location.search);
+      Object.entries(patch).forEach(([key, value]) => {
+        if (value) params.set(key, value); else params.delete(key);
+      });
+      const query = params.toString();
+      history.replaceState(null, "", `${location.pathname}${query ? `?${query}` : ""}`);
+      shownCount = PAGE_SIZE;
+      renderList();
+    }
+
+    function bindFilters() {
+      const q = document.getElementById("f-q");
+      if (!q) return;
+      let timer = null;
+      q.addEventListener("input", () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          const caret = q.selectionStart;
+          updateQuery({ q: q.value });
+          const next = document.getElementById("f-q");
+          if (next) { next.focus(); next.setSelectionRange(caret, caret); }
+        }, 220);
+      });
+      [["f-kind", "kind"], ["f-year", "year"], ["f-result", "result"], ["f-committee", "committee"]]
+        .forEach(([id, key]) => {
+          const el = document.getElementById(id);
+          if (el) el.addEventListener("change", () => updateQuery({ [key]: el.value }));
+        });
+      const reset = document.getElementById("f-reset");
+      if (reset) reset.addEventListener("click", () => {
+        history.replaceState(null, "", location.pathname);
+        shownCount = PAGE_SIZE;
+        renderList();
+      });
+      const more = document.getElementById("more");
+      if (more) more.addEventListener("click", () => {
+        shownCount += PAGE_SIZE;
+        renderList();
+      });
+    }
+
+    /* ---------- 個別表示 ---------- */
+
+    function historyHtml(item) {
+      return `<div class="timeline">${item.history.map((entry) => {
+        const meeting = meetingOf(entry.meetingId);
+        const links = (meeting.links || []).map((link) => linkPill(link, "pill--seigan")).join("");
+        const changed = entry.title && entry.title !== item.title
+          ? `<p>この定例会での件名：${esc(entry.title)}</p>` : "";
+        return `
+          <div class="timeline-item">
+            <strong>${esc(meeting.name)}</strong>
+            <p>議決結果：${esc(resultLabel(entry.result))}</p>
+            ${changed}
+            <p><a href="kaigiroku.html#petitions-${esc(entry.meetingId)}">会議録ページでこの定例会の請願・陳情を見る</a></p>
+            ${links}
+          </div>`;
+      }).join("")}</div>`;
+    }
+
+    function committeesHtml(item) {
+      if (!item.committees.length) {
+        return `<p class="petition__meta">この案件を議題名で参照している委員会の会議録は、収録データの中にありません。
+          委員会での審査状況は、公式の会議録検索システムでご確認ください。</p>`;
+      }
+      return item.committees.map((c) => `
+        <div class="committee-item">
+          <strong>${esc(c.date)} ${esc(c.committee)}</strong>
+          <p>議題：${esc(c.topicTitle)}</p>
+          <p>会議録から拾った質疑・答弁：${esc(c.exchanges)}件（${esc(c.status || "会議録")}）</p>
+          <a class="pill pill--seigan" href="kaigiroku.html#committee-${esc(c.sessionId)}-${esc(c.topicId)}">この議題の質疑を読む</a>
+        </div>`).join("");
+    }
+
+    function renderDetail(item) {
+      // 同じ資料が定例会ごとに並ぶため、どの定例会の資料かが分かるラベルにする
+      const officialLinks = [];
+      const seen = new Set();
+      item.history.forEach((entry) => {
+        const meeting = meetingOf(entry.meetingId);
+        (meeting.links || []).forEach((link) => {
+          if (!link.url || seen.has(link.url)) return;
+          seen.add(link.url);
+          officialLinks.push({ type: link.type, url: link.url, label: `${meeting.name}の公式資料` });
+        });
+      });
+      const meetingNames = item.history.map((entry) => meetingOf(entry.meetingId).name);
+
+      document.getElementById("page-root").innerHTML = `
+        <p class="breadcrumb"><a href="seigan.html">← 請願・陳情の一覧へ戻る</a></p>
+        <article class="detail" id="${esc(item.id)}">
+          <div class="detail__head">
+            <span class="petition__number">${esc(item.numberLabel)}</span>
+            <span class="tag tag--kind">${esc(item.kind)}</span>
+            <span class="tag" data-result="${esc(item.latestResult)}">${esc(resultLabel(item.latestResult))}</span>
+          </div>
+          <h2>${esc(item.title)}</h2>
+          <dl class="facts">
+            <dt>受理番号</dt><dd>${esc(item.numberLabel)}</dd>
+            <dt>種別</dt><dd>${esc(item.kind)}</dd>
+            <dt>受理年</dt><dd>${esc(item.acceptedYear || "公式ページの掲載から確定できていません")}</dd>
+            <dt>付託された定例会</dt><dd>${esc(meetingNames.join(" → "))}</dd>
+            <dt>最新の議決結果</dt><dd>${esc(resultLabel(item.latestResult))}（${esc(item.latestMeetingLabel)}）</dd>
+            <dt>審査した委員会</dt><dd>${esc(item.committeeNames.join("・") || "収録データからは特定できていません")}</dd>
+          </dl>
+          ${item.notes.length ? `<div class="note-box">${item.notes.map(esc).join("<br />")}</div>` : ""}
+
+          <h3>審査の経過</h3>
+          ${historyHtml(item)}
+
+          <h3>委員会での審査</h3>
+          ${committeesHtml(item)}
+
+          <h3>公式資料</h3>
+          <div>${officialLinks.map((link) => linkPill(link, "pill--seigan")).join("")}
+            ${linkPill({ label: "公式の請願・陳情のページ", url: "https://gikai.city.shinagawa.tokyo.jp/katsudou/petition" })}</div>
+
+          <p class="fine-print">
+            件名・議決結果は公式ページの掲載内容をそのまま採録しています。提出者・受理日・付託先の正式な記録は公式資料をご確認ください。
+          </p>
+        </article>`;
+      document.title = `${item.numberLabel} ${item.title} | 品川区議会DB`;
+    }
+
+    /* ---------- ルーティング ---------- */
+
+    function route() {
+      let hash = "";
+      try { hash = decodeURIComponent(location.hash.slice(1)); } catch (err) { hash = ""; }
+      const item = hash ? DATA.items.find((i) => i.id === hash) : null;
+      if (item) {
+        renderDetail(item);
+        window.scrollTo({ top: 0 });
+        return;
+      }
+      document.title = "請願・陳情 | 品川区議会DB";
+      renderList();
+      if (hash) {
+        // 一覧に戻ったときは、直前に見ていたカードの位置へ寄せる
+        const card = document.getElementById(`card-${hash}`);
+        if (card) card.scrollIntoView({ block: "center" });
+      }
+    }
+
+    function init() {
+      const root = document.getElementById("page-root");
+      if (!DATA || !Array.isArray(DATA.items)) {
+        root.innerHTML = `<div class="load-error"><strong>データを読み込めませんでした。</strong><br />
+          <code>seigan.html</code> と同じ場所に <code>data/petitions.js</code> があるか確認してください。</div>`;
+        return;
+      }
+      window.addEventListener("hashchange", route);
+      route();
+    }
+
+    init();
+  </script>
+</body>
+</html>
