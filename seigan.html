@@ -267,12 +267,12 @@
       const hits = DATA.items.filter((item) => matches(item, filters));
       const visible = hits.slice(0, shownCount);
       const summary = DATA.summary || {};
-      const yearLabels = (summary.yearsCovered || [])
-        .map((yearId) => (Object.values(MEETINGS).find((m) => m.yearId === yearId) || {}).yearLabel)
-        .filter(Boolean);
-      const coverage = yearLabels.length
-        ? `${yearLabels[yearLabels.length - 1]}〜${yearLabels[0]}`
-        : "収録年は data/petitions.js を参照";
+      // 収録している受理年の幅は、案件そのものから求める（公式ページ由来の年も含めるため）
+      const dated = DATA.items.filter((item) => item.sortYear);
+      const oldest = dated.reduce((min, item) => (item.sortYear < min.sortYear ? item : min), dated[0]);
+      const newest = dated.reduce((max, item) => (item.sortYear > max.sortYear ? item : max), dated[0]);
+      const yearCount = new Set(dated.map((item) => item.sortYear)).size;
+      const coverage = dated.length ? `${oldest.acceptedYear}〜${newest.acceptedYear}` : "—";
 
       document.getElementById("page-root").innerHTML = `
         <h2 class="section-title">請願・陳情とは</h2>
@@ -301,7 +301,7 @@
           <div class="stat"><strong>${esc((summary.itemCount || DATA.items.length).toLocaleString())}</strong><span>収録している案件</span></div>
           <div class="stat"><strong>${esc((summary.recordCount || 0).toLocaleString())}</strong><span>延べ審査件数（定例会ごと）</span></div>
           <div class="stat"><strong>${esc((summary.withCommittee || 0).toLocaleString())}</strong><span>委員会の質疑を紐付けた案件</span></div>
-          <div class="stat"><strong style="font-size:19px">${esc(coverage)}</strong><span>収録している年（${esc((summary.yearsCovered || []).length)}年分）</span></div>
+          <div class="stat"><strong style="font-size:19px">${esc(coverage)}</strong><span>収録している受理年（${esc(yearCount)}年分）</span></div>
         </div>
 
         <h2 class="section-title">案件をさがす</h2>
@@ -395,6 +395,11 @@
     /* ---------- 個別表示 ---------- */
 
     function historyHtml(item) {
+      if (!item.history.length) {
+        return `<p class="petition__meta">この案件は公式の請願・陳情ページから収録しています。
+          定例会ごとの審査経過は、会議録ページの年データが平成30年からのため収録していません。
+          上の受理年月日・付託年月日・議決結果は公式ページの掲載内容です。</p>`;
+      }
       return `<div class="timeline">${item.history.map((entry) => {
         const meeting = meetingOf(entry.meetingId);
         const links = (meeting.links || []).map((link) => linkPill(link, "pill--seigan")).join("");

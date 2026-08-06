@@ -389,11 +389,43 @@ OFFICIAL_FIELDS = (
 )
 
 
-def committee_name(value: str) -> str:
+def is_subsequence(short: str, long: str) -> bool:
+    """`short` の文字が `long` に同じ順で現れるか（略称と正式名称の照合用）。"""
+    position = 0
+    for char in short:
+        position = long.find(char, position)
+        if position < 0:
+            return False
+        position += 1
+    return True
+
+
+def build_committee_names(references: list[dict]) -> dict[str, str]:
+    """公式ページの略称を、会議録に出てくる正式な委員会名へ対応づける表を作る。
+
+    公式ページの付託委員会は「行革」「議運」「オリパラ」のような略称で、
+    会議録側は「行財政改革特別委員会」「議会運営委員会」のような正式名称。
+    会議録に実在する名前だけを候補にし、略称の文字が同じ順で現れる名前が
+    1つに定まるときだけ対応づける（推測で名前を作らない）。
+    """
+    full_names = sorted({r["committee"] for r in references if r.get("committee")})
+    mapping: dict[str, str] = {}
+    for name in full_names:
+        mapping[name] = name
+    return mapping
+
+
+def committee_name(value: str, known: dict[str, str] | None = None) -> str:
     """公式ページの表記（例:「文教」）を委員会名（例:「文教委員会」）にそろえる。"""
     value = (value or "").strip()
     if not value:
         return ""
+    if known:
+        if value in known:
+            return known[value]
+        matches = [name for name in known if is_subsequence(value, name)]
+        if len(matches) == 1:
+            return matches[0]
     return value if value.endswith("委員会") else f"{value}委員会"
 
 
@@ -411,6 +443,7 @@ def build_items(records: list[dict], references: list[dict], official: list[dict
     for reference in references:
         references_by_key.setdefault(reference["key"], []).append(reference)
     official_index = official_by_key(official)
+    known_committees = build_committee_names(references)
 
     grouped: "OrderedDict[str, dict]" = OrderedDict()
     for record in records:
@@ -504,7 +537,7 @@ def build_items(records: list[dict], references: list[dict], official: list[dict
             item["status"] = result_status(item["latestResult"], official_data.get("reference", False))
             item["meetingCount"] = 0
             item["yearIds"] = []
-            referred = committee_name(official_data.get("committee", ""))
+            referred = committee_name(official_data.get("committee", ""), known_committees)
             item["committeeNames"] = [referred] if referred else []
             item["exchangeCount"] = 0
             item.pop("key", None)
@@ -555,7 +588,7 @@ def build_items(records: list[dict], references: list[dict], official: list[dict
         } for c in committees]
         # 委員会名は、会議録で質疑が見つかった委員会と、公式ページの付託先を合わせる
         names = {c["committee"] for c in committees if c.get("committee")}
-        referred = committee_name(item.get("official", {}).get("committee", ""))
+        referred = committee_name(item.get("official", {}).get("committee", ""), known_committees)
         if referred:
             names.add(referred)
         item["committeeNames"] = sorted(names)
