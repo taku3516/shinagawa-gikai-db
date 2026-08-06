@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#1f4e79" />
   <title>品川区の選挙アーカイブ | 品川区議会DB</title>
   <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
   <style>
     :root {
       --c-main: #1f4e79; --c-main-dark: #173a5e; --c-bg: #f4f1e8;
@@ -64,8 +65,9 @@
     }
     #candidate-search { width: min(100%, 240px); }
     #hit-count { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
-    .election-list { display: grid; gap: 16px; }
+    .election-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
     .election-card {
+      min-width: 0;
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main);
       border-radius: 3px; background: var(--c-card);
     }
@@ -122,11 +124,16 @@
       .hero { padding-top: 28px; }
       .controls { align-items: stretch; }
       .controls label { width: 100%; margin-bottom: -8px; }
-      select { width: 100%; }
+      /* iOSで入力・選択時に画面が自動で拡大しないよう16pxにする */
+      select, #candidate-search { width: 100%; font-size: 16px; }
       .reference-panel { padding: 16px; }
       .reference-list a { align-items: flex-start; flex-direction: column; }
       .summary-meta { margin-left: 0; }
       .election-card summary, .election-body { padding-left: 14px; padding-right: 14px; }
+      /* 表の横スクロール量を減らす */
+      table { min-width: 560px; font-size: 12px; }
+      th, td { padding: 8px 7px; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
@@ -323,7 +330,8 @@
     function candidatesHtml(election, matcher) {
       const candidates = (election.candidates || []).filter(candidate => !matcher || !matcher.active || matcher.test(candidate));
       if (!candidates.length) return `<p><span class="tag">候補者・得票情報準備中</span></p>`;
-      return `<div class="table-wrap"><table>
+      return `<p class="table-scroll-hint">← 表は横にスクロールできます →</p>
+      <div class="table-wrap"><table>
         <caption class="visually-hidden">${esc(election.title)}の候補者別結果</caption>
         <thead><tr><th>順位</th><th>当落</th><th>候補者</th><th>党派</th><th>得票数</th><th>得票率</th></tr></thead>
         <tbody>${candidates.map((candidate) => `<tr>
@@ -340,7 +348,9 @@
     function proportionalResultsHtml(election) {
       const results = election.proportionalResults || [];
       if (!results.length) return "";
-      return `<h3>比例代表の品川区得票</h3><div class="table-wrap"><table>
+      return `<h3>比例代表の品川区得票</h3>
+      <p class="table-scroll-hint">← 表は横にスクロールできます →</p>
+      <div class="table-wrap"><table>
         <caption class="visually-hidden">${esc(election.title)}の比例代表結果</caption>
         <thead><tr><th>順位</th><th>政党等</th><th>得票数</th><th>得票率</th></tr></thead>
         <tbody>${results.map((result, index) => `<tr>

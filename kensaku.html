@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#1f4e79" />
   <title>横断検索 | 品川区議会DB</title>
   <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
   <style>
     :root {
       --c-main: #1f4e79;
@@ -319,7 +320,8 @@
       .hero { padding-top: 28px; }
       .search-panel-wrap { position: relative; }
       .query-row { display: grid; grid-template-columns: 1fr; }
-      #sort-order { width: 100%; }
+      /* iOSで選択欄に触れたときに画面が自動で拡大しないよう16pxにする */
+      #sort-order, .filter-field select { width: 100%; font-size: 16px; }
       .filter-grid { grid-template-columns: 1fr; }
       .filter-actions { grid-column: auto; }
       .qa-summary { grid-template-columns: 1fr; gap: 2px; }

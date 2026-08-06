@@ -106,7 +106,95 @@
   letter-spacing: 0.02em;
 }
 
+/* ===== スマートフォン用の開閉メニュー（640px以下でのみ表示） ===== */
+.site-nav-toggle {
+  display: none;
+}
+
 @media (max-width: 640px) {
+  .site-nav-toggle {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 16px;
+    border: 1px solid var(--c-main-dark, #173a5e);
+    border-radius: 4px;
+    background: var(--c-main-dark, #173a5e);
+    padding: 8px 12px;
+    color: #ffffff;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .site-nav-toggle__bars {
+    position: relative;
+    flex: 0 0 auto;
+    width: 17px;
+    height: 2px;
+    background: currentColor;
+    box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
+  }
+
+  .site-nav-toggle__current {
+    margin-left: auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.22);
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .site-nav-toggle__chevron {
+    flex: 0 0 auto;
+    margin-left: 2px;
+    border-top: 6px solid currentColor;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    transition: transform 0.15s ease;
+  }
+
+  /* 現在地バッジが無いページでは矢印を右端に寄せる */
+  .site-nav-toggle__text + .site-nav-toggle__chevron {
+    margin-left: auto;
+  }
+
+  .site-nav-toggle[aria-expanded="true"] .site-nav-toggle__chevron {
+    transform: rotate(180deg);
+  }
+
+  .site-nav[data-nav-open="false"] > .hero-links {
+    display: none;
+  }
+
+  .site-nav[data-nav-open="true"] > .hero-links {
+    max-height: 66vh;
+    overflow-y: auto;
+    margin-top: 10px;
+    border: 1px solid var(--c-border, #b9c3cc);
+    border-radius: 4px;
+    padding: 10px;
+    background: var(--c-card, #fffdf8);
+  }
+
+  /* 折りたたみメニュー内は縦一列にして、指で押しやすくする */
+  .site-nav .hero-links-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .site-nav .hero-links-row .pill {
+    justify-content: flex-start;
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
   .hero-links-row .pill {
     padding: 7px 10px;
     font-size: 13px;

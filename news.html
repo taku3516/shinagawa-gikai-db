@@ -7,6 +7,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231f4e79'/%3E%3Cpath d='M8 9h16v3H8zm0 6h16v3H8zm0 6h11v3H8z' fill='white'/%3E%3C/svg%3E" />
   <title>品川区ニュース | 品川区議会DB</title>
   <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
   <style>
     :root {
       --main: #1f4e79; --main-dark: #173a5e; --main-pale: #e7eef4;
@@ -102,6 +103,8 @@
       display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 18px;
       border: 1px solid var(--border); border-radius: 4px; background: var(--card); padding: 18px;
     }
+    /* 長い見出しやURLがあってもカードが横にはみ出さないようにする */
+    .news-card > * { min-width: 0; }
     .news-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-bottom: 8px; color: var(--soft); font-size: 12px; font-weight: 700; }
     .source { color: var(--main-dark); }
     .news-card h3 { margin: 0; font-size: 18px; line-height: 1.55; }
@@ -143,6 +146,14 @@
       padding: 6px 11px; color: var(--main-dark); font-weight: 900; cursor: pointer; white-space: nowrap;
     }
     footer { border-top: 1px solid var(--rule); background: var(--card); padding: 24px 0; color: var(--soft); font-size: 12px; line-height: 1.7; }
+    /* 横向きのスマートフォンや小さめのタブレットでは、絞り込み欄が1行に収まらず
+       ページ全体が横スクロールしてしまうため、2段に折り返す */
+    @media (max-width: 940px) {
+      .controls { grid-template-columns: 1fr 1fr; }
+      .controls input { grid-column: 1 / -1; }
+      .view-switch { grid-column: 1 / -1; justify-content: stretch; }
+      .view-button { flex: 1; padding-inline: 8px; }
+    }
     @media (max-width: 760px) {
       .container { width: min(100% - 22px, 1080px); }
       .controls { grid-template-columns: 1fr 1fr; }
@@ -153,9 +164,11 @@
       .view-button { flex: 1; padding-inline: 8px; }
       .sync-panel { grid-template-columns: 1fr; }
       .sync-actions { justify-content: flex-start; }
-      .news-card { padding: 15px; gap: 10px; }
+      /* 画面が狭いときは1列にして、操作ボタンを本文の下に横並びで置く */
+      .news-card { grid-template-columns: 1fr; padding: 15px; gap: 10px; }
       .news-card h3 { font-size: 16px; }
-      .news-actions { align-items: center; }
+      .news-actions { flex-direction: row; align-items: center; justify-content: flex-end; gap: 10px; }
+      .star-button { align-self: auto; }
       .hide-button { min-width: 68px; min-height: 44px; }
       .source-list { columns: 1; }
     }
