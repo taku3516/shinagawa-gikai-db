@@ -50,7 +50,9 @@ KIND_PREFIX = {"請願": "s", "陳情": "c"}
 
 # 議決結果の分類。公式ページの表記をそのまま残しつつ、一覧の絞り込み用に束ねる。
 CLOSED_RESULTS = ("採択", "不採択", "趣旨採択", "取り下げ", "撤回", "みなし")
-PENDING_RESULTS = ("継続審査", "審査未了", "閉会中の継続審査")
+PENDING_RESULTS = ("継続審査", "閉会中の継続審査")
+# 議員の任期満了などで結論が出ないまま終わったもの。継続審査とも議決とも違う。
+UNFINISHED_RESULTS = ("審議未了", "審査未了")
 
 
 def compact(value: str) -> str:
@@ -143,10 +145,12 @@ def number_label(era: str, year_number: int, kind: str, number: int, branch: str
 
 
 def result_status(result: str, reference: bool = False) -> str:
-    """議決結果を「審議終了 / 継続審査 / 参考送付 / 結果未収録」に束ねる。"""
+    """議決結果を「審議終了 / 継続審査 / 審議未了 / 参考送付 / 結果未収録」に束ねる。"""
     if not result:
         # 参考送付は委員会に付託されず議決もされない。未収録とは分けて扱う。
         return "参考送付" if reference else "結果未収録"
+    if any(word in result for word in UNFINISHED_RESULTS):
+        return "審議未了"
     if any(word in result for word in PENDING_RESULTS):
         return "継続審査"
     if any(word in result for word in CLOSED_RESULTS):

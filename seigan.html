@@ -194,6 +194,12 @@
       return result || "結果未収録";
     }
 
+    // 案件そのものの結果表示。議決されていない案件（委員会への参考送付など）は、
+    // 未収録ではなくその扱いを示す。
+    function itemResultLabel(item) {
+      return item.latestResult || item.status || "結果未収録";
+    }
+
     function linkPill(link, extraClass) {
       const isExternal = /^https?:/i.test(link.url || "");
       const target = isExternal ? ' target="_blank" rel="noopener"' : "";
@@ -215,7 +221,7 @@
           <div class="petition__head">
             <span class="petition__number">${esc(item.numberLabel)}</span>
             <span class="tag tag--kind">${esc(item.kind)}</span>
-            <span class="tag" data-result="${esc(item.latestResult)}">${esc(resultLabel(item.latestResult))}</span>
+            <span class="tag" data-result="${esc(itemResultLabel(item))}">${esc(itemResultLabel(item))}</span>
           </div>
           <h3><a href="#${esc(item.id)}">${esc(item.title)}</a></h3>
           <p class="petition__meta">${meta.join("<br />")}</p>
@@ -243,7 +249,7 @@
     function matches(item, filters) {
       if (filters.kind && item.kind !== filters.kind) return false;
       if (filters.year && item.acceptedYear !== filters.year) return false;
-      if (filters.result && resultLabel(item.latestResult) !== filters.result) return false;
+      if (filters.result && itemResultLabel(item) !== filters.result) return false;
       if (filters.committee && !item.committeeNames.includes(filters.committee)) return false;
       if (filters.q) {
         const key = searchKey(filters.q);
@@ -263,7 +269,7 @@
     function renderList() {
       const filters = currentFilters();
       const years = [...new Set(DATA.items.map((i) => i.acceptedYear).filter(Boolean))];
-      const results = [...new Set(DATA.items.map((i) => resultLabel(i.latestResult)))];
+      const results = [...new Set(DATA.items.map(itemResultLabel))];
       const committees = [...new Set(DATA.items.flatMap((i) => i.committeeNames))].sort();
       const hits = DATA.items.filter((item) => matches(item, filters));
       const visible = hits.slice(0, shownCount);
@@ -452,7 +458,7 @@
           <div class="detail__head">
             <span class="petition__number">${esc(item.numberLabel)}</span>
             <span class="tag tag--kind">${esc(item.kind)}</span>
-            <span class="tag" data-result="${esc(item.latestResult)}">${esc(resultLabel(item.latestResult))}</span>
+            <span class="tag" data-result="${esc(itemResultLabel(item))}">${esc(itemResultLabel(item))}</span>
           </div>
           <h2>${esc(item.title)}</h2>
           <dl class="facts">
@@ -471,7 +477,7 @@
             ${official.note ? `<dt>備考</dt><dd>${esc(official.note)}</dd>` : ""}
             ${meetingNames.length
               ? `<dt>付託された定例会</dt><dd>${esc(meetingNames.join(" → "))}</dd>
-                 <dt>最新の議決結果</dt><dd>${esc(resultLabel(item.latestResult))}（${esc(item.latestMeetingLabel)}）</dd>`
+                 <dt>最新の議決結果</dt><dd>${esc(itemResultLabel(item))}（${esc(item.latestMeetingLabel)}）</dd>`
               : ""}
             <dt>審査した委員会</dt><dd>${esc(item.committeeNames.join("・") || "収録データからは特定できていません")}</dd>
           </dl>
