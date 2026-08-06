@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-06T10:28:49.681654Z",
+  "generatedAt": "2026-08-06T12:51:14.040722Z",
   "items": [
     {
       "id": "3f4df165a67e1881fcc1",
@@ -21,6 +21,24 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 16
+    },
+    {
+      "id": "3b094fa0f9b03735d26e",
+      "title": "チエルネクサス、LMS『GLEXA』for Enterprise をバージョンアップし、 「AIレポート自動添削・採点機能」新搭載",
+      "summary": "[チエル株式会社] 学校教育向けにICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）のグループ会社である、チエルネクサス株式会社（本社：東京都品川区、代表取締役：品田 淳智）は2026年10月、LMS...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000183.000067516.html",
+      "publishedAt": "2026-08-06T08:45:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-06T12:50:54.345022Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "a10f0f6d3c4993e5d267",
@@ -5006,9 +5024,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 3198, column 28"
+      "status": "ok",
+      "scanned": 598,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
