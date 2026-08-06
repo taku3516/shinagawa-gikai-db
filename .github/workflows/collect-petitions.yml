@@ -1,0 +1,76 @@
+name: 請願・陳情を収集
+
+# 開発環境から品川区議会公式サイトへ到達できない場合があるため、
+# 公式サイトへの取得はGitHub Actions側で行う（ニュース収集と同じ考え方）。
+#
+# mode の意味:
+#   inspect … ページ構造を実行ログに書き出すだけ（ファイルは変更しない）
+#   write   … 取得結果をデータファイルへ書き出し、更新があればコミットする
+#
+# 作業用ブランチ（claude/**）へ収集スクリプトを push したときは、
+# マージ前に取得を確かめられるよう inspect で自動実行する。
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "inspect＝ページ構造をログに出す / write＝取得結果を書き出す"
+        default: inspect
+        type: choice
+        options:
+          - inspect
+          - write
+      follow:
+        description: "inspectで辿るリンク先の数"
+        default: "3"
+        type: string
+  push:
+    branches:
+      - "claude/**"
+    paths:
+      - "scripts/fetch_petitions.py"
+      - ".github/workflows/collect-petitions.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-shinagawa-petitions
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      MODE: ${{ inputs.mode || 'inspect' }}
+      FOLLOW: ${{ inputs.follow || '3' }}
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v6
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: 公式ページの構造を調べる
+        if: env.MODE == 'inspect'
+        run: python scripts/fetch_petitions.py --inspect --follow "$FOLLOW"
+
+      - name: 請願・陳情を取得する
+        if: env.MODE == 'write'
+        run: python scripts/fetch_petitions.py --write
+
+      - name: 取得結果に更新があれば保存
+        if: env.MODE == 'write'
+        run: |
+          if git diff --quiet -- data/; then
+            echo "更新はありません"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "請願・陳情の公開情報を自動更新"
+          git push
