@@ -201,6 +201,9 @@ CELL_NUMBER_RE = re.compile(r"第\s*(\d{1,3})(?:-(\d{1,2}))?\s*号")
 # 4つの日付が1つのセルにまとまっているため、ラベルで切り分ける
 DATE_LABELS = ("受理年月日", "付託年月日", "委員会採決年月日", "本会議採決年月日")
 DATE_SPLIT_RE = re.compile(r"(" + "|".join(DATE_LABELS) + r")\s*[：:]")
+# 和暦の日付（公式ページは「令和 8年 2月10日」のように空白が入ることがある）
+JP_DATE_RE = re.compile(r"(平成|令和)\s*(\d{1,2})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日")
+ERA_BASE = {"平成": 1988, "令和": 2018}
 
 
 def strip_label(value: str) -> str:
@@ -211,13 +214,52 @@ def strip_label(value: str) -> str:
     return re.sub(r"^[^：:]{1,12}[：:]\s*", "", value).strip()
 
 
+def normalize_date(value: str) -> str:
+    """「令和 8年 2月10日」のような表記の空白を落とす。"""
+    match = JP_DATE_RE.search(value)
+    if not match:
+        return ""
+    era, year, month, day = match.groups()
+    return f"{era}{int(year)}年{int(month)}月{int(day)}日"
+
+
+def date_to_iso(value: str) -> str:
+    """和暦の日付を西暦（YYYY-MM-DD）にする。読めなければ空文字。"""
+    match = JP_DATE_RE.search(value)
+    if not match:
+        return ""
+    era, year, month, day = match.groups()
+    return f"{ERA_BASE[era] + int(year):04d}-{int(month):02d}-{int(day):02d}"
+
+
 def split_labeled(value: str) -> dict[str, str]:
-    """「受理年月日：… 付託年月日：…」の形をラベルごとに分ける。"""
+    """4つの日付が入った1つのセルを、ラベルごとに分ける。
+
+    公式ページのこのセルは「受理年月日： 付託年月日： 委員会採決年月日：
+    本会議採決年月日： 令和 8年 2月10日 令和 8年 2月20日 …」のように、
+    ラベルが先にすべて並び、そのあとに日付が同じ順で並ぶ。日付は途中で
+    途切れる（継続審査で採決がまだ、など）。
+
+    ラベルと値が交互に並ぶ書き方に変わっても読めるよう、両方に対応する。
+    """
     parts = DATE_SPLIT_RE.split(value)
-    result: dict[str, str] = {}
-    for index in range(1, len(parts) - 1, 2):
-        result[parts[index]] = parts[index + 1].strip(" 　")
-    return result
+    labels = [parts[index] for index in range(1, len(parts), 2)]
+    segments = [parts[index] for index in range(2, len(parts) + 1, 2)]
+    if not labels:
+        return {}
+
+    # ラベルと値が交互（ラベル直後に日付がある）の場合
+    if any(JP_DATE_RE.search(segment) for segment in segments[:-1]):
+        return {
+            label: normalize_date(segment)
+            for label, segment in zip(labels, segments)
+            if JP_DATE_RE.search(segment)
+        }
+
+    # ラベルがすべて先に並び、そのあとに日付が同じ順で並ぶ場合
+    tail = segments[-1] if segments else ""
+    dates = [normalize_date(match.group(0)) for match in JP_DATE_RE.finditer(tail)]
+    return {label: date for label, date in zip(labels, dates)}
 
 
 def year_pages(index_url: str, markup: str) -> list[dict]:
@@ -279,6 +321,7 @@ def parse_year_page(page: dict, markup: str) -> list[dict]:
                 "title": values.get("件名", ""),
                 "committee": values.get("付託委員会", ""),
                 "receivedDate": dates.get("受理年月日", ""),
+                "receivedDateIso": date_to_iso(dates.get("受理年月日", "")),
                 "referredDate": dates.get("付託年月日", ""),
                 "committeeVoteDate": dates.get("委員会採決年月日", ""),
                 "plenaryVoteDate": dates.get("本会議採決年月日", ""),
