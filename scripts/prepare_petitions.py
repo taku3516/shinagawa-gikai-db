@@ -29,6 +29,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUT_PATH = DATA / "petitions.js"
+OFFICIAL_PATH = DATA / "petitions-official.js"
 LEDGER_PATH = ROOT / "docs" / "petition-inventory.md"
 
 DECODER = json.JSONDecoder()
@@ -262,6 +263,66 @@ def collect_committee_references(year_id: str) -> list[dict]:
     return references
 
 
+def load_official() -> list[dict]:
+    """公式サイトから取得した情報（scripts/fetch_petitions.py の出力）を読む。
+
+    ファイルが無い場合は空で返す。GitHub Actions で収集する前でも、年データだけで
+    台帳を作れるようにするため。
+    """
+    if not OFFICIAL_PATH.exists():
+        return []
+    items: list[dict] = []
+    for line in OFFICIAL_PATH.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip().rstrip(",")
+        if stripped.startswith("{") and stripped.endswith("}"):
+            try:
+                items.append(json.loads(stripped))
+            except json.JSONDecodeError:
+                continue
+    return items
+
+
+def official_by_key(official: list[dict]) -> dict[str, dict]:
+    return {
+        petition_key(item["era"], item["eraYear"], item["kind"], item["number"], item["branch"]): item
+        for item in official
+    }
+
+
+def resolve_era_from_official(records: list[dict], official: list[dict]) -> int:
+    """元号年が欠けた行を、公式ページの一覧と件名が一致する場合に補う。
+
+    公式ページは受理番号と件名を並べて掲載しているため、委員会会議録より確実。
+    """
+    by_kind_number: dict[tuple[str, int, str | None], list[dict]] = {}
+    for item in official:
+        by_kind_number.setdefault((item["kind"], item["number"], item["branch"]), []).append(item)
+
+    resolved = 0
+    for record in records:
+        if record["era"]:
+            continue
+        candidates = by_kind_number.get((record["kind"], record["number"], record["branch"]), [])
+        key = title_key(record["title"])
+        matched = [item for item in candidates if title_key(item.get("title", "")) == key]
+        if len(matched) != 1:
+            # 件名が完全一致しない場合は、先頭12文字での一致まで許す（表記ゆれ対策）
+            matched = [
+                item for item in candidates
+                if key[:12] and title_key(item.get("title", "")).startswith(key[:12])
+            ]
+        if len({(item["era"], item["eraYear"]) for item in matched}) != 1:
+            continue
+        record["era"] = matched[0]["era"]
+        record["eraYear"] = matched[0]["eraYear"]
+        record["note"] = " ".join(filter(None, [
+            record.get("note", ""),
+            "受理年は公式ページの一覧から補いました。",
+        ])).strip()
+        resolved += 1
+    return resolved
+
+
 def resolve_missing_era(records: list[dict], references: list[dict]) -> int:
     """元号年が欠けた行を、委員会の議題名から一意に決まる場合だけ補う。"""
     by_kind_number: dict[tuple[str, int, str | None], list[dict]] = {}
@@ -320,11 +381,26 @@ def build_meetings(records: list[dict]) -> "OrderedDict[str, dict]":
     return meetings
 
 
-def build_items(records: list[dict], references: list[dict]) -> list[dict]:
-    """受理番号で名寄せし、審査経過と委員会審査を持つ案件の一覧にする。"""
+OFFICIAL_FIELDS = (
+    "committee", "receivedDate", "receivedDateIso", "referredDate",
+    "committeeVoteDate", "plenaryVoteDate", "committeeResult", "plenaryResult", "note",
+)
+
+
+def official_block(item: dict) -> dict:
+    """公式ページ由来の項目だけを取り出す（空の項目は落とす）。"""
+    block = {field: item.get(field, "") for field in OFFICIAL_FIELDS if item.get(field)}
+    if item.get("sourceUrl"):
+        block["url"] = item["sourceUrl"]
+    return block
+
+
+def build_items(records: list[dict], references: list[dict], official: list[dict]) -> list[dict]:
+    """受理番号で名寄せし、審査経過・委員会審査・公式ページの情報を持つ一覧にする。"""
     references_by_key: dict[str, list[dict]] = {}
     for reference in references:
         references_by_key.setdefault(reference["key"], []).append(reference)
+    official_index = official_by_key(official)
 
     grouped: "OrderedDict[str, dict]" = OrderedDict()
     for record in records:
@@ -379,8 +455,49 @@ def build_items(records: list[dict], references: list[dict]) -> list[dict]:
         if count:
             item["id"] = f"{base_id}-{count + 1}"
 
+    # 公式ページにしかない案件（年データが平成30年からのため、平成27〜29年など）を足す
+    known_keys = set(grouped.keys())
+    for item in official:
+        key = petition_key(item["era"], item["eraYear"], item["kind"], item["number"], item["branch"])
+        if key in known_keys:
+            continue
+        grouped[key] = {
+            "id": petition_id(item["era"], item["eraYear"], item["kind"], item["number"], item["branch"]),
+            "key": key,
+            "kind": item["kind"],
+            "number": item["number"],
+            "branch": item["branch"],
+            "acceptedYear": era_label(item["era"], item["eraYear"]),
+            "numberLabel": number_label(item["era"], item["eraYear"], item["kind"], item["number"], item["branch"]),
+            "sortYear": western_year(item["era"], item["eraYear"]),
+            "title": item.get("title", ""),
+            "history": [],
+            "committees": [],
+            "notes": ["この案件は公式ページの一覧から収録しています。定例会ごとの審査経過は未収録です。"],
+        }
+
     for item in grouped.values():
         item["history"].sort(key=lambda h: (h["yearId"], h["meetingOrder"]))
+        official_item = official_index.get(item.get("key", ""))
+        if official_item:
+            item["official"] = official_block(official_item)
+            if not item["title"]:
+                item["title"] = official_item.get("title", "")
+        if not item["history"]:
+            # 公式ページだけの案件。定例会ごとの記録がないため、公式の議決結果を使う。
+            official_data = item.get("official", {})
+            item["firstYearId"] = ""
+            item["firstMeetingId"] = ""
+            item["firstMeetingLabel"] = official_data.get("referredDate", "") or "公式ページのみ"
+            item["latestMeetingLabel"] = official_data.get("plenaryVoteDate", "") or "公式ページのみ"
+            item["latestResult"] = official_data.get("plenaryResult") or official_data.get("committeeResult") or ""
+            item["status"] = result_status(item["latestResult"])
+            item["meetingCount"] = 0
+            item["yearIds"] = []
+            item["committeeNames"] = [official_data["committee"]] if official_data.get("committee") else []
+            item["exchangeCount"] = 0
+            item.pop("key", None)
+            continue
         first = item["history"][0]
         last = item["history"][-1]
         # 件名は最初に付託された定例会の表記を採る（公式ページの表記ゆれ対策）
@@ -390,7 +507,17 @@ def build_items(records: list[dict], references: list[dict]) -> list[dict]:
         item["firstMeetingLabel"] = first["meetingName"]
         item["latestResult"] = last["result"]
         item["latestMeetingLabel"] = last["meetingName"]
-        item["status"] = result_status(last["result"])
+        if not item["latestResult"]:
+            # 年データの取り込みで議決結果が欠けている行は、公式ページの結果で補う
+            official_data = item.get("official", {})
+            fallback = official_data.get("plenaryResult") or official_data.get("committeeResult") or ""
+            if fallback:
+                item["latestResult"] = fallback
+                item["notes"] = [
+                    note for note in item["notes"]
+                    if "議決結果は未収録" not in note
+                ] + ["議決結果は公式ページの一覧から補いました。"]
+        item["status"] = result_status(item["latestResult"])
         item["meetingCount"] = len(item["history"])
         item["yearIds"] = sorted({entry["yearId"] for entry in item["history"]})
         # 定例会の名前とリンクは meetings 表から引く。件名が定例会ごとに違う場合だけ残す。
@@ -523,6 +650,7 @@ def main() -> None:
     args = parser.parse_args()
 
     site = load_site()
+    official = load_official()
     records: list[dict] = []
     references: list[dict] = []
     dropped: list[dict] = []
@@ -544,9 +672,11 @@ def main() -> None:
     # 年をまたぐ継続審査があるため、年内で決まらなかった行は全年の参照でもう一度試す。
     era_resolved = sum(1 for record in records if "受理年は委員会会議録" in (record.get("note") or ""))
     era_resolved += resolve_missing_era(records, references)
+    # 公式ページの一覧があれば、そちらでも受理年の補完を試みる（委員会会議録より確実）
+    era_resolved += resolve_era_from_official(records, official)
 
     meetings = build_meetings(records)
-    items = build_items(records, references)
+    items = build_items(records, references, official)
 
     result_counts: "OrderedDict[str, int]" = OrderedDict()
     for item in items:
@@ -558,6 +688,8 @@ def main() -> None:
         "withCommittee": sum(1 for item in items if item["committees"]),
         "eraResolved": era_resolved,
         "unresolvedItems": sum(1 for item in items if not item["acceptedYear"]),
+        "withOfficial": sum(1 for item in items if item.get("official")),
+        "officialOnlyItems": sum(1 for item in items if not item["history"]),
         "recordsByYear": records_by_year,
         "resultCounts": result_counts,
         "yearsCovered": sorted(records_by_year.keys(), reverse=True),

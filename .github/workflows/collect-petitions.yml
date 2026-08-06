@@ -68,7 +68,8 @@ jobs:
       - name: 取得結果に更新があれば保存
         if: env.MODE == 'write'
         run: |
-          if git diff --quiet -- data/; then
+          # git diff は未追跡ファイルを見ないため、初回の書き出しも拾えるよう status で判定する
+          if [ -z "$(git status --porcelain -- data/)" ]; then
             echo "更新はありません"
             exit 0
           fi
