@@ -190,6 +190,125 @@ def report_outline(url: str, markup: str, max_tables: int = 8, max_links: int = 
     return outline
 
 
+##############################################################################
+# 年ごとのページ（/petition/NNN.html・/lobbying/NNN.html）の解析
+##############################################################################
+
+# 一覧ページのリンク（例: 「令和8年請願」→ /petition/20047.html）
+YEAR_LINK_RE = re.compile(r"^(平成|令和)(元|\d{1,2})年(請願|陳情)$")
+# 表の番号欄（例: 第1号 / 第48-2号）
+CELL_NUMBER_RE = re.compile(r"第\s*(\d{1,3})(?:-(\d{1,2}))?\s*号")
+# 4つの日付が1つのセルにまとまっているため、ラベルで切り分ける
+DATE_LABELS = ("受理年月日", "付託年月日", "委員会採決年月日", "本会議採決年月日")
+DATE_SPLIT_RE = re.compile(r"(" + "|".join(DATE_LABELS) + r")\s*[：:]")
+
+
+def strip_label(value: str) -> str:
+    """セル先頭の見出しラベル（例: 「件名：」）を落とす。
+
+    公式ページの表は、狭い画面用に各セルへ項目名を埋め込んでいる。
+    """
+    return re.sub(r"^[^：:]{1,12}[：:]\s*", "", value).strip()
+
+
+def split_labeled(value: str) -> dict[str, str]:
+    """「受理年月日：… 付託年月日：…」の形をラベルごとに分ける。"""
+    parts = DATE_SPLIT_RE.split(value)
+    result: dict[str, str] = {}
+    for index in range(1, len(parts) - 1, 2):
+        result[parts[index]] = parts[index + 1].strip(" 　")
+    return result
+
+
+def year_pages(index_url: str, markup: str) -> list[dict]:
+    """一覧ページから、年ごとのページの一覧を作る。"""
+    outline = PageOutline(index_url)
+    outline.feed(markup)
+    pages: list[dict] = []
+    seen = set()
+    for href, label in outline.links:
+        match = YEAR_LINK_RE.match(label.strip())
+        if not match or href in seen:
+            continue
+        if not re.search(r"/(petition|lobbying)/\d+\.html$", href):
+            continue
+        seen.add(href)
+        era, year_text, kind = match.groups()
+        pages.append({
+            "url": href,
+            "label": label.strip(),
+            "kind": kind,
+            "era": era,
+            "eraYear": 1 if year_text == "元" else int(year_text),
+        })
+    return pages
+
+
+def parse_year_page(page: dict, markup: str) -> list[dict]:
+    """年ごとのページの表から、請願・陳情を1件ずつ取り出す。"""
+    outline = PageOutline(page["url"])
+    outline.feed(markup)
+    records: list[dict] = []
+
+    for table in outline.tables:
+        rows = [row for row in table["rows"] if row]
+        if not rows:
+            continue
+        header = [cell.lstrip("＊") for cell in rows[0]]
+        if not any("番号" in cell for cell in header):
+            continue
+        for row in rows[1:]:
+            if any(cell.startswith("＊") for cell in row):
+                continue  # 表の途中に現れる見出し行
+            cells = [strip_label(cell) for cell in row]
+            number_match = CELL_NUMBER_RE.search(cells[0] if cells else "")
+            if not number_match:
+                continue
+            values = dict(zip(header, cells))
+            # 4つの日付は1つのセルにまとまっている。そのセルだけをラベルで切り分ける。
+            date_index = next(
+                (i for i, cell in enumerate(header) if "受理年月日" in cell), None
+            )
+            dates = split_labeled(row[date_index]) if date_index is not None and date_index < len(row) else {}
+            records.append({
+                "kind": page["kind"],
+                "era": page["era"],
+                "eraYear": page["eraYear"],
+                "number": int(number_match.group(1)),
+                "branch": number_match.group(2),
+                "title": values.get("件名", ""),
+                "committee": values.get("付託委員会", ""),
+                "receivedDate": dates.get("受理年月日", ""),
+                "referredDate": dates.get("付託年月日", ""),
+                "committeeVoteDate": dates.get("委員会採決年月日", ""),
+                "plenaryVoteDate": dates.get("本会議採決年月日", ""),
+                "committeeResult": next(
+                    (v for k, v in values.items() if "委員会" in k and "審査" in k), ""
+                ),
+                "plenaryResult": next(
+                    (v for k, v in values.items() if "本会議" in k and "結果" in k), ""
+                ),
+                "note": values.get("備考", ""),
+                "sourceUrl": page["url"],
+            })
+    return records
+
+
+def dump_rows(page: dict, markup: str, limit: int) -> None:
+    """表のセルを省略せずに書き出す（解析処理を確かめるため）。"""
+    outline = PageOutline(page["url"])
+    outline.feed(markup)
+    print(f"\n--- {page['label']} の生セル（先頭{limit}行） {page['url']} ---")
+    for table in outline.tables:
+        rows = [row for row in table["rows"] if row]
+        if not rows or not any("番号" in cell for cell in rows[0]):
+            continue
+        for row in rows[:limit + 1]:
+            for index, cell in enumerate(row):
+                print(f"    [{index}] {cell}")
+            print("    " + "-" * 60)
+
+
 def inspect(index_url: str, follow: int) -> None:
     """一覧ページと、そこから辿れるページの構造を書き出す。"""
     print("公式サイトの構造を調べます（ファイルは書き換えません）")
@@ -199,50 +318,93 @@ def inspect(index_url: str, follow: int) -> None:
     if follow <= 0:
         return
 
-    seen = {index_url}
-    targets = []
-    for href, label in outline.links:
-        if href in seen:
-            continue
-        if urlparse(href).hostname not in ALLOWED_HOSTS:
-            continue
-        if not re.search(r"petition|lobbying|chinjo|seigan", href, re.I) and not re.search(r"請願|陳情", label):
-            continue
-        seen.add(href)
-        targets.append(href)
-        if len(targets) >= follow:
-            break
+    pages = year_pages(index_url, markup)
+    print(f"\n\n{'#' * 78}\n# 年ごとのページ {len(pages)}件\n{'#' * 78}")
+    for page in pages:
+        print(f"  {page['label'].ljust(12)} {page['url']}")
 
-    print(f"\n\n{'#' * 78}\n# リンク先 {len(targets)}件の構造\n{'#' * 78}")
-    for href in targets:
+    targets = pages[:follow]
+    print(f"\n\n{'#' * 78}\n# 先頭{len(targets)}件の中身と解析結果\n{'#' * 78}")
+    for page in targets:
         try:
-            report_outline(href, fetch(href), max_tables=5, max_links=20)
+            page_markup = fetch(page["url"])
         except Exception as error:  # 1ページ失敗しても残りを続ける
-            print(f"\n[取得失敗] {href}: {error}")
+            print(f"\n[取得失敗] {page['url']}: {error}")
+            continue
+        dump_rows(page, page_markup, limit=2)
+        records = parse_year_page(page, page_markup)
+        print(f"\n--- {page['label']} の解析結果 {len(records)}件 ---")
+        for record in records[:5]:
+            print("    " + json.dumps(record, ensure_ascii=False))
 
 
-def write_placeholder(index_url: str) -> int:
-    """解析処理が未実装のうちは、取得できたことだけを記録して終わる。
+def era_label(era: str, year_number: int) -> str:
+    return f"{era}元年" if year_number == 1 else f"{era}{year_number}年"
 
-    公式ページの構造を確認したうえで、この関数に抽出処理を実装する。
-    中途半端な推測で `data/petitions.js` を書き換えないよう、別ファイルに出す。
+
+def collect(index_url: str) -> tuple[list[dict], list[dict]]:
+    """一覧ページから年ごとのページを辿り、請願・陳情をすべて取り出す。"""
+    pages = year_pages(index_url, fetch(index_url))
+    if not pages:
+        raise RuntimeError("一覧ページから年ごとのページを見つけられませんでした")
+
+    items: list[dict] = []
+    summaries: list[dict] = []
+    for page in pages:
+        try:
+            records = parse_year_page(page, fetch(page["url"]))
+        except Exception as error:
+            print(f"[取得失敗] {page['label']} {page['url']}: {error}")
+            summaries.append({**{k: page[k] for k in ("label", "url", "kind")}, "count": 0, "error": str(error)})
+            continue
+        for record in records:
+            suffix = f"-{record['branch']}" if record["branch"] else ""
+            record["numberLabel"] = (
+                f"{era_label(record['era'], record['eraYear'])}"
+                f"{record['kind']}第{record['number']}{suffix}号"
+            )
+        items.extend(records)
+        summaries.append({"label": page["label"], "url": page["url"], "kind": page["kind"], "count": len(records)})
+        print(f"  {page['label'].ljust(12)} {len(records):3d}件  {page['url']}")
+    return items, summaries
+
+
+def write(index_url: str) -> int:
+    """取得結果を data/petitions-official.js に書き出す。
+
+    既存の `data/petitions.js` は年データから作っているため、公式ページ由来の
+    情報は別ファイルへ出し、統合は `scripts/prepare_petitions.py` 側で行う。
     """
-    markup = fetch(index_url)
-    outline = PageOutline(index_url)
-    outline.feed(markup)
+    items, summaries = collect(index_url)
+    if not items:
+        print("1件も取り出せませんでした。ページ構造が変わっていないか確認してください。")
+        return 1
+
+    items.sort(key=lambda item: (
+        -(1988 if item["era"] == "平成" else 2018) - item["eraYear"],
+        0 if item["kind"] == "請願" else 1,
+        item["number"],
+        item["branch"] or "",
+    ))
     payload = {
         "generatedAt": date.today().isoformat(),
         "sourceUrl": index_url,
-        "status": "解析処理は未実装です。--inspect の結果を見て実装してください。",
-        "tables": len(outline.tables),
-        "links": len(outline.links),
+        "pages": summaries,
+        "itemCount": len(items),
     }
-    OUT_PATH.write_text(
-        "// 品川区議会公式サイトから取得した請願・陳情の情報（scripts/fetch_petitions.py で生成）\n"
-        f"window.SHINAGAWA_PETITIONS_OFFICIAL = {json.dumps(payload, ensure_ascii=False, indent=2)};\n",
-        encoding="utf-8",
-    )
-    print(f"書き出し: {OUT_PATH.relative_to(ROOT)}（解析処理は未実装）")
+    dumps = lambda value: json.dumps(value, ensure_ascii=False, separators=(",", ":"))
+    lines = [
+        "// 品川区議会公式サイトの請願・陳情ページから取得した情報（scripts/fetch_petitions.py で生成）",
+        "window.SHINAGAWA_PETITIONS_OFFICIAL = {",
+        f"  generatedAt: {dumps(payload['generatedAt'])},",
+        f"  sourceUrl: {dumps(payload['sourceUrl'])},",
+        f"  summary: {dumps(payload)},",
+        "  items: [",
+    ]
+    lines += [f"    {dumps(item)}," for item in items]
+    lines += ["  ]", "};", ""]
+    OUT_PATH.write_text("\n".join(lines), encoding="utf-8")
+    print(f"\n書き出し: {OUT_PATH.relative_to(ROOT)}（{len(items)}件）")
     return 0
 
 
@@ -260,7 +422,7 @@ def main() -> int:
     if args.inspect:
         inspect(args.url, args.follow)
     if args.write:
-        return write_placeholder(args.url)
+        return write(args.url)
     return 0
 
 
