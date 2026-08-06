@@ -454,15 +454,39 @@ def collect(index_url: str) -> tuple[list[dict], list[dict]]:
     return items, summaries
 
 
+def previous_item_count() -> int:
+    """前回書き出した件数を数える。ファイルが無ければ0。"""
+    if not OUT_PATH.exists():
+        return 0
+    return sum(
+        1 for line in OUT_PATH.read_text(encoding="utf-8").splitlines()
+        if line.startswith("    {")
+    )
+
+
 def write(index_url: str) -> int:
     """取得結果を data/petitions-official.js に書き出す。
 
     既存の `data/petitions.js` は年データから作っているため、公式ページ由来の
     情報は別ファイルへ出し、統合は `scripts/prepare_petitions.py` 側で行う。
+
+    定期実行で人が見ていないため、公式ページの作りが変わって取得できなくなった
+    ときに、収録済みのデータを取りこぼした結果で上書きしないようにしている。
     """
     items, summaries = collect(index_url)
     if not items:
         print("1件も取り出せませんでした。ページ構造が変わっていないか確認してください。")
+        return 1
+
+    empty_pages = [s["label"] for s in summaries if not s.get("count")]
+    if empty_pages:
+        print(f"\n1件も取れなかったページ（{len(empty_pages)}件）: {' / '.join(empty_pages)}")
+
+    previous = previous_item_count()
+    if previous and len(items) < previous * 0.9:
+        print(f"\n取得件数が大きく減りました（前回 {previous}件 → 今回 {len(items)}件）。")
+        print("公式ページの作りが変わった可能性があるため、書き出しを中止します。")
+        print("`--inspect` でページ構造を確認してから、解析処理を直してください。")
         return 1
 
     items.sort(key=lambda item: (
