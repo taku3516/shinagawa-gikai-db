@@ -7,10 +7,13 @@ name: 請願・陳情を収集
 #   inspect … ページ構造を実行ログに書き出すだけ（ファイルは変更しない）
 #   write   … 取得結果をデータファイルへ書き出し、更新があればコミットする
 #
-# 作業用ブランチ（claude/**）へ収集スクリプトを push したときは、
-# マージ前に取得を確かめられるよう inspect で自動実行する。
+# 作業用ブランチ（claude/**）へ収集スクリプトを push したときも、
+# マージ前に取得内容を確かめられるよう write で自動実行する。
 
 on:
+  schedule:
+    # 日本時間の毎週月曜 朝5時（請願・陳情は定例会ごとの更新なので週1回で足りる）
+    - cron: "0 20 * * 0"
   workflow_dispatch:
     inputs:
       mode:
@@ -43,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      MODE: ${{ inputs.mode || 'inspect' }}
+      MODE: ${{ inputs.mode || 'write' }}
       FOLLOW: ${{ inputs.follow || '3' }}
     steps:
       - name: リポジトリを取得
