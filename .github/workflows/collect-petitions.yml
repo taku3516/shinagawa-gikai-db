@@ -44,7 +44,9 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # 取得自体は1分ほどで終わるが、この上限には実行待ちの時間も含まれる。
+    # ランナーの割り当てが混み合うと15分では待ちきれずに中断されるため、長めにとる。
+    timeout-minutes: 45
     env:
       MODE: ${{ inputs.mode || 'write' }}
       FOLLOW: ${{ inputs.follow || '3' }}
