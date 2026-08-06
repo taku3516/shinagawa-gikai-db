@@ -387,6 +387,14 @@ OFFICIAL_FIELDS = (
 )
 
 
+def committee_name(value: str) -> str:
+    """公式ページの表記（例:「文教」）を委員会名（例:「文教委員会」）にそろえる。"""
+    value = (value or "").strip()
+    if not value:
+        return ""
+    return value if value.endswith("委員会") else f"{value}委員会"
+
+
 def official_block(item: dict) -> dict:
     """公式ページ由来の項目だけを取り出す（空の項目は落とす）。"""
     block = {field: item.get(field, "") for field in OFFICIAL_FIELDS if item.get(field)}
@@ -494,7 +502,8 @@ def build_items(records: list[dict], references: list[dict], official: list[dict
             item["status"] = result_status(item["latestResult"])
             item["meetingCount"] = 0
             item["yearIds"] = []
-            item["committeeNames"] = [official_data["committee"]] if official_data.get("committee") else []
+            referred = committee_name(official_data.get("committee", ""))
+            item["committeeNames"] = [referred] if referred else []
             item["exchangeCount"] = 0
             item.pop("key", None)
             continue
@@ -540,7 +549,12 @@ def build_items(records: list[dict], references: list[dict], official: list[dict
             "topicTitle": c["topicTitle"],
             "exchanges": c["exchanges"],
         } for c in committees]
-        item["committeeNames"] = sorted({c["committee"] for c in committees if c.get("committee")})
+        # 委員会名は、会議録で質疑が見つかった委員会と、公式ページの付託先を合わせる
+        names = {c["committee"] for c in committees if c.get("committee")}
+        referred = committee_name(item.get("official", {}).get("committee", ""))
+        if referred:
+            names.add(referred)
+        item["committeeNames"] = sorted(names)
         item["exchangeCount"] = sum(c["exchanges"] for c in committees)
         item.pop("key", None)
 

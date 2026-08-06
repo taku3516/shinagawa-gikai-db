@@ -286,11 +286,17 @@ def year_pages(index_url: str, markup: str) -> list[dict]:
     return pages
 
 
-def parse_year_page(page: dict, markup: str) -> list[dict]:
-    """年ごとのページの表から、請願・陳情を1件ずつ取り出す。"""
+def parse_year_page(page: dict, markup: str, verbose: bool = False) -> list[dict]:
+    """年ごとのページの表から、請願・陳情を1件ずつ取り出す。
+
+    `verbose` を立てると、見つけた見出し行と、結果が空になった行の生セルを
+    書き出す。年によって列の作りが違うことがあるため、実行ログで確かめられる
+    ようにしている。
+    """
     outline = PageOutline(page["url"])
     outline.feed(markup)
     records: list[dict] = []
+    unresolved_sample: list[str] | None = None
 
     for table in outline.tables:
         rows = [row for row in table["rows"] if row]
@@ -299,6 +305,8 @@ def parse_year_page(page: dict, markup: str) -> list[dict]:
         header = [cell.lstrip("＊") for cell in rows[0]]
         if not any("番号" in cell for cell in header):
             continue
+        if verbose:
+            print(f"    見出し: {' | '.join(header)}")
         for row in rows[1:]:
             if any(cell.startswith("＊") for cell in row):
                 continue  # 表の途中に現れる見出し行
@@ -334,6 +342,14 @@ def parse_year_page(page: dict, markup: str) -> list[dict]:
                 "note": values.get("備考", ""),
                 "sourceUrl": page["url"],
             })
+            if verbose and unresolved_sample is None and not records[-1]["committeeResult"] \
+                    and not records[-1]["plenaryResult"]:
+                unresolved_sample = list(row)
+
+    if verbose and unresolved_sample:
+        print("    結果が空になった行の生セル:")
+        for index, cell in enumerate(unresolved_sample):
+            print(f"      [{index}] {cell}")
     return records
 
 
@@ -395,7 +411,8 @@ def collect(index_url: str) -> tuple[list[dict], list[dict]]:
     summaries: list[dict] = []
     for page in pages:
         try:
-            records = parse_year_page(page, fetch(page["url"]))
+            print(f"\n  {page['label']}  {page['url']}")
+            records = parse_year_page(page, fetch(page["url"]), verbose=True)
         except Exception as error:
             print(f"[取得失敗] {page['label']} {page['url']}: {error}")
             summaries.append({**{k: page[k] for k in ("label", "url", "kind")}, "count": 0, "error": str(error)})
@@ -407,8 +424,9 @@ def collect(index_url: str) -> tuple[list[dict], list[dict]]:
                 f"{record['kind']}第{record['number']}{suffix}号"
             )
         items.extend(records)
+        blank = sum(1 for r in records if not r["committeeResult"] and not r["plenaryResult"])
         summaries.append({"label": page["label"], "url": page["url"], "kind": page["kind"], "count": len(records)})
-        print(f"  {page['label'].ljust(12)} {len(records):3d}件  {page['url']}")
+        print(f"    → {len(records)}件（うち結果が空 {blank}件）")
     return items, summaries
 
 

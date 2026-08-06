@@ -438,6 +438,7 @@
         });
       });
       const meetingNames = item.history.map((entry) => meetingOf(entry.meetingId).name);
+      const official = item.official || {};
 
       document.getElementById("page-root").innerHTML = `
         <p class="breadcrumb"><a href="seigan.html">← 請願・陳情の一覧へ戻る</a></p>
@@ -452,8 +453,20 @@
             <dt>受理番号</dt><dd>${esc(item.numberLabel)}</dd>
             <dt>種別</dt><dd>${esc(item.kind)}</dd>
             <dt>受理年</dt><dd>${esc(item.acceptedYear || "公式ページの掲載から確定できていません")}</dd>
-            <dt>付託された定例会</dt><dd>${esc(meetingNames.join(" → "))}</dd>
-            <dt>最新の議決結果</dt><dd>${esc(resultLabel(item.latestResult))}（${esc(item.latestMeetingLabel)}）</dd>
+            ${official.receivedDate ? `<dt>受理年月日</dt><dd>${esc(official.receivedDate)}</dd>` : ""}
+            ${official.committee ? `<dt>付託委員会</dt><dd>${esc(official.committee)}委員会</dd>` : ""}
+            ${official.referredDate ? `<dt>付託年月日</dt><dd>${esc(official.referredDate)}</dd>` : ""}
+            ${official.committeeResult
+              ? `<dt>委員会審査</dt><dd>${esc(official.committeeResult)}${official.committeeVoteDate ? `（${esc(official.committeeVoteDate)}採決）` : ""}</dd>`
+              : ""}
+            ${official.plenaryResult
+              ? `<dt>本会議結果</dt><dd>${esc(official.plenaryResult)}${official.plenaryVoteDate ? `（${esc(official.plenaryVoteDate)}採決）` : ""}</dd>`
+              : ""}
+            ${official.note ? `<dt>備考</dt><dd>${esc(official.note)}</dd>` : ""}
+            ${meetingNames.length
+              ? `<dt>付託された定例会</dt><dd>${esc(meetingNames.join(" → "))}</dd>
+                 <dt>最新の議決結果</dt><dd>${esc(resultLabel(item.latestResult))}（${esc(item.latestMeetingLabel)}）</dd>`
+              : ""}
             <dt>審査した委員会</dt><dd>${esc(item.committeeNames.join("・") || "収録データからは特定できていません")}</dd>
           </dl>
           ${item.notes.length ? `<div class="note-box">${item.notes.map(esc).join("<br />")}</div>` : ""}
