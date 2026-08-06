@@ -621,20 +621,23 @@
 
       for (const questioner of yearData.questions || []) {
         const summaries = questioner.qaSummaries || [];
+        const topics = questioner.topics || [];
         const memberAliases = aliasById.get(questioner.memberId) || [];
-        (questioner.topics || []).forEach((topic, topicIndex) => {
-          const normalizedTopic = normalizeText(topic);
-          const summary = summaries.find((item) => normalizeText(item.title) === normalizedTopic) || summaries[topicIndex] || {};
+        // 要約は発言事項（topics）より細かく分かれている場合がある（令和8年など）。
+        // 順番で対応づけると要約がずれ、あふれた分が検索から漏れるため、
+        // 要約がある人は要約1件を1項目として登録し、発言事項は検索語に含める。
+        const entries = summaries.length ? summaries : topics.map((topic) => ({ title: topic }));
+        entries.forEach((entry, entryIndex) => {
           addItem({
-            id: `question-${yearId}-${questioner.meetingId}-${questioner.memberId || topicIndex}-${topicIndex}`,
+            id: `question-${yearId}-${questioner.meetingId}-${questioner.memberId || entryIndex}-${entryIndex}`,
             category: "council",
             type: "質問・答弁",
             year,
-            title: topic,
+            title: entry.title || topics[entryIndex] || "質問",
             meta: [questioner.member, questioner.party, yearData.label, meetingNames[questioner.meetingId], questioner.kind || "一般質問"].filter(Boolean).join("／"),
-            question: summary.question || "",
-            answer: summary.answer || "",
-            primary: [questioner.member, questioner.party, questioner.kind, meetingNames[questioner.meetingId]].concat(memberAliases),
+            question: entry.question || "",
+            answer: entry.answer || "",
+            primary: [questioner.member, questioner.party, questioner.kind, meetingNames[questioner.meetingId]].concat(memberAliases).concat(topics),
             tags: [questioner.kind || "一般質問"],
             links: [{ type: "internal", label: "DB内で質問と答弁を開く", url: `kaigiroku.html#question-${questioner.meetingId}-${questioner.memberId}` }].concat(questioner.links || [])
           });
