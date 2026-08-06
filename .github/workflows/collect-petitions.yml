@@ -67,16 +67,23 @@ jobs:
         if: env.MODE == 'write'
         run: python scripts/fetch_petitions.py --write
 
+      - name: 案件ごとの台帳を作り直す
+        # 取得しただけでは data/petitions-official.js が変わるだけで、
+        # 請願・陳情ページが読む data/petitions.js は古いままになる。
+        # 年データと突き合わせるところまで通しで実行する。
+        if: env.MODE == 'write'
+        run: python scripts/prepare_petitions.py
+
       - name: 取得結果に更新があれば保存
         if: env.MODE == 'write'
         run: |
           # git diff は未追跡ファイルを見ないため、初回の書き出しも拾えるよう status で判定する
-          if [ -z "$(git status --porcelain -- data/)" ]; then
+          if [ -z "$(git status --porcelain -- data/ docs/)" ]; then
             echo "更新はありません"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/ docs/petition-inventory.md
           git commit -m "請願・陳情の公開情報を自動更新"
           git push
