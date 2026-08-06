@@ -19,7 +19,9 @@
   ];
 
   const row2Data = (site && Array.isArray(site.heroRow2)) ? site.heroRow2 : [
+    { type: "official", label: "会議をまとめて見る", url: "kaigi.html" },
     { type: "official", label: "会議録を見る", url: "kaigiroku.html" },
+    { type: "official", label: "意見書・決議等を見る", url: "ikensho.html" },
     { type: "official", label: "請願・陳情を見る", url: "seigan.html" },
     { type: "official", label: "予算・決算を見る", url: "yosan-kessan.html" },
     { type: "official", label: "行政評価を見る", url: "gyosei.html" },
@@ -66,6 +68,8 @@
     if (currentFile === "seijishikin.html" && label === "政治資金収支報告書を見る") return true;
     if (currentFile === "senkyo-shushi.html" && label === "選挙収支報告書を読む") return true;
     if (currentFile === "kaigiroku.html" && label === "会議録を見る") return true;
+    if (currentFile === "kaigi.html" && label === "会議をまとめて見る") return true;
+    if (currentFile === "ikensho.html" && label === "意見書・決議等を見る") return true;
     if (currentFile === "seigan.html" && label === "請願・陳情を見る") return true;
 
     return false;
