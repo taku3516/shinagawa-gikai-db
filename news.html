@@ -98,7 +98,8 @@
     #result-status { color: var(--soft); font-size: 13px; font-weight: 700; }
     .news-list { display: grid; gap: 14px; }
     .news-card {
-      display: grid; grid-template-columns: 1fr auto; gap: 12px 18px;
+      /* 1fr のままだと長い見出しで左列が縮まず、スマホで画面外にはみ出すため minmax(0,1fr) にする */
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 18px;
       border: 1px solid var(--border); border-radius: 4px; background: var(--card); padding: 18px;
     }
     .news-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-bottom: 8px; color: var(--soft); font-size: 12px; font-weight: 700; }
