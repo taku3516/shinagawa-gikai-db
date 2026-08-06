@@ -300,7 +300,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "代表質問",
       "date": "2018-02-21",
-      "memberId": "speaker-01",
+      "memberId": "x-watabe-shigeru",
       "topics": [
         "濱野区長の施政方針をうけて",
         "品川の教育について",
@@ -320,7 +320,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "公明",
       "kind": "代表質問",
       "date": "2018-02-21",
-      "memberId": "speaker-02",
+      "memberId": "hiroki_wakabayashi",
       "topics": [
         "長期基本計画、人口動向及び財政について",
         "区政運営について",
@@ -346,7 +346,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "共産",
       "kind": "代表質問",
       "date": "2018-02-21",
-      "memberId": "speaker-03",
+      "memberId": "x-minami-keiko",
       "topics": [
         "暮らし破壊の安倍政治追随から 住民の命・暮らし守る区政に転換を",
         "自治体の本旨は福祉の増進。２３区で最低の福祉を立て直せ",
@@ -369,7 +369,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "民・無",
       "kind": "代表質問",
       "date": "2018-02-22",
-      "memberId": "speaker-04",
+      "memberId": "x-ishida-shingo",
       "topics": [
         "東京2020オリンピック・パラリンピックについて",
         "防災対策について",
@@ -394,7 +394,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "公明",
       "kind": "一般質問",
       "date": "2018-02-22",
-      "memberId": "speaker-05",
+      "memberId": "saeko_niizuma",
       "topics": [
         "教育について",
         "視覚障がい者及び弱視者の意思疎通支援について",
@@ -414,7 +414,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "共産",
       "kind": "一般質問",
       "date": "2018-02-22",
-      "memberId": "speaker-06",
+      "memberId": "taisaku_ando",
       "topics": [
         "超高層再開発は区民の願いではない。住友や三井など大企業のもうけのためのまち壊しは止めよ",
         "防災と偽り、住民が望まない道路に８８２億円の税金投入。 特定整備路線を推進する区長の責任を問う",
@@ -435,7 +435,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "一般質問",
       "date": "2018-02-22",
-      "memberId": "speaker-07",
+      "memberId": "nobuaki_takahashi",
       "topics": [
         "防災について",
         "心のバリアフリーについて",
@@ -456,7 +456,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "民・無",
       "kind": "一般質問",
       "date": "2018-02-22",
-      "memberId": "speaker-08",
+      "memberId": "yoshihiro_matsunaga",
       "topics": [
         "福祉施策について",
         "防災について",
@@ -477,7 +477,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "公明",
       "kind": "一般質問",
       "date": "2018-02-22",
-      "memberId": "speaker-09",
+      "memberId": "x-asano-hiroyuki",
       "topics": [
         "品川区におけるドローンの活用について",
         "胃がん検診について",
@@ -497,7 +497,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "無所属",
       "kind": "一般質問",
       "date": "2018-02-23",
-      "memberId": "speaker-10",
+      "memberId": "shinji_takahashi",
       "topics": [
         "予算について",
         "教育について",
@@ -519,7 +519,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "共産",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-11",
+      "memberId": "chihiro_ishida",
       "topics": [
         "羽田新ルートの容認、二枚舌、隠ぺいは許されない 計画撤回を国に求める区政に転換を",
         "２３区で最低レベルの障害者福祉 障害者の人権保障へ、施設の増設とサービスの拡充を急げ",
@@ -540,7 +540,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-12",
+      "memberId": "hideo_ishida",
       "topics": [
         "羽田空港について",
         "区内の街づくり・商業・産業・観光振興について",
@@ -563,7 +563,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "民・無",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-13",
+      "memberId": "x-inagawa-takayuki",
       "topics": [
         "中小企業振興策について",
         "中心市街地の渋滞緩和策について",
@@ -584,7 +584,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "公明",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-14",
+      "memberId": "hiroo_akutsu",
       "topics": [
         "総合的ながん対策について",
         "子どもの未来応援施策について",
@@ -605,7 +605,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "無所属",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-15",
+      "memberId": "takako_nishimoto",
       "topics": [
         "品川区の魅力の発見と発信について",
         "人口動向に伴う諸課題について",
@@ -626,7 +626,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-16",
+      "memberId": "x-osawa-shinichi",
       "topics": [
         "人々の暮らしを守る品川区政",
         "子どもの命を守る施策について",
@@ -647,7 +647,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "ネット",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-17",
+      "memberId": "yumiko_yoshida",
       "topics": [
         "法が求める障がい者相談支援のあり方と品川区の障がい児・者支援策について",
         "区の男女共同参画政策における多様な性のあり方への理解促進策と支援策について",
@@ -668,7 +668,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "共産",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-18",
+      "memberId": "x-iinuma-masako",
       "topics": [
         "「認可保育園に預け安心して子育ても仕事もしたい」は当たり前の願い 質・量ともに責任を持つ保育を",
         "庶民のまち武蔵小山を愛する住民・商店を追い出さないで 駅前の超高層再開発、放射２号線道路は中止を",
@@ -689,7 +689,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-19",
+      "memberId": "yukari_yokoyama",
       "topics": [
         "児童虐待防止対策と児童相談所移管について",
         "青少年健全育成と性感染症対策について",
@@ -710,7 +710,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "公明",
       "kind": "一般質問",
       "date": "2018-06-29",
-      "memberId": "speaker-20",
+      "memberId": "yoshihiro_tsukamoto",
       "topics": [
         "安全・安心のまちづくりについて",
         "学校教育について",
@@ -731,7 +731,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "民・無",
       "kind": "一般質問",
       "date": "2018-10-25",
-      "memberId": "speaker-21",
+      "memberId": "yoshihiro_matsunaga",
       "topics": [
         "羽田空港機能強化について",
         "高齢者福祉の充実について",
@@ -752,7 +752,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "公明",
       "kind": "一般質問",
       "date": "2018-10-25",
-      "memberId": "speaker-22",
+      "memberId": "shinichiro_tsuru",
       "topics": [
         "健康施策について",
         "親子が笑顔になる子育て支援策の拡充について",
@@ -772,7 +772,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "共産",
       "kind": "一般質問",
       "date": "2018-10-25",
-      "memberId": "speaker-23",
+      "memberId": "hiroko_suzuki",
       "topics": [
         "区長選で示された民意は羽田新ルート撤回 「安全安心が最優先」と言うなら、国に撤回求めよ",
         "２３区で最低の福祉は抜本的な改善を 林試の森隣の公有地は、特養ホーム、障害者施設、認可保育園の増設を急げ",
@@ -794,7 +794,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "一般質問",
       "date": "2018-10-25",
-      "memberId": "speaker-24",
+      "memberId": "x-suzuki-masumi",
       "topics": [
         "区政運営について",
         "大井町のまちづくりについて",
@@ -815,7 +815,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "無品",
       "kind": "一般質問",
       "date": "2018-10-25",
-      "memberId": "speaker-25",
+      "memberId": "masanori_fujiwara",
       "topics": [
         "今後の政策展開と財政について",
         "待機児童対策について",
@@ -838,7 +838,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "一般質問",
       "date": "2018-10-26",
-      "memberId": "speaker-26",
+      "memberId": "x-suzuki-hiroshi",
       "topics": [
         "品川区の感染症対策について",
         "品川区の健康施策について",
@@ -858,7 +858,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "公明",
       "kind": "一般質問",
       "date": "2018-10-26",
-      "memberId": "speaker-27",
+      "memberId": "x-takeuchi-shinobu",
       "topics": [
         "コミュニティバスの導入について",
         "学校体育館への冷暖房設置など防災対策の強化について",
@@ -879,7 +879,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "無所属",
       "kind": "一般質問",
       "date": "2018-10-26",
-      "memberId": "speaker-28",
+      "memberId": "tsutsui_yosuke",
       "topics": [
         "羽田新飛行ルートについて",
         "オリンピック景気の取り込み策と安全対策について",
@@ -902,7 +902,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "共産",
       "kind": "一般質問",
       "date": "2018-10-26",
-      "memberId": "speaker-29",
+      "memberId": "x-minami-keiko",
       "topics": [
         "コミュニティバスの導入は、区民の移動する権利の保障を目的に",
         "認可保育園の増設で「待機児ゼロ」を 子どもの発達に必須の園庭確保に財政支援を求める",
@@ -923,7 +923,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "一般質問",
       "date": "2018-12-06",
-      "memberId": "speaker-30",
+      "memberId": "x-honda-takenobu",
       "topics": [
         "防災対策について",
         "区政運営について",
@@ -945,7 +945,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "公明",
       "kind": "一般質問",
       "date": "2018-12-06",
-      "memberId": "speaker-31",
+      "memberId": "hiroo_akutsu",
       "topics": [
         "自転車利用の考え方と「区民交通傷害保険」の導入について",
         "環境問題への関心の高まりと具体的な対策について",
@@ -966,7 +966,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "共産",
       "kind": "一般質問",
       "date": "2018-12-06",
-      "memberId": "speaker-32",
+      "memberId": "x-okuno-shinji",
       "topics": [
         "濱野区長の公約違反は許されない 安全安心が最優先と言うのなら羽田新ルート計画に反対を",
         "所得は低いのに保険料はいちばん高い 国保料引き下げは政治の責任",
@@ -987,7 +987,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "民・無",
       "kind": "一般質問",
       "date": "2018-12-06",
-      "memberId": "speaker-33",
+      "memberId": "kengo_kimura",
       "topics": [
         "特殊詐欺から狙われる高齢者を守るには",
         "正常な人口構成で、バランスのとれた品川区を",
@@ -1007,7 +1007,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "無品",
       "kind": "一般質問",
       "date": "2018-12-06",
-      "memberId": "speaker-34",
+      "memberId": "yukihiro_sugai",
       "topics": [
         "欧米の地方議員はボランティアです。消費税を上げるなら議員も区長も 身をきるべきでは",
         "区にも責任がある。首都圏の通勤ラッシュアワー改善せよ"
@@ -1026,7 +1026,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "共産",
       "kind": "一般質問",
       "date": "2018-12-07",
-      "memberId": "speaker-35",
+      "memberId": "toshifumi_nodate",
       "topics": [
         "ゆったり買い物ができ会話が弾む商店街を壊す、 ２９号線と２３階建ての戸越公園駅前１９番地再開発は止めよ",
         "災害関連死は人災 政治の責任で防げ",
@@ -1047,7 +1047,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "一般質問",
       "date": "2018-12-07",
-      "memberId": "speaker-36",
+      "memberId": "yuichi_watanabe",
       "topics": [
         "スポーツのちからで広がる障害者理解と支援の輪について",
         "子どもを守る学校と地域の役割",
@@ -1069,7 +1069,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "公明",
       "kind": "一般質問",
       "date": "2018-12-07",
-      "memberId": "speaker-37",
+      "memberId": "x-asano-hiroyuki",
       "topics": [
         "高校生等の医療費助成について",
         "各種がん検診の充実について",
@@ -1089,7 +1089,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "民・無",
       "kind": "一般質問",
       "date": "2018-12-07",
-      "memberId": "speaker-38",
+      "memberId": "takahiro_okura",
       "topics": [
         "防災対策について",
         "子どもたちを守る取り組みについて",
@@ -1110,7 +1110,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "自・未",
       "kind": "一般質問",
       "date": "2018-12-07",
-      "memberId": "speaker-39",
+      "memberId": "x-ito-masahiro",
       "topics": [
         "品川区の児童虐待対策について",
         "品川区の防災対策について",
@@ -1131,7 +1131,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "ネット",
       "kind": "一般質問",
       "date": "2018-12-07",
-      "memberId": "speaker-40",
+      "memberId": "x-tanaka-sayaka",
       "topics": [
         "子どもの権利に基づく性教育の充実について",
         "しながわネウボラネットワークの産褥期について",
@@ -1152,7 +1152,7 @@ window.SHINAGAWA_DB.years["h30"] = {
       "party": "無所属",
       "kind": "一般質問",
       "date": "2018-12-07",
-      "memberId": "speaker-41",
+      "memberId": "shinji_takahashi",
       "topics": [
         "教育施策について",
         "福祉施策について",
