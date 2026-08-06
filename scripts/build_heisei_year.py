@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 """平成◯年の会議録データを生成する（h29の手順を汎用化）。
 使い方: python3 scripts/build_heisei_year.py 28
+
+議案・請願陳情は公式の本会議資料ページ（hXX_NN/hXX_NNt）から取得し、
+prepare_history.py の解析処理をそのまま使う（要 beautifulsoup4）。
+取得できなかった年は bills/petitions を空のまま出力し、件数を表示する。
 """
 import collections, json, os, re, sys, time, unicodedata, urllib.request, html as H
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from prepare_history import parse_proposals_and_petitions
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = {"User-Agent": "Mozilla/5.0"}
@@ -156,6 +163,38 @@ def fetch_questions(hy, cache):
         time.sleep(0.4)
     return out
 
+def fetch_bills(hy, cache):
+    """本会議資料ページから議案・請願陳情を取得する。
+
+    平成のページはフォルダー名に t/r が付かず、本文ページ名にだけ付く
+    （例: h20_01/h20_01t）。取得や解析に失敗した回は黙って飛ばし、
+    呼び出し元が件数を見て判断できるようにする。
+    """
+    bills, petitions = [], []
+    for n in range(1, 5):
+        mid = f"h{hy}-{n}t"
+        url = f"{BASE}/h{hy}_{n:02d}/h{hy}_{n:02d}t"
+        path = cache / f"bills{n:02d}.html"
+        if path.exists() and path.stat().st_size > 3000:
+            body = path.read_text(encoding="utf-8")
+        else:
+            body = get(url)
+            if body:
+                path.write_text(body, encoding="utf-8")
+                time.sleep(0.35)
+        if not body:
+            print(f"  第{n}回: 資料ページを取得できませんでした（{url}）")
+            continue
+        try:
+            b, p = parse_proposals_and_petitions(body, url, mid)
+        except Exception as exc:
+            print(f"  第{n}回: 解析に失敗しました（{exc}）")
+            continue
+        print(f"  第{n}回: 議案{len(b)}件 請願陳情{len(p)}件")
+        bills.extend(b)
+        petitions.extend(p)
+    return bills, petitions
+
 def extract_qa(docs, cache):
     def flat(i):
         t = re.sub(r'\s+', '', re.sub(r'<[^>]+>', '', re.sub(r'<!--.*?-->', '', (cache / f"doc{i}.html").read_text(encoding="utf-8", errors="replace"), flags=re.S)))
@@ -216,6 +255,8 @@ def main():
     cache.mkdir(parents=True, exist_ok=True)
     docs = fetch_docs(hy, western, cache)
     questions = fetch_questions(hy, cache)
+    print(f"{yid}: 議案・請願陳情を取得中...")
+    bills, petitions = fetch_bills(hy, cache)
     qa = extract_qa(docs, cache)
     people = json.loads((ROOT / "data/people.js").read_text().split("peopleData = ", 1)[1].rstrip().rstrip(";"))
     known = {}
@@ -273,14 +314,28 @@ def main():
     data = {"id": yid, "label": f"平成{hy}年", "updatedAt": "2026-07-30",
             "yearSummary": {"title": f"平成{hy}年（{western}年）の本会議",
                             "text": "第1回から第4回までの定例会について、公式掲載の代表質問・一般質問を全項目掲載し、正式会議録から質問と答弁の要点をまとめています。正確な内容は公式会議録も確認してください。"},
-            "meetings": meetings, "bills": [], "petitions": [], "questions": qout}
+            "meetings": meetings, "bills": bills, "petitions": petitions, "questions": qout}
+    # 議案・請願陳情が取れた会議には、全件掲載であることを示す見出しを添える
+    for m in meetings:
+        bc = sum(1 for b in bills if b["meetingId"] == m["id"])
+        pc = sum(1 for p in petitions if p["meetingId"] == m["id"])
+        if bc:
+            m["billsSection"] = {"title": "提出議案（全件）",
+                                 "lead": f"公式ページ掲載の{bc}件を省略せず掲載しています。"}
+        if pc:
+            m["petitionsSection"] = {"title": "請願・陳情（全件）",
+                                     "lead": f"公式ページ掲載の{pc}件を省略せず掲載しています。"}
     (ROOT / f"data/{yid}.js").write_text(
         f"// 品川区議会DB データファイル（平成{hy}年）\n"
         "window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };\n"
         f'window.SHINAGAWA_DB.years["{yid}"] = ' + json.dumps(data, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
     ok = sum(1 for q in qout for s in q["qaSummaries"] if s["answer"].startswith("区側は"))
     tot = sum(len(q["qaSummaries"]) for q in qout)
-    print(f"{yid}: 会議{len(meetings)} 質問{len(qout)}名 項目{tot} 答弁抽出{ok}({100*ok//max(1,tot)}%)")
+    print(f"{yid}: 会議{len(meetings)} 議案{len(bills)} 請願陳情{len(petitions)} "
+          f"質問{len(qout)}名 項目{tot} 答弁抽出{ok}({100*ok//max(1,tot)}%)")
+    if not bills and not petitions:
+        print("※ 議案・請願陳情は0件です。公式ページの構成が異なる可能性があるため、"
+              f"{BASE}/h{hy}_01/h{hy}_01t を開いて確認してください。")
     print("台帳未登録:", sorted(newcomers) or "なし")
 
 if __name__ == "__main__":
