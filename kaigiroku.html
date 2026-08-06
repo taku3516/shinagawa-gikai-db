@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#1f4e79" />
   <title>会議録を見る | 品川区議会DB</title>
   <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
   <style>
     /* ===== 基調カラー：深い青と生成りを使った、公文書・資料庫を思わせる配色 ===== */
     :root {
@@ -66,6 +67,10 @@
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); font-size: clamp(11px, 1.25vw, 14px); line-height: 1.7;
       white-space: nowrap;
+    }
+    /* 狭い画面では1行に収まらないため折り返す */
+    @media (max-width: 860px) {
+      .disclaimer { white-space: normal; }
     }
     .hero-links { margin: 16px 0 0; }
 
@@ -148,14 +153,14 @@
       outline: 3px solid #f59e0b; outline-offset: 3px;
     }
     .accordion-button:disabled { opacity: 0.45; cursor: default; }
-    .accordion-list { display: grid; gap: 16px; padding: 24px 0 40px; }
+    .accordion-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 24px 0 40px; }
     .meeting-accordion {
       overflow: clip; border: 1px solid var(--c-border); border-radius: 4px;
       background: var(--c-card); scroll-margin-top: 76px;
     }
     .meeting-accordion[open] { box-shadow: 0 3px 10px rgba(23, 33, 43, 0.08); }
     .meeting-accordion > summary {
-      display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center;
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: center;
       min-height: 88px; padding: 18px 20px; cursor: pointer; list-style: none;
     }
     .meeting-accordion > summary::-webkit-details-marker { display: none; }
@@ -320,7 +325,7 @@
     .record-section > summary { display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 13px 16px; cursor: pointer; list-style: none; }
     .record-section > summary::-webkit-details-marker { display: none; }
     .record-section > summary:hover, .record-section[open] > summary { background: var(--c-main-pale); }
-    .record-section__title { flex: 1; }
+    .record-section__title { flex: 1; min-width: 0; }
     .record-section__title strong { display: block; color: var(--c-main-dark); font-size: 18px; }
     .record-section__title span { display: block; margin-top: 3px; color: var(--c-ink-soft); font-size: 13px; line-height: 1.55; }
     .record-section__count { color: var(--c-main-dark); font-size: 13px; font-weight: 900; white-space: nowrap; }
@@ -360,7 +365,7 @@
       .accordion-controls__status { margin-right: auto; }
       .accordion-button { min-height: 44px; padding: 8px 9px; font-size: 12px; }
       .accordion-list { padding-top: 16px; }
-      .meeting-accordion > summary { grid-template-columns: 1fr auto; min-height: 96px; padding: 16px; }
+      .meeting-accordion > summary { grid-template-columns: minmax(0, 1fr) auto; min-height: 96px; padding: 16px; }
       .meeting-accordion__title { font-size: 18px; }
       .meeting-accordion__summary { font-size: 13px; }
       .record-section { margin-top: 22px; }

@@ -86,13 +86,56 @@
   const row1Html = row1Data.map(renderLink).join("\n");
   const row2Html = row2Data.map(renderLink).join("\n");
 
-  const navHtml = `
-    <div class="hero-links">
-      <div class="hero-links-row">${row1Html}</div>
-      <div class="hero-links-row">${row2Html}</div>
-    </div>`;
+  // スマートフォンでは折りたたみメニューにするため、現在地の短い名前を用意する
+  function currentPageLabel() {
+    if (currentFile === "index.html") return "トップ";
+    const hit = row2Data.find(item => isCurrent(item.url, item.label));
+    if (!hit) return "";
+    return hit.label.replace(/を(見る|読む)$/, "");
+  }
 
-  roots.forEach(root => {
-    root.innerHTML = navHtml;
+  const currentLabel = currentPageLabel();
+  const currentHtml = currentLabel
+    ? `<span class="site-nav-toggle__current">表示中：${escapeHtml(currentLabel)}</span>`
+    : "";
+
+  function navHtml(panelId) {
+    return `
+    <div class="site-nav" data-nav-open="false">
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="${panelId}">
+        <span class="site-nav-toggle__bars" aria-hidden="true"></span>
+        <span class="site-nav-toggle__text">メニュー</span>
+        ${currentHtml}
+        <span class="site-nav-toggle__chevron" aria-hidden="true"></span>
+      </button>
+      <div class="hero-links" id="${panelId}">
+        <div class="hero-links-row">${row1Html}</div>
+        <div class="hero-links-row">${row2Html}</div>
+      </div>
+    </div>`;
+  }
+
+  roots.forEach((root, index) => {
+    root.innerHTML = navHtml(`site-nav-panel-${index + 1}`);
+
+    const wrapper = root.querySelector(".site-nav");
+    const toggle = root.querySelector(".site-nav-toggle");
+    if (!wrapper || !toggle) return;
+
+    function setOpen(open) {
+      wrapper.setAttribute("data-nav-open", open ? "true" : "false");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    toggle.addEventListener("click", () => {
+      setOpen(wrapper.getAttribute("data-nav-open") !== "true");
+    });
+
+    wrapper.addEventListener("keydown", event => {
+      if (event.key !== "Escape") return;
+      if (wrapper.getAttribute("data-nav-open") !== "true") return;
+      setOpen(false);
+      toggle.focus();
+    });
   });
 })();

@@ -1,0 +1,67 @@
+/* =========================================================================
+   スマートフォン向けの共通調整
+   - 指で押しやすい大きさ（最小44px）を確保する
+   - iOSで入力欄に触れたときの自動ズームを防ぐ（文字を16px以上にする）
+   - 画像や表が横にはみ出さないようにする
+   画面幅640px以下だけに適用し、パソコン表示は変えない。
+   ========================================================================= */
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* 横にはみ出す表は、指でなめらかにスクロールできるようにする */
+.table-wrap {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* 横スクロールの案内文はスマートフォンでのみ表示する */
+.table-scroll-hint {
+  display: none;
+  margin: 0 0 6px;
+  color: var(--c-ink-soft, #4b5a68);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  /* --- 入力欄・選択欄：iOSの自動ズーム対策（16px未満だと自動で拡大される） --- */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* --- 押しやすさの確保 --- */
+  .breadcrumb {
+    margin-top: 0;
+    margin-bottom: 2px;
+  }
+
+  .breadcrumb a,
+  .back {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  button,
+  summary,
+  a {
+    touch-action: manipulation;
+  }
+
+  .table-scroll-hint {
+    display: block;
+  }
+}
