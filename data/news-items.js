@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-06T01:43:12.551530Z",
+  "generatedAt": "2026-08-06T10:28:49.681654Z",
   "items": [
     {
       "id": "3f4df165a67e1881fcc1",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000001098.000016935.html",
-      "publishedAt": "2026-08-06T01:10:02Z",
+      "publishedAt": "2026-08-06T10:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-05T20:57:53.120243Z",
       "tags": [
@@ -21,6 +21,76 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 16
+    },
+    {
+      "id": "a10f0f6d3c4993e5d267",
+      "title": "五反田の居酒屋店主が日本酒の好み診断サイトを自作 生成AI使って開発",
+      "summary": "日本酒居酒屋「SAKE story（サケストーリー）」（品川区西五反田2）の店主、橋野元樹さんが7月15日、自分好みの日本酒を見つける無料ウェブサービス「日本酒三角チャート診断」をリリースした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5054",
+      "publishedAt": "2026-08-06T07:16:58Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-06T07:35:23.830016Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "76bef4ed614272cea632",
+      "title": "防災の日を前に、vitomと石井スポーツが「アウトドア用品で備える防災」の取り組みを開始",
+      "summary": "[株式会社ｖｉｔｏｍ] 株式会社vitom（本社：東京都品川区、代表取締役：林幹晃）は、ヨドバシグループが展開するスポーツ専門店「石井スポーツ」「アートスポーツ」において、防災の日（9月1日）に向け、「アウトドア用品で防災に備え...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000024.000145411.html",
+      "publishedAt": "2026-08-06T06:45:22Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-06T07:35:23.830016Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "b8d6dd85a424e4a0008c",
+      "title": "ホーチキ、製品に初めてリサイクルプラスチックを採用",
+      "summary": "[ホーチキ株式会社] ホーチキ株式会社（本社：東京都品川区／代表取締役社長執行役員：細井元、以下「当社」）は、当社製品として初めてリサイクルプラスチックを採用した火災受信機の新シリーズ「RPYシリーズ」を、2026年10月に販...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000021.000143222.html",
+      "publishedAt": "2026-08-06T05:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-06T07:35:23.830016Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "b8cd1d793bde3d9d15c3",
+      "title": "八幡神社 例大祭 (鮫洲)",
+      "summary": "2026年8月13日（木）～16日（日）、鮫洲八幡神社 例大祭が行われます。（8月13日は例大祭式典となり神社総代のみで執り行われます） 鮫洲八幡神社 例大祭の特徴は、深夜に行われる大神輿の宮出しです。15日（土）の3時から宮出しが行われます。大神輿は約4時間、朝7時までかけて御旅所まで担がれます。大神輿の宮納めは、翌16日（日）午後3時から。御旅所を発御し、午後6時に無事神社へ帰社されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/samezureitaisai2026",
+      "publishedAt": "2026-08-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-06T04:56:37.838139Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "4937041db3db77764d2a",
@@ -4938,7 +5008,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2582, column 28"
+      "message": "not well-formed (invalid token): line 3198, column 28"
     },
     {
       "source": "朝日新聞",

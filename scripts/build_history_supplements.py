@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""全件データと要約が揃った年度だけ rXX-complete.js を生成する。
+"""全件データと要約が揃った年度だけ <年ID>-complete.js を生成する。
 
 prepare_history.py が生成した qa_queue.json の各項目に、topics と同じ順で
 qaSummaries（title / question / answer）を入力してから実行する。未入力、件数違い、
 公式データとの不一致、会議メタデータ不足が1件でもあれば出力しない。
 
 実行例:
-  python3 scripts/build_history_supplements.py --years 7
-  python3 scripts/build_history_supplements.py --years 7 --write
+  python3 scripts/build_history_supplements.py --years r07
+  python3 scripts/build_history_supplements.py --years h20 --write
+
+年は h13〜h30 / r01〜r08 で指定する（数値だけの旧指定も可。0＝平成30年）。
 """
 
 from __future__ import annotations
@@ -23,20 +25,30 @@ ROOT = Path(__file__).resolve().parents[1]
 HISTORY_DIR = ROOT / "scripts/out/history"
 
 
-def year_id(year: int) -> str:
-    return "h30" if year == 0 else f"r{year:02d}"
+def year_token(value: str | int) -> str:
+    """年の指定を h13〜h30 / r01〜r08 の年IDに正規化する（数値だけの旧指定も可）。"""
+    text = str(value).strip().lower()
+    match = re.fullmatch(r"([hr])(\d{1,2})", text)
+    if match:
+        return f"{match.group(1)}{int(match.group(2)):02d}"
+    if re.fullmatch(r"\d{1,2}", text):
+        number = int(text)
+        return "h30" if number == 0 else f"r{number:02d}"
+    raise argparse.ArgumentTypeError(f"年の指定が不正です: {value}（例: h20, r05, 7）")
 
 
-def year_label(year: int) -> str:
-    return "平成30年" if year == 0 else ("令和元年" if year == 1 else f"令和{year}年")
+def year_label(identifier: str) -> str:
+    number = int(identifier[1:])
+    if identifier.startswith("h"):
+        return f"平成{number}年"
+    return "令和元年" if number == 1 else f"令和{number}年"
 
 
 def normalized(value: str) -> str:
     return re.sub(r"[\s　◯○・]", "", value or "").lower()
 
 
-def load_current(year: int) -> dict:
-    identifier = year_id(year)
+def load_current(identifier: str) -> dict:
     path = ROOT / f"data/{identifier}.js"
     source = path.read_text(encoding="utf-8")
     marker = f'years["{identifier}"] = '
@@ -48,8 +60,7 @@ def js_json(value) -> str:
     return json.dumps(value, ensure_ascii=False, indent=2)
 
 
-def validate_year(year: int, official: dict, queue: list[dict], current: dict) -> list[str]:
-    identifier = year_id(year)
+def validate_year(identifier: str, official: dict, queue: list[dict], current: dict) -> list[str]:
     errors: list[str] = []
     current_meeting_ids = {item.get("id") for item in current.get("meetings", [])}
     official_meeting_ids = {
@@ -91,9 +102,8 @@ def validate_year(year: int, official: dict, queue: list[dict], current: dict) -
     return errors
 
 
-def build_js(year: int, official: dict, queue: list[dict]) -> str:
-    identifier = year_id(year)
-    label = year_label(year)
+def build_js(identifier: str, official: dict, queue: list[dict]) -> str:
+    label = year_label(identifier)
     question_patches = [{
         "meetingId": item["meetingId"],
         "memberId": item["memberId"],
@@ -145,8 +155,12 @@ def build_js(year: int, official: dict, queue: list[dict]) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--years", nargs="+", type=int, default=list(range(7, 0, -1)))
-    parser.add_argument("--write", action="store_true", help="検証成功時に data/rXX-complete.js を出力")
+    parser.add_argument(
+        "--years", nargs="+", type=year_token,
+        default=[f"r{number:02d}" for number in range(7, 0, -1)],
+        help="対象の年（例: h20 r05）。数値だけの旧指定も使える（0＝平成30年）",
+    )
+    parser.add_argument("--write", action="store_true", help="検証成功時に data/<年ID>-complete.js を出力")
     args = parser.parse_args()
 
     queue_path = HISTORY_DIR / "qa_queue.json"
@@ -154,10 +168,9 @@ def main() -> None:
         raise SystemExit("先に python3 scripts/prepare_history.py --with-contexts を実行してください")
     all_queue = json.loads(queue_path.read_text(encoding="utf-8"))
     failed = False
-    prepared: list[tuple[int, dict, list[dict]]] = []
+    prepared: list[tuple[str, dict, list[dict]]] = []
 
-    for year in args.years:
-        identifier = year_id(year)
+    for identifier in args.years:
         official_path = HISTORY_DIR / f"{identifier}_official.json"
         if not official_path.exists():
             print(f"{identifier}: 公式データがありません")
@@ -165,7 +178,7 @@ def main() -> None:
             continue
         official = json.loads(official_path.read_text(encoding="utf-8"))
         queue = [item for item in all_queue if item.get("yearId") == identifier]
-        errors = validate_year(year, official, queue, load_current(year))
+        errors = validate_year(identifier, official, queue, load_current(identifier))
         if errors:
             failed = True
             print(f"{identifier}: 未完了（{len(errors)}件）")
@@ -175,15 +188,15 @@ def main() -> None:
                 print(f"  - ほか {len(errors) - 12}件")
         else:
             print(f"{identifier}: 検証完了（質問者{len(queue)}名）")
-            prepared.append((year, official, queue))
+            prepared.append((identifier, official, queue))
 
     if failed:
         print("未完了項目があるため、補足データは出力していません。")
         raise SystemExit(1)
     if args.write:
-        for year, official, queue in prepared:
-            path = ROOT / f"data/{year_id(year)}-complete.js"
-            path.write_text(build_js(year, official, queue), encoding="utf-8")
+        for identifier, official, queue in prepared:
+            path = ROOT / f"data/{identifier}-complete.js"
+            path.write_text(build_js(identifier, official, queue), encoding="utf-8")
             print(f"出力: {path.relative_to(ROOT)}")
     else:
         print("検証のみ完了。出力する場合は --write を付けてください。")

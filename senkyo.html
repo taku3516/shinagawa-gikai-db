@@ -17,6 +17,8 @@
     body {
       margin: 0; background: var(--c-bg); color: var(--c-ink);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      /* 長いURL・英数字の連続でも画面外にはみ出さないよう折り返す */
+      overflow-wrap: break-word;
     }
     a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
     a:hover { text-decoration: underline; }
