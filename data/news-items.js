@@ -1,7 +1,62 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-07T03:26:46.964064Z",
+  "generatedAt": "2026-08-07T07:50:41.257321Z",
   "items": [
+    {
+      "id": "fc5825cfeccbe3c2b6e3",
+      "title": "まちづくりにおける市民参加型イベント「森之宮まち未来（みく）じ」を実施",
+      "summary": "[株式会社日本総合研究所] 株式会社日本総合研究所（所在地：東京都品川区、代表取締役社長：内川淳、以下「日本総研」）と独立行政法人都市再生機構（以下「ＵＲ都市機構」）は、ＵＲ都市機構などが大阪市・森之宮地区で運営する「ほと...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000209.000068011.html",
+      "publishedAt": "2026-08-07T07:40:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "行政",
+        "都市開発",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "86f353fb982ea4a4a6e7",
+      "title": "防災関連書籍の電子版を無料公開（2026年9月6日までの期間限定）",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年8月7日に防災関連書籍の電子版を期間限定で無...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009323.000002535.html",
+      "publishedAt": "2026-08-07T07:40:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "41b4fc304f51c665d524",
+      "title": "品川区戸越六丁目18・20番東地区防災街区整備事業組合設立",
+      "summary": "[旭化成ホームズ株式会社] 旭化成ホームズ株式会社（本社：東京都千代田区、代表取締役社長：大和久 裕二）は、東京都品川区戸越六丁目18・20番東地区防災街区整備事業において、2026年7月17日、防災街区整備事業組合が設立されましたので...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000266.000073738.html",
+      "publishedAt": "2026-08-07T07:40:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "3046a4105f97df459871",
       "title": "8月6日開催の委員会の結果を掲載。",
@@ -21,6 +76,57 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "a7fed6a35ee8c79af854",
+      "title": "施設予約システムメンテナンスのお知らせ",
+      "summary": "デジタル推進課 電話：03-5742-6618 FAX：03-5742-7164",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-bunka/shisetsuyoyaku/20260807091608.html",
+      "publishedAt": "2026-08-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "7e43a87d9921fb67a169",
+      "title": "インクルーシブスポーツチャレンジデー(9月26日開催)",
+      "summary": "スポーツ推進課インクルーシブスポーツ担当 電話：03-5742-3854 FAX：03-5742-6585",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20180813123848.html",
+      "publishedAt": "2026-08-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "53a157b7e809d8beb52c",
+      "title": "令和8年熊本地震被災者の公営住宅への受け入れ",
+      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756 メール：mokumitsu-seibi@city.shinagawa.tokyo.jp 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260805090700.html",
+      "publishedAt": "2026-08-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "b7d0726dec6ea1c7e9c8",
@@ -5026,7 +5132,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 6,
+      "scanned": 8,
       "accepted": 0
     },
     {
@@ -5044,7 +5150,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 547,
+      "scanned": 542,
       "accepted": 0
     },
     {
@@ -5069,7 +5175,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 3
     },
     {
       "source": "東急ニュースリリース",
