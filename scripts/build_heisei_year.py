@@ -62,7 +62,12 @@ def inspect_questions(hy):
         print(f"\n===== 第{n}回 {u}")
         print(f"  取得 {len(h):,}文字 / <tr> {len(rows)}行 / "
               f"<li> {body.count('<li')}個 / <br> {len(re.findall(r'<br', body, re.I))}個 / "
-              f'class="giin" {body.count(chr(34)+"giin"+chr(34))}個')
+              f'class="giin" {body.count(chr(34)+"giin"+chr(34))}個 / '
+              f'class="gianmei" {body.count(chr(34)+"gianmei"+chr(34))}個')
+        # 行を切り出す前に、解析が <h3> の見出しで区切れているかを見る。
+        # 区切れていなければ、その回の行は1つも読まれない。
+        heads = re.findall(r'<h3>([^<]+)</h3>', body)
+        print(f"  解析が見つけた<h3>見出し: {len(heads)}個 {heads[:6]}")
         for index, tr in enumerate(rows[:3], 1):
             cells = re.findall(r'(<t[dh][^>]*>)(.*?)</t[dh]>', tr, re.S)
             print(f"  --- {index}行目（セル{len(cells)}個）")
@@ -91,6 +96,40 @@ def inspect_questions(hy):
                     print(f"      タグ: {tag}")
                     print(f"      中身: {re.sub(r'[ ]+', ' ', inner.strip())[:600]}")
         print(f"  潰れているセル: {lumped}個")
+
+    # 解析そのものを通し、会議ごとに何名・何項目取れたかを出す。
+    # 既にある data/hXX.js と見比べれば、どの回が落ちているかが一目で分かる。
+    print("\n===== 解析結果（会議ごと）")
+    parsed = fetch_questions(hy, None)
+    total = 0
+    for key in sorted(parsed):
+        items = parsed[key]
+        count = sum(len(it["topics"]) for it in items)
+        total += count
+        print(f"  {key}: 質問者{len(items)}名 / 発言項目{count}件")
+        for it in items[:3]:
+            print(f"      {it['member']}（{it['party']}）{len(it['topics'])}項目 "
+                  f"{it['topics'][:2]}")
+    print(f"  合計: 発言項目{total}件")
+
+    path = ROOT / f"data/h{hy}.js"
+    if path.exists():
+        try:
+            current = json.loads(path.read_text(encoding="utf-8")
+                                 .split(f'years["h{hy}"] = ', 1)[1].rstrip().rstrip(";"))
+        except (IndexError, ValueError):
+            return
+        print("\n===== 今あるデータ（比較用）")
+        by_meeting = {}
+        for entry in current.get("questions") or []:
+            key = entry.get("meetingId", "?")
+            by_meeting.setdefault(key, [0, 0])
+            by_meeting[key][0] += 1
+            by_meeting[key][1] += len(entry.get("topics") or [])
+        for key in sorted(by_meeting):
+            people, count = by_meeting[key]
+            print(f"  {key}: 質問者{people}名 / 発言項目{count}件")
+        print(f"  合計: 発言項目{sum(v[1] for v in by_meeting.values())}件")
 
 
 def fetch_questions(hy, cache):
