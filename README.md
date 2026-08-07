@@ -66,6 +66,10 @@
 開発環境から会議録へ到達できない場合は、GitHub Actionsの「委員会質疑を会議録から作り直す」を年を指定して手動実行してください（`.github/workflows/rebuild-committees.yml`）。
 poppler と依存ライブラリの用意から、要約の検査、更新の保存までを通しで行います。
 
+本会議（平成年）の質問・答弁要約は `python3 scripts/build_heisei_year.py <平成の年>` で再生成します。
+こちらも GitHub Actions の「本会議の質問・答弁を会議録から作り直す」で手動実行できます
+（`.github/workflows/rebuild-plenary.yml`）。**委員会は西暦、本会議は平成年**を指定する点に注意してください。
+
 ## 質問・答弁要約の品質
 
 本会議の代表・一般質問と委員会質疑の要約は、「何について質問したか」「何について答弁したか」が
