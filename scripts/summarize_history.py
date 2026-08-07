@@ -12,8 +12,13 @@ import argparse
 import json
 import math
 import re
+import sys
 import unicodedata
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import qa_summary as qa
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE_PATH = ROOT / "scripts/out/history/qa_queue.json"
@@ -514,7 +519,8 @@ def select_diverse_sentences(
     selected.sort(key=lambda item: item[0])
     text = " ".join(ensure_ending(sentence) for _, sentence, _ in selected)
     if len(text) > limit:
-        text = text[:limit].rstrip("、,。 ") + "…。"
+        # 文字数で切ると語の途中で終わる。文の区切りまで戻す。
+        text = qa.finish(text, limit) or text[:limit]
     return text, max((score for _, _, score in selected), default=0.0)
 
 
@@ -747,7 +753,7 @@ def clean_sentence(sentence: str, limit: int = 210) -> str:
     value = re.sub(r"^区(?:は|では)[、,]?\s*", "", value)
     value = value.strip()
     if len(value) > limit:
-        value = value[:limit].rstrip("、, ") + "…"
+        value = qa.finish(value, limit) or value[:limit]
     return value
 
 

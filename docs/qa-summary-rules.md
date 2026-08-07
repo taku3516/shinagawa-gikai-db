@@ -23,7 +23,10 @@
 
 | スクリプト | 役割 |
 |---|---|
-| `scripts/prepare_committees.py` ほか | 会議録から要約を**生成**する |
+| `scripts/prepare_committees.py` | 委員会質疑を会議録から**生成**する |
+| `scripts/build_heisei_year.py` | 本会議（平成年）を会議録から**生成**する |
+| `scripts/build_from_minutes.py` | 質問者ページが無い年を会議録本文から**生成**する |
+| `scripts/summarize_history.py` | 過去年の質問・答弁要約を**生成**する |
 | `scripts/repair_qa_summaries.py` | すでに書き出したデータを**修復**する |
 | `scripts/check_qa_summaries.py` | 公開前・変更時に**検査**する |
 

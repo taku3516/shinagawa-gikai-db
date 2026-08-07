@@ -116,7 +116,11 @@ def finish(text: str, limit: int) -> str:
             break
     if kept:
         joined = "".join(kept)
-        return joined if len(joined) <= limit else kept[0][:limit]
+        if len(joined) <= limit:
+            return joined
+        # 1文だけで上限を超えている。文字数で切ると語の途中で終わるため、
+        # 下の読点で閉じる処理に任せる。
+        text = kept[0]
 
     restored = restore_reported_ending(text)
     if is_complete(restored) and len(restored) <= limit:
