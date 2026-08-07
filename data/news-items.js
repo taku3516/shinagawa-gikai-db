@@ -1,7 +1,48 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-07T07:50:41.257321Z",
+  "generatedAt": "2026-08-07T10:24:12.054919Z",
   "items": [
+    {
+      "id": "3f4df165a67e1881fcc1",
+      "title": "『エレガンス』で「このミス」8位ランクインの石川智健氏、最新書下し長篇『ストーリーランド』、徳間書店より8/28発売！ 発売前に冒頭部分、特別無料公開中！",
+      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、石川智健氏の長篇小説『ストーリーランド』（https://www.tokuma.jp/book/b679235.html）を8月28日（金）に発売いたします。また、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001098.000016935.html",
+      "publishedAt": "2026-08-07T10:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T20:57:53.120243Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "2a87fc315fea75a6332c",
+      "title": "大井町にギョーザと創作中華「蓮月」 南青山、新橋に次ぐ都内3店舗目",
+      "summary": "ギョーザと創作中華料理の店「亜細亜割烹（アジアかっぽう）蓮月 大井町店」（品川区大井1）が、大井町駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5055",
+      "publishedAt": "2026-08-07T08:29:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "fc5825cfeccbe3c2b6e3",
       "title": "まちづくりにおける市民参加型イベント「森之宮まち未来（みく）じ」を実施",
@@ -76,6 +117,23 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-08-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "a7fed6a35ee8c79af854",
@@ -163,26 +221,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "3f4df165a67e1881fcc1",
-      "title": "『エレガンス』で「このミス」8位ランクインの石川智健氏、最新書下し長篇『ストーリーランド』、徳間書店より8/28発売！ 発売前に冒頭部分、特別無料公開中！",
-      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、石川智健氏の長篇小説『ストーリーランド』（https://www.tokuma.jp/book/b679235.html）を8月28日（金）に発売いたします。また、...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000001098.000016935.html",
-      "publishedAt": "2026-08-06T22:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-05T20:57:53.120243Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "上大崎",
-        "大崎"
-      ],
-      "relevanceScore": 16
     },
     {
       "id": "3b094fa0f9b03735d26e",
@@ -5150,7 +5188,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 542,
+      "scanned": 576,
       "accepted": 0
     },
     {
@@ -5175,7 +5213,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 3
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
