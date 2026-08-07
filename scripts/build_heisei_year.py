@@ -46,6 +46,31 @@ def fetch_docs(hy, western, cache):
             time.sleep(0.35)
     return docs
 
+def inspect_questions(hy):
+    """質問者ページの表の作りを実行ログへ書き出す（解析が噛み合わないときの調査用）。
+
+    開発環境から公式ページへ到達できないため、実際のHTMLがどう並んでいるかを
+    ここで見る。発言事項が <li> なのか <br> なのか、それとも行ごとに分かれて
+    いるのかが分かれば、当て推量で直さずに済む。
+    """
+    for n in range(1, 5):
+        u = f"{BASE}/h{hy}_{n:02d}/h{hy}_{n:02d}t2"
+        h = get(u)
+        body = re.sub(r'<!--.*?-->', ' ', h, flags=re.S)
+        body = body[body.find("entry-content"):]
+        rows = re.findall(r'<tr.*?</tr>', body, re.S)
+        print(f"\n===== 第{n}回 {u}")
+        print(f"  取得 {len(h):,}文字 / <tr> {len(rows)}行 / "
+              f"<li> {body.count('<li')}個 / <br> {len(re.findall(r'<br', body, re.I))}個 / "
+              f'class="giin" {body.count(chr(34)+"giin"+chr(34))}個')
+        for index, tr in enumerate(rows[:4], 1):
+            cells = re.findall(r'(<t[dh][^>]*>)(.*?)</t[dh]>', tr, re.S)
+            print(f"  --- {index}行目（セル{len(cells)}個）")
+            for tag, inner in cells:
+                flat = re.sub(r'\s+', ' ', inner).strip()
+                print(f"      {tag} {flat[:220]}")
+
+
 def fetch_questions(hy, cache):
     out = {}
     for n in range(1, 5):
@@ -119,17 +144,24 @@ def fetch_questions(hy, cache):
                                    "party": wm.group(2).strip(), "topics": topics, "url": u})
                     continue
                 # 旧形式: 「順序/1./項目」で始まり、議員名セルが現れるまで項目を積む
-                texts = [t for t in tds if t and not re.fullmatch(r'[０-９0-9一二三四五六七八九十]+[．.]?', t)]
+                is_noise = lambda t: (not t
+                                      or re.fullmatch(r'[０-９0-9一二三四五六七八九十]+[．.]?', t)
+                                      or t in ("順序", "発言事項", "議員名"))
+                texts = [t for t in tds if not is_noise(t)]
                 who = next((t for t in texts if re.match(r'.+ ?（.+?）$', t)), None)
+                # 項目のセルは分けて数える。議員名のセルは「姓 名」「（会派）」に
+                # 割れてしまうので、そのセルごと対象から外す
+                items = [t for x in raw if cell(x) != who
+                         for t in cell_items(x) if not is_noise(t)]
                 if who:
                     wm = re.match(r'(.+?) ?（(.+?)）', who)
-                    body_topics = pending + [t for t in texts if t != who]
+                    body_topics = pending + items
                     if wm and body_topics:
                         qs.append({"date": last_date, "kind": kind, "member": wm.group(1).strip(),
                                    "party": wm.group(2).strip(), "topics": body_topics, "url": u})
                     pending = []
                 else:
-                    pending += [t for t in texts if t not in ("順序", "発言事項", "議員名")]
+                    pending += items
         # 表の外に議員名が置かれる年（h25第1回など）: table直後のテキストから補完する
         if not qs:
             body2 = re.sub(r'<!--.*?-->', ' ', h, flags=re.S)
@@ -299,11 +331,17 @@ def check_no_regression(yid, qout):
 
 
 def main():
-    if len(sys.argv) < 2 or not sys.argv[1].strip().isdigit():
-        raise SystemExit("使い方: python3 scripts/build_heisei_year.py <平成の年（例: 28）>")
-    hy = int(sys.argv[1].strip()); western = 1988 + hy
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    if not args or not args[0].strip().isdigit():
+        raise SystemExit(
+            "使い方: python3 scripts/build_heisei_year.py <平成の年（例: 28）> [--inspect]")
+    hy = int(args[0].strip()); western = 1988 + hy
     if not 1 <= hy <= 31:
         raise SystemExit(f"平成{hy}年は存在しません。1〜31を指定してください。")
+    if "--inspect" in sys.argv:
+        # 表の作りを見るだけ。データは書き換えない
+        inspect_questions(hy)
+        return
     yid = f"h{hy}"
     cache = ROOT / f"scripts/cache/{yid}"
     cache.mkdir(parents=True, exist_ok=True)
