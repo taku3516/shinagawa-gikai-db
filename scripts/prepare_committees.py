@@ -14,6 +14,7 @@ import html
 import json
 import re
 import subprocess
+import sys
 import time
 import urllib.parse
 import urllib.request
@@ -23,6 +24,10 @@ from datetime import date
 from pathlib import Path
 
 from bs4 import BeautifulSoup
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import qa_summary as qa
 
 ROOT = Path(__file__).resolve().parents[1]
 YEAR = 2026
@@ -485,14 +490,13 @@ def clean_spoken_style(value: str) -> str:
 
 
 def clip_at_clause(value: str, limit: int) -> str:
-    text = compact(value)
-    if len(text) <= limit:
-        return text
-    floor = max(50, int(limit * 0.58))
-    positions = [match.end() for match in re.finditer(r"[。！？、]", text[:limit + 1])]
-    cut = max((position for position in positions if position >= floor), default=limit)
-    clipped = text[:cut].rstrip("、 ")
-    return clipped[:limit - 1].rstrip("、 ") + "…"
+    """上限に収まる範囲で、文の区切りまでを返す。
+
+    以前は文字数で切って「…」を付けていたため、何について述べたのかが
+    読み取れない要約が大量にできていた。判定と整形は scripts/qa_summary.py に
+    集約している。
+    """
+    return qa.finish(value, limit)
 
 
 def condense_sentence(value: str, cues: tuple[str, ...], limit: int, mode: str) -> str:
@@ -587,8 +591,11 @@ def concise_summary(text: str, cues: tuple[str, ...], limit: int, mode: str, kin
     result = "".join(selected)
     if not result:
         result = sentences[-1] if mode == "question" else sentences[0]
-    result = clip_at_clause(result, limit)
-    return clip_at_clause(reported_question(result, kind), limit) if mode == "question" else result
+    if mode != "question":
+        return clip_at_clause(result, limit)
+    # 語尾を付けたあとに切ると語尾自体が欠ける。先に長さを整えてから語尾を付ける。
+    trimmed = clip_at_clause(result, max(40, limit - 12))
+    return qa.normalize_question(reported_question(trimmed or result, kind))
 
 
 def normalize_agenda_title(value: str, fallback: str = "委員会での質疑") -> str:
@@ -815,9 +822,11 @@ def make_topics(voices: list[dict], session_id: str) -> list[dict]:
         # 進行発言は、質問・意見として掲載しない。
         if not question:
             continue
-        answer = clip_at_clause(" ".join(answer_parts), 240)
+        answer = qa.strip_answer_lead(clip_at_clause(" ".join(answer_parts), qa.ANSWER_LIMIT))
         if not answer:
-            answer = "この発言に対する個別の答弁・回答は、会議録に記録されていません。"
+            # 意見・要望のように答弁を求めていない発言と、答弁を拾えなかった発言を
+            # 同じ文言にしない（何について答弁したかを読む側が誤解しないように）
+            answer = qa.no_answer_text(kind)
         exchanges.append({
             "agenda": agenda,
             "speaker": speaker,

@@ -1,0 +1,45 @@
+name: 質問・答弁要約を検査
+
+# 会議録を遡って実装したり、新しい会議録から要約を足したりするたびに、
+# 「何について質問したか」「何について答弁したか」が読み取れる形になっているかを
+# 自動で確かめる。判定は scripts/qa_summary.py に集約している。
+#
+# 文の途中で切れている・空・古い文言のままといった機械的に直せる問題があると
+# 失敗する。会議録から取り直さないと直らない項目（前置きだけの質問など）は
+# 件数を出すだけで失敗にはしない。
+
+on:
+  push:
+    paths:
+      - "data/**"
+      - "scripts/qa_summary.py"
+      - "scripts/check_qa_summaries.py"
+      - "scripts/repair_qa_summaries.py"
+      - ".github/workflows/check-qa-summaries.yml"
+  pull_request:
+    paths:
+      - "data/**"
+      - "scripts/qa_summary.py"
+      - "scripts/check_qa_summaries.py"
+      - "scripts/repair_qa_summaries.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    # 実行待ちの時間もこの上限に含まれるため、混雑しても待ちきれるようにしておく
+    timeout-minutes: 45
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v6
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: 要約を検査する
+        run: python scripts/check_qa_summaries.py --details --limit 3
