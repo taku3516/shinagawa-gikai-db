@@ -513,13 +513,33 @@ def clean_spoken_style(value: str) -> str:
 
 
 def clip_at_clause(value: str, limit: int) -> str:
-    """上限に収まる範囲で、文の区切りまでを返す。
+    """上限に収まる範囲で、文の区切りまでを返す（質問・答弁の要約用）。
 
     以前は文字数で切って「…」を付けていたため、何について述べたのかが
     読み取れない要約が大量にできていた。判定と整形は scripts/qa_summary.py に
     集約している。
+
+    文として閉じられないときは空を返す。呼び出し側で扱いを決めること。
     """
     return qa.finish(value, limit)
+
+
+def clip_title(value: str, limit: int = 80) -> str:
+    """議題名を上限内に収める。
+
+    議題名は文ではなく名詞句なので、文の区切りを求める `clip_at_clause` は使えない
+    （句点が無いと空になってしまう）。区切りらしい記号まで戻し、無ければそのまま切る。
+    空にはしない。
+    """
+    text = compact(value)
+    if len(text) <= limit:
+        return text
+    head = text[:limit]
+    for mark in ("、", "・", "／", "，", " "):
+        position = head.rfind(mark)
+        if position >= limit // 2:
+            return head[:position].rstrip("、・／， ")
+    return head.rstrip("、・／， ")
 
 
 def condense_sentence(value: str, cues: tuple[str, ...], limit: int, mode: str) -> str:
@@ -568,7 +588,11 @@ def reported_question(value: str, kind: str) -> str:
     text = text.replace("いただければと思います", "ほしいと求めました")
     text = text.replace("いただきたいと思います", "ほしいと求めました")
     text = re.sub(r"(?:ので、)?よろしく(?:お願いいたします|お願いします)[。 ]*$", "", text)
-    text = re.sub(r"(?:教えて|お聞かせ|説明して)(?:いただければと思います|いただきたいと思います|ください)[。 ]*$", "説明を求めました。", text)
+    # 直前の助詞ごと置き換える。「数字を教えてください」→「数字の説明を求めました」
+    text = re.sub(
+        r"(?:を|は|が)?(?:教えて|お聞かせ|説明して)(?:いただければと思います|いただきたいと思います|ください)[。 ]*$",
+        "の説明を求めました。", text)
+    text = re.sub(r"(?:の)+の説明を求めました。$", "の説明を求めました。", text)
     text = re.sub(r"(?:でしょうか|ですか)[。 ]*$", "か尋ねました。", text)
     text = re.sub(r"という認識でよろしいのか[。 ]*$", "との認識でよいか確認しました。", text)
     if kind in ("意見", "提案") and not re.search(r"(?:述べました|提案しました|求めました|尋ねました|確認しました)[。 ]*$", text):
@@ -618,7 +642,12 @@ def concise_summary(text: str, cues: tuple[str, ...], limit: int, mode: str, kin
         return clip_at_clause(result, limit)
     # 語尾を付けたあとに切ると語尾自体が欠ける。先に長さを整えてから語尾を付ける。
     trimmed = clip_at_clause(result, max(40, limit - 12))
-    return qa.normalize_question(reported_question(trimmed or result, kind))
+    question = qa.normalize_question(reported_question(trimmed or result, kind))
+    # 語尾を足した結果が上限を超える、あるいは文として閉じていない場合は整え直す。
+    # それでも整わなければ空を返し、この発言は載せない（壊れた要約を出さない）。
+    if len(question) > limit or not qa.is_complete(question):
+        question = qa.normalize_question(qa.finish(question, limit))
+    return question
 
 
 def normalize_agenda_title(value: str, fallback: str = "委員会での質疑") -> str:
@@ -706,7 +735,7 @@ def normalize_agenda_title(value: str, fallback: str = "委員会での質疑") 
         title += "」"
     if not title or len(title) < 2:
         title = fallback
-    return clip_at_clause(title, 80)
+    return clip_title(title, 80)
 
 
 GENERIC_TOPIC_TITLES = {
