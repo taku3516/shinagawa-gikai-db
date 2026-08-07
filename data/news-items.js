@@ -1,7 +1,46 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-07T00:22:18.530184Z",
+  "generatedAt": "2026-08-07T03:26:46.964064Z",
   "items": [
+    {
+      "id": "3046a4105f97df459871",
+      "title": "8月6日開催の委員会の結果を掲載。",
+      "summary": "8月6日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20717.html",
+      "publishedAt": "2026-08-07T01:28:26Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T01:43:44.908185Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "b7d0726dec6ea1c7e9c8",
+      "title": "大井第三地区「清流あそび」を実施",
+      "summary": "大井第三地域センター 電話：03-3773-2000 FAX：03-3771-3735",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260728130000.html",
+      "publishedAt": "2026-08-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T03:26:29.316446Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "d72bf6216af184430233",
       "title": "品川区世論調査の回答について",
@@ -237,26 +276,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "3046a4105f97df459871",
-      "title": "8月6日開催の委員会の予定を掲載。",
-      "summary": "8月6日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20717.html",
-      "publishedAt": "2026-08-05T01:28:26Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-05T01:43:44.908185Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "a565f128501aebcd0378",
@@ -5025,7 +5044,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 572,
+      "scanned": 547,
       "accepted": 0
     },
     {
@@ -5050,7 +5069,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
