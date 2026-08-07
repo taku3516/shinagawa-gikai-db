@@ -1,7 +1,7 @@
 """公式の質問者ページが無い年を、会議録本文だけから構築する（平成13・14年用）。"""
 import collections, json, re, sys, unicodedata, urllib.request, time
 from pathlib import Path
-ROOT = Path("/Users/apple/my-claude-project/shinagawa-gikai ver2")
+ROOT = Path(__file__).resolve().parents[1]  # スクリプトの位置からリポジトリを決める
 KAI = "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000"
 UA = {"User-Agent": "Mozilla/5.0"}
 OFFICIAL = r'区長|教育長|次長|部長|議長|委員長|監査|室長|所長|管理者|収入役|助役'

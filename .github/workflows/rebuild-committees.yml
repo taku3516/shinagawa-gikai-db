@@ -1,0 +1,74 @@
+name: 委員会質疑を会議録から作り直す
+
+# 会議録検索システムと校正原稿PDFから、指定した年の委員会質疑・答弁要約を
+# 作り直す。開発環境から会議録へ到達できない場合があるため、取得はここで行う。
+#
+# 使いどころ:
+#   - 質問・答弁要約の作り方を直したあと、過去年に反映する
+#   - `scripts/check_qa_summaries.py` の「要改善」を減らす
+#   - 新しい年・未収録の年を追加する
+#
+# 1回の実行で1年分を作り直す。会議録の取得に時間がかかるため、年をまたいで
+# まとめて実行はしない。
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "作り直す年（西暦。例: 2017）"
+        required: true
+        type: string
+      refresh:
+        description: "取得済みの会議録を使わず取り直す"
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-shinagawa-committees
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    # 会議録の取得に時間がかかる。実行待ちの時間もこの上限に含まれる。
+    timeout-minutes: 300
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v6
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: 必要なものを入れる
+        # poppler は校正原稿PDFの読み取りに使う（pdfinfo / pdftotext）
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements-history.txt
+
+      - name: 委員会質疑を作り直す
+        run: |
+          python scripts/prepare_committees.py --year "${{ inputs.year }}" \
+            ${{ inputs.refresh && '--refresh' || '' }}
+
+      - name: 要約を検査する
+        # 作り直した結果が共通ルールを満たしているかを、保存する前に確かめる
+        run: python scripts/check_qa_summaries.py
+
+      - name: 更新があれば保存
+        run: |
+          if [ -z "$(git status --porcelain -- data/ docs/)" ]; then
+            echo "更新はありません"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/
+          git commit -m "${{ inputs.year }}年の委員会質疑を会議録から作り直し"
+          git push

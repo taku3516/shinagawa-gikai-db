@@ -13,6 +13,8 @@ import hashlib
 import html
 import json
 import re
+import os
+import shutil
 import subprocess
 import sys
 import time
@@ -43,8 +45,11 @@ UA = {"User-Agent": "Mozilla/5.0 (shinagawa-gikai-db committee importer)"}
 MINUTES_BASE = "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000"
 DRAFT_INDEX = "https://gikai.city.shinagawa.tokyo.jp/search"
 CALENDAR_URL = "https://gikai.city.shinagawa.tokyo.jp/calendar_list"
-PDFINFO = Path("/Users/apple/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdfinfo")
-PDFTOTEXT = Path("/Users/apple/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/poppler/bin/pdftotext")
+# 校正原稿PDFの読み取りに poppler を使う。実行する環境によって置き場所が違うため、
+# PATH から探す。環境変数（PDFINFO / PDFTOTEXT）で明示することもできる。
+# 見つからない場合は、PDFを読む段階になってから分かりやすく知らせる。
+#   Ubuntu/Debian: sudo apt-get install poppler-utils
+#   macOS:         brew install poppler
 OPENER = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 
 
@@ -351,14 +356,32 @@ def parse_html_voices(raw: bytes) -> tuple[list[dict], str]:
     return voices, meeting_time
 
 
+def poppler_tool(name: str) -> str:
+    """poppler のコマンドの場所を返す。無ければ入れ方を添えて止める。"""
+    override = os.environ.get(name.upper())
+    if override:
+        return override
+    found = shutil.which(name)
+    if not found:
+        raise SystemExit(
+            f"{name} が見つかりません。校正原稿PDFの読み取りに poppler が必要です。\n"
+            f"  Ubuntu/Debian: sudo apt-get install -y poppler-utils\n"
+            f"  macOS:         brew install poppler\n"
+            f"  別の場所にある場合は環境変数 {name.upper()} で指定してください。"
+        )
+    return found
+
+
 def pdf_page_count(path: Path) -> int:
-    result = subprocess.run([str(PDFINFO), str(path)], capture_output=True, text=True, check=True)
+    result = subprocess.run([poppler_tool("pdfinfo"), str(path)], capture_output=True, text=True, check=True)
     match = re.search(r"^Pages:\s+(\d+)", result.stdout, re.M)
     return int(match.group(1)) if match else 0
 
 
 def pdf_text(path: Path) -> str:
-    result = subprocess.run([str(PDFTOTEXT), "-layout", str(path), "-"], capture_output=True, check=True)
+    result = subprocess.run(
+        [poppler_tool("pdftotext"), "-layout", str(path), "-"], capture_output=True, check=True
+    )
     return result.stdout.decode("utf-8", "replace")
 
 
