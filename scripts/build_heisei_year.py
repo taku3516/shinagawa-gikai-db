@@ -11,6 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from prepare_history import parse_proposals_and_petitions
+import qa_summary as qa
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = {"User-Agent": "Mozilla/5.0"}
@@ -231,7 +232,8 @@ def pick(text, key, maxlen):
                 if re.search(r'お答え|申し上げ|お尋ね|伺いま', sent) and len(sent) < 60:
                     continue
                 if 14 < len(sent) < maxlen * 2:
-                    return re.sub(r'^[」「、]', '', sent)[:maxlen] + "。"
+                    # 文字数で切ると語の途中で終わる。文として閉じられる形にする。
+                    return qa.finish(re.sub(r'^[」「、]', '', sent) + "。", maxlen)
             break
     return ""
 
@@ -275,8 +277,9 @@ def main():
                 q = pick(src["q"], tp, 150) if src else ""
                 a = pick(src["ans"], tp, 170) if src else ""
                 sums.append({"title": tp,
-                             "question": fix_q(q) if q else f"「{tp}」について、現状の認識と区の対応を質問しました。",
-                             "answer": ("区側は、" + a) if a else "答弁の全文は会議録を参照してください。"})
+                             "question": qa.normalize_question(
+                                 fix_q(q) if q else f"「{tp}」について、現状の認識と区の対応を質問しました。"),
+                             "answer": qa.strip_answer_lead("区側は、" + a) if a else qa.no_answer_text("質問")})
             it["qaSummaries"] = sums
             it["minutesDoc"] = src["doc"] if src else None
         ev = collections.defaultdict(list)

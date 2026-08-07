@@ -1,6 +1,8 @@
 """公式の質問者ページが無い年を、会議録本文だけから構築する（平成13・14年用）。"""
 import collections, json, re, sys, unicodedata, urllib.request, time
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import qa_summary as qa
 ROOT = Path(__file__).resolve().parents[1]  # スクリプトの位置からリポジトリを決める
 KAI = "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000"
 UA = {"User-Agent": "Mozilla/5.0"}
@@ -42,7 +44,8 @@ def pick(text, key, maxlen):
         for m in re.finditer(re.escape(k), text):
             for s in [x for x in text[m.start():].split("。") if x.strip()][:3]:
                 if re.search(r'お答え|申し上げ|お尋ね|伺いま', s) and len(s) < 60: continue
-                if 14 < len(s) < maxlen * 2: return re.sub(r'^[」「、]', '', s)[:maxlen] + "。"
+                # 文字数で切ると語の途中で終わる。文として閉じられる形にする。
+                if 14 < len(s) < maxlen * 2: return qa.finish(re.sub(r'^[」「、]', '', s) + "。", maxlen)
             break
     return ""
 
@@ -92,11 +95,12 @@ def main():
             sums = []
             for tp in tps:
                 q = pick(qspan, tp, 150); a = pick("".join(ans), tp, 170)
-                sums.append({"title": tp, "question": q or f"「{tp}」について、現状の認識と区の対応を質問しました。",
-                             "answer": ("区側は、" + a) if a else "答弁の全文は会議録を参照してください。"})
+                sums.append({"title": tp,
+                             "question": qa.normalize_question(q or f"「{tp}」について、現状の認識と区の対応を質問しました。"),
+                             "answer": qa.strip_answer_lead("区側は、" + a) if a else qa.no_answer_text("質問")})
             if not sums:
-                sums = [{"title": "質問の概要", "question": qspan[:150] + "。",
-                         "answer": "答弁の全文は会議録を参照してください。"}]
+                sums = [{"title": "質問の概要", "question": qa.finish(qspan, qa.QUESTION_LIMIT),
+                         "answer": qa.no_answer_text("質問")}]
             by_sess[sess].append({"member": who, "party": party, "kind": kind, "date": date,
                                   "topics": tps or ["（発言項目は会議録参照）"], "qaSummaries": sums, "doc": i})
             k = j if j > k + 1 else k + 1
@@ -131,7 +135,14 @@ def main():
             "yearSummary": {"title": f"平成{hy}年（{western}年）の本会議",
                             "text": "この年は公式サイトに質問者・発言事項のページが無いため、正式会議録の本文から質問者と発言項目を機械抽出して掲載しています。抽出漏れの可能性があるため、正確な内容は各リンク先の会議録原文を確認してください。"},
             "meetings": meetings, "bills": [], "petitions": [], "questions": qout}
-    (ROOT / f"data/{yid}.js").write_text(
+    out = ROOT / f"data/{yid}.js"
+    # 会議録に到達できないと1件も取れないまま空データで上書きしてしまう。
+    # すでにあるデータを消さないよう、何も取れなかったときは書かない。
+    if not qout and out.exists():
+        print(f"{yid}: 1件も取得できませんでした。既存のデータを残して終了します。")
+        print("会議録検索システムに到達できているか確認してください。")
+        return 1
+    out.write_text(
         f"// 品川区議会DB データファイル（平成{hy}年・会議録本文からの抽出）\n"
         "window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };\n"
         f'window.SHINAGAWA_DB.years["{yid}"] = ' + json.dumps(data, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
@@ -139,5 +150,9 @@ def main():
     tot = sum(len(q["qaSummaries"]) for q in qout)
     print(f"{yid}: 会議{len(meetings)} 質問{len(qout)}名 項目{tot} 答弁抽出{ok}({100*ok//max(1,tot)}%)")
     print("台帳未登録:", sorted(newc) or "なし")
+    return 0
 
-main()
+
+# import しただけで動き出さないようにする（取り込みテストで実データを壊さないため）
+if __name__ == "__main__":
+    sys.exit(main())
