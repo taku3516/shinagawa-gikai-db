@@ -63,12 +63,34 @@ def inspect_questions(hy):
         print(f"  取得 {len(h):,}文字 / <tr> {len(rows)}行 / "
               f"<li> {body.count('<li')}個 / <br> {len(re.findall(r'<br', body, re.I))}個 / "
               f'class="giin" {body.count(chr(34)+"giin"+chr(34))}個')
-        for index, tr in enumerate(rows[:4], 1):
+        for index, tr in enumerate(rows[:3], 1):
             cells = re.findall(r'(<t[dh][^>]*>)(.*?)</t[dh]>', tr, re.S)
             print(f"  --- {index}行目（セル{len(cells)}個）")
             for tag, inner in cells:
                 flat = re.sub(r'\s+', ' ', inner).strip()
                 print(f"      {tag} {flat[:220]}")
+
+        # 潰れている行を狙って出す。「について」が2つ以上あるのに1項目にしか
+        # 割れないセルは、区切りを読み取れていないということ。
+        flat = lambda x: re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', H.unescape(x))).strip()
+        lumped = 0
+        for tr in rows:
+            for tag, inner in re.findall(r'(<t[dh][^>]*>)(.*?)</t[dh]>', tr, re.S):
+                if 'giin' in tag:
+                    continue
+                text = flat(inner)
+                if text.count("について") < 2:
+                    continue
+                pieces = re.findall(r'<li[^>]*>(.*?)</li>', inner, re.S) \
+                    or re.split(r'<br\s*/?>|</p>|</div>', inner, flags=re.I)
+                if len([p for p in pieces if flat(p)]) >= 2:
+                    continue  # 割れているので問題なし
+                lumped += 1
+                if lumped <= 3:
+                    print(f"  ★ 潰れているセル（「について」{text.count('について')}個が1項目）")
+                    print(f"      タグ: {tag}")
+                    print(f"      中身: {re.sub(r'[ ]+', ' ', inner.strip())[:600]}")
+        print(f"  潰れているセル: {lumped}個")
 
 
 def fetch_questions(hy, cache):
