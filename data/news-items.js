@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-07T10:24:12.054919Z",
+  "generatedAt": "2026-08-07T13:46:43.901817Z",
   "items": [
     {
       "id": "3f4df165a67e1881fcc1",
@@ -21,6 +21,23 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 16
+    },
+    {
+      "id": "27349ea2d4b89d574496",
+      "title": "【北陸電話工事】商号変更に関するお知らせ",
+      "summary": "[コムシスホールディングス株式会社] コムシスホールディングス株式会社（本社：東京都品川区 代表取締役社長 田辺 博）のグループ会社である北陸電話工事株式会社（本社：石川県金沢市 代表取締役社長 猪倉 稔正 以下 北陸電話工事）は、事業領域...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000023.000183413.html",
+      "publishedAt": "2026-08-07T08:45:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T13:46:25.791345Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "2a87fc315fea75a6332c",
@@ -5187,9 +5204,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 576,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1620, column 54"
     },
     {
       "source": "朝日新聞",
