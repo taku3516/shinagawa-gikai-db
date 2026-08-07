@@ -68,6 +68,21 @@ def fetch_questions(hy, cache):
                 last_date = f"{dm.group(1)}月{dm.group(2)}日"
             kind = "代表質問" if "代表質問" in head else "一般質問"
             cell = lambda x: re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', x))).strip()
+
+            def cell_items(x):
+                """発言事項のセルを、項目ごとの一覧にして返す。
+
+                発言事項は1つのセルの中に <li> や <br> で並んでいる年がある。
+                そのままタグを空白に置き換えると「防災意識の高揚について
+                「しながわ防災体験館」について …」と全項目が1つに潰れ、
+                何について質問したのかが読み取れなくなる。区切りで分けてから
+                文字に直す。区切りが無いセルは1件として返す。
+                """
+                pieces = re.findall(r'<li[^>]*>(.*?)</li>', x, re.S)
+                if not pieces:
+                    pieces = re.split(r'<br\s*/?>|</p>|</div>', x, flags=re.I)
+                return [item for item in (cell(p) for p in pieces) if item]
+
             pending = []          # 旧形式（項目が行ごとに分かれる年）用のバッファ
             for tr in re.findall(r'<tr.*?</tr>', seg, re.S):
                 tds = [cell(x) for x in re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)]
@@ -79,7 +94,12 @@ def fetch_questions(hy, cache):
                 if gm:
                     gtxt = cell(gm.group(1))
                     wm3 = re.match(r'(.+?)\s*[（(]([^）)]+)[）)]', gtxt)
-                    tp = [cell(x) for x in re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)]
+                    # 議員名セルは項目ではないので、分割の対象から外す。
+                    # （分けると「姓 名」「（会派）」が項目として混ざる）
+                    tp = [item
+                          for whole, inner in re.findall(r'(<td[^>]*>)(.*?)</td>', tr, re.S)
+                          if 'class="giin"' not in whole
+                          for item in cell_items(inner)]
                     tp = [t for t in tp if t and t != gtxt
                           and not re.fullmatch(r'[０-９0-9一二三四五六七八九十]+[．.]?', t)
                           and t not in ("順序", "発言事項", "議員名")]
@@ -251,6 +271,33 @@ def fix_q(s):
             return n
     return s if s.endswith("。") else (s + "などについて質問しました。" if s else s)
 
+def check_no_regression(yid, qout):
+    """既にあるデータより発言項目が大きく減っていたら、書き出さずに止める。
+
+    公式ページの作りが変わって解析が噛み合わなくなると、質問者は取れているのに
+    発言項目だけが潰れる（6項目が1項目に合わさるなど）ことがある。件数は
+    それなりに出るので気付きにくく、そのまま保存すると「何について質問したか」が
+    読めないデータで上書きしてしまう。取り直しは何度でもできるので、
+    減っているときは書かずに止めて、原因を見てからにする。
+    """
+    path = ROOT / f"data/{yid}.js"
+    if not path.exists():
+        return
+    try:
+        current = json.loads(path.read_text(encoding="utf-8")
+                             .split(f'years["{yid}"] = ', 1)[1].rstrip().rstrip(";"))
+    except (IndexError, ValueError):
+        return  # 既存データを読めないときは、この確認は行わない
+    before = sum(len(e.get("topics") or []) for e in current.get("questions") or [])
+    after = sum(len(e["topics"]) for e in qout)
+    if before and after < before * 0.9:
+        raise SystemExit(
+            f"{yid}: 発言項目が {before}件 から {after}件 に減りました。"
+            f"公式ページの作りが変わった可能性があります。"
+            f"data/{yid}.js は書き換えません。")
+    print(f"{yid}: 発言項目 {before}件 → {after}件")
+
+
 def main():
     if len(sys.argv) < 2 or not sys.argv[1].strip().isdigit():
         raise SystemExit("使い方: python3 scripts/build_heisei_year.py <平成の年（例: 28）>")
@@ -322,6 +369,7 @@ def main():
     # 取得に失敗した年をここで書き出すと、既にある会議録データを空で潰してしまう
     if not qout:
         raise SystemExit(f"{yid}: 質問を1件も取得できませんでした。data/{yid}.js は書き換えません。")
+    check_no_regression(yid, qout)
     data = {"id": yid, "label": f"平成{hy}年", "updatedAt": date.today().isoformat(),
             "yearSummary": {"title": f"平成{hy}年（{western}年）の本会議",
                             "text": "第1回から第4回までの定例会について、公式掲載の代表質問・一般質問を全項目掲載し、正式会議録から質問と答弁の要点をまとめています。正確な内容は公式会議録も確認してください。"},
