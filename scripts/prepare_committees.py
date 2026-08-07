@@ -588,19 +588,14 @@ def reported_question(value: str, kind: str) -> str:
     text = text.replace("いただければと思います", "ほしいと求めました")
     text = text.replace("いただきたいと思います", "ほしいと求めました")
     text = re.sub(r"(?:ので、)?よろしく(?:お願いいたします|お願いします)[。 ]*$", "", text)
-    # 直前の助詞ごと置き換える。「数字を教えてください」→「数字の説明を求めました」
-    text = re.sub(
-        r"(?:を|は|が)?(?:教えて|お聞かせ|説明して)(?:いただければと思います|いただきたいと思います|ください)[。 ]*$",
-        "の説明を求めました。", text)
-    text = re.sub(r"(?:の)+の説明を求めました。$", "の説明を求めました。", text)
-    text = re.sub(r"(?:でしょうか|ですか)[。 ]*$", "か尋ねました。", text)
     text = re.sub(r"という認識でよろしいのか[。 ]*$", "との認識でよいか確認しました。", text)
-    if kind in ("意見", "提案") and not re.search(r"(?:述べました|提案しました|求めました|尋ねました|確認しました)[。 ]*$", text):
-        text = text.rstrip("。") + "との意見を述べました。"
-    text = text.replace("ととの意見を述べました", "との意見を述べました")
     if text and text[-1] not in "。！？…":
         text += "。"
-    return compact(text)
+    # 語尾の言い換えは共通ルールに任せる。ここに同じ変換を書くと必ずずれる
+    text = qa.normalize_question(text)
+    if kind in ("意見", "提案") and not qa.looks_reported(text):
+        text = text.rstrip("。") + "との意見を述べました。"
+    return compact(qa.normalize_question(text))
 
 
 def concise_summary(text: str, cues: tuple[str, ...], limit: int, mode: str, kind: str = "") -> str:
