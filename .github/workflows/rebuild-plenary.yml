@@ -18,6 +18,11 @@ on:
         description: "作り直す年（平成。例: 28 → 平成28年）"
         required: true
         type: string
+      mode:
+        description: "write=作り直して保存 / inspect=公式ページの表の作りをログに出すだけ"
+        default: write
+        type: choice
+        options: [write, inspect]
 
 permissions:
   contents: write
@@ -48,14 +53,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r scripts/requirements-history.txt
 
+      - name: 公式ページの表の作りを見る
+        if: inputs.mode == 'inspect'
+        # 解析が噛み合わないときの調査用。データは書き換えない
+        run: python scripts/build_heisei_year.py "${{ inputs.year }}" --inspect
+
       - name: 本会議の質問・答弁を作り直す
+        if: inputs.mode == 'write'
         run: python scripts/build_heisei_year.py "${{ inputs.year }}"
 
       - name: 要約を検査する
+        if: inputs.mode == 'write'
         # 作り直した結果が共通ルールを満たしているかを、保存する前に確かめる
         run: python scripts/check_qa_summaries.py
 
       - name: 更新があれば保存
+        if: inputs.mode == 'write'
         run: |
           scripts/commit_data_update.sh \
             "平成${{ inputs.year }}年の本会議質問・答弁を会議録から作り直し" data/
