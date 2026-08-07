@@ -1,0 +1,65 @@
+name: 本会議の質問・答弁を会議録から作り直す
+
+# 公式の本会議資料ページと会議録検索システムから、指定した平成年の
+# 代表質問・一般質問と答弁の要約（data/hXX.js の qaSummaries）を作り直す。
+# 開発環境から会議録へ到達できない場合があるため、取得はここで行う。
+#
+# 使いどころ:
+#   - 質問・答弁要約の作り方を直したあと、過去年に反映する
+#   - `scripts/check_qa_summaries.py` の「要改善」を減らす
+#
+# 委員会側は `rebuild-committees.yml`（西暦を指定）。こちらは平成年を指定する。
+# 1回の実行で1年分を作り直す。
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "作り直す年（平成。例: 28 → 平成28年）"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-shinagawa-plenary
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    # 会議録の取得に時間がかかる。実行待ちの時間もこの上限に含まれる。
+    timeout-minutes: 300
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v6
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: 必要なものを入れる
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements-history.txt
+
+      - name: 本会議の質問・答弁を作り直す
+        run: python scripts/build_heisei_year.py "${{ inputs.year }}"
+
+      - name: 要約を検査する
+        # 作り直した結果が共通ルールを満たしているかを、保存する前に確かめる
+        run: python scripts/check_qa_summaries.py
+
+      - name: 更新があれば保存
+        run: |
+          if [ -z "$(git status --porcelain -- data/)" ]; then
+            echo "更新はありません"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "平成${{ inputs.year }}年の本会議質問・答弁を会議録から作り直し"
+          git push

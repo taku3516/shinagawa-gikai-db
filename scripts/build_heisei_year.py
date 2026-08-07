@@ -7,6 +7,7 @@ prepare_history.py の解析処理をそのまま使う（要 beautifulsoup4）�
 取得できなかった年は bills/petitions を空のまま出力し、件数を表示する。
 """
 import collections, json, os, re, sys, time, unicodedata, urllib.request, html as H
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -200,7 +201,7 @@ def extract_qa(docs, cache):
     def flat(i):
         t = re.sub(r'\s+', '', re.sub(r'<[^>]+>', '', re.sub(r'<!--.*?-->', '', (cache / f"doc{i}.html").read_text(encoding="utf-8", errors="replace"), flags=re.S)))
         return re.sub(r'\d+:◯[^）]{2,25}）', '', t)
-    qa = {}
+    speeches = {}
     for i, name in sorted(docs.items(), key=lambda x: int(x[0])):
         m = re.search(r'第(\d)回定例会（第(\d)日目）', name)
         if not m or "本文" not in name:
@@ -219,9 +220,9 @@ def extract_qa(docs, cache):
             while j < len(marks) and re.search(OFFICIAL, marks[j][2]):
                 ae = marks[j + 1][0] if j + 1 < len(marks) else marks[j][1] + 8000
                 ans.append(t[marks[j][1]:ae][:8000]); j += 1
-            qa.setdefault((sess, norm(who)), {"q": qspan[:9000], "ans": "".join(ans), "doc": i})
+            speeches.setdefault((sess, norm(who)), {"q": qspan[:9000], "ans": "".join(ans), "doc": i})
             k = j if j > k + 1 else k + 1
-    return qa
+    return speeches
 
 def pick(text, key, maxlen):
     for k in [key[:8], key[:6], key[:4], key[-5:]]:
@@ -251,7 +252,11 @@ def fix_q(s):
     return s if s.endswith("。") else (s + "などについて質問しました。" if s else s)
 
 def main():
-    hy = int(sys.argv[1]); western = 1988 + hy
+    if len(sys.argv) < 2 or not sys.argv[1].strip().isdigit():
+        raise SystemExit("使い方: python3 scripts/build_heisei_year.py <平成の年（例: 28）>")
+    hy = int(sys.argv[1].strip()); western = 1988 + hy
+    if not 1 <= hy <= 31:
+        raise SystemExit(f"平成{hy}年は存在しません。1〜31を指定してください。")
     yid = f"h{hy}"
     cache = ROOT / f"scripts/cache/{yid}"
     cache.mkdir(parents=True, exist_ok=True)
@@ -259,7 +264,7 @@ def main():
     questions = fetch_questions(hy, cache)
     print(f"{yid}: 議案・請願陳情を取得中...")
     bills, petitions = fetch_bills(hy, cache)
-    qa = extract_qa(docs, cache)
+    speeches = extract_qa(docs, cache)
     people = json.loads((ROOT / "data/people.js").read_text().split("peopleData = ", 1)[1].rstrip().rstrip(";"))
     known = {}
     for p in people["people"]:
@@ -271,7 +276,7 @@ def main():
         if not items:
             continue
         for it in items:
-            src = qa.get((n, norm(it["member"])))
+            src = speeches.get((n, norm(it["member"])))
             sums = []
             for tp in it["topics"]:
                 q = pick(src["q"], tp, 150) if src else ""
@@ -314,7 +319,10 @@ def main():
             else:
                 newcomers.add(it["member"])
             qout.append(e)
-    data = {"id": yid, "label": f"平成{hy}年", "updatedAt": "2026-07-30",
+    # 取得に失敗した年をここで書き出すと、既にある会議録データを空で潰してしまう
+    if not qout:
+        raise SystemExit(f"{yid}: 質問を1件も取得できませんでした。data/{yid}.js は書き換えません。")
+    data = {"id": yid, "label": f"平成{hy}年", "updatedAt": date.today().isoformat(),
             "yearSummary": {"title": f"平成{hy}年（{western}年）の本会議",
                             "text": "第1回から第4回までの定例会について、公式掲載の代表質問・一般質問を全項目掲載し、正式会議録から質問と答弁の要点をまとめています。正確な内容は公式会議録も確認してください。"},
             "meetings": meetings, "bills": bills, "petitions": petitions, "questions": qout}
