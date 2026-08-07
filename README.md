@@ -62,6 +62,25 @@
 - `data/h13-committees.js`〜`data/r08-committees.js`（および分割ファイル `-part-NN.js`） — 年度別の委員会質疑・答弁要約
 
 過去年の委員会データを更新する場合は `python3 scripts/prepare_committees.py --year <西暦年>` で再生成できます。
+会議録の取得には poppler（`pdfinfo` / `pdftotext`）が必要です（Ubuntu/Debianは `sudo apt-get install poppler-utils`、macOSは `brew install poppler`）。
+開発環境から会議録へ到達できない場合は、GitHub Actionsの「委員会質疑を会議録から作り直す」を年を指定して手動実行してください（`.github/workflows/rebuild-committees.yml`）。
+poppler と依存ライブラリの用意から、要約の検査、更新の保存までを通しで行います。
+
+## 質問・答弁要約の品質
+
+本会議の代表・一般質問と委員会質疑の要約は、「何について質問したか」「何について答弁したか」が
+読み取れることを条件にしています。判定と整形は `scripts/qa_summary.py` に集約し、生成・修復・検査が
+同じ定義を使います。書き方のルールは[要約作成ルール](docs/qa-summary-rules.md)にまとめています。
+
+```bash
+python3 scripts/check_qa_summaries.py           # 検査（要修正が1件でもあれば終了コード1）
+python3 scripts/check_qa_summaries.py --details # 問題のある要約も表示
+python3 scripts/repair_qa_summaries.py --write  # 機械的に直せるものを修復
+```
+
+`.github/workflows/check-qa-summaries.yml` により、`data/` や要約スクリプトを変更するたびに
+自動で検査されます。文の途中で切れている、答弁が古い文言のまま、といった機械的に直せる問題が
+あると失敗します。会議録から取り直さないと直らない項目は件数を出すだけで、再生成のたびに減らします。
 
 平成30年〜令和7年の全件化と会議録要約、および平成13〜29年に議案・請願陳情を追加する手順は、[実装準備・監査手順](docs/history-expansion.md)にまとめています。質問・答弁要約の書き方は[要約作成ルール](docs/qa-summary-rules.md)にまとめています。平成13〜29年の議案・請願陳情は、公式サイトへ到達できる環境で次を実行すると収集できます。
 
