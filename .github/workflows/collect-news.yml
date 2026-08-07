@@ -24,6 +24,9 @@ jobs:
     steps:
       - name: リポジトリを取得
         uses: actions/checkout@v6
+        with:
+          # push が競合したときに rebase できるよう、履歴ごと取得する
+          fetch-depth: 0
 
       - name: Pythonを準備
         uses: actions/setup-python@v6
@@ -35,12 +38,4 @@ jobs:
 
       - name: 記事の更新があれば保存
         run: |
-          if git diff --quiet -- data/news-items.js; then
-            echo "新しい記事はありません"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/news-items.js
-          git commit -m "品川区ニュースを自動更新"
-          git push
+          scripts/commit_data_update.sh "品川区ニュースを自動更新" data/news-items.js
