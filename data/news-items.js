@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-08T04:34:59.257963Z",
+  "generatedAt": "2026-08-08T13:25:26.735419Z",
   "items": [
     {
       "id": "3f4df165a67e1881fcc1",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000001098.000016935.html",
-      "publishedAt": "2026-08-08T04:10:02Z",
+      "publishedAt": "2026-08-08T10:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-05T20:57:53.120243Z",
       "tags": [
@@ -5223,7 +5223,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1526, column 54"
+      "message": "not well-formed (invalid token): line 1002, column 19"
     },
     {
       "source": "朝日新聞",
@@ -5304,9 +5304,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
