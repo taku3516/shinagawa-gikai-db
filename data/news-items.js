@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-07T13:46:43.901817Z",
+  "generatedAt": "2026-08-08T02:27:11.629008Z",
   "items": [
+    {
+      "id": "db321cfdabbce5f73614",
+      "title": "協力会員募集説明会を開催します！",
+      "summary": "さわやかサービスの活動について写真などを使ってご説明します。 また、ご希望の方はその場で会員登録することもできます。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-58691.html",
+      "publishedAt": "2026-08-08T02:26:52.662642Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-08T02:26:52.662642Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "41b4fc304f51c665d524",
+      "title": "品川区戸越六丁目18・20番東地区防災街区整備事業組合設立",
+      "summary": "[旭化成ホームズ株式会社] 旭化成ホームズ株式会社（本社：東京都千代田区、代表取締役社長：大和久 裕二）は、東京都品川区戸越六丁目18・20番東地区防災街区整備事業において、2026年7月17日、防災街区整備事業組合が設立されましたので...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000266.000073738.html",
+      "publishedAt": "2026-08-07T23:10:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "3f4df165a67e1881fcc1",
       "title": "『エレガンス』で「このミス」8位ランクインの石川智健氏、最新書下し長篇『ストーリーランド』、徳間書店より8/28発売！ 発売前に冒頭部分、特別無料公開中！",
@@ -95,25 +131,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "41b4fc304f51c665d524",
-      "title": "品川区戸越六丁目18・20番東地区防災街区整備事業組合設立",
-      "summary": "[旭化成ホームズ株式会社] 旭化成ホームズ株式会社（本社：東京都千代田区、代表取締役社長：大和久 裕二）は、東京都品川区戸越六丁目18・20番東地区防災街区整備事業において、2026年7月17日、防災街区整備事業組合が設立されましたので...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000266.000073738.html",
-      "publishedAt": "2026-08-07T07:40:48Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T07:50:23.345001Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "戸越"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "3046a4105f97df459871",
@@ -5206,7 +5223,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1620, column 54"
+      "message": "not well-formed (invalid token): line 1615, column 54"
     },
     {
       "source": "朝日新聞",
