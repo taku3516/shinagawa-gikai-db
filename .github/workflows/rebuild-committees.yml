@@ -55,6 +55,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r scripts/requirements-history.txt
 
+      - name: 取得済みの会議録を持ち越す
+        # scripts/cache は .gitignore しているため、何もしないと実行のたびに
+        # 会議録を取り直すことになる（1年あたり約125会議・0.45秒間隔）。
+        # 生成の直し方を変えて同じ年を作り直すことは多いので、ここで持ち越す。
+        # prepare_committees.py はキャッシュがあれば取得も待機も飛ばす。
+        #
+        # キーに run_id を入れて毎回書き出し、restore-keys で直前の同じ年を
+        # 復元する。--refresh で取り直した場合も、その結果が次に引き継がれる。
+        uses: actions/cache@v4
+        with:
+          path: scripts/cache
+          key: minutes-${{ inputs.year }}-${{ github.run_id }}
+          restore-keys: |
+            minutes-${{ inputs.year }}-
+
       - name: 委員会質疑を作り直す
         run: |
           python scripts/prepare_committees.py --year "${{ inputs.year }}" \
