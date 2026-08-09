@@ -7,12 +7,19 @@ name: 質問・答弁要約を検査
 # 文の途中で切れている・空・古い文言のままといった機械的に直せる問題があると
 # 失敗する。会議録から取り直さないと直らない項目（前置きだけの質問など）は
 # 件数を出すだけで失敗にはしない。
+#
+# あわせて、文としては壊れていないが要約になっていないもの（発言の口語がそのまま
+# 残っている、見出しの言い換えで終わっている等）の割合を年ごとに測り、
+# scripts/qa_baseline.json の基準値より悪化した場合も失敗する。
+# 0件を求めるものではないので、生成を直して改善したときは
+# `python3 scripts/check_qa_summaries.py --update-baseline` で基準値を引き直す。
 
 on:
   push:
     paths:
       - "data/**"
       - "scripts/qa_summary.py"
+      - "scripts/qa_baseline.json"
       - "scripts/check_qa_summaries.py"
       - "scripts/repair_qa_summaries.py"
       - ".github/workflows/check-qa-summaries.yml"
@@ -20,6 +27,7 @@ on:
     paths:
       - "data/**"
       - "scripts/qa_summary.py"
+      - "scripts/qa_baseline.json"
       - "scripts/check_qa_summaries.py"
       - "scripts/repair_qa_summaries.py"
   workflow_dispatch:
@@ -42,4 +50,4 @@ jobs:
           python-version: "3.12"
 
       - name: 要約を検査する
-        run: python scripts/check_qa_summaries.py --details --limit 3
+        run: python scripts/check_qa_summaries.py --by-year --details --limit 3

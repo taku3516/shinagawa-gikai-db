@@ -280,6 +280,115 @@ BLOCKING_ISSUES = ("空", "未完結", "長すぎる", "旧文言", "二重に�
 ADVISORY_ISSUES = ("短すぎる", "前置きのみ", "定型のまま", "接続詞始まり")
 
 
+##############################################################################
+# 品質の検査
+##############################################################################
+#
+# 上の検査は「文として壊れていないか」だけを見ている。それを全部通っていても、
+# 発言をそのまま貼っただけで要約になっていない、という状態は起こる。実際に
+# 起きていた（要修正0件のまま、委員会の質問の4割に話し言葉が残っていた）。
+#
+# ここに置くのは、その「壊れてはいないが要約として機能していない」を捕まえる
+# 判定。1件ごとに真偽を返すものだけを置き、割合の集計と基準値との比較は
+# scripts/check_qa_summaries.py が行う。
+
+QUALITY_ISSUES = {
+    "話し言葉": "発言をそのまま貼っていて第三者の要約になっていない",
+    "タイトル反復": "見出しを言い換えただけで、何を尋ねたのかが入っていない",
+    "語尾破綻": "語尾の差し替えが文の途中に入り、発言がそのまま後ろに残っている",
+    "答弁欠落": "答弁を求める発言なのに答弁を特定できていない",
+}
+
+# 話し言葉が残っている印。会議録の口語そのままでしか出てこない言い回しを選ぶ。
+# 「その辺」「ちょっと」のように、単独では何を指すか分からない語を含める。
+SPOKEN_MARKERS = re.compile(
+    r"(?:のですけれど|んですけれど|ちょっと|かなと思|なんですが|わけですけれ"
+    r"|ですよね|そこら辺|その辺|といいますか|ですけれども)"
+)
+
+# 語尾の差し替えが失敗した跡。
+#
+# 大半は「文末だと思って語尾を付けたが、実際には文が続いていた」型で、
+# 差し替えた語尾の直後に接続助詞が来て、元の発言がそのまま後ろに残る。
+#   例: 「…改修してほしいと求めましたが、いかがでしょうか。」
+#       「…使わせてほしいと求めましたけれども、よろしいか尋ねました。」
+# 残りは直前の助詞とぶつかった型。
+#   例: 「構わないので」＋「の説明を求めました」→「構わないのでの説明を求めました」
+#
+# 「〜から説明を求めました」「こととの兼ね合い」のように、字面が似ていても
+# 文として正しいものは除く。ここが緩いと、直すべき件数が読めなくなる。
+PARTICLE_COLLISION = re.compile(
+    # 語尾の直後に文が続いている（差し替え位置を間違えた）
+    r"(?:求めました|尋ねました|述べました|確認しました|示しました)"
+    r"(?:けれども|けれど|けど|が、|ので|ですが)"
+    # 直前の助詞とぶつかった
+    r"|(?:ので|のに|たい|ほしい|よう)の説明を"
+    r"|ととの意見を述べました"
+    r"|をを"
+)
+
+# 見出しの反復とみなす、見出しから先に伸びてよい字数。
+# 「孤立死の防止について」→「孤立死の防止について尋ねました。」は反復。
+# 見出しに続けて実際の質問内容が書かれていれば、この幅を超える。
+TITLE_ECHO_MARGIN = 28
+# 見出しの照合に使う先頭の字数。長い見出しの全文一致を求めると取りこぼす。
+TITLE_ECHO_STEM = 12
+
+
+def has_spoken_style(text: str) -> bool:
+    """発言の口語がそのまま残っているか。"""
+    return bool(SPOKEN_MARKERS.search(compact(text)))
+
+
+def has_broken_ending(text: str) -> bool:
+    """語尾の差し替えが失敗した跡が残っているか。"""
+    return bool(PARTICLE_COLLISION.search(compact(text)))
+
+
+def echoes_title(title: str, question: str) -> bool:
+    """質問が見出しの言い換えで終わっていないか。
+
+    見出しの先頭部分がそのまま質問に含まれ、かつ質問がそこから
+    ほとんど伸びていなければ、何を尋ねたのかが入っていないとみなす。
+    """
+    stem = re.sub(r"について$", "", compact(title).strip("「」"))[:TITLE_ECHO_STEM]
+    body = compact(question)
+    if not stem or stem not in body:
+        return False
+    return len(body) <= len(stem) + TITLE_ECHO_MARGIN
+
+
+def answer_is_missing(answer: str, kind: str) -> bool:
+    """答弁を求める発言なのに答弁が取れていないか。
+
+    意見・提案は答弁を求めていないので、答弁が無いことは正常な状態であり
+    欠落として数えない。ここを混ぜると改善したかどうかが読めなくなる。
+    """
+    if kind in KINDS_WITHOUT_ANSWER:
+        return False
+    return is_no_answer(answer)
+
+
+def check_quality(title: str, question: str, answer: str, kind: str = "") -> list[str]:
+    """要約として機能しているかを検査し、問題があれば項目名の一覧を返す。
+
+    check_question / check_answer と違い、ここで挙がるものは文としては
+    壊れていない。0件を求めるのではなく、割合を記録して下げていく。
+    """
+    found = []
+    if has_spoken_style(question):
+        found.append("質問:話し言葉")
+    if has_broken_ending(question):
+        found.append("質問:語尾破綻")
+    if echoes_title(title, question):
+        found.append("質問:タイトル反復")
+    if answer_is_missing(answer, kind):
+        found.append("答弁:答弁欠落")
+    elif has_spoken_style(answer):
+        found.append("答弁:話し言葉")
+    return found
+
+
 def check_question(text: str) -> list[str]:
     """質問の要約を検査し、問題があれば項目名の一覧を返す。"""
     found = []
