@@ -38,6 +38,15 @@ LEGACY_FULL_TEXT = "答弁の全文は会議録を参照してください。"
 # 答弁を求めていない発言の種類
 KINDS_WITHOUT_ANSWER = ("意見", "提案")
 
+# 掲載の仕方。項目によって、同じ文が問題にも正常にもなる。
+#
+#   要約 … 第三者の言い方に直したもの（本会議のバッチ要約）。
+#          「〜してください」で終わっていたら直し損ねている
+#   抜粋 … 発言をそのまま切り出したもの（委員会）。
+#          「〜してください」で終わるのが正しい状態で、直す対象ではない
+STYLE_SUMMARY = "要約"
+STYLE_EXCERPT = "抜粋"
+
 # 要約の長さの上限
 QUESTION_LIMIT = 190
 ANSWER_LIMIT = 240
@@ -369,11 +378,26 @@ def answer_is_missing(answer: str, kind: str) -> bool:
     return is_no_answer(answer)
 
 
-def check_quality(title: str, question: str, answer: str, kind: str = "") -> list[str]:
-    """要約として機能しているかを検査し、問題があれば項目名の一覧を返す。
+# 掲載の仕方ごとに見る項目。
+#
+# 話し言葉は**要約にだけ**当てる。抜粋は発言そのままなので、口語が残っているのは
+# 正常な状態であって欠陥ではない。ここを分けないと、抜粋を作り直すたびに
+# 「悪化した」と出て毎回引っかかる（実際に r07 で 33.3%→49.4% と出た）。
+QUALITY_BY_STYLE = {
+    STYLE_SUMMARY: ("質問:話し言葉", "質問:タイトル反復", "質問:語尾破綻",
+                    "答弁:答弁欠落", "答弁:話し言葉"),
+    STYLE_EXCERPT: ("質問:タイトル反復", "質問:語尾破綻", "答弁:答弁欠落"),
+}
+
+
+def check_quality(title: str, question: str, answer: str, kind: str = "",
+                  style: str = STYLE_SUMMARY) -> list[str]:
+    """掲載文が読めるものになっているかを検査し、問題があれば項目名を返す。
 
     check_question / check_answer と違い、ここで挙がるものは文としては
     壊れていない。0件を求めるのではなく、割合を記録して下げていく。
+
+    抜粋では話し言葉を見ない（上の QUALITY_BY_STYLE を参照）。
     """
     found = []
     if has_spoken_style(question):
@@ -386,17 +410,8 @@ def check_quality(title: str, question: str, answer: str, kind: str = "") -> lis
         found.append("答弁:答弁欠落")
     elif has_spoken_style(answer):
         found.append("答弁:話し言葉")
-    return found
-
-
-# 掲載の仕方。項目によって、同じ文が問題にも正常にもなる。
-#
-#   要約 … 第三者の言い方に直したもの（本会議のバッチ要約）。
-#          「〜してください」で終わっていたら直し損ねている
-#   抜粋 … 発言をそのまま切り出したもの（委員会）。
-#          「〜してください」で終わるのが正しい状態で、直す対象ではない
-STYLE_SUMMARY = "要約"
-STYLE_EXCERPT = "抜粋"
+    applicable = QUALITY_BY_STYLE.get(style, QUALITY_BY_STYLE[STYLE_SUMMARY])
+    return [name for name in found if name in applicable]
 
 
 def check_question(text: str, style: str = STYLE_SUMMARY) -> list[str]:
