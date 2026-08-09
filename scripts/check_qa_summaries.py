@@ -218,7 +218,8 @@ def measure():
                     ))
 
         for name in qa.check_quality(
-            record["title"], record["question"], record["answer"], record["kind"]
+            record["title"], record["question"], record["answer"],
+            record["kind"], record["style"],
         ):
             counter[name] += 1
             if len(examples[name]) < 5:
@@ -234,10 +235,20 @@ def rate(counter: Counter, name: str) -> float:
     return round(100 * counter[name] / total, 1) if total else 0.0
 
 
-def quality_names() -> list[str]:
-    """品質の項目名を、表示順に返す。"""
-    return ["質問:話し言葉", "質問:タイトル反復", "質問:語尾破綻",
-            "答弁:答弁欠落", "答弁:話し言葉"]
+def style_of(dataset: str) -> str:
+    """データごとの掲載の仕方。委員会は抜粋、本会議は要約。"""
+    return qa.STYLE_EXCERPT if dataset == "委員会" else qa.STYLE_SUMMARY
+
+
+def quality_names(dataset: str = "") -> list[str]:
+    """品質の項目名を、表示順に返す。
+
+    掲載の仕方で見る項目が違う。抜粋（委員会）では話し言葉を見ない——
+    発言そのままなので、口語が残っているのは正常な状態だから。
+    """
+    if not dataset:
+        return list(qa.QUALITY_BY_STYLE[qa.STYLE_SUMMARY])
+    return list(qa.QUALITY_BY_STYLE[style_of(dataset)])
 
 
 def volume(counter: Counter, name: str) -> float:
@@ -265,7 +276,7 @@ def build_baseline(stats) -> dict:
     for (dataset, year), counter in stats.items():
         out.setdefault(dataset, {})[year] = {
             "件数": counter["件数"],
-            **{name: rate(counter, name) for name in quality_names()},
+            **{name: rate(counter, name) for name in quality_names(dataset)},
             **{name: volume(counter, name) for name in volume_names(counter)},
         }
     return out
@@ -293,7 +304,7 @@ def regressions(stats, baseline) -> list[tuple[str, str, str, float, float, str]
         recorded = baseline.get(dataset, {}).get(year)
         if not recorded:
             continue
-        for name in quality_names():
+        for name in quality_names(dataset):
             before = recorded.get(name)
             if before is None:
                 continue
@@ -322,15 +333,17 @@ def print_by_year(stats) -> None:
         )
         if not rows:
             continue
+        names = quality_names(dataset)
         print()
-        print(f"■ {dataset}の年ごとの割合（％）")
-        header = "  年     件数  " + "  ".join(f"{name.split(':')[1]:>8}" for name in quality_names())
+        note = "（抜粋なので話し言葉は見ません）" if dataset == "委員会" else ""
+        print(f"■ {dataset}の年ごとの割合（％）{note}")
+        header = "  年     件数  " + "  ".join(f"{name.split(':')[1]:>8}" for name in names)
         if dataset == "委員会":
             header += "   保持率"
         print(header)
         for year, counter in rows:
             line = f"  {year}  {counter['件数']:6,d}  "
-            line += "  ".join(f"{rate(counter, name):8.1f}" for name in quality_names())
+            line += "  ".join(f"{rate(counter, name):8.1f}" for name in names)
             if dataset == "委員会":
                 kept = counter["原文字数"]
                 line += f"  {100 * counter['掲載字数'] / kept:7.1f}" if kept else "        -"
@@ -400,9 +413,18 @@ def main() -> int:
     overall: Counter = Counter()
     for counter in stats.values():
         overall.update(counter)
-    for name in quality_names():
-        reason = qa.QUALITY_ISSUES.get(name.split(":", 1)[1], "")
-        print(f"  {name}: {overall[name]:,}件 ({rate(overall, name):.1f}%)  — {reason}")
+    for dataset in ("委員会", "本会議"):
+        totals: Counter = Counter()
+        for (owner, _), counter in stats.items():
+            if owner == dataset:
+                totals.update(counter)
+        if not totals["件数"]:
+            continue
+        note = "（抜粋）" if dataset == "委員会" else "（要約）"
+        print(f"  {dataset}{note}")
+        for name in quality_names(dataset):
+            reason = qa.QUALITY_ISSUES.get(name.split(":", 1)[1], "")
+            print(f"    {name}: {totals[name]:,}件 ({rate(totals, name):.1f}%)  — {reason}")
 
     print()
     print("■ 量（上下どちらに動きすぎても失敗します）")

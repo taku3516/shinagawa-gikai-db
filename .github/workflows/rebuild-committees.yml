@@ -22,6 +22,10 @@ on:
         description: "取得済みの会議録を使わず取り直す"
         default: false
         type: boolean
+      update_baseline:
+        description: "品質・量の基準値を引き直す（増減を確認したうえで受け入れるとき）"
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -76,10 +80,19 @@ jobs:
             ${{ inputs.refresh && '--refresh' || '' }}
 
       - name: 要約を検査する
-        # 作り直した結果が共通ルールを満たしているかを、保存する前に確かめる
-        run: python scripts/check_qa_summaries.py
+        # 作り直した結果が共通ルールを満たしているかを、保存する前に確かめる。
+        #
+        # --details で実例を出す。ここで止まったときデータは破棄されるので、
+        # 数字だけでは何が起きたか分からない。実際の文をログに残す。
+        #
+        # 生成を直すと量が変わり、基準値から外れて止まる。それが意図した変更
+        # なら、増減を確認したうえで update_baseline を on にして流し直す。
+        run: |
+          python scripts/check_qa_summaries.py --details --limit 5 \
+            ${{ inputs.update_baseline && '--update-baseline' || '' }}
 
       - name: 更新があれば保存
         run: |
           scripts/commit_data_update.sh \
-            "${{ inputs.year }}年の委員会質疑を会議録から作り直し" data/ docs/
+            "${{ inputs.year }}年の委員会質疑を会議録から作り直し" \
+            data/ docs/ scripts/qa_baseline.json
