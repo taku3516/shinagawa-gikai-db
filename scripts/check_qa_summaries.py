@@ -14,6 +14,8 @@
   会議録から取り直さないと直らない。件数を出すだけで、失敗にはしない。
 - **品質**  文としては壊れていないが、発言をそのまま貼っただけで要約に
   なっていないもの。**0件は求めず、割合を基準値と比べて悪化だけを止める**。
+- **量**  保持率と平均字数。**上下どちらに動きすぎても止める**。減る側を
+  見ないと、本文を削るだけで品質の割合が下がってしまう（下記）。
 
 なぜ品質の検査を分けているか
 ----------------------------
@@ -23,6 +25,18 @@
 本会議h15〜h29の46.1%が見出しの言い換えで終わっていた。形だけを見る検査は
 「直したつもり」を通してしまう。だから割合を年ごとに記録して、悪化したら
 落ちるようにしてある。
+
+なぜ量も見るのか
+----------------
+
+品質の項目はすべて「悪さの割合」で、低いほど良い。これだけを見ていると、
+**本文を削れば点数が上がる**。実際に起きた。r07 を作り直したとき、質問529件が
+2文から1文になって35,115字が失われたにもかかわらず、話し言葉は33.3%→31.8%と
+下がり、検査を通った。消えていたのは2文目——実際に何を求めたのかが書かれて
+いる側だった。
+
+そこで保持率と平均字数を基準値に入れ、**減る側も見る**ようにしてある。
+悪さの割合は上限だけ、量は上下の両方。
 
 基準値（`scripts/qa_baseline.json`）
 -----------------------------------
@@ -56,9 +70,14 @@ DATA = ROOT / "data"
 BASELINE_PATH = ROOT / "scripts" / "qa_baseline.json"
 DECODER = json.JSONDecoder()
 
-# 基準値と比べるときに許す悪化幅（ポイント）。
+# 悪さの割合について、基準値と比べて許す悪化幅（ポイント）。
 # 会議が数件増減するだけで割合はわずかに動くので、その分を吸収する。
 TOLERANCE = 0.5
+
+# 量について、基準値と比べて許す増減の幅（％）。
+# 悪さの割合と違って上下どちらも見る。減る側を見ないと、本文を削るだけで
+# 悪さの割合が下がり、内容が失われたのに「改善した」と読めてしまう。
+VOLUME_TOLERANCE = 2.0
 
 # 本会議は年によって作り方が違い、品質もそこで切り替わる。年ごとの数字だけでは
 # 読みにくいので、まとめて表示するための区分を持つ。CIの判定は年ごとに行う。
@@ -167,6 +186,11 @@ def measure():
         counter["件数"] += 1
         counter["原文字数"] += record["characters"]
         counter["掲載字数"] += len(record["question"]) + len(record["answer"])
+        counter["質問字数"] += len(record["question"])
+        if not qa.is_no_answer(record["answer"]):
+            # 答弁なしの定型文は本文ではないので、平均字数の材料にしない
+            counter["答弁あり"] += 1
+            counter["答弁字数"] += len(record["answer"])
         # 答弁欠落の分母は「答弁を求める発言」だけ。意見・提案は混ぜない
         if record["kind"] not in qa.KINDS_WITHOUT_ANSWER:
             counter["要答弁"] += 1
@@ -211,13 +235,33 @@ def quality_names() -> list[str]:
             "答弁:答弁欠落", "答弁:話し言葉"]
 
 
+def volume(counter: Counter, name: str) -> float:
+    """量の項目を返す。基準値と比べて上下どちらの動きも見る。"""
+    if name == "保持率":
+        source = counter["原文字数"]
+        return round(100 * counter["掲載字数"] / source, 1) if source else 0.0
+    if name == "質問の平均字数":
+        return round(counter["質問字数"] / counter["件数"], 1) if counter["件数"] else 0.0
+    if name == "答弁の平均字数":
+        # 答弁なしの定型文は本文ではないので、平均に混ぜない
+        return round(counter["答弁字数"] / counter["答弁あり"], 1) if counter["答弁あり"] else 0.0
+    raise KeyError(name)
+
+
+def volume_names(counter: Counter) -> list[str]:
+    """量の項目名を返す。保持率は原文の字数を持つ委員会だけ。"""
+    names = ["質問の平均字数", "答弁の平均字数"]
+    return (["保持率"] + names) if counter["原文字数"] else names
+
+
 def build_baseline(stats) -> dict:
-    """いまの割合を、基準値として書き出せる形にする。"""
+    """いまの値を、基準値として書き出せる形にする。"""
     out: dict = {}
     for (dataset, year), counter in stats.items():
         out.setdefault(dataset, {})[year] = {
             "件数": counter["件数"],
             **{name: rate(counter, name) for name in quality_names()},
+            **{name: volume(counter, name) for name in volume_names(counter)},
         }
     return out
 
@@ -228,8 +272,17 @@ def load_baseline() -> dict:
     return json.loads(BASELINE_PATH.read_text(encoding="utf-8")).get("割合", {})
 
 
-def regressions(stats, baseline) -> list[tuple[str, str, str, float, float]]:
-    """基準値より悪化した (データ, 年, 項目, 現在, 基準) を返す。"""
+def regressions(stats, baseline) -> list[tuple[str, str, str, float, float, str]]:
+    """基準値から外れた (データ, 年, 項目, 現在, 基準, 理由) を返す。
+
+    項目によって見る向きが違う。
+
+    - **悪さの割合**（話し言葉など）は上限だけ見る。下がるのは改善なので止めない
+    - **量**（保持率・平均字数）は上下どちらも見る。**減る側を見ないと、
+      本文を削るだけで悪さの割合が下がり、改善と誤判定される**。実際に起きた:
+      r07 を作り直したとき、質問529件が2文から1文になって35,115字が失われた
+      にもかかわらず、話し言葉は33.3%→31.8%と下がって検査を通った
+    """
     found = []
     for (dataset, year), counter in sorted(stats.items(), key=lambda kv: year_order(kv[0][1])):
         recorded = baseline.get(dataset, {}).get(year)
@@ -241,7 +294,17 @@ def regressions(stats, baseline) -> list[tuple[str, str, str, float, float]]:
                 continue
             now = rate(counter, name)
             if now > before + TOLERANCE:
-                found.append((dataset, year, name, now, before))
+                found.append((dataset, year, name, now, before, "悪化"))
+        for name in volume_names(counter):
+            before = recorded.get(name)
+            if not before:
+                continue
+            now = volume(counter, name)
+            allowed = before * VOLUME_TOLERANCE / 100
+            if now < before - allowed:
+                found.append((dataset, year, name, now, before, "減りすぎ"))
+            elif now > before + allowed:
+                found.append((dataset, year, name, now, before, "増えすぎ"))
     return found
 
 
@@ -336,6 +399,12 @@ def main() -> int:
         reason = qa.QUALITY_ISSUES.get(name.split(":", 1)[1], "")
         print(f"  {name}: {overall[name]:,}件 ({rate(overall, name):.1f}%)  — {reason}")
 
+    print()
+    print("■ 量（上下どちらに動きすぎても失敗します）")
+    for name in volume_names(overall):
+        unit = "" if "字数" in name else "%"
+        print(f"  {name}: {volume(overall, name):.1f}{unit}")
+
     print_bands(stats)
     if args.by_year:
         print_by_year(stats)
@@ -360,9 +429,10 @@ def main() -> int:
     if not baseline:
         print("■ 基準値が未記録です。`--update-baseline` で作成してください。")
     elif worse:
-        print("■ 悪化（基準値を超えました）")
-        for dataset, year, name, now, before in worse:
-            print(f"  {dataset} {year} {name}: {before:.1f}% → {now:.1f}%")
+        print("■ 基準値から外れました")
+        for dataset, year, name, now, before, reason in worse:
+            unit = "" if "字数" in name else "%"
+            print(f"  {dataset} {year} {name}［{reason}］: {before:.1f}{unit} → {now:.1f}{unit}")
         print()
         print("  意図した変更なら `--update-baseline` で基準値を引き直してください。")
     else:
