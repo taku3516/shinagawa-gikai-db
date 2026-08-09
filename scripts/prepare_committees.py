@@ -1079,10 +1079,12 @@ def validate(sessions: list[dict]) -> None:
                 assert item["speaker"] and item["question"] and item["answer"]
                 assert not item.get("title") or len(item["title"]) <= 44
                 assert not re.match(r"^[0-9０-９]+[:：]", item["question"])
-                assert len(item["question"]) <= 141, (
+                # 上限は共通ルールの値をそのまま使う。ここに数字を書くと、
+                # qa_summary 側を変えたときに必ず食い違う（実際に起きた）。
+                assert len(item["question"]) <= qa.QUESTION_LIMIT, (
                     session["id"], topic["title"], item["id"], len(item["question"]), item["question"]
                 )
-                assert len(item["answer"]) <= 241, (
+                assert len(item["answer"]) <= qa.ANSWER_LIMIT, (
                     session["id"], topic["title"], item["id"], len(item["answer"]), item["answer"]
                 )
 
