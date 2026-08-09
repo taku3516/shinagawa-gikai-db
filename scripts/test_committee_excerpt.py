@@ -141,6 +141,47 @@ def test_answer_keeps_whole_sentences() -> None:
         )
 
 
+def test_generated_output_passes_validate() -> None:
+    """作ったものが validate() を通る。
+
+    生成側の上限（qa.QUESTION_LIMIT）と validate() の上限がずれていると、
+    156会議ぶんを取り直したあとの最後で落ちる。実際に落ちた——上限を 140 から
+    190 に上げたとき、validate() に書いてあった 141 を直し忘れていた。
+    ここで両者を突き合わせておけば、会議録を取りに行く前に分かる。
+
+    題材はそのとき落ちた発言そのもの（186字）。
+    """
+    speech = (
+        "最後に口頭で、パブリックコメントを受けての区のお考えを示されましたけれども、"
+        "パブリックコメントの結果の公表に当たっては、パブリックコメントを受けて区としては"
+        "こういうふうに取り組んでいきます、こういうふうなことを考えていますという区の見解"
+        "というのですかね、この案のとおりでいきますという一言になってしまうと、"
+        "そうかもしれないですけれども、そういった見解をつけるのでしょうか。"
+    )
+    generated = question(speech)
+    check("上限より長い発言でも中身が出る", len(generated) > 140, f"{len(generated)}字")
+
+    session = {
+        "id": "test-session", "dateIso": f"{pc.YEAR}-01-20",
+        "status": "正式会議録",
+        "links": [{"type": "minutes", "label": "公式", "url": "https://example.invalid/"}],
+        "topics": [{
+            "id": "topic-01", "title": "テスト議題", "agenda": "テスト議題",
+            "exchanges": [{
+                "id": "exchange-001", "speaker": "テスト委員", "kind": "質問",
+                "question": generated,
+                "answer": answer("検討してまいりたいと考えてございます。", limit=qa.ANSWER_LIMIT),
+                "respondent": "テスト課長",
+            }],
+        }],
+    }
+    try:
+        pc.validate([session])
+        check("validate() を通る", True)
+    except AssertionError as error:
+        check("validate() を通る", False, f"生成側と検査側の上限がずれている → {error}")
+
+
 def test_excerpt_style_allows_first_person_ending() -> None:
     """抜粋は「〜してください」で終わってよい（要約では直し損ね）。"""
     text = "その辺のところを分かっている限りで構わないので教えてください。"
