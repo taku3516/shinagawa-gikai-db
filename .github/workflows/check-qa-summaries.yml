@@ -21,6 +21,8 @@ on:
       - "scripts/qa_summary.py"
       - "scripts/qa_baseline.json"
       - "scripts/check_qa_summaries.py"
+      - "scripts/prepare_committees.py"
+      - "scripts/test_committee_excerpt.py"
       - "scripts/repair_qa_summaries.py"
       - ".github/workflows/check-qa-summaries.yml"
   pull_request:
@@ -29,6 +31,8 @@ on:
       - "scripts/qa_summary.py"
       - "scripts/qa_baseline.json"
       - "scripts/check_qa_summaries.py"
+      - "scripts/prepare_committees.py"
+      - "scripts/test_committee_excerpt.py"
       - "scripts/repair_qa_summaries.py"
   workflow_dispatch:
 
@@ -48,6 +52,15 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
+      - name: 必要なものを入れる
+        # test_committee_excerpt.py が prepare_committees.py を読み込むため。
+        # 検査そのもの（check_qa_summaries.py）は標準ライブラリだけで動く。
+        run: pip install -r scripts/requirements-history.txt
+
+      - name: 抜粋づくりを試す
+        # 会議録なしで動く。節の継ぎ足しと語尾の差し替えが復活していないかを見る
+        run: python scripts/test_committee_excerpt.py
 
       - name: 要約を検査する
         run: python scripts/check_qa_summaries.py --by-year --details --limit 3

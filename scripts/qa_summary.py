@@ -389,8 +389,18 @@ def check_quality(title: str, question: str, answer: str, kind: str = "") -> lis
     return found
 
 
-def check_question(text: str) -> list[str]:
-    """質問の要約を検査し、問題があれば項目名の一覧を返す。"""
+# 掲載の仕方。項目によって、同じ文が問題にも正常にもなる。
+#
+#   要約 … 第三者の言い方に直したもの（本会議のバッチ要約）。
+#          「〜してください」で終わっていたら直し損ねている
+#   抜粋 … 発言をそのまま切り出したもの（委員会）。
+#          「〜してください」で終わるのが正しい状態で、直す対象ではない
+STYLE_SUMMARY = "要約"
+STYLE_EXCERPT = "抜粋"
+
+
+def check_question(text: str, style: str = STYLE_SUMMARY) -> list[str]:
+    """質問の掲載文を検査し、問題があれば項目名の一覧を返す。"""
     found = []
     value = compact(text)
     if not value:
@@ -403,7 +413,7 @@ def check_question(text: str) -> list[str]:
         found.append("長すぎる")
     if "について」について" in value:
         found.append("二重について")
-    if re.search(r"(?:ください|下さい|でしょうか|ですか)[。！？]?$", value):
+    if style == STYLE_SUMMARY and re.search(r"(?:ください|下さい|でしょうか|ですか)[。！？]?$", value):
         found.append("一人称")
     if re.search(r"(?<=[をはが])説明を求めました[。！？]?$", value):
         found.append("助詞の重複")
