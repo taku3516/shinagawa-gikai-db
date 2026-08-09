@@ -2,8 +2,12 @@
 """指定年の委員会会議録を収集し、台帳と画面用データを生成する。
 
 正式会議録（会議録検索システムのHTML）と直近の校正原稿PDFを同じ形式に
-そろえる。要約は外部AIへ送らず、発言録から質問・要望を含む文と答弁・対応を
-示す文を抽出する。推測による補完は行わない。
+そろえる。外部AIへは送らず、発言録から質問・要望を含む文と答弁・対応を示す文を
+**そのまま抜き出す**。推測による補完も、語尾の書き換えもしない。
+
+ここが作るのは要約ではなく抜粋。以前は文の中から節を継ぎ足し、質問の語尾を
+第三者の言い方へ差し替えていたが、原文に無い文ができるうえ、助詞と噛み合わない
+語尾が残るため、どちらもやめた（docs/qa-summary-rules.md の「修正の経緯」）。
 """
 
 from __future__ import annotations
@@ -542,107 +546,75 @@ def clip_title(value: str, limit: int = 80) -> str:
     return head.rstrip("、・／， ")
 
 
-def condense_sentence(value: str, cues: tuple[str, ...], limit: int, mode: str) -> str:
-    """長い一文から、結論・数字・対応を示す節だけを残す。"""
-    sentence = clean_spoken_style(value)
-    if len(sentence) <= limit:
-        return sentence
-    clauses = [compact(part) for part in re.split(r"(?<=、)", sentence) if compact(part)]
-    if len(clauses) <= 1:
-        return clip_at_clause(sentence, limit)
-    ranked = []
-    for index, clause in enumerate(clauses):
-        score = sum(2 for cue in cues if cue in clause)
-        if re.search(r"\d|[０-９]", clause):
-            score += 2
-        if mode == "question" and re.search(r"(?:ですか|でしょうか|伺|尋ね|確認|求め|要望|提案|教えて|ほしい)", clause):
-            score += 5
-        if mode == "answer" and re.search(r"(?:実施|予定|検討|対応|方針|説明|回答|認識|見込|開始|継続|変更|設置|支援)", clause):
-            score += 4
-        if index == len(clauses) - 1:
-            score += 3
-        ranked.append((score, index, clause))
+# 文の重要度を測る手がかり。質問なら「何を求めたか」、答弁なら「どう対応するか」。
+QUESTION_POINT = re.compile(r"(?:ですか|でしょうか|伺|尋ね|確認|求め|要望|提案|ほしい)")
+ANSWER_POINT = re.compile(r"(?:実施|予定|検討|対応|方針|説明|回答|認識|見込|開始|継続|変更|できない|難しい)")
 
-    selected_indexes = []
-    total = 0
-    for _, index, clause in sorted(ranked, reverse=True):
-        if index in selected_indexes:
-            continue
-        if selected_indexes and total + len(clause) > limit:
-            continue
-        selected_indexes.append(index)
-        total += len(clause)
-        if len(selected_indexes) >= 3:
-            break
-    result = "".join(clauses[index] for index in sorted(selected_indexes))
-    result = re.sub(r"^(?:それで|そこで|そのため|一方|また|あと|ということで)[、 ]*", "", result)
-    result = compact(result or clauses[-1]).rstrip("、 ")
-    if result and result[-1] not in "。！？…":
-        result += "。"
-    return clip_at_clause(result, limit)
+# 相づちだけの発言。要点を持たないので抜粋の対象から外す。
+BACKCHANNEL = re.compile(r"(?:はい|承知しました|ありがとうございます)[。！ ]*")
 
 
-def reported_question(value: str, kind: str) -> str:
-    """質問文の語尾を、短い第三者要約として読みやすくする。"""
-    text = compact(value)
-    text = text.replace("いただければと思います", "ほしいと求めました")
-    text = text.replace("いただきたいと思います", "ほしいと求めました")
-    text = re.sub(r"(?:ので、)?よろしく(?:お願いいたします|お願いします)[。 ]*$", "", text)
-    text = re.sub(r"という認識でよろしいのか[。 ]*$", "との認識でよいか確認しました。", text)
-    if text and text[-1] not in "。！？…":
-        text += "。"
-    # 語尾の言い換えは共通ルールに任せる。ここに同じ変換を書くと必ずずれる
-    text = qa.normalize_question(text)
-    if kind in ("意見", "提案") and not qa.looks_reported(text):
-        text = text.rstrip("。") + "との意見を述べました。"
-    return compact(qa.normalize_question(text))
+def pick_sentences(sentences: list[str], cues: tuple[str, ...], limit: int, mode: str) -> str:
+    """要点を含む文を、原文の順序と形のまま選ぶ。
 
+    **文は丸ごと採るか採らないかのどちらかにする。** 以前は文の中から節を選んで
+    継ぎ足していたため、原文には無い文ができていた（「簡単でいいのでの説明を
+    求めました」など）。読点で切って貼るのをやめれば、この壊れ方は起きない。
 
-def concise_summary(text: str, cues: tuple[str, ...], limit: int, mode: str, kind: str = "") -> str:
-    """重要文を選び、質問・答弁を短い読み言葉に整える。"""
-    raw_sentences = sentence_list(text)
-    sentences = []
-    for sentence in raw_sentences:
-        cleaned = clean_spoken_style(sentence)
-        if not cleaned:
-            continue
-        if re.fullmatch(r"(?:はい|承知しました|ありがとうございます)[。！ ]*", cleaned):
-            continue
-        sentences.append(cleaned)
-    if not sentences:
-        return ""
-
+    重要な順に、上限へ収まる文を採り、最後に元の順序へ戻す。上限に入らない文は
+    飛ばす（後ろにもっと短い要点の文があれば、そちらを拾える）。
+    """
     scored = []
     for index, sentence in enumerate(sentences):
         score = sum(2 for cue in cues if cue in sentence)
         if re.search(r"\d|[０-９]", sentence):
             score += 2
-        if mode == "question" and re.search(r"(?:ですか|でしょうか|伺|尋ね|確認|求め|要望|提案|ほしい)", sentence):
+        if mode == "question" and QUESTION_POINT.search(sentence):
             score += 4
-        if mode == "answer" and re.search(r"(?:実施|予定|検討|対応|方針|説明|回答|認識|見込|開始|継続|変更|できない|難しい)", sentence):
+        if mode == "answer" and ANSWER_POINT.search(sentence):
             score += 4
         if index == len(sentences) - 1:
             score += 2
-        scored.append((score, index, sentence))
+        # 同点なら前に出てくる文を優先する（-index を鍵にして昇順に戻す）
+        scored.append((score, -index, index))
 
-    # 質問は結論に近い文、答弁は結論・数字・対応方針を優先する。
-    wanted = 2
-    chosen_indexes = sorted(index for _, index, _ in sorted(scored, reverse=True)[:wanted])
-    sentence_limit = max(70, limit // max(1, len(chosen_indexes)))
-    selected = [condense_sentence(sentences[index], cues, sentence_limit, mode) for index in chosen_indexes]
-    result = "".join(selected)
+    chosen: list[int] = []
+    total = 0
+    for _, _, index in sorted(scored, reverse=True):
+        length = len(sentences[index])
+        if chosen and total + length > limit:
+            continue
+        chosen.append(index)
+        total += length
+    return "".join(sentences[index] for index in sorted(chosen))
+
+
+def concise_summary(text: str, cues: tuple[str, ...], limit: int, mode: str) -> str:
+    """発言から要点を含む文を、原文のまま抜き出す。
+
+    ここが作るのは要約ではなく**抜粋**。以前は節を継ぎ足したうえで質問の語尾を
+    第三者の言い方（「〜を求めました」）へ差し替えていたが、
+
+    - 原文に無い文ができる
+    - 差し替えた語尾が直前の助詞と噛み合わない
+    - 文末だと思って語尾を付けた結果、後ろに元の発言が残る
+
+    という壊れ方をしていた。語尾の差し替えはやめ、画面にも「該当発言の抜粋」
+    として出す。要約が要るなら、抜粋を消さずに別の項目として足すこと。
+    """
+    sentences = []
+    for sentence in sentence_list(text):
+        cleaned = clean_spoken_style(sentence)
+        if not cleaned or BACKCHANNEL.fullmatch(cleaned):
+            continue
+        sentences.append(cleaned)
+    if not sentences:
+        return ""
+
+    result = pick_sentences(sentences, cues, limit, mode)
     if not result:
         result = sentences[-1] if mode == "question" else sentences[0]
-    if mode != "question":
-        return clip_at_clause(result, limit)
-    # 語尾を付けたあとに切ると語尾自体が欠ける。先に長さを整えてから語尾を付ける。
-    trimmed = clip_at_clause(result, max(40, limit - 12))
-    question = qa.normalize_question(reported_question(trimmed or result, kind))
-    # 語尾を足した結果が上限を超える、あるいは文として閉じていない場合は整え直す。
-    # それでも整わなければ空を返し、この発言は載せない（壊れた要約を出さない）。
-    if len(question) > limit or not qa.is_complete(question):
-        question = qa.normalize_question(qa.finish(question, limit))
-    return question
+    return clip_at_clause(result, limit)
 
 
 def normalize_agenda_title(value: str, fallback: str = "委員会での質疑") -> str:
@@ -863,7 +835,9 @@ def make_topics(voices: list[dict], session_id: str) -> list[dict]:
             if summary:
                 answer_parts.append(summary)
         kind = classify_kind(text)
-        question = concise_summary(text, QUESTION_CUES, 140, "question", kind)
+        # 語尾を足さなくなったぶん、上限は共通ルールの値をそのまま使える。
+        # 以前は語尾の追加ぶんを見込んで 140 に抑えていた。
+        question = concise_summary(text, QUESTION_CUES, qa.QUESTION_LIMIT, "question")
         # 副委員長が進行を代行する会議では、議題提示や説明要求が通常の委員発言と
         # 同じ発言者区分で記録されることがある。要約対象となる本文が残らない
         # 進行発言は、質問・意見として掲載しない。
@@ -930,7 +904,7 @@ def process_document(document: dict, refresh: bool) -> dict:
         "time": meeting_time,
         "status": status,
         "sourceType": source_type,
-        "overview": f"{committee}の会議録から、実質的な質問・確認・意見・要望と答弁・対応を{exchange_count}件整理しています。",
+        "overview": f"{committee}の会議録から、実質的な質問・確認・意見・要望と答弁・対応を{exchange_count}件抜き出しています。",
         "topics": topics,
         "links": [
             {"type": "minutes" if source_type == "formal" else "minutesDraft",
@@ -980,7 +954,7 @@ def meeting_shells_for(sessions: list[dict]) -> list[dict]:
             "name": name,
             "summary": f"{period}に開催された委員会の質疑・答弁{exchange_count}件を掲載しています。",
             "detailTitle": f"{YEAR_LABEL} {name}",
-            "detailLead": "公式会議録から、実質的な質問・確認・意見・要望と答弁・対応を議題別に整理しています。",
+            "detailLead": "公式会議録から、実質的な質問・確認・意見・要望と答弁・対応の発言を、議題別に抜き出しています。",
             "events": [],
             "links": [
                 {"type": "official", "label": "公式の会議録検索", "url": "https://gikai.city.shinagawa.tokyo.jp/search"}

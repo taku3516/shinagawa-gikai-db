@@ -787,9 +787,9 @@
             <span class="committee-exchange__kind">${esc(item.kind || "質問")}</span>
           </div>
           <dl>
-            <dt>質問・意見の要点</dt>
+            <dt>質問・意見（発言の抜粋）</dt>
             <dd>${esc(item.question)}</dd>
-            <dt>答弁・対応の要点</dt>
+            <dt>答弁・対応（発言の抜粋）</dt>
             <dd>${esc(item.answer)}</dd>
             ${item.respondent ? `<dt>答弁・対応者</dt><dd>${esc(item.respondent)}</dd>` : ""}
           </dl>
@@ -818,7 +818,7 @@
       content.innerHTML = `
         ${session.time ? `<p class="committee-session__meta">開催時間：${esc(session.time)}</p>` : ""}
         <div class="committee-topics">${(session.topics || []).map((topic) => committeeTopicHtml(session, topic)).join("")}</div>
-        <p class="fine-print qa-summary-note">※質問・答弁の要点を本サイトで要約しています。明確な回答が記録されていない発言には、その旨を記載しています。正確な発言は公式の会議録をご確認ください。</p>
+        <p class="fine-print qa-summary-note">※質問・答弁は、会議録の該当発言から要点を含む文を抜き出して掲載しています（要約ではありません）。発言の一部のみを載せているため、前後の文脈は公式の会議録をご確認ください。明確な回答が記録されていない発言には、その旨を記載しています。</p>
         <div class="committee-session__links">${pillsHtml(session.links, activeSite)}</div>`;
       details.dataset.rendered = "true";
       setupDetailsAccessibility(content);

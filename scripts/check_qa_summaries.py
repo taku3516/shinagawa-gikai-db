@@ -143,6 +143,9 @@ def records():
                         "question": exchange.get("question") or "",
                         "answer": exchange.get("answer") or "",
                         "kind": exchange.get("kind") or "",
+                        # 委員会は発言の抜粋を載せている。「〜してください」で
+                        # 終わるのが正しい状態なので、一人称は問題としない
+                        "style": qa.STYLE_EXCERPT,
                         # 原文の字数は会議に1つなので、その会議の先頭の質疑にだけ載せる
                         "characters": characters,
                     }
@@ -159,6 +162,8 @@ def records():
                     "answer": item.get("answer") or "",
                     # 本会議は kind を持たない。答弁を求める発言として扱う
                     "kind": "質問",
+                    # 本会議は第三者の言い方に直した要約を載せている
+                    "style": qa.STYLE_SUMMARY,
                     "characters": 0,
                 }
 
@@ -196,7 +201,7 @@ def measure():
             counter["要答弁"] += 1
 
         for field, problems in (
-            ("質問", qa.check_question(record["question"])),
+            ("質問", qa.check_question(record["question"], record["style"])),
             ("答弁", qa.check_answer(record["answer"], record["kind"])),
         ):
             for problem in problems:
