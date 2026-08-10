@@ -50,7 +50,13 @@
     python3 scripts/check_qa_summaries.py                   # 全データを検査
     python3 scripts/check_qa_summaries.py --details         # 問題のある要約を表示
     python3 scripts/check_qa_summaries.py --by-year         # 年ごとの内訳を出す
+    python3 scripts/check_qa_summaries.py --year 2025 --details  # その年の実例と見本
     python3 scripts/check_qa_summaries.py --update-baseline # 改善後に基準値を引き直す
+
+`--year` を付けると、実例をその年に絞ったうえで、問題の有無にかかわらず
+掲載文そのものを何件か出す。作り直した年が読める文になっているかは、割合では
+分からない。作り直しの流れ（`.github/workflows/rebuild-committees.yml`）は
+ここで止まるとデータを捨てるので、判断に使う文はログに残しておく必要がある。
 """
 
 from __future__ import annotations
@@ -93,6 +99,24 @@ PLENARY_BANDS = (
 def year_order(year: str) -> tuple[int, int]:
     """h13→r08 の順に並べるための鍵。"""
     return (0 if year.startswith("h") else 1, int(year[1:]))
+
+
+def year_id(value: str) -> str:
+    """`--year` の指定を h13〜r08 の形にそろえる。
+
+    作り直しの流れは西暦（2025）で年を受け取り、データは和暦（r07）で
+    持っている。どちらで書いても通るようにして、指定を写し替える手間をなくす。
+    """
+    text = value.strip().lower()
+    if not text:
+        # argparse は文字列の既定値にも type を通す。指定なしはそのまま返す
+        return ""
+    if text.isdigit() and len(text) == 4:
+        number = int(text)
+        return f"r{number - 2018:02d}" if number >= 2019 else f"h{number - 1988:02d}"
+    if text[:1] in ("h", "r") and text[1:].isdigit():
+        return f"{text[0]}{int(text[1:]):02d}"
+    raise argparse.ArgumentTypeError(f"年の指定が読めません: {value}（例: 2025 / r07 / h30）")
 
 
 def plenary_band(year: str) -> str:
@@ -176,16 +200,30 @@ def records():
         yield from plenary(path, (year or {}).get("questions"))
 
 
-def measure():
-    """全データを走査して、年ごとの件数と品質の内訳を返す。"""
+def measure(focus: str = "", limit: int = 5):
+    """全データを走査して、年ごとの件数と品質の内訳を返す。
+
+    `focus` に年（h13〜r08）を渡すと、**実例の収集だけ**をその年に絞る。
+    数え上げと基準値の比較は全データのまま行う——年を絞ると、その年以外の
+    悪化を見落とすため。実例は先に出会った順に溜まるので、絞らないと
+    ファイル名の若い年（h13）で埋まり、作り直した年の文が1件も出てこない。
+
+    `focus` を渡したときは、問題の有無にかかわらずその年の掲載文も集める。
+    読める文になっているかは、悪い例だけを見ても分からない。
+    """
     blocking: Counter = Counter()
     advisory: Counter = Counter()
     by_file: dict[str, Counter] = defaultdict(Counter)
     examples: dict[str, list] = defaultdict(list)
+    # focus の年の掲載文。見本として何件か抜き出すために全件持つ
+    focused: list[dict] = []
     # (dataset, year) -> Counter。品質の内訳と、割合の分母をここに集める
     stats: dict[tuple[str, str], Counter] = defaultdict(Counter)
 
     for record in records():
+        in_focus = not focus or record["year"] == focus
+        if focus and in_focus:
+            focused.append(record)
         key = (record["dataset"], record["year"])
         counter = stats[key]
         counter["件数"] += 1
@@ -211,7 +249,7 @@ def measure():
                     by_file[record["source"]][name] += 1
                 else:
                     advisory[name] += 1
-                if len(examples[name]) < 5:
+                if in_focus and len(examples[name]) < limit:
                     examples[name].append((
                         record["source"], record["title"],
                         record["question"] if field == "質問" else record["answer"],
@@ -222,11 +260,11 @@ def measure():
             record["kind"], record["style"],
         ):
             counter[name] += 1
-            if len(examples[name]) < 5:
+            if in_focus and len(examples[name]) < limit:
                 text = record["answer"] if name.startswith("答弁") else record["question"]
                 examples[name].append((record["source"], record["title"], text))
 
-    return blocking, advisory, by_file, examples, stats
+    return blocking, advisory, by_file, examples, focused, stats
 
 
 def rate(counter: Counter, name: str) -> float:
@@ -371,16 +409,40 @@ def print_bands(stats) -> None:
         print(f"{line}   {note}")
 
 
+def print_samples(focused: list[dict], year: str, count: int) -> None:
+    """その年の掲載文を、間隔を空けて何件か全文で出す。
+
+    悪い例だけを並べても、直した結果が読める文になったかは分からない。
+    先頭から順に取ると同じ会議の同じ話題ばかりになるので、全体から等間隔で
+    抜く。文は切り詰めない——上限（質問190字・答弁240字）まで見て判断する。
+    """
+    if not focused:
+        print()
+        print(f"■ {year} の掲載文は見つかりませんでした")
+        return
+    step = max(1, len(focused) // count)
+    picked = focused[::step][:count]
+    print()
+    print(f"■ {year} の掲載文（{len(focused):,}件から{len(picked)}件・全文）")
+    for record in picked:
+        print()
+        print(f"  [{record['dataset']}／{record['source']}] {record['title']}")
+        print(f"    質問  {record['question']}")
+        print(f"    答弁  {record['answer']}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--details", action="store_true", help="問題のある要約を表示する")
     parser.add_argument("--limit", type=int, default=5, help="--details で表示する件数（項目ごと）")
     parser.add_argument("--by-year", action="store_true", help="年ごとの割合を出す")
+    parser.add_argument("--year", type=year_id, default="",
+                        help="実例と見本をこの年に絞る（例: 2025 / r07）。検査自体は全データのまま")
     parser.add_argument("--update-baseline", action="store_true",
                         help="いまの割合で基準値を引き直す（改善したときだけ使う）")
     args = parser.parse_args()
 
-    blocking, advisory, by_file, examples, stats = measure()
+    blocking, advisory, by_file, examples, focused, stats = measure(args.year, args.limit)
     total = sum(counter["件数"] for counter in stats.values())
 
     print(f"検査した要約: {total:,}件")
@@ -467,7 +529,7 @@ def main() -> int:
 
     if args.details:
         print()
-        print("■ 例")
+        print(f"■ 例{f'（{args.year}のみ）' if args.year else ''}")
         for key in list(blocking) + list(advisory) + quality_names():
             if not examples[key]:
                 continue
@@ -475,6 +537,8 @@ def main() -> int:
             for source, title, text in examples[key][:args.limit]:
                 print(f"  [{source}] {title[:40]}")
                 print(f"    {text[:150]}")
+        if args.year:
+            print_samples(focused, args.year, args.limit)
 
     return 1 if (blocking or worse) else 0
 
