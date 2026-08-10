@@ -89,6 +89,11 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "type": "official",
+      "label": "町会区域を探す",
+      "url": "chokai-map.html"
+    },
+    {
+      "type": "official",
       "label": "横断検索",
       "url": "kensaku.html"
     }

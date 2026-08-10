@@ -31,6 +31,7 @@
     { type: "official", label: "政治資金収支報告書を見る", url: "seijishikin.html" },
     { type: "official", label: "選挙収支報告書を読む", url: "senkyo-shushi.html" },
     { type: "official", label: "品川区ニュースを見る", url: "news.html" },
+    { type: "official", label: "町会区域を探す", url: "chokai-map.html" },
     { type: "official", label: "横断検索", url: "kensaku.html" }
   ];
 
@@ -61,6 +62,7 @@
     if (currentFile === "giin.html" && label === "政治家名簿を見る") return true;
     if (currentFile === "senkyo.html" && label === "品川区の選挙を見る") return true;
     if (currentFile === "news.html" && label === "品川区ニュースを見る") return true;
+    if (currentFile === "chokai-map.html" && label === "町会区域を探す") return true;
     if (currentFile === "yosan-kessan.html" && label === "予算・決算を見る") return true;
     if (currentFile === "gyosei.html" && label === "行政評価を見る") return true;
     if (currentFile === "kensaku.html" && label === "横断検索") return true;
