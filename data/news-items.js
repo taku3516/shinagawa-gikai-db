@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-09T21:56:34.024524Z",
+  "generatedAt": "2026-08-10T02:40:17.790699Z",
   "items": [
+    {
+      "id": "1cb247b94d92dc52ffe1",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月10日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年8月10日号(令和8年8月3日～令和8年8月9日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62321.html",
+      "publishedAt": "2026-08-10T02:39:53.879002Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-10T02:39:53.879002Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "3f4df165a67e1881fcc1",
       "title": "『エレガンス』で「このミス」8位ランクインの石川智健氏、最新書下し長篇『ストーリーランド』、徳間書店より8/28発売！ 発売前に冒頭部分、特別無料公開中！",
@@ -255,6 +272,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
+    },
+    {
+      "id": "36fd47db4758176599f2",
+      "title": "令和8年熊本地震災害義援金の受付",
+      "summary": "総務課 電話:03-5742-6624 FAX:03-3774-6356",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260729151707.html",
+      "publishedAt": "2026-08-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-29T08:21:12.534425Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "3b094fa0f9b03735d26e",
@@ -1395,23 +1429,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "36fd47db4758176599f2",
-      "title": "令和8年熊本地震災害義援金の受付",
-      "summary": "総務課 電話:03-5742-6624 FAX:03-3774-6356",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260729151707.html",
-      "publishedAt": "2026-07-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-29T08:21:12.534425Z",
-      "tags": [
-        "事件事故"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "f71d621ea9ccb1a8c63d",
       "title": "平成25年生活扶助基準改定に係る最高裁判決を踏まえた保護費の追加給付",
       "summary": "",
@@ -1746,7 +1763,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "723d4081724162cad7ed",
-      "title": "品川区住民税非課税世帯エアコン購入費等助成事業【締切間近】",
+      "title": "品川区住民税非課税世帯エアコン購入費等助成事業【受付終了】",
       "summary": "経済的な理由によりエアコンを設置することが難しい住民税非課税世帯に対し、エアコンの購入等に要する費用を助成します。 エアコン助成事業のご案内(PDF : 259KB) ※ 助成金の交付決定前に購入したエアコンは助成対象外となりますので、必ず購入前に訪問調査の申請をお願いします。 7月31日が申請期限となりますので、お早めにお申し込みください。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
@@ -5223,7 +5240,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1360, column 44"
+      "message": "not well-formed (invalid token): line 1455, column 44"
     },
     {
       "source": "朝日新聞",
@@ -5247,7 +5264,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
