@@ -51,6 +51,36 @@ STYLE_EXCERPT = "抜粋"
 QUESTION_LIMIT = 190
 ANSWER_LIMIT = 240
 
+
+def western_year(value: str) -> int:
+    """年の指定を西暦に直す。西暦でも和暦でも受ける。
+
+        2025 / r07 / r7 / 令和7 / 令和元 / h30 / 平成30
+
+    作り直しは1年ずつ手で流し、同じ指定を生成側（`prepare_committees.py`）と
+    検査側（`check_qa_summaries.py`）の両方に渡す。片方だけが受ける書き方が
+    あると、生成が終わったあとの検査で落ちる。だから読み方はここに1つ置く。
+
+    数字だけの和暦（「7」）は平成とも令和とも取れるので受けない。実際に「7」で
+    落ちて1往復無駄になったが、勝手にどちらかへ寄せるほうが危ない。
+    """
+    text = value.strip().translate(str.maketrans("０１２３４５６７８９", "0123456789"))
+    if text.isdigit() and len(text) == 4:
+        return int(text)
+    match = re.fullmatch(r"(?:令和|reiwa|r)\s*(元|\d{1,2})", text, re.IGNORECASE)
+    if match:
+        return 2018 + (1 if match[1] == "元" else int(match[1]))
+    match = re.fullmatch(r"(?:平成|heisei|h)\s*(元|\d{1,2})", text, re.IGNORECASE)
+    if match:
+        return 1988 + (1 if match[1] == "元" else int(match[1]))
+    raise ValueError(f"年の指定が読めません: {value}（例: 2025 / r07 / 令和7 / h30 / 平成30）")
+
+
+def year_id(value: str) -> str:
+    """年の指定を、データが使う h13〜r08 の形に直す。"""
+    year = western_year(value)
+    return f"r{year - 2018:02d}" if year >= 2019 else f"h{year - 1988:02d}"
+
 # 間接話法の語尾（この形で終わっていれば、第三者の要約として完結している）
 REPORTED_ENDINGS = (
     "述べました", "求めました", "尋ねました", "確認しました", "提案しました",

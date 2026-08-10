@@ -104,19 +104,17 @@ def year_order(year: str) -> tuple[int, int]:
 def year_id(value: str) -> str:
     """`--year` の指定を h13〜r08 の形にそろえる。
 
-    作り直しの流れは西暦（2025）で年を受け取り、データは和暦（r07）で
-    持っている。どちらで書いても通るようにして、指定を写し替える手間をなくす。
+    作り直しの流れは同じ指定を生成側と検査側の両方に渡すので、読み方は
+    共通ルール（`qa_summary.year_id`）に持たせて、片方だけが受ける書き方が
+    生まれないようにしてある。
     """
-    text = value.strip().lower()
-    if not text:
+    if not value.strip():
         # argparse は文字列の既定値にも type を通す。指定なしはそのまま返す
         return ""
-    if text.isdigit() and len(text) == 4:
-        number = int(text)
-        return f"r{number - 2018:02d}" if number >= 2019 else f"h{number - 1988:02d}"
-    if text[:1] in ("h", "r") and text[1:].isdigit():
-        return f"{text[0]}{int(text[1:]):02d}"
-    raise argparse.ArgumentTypeError(f"年の指定が読めません: {value}（例: 2025 / r07 / h30）")
+    try:
+        return qa.year_id(value)
+    except ValueError as error:
+        raise argparse.ArgumentTypeError(str(error)) from error
 
 
 def plenary_band(year: str) -> str:

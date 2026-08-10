@@ -65,7 +65,9 @@ def configure_year(year: int) -> None:
     global YEAR, REIWA_YEAR, YEAR_ID, YEAR_LABEL
     global CACHE, OUT, DATA_PATH, DATA_PART_PATTERN, LEDGER_PATH
     if year < 2001:
-        raise ValueError("会議録検索システムの収録は平成13年（2001年）からです")
+        raise ValueError(
+            f"会議録検索システムの収録は平成13年（2001年）からです（指定: {year}）"
+        )
     YEAR = year
     if year >= 2019:
         REIWA_YEAR = year - 2018
@@ -1139,9 +1141,17 @@ def validate(sessions: list[dict]) -> None:
                 )
 
 
+def western_year(value: str) -> int:
+    """`--year` の指定を西暦に直す。読み方は共通ルールに持たせてある。"""
+    try:
+        return qa.western_year(value)
+    except ValueError as error:
+        raise argparse.ArgumentTypeError(str(error)) from error
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--year", type=int, default=date.today().year)
+    parser.add_argument("--year", type=western_year, default=date.today().year)
     parser.add_argument("--refresh", action="store_true")
     parser.add_argument("--inventory-only", action="store_true")
     args = parser.parse_args()
