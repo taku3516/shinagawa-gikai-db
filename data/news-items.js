@@ -1,7 +1,47 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-10T08:14:00.332159Z",
+  "generatedAt": "2026-08-10T10:42:00.073408Z",
   "items": [
+    {
+      "id": "16286736ac22c4b7b8cf",
+      "title": "しながわ子ども議会（議場見学会）を開催しました。",
+      "summary": "しながわ子ども議会（議場見学会）を開催しました。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20723.html",
+      "publishedAt": "2026-08-10T08:46:05Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-10T10:41:33.766147Z",
+      "tags": [
+        "子育て教育",
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "c48123382a00045a28c6",
+      "title": "五反田TOCにスーパー「ストックマート」 毎朝コストコ商品を仕入れ販売",
+      "summary": "「ストックマート五反田TOCビル店」（品川区西五反田7、TEL 03-6275-3305）が8月6日、五反田TOCビル地下1階にオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5056",
+      "publishedAt": "2026-08-10T08:25:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-10T10:41:33.766147Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "1cb247b94d92dc52ffe1",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月10日号）を公開しました‼",
@@ -18,6 +58,61 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "f3c6ccdda92ea27646c8",
+      "title": "info＆cafe SQUARE「ボードゲームで学ぶ」",
+      "summary": "2026年8月29日（土）、スクエア荏原1階 info＆cafe SQUARE（インフォアンドカフェスクエア）にて「ボードゲームで学ぶ」が開催されます。 世界のボードゲームの中から厳選した、誰でもできるボードゲームが10種類以上！無料で体験できます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/infows20260829",
+      "publishedAt": "2026-08-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-10T10:41:33.766147Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原",
+        "スクエア荏原"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "bf9f3d4ab36cb1a45117",
+      "title": "物流博物館「JR貨物音楽部 ミニコンサート」",
+      "summary": "2026年9月21日（月・祝）物流博物館にて「ＪＲ貨物音楽部 ミニコンサート」が開催されます。 親子でも大人だけでも楽しめる、鉄道をテーマにした楽曲をＪＲ貨物音楽部が演奏します。 当日は、ＪＲ貨物の仕事紹介コーナーや、制服を着て記念撮影ができる体験もご用意しています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/buturyuconcert2026",
+      "publishedAt": "2026-08-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-10T10:41:33.766147Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "fbea1a6dca20027a595c",
+      "title": "ドコモ・バイクシェアのサービス提供一時停止のお知らせ（品川区シェアサイクル事業）",
+      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/20250313190123.html",
+      "publishedAt": "2026-08-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T10:27:17.898259Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "d72bf6216af184430233",
@@ -724,23 +819,6 @@ window.SHINAGAWA_NEWS = {
         "品川区役所"
       ],
       "relevanceScore": 22
-    },
-    {
-      "id": "fbea1a6dca20027a595c",
-      "title": "ドコモ・バイクシェアのサービス提供一時停止のお知らせ（品川区シェアサイクル事業）",
-      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/20250313190123.html",
-      "publishedAt": "2026-08-04T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-04T10:27:17.898259Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "28b0f0021212a321755b",
@@ -5216,7 +5294,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 9
+      "accepted": 10
     },
     {
       "source": "警視庁",
@@ -5240,7 +5318,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1139, column 34"
+      "message": "not well-formed (invalid token): line 1939, column 34"
     },
     {
       "source": "朝日新聞",
@@ -5321,9 +5399,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
