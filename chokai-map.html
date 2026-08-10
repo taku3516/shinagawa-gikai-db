@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1f4e79" />
+  <title>町会・自治会区域を探す｜品川区議会DB</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231f4e79'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="site-nav.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <style>
+    :root {
+      --c-main: #1f4e79;
+      --c-main-dark: #173a5e;
+      --c-main-pale: #e7eef4;
+      --c-bg: #f4f1e8;
+      --c-card: #fffdf8;
+      --c-ink: #17212b;
+      --c-ink-soft: #4f5d68;
+      --c-border: #b9c3cc;
+      --c-rule: #d8d2c4;
+      --c-warning: #8a4b08;
+      --c-warning-bg: #fff7df;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--c-bg);
+      color: var(--c-ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      overflow-wrap: anywhere;
+    }
+    a { color: var(--c-main-dark); font-weight: 700; text-underline-offset: 3px; }
+    button, input, select { font: inherit; }
+    button, select { cursor: pointer; }
+    .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .hero {
+      border-top: 6px solid var(--c-main);
+      border-bottom: 1px solid var(--c-rule);
+      background: var(--c-card);
+      padding: 38px 0 30px;
+    }
+    .hero h1 { margin: 0 0 12px; color: var(--c-main-dark); font-size: clamp(30px, 5vw, 52px); line-height: 1.15; }
+    .hero .lead { max-width: 820px; margin: 0; font-size: 17px; line-height: 1.85; }
+    .notice {
+      margin-top: 18px;
+      border: 1px solid #d8b36c;
+      border-left: 5px solid var(--c-warning);
+      border-radius: 4px;
+      background: var(--c-warning-bg);
+      padding: 13px 15px;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    .notice strong { color: #713b06; }
+    main { padding: 30px 0 56px; }
+    .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
+    .stat { border: 1px solid var(--c-border); border-top: 3px solid var(--c-main); background: var(--c-card); padding: 14px 16px; }
+    .stat strong { display: block; color: var(--c-main); font-size: 26px; line-height: 1.2; }
+    .stat span { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .map-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr); gap: 18px; align-items: start; }
+    .panel { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); }
+    .map-panel { overflow: hidden; }
+    #chokai-map { width: 100%; min-height: 590px; background: #dbe6ec; }
+    .map-fallback { display: grid; place-items: center; min-height: 590px; padding: 24px; text-align: center; line-height: 1.8; }
+    .map-caption { border-top: 1px solid var(--c-border); padding: 10px 14px; color: var(--c-ink-soft); font-size: 12px; line-height: 1.65; }
+    .sidebar { position: sticky; top: 12px; overflow: hidden; }
+    .controls { display: grid; gap: 12px; padding: 18px; border-bottom: 1px solid var(--c-border); }
+    .control { display: grid; gap: 5px; }
+    .control label { font-size: 13px; font-weight: 800; }
+    .control input, .control select {
+      width: 100%; min-height: 46px; border: 1px solid #8b9bab; border-radius: 3px;
+      background: #fff; padding: 9px 11px; color: var(--c-ink); font-size: 16px;
+    }
+    .control input:focus-visible, .control select:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 3px solid #f59e0b; outline-offset: 2px;
+    }
+    .button-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .button {
+      min-height: 42px; border: 1px solid var(--c-main); border-radius: 3px;
+      background: var(--c-main); padding: 8px 13px; color: #fff; font-weight: 800;
+    }
+    .button--secondary { background: #fff; color: var(--c-main-dark); }
+    .result-status { margin: 0; padding: 14px 18px; color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
+    .results { max-height: 570px; overflow: auto; border-top: 1px solid var(--c-rule); }
+    .association { border-bottom: 1px solid var(--c-rule); }
+    .association:last-child { border-bottom: 0; }
+    .association summary { display: flex; align-items: center; gap: 10px; padding: 14px 16px; cursor: pointer; list-style: none; }
+    .association summary::-webkit-details-marker { display: none; }
+    .association summary:hover, .association[open] summary { background: var(--c-main-pale); }
+    .association__title { flex: 1; font-weight: 800; line-height: 1.45; }
+    .association__region { display: block; margin-top: 3px; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
+    .association__count { white-space: nowrap; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
+    .association__icon { color: var(--c-main); font-size: 19px; font-weight: 900; }
+    .association__icon::before { content: "+"; }
+    .association[open] .association__icon::before { content: "−"; }
+    .association__body { border-top: 1px solid var(--c-border); padding: 13px 16px 16px; }
+    .region-badge {
+      display: inline-block; margin-bottom: 10px; border: 1px solid #8ba0b1; border-radius: 999px;
+      background: #eef3f6; padding: 3px 9px; color: var(--c-main-dark); font-size: 12px; font-weight: 800;
+    }
+    .info-section + .info-section { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--c-rule); }
+    .info-section h3 { margin: 0 0 8px; color: var(--c-main-dark); font-size: 14px; }
+    .info-grid { display: grid; grid-template-columns: minmax(100px, 0.35fr) minmax(0, 1fr); margin: 0; }
+    .info-grid dt, .info-grid dd { margin: 0; border-top: 1px solid #e4dfd4; padding: 7px 8px; font-size: 13px; line-height: 1.65; }
+    .info-grid dt { color: var(--c-ink-soft); font-weight: 800; }
+    .info-grid dd { background: #fff; }
+    .profile-text { margin: 0; font-size: 13px; line-height: 1.8; white-space: pre-line; }
+    .profile-text + .profile-text { margin-top: 9px; }
+    .profile-source-label { color: var(--c-ink-soft); font-size: 11px; font-weight: 800; }
+    .profile-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px; }
+    .profile-link {
+      display: inline-block; border: 1px solid #7690a5; border-radius: 3px;
+      background: #fff; padding: 6px 9px; font-size: 12px; font-weight: 800;
+    }
+    .source-list { margin: 7px 0 0; padding-left: 19px; font-size: 12px; line-height: 1.7; }
+    .area-list { margin: 0; padding-left: 21px; line-height: 1.75; }
+    .area-list li + li { margin-top: 4px; }
+    .source-link { display: inline-block; margin-top: 10px; font-size: 12px; }
+    .empty { padding: 28px 18px; color: var(--c-ink-soft); text-align: center; line-height: 1.75; }
+    .about { margin-top: 24px; padding: 22px; }
+    .about h2 { margin: 0 0 12px; color: var(--c-main-dark); font-size: 21px; }
+    .about p, .about li { font-size: 14px; line-height: 1.8; }
+    .about ul { margin: 10px 0 0; padding-left: 22px; }
+    .leaflet-popup-content { line-height: 1.6; }
+    .map-legend {
+      max-width: 210px; border: 1px solid #768594; border-radius: 3px;
+      background: rgb(255 253 248 / 94%); padding: 8px 10px; color: var(--c-ink);
+      box-shadow: 0 1px 5px rgb(0 0 0 / 20%); font-size: 11px; line-height: 1.55;
+      pointer-events: none;
+    }
+    .map-legend strong { display: block; margin-bottom: 3px; font-size: 12px; }
+    .map-legend__sample {
+      display: inline-block; width: 19px; height: 12px; margin-right: 5px;
+      border: 2px solid #596a77; background: #c7dceb; vertical-align: -2px;
+    }
+    .location-control button {
+      min-width: 104px; min-height: 38px; border: 0; border-radius: 3px;
+      background: #fff; padding: 6px 9px; color: var(--c-main-dark);
+      box-shadow: 0 1px 5px rgb(0 0 0 / 28%); font-size: 13px; font-weight: 900;
+    }
+    .location-control button:hover { background: #eef4f7; }
+    .location-control button[aria-pressed="true"] { background: var(--c-main); color: #fff; }
+    .location-control button:disabled { cursor: wait; opacity: 0.78; }
+    .location-note { display: block; margin-top: 4px; color: #3e5262; font-weight: 700; }
+    .current-location-marker { filter: drop-shadow(0 1px 2px rgb(0 0 0 / 45%)); }
+
+    @media (max-width: 860px) {
+      .map-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      #chokai-map, .map-fallback { min-height: 430px; }
+      .results { max-height: none; }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(100% - 20px, 1180px); }
+      .hero { padding-top: 28px; }
+      .stats { grid-template-columns: 1fr; }
+      #chokai-map, .map-fallback { min-height: 360px; }
+      .association summary { padding: 13px 12px; }
+      .info-grid { grid-template-columns: 1fr; }
+      .info-grid dd { border-top: 0; padding-top: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>町会・自治会区域を探す</h1>
+      <p class="lead">品川区公式の住所区域を、町会名・住所・地域区分から検索できます。町会長、連絡先、紹介、活動、ウェブサイト・SNSの公開情報も掲載しています。</p>
+      <div class="notice">
+        <strong>区域の見方：</strong>品川区「しながわMAP」の町会オープンデータを町会ごとに色分けしています。色は区域を見分けるためのもので、検索すると該当区域を濃く表示します。重要な判断では公式区域図も確認してください。
+      </div>
+      <nav data-site-nav></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="stats" aria-label="掲載データの概要">
+        <div class="stat"><strong id="association-count">—</strong><span>町会・自治会</span></div>
+        <div class="stat"><strong id="region-count">—</strong><span>地域区分</span></div>
+        <div class="stat"><strong id="source-updated">—</strong><span>住所区域ページの最新更新</span></div>
+      </div>
+
+      <div class="map-layout">
+        <section class="panel map-panel" aria-label="町会・自治会地図">
+          <div id="chokai-map"><div class="map-fallback">地図を読み込んでいます。</div></div>
+          <div class="map-caption">背景地図 © OpenStreetMap contributors。町会境界：<a id="boundary-source-link" href="#" target="_blank" rel="noopener">品川区「しながわMAP」オープンデータ</a>（掲載日2017年7月31日）。地域センターのピンは表示せず、区域ごとに地域区分を表示します。<span class="location-note" id="location-status" aria-live="polite">「現在地」ボタンを押すと、ブラウザで位置を取得して地図に表示します。</span></div>
+        </section>
+
+        <aside class="panel sidebar" aria-label="町会・自治会検索">
+          <div class="controls">
+            <div class="control">
+              <label for="chokai-search">町会名・住所から検索</label>
+              <input id="chokai-search" type="search" placeholder="例：北品川1丁目、八潮、町会名" autocomplete="off" />
+            </div>
+            <div class="control">
+              <label for="region-select">地域区分で絞り込み</label>
+              <select id="region-select"><option value="">すべての地域</option></select>
+            </div>
+            <div class="button-row">
+              <button class="button button--secondary" id="reset-button" type="button">条件をクリア</button>
+              <a class="button button--secondary" href="exports/shinagawa-chokai-map.kml" download>Googleマイマップ用KML ↓</a>
+              <a class="button" id="official-map-link" href="#" target="_blank" rel="noopener">品川区公式区域図 ↗</a>
+            </div>
+          </div>
+          <p class="result-status" id="result-status" aria-live="polite">データを読み込んでいます。</p>
+          <div class="results" id="results"></div>
+        </aside>
+      </div>
+
+      <section class="panel about">
+        <h2>データと更新について</h2>
+        <p>町会・自治会名、住所区域、境界、町会長、連絡先、紹介、活動、ウェブサイト・SNSを複数の公開情報から町会名で照合しています。公開されていない項目は推測せず、住所の番・号や長い紹介文も省略せず掲載しています。</p>
+        <ul>
+          <li><a id="source-index-link" href="#" target="_blank" rel="noopener">品川区「町会・自治会」↗</a></li>
+          <li><a id="source-csv-link" href="#" target="_blank" rel="noopener">東京都オープンデータ「町会・自治会一覧」CSV ↗</a></li>
+          <li><a id="source-boundary-link" href="#" target="_blank" rel="noopener">品川区「しながわMAP」町会境界Shape ↗</a></li>
+          <li><a id="source-union-link" href="#" target="_blank" rel="noopener">品川区町会自治会連合会「町会・自治会一覧」↗</a></li>
+          <li><a id="source-tamemap-link" href="#" target="_blank" rel="noopener">しながわすまいるネット「登録団体」↗</a></li>
+          <li>現在地はブラウザの位置情報機能を利用し、GPS座標を当サイトに保存しません。背景地図の表示にはOpenStreetMapの地図タイル通信を利用します。HTTPSの公開ページで、利用者が許可した場合だけ動作します。</li>
+          <li>公式Shapeのうち町会名が登録されていない3区域は、灰色で表示しています。</li>
+          <li>区域情報は内容を証明するものではありません。重要な判断には品川区公式情報をご利用ください。</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="data/site.js"></script>
+  <script src="data/chokai.js"></script>
+  <script src="data/chokai-boundaries.js"></script>
+  <script src="data/chokai-profiles.js"></script>
+  <script src="site-nav.js"></script>
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script>
+    (() => {
+      "use strict";
+      const data = window.SHINAGAWA_DB && window.SHINAGAWA_DB.chokai;
+      const boundaries = window.SHINAGAWA_DB && window.SHINAGAWA_DB.chokaiBoundaries;
+      const profileData = window.SHINAGAWA_DB && window.SHINAGAWA_DB.chokaiProfiles;
+      const profiles = profileData && profileData.profiles || {};
+      const resultsRoot = document.getElementById("results");
+      const searchInput = document.getElementById("chokai-search");
+      const regionSelect = document.getElementById("region-select");
+      const status = document.getElementById("result-status");
+      const boundaryLayers = [];
+      const boundaryLayerByAssociation = new Map();
+      const boundaryPalette = [
+        "#c7dceb", "#d8e5c5", "#ead8c8", "#ddd3e8"
+      ];
+      let map = null;
+      let boundaryGeoJson = null;
+      let highlightedBoundaryNames = new Set();
+      let boundaryFilterActive = false;
+      let locationWatchId = null;
+      let locationMarker = null;
+      let locationAccuracyCircle = null;
+      let locationButton = null;
+      let locationHasCentered = false;
+
+      const escapeHtml = value => String(value ?? "").replace(/[&<>'"]/g, character => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
+      })[character]);
+      const escapeRegExp = value => String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const normalize = value => String(value || "").normalize("NFKC").toLocaleLowerCase("ja").replace(/\s+/g, "");
+      const regionalAreaName = value => String(value || "").replace("地域センター", "地域");
+      const associationAnchor = name => {
+        let hash = 0;
+        for (const character of String(name)) hash = ((hash << 5) - hash + character.codePointAt(0)) | 0;
+        return `chokai-${Math.abs(hash)}`;
+      };
+      const publicUrl = value => /^https?:\/\/[^\s]+$/i.test(String(value || "").trim()) ? String(value).trim() : "";
+      const displayValue = value => {
+        const text = String(value || "").trim();
+        return /^(?:なし|無し|未登録|-|―)$/.test(text) ? "" : text;
+      };
+
+      function infoGrid(entries) {
+        const rows = entries.filter(([, value]) => displayValue(value));
+        if (!rows.length) return "";
+        return `<dl class="info-grid">${rows.map(([label, value, kind]) => {
+          const shown = displayValue(value);
+          let content = escapeHtml(shown);
+          if (kind === "email") content = `<a href="mailto:${encodeURIComponent(shown)}">${escapeHtml(shown)}</a>`;
+          if (kind === "phone") {
+            const number = shown.replace(/[^0-9+]/g, "");
+            if (number.length >= 9 && number.length <= 14) content = `<a href="tel:${escapeHtml(number)}">${escapeHtml(shown)}</a>`;
+          }
+          return `<dt>${escapeHtml(label)}</dt><dd>${content}</dd>`;
+        }).join("")}</dl>`;
+      }
+
+      function profileLink(url, label) {
+        const href = publicUrl(url);
+        return href ? `<a class="profile-link" href="${escapeHtml(href)}" target="_blank" rel="noopener">${escapeHtml(label)} ↗</a>` : "";
+      }
+
+      function setLocationStatus(message) {
+        document.getElementById("location-status").textContent = message;
+      }
+
+      function updateLocationButton(label, active = false, disabled = false) {
+        if (!locationButton) return;
+        locationButton.textContent = label;
+        locationButton.setAttribute("aria-pressed", String(active));
+        locationButton.disabled = disabled;
+      }
+
+      function stopLocationTracking(removeMarker = true) {
+        if (locationWatchId !== null && navigator.geolocation) {
+          navigator.geolocation.clearWatch(locationWatchId);
+        }
+        locationWatchId = null;
+        locationHasCentered = false;
+        if (removeMarker && map) {
+          if (locationMarker) map.removeLayer(locationMarker);
+          if (locationAccuracyCircle) map.removeLayer(locationAccuracyCircle);
+          locationMarker = null;
+          locationAccuracyCircle = null;
+        }
+        updateLocationButton("◎ 現在地", false, false);
+        if (removeMarker) setLocationStatus("現在地表示を停止しました。位置情報は保存していません。");
+      }
+
+      function showCurrentPosition(position) {
+        if (!map) return;
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const accuracy = Math.max(0, Number(position.coords.accuracy) || 0);
+        const latLng = [latitude, longitude];
+        if (!locationMarker) {
+          locationMarker = L.circleMarker(latLng, {
+            radius: 8,
+            color: "#fff",
+            weight: 3,
+            fillColor: "#0878c9",
+            fillOpacity: 1,
+            className: "current-location-marker",
+            pane: "markerPane"
+          }).addTo(map);
+        } else {
+          locationMarker.setLatLng(latLng);
+        }
+        const popup = `<strong>現在地</strong><br>測位精度：約${escapeHtml(Math.round(accuracy))}m<br><small>GPS座標は当サイトに保存しません。</small>`;
+        locationMarker.bindPopup(popup);
+        if (!locationAccuracyCircle) {
+          locationAccuracyCircle = L.circle(latLng, {
+            radius: accuracy,
+            color: "#0878c9",
+            weight: 1,
+            opacity: 0.65,
+            fillColor: "#64b5e8",
+            fillOpacity: 0.15,
+            interactive: false
+          }).addTo(map);
+        } else {
+          locationAccuracyCircle.setLatLng(latLng).setRadius(accuracy);
+        }
+        locationMarker.bringToFront();
+        updateLocationButton("● 現在地を停止", true, false);
+        setLocationStatus(`現在地を表示中です（測位精度：約${Math.round(accuracy)}m）。もう一度押すと停止します。`);
+        if (!locationHasCentered) {
+          locationHasCentered = true;
+          if (accuracy > 0) {
+            map.fitBounds(locationAccuracyCircle.getBounds(), { padding: [42, 42], maxZoom: 17 });
+          } else {
+            map.setView(latLng, 17);
+          }
+          locationMarker.openPopup();
+        }
+      }
+
+      function handleLocationError(error) {
+        const messages = {
+          1: "位置情報の利用が許可されていません。ブラウザのサイト設定から許可できます。",
+          2: "現在地を取得できませんでした。端末のGPS・位置情報設定を確認してください。",
+          3: "現在地の取得が時間内に完了しませんでした。もう一度お試しください。"
+        };
+        if (locationWatchId !== null && navigator.geolocation) navigator.geolocation.clearWatch(locationWatchId);
+        locationWatchId = null;
+        updateLocationButton("◎ 現在地を再試行", false, false);
+        const insecureHint = !window.isSecureContext ? " 公開版のHTTPSページでお試しください。" : "";
+        setLocationStatus((messages[error.code] || "現在地を取得できませんでした。") + insecureHint);
+      }
+
+      function toggleLocationTracking() {
+        if (locationWatchId !== null) {
+          stopLocationTracking(true);
+          return;
+        }
+        if (!navigator.geolocation) {
+          updateLocationButton("現在地は非対応", false, true);
+          setLocationStatus("このブラウザは位置情報機能に対応していません。");
+          return;
+        }
+        locationHasCentered = false;
+        updateLocationButton("測位しています…", true, true);
+        setLocationStatus("端末の位置情報を確認しています。ブラウザの許可画面が出た場合は選択してください。");
+        locationWatchId = navigator.geolocation.watchPosition(
+          showCurrentPosition,
+          handleLocationError,
+          { enableHighAccuracy: true, maximumAge: 10000, timeout: 15000 }
+        );
+      }
+
+      function addLocationControl() {
+        if (!map) return;
+        const control = L.control({ position: "topright" });
+        control.onAdd = () => {
+          const container = L.DomUtil.create("div", "location-control");
+          locationButton = L.DomUtil.create("button", "", container);
+          locationButton.type = "button";
+          locationButton.textContent = "◎ 現在地";
+          locationButton.setAttribute("aria-label", "GPSで現在地を地図に表示");
+          locationButton.setAttribute("aria-pressed", "false");
+          L.DomEvent.disableClickPropagation(container);
+          L.DomEvent.disableScrollPropagation(container);
+          L.DomEvent.on(locationButton, "click", toggleLocationTracking);
+          return container;
+        };
+        control.addTo(map);
+      }
+
+      function stableColor(feature) {
+        if (feature.properties && feature.properties.unassigned) return "#9199a1";
+        const colorIndex = Number(feature.properties && feature.properties.colorIndex || 0);
+        return boundaryPalette[colorIndex % boundaryPalette.length];
+      }
+
+      function isHighlighted(feature) {
+        const names = feature.properties && feature.properties.associationNames || [];
+        return names.some(name => highlightedBoundaryNames.has(name));
+      }
+
+      function boundaryStyle(feature) {
+        const selected = isHighlighted(feature);
+        const unassigned = feature.properties && feature.properties.unassigned;
+        return {
+          color: selected ? "#173a5e" : unassigned ? "#69737c" : "#596a77",
+          weight: selected ? 3.2 : 1.35,
+          opacity: boundaryFilterActive && !selected ? 0.3 : 0.9,
+          fillColor: stableColor(feature),
+          fillOpacity: selected ? 0.68 : boundaryFilterActive ? 0.07 : unassigned ? 0.12 : 0.46
+        };
+      }
+
+      function updateBoundaryDisplay(names, filterActive) {
+        highlightedBoundaryNames = names;
+        boundaryFilterActive = filterActive;
+        boundaryLayers.forEach(layer => layer.setStyle(boundaryStyle(layer.feature)));
+      }
+
+      function boundaryPopup(feature) {
+        const properties = feature.properties || {};
+        const name = properties.name || "町会名未登録区域";
+        const profile = profiles[name] || {};
+        const leader = profile.union && profile.union.leaderName || profile.tamemap && profile.tamemap.representative || "";
+        return `<strong>${escapeHtml(name)}</strong><br>${escapeHtml(regionalAreaName(properties.regionName) || "地域区分未登録")}` +
+          (leader ? `<br>町会長・代表者：${escapeHtml(leader)}` : "") +
+          (!properties.unassigned ? `<br><a href="#${escapeHtml(associationAnchor(name))}">住所・連絡先・詳細を見る</a>` : "") +
+          (properties.unassigned ? "<br><small>公式データに町会名の登録がない区域です。</small>" : "");
+      }
+
+      function latestSourceUpdate() {
+        const updates = data.regions.map(region => region.sourceUpdated).filter(Boolean);
+        const sortValue = value => {
+          const match = String(value).match(/(令和|平成)(元|\d+)年(\d+)月(\d+)日/);
+          if (!match) return 0;
+          const eraYear = match[2] === "元" ? 1 : Number(match[2]);
+          const year = (match[1] === "令和" ? 2018 : 1988) + eraYear;
+          return year * 10000 + Number(match[3]) * 100 + Number(match[4]);
+        };
+        return updates.sort((a, b) => sortValue(b) - sortValue(a))[0] || "公式ページ参照";
+      }
+
+      function setupMap() {
+        const root = document.getElementById("chokai-map");
+        if (!window.L) {
+          root.innerHTML = '<div class="map-fallback">地図ライブラリを読み込めませんでした。町会・住所検索はそのまま利用できます。</div>';
+          return;
+        }
+        root.innerHTML = "";
+        map = L.map(root, { scrollWheelZoom: false }).setView([35.6095, 139.7305], 13);
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        }).addTo(map);
+        addLocationControl();
+
+        if (boundaries && Array.isArray(boundaries.features) && boundaries.features.length) {
+          boundaryGeoJson = L.geoJSON(boundaries, {
+            style: boundaryStyle,
+            onEachFeature: (feature, layer) => {
+              layer.bindPopup(boundaryPopup(feature));
+              layer.on("mouseover", () => {
+                layer.setStyle({ weight: 3.5, opacity: 1, fillOpacity: Math.max(boundaryStyle(feature).fillOpacity, 0.58) });
+                layer.bringToFront();
+              });
+              layer.on("mouseout", () => layer.setStyle(boundaryStyle(feature)));
+              boundaryLayers.push(layer);
+              const names = feature.properties && feature.properties.associationNames || [];
+              names.forEach(name => {
+                const layers = boundaryLayerByAssociation.get(name) || [];
+                layers.push(layer);
+                boundaryLayerByAssociation.set(name, layers);
+              });
+            }
+          }).addTo(map);
+          map.fitBounds(boundaryGeoJson.getBounds(), { padding: [18, 18] });
+
+          const legend = L.control({ position: "bottomleft" });
+          legend.onAdd = () => {
+            const root = L.DomUtil.create("div", "map-legend");
+            root.innerHTML = `<strong><span class="map-legend__sample" aria-hidden="true"></span>町会区域（${escapeHtml(boundaries.colorCount || boundaryPalette.length)}色）</strong>隣接区域を少ない淡色で塗り分けています。区域をクリックすると町会名を表示します。`;
+            return root;
+          };
+          legend.addTo(map);
+        }
+      }
+
+      function allAssociations() {
+        return data.regions.flatMap(region => region.associations.map(association => ({ ...association, region })));
+      }
+
+      function searchableText(item) {
+        const profile = profiles[item.name] || {};
+        const expandedAddresses = item.areas.flatMap(area => {
+          const terms = [`${area.town}${area.range}`];
+          for (const match of area.range.matchAll(/(\d+)(番|号)\s*[～〜-]\s*(\d+)\2/g)) {
+            const start = Number(match[1]);
+            const end = Number(match[3]);
+            if (end >= start && end - start <= 100) {
+              for (let number = start; number <= end; number += 1) terms.push(`${area.town}${number}${match[2]}`);
+            }
+          }
+          return terms;
+        });
+        return normalize([
+          item.name,
+          item.kana,
+          item.region.name,
+          ...item.areas.flatMap(area => [area.town, area.range]),
+          ...expandedAddresses,
+          JSON.stringify(profile)
+        ].join(" "));
+      }
+
+      function renderProfile(item) {
+        const profile = profiles[item.name] || {};
+        const union = profile.union || {};
+        const tamemap = profile.tamemap || {};
+        const contactRows = infoGrid([
+          ["町会・自治会長", union.leaderName],
+          ["連合会掲載の連絡先", union.contact],
+          ["代表者", tamemap.representative],
+          ["連絡担当者", tamemap.contactName],
+          ["郵便番号", tamemap.postalCode],
+          ["連絡先住所", tamemap.address],
+          ["電話", tamemap.phone, "phone"],
+          ["FAX", tamemap.fax],
+          ["メール", tamemap.email, "email"]
+        ]);
+        const activityRows = infoGrid([
+          ["設立年月日", tamemap.founded], ["会員構成", tamemap.membership],
+          ["対象年齢", tamemap.targetAge], ["活動地域", tamemap.activityArea],
+          ["活動日時", tamemap.activitySchedule], ["入会金", tamemap.admissionFee],
+          ["会費", tamemap.dues], ["会員募集", tamemap.recruiting], ["備考", tamemap.notes]
+        ]);
+        const webLinks = [
+          profileLink(tamemap.homepage, "ホームページ"), profileLink(tamemap.facebook, "Facebook"),
+          profileLink(tamemap.x, "X"), profileLink(tamemap.instagram, "Instagram"),
+          profileLink(tamemap.youtube, "YouTube"), profileLink(tamemap.otherSocial, "その他SNS")
+        ].filter(Boolean).join("");
+        const descriptions = [
+          displayValue(union.description) ? `<p class="profile-text"><span class="profile-source-label">連合会サイトの紹介</span><br>${escapeHtml(union.description)}</p>` : "",
+          displayValue(tamemap.description) && normalize(tamemap.description) !== normalize(union.description)
+            ? `<p class="profile-text"><span class="profile-source-label">しながわすまいるネットの紹介</span><br>${escapeHtml(tamemap.description)}</p>` : "",
+          displayValue(tamemap.achievements) ? `<p class="profile-text"><span class="profile-source-label">活動実績</span><br>${escapeHtml(tamemap.achievements)}</p>` : ""
+        ].filter(Boolean).join("");
+        const sources = [
+          union.url ? `<li><a href="${escapeHtml(union.url)}" target="_blank" rel="noopener">品川区町会自治会連合会の個別ページ ↗</a></li>` : "",
+          tamemap.url ? `<li><a href="${escapeHtml(tamemap.url)}" target="_blank" rel="noopener">しながわすまいるネットの団体ページ ↗</a></li>` : "",
+          `<li><a href="${escapeHtml(item.region.sourceUrl)}" target="_blank" rel="noopener">品川区公式の住所区域一覧 ↗</a></li>`
+        ].filter(Boolean).join("");
+        return `${contactRows ? `<section class="info-section"><h3>町会長・連絡先</h3>${contactRows}</section>` : ""}
+          ${descriptions ? `<section class="info-section"><h3>町会の紹介・活動</h3>${descriptions}</section>` : ""}
+          ${(activityRows || webLinks) ? `<section class="info-section"><h3>活動・ウェブサイト・SNS</h3>${activityRows}${webLinks ? `<div class="profile-links">${webLinks}</div>` : ""}</section>` : ""}
+          <section class="info-section"><h3>出典・詳しい情報</h3><ul class="source-list">${sources}</ul></section>`;
+      }
+
+      function render() {
+        const queryTokens = String(searchInput.value || "").normalize("NFKC").trim().split(/\s+/).map(normalize).filter(Boolean);
+        const selectedRegion = regionSelect.value;
+        const matches = allAssociations().filter(item => {
+          const regionMatch = !selectedRegion || item.region.name === selectedRegion;
+          const searchTarget = searchableText(item);
+          const queryMatch = queryTokens.every(token => {
+            if (/^\d+(?:番|号)$/.test(token)) {
+              return new RegExp(`(?:^|[^0-9])${escapeRegExp(token)}(?:$|[^0-9])`).test(searchTarget);
+            }
+            return searchTarget.includes(token);
+          });
+          return regionMatch && queryMatch;
+        });
+
+        status.textContent = `${matches.length}件を表示（全${data.associationCount}件）`;
+        const matchingNames = new Set(matches.map(item => item.name));
+        const filterActive = Boolean(queryTokens.length || selectedRegion);
+        updateBoundaryDisplay(matchingNames, filterActive);
+        if (!matches.length) {
+          resultsRoot.innerHTML = '<div class="empty">該当する町会・自治会がありません。<br>番・号を外して検索すると見つかる場合があります。</div>';
+        } else {
+          resultsRoot.innerHTML = matches.map((item, index) => {
+            const areas = item.areas.map(area => `<li><strong>${escapeHtml(area.town)}</strong> ${escapeHtml(area.range)}</li>`).join("");
+            return `<details class="association" id="${escapeHtml(associationAnchor(item.name))}"${matches.length <= 3 || (queryTokens.length && index === 0) ? " open" : ""}>
+              <summary>
+                <span class="association__title">${escapeHtml(item.name)}<span class="association__region">${escapeHtml(regionalAreaName(item.region.name))}</span></span>
+                <span class="association__count">${item.areas.length}区域</span><span class="association__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="association__body"><span class="region-badge">${escapeHtml(regionalAreaName(item.region.name))}</span>
+                <section class="info-section"><h3>町会区域の住所</h3><ul class="area-list">${areas}</ul></section>
+                ${renderProfile(item)}
+              </div>
+            </details>`;
+          }).join("");
+        }
+
+        const params = new URLSearchParams();
+        if (searchInput.value.trim()) params.set("q", searchInput.value.trim());
+        if (selectedRegion) params.set("region", selectedRegion);
+        const nextUrl = `${location.pathname}${params.size ? `?${params}` : ""}${location.hash}`;
+        if (location.protocol !== "file:") history.replaceState(null, "", nextUrl);
+
+        if (filterActive && map && boundaryLayers.length) {
+          const layers = queryTokens.length
+            ? [...matchingNames].flatMap(name => boundaryLayerByAssociation.get(name) || [])
+            : boundaryLayers.filter(layer => layer.feature.properties.regionName === selectedRegion);
+          const uniqueLayers = [...new Set(layers)];
+          if (uniqueLayers.length) {
+            const bounds = L.featureGroup(uniqueLayers).getBounds();
+            if (bounds.isValid()) map.fitBounds(bounds, { padding: [26, 26], maxZoom: 16 });
+          }
+        }
+      }
+
+      function initialize() {
+        if (!data || !Array.isArray(data.regions)) {
+          status.textContent = "町会データを読み込めませんでした。";
+          resultsRoot.innerHTML = '<div class="empty">data/chokai.js を確認してください。</div>';
+          return;
+        }
+        document.getElementById("association-count").textContent = data.associationCount;
+        document.getElementById("region-count").textContent = data.regionCount;
+        document.getElementById("source-updated").textContent = latestSourceUpdate();
+        document.getElementById("official-map-link").href = data.source.officialMapUrl;
+        document.getElementById("source-index-link").href = data.source.areaIndexUrl;
+        document.getElementById("source-csv-link").href = data.source.associationCsvUrl;
+        if (boundaries && boundaries.source) {
+          document.getElementById("boundary-source-link").href = boundaries.source.detailUrl;
+          document.getElementById("source-boundary-link").href = boundaries.source.detailUrl;
+        }
+        if (profileData && profileData.sources) {
+          document.getElementById("source-union-link").href = profileData.sources.unionIndexUrl;
+          document.getElementById("source-tamemap-link").href = profileData.sources.tamemapIndexUrl;
+        }
+
+        data.regions.forEach(region => {
+          const option = document.createElement("option");
+          option.value = region.name;
+          option.textContent = `${regionalAreaName(region.name)}（${region.associations.length}）`;
+          regionSelect.append(option);
+        });
+
+        const params = new URLSearchParams(location.search);
+        searchInput.value = params.get("q") || "";
+        const requestedRegion = params.get("region") || "";
+        if ([...regionSelect.options].some(option => option.value === requestedRegion)) regionSelect.value = requestedRegion;
+
+        setupMap();
+        render();
+        searchInput.addEventListener("input", render);
+        regionSelect.addEventListener("change", render);
+        document.getElementById("reset-button").addEventListener("click", () => {
+          searchInput.value = "";
+          regionSelect.value = "";
+          render();
+          if (map && boundaryGeoJson) map.fitBounds(boundaryGeoJson.getBounds(), { padding: [18, 18] });
+          searchInput.focus();
+        });
+        window.addEventListener("pagehide", () => stopLocationTracking(false), { once: true });
+      }
+
+      initialize();
+    })();
+  </script>
+</body>
+</html>
