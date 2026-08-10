@@ -556,16 +556,26 @@ ANSWER_POINT = re.compile(r"(?:実施|予定|検討|対応|方針|説明|回答|
 BACKCHANNEL = re.compile(r"(?:はい|承知しました|ありがとうございます)[。！ ]*")
 
 # 前の文を受けるための語。抜き出した先頭に来ると、受けるものが無いまま
-# 「なお、」「その中で、」で始まり、話の途中から読まされる。落としても
-# 内容は変わらないものだけを挙げる（「ただし」「一方」など、逆接や条件を
-# 表すものは内容が変わるので入れない）。
-LEADING_CONNECTIVE = re.compile(
+# 「ただ、」「ですから、」で始まり、話の途中から読まされる。
+DANGLING_CONNECTIVE = re.compile(
+    r"^(?:なお|また|さらに|そして|それから|続いて|次に|その中で|その上で|それでは|では"
+    r"|ただ|ただし|しかし|一方|ですから|ですので|そのため|したがって|よって|なので"
+    r"|そうしますと|そういった中で|こうした中で)[、 ]+")
+
+# そのうち、落としても内容が変わらないもの。逆接（ただ・しかし・一方）や
+# 帰結（ですから・したがって）は、落とすと発言の位置づけが変わってしまう。
+# 受ける文を足せないときの逃げ道なので、安全な語だけに限る。
+DROPPABLE_CONNECTIVE = re.compile(
     r"^(?:なお|また|さらに|そして|それから|続いて|次に|その中で|その上で|それでは|では)[、 ]+")
 
 
 def drop_leading_connective(text: str) -> str:
-    """抜き出した文の先頭から、受けるものが無くなった接続の語を落とす。"""
-    return LEADING_CONNECTIVE.sub("", text, count=1)
+    """抜き出した文の先頭から、受けるものが無くなった接続の語を落とす。
+
+    受ける文を前に足せたならここには来ない（`pick_window` が先に試す）。
+    足せなかったときだけ、落としても内容が変わらない語を除く。
+    """
+    return DROPPABLE_CONNECTIVE.sub("", text, count=1)
 
 
 def pick_window(sentences: list[str], scores: list[int], limit: int) -> list[int]:
@@ -577,11 +587,24 @@ def pick_window(sentences: list[str], scores: list[int], limit: int) -> list[int
 
     もっとも要点らしい文を起点にして、左右のうち点数の高い側から、上限に
     収まるあいだだけ足す。
+
+    ただし、先頭が「ただ、」「ですから、」のように前の文を受ける形になって
+    いるあいだは、**点数を見ずに前の文を優先して足す**。受けるものが無いまま
+    始まると、逆接や帰結が宙に浮いて、発言の位置づけを読み違えさせる。
+    前の文を足せないときだけ、`drop_leading_connective` で落とす。
     """
     best = max(range(len(sentences)), key=lambda index: (scores[index], -index))
     left = right = best
     total = len(sentences[best])
     while True:
+        # 先頭が前を受ける形なら、点数より先に、受ける文を足す。点数で左へ
+        # 伸びたあとに先頭が接続語になることもあるので、毎回ここを見る
+        if (left - 1 >= 0 and DANGLING_CONNECTIVE.match(sentences[left])
+                and total + len(sentences[left - 1]) <= limit):
+            left -= 1
+            total += len(sentences[left])
+            continue
+
         options = []
         if left - 1 >= 0 and total + len(sentences[left - 1]) <= limit:
             options.append((scores[left - 1], -1, left - 1))
