@@ -553,6 +553,48 @@ ANSWER_POINT = re.compile(r"(?:実施|予定|検討|対応|方針|説明|回答|
 # 相づちだけの発言。要点を持たないので抜粋の対象から外す。
 BACKCHANNEL = re.compile(r"(?:はい|承知しました|ありがとうございます)[。！ ]*")
 
+# 前の文を受けるための語。抜き出した先頭に来ると、受けるものが無いまま
+# 「なお、」「その中で、」で始まり、話の途中から読まされる。落としても
+# 内容は変わらないものだけを挙げる（「ただし」「一方」など、逆接や条件を
+# 表すものは内容が変わるので入れない）。
+LEADING_CONNECTIVE = re.compile(
+    r"^(?:なお|また|さらに|そして|それから|続いて|次に|その中で|その上で|それでは|では)[、 ]+")
+
+
+def drop_leading_connective(text: str) -> str:
+    """抜き出した文の先頭から、受けるものが無くなった接続の語を落とす。"""
+    return LEADING_CONNECTIVE.sub("", text, count=1)
+
+
+def pick_window(sentences: list[str], scores: list[int], limit: int) -> list[int]:
+    """要点の文から、隣り合う文だけを足して範囲を広げる。
+
+    答弁は一続きの説明なので、離れた文を並べると話がつながらない。実際に
+    「その中で、〜と認識しています。罹災証明書は個人の住家です。」のように、
+    関係のない2文が並ぶ抜粋ができていた。
+
+    もっとも要点らしい文を起点にして、左右のうち点数の高い側から、上限に
+    収まるあいだだけ足す。
+    """
+    best = max(range(len(sentences)), key=lambda index: (scores[index], -index))
+    left = right = best
+    total = len(sentences[best])
+    while True:
+        options = []
+        if left - 1 >= 0 and total + len(sentences[left - 1]) <= limit:
+            options.append((scores[left - 1], -1, left - 1))
+        if right + 1 < len(sentences) and total + len(sentences[right + 1]) <= limit:
+            options.append((scores[right + 1], 1, right + 1))
+        if not options:
+            break
+        _, side, index = max(options)
+        total += len(sentences[index])
+        if side < 0:
+            left = index
+        else:
+            right = index
+    return list(range(left, right + 1))
+
 
 def pick_sentences(sentences: list[str], cues: tuple[str, ...], limit: int, mode: str) -> str:
     """要点を含む文を、原文の順序と形のまま選ぶ。
@@ -563,8 +605,12 @@ def pick_sentences(sentences: list[str], cues: tuple[str, ...], limit: int, mode
 
     重要な順に、上限へ収まる文を採り、最後に元の順序へ戻す。上限に入らない文は
     飛ばす（後ろにもっと短い要点の文があれば、そちらを拾える）。
+
+    ただし答弁は隣り合う文だけを採る（`pick_window`）。答弁は一続きの説明なので、
+    離れた文を並べると話がつながらない。質問は「まず〜、次に〜」と論点が飛ぶのが
+    普通なので、点数の高い文をそのまま拾う。
     """
-    scored = []
+    scores = []
     for index, sentence in enumerate(sentences):
         score = sum(2 for cue in cues if cue in sentence)
         if re.search(r"\d|[０-９]", sentence):
@@ -575,9 +621,13 @@ def pick_sentences(sentences: list[str], cues: tuple[str, ...], limit: int, mode
             score += 4
         if index == len(sentences) - 1:
             score += 2
-        # 同点なら前に出てくる文を優先する（-index を鍵にして昇順に戻す）
-        scored.append((score, -index, index))
+        scores.append(score)
 
+    if mode == "answer":
+        return "".join(sentences[index] for index in pick_window(sentences, scores, limit))
+
+    # 同点なら前に出てくる文を優先する（-index を鍵にして昇順に戻す）
+    scored = [(score, -index, index) for index, score in enumerate(scores)]
     chosen: list[int] = []
     total = 0
     for _, _, index in sorted(scored, reverse=True):
@@ -614,7 +664,7 @@ def concise_summary(text: str, cues: tuple[str, ...], limit: int, mode: str) -> 
     result = pick_sentences(sentences, cues, limit, mode)
     if not result:
         result = sentences[-1] if mode == "question" else sentences[0]
-    return clip_at_clause(result, limit)
+    return clip_at_clause(drop_leading_connective(result), limit)
 
 
 def normalize_agenda_title(value: str, fallback: str = "委員会での質疑") -> str:
