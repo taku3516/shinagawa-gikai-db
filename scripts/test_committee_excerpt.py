@@ -195,6 +195,54 @@ def test_empty_input_is_empty() -> None:
     check("相づちだけの発言は空", question("はい。ありがとうございます。") == "")
 
 
+def test_answer_sentences_are_adjacent() -> None:
+    """答弁は隣り合う文だけを採る。離れた文を並べない。
+
+    r07 で「その中で、〜と認識しています。罹災証明書は個人の住家です。」という、
+    関係のない2文が並ぶ抜粋ができていた。答弁は一続きの説明なので、点数の高い
+    文を離れた位置から集めると話がつながらない。
+    """
+    # 間に長い文を挟む。以前は点数の高い文だけを拾っていたため、上限に入らない
+    # 中の文が飛ばされ、離れた2文が並んだ抜粋になっていた
+    speech = (
+        "周りにまだ見舞金の申請等をされていない方がいらっしゃったらコールセンターへ"
+        "とご案内していたので、遅れて申請される方もいると認識しています。"
+        "本日お手元にお配りした一枚物の裏面をご覧いただきますと、そちらに全体の"
+        "流れが書いてございますので、恐れ入りますがあわせてご覧いただければと"
+        "存じますし、ご不明な点は個別にお申し出いただければ幸いに存じます。"
+        "罹災証明書は個人の住家について発行するという扱いで対応してまいります。"
+    )
+    result = answer(speech, limit=130)
+    picked = [sentence for sentence in qa.sentences(result)]
+    normalized = qa.sentences(pc.clean_spoken_style(speech))
+    # 抜き出した文が、原文の中で隣り合っていること
+    positions = [normalized.index(sentence) for sentence in picked if sentence in normalized]
+    check(
+        "答弁の文が原文で隣り合っている",
+        positions == list(range(min(positions), min(positions) + len(positions))),
+        f"離れた位置の文が並んでいる: {positions} → {result}",
+    )
+
+
+def test_leading_connective_is_dropped() -> None:
+    """受けるものが無くなった接続の語を、先頭から落とす。
+
+    抜き出した先頭が「なお、」「その中で、」だと、前の文が無いまま話の途中から
+    読まされる。落としても内容は変わらない語だけを対象にしている。
+    """
+    speech = (
+        "なお、公園の設置につきましては、こちらは例外という説明をしております。"
+        "基本は民間公衆喫煙所をベースに各地区で進めてまいる方針です。"
+    )
+    result = answer(speech, limit=130)
+    check("先頭の「なお、」が落ちる", not result.startswith("なお、"), f"→ {result}")
+    check("本文は残る", "公園の設置" in result, f"→ {result}")
+
+    # 内容が変わる接続の語は落とさない
+    kept = pc.drop_leading_connective("ただし、対象は世帯単位となります。")
+    check("「ただし」は落とさない", kept.startswith("ただし、"), f"→ {kept}")
+
+
 def main() -> int:
     tests = [value for name, value in sorted(globals().items()) if name.startswith("test_")]
     for test in tests:
