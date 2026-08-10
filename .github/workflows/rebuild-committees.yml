@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
     inputs:
       year:
-        description: "作り直す年（西暦。例: 2017）"
+        description: "作り直す年（2025 / r07 / 令和7 / h30 / 平成30。数字だけの和暦は不可）"
         required: true
         type: string
       refresh:
