@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-10T10:42:00.073408Z",
+  "generatedAt": "2026-08-10T13:52:10.645911Z",
   "items": [
     {
       "id": "16286736ac22c4b7b8cf",
@@ -58,6 +58,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "916479465b78b4a0fd04",
+      "title": "しながわクルーズ 9・10・11月",
+      "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9～11月の「しながわクルーズ」は、月ごとに東京湾の魅力を発見できるコースとなっています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawacruise202609",
+      "publishedAt": "2026-08-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-10T13:51:49.488768Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 14
     },
     {
       "id": "f3c6ccdda92ea27646c8",
@@ -5318,7 +5337,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1939, column 34"
+      "message": "not well-formed (invalid token): line 2345, column 34"
     },
     {
       "source": "朝日新聞",
