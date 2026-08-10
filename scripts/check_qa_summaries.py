@@ -514,19 +514,10 @@ def main() -> int:
 
     baseline = load_baseline()
     worse = regressions(stats, baseline) if baseline else []
-    print()
-    if not baseline:
-        print("■ 基準値が未記録です。`--update-baseline` で作成してください。")
-    elif worse:
-        print("■ 基準値から外れました")
-        for dataset, year, name, now, before, reason in worse:
-            unit = "" if "字数" in name else "%"
-            print(f"  {dataset} {year} {name}［{reason}］: {before:.1f}{unit} → {now:.1f}{unit}")
-        print()
-        print("  意図した変更なら `--update-baseline` で基準値を引き直してください。")
-    else:
-        print("■ 悪化なし（基準値以内）")
 
+    # 実例と見本を先に出し、判定を最後に置く。--details を付けると実例だけで
+    # 100行を超えるので、判定を先に書くと、作り直しの流れのログでは末尾しか
+    # 読めない道具から数字が見えなくなる。次にどうするかを決める材料は末尾に置く。
     if args.details:
         print()
         print(f"■ 例{f'（{args.year}のみ）' if args.year else ''}")
@@ -539,6 +530,19 @@ def main() -> int:
                 print(f"    {text[:150]}")
         if args.year:
             print_samples(focused, args.year, args.limit)
+
+    print()
+    if not baseline:
+        print("■ 基準値が未記録です。`--update-baseline` で作成してください。")
+    elif worse:
+        print("■ 基準値から外れました")
+        for dataset, year, name, now, before, reason in worse:
+            unit = "" if "字数" in name else "%"
+            print(f"  {dataset} {year} {name}［{reason}］: {before:.1f}{unit} → {now:.1f}{unit}")
+        print()
+        print("  意図した変更なら `--update-baseline` で基準値を引き直してください。")
+    else:
+        print("■ 悪化なし（基準値以内）")
 
     return 1 if (blocking or worse) else 0
 
