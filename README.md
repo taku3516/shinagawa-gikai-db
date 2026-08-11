@@ -135,7 +135,7 @@ python3 scripts/prepare_resolutions.py
 - `data/news-items.js` — 収集済みニュース（自動生成）
 - `scripts/collect_news.py` — RSSと公開Webページの収集、重複排除、関連度判定、タグ付け
 - `.github/workflows/collect-news.yml` — GitHub Actionsで毎時00分に確認し、記事に変更がある場合だけ収集結果を保存
-- `news-sync.js` / `data/firebase-config.js` — 希望者だけがGoogleログインで保存内容を同期する機能（公開版では無効）
+- `news-sync.js` / `data/firebase-config.js` — 希望者だけがGoogleログインで保存内容を同期する機能（Git上は無効、公開時に専用キーを注入）
 - `firebase/firestore.rules` — 利用者本人の同期領域だけを許可するデータベースルール
 
 ローカルで収集を試す場合は、追加ライブラリなしで次を実行できます。

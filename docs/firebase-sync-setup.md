@@ -46,31 +46,15 @@
 
 ### 4. サイト側の公開設定を入れる（公開情報として扱う）
 
-Firebaseのウェブ設定はブラウザへ配信されるため、リポジトリを非公開にしても利用者からは参照できます。特に `apiKey` は秘密鍵の代わりにはなりません。古いキーを失効したうえで、Google Cloud ConsoleでHTTPリファラーを公開サイトに限定し、Firebaseで必要なAPIだけを許可してください。
+Firebaseのウェブ設定はブラウザへ配信されるため、リポジトリを非公開にしても利用者からは参照できます。特に `apiKey` は秘密鍵の代わりにはなりません。共有中の古いキーは直ちに削除せず、サイト専用キーへ切り替えたあと、他の利用箇所も移行してからローテーションしてください。
 
-このリポジトリの公開版は、Secret scanningへの再混入を防ぐため `data/firebase-config.js` を空欄・無効のまま管理します。新しいキーをコミットして同期を再開する場合は、キーが公開されること、制限が有効であること、GitHubの警告をどう管理するかを所有者が確認してから行ってください。`messagingSenderId` が表示されていれば、それも設定し、最後に先頭の `enabled` を `true` にします。
+リポジトリ内の `data/firebase-config.js` は、Secret scanningへの再混入を防ぐため空欄・無効のまま管理します。公開時はリポジトリSecret `FIREBASE_API_KEY` を `scripts/build_pages.py` が生成物だけに差し込み、Git履歴やPull Requestにはキーを残しません。
 
-```js
-window.SHINAGAWA_FIREBASE_SYNC = Object.freeze({
-  enabled: true,
-  sdkVersion: "12.16.0",
-  firebaseConfig: Object.freeze({
-    apiKey: "Firebase Consoleに表示された値",
-    authDomain: "Firebase Consoleに表示された値",
-    projectId: "Firebase Consoleに表示された値",
-    appId: "Firebase Consoleに表示された値",
-    messagingSenderId: "Firebase Consoleに表示された値"
-  }),
-  appCheck: Object.freeze({
-    enabled: false,
-    enterpriseSiteKey: ""
-  })
-});
-```
+FirebaseのウェブAPIキーはブラウザへ送られる公開識別子であり、GitHub Secretsに置いても公開サイトの利用者からは確認できます。秘密にする目的ではなく、Gitへの誤コミットを防ぐ目的で使用します。実際の保護は、サイト専用キー、HTTPリファラー制限、Firebase APIだけのAPI制限、Firestoreルール、App Checkで行います。他のGoogle APIと同じキーを共有しないでください。
 
-サービスアカウントJSON、`private_key`、OAuthのクライアントシークレットは貼り付けません。
+サイト専用キーを作成したら、GitHubのリポジトリで「Settings」→「Secrets and variables」→「Actions」→「New repository secret」を開き、名前を `FIREBASE_API_KEY` として保存します。サービスアカウントJSON、`private_key`、OAuthのクライアントシークレットは保存しません。
 
-Google Cloud Consoleの「APIとサービス」→「認証情報」で、ウェブアプリが使うBrowser keyの「アプリケーションの制限」をHTTPリファラーにし、公開サイトのURLだけを許可します。「APIの制限」ではFirebaseが必要とするAPIだけを許可し、Generative Language APIなど無関係なAPIを同じキーへ追加しないでください。既存の制限を変更する場合は、先にテストしてから本番へ反映します。
+Google Cloud Consoleの「APIとサービス」→「認証情報」で、サイト専用キーの「アプリケーションの制限」をウェブサイトにし、`taku3516.github.io` と `taku3516.github.io/*` だけを許可します。「APIの制限」ではFirebase Management API、Identity Toolkit API、Token Service API、Cloud Datastore API、Google Cloud Firestore APIだけを許可し、Generative Language APIなど無関係なAPIを同じキーへ追加しないでください。既存の共有キーは変更せず、利用箇所を移行してから別途ローテーションします。
 
 設定後は次の簡易検査を実行できます。
 
@@ -78,7 +62,7 @@ Google Cloud Consoleの「APIとサービス」→「認証情報」で、ウェ
 python3 scripts/check_firebase_sync.py
 ```
 
-同じ検査はPull Requestとpushでも自動実行され、Google APIキー形式や秘密情報らしい値が公開設定へ入ると失敗します。
+同じ検査はPull Requestとpushでも自動実行され、Google APIキー形式や秘密情報らしい値がリポジトリ内の公開設定へ入ると失敗します。GitHub Pagesの公開処理は `FIREBASE_API_KEY` が未設定または形式不正なら停止します。
 
 ### 5. 2台で確認する
 
