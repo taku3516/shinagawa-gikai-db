@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+"""Build the static Pages artifact without storing Firebase's API key in Git."""
+
+from argparse import ArgumentParser
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+
+
+ROOT = Path(__file__).resolve().parents[1]
+GOOGLE_API_KEY = re.compile(r"AIza[0-9A-Za-z_-]{35}")
+
+
+def tracked_files() -> list[Path]:
+    output = subprocess.check_output(
+        ["git", "ls-files", "-z"], cwd=ROOT
+    ).decode("utf-8")
+    return [Path(item) for item in output.split("\0") if item]
+
+
+def firebase_config(api_key: str) -> str:
+    if not GOOGLE_API_KEY.fullmatch(api_key):
+        raise ValueError("FIREBASE_API_KEYがGoogle APIキーの形式ではありません")
+
+    config = {
+        "apiKey": api_key,
+        "authDomain": "shinagawakugiakidb.firebaseapp.com",
+        "projectId": "shinagawakugiakidb",
+        "appId": "1:938034569960:web:64240cfc36db741526df5d",
+        "messagingSenderId": "938034569960",
+    }
+    entries = ",\n".join(
+        f"    {key}: {json.dumps(value)}" for key, value in config.items()
+    )
+    return f"""/* GitHub Pagesのデプロイ時に生成されるFirebase公開設定です。 */
+window.SHINAGAWA_FIREBASE_SYNC = Object.freeze({{
+  enabled: true,
+  sdkVersion: "12.16.0",
+  firebaseConfig: Object.freeze({{
+{entries}
+  }}),
+  appCheck: Object.freeze({{
+    enabled: false,
+    enterpriseSiteKey: ""
+  }})
+}});
+"""
+
+
+def build(output: Path, api_key: str) -> None:
+    if output.exists() and any(output.iterdir()):
+        raise ValueError(f"出力先が空ではありません: {output}")
+    output.mkdir(parents=True, exist_ok=True)
+
+    for relative in tracked_files():
+        if relative.parts[0].startswith("."):
+            continue
+        source = ROOT / relative
+        destination = output / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, destination)
+
+    (output / "data" / "firebase-config.js").write_text(
+        firebase_config(api_key), encoding="utf-8"
+    )
+    (output / ".nojekyll").touch()
+
+
+def main() -> int:
+    parser = ArgumentParser()
+    parser.add_argument("--output", type=Path, default=ROOT / "_site")
+    args = parser.parse_args()
+    api_key = os.environ.get("FIREBASE_API_KEY", "").strip()
+    if not api_key:
+        parser.error("FIREBASE_API_KEYが設定されていません")
+    build(args.output.resolve(), api_key)
+    print(f"GitHub Pages用ファイルを生成しました: {args.output}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
