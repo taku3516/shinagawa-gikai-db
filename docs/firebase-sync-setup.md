@@ -54,7 +54,7 @@ FirebaseのウェブAPIキーはブラウザへ送られる公開識別子であ
 
 サイト専用キーを作成したら、GitHubのリポジトリで「Settings」→「Secrets and variables」→「Actions」→「New repository secret」を開き、名前を `FIREBASE_API_KEY` として保存します。サービスアカウントJSON、`private_key`、OAuthのクライアントシークレットは保存しません。
 
-Google Cloud Consoleの「APIとサービス」→「認証情報」で、サイト専用キーの「アプリケーションの制限」をウェブサイトにし、`taku3516.github.io` と `taku3516.github.io/*` だけを許可します。「APIの制限」ではFirebase Management API、Identity Toolkit API、Token Service API、Cloud Datastore API、Google Cloud Firestore APIだけを許可し、Generative Language APIなど無関係なAPIを同じキーへ追加しないでください。既存の共有キーは変更せず、利用箇所を移行してから別途ローテーションします。
+Google Cloud Consoleの「APIとサービス」→「認証情報」で、サイト専用キーの「アプリケーションの制限」をウェブサイトにし、`taku3516.github.io`、`taku3516.github.io/*`、`shinagawakugiakidb.firebaseapp.com/*` だけを許可します。最後のドメインはGoogleログインの認証ハンドラー（`/__/auth/handler`）で必要です。「APIの制限」ではFirebase Management API、Identity Toolkit API、Token Service API、Cloud Datastore API、Google Cloud Firestore APIだけを許可し、Generative Language APIなど無関係なAPIを同じキーへ追加しないでください。既存の共有キーは変更せず、利用箇所を移行してから別途ローテーションします。
 
 設定後は次の簡易検査を実行できます。
 
