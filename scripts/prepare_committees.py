@@ -336,6 +336,24 @@ def discover_drafts(refresh: bool) -> list[dict]:
     return documents
 
 
+# 画面上の連番と発言者ラベル。本文にも重複して入るので落とす。
+# 全角で入る年がある（平成18年で「１２：○山田委員」の形が混じっていた）。
+VOICE_LABEL = re.compile(r"^[0-9０-９]+[:：]\s*[○◯]\s*\S+\s*")
+
+# 発言者ラベルが付かず、連番だけが残る形。時刻（10:00）を消さないよう、
+# コロンの後ろが数字のものは対象にしない。
+VOICE_NUMBER = re.compile(r"^[0-9０-９]+[:：]\s*(?![0-9０-９])")
+
+
+def strip_voice_label(text: str) -> str:
+    """発言本文の先頭に残る、画面用の連番と発言者ラベルを落とす。
+
+    ここを取りこぼすと `validate` のアサーションで落ちる。平成18年の
+    作り直しが、9分かけて会議録を取り終えたあとにそこで止まった。
+    """
+    return VOICE_NUMBER.sub("", VOICE_LABEL.sub("", text), count=1)
+
+
 def parse_html_voices(raw: bytes) -> tuple[list[dict], str]:
     soup = BeautifulSoup(raw.decode("utf-8", "replace"), "html.parser")
     speakers = {}
@@ -348,8 +366,7 @@ def parse_html_voices(raw: bytes) -> tuple[list[dict], str]:
         text = compact(node.get_text(" ", strip=True))
         if text:
             code = node.get("data-voice_code", "")
-            # 画面上の連番と発言者ラベルは別に保持されているが、本文にも重複して入る。
-            text = re.sub(r"^\d+:\s*[○◯]\s*\S+\s*", "", text)
+            text = strip_voice_label(text)
             voices.append({"speaker": speakers.get(code, ""), "text": text})
     full_text = compact(soup.get_text(" ", strip=True))
     time_marks = re.findall(
@@ -1153,7 +1170,12 @@ def validate(sessions: list[dict]) -> None:
                 exchange_ids.add(item["id"])
                 assert item["speaker"] and item["question"] and item["answer"]
                 assert not item.get("title") or len(item["title"]) <= 44
-                assert not re.match(r"^[0-9０-９]+[:：]", item["question"])
+                # 何が引っかかったかを必ず添える。文言が無いと、9分かけて会議録を
+                # 取り終えたあとに落ちても、次に何を直せばいいのか分からない
+                assert not re.match(r"^[0-9０-９]+[:：]", item["question"]), (
+                    "発言者ラベルが残っている", session["id"], topic["title"],
+                    item["id"], item["question"][:60],
+                )
                 # 上限は共通ルールの値をそのまま使う。ここに数字を書くと、
                 # qa_summary 側を変えたときに必ず食い違う（実際に起きた）。
                 assert len(item["question"]) <= qa.QUESTION_LIMIT, (
