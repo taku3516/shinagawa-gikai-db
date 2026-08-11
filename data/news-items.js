@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-10T13:52:10.645911Z",
+  "generatedAt": "2026-08-11T04:47:40.178983Z",
   "items": [
+    {
+      "id": "34bd6cfd994803640b58",
+      "title": "第26回「大崎コミックシェルター2026夏」",
+      "summary": "2026年8月15日（土）、16日（日）、大崎駅南改札出口付近にて「大崎コミックシェルター2026 夏」が開催されます。お台場・国際展示場に全国から人が集結する「コミックマーケット」開催に合わせ、りんかい線・JR乗換駅となる大崎で「休憩場所＝シェルター」とおもてなしを提供する恒例イベントです。 イベントの最新情報は公式Xよりご確認ください。 https://x.com/osakicomishel",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/osakicomic2026natsu",
+      "publishedAt": "2026-08-11T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-11T04:47:17.717443Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "16286736ac22c4b7b8cf",
       "title": "しながわ子ども議会（議場見学会）を開催しました。",
@@ -5337,7 +5358,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2345, column 34"
+      "message": "not well-formed (invalid token): line 2728, column 34"
     },
     {
       "source": "朝日新聞",
