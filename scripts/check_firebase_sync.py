@@ -11,6 +11,7 @@ CONFIG = ROOT / "data" / "firebase-config.js"
 RULES = ROOT / "firebase" / "firestore.rules"
 FORBIDDEN = ("private_key", "client_secret", "service_account", "BEGIN PRIVATE KEY")
 REQUIRED = ("apiKey", "authDomain", "projectId", "appId")
+GOOGLE_API_KEY = re.compile(r"AIza[0-9A-Za-z_-]{35}")
 
 
 def main() -> int:
@@ -22,6 +23,11 @@ def main() -> int:
     for keyword in FORBIDDEN:
         if keyword.lower() in lowered:
             errors.append(f"公開設定に秘密情報らしい文字列があります: {keyword}")
+
+    if GOOGLE_API_KEY.search(config_text):
+        errors.append(
+            "Google APIキーがリポジトリ内にあります。キーを失効して公開設定から削除してください"
+        )
 
     enabled_match = re.search(
         r"SHINAGAWA_FIREBASE_SYNC\s*=.*?enabled\s*:\s*(true|false)",
