@@ -1,0 +1,17 @@
+name: 公開設定の秘密情報チェック
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check-public-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+      - name: Firebase公開設定を確認
+        run: python3 scripts/check_firebase_sync.py

@@ -44,9 +44,11 @@
 
 テストモードのまま公開しないでください。用意したルールは、ログイン利用者本人の領域だけを許可し、それ以外を既定で拒否します。
 
-### 4. サイト側の公開設定を入れる
+### 4. サイト側の公開設定を入れる（公開情報として扱う）
 
-`data/firebase-config.js` の空欄に、手順1で控えた値を貼り付けます。`messagingSenderId` が表示されていれば、それも貼り付けます。最後に先頭の `enabled` を `true` にします。
+Firebaseのウェブ設定はブラウザへ配信されるため、リポジトリを非公開にしても利用者からは参照できます。特に `apiKey` は秘密鍵の代わりにはなりません。古いキーを失効したうえで、Google Cloud ConsoleでHTTPリファラーを公開サイトに限定し、Firebaseで必要なAPIだけを許可してください。
+
+このリポジトリの公開版は、Secret scanningへの再混入を防ぐため `data/firebase-config.js` を空欄・無効のまま管理します。新しいキーをコミットして同期を再開する場合は、キーが公開されること、制限が有効であること、GitHubの警告をどう管理するかを所有者が確認してから行ってください。`messagingSenderId` が表示されていれば、それも設定し、最後に先頭の `enabled` を `true` にします。
 
 ```js
 window.SHINAGAWA_FIREBASE_SYNC = Object.freeze({
@@ -68,13 +70,15 @@ window.SHINAGAWA_FIREBASE_SYNC = Object.freeze({
 
 サービスアカウントJSON、`private_key`、OAuthのクライアントシークレットは貼り付けません。
 
-Google Cloud Consoleの「APIとサービス」→「認証情報」で、ウェブアプリが使うBrowser keyの「APIの制限」も確認します。Firebaseが自動設定したFirebase関連APIだけを許可し、Generative Language APIなど無関係なAPIを同じキーへ追加しないでください。既存の制限を変更する場合は、先にテストしてから本番へ反映します。
+Google Cloud Consoleの「APIとサービス」→「認証情報」で、ウェブアプリが使うBrowser keyの「アプリケーションの制限」をHTTPリファラーにし、公開サイトのURLだけを許可します。「APIの制限」ではFirebaseが必要とするAPIだけを許可し、Generative Language APIなど無関係なAPIを同じキーへ追加しないでください。既存の制限を変更する場合は、先にテストしてから本番へ反映します。
 
 設定後は次の簡易検査を実行できます。
 
 ```bash
 python3 scripts/check_firebase_sync.py
 ```
+
+同じ検査はPull Requestとpushでも自動実行され、Google APIキー形式や秘密情報らしい値が公開設定へ入ると失敗します。
 
 ### 5. 2台で確認する
 
