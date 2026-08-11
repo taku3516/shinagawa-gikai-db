@@ -271,21 +271,28 @@ def test_leading_connective_is_dropped() -> None:
 def test_voice_label_is_stripped() -> None:
     """発言本文に残る、画面用の連番と発言者ラベルを落とす。
 
-    平成18年の作り直しが、9分かけて会議録を取り終えたあとに
-    `validate` のアサーションで落ちた。連番が全角で入る年があり、
-    半角しか見ていなかった。時刻（10:00）は消さない。
+    「○＋氏名」まで揃っている形だけを落とす。数字とコロンだけで判断すると、
+    発言に出てくる比率や時刻を壊す。平成18年の作り直しが、9分かけて会議録を
+    取り終えたあとに「６：４で出資割合を分ける」で止まった。
     """
     for given, want in (
         ("12: ○山田委員 その点について伺います。", "その点について伺います。"),
         ("１２：○山田委員 その点について伺います。", "その点について伺います。"),
-        ("12：その点について伺います。", "その点について伺います。"),
         ("その点について伺います。", "その点について伺います。"),
     ):
         check(f"ラベルが落ちる: {given[:12]}…", pc.strip_voice_label(given) == want,
               f"→ {pc.strip_voice_label(given)}")
-    for time_text in ("10:00から開催いたします。", "１０：００から開催いたします。"):
-        check(f"時刻は消さない: {time_text[:8]}…", pc.strip_voice_label(time_text) == time_text,
-              f"→ {pc.strip_voice_label(time_text)}")
+
+    # 発言そのものが数字とコロンで始まることがある。これは本文なので消さない
+    for kept in (
+        "６：４で出資割合を分けるというけど、２３区の側はどうなのか伺います。",
+        "10:00から開催いたします。",
+        "１０：００から開催いたします。",
+    ):
+        check(f"本文は消さない: {kept[:10]}…", pc.strip_voice_label(kept) == kept,
+              f"→ {pc.strip_voice_label(kept)}")
+        check(f"検査も通す: {kept[:10]}…", not pc.VOICE_LABEL.match(kept),
+              "発言者ラベルとして弾かれている")
 
 
 def main() -> int:

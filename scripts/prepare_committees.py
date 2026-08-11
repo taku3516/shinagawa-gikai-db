@@ -336,22 +336,18 @@ def discover_drafts(refresh: bool) -> list[dict]:
     return documents
 
 
-# 画面上の連番と発言者ラベル。本文にも重複して入るので落とす。
-# 全角で入る年がある（平成18年で「１２：○山田委員」の形が混じっていた）。
+# 画面上の連番と発言者ラベル。本文にも重複して入るので落とす。全角で入る年も
+# あるため、数字とコロンは半角・全角の両方を見る。
+#
+# 「○＋氏名」まで揃っている形だけを対象にする。数字とコロンだけで判断すると、
+# 発言に出てくる比率（「６：４で出資割合を分ける」）や時刻（「10:00から」）を
+# 壊す。実際に平成18年の「６：４」がこの形だった。
 VOICE_LABEL = re.compile(r"^[0-9０-９]+[:：]\s*[○◯]\s*\S+\s*")
-
-# 発言者ラベルが付かず、連番だけが残る形。時刻（10:00）を消さないよう、
-# コロンの後ろが数字のものは対象にしない。
-VOICE_NUMBER = re.compile(r"^[0-9０-９]+[:：]\s*(?![0-9０-９])")
 
 
 def strip_voice_label(text: str) -> str:
-    """発言本文の先頭に残る、画面用の連番と発言者ラベルを落とす。
-
-    ここを取りこぼすと `validate` のアサーションで落ちる。平成18年の
-    作り直しが、9分かけて会議録を取り終えたあとにそこで止まった。
-    """
-    return VOICE_NUMBER.sub("", VOICE_LABEL.sub("", text), count=1)
+    """発言本文の先頭に残る、画面用の連番と発言者ラベルを落とす。"""
+    return VOICE_LABEL.sub("", text, count=1)
 
 
 def parse_html_voices(raw: bytes) -> tuple[list[dict], str]:
@@ -1170,9 +1166,13 @@ def validate(sessions: list[dict]) -> None:
                 exchange_ids.add(item["id"])
                 assert item["speaker"] and item["question"] and item["answer"]
                 assert not item.get("title") or len(item["title"]) <= 44
+                # 見るのは発言者ラベル（「12:○山田委員」）が残っている場合だけ。
+                # 数字とコロンだけで弾くと、発言に出てくる比率や時刻に引っかかる
+                # ——平成18年の「６：４で出資割合を分ける」で実際に止まった。
+                #
                 # 何が引っかかったかを必ず添える。文言が無いと、9分かけて会議録を
                 # 取り終えたあとに落ちても、次に何を直せばいいのか分からない
-                assert not re.match(r"^[0-9０-９]+[:：]", item["question"]), (
+                assert not VOICE_LABEL.match(item["question"]), (
                     "発言者ラベルが残っている", session["id"], topic["title"],
                     item["id"], item["question"][:60],
                 )
