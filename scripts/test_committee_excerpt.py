@@ -268,6 +268,26 @@ def test_leading_connective_is_dropped() -> None:
     check("「ただし」は落とさない", kept.startswith("ただし、"), f"→ {kept}")
 
 
+def test_voice_label_is_stripped() -> None:
+    """発言本文に残る、画面用の連番と発言者ラベルを落とす。
+
+    平成18年の作り直しが、9分かけて会議録を取り終えたあとに
+    `validate` のアサーションで落ちた。連番が全角で入る年があり、
+    半角しか見ていなかった。時刻（10:00）は消さない。
+    """
+    for given, want in (
+        ("12: ○山田委員 その点について伺います。", "その点について伺います。"),
+        ("１２：○山田委員 その点について伺います。", "その点について伺います。"),
+        ("12：その点について伺います。", "その点について伺います。"),
+        ("その点について伺います。", "その点について伺います。"),
+    ):
+        check(f"ラベルが落ちる: {given[:12]}…", pc.strip_voice_label(given) == want,
+              f"→ {pc.strip_voice_label(given)}")
+    for time_text in ("10:00から開催いたします。", "１０：００から開催いたします。"):
+        check(f"時刻は消さない: {time_text[:8]}…", pc.strip_voice_label(time_text) == time_text,
+              f"→ {pc.strip_voice_label(time_text)}")
+
+
 def main() -> int:
     tests = [value for name, value in sorted(globals().items()) if name.startswith("test_")]
     for test in tests:
