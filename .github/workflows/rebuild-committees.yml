@@ -65,9 +65,9 @@ jobs:
         # 生成の直し方を変えて同じ年を作り直すことは多いので、ここで持ち越す。
         # prepare_committees.py はキャッシュがあれば取得も待機も飛ばす。
         #
-        # キーに run_id を入れて毎回書き出し、restore-keys で直前の同じ年を
-        # 復元する。--refresh で取り直した場合も、その結果が次に引き継がれる。
-        uses: actions/cache@v4
+        # restore-keys で直前の同じ年を復元する。--refresh で取り直した場合も、
+        # その結果が次に引き継がれる。
+        uses: actions/cache/restore@v4
         with:
           path: scripts/cache
           key: minutes-${{ inputs.year }}-${{ github.run_id }}
@@ -78,6 +78,19 @@ jobs:
         run: |
           python scripts/prepare_committees.py --year "${{ inputs.year }}" \
             ${{ inputs.refresh && '--refresh' || '' }}
+
+      - name: 取得した会議録を残す
+        # 生成や検査で止まってもここまで来る（always）。取得だけで1年9分かかる
+        # ので、失敗のたびに取り直すと、直しを試すのに毎回9分待つことになる。
+        # 実際に平成18年で2回続けて取り直しになった。
+        #
+        # actions/cache の自動保存は失敗した実行では走らないため、保存を
+        # 分けて always で回している。
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: scripts/cache
+          key: minutes-${{ inputs.year }}-${{ github.run_id }}
 
       - name: 要約を検査する
         # 作り直した結果が共通ルールを満たしているかを、保存する前に確かめる。
