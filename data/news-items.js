@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-12T03:03:36.531487Z",
+  "generatedAt": "2026-08-12T05:13:00.385522Z",
   "items": [
     {
       "id": "7537fab793b47df96010",
@@ -38,6 +38,27 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "e2bd0470b0ea2959d262",
+      "title": "第72回 大井どんたく 夏まつり",
+      "summary": "2026年8月22日（土）・23日（日）、大井町駅前中央通りにて「第72回大井どんたく夏まつり」が開催されます。 盆踊りやダンス、音楽ステージや、バラエティ豊かなグルメコーナー、屋台の出店など、さまざまなイベントを予定しています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ooimachidontakusummerfestival2026",
+      "publishedAt": "2026-08-12T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-12T05:12:34.928621Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 8
     },
     {
       "id": "d72bf6216af184430233",
@@ -5376,7 +5397,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 9,
       "accepted": 0
     },
     {
@@ -5395,12 +5416,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1801, column 45"
+      "message": "not well-formed (invalid token): line 1906, column 45"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 39,
       "accepted": 0
     },
     {
@@ -5419,7 +5440,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -5477,8 +5498,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "しながわ観光協会",
       "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
