@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-12T05:13:00.385522Z",
+  "generatedAt": "2026-08-12T07:58:24.570390Z",
   "items": [
     {
       "id": "7537fab793b47df96010",
@@ -40,8 +40,26 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
+      "id": "fe27c3ddc318e1dc0a8e",
+      "title": "大田区立郷土博物館 特集展示「大森駅開業前夜」",
+      "summary": "2026年6月24日（水）～9月13日（日）、大田区立郷土博物館にて、特別展示「大森駅開業前夜ー150年前の大森を振り返るー」が開催されます。 明治時代初期は、移動手段が東海道の往来（徒歩）から鉄道へと移り変わる時期でした。本展示は大森駅が2026年6月に開業150周年を迎えることを記念し、東海道の間の宿（あいのしゅく）の成り立ちや大森停車場（大森駅）の設置準備について紹介します。また、地場産業であった海苔の養殖と麦わら細工の生産をとおして、大森駅開業前後の大森地域を見つめ…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/omori-zenya",
+      "publishedAt": "2026-08-12T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-12T07:57:56.935603Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
       "id": "e2bd0470b0ea2959d262",
-      "title": "第72回 大井どんたく 夏まつり",
+      "title": "第72回 大井どんたく 夏まつり 2026",
       "summary": "2026年8月22日（土）・23日（日）、大井町駅前中央通りにて「第72回大井どんたく夏まつり」が開催されます。 盆踊りやダンス、音楽ステージや、バラエティ豊かなグルメコーナー、屋台の出店など、さまざまなイベントを予定しています。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -58,6 +76,23 @@ window.SHINAGAWA_NEWS = {
         "大井",
         "大井町駅"
       ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "fbea1a6dca20027a595c",
+      "title": "ドコモ・バイクシェアのサービス提供再開のお知らせ（品川区シェアサイクル事業）",
+      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/20250313190123.html",
+      "publishedAt": "2026-08-12T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T10:27:17.898259Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
       "relevanceScore": 8
     },
     {
@@ -247,23 +282,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "fbea1a6dca20027a595c",
-      "title": "ドコモ・バイクシェアのサービス提供一時停止のお知らせ（品川区シェアサイクル事業）",
-      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/20250313190123.html",
-      "publishedAt": "2026-08-10T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-04T10:27:17.898259Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "3f4df165a67e1881fcc1",
@@ -5397,7 +5415,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 9,
+      "scanned": 8,
       "accepted": 0
     },
     {
@@ -5416,7 +5434,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1906, column 45"
+      "message": "not well-formed (invalid token): line 1727, column 44"
     },
     {
       "source": "朝日新聞",
