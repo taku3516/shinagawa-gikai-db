@@ -1,7 +1,97 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-11T04:47:40.178983Z",
+  "generatedAt": "2026-08-12T03:03:36.531487Z",
   "items": [
+    {
+      "id": "7537fab793b47df96010",
+      "title": "【新店情報】『串カツ田中 生駒店』が8月12日(水)にオープン！",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）の子会社である株式会社串カツ田中は、2026年8月12日(水)に「串カツ田中 生駒店」をオープンいたします。 [画像...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000619.000027839.html",
+      "publishedAt": "2026-08-12T02:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-12T03:03:11.571503Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "862c04a0cf5fbc217876",
+      "title": "カウンターワークス、R&Iカンパニーリミテッドが開発したイートイン対応型トレーラーハウスの商業施設展開に協力",
+      "summary": "[株式会社カウンターワークス] 商業不動産をデジタル化し、新たなインフラの創造を目指す株式会社COUNTERWORKS（本社：東京都品川区、代表取締役CEO：三瓶 直樹、以下「カウンターワークス」）は、R&Iカンパニーリミテッド株式会社（本社：...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000216.000013729.html",
+      "publishedAt": "2026-08-12T02:15:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-12T03:03:11.571503Z",
+      "tags": [
+        "都市開発",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-12T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "1cbad4981952da923fb9",
+      "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
+      "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
+      "publishedAt": "2026-08-12T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T02:00:04.964019Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "3b02c62cbde230a675f7",
+      "title": "令和8年度庁舎広告(壁面ポスター)の第2次募集開始",
+      "summary": "掲載箇所は、下記ファイル(庁舎広告掲載箇所のご案内)をご覧ください。 庁舎広告掲載箇所のご案内（品川区役所3階平面図）(PDF : 723KB) 掲載場所の空き状況は、下記ファイルよりご確認ください。(令和8年7月21日現在) R8庁舎内広告受付状況(PDF : 44KB) 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
+      "publishedAt": "2026-08-12T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T01:46:19.238621Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 22
+    },
     {
       "id": "34bd6cfd994803640b58",
       "title": "第26回「大崎コミックシェルター2026夏」",
@@ -148,23 +238,6 @@ window.SHINAGAWA_NEWS = {
       "publishedAt": "2026-08-10T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-04T10:27:17.898259Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-10T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
       "tags": [
         "その他"
       ],
@@ -2166,23 +2239,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
-      "id": "1cbad4981952da923fb9",
-      "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
-      "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
-      "publishedAt": "2026-07-27T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-27T02:00:04.964019Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
       "id": "fa3cae7a0a275e978d61",
       "title": "休日・夜間（平日・土曜日）の診療",
       "summary": "",
@@ -2664,25 +2720,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "3b02c62cbde230a675f7",
-      "title": "令和8年度庁舎広告(壁面ポスター)の第2次募集開始",
-      "summary": "掲載箇所は、下記ファイル(庁舎広告掲載箇所のご案内)をご覧ください。 庁舎広告掲載箇所のご案内（品川区役所3階平面図）(PDF : 723KB) 掲載場所の空き状況は、下記ファイルよりご確認ください。(令和8年7月21日現在) R8庁舎内広告受付状況(PDF : 44KB) 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
-      "publishedAt": "2026-07-21T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-22T01:46:19.238621Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [
-        "品川区役所"
-      ],
-      "relevanceScore": 22
     },
     {
       "id": "887c5a1b6bcbcd9505eb",
@@ -5358,7 +5395,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2728, column 34"
+      "message": "not well-formed (invalid token): line 1801, column 45"
     },
     {
       "source": "朝日新聞",
@@ -5382,7 +5419,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
