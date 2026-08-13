@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-12T07:58:24.570390Z",
+  "generatedAt": "2026-08-13T03:06:35.318794Z",
   "items": [
+    {
+      "id": "d1dd83d891eed5705025",
+      "title": "ビートレンド、基幹インフラをOracle Cloud Infrastructure（OCI）へ刷新",
+      "summary": "[ビートレンド株式会社] スマートCRMプラットフォーム『betrend』を提供するビートレンド株式会社（本社：東京都品川区、代表取締役社長：井上 英昭、以下 ビートレンド）は、AI時代に向けたサービス品質のさらなる向上、セキュリティの...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000031.000012085.html",
+      "publishedAt": "2026-08-13T02:40:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-13T03:06:16.782000Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "7537fab793b47df96010",
       "title": "【新店情報】『串カツ田中 生駒店』が8月12日(水)にオープン！",
@@ -89,23 +123,6 @@ window.SHINAGAWA_NEWS = {
       "publishedAt": "2026-08-12T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-04T10:27:17.898259Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-12T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
       "tags": [
         "その他"
       ],
@@ -5434,7 +5451,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1727, column 44"
+      "message": "not well-formed (invalid token): line 2011, column 43"
     },
     {
       "source": "朝日新聞",
@@ -5458,7 +5475,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
