@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-13T03:06:35.318794Z",
+  "generatedAt": "2026-08-13T08:00:00.123237Z",
   "items": [
+    {
+      "id": "077b87eafdc985f9679d",
+      "title": "「こども誰でも通園制度」の課題を打破。フローレンス、「医療的ケア児等の育ちの支援事業」を品川区から受託",
+      "summary": "[認定NPO法人フローレンス] [画像1: https://prcdn.freetls.fastly.net/release_image/28029/410/28029-410-365879b7f0049766421ee3224c5b50bd-1920x1280.png?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000410.000028029.html",
+      "publishedAt": "2026-08-13T06:41:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-13T07:59:40.549445Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "d1dd83d891eed5705025",
       "title": "ビートレンド、基幹インフラをOracle Cloud Infrastructure（OCI）へ刷新",
@@ -5438,7 +5455,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 138,
+      "scanned": 136,
       "accepted": 0
     },
     {
@@ -5451,12 +5468,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2011, column 43"
+      "message": "not well-formed (invalid token): line 1984, column 48"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
