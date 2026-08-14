@@ -240,7 +240,8 @@ window.SHINAGAWA_DB.site = {
       "label": "平成22年",
       "file": "data/h22.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h21",
