@@ -2,6 +2,8 @@
 
 更新日: 2026年8月14日
 
+段階1・2（生成と表示）は実装済みです。実装した内容に合わせてこの文書も更新しています。データの投入（段階3以降）は会議録の取得を伴うため、`.github/workflows/rebuild-committees.yml` を年ごとに実行します。
+
 本会議・委員会の質疑を、要約（抜粋）だけでなく**会議録の全文**でも読めるようにするための設計です。GitHub Pagesのまま、既存のデータ形式・`file://`での直接起動・横断検索を壊さずに実現することを条件にしています。
 
 ## 1. なぜ全文が必要か
@@ -111,13 +113,9 @@ window.SHINAGAWA_DB.registerMinutes = function (payload) {
 
 ### 索引層への追加
 
-各 `session` に次を足します。
+各 `session` に `"hasFullText": true` を、各 `exchange` に `"voiceIndex"`（元の発言の位置、1始まり）を足します。`characters` と `voices` は既存の `sourceMeta` にあるため、そのまま見出しの表示に使います。
 
-```json
-"hasFullText": true
-```
-
-`characters` と `voices` は既存の `sourceMeta` にあるため、そのまま表示に使います。
+`hasFullText` は「書いたかどうか」ではなく「全文ファイルが在るか」で決めます。`--skip-fulltext` で索引だけ作り直したときも、既に置いてある全文をそのまま使えるようにするためです。
 
 ## 5. 生成側の変更
 
@@ -139,12 +137,11 @@ def write_minutes_file(path, payload) -> bool:
 
 ### `scripts/prepare_committees.py`
 
-`process_document()` は既に `voices` を組み立てているので、そこから全文を書き出します。
+`process_document()` は既に `voices` を組み立てているので、そこから全文を書き出します。既定は索引層・全文層の両方を出力し、`--skip-fulltext` で全文層に触れないようにできます。抜き出し方を調整している最中はこちらを使います。
 
-- `--skip-fulltext`（索引層だけ作り直す。抽出ロジックの調整中はこちら）
-- `--fulltext-only`（全文層だけ入れる。初回投入用）
+逆（全文層だけ入れる `--fulltext-only`）は**用意していません**。全文を足すときは索引層にも `hasFullText` と `voiceIndex` が要るため、抜粋も作り直す必要があります。全文だけ書いても画面には出ません。
 
-を `argparse` へ追加します。既定は両方を出力します。
+会議録の取得はキャッシュが効くので、同じ年を作り直す費用はほぼ生成処理だけです。
 
 ### 校正原稿から正式会議録への差し替え
 
@@ -261,7 +258,7 @@ GitHub Pagesの公開サイト上限は1 GB（ハード）です。本会議ま�
 
 ### 併せて直すもの
 
-- **`scripts/build_pages.py`** — 現在 `git ls-files` の結果を丸ごと `_site` へコピーしているため、`docs/`（848 KB）・`scripts/`（540 KB）・`exports/*.kml`（914 KB）も公開されています。公開対象から除きます
+- **`scripts/build_pages.py`** — `git ls-files` の結果を丸ごと `_site` へコピーしていたため、`docs/`（848 KB）と `scripts/`（540 KB）も公開されていました。この2つを除きます。`exports/` は `chokai-map.html` がKMLをダウンロードさせているので**残します**
 - **`.github/workflows/rebuild-committees.yml`** — `fetch-depth: 0` でクローンしているため、全文投入後は取得量が増えます。`filter: blob:none` を足して部分クローンにします
 - **`.github/workflows/pages.yml`** — `actions/checkout` は既定の `fetch-depth: 1` のままで問題ありません
 
@@ -274,9 +271,10 @@ GitHub Pagesの公開サイト上限は1 GB（ハード）です。本会議ま�
 
 | 段階 | 内容 | 分量 |
 |---|---|---:|
-| **1** | `scripts/minutes_fulltext.py` 新設、`prepare_committees.py` 改修、`data/site.js` に `registerMinutes`。**令和6年だけ**投入して形式を固める | 151会議 / 約16 MB |
-| **2** | `kaigiroku.html` の全文表示・アンカー・抜粋からのリンク。令和6年で表示速度と読み込み時間を実測 | — |
-| **3** | 残り25年を年ごとに投入（`rebuild-committees.yml` を年指定で実行。1年1コミット） | 3,149会議 / 約401 MB |
+| **1**（実装済み） | `scripts/minutes_fulltext.py` 新設、`prepare_committees.py` 改修、`data/site.js` に `registerMinutes` | — |
+| **2**（実装済み） | `kaigiroku.html` の全文表示・アンカー・抜粋からのリンク、`kaigi.html` からの案内 | — |
+| **3a** | **令和6年だけ**投入し、表示速度・読み込み時間・法務面を実データで確認する | 151会議 / 約16 MB |
+| **3b** | 残り25年を年ごとに投入（`rebuild-committees.yml` を年指定で実行。1年1コミット） | 3,149会議 / 約401 MB |
 | **4** | 本会議の全文（`prepare_history.py`） | 約100 MB |
 | **5** | 全文検索（別設計） | — |
 
@@ -284,14 +282,18 @@ GitHub Pagesの公開サイト上限は1 GB（ハード）です。本会議ま�
 
 ## 10. 検査
 
-新規に `scripts/check_minutes_fulltext.py` を置き、`.github/workflows/check-qa-summaries.yml` と同じ形でCIに足します。
+`scripts/check_minutes_fulltext.py` が次を見ます。`.github/workflows/check-qa-summaries.yml`（push・PR）と `rebuild-committees.yml`（保存の直前）の両方から実行します。
 
-1. 索引層で `hasFullText: true` の全会議に、対応する全文ファイルがある
-2. 全文ファイルの `characters` が索引層の `sourceMeta.characters` と一致する
-3. 発言者が空の発言が一定割合を超えていない（PDF由来で崩れやすい）
-4. 会議IDが重複していない
+1. 索引層で `hasFullText` の全会議に、対応する全文ファイルがあり、読める
+2. 全文の `characters` が索引層の `sourceMeta.characters` と一致する
+3. 抜粋の `voiceIndex` が、全文の同じ発言者を指している
+4. 発言者を取れていない発言が2割を超えていない（校正原稿PDFで崩れやすい）
 5. 1ファイルが1 MBを超えていない
-6. `sourceType: "draft"` のまま残っている会議を一覧に出す（正式版への差し替え漏れの検知）
+6. 会議一覧に無い全文が残っていない（会議区分が変わったときの取り残し）
+
+あわせて、校正原稿のまま残っている会議を一覧に出します（正式版への差し替え漏れの目印。これ自体では失敗させません）。
+
+会議録なしで動く単体試験は `scripts/test_minutes_fulltext.py` です。書き換えないこと（write-once）と、`voiceIndex` が全文の同じ発言を指すことを確かめます。
 
 ## 11. 注意点
 
@@ -321,7 +323,7 @@ READMEの「`index.html`をブラウザで直接開くだけで動作します�
 段階1の完了時に次を更新します。
 
 - [サイトとデータの構成](architecture.md) — 全文層のデータ形式と読み込み方式
-- [データの更新方法](data-maintenance.md) — `--skip-fulltext` / `--fulltext-only` の使い分け
+- [データの更新方法](data-maintenance.md) — `--skip-fulltext` の使いどころ
 - [自動更新とGitHub Actions](automation.md) — 全文検査の追加
 - [質問・答弁要約の作成ルール](qa-summary-rules.md) — 抜粋の位置づけ（全文への入口であること）
 - `README.md` — 収録範囲に全文を追記

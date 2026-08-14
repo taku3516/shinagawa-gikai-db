@@ -8,7 +8,7 @@
 |---|---|---|---|
 | GitHub Pagesへ公開 | `.github/workflows/pages.yml` | `main`へのpush、手動 | 静的サイトをGitHub Pagesへ公開 |
 | 公開設定の秘密情報チェック | `.github/workflows/check-public-config.yml` | push、pull request | 公開ファイルへ秘密情報が混入していないか検査 |
-| 質問・答弁要約を検査 | `.github/workflows/check-qa-summaries.yml` | 関連ファイルのpush、pull request、手動 | 要約の欠落や機械的な品質問題を検査 |
+| 質問・答弁要約を検査 | `.github/workflows/check-qa-summaries.yml` | 関連ファイルのpush、pull request、手動 | 要約の欠落や機械的な品質問題、会議録全文との整合を検査 |
 | 品川区ニュースを収集 | `.github/workflows/collect-news.yml` | 3時間ごと、手動 | ニュースを収集し、変更がある場合だけ保存 |
 | 請願・陳情を収集 | `.github/workflows/collect-petitions.yml` | 毎週月曜、手動 | 公式ページから審議状況を取得して台帳を更新 |
 | 町会・自治会区域データを更新 | `.github/workflows/update-chokai.yml` | 毎週月曜、手動 | 町会一覧、境界、プロフィール、KMLを更新 |
@@ -35,7 +35,9 @@ GitHub Actionsの混雑を避けるため、ニュースと町会データは毎
 
 「委員会質疑を会議録から作り直す」では、対象年を`2025`、`r07`、`令和7`、`h30`、`平成30`などで指定します。数字だけの和暦は使用しません。
 
-ワークフローはpopplerと依存ライブラリの準備、会議録の取得、要約生成、品質検査、更新の保存までを行います。
+ワークフローはpopplerと依存ライブラリの準備、会議録の取得、要約生成、会議録全文の書き出し、品質検査、更新の保存までを行います。
+
+`skip_fulltext`をonにすると会議録全文を作り直しません。抜き出し方だけを直していて、全文に差分を出したくないときに使います。
 
 ### 本会議
 
@@ -46,6 +48,8 @@ GitHub Actionsの混雑を避けるため、ニュースと町会データは毎
 生成に時間がかかる間に`main`が進んでも成果を失わないよう、自動更新の保存は`scripts/commit_data_update.sh`へ集約しています。pushが拒否された場合は最新の`main`を取り直し、生成物を積み直してから再度保存します。
 
 データや要約スクリプトを変更すると、`.github/workflows/check-qa-summaries.yml`が要約を検査します。文の途中で切れている、答弁が古い文言のまま、といった機械的に直せる問題がある場合は失敗します。会議録からの再取得が必要な項目は件数を表示し、再生成を進めながら減らします。
+
+同じワークフローで`scripts/check_minutes_fulltext.py`が会議録全文も検査します。抜粋と全文は別ファイルなので、片方だけ作り直したまま気づかない、という壊れ方をします。字数の食い違い、`voiceIndex`が指す発言者の食い違い、全文の取りこぼしや余りがあると失敗します。
 
 ## ニュース同期の公開設定
 

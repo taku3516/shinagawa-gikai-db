@@ -337,3 +337,18 @@ window.SHINAGAWA_DB.site = {
   ],
   "sourcesNote": "このサイトの内容は上記の公式ページのみを一次情報としています。要約・言い換えには誤りが含まれる可能性があるため、必ずリンク先の一次情報を確認してください。"
 };
+
+/* 会議録全文の受け皿。
+ *
+ * 全文は会議1件につき1ファイル（data/minutes/<年>/<会議ID>.js）に分けてあり、
+ * 会議を開いたときだけ読み込む。年データにまとめると1年30MBになり、同期
+ * 読み込みしている画面が表示できなくなるため（docs/fulltext-minutes-plan.md）。
+ *
+ * 読み込みは fetch ではなく <script> で行う。index.html をダブルクリックして
+ * file:// で開く使い方を残すためで、fetch は file:// ではCORSで止まる。
+ */
+window.SHINAGAWA_DB.minutes = window.SHINAGAWA_DB.minutes || {};
+window.SHINAGAWA_DB.registerMinutes = function (payload) {
+  if (!payload || !payload.id) return;
+  window.SHINAGAWA_DB.minutes[payload.id] = payload;
+};

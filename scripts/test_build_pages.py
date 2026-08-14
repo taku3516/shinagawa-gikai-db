@@ -4,10 +4,27 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from build_pages import GOOGLE_API_KEY, build
+from build_pages import GOOGLE_API_KEY, PRIVATE_DIRECTORIES, build
 
 
 class BuildPagesTest(unittest.TestCase):
+    def test_excludes_private_directories_but_keeps_exports(self) -> None:
+        api_key = "AIza" + "A" * 35
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "site"
+            build(output, api_key)
+
+            for name in PRIVATE_DIRECTORIES:
+                self.assertFalse((output / name).exists(), f"{name} を公開しています")
+            # chokai-map.html がKMLをダウンロードさせているので、
+            # exports は公開し続けなければならない
+            self.assertTrue(
+                (output / "exports" / "shinagawa-chokai-map.kml").exists(),
+                "chokai-map.html のKMLが公開されていません",
+            )
+            self.assertTrue((output / "kaigiroku.html").exists())
+            self.assertTrue((output / "data" / "site.js").exists())
+
     def test_rejects_invalid_key(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaisesRegex(ValueError, "Google APIキー"):

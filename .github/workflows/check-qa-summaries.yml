@@ -24,6 +24,9 @@ on:
       - "scripts/prepare_committees.py"
       - "scripts/test_committee_excerpt.py"
       - "scripts/repair_qa_summaries.py"
+      - "scripts/minutes_fulltext.py"
+      - "scripts/check_minutes_fulltext.py"
+      - "scripts/test_minutes_fulltext.py"
       - ".github/workflows/check-qa-summaries.yml"
   pull_request:
     paths:
@@ -34,6 +37,9 @@ on:
       - "scripts/prepare_committees.py"
       - "scripts/test_committee_excerpt.py"
       - "scripts/repair_qa_summaries.py"
+      - "scripts/minutes_fulltext.py"
+      - "scripts/check_minutes_fulltext.py"
+      - "scripts/test_minutes_fulltext.py"
   workflow_dispatch:
 
 permissions:
@@ -62,5 +68,13 @@ jobs:
         # 会議録なしで動く。節の継ぎ足しと語尾の差し替えが復活していないかを見る
         run: python scripts/test_committee_excerpt.py
 
+      - name: 全文の書き出しを試す
+        # 会議録なしで動く。書き換えないこと（write-once）と、抜粋の
+        # voiceIndex が全文の同じ発言を指すことを見る
+        run: python scripts/test_minutes_fulltext.py
+
       - name: 要約を検査する
         run: python scripts/check_qa_summaries.py --by-year --details --limit 3
+
+      - name: 会議録全文を検査する
+        run: python scripts/check_minutes_fulltext.py --details

@@ -22,6 +22,10 @@ on:
         description: "取得済みの会議録を使わず取り直す"
         default: false
         type: boolean
+      skip_fulltext:
+        description: "会議録全文を作り直さない（抜き出し方だけ直すとき）"
+        default: false
+        type: boolean
       update_baseline:
         description: "品質・量の基準値を引き直す（増減を確認したうえで受け入れるとき）"
         default: false
@@ -45,6 +49,9 @@ jobs:
         with:
           # push が競合したときに rebase できるよう、履歴ごと取得する
           fetch-depth: 0
+          # 会議録全文を入れると履歴の中身が数百MB規模になる。過去のファイル
+          # 本体はここでは要らないので、必要になった時点で取りに行かせる。
+          filter: blob:none
 
       - name: Pythonを準備
         uses: actions/setup-python@v6
@@ -75,9 +82,13 @@ jobs:
             minutes-${{ inputs.year }}-
 
       - name: 委員会質疑を作り直す
+        # 全文は一度書いたら書き換えないので、抜き出し方を直すだけのときは
+        # skip_fulltext を on にすると、全文に差分が出ない
+        # （docs/fulltext-minutes-plan.md）。
         run: |
           python scripts/prepare_committees.py --year "${{ inputs.year }}" \
-            ${{ inputs.refresh && '--refresh' || '' }}
+            ${{ inputs.refresh && '--refresh' || '' }} \
+            ${{ inputs.skip_fulltext && '--skip-fulltext' || '' }}
 
       - name: 取得した会議録を残す
         # 生成や検査で止まってもここまで来る（always）。取得だけで1年9分かかる
@@ -91,6 +102,13 @@ jobs:
         with:
           path: scripts/cache
           key: minutes-${{ inputs.year }}-${{ github.run_id }}
+
+      - name: 会議録全文を検査する
+        # 抜粋と全文が噛み合っているか（字数、voiceIndex の指す発言者、
+        # 取りこぼし、余り）を見る。片方だけ作り直したまま気づかない、
+        # という壊れ方をするため、保存する前に確かめる。
+        run: |
+          python scripts/check_minutes_fulltext.py --year "${{ inputs.year }}" --details
 
       - name: 要約を検査する
         # 作り直した結果が共通ルールを満たしているかを、保存する前に確かめる。

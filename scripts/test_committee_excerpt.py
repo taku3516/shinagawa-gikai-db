@@ -172,6 +172,8 @@ def test_generated_output_passes_validate() -> None:
                 "question": generated,
                 "answer": answer("検討してまいりたいと考えてございます。", limit=qa.ANSWER_LIMIT),
                 "respondent": "テスト課長",
+                # 全文の該当発言へ飛ぶための位置。1始まりで全文側の `i` と揃える
+                "voiceIndex": 3,
             }],
         }],
     }
