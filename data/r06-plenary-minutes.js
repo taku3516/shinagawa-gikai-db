@@ -79,6 +79,30 @@
     "hasFullText": true
   },
   {
+    "id": "r06-20240423-honkaigi",
+    "meetingId": "r06-1r",
+    "dateIso": "2024-04-23",
+    "date": "2024年4月23日",
+    "dayLabel": "第1日目",
+    "title": "2024年4月23日 令和６年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=780#one",
+    "characters": 12714,
+    "voices": 35,
+    "hasFullText": true
+  },
+  {
+    "id": "r06-20240527-honkaigi",
+    "meetingId": "r06-2r",
+    "dateIso": "2024-05-27",
+    "date": "2024年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2024年5月27日 令和６年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=6651#one",
+    "characters": 4356,
+    "voices": 37,
+    "hasFullText": true
+  },
+  {
     "id": "r06-20240627-honkaigi",
     "meetingId": "r06-2t",
     "dateIso": "2024-06-27",
@@ -220,6 +244,18 @@
     "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=6889#one",
     "characters": 25996,
     "voices": 55,
+    "hasFullText": true
+  },
+  {
+    "id": "r06-20241225-honkaigi",
+    "meetingId": "r06-3r",
+    "dateIso": "2024-12-25",
+    "date": "2024年12月25日",
+    "dayLabel": "第1日目",
+    "title": "2024年12月25日 令和６年_第３回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=6891#one",
+    "characters": 4227,
+    "voices": 20,
     "hasFullText": true
   }
 ];

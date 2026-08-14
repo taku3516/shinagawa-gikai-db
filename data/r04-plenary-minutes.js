@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "r04-20220527-honkaigi",
+    "meetingId": "r04-1r",
+    "dateIso": "2022-05-27",
+    "date": "2022年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2022年5月27日 令和４年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=772#one",
+    "characters": 8189,
+    "voices": 49,
+    "hasFullText": true
+  },
+  {
     "id": "r04-20220623-honkaigi",
     "meetingId": "r04-2t",
     "dateIso": "2022-06-23",

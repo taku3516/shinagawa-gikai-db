@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "h26-20140527-honkaigi",
+    "meetingId": "h26-1r",
+    "dateIso": "2014-05-27",
+    "date": "2014年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2014年5月27日 平成26年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=742#one",
+    "characters": 3510,
+    "voices": 27,
+    "hasFullText": true
+  },
+  {
     "id": "h26-20140626-honkaigi",
     "meetingId": "h26-2t",
     "dateIso": "2014-06-26",
@@ -148,6 +160,18 @@
     "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=400#one",
     "characters": 24582,
     "voices": 86,
+    "hasFullText": true
+  },
+  {
+    "id": "h26-20141128-honkaigi",
+    "meetingId": "h26-2r",
+    "dateIso": "2014-11-28",
+    "date": "2014年11月28日",
+    "dayLabel": "第1日目",
+    "title": "2014年11月28日 平成26年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=744#one",
+    "characters": 3394,
+    "voices": 18,
     "hasFullText": true
   },
   {

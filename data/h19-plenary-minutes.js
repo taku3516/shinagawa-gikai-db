@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "h19-20070525-honkaigi",
+    "meetingId": "h19-1r",
+    "dateIso": "2007-05-25",
+    "date": "2007年5月25日",
+    "dayLabel": "第1日目",
+    "title": "2007年5月25日 平成19年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=718#one",
+    "characters": 8520,
+    "voices": 84,
+    "hasFullText": true
+  },
+  {
     "id": "h19-20070621-honkaigi",
     "meetingId": "h19-2t",
     "dateIso": "2007-06-21",
@@ -184,6 +196,18 @@
     "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=200#one",
     "characters": 17867,
     "voices": 58,
+    "hasFullText": true
+  },
+  {
+    "id": "h19-20071226-honkaigi",
+    "meetingId": "h19-2r",
+    "dateIso": "2007-12-26",
+    "date": "2007年12月26日",
+    "dayLabel": "第1日目",
+    "title": "2007年12月26日 平成19年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=720#one",
+    "characters": 4161,
+    "voices": 18,
     "hasFullText": true
   }
 ];

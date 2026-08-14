@@ -67,6 +67,42 @@
     "hasFullText": true
   },
   {
+    "id": "h16-20040408-honkaigi",
+    "meetingId": "h16-1r",
+    "dateIso": "2004-04-08",
+    "date": "2004年4月8日",
+    "dayLabel": "第1日目",
+    "title": "2004年4月8日 平成16年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=702#one",
+    "characters": 3808,
+    "voices": 9,
+    "hasFullText": true
+  },
+  {
+    "id": "h16-20040409-honkaigi",
+    "meetingId": "h16-1r",
+    "dateIso": "2004-04-09",
+    "date": "2004年4月9日",
+    "dayLabel": "第2日目",
+    "title": "2004年4月9日 平成16年_第１回臨時会（第２日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=704#one",
+    "characters": 8640,
+    "voices": 16,
+    "hasFullText": true
+  },
+  {
+    "id": "h16-20040527-honkaigi",
+    "meetingId": "h16-2r",
+    "dateIso": "2004-05-27",
+    "date": "2004年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2004年5月27日 平成16年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=706#one",
+    "characters": 6435,
+    "voices": 60,
+    "hasFullText": true
+  },
+  {
     "id": "h16-20040625-honkaigi",
     "meetingId": "h16-2t",
     "dateIso": "2004-06-25",

@@ -65,6 +65,18 @@
     "characters": 49654,
     "voices": 107,
     "hasFullText": true
+  },
+  {
+    "id": "r08-20260527-honkaigi",
+    "meetingId": "r08-1r",
+    "dateIso": "2026-05-27",
+    "date": "2026年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2026年5月27日 令和８年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=7395#one",
+    "characters": 9911,
+    "voices": 49,
+    "hasFullText": true
   }
 ];
 

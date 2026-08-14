@@ -67,6 +67,30 @@
     "hasFullText": true
   },
   {
+    "id": "h20-20080527-honkaigi",
+    "meetingId": "h20-1r",
+    "dateIso": "2008-05-27",
+    "date": "2008年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2008年5月27日 平成20年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=722#one",
+    "characters": 4238,
+    "voices": 9,
+    "hasFullText": true
+  },
+  {
+    "id": "h20-20080528-honkaigi",
+    "meetingId": "h20-1r",
+    "dateIso": "2008-05-28",
+    "date": "2008年5月28日",
+    "dayLabel": "第2日目",
+    "title": "2008年5月28日 平成20年_第１回臨時会（第２日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=724#one",
+    "characters": 8816,
+    "voices": 36,
+    "hasFullText": true
+  },
+  {
     "id": "h20-20080619-honkaigi",
     "meetingId": "h20-2t",
     "dateIso": "2008-06-19",

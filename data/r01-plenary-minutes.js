@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "r01-20190527-honkaigi",
+    "meetingId": "r01-1r",
+    "dateIso": "2019-05-27",
+    "date": "2019年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2019年5月27日 令和元年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=758#one",
+    "characters": 8148,
+    "voices": 74,
+    "hasFullText": true
+  },
+  {
     "id": "r01-20190627-honkaigi",
     "meetingId": "r01-2t",
     "dateIso": "2019-06-27",

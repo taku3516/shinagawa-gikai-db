@@ -67,6 +67,30 @@
     "hasFullText": true
   },
   {
+    "id": "h27-20150526-honkaigi",
+    "meetingId": "h27-1r",
+    "dateIso": "2015-05-26",
+    "date": "2015年5月26日",
+    "dayLabel": "第1日目",
+    "title": "2015年5月26日 平成27年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=746#one",
+    "characters": 10244,
+    "voices": 88,
+    "hasFullText": true
+  },
+  {
+    "id": "h27-20150527-honkaigi",
+    "meetingId": "h27-1r",
+    "dateIso": "2015-05-27",
+    "date": "2015年5月27日",
+    "dayLabel": "第2日目",
+    "title": "2015年5月27日 平成27年_第１回臨時会（第２日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=748#one",
+    "characters": 4571,
+    "voices": 22,
+    "hasFullText": true
+  },
+  {
     "id": "h27-20150625-honkaigi",
     "meetingId": "h27-2t",
     "dateIso": "2015-06-25",

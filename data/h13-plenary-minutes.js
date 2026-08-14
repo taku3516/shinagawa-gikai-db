@@ -7,6 +7,18 @@
   // 本会議1日ぶんの見出し。全文は開いたときに data/minutes/ から読み込む。
   year.plenaryMinutes = [
   {
+    "id": "h13-20010525-honkaigi",
+    "meetingId": "h13-1r",
+    "dateIso": "2001-05-25",
+    "date": "2001年5月25日",
+    "dayLabel": "第1日目",
+    "title": "2001年5月25日 平成13年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=696#one",
+    "characters": 9098,
+    "voices": 76,
+    "hasFullText": true
+  },
+  {
     "id": "h13-20010628-honkaigi",
     "meetingId": "h13-2t",
     "dateIso": "2001-06-28",

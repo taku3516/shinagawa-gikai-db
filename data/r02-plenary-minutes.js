@@ -67,6 +67,30 @@
     "hasFullText": true
   },
   {
+    "id": "r02-20200512-honkaigi",
+    "meetingId": "r02-1r",
+    "dateIso": "2020-05-12",
+    "date": "2020年5月12日",
+    "dayLabel": "第1日目",
+    "title": "2020年5月12日 令和２年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=760#one",
+    "characters": 8427,
+    "voices": 32,
+    "hasFullText": true
+  },
+  {
+    "id": "r02-20200527-honkaigi",
+    "meetingId": "r02-2r",
+    "dateIso": "2020-05-27",
+    "date": "2020年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2020年5月27日 令和２年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=762#one",
+    "characters": 4201,
+    "voices": 35,
+    "hasFullText": true
+  },
+  {
     "id": "r02-20200625-honkaigi",
     "meetingId": "r02-2t",
     "dateIso": "2020-06-25",
@@ -208,6 +232,30 @@
     "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=590#one",
     "characters": 22855,
     "voices": 55,
+    "hasFullText": true
+  },
+  {
+    "id": "r02-20201223-honkaigi",
+    "meetingId": "r02-3r",
+    "dateIso": "2020-12-23",
+    "date": "2020年12月23日",
+    "dayLabel": "第1日目",
+    "title": "2020年12月23日 令和２年_第３回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=764#one",
+    "characters": 2260,
+    "voices": 15,
+    "hasFullText": true
+  },
+  {
+    "id": "r02-20201225-honkaigi",
+    "meetingId": "r02-3r",
+    "dateIso": "2020-12-25",
+    "date": "2020年12月25日",
+    "dayLabel": "第2日目",
+    "title": "2020年12月25日 令和２年_第３回臨時会（第２日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=766#one",
+    "characters": 39750,
+    "voices": 41,
     "hasFullText": true
   }
 ];

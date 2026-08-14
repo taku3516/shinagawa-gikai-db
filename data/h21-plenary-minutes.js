@@ -7,6 +7,18 @@
   // 本会議1日ぶんの見出し。全文は開いたときに data/minutes/ から読み込む。
   year.plenaryMinutes = [
   {
+    "id": "h21-20090119-honkaigi",
+    "meetingId": "h21-1r",
+    "dateIso": "2009-01-19",
+    "date": "2009年1月19日",
+    "dayLabel": "第1日目",
+    "title": "2009年1月19日 平成21年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=726#one",
+    "characters": 9453,
+    "voices": 32,
+    "hasFullText": true
+  },
+  {
     "id": "h21-20090225-honkaigi",
     "meetingId": "h21-1t",
     "dateIso": "2009-02-25",
@@ -64,6 +76,18 @@
     "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=238#one",
     "characters": 30268,
     "voices": 71,
+    "hasFullText": true
+  },
+  {
+    "id": "h21-20090528-honkaigi",
+    "meetingId": "h21-2r",
+    "dateIso": "2009-05-28",
+    "date": "2009年5月28日",
+    "dayLabel": "第1日目",
+    "title": "2009年5月28日 平成21年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=728#one",
+    "characters": 11971,
+    "voices": 84,
     "hasFullText": true
   },
   {

@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "r07-20250527-honkaigi",
+    "meetingId": "r07-1r",
+    "dateIso": "2025-05-27",
+    "date": "2025年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2025年5月27日 令和７年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=7035#one",
+    "characters": 11286,
+    "voices": 79,
+    "hasFullText": true
+  },
+  {
     "id": "r07-20250626-honkaigi",
     "meetingId": "r07-2t",
     "dateIso": "2025-06-26",
@@ -208,6 +220,18 @@
     "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=7245#one",
     "characters": 30699,
     "voices": 77,
+    "hasFullText": true
+  },
+  {
+    "id": "r07-20251225-honkaigi",
+    "meetingId": "r07-2r",
+    "dateIso": "2025-12-25",
+    "date": "2025年12月25日",
+    "dayLabel": "第1日目",
+    "title": "2025年12月25日 令和７年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=7247#one",
+    "characters": 3734,
+    "voices": 18,
     "hasFullText": true
   }
 ];

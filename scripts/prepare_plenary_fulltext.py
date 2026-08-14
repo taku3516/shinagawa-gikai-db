@@ -60,8 +60,13 @@ import prepare_history as ph
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
-# 会議録検索システムの本会議。Cabinet=1 が本会議で、委員会は別の番号。
 MINUTES_BASE = ph.MINUTES_BASE
+
+# 会議録検索システムの分類。本会議は定例会と臨時会で番号が分かれている。
+# 3以降は委員会（prepare_committees.py が扱う）。
+#
+# ここを 1 だけにすると臨時会の会議録がまるごと抜ける。実際に抜けていた。
+PLENARY_CABINETS = (1, 2)
 
 # 本会議の会議録は「名簿・議事日程」と「本文」の2件で1日分になる。全文に
 # するのは本文のほうだけ。
@@ -122,39 +127,50 @@ def day_label_of(title: str) -> str:
     return f"第{to_number(match.group(1))}日目" if match else ""
 
 
+def collect_month(year: str, cabinet: int, western: int, month: int, last: int,
+                  found: dict[str, dict], refresh: bool) -> None:
+    """1か月ぶんの一覧から、本文の会議録を拾って `found` へ入れる。"""
+    url = (
+        f"{MINUTES_BASE}?QueryType=new&Template=list&Cabinet={cabinet}"
+        f"&TermStart={western}-{month:02d}-01&TermEnd={western}-{month:02d}-{last:02d}"
+    )
+    soup = ph.clean_soup(ph.fetch(url, refresh))
+    for item in soup.select(".result-document__item"):
+        anchor = item.select_one('a[href*="Template=document"][href*="Id="]')
+        date_node = item.select_one(".ans-title__date")
+        if not anchor or not date_node:
+            continue
+        title = ph.compact(anchor.get_text(" ", strip=True))
+        if BODY_TITLE not in title:
+            continue
+        iso_date = ph.compact(date_node.get_text(" ", strip=True))
+        # 定例会と臨時会が同じ日に開かれることはないが、月をまたぐ検索で
+        # 重複したときは先に見つけたほうを残す（順序を安定させる）。
+        found.setdefault(iso_date, {
+            "dateIso": iso_date,
+            "title": title,
+            # 取得のたびに変わる番号を落としてから使う（minutes_fulltext.py）。
+            # ここを素通しにすると、取得し直すたびに全文の出典URLが変わり、
+            # write-once が崩れて全ファイルが差分になる。
+            "url": mf.canonical_source_url(anchor.get("href")),
+            "meetingId": meeting_id_for(year, title),
+            "dayLabel": day_label_of(title),
+        })
+
+
 def discover(year: str, refresh: bool = False) -> list[dict]:
-    """その年の本会議の会議録（本文）を、月ごとの検索で集める。"""
+    """その年の本会議の会議録（本文）を、分類ごと・月ごとの検索で集める。
+
+    定例会（Cabinet=1）と臨時会（Cabinet=2）の両方を見る。年間検索は10件ごとに
+    POSTページングされるため、月単位のGETで取り切る。
+    """
     western = ph.western_year(year)
     found: dict[str, dict] = {}
-    for month, last in enumerate(MONTH_LAST_DAY, start=1):
-        if month == 2 and western % 4 != 0:
-            last = 28
-        url = (
-            f"{MINUTES_BASE}?QueryType=new&Template=list&Cabinet=1"
-            f"&TermStart={western}-{month:02d}-01&TermEnd={western}-{month:02d}-{last:02d}"
-        )
-        soup = ph.clean_soup(ph.fetch(url, refresh))
-        for item in soup.select(".result-document__item"):
-            anchor = item.select_one('a[href*="Template=document"][href*="Id="]')
-            date_node = item.select_one(".ans-title__date")
-            if not anchor or not date_node:
-                continue
-            title = ph.compact(anchor.get_text(" ", strip=True))
-            if BODY_TITLE not in title:
-                continue
-            iso_date = ph.compact(date_node.get_text(" ", strip=True))
-            # 同じ日に2件出ることはないが、月をまたぐ検索で重複したときは
-            # 先に見つけたほうを残す（順序を安定させる）。
-            found.setdefault(iso_date, {
-                "dateIso": iso_date,
-                "title": title,
-                # 取得のたびに変わる番号を落としてから使う（minutes_fulltext.py）。
-                # ここを素通しにすると、取得し直すたびに全文の出典URLが変わり、
-                # write-once が崩れて全ファイルが差分になる。
-                "url": mf.canonical_source_url(anchor.get("href")),
-                "meetingId": meeting_id_for(year, title),
-                "dayLabel": day_label_of(title),
-            })
+    for cabinet in PLENARY_CABINETS:
+        for month, last in enumerate(MONTH_LAST_DAY, start=1):
+            if month == 2 and western % 4 != 0:
+                last = 28
+            collect_month(year, cabinet, western, month, last, found, refresh)
     return [found[key] for key in sorted(found)]
 
 

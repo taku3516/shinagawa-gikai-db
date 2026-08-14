@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "h14-20020531-honkaigi",
+    "meetingId": "h14-1r",
+    "dateIso": "2002-05-31",
+    "date": "2002年5月31日",
+    "dayLabel": "第1日目",
+    "title": "2002年5月31日 平成14年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=698#one",
+    "characters": 5381,
+    "voices": 44,
+    "hasFullText": true
+  },
+  {
     "id": "h14-20020627-honkaigi",
     "meetingId": "h14-2t",
     "dateIso": "2002-06-27",
