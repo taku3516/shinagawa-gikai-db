@@ -1,7 +1,76 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-13T08:00:00.123237Z",
+  "generatedAt": "2026-08-14T03:05:19.088101Z",
   "items": [
+    {
+      "id": "e8f550dd815ed4f2a433",
+      "title": "現場職特化のオンラインスクール「BLUEPRINT」提供開始 ― 第二種電気工事士の合格までAIが伴走",
+      "summary": "[WE UP] 株式会社WE UP（本社：東京都品川区、代表取締役：伊藤宏志）は、現場職に特化した技術・資格が学べるオンラインスクール「BLUEPRINT（ブループリント）」の提供を、2026年8月より開始しました。第一弾となる第二...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000022.000096006.html",
+      "publishedAt": "2026-08-14T01:40:49Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-14T03:04:54.234228Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5de5e6936dd1d8b2892e",
+      "title": "令和8年度(9年度採用)品川区立学校教育職員採用候補者選考【第一次選考合格発表】",
+      "summary": "指導課 教職員人事係 電話：03-5742-6831 FAX：03-5742-6892 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20260814senkou.html",
+      "publishedAt": "2026-08-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-14T03:04:54.234228Z",
+      "tags": [
+        "行政",
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0aeb208ea30c1c1f46fa",
+      "title": "税務職員等をかたる「還付金詐欺」にご注意ください",
+      "summary": "税務課 税務係 電話03-5742-6662 FAX03-5742-7108",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-zeikin/procedure-zeikin-oshirase/20260713133411.html",
+      "publishedAt": "2026-08-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-14T03:04:54.234228Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "077b87eafdc985f9679d",
       "title": "「こども誰でも通園制度」の課題を打破。フローレンス、「医療的ケア児等の育ちの支援事業」を品川区から受託",
@@ -35,23 +104,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-13T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "7537fab793b47df96010",
@@ -5449,7 +5501,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 9,
       "accepted": 0
     },
     {
@@ -5468,7 +5520,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1984, column 48"
+      "message": "not well-formed (invalid token): line 2313, column 15"
     },
     {
       "source": "朝日新聞",
