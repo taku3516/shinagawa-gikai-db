@@ -1307,8 +1307,8 @@
       for (const type of ["wheel", "touchstart", "keydown"]) {
         window.addEventListener(type, stop, { once: true, passive: true });
       }
-      // ずれているときだけ動かす。位置が合ったあとでも、上にある開閉の高さが
-      // 変わって数万px ずれることがあるので、3秒のあいだ見張り続ける。
+      // ずれているときだけ動かす。位置が合ったあとでも、上にある開閉の中身が
+      // 描かれて数万px ずれることがあるので、5秒のあいだ見張り続ける。
       // 1回合わせて終わりにすると、合う回と合わない回が出る。
       const tick = (remaining) => {
         if (cancelled || remaining <= 0) return;
@@ -1317,7 +1317,9 @@
         }
         setTimeout(() => tick(remaining - 1), 120);
       };
-      requestAnimationFrame(() => tick(25));
+      // requestAnimationFrame は使わない。裏に回っているタブでは発火しないので、
+      // 別タブで開いたリンクが位置合わせされないまま残る。
+      setTimeout(() => tick(40), 0);
     }
 
     function setupAccordions() {

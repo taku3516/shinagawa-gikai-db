@@ -14,6 +14,7 @@
 
 from __future__ import annotations
 
+import collections
 import sys
 import tempfile
 from pathlib import Path
@@ -155,29 +156,60 @@ def test_overlay_round_trip() -> None:
             pp.DATA = original
 
 
+SITE_FIXTURE = """// 品川区議会DB データファイル（自動生成の書式）
+window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
+window.SHINAGAWA_DB.site = {
+  "siteName": "品川区議会DB",
+  "years": [
+    {
+      "id": "r07",
+      "label": "令和7年",
+      "file": "data/r07.js",
+      "committees": true,
+      "available": true
+    },
+    {
+      "id": "r06",
+      "label": "令和6年",
+      "file": "data/r06.js",
+      "committees": true,
+      "plenaryMinutes": true,
+      "available": true
+    }
+  ],
+  "defaultYear": "r07"
+};
+"""
+
+
 def test_site_flag() -> None:
     """`data/site.js` の目印を、他の行を動かさずに立てられる。
 
     ここを忘れると、全文を入れたのに画面に何も出ない（読み込む合図が無い）
     という分かりにくい失敗になるので、生成のたびに自動で立てている。
+
+    本物の `data/site.js` は年を足すたびに変わるので、試験は自前の見本を使う
+    （実データを見に行くと、目印が増えただけで試験が落ちる）。
     """
-    original_text = (pp.DATA / "site.js").read_text(encoding="utf-8")
     with tempfile.TemporaryDirectory() as tmp:
         original = pp.DATA
         try:
             pp.DATA = Path(tmp)
-            (pp.DATA / "site.js").write_text(original_text, encoding="utf-8")
+            (pp.DATA / "site.js").write_text(SITE_FIXTURE, encoding="utf-8")
             # 既に立っている年は触らない（生成のたびに差分を出さない）
             ok("立っている年は触らない", pp.enable_in_site("r06") is False)
-            ok("立っていない年には立てる", pp.enable_in_site("r05") is True)
+            ok("一覧に無い年は触らない", pp.enable_in_site("h13") is False)
+            ok("立っていない年には立てる", pp.enable_in_site("r07") is True)
 
             changed = (pp.DATA / "site.js").read_text(encoding="utf-8")
-            added = [line for line in changed.splitlines()
-                     if line not in original_text.splitlines()]
-            ok("増えるのは目印の1行だけ", len(added) == 0, str(added))
-            before = original_text.splitlines()
-            after = changed.splitlines()
-            ok("行数の増加は1行", len(after) - len(before) == 1, f"{len(before)} → {len(after)}")
+            before, after = SITE_FIXTURE.splitlines(), changed.splitlines()
+            ok("増えるのは1行だけ", len(after) - len(before) == 1, f"{len(before)} → {len(after)}")
+            # 目印の行はもともと別の年にもあるので、行の集まりの差で見る
+            added = collections.Counter(after) - collections.Counter(before)
+            ok("増えたのは目印の行だけ",
+               list(added.elements()) == ['      "plenaryMinutes": true,'], str(dict(added)))
+            ok("消えた行は無い", not (collections.Counter(before) - collections.Counter(after)),
+               str(dict(collections.Counter(before) - collections.Counter(after))))
             ok("委員会の目印の隣に置く",
                '      "committees": true,\n      "plenaryMinutes": true,' in changed)
             ok("他の年は動かない", changed.count('"plenaryMinutes": true') == 2)
