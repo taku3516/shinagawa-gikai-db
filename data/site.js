@@ -105,6 +105,7 @@ window.SHINAGAWA_DB.site = {
       "file": "data/r08.js",
       "supplement": "data/r08-complete.js",
       "committees": true,
+      "plenaryMinutes": true,
       "available": true
     },
     {
@@ -158,7 +159,8 @@ window.SHINAGAWA_DB.site = {
       "file": "data/r02.js",
       "supplement": "data/r02-complete.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "r01",
@@ -166,7 +168,8 @@ window.SHINAGAWA_DB.site = {
       "file": "data/r01.js",
       "supplement": "data/r01-complete.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h30",
@@ -174,126 +177,144 @@ window.SHINAGAWA_DB.site = {
       "file": "data/h30.js",
       "supplement": "data/h30-complete.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h29",
       "label": "平成29年",
       "file": "data/h29.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h28",
       "label": "平成28年",
       "file": "data/h28.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h27",
       "label": "平成27年",
       "file": "data/h27.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h26",
       "label": "平成26年",
       "file": "data/h26.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h25",
       "label": "平成25年",
       "file": "data/h25.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h24",
       "label": "平成24年",
       "file": "data/h24.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h23",
       "label": "平成23年",
       "file": "data/h23.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h22",
       "label": "平成22年",
       "file": "data/h22.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h21",
       "label": "平成21年",
       "file": "data/h21.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h20",
       "label": "平成20年",
       "file": "data/h20.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h19",
       "label": "平成19年",
       "file": "data/h19.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h18",
       "label": "平成18年",
       "file": "data/h18.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h17",
       "label": "平成17年",
       "file": "data/h17.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h16",
       "label": "平成16年",
       "file": "data/h16.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h15",
       "label": "平成15年",
       "file": "data/h15.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h14",
       "label": "平成14年",
       "file": "data/h14.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h13",
       "label": "平成13年",
       "file": "data/h13.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     }
   ],
   "defaultYear": "r08",

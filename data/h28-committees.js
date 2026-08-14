@@ -3,7 +3,7 @@
   "use strict";
   const year = window.SHINAGAWA_DB && window.SHINAGAWA_DB.years && window.SHINAGAWA_DB.years.h28;
   if (!year) throw new Error("平成28年データの読み込み後に h28-committees.js を読み込んでください");
-  year.updatedAt = "2026-08-10";
+  year.updatedAt = "2026-08-14";
   year.committeeSessions = [];
   year.committeePending = [];
   year.committeeDataParts = ["h28-committees-part-01.js","h28-committees-part-02.js","h28-committees-part-03.js","h28-committees-part-04.js","h28-committees-part-05.js","h28-committees-part-06.js","h28-committees-part-07.js","h28-committees-part-08.js","h28-committees-part-09.js","h28-committees-part-10.js","h28-committees-part-11.js","h28-committees-part-12.js","h28-committees-part-13.js","h28-committees-part-14.js","h28-committees-part-15.js","h28-committees-part-16.js","h28-committees-part-17.js"];

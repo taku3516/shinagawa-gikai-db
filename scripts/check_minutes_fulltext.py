@@ -45,6 +45,12 @@ MAX_BYTES = 1_000_000
 MAX_UNNAMED_RATIO = 0.20
 
 
+def normalized(value: str) -> str:
+    """氏名を照合用に均す。会議録は「渡部茂君」、年データは「渡部 茂」のように
+    区切りと敬称が違うので、空白と丸印を落としてから含むかどうかを見る。"""
+    return re.sub(r"[\s　○◯・]", "", value or "")
+
+
 def year_id(value: str) -> str:
     """`--year` の指定を年ID（h13〜r08）に直す。
 
@@ -87,6 +93,27 @@ def json_after(text: str, marker: str) -> object | None:
     if index < 0:
         return None
     return DECODER.raw_decode(text, index + len(marker))[0]
+
+
+def year_questions(year: str) -> dict[str, dict]:
+    """年データの質問者を、目次の入口と同じキーで引けるようにする。
+
+    `data/<年>.js` は `years["r06"] = {...};` の形なので、そのJSONだけを読む
+    （`-complete.js` の差し替えは題名と要約が対象で、議員名は変わらない）。
+    """
+    path = DATA / f"{year}.js"
+    if not path.exists():
+        return {}
+    text = path.read_text(encoding="utf-8")
+    marker = f'years["{year}"] = '
+    index = text.find(marker)
+    if index < 0:
+        return {}
+    data = DECODER.raw_decode(text, index + len(marker))[0]
+    return {
+        f"{item.get('meetingId')}:{item.get('memberId') or item.get('member')}": item
+        for item in data.get("questions") or []
+    }
 
 
 def plenary_years(year: str | None) -> list[tuple[str, list[dict], dict]]:
@@ -224,15 +251,28 @@ def main() -> int:
             voices_by_session[session_id] = {
                 voice["i"]: voice for voice in minutes.get("voices") or []}
 
-        # 3'. 質問者の入口が、全文の実在する発言を指しているか。ここがずれると
-        #     「原文を読む」が別人の発言へ飛ぶ。
+        # 3'. 質問者の入口が、その議員の発言を指しているか。ここがずれると
+        #     「原文を読む」が黙って別人の発言へ飛ぶ。実在するかだけでは
+        #     気づけないので、発言者の名前まで突き合わせる。
+        questions = year_questions(year)
         for key, start in starts.items():
             session_id = start.get("sessionId")
             number = start.get("voiceIndex")
             if session_id not in voices_by_session:
                 problems.append(f"{key}: 入口の指す本会議 {session_id} の全文がありません")
-            elif number not in voices_by_session[session_id]:
+                continue
+            voice = voices_by_session[session_id].get(number)
+            if voice is None:
                 problems.append(f"{key}: 発言{number}が {session_id} の全文にありません")
+                continue
+            member = (questions.get(key) or {}).get("member")
+            if not member:
+                stats["質問者不明の入口"] += 1
+                continue
+            if normalized(member) not in normalized(voice.get("speaker", "")):
+                problems.append(
+                    f"{key}: 発言{number}の発言者が違います"
+                    f"（全文 {voice.get('speaker')} / 質問者 {member}）")
 
     # 余っている全文（一覧から消えたのに残っている）
     years = {year for year, _ in sessions} | {year for year, _, _ in plenary}
