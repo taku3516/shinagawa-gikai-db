@@ -9,6 +9,7 @@
   {
     "id": "r02-20200219-honkaigi",
     "meetingId": "r02-1t",
+    "meetingName": "令和2年第1回定例会",
     "dateIso": "2020-02-19",
     "date": "2020年2月19日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "r02-20200220-honkaigi",
     "meetingId": "r02-1t",
+    "meetingName": "令和2年第1回定例会",
     "dateIso": "2020-02-20",
     "date": "2020年2月20日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "r02-20200221-honkaigi",
     "meetingId": "r02-1t",
+    "meetingName": "令和2年第1回定例会",
     "dateIso": "2020-02-21",
     "date": "2020年2月21日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "r02-20200306-honkaigi",
     "meetingId": "r02-1t",
+    "meetingName": "令和2年第1回定例会",
     "dateIso": "2020-03-06",
     "date": "2020年3月6日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "r02-20200327-honkaigi",
     "meetingId": "r02-1t",
+    "meetingName": "令和2年第1回定例会",
     "dateIso": "2020-03-27",
     "date": "2020年3月27日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "r02-20200512-honkaigi",
     "meetingId": "r02-1r",
+    "meetingName": "令和2年第1回臨時会",
     "dateIso": "2020-05-12",
     "date": "2020年5月12日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "r02-20200527-honkaigi",
     "meetingId": "r02-2r",
+    "meetingName": "令和2年第2回臨時会",
     "dateIso": "2020-05-27",
     "date": "2020年5月27日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "r02-20200625-honkaigi",
     "meetingId": "r02-2t",
+    "meetingName": "令和2年第2回定例会",
     "dateIso": "2020-06-25",
     "date": "2020年6月25日",
     "dayLabel": "第1日目",
@@ -105,6 +113,7 @@
   {
     "id": "r02-20200626-honkaigi",
     "meetingId": "r02-2t",
+    "meetingName": "令和2年第2回定例会",
     "dateIso": "2020-06-26",
     "date": "2020年6月26日",
     "dayLabel": "第2日目",
@@ -117,6 +126,7 @@
   {
     "id": "r02-20200630-honkaigi",
     "meetingId": "r02-2t",
+    "meetingName": "令和2年第2回定例会",
     "dateIso": "2020-06-30",
     "date": "2020年6月30日",
     "dayLabel": "第3日目",
@@ -129,6 +139,7 @@
   {
     "id": "r02-20200708-honkaigi",
     "meetingId": "r02-2t",
+    "meetingName": "令和2年第2回定例会",
     "dateIso": "2020-07-08",
     "date": "2020年7月8日",
     "dayLabel": "第4日目",
@@ -141,6 +152,7 @@
   {
     "id": "r02-20200917-honkaigi",
     "meetingId": "r02-3t",
+    "meetingName": "令和2年第3回定例会",
     "dateIso": "2020-09-17",
     "date": "2020年9月17日",
     "dayLabel": "第1日目",
@@ -153,6 +165,7 @@
   {
     "id": "r02-20200918-honkaigi",
     "meetingId": "r02-3t",
+    "meetingName": "令和2年第3回定例会",
     "dateIso": "2020-09-18",
     "date": "2020年9月18日",
     "dayLabel": "第2日目",
@@ -165,6 +178,7 @@
   {
     "id": "r02-20200924-honkaigi",
     "meetingId": "r02-3t",
+    "meetingName": "令和2年第3回定例会",
     "dateIso": "2020-09-24",
     "date": "2020年9月24日",
     "dayLabel": "第3日目",
@@ -177,6 +191,7 @@
   {
     "id": "r02-20201022-honkaigi",
     "meetingId": "r02-3t",
+    "meetingName": "令和2年第3回定例会",
     "dateIso": "2020-10-22",
     "date": "2020年10月22日",
     "dayLabel": "第4日目",
@@ -189,6 +204,7 @@
   {
     "id": "r02-20201126-honkaigi",
     "meetingId": "r02-4t",
+    "meetingName": "令和2年第4回定例会",
     "dateIso": "2020-11-26",
     "date": "2020年11月26日",
     "dayLabel": "第1日目",
@@ -201,6 +217,7 @@
   {
     "id": "r02-20201127-honkaigi",
     "meetingId": "r02-4t",
+    "meetingName": "令和2年第4回定例会",
     "dateIso": "2020-11-27",
     "date": "2020年11月27日",
     "dayLabel": "第2日目",
@@ -213,6 +230,7 @@
   {
     "id": "r02-20201130-honkaigi",
     "meetingId": "r02-4t",
+    "meetingName": "令和2年第4回定例会",
     "dateIso": "2020-11-30",
     "date": "2020年11月30日",
     "dayLabel": "第3日目",
@@ -225,6 +243,7 @@
   {
     "id": "r02-20201210-honkaigi",
     "meetingId": "r02-4t",
+    "meetingName": "令和2年第4回定例会",
     "dateIso": "2020-12-10",
     "date": "2020年12月10日",
     "dayLabel": "第4日目",
@@ -237,6 +256,7 @@
   {
     "id": "r02-20201223-honkaigi",
     "meetingId": "r02-3r",
+    "meetingName": "令和2年第3回臨時会",
     "dateIso": "2020-12-23",
     "date": "2020年12月23日",
     "dayLabel": "第1日目",
@@ -249,6 +269,7 @@
   {
     "id": "r02-20201225-honkaigi",
     "meetingId": "r02-3r",
+    "meetingName": "令和2年第3回臨時会",
     "dateIso": "2020-12-25",
     "date": "2020年12月25日",
     "dayLabel": "第2日目",

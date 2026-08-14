@@ -9,6 +9,7 @@
   {
     "id": "h23-20110223-honkaigi",
     "meetingId": "h23-1t",
+    "meetingName": "平成23年第1回定例会",
     "dateIso": "2011-02-23",
     "date": "2011年2月23日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h23-20110224-honkaigi",
     "meetingId": "h23-1t",
+    "meetingName": "平成23年第1回定例会",
     "dateIso": "2011-02-24",
     "date": "2011年2月24日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h23-20110225-honkaigi",
     "meetingId": "h23-1t",
+    "meetingName": "平成23年第1回定例会",
     "dateIso": "2011-02-25",
     "date": "2011年2月25日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h23-20110310-honkaigi",
     "meetingId": "h23-1t",
+    "meetingName": "平成23年第1回定例会",
     "dateIso": "2011-03-10",
     "date": "2011年3月10日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h23-20110329-honkaigi",
     "meetingId": "h23-1t",
+    "meetingName": "平成23年第1回定例会",
     "dateIso": "2011-03-29",
     "date": "2011年3月29日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h23-20110525-honkaigi",
     "meetingId": "h23-1r",
+    "meetingName": "平成23年第1回臨時会",
     "dateIso": "2011-05-25",
     "date": "2011年5月25日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h23-20110623-honkaigi",
     "meetingId": "h23-2t",
+    "meetingName": "平成23年第2回定例会",
     "dateIso": "2011-06-23",
     "date": "2011年6月23日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h23-20110624-honkaigi",
     "meetingId": "h23-2t",
+    "meetingName": "平成23年第2回定例会",
     "dateIso": "2011-06-24",
     "date": "2011年6月24日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h23-20110706-honkaigi",
     "meetingId": "h23-2t",
+    "meetingName": "平成23年第2回定例会",
     "dateIso": "2011-07-06",
     "date": "2011年7月6日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h23-20110921-honkaigi",
     "meetingId": "h23-3t",
+    "meetingName": "平成23年第3回定例会",
     "dateIso": "2011-09-21",
     "date": "2011年9月21日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "h23-20110922-honkaigi",
     "meetingId": "h23-3t",
+    "meetingName": "平成23年第3回定例会",
     "dateIso": "2011-09-22",
     "date": "2011年9月22日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "h23-20111021-honkaigi",
     "meetingId": "h23-3t",
+    "meetingName": "平成23年第3回定例会",
     "dateIso": "2011-10-21",
     "date": "2011年10月21日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "h23-20111124-honkaigi",
     "meetingId": "h23-4t",
+    "meetingName": "平成23年第4回定例会",
     "dateIso": "2011-11-24",
     "date": "2011年11月24日",
     "dayLabel": "第1日目",
@@ -165,6 +178,7 @@
   {
     "id": "h23-20111125-honkaigi",
     "meetingId": "h23-4t",
+    "meetingName": "平成23年第4回定例会",
     "dateIso": "2011-11-25",
     "date": "2011年11月25日",
     "dayLabel": "第2日目",
@@ -177,6 +191,7 @@
   {
     "id": "h23-20111207-honkaigi",
     "meetingId": "h23-4t",
+    "meetingName": "平成23年第4回定例会",
     "dateIso": "2011-12-07",
     "date": "2011年12月7日",
     "dayLabel": "第3日目",

@@ -9,6 +9,7 @@
   {
     "id": "r05-20230112-honkaigi",
     "meetingId": "r05-4t",
+    "meetingName": "令和4年第4回定例会",
     "dateIso": "2023-01-12",
     "date": "2023年1月12日",
     "dayLabel": "第4日目",
@@ -21,6 +22,7 @@
   {
     "id": "r05-20230221-honkaigi",
     "meetingId": "r05-1t",
+    "meetingName": "令和5年第1回定例会",
     "dateIso": "2023-02-21",
     "date": "2023年2月21日",
     "dayLabel": "第1日目",
@@ -33,6 +35,7 @@
   {
     "id": "r05-20230222-honkaigi",
     "meetingId": "r05-1t",
+    "meetingName": "令和5年第1回定例会",
     "dateIso": "2023-02-22",
     "date": "2023年2月22日",
     "dayLabel": "第2日目",
@@ -45,6 +48,7 @@
   {
     "id": "r05-20230224-honkaigi",
     "meetingId": "r05-1t",
+    "meetingName": "令和5年第1回定例会",
     "dateIso": "2023-02-24",
     "date": "2023年2月24日",
     "dayLabel": "第3日目",
@@ -57,6 +61,7 @@
   {
     "id": "r05-20230309-honkaigi",
     "meetingId": "r05-1t",
+    "meetingName": "令和5年第1回定例会",
     "dateIso": "2023-03-09",
     "date": "2023年3月9日",
     "dayLabel": "第4日目",
@@ -69,6 +74,7 @@
   {
     "id": "r05-20230328-honkaigi",
     "meetingId": "r05-1t",
+    "meetingName": "令和5年第1回定例会",
     "dateIso": "2023-03-28",
     "date": "2023年3月28日",
     "dayLabel": "第5日目",
@@ -81,6 +87,7 @@
   {
     "id": "r05-20230526-honkaigi",
     "meetingId": "r05-1r",
+    "meetingName": "令和5年第1回臨時会",
     "dateIso": "2023-05-26",
     "date": "2023年5月26日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "r05-20230529-honkaigi",
     "meetingId": "r05-1r",
+    "meetingName": "令和5年第1回臨時会",
     "dateIso": "2023-05-29",
     "date": "2023年5月29日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "r05-20230629-honkaigi",
     "meetingId": "r05-2t",
+    "meetingName": "令和5年第2回定例会",
     "dateIso": "2023-06-29",
     "date": "2023年6月29日",
     "dayLabel": "第1日目",
@@ -117,6 +126,7 @@
   {
     "id": "r05-20230630-honkaigi",
     "meetingId": "r05-2t",
+    "meetingName": "令和5年第2回定例会",
     "dateIso": "2023-06-30",
     "date": "2023年6月30日",
     "dayLabel": "第2日目",
@@ -129,6 +139,7 @@
   {
     "id": "r05-20230711-honkaigi",
     "meetingId": "r05-2t",
+    "meetingName": "令和5年第2回定例会",
     "dateIso": "2023-07-11",
     "date": "2023年7月11日",
     "dayLabel": "第3日目",
@@ -141,6 +152,7 @@
   {
     "id": "r05-20230921-honkaigi",
     "meetingId": "r05-3t",
+    "meetingName": "令和5年第3回定例会",
     "dateIso": "2023-09-21",
     "date": "2023年9月21日",
     "dayLabel": "第1日目",
@@ -153,6 +165,7 @@
   {
     "id": "r05-20230922-honkaigi",
     "meetingId": "r05-3t",
+    "meetingName": "令和5年第3回定例会",
     "dateIso": "2023-09-22",
     "date": "2023年9月22日",
     "dayLabel": "第2日目",
@@ -165,6 +178,7 @@
   {
     "id": "r05-20231024-honkaigi",
     "meetingId": "r05-3t",
+    "meetingName": "令和5年第3回定例会",
     "dateIso": "2023-10-24",
     "date": "2023年10月24日",
     "dayLabel": "第3日目",
@@ -177,6 +191,7 @@
   {
     "id": "r05-20231122-honkaigi",
     "meetingId": "r05-4t",
+    "meetingName": "令和5年第4回定例会",
     "dateIso": "2023-11-22",
     "date": "2023年11月22日",
     "dayLabel": "第1日目",
@@ -189,6 +204,7 @@
   {
     "id": "r05-20231124-honkaigi",
     "meetingId": "r05-4t",
+    "meetingName": "令和5年第4回定例会",
     "dateIso": "2023-11-24",
     "date": "2023年11月24日",
     "dayLabel": "第2日目",
@@ -201,6 +217,7 @@
   {
     "id": "r05-20231128-honkaigi",
     "meetingId": "r05-4t",
+    "meetingName": "令和5年第4回定例会",
     "dateIso": "2023-11-28",
     "date": "2023年11月28日",
     "dayLabel": "第3日目",
@@ -213,6 +230,7 @@
   {
     "id": "r05-20231130-honkaigi",
     "meetingId": "r05-4t",
+    "meetingName": "令和5年第4回定例会",
     "dateIso": "2023-11-30",
     "date": "2023年11月30日",
     "dayLabel": "第4日目",
@@ -225,6 +243,7 @@
   {
     "id": "r05-20231206-honkaigi",
     "meetingId": "r05-4t",
+    "meetingName": "令和5年第4回定例会",
     "dateIso": "2023-12-06",
     "date": "2023年12月6日",
     "dayLabel": "第5日目",
@@ -237,6 +256,7 @@
   {
     "id": "r05-20231227-honkaigi",
     "meetingId": "r05-2r",
+    "meetingName": "令和5年第2回臨時会",
     "dateIso": "2023-12-27",
     "date": "2023年12月27日",
     "dayLabel": "第1日目",

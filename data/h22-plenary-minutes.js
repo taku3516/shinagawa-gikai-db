@@ -9,6 +9,7 @@
   {
     "id": "h22-20100224-honkaigi",
     "meetingId": "h22-1t",
+    "meetingName": "平成22年第1回定例会",
     "dateIso": "2010-02-24",
     "date": "2010年2月24日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h22-20100225-honkaigi",
     "meetingId": "h22-1t",
+    "meetingName": "平成22年第1回定例会",
     "dateIso": "2010-02-25",
     "date": "2010年2月25日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h22-20100226-honkaigi",
     "meetingId": "h22-1t",
+    "meetingName": "平成22年第1回定例会",
     "dateIso": "2010-02-26",
     "date": "2010年2月26日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h22-20100309-honkaigi",
     "meetingId": "h22-1t",
+    "meetingName": "平成22年第1回定例会",
     "dateIso": "2010-03-09",
     "date": "2010年3月9日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h22-20100326-honkaigi",
     "meetingId": "h22-1t",
+    "meetingName": "平成22年第1回定例会",
     "dateIso": "2010-03-26",
     "date": "2010年3月26日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h22-20100331-honkaigi",
     "meetingId": "h22-1r",
+    "meetingName": "平成22年第1回臨時会",
     "dateIso": "2010-03-31",
     "date": "2010年3月31日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h22-20100528-honkaigi",
     "meetingId": "h22-2r",
+    "meetingName": "平成22年第2回臨時会",
     "dateIso": "2010-05-28",
     "date": "2010年5月28日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h22-20100624-honkaigi",
     "meetingId": "h22-2t",
+    "meetingName": "平成22年第2回定例会",
     "dateIso": "2010-06-24",
     "date": "2010年6月24日",
     "dayLabel": "第1日目",
@@ -105,6 +113,7 @@
   {
     "id": "h22-20100625-honkaigi",
     "meetingId": "h22-2t",
+    "meetingName": "平成22年第2回定例会",
     "dateIso": "2010-06-25",
     "date": "2010年6月25日",
     "dayLabel": "第2日目",
@@ -117,6 +126,7 @@
   {
     "id": "h22-20100707-honkaigi",
     "meetingId": "h22-2t",
+    "meetingName": "平成22年第2回定例会",
     "dateIso": "2010-07-07",
     "date": "2010年7月7日",
     "dayLabel": "第3日目",
@@ -129,6 +139,7 @@
   {
     "id": "h22-20101021-honkaigi",
     "meetingId": "h22-3t",
+    "meetingName": "平成22年第3回定例会",
     "dateIso": "2010-10-21",
     "date": "2010年10月21日",
     "dayLabel": "第1日目",
@@ -141,6 +152,7 @@
   {
     "id": "h22-20101022-honkaigi",
     "meetingId": "h22-3t",
+    "meetingName": "平成22年第3回定例会",
     "dateIso": "2010-10-22",
     "date": "2010年10月22日",
     "dayLabel": "第2日目",
@@ -153,6 +165,7 @@
   {
     "id": "h22-20101116-honkaigi",
     "meetingId": "h22-3t",
+    "meetingName": "平成22年第3回定例会",
     "dateIso": "2010-11-16",
     "date": "2010年11月16日",
     "dayLabel": "第3日目",
@@ -165,6 +178,7 @@
   {
     "id": "h22-20101130-honkaigi",
     "meetingId": "h22-3r",
+    "meetingName": "平成22年第3回臨時会",
     "dateIso": "2010-11-30",
     "date": "2010年11月30日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h22-20101209-honkaigi",
     "meetingId": "h22-4t",
+    "meetingName": "平成22年第4回定例会",
     "dateIso": "2010-12-09",
     "date": "2010年12月9日",
     "dayLabel": "第1日目",
@@ -189,6 +204,7 @@
   {
     "id": "h22-20101210-honkaigi",
     "meetingId": "h22-4t",
+    "meetingName": "平成22年第4回定例会",
     "dateIso": "2010-12-10",
     "date": "2010年12月10日",
     "dayLabel": "第2日目",
@@ -201,6 +217,7 @@
   {
     "id": "h22-20101222-honkaigi",
     "meetingId": "h22-4t",
+    "meetingName": "平成22年第4回定例会",
     "dateIso": "2010-12-22",
     "date": "2010年12月22日",
     "dayLabel": "第3日目",

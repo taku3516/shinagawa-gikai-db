@@ -9,6 +9,7 @@
   {
     "id": "h24-20120222-honkaigi",
     "meetingId": "h24-1t",
+    "meetingName": "平成24年第1回定例会",
     "dateIso": "2012-02-22",
     "date": "2012年2月22日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h24-20120223-honkaigi",
     "meetingId": "h24-1t",
+    "meetingName": "平成24年第1回定例会",
     "dateIso": "2012-02-23",
     "date": "2012年2月23日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h24-20120224-honkaigi",
     "meetingId": "h24-1t",
+    "meetingName": "平成24年第1回定例会",
     "dateIso": "2012-02-24",
     "date": "2012年2月24日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h24-20120308-honkaigi",
     "meetingId": "h24-1t",
+    "meetingName": "平成24年第1回定例会",
     "dateIso": "2012-03-08",
     "date": "2012年3月8日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h24-20120323-honkaigi",
     "meetingId": "h24-1t",
+    "meetingName": "平成24年第1回定例会",
     "dateIso": "2012-03-23",
     "date": "2012年3月23日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h24-20120525-honkaigi",
     "meetingId": "h24-1r",
+    "meetingName": "平成24年第1回臨時会",
     "dateIso": "2012-05-25",
     "date": "2012年5月25日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h24-20120621-honkaigi",
     "meetingId": "h24-2t",
+    "meetingName": "平成24年第2回定例会",
     "dateIso": "2012-06-21",
     "date": "2012年6月21日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h24-20120622-honkaigi",
     "meetingId": "h24-2t",
+    "meetingName": "平成24年第2回定例会",
     "dateIso": "2012-06-22",
     "date": "2012年6月22日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h24-20120705-honkaigi",
     "meetingId": "h24-2t",
+    "meetingName": "平成24年第2回定例会",
     "dateIso": "2012-07-05",
     "date": "2012年7月5日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h24-20120920-honkaigi",
     "meetingId": "h24-3t",
+    "meetingName": "平成24年第3回定例会",
     "dateIso": "2012-09-20",
     "date": "2012年9月20日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "h24-20120921-honkaigi",
     "meetingId": "h24-3t",
+    "meetingName": "平成24年第3回定例会",
     "dateIso": "2012-09-21",
     "date": "2012年9月21日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "h24-20121019-honkaigi",
     "meetingId": "h24-3t",
+    "meetingName": "平成24年第3回定例会",
     "dateIso": "2012-10-19",
     "date": "2012年10月19日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "h24-20121121-honkaigi",
     "meetingId": "h24-4t",
+    "meetingName": "平成24年第4回定例会",
     "dateIso": "2012-11-21",
     "date": "2012年11月21日",
     "dayLabel": "第1日目",
@@ -165,6 +178,7 @@
   {
     "id": "h24-20121122-honkaigi",
     "meetingId": "h24-4t",
+    "meetingName": "平成24年第4回定例会",
     "dateIso": "2012-11-22",
     "date": "2012年11月22日",
     "dayLabel": "第2日目",
@@ -177,6 +191,7 @@
   {
     "id": "h24-20121127-honkaigi",
     "meetingId": "h24-4t",
+    "meetingName": "平成24年第4回定例会",
     "dateIso": "2012-11-27",
     "date": "2012年11月27日",
     "dayLabel": "第3日目",
@@ -189,6 +204,7 @@
   {
     "id": "h24-20121207-honkaigi",
     "meetingId": "h24-4t",
+    "meetingName": "平成24年第4回定例会",
     "dateIso": "2012-12-07",
     "date": "2012年12月7日",
     "dayLabel": "第4日目",

@@ -9,6 +9,7 @@
   {
     "id": "r01-20190220-honkaigi",
     "meetingId": "r01-1t",
+    "meetingName": "平成31年第1回定例会",
     "dateIso": "2019-02-20",
     "date": "2019年2月20日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "r01-20190221-honkaigi",
     "meetingId": "r01-1t",
+    "meetingName": "平成31年第1回定例会",
     "dateIso": "2019-02-21",
     "date": "2019年2月21日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "r01-20190222-honkaigi",
     "meetingId": "r01-1t",
+    "meetingName": "平成31年第1回定例会",
     "dateIso": "2019-02-22",
     "date": "2019年2月22日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "r01-20190307-honkaigi",
     "meetingId": "r01-1t",
+    "meetingName": "平成31年第1回定例会",
     "dateIso": "2019-03-07",
     "date": "2019年3月7日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "r01-20190326-honkaigi",
     "meetingId": "r01-1t",
+    "meetingName": "平成31年第1回定例会",
     "dateIso": "2019-03-26",
     "date": "2019年3月26日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "r01-20190527-honkaigi",
     "meetingId": "r01-1r",
+    "meetingName": "令和元年第1回臨時会",
     "dateIso": "2019-05-27",
     "date": "2019年5月27日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "r01-20190627-honkaigi",
     "meetingId": "r01-2t",
+    "meetingName": "令和元年第2回定例会",
     "dateIso": "2019-06-27",
     "date": "2019年6月27日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "r01-20190628-honkaigi",
     "meetingId": "r01-2t",
+    "meetingName": "令和元年第2回定例会",
     "dateIso": "2019-06-28",
     "date": "2019年6月28日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "r01-20190710-honkaigi",
     "meetingId": "r01-2t",
+    "meetingName": "令和元年第2回定例会",
     "dateIso": "2019-07-10",
     "date": "2019年7月10日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "r01-20190919-honkaigi",
     "meetingId": "r01-3t",
+    "meetingName": "令和元年第3回定例会",
     "dateIso": "2019-09-19",
     "date": "2019年9月19日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "r01-20190920-honkaigi",
     "meetingId": "r01-3t",
+    "meetingName": "令和元年第3回定例会",
     "dateIso": "2019-09-20",
     "date": "2019年9月20日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "r01-20191023-honkaigi",
     "meetingId": "r01-3t",
+    "meetingName": "令和元年第3回定例会",
     "dateIso": "2019-10-23",
     "date": "2019年10月23日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "r01-20191128-honkaigi",
     "meetingId": "r01-4t",
+    "meetingName": "令和元年第4回定例会",
     "dateIso": "2019-11-28",
     "date": "2019年11月28日",
     "dayLabel": "第1日目",
@@ -165,6 +178,7 @@
   {
     "id": "r01-20191129-honkaigi",
     "meetingId": "r01-4t",
+    "meetingName": "令和元年第4回定例会",
     "dateIso": "2019-11-29",
     "date": "2019年11月29日",
     "dayLabel": "第2日目",
@@ -177,6 +191,7 @@
   {
     "id": "r01-20191212-honkaigi",
     "meetingId": "r01-4t",
+    "meetingName": "令和元年第4回定例会",
     "dateIso": "2019-12-12",
     "date": "2019年12月12日",
     "dayLabel": "第3日目",

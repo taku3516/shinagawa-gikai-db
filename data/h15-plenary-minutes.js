@@ -9,6 +9,7 @@
   {
     "id": "h15-20030226-honkaigi",
     "meetingId": "h15-1t",
+    "meetingName": "平成15年第1回定例会",
     "dateIso": "2003-02-26",
     "date": "2003年2月26日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h15-20030227-honkaigi",
     "meetingId": "h15-1t",
+    "meetingName": "平成15年第1回定例会",
     "dateIso": "2003-02-27",
     "date": "2003年2月27日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h15-20030228-honkaigi",
     "meetingId": "h15-1t",
+    "meetingName": "平成15年第1回定例会",
     "dateIso": "2003-02-28",
     "date": "2003年2月28日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h15-20030311-honkaigi",
     "meetingId": "h15-1t",
+    "meetingName": "平成15年第1回定例会",
     "dateIso": "2003-03-11",
     "date": "2003年3月11日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h15-20030328-honkaigi",
     "meetingId": "h15-1t",
+    "meetingName": "平成15年第1回定例会",
     "dateIso": "2003-03-28",
     "date": "2003年3月28日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h15-20030523-honkaigi",
     "meetingId": "h15-1r",
+    "meetingName": "平成15年第1回臨時会",
     "dateIso": "2003-05-23",
     "date": "2003年5月23日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h15-20030626-honkaigi",
     "meetingId": "h15-2t",
+    "meetingName": "平成15年第2回定例会",
     "dateIso": "2003-06-26",
     "date": "2003年6月26日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h15-20030627-honkaigi",
     "meetingId": "h15-2t",
+    "meetingName": "平成15年第2回定例会",
     "dateIso": "2003-06-27",
     "date": "2003年6月27日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h15-20030711-honkaigi",
     "meetingId": "h15-2t",
+    "meetingName": "平成15年第2回定例会",
     "dateIso": "2003-07-11",
     "date": "2003年7月11日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h15-20030925-honkaigi",
     "meetingId": "h15-3t",
+    "meetingName": "平成15年第3回定例会",
     "dateIso": "2003-09-25",
     "date": "2003年9月25日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "h15-20030926-honkaigi",
     "meetingId": "h15-3t",
+    "meetingName": "平成15年第3回定例会",
     "dateIso": "2003-09-26",
     "date": "2003年9月26日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "h15-20031014-honkaigi",
     "meetingId": "h15-3t",
+    "meetingName": "平成15年第3回定例会",
     "dateIso": "2003-10-14",
     "date": "2003年10月14日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "h15-20031024-honkaigi",
     "meetingId": "h15-3t",
+    "meetingName": "平成15年第3回定例会",
     "dateIso": "2003-10-24",
     "date": "2003年10月24日",
     "dayLabel": "第4日目",
@@ -165,6 +178,7 @@
   {
     "id": "h15-20031120-honkaigi",
     "meetingId": "h15-4t",
+    "meetingName": "平成15年第4回定例会",
     "dateIso": "2003-11-20",
     "date": "2003年11月20日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h15-20031121-honkaigi",
     "meetingId": "h15-4t",
+    "meetingName": "平成15年第4回定例会",
     "dateIso": "2003-11-21",
     "date": "2003年11月21日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h15-20031205-honkaigi",
     "meetingId": "h15-4t",
+    "meetingName": "平成15年第4回定例会",
     "dateIso": "2003-12-05",
     "date": "2003年12月5日",
     "dayLabel": "第3日目",

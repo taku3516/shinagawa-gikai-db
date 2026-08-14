@@ -9,6 +9,7 @@
   {
     "id": "h19-20070221-honkaigi",
     "meetingId": "h19-1t",
+    "meetingName": "平成19年第1回定例会",
     "dateIso": "2007-02-21",
     "date": "2007年2月21日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h19-20070222-honkaigi",
     "meetingId": "h19-1t",
+    "meetingName": "平成19年第1回定例会",
     "dateIso": "2007-02-22",
     "date": "2007年2月22日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h19-20070223-honkaigi",
     "meetingId": "h19-1t",
+    "meetingName": "平成19年第1回定例会",
     "dateIso": "2007-02-23",
     "date": "2007年2月23日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h19-20070308-honkaigi",
     "meetingId": "h19-1t",
+    "meetingName": "平成19年第1回定例会",
     "dateIso": "2007-03-08",
     "date": "2007年3月8日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h19-20070327-honkaigi",
     "meetingId": "h19-1t",
+    "meetingName": "平成19年第1回定例会",
     "dateIso": "2007-03-27",
     "date": "2007年3月27日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h19-20070525-honkaigi",
     "meetingId": "h19-1r",
+    "meetingName": "平成19年第1回臨時会",
     "dateIso": "2007-05-25",
     "date": "2007年5月25日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h19-20070621-honkaigi",
     "meetingId": "h19-2t",
+    "meetingName": "平成19年第2回定例会",
     "dateIso": "2007-06-21",
     "date": "2007年6月21日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h19-20070622-honkaigi",
     "meetingId": "h19-2t",
+    "meetingName": "平成19年第2回定例会",
     "dateIso": "2007-06-22",
     "date": "2007年6月22日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h19-20070704-honkaigi",
     "meetingId": "h19-2t",
+    "meetingName": "平成19年第2回定例会",
     "dateIso": "2007-07-04",
     "date": "2007年7月4日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h19-20070920-honkaigi",
     "meetingId": "h19-3t",
+    "meetingName": "平成19年第3回定例会",
     "dateIso": "2007-09-20",
     "date": "2007年9月20日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "h19-20070921-honkaigi",
     "meetingId": "h19-3t",
+    "meetingName": "平成19年第3回定例会",
     "dateIso": "2007-09-21",
     "date": "2007年9月21日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "h19-20070926-honkaigi",
     "meetingId": "h19-3t",
+    "meetingName": "平成19年第3回定例会",
     "dateIso": "2007-09-26",
     "date": "2007年9月26日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "h19-20071019-honkaigi",
     "meetingId": "h19-3t",
+    "meetingName": "平成19年第3回定例会",
     "dateIso": "2007-10-19",
     "date": "2007年10月19日",
     "dayLabel": "第4日目",
@@ -165,6 +178,7 @@
   {
     "id": "h19-20071121-honkaigi",
     "meetingId": "h19-4t",
+    "meetingName": "平成19年第4回定例会",
     "dateIso": "2007-11-21",
     "date": "2007年11月21日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h19-20071122-honkaigi",
     "meetingId": "h19-4t",
+    "meetingName": "平成19年第4回定例会",
     "dateIso": "2007-11-22",
     "date": "2007年11月22日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h19-20071207-honkaigi",
     "meetingId": "h19-4t",
+    "meetingName": "平成19年第4回定例会",
     "dateIso": "2007-12-07",
     "date": "2007年12月7日",
     "dayLabel": "第3日目",
@@ -201,6 +217,7 @@
   {
     "id": "h19-20071226-honkaigi",
     "meetingId": "h19-2r",
+    "meetingName": "平成19年第2回臨時会",
     "dateIso": "2007-12-26",
     "date": "2007年12月26日",
     "dayLabel": "第1日目",

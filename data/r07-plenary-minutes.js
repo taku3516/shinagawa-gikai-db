@@ -9,6 +9,7 @@
   {
     "id": "r07-20250219-honkaigi",
     "meetingId": "r07-1t",
+    "meetingName": "令和7年第1回定例会",
     "dateIso": "2025-02-19",
     "date": "2025年2月19日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "r07-20250220-honkaigi",
     "meetingId": "r07-1t",
+    "meetingName": "令和7年第1回定例会",
     "dateIso": "2025-02-20",
     "date": "2025年2月20日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "r07-20250221-honkaigi",
     "meetingId": "r07-1t",
+    "meetingName": "令和7年第1回定例会",
     "dateIso": "2025-02-21",
     "date": "2025年2月21日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "r07-20250307-honkaigi",
     "meetingId": "r07-1t",
+    "meetingName": "令和7年第1回定例会",
     "dateIso": "2025-03-07",
     "date": "2025年3月7日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "r07-20250326-honkaigi",
     "meetingId": "r07-1t",
+    "meetingName": "令和7年第1回定例会",
     "dateIso": "2025-03-26",
     "date": "2025年3月26日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "r07-20250527-honkaigi",
     "meetingId": "r07-1r",
+    "meetingName": "令和7年第1回臨時会",
     "dateIso": "2025-05-27",
     "date": "2025年5月27日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "r07-20250626-honkaigi",
     "meetingId": "r07-2t",
+    "meetingName": "令和7年第2回定例会",
     "dateIso": "2025-06-26",
     "date": "2025年6月26日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "r07-20250627-honkaigi",
     "meetingId": "r07-2t",
+    "meetingName": "令和7年第2回定例会",
     "dateIso": "2025-06-27",
     "date": "2025年6月27日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "r07-20250710-honkaigi",
     "meetingId": "r07-2t",
+    "meetingName": "令和7年第2回定例会",
     "dateIso": "2025-07-10",
     "date": "2025年7月10日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "r07-20250918-honkaigi",
     "meetingId": "r07-3t",
+    "meetingName": "令和7年第3回定例会",
     "dateIso": "2025-09-18",
     "date": "2025年9月18日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "r07-20250919-honkaigi",
     "meetingId": "r07-3t",
+    "meetingName": "令和7年第3回定例会",
     "dateIso": "2025-09-19",
     "date": "2025年9月19日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "r07-20250930-honkaigi",
     "meetingId": "r07-3t",
+    "meetingName": "令和7年第3回定例会",
     "dateIso": "2025-09-30",
     "date": "2025年9月30日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "r07-20251023-honkaigi",
     "meetingId": "r07-3t",
+    "meetingName": "令和7年第3回定例会",
     "dateIso": "2025-10-23",
     "date": "2025年10月23日",
     "dayLabel": "第4日目",
@@ -165,6 +178,7 @@
   {
     "id": "r07-20251120-honkaigi",
     "meetingId": "r07-4t",
+    "meetingName": "令和7年第4回定例会",
     "dateIso": "2025-11-20",
     "date": "2025年11月20日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "r07-20251121-honkaigi",
     "meetingId": "r07-4t",
+    "meetingName": "令和7年第4回定例会",
     "dateIso": "2025-11-21",
     "date": "2025年11月21日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "r07-20251126-honkaigi",
     "meetingId": "r07-4t",
+    "meetingName": "令和7年第4回定例会",
     "dateIso": "2025-11-26",
     "date": "2025年11月26日",
     "dayLabel": "第3日目",
@@ -201,6 +217,7 @@
   {
     "id": "r07-20251127-honkaigi",
     "meetingId": "r07-4t",
+    "meetingName": "令和7年第4回定例会",
     "dateIso": "2025-11-27",
     "date": "2025年11月27日",
     "dayLabel": "第4日目",
@@ -213,6 +230,7 @@
   {
     "id": "r07-20251205-honkaigi",
     "meetingId": "r07-4t",
+    "meetingName": "令和7年第4回定例会",
     "dateIso": "2025-12-05",
     "date": "2025年12月5日",
     "dayLabel": "第5日目",
@@ -225,6 +243,7 @@
   {
     "id": "r07-20251225-honkaigi",
     "meetingId": "r07-2r",
+    "meetingName": "令和7年第2回臨時会",
     "dateIso": "2025-12-25",
     "date": "2025年12月25日",
     "dayLabel": "第1日目",

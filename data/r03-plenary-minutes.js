@@ -9,6 +9,7 @@
   {
     "id": "r03-20210217-honkaigi",
     "meetingId": "r03-1t",
+    "meetingName": "令和3年第1回定例会",
     "dateIso": "2021-02-17",
     "date": "2021年2月17日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "r03-20210218-honkaigi",
     "meetingId": "r03-1t",
+    "meetingName": "令和3年第1回定例会",
     "dateIso": "2021-02-18",
     "date": "2021年2月18日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "r03-20210219-honkaigi",
     "meetingId": "r03-1t",
+    "meetingName": "令和3年第1回定例会",
     "dateIso": "2021-02-19",
     "date": "2021年2月19日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "r03-20210305-honkaigi",
     "meetingId": "r03-1t",
+    "meetingName": "令和3年第1回定例会",
     "dateIso": "2021-03-05",
     "date": "2021年3月5日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "r03-20210323-honkaigi",
     "meetingId": "r03-1t",
+    "meetingName": "令和3年第1回定例会",
     "dateIso": "2021-03-23",
     "date": "2021年3月23日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "r03-20210527-honkaigi",
     "meetingId": "r03-1r",
+    "meetingName": "令和3年第1回臨時会",
     "dateIso": "2021-05-27",
     "date": "2021年5月27日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "r03-20210623-honkaigi",
     "meetingId": "r03-2t",
+    "meetingName": "令和3年第2回定例会",
     "dateIso": "2021-06-23",
     "date": "2021年6月23日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "r03-20210624-honkaigi",
     "meetingId": "r03-2t",
+    "meetingName": "令和3年第2回定例会",
     "dateIso": "2021-06-24",
     "date": "2021年6月24日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "r03-20210714-honkaigi",
     "meetingId": "r03-2t",
+    "meetingName": "令和3年第2回定例会",
     "dateIso": "2021-07-14",
     "date": "2021年7月14日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "r03-20210916-honkaigi",
     "meetingId": "r03-3t",
+    "meetingName": "令和3年第3回定例会",
     "dateIso": "2021-09-16",
     "date": "2021年9月16日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "r03-20210917-honkaigi",
     "meetingId": "r03-3t",
+    "meetingName": "令和3年第3回定例会",
     "dateIso": "2021-09-17",
     "date": "2021年9月17日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "r03-20211020-honkaigi",
     "meetingId": "r03-3t",
+    "meetingName": "令和3年第3回定例会",
     "dateIso": "2021-10-20",
     "date": "2021年10月20日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "r03-20211125-honkaigi",
     "meetingId": "r03-4t",
+    "meetingName": "令和3年第4回定例会",
     "dateIso": "2021-11-25",
     "date": "2021年11月25日",
     "dayLabel": "第1日目",
@@ -165,6 +178,7 @@
   {
     "id": "r03-20211126-honkaigi",
     "meetingId": "r03-4t",
+    "meetingName": "令和3年第4回定例会",
     "dateIso": "2021-11-26",
     "date": "2021年11月26日",
     "dayLabel": "第2日目",
@@ -177,6 +191,7 @@
   {
     "id": "r03-20211209-honkaigi",
     "meetingId": "r03-4t",
+    "meetingName": "令和3年第4回定例会",
     "dateIso": "2021-12-09",
     "date": "2021年12月9日",
     "dayLabel": "第3日目",
@@ -189,6 +204,7 @@
   {
     "id": "r03-20211223-honkaigi",
     "meetingId": "r03-2r",
+    "meetingName": "令和3年第2回臨時会",
     "dateIso": "2021-12-23",
     "date": "2021年12月23日",
     "dayLabel": "第1日目",

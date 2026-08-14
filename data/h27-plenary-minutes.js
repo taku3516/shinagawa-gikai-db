@@ -9,6 +9,7 @@
   {
     "id": "h27-20150218-honkaigi",
     "meetingId": "h27-1t",
+    "meetingName": "平成27年第1回定例会",
     "dateIso": "2015-02-18",
     "date": "2015年2月18日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h27-20150219-honkaigi",
     "meetingId": "h27-1t",
+    "meetingName": "平成27年第1回定例会",
     "dateIso": "2015-02-19",
     "date": "2015年2月19日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h27-20150220-honkaigi",
     "meetingId": "h27-1t",
+    "meetingName": "平成27年第1回定例会",
     "dateIso": "2015-02-20",
     "date": "2015年2月20日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h27-20150305-honkaigi",
     "meetingId": "h27-1t",
+    "meetingName": "平成27年第1回定例会",
     "dateIso": "2015-03-05",
     "date": "2015年3月5日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h27-20150327-honkaigi",
     "meetingId": "h27-1t",
+    "meetingName": "平成27年第1回定例会",
     "dateIso": "2015-03-27",
     "date": "2015年3月27日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h27-20150526-honkaigi",
     "meetingId": "h27-1r",
+    "meetingName": "平成27年第1回臨時会",
     "dateIso": "2015-05-26",
     "date": "2015年5月26日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h27-20150527-honkaigi",
     "meetingId": "h27-1r",
+    "meetingName": "平成27年第1回臨時会",
     "dateIso": "2015-05-27",
     "date": "2015年5月27日",
     "dayLabel": "第2日目",
@@ -93,6 +100,7 @@
   {
     "id": "h27-20150625-honkaigi",
     "meetingId": "h27-2t",
+    "meetingName": "平成27年第2回定例会",
     "dateIso": "2015-06-25",
     "date": "2015年6月25日",
     "dayLabel": "第1日目",
@@ -105,6 +113,7 @@
   {
     "id": "h27-20150626-honkaigi",
     "meetingId": "h27-2t",
+    "meetingName": "平成27年第2回定例会",
     "dateIso": "2015-06-26",
     "date": "2015年6月26日",
     "dayLabel": "第2日目",
@@ -117,6 +126,7 @@
   {
     "id": "h27-20150708-honkaigi",
     "meetingId": "h27-2t",
+    "meetingName": "平成27年第2回定例会",
     "dateIso": "2015-07-08",
     "date": "2015年7月8日",
     "dayLabel": "第3日目",
@@ -129,6 +139,7 @@
   {
     "id": "h27-20150917-honkaigi",
     "meetingId": "h27-3t",
+    "meetingName": "平成27年第3回定例会",
     "dateIso": "2015-09-17",
     "date": "2015年9月17日",
     "dayLabel": "第1日目",
@@ -141,6 +152,7 @@
   {
     "id": "h27-20150918-honkaigi",
     "meetingId": "h27-3t",
+    "meetingName": "平成27年第3回定例会",
     "dateIso": "2015-09-18",
     "date": "2015年9月18日",
     "dayLabel": "第2日目",
@@ -153,6 +165,7 @@
   {
     "id": "h27-20151023-honkaigi",
     "meetingId": "h27-3t",
+    "meetingName": "平成27年第3回定例会",
     "dateIso": "2015-10-23",
     "date": "2015年10月23日",
     "dayLabel": "第3日目",
@@ -165,6 +178,7 @@
   {
     "id": "h27-20151126-honkaigi",
     "meetingId": "h27-4t",
+    "meetingName": "平成27年第4回定例会",
     "dateIso": "2015-11-26",
     "date": "2015年11月26日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h27-20151127-honkaigi",
     "meetingId": "h27-4t",
+    "meetingName": "平成27年第4回定例会",
     "dateIso": "2015-11-27",
     "date": "2015年11月27日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h27-20151130-honkaigi",
     "meetingId": "h27-4t",
+    "meetingName": "平成27年第4回定例会",
     "dateIso": "2015-11-30",
     "date": "2015年11月30日",
     "dayLabel": "第3日目",
@@ -201,6 +217,7 @@
   {
     "id": "h27-20151209-honkaigi",
     "meetingId": "h27-4t",
+    "meetingName": "平成27年第4回定例会",
     "dateIso": "2015-12-09",
     "date": "2015年12月9日",
     "dayLabel": "第4日目",

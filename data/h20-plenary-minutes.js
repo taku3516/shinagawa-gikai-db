@@ -9,6 +9,7 @@
   {
     "id": "h20-20080220-honkaigi",
     "meetingId": "h20-1t",
+    "meetingName": "平成20年第1回定例会",
     "dateIso": "2008-02-20",
     "date": "2008年2月20日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h20-20080221-honkaigi",
     "meetingId": "h20-1t",
+    "meetingName": "平成20年第1回定例会",
     "dateIso": "2008-02-21",
     "date": "2008年2月21日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h20-20080222-honkaigi",
     "meetingId": "h20-1t",
+    "meetingName": "平成20年第1回定例会",
     "dateIso": "2008-02-22",
     "date": "2008年2月22日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h20-20080306-honkaigi",
     "meetingId": "h20-1t",
+    "meetingName": "平成20年第1回定例会",
     "dateIso": "2008-03-06",
     "date": "2008年3月6日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h20-20080327-honkaigi",
     "meetingId": "h20-1t",
+    "meetingName": "平成20年第1回定例会",
     "dateIso": "2008-03-27",
     "date": "2008年3月27日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h20-20080527-honkaigi",
     "meetingId": "h20-1r",
+    "meetingName": "平成20年第1回臨時会",
     "dateIso": "2008-05-27",
     "date": "2008年5月27日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h20-20080528-honkaigi",
     "meetingId": "h20-1r",
+    "meetingName": "平成20年第1回臨時会",
     "dateIso": "2008-05-28",
     "date": "2008年5月28日",
     "dayLabel": "第2日目",
@@ -93,6 +100,7 @@
   {
     "id": "h20-20080619-honkaigi",
     "meetingId": "h20-2t",
+    "meetingName": "平成20年第2回定例会",
     "dateIso": "2008-06-19",
     "date": "2008年6月19日",
     "dayLabel": "第1日目",
@@ -105,6 +113,7 @@
   {
     "id": "h20-20080620-honkaigi",
     "meetingId": "h20-2t",
+    "meetingName": "平成20年第2回定例会",
     "dateIso": "2008-06-20",
     "date": "2008年6月20日",
     "dayLabel": "第2日目",
@@ -117,6 +126,7 @@
   {
     "id": "h20-20080703-honkaigi",
     "meetingId": "h20-2t",
+    "meetingName": "平成20年第2回定例会",
     "dateIso": "2008-07-03",
     "date": "2008年7月3日",
     "dayLabel": "第3日目",
@@ -129,6 +139,7 @@
   {
     "id": "h20-20080925-honkaigi",
     "meetingId": "h20-3t",
+    "meetingName": "平成20年第3回定例会",
     "dateIso": "2008-09-25",
     "date": "2008年9月25日",
     "dayLabel": "第1日目",
@@ -141,6 +152,7 @@
   {
     "id": "h20-20080926-honkaigi",
     "meetingId": "h20-3t",
+    "meetingName": "平成20年第3回定例会",
     "dateIso": "2008-09-26",
     "date": "2008年9月26日",
     "dayLabel": "第2日目",
@@ -153,6 +165,7 @@
   {
     "id": "h20-20081022-honkaigi",
     "meetingId": "h20-3t",
+    "meetingName": "平成20年第3回定例会",
     "dateIso": "2008-10-22",
     "date": "2008年10月22日",
     "dayLabel": "第3日目",
@@ -165,6 +178,7 @@
   {
     "id": "h20-20081120-honkaigi",
     "meetingId": "h20-4t",
+    "meetingName": "平成20年第4回定例会",
     "dateIso": "2008-11-20",
     "date": "2008年11月20日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h20-20081121-honkaigi",
     "meetingId": "h20-4t",
+    "meetingName": "平成20年第4回定例会",
     "dateIso": "2008-11-21",
     "date": "2008年11月21日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h20-20081205-honkaigi",
     "meetingId": "h20-4t",
+    "meetingName": "平成20年第4回定例会",
     "dateIso": "2008-12-05",
     "date": "2008年12月5日",
     "dayLabel": "第3日目",

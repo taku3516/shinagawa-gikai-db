@@ -9,6 +9,7 @@
   {
     "id": "r06-20240220-honkaigi",
     "meetingId": "r06-1t",
+    "meetingName": "令和6年第1回定例会",
     "dateIso": "2024-02-20",
     "date": "2024年2月20日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "r06-20240221-honkaigi",
     "meetingId": "r06-1t",
+    "meetingName": "令和6年第1回定例会",
     "dateIso": "2024-02-21",
     "date": "2024年2月21日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "r06-20240222-honkaigi",
     "meetingId": "r06-1t",
+    "meetingName": "令和6年第1回定例会",
     "dateIso": "2024-02-22",
     "date": "2024年2月22日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "r06-20240229-honkaigi",
     "meetingId": "r06-1t",
+    "meetingName": "令和6年第1回定例会",
     "dateIso": "2024-02-29",
     "date": "2024年2月29日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "r06-20240307-honkaigi",
     "meetingId": "r06-1t",
+    "meetingName": "令和6年第1回定例会",
     "dateIso": "2024-03-07",
     "date": "2024年3月7日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "r06-20240327-honkaigi",
     "meetingId": "r06-1t",
+    "meetingName": "令和6年第1回定例会",
     "dateIso": "2024-03-27",
     "date": "2024年3月27日",
     "dayLabel": "第6日目",
@@ -81,6 +87,7 @@
   {
     "id": "r06-20240423-honkaigi",
     "meetingId": "r06-1r",
+    "meetingName": "令和6年第1回臨時会",
     "dateIso": "2024-04-23",
     "date": "2024年4月23日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "r06-20240527-honkaigi",
     "meetingId": "r06-2r",
+    "meetingName": "令和6年第2回臨時会",
     "dateIso": "2024-05-27",
     "date": "2024年5月27日",
     "dayLabel": "第1日目",
@@ -105,6 +113,7 @@
   {
     "id": "r06-20240627-honkaigi",
     "meetingId": "r06-2t",
+    "meetingName": "令和6年第2回定例会",
     "dateIso": "2024-06-27",
     "date": "2024年6月27日",
     "dayLabel": "第1日目",
@@ -117,6 +126,7 @@
   {
     "id": "r06-20240628-honkaigi",
     "meetingId": "r06-2t",
+    "meetingName": "令和6年第2回定例会",
     "dateIso": "2024-06-28",
     "date": "2024年6月28日",
     "dayLabel": "第2日目",
@@ -129,6 +139,7 @@
   {
     "id": "r06-20240710-honkaigi",
     "meetingId": "r06-2t",
+    "meetingName": "令和6年第2回定例会",
     "dateIso": "2024-07-10",
     "date": "2024年7月10日",
     "dayLabel": "第3日目",
@@ -141,6 +152,7 @@
   {
     "id": "r06-20240919-honkaigi",
     "meetingId": "r06-3t",
+    "meetingName": "令和6年第3回定例会",
     "dateIso": "2024-09-19",
     "date": "2024年9月19日",
     "dayLabel": "第1日目",
@@ -153,6 +165,7 @@
   {
     "id": "r06-20240920-honkaigi",
     "meetingId": "r06-3t",
+    "meetingName": "令和6年第3回定例会",
     "dateIso": "2024-09-20",
     "date": "2024年9月20日",
     "dayLabel": "第2日目",
@@ -165,6 +178,7 @@
   {
     "id": "r06-20241010-honkaigi",
     "meetingId": "r06-3t",
+    "meetingName": "令和6年第3回定例会",
     "dateIso": "2024-10-10",
     "date": "2024年10月10日",
     "dayLabel": "第3日目",
@@ -177,6 +191,7 @@
   {
     "id": "r06-20241025-honkaigi",
     "meetingId": "r06-3t",
+    "meetingName": "令和6年第3回定例会",
     "dateIso": "2024-10-25",
     "date": "2024年10月25日",
     "dayLabel": "第4日目",
@@ -189,6 +204,7 @@
   {
     "id": "r06-20241121-honkaigi",
     "meetingId": "r06-4t",
+    "meetingName": "令和6年第4回定例会",
     "dateIso": "2024-11-21",
     "date": "2024年11月21日",
     "dayLabel": "第1日目",
@@ -201,6 +217,7 @@
   {
     "id": "r06-20241122-honkaigi",
     "meetingId": "r06-4t",
+    "meetingName": "令和6年第4回定例会",
     "dateIso": "2024-11-22",
     "date": "2024年11月22日",
     "dayLabel": "第2日目",
@@ -213,6 +230,7 @@
   {
     "id": "r06-20241126-honkaigi",
     "meetingId": "r06-4t",
+    "meetingName": "令和6年第4回定例会",
     "dateIso": "2024-11-26",
     "date": "2024年11月26日",
     "dayLabel": "第3日目",
@@ -225,6 +243,7 @@
   {
     "id": "r06-20241128-honkaigi",
     "meetingId": "r06-4t",
+    "meetingName": "令和6年第4回定例会",
     "dateIso": "2024-11-28",
     "date": "2024年11月28日",
     "dayLabel": "第4日目",
@@ -237,6 +256,7 @@
   {
     "id": "r06-20241205-honkaigi",
     "meetingId": "r06-4t",
+    "meetingName": "令和6年第4回定例会",
     "dateIso": "2024-12-05",
     "date": "2024年12月5日",
     "dayLabel": "第5日目",
@@ -249,6 +269,7 @@
   {
     "id": "r06-20241225-honkaigi",
     "meetingId": "r06-3r",
+    "meetingName": "令和6年第3回臨時会",
     "dateIso": "2024-12-25",
     "date": "2024年12月25日",
     "dayLabel": "第1日目",

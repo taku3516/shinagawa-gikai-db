@@ -9,6 +9,7 @@
   {
     "id": "h21-20090119-honkaigi",
     "meetingId": "h21-1r",
+    "meetingName": "平成21年第1回臨時会",
     "dateIso": "2009-01-19",
     "date": "2009年1月19日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h21-20090225-honkaigi",
     "meetingId": "h21-1t",
+    "meetingName": "平成21年第1回定例会",
     "dateIso": "2009-02-25",
     "date": "2009年2月25日",
     "dayLabel": "第1日目",
@@ -33,6 +35,7 @@
   {
     "id": "h21-20090226-honkaigi",
     "meetingId": "h21-1t",
+    "meetingName": "平成21年第1回定例会",
     "dateIso": "2009-02-26",
     "date": "2009年2月26日",
     "dayLabel": "第2日目",
@@ -45,6 +48,7 @@
   {
     "id": "h21-20090227-honkaigi",
     "meetingId": "h21-1t",
+    "meetingName": "平成21年第1回定例会",
     "dateIso": "2009-02-27",
     "date": "2009年2月27日",
     "dayLabel": "第3日目",
@@ -57,6 +61,7 @@
   {
     "id": "h21-20090310-honkaigi",
     "meetingId": "h21-1t",
+    "meetingName": "平成21年第1回定例会",
     "dateIso": "2009-03-10",
     "date": "2009年3月10日",
     "dayLabel": "第4日目",
@@ -69,6 +74,7 @@
   {
     "id": "h21-20090330-honkaigi",
     "meetingId": "h21-1t",
+    "meetingName": "平成21年第1回定例会",
     "dateIso": "2009-03-30",
     "date": "2009年3月30日",
     "dayLabel": "第5日目",
@@ -81,6 +87,7 @@
   {
     "id": "h21-20090528-honkaigi",
     "meetingId": "h21-2r",
+    "meetingName": "平成21年第2回臨時会",
     "dateIso": "2009-05-28",
     "date": "2009年5月28日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h21-20090618-honkaigi",
     "meetingId": "h21-2t",
+    "meetingName": "平成21年第2回定例会",
     "dateIso": "2009-06-18",
     "date": "2009年6月18日",
     "dayLabel": "第1日目",
@@ -105,6 +113,7 @@
   {
     "id": "h21-20090619-honkaigi",
     "meetingId": "h21-2t",
+    "meetingName": "平成21年第2回定例会",
     "dateIso": "2009-06-19",
     "date": "2009年6月19日",
     "dayLabel": "第2日目",
@@ -117,6 +126,7 @@
   {
     "id": "h21-20090701-honkaigi",
     "meetingId": "h21-2t",
+    "meetingName": "平成21年第2回定例会",
     "dateIso": "2009-07-01",
     "date": "2009年7月1日",
     "dayLabel": "第3日目",
@@ -129,6 +139,7 @@
   {
     "id": "h21-20090917-honkaigi",
     "meetingId": "h21-3t",
+    "meetingName": "平成21年第3回定例会",
     "dateIso": "2009-09-17",
     "date": "2009年9月17日",
     "dayLabel": "第1日目",
@@ -141,6 +152,7 @@
   {
     "id": "h21-20090918-honkaigi",
     "meetingId": "h21-3t",
+    "meetingName": "平成21年第3回定例会",
     "dateIso": "2009-09-18",
     "date": "2009年9月18日",
     "dayLabel": "第2日目",
@@ -153,6 +165,7 @@
   {
     "id": "h21-20090930-honkaigi",
     "meetingId": "h21-3t",
+    "meetingName": "平成21年第3回定例会",
     "dateIso": "2009-09-30",
     "date": "2009年9月30日",
     "dayLabel": "第3日目",
@@ -165,6 +178,7 @@
   {
     "id": "h21-20091021-honkaigi",
     "meetingId": "h21-3t",
+    "meetingName": "平成21年第3回定例会",
     "dateIso": "2009-10-21",
     "date": "2009年10月21日",
     "dayLabel": "第4日目",
@@ -177,6 +191,7 @@
   {
     "id": "h21-20091126-honkaigi",
     "meetingId": "h21-4t",
+    "meetingName": "平成21年第4回定例会",
     "dateIso": "2009-11-26",
     "date": "2009年11月26日",
     "dayLabel": "第1日目",
@@ -189,6 +204,7 @@
   {
     "id": "h21-20091127-honkaigi",
     "meetingId": "h21-4t",
+    "meetingName": "平成21年第4回定例会",
     "dateIso": "2009-11-27",
     "date": "2009年11月27日",
     "dayLabel": "第2日目",
@@ -201,6 +217,7 @@
   {
     "id": "h21-20091130-honkaigi",
     "meetingId": "h21-4t",
+    "meetingName": "平成21年第4回定例会",
     "dateIso": "2009-11-30",
     "date": "2009年11月30日",
     "dayLabel": "第3日目",
@@ -213,6 +230,7 @@
   {
     "id": "h21-20091208-honkaigi",
     "meetingId": "h21-4t",
+    "meetingName": "平成21年第4回定例会",
     "dateIso": "2009-12-08",
     "date": "2009年12月8日",
     "dayLabel": "第4日目",

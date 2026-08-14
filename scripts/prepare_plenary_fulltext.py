@@ -75,6 +75,9 @@ BODY_TITLE = "本文"
 # 「令和６年_第１回定例会（第１日目）　本文」から回次と種別を取る。
 MEETING_TITLE = re.compile(r"第([０-９0-9]+)回(定例会|臨時会)")
 DAY_TITLE = re.compile(r"（第([０-９0-9]+)日目）")
+# 会議の名前（「令和6年第1回臨時会」）。年データに載っていない臨時会は、
+# 画面がこの名前で見出しを作る。
+MEETING_NAME = re.compile(r"([^_（\s]+年)_(第[０-９0-9]+回(?:定例会|臨時会))")
 
 MEETING_SUFFIX = {"定例会": "t", "臨時会": "r"}
 
@@ -127,6 +130,19 @@ def day_label_of(title: str) -> str:
     return f"第{to_number(match.group(1))}日目" if match else ""
 
 
+def meeting_name_of(title: str) -> str:
+    """会議録の表題から会議の名前を作る（「令和6年第1回臨時会」）。
+
+    臨時会は年データ（`data/<年>.js` の `meetings`）に載っていないことが多い。
+    その場合、画面はこの名前で見出しを作って全文を出す。ここが空だと、全文を
+    入れても画面から到達できない会議になる。
+    """
+    match = MEETING_NAME.search(title)
+    if not match:
+        return ""
+    return f"{match.group(1)}{match.group(2)}".translate(ZENKAKU_DIGITS)
+
+
 def collect_month(year: str, cabinet: int, western: int, month: int, last: int,
                   found: dict[str, dict], refresh: bool) -> None:
     """1か月ぶんの一覧から、本文の会議録を拾って `found` へ入れる。"""
@@ -154,6 +170,7 @@ def collect_month(year: str, cabinet: int, western: int, month: int, last: int,
             # write-once が崩れて全ファイルが差分になる。
             "url": mf.canonical_source_url(anchor.get("href")),
             "meetingId": meeting_id_for(year, title),
+            "meetingName": meeting_name_of(title),
             "dayLabel": day_label_of(title),
         })
 
@@ -346,6 +363,7 @@ def main() -> int:
         sessions.append({
             "id": session_id,
             "meetingId": document["meetingId"],
+            "meetingName": document["meetingName"],
             "dateIso": iso_date,
             "date": date_label_of(year, iso_date),
             "dayLabel": document["dayLabel"],

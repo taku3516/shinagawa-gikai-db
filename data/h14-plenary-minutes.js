@@ -9,6 +9,7 @@
   {
     "id": "h14-20020227-honkaigi",
     "meetingId": "h14-1t",
+    "meetingName": "平成14年第1回定例会",
     "dateIso": "2002-02-27",
     "date": "2002年2月27日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h14-20020228-honkaigi",
     "meetingId": "h14-1t",
+    "meetingName": "平成14年第1回定例会",
     "dateIso": "2002-02-28",
     "date": "2002年2月28日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h14-20020301-honkaigi",
     "meetingId": "h14-1t",
+    "meetingName": "平成14年第1回定例会",
     "dateIso": "2002-03-01",
     "date": "2002年3月1日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h14-20020311-honkaigi",
     "meetingId": "h14-1t",
+    "meetingName": "平成14年第1回定例会",
     "dateIso": "2002-03-11",
     "date": "2002年3月11日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h14-20020328-honkaigi",
     "meetingId": "h14-1t",
+    "meetingName": "平成14年第1回定例会",
     "dateIso": "2002-03-28",
     "date": "2002年3月28日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h14-20020531-honkaigi",
     "meetingId": "h14-1r",
+    "meetingName": "平成14年第1回臨時会",
     "dateIso": "2002-05-31",
     "date": "2002年5月31日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h14-20020627-honkaigi",
     "meetingId": "h14-2t",
+    "meetingName": "平成14年第2回定例会",
     "dateIso": "2002-06-27",
     "date": "2002年6月27日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h14-20020628-honkaigi",
     "meetingId": "h14-2t",
+    "meetingName": "平成14年第2回定例会",
     "dateIso": "2002-06-28",
     "date": "2002年6月28日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h14-20020712-honkaigi",
     "meetingId": "h14-2t",
+    "meetingName": "平成14年第2回定例会",
     "dateIso": "2002-07-12",
     "date": "2002年7月12日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h14-20020919-honkaigi",
     "meetingId": "h14-3t",
+    "meetingName": "平成14年第3回定例会",
     "dateIso": "2002-09-19",
     "date": "2002年9月19日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "h14-20020920-honkaigi",
     "meetingId": "h14-3t",
+    "meetingName": "平成14年第3回定例会",
     "dateIso": "2002-09-20",
     "date": "2002年9月20日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "h14-20020925-honkaigi",
     "meetingId": "h14-3t",
+    "meetingName": "平成14年第3回定例会",
     "dateIso": "2002-09-25",
     "date": "2002年9月25日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "h14-20021017-honkaigi",
     "meetingId": "h14-3t",
+    "meetingName": "平成14年第3回定例会",
     "dateIso": "2002-10-17",
     "date": "2002年10月17日",
     "dayLabel": "第4日目",
@@ -165,6 +178,7 @@
   {
     "id": "h14-20021121-honkaigi",
     "meetingId": "h14-4t",
+    "meetingName": "平成14年第4回定例会",
     "dateIso": "2002-11-21",
     "date": "2002年11月21日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h14-20021122-honkaigi",
     "meetingId": "h14-4t",
+    "meetingName": "平成14年第4回定例会",
     "dateIso": "2002-11-22",
     "date": "2002年11月22日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h14-20021205-honkaigi",
     "meetingId": "h14-4t",
+    "meetingName": "平成14年第4回定例会",
     "dateIso": "2002-12-05",
     "date": "2002年12月5日",
     "dayLabel": "第3日目",

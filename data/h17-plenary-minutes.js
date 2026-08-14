@@ -9,6 +9,7 @@
   {
     "id": "h17-20050222-honkaigi",
     "meetingId": "h17-1t",
+    "meetingName": "平成17年第1回定例会",
     "dateIso": "2005-02-22",
     "date": "2005年2月22日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h17-20050223-honkaigi",
     "meetingId": "h17-1t",
+    "meetingName": "平成17年第1回定例会",
     "dateIso": "2005-02-23",
     "date": "2005年2月23日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h17-20050224-honkaigi",
     "meetingId": "h17-1t",
+    "meetingName": "平成17年第1回定例会",
     "dateIso": "2005-02-24",
     "date": "2005年2月24日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h17-20050310-honkaigi",
     "meetingId": "h17-1t",
+    "meetingName": "平成17年第1回定例会",
     "dateIso": "2005-03-10",
     "date": "2005年3月10日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h17-20050329-honkaigi",
     "meetingId": "h17-1t",
+    "meetingName": "平成17年第1回定例会",
     "dateIso": "2005-03-29",
     "date": "2005年3月29日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h17-20050527-honkaigi",
     "meetingId": "h17-1r",
+    "meetingName": "平成17年第1回臨時会",
     "dateIso": "2005-05-27",
     "date": "2005年5月27日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h17-20050622-honkaigi",
     "meetingId": "h17-2t",
+    "meetingName": "平成17年第2回定例会",
     "dateIso": "2005-06-22",
     "date": "2005年6月22日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h17-20050623-honkaigi",
     "meetingId": "h17-2t",
+    "meetingName": "平成17年第2回定例会",
     "dateIso": "2005-06-23",
     "date": "2005年6月23日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h17-20050714-honkaigi",
     "meetingId": "h17-2t",
+    "meetingName": "平成17年第2回定例会",
     "dateIso": "2005-07-14",
     "date": "2005年7月14日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h17-20050921-honkaigi",
     "meetingId": "h17-3t",
+    "meetingName": "平成17年第3回定例会",
     "dateIso": "2005-09-21",
     "date": "2005年9月21日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "h17-20050922-honkaigi",
     "meetingId": "h17-3t",
+    "meetingName": "平成17年第3回定例会",
     "dateIso": "2005-09-22",
     "date": "2005年9月22日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "h17-20050927-honkaigi",
     "meetingId": "h17-3t",
+    "meetingName": "平成17年第3回定例会",
     "dateIso": "2005-09-27",
     "date": "2005年9月27日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "h17-20051021-honkaigi",
     "meetingId": "h17-3t",
+    "meetingName": "平成17年第3回定例会",
     "dateIso": "2005-10-21",
     "date": "2005年10月21日",
     "dayLabel": "第4日目",
@@ -165,6 +178,7 @@
   {
     "id": "h17-20051124-honkaigi",
     "meetingId": "h17-4t",
+    "meetingName": "平成17年第4回定例会",
     "dateIso": "2005-11-24",
     "date": "2005年11月24日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h17-20051125-honkaigi",
     "meetingId": "h17-4t",
+    "meetingName": "平成17年第4回定例会",
     "dateIso": "2005-11-25",
     "date": "2005年11月25日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h17-20051208-honkaigi",
     "meetingId": "h17-4t",
+    "meetingName": "平成17年第4回定例会",
     "dateIso": "2005-12-08",
     "date": "2005年12月8日",
     "dayLabel": "第3日目",

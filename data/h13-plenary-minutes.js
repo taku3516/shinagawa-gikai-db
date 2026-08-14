@@ -9,6 +9,7 @@
   {
     "id": "h13-20010525-honkaigi",
     "meetingId": "h13-1r",
+    "meetingName": "平成13年第1回臨時会",
     "dateIso": "2001-05-25",
     "date": "2001年5月25日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h13-20010628-honkaigi",
     "meetingId": "h13-2t",
+    "meetingName": "平成13年第2回定例会",
     "dateIso": "2001-06-28",
     "date": "2001年6月28日",
     "dayLabel": "第1日目",
@@ -33,6 +35,7 @@
   {
     "id": "h13-20010629-honkaigi",
     "meetingId": "h13-2t",
+    "meetingName": "平成13年第2回定例会",
     "dateIso": "2001-06-29",
     "date": "2001年6月29日",
     "dayLabel": "第2日目",
@@ -45,6 +48,7 @@
   {
     "id": "h13-20010713-honkaigi",
     "meetingId": "h13-2t",
+    "meetingName": "平成13年第2回定例会",
     "dateIso": "2001-07-13",
     "date": "2001年7月13日",
     "dayLabel": "第3日目",
@@ -57,6 +61,7 @@
   {
     "id": "h13-20010920-honkaigi",
     "meetingId": "h13-3t",
+    "meetingName": "平成13年第3回定例会",
     "dateIso": "2001-09-20",
     "date": "2001年9月20日",
     "dayLabel": "第1日目",
@@ -69,6 +74,7 @@
   {
     "id": "h13-20010921-honkaigi",
     "meetingId": "h13-3t",
+    "meetingName": "平成13年第3回定例会",
     "dateIso": "2001-09-21",
     "date": "2001年9月21日",
     "dayLabel": "第2日目",
@@ -81,6 +87,7 @@
   {
     "id": "h13-20011019-honkaigi",
     "meetingId": "h13-3t",
+    "meetingName": "平成13年第3回定例会",
     "dateIso": "2001-10-19",
     "date": "2001年10月19日",
     "dayLabel": "第3日目",
@@ -93,6 +100,7 @@
   {
     "id": "h13-20011121-honkaigi",
     "meetingId": "h13-4t",
+    "meetingName": "平成13年第4回定例会",
     "dateIso": "2001-11-21",
     "date": "2001年11月21日",
     "dayLabel": "第1日目",
@@ -105,6 +113,7 @@
   {
     "id": "h13-20011122-honkaigi",
     "meetingId": "h13-4t",
+    "meetingName": "平成13年第4回定例会",
     "dateIso": "2001-11-22",
     "date": "2001年11月22日",
     "dayLabel": "第2日目",
@@ -117,6 +126,7 @@
   {
     "id": "h13-20011207-honkaigi",
     "meetingId": "h13-4t",
+    "meetingName": "平成13年第4回定例会",
     "dateIso": "2001-12-07",
     "date": "2001年12月7日",
     "dayLabel": "第3日目",

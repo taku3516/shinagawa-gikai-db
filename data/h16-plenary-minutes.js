@@ -9,6 +9,7 @@
   {
     "id": "h16-20040225-honkaigi",
     "meetingId": "h16-1t",
+    "meetingName": "平成16年第1回定例会",
     "dateIso": "2004-02-25",
     "date": "2004年2月25日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h16-20040226-honkaigi",
     "meetingId": "h16-1t",
+    "meetingName": "平成16年第1回定例会",
     "dateIso": "2004-02-26",
     "date": "2004年2月26日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h16-20040227-honkaigi",
     "meetingId": "h16-1t",
+    "meetingName": "平成16年第1回定例会",
     "dateIso": "2004-02-27",
     "date": "2004年2月27日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h16-20040309-honkaigi",
     "meetingId": "h16-1t",
+    "meetingName": "平成16年第1回定例会",
     "dateIso": "2004-03-09",
     "date": "2004年3月9日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h16-20040324-honkaigi",
     "meetingId": "h16-1t",
+    "meetingName": "平成16年第1回定例会",
     "dateIso": "2004-03-24",
     "date": "2004年3月24日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h16-20040408-honkaigi",
     "meetingId": "h16-1r",
+    "meetingName": "平成16年第1回臨時会",
     "dateIso": "2004-04-08",
     "date": "2004年4月8日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h16-20040409-honkaigi",
     "meetingId": "h16-1r",
+    "meetingName": "平成16年第1回臨時会",
     "dateIso": "2004-04-09",
     "date": "2004年4月9日",
     "dayLabel": "第2日目",
@@ -93,6 +100,7 @@
   {
     "id": "h16-20040527-honkaigi",
     "meetingId": "h16-2r",
+    "meetingName": "平成16年第2回臨時会",
     "dateIso": "2004-05-27",
     "date": "2004年5月27日",
     "dayLabel": "第1日目",
@@ -105,6 +113,7 @@
   {
     "id": "h16-20040625-honkaigi",
     "meetingId": "h16-2t",
+    "meetingName": "平成16年第2回定例会",
     "dateIso": "2004-06-25",
     "date": "2004年6月25日",
     "dayLabel": "第1日目",
@@ -117,6 +126,7 @@
   {
     "id": "h16-20040628-honkaigi",
     "meetingId": "h16-2t",
+    "meetingName": "平成16年第2回定例会",
     "dateIso": "2004-06-28",
     "date": "2004年6月28日",
     "dayLabel": "第2日目",
@@ -129,6 +139,7 @@
   {
     "id": "h16-20040708-honkaigi",
     "meetingId": "h16-2t",
+    "meetingName": "平成16年第2回定例会",
     "dateIso": "2004-07-08",
     "date": "2004年7月8日",
     "dayLabel": "第3日目",
@@ -141,6 +152,7 @@
   {
     "id": "h16-20040922-honkaigi",
     "meetingId": "h16-3t",
+    "meetingName": "平成16年第3回定例会",
     "dateIso": "2004-09-22",
     "date": "2004年9月22日",
     "dayLabel": "第1日目",
@@ -153,6 +165,7 @@
   {
     "id": "h16-20040924-honkaigi",
     "meetingId": "h16-3t",
+    "meetingName": "平成16年第3回定例会",
     "dateIso": "2004-09-24",
     "date": "2004年9月24日",
     "dayLabel": "第2日目",
@@ -165,6 +178,7 @@
   {
     "id": "h16-20041022-honkaigi",
     "meetingId": "h16-3t",
+    "meetingName": "平成16年第3回定例会",
     "dateIso": "2004-10-22",
     "date": "2004年10月22日",
     "dayLabel": "第3日目",
@@ -177,6 +191,7 @@
   {
     "id": "h16-20041125-honkaigi",
     "meetingId": "h16-4t",
+    "meetingName": "平成16年第4回定例会",
     "dateIso": "2004-11-25",
     "date": "2004年11月25日",
     "dayLabel": "第1日目",
@@ -189,6 +204,7 @@
   {
     "id": "h16-20041126-honkaigi",
     "meetingId": "h16-4t",
+    "meetingName": "平成16年第4回定例会",
     "dateIso": "2004-11-26",
     "date": "2004年11月26日",
     "dayLabel": "第2日目",
@@ -201,6 +217,7 @@
   {
     "id": "h16-20041209-honkaigi",
     "meetingId": "h16-4t",
+    "meetingName": "平成16年第4回定例会",
     "dateIso": "2004-12-09",
     "date": "2004年12月9日",
     "dayLabel": "第3日目",

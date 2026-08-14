@@ -9,6 +9,7 @@
   {
     "id": "r04-20220217-honkaigi",
     "meetingId": "r04-1t",
+    "meetingName": "令和4年第1回定例会",
     "dateIso": "2022-02-17",
     "date": "2022年2月17日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "r04-20220218-honkaigi",
     "meetingId": "r04-1t",
+    "meetingName": "令和4年第1回定例会",
     "dateIso": "2022-02-18",
     "date": "2022年2月18日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "r04-20220221-honkaigi",
     "meetingId": "r04-1t",
+    "meetingName": "令和4年第1回定例会",
     "dateIso": "2022-02-21",
     "date": "2022年2月21日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "r04-20220307-honkaigi",
     "meetingId": "r04-1t",
+    "meetingName": "令和4年第1回定例会",
     "dateIso": "2022-03-07",
     "date": "2022年3月7日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "r04-20220325-honkaigi",
     "meetingId": "r04-1t",
+    "meetingName": "令和4年第1回定例会",
     "dateIso": "2022-03-25",
     "date": "2022年3月25日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "r04-20220527-honkaigi",
     "meetingId": "r04-1r",
+    "meetingName": "令和4年第1回臨時会",
     "dateIso": "2022-05-27",
     "date": "2022年5月27日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "r04-20220623-honkaigi",
     "meetingId": "r04-2t",
+    "meetingName": "令和4年第2回定例会",
     "dateIso": "2022-06-23",
     "date": "2022年6月23日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "r04-20220624-honkaigi",
     "meetingId": "r04-2t",
+    "meetingName": "令和4年第2回定例会",
     "dateIso": "2022-06-24",
     "date": "2022年6月24日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "r04-20220707-honkaigi",
     "meetingId": "r04-2t",
+    "meetingName": "令和4年第2回定例会",
     "dateIso": "2022-07-07",
     "date": "2022年7月7日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "r04-20221027-honkaigi",
     "meetingId": "r04-3t",
+    "meetingName": "令和4年第3回定例会",
     "dateIso": "2022-10-27",
     "date": "2022年10月27日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "r04-20221028-honkaigi",
     "meetingId": "r04-3t",
+    "meetingName": "令和4年第3回定例会",
     "dateIso": "2022-10-28",
     "date": "2022年10月28日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "r04-20221102-honkaigi",
     "meetingId": "r04-3t",
+    "meetingName": "令和4年第3回定例会",
     "dateIso": "2022-11-02",
     "date": "2022年11月2日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "r04-20221125-honkaigi",
     "meetingId": "r04-3t",
+    "meetingName": "令和4年第3回定例会",
     "dateIso": "2022-11-25",
     "date": "2022年11月25日",
     "dayLabel": "第4日目",
@@ -165,6 +178,7 @@
   {
     "id": "r04-20221220-honkaigi",
     "meetingId": "r04-4t",
+    "meetingName": "令和4年第4回定例会",
     "dateIso": "2022-12-20",
     "date": "2022年12月20日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "r04-20221221-honkaigi",
     "meetingId": "r04-4t",
+    "meetingName": "令和4年第4回定例会",
     "dateIso": "2022-12-21",
     "date": "2022年12月21日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "r04-20221223-honkaigi",
     "meetingId": "r04-4t",
+    "meetingName": "令和4年第4回定例会",
     "dateIso": "2022-12-23",
     "date": "2022年12月23日",
     "dayLabel": "第3日目",

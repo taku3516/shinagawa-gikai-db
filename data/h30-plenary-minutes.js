@@ -9,6 +9,7 @@
   {
     "id": "h30-20180221-honkaigi",
     "meetingId": "h30-1t",
+    "meetingName": "平成30年第1回定例会",
     "dateIso": "2018-02-21",
     "date": "2018年2月21日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h30-20180222-honkaigi",
     "meetingId": "h30-1t",
+    "meetingName": "平成30年第1回定例会",
     "dateIso": "2018-02-22",
     "date": "2018年2月22日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h30-20180223-honkaigi",
     "meetingId": "h30-1t",
+    "meetingName": "平成30年第1回定例会",
     "dateIso": "2018-02-23",
     "date": "2018年2月23日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h30-20180308-honkaigi",
     "meetingId": "h30-1t",
+    "meetingName": "平成30年第1回定例会",
     "dateIso": "2018-03-08",
     "date": "2018年3月8日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h30-20180327-honkaigi",
     "meetingId": "h30-1t",
+    "meetingName": "平成30年第1回定例会",
     "dateIso": "2018-03-27",
     "date": "2018年3月27日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h30-20180529-honkaigi",
     "meetingId": "h30-1r",
+    "meetingName": "平成30年第1回臨時会",
     "dateIso": "2018-05-29",
     "date": "2018年5月29日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h30-20180628-honkaigi",
     "meetingId": "h30-2t",
+    "meetingName": "平成30年第2回定例会",
     "dateIso": "2018-06-28",
     "date": "2018年6月28日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h30-20180629-honkaigi",
     "meetingId": "h30-2t",
+    "meetingName": "平成30年第2回定例会",
     "dateIso": "2018-06-29",
     "date": "2018年6月29日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h30-20180711-honkaigi",
     "meetingId": "h30-2t",
+    "meetingName": "平成30年第2回定例会",
     "dateIso": "2018-07-11",
     "date": "2018年7月11日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h30-20180824-honkaigi",
     "meetingId": "h30-2r",
+    "meetingName": "平成30年第2回臨時会",
     "dateIso": "2018-08-24",
     "date": "2018年8月24日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "h30-20181025-honkaigi",
     "meetingId": "h30-3t",
+    "meetingName": "平成30年第3回定例会",
     "dateIso": "2018-10-25",
     "date": "2018年10月25日",
     "dayLabel": "第1日目",
@@ -141,6 +152,7 @@
   {
     "id": "h30-20181026-honkaigi",
     "meetingId": "h30-3t",
+    "meetingName": "平成30年第3回定例会",
     "dateIso": "2018-10-26",
     "date": "2018年10月26日",
     "dayLabel": "第2日目",
@@ -153,6 +165,7 @@
   {
     "id": "h30-20181121-honkaigi",
     "meetingId": "h30-3t",
+    "meetingName": "平成30年第3回定例会",
     "dateIso": "2018-11-21",
     "date": "2018年11月21日",
     "dayLabel": "第3日目",
@@ -165,6 +178,7 @@
   {
     "id": "h30-20181206-honkaigi",
     "meetingId": "h30-4t",
+    "meetingName": "平成30年第4回定例会",
     "dateIso": "2018-12-06",
     "date": "2018年12月6日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h30-20181207-honkaigi",
     "meetingId": "h30-4t",
+    "meetingName": "平成30年第4回定例会",
     "dateIso": "2018-12-07",
     "date": "2018年12月7日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h30-20181219-honkaigi",
     "meetingId": "h30-4t",
+    "meetingName": "平成30年第4回定例会",
     "dateIso": "2018-12-19",
     "date": "2018年12月19日",
     "dayLabel": "第3日目",

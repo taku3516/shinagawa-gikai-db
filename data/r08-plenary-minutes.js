@@ -9,6 +9,7 @@
   {
     "id": "r08-20260218-honkaigi",
     "meetingId": "r08-1t",
+    "meetingName": "令和8年第1回定例会",
     "dateIso": "2026-02-18",
     "date": "2026年2月18日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "r08-20260219-honkaigi",
     "meetingId": "r08-1t",
+    "meetingName": "令和8年第1回定例会",
     "dateIso": "2026-02-19",
     "date": "2026年2月19日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "r08-20260220-honkaigi",
     "meetingId": "r08-1t",
+    "meetingName": "令和8年第1回定例会",
     "dateIso": "2026-02-20",
     "date": "2026年2月20日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "r08-20260306-honkaigi",
     "meetingId": "r08-1t",
+    "meetingName": "令和8年第1回定例会",
     "dateIso": "2026-03-06",
     "date": "2026年3月6日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "r08-20260327-honkaigi",
     "meetingId": "r08-1t",
+    "meetingName": "令和8年第1回定例会",
     "dateIso": "2026-03-27",
     "date": "2026年3月27日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "r08-20260527-honkaigi",
     "meetingId": "r08-1r",
+    "meetingName": "令和8年第1回臨時会",
     "dateIso": "2026-05-27",
     "date": "2026年5月27日",
     "dayLabel": "第1日目",

@@ -9,6 +9,7 @@
   {
     "id": "h18-20060117-honkaigi",
     "meetingId": "h18-1r",
+    "meetingName": "平成18年第1回臨時会",
     "dateIso": "2006-01-17",
     "date": "2006年1月17日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h18-20060119-honkaigi",
     "meetingId": "h18-1r",
+    "meetingName": "平成18年第1回臨時会",
     "dateIso": "2006-01-19",
     "date": "2006年1月19日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h18-20060222-honkaigi",
     "meetingId": "h18-1t",
+    "meetingName": "平成18年第1回定例会",
     "dateIso": "2006-02-22",
     "date": "2006年2月22日",
     "dayLabel": "第1日目",
@@ -45,6 +48,7 @@
   {
     "id": "h18-20060223-honkaigi",
     "meetingId": "h18-1t",
+    "meetingName": "平成18年第1回定例会",
     "dateIso": "2006-02-23",
     "date": "2006年2月23日",
     "dayLabel": "第2日目",
@@ -57,6 +61,7 @@
   {
     "id": "h18-20060224-honkaigi",
     "meetingId": "h18-1t",
+    "meetingName": "平成18年第1回定例会",
     "dateIso": "2006-02-24",
     "date": "2006年2月24日",
     "dayLabel": "第3日目",
@@ -69,6 +74,7 @@
   {
     "id": "h18-20060309-honkaigi",
     "meetingId": "h18-1t",
+    "meetingName": "平成18年第1回定例会",
     "dateIso": "2006-03-09",
     "date": "2006年3月9日",
     "dayLabel": "第4日目",
@@ -81,6 +87,7 @@
   {
     "id": "h18-20060328-honkaigi",
     "meetingId": "h18-1t",
+    "meetingName": "平成18年第1回定例会",
     "dateIso": "2006-03-28",
     "date": "2006年3月28日",
     "dayLabel": "第5日目",
@@ -93,6 +100,7 @@
   {
     "id": "h18-20060530-honkaigi",
     "meetingId": "h18-2r",
+    "meetingName": "平成18年第2回臨時会",
     "dateIso": "2006-05-30",
     "date": "2006年5月30日",
     "dayLabel": "第1日目",
@@ -105,6 +113,7 @@
   {
     "id": "h18-20060622-honkaigi",
     "meetingId": "h18-2t",
+    "meetingName": "平成18年第2回定例会",
     "dateIso": "2006-06-22",
     "date": "2006年6月22日",
     "dayLabel": "第1日目",
@@ -117,6 +126,7 @@
   {
     "id": "h18-20060623-honkaigi",
     "meetingId": "h18-2t",
+    "meetingName": "平成18年第2回定例会",
     "dateIso": "2006-06-23",
     "date": "2006年6月23日",
     "dayLabel": "第2日目",
@@ -129,6 +139,7 @@
   {
     "id": "h18-20060627-honkaigi",
     "meetingId": "h18-2t",
+    "meetingName": "平成18年第2回定例会",
     "dateIso": "2006-06-27",
     "date": "2006年6月27日",
     "dayLabel": "第3日目",
@@ -141,6 +152,7 @@
   {
     "id": "h18-20060707-honkaigi",
     "meetingId": "h18-2t",
+    "meetingName": "平成18年第2回定例会",
     "dateIso": "2006-07-07",
     "date": "2006年7月7日",
     "dayLabel": "第4日目",
@@ -153,6 +165,7 @@
   {
     "id": "h18-20060905-honkaigi",
     "meetingId": "h18-3r",
+    "meetingName": "平成18年第3回臨時会",
     "dateIso": "2006-09-05",
     "date": "2006年9月5日",
     "dayLabel": "第1日目",
@@ -165,6 +178,7 @@
   {
     "id": "h18-20060921-honkaigi",
     "meetingId": "h18-3t",
+    "meetingName": "平成18年第3回定例会",
     "dateIso": "2006-09-21",
     "date": "2006年9月21日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h18-20060922-honkaigi",
     "meetingId": "h18-3t",
+    "meetingName": "平成18年第3回定例会",
     "dateIso": "2006-09-22",
     "date": "2006年9月22日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h18-20060926-honkaigi",
     "meetingId": "h18-3t",
+    "meetingName": "平成18年第3回定例会",
     "dateIso": "2006-09-26",
     "date": "2006年9月26日",
     "dayLabel": "第3日目",
@@ -201,6 +217,7 @@
   {
     "id": "h18-20061012-honkaigi",
     "meetingId": "h18-3t",
+    "meetingName": "平成18年第3回定例会",
     "dateIso": "2006-10-12",
     "date": "2006年10月12日",
     "dayLabel": "第4日目",
@@ -213,6 +230,7 @@
   {
     "id": "h18-20061027-honkaigi",
     "meetingId": "h18-3t",
+    "meetingName": "平成18年第3回定例会",
     "dateIso": "2006-10-27",
     "date": "2006年10月27日",
     "dayLabel": "第5日目",
@@ -225,6 +243,7 @@
   {
     "id": "h18-20061122-honkaigi",
     "meetingId": "h18-4t",
+    "meetingName": "平成18年第4回定例会",
     "dateIso": "2006-11-22",
     "date": "2006年11月22日",
     "dayLabel": "第1日目",
@@ -237,6 +256,7 @@
   {
     "id": "h18-20061124-honkaigi",
     "meetingId": "h18-4t",
+    "meetingName": "平成18年第4回定例会",
     "dateIso": "2006-11-24",
     "date": "2006年11月24日",
     "dayLabel": "第2日目",
@@ -249,6 +269,7 @@
   {
     "id": "h18-20061207-honkaigi",
     "meetingId": "h18-4t",
+    "meetingName": "平成18年第4回定例会",
     "dateIso": "2006-12-07",
     "date": "2006年12月7日",
     "dayLabel": "第3日目",

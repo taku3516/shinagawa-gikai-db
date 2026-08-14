@@ -9,6 +9,7 @@
   {
     "id": "h25-20130220-honkaigi",
     "meetingId": "h25-1t",
+    "meetingName": "平成25年第1回定例会",
     "dateIso": "2013-02-20",
     "date": "2013年2月20日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h25-20130221-honkaigi",
     "meetingId": "h25-1t",
+    "meetingName": "平成25年第1回定例会",
     "dateIso": "2013-02-21",
     "date": "2013年2月21日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h25-20130222-honkaigi",
     "meetingId": "h25-1t",
+    "meetingName": "平成25年第1回定例会",
     "dateIso": "2013-02-22",
     "date": "2013年2月22日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h25-20130307-honkaigi",
     "meetingId": "h25-1t",
+    "meetingName": "平成25年第1回定例会",
     "dateIso": "2013-03-07",
     "date": "2013年3月7日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h25-20130326-honkaigi",
     "meetingId": "h25-1t",
+    "meetingName": "平成25年第1回定例会",
     "dateIso": "2013-03-26",
     "date": "2013年3月26日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h25-20130528-honkaigi",
     "meetingId": "h25-1r",
+    "meetingName": "平成25年第1回臨時会",
     "dateIso": "2013-05-28",
     "date": "2013年5月28日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h25-20130627-honkaigi",
     "meetingId": "h25-2t",
+    "meetingName": "平成25年第2回定例会",
     "dateIso": "2013-06-27",
     "date": "2013年6月27日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h25-20130628-honkaigi",
     "meetingId": "h25-2t",
+    "meetingName": "平成25年第2回定例会",
     "dateIso": "2013-06-28",
     "date": "2013年6月28日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h25-20130702-honkaigi",
     "meetingId": "h25-2t",
+    "meetingName": "平成25年第2回定例会",
     "dateIso": "2013-07-02",
     "date": "2013年7月2日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h25-20130711-honkaigi",
     "meetingId": "h25-2t",
+    "meetingName": "平成25年第2回定例会",
     "dateIso": "2013-07-11",
     "date": "2013年7月11日",
     "dayLabel": "第4日目",
@@ -129,6 +139,7 @@
   {
     "id": "h25-20130919-honkaigi",
     "meetingId": "h25-3t",
+    "meetingName": "平成25年第3回定例会",
     "dateIso": "2013-09-19",
     "date": "2013年9月19日",
     "dayLabel": "第1日目",
@@ -141,6 +152,7 @@
   {
     "id": "h25-20130920-honkaigi",
     "meetingId": "h25-3t",
+    "meetingName": "平成25年第3回定例会",
     "dateIso": "2013-09-20",
     "date": "2013年9月20日",
     "dayLabel": "第2日目",
@@ -153,6 +165,7 @@
   {
     "id": "h25-20131021-honkaigi",
     "meetingId": "h25-3t",
+    "meetingName": "平成25年第3回定例会",
     "dateIso": "2013-10-21",
     "date": "2013年10月21日",
     "dayLabel": "第3日目",
@@ -165,6 +178,7 @@
   {
     "id": "h25-20131121-honkaigi",
     "meetingId": "h25-4t",
+    "meetingName": "平成25年第4回定例会",
     "dateIso": "2013-11-21",
     "date": "2013年11月21日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h25-20131122-honkaigi",
     "meetingId": "h25-4t",
+    "meetingName": "平成25年第4回定例会",
     "dateIso": "2013-11-22",
     "date": "2013年11月22日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h25-20131206-honkaigi",
     "meetingId": "h25-4t",
+    "meetingName": "平成25年第4回定例会",
     "dateIso": "2013-12-06",
     "date": "2013年12月6日",
     "dayLabel": "第3日目",

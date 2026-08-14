@@ -9,6 +9,7 @@
   {
     "id": "h29-20170222-honkaigi",
     "meetingId": "h29-1t",
+    "meetingName": "平成29年第1回定例会",
     "dateIso": "2017-02-22",
     "date": "2017年2月22日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h29-20170223-honkaigi",
     "meetingId": "h29-1t",
+    "meetingName": "平成29年第1回定例会",
     "dateIso": "2017-02-23",
     "date": "2017年2月23日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h29-20170224-honkaigi",
     "meetingId": "h29-1t",
+    "meetingName": "平成29年第1回定例会",
     "dateIso": "2017-02-24",
     "date": "2017年2月24日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h29-20170309-honkaigi",
     "meetingId": "h29-1t",
+    "meetingName": "平成29年第1回定例会",
     "dateIso": "2017-03-09",
     "date": "2017年3月9日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h29-20170328-honkaigi",
     "meetingId": "h29-1t",
+    "meetingName": "平成29年第1回定例会",
     "dateIso": "2017-03-28",
     "date": "2017年3月28日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h29-20170526-honkaigi",
     "meetingId": "h29-1r",
+    "meetingName": "平成29年第1回臨時会",
     "dateIso": "2017-05-26",
     "date": "2017年5月26日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h29-20170706-honkaigi",
     "meetingId": "h29-2t",
+    "meetingName": "平成29年第2回定例会",
     "dateIso": "2017-07-06",
     "date": "2017年7月6日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h29-20170707-honkaigi",
     "meetingId": "h29-2t",
+    "meetingName": "平成29年第2回定例会",
     "dateIso": "2017-07-07",
     "date": "2017年7月7日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h29-20170719-honkaigi",
     "meetingId": "h29-2t",
+    "meetingName": "平成29年第2回定例会",
     "dateIso": "2017-07-19",
     "date": "2017年7月19日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h29-20170921-honkaigi",
     "meetingId": "h29-3t",
+    "meetingName": "平成29年第3回定例会",
     "dateIso": "2017-09-21",
     "date": "2017年9月21日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "h29-20170922-honkaigi",
     "meetingId": "h29-3t",
+    "meetingName": "平成29年第3回定例会",
     "dateIso": "2017-09-22",
     "date": "2017年9月22日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "h29-20170929-honkaigi",
     "meetingId": "h29-3t",
+    "meetingName": "平成29年第3回定例会",
     "dateIso": "2017-09-29",
     "date": "2017年9月29日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "h29-20171019-honkaigi",
     "meetingId": "h29-3t",
+    "meetingName": "平成29年第3回定例会",
     "dateIso": "2017-10-19",
     "date": "2017年10月19日",
     "dayLabel": "第4日目",
@@ -165,6 +178,7 @@
   {
     "id": "h29-20171124-honkaigi",
     "meetingId": "h29-4t",
+    "meetingName": "平成29年第4回定例会",
     "dateIso": "2017-11-24",
     "date": "2017年11月24日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h29-20171127-honkaigi",
     "meetingId": "h29-4t",
+    "meetingName": "平成29年第4回定例会",
     "dateIso": "2017-11-27",
     "date": "2017年11月27日",
     "dayLabel": "第2日目",
@@ -189,6 +204,7 @@
   {
     "id": "h29-20171129-honkaigi",
     "meetingId": "h29-4t",
+    "meetingName": "平成29年第4回定例会",
     "dateIso": "2017-11-29",
     "date": "2017年11月29日",
     "dayLabel": "第3日目",
@@ -201,6 +217,7 @@
   {
     "id": "h29-20171207-honkaigi",
     "meetingId": "h29-4t",
+    "meetingName": "平成29年第4回定例会",
     "dateIso": "2017-12-07",
     "date": "2017年12月7日",
     "dayLabel": "第4日目",

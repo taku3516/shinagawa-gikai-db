@@ -9,6 +9,7 @@
   {
     "id": "h26-20140219-honkaigi",
     "meetingId": "h26-1t",
+    "meetingName": "平成26年第1回定例会",
     "dateIso": "2014-02-19",
     "date": "2014年2月19日",
     "dayLabel": "第1日目",
@@ -21,6 +22,7 @@
   {
     "id": "h26-20140220-honkaigi",
     "meetingId": "h26-1t",
+    "meetingName": "平成26年第1回定例会",
     "dateIso": "2014-02-20",
     "date": "2014年2月20日",
     "dayLabel": "第2日目",
@@ -33,6 +35,7 @@
   {
     "id": "h26-20140221-honkaigi",
     "meetingId": "h26-1t",
+    "meetingName": "平成26年第1回定例会",
     "dateIso": "2014-02-21",
     "date": "2014年2月21日",
     "dayLabel": "第3日目",
@@ -45,6 +48,7 @@
   {
     "id": "h26-20140306-honkaigi",
     "meetingId": "h26-1t",
+    "meetingName": "平成26年第1回定例会",
     "dateIso": "2014-03-06",
     "date": "2014年3月6日",
     "dayLabel": "第4日目",
@@ -57,6 +61,7 @@
   {
     "id": "h26-20140326-honkaigi",
     "meetingId": "h26-1t",
+    "meetingName": "平成26年第1回定例会",
     "dateIso": "2014-03-26",
     "date": "2014年3月26日",
     "dayLabel": "第5日目",
@@ -69,6 +74,7 @@
   {
     "id": "h26-20140527-honkaigi",
     "meetingId": "h26-1r",
+    "meetingName": "平成26年第1回臨時会",
     "dateIso": "2014-05-27",
     "date": "2014年5月27日",
     "dayLabel": "第1日目",
@@ -81,6 +87,7 @@
   {
     "id": "h26-20140626-honkaigi",
     "meetingId": "h26-2t",
+    "meetingName": "平成26年第2回定例会",
     "dateIso": "2014-06-26",
     "date": "2014年6月26日",
     "dayLabel": "第1日目",
@@ -93,6 +100,7 @@
   {
     "id": "h26-20140627-honkaigi",
     "meetingId": "h26-2t",
+    "meetingName": "平成26年第2回定例会",
     "dateIso": "2014-06-27",
     "date": "2014年6月27日",
     "dayLabel": "第2日目",
@@ -105,6 +113,7 @@
   {
     "id": "h26-20140709-honkaigi",
     "meetingId": "h26-2t",
+    "meetingName": "平成26年第2回定例会",
     "dateIso": "2014-07-09",
     "date": "2014年7月9日",
     "dayLabel": "第3日目",
@@ -117,6 +126,7 @@
   {
     "id": "h26-20141023-honkaigi",
     "meetingId": "h26-3t",
+    "meetingName": "平成26年第3回定例会",
     "dateIso": "2014-10-23",
     "date": "2014年10月23日",
     "dayLabel": "第1日目",
@@ -129,6 +139,7 @@
   {
     "id": "h26-20141024-honkaigi",
     "meetingId": "h26-3t",
+    "meetingName": "平成26年第3回定例会",
     "dateIso": "2014-10-24",
     "date": "2014年10月24日",
     "dayLabel": "第2日目",
@@ -141,6 +152,7 @@
   {
     "id": "h26-20141028-honkaigi",
     "meetingId": "h26-3t",
+    "meetingName": "平成26年第3回定例会",
     "dateIso": "2014-10-28",
     "date": "2014年10月28日",
     "dayLabel": "第3日目",
@@ -153,6 +165,7 @@
   {
     "id": "h26-20141121-honkaigi",
     "meetingId": "h26-3t",
+    "meetingName": "平成26年第3回定例会",
     "dateIso": "2014-11-21",
     "date": "2014年11月21日",
     "dayLabel": "第4日目",
@@ -165,6 +178,7 @@
   {
     "id": "h26-20141128-honkaigi",
     "meetingId": "h26-2r",
+    "meetingName": "平成26年第2回臨時会",
     "dateIso": "2014-11-28",
     "date": "2014年11月28日",
     "dayLabel": "第1日目",
@@ -177,6 +191,7 @@
   {
     "id": "h26-20141211-honkaigi",
     "meetingId": "h26-4t",
+    "meetingName": "平成26年第4回定例会",
     "dateIso": "2014-12-11",
     "date": "2014年12月11日",
     "dayLabel": "第1日目",
@@ -189,6 +204,7 @@
   {
     "id": "h26-20141212-honkaigi",
     "meetingId": "h26-4t",
+    "meetingName": "平成26年第4回定例会",
     "dateIso": "2014-12-12",
     "date": "2014年12月12日",
     "dayLabel": "第2日目",
@@ -201,6 +217,7 @@
   {
     "id": "h26-20141225-honkaigi",
     "meetingId": "h26-4t",
+    "meetingName": "平成26年第4回定例会",
     "dateIso": "2014-12-25",
     "date": "2014年12月25日",
     "dayLabel": "第3日目",
