@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-14T05:13:32.202448Z",
+  "generatedAt": "2026-08-14T07:56:37.629333Z",
   "items": [
     {
       "id": "e8f550dd815ed4f2a433",
@@ -50,6 +50,23 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-14T03:04:54.234228Z",
       "tags": [
         "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-08-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -535,23 +552,6 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-08-07T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "a7fed6a35ee8c79af854",
@@ -5520,7 +5520,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2505, column 15"
+      "message": "not well-formed (invalid token): line 2694, column 15"
     },
     {
       "source": "朝日新聞",
