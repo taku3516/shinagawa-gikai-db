@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "h24-20120525-honkaigi",
+    "meetingId": "h24-1r",
+    "dateIso": "2012-05-25",
+    "date": "2012年5月25日",
+    "dayLabel": "第1日目",
+    "title": "2012年5月25日 平成24年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=738#one",
+    "characters": 3468,
+    "voices": 27,
+    "hasFullText": true
+  },
+  {
     "id": "h24-20120621-honkaigi",
     "meetingId": "h24-2t",
     "dateIso": "2012-06-21",

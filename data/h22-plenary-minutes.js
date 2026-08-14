@@ -67,6 +67,30 @@
     "hasFullText": true
   },
   {
+    "id": "h22-20100331-honkaigi",
+    "meetingId": "h22-1r",
+    "dateIso": "2010-03-31",
+    "date": "2010年3月31日",
+    "dayLabel": "第1日目",
+    "title": "2010年3月31日 平成22年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=730#one",
+    "characters": 2957,
+    "voices": 14,
+    "hasFullText": true
+  },
+  {
+    "id": "h22-20100528-honkaigi",
+    "meetingId": "h22-2r",
+    "dateIso": "2010-05-28",
+    "date": "2010年5月28日",
+    "dayLabel": "第1日目",
+    "title": "2010年5月28日 平成22年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=732#one",
+    "characters": 3381,
+    "voices": 29,
+    "hasFullText": true
+  },
+  {
     "id": "h22-20100624-honkaigi",
     "meetingId": "h22-2t",
     "dateIso": "2010-06-24",
@@ -136,6 +160,18 @@
     "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=282#one",
     "characters": 26274,
     "voices": 70,
+    "hasFullText": true
+  },
+  {
+    "id": "h22-20101130-honkaigi",
+    "meetingId": "h22-3r",
+    "dateIso": "2010-11-30",
+    "date": "2010年11月30日",
+    "dayLabel": "第1日目",
+    "title": "2010年11月30日 平成22年_第３回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=734#one",
+    "characters": 3810,
+    "voices": 18,
     "hasFullText": true
   },
   {

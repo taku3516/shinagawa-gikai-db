@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "h17-20050527-honkaigi",
+    "meetingId": "h17-1r",
+    "dateIso": "2005-05-27",
+    "date": "2005年5月27日",
+    "dayLabel": "第1日目",
+    "title": "2005年5月27日 平成17年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=708#one",
+    "characters": 7907,
+    "voices": 79,
+    "hasFullText": true
+  },
+  {
     "id": "h17-20050622-honkaigi",
     "meetingId": "h17-2t",
     "dateIso": "2005-06-22",

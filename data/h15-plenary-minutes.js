@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "h15-20030523-honkaigi",
+    "meetingId": "h15-1r",
+    "dateIso": "2003-05-23",
+    "date": "2003年5月23日",
+    "dayLabel": "第1日目",
+    "title": "2003年5月23日 平成15年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=700#one",
+    "characters": 9813,
+    "voices": 81,
+    "hasFullText": true
+  },
+  {
     "id": "h15-20030626-honkaigi",
     "meetingId": "h15-2t",
     "dateIso": "2003-06-26",

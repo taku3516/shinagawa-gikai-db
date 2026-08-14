@@ -7,6 +7,30 @@
   // 本会議1日ぶんの見出し。全文は開いたときに data/minutes/ から読み込む。
   year.plenaryMinutes = [
   {
+    "id": "h18-20060117-honkaigi",
+    "meetingId": "h18-1r",
+    "dateIso": "2006-01-17",
+    "date": "2006年1月17日",
+    "dayLabel": "第1日目",
+    "title": "2006年1月17日 平成18年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=710#one",
+    "characters": 5424,
+    "voices": 26,
+    "hasFullText": true
+  },
+  {
+    "id": "h18-20060119-honkaigi",
+    "meetingId": "h18-1r",
+    "dateIso": "2006-01-19",
+    "date": "2006年1月19日",
+    "dayLabel": "第2日目",
+    "title": "2006年1月19日 平成18年_第１回臨時会（第２日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=712#one",
+    "characters": 14275,
+    "voices": 24,
+    "hasFullText": true
+  },
+  {
     "id": "h18-20060222-honkaigi",
     "meetingId": "h18-1t",
     "dateIso": "2006-02-22",
@@ -67,6 +91,18 @@
     "hasFullText": true
   },
   {
+    "id": "h18-20060530-honkaigi",
+    "meetingId": "h18-2r",
+    "dateIso": "2006-05-30",
+    "date": "2006年5月30日",
+    "dayLabel": "第1日目",
+    "title": "2006年5月30日 平成18年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=714#one",
+    "characters": 10653,
+    "voices": 77,
+    "hasFullText": true
+  },
+  {
     "id": "h18-20060622-honkaigi",
     "meetingId": "h18-2t",
     "dateIso": "2006-06-22",
@@ -112,6 +148,18 @@
     "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=154#one",
     "characters": 35242,
     "voices": 85,
+    "hasFullText": true
+  },
+  {
+    "id": "h18-20060905-honkaigi",
+    "meetingId": "h18-3r",
+    "dateIso": "2006-09-05",
+    "date": "2006年9月5日",
+    "dayLabel": "第1日目",
+    "title": "2006年9月5日 平成18年_第３回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=716#one",
+    "characters": 3267,
+    "voices": 21,
     "hasFullText": true
   },
   {

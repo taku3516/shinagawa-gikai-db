@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "h30-20180529-honkaigi",
+    "meetingId": "h30-1r",
+    "dateIso": "2018-05-29",
+    "date": "2018年5月29日",
+    "dayLabel": "第1日目",
+    "title": "2018年5月29日 平成30年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=754#one",
+    "characters": 15589,
+    "voices": 59,
+    "hasFullText": true
+  },
+  {
     "id": "h30-20180628-honkaigi",
     "meetingId": "h30-2t",
     "dateIso": "2018-06-28",
@@ -100,6 +112,18 @@
     "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=516#one",
     "characters": 34036,
     "voices": 96,
+    "hasFullText": true
+  },
+  {
+    "id": "h30-20180824-honkaigi",
+    "meetingId": "h30-2r",
+    "dateIso": "2018-08-24",
+    "date": "2018年8月24日",
+    "dayLabel": "第1日目",
+    "title": "2018年8月24日 平成30年_第２回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=756#one",
+    "characters": 13161,
+    "voices": 48,
     "hasFullText": true
   },
   {

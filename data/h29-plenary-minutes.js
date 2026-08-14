@@ -67,6 +67,18 @@
     "hasFullText": true
   },
   {
+    "id": "h29-20170526-honkaigi",
+    "meetingId": "h29-1r",
+    "dateIso": "2017-05-26",
+    "date": "2017年5月26日",
+    "dayLabel": "第1日目",
+    "title": "2017年5月26日 平成29年_第１回臨時会（第１日目）",
+    "sourceUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?Template=document&Id=752#one",
+    "characters": 9409,
+    "voices": 88,
+    "hasFullText": true
+  },
+  {
     "id": "h29-20170706-honkaigi",
     "meetingId": "h29-2t",
     "dateIso": "2017-07-06",
