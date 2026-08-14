@@ -809,6 +809,10 @@
     }
 
     function fullTextHtml(session, minutes) {
+      // 全文にするのは正式会議録だけ（prepare_committees.py）。formal でない
+      // ものは本来置かれず、CIの check_minutes_fulltext.py でも失敗する。
+      // ここで分けているのは、万一入り込んだときに「正式会議録の全文です」と
+      // 言い切らないための保険。
       const formal = minutes.sourceType === "formal";
       const link = (session.links || []).find((item) => /^https?:/.test(String(item.url)));
       const voices = (minutes.voices || []).map((voice) => `
@@ -822,7 +826,7 @@
         <p class="committee-fulltext__source">
           ${formal
             ? "品川区議会公式の<strong>正式会議録</strong>の全文です。"
-            : "公式の<strong>校正原稿PDF</strong>から文字を取り出したもので、正式な会議録ではありません。正式版の公開後に差し替えます。"}
+            : "<strong>正式な会議録ではありません。</strong>正式版の公開後に差し替えます。"}
           発言の表記は公式の記録のとおりで、本サイトでの要約・言い換えは行っていません。
           ${link ? `出典：<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>` : ""}
           （${esc(minutes.fetchedAt)}取得）。正確な内容は必ず公式の会議録をご確認ください。

@@ -91,13 +91,18 @@ def test_write_once() -> None:
               mf.read_minutes_file(path)["fetchedAt"] == "2027-01-01")
 
 
-def test_draft_to_formal() -> None:
-    """校正原稿から正式会議録へ差し替わる。"""
+def test_source_type_change_rewrites() -> None:
+    """出典の種類が変われば書き換える。
+
+    掲載する全文は正式会議録だけに絞っている（prepare_committees.py が
+    formal 以外を書かない）。ただし書き出し側は種類を見ないので、
+    校正原稿から正式会議録へ差し替わる場合に追随できることを確かめておく。
+    """
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
         mf.write_minutes_file(payload_for(sample_voices(), source_type="draft"), root)
         path = mf.minutes_path("r06-20240515-19", root)
-        check("校正原稿と分かる注記が入る", "校正原稿" in path.read_text(encoding="utf-8"))
+        check("正式でない旨の注記が入る", "正式会議録ではない" in path.read_text(encoding="utf-8"))
 
         wrote = mf.write_minutes_file(payload_for(sample_voices(), source_type="formal"), root)
         check("正式会議録が来たら書き換える", wrote is True)

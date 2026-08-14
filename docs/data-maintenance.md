@@ -34,7 +34,7 @@ python3 scripts/repair_qa_summaries.py --write  # 機械的に直せるものを
 python3 scripts/prepare_committees.py --year 2025
 ```
 
-これで抜粋（`data/<年>-committees-part-NN.js`）と会議録全文（`data/minutes/<年>/`）の両方を作り直します。
+これで抜粋（`data/<年>-committees-part-NN.js`）と会議録全文（`data/minutes/<年>/`）の両方を作り直します。全文を作るのは**正式会議録だけ**です。校正原稿PDFの会議は抜粋と公式PDFへのリンクのみになり、正式会議録が公開されてから作り直すと全文が付きます。
 
 抜き出し方だけを直していて、全文に触れたくないときは`--skip-fulltext`を付けます。
 

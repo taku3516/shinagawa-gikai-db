@@ -991,7 +991,14 @@ def process_document(document: dict, refresh: bool, write_fulltext: bool = True)
     date_label = f"{YEAR}年{int(iso_date[5:7])}月{int(iso_date[8:10])}日"
     # 全文は会議1件につき1ファイル。抜粋（索引層）と違って書き換えないので、
     # 抜き出し方を直して作り直しても差分が出ない（scripts/minutes_fulltext.py）。
-    if write_fulltext:
+    #
+    # 全文にするのは正式会議録だけ。校正原稿PDFは parse_pdf_voices が行の結合を
+    # 機械的にやっているため、抜粋では目立たない崩れが全文だと見える。加えて
+    # 校正原稿は正式版の公開後に公式サイトから消えるので、全文で残すと
+    # 「公式には存在しない版」が手元に残ることになる。
+    # 校正原稿の会議は抜粋と公式PDFへのリンクのみを載せ、正式会議録が公開
+    # されてから作り直すと全文が付く。
+    if write_fulltext and source_type == "formal":
         mf.write_minutes_file(mf.build_payload(
             session_id,
             date_iso=iso_date,

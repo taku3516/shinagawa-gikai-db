@@ -10,9 +10,9 @@
 1. `hasFullText` の会議に全文ファイルがある（逆に、余っている全文がない）
 2. 全文の字数が、抜粋側の `sourceMeta.characters` と一致する
 3. 抜粋の `voiceIndex` が、全文の同じ発言者を指している
-4. 発言者を取れていない発言が多すぎない（校正原稿PDFで崩れやすい）
+4. 発言者を取れていない発言が多すぎない（行の結合に失敗すると跳ね上がる）
 5. 1ファイルが大きすぎない（画面が開いたときに一度で読む単位）
-6. 校正原稿のまま残っている会議（正式版への差し替え漏れ）
+6. 全文が正式会議録のものだけになっている（校正原稿PDFは全文にしない）
 
     python3 scripts/check_minutes_fulltext.py
     python3 scripts/check_minutes_fulltext.py --year r06 --details
@@ -97,7 +97,6 @@ def main() -> int:
     problems: list[str] = []
     notes: list[str] = []
     stats = defaultdict(int)
-    drafts: list[str] = []
     by_year_total = defaultdict(int)
     by_year_full = defaultdict(int)
 
@@ -158,9 +157,13 @@ def main() -> int:
         if size > MAX_BYTES:
             problems.append(f"{session_id}: 全文ファイルが大きすぎます（{size:,}バイト）")
 
-        # 6. 校正原稿のまま残っているもの
+        # 6. 全文にしてよいのは正式会議録だけ。校正原稿PDFは行の結合が崩れる
+        #    うえ、正式版の公開後に公式サイトから消えるため全文では載せない
+        #    （prepare_committees.py の process_document）。
         if minutes.get("sourceType") != "formal":
-            drafts.append(f"{session_id} {minutes.get('dateIso')} {minutes.get('title')}")
+            problems.append(
+                f"{session_id}: 正式会議録でない全文が置かれています"
+                f"（sourceType={minutes.get('sourceType')}）")
 
     # 余っている全文（会議一覧から消えたのに残っている）
     years = {year for year, _ in sessions}
@@ -183,9 +186,6 @@ def main() -> int:
     if stats["voiceIndex無し"]:
         notes.append(f"voiceIndex を持たない質疑が{stats['voiceIndex無し']:,}件あります"
                      "（全文を入れる前に作った抜粋。作り直すと付きます）")
-    if drafts:
-        notes.append(f"校正原稿のままの全文が{len(drafts)}会議あります"
-                     "（正式会議録の公開後に作り直して差し替えてください）")
 
     if not args.year:
         print("\n  年別:")
@@ -194,9 +194,6 @@ def main() -> int:
 
     for note in notes:
         print(f"\n  ※ {note}")
-    if args.details and drafts:
-        for line in drafts[:args.limit]:
-            print(f"      - {line}")
 
     if problems:
         print(f"\n■ 要対応 {len(problems)}件")
