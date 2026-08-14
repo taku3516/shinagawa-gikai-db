@@ -295,7 +295,9 @@
     .committee-voice--member { border-left-color: var(--c-main); }
     .committee-voice__speaker { margin: 0 0 4px; color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
     .committee-voice__no { margin-right: 6px; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
+    /* 公式会議録の改行ごとに1段落。長い答弁でも読める間隔にする */
     .committee-voice__text { margin: 0; font-size: 14px; line-height: 1.9; }
+    .committee-voice__text + .committee-voice__text { margin-top: 8px; }
     .committee-voice:target { background: #fffbe6; }
     .committee-voice:target .committee-voice__speaker { text-decoration: underline; }
 
@@ -476,6 +478,12 @@
   <script>
     "use strict";
 
+    // アンカー付きで開かれたときは、位置合わせをこちらで持つ。全文の中の発言は
+    // 読み込むまでDOMに無く、ブラウザは移動先を見つけられないまま前回の位置を
+    // 復元する。こちらが合わせたあとに復元が来ると、別の場所へ飛ばされる。
+    // 復元より先に止める必要があるので、初期化を待たずここで切る。
+    if (location.hash && "scrollRestoration" in history) history.scrollRestoration = "manual";
+
     /* ---------- ユーティリティ ---------- */
 
     // HTMLエスケープ（データ由来の文字列は必ずこれを通す）
@@ -508,6 +516,14 @@
       if (meta.supplement && !db.loadedSupplements[meta.supplement]) {
         await loadScript(meta.supplement);
         db.loadedSupplements[meta.supplement] = true;
+      }
+
+      // 本会議の全文の目次。質問者から原文への入口もここで足すので、
+      // year.questions を差し替える -complete.js より後に読み込む。
+      db.loadedPlenaryMinutes = db.loadedPlenaryMinutes || {};
+      if (meta.plenaryMinutes && !db.loadedPlenaryMinutes[meta.id]) {
+        await loadScript(`data/${meta.id}-plenary-minutes.js`);
+        db.loadedPlenaryMinutes[meta.id] = true;
       }
 
       // 委員会データは容量が大きいため、対象年を選んだときだけ分割ファイルを読み込む。
@@ -769,7 +785,9 @@
             <h4>会議録からの要約</h4>
             ${qaSummaries}
           </div>
-          <p class="fine-print qa-summary-note">※質問・答弁の要点を本サイトで要約しています。正確な発言は公式の会議録をご確認ください。</p>` : ""}
+          <p class="fine-print qa-summary-note">※質問・答弁の要点を本サイトで要約しています。正確な発言は公式の会議録をご確認ください。${
+            q.fullText ? "下の「原文を読む」から、この議員の質問の全文へ移動できます。" : ""}</p>` : ""}
+            ${questionFullTextLinkHtml(q)}
             ${pillsHtml(q.links, site)}
           </div>
         </details>`;
@@ -787,8 +805,22 @@
       return `data/minutes/${sessionId.slice(0, 3)}/${sessionId}.js`;
     }
 
+    // 委員会と本会議で全文の仕組みは同じ。会議IDの末尾で見分ける
+    // （本会議は r06-20240220-honkaigi、委員会は r06-20240515-19）。
+    function fullTextKind(sessionId) {
+      return String(sessionId).endsWith("-honkaigi") ? "plenary" : "committee";
+    }
+
     function voiceAnchor(sessionId, voiceIndex) {
-      return `committee-${sessionId}-v${String(voiceIndex).padStart(4, "0")}`;
+      return `${fullTextKind(sessionId)}-${sessionId}-v${String(voiceIndex).padStart(4, "0")}`;
+    }
+
+    // 全文の開閉を持つ会議を、委員会・本会議のどちらからでも引く。
+    function fullTextSession(sessionId) {
+      const year = activeYear || {};
+      return (year.committeeSessions || []).find((item) => item.id === sessionId)
+        || (year.plenaryMinutes || []).find((item) => item.id === sessionId)
+        || null;
     }
 
     // 抜粋は原文の3割ほどで、答弁は文の途中で切れていることが多い。1手で
@@ -800,8 +832,28 @@
            data-voice-jump="${esc(session.id)}">原文を読む（発言 ${esc(item.voiceIndex)}）</a></p>`;
     }
 
+    // 発言本文は、公式会議録の改行を段落として持っている（scripts/minutes_fulltext.py
+    // の voice_paragraphs）。4,000字を超える答弁があるので、ここで段落に戻さないと
+    // 改行のない一続きになって読めない。
+    function voiceTextHtml(text) {
+      return String(text || "").split("\n").filter((line) => line.trim())
+        .map((line) => `<p class="committee-voice__text">${esc(line)}</p>`).join("");
+    }
+
+    // 委員会は sourceMeta に、本会議は目次（plenaryMinutes）に持っている。
+    // 本会議の質問者から原文へ。要約は見出しの言い換えになっているものが
+    // 多いので、その議員が質問を始めた発言へ直接飛ばす
+    // （位置は data/<年>-plenary-minutes.js が持っている）。
+    function questionFullTextLinkHtml(question) {
+      const start = question.fullText;
+      if (!start || !start.sessionId || !start.voiceIndex) return "";
+      return `<p class="committee-exchange__source">
+        <a href="#${esc(voiceAnchor(start.sessionId, start.voiceIndex))}"
+           data-voice-jump="${esc(start.sessionId)}">会議録の原文を読む（${esc(question.member)}議員の質問全文へ）</a></p>`;
+    }
+
     function fullTextSummaryLabel(session) {
-      const meta = session.sourceMeta || {};
+      const meta = session.sourceMeta || session;
       const parts = [];
       if (meta.voices) parts.push(`${meta.voices}発言`);
       if (meta.characters) parts.push(`約${Math.round(meta.characters / 1000)}千字`);
@@ -814,13 +866,14 @@
       // ここで分けているのは、万一入り込んだときに「正式会議録の全文です」と
       // 言い切らないための保険。
       const formal = minutes.sourceType === "formal";
-      const link = (session.links || []).find((item) => /^https?:/.test(String(item.url)));
+      // 出典は全文そのものが持っている（委員会・本会議で同じ形）。
+      const source = /^https?:/.test(String(minutes.sourceUrl)) ? minutes.sourceUrl : "";
       const voices = (minutes.voices || []).map((voice) => `
         <li class="committee-voice${voice.speaker ? " committee-voice--member" : ""}"
             id="${esc(voiceAnchor(session.id, voice.i))}">
           ${voice.speaker ? `<p class="committee-voice__speaker">
             <span class="committee-voice__no">${esc(voice.i)}</span>○${esc(voice.speaker)}</p>` : ""}
-          <p class="committee-voice__text">${esc(voice.text)}</p>
+          ${voiceTextHtml(voice.text)}
         </li>`).join("");
       return `
         <p class="committee-fulltext__source">
@@ -828,7 +881,7 @@
             ? "品川区議会公式の<strong>正式会議録</strong>の全文です。"
             : "<strong>正式な会議録ではありません。</strong>正式版の公開後に差し替えます。"}
           発言の表記は公式の記録のとおりで、本サイトでの要約・言い換えは行っていません。
-          ${link ? `出典：<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>` : ""}
+          ${source ? `出典：<a href="${esc(source)}" target="_blank" rel="noopener">公式の会議録を読む</a>` : ""}
           （${esc(minutes.fetchedAt)}取得）。正確な内容は必ず公式の会議録をご確認ください。
         </p>
         <ol class="committee-voices">${voices}</ol>`;
@@ -856,8 +909,7 @@
       const sessionId = details.dataset.fulltextFor;
       const box = details.querySelector("[data-fulltext]");
       if (!sessionId || !box) return;
-      const session = (activeYear && (activeYear.committeeSessions || [])
-        .find((item) => item.id === sessionId));
+      const session = fullTextSession(sessionId);
       if (!session) return;
       details.dataset.fullTextState = "loading";
       box.innerHTML = `<p class="committee-fulltext__state">会議録全文を読み込んでいます…</p>`;
@@ -870,39 +922,53 @@
       } catch (err) {
         // 開き直しで取り直せるよう、状態を戻してから知らせる
         details.dataset.fullTextState = "";
-        const link = (session.links || []).find((item) => /^https?:/.test(String(item.url)));
+        const url = session.sourceUrl
+          || ((session.links || []).find((item) => /^https?:/.test(String(item.url))) || {}).url;
         box.innerHTML = `<p class="committee-fulltext__state">会議録全文を読み込めませんでした。
-          もう一度開くと読み直します。${link
-            ? `<a href="${esc(link.url)}" target="_blank" rel="noopener">公式の会議録</a>もご利用ください。`
+          もう一度開くと読み直します。${url
+            ? `<a href="${esc(url)}" target="_blank" rel="noopener">公式の会議録</a>もご利用ください。`
             : ""}</p>`;
       }
     }
 
     // 全文を読み込んだうえで、その中の発言まで開く。抜粋からの「原文を読む」と
-    // 全文内アンカーの両方から呼ぶ。
+    // 全文内アンカーの両方から呼ぶ。委員会は会議の開閉を先に開く必要があるが、
+    // 本会議の全文は資料種別の節に直接置いてあるので、それが要らない。
     async function openFullText(sessionId) {
-      const session = document.getElementById(`committee-${sessionId}`);
-      if (!session) return null;
-      renderCommitteeSession(session);
-      session.open = true;
-      const details = document.getElementById(`committee-${sessionId}-full`);
+      if (fullTextKind(sessionId) === "committee") {
+        const session = document.getElementById(`committee-${sessionId}`);
+        if (!session) return null;
+        renderCommitteeSession(session);
+        session.open = true;
+      }
+      const details = document.getElementById(`${fullTextKind(sessionId)}-${sessionId}-full`);
       if (!details) return null;
       details.open = true;
       await renderFullText(details);
       return details;
     }
 
-    function fullTextDetailsHtml(session) {
+    function fullTextDetailsHtml(session, heading = "会議録全文") {
       if (!session.hasFullText) return "";
-      return `<details class="committee-fulltext" id="committee-${esc(session.id)}-full"
+      return `<details class="committee-fulltext" id="${esc(fullTextKind(session.id))}-${esc(session.id)}-full"
                        data-fulltext-for="${esc(session.id)}">
         <summary>
-          <span class="committee-topic__summary-main"><h4>会議録全文</h4></span>
+          <span class="committee-topic__summary-main"><h4>${esc(heading)}</h4></span>
           <span class="committee-topic__count">${esc(fullTextSummaryLabel(session))}</span>
           <span class="committee-toggle-icon" aria-hidden="true"></span>
         </summary>
         <div class="committee-fulltext__content" data-fulltext></div>
       </details>`;
+    }
+
+    // 本会議の全文。1日ぶんずつの開閉にする（1日6万字あるので、定例会の
+    // 全日をまとめて開くと重い）。
+    function plenaryFullTextHtml(days) {
+      return `<div class="committee-topics">${days.map((day) =>
+        fullTextDetailsHtml(day, `${day.date}${day.dayLabel ? `（${day.dayLabel}）` : ""}`)
+      ).join("")}</div>
+      <p class="fine-print qa-summary-note">※品川区議会公式の正式会議録をそのまま掲載しています（本サイトによる要約・言い換えはありません）。
+        各質問者の「原文を読む」から、その議員が質問を始めた発言へ移動できます。</p>`;
     }
 
     // 初期DOMを軽くするため、会議見出しだけを先に描画し、開いた会議の中身だけを生成する。
@@ -1042,6 +1108,21 @@
         });
       }
 
+      // 本会議の会議録全文（開催日ごと）
+      const plenaryDays = (year.plenaryMinutes || [])
+        .filter((day) => day.meetingId === meeting.id && day.hasFullText);
+      if (plenaryDays.length > 0) {
+        const characters = plenaryDays.reduce((total, day) => total + (day.characters || 0), 0);
+        html += recordSectionHtml({
+          id: `plenary-${meeting.id}-fulltext`,
+          title: "本会議の会議録全文",
+          lead: "公式の正式会議録を、開催日ごとに全文そのまま掲載しています。質問・答弁の要約では拾いきれない部分は、こちらでお読みください。",
+          countLabel: `${plenaryDays.length}日・約${Math.round(characters / 10000)}万字`,
+          content: plenaryFullTextHtml(plenaryDays),
+          open: false
+        });
+      }
+
       // 代表質問・一般質問
       if (questions.length > 0) {
         const sec = meeting.questionsSection || {};
@@ -1166,7 +1247,7 @@
     }
 
     function hashBelongsToYear(hashId, yearId) {
-      return ["meeting", "question", "committee", "bills", "petitions"]
+      return ["meeting", "question", "committee", "plenary", "bills", "petitions"]
         .some((prefix) => hashId.startsWith(`${prefix}-${yearId}-`));
     }
 
@@ -1191,6 +1272,16 @@
           target = document.getElementById(hashId);
         }
       }
+      // 本会議の全文の中の発言（plenary-<会議ID>-v0008）も同じ。開閉そのものは
+      // 資料種別の節に最初から置いてあるので、読み込みだけ待てばよい。
+      if (!target && hashId.startsWith("plenary-") && activeYear) {
+        const day = (activeYear.plenaryMinutes || []).find((item) =>
+          hashId.startsWith(`plenary-${item.id}-`));
+        if (day) {
+          await openFullText(day.id);
+          target = document.getElementById(hashId);
+        }
+      }
       if (!target) return false;
       if (target.matches("details")) target.open = true;
       let ancestor = target.parentElement && target.parentElement.closest("details");
@@ -1199,8 +1290,36 @@
         ancestor = ancestor.parentElement && ancestor.parentElement.closest("details");
       }
       updateAccordionControls();
-      if (shouldScroll) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+      if (shouldScroll) scrollToAnchor(target);
       return true;
+    }
+
+    // 発言のアンカー（committee-<会議ID>-v0047）は全文を読み込むまでDOMに無い。
+    // 読み込みは非同期なので、位置を合わせた直後にブラウザ側の読み込みが終わって
+    // 先頭へ戻されることがある（移動先を見つけられないまま復元がかかる）。
+    // 実際、同じアンカーでも合う回と合わない回があった。
+    //
+    // 合わせ直すのはずれているときだけで、利用者が自分で動かしたらそこでやめる。
+    function scrollToAnchor(target) {
+      let cancelled = false;
+      // 利用者が自分で動かしたら、そこで見張りをやめる
+      const stop = () => { cancelled = true; };
+      for (const type of ["wheel", "touchstart", "keydown"]) {
+        window.addEventListener(type, stop, { once: true, passive: true });
+      }
+      // ずれているときだけ動かす。位置が合ったあとでも、上にある開閉の中身が
+      // 描かれて数万px ずれることがあるので、5秒のあいだ見張り続ける。
+      // 1回合わせて終わりにすると、合う回と合わない回が出る。
+      const tick = (remaining) => {
+        if (cancelled || remaining <= 0) return;
+        if (Math.abs(target.getBoundingClientRect().top) >= 4) {
+          target.scrollIntoView({ block: "start" });
+        }
+        setTimeout(() => tick(remaining - 1), 120);
+      };
+      // requestAnimationFrame は使わない。裏に回っているタブでは発火しないので、
+      // 別タブで開いたリンクが位置合わせされないまま残る。
+      setTimeout(() => tick(40), 0);
     }
 
     function setupAccordions() {

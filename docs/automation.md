@@ -9,6 +9,7 @@
 | GitHub Pagesへ公開 | `.github/workflows/pages.yml` | `main`へのpush、手動 | 静的サイトをGitHub Pagesへ公開 |
 | 公開設定の秘密情報チェック | `.github/workflows/check-public-config.yml` | push、pull request | 公開ファイルへ秘密情報が混入していないか検査 |
 | 質問・答弁要約を検査 | `.github/workflows/check-qa-summaries.yml` | 関連ファイルのpush、pull request、手動 | 要約の欠落や機械的な品質問題、会議録全文との整合を検査 |
+| 本会議の会議録全文を作る | `.github/workflows/rebuild-plenary-fulltext.yml` | 手動 | 指定した年の本会議の全文と、質問者から原文への入口を作成 |
 | 品川区ニュースを収集 | `.github/workflows/collect-news.yml` | 3時間ごと、手動 | ニュースを収集し、変更がある場合だけ保存 |
 | 請願・陳情を収集 | `.github/workflows/collect-petitions.yml` | 毎週月曜、手動 | 公式ページから審議状況を取得して台帳を更新 |
 | 町会・自治会区域データを更新 | `.github/workflows/update-chokai.yml` | 毎週月曜、手動 | 町会一覧、境界、プロフィール、KMLを更新 |
@@ -43,13 +44,21 @@ GitHub Actionsの混雑を避けるため、ニュースと町会データは毎
 
 「本会議の質問・答弁を会議録から作り直す」では、平成の年数を指定します。例えば平成28年は`28`です。
 
+### 本会議の会議録全文
+
+「本会議の会議録全文を作る」では、対象年を`2024`、`r06`、`令和6`、`h30`、`平成30`などで指定します。1回の実行で1年分（本会議18日程度）です。
+
+このワークフローは全文と入口だけを作り、**本会議の質問・答弁要約には触れません**。要約はリポジトリに入っていないキューから作っているため、ここで作り直すと人手で確かめた要約まで壊れます。
+
 ## 更新の保存
 
 生成に時間がかかる間に`main`が進んでも成果を失わないよう、自動更新の保存は`scripts/commit_data_update.sh`へ集約しています。pushが拒否された場合は最新の`main`を取り直し、生成物を積み直してから再度保存します。
 
 データや要約スクリプトを変更すると、`.github/workflows/check-qa-summaries.yml`が要約を検査します。文の途中で切れている、答弁が古い文言のまま、といった機械的に直せる問題がある場合は失敗します。会議録からの再取得が必要な項目は件数を表示し、再生成を進めながら減らします。
 
-同じワークフローで`scripts/check_minutes_fulltext.py`が会議録全文も検査します。抜粋と全文は別ファイルなので、片方だけ作り直したまま気づかない、という壊れ方をします。字数の食い違い、`voiceIndex`が指す発言者の食い違い、全文の取りこぼしや余りがあると失敗します。
+同じワークフローで`scripts/check_minutes_fulltext.py`が会議録全文も検査します。抜粋・要約と全文は別ファイルなので、片方だけ作り直したまま気づかない、という壊れ方をします。字数の食い違い、`voiceIndex`（本会議は質問者の入口）が指す発言の食い違い、全文の取りこぼしや余りがあると失敗します。
+
+あわせて`scripts/test_minutes_fulltext.py`と`scripts/test_plenary_fulltext.py`が、会議録なしで生成経路を通します。
 
 ## ニュース同期の公開設定
 

@@ -113,6 +113,7 @@ window.SHINAGAWA_DB.site = {
       "file": "data/r07.js",
       "supplement": "data/r07-complete.js",
       "committees": true,
+      "plenaryMinutes": true,
       "available": true
     },
     {
@@ -121,6 +122,7 @@ window.SHINAGAWA_DB.site = {
       "file": "data/r06.js",
       "supplement": "data/r06-complete.js",
       "committees": true,
+      "plenaryMinutes": true,
       "available": true
     },
     {
@@ -129,6 +131,7 @@ window.SHINAGAWA_DB.site = {
       "file": "data/r05.js",
       "supplement": "data/r05-complete.js",
       "committees": true,
+      "plenaryMinutes": true,
       "available": true
     },
     {
@@ -137,6 +140,7 @@ window.SHINAGAWA_DB.site = {
       "file": "data/r04.js",
       "supplement": "data/r04-complete.js",
       "committees": true,
+      "plenaryMinutes": true,
       "available": true
     },
     {
@@ -145,7 +149,8 @@ window.SHINAGAWA_DB.site = {
       "file": "data/r03.js",
       "supplement": "data/r03-complete.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "r02",

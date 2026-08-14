@@ -52,6 +52,16 @@ ESCAPED_PS = "\\u2029"
 # ので、全文ファイルのパスを索引層に持たせる必要がない。
 SESSION_ID = re.compile(r"^(?P<year>[hr]\d{2})-\d{8}-.+$")
 
+# 発言本文の段落の区切り。空白ではなく改行で持つ（voice_paragraphs の説明）。
+PARAGRAPH_SEPARATOR = "\n"
+
+# 発言者ラベルの頭に付く丸印。全角・半角の両方が混在する。
+NAME_MARK = r"[○◯]"
+
+# 本会議の会議IDの末尾（r06-20240220-honkaigi）。委員会は会議室番号が入るので、
+# これで見分けられる。画面側（kaigiroku.html の fullTextKind）も同じ決まり。
+PLENARY_SUFFIX = "-honkaigi"
+
 # 比較に使う項目。fetchedAt は入れない（理由はモジュールの説明にある）。
 CONTENT_KEYS = ("id", "dateIso", "title", "sourceType", "sourceUrl", "characters", "voices")
 
@@ -74,6 +84,88 @@ def minutes_href(session_id: str) -> str:
     return f"data/minutes/{year_id_of(session_id)}/{session_id}.js"
 
 
+# 会議録検索システムのURLは `index.php/<数字>?Template=document&Id=2980` の形で、
+# 先頭の数字が取得のたびに変わる（同じ会議でも 965719 / 877121 のように別の値が
+# 返る）。中身は同じで、この数字を 100000 に固定しても同じ会議録が開く。
+SOURCE_PATH = re.compile(r"(kaigiroku\.city\.shinagawa\.tokyo\.jp/index\.php/)\d+")
+STABLE_PATH_ID = "100000"
+
+
+def canonical_source_url(url: str) -> str:
+    """会議録のURLから、取得のたびに変わる番号を落とす。
+
+    ここを素通しにすると、取得し直すたびに全文の `sourceUrl` が変わって
+    write-once が崩れ、3,300ファイルすべてが差分になる（Gitの履歴が一度で
+    数百MB増える）。索引層のリンクと取得キャッシュのキーも同じ理由で揺れる
+    ので、取得する前の段階で固定する。
+    """
+    return SOURCE_PATH.sub(rf"\g<1>{STABLE_PATH_ID}", url or "")
+
+
+def normalized_name(value: str) -> str:
+    """発言者名を照合用に均す。丸印・空白・コロンを落とす。"""
+    return re.sub(r"[\s　○◯]", "", value or "").strip("：:")
+
+
+def _label_pattern(speaker: str) -> re.Pattern | None:
+    """発言本文の先頭に置かれた発言者ラベルを見つけるための照合を作る。
+
+    公式のHTMLでは、名前と本文の間に全角空白が入ったり入らなかったりする。
+    名前の1文字ずつの間に空白を許して照合する。
+    """
+    key = normalized_name(speaker)
+    if not key:
+        return None
+    return re.compile(rf"^{NAME_MARK}?\s*" + r"\s*".join(map(re.escape, key)) + r"\s*")
+
+
+def drop_speaker_label(lines: list[str], speaker: str) -> list[str]:
+    """発言の頭に置かれた発言者ラベル（「◯石田委員長」）を落とす。
+
+    発言者は `speaker` として別に持っているので、本文に重ねて残す意味がない。
+    ラベルだけの行なら行ごと落とし、同じ行に本文が続くならラベルだけを削る。
+
+    開議時刻や議題の見出し（「○午前１０時００分開会」）がラベルより前に
+    来ることがあるため、先頭3行までを見る。それより後ろの同名は本文中の
+    言及とみなして触らない。
+    """
+    pattern = _label_pattern(speaker)
+    if not pattern:
+        return lines
+    result = list(lines)
+    for index, line in enumerate(result[:3]):
+        match = pattern.match(line)
+        if not match:
+            continue
+        rest = line[match.end():].strip()
+        if rest:
+            result[index] = rest
+        else:
+            del result[index]
+        break
+    return result
+
+
+def voice_paragraphs(node, speaker: str = "") -> list[str]:
+    """1発言のHTMLから、公式会議録の改行どおりの段落を取り出す。
+
+    会議録検索システムは1発言を `<p class="voice__text">` に入れ、段落の
+    区切りを `<br>` で表している。ここを空白でつぶすと、4,000字を超える
+    答弁が改行のない一続きになって読めない。要約が読みにくいから全文を
+    載せるのに、全文が読めなければ意味がないので、区切りを段落として残す。
+
+    引数は BeautifulSoup のノード。`<br>` を改行に置き換えてから取り出す
+    ので、行の途中に別のタグが入っていても切れない。
+    """
+    for line_break in node.find_all("br"):
+        line_break.replace_with(PARAGRAPH_SEPARATOR)
+    lines = [
+        re.sub(r"\s+", " ", line).strip()
+        for line in node.get_text("").split(PARAGRAPH_SEPARATOR)
+    ]
+    return drop_speaker_label([line for line in lines if line], speaker)
+
+
 def build_payload(
     session_id: str,
     *,
@@ -86,13 +178,22 @@ def build_payload(
 ) -> dict:
     """全文ファイルに書く内容を組み立てる。
 
-    `voices` は [{"speaker": ..., "text": ...}] の並び。発言の連番 `i` は、
-    空の発言を飛ばす前の位置で1から振る。抜粋側の `voiceIndex` が同じ数え方
-    をしているので、ここを変えると抜粋から全文へのリンクがずれる。
+    `voices` は [{"speaker": ..., "text": ..., "lines": [...]}] の並び。
+    `lines` があればそれを段落として改行で綴じる。無ければ `text` をその
+    まま使う（校正原稿PDFなど、段落を取り出せない経路）。
+
+    段落の区切りを改行1文字で持つので、字数は空白で綴じたときと変わらない。
+    索引層の `sourceMeta.characters` と突き合わせる検査（check_minutes_
+    fulltext.py）が、ここを変えても通り続けるのはそのため。
+
+    発言の連番 `i` は、空の発言を飛ばす前の位置で1から振る。抜粋側の
+    `voiceIndex` が同じ数え方をしているので、ここを変えると抜粋から全文への
+    リンクがずれる。
     """
     numbered = []
     for index, voice in enumerate(voices, start=1):
-        text = (voice.get("text") or "").strip()
+        lines = [line for line in (voice.get("lines") or []) if line.strip()]
+        text = (PARAGRAPH_SEPARATOR.join(lines) if lines else (voice.get("text") or "")).strip()
         if not text:
             continue
         numbered.append({
@@ -174,17 +275,30 @@ def write_minutes_file(payload: dict, root: Path | None = None) -> bool:
     return True
 
 
-def prune_missing(session_ids: set[str], year_id: str, root: Path | None = None) -> list[str]:
+def is_plenary(session_id: str) -> bool:
+    """本会議の会議IDか。委員会は末尾が会議室番号（r06-20240515-19）。"""
+    return str(session_id).endswith(PLENARY_SUFFIX)
+
+
+def prune_missing(
+    session_ids: set[str], year_id: str, root: Path | None = None, *, plenary: bool = False,
+) -> list[str]:
     """その年の全文のうち、会議一覧から消えたものを削除する。
 
     会議録検索システム側で会議の区分が変わると、古い会議IDのファイルが
     残ってしまう。年単位で作り直すときに掃除する。
+
+    **委員会と本会議の全文は同じ年ディレクトリに混ざっている。** 呼んだ側が
+    持っている分だけを見る（`plenary` で切り替える）。ここを分けないと、
+    委員会を作り直すたびにその年の本会議の全文が消える。
     """
     directory = (root or MINUTES_ROOT) / year_id
     if not directory.exists():
         return []
     removed = []
     for path in sorted(directory.glob("*.js")):
+        if is_plenary(path.stem) != plenary:
+            continue
         if path.stem not in session_ids:
             path.unlink()
             removed.append(path.stem)

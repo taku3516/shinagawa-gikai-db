@@ -27,6 +27,8 @@ on:
       - "scripts/minutes_fulltext.py"
       - "scripts/check_minutes_fulltext.py"
       - "scripts/test_minutes_fulltext.py"
+      - "scripts/prepare_plenary_fulltext.py"
+      - "scripts/test_plenary_fulltext.py"
       - ".github/workflows/check-qa-summaries.yml"
   pull_request:
     paths:
@@ -40,6 +42,8 @@ on:
       - "scripts/minutes_fulltext.py"
       - "scripts/check_minutes_fulltext.py"
       - "scripts/test_minutes_fulltext.py"
+      - "scripts/prepare_plenary_fulltext.py"
+      - "scripts/test_plenary_fulltext.py"
   workflow_dispatch:
 
 permissions:
@@ -72,6 +76,11 @@ jobs:
         # 会議録なしで動く。書き換えないこと（write-once）と、抜粋の
         # voiceIndex が全文の同じ発言を指すことを見る
         run: python scripts/test_minutes_fulltext.py
+
+      - name: 本会議の全文づくりを試す
+        # 会議録なしで動く。会議録の表題から会議IDを導けること、発言が段落に
+        # 分かれること、質問者の入口がその議員の質問を指すことを見る
+        run: python scripts/test_plenary_fulltext.py
 
       - name: 要約を検査する
         run: python scripts/check_qa_summaries.py --by-year --details --limit 3

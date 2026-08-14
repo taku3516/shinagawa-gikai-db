@@ -44,7 +44,19 @@ python3 scripts/prepare_committees.py --year 2025 --skip-fulltext
 
 全文ファイルは中身が変わらない限り書き換えません。抜き出し方を直して26年分を作り直しても、全文には差分が出ない設計です（[会議録全文の掲載設計](fulltext-minutes-plan.md)）。逆に「全文だけ作り直す」指定は用意していません。全文を足すときは抜粋側にも`hasFullText`と`voiceIndex`が要るためです。
 
-生成したら、抜粋と全文が噛み合っているかを検査します。
+### 本会議の会議録全文
+
+本会議の全文は、委員会とは別のスクリプトで作ります。
+
+```bash
+python3 scripts/prepare_plenary_fulltext.py --year r06
+```
+
+これで全文（`data/minutes/<年>/<年>-YYYYMMDD-honkaigi.js`）と、質問者から原文への入口（`data/<年>-plenary-minutes.js`）を作り、`data/site.js`の`plenaryMinutes`を立てます。
+
+**本会議の質問・答弁要約は作り直しません。** 要約は`scripts/out/history/qa_queue.json`から作っており、そこはリポジトリに入っていないため、ここで作り直すと人手で確かめた要約まで壊れます。全文への入口だけを重ねる形にしているのはこのためです（[会議録全文の掲載設計](fulltext-minutes-plan.md)）。
+
+生成したら、抜粋・要約と全文が噛み合っているかを検査します。委員会と本会議の両方を見ます。
 
 ```bash
 python3 scripts/check_minutes_fulltext.py --year 2025 --details
