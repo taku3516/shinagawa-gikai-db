@@ -150,6 +150,29 @@ def test_voice_index_matches() -> None:
               f"{item['question'][:30]} / {voice and voice['text'][:40]}")
 
 
+def test_source_url_is_stable() -> None:
+    """会議録のURLから、取得のたびに変わる番号を落とす。
+
+    ここを素通しにすると、同じ会議録を取り直すだけで全文の `sourceUrl` が
+    変わり、write-once が崩れて3,300ファイルすべてが差分になる。
+    """
+    base = "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/"
+    first = mf.canonical_source_url(f"{base}965719?Template=document&Id=2980#one")
+    second = mf.canonical_source_url(f"{base}877121?Template=document&Id=2980#one")
+    check("番号が違っても同じURLになる", first == second, f"{first} / {second}")
+    check("会議の指定は残る", first.endswith("?Template=document&Id=2980#one"), first)
+    # 校正原稿PDFは別のホスト。触らない
+    pdf = "https://gikai.city.shinagawa.tokyo.jp/wp-content/uploads/2026.01.22a.pdf"
+    check("PDFのURLは変えない", mf.canonical_source_url(pdf) == pdf)
+
+    # 出典URLが変われば書き換える（正規化しても変わるときは本当に別の会議録）
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        mf.write_minutes_file(payload_for(sample_voices(), source_url=first), root)
+        again = mf.write_minutes_file(payload_for(sample_voices(), source_url=first), root)
+        check("同じ出典URLなら書き換えない", again is False)
+
+
 def test_paths_and_prune() -> None:
     """パスの導出と、会議一覧から消えた全文の掃除。"""
     check("画面用のパスを導ける",
@@ -164,11 +187,78 @@ def test_paths_and_prune() -> None:
 
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
-        for session_id in ("r06-20240515-19", "r06-20240517-5"):
+        for session_id in ("r06-20240515-19", "r06-20240517-5", "r06-20240220-honkaigi"):
             mf.write_minutes_file(payload_for(sample_voices()) | {"id": session_id}, root)
         removed = mf.prune_missing({"r06-20240515-19"}, "r06", root)
         check("一覧から消えた全文を削除する", removed == ["r06-20240517-5"], str(removed))
         check("残すものは消さない", mf.minutes_path("r06-20240515-19", root).exists())
+        # 委員会と本会議の全文は同じ年ディレクトリに混ざっている。ここを分けないと、
+        # 委員会を作り直すたびにその年の本会議の全文が消える（実際に消えた）。
+        check("委員会の掃除で本会議の全文を消さない",
+              mf.minutes_path("r06-20240220-honkaigi", root).exists())
+
+        removed = mf.prune_missing(set(), "r06", root, plenary=True)
+        check("本会議の掃除は本会議だけを見る", removed == ["r06-20240220-honkaigi"], str(removed))
+        check("本会議の掃除で委員会の全文を消さない",
+              mf.minutes_path("r06-20240515-19", root).exists())
+
+
+def official_minutes_html(voices: list[dict]) -> bytes:
+    """会議録検索システムの実際の形。本文が `.voice__text` に入り、段落が `<br>`。
+
+    `minutes_html` は入れ物の無い古い形。両方を通す。
+    """
+    items, texts = [], []
+    for index, voice in enumerate(voices, start=1):
+        items.append(
+            f'<li class="voicelist__item" data-voice_code="v{index}">'
+            f'<span class="speaker__name">◯{voice["speaker"]}</span></li>')
+        # 1発言が「発言者ラベル → 段落 → 段落 …」の並びになる。開会の発言だけ
+        # 時刻の見出しがラベルより前に来る（公式のHTMLがそうなっている）。
+        lines = [f'◯{voice["speaker"]}'] + voice["text"].split("。")[:-1]
+        lines = [f"{line}。" if not line.startswith("◯") else line for line in lines]
+        if index == 1:
+            lines.insert(0, "○午後 １時００分開会")
+        texts.append(
+            f'<div class="voice voice-text" data-voice_code="v{index}">'
+            f'<div class="voice__detail">{index}:</div>'
+            f'<p class="voice__text">{"<br />".join(lines)}<br /></p></div>')
+    return (
+        "<html><body><ul>" + "".join(items) + "</ul>" + "".join(texts) +
+        "<p>○午後 ３時０２分閉会</p></body></html>"
+    ).encode("utf-8")
+
+
+def test_paragraphs_are_kept() -> None:
+    """公式会議録の改行を段落として残し、発言者ラベルは本文に残さない。"""
+    voices = sample_voices()
+    parsed, _ = pc.parse_html_voices(official_minutes_html(voices))
+    check("発言の数が合う", len(parsed) == len(voices), f"{len(parsed)} / {len(voices)}")
+
+    third = parsed[2]
+    check("段落に分かれている", len(third["lines"]) >= 1, str(third["lines"]))
+    check("発言者ラベルを本文に残さない",
+          not any(line.startswith("◯のだて委員") for line in third["lines"]),
+          str(third["lines"]))
+    check("抜粋に渡す本文は空白で綴じる", "\n" not in third["text"], repr(third["text"][:40]))
+
+    # 開会の発言は、時刻の見出しが発言者ラベルより前に来る。見出しは残し、
+    # ラベルだけを落とす（以前の正規表現は逆に見出しのほうを削っていた）。
+    first = parsed[0]
+    check("開会時刻の見出しは残る", first["lines"][0].startswith("○午後"), str(first["lines"][:2]))
+    check("見出しの後ろのラベルも落とす",
+          not any(line.startswith("◯石田委員長") for line in first["lines"]),
+          str(first["lines"]))
+
+    payload = payload_for(parsed)
+    stored = payload["voices"][2]
+    check("全文は改行で段落を持つ",
+          stored["text"] == "\n".join(third["lines"]), repr(stored["text"][:60]))
+    # 索引層の sourceMeta.characters と突き合わせる検査が通り続けるかどうか。
+    # 区切りが空白1文字から改行1文字に変わるだけなので、字数は動かない。
+    check("字数は空白で綴じたときと変わらない",
+          payload["characters"] == sum(len(voice["text"]) for voice in parsed),
+          f'{payload["characters"]} / {sum(len(v["text"]) for v in parsed)}')
 
 
 def minutes_html(voices: list[dict]) -> bytes:

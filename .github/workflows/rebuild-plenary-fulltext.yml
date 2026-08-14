@@ -1,0 +1,93 @@
+name: 本会議の会議録全文を作る
+
+# 会議録検索システムから、指定した年の本会議（定例会・臨時会）の全文を取得して
+# data/minutes/<年>/<会議ID>.js へ書き出し、質問者から原文への入口
+# （data/<年>-plenary-minutes.js）を作り直す。開発環境から会議録へ到達できない
+# 場合があるため、取得はここで行う。
+#
+# 本会議の質問・答弁要約は触らない。要約は scripts/out/history/qa_queue.json から
+# 作っており、そこはリポジトリに入っていないため、ここで作り直すと人手で確かめた
+# 要約まで壊れる（docs/fulltext-minutes-plan.md）。
+#
+# 1回の実行で1年分（本会議18日程度）。委員会に比べれば軽いが、年をまたいで
+# まとめて実行はしない。
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "作る年（2024 / r06 / 令和6 / h30 / 平成30。数字だけの和暦は不可）"
+        required: true
+        type: string
+      refresh:
+        description: "取得済みの会議録を使わず取り直す"
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-shinagawa-plenary
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v6
+        with:
+          # push が競合したときに rebase できるよう、履歴ごと取得する
+          fetch-depth: 0
+          # 会議録全文を入れると履歴の中身が数百MB規模になる。過去のファイル
+          # 本体はここでは要らないので、必要になった時点で取りに行かせる。
+          filter: blob:none
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: 必要なものを入れる
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements-history.txt
+
+      - name: 取得済みの会議録を持ち越す
+        # scripts/cache は .gitignore しているため、何もしないと実行のたびに
+        # 会議録を取り直す。prepare_plenary_fulltext.py はキャッシュがあれば
+        # 取得も待機も飛ばす。
+        uses: actions/cache/restore@v4
+        with:
+          path: scripts/cache
+          key: plenary-${{ inputs.year }}-${{ github.run_id }}
+          restore-keys: |
+            plenary-${{ inputs.year }}-
+
+      - name: 本会議の全文を作る
+        run: |
+          python scripts/prepare_plenary_fulltext.py --year "${{ inputs.year }}" \
+            ${{ inputs.refresh && '--refresh' || '' }}
+
+      - name: 取得した会議録を残す
+        # 生成や検査で止まってもここまで来る（always）。失敗のたびに取り直すと、
+        # 直しを試すのに毎回取得時間を待つことになる。
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: scripts/cache
+          key: plenary-${{ inputs.year }}-${{ github.run_id }}
+
+      - name: 会議録全文を検査する
+        # 字数の一致、質問者の入口が指す発言、取りこぼし、余りを見る。
+        # 保存する前に確かめる。
+        run: |
+          python scripts/check_minutes_fulltext.py --year "${{ inputs.year }}" --details
+
+      - name: 更新があれば保存
+        run: |
+          scripts/commit_data_update.sh \
+            "${{ inputs.year }}年の本会議の会議録全文を追加" \
+            data/

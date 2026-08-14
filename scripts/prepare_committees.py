@@ -294,7 +294,11 @@ def discover_formal(refresh: bool) -> list[dict]:
                     continue
                 documents.append({
                     "sourceType": "formal", "committee": committee, "cabinet": cabinet,
-                    "dateIso": iso_date, "url": absolute_url(anchor.get("href", "")),
+                    "dateIso": iso_date,
+                    # 取得のたびに変わる番号を落としてから使う。ここを素通しに
+                    # すると、取得キャッシュが毎回外れ、索引層のリンクと全文の
+                    # 出典URLが揺れて write-once が崩れる（minutes_fulltext.py）。
+                    "url": mf.canonical_source_url(absolute_url(anchor.get("href", ""))),
                     "listUrl": url, "title": compact(anchor.get_text(" ", strip=True)),
                 })
     return documents
@@ -360,11 +364,22 @@ def parse_html_voices(raw: bytes) -> tuple[list[dict], str]:
             speakers[item.get("data-voice_code", "")] = normalize_name(name.get_text(" ", strip=True))
     voices = []
     for node in soup.select(".voice-text[data-voice_code], .voice_text[data-voice_code]"):
-        text = compact(node.get_text(" ", strip=True))
+        code = node.get("data-voice_code", "")
+        speaker = speakers.get(code, "")
+        # 本文は <p class="voice__text"> に入っていて、段落の区切りが <br>
+        # で表されている。全文はこの区切りを段落として残す（空白でつぶすと
+        # 4,000字の答弁が一続きになって読めない）。抜粋づくりに渡す text は
+        # これまでどおり空白で綴じたものにして、抜き出し方を変えない。
+        body = node.select_one(".voice__text")
+        if body is not None:
+            lines = mf.voice_paragraphs(body, speaker)
+        else:
+            # 本文の入れ物が無いHTML。これまでどおりノード全体から取り、
+            # 先頭に残る連番と発言者ラベルを落とす。
+            lines = [strip_voice_label(compact(node.get_text(" ", strip=True)))]
+        text = " ".join(line for line in lines if line).strip()
         if text:
-            code = node.get("data-voice_code", "")
-            text = strip_voice_label(text)
-            voices.append({"speaker": speakers.get(code, ""), "text": text})
+            voices.append({"speaker": speaker, "text": text, "lines": lines})
     full_text = compact(soup.get_text(" ", strip=True))
     time_marks = re.findall(
         r"[○◯]?\s*(午[前後]\s*[０-９\d]{1,2}時[０-９\d]{1,2}分)\s*(開会|閉会)",
