@@ -171,6 +171,94 @@ def test_paths_and_prune() -> None:
         check("残すものは消さない", mf.minutes_path("r06-20240515-19", root).exists())
 
 
+def minutes_html(voices: list[dict]) -> bytes:
+    """会議録検索システムのHTMLに似せたもの。`parse_html_voices` が読む形。"""
+    items, texts = [], []
+    for index, voice in enumerate(voices, start=1):
+        items.append(
+            f'<li class="voicelist__item" data-voice_code="v{index}">'
+            f'<span class="speaker__name">{voice["speaker"]}</span></li>')
+        texts.append(
+            f'<div class="voice-text" data-voice_code="v{index}">'
+            f'{index}:○{voice["speaker"]} {voice["text"]}</div>')
+    return (
+        "<html><body><ul>" + "".join(items) + "</ul>"
+        "<p>○午後 １時００分開会</p>" + "".join(texts) +
+        "<p>○午後 ３時０２分閉会</p></body></html>"
+    ).encode("utf-8")
+
+
+def test_process_document_writes_fulltext() -> None:
+    """会議録の取得から全文の書き出しまでを、実際の経路で通す。
+
+    ここが通らないと、会議録を151会議ぶん取り終えたあとで初めて分かる。
+    取得だけを差し替えて、HTMLの読み取り・抜粋づくり・全文の書き出しは
+    本番と同じものを動かす。
+    """
+    voices = sample_voices()
+    document = {
+        "dateIso": "2024-05-15",
+        "committee": "災害・環境対策特別委員会",
+        "sourceType": "formal",
+        "url": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000?x=1",
+        "listUrl": "https://kaigiroku.city.shinagawa.tokyo.jp/index.php/100000",
+        "cabinet": 19,
+    }
+    # configure_year はモジュールの状態を書き換えるので、あとの試験へ持ち越さない
+    original = (pc.fetch, pc.parse_pdf_voices, mf.MINUTES_ROOT, pc.YEAR)
+    with tempfile.TemporaryDirectory() as tmp:
+        try:
+            pc.configure_year(2024)
+            pc.fetch = lambda url, suffix=".html", refresh=False: minutes_html(voices)
+            mf.MINUTES_ROOT = Path(tmp)
+
+            session = pc.process_document(document, refresh=False)
+            check("全文があると記録される", session["hasFullText"] is True)
+            path = mf.minutes_path(session["id"], Path(tmp))
+            check("全文ファイルが置かれる", path.exists(), str(path))
+
+            minutes = mf.read_minutes_file(path)
+            check("発言の数が合う", len(minutes["voices"]) == len(voices),
+                  f"{len(minutes['voices'])} / {len(voices)}")
+            check("画面用の字数と全文の字数が一致する",
+                  minutes["characters"] == session["sourceMeta"]["characters"],
+                  f"{minutes['characters']} / {session['sourceMeta']['characters']}")
+            # 発言者ラベル（「3:○のだて委員」）が本文に残っていないこと
+            check("発言者ラベルが本文に残らない",
+                  not any(pc.VOICE_LABEL.match(v["text"]) for v in minutes["voices"]),
+                  str([v["text"][:20] for v in minutes["voices"]][:3]))
+
+            speakers = {v["i"]: v["speaker"] for v in minutes["voices"]}
+            exchanges = [x for topic in session["topics"] for x in topic["exchanges"]]
+            check("抜粋が作れている", len(exchanges) >= 2, f"{len(exchanges)}件")
+            check("抜粋の voiceIndex が全文の同じ発言者を指す",
+                  all(speakers.get(x["voiceIndex"]) == x["speaker"] for x in exchanges),
+                  str([(x["voiceIndex"], x["speaker"], speakers.get(x["voiceIndex"]))
+                       for x in exchanges]))
+            pc.validate([session])
+            check("validate() を通る", True)
+
+            # 2回目は書き換わらない（write-once が本番経路でも効いているか）
+            before = path.stat().st_mtime_ns
+            time.sleep(0.01)
+            pc.process_document(document, refresh=False)
+            check("同じ会議録なら書き換えない", path.stat().st_mtime_ns == before)
+
+            # 校正原稿からは全文を作らない
+            draft = dict(document, sourceType="draft", dateIso="2024-05-17")
+            pc.fetch = lambda url, suffix=".html", refresh=False: minutes_html(voices)
+            pc.parse_pdf_voices = lambda raw, url: (voices, "午後 １時００分～午後 ３時０２分", 12)
+            draft_session = pc.process_document(draft, refresh=False)
+            check("校正原稿では全文を作らない", draft_session["hasFullText"] is False)
+            check("校正原稿の全文ファイルは置かれない",
+                  not mf.minutes_path(draft_session["id"], Path(tmp)).exists())
+        except AssertionError as error:
+            check("validate() を通る", False, str(error))
+        finally:
+            pc.fetch, pc.parse_pdf_voices, mf.MINUTES_ROOT, year = original
+            pc.configure_year(year)
+
+
 def test_generated_file_is_loadable() -> None:
     """書き出したファイルが、画面と同じ形で読み込める。"""
     text = mf.render(payload_for(sample_voices()))
