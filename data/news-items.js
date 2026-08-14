@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-14T07:56:37.629333Z",
+  "generatedAt": "2026-08-14T16:14:15.162139Z",
   "items": [
+    {
+      "id": "be9a65534fd3d7b1e8e1",
+      "title": "【参加者募集】令和8年度 初心者硬式テニス教室～スポーツデビュープログラム～",
+      "summary": "令和8年10月2日(金)、10月9日(金)、10月16日(金)、10月23日(金) (1)午前の部：午前10時15分から11時45分まで (2)午後の部：午後1時15分から2時45分まで スポーツ推進課地域スポーツ推進係 電話：03-5742-6838 FAX：03-5742-6585",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20260807144845.html",
+      "publishedAt": "2026-08-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-14T16:13:39.403142Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "affc6439f2ab61bcce46",
+      "title": "【参加者募集中】多文化共生講座 ～教えて！外国人の日本生活～",
+      "summary": "総務課 平和・国際担当 電話：03-5742-6691（平日 午前8時30分～午後5時15分） FAX：03-3774-6356",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/kokusai/tabunka/20220921100641.html",
+      "publishedAt": "2026-08-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-14T16:13:39.403142Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
     {
       "id": "e8f550dd815ed4f2a433",
       "title": "現場職特化のオンラインスクール「BLUEPRINT」提供開始 ― 第二種電気工事士の合格までAIが伴走",
@@ -5501,7 +5535,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 9,
       "accepted": 0
     },
     {
@@ -5518,9 +5552,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2694, column 15"
+      "status": "ok",
+      "scanned": 489,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -5544,7 +5578,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
