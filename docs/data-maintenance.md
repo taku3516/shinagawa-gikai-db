@@ -34,6 +34,22 @@ python3 scripts/repair_qa_summaries.py --write  # 機械的に直せるものを
 python3 scripts/prepare_committees.py --year 2025
 ```
 
+これで抜粋（`data/<年>-committees-part-NN.js`）と会議録全文（`data/minutes/<年>/`）の両方を作り直します。全文を作るのは**正式会議録だけ**です。校正原稿PDFの会議は抜粋と公式PDFへのリンクのみになり、正式会議録が公開されてから作り直すと全文が付きます。
+
+抜き出し方だけを直していて、全文に触れたくないときは`--skip-fulltext`を付けます。
+
+```bash
+python3 scripts/prepare_committees.py --year 2025 --skip-fulltext
+```
+
+全文ファイルは中身が変わらない限り書き換えません。抜き出し方を直して26年分を作り直しても、全文には差分が出ない設計です（[会議録全文の掲載設計](fulltext-minutes-plan.md)）。逆に「全文だけ作り直す」指定は用意していません。全文を足すときは抜粋側にも`hasFullText`と`voiceIndex`が要るためです。
+
+生成したら、抜粋と全文が噛み合っているかを検査します。
+
+```bash
+python3 scripts/check_minutes_fulltext.py --year 2025 --details
+```
+
 開発環境から会議録へ到達できない場合は、GitHub Actionsの「委員会質疑を会議録から作り直す」を実行してください。popplerと依存ライブラリの準備から、要約の検査、更新の保存までを行います。
 
 ## 本会議の質問・答弁

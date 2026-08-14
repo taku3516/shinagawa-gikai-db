@@ -13,6 +13,14 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 GOOGLE_API_KEY = re.compile(r"AIza[0-9A-Za-z_-]{35}")
 
+# 公開しないディレクトリ。開発・保守用で、画面からは参照していない。
+# GitHub Pagesの1GB制限は会議録全文に使いたい（docs/fulltext-minutes-plan.md）。
+#
+# `exports/` は入れないこと。chokai-map.html が
+# `exports/shinagawa-chokai-map.kml` をダウンロードさせている。
+# ここに足すときは、画面のリンク先になっていないことを必ず確かめる。
+PRIVATE_DIRECTORIES = {"docs", "scripts"}
+
 
 def tracked_files() -> list[Path]:
     output = subprocess.check_output(
@@ -57,6 +65,8 @@ def build(output: Path, api_key: str) -> None:
 
     for relative in tracked_files():
         if relative.parts[0].startswith("."):
+            continue
+        if relative.parts[0] in PRIVATE_DIRECTORIES:
             continue
         source = ROOT / relative
         destination = output / relative

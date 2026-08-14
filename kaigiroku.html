@@ -242,13 +242,15 @@
     .committee-session {
       border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); overflow: clip;
     }
-    .committee-session > summary, .committee-topic > summary {
+    .committee-session > summary, .committee-topic > summary, .committee-fulltext > summary {
       display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 14px 16px;
       cursor: pointer; list-style: none;
     }
-    .committee-session > summary::-webkit-details-marker, .committee-topic > summary::-webkit-details-marker { display: none; }
+    .committee-session > summary::-webkit-details-marker, .committee-topic > summary::-webkit-details-marker,
+    .committee-fulltext > summary::-webkit-details-marker { display: none; }
     .committee-session > summary:hover, .committee-session[open] > summary,
-    .committee-topic > summary:hover, .committee-topic[open] > summary { background: var(--c-main-pale); }
+    .committee-topic > summary:hover, .committee-topic[open] > summary,
+    .committee-fulltext > summary:hover, .committee-fulltext[open] > summary { background: var(--c-main-pale); }
     .committee-session__summary-main, .committee-topic__summary-main { flex: 1; min-width: 0; }
     .committee-session__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .committee-session__head .tag { margin: 0; }
@@ -274,7 +276,29 @@
     .committee-exchange dl { display: grid; grid-template-columns: 8em 1fr; gap: 8px 12px; margin: 0; }
     .committee-exchange dt { color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
     .committee-exchange dd { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .committee-exchange__source { margin: 10px 0 0; text-align: right; font-size: 12px; }
+    .committee-exchange__source a { color: var(--c-main-dark); font-weight: 800; }
     .committee-session__links { margin-top: 18px; }
+
+    /* ===== 会議録全文（開いたときだけ data/minutes/ から読み込む） ===== */
+    .committee-fulltext { border: 1px solid var(--c-rule); border-radius: 3px; background: #fff; overflow: clip; }
+    .committee-fulltext h4 { margin: 0; color: var(--c-main-dark); font-size: 16px; }
+    .committee-fulltext__content { border-top: 1px solid var(--c-rule); padding: 14px; }
+    .committee-fulltext__source {
+      margin: 0 0 14px; padding: 10px 12px;
+      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
+      background: var(--c-card); color: var(--c-ink-soft); font-size: 12px; line-height: 1.7;
+    }
+    .committee-fulltext__state { margin: 0; color: var(--c-ink-soft); font-size: 13px; }
+    .committee-voices { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+    .committee-voice { border-left: 3px solid var(--c-rule); padding: 0 0 0 12px; }
+    .committee-voice--member { border-left-color: var(--c-main); }
+    .committee-voice__speaker { margin: 0 0 4px; color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
+    .committee-voice__no { margin-right: 6px; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
+    .committee-voice__text { margin: 0; font-size: 14px; line-height: 1.9; }
+    .committee-voice:target { background: #fffbe6; }
+    .committee-voice:target .committee-voice__speaker { text-decoration: underline; }
+
     .committee-pending { border: 1px dashed var(--c-border); border-radius: 3px; background: #f7f8fa; padding: 14px 16px; }
     .committee-pending strong { display: block; margin-bottom: 5px; }
     .committee-pending p { margin: 0; color: var(--c-ink-soft); font-size: 13px; }
@@ -354,7 +378,8 @@
       .qa-summary { padding: 13px 14px; }
       .qa-summary dl { grid-template-columns: 1fr; gap: 4px; }
       .qa-summary dd + dt { margin-top: 6px; }
-      .committee-session > summary, .committee-topic > summary { min-height: 72px; padding: 13px; }
+      .committee-session > summary, .committee-topic > summary,
+      .committee-fulltext > summary { min-height: 72px; padding: 13px; }
       .committee-session__content { padding: 12px; }
       .committee-session h3 { font-size: 16px; }
       .committee-session__count, .committee-topic__count { white-space: normal; text-align: right; }
@@ -754,6 +779,132 @@
       return (session.topics || []).reduce((total, topic) => total + (topic.exchanges || []).length, 0);
     }
 
+    /* ---------- 会議録全文 ---------- */
+
+    // 全文は会議1件につき1ファイル。会議IDの先頭3文字が年ID（r06-20240515-19 → r06）
+    // なので、対応表を持たずにパスを導ける（scripts/minutes_fulltext.py と同じ導出）。
+    function minutesFile(sessionId) {
+      return `data/minutes/${sessionId.slice(0, 3)}/${sessionId}.js`;
+    }
+
+    function voiceAnchor(sessionId, voiceIndex) {
+      return `committee-${sessionId}-v${String(voiceIndex).padStart(4, "0")}`;
+    }
+
+    // 抜粋は原文の3割ほどで、答弁は文の途中で切れていることが多い。1手で
+    // 原文へ行けるようにしておく（全文を載せる一番の目的がこれ）。
+    function voiceJumpHtml(session, item) {
+      if (!session.hasFullText || !item.voiceIndex) return "";
+      return `<p class="committee-exchange__source">
+        <a href="#${esc(voiceAnchor(session.id, item.voiceIndex))}"
+           data-voice-jump="${esc(session.id)}">原文を読む（発言 ${esc(item.voiceIndex)}）</a></p>`;
+    }
+
+    function fullTextSummaryLabel(session) {
+      const meta = session.sourceMeta || {};
+      const parts = [];
+      if (meta.voices) parts.push(`${meta.voices}発言`);
+      if (meta.characters) parts.push(`約${Math.round(meta.characters / 1000)}千字`);
+      return parts.join("・") || "全文";
+    }
+
+    function fullTextHtml(session, minutes) {
+      // 全文にするのは正式会議録だけ（prepare_committees.py）。formal でない
+      // ものは本来置かれず、CIの check_minutes_fulltext.py でも失敗する。
+      // ここで分けているのは、万一入り込んだときに「正式会議録の全文です」と
+      // 言い切らないための保険。
+      const formal = minutes.sourceType === "formal";
+      const link = (session.links || []).find((item) => /^https?:/.test(String(item.url)));
+      const voices = (minutes.voices || []).map((voice) => `
+        <li class="committee-voice${voice.speaker ? " committee-voice--member" : ""}"
+            id="${esc(voiceAnchor(session.id, voice.i))}">
+          ${voice.speaker ? `<p class="committee-voice__speaker">
+            <span class="committee-voice__no">${esc(voice.i)}</span>○${esc(voice.speaker)}</p>` : ""}
+          <p class="committee-voice__text">${esc(voice.text)}</p>
+        </li>`).join("");
+      return `
+        <p class="committee-fulltext__source">
+          ${formal
+            ? "品川区議会公式の<strong>正式会議録</strong>の全文です。"
+            : "<strong>正式な会議録ではありません。</strong>正式版の公開後に差し替えます。"}
+          発言の表記は公式の記録のとおりで、本サイトでの要約・言い換えは行っていません。
+          ${link ? `出典：<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>` : ""}
+          （${esc(minutes.fetchedAt)}取得）。正確な内容は必ず公式の会議録をご確認ください。
+        </p>
+        <ol class="committee-voices">${voices}</ol>`;
+    }
+
+    // 読み込み中のものを覚えておく。開閉の toggle とアンカーからの呼び出しが
+    // 重なったとき、あとから来たほうが「読み込み中だから何もしない」で終わると、
+    // 移動先がまだDOMに無いまま処理が進んでしまう（アンカー直打ちで実際に起きた）。
+    // 同じ読み込みを待たせるため、要素ごとにPromiseを持たせる。
+    const fullTextLoads = new WeakMap();
+
+    function renderFullText(details) {
+      if (!details) return Promise.resolve();
+      if (fullTextLoads.has(details)) return fullTextLoads.get(details);
+      const task = loadFullText(details).finally(() => {
+        // 失敗したときは覚えを消して、開き直しで取り直せるようにする
+        if (details.dataset.fullTextState !== "done") fullTextLoads.delete(details);
+      });
+      fullTextLoads.set(details, task);
+      return task;
+    }
+
+    // 会議を開いた時点では読み込まない。全文の開閉を開いたときに初めて取りに行く。
+    async function loadFullText(details) {
+      const sessionId = details.dataset.fulltextFor;
+      const box = details.querySelector("[data-fulltext]");
+      if (!sessionId || !box) return;
+      const session = (activeYear && (activeYear.committeeSessions || [])
+        .find((item) => item.id === sessionId));
+      if (!session) return;
+      details.dataset.fullTextState = "loading";
+      box.innerHTML = `<p class="committee-fulltext__state">会議録全文を読み込んでいます…</p>`;
+      try {
+        if (!window.SHINAGAWA_DB.minutes[sessionId]) await loadScript(minutesFile(sessionId));
+        const minutes = window.SHINAGAWA_DB.minutes[sessionId];
+        if (!minutes) throw new Error(`${sessionId} の全文を読み取れませんでした`);
+        box.innerHTML = fullTextHtml(session, minutes);
+        details.dataset.fullTextState = "done";
+      } catch (err) {
+        // 開き直しで取り直せるよう、状態を戻してから知らせる
+        details.dataset.fullTextState = "";
+        const link = (session.links || []).find((item) => /^https?:/.test(String(item.url)));
+        box.innerHTML = `<p class="committee-fulltext__state">会議録全文を読み込めませんでした。
+          もう一度開くと読み直します。${link
+            ? `<a href="${esc(link.url)}" target="_blank" rel="noopener">公式の会議録</a>もご利用ください。`
+            : ""}</p>`;
+      }
+    }
+
+    // 全文を読み込んだうえで、その中の発言まで開く。抜粋からの「原文を読む」と
+    // 全文内アンカーの両方から呼ぶ。
+    async function openFullText(sessionId) {
+      const session = document.getElementById(`committee-${sessionId}`);
+      if (!session) return null;
+      renderCommitteeSession(session);
+      session.open = true;
+      const details = document.getElementById(`committee-${sessionId}-full`);
+      if (!details) return null;
+      details.open = true;
+      await renderFullText(details);
+      return details;
+    }
+
+    function fullTextDetailsHtml(session) {
+      if (!session.hasFullText) return "";
+      return `<details class="committee-fulltext" id="committee-${esc(session.id)}-full"
+                       data-fulltext-for="${esc(session.id)}">
+        <summary>
+          <span class="committee-topic__summary-main"><h4>会議録全文</h4></span>
+          <span class="committee-topic__count">${esc(fullTextSummaryLabel(session))}</span>
+          <span class="committee-toggle-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="committee-fulltext__content" data-fulltext></div>
+      </details>`;
+    }
+
     // 初期DOMを軽くするため、会議見出しだけを先に描画し、開いた会議の中身だけを生成する。
     function committeeSessionsHtml(sessions, pending) {
       const published = sessions.map((session) => `<details class="committee-session" id="committee-${esc(session.id)}" data-session-id="${esc(session.id)}">
@@ -793,6 +944,7 @@
             <dd>${esc(item.answer)}</dd>
             ${item.respondent ? `<dt>答弁・対応者</dt><dd>${esc(item.respondent)}</dd>` : ""}
           </dl>
+          ${voiceJumpHtml(session, item)}
         </article>`).join("");
       return `<details class="committee-topic" id="committee-${esc(session.id)}-${esc(topic.id)}">
         <summary>
@@ -817,8 +969,10 @@
       if (!session || !content) return;
       content.innerHTML = `
         ${session.time ? `<p class="committee-session__meta">開催時間：${esc(session.time)}</p>` : ""}
-        <div class="committee-topics">${(session.topics || []).map((topic) => committeeTopicHtml(session, topic)).join("")}</div>
-        <p class="fine-print qa-summary-note">※質問・答弁は、会議録の該当発言から要点を含む文を抜き出して掲載しています（要約ではありません）。発言の一部のみを載せているため、前後の文脈は公式の会議録をご確認ください。明確な回答が記録されていない発言には、その旨を記載しています。</p>
+        <div class="committee-topics">${(session.topics || []).map((topic) => committeeTopicHtml(session, topic)).join("")}${fullTextDetailsHtml(session)}</div>
+        <p class="fine-print qa-summary-note">※上の議題別の質問・答弁は、会議録の該当発言から要点を含む文を抜き出して掲載しています（要約ではありません）。発言の一部のみを載せているため、${session.hasFullText
+          ? "前後の文脈は「会議録全文」または公式の会議録をご確認ください。各質疑の「原文を読む」から全文の該当発言へ移動できます。"
+          : "前後の文脈は公式の会議録をご確認ください。"}明確な回答が記録されていない発言には、その旨を記載しています。</p>
         <div class="committee-session__links">${pillsHtml(session.links, activeSite)}</div>`;
       details.dataset.rendered = "true";
       setupDetailsAccessibility(content);
@@ -991,6 +1145,9 @@
         details.addEventListener("toggle", () => {
           summary.setAttribute("aria-expanded", String(details.open));
           if (details.matches(".committee-session") && details.open) renderCommitteeSession(details);
+          // 全文は会議を開いた時点では取りに行かない。1会議で平均130KBあるので、
+          // 読む意思表示（全文の開閉を開く）があってから読み込む。
+          if (details.matches(".committee-fulltext") && details.open) renderFullText(details);
         });
         summary.addEventListener("keydown", (event) => {
           if (event.key !== "Enter" && event.key !== " ") return;
@@ -1014,7 +1171,7 @@
     }
 
     // アンカー先が閉じた会議・資料種別・質問者の内側にある場合は、祖先をすべて開く
-    function openAccordionForHash(shouldScroll) {
+    async function openAccordionForHash(shouldScroll) {
       if (!location.hash) return false;
       const hashId = decodedHashId();
       let target = document.getElementById(hashId);
@@ -1025,6 +1182,12 @@
         if (details) {
           renderCommitteeSession(details);
           details.open = true;
+          target = document.getElementById(hashId);
+        }
+        // 全文の中の発言を指すアンカー（committee-<会議ID>-v0047）は、全文を
+        // 読み込むまでDOMに無い。読み込んでから取り直す。
+        if (!target && session && /-(full|v\d+)$/.test(hashId)) {
+          await openFullText(session.id);
           target = document.getElementById(hashId);
         }
       }
@@ -1045,6 +1208,23 @@
       for (const item of accordions()) item.addEventListener("toggle", updateAccordionControls);
       updateAccordionControls();
       openAccordionForHash(false);
+    }
+
+    // 抜粋の「原文を読む」。全文を読み込んでからでないと移動先がDOMに無いので、
+    // 既定の遷移は止めて、読み込みを待ってから位置を合わせる。
+    function setupVoiceJump() {
+      document.addEventListener("click", async (event) => {
+        const link = event.target.closest("a[data-voice-jump]");
+        if (!link) return;
+        event.preventDefault();
+        const hashId = decodeURIComponent(link.hash.slice(1));
+        await openFullText(link.dataset.voiceJump);
+        const target = document.getElementById(hashId);
+        if (!target) return;
+        // 同じアンカーを続けて押しても動くよう、hashchange任せにしない
+        history.replaceState(null, "", `#${link.hash.slice(1)}`);
+        requestAnimationFrame(() => target.scrollIntoView({ block: "center" }));
+      });
     }
 
     // 参照元
@@ -1105,6 +1285,7 @@
         return;
       }
       const site = db.site;
+      setupVoiceJump();
       renderSources(site);
 
       const sel = document.getElementById("year-select");
@@ -1130,7 +1311,7 @@
         const hashId = decodedHashId();
         const hashYear = site.years.find((y) => hashBelongsToYear(hashId, y.id) && y.available);
         if (hashYear && sel.value !== hashYear.id) await showYear(hashYear.id);
-        openAccordionForHash(true);
+        await openAccordionForHash(true);
       }
 
       sel.addEventListener("change", () => showYear(sel.value));
@@ -1140,7 +1321,7 @@
       const hashId = decodedHashId();
       const hashYear = site.years.find((y) => hashBelongsToYear(hashId, y.id) && y.available);
       await showYear(hashYear ? hashYear.id : site.defaultYear);
-      openAccordionForHash(true);
+      await openAccordionForHash(true);
     }
 
     init();

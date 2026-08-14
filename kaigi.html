@@ -74,6 +74,7 @@
     .video-connection { margin-top:10px; padding-top:9px; border-top:1px dashed var(--c-border); }
     .committee-topic { margin-top:12px; border-top:1px solid var(--c-rule); padding-top:12px; }
     .committee-topic h4 { margin:0 0 10px; }
+    .fulltext-link { display:inline-block; margin-top:10px; color:var(--c-main-dark); font-size:12px; font-weight:800; }
     .empty { color:var(--c-ink-soft); }
     footer { border-top:1px solid var(--c-border); background:var(--c-main-dark); padding:28px 0; color:#fff; text-align:center; font-size:13px; line-height:1.8; }
     @media(max-width:720px) {
@@ -187,8 +188,16 @@
         return `<article class="questioner" id="question-${esc(q.meetingId)}-${esc(q.memberId||qIndex)}"><h3>${esc(q.member)}（${esc(q.party)}）</h3><p>${esc(q.kind||"一般質問")}</p><ul class="topic-list">${(q.topics||[]).map((t)=>`<li>${esc(t)}</li>`).join("")}</ul>${qa?`<div class="qa-grid">${qa}</div>`:""}${pills(q.links)}</article>`;
       }).join("");
     }
+    // 会議録全文は kaigiroku.html だけが描く。ここは案内するだけにして、
+    // 全文の読み込み・表示を2か所に持たない（docs/fulltext-minutes-plan.md）。
+    function fullTextLink(session,voiceIndex) {
+      if(!session.hasFullText) return "";
+      const anchor=voiceIndex?`v${String(voiceIndex).padStart(4,"0")}`:"full";
+      const label=voiceIndex?`原文を読む（発言 ${esc(voiceIndex)}）`:"会議録全文を読む";
+      return `<a class="fulltext-link" href="kaigiroku.html#committee-${esc(session.id)}-${anchor}">${label}</a>`;
+    }
     function sessionsHtml(sessions,pending) {
-      const published=sessions.map((session)=>`<article class="committee-session" id="committee-${esc(session.id)}"><h3>${esc(session.date)} ${esc(session.committee)}</h3><p>${esc(session.time||"")}／${esc(session.status||"")}</p><p>${esc(session.overview||"")}</p>${(session.topics||[]).map((topic)=>`<section class="committee-topic"><h4>${esc(topic.title)}</h4><div class="qa-grid">${(topic.exchanges||[]).map((x)=>`<article class="qa exchange" id="committee-${esc(session.id)}-${esc(x.id)}"><h4>${esc(x.title||x.speaker)}</h4><dl><dt>発言者</dt><dd>${esc(x.speaker)}</dd><dt>${esc(x.kind||"質問")}</dt><dd>${esc(x.question)}</dd><dt>答弁・対応</dt><dd>${esc(x.answer)}</dd>${x.respondent?`<dt>答弁者</dt><dd>${esc(x.respondent)}</dd>`:""}</dl></article>`).join("")}</div></section>`).join("")}${pills(session.links)}</article>`).join("");
+      const published=sessions.map((session)=>`<article class="committee-session" id="committee-${esc(session.id)}"><h3>${esc(session.date)} ${esc(session.committee)}</h3><p>${esc(session.time||"")}／${esc(session.status||"")}</p><p>${esc(session.overview||"")}</p>${(session.topics||[]).map((topic)=>`<section class="committee-topic"><h4>${esc(topic.title)}</h4><div class="qa-grid">${(topic.exchanges||[]).map((x)=>`<article class="qa exchange" id="committee-${esc(session.id)}-${esc(x.id)}"><h4>${esc(x.title||x.speaker)}</h4><dl><dt>発言者</dt><dd>${esc(x.speaker)}</dd><dt>${esc(x.kind||"質問")}</dt><dd>${esc(x.question)}</dd><dt>答弁・対応</dt><dd>${esc(x.answer)}</dd>${x.respondent?`<dt>答弁者</dt><dd>${esc(x.respondent)}</dd>`:""}</dl>${fullTextLink(session,x.voiceIndex)}</article>`).join("")}</div></section>`).join("")}${fullTextLink(session)}${pills(session.links)}</article>`).join("");
       const waiting=pending.map((x)=>`<article class="card"><h3>${esc(x.date)} ${esc(x.committee)}</h3><p>${esc(x.status||"会議録公開待ち")}</p>${x.officialUrl?pills([{type:"official",label:"公式情報を見る",url:x.officialUrl}]):""}</article>`).join("");
       return published+waiting;
     }

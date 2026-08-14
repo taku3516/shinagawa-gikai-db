@@ -33,6 +33,7 @@ from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import minutes_fulltext as mf
 import qa_summary as qa
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -943,6 +944,10 @@ def make_topics(voices: list[dict], session_id: str) -> list[dict]:
             "question": question,
             "respondent": "、".join(respondents),
             "answer": answer,
+            # 抜粋の元になった発言の位置。全文ファイルの `i` と同じ数え方
+            # （1始まり）にしてある。画面はこれを使って、切れている抜粋から
+            # 原文の該当発言へ直接リンクする。
+            "voiceIndex": index + 1,
         })
 
     grouped: OrderedDict[str, list[dict]] = OrderedDict()
@@ -967,7 +972,7 @@ def make_topics(voices: list[dict], session_id: str) -> list[dict]:
     return topics
 
 
-def process_document(document: dict, refresh: bool) -> dict:
+def process_document(document: dict, refresh: bool, write_fulltext: bool = True) -> dict:
     iso_date = document["dateIso"]
     committee = document["committee"]
     source_type = document["sourceType"]
@@ -983,16 +988,39 @@ def process_document(document: dict, refresh: bool) -> dict:
     topics = make_topics(voices, session_id)
     exchange_count = sum(len(topic["exchanges"]) for topic in topics)
     status = "正式会議録" if source_type == "formal" else "校正原稿・正式会議録ではない"
+    date_label = f"{YEAR}年{int(iso_date[5:7])}月{int(iso_date[8:10])}日"
+    # 全文は会議1件につき1ファイル。抜粋（索引層）と違って書き換えないので、
+    # 抜き出し方を直して作り直しても差分が出ない（scripts/minutes_fulltext.py）。
+    #
+    # 全文にするのは正式会議録だけ。校正原稿PDFは parse_pdf_voices が行の結合を
+    # 機械的にやっているため、抜粋では目立たない崩れが全文だと見える。加えて
+    # 校正原稿は正式版の公開後に公式サイトから消えるので、全文で残すと
+    # 「公式には存在しない版」が手元に残ることになる。
+    # 校正原稿の会議は抜粋と公式PDFへのリンクのみを載せ、正式会議録が公開
+    # されてから作り直すと全文が付く。
+    if write_fulltext and source_type == "formal":
+        mf.write_minutes_file(mf.build_payload(
+            session_id,
+            date_iso=iso_date,
+            title=f"{date_label} {committee}",
+            source_type=source_type,
+            source_url=document["url"],
+            voices=voices,
+        ))
     return {
         "id": session_id,
         "meetingId": meeting_id_for(iso_date, committee),
-        "date": f"{YEAR}年{int(iso_date[5:7])}月{int(iso_date[8:10])}日",
+        "date": date_label,
         "dateIso": iso_date,
         "committee": committee,
         "time": meeting_time,
         "status": status,
         "sourceType": source_type,
         "overview": f"{committee}の会議録から、実質的な質問・確認・意見・要望と答弁・対応を{exchange_count}件抜き出しています。",
+        # 全文ファイルが置いてあるかどうか。画面はこれを見て「会議録全文」の
+        # 開閉を出す。--skip-fulltext で索引だけ作り直したときも、既に置いて
+        # ある全文はそのまま使えるので、書いたかどうかではなく在るかを見る。
+        "hasFullText": mf.minutes_path(session_id).exists(),
         "topics": topics,
         "links": [
             {"type": "minutes" if source_type == "formal" else "minutesDraft",
@@ -1166,6 +1194,13 @@ def validate(sessions: list[dict]) -> None:
                 exchange_ids.add(item["id"])
                 assert item["speaker"] and item["question"] and item["answer"]
                 assert not item.get("title") or len(item["title"]) <= 44
+                # 抜粋から全文の該当発言へ飛ぶための位置。1始まりで、全文
+                # ファイルの `i` と揃っている必要がある。ここがずれると、
+                # 読者が別人の発言に飛ばされる
+                assert isinstance(item.get("voiceIndex"), int) and item["voiceIndex"] >= 1, (
+                    "voiceIndex が無い、または1始まりでない", session["id"], item["id"],
+                    item.get("voiceIndex"),
+                )
                 # 見るのは発言者ラベル（「12:○山田委員」）が残っている場合だけ。
                 # 数字とコロンだけで弾くと、発言に出てくる比率や時刻に引っかかる
                 # ——平成18年の「６：４で出資割合を分ける」で実際に止まった。
@@ -1199,6 +1234,13 @@ def main() -> None:
     parser.add_argument("--year", type=western_year, default=date.today().year)
     parser.add_argument("--refresh", action="store_true")
     parser.add_argument("--inventory-only", action="store_true")
+    # 抜粋（索引層）は作り直す頻度が高く、全文（全文層）は一度書いたら
+    # 書き換えない。抜き出し方を直しているだけのときは、全文に触らせない。
+    #
+    # 逆（全文だけ書く）は用意していない。全文を足すときは索引側にも
+    # hasFullText と voiceIndex が要るので、抜粋も作り直す必要がある。
+    parser.add_argument("--skip-fulltext", action="store_true",
+                        help="全文ファイルを書かない（抜粋だけ作り直す）")
     args = parser.parse_args()
     configure_year(args.year)
     OUT.mkdir(parents=True, exist_ok=True)
@@ -1219,8 +1261,15 @@ def main() -> None:
     sessions = []
     for index, document in enumerate(documents, start=1):
         print(f"[{index}/{len(documents)}] {document['dateIso']} {document['committee']}")
-        sessions.append(process_document(document, args.refresh))
+        sessions.append(process_document(document, args.refresh, not args.skip_fulltext))
     validate(sessions)
+    if not args.skip_fulltext:
+        # 会議録検索システム側で会議の区分が変わると、古い会議IDの全文が残る。
+        # 年単位で作り直したこの時点で掃除する。検査を通ってから消すことで、
+        # 生成が途中で壊れていたときに既存の全文を巻き添えにしない。
+        removed = mf.prune_missing({item["id"] for item in sessions}, YEAR_ID)
+        if removed:
+            print(f"会議一覧から消えた全文を削除: {len(removed)}件 {'、'.join(removed[:5])}")
     implemented = {(item["dateIso"], item["committee"]) for item in sessions}
     pending_source = KNOWN_PENDING if YEAR == 2026 else []
     pending = [
@@ -1234,7 +1283,9 @@ def main() -> None:
     LEDGER_PATH.write_text(ledger_markdown(sessions, pending), encoding="utf-8")
     (OUT / "sessions.json").write_text(json.dumps(sessions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     exchanges = sum(len(topic["exchanges"]) for session in sessions for topic in session["topics"])
+    fulltext = sum(1 for session in sessions if session["hasFullText"])
     print(f"生成完了: {len(sessions)}会議・{exchanges}件 / 公開待ち等{len(pending)}件 / データ{len(part_files)}分割")
+    print(f"会議録全文: {fulltext}/{len(sessions)}会議")
 
 
 if __name__ == "__main__":
