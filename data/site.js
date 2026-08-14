@@ -176,7 +176,8 @@ window.SHINAGAWA_DB.site = {
       "file": "data/h30.js",
       "supplement": "data/h30-complete.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h29",
