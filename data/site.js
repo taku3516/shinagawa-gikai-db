@@ -184,7 +184,8 @@ window.SHINAGAWA_DB.site = {
       "label": "平成29年",
       "file": "data/h29.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     },
     {
       "id": "h28",
