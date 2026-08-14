@@ -46,6 +46,29 @@ def fetch_docs(hy, western, cache):
             time.sleep(0.35)
     return docs
 
+def cell(x):
+    """セルのタグを外して1行の文字にする。"""
+    return re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', x))).strip()
+
+
+def cell_items(x):
+    """発言事項のセルを、項目ごとの一覧にして返す。
+
+    発言事項は1つのセルの中に <li> や <br> で並んでいる年がある。
+    そのままタグを空白に置き換えると「防災意識の高揚について
+    「しながわ防災体験館」について …」と全項目が1つに潰れ、
+    何について質問したのかが読み取れなくなる。区切りで分けてから
+    文字に直す。区切りが無いセルは1件として返す。
+
+    取り直しの処理も含め、セルを項目に分けるところは必ずここを通す。
+    別々に書くと、片方だけ潰れたままになる。
+    """
+    pieces = re.findall(r'<li[^>]*>(.*?)</li>', x, re.S)
+    if not pieces:
+        pieces = re.split(r'<br\s*/?>|</p>|</div>', x, flags=re.I)
+    return [item for item in (cell(p) for p in pieces) if item]
+
+
 def inspect_questions(hy):
     """質問者ページの表の作りを実行ログへ書き出す（解析が噛み合わないときの調査用）。
 
@@ -153,22 +176,6 @@ def fetch_questions(hy, cache):
             if dm:
                 last_date = f"{dm.group(1)}月{dm.group(2)}日"
             kind = "代表質問" if "代表質問" in head else "一般質問"
-            cell = lambda x: re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', x))).strip()
-
-            def cell_items(x):
-                """発言事項のセルを、項目ごとの一覧にして返す。
-
-                発言事項は1つのセルの中に <li> や <br> で並んでいる年がある。
-                そのままタグを空白に置き換えると「防災意識の高揚について
-                「しながわ防災体験館」について …」と全項目が1つに潰れ、
-                何について質問したのかが読み取れなくなる。区切りで分けてから
-                文字に直す。区切りが無いセルは1件として返す。
-                """
-                pieces = re.findall(r'<li[^>]*>(.*?)</li>', x, re.S)
-                if not pieces:
-                    pieces = re.split(r'<br\s*/?>|</p>|</div>', x, flags=re.I)
-                return [item for item in (cell(p) for p in pieces) if item]
-
             pending = []          # 旧形式（項目が行ごとに分かれる年）用のバッファ
             for tr in re.findall(r'<tr.*?</tr>', seg, re.S):
                 tds = [cell(x) for x in re.findall(r'<td[^>]*>(.*?)</td>', tr, re.S)]
@@ -228,7 +235,6 @@ def fetch_questions(hy, cache):
             body2 = re.sub(r'<!--.*?-->', ' ', h, flags=re.S)
             body2 = body2[body2.find("entry-content"):]
             blocks = re.split(r'(<table.*?</table>)', body2, flags=re.S)
-            cell = lambda x: re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', x))).strip()
             cur_date, cur_kind, pend = "", "一般質問", []
             for blk in blocks:
                 plain = cell(blk)
@@ -253,26 +259,33 @@ def fetch_questions(hy, cache):
         if any(x for x in qs if len(x["member"]) <= 3) or not qs:
             body3 = re.sub(r'<!--.*?-->', ' ', h, flags=re.S)
             body3 = body3[body3.find("entry-content"):]
-            cell3 = lambda x: re.sub(r'\s+', ' ', H.unescape(re.sub(r'<[^>]+>', ' ', x))).strip()
             gi = list(re.finditer(r'<td[^>]*class="giin"[^>]*>(.*?)</td>', body3, re.S))
             if gi:
                 fixed, prev_end = [], 0
                 for g in gi:
                     chunk = body3[prev_end:g.start()]
                     prev_end = g.end()
-                    dm3 = re.findall(r'(\d+)月(\d+)日', cell3(chunk))
+                    dm3 = re.findall(r'(\d+)月(\d+)日', cell(chunk))
                     if dm3:
                         last_date = f"{dm3[-1][0]}月{dm3[-1][1]}日"
-                    kind3 = "代表質問" if "代表質問" in cell3(chunk)[-400:] else kind
-                    topics3 = [cell3(x) for x in re.findall(r'<td[^>]*>(.*?)</td>', chunk, re.S)]
+                    kind3 = "代表質問" if "代表質問" in cell(chunk)[-400:] else kind
+                    topics3 = [t for x in re.findall(r'<td[^>]*>(.*?)</td>', chunk, re.S)
+                               for t in cell_items(x)]
                     topics3 = [t for t in topics3 if t and not re.fullmatch(r'[０-９0-9一二三四五六七八九十]+[．.]?', t)
                                and t not in ("順序", "発言事項", "議員名") and len(t) > 3]
-                    wm3 = re.match(r'(.+?)\s*[（(]([^）)]+)[）)]', cell3(g.group(1)))
+                    wm3 = re.match(r'(.+?)\s*[（(]([^）)]+)[）)]', cell(g.group(1)))
                     if wm3 and topics3:
                         fixed.append({"date": last_date, "kind": kind3,
                                       "member": re.sub(r'\s+', '', wm3.group(1)),
                                       "party": wm3.group(2).strip(), "topics": topics3, "url": u})
-                if len(fixed) >= len(qs):
+                # 取り直した結果は、確かに良くなっているときだけ採る。
+                # 同数でも入れ替えていたため、「中塚亮」のように名前が3文字の
+                # 議員が1人いるだけでこの処理が起動し、正しく取れていた
+                # 9名43項目を9名9項目で上書きしていた。
+                if fixed and (len(fixed) > len(qs) or
+                              (len(fixed) == len(qs) and
+                               sum(len(x["topics"]) for x in fixed) >
+                               sum(len(x["topics"]) for x in qs))):
                     qs = fixed
         out[f"h{hy}-{n}t"] = qs
         time.sleep(0.4)
