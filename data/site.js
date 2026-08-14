@@ -312,7 +312,8 @@ window.SHINAGAWA_DB.site = {
       "label": "平成13年",
       "file": "data/h13.js",
       "available": true,
-      "committees": true
+      "committees": true,
+      "plenaryMinutes": true
     }
   ],
   "defaultYear": "r08",
