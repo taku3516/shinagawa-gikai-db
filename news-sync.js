@@ -3,6 +3,11 @@ const bridge = window.SHINAGAWA_NEWS_SYNC_BRIDGE;
 const panel = document.getElementById("news-sync-panel");
 
 const requiredConfigKeys = ["apiKey", "authDomain", "projectId", "appId"];
+// ホーム画面から起動したwebアプリ（standalone表示）ではポップアップ方式のログインが完了しないため、
+// 画面遷移方式へ切り替えた際の状態をこのキーで引き継ぐ
+const pendingRedirectKey = "shinagawa-news-sync-redirect";
+const pendingRedirectMaxAgeMs = 10 * 60 * 1000;
+const popupTimeoutMs = 25000;
 const hasCompleteConfig = Boolean(
   settings?.enabled
   && settings.firebaseConfig
@@ -64,6 +69,9 @@ async function startSync() {
   let unsubscribeFavorites = null;
   let unsubscribePreferences = null;
   let preferenceTimer = null;
+  // standalone表示ではポップアップに親ウィンドウ参照が渡らず結果を受け取れないため、最初から画面遷移方式を使う
+  let useRedirect = isStandaloneDisplay();
+  let redirecting = false;
 
   window.SHINAGAWA_NEWS_CLOUD = Object.freeze({
     isActive: () => Boolean(currentUser),
@@ -109,16 +117,36 @@ async function startSync() {
     }
   });
 
+  await resumeRedirect();
+
   elements.login.addEventListener("click", async () => {
     setBusy(true);
     setStatus("Googleログインを確認しています…");
+    const remember = elements.remember.checked;
     try {
-      const persistence = elements.remember.checked
-        ? authApi.browserLocalPersistence
-        : authApi.browserSessionPersistence;
-      await authApi.setPersistence(auth, persistence);
-      await authApi.signInWithPopup(auth, provider);
+      await applyPersistence(remember);
+      if (useRedirect) {
+        await startRedirect("signin", remember);
+        return;
+      }
+      // ポップアップが開けない環境では応答自体が返らないため、一定時間で画面遷移方式へ切り替えられるようにする
+      const hangTimer = window.setTimeout(() => {
+        useRedirect = true;
+        setStatus("ログイン画面を確認できません。もう一度「Googleで同期」を押すと、ページを移動してログインします。", true);
+        setBusy(false);
+      }, popupTimeoutMs);
+      try {
+        await authApi.signInWithPopup(auth, provider);
+      } finally {
+        window.clearTimeout(hangTimer);
+      }
     } catch (error) {
+      if (redirecting) return;
+      if (error?.code === "auth/popup-blocked" || error?.code === "auth/operation-not-supported-in-this-environment") {
+        useRedirect = true;
+        await startRedirect("signin", remember);
+        return;
+      }
       if (error?.code !== "auth/popup-closed-by-user" && error?.code !== "auth/cancelled-popup-request") {
         console.error("Googleログインに失敗しました。", error);
         setStatus("ログインできませんでした。設定または通信状態を確認してください。", true);
@@ -150,12 +178,19 @@ async function startSync() {
     setBusy(true);
     setStatus("本人確認をしています…");
     try {
+      if (useRedirect) {
+        await startRedirect("remove", elements.remember.checked);
+        return;
+      }
       await authApi.reauthenticateWithPopup(currentUser, provider);
-      setStatus("同期データを削除しています…");
-      await deleteAllUserData(currentUser.uid, db, firestoreApi);
-      await authApi.deleteUser(currentUser);
-      window.location.reload();
+      await removeAccount(currentUser);
     } catch (error) {
+      if (redirecting) return;
+      if (error?.code === "auth/popup-blocked" || error?.code === "auth/operation-not-supported-in-this-environment") {
+        useRedirect = true;
+        await startRedirect("remove", elements.remember.checked);
+        return;
+      }
       console.error("同期データまたはアカウントの削除に失敗しました。", error);
       setStatus("削除できませんでした。もう一度ログインしてお試しください。", true);
       setBusy(false);
@@ -196,6 +231,71 @@ async function startSync() {
     }
     setBusy(false);
   });
+
+  async function applyPersistence(remember) {
+    await authApi.setPersistence(
+      auth,
+      remember ? authApi.browserLocalPersistence : authApi.browserSessionPersistence
+    );
+  }
+
+  // ポップアップが使えない環境向けに、Googleのログイン画面へページごと移動する
+  async function startRedirect(mode, remember) {
+    redirecting = true;
+    savePendingRedirect(mode, remember);
+    setStatus("Googleのログイン画面へ移動します…");
+    try {
+      if (mode === "remove") {
+        await authApi.reauthenticateWithRedirect(currentUser, provider);
+      } else {
+        await authApi.signInWithRedirect(auth, provider);
+      }
+    } catch (error) {
+      redirecting = false;
+      clearPendingRedirect();
+      console.error("Googleのログイン画面へ移動できませんでした。", error);
+      setStatus("ログイン画面を開けませんでした。通信状態を確認するか、ブラウザで開き直してお試しください。", true);
+      setBusy(false);
+    }
+  }
+
+  // 画面遷移方式のログインから戻ってきたときに、結果を受け取って処理を続ける
+  async function resumeRedirect() {
+    const pending = takePendingRedirect();
+    if (!pending) return;
+    useRedirect = true;
+    elements.remember.checked = pending.remember;
+    setBusy(true);
+    setStatus("Googleログインの結果を確認しています…");
+    try {
+      await applyPersistence(pending.remember);
+      const result = await authApi.getRedirectResult(auth);
+      if (!result) {
+        setStatus("ログインを完了できませんでした。ブラウザで開いてからもう一度お試しください。", true);
+        setBusy(false);
+        return;
+      }
+      if (pending.mode === "remove") {
+        await removeAccount(result.user);
+      }
+    } catch (error) {
+      if (pending.mode === "remove") {
+        console.error("同期データまたはアカウントの削除に失敗しました。", error);
+        setStatus("削除できませんでした。もう一度ログインしてお試しください。", true);
+      } else {
+        console.error("Googleログインの結果を確認できませんでした。", error);
+        setStatus("ログインできませんでした。設定または通信状態を確認してください。", true);
+      }
+      setBusy(false);
+    }
+  }
+
+  async function removeAccount(user) {
+    setStatus("同期データを削除しています…");
+    await deleteAllUserData(user.uid, db, firestoreApi);
+    await authApi.deleteUser(user);
+    window.location.reload();
+  }
 
   function startListeners(uid, database, api) {
     unsubscribeFavorites = api.onSnapshot(
@@ -271,6 +371,56 @@ async function deleteAllUserData(uid, database, api) {
     await batch.commit();
   }
   await api.deleteDoc(api.doc(database, "users", uid, "preferences", "news"));
+}
+
+// ホーム画面から起動したwebアプリ（standalone表示）かどうかを判定する
+function isStandaloneDisplay() {
+  if (window.navigator.standalone === true) return true;
+  const modes = ["standalone", "fullscreen", "minimal-ui", "window-controls-overlay"];
+  return modes.some(mode => window.matchMedia(`(display-mode: ${mode})`).matches);
+}
+
+function savePendingRedirect(mode, remember) {
+  try {
+    window.sessionStorage.setItem(
+      pendingRedirectKey,
+      JSON.stringify({ mode, remember: remember === true, startedAt: Date.now() })
+    );
+  } catch (error) {
+    console.warn("ログインの経過を一時保存できませんでした。", error);
+  }
+}
+
+function clearPendingRedirect() {
+  try {
+    window.sessionStorage.removeItem(pendingRedirectKey);
+  } catch (error) {
+    console.warn("ログインの経過を消去できませんでした。", error);
+  }
+}
+
+// 一度読み取ったら消し、古い記録は無視する（意図しない削除処理の再実行を防ぐ）
+function takePendingRedirect() {
+  let raw = null;
+  try {
+    raw = window.sessionStorage.getItem(pendingRedirectKey);
+    window.sessionStorage.removeItem(pendingRedirectKey);
+  } catch (error) {
+    console.warn("ログインの経過を読み取れませんでした。", error);
+    return null;
+  }
+  if (!raw) return null;
+  try {
+    const pending = JSON.parse(raw);
+    const isFresh = Number.isFinite(pending?.startedAt)
+      && Date.now() - pending.startedAt >= 0
+      && Date.now() - pending.startedAt < pendingRedirectMaxAgeMs;
+    if (!isFresh || (pending.mode !== "signin" && pending.mode !== "remove")) return null;
+    return { mode: pending.mode, remember: pending.remember === true };
+  } catch (error) {
+    console.warn("ログインの経過を解析できませんでした。", error);
+    return null;
+  }
 }
 
 function sanitizeSources(values) {
