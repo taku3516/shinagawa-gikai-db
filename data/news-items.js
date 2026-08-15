@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-14T16:14:15.162139Z",
+  "generatedAt": "2026-08-15T07:06:55.907049Z",
   "items": [
+    {
+      "id": "6c4338c5a3165520d715",
+      "title": "【9/4開催】女性の“次の一歩”を品川から応援！女性起業家の事業ピッチ×品川区長・森澤恭子氏登壇のクロストーク×JICA・アフリカ視察団との交流「ウーマンズエンパワーメント・サミット 品川」開催",
+      "summary": "[品川区立武蔵小山創業支援センター] [画像1: https://prcdn.freetls.fastly.net/release_image/46375/45/46375-45-a8476be7a35f40e4bf7f582b3760c911-1414x845.jpg?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000045.000046375.html",
+      "publishedAt": "2026-08-15T06:15:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-15T07:06:36.038446Z",
+      "tags": [
+        "行政",
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [
+        "小山"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "be9a65534fd3d7b1e8e1",
       "title": "【参加者募集】令和8年度 初心者硬式テニス教室～スポーツデビュープログラム～",
@@ -5553,7 +5574,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 489,
+      "scanned": 443,
       "accepted": 0
     },
     {
@@ -5578,7 +5599,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
