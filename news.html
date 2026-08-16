@@ -3,18 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#1f4e79" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231f4e79'/%3E%3Cpath d='M8 9h16v3H8zm0 6h16v3H8zm0 6h11v3H8z' fill='white'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#0017c1" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230017c1'/%3E%3Cpath d='M8 9h16v3H8zm0 6h16v3H8zm0 6h11v3H8z' fill='white'/%3E%3C/svg%3E" />
   <title>品川区ニュース | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
-    :root {
-      --main: #1f4e79; --main-dark: #173a5e; --main-pale: #e7eef4;
-      --bg: #f4f1e8; --card: #fffdf8; --ink: #17212b; --soft: #4f5d68;
-      --border: #b9c3cc; --rule: #d8d2c4; --star: #a65f00;
-    }
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     body {
@@ -31,9 +29,9 @@
     .lead { max-width: 780px; margin: 0; color: var(--soft); line-height: 1.8; }
     .notice {
       margin-top: 20px; border: 1px solid var(--border); border-left: 4px solid var(--main);
-      border-radius: 3px; background: #f8fafc; padding: 12px 14px; font-size: 13px; line-height: 1.7;
+      border-radius: 3px; background: var(--c-surface-sub); padding: 12px 14px; font-size: 13px; line-height: 1.7;
     }
-    .controls-wrap { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border); background: rgba(244, 241, 232, .97); box-shadow: 0 2px 6px rgba(23,33,43,.08); backdrop-filter: blur(8px); }
+    .controls-wrap { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border); background: rgba(242, 242, 242, 0.94); box-shadow: 0 2px 6px rgba(26, 26, 26,.08); backdrop-filter: blur(8px); }
     .controls { position: relative; display: grid; grid-template-columns: minmax(220px, 1fr) 190px 190px auto; gap: 10px; padding: 12px 0; }
     .controls input, .controls select {
       width: 100%; min-height: 44px; border: 1px solid var(--border); border-radius: 3px;
@@ -56,7 +54,7 @@
     .source-filter-panel {
       position: absolute; top: calc(100% + 7px); right: 0; width: min(390px, calc(100vw - 24px));
       max-height: min(520px, 62vh); overflow: auto; border: 1px solid var(--border); border-radius: 4px;
-      background: var(--card); padding: 12px; box-shadow: 0 10px 28px rgba(23,33,43,.18);
+      background: var(--card); padding: 12px; box-shadow: 0 10px 28px rgba(26, 26, 26,.18);
     }
     .source-filter-panel[hidden] { display: none; }
     .source-filter-actions { display: flex; gap: 8px; margin-bottom: 9px; padding-bottom: 9px; border-bottom: 1px solid var(--rule); }
@@ -66,7 +64,7 @@
     }
     .source-option {
       display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: center;
-      min-height: 42px; padding: 5px 3px; border-bottom: 1px solid #ece7dc; cursor: pointer;
+      min-height: 42px; padding: 5px 3px; border-bottom: 1px solid var(--c-border); cursor: pointer;
       font-size: 13px; font-weight: 700;
     }
     .source-option:last-child { border-bottom: 0; }
@@ -82,7 +80,7 @@
     .sync-copy { min-width: 0; }
     .sync-title { margin: 0 0 4px; color: var(--main-dark); font-size: 15px; font-weight: 900; }
     .sync-status { margin: 0; color: var(--soft); font-size: 12px; line-height: 1.6; }
-    .sync-status[data-error="true"] { color: #9f2d20; font-weight: 800; }
+    .sync-status[data-error="true"] { color: var(--c-fail); font-weight: 800; }
     .sync-account { color: var(--ink); font-weight: 800; }
     .sync-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; align-items: center; }
     .sync-remember { display: inline-flex; gap: 6px; align-items: center; color: var(--soft); font-size: 12px; font-weight: 700; }
@@ -92,7 +90,7 @@
       padding: 7px 12px; color: #fff; font-size: 13px; font-weight: 800; cursor: pointer;
     }
     .sync-button.secondary { background: var(--card); color: var(--main-dark); }
-    .sync-button.danger { border-color: #a33a2a; background: var(--card); color: #8b2d20; }
+    .sync-button.danger { border-color: var(--c-fail-border); background: var(--card); color: var(--c-fail); }
     .sync-button:disabled { cursor: wait; opacity: .55; }
     .hidden-note { margin: -8px 0 20px; color: var(--soft); font-size: 12px; line-height: 1.7; }
     .summary-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: baseline; margin-bottom: 18px; }
@@ -112,13 +110,13 @@
     .news-card p { margin: 10px 0 0; color: var(--soft); font-size: 14px; line-height: 1.8; }
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
     .tag { border-radius: 3px; background: var(--main-pale); padding: 4px 8px; color: var(--main-dark); font-size: 11px; font-weight: 800; }
-    .location { border: 1px solid var(--border); background: #f6f4ed; }
+    .location { border: 1px solid var(--border); background: var(--c-surface-sub); }
     .star-button {
       align-self: start; display: inline-grid; place-items: center; width: 44px; height: 44px;
       border: 1px solid var(--border); border-radius: 50%; background: var(--card); color: var(--soft);
       font-size: 23px; line-height: 1; cursor: pointer;
     }
-    .star-button[aria-pressed="true"] { border-color: #d6a44b; background: #fff7d6; color: var(--star); }
+    .star-button[aria-pressed="true"] { border-color: var(--c-hold-border); background: var(--c-hold-bg); color: var(--star); }
     .news-actions { display: flex; flex-direction: column; gap: 8px; align-items: stretch; }
     .hide-button {
       min-width: 72px; min-height: 40px; border: 1px solid var(--border); border-radius: 3px;
@@ -126,7 +124,7 @@
       cursor: pointer; white-space: nowrap;
     }
     .hide-button:hover { border-color: var(--main); background: var(--main-pale); color: var(--main-dark); }
-    .star-button:focus-visible, .hide-button:focus-visible, .view-button:focus-visible, .source-filter-button:focus-visible, .source-filter-actions button:focus-visible, .sync-button:focus-visible, .undo-notice button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+    /* フォーカスリングは site-theme.css で全ページ共通に定義している */
     .empty { border: 1px dashed var(--border); border-radius: 4px; background: var(--card); padding: 42px 20px; text-align: center; color: var(--soft); line-height: 1.8; }
     .load-more { display: block; min-height: 44px; margin: 22px auto 0; border: 1px solid var(--main); border-radius: 3px; background: var(--card); padding: 9px 22px; color: var(--main-dark); font-weight: 800; cursor: pointer; }
     .load-more[hidden] { display: none; }
@@ -139,7 +137,7 @@
       position: fixed; z-index: 30; right: 18px; bottom: 18px; display: flex; align-items: center; gap: 12px;
       max-width: min(520px, calc(100vw - 36px)); border: 1px solid var(--main-dark); border-radius: 4px;
       background: var(--main-dark); padding: 11px 12px 11px 15px; color: #fff;
-      box-shadow: 0 8px 24px rgba(23,33,43,.28); font-size: 13px; font-weight: 700;
+      box-shadow: 0 8px 24px rgba(26, 26, 26,.28); font-size: 13px; font-weight: 700;
     }
     .undo-notice[hidden] { display: none; }
     .undo-notice button {

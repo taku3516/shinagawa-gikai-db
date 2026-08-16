@@ -23,7 +23,7 @@ iframe {
 .table-scroll-hint {
   display: none;
   margin: 0 0 6px;
-  color: var(--c-ink-soft, #4b5a68);
+  color: var(--c-ink-soft);
   font-size: 12px;
   font-weight: 700;
 }

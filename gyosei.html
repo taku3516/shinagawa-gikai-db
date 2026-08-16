@@ -3,24 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#1f4e79" />
+  <meta name="theme-color" content="#0017c1" />
   <title>行政評価（事務事業評価） | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
-    :root {
-      --c-main: #1f4e79; --c-main-dark: #173a5e; --c-main-pale: #e7eef4;
-      --c-bg: #f4f1e8; --c-card: #fffdf8; --c-ink: #17212b; --c-ink-soft: #4f5d68;
-      --c-border: #b9c3cc; --c-rule: #d8d2c4;
-      /* 年度で見る情報なので、予算・決算ページと同じ橙系アクセントに合わせる */
-      --c-fiscal: #b45309; --c-fiscal-bg: #fff7ed; --c-fiscal-border: #fcd9b6;
-      /* 評価区分の色分け（A拡大＝緑 / B継続＝青 / C改善＝橙 / D廃止＝赤） */
-      --c-a: #15803d; --c-a-bg: #f0fdf4; --c-a-border: #bbf7d0;
-      --c-b: #1f4e79; --c-b-bg: #e7eef4; --c-b-border: #b9c3cc;
-      --c-c: #b45309; --c-c-bg: #fff7ed; --c-c-border: #fcd9b6;
-      --c-d: #be123c; --c-d-bg: #fff1f2; --c-d-border: #fecaca;
-    }
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
     body { margin: 0; background: var(--c-bg); color: var(--c-ink);
@@ -85,7 +76,7 @@
     .pill--fiscal { border-color: var(--c-fiscal-border); background: var(--c-fiscal-bg); color: var(--c-fiscal); }
     .pill .kind { margin-left: 8px; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .col-box { border: 1px solid var(--c-rule); border-radius: 3px; background: #fffdf6; padding: 12px 14px; }
+    .col-box { border: 1px solid var(--c-rule); border-radius: 3px; background: var(--c-surface-sub); padding: 12px 14px; }
     .col-box h4 { margin: 0 0 8px; font-size: 13px; color: var(--c-ink-soft); }
     .status-note { color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; margin: 6px 0 0; }
     .fine-print { margin-top: 20px; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }

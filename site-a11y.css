@@ -6,7 +6,7 @@
   transform: translateY(-160%);
   border: 3px solid #fff;
   border-radius: 4px;
-  background: #102f4c;
+  background: var(--c-main-dark);
   padding: 10px 14px;
   color: #fff;
   font-weight: 800;
@@ -19,18 +19,18 @@
   bottom: 12px;
   z-index: 900;
   min-height: 44px;
-  border: 2px solid #1f4e79;
+  border: 2px solid var(--c-main);
   border-radius: 4px;
-  background: #fffdf8;
+  background: var(--c-card);
   padding: 8px 13px;
-  color: #173a5e;
+  color: var(--c-main-dark);
   font: inherit;
   font-size: 14px;
   font-weight: 900;
-  box-shadow: 0 3px 12px rgba(23, 33, 43, 0.22);
+  box-shadow: 0 3px 12px rgba(26, 26, 26, 0.22);
   cursor: pointer;
 }
-.a11y-launcher:hover { background: #e7eef4; }
+.a11y-launcher:hover { background: var(--c-main-pale); }
 .a11y-panel[hidden] { display: none; }
 .a11y-panel {
   position: fixed;
@@ -39,53 +39,45 @@
   width: min(380px, calc(100vw - 24px));
   max-height: calc(100vh - 90px);
   overflow: auto;
-  border: 2px solid #1f4e79;
+  border: 2px solid var(--c-main);
   border-radius: 5px;
-  background: #fffdf8;
-  color: #17212b;
+  background: var(--c-card);
+  color: var(--c-ink);
   padding: 18px;
-  box-shadow: 0 8px 28px rgba(23, 33, 43, 0.3);
+  box-shadow: 0 8px 28px rgba(26, 26, 26, 0.3);
 }
 .a11y-panel__head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 .a11y-panel__head h2 { flex: 1; margin: 0; font-size: 20px; }
 .a11y-panel__close {
-  width: 44px; height: 44px; border: 1px solid #b9c3cc; border-radius: 4px;
-  background: #fff; color: #17212b; font: inherit; font-size: 22px; cursor: pointer;
+  width: 44px; height: 44px; border: 1px solid var(--c-border); border-radius: 4px;
+  background: #fff; color: var(--c-ink); font: inherit; font-size: 22px; cursor: pointer;
 }
 .a11y-group { margin: 0 0 18px; border: 0; padding: 0; }
 .a11y-group legend { margin-bottom: 8px; font-weight: 900; }
 .a11y-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
 .a11y-options label {
-  display: grid; place-items: center; min-height: 44px; border: 1px solid #9aa9b5;
+  display: grid; place-items: center; min-height: 44px; border: 1px solid var(--c-border-strong);
   border-radius: 4px; background: #fff; padding: 7px; text-align: center;
   font-size: 13px; font-weight: 800; cursor: pointer;
 }
 .a11y-options label:has(input:checked) {
-  border: 3px solid #1f4e79; background: #e7eef4; padding: 5px;
+  border: 3px solid var(--c-main); background: var(--c-main-pale); padding: 5px;
 }
 .a11y-options input { position: absolute; opacity: 0; pointer-events: none; }
-.a11y-options label:focus-within { outline: 3px solid #f59e0b; outline-offset: 2px; }
-.a11y-reset {
-  width: 100%; min-height: 44px; border: 1px solid #1f4e79; border-radius: 4px;
-  background: #fff; color: #173a5e; font: inherit; font-weight: 900; cursor: pointer;
+.a11y-options label:focus-within {
+  outline: 3px solid var(--c-focus); outline-offset: 1px;
+  box-shadow: 0 0 0 6px var(--c-focus-outer);
 }
-.a11y-note { margin: 12px 0 0; color: #4f5d68; font-size: 12px; line-height: 1.7; }
+.a11y-reset {
+  width: 100%; min-height: 44px; border: 1px solid var(--c-main); border-radius: 4px;
+  background: #fff; color: var(--c-main-dark); font: inherit; font-weight: 900; cursor: pointer;
+}
+.a11y-note { margin: 12px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.7; }
 
 html[data-font-size="large"] { font-size: 112.5%; }
 html[data-font-size="xlarge"] { font-size: 125%; }
-html[data-contrast="high"] {
-  --c-main: #003f73 !important;
-  --c-main-dark: #001f3f !important;
-  --c-main-pale: #e2f1ff !important;
-  --c-bg: #fff !important;
-  --c-card: #fff !important;
-  --c-ink: #000 !important;
-  --c-ink-soft: #222 !important;
-  --c-border: #333 !important;
-  --c-rule: #555 !important;
-}
-html[data-contrast="high"] a { color: #00336b !important; text-decoration-thickness: 2px !important; }
-html[data-contrast="high"] :focus-visible { outline: 4px solid #d97706 !important; outline-offset: 3px !important; }
+/* ハイコントラスト時の変数の中身は site-theme.css 側にまとめている */
+html[data-contrast="high"] a { text-decoration-thickness: 2px !important; }
 html[data-motion="reduced"] { scroll-behavior: auto !important; }
 html[data-motion="reduced"] *, html[data-motion="reduced"] *::before, html[data-motion="reduced"] *::after {
   scroll-behavior: auto !important;

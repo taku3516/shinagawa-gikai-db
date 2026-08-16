@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#1f4e79" />
+  <meta name="theme-color" content="#0017c1" />
   <title>町会・自治会区域を探す｜品川区議会DB</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231f4e79'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230017c1'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link
     rel="stylesheet"
@@ -14,19 +15,8 @@
     crossorigin=""
   />
   <style>
-    :root {
-      --c-main: #1f4e79;
-      --c-main-dark: #173a5e;
-      --c-main-pale: #e7eef4;
-      --c-bg: #f4f1e8;
-      --c-card: #fffdf8;
-      --c-ink: #17212b;
-      --c-ink-soft: #4f5d68;
-      --c-border: #b9c3cc;
-      --c-rule: #d8d2c4;
-      --c-warning: #8a4b08;
-      --c-warning-bg: #fff7df;
-    }
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
 
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -50,17 +40,20 @@
     .breadcrumb { margin: 0 0 12px; font-size: 14px; }
     .hero h1 { margin: 0 0 12px; color: var(--c-main-dark); font-size: clamp(30px, 5vw, 52px); line-height: 1.15; }
     .hero .lead { max-width: 820px; margin: 0; font-size: 17px; line-height: 1.85; }
+    /* 「区域の見方」は注意喚起ではなく読み方の説明なので、
+       警告色（橙）ではなく他ページと同じ説明パネルの見た目にする。
+       橙は本当に注意が必要なときだけに取っておく */
     .notice {
       margin-top: 18px;
-      border: 1px solid #d8b36c;
-      border-left: 5px solid var(--c-warning);
+      border: 1px solid var(--c-border);
+      border-left: 5px solid var(--c-main);
       border-radius: 4px;
-      background: var(--c-warning-bg);
+      background: var(--c-card);
       padding: 13px 15px;
       font-size: 14px;
       line-height: 1.75;
     }
-    .notice strong { color: #713b06; }
+    .notice strong { color: var(--c-main-dark); }
     main { padding: 30px 0 56px; }
     .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
     .stat { border: 1px solid var(--c-border); border-top: 3px solid var(--c-main); background: var(--c-card); padding: 14px 16px; }
@@ -69,7 +62,7 @@
     .map-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr); gap: 18px; align-items: start; }
     .panel { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); }
     .map-panel { overflow: hidden; }
-    #chokai-map { width: 100%; min-height: 590px; background: #dbe6ec; }
+    #chokai-map { width: 100%; min-height: 590px; background: var(--c-map-bg); }
     .map-fallback { display: grid; place-items: center; min-height: 590px; padding: 24px; text-align: center; line-height: 1.8; }
     .map-caption { border-top: 1px solid var(--c-border); padding: 10px 14px; color: var(--c-ink-soft); font-size: 12px; line-height: 1.65; }
     .sidebar { position: sticky; top: 12px; overflow: hidden; }
@@ -77,12 +70,10 @@
     .control { display: grid; gap: 5px; }
     .control label { font-size: 13px; font-weight: 800; }
     .control input, .control select {
-      width: 100%; min-height: 46px; border: 1px solid #8b9bab; border-radius: 3px;
+      width: 100%; min-height: 46px; border: 1px solid var(--c-border-strong); border-radius: 3px;
       background: #fff; padding: 9px 11px; color: var(--c-ink); font-size: 16px;
     }
-    .control input:focus-visible, .control select:focus-visible, button:focus-visible, summary:focus-visible {
-      outline: 3px solid #f59e0b; outline-offset: 2px;
-    }
+    /* フォーカスリングは site-theme.css で全ページ共通に定義している */
     .button-row { display: flex; flex-wrap: wrap; gap: 8px; }
     .button {
       min-height: 42px; border: 1px solid var(--c-main); border-radius: 3px;
@@ -104,13 +95,13 @@
     .association[open] .association__icon::before { content: "−"; }
     .association__body { border-top: 1px solid var(--c-border); padding: 13px 16px 16px; }
     .region-badge {
-      display: inline-block; margin-bottom: 10px; border: 1px solid #8ba0b1; border-radius: 999px;
-      background: #eef3f6; padding: 3px 9px; color: var(--c-main-dark); font-size: 12px; font-weight: 800;
+      display: inline-block; margin-bottom: 10px; border: 1px solid var(--c-border-strong); border-radius: 999px;
+      background: var(--c-surface-sub); padding: 3px 9px; color: var(--c-main-dark); font-size: 12px; font-weight: 800;
     }
     .info-section + .info-section { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--c-rule); }
     .info-section h3 { margin: 0 0 8px; color: var(--c-main-dark); font-size: 14px; }
     .info-grid { display: grid; grid-template-columns: minmax(100px, 0.35fr) minmax(0, 1fr); margin: 0; }
-    .info-grid dt, .info-grid dd { margin: 0; border-top: 1px solid #e4dfd4; padding: 7px 8px; font-size: 13px; line-height: 1.65; }
+    .info-grid dt, .info-grid dd { margin: 0; border-top: 1px solid var(--c-border); padding: 7px 8px; font-size: 13px; line-height: 1.65; }
     .info-grid dt { color: var(--c-ink-soft); font-weight: 800; }
     .info-grid dd { background: #fff; }
     .profile-text { margin: 0; font-size: 13px; line-height: 1.8; white-space: pre-line; }
@@ -118,7 +109,7 @@
     .profile-source-label { color: var(--c-ink-soft); font-size: 11px; font-weight: 800; }
     .profile-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px; }
     .profile-link {
-      display: inline-block; border: 1px solid #7690a5; border-radius: 3px;
+      display: inline-block; border: 1px solid var(--c-border-strong); border-radius: 3px;
       background: #fff; padding: 6px 9px; font-size: 12px; font-weight: 800;
     }
     .source-list { margin: 7px 0 0; padding-left: 19px; font-size: 12px; line-height: 1.7; }
@@ -132,25 +123,25 @@
     .about ul { margin: 10px 0 0; padding-left: 22px; }
     .leaflet-popup-content { line-height: 1.6; }
     .map-legend {
-      max-width: 210px; border: 1px solid #768594; border-radius: 3px;
-      background: rgb(255 253 248 / 94%); padding: 8px 10px; color: var(--c-ink);
+      max-width: 210px; border: 1px solid var(--c-border-strong); border-radius: 3px;
+      background: rgb(255 255 255 / 94%); padding: 8px 10px; color: var(--c-ink);
       box-shadow: 0 1px 5px rgb(0 0 0 / 20%); font-size: 11px; line-height: 1.55;
       pointer-events: none;
     }
     .map-legend strong { display: block; margin-bottom: 3px; font-size: 12px; }
     .map-legend__sample {
       display: inline-block; width: 19px; height: 12px; margin-right: 5px;
-      border: 2px solid #596a77; background: #c7dceb; vertical-align: -2px;
+      border: 2px solid var(--c-border-strong); background: var(--c-chart-1); vertical-align: -2px;
     }
     .location-control button {
       min-width: 104px; min-height: 38px; border: 0; border-radius: 3px;
       background: #fff; padding: 6px 9px; color: var(--c-main-dark);
       box-shadow: 0 1px 5px rgb(0 0 0 / 28%); font-size: 13px; font-weight: 900;
     }
-    .location-control button:hover { background: #eef4f7; }
+    .location-control button:hover { background: var(--c-main-pale); }
     .location-control button[aria-pressed="true"] { background: var(--c-main); color: #fff; }
     .location-control button:disabled { cursor: wait; opacity: 0.78; }
-    .location-note { display: block; margin-top: 4px; color: #3e5262; font-weight: 700; }
+    .location-note { display: block; margin-top: 4px; color: var(--c-ink-soft); font-weight: 700; }
     .current-location-marker { filter: drop-shadow(0 1px 2px rgb(0 0 0 / 45%)); }
 
     @media (max-width: 860px) {
@@ -260,7 +251,10 @@
       const boundaryLayers = [];
       const boundaryLayerByAssociation = new Map();
       const boundaryPalette = [
-        "#c7dceb", "#d8e5c5", "#ead8c8", "#ddd3e8"
+        // 塗り分けは「隣り合う区域を見分ける」ためだけのもので、色自体に意味はない。
+        // site-theme.css の --c-chart-1〜4 と同じ値。P型・D型色覚でも隣同士が
+        // 判別できるよう、青と橙を対にし、あいだに灰と緑を挟む順序にしている
+        "#d9e6ff", "#ffdfca", "#e6e6e6", "#c2e5d1"
       ];
       let map = null;
       let boundaryGeoJson = null;
@@ -347,7 +341,7 @@
             radius: 8,
             color: "#fff",
             weight: 3,
-            fillColor: "#0878c9",
+            fillColor: "#0017c1",
             fillOpacity: 1,
             className: "current-location-marker",
             pane: "markerPane"
@@ -360,10 +354,10 @@
         if (!locationAccuracyCircle) {
           locationAccuracyCircle = L.circle(latLng, {
             radius: accuracy,
-            color: "#0878c9",
+            color: "#0017c1",
             weight: 1,
             opacity: 0.65,
-            fillColor: "#64b5e8",
+            fillColor: "#9db7f9",
             fillOpacity: 0.15,
             interactive: false
           }).addTo(map);
@@ -436,7 +430,7 @@
       }
 
       function stableColor(feature) {
-        if (feature.properties && feature.properties.unassigned) return "#9199a1";
+        if (feature.properties && feature.properties.unassigned) return "#b3b3b3";
         const colorIndex = Number(feature.properties && feature.properties.colorIndex || 0);
         return boundaryPalette[colorIndex % boundaryPalette.length];
       }
@@ -450,7 +444,7 @@
         const selected = isHighlighted(feature);
         const unassigned = feature.properties && feature.properties.unassigned;
         return {
-          color: selected ? "#173a5e" : unassigned ? "#69737c" : "#596a77",
+          color: selected ? "#0017c1" : unassigned ? "#767676" : "#4d4d4d",
           weight: selected ? 3.2 : 1.35,
           opacity: boundaryFilterActive && !selected ? 0.3 : 0.9,
           fillColor: stableColor(feature),

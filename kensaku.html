@@ -3,32 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#1f4e79" />
+  <meta name="theme-color" content="#0017c1" />
   <title>横断検索 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
-    :root {
-      --c-main: #1f4e79;
-      --c-main-dark: #173a5e;
-      --c-main-pale: #e7eef4;
-      --c-bg: #f4f1e8;
-      --c-card: #fffdf8;
-      --c-ink: #17212b;
-      --c-ink-soft: #4f5d68;
-      --c-border: #b9c3cc;
-      --c-rule: #d8d2c4;
-      --c-focus: #f59e0b;
-      --c-result-bg: #fef3c7;
-      --c-result-text: #92400e;
-      --c-news-bg: #f0fdf4;
-      --c-news-text: #166534;
-      --c-election-bg: #f5f3ff;
-      --c-election-text: #6d28d9;
-      --c-fund-bg: #fff8dd;
-      --c-fund-text: #6b4f1d;
-    }
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     body {
@@ -42,10 +25,7 @@
     a:hover { text-decoration: underline; }
     button, input, select { font: inherit; }
     button, select { cursor: pointer; }
-    button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, a:focus-visible {
-      outline: 3px solid var(--c-focus);
-      outline-offset: 2px;
-    }
+    /* フォーカスリングは site-theme.css で全ページ共通に定義している */
     .container { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
     .sr-only {
       position: absolute;
@@ -71,7 +51,7 @@
       max-width: 860px;
       margin-top: 15px;
       padding: 11px 15px;
-      border: 1px solid rgba(80, 129, 181, .5);
+      border: 1px solid var(--c-border);
       border-left: 4px solid var(--c-main);
       border-radius: 4px;
       background: var(--c-card);
@@ -83,8 +63,8 @@
       top: 0;
       z-index: 20;
       border-bottom: 1px solid var(--c-border);
-      background: rgba(244, 241, 232, .97);
-      box-shadow: 0 2px 8px rgba(23, 33, 43, .08);
+      background: rgba(242, 242, 242, 0.94);
+      box-shadow: 0 2px 8px rgba(26, 26, 26, .08);
       backdrop-filter: blur(8px);
     }
     .search-panel { padding: 14px 0 12px; }
@@ -222,11 +202,10 @@
       background: var(--c-card);
       padding: 15px 17px;
     }
-    .hitrow[data-category="ニュース"] { border-left-color: #2f855a; }
-    .hitrow[data-category="選挙"] { border-left-color: #7c3aed; }
-    .hitrow[data-category="行政評価"] { border-left-color: #0f766e; }
-    .hitrow[data-category="政務活動費"] { border-left-color: #b45309; }
-    .hitrow[data-category="政治資金"] { border-left-color: #8a6b24; }
+    /* 以前はカテゴリごとに左罫の色を変えていたが、色の違いに意味がなく
+       （緑＝ニュース、紫＝選挙…と覚える手がかりが無い）、
+       色数だけが増えていた。カテゴリはバッジの文字が示すので、
+       左罫はすべてキーカラーに統一する */
     .hitrow h2 { margin: 1px 0 7px; font-size: 17px; line-height: 1.55; }
     .meta { margin: 0 0 7px; color: var(--c-main-dark); font-size: 12px; font-weight: 800; line-height: 1.6; }
     .summary { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.75; }
@@ -251,18 +230,18 @@
       font-size: 11px;
       font-weight: 800;
     }
-    .badge--year { background: #f3f4f6; color: #374151; }
+    .badge--year { background: var(--c-surface-sub); color: var(--c-ink-soft); }
     .badge--result { background: var(--c-result-bg); color: var(--c-result-text); }
     .badge--news { background: var(--c-news-bg); color: var(--c-news-text); }
     .badge--election { background: var(--c-election-bg); color: var(--c-election-text); }
-    .badge--expense { background: #fff7ed; color: #9a3412; }
+    .badge--expense { background: var(--c-expense-pale); color: var(--c-main-dark); }
     .badge--fund { background: var(--c-fund-bg); color: var(--c-fund-text); }
     .pill {
       display: inline-flex;
       align-items: center;
       min-height: 34px;
       margin: 10px 6px 0 0;
-      border: 1px solid rgba(80, 129, 181, .4);
+      border: 1px solid var(--c-border);
       border-radius: 3px;
       background: var(--c-card);
       padding: 6px 11px;
@@ -270,14 +249,16 @@
       font-size: 12px;
       font-weight: 800;
     }
-    .pill--source { border-color: #bbf7d0; background: #f0fdf4; color: #166534; }
-    .pill--minutes { border-color: #bbf7d0; background: #f0fdf4; color: #15803d; }
-    .pill--video { border-color: #fecaca; background: #fff1f2; color: #be123c; }
-    mark { border-radius: 2px; background: #fde68a; color: inherit; padding: 0 .08em; }
+    /* 出典・議事録は標準のリンク見た目、録画だけ映像とわかるライトブルーにする */
+    .pill--source, .pill--minutes {
+      border-color: var(--c-minutes-border); background: var(--c-minutes-bg); color: var(--c-minutes-text);
+    }
+    .pill--video { border-color: var(--c-video-border); background: var(--c-video-bg); color: var(--c-video-text); }
+    mark { border-radius: 2px; background: var(--c-highlight); color: inherit; padding: 0 .08em; }
     .guide {
       border: 1px dashed var(--c-border);
       border-radius: 4px;
-      background: rgba(255, 253, 248, .68);
+      background: rgba(255, 255, 255, 0.72);
       padding: 28px 20px;
       color: var(--c-ink-soft);
       text-align: center;

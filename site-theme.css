@@ -1,0 +1,298 @@
+/* ==========================================================================
+   サイト共通カラーテーマ
+
+   デジタル庁「ダッシュボード作成ガイドブック」およびデザインシステムの
+   考え方に合わせた配色。カラーコードは公式のデザイントークン
+   （@digital-go-jp/design-tokens v2.0.1）の値をそのまま使っている。
+
+   守っている原則は3つ。
+     1. 色は「意味」を持つときだけ使う。カテゴリを区別するためだけに
+        色相を増やさない（区別はラベルと配置で行う）。
+     2. 使う色相はキーカラー（青）＋グレー＋状態色（緑・赤・橙）に絞る。
+        緑・赤・橙は「可決／否決／継続審査」のような状態にのみ割り当てる。
+     3. 文字と背景のコントラスト比は本文4.5:1以上、UI境界3:1以上を確保する。
+
+   このファイルは各ページの <style> より前に読み込むこと。
+   個別ページで :root を再定義すると、こちらの指定が上書きされてしまう。
+   ========================================================================== */
+
+:root {
+  /* --------------------------------------------------------------------
+     1. プリミティブ（デジタル庁デザインシステムの原色。直接使わない）
+     -------------------------------------------------------------------- */
+
+  /* Solid Gray：文字・背景・境界線の土台 */
+  --dads-gray-50: #f2f2f2;
+  --dads-gray-100: #e6e6e6;
+  --dads-gray-200: #cccccc;
+  --dads-gray-300: #b3b3b3;
+  /* 420 は非文字要素で3:1、536 は文字で4.5:1を満たす下限値 */
+  --dads-gray-420: #949494;
+  --dads-gray-536: #767676;
+  --dads-gray-600: #666666;
+  --dads-gray-700: #4d4d4d;
+  --dads-gray-800: #333333;
+  --dads-gray-900: #1a1a1a;
+
+  /* Blue：キーカラー */
+  --dads-blue-50: #e8f1fe;
+  --dads-blue-100: #d9e6ff;
+  --dads-blue-200: #c5d7fb;
+  --dads-blue-300: #9db7f9;
+  --dads-blue-900: #0017c1;
+  --dads-blue-1000: #00118f;
+  --dads-blue-1200: #000060;
+
+  /* Light Blue：キーカラーと同系の補助色（映像・外部サービスへの導線） */
+  --dads-light-blue-50: #f0f9ff;
+  --dads-light-blue-200: #c0e4ff;
+  --dads-light-blue-300: #97d3ff;
+  --dads-light-blue-1000: #00428c;
+
+  /* Green / Red / Orange：状態色。装飾には使わない */
+  --dads-green-50: #e6f5ec;
+  --dads-green-200: #9bd4b5;
+  --dads-green-800: #197a4b;
+  --dads-green-900: #115a36;
+  --dads-red-50: #fdeeee;
+  --dads-red-200: #ffbbbb;
+  --dads-red-900: #ce0000;
+  --dads-red-1000: #a90000;
+  --dads-orange-50: #ffeee2;
+  --dads-orange-200: #ffc199;
+  --dads-orange-800: #c74700;
+  --dads-orange-1000: #8b3200;
+
+  /* Yellow-300：フォーカスリング専用。公式に「いかなる場合も変更しない」
+     とされている色なので、他の用途に流用しない */
+  --dads-yellow-300: #ffd43d;
+
+  /* --------------------------------------------------------------------
+     2. 土台（背景・文字・境界線）
+     -------------------------------------------------------------------- */
+
+  --c-bg: var(--dads-gray-50);          /* ページ地。カードとの差でリズムを作る */
+  --c-card: #ffffff;                    /* カード・パネルの地 */
+  --c-surface-sub: var(--dads-gray-50); /* カードの中に置く一段沈んだ面 */
+  --c-ink: var(--dads-gray-900);        /* 本文（白地に17.4:1） */
+  --c-ink-soft: var(--dads-gray-700);   /* 補足文（白地に8.5:1） */
+  /* 控えめな補助文。gray-536 は「白地でちょうど4.5:1」の下限値で、
+     灰の面（--c-surface-sub）に載せると4.06:1まで落ちてしまう。
+     このサイトはカードの中に灰の面を置くので、どの地でも4.5:1を
+     満たす gray-600 を採用する（白5.7:1／灰5.1:1／淡青5.0:1） */
+  --c-ink-mute: var(--dads-gray-600);
+  --c-border: var(--dads-gray-300);     /* カードの境界線 */
+  --c-border-strong: var(--dads-gray-420); /* 入力欄など操作できる要素の境界線（3:1） */
+  --c-rule: var(--dads-gray-100);       /* 区切り線 */
+
+  /* --------------------------------------------------------------------
+     3. キーカラー（青）
+     -------------------------------------------------------------------- */
+
+  --c-main: var(--dads-blue-900);       /* 見出し罫・アイコン・面の塗り */
+  --c-main-dark: var(--dads-blue-1000); /* リンク文字（白地に14.2:1） */
+  --c-main-deep: var(--dads-blue-1200); /* フッターなど濃い面 */
+  --c-main-pale: var(--dads-blue-50);   /* 選択中・ホバーの面 */
+  --c-main-pale-2: var(--dads-blue-100);/* さらに濃いホバー面 */
+  --c-main-border: var(--dads-blue-200);
+
+  /* フォーカスリング（黄＋黒の2重構造） */
+  --c-focus: var(--dads-yellow-300);
+  --c-focus-outer: #000000;
+
+  /* --------------------------------------------------------------------
+     4. 状態色（意味を持つ色。ここ以外では使わない）
+     -------------------------------------------------------------------- */
+
+  /* 可決・採択・拡大など、肯定的に確定した状態 */
+  --c-pass: var(--dads-green-900);
+  --c-pass-bg: var(--dads-green-50);
+  --c-pass-border: var(--dads-green-200);
+
+  /* 否決・不採択・廃止など、否定的に確定した状態 */
+  --c-fail: var(--dads-red-1000);
+  --c-fail-bg: var(--dads-red-50);
+  --c-fail-border: var(--dads-red-200);
+
+  /* 継続審査・要改善など、未確定・注意が必要な状態 */
+  --c-hold: var(--dads-orange-1000);
+  --c-hold-bg: var(--dads-orange-50);
+  --c-hold-border: var(--dads-orange-200);
+
+  /* 状態が決まっていない・該当なし */
+  --c-none: var(--dads-gray-700);
+  --c-none-bg: var(--dads-gray-50);
+  --c-none-border: var(--dads-gray-300);
+
+  /* 警告文（注意書き・免責） */
+  --c-warning: var(--dads-orange-1000);
+  --c-warning-bg: var(--dads-orange-50);
+  --c-warning-border: var(--dads-orange-200);
+  --c-warn: var(--dads-orange-50);
+
+  /* --------------------------------------------------------------------
+     5. リンクの種類
+
+     録画・議事録は「状態」ではなく「行き先の種類」なので、状態色（赤・緑）
+     は使わない。映像だけを補助色のライトブルーで示し、それ以外は
+     すべて標準のリンク見た目に揃える。区別はラベルの文言が担う。
+     -------------------------------------------------------------------- */
+
+  /* 録画・中継（映像） */
+  --c-video: var(--dads-light-blue-1000);
+  --c-video-text: var(--dads-light-blue-1000);
+  --c-video-bg: var(--dads-light-blue-50);
+  --c-video-border: var(--dads-light-blue-300);
+  --c-video-hover: var(--dads-light-blue-200);
+
+  /* 議事録・会議録（文書）＝標準のリンク見た目 */
+  --c-minutes: var(--c-main-dark);
+  --c-minutes-text: var(--c-main-dark);
+  --c-minutes-bg: var(--c-card);
+  --c-minutes-border: var(--c-border);
+  --c-minutes-hover: var(--c-main-pale);
+
+  /* --------------------------------------------------------------------
+     6. タグ・見出しのアクセント
+
+     以前はページごとに色相を変えていた（予算＝橙／請願＝緑／意見書＝茶…）。
+     これは意味のない色分けなので、すべてキーカラーに統一する。
+     ページの区別は見出しとパンくずが担う。
+     -------------------------------------------------------------------- */
+
+  --c-accent: var(--c-main);
+  --c-accent-pale: var(--c-main-pale);
+  --c-accent-border: var(--c-main-border);
+
+  --c-fiscal: var(--c-main);            /* 予算・決算・行政評価 */
+  --c-fiscal-bg: var(--c-main-pale);
+  --c-fiscal-border: var(--c-main-border);
+
+  --c-seigan: var(--c-main);            /* 請願・陳情 */
+  --c-seigan-bg: var(--c-main-pale);
+  --c-seigan-border: var(--c-main-border);
+
+  --c-fund: var(--c-main);              /* 政治資金・選挙収支 */
+  --c-fund-text: var(--c-main-dark);
+  --c-fund-bg: var(--c-main-pale);
+  --c-fund-pale: var(--c-main-pale);
+  --c-fund-border: var(--c-main-border);
+
+  --c-expense: var(--c-main);           /* 政務活動費 */
+  --c-expense-pale: var(--c-main-pale);
+  --c-expense-border: var(--c-main-border);
+
+  --c-news-text: var(--c-main-dark);    /* 横断検索の分類バッジ */
+  --c-news-bg: var(--c-main-pale);
+  --c-election-text: var(--c-main-dark);
+  --c-election-bg: var(--c-main-pale);
+
+  --c-star: var(--dads-orange-1000);    /* 注目マーク */
+  --c-soft-blue: var(--c-main-pale);
+
+  /* 議決結果タグ：結果の内容によらず同じ見た目なので、状態色ではなく
+     中立のグレーにする。個別の結果に応じた色分けは .is-pass などで行う */
+  --c-result-bg: var(--dads-gray-50);
+  --c-result-text: var(--dads-gray-800);
+  --c-result-border: var(--dads-gray-300);
+
+  /* 行政評価の4区分（A拡大／B継続／C改善／D廃止）＝確定した評価なので状態色 */
+  --c-a: var(--c-pass);
+  --c-a-bg: var(--c-pass-bg);
+  --c-a-border: var(--c-pass-border);
+  --c-b: var(--c-main-dark);
+  --c-b-bg: var(--c-main-pale);
+  --c-b-border: var(--c-main-border);
+  --c-c: var(--c-hold);
+  --c-c-bg: var(--c-hold-bg);
+  --c-c-border: var(--c-hold-border);
+  --c-d: var(--c-fail);
+  --c-d-bg: var(--c-fail-bg);
+  --c-d-border: var(--c-fail-border);
+
+  /* --------------------------------------------------------------------
+     7. 地図・チャート
+
+     ガイドブックの「チャートで使う色」の考え方に合わせる。
+     隣り合う区域を塗り分けるだけの用途なので、色そのものに意味はない。
+     P型・D型色覚でも隣同士が判別できるよう、青と橙を対にし、
+     グレーと緑を挟む順序にしている。塗りは薄く、境界線と地名の
+     可読性を優先する。
+     -------------------------------------------------------------------- */
+
+  --c-chart-1: var(--dads-blue-100);
+  --c-chart-2: #ffdfca;                 /* orange-100 */
+  --c-chart-3: var(--dads-gray-100);
+  --c-chart-4: #c2e5d1;                 /* green-100 */
+  --c-chart-none: var(--dads-gray-200); /* 該当データなし */
+
+  --c-map-bg: var(--dads-gray-100);     /* 地図の下地 */
+  --c-map-stroke: var(--dads-gray-700); /* 区域の境界線 */
+  --c-map-stroke-mute: var(--dads-gray-536);
+  --c-map-here: var(--c-main);          /* 現在地 */
+  --c-map-here-halo: var(--dads-blue-300);
+
+  /* 検索語のハイライト */
+  --c-highlight: #ffe380;               /* yellow-200 */
+
+  /* --------------------------------------------------------------------
+     8. news.html 用の短い別名（既存の変数名を残すための対応）
+     -------------------------------------------------------------------- */
+
+  --main: var(--c-main);
+  --main-dark: var(--c-main-dark);
+  --main-pale: var(--c-main-pale);
+  --bg: var(--c-bg);
+  --card: var(--c-card);
+  --ink: var(--c-ink);
+  --soft: var(--c-ink-soft);
+  --border: var(--c-border);
+  --rule: var(--c-rule);
+  --star: var(--c-star);
+}
+
+/* ==========================================================================
+   フォーカスリング（黄＋黒の2重構造）
+
+   デジタル庁デザインシステムの指定に合わせ、全ページ共通で同じ見た目にする。
+   キーボード操作でたどったときだけ出る :focus-visible に限定している。
+   ========================================================================== */
+
+:where(a, button, summary, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--c-focus);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 6px var(--c-focus-outer);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   ハイコントラスト表示（アクセシビリティ設定）
+
+   デジタル庁パレットの中で最も濃い段階に置き換える。
+   ========================================================================== */
+
+html[data-contrast="high"] {
+  --c-bg: #ffffff;
+  --c-card: #ffffff;
+  --c-surface-sub: #ffffff;
+  --c-ink: #000000;
+  --c-ink-soft: #000000;
+  --c-ink-mute: var(--dads-gray-700);
+  --c-border: var(--dads-gray-700);
+  --c-border-strong: var(--dads-gray-800);
+  --c-rule: var(--dads-gray-600);
+
+  --c-main: var(--dads-blue-1200);
+  --c-main-dark: var(--dads-blue-1200);
+  --c-main-deep: var(--dads-blue-1200);
+  --c-main-pale: var(--dads-blue-100);
+  --c-main-pale-2: var(--dads-blue-200);
+  --c-main-border: var(--dads-blue-1200);
+
+  --c-pass: #003d21;
+  --c-fail: #7a0000;
+  --c-hold: #5c2100;
+  --c-video: var(--dads-blue-1200);
+  --c-video-text: var(--dads-blue-1200);
+  --c-video-border: var(--dads-blue-1200);
+}

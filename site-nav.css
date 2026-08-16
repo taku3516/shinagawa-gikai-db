@@ -20,11 +20,11 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  border: 1px solid var(--c-border, #b9c3cc);
+  border: 1px solid var(--c-border);
   border-radius: 3px;
-  background: var(--c-card, #fffdf8);
+  background: var(--c-card);
   padding: 6px 10px;
-  color: var(--c-main-dark, #173a5e);
+  color: var(--c-main-dark);
   font-size: 13px;
   font-weight: 800;
   line-height: 1.35;
@@ -37,28 +37,31 @@
 
 .hero-links-row .pill:hover,
 .site-function-nav__link:hover {
-  background: var(--c-main-pale, #e7eef4);
+  background: var(--c-main-pale);
   text-decoration-thickness: 2px;
 }
 
-/* 動画（赤系） */
+/* 録画・中継（映像への導線）。
+   赤は「否決」などの状態に使う色なので、ここでは使わない。
+   キーカラーと同系のライトブルーで「映像」であることだけを示す */
 .hero-links-row .pill--video {
-  border-color: var(--c-video-border, #fecaca);
-  background: var(--c-video-bg, #fff1f2);
-  color: var(--c-video-text, #be123c);
+  border-color: var(--c-video-border);
+  background: var(--c-video-bg);
+  color: var(--c-video-text);
 }
 .hero-links-row .pill--video:hover {
-  background: #ffe4e6;
+  background: var(--c-video-hover);
 }
 
-/* 議事録（緑系） */
+/* 議事録・会議録（文書への導線）。
+   ふつうの資料リンクなので、標準のリンクと同じ見た目にする */
 .hero-links-row .pill--minutes {
-  border-color: var(--c-minutes-border, #bbf7d0);
-  background: var(--c-minutes-bg, #f0fdf4);
-  color: var(--c-minutes-text, #15803d);
+  border-color: var(--c-minutes-border);
+  background: var(--c-minutes-bg);
+  color: var(--c-minutes-text);
 }
 .hero-links-row .pill--minutes:hover {
-  background: #dcfce7;
+  background: var(--c-minutes-hover);
 }
 
 /* ===== 現在地（アクティブ）ボタンのハイライトスタイル ===== */
@@ -66,30 +69,23 @@
 .hero-links-row .pill.is-active,
 .site-function-nav__link[aria-current="page"],
 .site-function-nav__link.is-active {
-  background: var(--c-main-dark, #173a5e) !important;
+  background: var(--c-main) !important;
   color: #ffffff !important;
-  border-color: var(--c-main-dark, #173a5e) !important;
+  border-color: var(--c-main) !important;
   text-decoration: none !important;
-  box-shadow: 0 0 0 2px #ffffff, 0 3px 8px rgba(23, 58, 94, 0.35);
   font-weight: 900;
 }
 
-/* 緑系のアクティブ時 */
+/* 現在地は「今どこにいるか」という状態なので、リンクの種類（映像／文書）に
+   関係なく同じキーカラーで塗りつぶす。種類ごとに色を変えると、
+   現在地の印なのか種類の印なのか読み取れなくなる */
 .hero-links-row .pill--minutes[aria-current="page"],
-.hero-links-row .pill--minutes.is-active {
-  background: #15803d !important;
-  color: #ffffff !important;
-  border-color: #166534 !important;
-  box-shadow: 0 0 0 2px #ffffff, 0 3px 8px rgba(21, 128, 61, 0.35);
-}
-
-/* 赤系のアクティブ時 */
+.hero-links-row .pill--minutes.is-active,
 .hero-links-row .pill--video[aria-current="page"],
 .hero-links-row .pill--video.is-active {
-  background: #be123c !important;
+  background: var(--c-main) !important;
   color: #ffffff !important;
-  border-color: #9f1239 !important;
-  box-shadow: 0 0 0 2px #ffffff, 0 3px 8px rgba(190, 18, 60, 0.35);
+  border-color: var(--c-main) !important;
 }
 
 /* 現在地を示すバッジ */
@@ -119,9 +115,9 @@
     width: 100%;
     min-height: 48px;
     margin-top: 16px;
-    border: 1px solid var(--c-main-dark, #173a5e);
+    border: 1px solid var(--c-main-dark);
     border-radius: 4px;
-    background: var(--c-main-dark, #173a5e);
+    background: var(--c-main-dark);
     padding: 8px 12px;
     color: #ffffff;
     font: inherit;
@@ -175,10 +171,10 @@
     max-height: 66vh;
     overflow-y: auto;
     margin-top: 10px;
-    border: 1px solid var(--c-border, #b9c3cc);
+    border: 1px solid var(--c-border);
     border-radius: 4px;
     padding: 10px;
-    background: var(--c-card, #fffdf8);
+    background: var(--c-card);
   }
 
   /* 折りたたみメニュー内は縦一列にして、指で押しやすくする */
