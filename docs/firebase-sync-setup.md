@@ -66,7 +66,15 @@ python3 scripts/check_firebase_sync.py
 
 ### 5. Firebase Hostingのデプロイを設定する（所有者のみ・初回だけ）
 
-ニュースページの配信に必要です。リポジトリの作業ディレクトリで次を実行します。**この操作にはFirebaseプロジェクトへのログインが必要なため、所有者ご自身での実行が必要です。**
+ニュースページの配信に必要です。**この操作にはFirebaseプロジェクトへのログインが必要なため、所有者ご自身での実行が必要です。**
+
+**先に `firebase.json` の hosting 設定と `.firebaserc` がmainに入っていることを確認してください。** 未反映のまま実行すると `Didn't find a Hosting config in firebase.json` で止まります。
+
+実行はリポジトリの直下です。親フォルダで実行しないでください。
+
+```bash
+cd /Users/apple/my-claude-project/shinagawa-gikai-db
+```
 
 ```bash
 npx firebase login
