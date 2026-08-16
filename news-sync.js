@@ -1,4 +1,9 @@
-import { isPopupSignInBlocked } from "./news-sync-environment.js";
+import { signInMethod } from "./news-sync-environment.js";
+
+// 遷移方式では「ログイン状態を維持」の選択がページ移動をまたぐため、
+// 自分のドメインの保存領域に預けておく。遷移方式が使えるのはドメインが
+// 一致している場合だけなので、この領域は必ず読み戻せる。
+const REMEMBER_KEY = "shinagawa-news-sync-remember-v1";
 
 const settings = window.SHINAGAWA_FIREBASE_SYNC;
 const bridge = window.SHINAGAWA_NEWS_SYNC_BRIDGE;
@@ -111,6 +116,25 @@ async function startSync() {
     }
   });
 
+  // この環境で使える方式を決める（理由は news-sync-environment.js）。
+  const method = signInMethod(
+    navigator.userAgent,
+    navigator.maxTouchPoints,
+    window.location.hostname,
+    settings.firebaseConfig.authDomain
+  );
+
+  // 遷移方式から戻ってきた場合の受け取り。ページを開くたびに確認する。
+  if (method === "redirect") {
+    restoreRememberChoice(elements.remember);
+    authApi.getRedirectResult(auth).catch(error => {
+      if (error?.code === "auth/no-auth-event") return;
+      console.error("ログインから戻れませんでした。", error);
+      setStatus("ログインを完了できませんでした。もう一度お試しください。", true);
+      setBusy(false);
+    });
+  }
+
   elements.login.addEventListener("click", async () => {
     setBusy(true);
     setStatus("Googleログインを確認しています…");
@@ -119,6 +143,16 @@ async function startSync() {
         ? authApi.browserLocalPersistence
         : authApi.browserSessionPersistence;
       await authApi.setPersistence(auth, persistence);
+
+      if (method === "redirect") {
+        // iPhone・iPadではポップアップの結果を受け取れない。ページごと移動する。
+        // 選択はページ移動をまたぐため、出発前に預けておく。
+        rememberChoice(elements.remember.checked);
+        setStatus("Googleのログイン画面へ移動します…");
+        await authApi.signInWithRedirect(auth, provider);
+        return; // ここでこのページを離れる
+      }
+
       await authApi.signInWithPopup(auth, provider);
     } catch (error) {
       if (error?.code !== "auth/popup-closed-by-user" && error?.code !== "auth/cancelled-popup-request") {
@@ -178,16 +212,10 @@ async function startSync() {
       elements.remove.hidden = true;
       setStatus("この端末だけに保存中。ログインは任意です。");
       setBusy(false);
-      // iOS・iPadOSかつドメイン不一致のときはGoogleログインを完了できない
-      // （理由は news-sync-environment.js）。分かりにくいエラー画面へ進ませる前に案内する。
-      // ドメインをそろえた配信元では遮らないので、移行後は自動的に無効化されなくなる。
+      // 旧URLのiPhone・iPadはどの方式でも完了できない（理由は news-sync-environment.js）。
+      // 分かりにくいエラー画面へ進ませる前に案内する。
       // setBusy はボタンを有効化し直すため、その後に無効化すること。
-      if (isPopupSignInBlocked(
-        navigator.userAgent,
-        navigator.maxTouchPoints,
-        window.location.hostname,
-        settings.firebaseConfig.authDomain
-      )) {
+      if (method === "unavailable") {
         elements.login.disabled = true;
         elements.remember.closest("label").hidden = true;
         setStatus(
@@ -290,6 +318,22 @@ async function deleteAllUserData(uid, database, api) {
     await batch.commit();
   }
   await api.deleteDoc(api.doc(database, "users", uid, "preferences", "news"));
+}
+
+// 「ログイン状態を維持」の選択を、遷移方式のページ移動をまたいで保つ。
+function rememberChoice(shouldRemember) {
+  try {
+    window.sessionStorage.setItem(REMEMBER_KEY, shouldRemember ? "1" : "0");
+  } catch (_) { /* 保存できない環境では既定（維持しない）で扱う */ }
+}
+
+function restoreRememberChoice(checkbox) {
+  try {
+    const saved = window.sessionStorage.getItem(REMEMBER_KEY);
+    if (saved === null) return;
+    window.sessionStorage.removeItem(REMEMBER_KEY);
+    checkbox.checked = saved === "1";
+  } catch (_) { /* 読めない環境では既定のまま */ }
 }
 
 function sanitizeSources(values) {
