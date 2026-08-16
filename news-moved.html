@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>品川区ニュース | 品川区議会DB</title>
+<!--
+  旧URLのニュースページです。GitHub Pagesの公開時に news.html としてこの内容を配ります
+  （scripts/build_pages.py）。リポジトリの news.html は中身そのままで、
+  Firebase Hosting 側の配信物になります（scripts/build_news_app.py）。
+
+  ニュースページだけを別ドメインへ移した理由は docs/firebase-sync-setup.md にあります。
+  要点は、Googleログインは配信元と authDomain のドメインが一致していないと
+  iPhone・iPadで完了できない、というものです。
+-->
+<link rel="canonical" href="https://shinagawakugiakidb.firebaseapp.com/news.html" />
+<style>
+  body {
+    margin: 0; padding: 48px 20px;
+    font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    line-height: 1.8; color: #1f2937; background: #f8fafc;
+  }
+  main { max-width: 640px; margin: 0 auto; background: #fff; padding: 32px 28px; border-radius: 12px; border: 1px solid #e2e8f0; }
+  h1 { font-size: 20px; margin: 0 0 16px; color: #1f4e79; }
+  a.button {
+    display: inline-block; margin-top: 8px; padding: 12px 20px;
+    background: #1f4e79; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700;
+  }
+  .note { font-size: 14px; color: #475569; margin-top: 20px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ニュースページは移動しました</h1>
+  <p>自動で移動します。切り替わらない場合は、次のボタンからお進みください。</p>
+  <p><a class="button" id="go" href="https://shinagawakugiakidb.firebaseapp.com/news.html">品川区ニュースを開く</a></p>
+  <p class="note">
+    iPhone・iPadでもGoogleログインで同期できるようにするための移動です。
+    保存済みの★と表示設定は引き継がれます。
+    <a href="index.html">品川区議会DB トップへ戻る</a>
+  </p>
+</main>
+
+<script src="news-migration.js"></script>
+<script>
+  (() => {
+    "use strict";
+    const destination = "https://shinagawakugiakidb.firebaseapp.com/news.html";
+
+    // 端末内保存を新URLへ運ぶ。「#」以降はサーバーへ送られないため、
+    // アクセス記録には残らない。運ぶのは★・非表示にした配信元・非表示にした記事だけ。
+    function carriedOver() {
+      try {
+        const read = key => JSON.parse(localStorage.getItem(key) || "[]");
+        return window.SHINAGAWA_NEWS_MIGRATION.encode({
+          favorites: read("shinagawa-news-favorites-v1"),
+          hiddenSources: read("shinagawa-news-hidden-sources-v1"),
+          hiddenItems: read("shinagawa-news-hidden-items-v1")
+        });
+      } catch (_) {
+        // 読めない環境では引き継ぎなしで移動する。移動自体は止めない。
+        return "";
+      }
+    }
+
+    const payload = carriedOver();
+    const target = payload ? `${destination}#migrate=${payload}` : destination;
+    document.getElementById("go").href = target;
+    // 履歴を汚さないよう置き換えで移動する。戻るボタンでここへ戻らせない。
+    window.location.replace(target);
+  })();
+</script>
+</body>
+</html>

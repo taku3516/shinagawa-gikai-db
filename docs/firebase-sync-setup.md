@@ -64,7 +64,38 @@ python3 scripts/check_firebase_sync.py
 
 同じ検査はPull Requestとpushでも自動実行され、Google APIキー形式や秘密情報らしい値がリポジトリ内の公開設定へ入ると失敗します。GitHub Pagesの公開処理は `FIREBASE_API_KEY` が未設定または形式不正なら停止します。
 
-### 5. 2台で確認する
+### 5. Firebase Hostingのデプロイを設定する（所有者のみ・初回だけ）
+
+ニュースページの配信に必要です。**この操作にはFirebaseプロジェクトへのログインが必要なため、所有者ご自身での実行が必要です。**
+
+**先に `firebase.json` の hosting 設定と `.firebaserc` がmainに入っていることを確認してください。** 未反映のまま実行すると `Didn't find a Hosting config in firebase.json` で止まります。
+
+実行はリポジトリの直下です。親フォルダで実行しないでください。
+
+```bash
+cd /Users/apple/my-claude-project/shinagawa-gikai-db
+```
+
+```bash
+npx firebase login
+```
+
+```bash
+npx firebase init hosting:github
+```
+
+対話では次のように答えます。
+
+- 対象プロジェクト: `shinagawakugiakidb`
+- 公開ディレクトリ: `_news-app`（`.firebaserc` と `firebase.json` は用意済みなので、上書きするか聞かれたら **No**）
+- ビルド用のワークフローを作るか: **No**（`.github/workflows/firebase-hosting.yml` を用意済み）
+- GitHubリポジトリ: `taku3516/shinagawa-gikai-db`
+
+完了すると、GitHub Secretsに `FIREBASE_SERVICE_ACCOUNT_SHINAGAWAKUGIAKIDB` が登録されます。ワークフローはこの名前を参照します。別の名前で登録された場合は `.github/workflows/firebase-hosting.yml` の該当箇所を合わせてください。
+
+初回はGitHub Actionsの「Firebase Hostingへ公開（ニュースページ）」を手動実行して確認できます。
+
+### 6. 2台で確認する
 
 1. 公開サイトを開き、1台目でGoogleログインする
 2. ニュースに★を付け、配信元を1つ非表示にする
@@ -100,20 +131,48 @@ This may happen if browser sessionStorage is inaccessible or accidentally cleare
 - **リダイレクト方式へ切り替える**: 解決しません。Firebase SDKは「リダイレクト中」の印をsessionStorageに置くため、webアプリが終了すると資格情報を受け取れません
 - **ポップアップをタップと同じ処理のかたまりの中で呼ぶ**: これは別の問題（ポップアップが開かない）への正しい対処ですが、本件は解決しません。PR #69 で試し、#70 で差し戻しました
 
-### 恒久的な解決
+### 解決方法：ニュースページだけを移す
 
-**サイトの配信元と `authDomain` のドメインをそろえる**必要があります。Firebase Hostingへ移し、公開URLを `shinagawakugiakidb.firebaseapp.com`（または独自ドメイン）にする形です。
+**配信元と `authDomain` のドメインをそろえる**必要があります。ただし移すのは**ログインするページだけ**で十分です。
 
-移行を検討する際の実測値です。
+| | 配信元 | URL |
+| --- | --- | --- |
+| ニュースページ | Firebase Hosting | `https://shinagawakugiakidb.firebaseapp.com/news.html` |
+| それ以外すべて | GitHub Pages | `https://taku3516.github.io/shinagawa-gikai-db/` |
 
-| 項目 | 実測 |
+サイト全体を移してはいけません。無料枠の転送量に収まらなくなります。
+
+| 項目 | 実測（圧縮後） |
 | --- | --- |
-| 会議録全文 `data/minutes` | 493 MB |
-| それ以外の公開物 | 150 MB |
-| ニュースページ1回の読み込み | 0.30 MB |
+| ニュースページ一式 | **0.076 MB** → 1日あたり約4,700表示ぶん |
+| トップページ | 0.65 MB → 約550表示ぶん |
+| 会議録全文ページ | 0.75 MB → 約480表示ぶん |
+| 会議録全文 `data/minutes` | 493 MB（GitHub Pagesに据え置き） |
 | Firebase Hosting 無料枠 | 転送 360 MB/日、保存 10 GB |
 
-全部を移すと会議録全文の閲覧で無料枠を超え、Blazeプラン（従量課金）が必要になります。サイト本体だけを移し、会議録全文はGitHub Pagesに残して絶対URLで読み込む分割構成なら、無料枠に収まる見込みです。いずれも公開URLの変更を伴います。
+ログインするページはニュースページだけなので、他を巻き込む必要はありません。**制約に収まらないときは、動かす範囲を疑ってください。**
+
+### 仕組み
+
+- `scripts/build_news_app.py` が Firebase Hosting 用の配信物（`_news-app/`）を作ります。配信対象は `FILES` に列挙したものだけです。**ここに足すと転送量が増えます。**
+- 別ドメインになるため、ニュースページから他ページへのリンクは絶対URLへ書き換えます（`site-url.js`）。基準URLは配信時に差し込みます。GitHub Pages 側のページでは基準URLが無いので、従来どおり相対リンクのまま動きます
+- どのページからでもニュースへ直接行けるよう、ナビゲーションのニュースリンクだけは常に絶対URLです（`site-nav.js` の `NEWS_URL`）
+- 旧URL（`taku3516.github.io/.../news.html`）は転送ページになります。`scripts/build_pages.py` が `news-moved.html` を `news.html` として配ります。リポジトリの `news.html` は本体のままなので、ローカルでダブルクリックしたときは従来どおり開きます
+
+### 端末内保存の引き継ぎ
+
+端末内保存の領域はURLごとに分かれるため、配信元が変わると★と表示設定が空から始まります。ログインした利用者はクラウドから復元されますが、ログインしない利用者のために転送時に引き継ぎます（`news-migration.js`）。
+
+- 受け渡しはURLの `#` 以降を使います。`#` 以降はサーバーへ送られず、アクセス記録に残りません
+- 運ぶのは★・非表示にした配信元・非表示にした記事だけです
+- 取り込むのは**この端末にまだ保存が無いときだけ**で、既存の内容は上書きしません
+- URLは誰でも書き換えられるため、受け取り側は形式と件数を検査してから保存します
+- 取り込んだ直後にURLから消し、再読み込みで二度実行されないようにします
+
+```bash
+node --test scripts/news-migration.test.mjs
+node --test scripts/site-url.test.mjs
+```
 
 ### 現在の対応
 
