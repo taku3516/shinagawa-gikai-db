@@ -2,17 +2,22 @@
  * news-sync-environment.js の検査です。
  * 実行: node --test scripts/news-sync-environment.test.mjs
  *
- * 遮る条件は「iOS・iPadOS」かつ「ドメインが不一致」の両方です。
- * ここでは3方向を確かめます。
- *   1. iOSを取りこぼさない（取りこぼすと分かりにくいエラーが出る）
- *   2. それ以外の環境を巻き込まない（巻き込むと動いているログインが壊れる）
- *   3. ドメインをそろえた配信元では、iOSでも遮らない（移行の成果を打ち消さない）
+ * ログイン方式は環境とドメインの組み合わせで3通りに分かれます。
+ *
+ *   パソコン           → popup      （今動いている。壊さない）
+ *   iOS・ドメイン一致  → redirect   （ポップアップは完了できないが、遷移なら通る）
+ *   iOS・ドメイン不一致 → unavailable（どの方式でも完了できない。案内を出す）
+ *
+ * iOS でポップアップが使えないのは、認証ハンドラーがGoogleへ行く前に書いた
+ * sessionStorage を、戻ってきた後に読めないためです。遷移方式なら、その印は
+ * アプリ自身のドメインの領域に置かれるため、ドメインが一致していれば残ります。
+ * ドメインが不一致だと遷移方式でも印が別領域になり、やはり完了できません。
  */
 
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
-  isPopupSignInBlocked,
+  signInMethod,
   isWebKitOnlyPlatform,
   isSameAuthDomain
 } from "../news-sync-environment.js";
@@ -28,59 +33,66 @@ const androidChrome = "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.
 const AUTH = "shinagawakugiakidb.firebaseapp.com";
 const OLD_HOST = "taku3516.github.io";
 
-/* ---------- 1. iOSを取りこぼさない（旧URL＝ドメイン不一致） ---------- */
+/* ---------- iOS・ドメイン一致 → 遷移方式 ---------- */
 
-test("旧URLのiPhone Safariは遮る", () => {
-  assert.equal(isPopupSignInBlocked(iphone, 5, OLD_HOST, AUTH), true);
+test("新URLのiPhone Safariは遷移方式", () => {
+  assert.equal(signInMethod(iphone, 5, AUTH, AUTH), "redirect");
 });
 
-test("旧URLのiPhone Chromeも遮る（中身はWebKitのため）", () => {
-  assert.equal(isPopupSignInBlocked(iphoneChrome, 5, OLD_HOST, AUTH), true);
+test("新URLのiPhone Chromeも遷移方式（中身はWebKitのため）", () => {
+  assert.equal(signInMethod(iphoneChrome, 5, AUTH, AUTH), "redirect");
 });
 
-test("旧URLのiPadOS13より前のiPadは遮る", () => {
-  assert.equal(isPopupSignInBlocked(ipadOld, 5, OLD_HOST, AUTH), true);
+test("新URLのiPadOS（Mac表記）も、タッチ対応から見分けて遷移方式", () => {
+  assert.equal(signInMethod(ipadOS, 5, AUTH, AUTH), "redirect");
 });
 
-test("旧URLのiPadOS（Mac表記）は、タッチ対応から見分けて遮る", () => {
-  assert.equal(isPopupSignInBlocked(ipadOS, 5, OLD_HOST, AUTH), true);
+test("新URLの古いiPadも遷移方式", () => {
+  assert.equal(signInMethod(ipadOld, 5, AUTH, AUTH), "redirect");
 });
 
-/* ---------- 2. それ以外の環境を巻き込まない ---------- */
+/* ---------- パソコン → ポップアップ方式（今動いている。壊さない） ---------- */
 
-test("MacのSafariは遮らない（タッチ非対応で見分ける）", () => {
-  assert.equal(isPopupSignInBlocked(ipadOS, 0, OLD_HOST, AUTH), false);
+test("MacのChromeはポップアップ方式のまま", () => {
+  assert.equal(signInMethod(macChrome, 0, AUTH, AUTH), "popup");
 });
 
-test("MacのChromeは遮らない", () => {
-  assert.equal(isPopupSignInBlocked(macChrome, 0, OLD_HOST, AUTH), false);
+test("WindowsのChromeはポップアップ方式のまま", () => {
+  assert.equal(signInMethod(windowsChrome, 0, AUTH, AUTH), "popup");
 });
 
-test("WindowsのChromeは遮らない", () => {
-  assert.equal(isPopupSignInBlocked(windowsChrome, 0, OLD_HOST, AUTH), false);
+test("AndroidのChromeはポップアップ方式のまま（WebKitではないため）", () => {
+  assert.equal(signInMethod(androidChrome, 5, AUTH, AUTH), "popup");
 });
 
-test("AndroidのChromeは遮らない（WebKitではないため）", () => {
-  assert.equal(isPopupSignInBlocked(androidChrome, 5, OLD_HOST, AUTH), false);
+test("MacのSafariはポップアップ方式のまま（タッチ非対応で見分ける）", () => {
+  assert.equal(signInMethod(ipadOS, 0, AUTH, AUTH), "popup");
 });
 
-/* ---------- 3. ドメインをそろえた配信元では遮らない ---------- */
+/* ---------- iOS・ドメイン不一致 → 案内 ---------- */
 
-test("新URLのiPhoneは遮らない。移行の成果を打ち消してはいけない", () => {
-  assert.equal(isPopupSignInBlocked(iphone, 5, AUTH, AUTH), false);
+test("旧URLのiPhoneはどの方式でも完了できないので案内する", () => {
+  // 遷移方式にしても、印が別ドメインの領域に置かれるため戻れない。
+  assert.equal(signInMethod(iphone, 5, OLD_HOST, AUTH), "unavailable");
 });
 
-test("新URLのiPadOSも遮らない", () => {
-  assert.equal(isPopupSignInBlocked(ipadOS, 5, AUTH, AUTH), false);
+test("旧URLのiPadOSも案内する", () => {
+  assert.equal(signInMethod(ipadOS, 5, OLD_HOST, AUTH), "unavailable");
 });
+
+test("旧URLでもパソコンはポップアップ方式で通る", () => {
+  // 実際に旧URLのパソコンでは動いていた。巻き込まない。
+  assert.equal(signInMethod(windowsChrome, 0, OLD_HOST, AUTH), "popup");
+});
+
+/* ---------- ドメイン判定 ---------- */
 
 test("大文字小文字や前後の空白が違ってもドメイン一致とみなす", () => {
   assert.equal(isSameAuthDomain("ShinagawaKugiakiDB.FirebaseApp.com", ` ${AUTH} `), true);
-  assert.equal(isPopupSignInBlocked(iphone, 5, AUTH.toUpperCase(), AUTH), false);
+  assert.equal(signInMethod(iphone, 5, AUTH.toUpperCase(), AUTH), "redirect");
 });
 
 test("紛らわしい別ドメインは一致とみなさない", () => {
-  // 前方一致や部分一致で通してしまうと、認証が通らない配信元を見逃す。
   assert.equal(isSameAuthDomain("evil-shinagawakugiakidb.firebaseapp.com", AUTH), false);
   assert.equal(isSameAuthDomain("shinagawakugiakidb.firebaseapp.com.example.jp", AUTH), false);
   assert.equal(isSameAuthDomain("shinagawakugiakidb.web.app", AUTH), false);
@@ -88,13 +100,12 @@ test("紛らわしい別ドメインは一致とみなさない", () => {
 
 /* ---------- 判定材料が欠けている場合 ---------- */
 
-test("判定材料が欠けているときは遮らない", () => {
-  // 判定できないなら従来どおりログインを試させる。
-  // 誤って遮ると、動いている環境まで使えなくなる。
-  assert.equal(isPopupSignInBlocked("", 0, OLD_HOST, AUTH), false);
-  assert.equal(isPopupSignInBlocked(undefined, undefined, undefined, undefined), false);
-  assert.equal(isPopupSignInBlocked(iphone, 5, "", AUTH), false);
-  assert.equal(isPopupSignInBlocked(iphone, 5, OLD_HOST, ""), false);
+test("判定材料が欠けているときはポップアップ方式にする", () => {
+  // 判定できないなら従来の動きに任せる。誤って遮ると動いている環境が壊れる。
+  assert.equal(signInMethod("", 0, AUTH, AUTH), "popup");
+  assert.equal(signInMethod(undefined, undefined, undefined, undefined), "popup");
+  assert.equal(signInMethod(iphone, 5, "", AUTH), "popup");
+  assert.equal(signInMethod(iphone, 5, AUTH, ""), "popup");
 });
 
 test("環境判定そのものは単体でも使える", () => {

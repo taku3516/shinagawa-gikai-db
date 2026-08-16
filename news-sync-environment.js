@@ -1,21 +1,23 @@
 /*
- * Googleログインを完了できない環境の判定です。
+ * ログイン方式の選択です。
  *
- * FirebaseのGoogleログインは、認証ハンドラー（<authDomain>/__/auth/handler）が
- * Googleへ移動する前にsessionStorageへ状態を書き、戻ってきた後にそれを読む作りです。
- * サイトの配信元と authDomain のドメインが異なると、WebKitのストレージ分割によって
- * この読み書きが別扱いになり、戻ってきた時点で
- * 「Unable to process request due to missing initial state」となって完了できません。
+ * FirebaseのGoogleログインは、認証ハンドラーがGoogleへ移動する前にsessionStorageへ
+ * 状態を書き、戻ってきた後にそれを読む作りになっています。この読み書きがどの領域に
+ * 置かれるかで、使える方式が変わります。
  *
- * iOS・iPadOSはブラウザの種類によらず中身がWebKitなので、Chromeを使っても同じです。
- * パソコンのブラウザ（Blink系など）ではこの分割が起きないため、従来どおり利用できます。
+ * ポップアップ方式は、iOS・iPadOSでは完了できません。ハンドラーが別窓で動くため、
+ * 書いた領域と読む領域がWebKitのストレージ分割で別扱いになり、
+ * 「Unable to process request due to missing initial state」になります。
+ * iOSはブラウザの種類によらず中身がWebKitなので、Chromeを使っても同じです。
  *
- * したがって完了できない条件は「iOS・iPadOS」かつ「ドメインが不一致」の両方です。
- * ドメインをそろえた配信元（docs/firebase-sync-setup.md 参照）から開かれた場合は、
- * iOSでも問題なく完了できるため遮ってはいけません。
+ * 遷移方式（signInWithRedirect）は、印がアプリ自身のドメインの領域に置かれます。
+ * 配信元と authDomain のドメインが一致していれば往復しても残るため、完了できます。
+ * 一致していないと、遷移方式でも印が別領域になり、やはり完了できません。
  *
- * 判定は控えめにします。取りこぼすと分かりにくいエラーが出るだけですが、
- * 巻き込むと現に動いている環境のログインまで使えなくなるためです。
+ * パソコンのブラウザではストレージ分割が起きないため、ポップアップ方式のまま
+ * 従来どおり利用できます。動いているものを変えません。
+ *
+ * 判定は控えめにします。材料が取れないときはポップアップ方式に任せます。
  */
 
 /**
@@ -51,17 +53,16 @@ export function isSameAuthDomain(currentHost, authDomain) {
 }
 
 /**
- * Googleログインを完了できない環境かどうかを判定します。
- * iOS・iPadOSであり、かつドメインが不一致のときだけ true を返します。
+ * この環境で使うログイン方式を返します。
  * @param {string|null|undefined} userAgent navigator.userAgent
  * @param {number|null|undefined} maxTouchPoints navigator.maxTouchPoints
  * @param {string|null|undefined} currentHost location.hostname
  * @param {string|null|undefined} authDomain 設定のauthDomain
- * @returns {boolean} 完了できない環境なら true
+ * @returns {"popup"|"redirect"|"unavailable"}
  */
-export function isPopupSignInBlocked(userAgent, maxTouchPoints, currentHost, authDomain) {
-  if (!isWebKitOnlyPlatform(userAgent, maxTouchPoints)) return false;
-  // ドメインが分からないときは遮らない。動く環境を巻き込む方が損害が大きい。
-  if (!currentHost || !authDomain) return false;
-  return !isSameAuthDomain(currentHost, authDomain);
+export function signInMethod(userAgent, maxTouchPoints, currentHost, authDomain) {
+  if (!isWebKitOnlyPlatform(userAgent, maxTouchPoints)) return "popup";
+  // ドメインが分からないときは従来の動きに任せる。
+  if (!currentHost || !authDomain) return "popup";
+  return isSameAuthDomain(currentHost, authDomain) ? "redirect" : "unavailable";
 }
