@@ -1,10 +1,3 @@
-import {
-  applyPersistenceChoice,
-  startGoogleSignIn,
-  isUserCancelled,
-  isPopupUnavailable
-} from "./news-sync-auth.js";
-
 const settings = window.SHINAGAWA_FIREBASE_SYNC;
 const bridge = window.SHINAGAWA_NEWS_SYNC_BRIDGE;
 const panel = document.getElementById("news-sync-panel");
@@ -116,33 +109,24 @@ async function startSync() {
     }
   });
 
-  // 保持方式はタップより前に決めておく。ログインの直前に切り替えると、
-  // 保存領域への書き込みを待つ間にポップアップの許可が切れる。
-  applyPersistenceChoice(authApi, auth, elements.remember.checked);
-  elements.remember.addEventListener("change", () => {
-    applyPersistenceChoice(authApi, auth, elements.remember.checked);
-  });
-
-  // このハンドラーは async にしない。ポップアップより前に await が入ると、
-  // ホーム画面のwebアプリでは窓が開いても白いまま進まなくなる。
-  elements.login.addEventListener("click", () => {
+  elements.login.addEventListener("click", async () => {
     setBusy(true);
     setStatus("Googleログインを確認しています…");
-    startGoogleSignIn(authApi, auth, provider).catch(error => {
-      if (isUserCancelled(error)) {
-        setStatus("ログインはキャンセルされました。端末内保存を利用しています。");
-      } else if (isPopupUnavailable(error)) {
-        console.error("Googleログインの画面を開けませんでした。", error);
-        setStatus(
-          "ログイン画面を開けませんでした。ホーム画面のアプリで繰り返す場合は、ブラウザで開いてお試しください。",
-          true
-        );
-      } else {
+    try {
+      const persistence = elements.remember.checked
+        ? authApi.browserLocalPersistence
+        : authApi.browserSessionPersistence;
+      await authApi.setPersistence(auth, persistence);
+      await authApi.signInWithPopup(auth, provider);
+    } catch (error) {
+      if (error?.code !== "auth/popup-closed-by-user" && error?.code !== "auth/cancelled-popup-request") {
         console.error("Googleログインに失敗しました。", error);
         setStatus("ログインできませんでした。設定または通信状態を確認してください。", true);
+      } else {
+        setStatus("ログインはキャンセルされました。端末内保存を利用しています。");
       }
       setBusy(false);
-    });
+    }
   });
 
   elements.logout.addEventListener("click", async () => {
