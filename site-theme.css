@@ -76,10 +76,11 @@
   --c-surface-sub: var(--dads-gray-50); /* カードの中に置く一段沈んだ面 */
   --c-ink: var(--dads-gray-900);        /* 本文（白地に17.4:1） */
   --c-ink-soft: var(--dads-gray-700);   /* 補足文（白地に8.5:1） */
-  /* --c-ink-mute は「白地に置いたときちょうど4.5:1」の下限値。
-     灰の面（--c-surface-sub）に載せると4.1:1まで落ちるので、
-     白以外の背景では --c-ink-soft を使うこと */
-  --c-ink-mute: var(--dads-gray-536);
+  /* 控えめな補助文。gray-536 は「白地でちょうど4.5:1」の下限値で、
+     灰の面（--c-surface-sub）に載せると4.06:1まで落ちてしまう。
+     このサイトはカードの中に灰の面を置くので、どの地でも4.5:1を
+     満たす gray-600 を採用する（白5.7:1／灰5.1:1／淡青5.0:1） */
+  --c-ink-mute: var(--dads-gray-600);
   --c-border: var(--dads-gray-300);     /* カードの境界線 */
   --c-border-strong: var(--dads-gray-420); /* 入力欄など操作できる要素の境界線（3:1） */
   --c-rule: var(--dads-gray-100);       /* 区切り線 */
