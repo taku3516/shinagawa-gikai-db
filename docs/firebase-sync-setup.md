@@ -73,6 +73,58 @@ python3 scripts/check_firebase_sync.py
 5. 片方で★を外し、もう片方にも反映されることを確認する
 6. ログアウト後、その端末がログイン前の端末内保存表示へ戻ることを確認する
 
+## iPhone・iPadでログインできない理由（既知の制限）
+
+**iOS・iPadOSではGoogleログインを完了できません。** ブラウザの種類は関係ありません（iOSではChromeも中身がWebKitのため、Safariと同じ挙動になります）。パソコンのブラウザでは従来どおり利用できます。
+
+### 仕組み
+
+FirebaseのGoogleログインは、認証ハンドラーが2段階でsessionStorageを使います。
+
+1. ポップアップが `shinagawakugiakidb.firebaseapp.com/__/auth/handler` を開く
+2. ハンドラーが**sessionStorageへ状態を書き**、Googleのログイン画面へ移動する
+3. ログイン後、Googleがハンドラーへ戻す
+4. ハンドラーが**sessionStorageから状態を読む**
+
+このサイトは `taku3516.github.io` から配信しているため、ハンドラーは別ドメインです。WebKitはストレージ分割（Storage Partitioning）を行うため、2で書いた領域と4で読む領域が別扱いになり、次のエラーになります。
+
+```
+Unable to process request due to missing initial state.
+This may happen if browser sessionStorage is inaccessible or accidentally cleared.
+```
+
+エラー文には `signInWithRedirect` も挙がりますが、これは原因候補の列挙です。このサイトはポップアップ方式のみを使っています。
+
+### 試したが解決しなかった方法
+
+- **リダイレクト方式へ切り替える**: 解決しません。Firebase SDKは「リダイレクト中」の印をsessionStorageに置くため、webアプリが終了すると資格情報を受け取れません
+- **ポップアップをタップと同じ処理のかたまりの中で呼ぶ**: これは別の問題（ポップアップが開かない）への正しい対処ですが、本件は解決しません。PR #69 で試し、#70 で差し戻しました
+
+### 恒久的な解決
+
+**サイトの配信元と `authDomain` のドメインをそろえる**必要があります。Firebase Hostingへ移し、公開URLを `shinagawakugiakidb.firebaseapp.com`（または独自ドメイン）にする形です。
+
+移行を検討する際の実測値です。
+
+| 項目 | 実測 |
+| --- | --- |
+| 会議録全文 `data/minutes` | 493 MB |
+| それ以外の公開物 | 150 MB |
+| ニュースページ1回の読み込み | 0.30 MB |
+| Firebase Hosting 無料枠 | 転送 360 MB/日、保存 10 GB |
+
+全部を移すと会議録全文の閲覧で無料枠を超え、Blazeプラン（従量課金）が必要になります。サイト本体だけを移し、会議録全文はGitHub Pagesに残して絶対URLで読み込む分割構成なら、無料枠に収まる見込みです。いずれも公開URLの変更を伴います。
+
+### 現在の対応
+
+移行までの間、iOS・iPadOSでは**ログインボタンを無効にし、事前に案内を表示します**。分かりにくいエラー画面へ進ませないためです。判定は `news-sync-environment.js` にあり、次の検査で確認できます。
+
+```bash
+node --test scripts/news-sync-environment.test.mjs
+```
+
+判定は控えめにしています。取りこぼしても分かりにくいエラーが出るだけですが、巻き込むと現に動いているパソコンのログインまで使えなくなるためです。
+
 ## App Check（動作確認後に推奨）
 
 不正な自動アクセスへの対策を強める場合は、Firebase App CheckでreCAPTCHA Enterpriseを登録できます。サイトキーを `enterpriseSiteKey` に入れ、`appCheck.enabled` を `true` にします。
