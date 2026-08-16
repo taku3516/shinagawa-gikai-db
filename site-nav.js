@@ -42,8 +42,19 @@
     minutesDraft: "pill pill--minutes"
   };
 
+  // ニュースページだけは Firebase Hosting から配信している。Googleログインは
+  // 配信元と authDomain のドメインが一致していないと iPhone・iPad で完了できないため
+  // （理由は docs/firebase-sync-setup.md）。どのページから押しても直接そこへ向ける。
+  const NEWS_URL = "https://shinagawakugiakidb.firebaseapp.com/news.html";
+
   function resolveUrl(rawUrl) {
     const u = String(rawUrl || "");
+    if (u === "news.html") return NEWS_URL;
+    // ニュースページ自身は別ドメインにあるため、他ページへのリンクを絶対URLにする
+    // （site-url.js）。同じドメインから配信されるページでは従来どおり相対リンク。
+    if (window.SHINAGAWA_SITE_BASE && window.SHINAGAWA_URL) {
+      return window.SHINAGAWA_URL.resolve(u);
+    }
     if (u.startsWith("#")) {
       return currentFile === "index.html" ? u : `index.html${u}`;
     }
