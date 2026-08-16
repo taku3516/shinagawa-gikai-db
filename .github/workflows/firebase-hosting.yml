@@ -1,0 +1,66 @@
+name: Firebase Hostingへ公開（ニュースページ）
+
+# ニュースページだけを Firebase Hosting から配信する。Googleログインは配信元と
+# authDomain のドメインが一致していないと iPhone・iPad で完了できないため
+# （docs/firebase-sync-setup.md）。
+#
+# サイト本体は従来どおり GitHub Pages（pages.yml）から配信する。
+# ここで配るのは 0.1MB 未満で、無料枠の転送量 360MB/日に十分収まる。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - news.html
+      - news-sync.js
+      - news-sync-environment.js
+      - news-migration.js
+      - site-url.js
+      - site-nav.js
+      - site-nav.css
+      - site-a11y.js
+      - site-a11y.css
+      - site-mobile.css
+      - data/site.js
+      - data/news-items.js
+      - firebase.json
+      - .firebaserc
+      - scripts/build_news_app.py
+      - .github/workflows/firebase-hosting.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: firebase-hosting
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v6
+
+      - name: 公開設定を検査
+        run: python3 scripts/check_firebase_sync.py
+
+      - name: 判定と引き継ぎの検査
+        run: |
+          node --test scripts/news-sync-environment.test.mjs
+          node --test scripts/news-migration.test.mjs
+          node --test scripts/site-url.test.mjs
+
+      - name: 配信ファイルを生成
+        env:
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+        run: python3 scripts/build_news_app.py
+
+      - name: Firebase Hostingへ公開
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SHINAGAWAKUGIAKIDB }}
+          channelId: live
+          projectId: shinagawakugiakidb

@@ -76,6 +76,15 @@ def build(output: Path, api_key: str) -> None:
     (output / "data" / "firebase-config.js").write_text(
         firebase_config(api_key), encoding="utf-8"
     )
+
+    # ニュースページは Firebase Hosting へ移した（scripts/build_news_app.py）。
+    # Googleログインは配信元と authDomain のドメインが一致していないと
+    # iPhone・iPad で完了できないため（docs/firebase-sync-setup.md）。
+    # 旧URLからは転送する。リポジトリの news.html はそのまま残すので、
+    # ローカルでダブルクリックしたときは従来どおり本体が開く。
+    shutil.copy2(ROOT / "news-moved.html", output / "news.html")
+    (output / "news-moved.html").unlink(missing_ok=True)
+
     (output / ".nojekyll").touch()
 
 

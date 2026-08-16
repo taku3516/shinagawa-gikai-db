@@ -247,7 +247,10 @@
   <footer><div class="container">品川区議会DB — ニュースの正確な内容は、必ず各発信元のページで確認してください。</div></footer>
 
   <script src="data/site.js"></script>
+  <!-- site-nav.js より前に読む。別ドメインから配信された場合のリンク解決に使う。 -->
+  <script src="site-url.js"></script>
   <script src="site-nav.js"></script>
+  <script src="news-migration.js"></script>
   <script src="data/news-items.js"></script>
   <script src="data/firebase-config.js"></script>
   <script>
@@ -259,6 +262,10 @@
       let cloudActive = false;
       let undoTimer = null;
       let lastHiddenId = "";
+
+      // 旧URL（GitHub Pages）からの引き継ぎ。state を作る前に取り込む必要がある。
+      importCarriedOverState();
+
       const state = { view: "all", visible: 40, favorites: loadFavorites(), hiddenSources: loadHiddenSources(), hiddenItems: loadHiddenItems() };
       const elements = {
         search: document.getElementById("search"), tag: document.getElementById("tag-filter"),
@@ -270,6 +277,30 @@
         sources: document.getElementById("source-list"), undo: document.getElementById("undo-notice"),
         undoMessage: document.getElementById("undo-message"), undoButton: document.getElementById("undo-button")
       };
+
+      // 旧URLから運ばれてきた★と表示設定を取り込む。
+      // 端末内保存の領域はURLごとに分かれるため、配信元が変わると空から始まってしまう。
+      // 取り込むのは、この端末にまだ保存が無いときだけ。既存の内容を上書きしない。
+      function importCarriedOverState() {
+        const match = /[#&]migrate=([^&]*)/.exec(window.location.hash || "");
+        if (!match) return;
+        // 取り込みの成否によらず、URLからは必ず消す。再読み込みで二度実行させない。
+        try {
+          history.replaceState(null, "", window.location.pathname + window.location.search);
+        } catch (_) { /* 履歴を書き換えられない環境では、そのままでも実害はない */ }
+
+        const carried = window.SHINAGAWA_NEWS_MIGRATION?.decode(match[1]);
+        if (!carried) return;
+        try {
+          const hasExisting = localStorage.getItem(storageKey)
+            || localStorage.getItem(sourceStorageKey)
+            || localStorage.getItem(hiddenItemStorageKey);
+          if (hasExisting) return;
+          localStorage.setItem(storageKey, JSON.stringify(carried.favorites));
+          localStorage.setItem(sourceStorageKey, JSON.stringify(carried.hiddenSources));
+          localStorage.setItem(hiddenItemStorageKey, JSON.stringify(carried.hiddenItems));
+        } catch (_) { /* 保存できない環境では引き継がない。画面は通常どおり使える */ }
+      }
 
       function loadFavorites() {
         try { return new Set(JSON.parse(localStorage.getItem(storageKey) || "[]")); }
