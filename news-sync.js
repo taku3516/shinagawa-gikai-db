@@ -1,3 +1,5 @@
+import { isPopupSignInBlocked } from "./news-sync-environment.js";
+
 const settings = window.SHINAGAWA_FIREBASE_SYNC;
 const bridge = window.SHINAGAWA_NEWS_SYNC_BRIDGE;
 const panel = document.getElementById("news-sync-panel");
@@ -176,6 +178,23 @@ async function startSync() {
       elements.remove.hidden = true;
       setStatus("この端末だけに保存中。ログインは任意です。");
       setBusy(false);
+      // iOS・iPadOSかつドメイン不一致のときはGoogleログインを完了できない
+      // （理由は news-sync-environment.js）。分かりにくいエラー画面へ進ませる前に案内する。
+      // ドメインをそろえた配信元では遮らないので、移行後は自動的に無効化されなくなる。
+      // setBusy はボタンを有効化し直すため、その後に無効化すること。
+      if (isPopupSignInBlocked(
+        navigator.userAgent,
+        navigator.maxTouchPoints,
+        window.location.hostname,
+        settings.firebaseConfig.authDomain
+      )) {
+        elements.login.disabled = true;
+        elements.remember.closest("label").hidden = true;
+        setStatus(
+          "iPhone・iPadではGoogleログインをご利用いただけません。パソコンのブラウザからお試しください。"
+          + "★の保存と表示設定は、この端末で引き続きご利用いただけます。"
+        );
+      }
       return;
     }
 
