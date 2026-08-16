@@ -3,33 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#1f4e79" />
+  <meta name="theme-color" content="#0017c1" />
   <title>会議録を見る | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
     /* ===== 基調カラー：深い青と生成りを使った、公文書・資料庫を思わせる配色 ===== */
-    :root {
-      --c-main: #1f4e79;
-      --c-main-dark: #173a5e;
-      --c-main-pale: #e7eef4;
-      --c-bg: #f4f1e8;
-      --c-card: #fffdf8;
-      --c-ink: #17212b;
-      --c-ink-soft: #4f5d68;
-      --c-border: #b9c3cc;
-      --c-rule: #d8d2c4;
-      /* 機能別の色分け */
-      --c-video-bg: #fff1f2;      /* 録画リンク＝赤系 */
-      --c-video-border: #fecaca;
-      --c-video-text: #be123c;
-      --c-minutes-bg: #f0fdf4;    /* 議事録リンク＝緑系 */
-      --c-minutes-border: #bbf7d0;
-      --c-minutes-text: #15803d;
-      --c-result-bg: #fef3c7;     /* 議決結果タグ＝黄系 */
-      --c-result-text: #92400e;
-    }
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
 
     * { box-sizing: border-box; }
 
@@ -108,7 +91,7 @@
     .tag--result { background: var(--c-result-bg); color: var(--c-result-text); }
     .chip {
       display: inline-flex; margin-bottom: 10px; border: 1px solid var(--c-border); border-radius: 3px;
-      background: #f6f4ed; padding: 3px 9px; color: #334452; font-size: 12px; font-weight: 800;
+      background: var(--c-surface-sub); padding: 3px 9px; color: var(--c-ink-soft); font-size: 12px; font-weight: 800;
     }
 
     /* ===== 年切り替え ===== */
@@ -136,8 +119,8 @@
     .accordion-controls {
       position: sticky; top: 0; z-index: 20;
       border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border);
-      background: rgba(244, 241, 232, 0.97); padding: 8px 0;
-      box-shadow: 0 2px 5px rgba(23, 33, 43, 0.1);
+      background: rgba(242, 242, 242, 0.94); padding: 8px 0;
+      box-shadow: 0 2px 5px rgba(26, 26, 26, 0.1);
       backdrop-filter: blur(8px);
     }
     .accordion-controls__inner { display: flex; align-items: center; gap: 8px; }
@@ -149,17 +132,14 @@
       font: inherit; font-size: 13px; font-weight: 800; cursor: pointer;
     }
     .accordion-button:hover { background: var(--c-main-pale); }
-    .accordion-button:focus-visible, .meeting-accordion > summary:focus-visible,
-    .record-section > summary:focus-visible, .card.q > summary:focus-visible {
-      outline: 3px solid #f59e0b; outline-offset: 3px;
-    }
+    /* フォーカスリングは site-theme.css で全ページ共通に定義している */
     .accordion-button:disabled { opacity: 0.45; cursor: default; }
     .accordion-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 24px 0 40px; }
     .meeting-accordion {
       overflow: clip; border: 1px solid var(--c-border); border-radius: 4px;
       background: var(--c-card); scroll-margin-top: 76px;
     }
-    .meeting-accordion[open] { box-shadow: 0 3px 10px rgba(23, 33, 43, 0.08); }
+    .meeting-accordion[open] { box-shadow: 0 3px 10px rgba(26, 26, 26, 0.08); }
     .meeting-accordion > summary {
       display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: center;
       min-height: 88px; padding: 18px 20px; cursor: pointer; list-style: none;
@@ -178,8 +158,8 @@
     }
     .meeting-accordion__counts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
     .meeting-accordion__count {
-      border: 1px solid var(--c-border); border-radius: 3px; background: #f6f4ed; padding: 3px 9px;
-      color: #374151; font-size: 12px; font-weight: 800;
+      border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-surface-sub); padding: 3px 9px;
+      color: var(--c-ink-soft); font-size: 12px; font-weight: 800;
     }
     .meeting-accordion__icon {
       display: inline-grid; place-items: center; width: 36px; height: 36px;
@@ -229,7 +209,7 @@
     .qa-summaries > h4 { margin: 0; font-size: 15px; }
     .qa-summary {
       border-left: 4px solid var(--c-main); border-radius: 2px;
-      background: #f3f6f8; padding: 14px 16px;
+      background: var(--c-surface-sub); padding: 14px 16px;
     }
     .qa-summary h5 { margin: 0 0 10px; font-size: 15px; line-height: 1.55; }
     .qa-summary dl { display: grid; grid-template-columns: 5em 1fr; gap: 8px 12px; margin: 0; }
@@ -268,7 +248,7 @@
     .committee-topic__agenda { margin: 0 0 12px; color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
     .committee-topic__content { border-top: 1px solid var(--c-rule); padding: 14px; }
     .committee-exchanges { display: grid; gap: 12px; }
-    .committee-exchange { border-left: 4px solid var(--c-main); border-radius: 2px; background: #f3f6f8; padding: 14px 16px; }
+    .committee-exchange { border-left: 4px solid var(--c-main); border-radius: 2px; background: var(--c-surface-sub); padding: 14px 16px; }
     .committee-exchange__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
     .committee-exchange__head h5 { margin: 0; font-size: 15px; }
     .committee-exchange__speaker { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
@@ -298,10 +278,10 @@
     /* 公式会議録の改行ごとに1段落。長い答弁でも読める間隔にする */
     .committee-voice__text { margin: 0; font-size: 14px; line-height: 1.9; }
     .committee-voice__text + .committee-voice__text { margin-top: 8px; }
-    .committee-voice:target { background: #fffbe6; }
+    .committee-voice:target { background: var(--c-highlight); }
     .committee-voice:target .committee-voice__speaker { text-decoration: underline; }
 
-    .committee-pending { border: 1px dashed var(--c-border); border-radius: 3px; background: #f7f8fa; padding: 14px 16px; }
+    .committee-pending { border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-surface-sub); padding: 14px 16px; }
     .committee-pending strong { display: block; margin-bottom: 5px; }
     .committee-pending p { margin: 0; color: var(--c-ink-soft); font-size: 13px; }
 
@@ -349,7 +329,7 @@
     .committee-session[id], .committee-topic[id], .committee-exchange[id] { scroll-margin-top: 76px; }
 
     /* ===== 件数の多い資料種別をまとめる内側の折りたたみ ===== */
-    .record-section { margin-top: 30px; border: 1px solid var(--c-border); border-top: 3px solid var(--c-main); border-radius: 3px; background: #faf9f4; }
+    .record-section { margin-top: 30px; border: 1px solid var(--c-border); border-top: 3px solid var(--c-main); border-radius: 3px; background: var(--c-surface-sub); }
     .record-section > summary { display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 13px 16px; cursor: pointer; list-style: none; }
     .record-section > summary::-webkit-details-marker { display: none; }
     .record-section > summary:hover, .record-section[open] > summary { background: var(--c-main-pale); }

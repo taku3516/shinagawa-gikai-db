@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#1f4e79" />
+  <meta name="theme-color" content="#0017c1" />
   <title>意見書・決議等を見る | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
-    :root {
-      --c-main:#1f4e79; --c-main-dark:#173a5e; --c-main-pale:#e7eef4;
-      --c-bg:#f4f1e8; --c-card:#fffdf8; --c-ink:#17212b; --c-ink-soft:#4f5d68;
-      --c-border:#b9c3cc; --c-rule:#d8d2c4; --c-accent:#6b3f21; --c-accent-pale:#f8eee5;
-    }
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
     body { margin:0; background:var(--c-bg); color:var(--c-ink); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif; overflow-wrap:anywhere; }
@@ -23,7 +21,7 @@
     .breadcrumb { margin:0 0 12px; font-size:14px; }
     h1 { margin:0 0 12px; font-size:clamp(30px,5vw,50px); line-height:1.15; }
     .lead { max-width:900px; margin:0; line-height:1.9; }
-    .notice { margin-top:18px; border:1px solid #d6b99f; border-left:4px solid var(--c-accent); border-radius:4px; background:var(--c-accent-pale); padding:13px 15px; font-size:13px; line-height:1.8; }
+    .notice { margin-top:18px; border:1px solid var(--c-border); border-left:4px solid var(--c-accent); border-radius:4px; background:var(--c-accent-pale); padding:13px 15px; font-size:13px; line-height:1.8; }
     main section { padding:32px 0 44px; }
     .stats { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; }
     .stat { flex:1 1 150px; border:1px solid var(--c-border); border-top:3px solid var(--c-accent); border-radius:4px; background:var(--c-card); padding:14px; }
@@ -47,7 +45,7 @@
     .year-body { border-top:1px solid var(--c-border); padding:14px; display:grid; gap:10px; }
     .item { border:1px solid var(--c-rule); border-left:4px solid var(--c-accent); border-radius:4px; background:#fff; padding:14px 16px; scroll-margin-top:16px; }
     .item-head { display:flex; flex-wrap:wrap; gap:7px; align-items:center; }
-    .tag { display:inline-flex; border:1px solid #d6b99f; border-radius:999px; background:var(--c-accent-pale); padding:3px 9px; color:var(--c-accent); font-size:11px; font-weight:900; }
+    .tag { display:inline-flex; border:1px solid var(--c-border); border-radius:999px; background:var(--c-accent-pale); padding:3px 9px; color:var(--c-accent); font-size:11px; font-weight:900; }
     .date { color:var(--c-ink-soft); font-size:12px; font-weight:800; }
     .item h3 { margin:8px 0 6px; font-size:16px; line-height:1.6; }
     .meta { margin:0; color:var(--c-ink-soft); font-size:13px; }

@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#1f4e79" />
+  <meta name="theme-color" content="#0017c1" />
   <title>品川区の選挙アーカイブ | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
-    :root {
-      --c-main: #1f4e79; --c-main-dark: #173a5e; --c-bg: #f4f1e8;
-      --c-card: #fffdf8; --c-ink: #17212b; --c-ink-soft: #4f5d68;
-      --c-border: #b9c3cc; --c-soft-blue: #e7eef4; --c-warn: #fef3c7;
-    }
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
     * { box-sizing: border-box; }
     body {
       margin: 0; background: var(--c-bg); color: var(--c-ink);
@@ -25,7 +23,7 @@
     a:hover { text-decoration: underline; }
     .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
     .hero {
-      padding: 40px 0 28px; border-top: 6px solid var(--c-main); border-bottom: 1px solid #d8d2c4;
+      padding: 40px 0 28px; border-top: 6px solid var(--c-main); border-bottom: 1px solid var(--c-border);
       background: var(--c-card);
     }
     .breadcrumb { margin: 0 0 12px; font-size: 14px; }
@@ -48,7 +46,7 @@
     .reference-list a {
       display: flex; min-height: 44px; gap: 10px; align-items: center; justify-content: space-between;
       padding: 10px 12px; border: 1px solid var(--c-border); border-radius: 3px;
-      background: #f8fafc;
+      background: var(--c-surface-sub);
     }
     .reference-list a:hover { background: var(--c-soft-blue); }
     .reference-role {
@@ -77,7 +75,7 @@
       cursor: pointer; padding: 18px 20px; color: var(--c-main-dark);
       font-weight: 800; line-height: 1.6;
     }
-    .election-card summary:hover { background: #f8fafc; }
+    .election-card summary:hover { background: var(--c-surface-sub); }
     .summary-main { display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .date { color: var(--c-ink); font-variant-numeric: tabular-nums; }
     .tag {
@@ -91,7 +89,7 @@
       display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 8px; margin-top: 16px;
     }
-    .stat { padding: 10px 12px; border: 1px solid var(--c-border); background: #fafafa; }
+    .stat { padding: 10px 12px; border: 1px solid var(--c-border); background: var(--c-surface-sub); }
     .stat dt { color: var(--c-ink-soft); font-size: 12px; font-weight: 800; }
     .stat dd { margin: 4px 0 0; font-size: 16px; font-weight: 800; }
     .table-wrap { overflow-x: auto; border: 1px solid var(--c-border); }

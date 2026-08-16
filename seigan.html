@@ -3,24 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#1f4e79" />
+  <meta name="theme-color" content="#0017c1" />
   <title>請願・陳情 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
-    :root {
-      --c-main: #1f4e79; --c-main-dark: #173a5e; --c-main-pale: #e7eef4;
-      --c-bg: #f4f1e8; --c-card: #fffdf8; --c-ink: #17212b; --c-ink-soft: #4f5d68;
-      --c-border: #b9c3cc; --c-rule: #d8d2c4;
-      /* 住民から出された声をまとめるページなので、議案（青）とは別の緑系アクセントにする */
-      --c-seigan: #0f766e; --c-seigan-bg: #ecfdf5; --c-seigan-border: #99e2d0;
-      /* 議決結果の色分け（採択＝緑 / 不採択＝赤 / 継続審査＝橙 / それ以外＝灰） */
-      --c-pass: #15803d; --c-pass-bg: #f0fdf4; --c-pass-border: #bbf7d0;
-      --c-fail: #be123c; --c-fail-bg: #fff1f2; --c-fail-border: #fecaca;
-      --c-hold: #b45309; --c-hold-bg: #fff7ed; --c-hold-border: #fcd9b6;
-      --c-none: #52606d; --c-none-bg: #f1f3f5; --c-none-border: #d5dade;
-    }
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
     body { margin: 0; background: var(--c-bg); color: var(--c-ink);
