@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-17T07:31:57.071360Z",
+  "generatedAt": "2026-08-17T10:05:03.659246Z",
   "items": [
+    {
+      "id": "4cc28f4961b9caee25c7",
+      "title": "【8/19開催】tenso Logi-link、海外販売初心者を対象に「越境ビジネスポリシー実務講座」をeBayと開催",
+      "summary": "[BEENOS株式会社] 国際配送代行サービスtenso Logi-linkを運営するtenso株式会社（本社：東京都品川区、代表取締役社長：直井 聖太、以下「tenso」）は、イーベイ・ジャパンと合同で、初心者向け越境ビジネスポリシーに関する実...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000918.000035599.html",
+      "publishedAt": "2026-08-17T07:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-17T10:04:39.364616Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "9426cb2a6dcf48c58dda",
       "title": "AI動画プラットフォーム「1ROLL」が東芝テックに導入されて1年 動画が顧客の潜在ニーズを可視化",
@@ -5648,7 +5665,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1018, column 45"
+      "message": "not well-formed (invalid token): line 1728, column 45"
     },
     {
       "source": "朝日新聞",
