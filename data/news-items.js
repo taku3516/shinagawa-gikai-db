@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-17T10:05:03.659246Z",
+  "generatedAt": "2026-08-17T13:15:32.989842Z",
   "items": [
     {
       "id": "4cc28f4961b9caee25c7",
@@ -54,6 +54,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "79b56e51c7fd36389dcb",
+      "title": "天王洲ハーバーマーケット『天王洲夏夜祭 ～真夏の怪談ナイト～』",
+      "summary": "2026年8月21日（金）、22日（土）、アイルしながわにて天王洲ハーバーマーケット『天王洲夏夜祭』（てんのうず かやさい）が開催されます。 8月は「真夏の怪談ナイト」と銘打ち、親子で楽しめるやさしい怪談から、背筋が凍るような本格怪談までお楽しみいただけます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tennozmarket202606-2",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-17T13:15:08.417313Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "604d9e047ab548b9fe1c",
@@ -5641,7 +5660,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 10
+      "accepted": 9
     },
     {
       "source": "警視庁",
@@ -5665,7 +5684,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1728, column 45"
+      "message": "not well-formed (invalid token): line 2474, column 45"
     },
     {
       "source": "朝日新聞",
@@ -5689,7 +5708,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
