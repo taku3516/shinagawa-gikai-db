@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-17T04:11:12.079755Z",
+  "generatedAt": "2026-08-17T07:31:57.071360Z",
   "items": [
+    {
+      "id": "9426cb2a6dcf48c58dda",
+      "title": "AI動画プラットフォーム「1ROLL」が東芝テックに導入されて1年 動画が顧客の潜在ニーズを可視化",
+      "summary": "[株式会社フレイ・スリー] AI動画プラットフォーム「1ROLL（ワンロール）」を開発・運営する株式会社フレイ・スリー（所在地：東京都品川区東五反田5-22-33 TK 池田山2F 、代表：石田 貢）は、東芝テック株式会社様（以下、東芝テック）の...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000008.000105667.html",
+      "publishedAt": "2026-08-17T06:45:26Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-17T07:31:35.725143Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "efa08b423af70b28186a",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月17日号）を公開しました‼",
@@ -15,6 +34,43 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-17T02:00:43.217599Z",
       "tags": [
         "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "604d9e047ab548b9fe1c",
+      "title": "『小学生紙ヒコーキグランプリ 荏原第二地区大会』開催",
+      "summary": "令和8年8月1日（土）、品川区青少年対策荏原第二地区委員会による「第2回 小学生紙ヒコーキグランプリ 荏原第二地区大会」 が開催されました。 当日は約100人が参加し、様々な飛行機が宙を舞いました。 参加者は、思い思いに紙飛行機を作り、その距離を競いました。 子どもも大人も熱心に紙を折り、親子が揃って投げる場面も見受けられるなど、家族で楽しんでいただけるイベントとなりました。 今後も荏原第二地区委員会は、地域の皆様とともに楽しいイベントを企画しますので、ぜひご参加ください。…",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba2/shisetsu-kuyakusyo-chiiki-eba2-oshirase/r7_mini-sports-fes_report.html",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-17T07:31:35.725143Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -37,6 +93,23 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
+      "id": "141bbb2b714a15ff5e66",
+      "title": "避暑シェルターの利用",
+      "summary": "総務課 総務係 電話：03-5742-6625 FAX：03-3774-3656",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/hpg000022596.html",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
       "id": "6c4338c5a3165520d715",
       "title": "【9/4開催】女性の“次の一歩”を品川から応援！女性起業家の事業ピッチ×品川区長・森澤恭子氏登壇のクロストーク×JICA・アフリカ視察団との交流「ウーマンズエンパワーメント・サミット 品川」開催",
       "summary": "[品川区立武蔵小山創業支援センター] [画像1: https://prcdn.freetls.fastly.net/release_image/46375/45/46375-45-a8476be7a35f40e4bf7f582b3760c911-1414x845.jpg?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&...",
@@ -56,6 +129,23 @@ window.SHINAGAWA_NEWS = {
         "小山"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "9321b17422dcc167934b",
+      "title": "消費者力アップ連続講座2026受講者募集",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260813091746.html",
+      "publishedAt": "2026-08-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-17T07:31:35.725143Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 4
     },
     {
       "id": "be9a65534fd3d7b1e8e1",
@@ -139,23 +229,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-14T03:04:54.234228Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-08-14T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -1330,7 +1403,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "6d2064646574bbea4f96",
       "title": "エシカルカフェ第2回【夏休みの自由課題に】「おいしい」をずっと楽しむために、あなたの“推し”エシカルをプリマハム＆日本アクセスと見つけよう！",
-      "summary": "消費者センター 電話：03-6421-6136 FAX：03-6421-6132",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -2829,23 +2902,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
-      "id": "141bbb2b714a15ff5e66",
-      "title": "避暑シェルターのご利用について",
-      "summary": "総務課 総務係 電話：03-5742-6625 FAX：03-3774-3656",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/hpg000022596.html",
-      "publishedAt": "2026-07-22T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "a4bda8559655bfcae374",
       "title": "「ミーツカンパニー」がブランドロゴを刷新。より見やすく、より親しみやすく。学生と企業をつなぐブランドへ",
       "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営する新卒就職支...",
@@ -3877,7 +3933,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "361545ddec0f11b12db6",
       "title": "エシカルカフェ第1回「【夏休みの自由課題に】みんなで作ろう 地域の色 自分の色 ～「どろ絵の具」ワークショップ～」",
-      "summary": "消費者センター 電話：03-6421-6136 FAX：03-6421-6132",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -5590,9 +5646,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 262,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1018, column 45"
     },
     {
       "source": "朝日新聞",
@@ -5616,7 +5672,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
