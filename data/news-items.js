@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-15T07:06:55.907049Z",
+  "generatedAt": "2026-08-17T02:01:07.137127Z",
   "items": [
+    {
+      "id": "efa08b423af70b28186a",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月17日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年8月17日号(令和8年8月10日～令和8年8月16日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62407.html",
+      "publishedAt": "2026-08-17T02:00:43.217599Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-17T02:00:43.217599Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "6c4338c5a3165520d715",
       "title": "【9/4開催】女性の“次の一歩”を品川から応援！女性起業家の事業ピッチ×品川区長・森澤恭子氏登壇のクロストーク×JICA・アフリカ視察団との交流「ウーマンズエンパワーメント・サミット 品川」開催",
@@ -125,23 +159,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-14T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "dbe3cd7369c456dd28f3",
@@ -5556,13 +5573,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 9,
+      "scanned": 8,
       "accepted": 0
     },
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 136,
+      "scanned": 139,
       "accepted": 0
     },
     {
@@ -5574,7 +5591,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 443,
+      "scanned": 228,
       "accepted": 0
     },
     {
@@ -5599,7 +5616,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
