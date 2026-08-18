@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-18T15:56:37.427982Z",
+  "generatedAt": "2026-08-18T21:46:27.277281Z",
   "items": [
     {
       "id": "53a157b7e809d8beb52c",
@@ -27,7 +27,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000024.000100855.html",
-      "publishedAt": "2026-08-18T15:40:02Z",
+      "publishedAt": "2026-08-18T21:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-18T04:05:36.595226Z",
       "tags": [
@@ -46,7 +46,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
-      "publishedAt": "2026-08-18T13:10:02Z",
+      "publishedAt": "2026-08-18T19:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-18T13:23:04.852236Z",
       "tags": [
@@ -5821,7 +5821,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1987, column 48"
+      "message": "not well-formed (invalid token): line 2107, column 48"
     },
     {
       "source": "朝日新聞",
@@ -5845,7 +5845,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
