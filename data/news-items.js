@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-18T04:06:00.965238Z",
+  "generatedAt": "2026-08-18T07:15:48.679295Z",
   "items": [
+    {
+      "id": "082f81bfce71361decf3",
+      "title": "CADデータがそのまま\"現場\"になる。溶接シミュレーションツール「WeldNext」、実物寸法でのMR事前リハーサル機能を搭載しVer.2.0.0へアップデート",
+      "summary": "[イマクリエイト株式会社] イマクリエイト株式会社（本社：東京都品川区東五反田5丁目22-7、代表取締役：山本彰洋）は、株式会社神戸製鋼所溶接事業部門及びコベルコ溶接テクノ株式会社（以下、神戸製鋼所溶接事業部門及びコベルコ溶接テク...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000073.000034298.html",
+      "publishedAt": "2026-08-18T04:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T07:14:06.561911Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "df0cd4c2f030be4d8a86",
       "title": "【業界初※】年間11万円お得な\"2度吸い\"がビックカメラに常設化。 加熱式タバコデバイスの専門売場「2度吸い革命」、ラゾーナ川崎店にオープン",
@@ -5739,7 +5758,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2677, column 45"
+      "message": "not well-formed (invalid token): line 1972, column 47"
     },
     {
       "source": "朝日新聞",
@@ -5763,7 +5782,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -5820,9 +5839,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
