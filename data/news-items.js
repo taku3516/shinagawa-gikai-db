@@ -1,7 +1,49 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-18T09:58:02.252100Z",
+  "generatedAt": "2026-08-18T13:23:23.800601Z",
   "items": [
+    {
+      "id": "f0085228e601e2a90620",
+      "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
+      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、8月19日の「世界写真の日」に合わせ、写真の魅力や撮ることの楽しさを伝...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
+      "publishedAt": "2026-08-18T13:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T13:23:04.852236Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "天王洲アイル駅",
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "018bae190d39fc68984c",
+      "title": "中延にギャラリーカフェ「セプト」 アート作品の展示や雑貨販売も",
+      "summary": "ギャラリーカフェ「sept（セプト）」（品川区中延6）が7月22日、中延の源氏前小学校近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5058",
+      "publishedAt": "2026-08-18T10:49:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T13:23:04.852236Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "中延"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "df0cd4c2f030be4d8a86",
       "title": "【業界初※】年間11万円お得な\"2度吸い\"がビックカメラに常設化。 加熱式タバコデバイスの専門売場「2度吸い革命」、ラゾーナ川崎店にオープン",
@@ -5779,7 +5821,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2100, column 68"
+      "message": "not well-formed (invalid token): line 1856, column 48"
     },
     {
       "source": "朝日新聞",
@@ -5803,7 +5845,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
