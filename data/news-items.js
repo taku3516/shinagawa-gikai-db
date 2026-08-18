@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-18T01:58:12.256517Z",
+  "generatedAt": "2026-08-18T04:06:00.965238Z",
   "items": [
+    {
+      "id": "df0cd4c2f030be4d8a86",
+      "title": "【業界初※】年間11万円お得な\"2度吸い\"がビックカメラに常設化。 加熱式タバコデバイスの専門売場「2度吸い革命」、ラゾーナ川崎店にオープン",
+      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田、代表取締役：大野 達朗）は、2026年7月2日（木）より、株式会社ビックカメラが運営する「ビックカメラ ラゾーナ川崎店」において、当社取扱の2度吸い対応加熱式タ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000024.000100855.html",
+      "publishedAt": "2026-08-18T03:15:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T04:05:36.595226Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "af0cf25a3558f916b240",
       "title": "「地球の歩き方」が地域の食文化を未来へつなぐ「名店の味復活プロジェクト」を始動＆アンケート募集開始！ 第1弾は秋田市の名店「華麗亭」",
@@ -5701,7 +5720,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 9,
       "accepted": 0
     },
     {
@@ -5720,7 +5739,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2567, column 45"
+      "message": "not well-formed (invalid token): line 2677, column 45"
     },
     {
       "source": "朝日新聞",
@@ -5744,7 +5763,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
