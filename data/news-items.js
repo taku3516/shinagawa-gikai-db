@@ -1,7 +1,60 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-17T13:15:32.989842Z",
+  "generatedAt": "2026-08-18T01:58:12.256517Z",
   "items": [
+    {
+      "id": "af0cf25a3558f916b240",
+      "title": "「地球の歩き方」が地域の食文化を未来へつなぐ「名店の味復活プロジェクト」を始動＆アンケート募集開始！ 第1弾は秋田市の名店「華麗亭」",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 地球の歩き方（東京都品川区／代表取締役社長：新井邦弘）は、地域で長年愛されながら惜しまれつつ閉店した...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009337.000002535.html",
+      "publishedAt": "2026-08-18T01:15:31Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T01:57:49.746937Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "0f7ef77bb30180cd3552",
+      "title": "西品川二・三丁目地区地区計画",
+      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/20251014165418.html",
+      "publishedAt": "2026-08-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T01:57:49.746937Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西品川"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "4cc28f4961b9caee25c7",
       "title": "【8/19開催】tenso Logi-link、海外販売初心者を対象に「越境ビジネスポリシー実務講座」をeBayと開催",
@@ -110,23 +163,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "141bbb2b714a15ff5e66",
@@ -5684,7 +5720,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2474, column 45"
+      "message": "not well-formed (invalid token): line 2567, column 45"
     },
     {
       "source": "朝日新聞",
@@ -5708,7 +5744,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
