@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-18T13:23:23.800601Z",
+  "generatedAt": "2026-08-18T15:56:37.427982Z",
   "items": [
+    {
+      "id": "53a157b7e809d8beb52c",
+      "title": "令和8年熊本地震被災者の公営住宅への受け入れ",
+      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756 メール：mokumitsu-seibi@city.shinagawa.tokyo.jp 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260805090700.html",
+      "publishedAt": "2026-08-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "df0cd4c2f030be4d8a86",
+      "title": "【業界初※】年間11万円お得な\"2度吸い\"がビックカメラに常設化。 加熱式タバコデバイスの専門売場「2度吸い革命」、ラゾーナ川崎店にオープン",
+      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田、代表取締役：大野 達朗）は、2026年7月2日（木）より、株式会社ビックカメラが運営する「ビックカメラ ラゾーナ川崎店」において、当社取扱の2度吸い対応加熱式タ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000024.000100855.html",
+      "publishedAt": "2026-08-18T15:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T04:05:36.595226Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "f0085228e601e2a90620",
       "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
@@ -43,25 +79,6 @@ window.SHINAGAWA_NEWS = {
         "中延"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "df0cd4c2f030be4d8a86",
-      "title": "【業界初※】年間11万円お得な\"2度吸い\"がビックカメラに常設化。 加熱式タバコデバイスの専門売場「2度吸い革命」、ラゾーナ川崎店にオープン",
-      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田、代表取締役：大野 達朗）は、2026年7月2日（木）より、株式会社ビックカメラが運営する「ビックカメラ ラゾーナ川崎店」において、当社取扱の2度吸い対応加熱式タ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000024.000100855.html",
-      "publishedAt": "2026-08-18T09:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-18T04:05:36.595226Z",
-      "tags": [
-        "店舗開店閉店"
-      ],
-      "locations": [
-        "西五反田"
-      ],
-      "relevanceScore": 12
     },
     {
       "id": "7087aee018f81c9ec232",
@@ -901,23 +918,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-07T07:50:23.345001Z",
       "tags": [
         "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "53a157b7e809d8beb52c",
-      "title": "令和8年熊本地震被災者の公営住宅への受け入れ",
-      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756 メール：mokumitsu-seibi@city.shinagawa.tokyo.jp 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260805090700.html",
-      "publishedAt": "2026-08-07T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T07:50:23.345001Z",
-      "tags": [
-        "その他"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -5821,7 +5821,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1856, column 48"
+      "message": "not well-formed (invalid token): line 1987, column 48"
     },
     {
       "source": "朝日新聞",
