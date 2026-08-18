@@ -1,7 +1,47 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-18T07:15:48.679295Z",
+  "generatedAt": "2026-08-18T09:58:02.252100Z",
   "items": [
+    {
+      "id": "df0cd4c2f030be4d8a86",
+      "title": "【業界初※】年間11万円お得な\"2度吸い\"がビックカメラに常設化。 加熱式タバコデバイスの専門売場「2度吸い革命」、ラゾーナ川崎店にオープン",
+      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田、代表取締役：大野 達朗）は、2026年7月2日（木）より、株式会社ビックカメラが運営する「ビックカメラ ラゾーナ川崎店」において、当社取扱の2度吸い対応加熱式タ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000024.000100855.html",
+      "publishedAt": "2026-08-18T09:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T04:05:36.595226Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "7087aee018f81c9ec232",
+      "title": "広域品川圏エリアで『美酒巡礼』",
+      "summary": "[東日本旅客鉄道株式会社] ○JR東日本グループは、浜松町駅から大井町駅に広がる広域品川圏（Greater Shinagawa）において、沿線の魅力を高めるまちづくりを推進しています。 ○WATERS takeshiba、TAKANAWA GATEWAY CITY、OIMACHI TRACKSの3...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001501.000017557.html",
+      "publishedAt": "2026-08-18T09:15:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T09:57:38.621928Z",
+      "tags": [
+        "都市開発",
+        "交通"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 10
+    },
     {
       "id": "082f81bfce71361decf3",
       "title": "CADデータがそのまま\"現場\"になる。溶接シミュレーションツール「WeldNext」、実物寸法でのMR事前リハーサル機能を搭載しVer.2.0.0へアップデート",
@@ -18,25 +58,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "東五反田"
-      ],
-      "relevanceScore": 12
-    },
-    {
-      "id": "df0cd4c2f030be4d8a86",
-      "title": "【業界初※】年間11万円お得な\"2度吸い\"がビックカメラに常設化。 加熱式タバコデバイスの専門売場「2度吸い革命」、ラゾーナ川崎店にオープン",
-      "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田、代表取締役：大野 達朗）は、2026年7月2日（木）より、株式会社ビックカメラが運営する「ビックカメラ ラゾーナ川崎店」において、当社取扱の2度吸い対応加熱式タ...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000024.000100855.html",
-      "publishedAt": "2026-08-18T03:15:19Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-18T04:05:36.595226Z",
-      "tags": [
-        "店舗開店閉店"
-      ],
-      "locations": [
-        "西五反田"
       ],
       "relevanceScore": 12
     },
@@ -5758,7 +5779,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1972, column 47"
+      "message": "not well-formed (invalid token): line 2100, column 68"
     },
     {
       "source": "朝日新聞",
@@ -5782,7 +5803,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
@@ -5839,9 +5860,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
