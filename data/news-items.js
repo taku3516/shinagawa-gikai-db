@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-19T02:01:21.456126Z",
+  "generatedAt": "2026-08-19T04:07:13.828470Z",
   "items": [
+    {
+      "id": "d7d87c11c0f81d71c824",
+      "title": "8割超が“収納キャパ限界”、災害時の“モノの喪失”に高まる不安 「分散保管」として４割超がトランクルームを利用・検討",
+      "summary": "[株式会社キュラーズ] 屋内型トランクルーム最大手の株式会社キュラーズ(本社:東京都品川区、代表取締役:スティーブ・スポーン)は、東京都内の集合住宅(マンション/アパート)にお住まいの20～60代男女386名を対象に、都市部における...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000052.000038669.html",
+      "publishedAt": "2026-08-19T03:40:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-19T04:06:50.675659Z",
+      "tags": [
+        "事件事故",
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "d1ef78d94a37cfc791c1",
+      "title": "株式会社神戸製鋼所との資本業務提携契約の締結について- 製造現場でのDX活用による少人化・高度化を推進 -",
+      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也、以下「センシンロボティクス」）は、株式会社神戸製鋼所（本社：兵庫県神戸市...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000150.000028447.html",
+      "publishedAt": "2026-08-19T03:40:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-19T04:06:50.675659Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "53a157b7e809d8beb52c",
       "title": "令和8年熊本地震被災者の公営住宅への受け入れ",
@@ -35,6 +70,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
+    },
+    {
+      "id": "f71d621ea9ccb1a8c63d",
+      "title": "平成25年生活扶助基準改定に係る最高裁判決を踏まえた保護費の追加給付",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/20260330161446.html",
+      "publishedAt": "2026-08-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "df0cd4c2f030be4d8a86",
@@ -2061,23 +2113,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "f71d621ea9ccb1a8c63d",
-      "title": "平成25年生活扶助基準改定に係る最高裁判決を踏まえた保護費の追加給付",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/20260330161446.html",
-      "publishedAt": "2026-07-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "19413da7c891952f8507",
@@ -5821,7 +5856,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2237, column 48"
+      "message": "not well-formed (invalid token): line 2360, column 48"
     },
     {
       "source": "朝日新聞",
@@ -5845,7 +5880,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
@@ -5902,9 +5937,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
