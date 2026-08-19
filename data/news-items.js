@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-19T13:25:14.855180Z",
+  "generatedAt": "2026-08-19T15:56:36.863610Z",
   "items": [
+    {
+      "id": "da94e500ccd52050e616",
+      "title": "東京・天王洲のライブハウス「KIWA」、2026年10月1日（木）より新名称「SONORRA」に変更",
+      "summary": "[寺田倉庫] 寺田倉庫株式会社（東京都品川区 代表取締役社長：寺田航平）は、当社が運営するライブハウス「KIWA」の名称を、2026年10月1日（木）より「SONORRA（ソノラ）」へ変更いたします。「SONORRA」は「新人ミュージシ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000484.000014158.html",
+      "publishedAt": "2026-08-19T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-19T15:56:11.581202Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "0e74374b6297efbcec31",
       "title": "西小山にベーカリー「やわらパン」 電気工事士がパン職人に転身、独立",
@@ -663,23 +682,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
-      "id": "fbea1a6dca20027a595c",
-      "title": "ドコモ・バイクシェアのサービス提供再開のお知らせ（品川区シェアサイクル事業）",
-      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/20250313190123.html",
-      "publishedAt": "2026-08-12T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-04T10:27:17.898259Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
       "id": "1cbad4981952da923fb9",
       "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
       "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
@@ -849,6 +851,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "fbea1a6dca20027a595c",
+      "title": "ドコモ・バイクシェアのサービス提供一時停止のお知らせ（品川区シェアサイクル事業）",
+      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/20250313190123.html",
+      "publishedAt": "2026-08-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T10:27:17.898259Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "3f4df165a67e1881fcc1",
@@ -5916,7 +5935,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2532, column 42"
+      "message": "not well-formed (invalid token): line 2612, column 42"
     },
     {
       "source": "朝日新聞",
