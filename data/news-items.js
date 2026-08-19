@@ -1,7 +1,48 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-19T07:14:52.868041Z",
+  "generatedAt": "2026-08-19T13:25:14.855180Z",
   "items": [
+    {
+      "id": "0e74374b6297efbcec31",
+      "title": "西小山にベーカリー「やわらパン」 電気工事士がパン職人に転身、独立",
+      "summary": "ベーカリー「やわらPain（パン）」（品川区小山5、TEL 050-1794-9600）が、西小山駅近くの住宅街にオープンして3カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5059",
+      "publishedAt": "2026-08-19T11:09:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-19T13:24:53.970567Z",
+      "tags": [
+        "都市開発",
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "西小山駅"
+      ],
+      "relevanceScore": 18
+    },
+    {
+      "id": "fb1f303024fcba529a58",
+      "title": "株式会社Oshimateが運営する「推しガチャ(TM)」にて、イ・ボミプロの誕生日を記念した『イ・ボミプロ バースデー記念ガチャ』を1か月限定で開催",
+      "summary": "[株式会社Ｏｓｈｉｍａｔｅ] 株式会社Oshimate（本社：東京都品川区西五反田３丁目１５番６号、代表取締役：孫 熙久）は、同社が企画・運営するオンラインくじサービス「推しガチャ(TM)」において、女子プロゴルファー・イ・ボミプロの誕生日...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000003.000188689.html",
+      "publishedAt": "2026-08-19T10:15:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-19T13:24:53.970567Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "d7d87c11c0f81d71c824",
       "title": "8割超が“収納キャパ限界”、災害時の“モノの喪失”に高まる不安 「分散保管」として４割超がトランクルームを利用・検討",
@@ -5875,7 +5916,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2046, column 42"
+      "message": "not well-formed (invalid token): line 2532, column 42"
     },
     {
       "source": "朝日新聞",
@@ -5899,7 +5940,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
