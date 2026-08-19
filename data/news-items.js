@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-19T04:07:13.828470Z",
+  "generatedAt": "2026-08-19T07:14:52.868041Z",
   "items": [
     {
       "id": "d7d87c11c0f81d71c824",
@@ -36,6 +36,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "0c9ab36ee4031f4e9684",
+      "title": "居木神社 例大祭（大崎祭）",
+      "summary": "2026年8月21日（金）～23日（日）、大崎の居木神社にて「例大祭（大崎祭）」が開催されます。 8月21日（金）宵宮祭 13:00～17:00 各町御神酒所修祓御霊入れ 17:30～18:30 子供神輿渡御（シンクパーク並びに神社周辺） 18:00～ 奉納演芸（19:00～ビンゴゲーム大会）",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/irugijinjyareitaisai2026",
+      "publishedAt": "2026-08-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-19T07:14:29.144545Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "53a157b7e809d8beb52c",
@@ -5843,7 +5862,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 139,
+      "scanned": 138,
       "accepted": 0
     },
     {
@@ -5856,7 +5875,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2360, column 48"
+      "message": "not well-formed (invalid token): line 2046, column 42"
     },
     {
       "source": "朝日新聞",
@@ -5880,7 +5899,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
