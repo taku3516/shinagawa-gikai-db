@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-19T15:56:36.863610Z",
+  "generatedAt": "2026-08-19T21:49:18.854504Z",
   "items": [
+    {
+      "id": "f0085228e601e2a90620",
+      "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
+      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、8月19日の「世界写真の日」に合わせ、写真の魅力や撮ることの楽しさを伝...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
+      "publishedAt": "2026-08-19T20:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T13:23:04.852236Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "天王洲アイル駅",
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "d1ef78d94a37cfc791c1",
+      "title": "株式会社神戸製鋼所との資本業務提携契約の締結について- 製造現場でのDX活用による少人化・高度化を推進 -",
+      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也、以下「センシンロボティクス」）は、株式会社神戸製鋼所（本社：兵庫県神戸市...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000150.000028447.html",
+      "publishedAt": "2026-08-19T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-19T04:06:50.675659Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "da94e500ccd52050e616",
       "title": "東京・天王洲のライブハウス「KIWA」、2026年10月1日（木）より新名称「SONORRA」に変更",
@@ -79,23 +117,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 12
-    },
-    {
-      "id": "d1ef78d94a37cfc791c1",
-      "title": "株式会社神戸製鋼所との資本業務提携契約の締結について- 製造現場でのDX活用による少人化・高度化を推進 -",
-      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也、以下「センシンロボティクス」）は、株式会社神戸製鋼所（本社：兵庫県神戸市...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000150.000028447.html",
-      "publishedAt": "2026-08-19T03:40:38Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-19T04:06:50.675659Z",
-      "tags": [
-        "都市開発"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "0c9ab36ee4031f4e9684",
@@ -185,27 +206,6 @@ window.SHINAGAWA_NEWS = {
         "西五反田"
       ],
       "relevanceScore": 12
-    },
-    {
-      "id": "f0085228e601e2a90620",
-      "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
-      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、8月19日の「世界写真の日」に合わせ、写真の魅力や撮ることの楽しさを伝...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
-      "publishedAt": "2026-08-18T19:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-18T13:23:04.852236Z",
-      "tags": [
-        "交通"
-      ],
-      "locations": [
-        "天王洲アイル駅",
-        "天王洲アイル",
-        "天王洲"
-      ],
-      "relevanceScore": 20
     },
     {
       "id": "018bae190d39fc68984c",
@@ -5935,7 +5935,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2612, column 42"
+      "message": "not well-formed (invalid token): line 2736, column 42"
     },
     {
       "source": "朝日新聞",
@@ -5959,7 +5959,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
