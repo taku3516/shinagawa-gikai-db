@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-19T21:49:18.854504Z",
+  "generatedAt": "2026-08-20T01:57:36.389751Z",
   "items": [
+    {
+      "id": "810f426108594805a7dc",
+      "title": "【品川介護福祉専門学校】★9月のオープンキャンパスのお知らせ★",
+      "summary": "進路を考え始めた高校1，2年生も、受験の準備を始めた高校3年生も、もちろん社会人の方も大歓迎！！ ぜひお友達や保護者の方ともご一緒にご参加ください☆彡本校の専任教員と在校生が学校の様子を楽しくわかりやすくお伝えします！ 体験授業や品川区修学資金貸付制度などの学費サポート、地元の品川区社会福祉協議会が設立・運営している学校ならではの万全のバックアップ体制についてご紹介します☆ また9月19日（土）14：00～16：00は、卒業生が来校します♪気になる就職後の話しも聞けます！…",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62484.html",
+      "publishedAt": "2026-08-20T01:57:16.670411Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-20T01:57:16.670411Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 14
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "f0085228e601e2a90620",
       "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
@@ -119,6 +155,24 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
+      "id": "3a990a44adc412e8f37d",
+      "title": "【令和8年10月15日以降採用予定】会計年度任用職員(福祉専門員)募集",
+      "summary": "令和8年8月19日（水）～令和8年9月1日（火）【郵送の場合は必着】 【郵送方法】 Ａ4判が入る大きさ（角形2号）の封筒に入れ、表に赤字で「品川区会計年度任用職員採用選考申込書在中」と明記し、 必ず簡易書留で郵送してください。 簡易書留によらないものの事故については責任を負いません。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20261015saiyo.html",
+      "publishedAt": "2026-08-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T01:57:16.670411Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 14
+    },
+    {
       "id": "0c9ab36ee4031f4e9684",
       "title": "居木神社 例大祭（大崎祭）",
       "summary": "2026年8月21日（金）～23日（日）、大崎の居木神社にて「例大祭（大崎祭）」が開催されます。 8月21日（金）宵宮祭 13:00～17:00 各町御神酒所修祓御霊入れ 17:30～18:30 子供神輿渡御（シンクパーク並びに神社周辺） 18:00～ 奉納演芸（19:00～ビンゴゲーム大会）",
@@ -153,23 +207,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-19T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "f71d621ea9ccb1a8c63d",
@@ -1469,7 +1506,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "fb2d04cf4e411e3a8f66",
-      "title": "令和８年熊本地震被災者支援のための街頭募金活動にご協力をお願いいたします",
+      "title": "令和８年熊本地震被災者支援のための街頭募金活動にご協力をお願いいたします （ご協力ありがとうございました）",
       "summary": "７月２８日に発生した熊本地震により、熊本県を中心に甚大な被害が発生いたしました。品川ボランティアセンターでは「令和８年熊本地震 被災者支援街頭募金活動」を下記の通り実施することとなりました。 ここ大井町から被災地熊本へ皆様の温かいお気持ちを届けます。皆様の温かいお気持ちとご協力をお願いいたします。",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
@@ -5935,7 +5972,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2736, column 42"
+      "message": "not well-formed (invalid token): line 2843, column 42"
     },
     {
       "source": "朝日新聞",
@@ -5959,7 +5996,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
