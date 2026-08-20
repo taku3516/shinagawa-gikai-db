@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-20T04:05:18.212404Z",
+  "generatedAt": "2026-08-20T07:15:20.741731Z",
   "items": [
+    {
+      "id": "c7fbb1228214b19849e1",
+      "title": "品川区役所、対話型AI面接サービス「エンPeopleX AI面接」を導入",
+      "summary": "[株式会社PeopleX] [画像1: https://prcdn.freetls.fastly.net/release_image/139786/285/139786-285-e644aeb2c7b1a7e88ab9309f6e678de3-1200x630.png?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000285.000139786.html",
+      "publishedAt": "2026-08-20T06:40:49Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T07:14:50.213342Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "d9b23542392e7c367c59",
+      "title": "ESG Journal、ホワイトペーパー「SBTiネットゼロ基準V2.0確定。2027年Q1の移行開始まで残りわずかー来期予算までに整えるべき“算定基盤”と内部統制」を公開",
+      "summary": "[シェルパ・アンド・カンパニー] シェルパ・アンド・カンパニー株式会社（本社：東京都品川区、代表取締役CEO 杉本淳、以下「シェルパ」）が運営するサステナビリティ・ESG特化メディア「ESG Journal」は、新たなホワイトペーパー「SBTiネットゼ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000154.000100923.html",
+      "publishedAt": "2026-08-20T05:45:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T07:14:50.213342Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "810f426108594805a7dc",
       "title": "【品川介護福祉専門学校】★9月のオープンキャンパスのお知らせ★",
@@ -20,6 +56,44 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 14
+    },
+    {
+      "id": "ba247023fa940e6677df",
+      "title": "第36回 大崎ニューシティ盆踊り大会",
+      "summary": "2026年8月21日（金）、22日（土）、「第36回 大崎ニューシティ盆踊り大会」が開催されます。 盆踊りや地元ダンスチームによるステージ、ものまねショーなど楽しい企画がもりだくさんです。 詳しくは こちら",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/osakincbon36",
+      "publishedAt": "2026-08-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T07:14:50.213342Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎ニューシティ"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "11cb4865554afb6427c2",
+      "title": "しながわツアー「復刻、大本山成田山新勝寺への特別参拝」日帰りバスツアー",
+      "summary": "2026年9月20日（日）、 しながわツアー× 宿場トラベル によるバスツアー 「復刻、大本山成田山新勝寺への特別参拝 」が開催されます。 しながわツアーとは 品川区にまつわる多彩なスポットを体験できる旅行企画を応援する品川区の制度を活用した、特別な旅のラインナップです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawa-tour-nrt",
+      "publishedAt": "2026-08-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T07:14:50.213342Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "f989c49d2fac5b93a9ef",
@@ -5989,9 +6063,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 3002, column 42"
+      "status": "ok",
+      "scanned": 552,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -6015,7 +6089,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
