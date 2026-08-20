@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-20T07:15:20.741731Z",
+  "generatedAt": "2026-08-20T13:26:17.313783Z",
   "items": [
+    {
+      "id": "74e0e2dd698ac3769ae8",
+      "title": "フォーカスシステムズ、第2種医療機器製造販売業許可を取得",
+      "summary": "[株式会社フォーカスシステムズ] 株式会社フォーカスシステムズ（東京都品川区、代表取締役社長：森啓一、以下「当社」）は、第2種医療機器製造販売業許可を取得し、メディカルAI事業の取組みを進展させました。 今回の第2種医療機器製造販売...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000090.000085937.html",
+      "publishedAt": "2026-08-20T13:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T13:25:48.325271Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5bfbf297e93d61442728",
+      "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
+      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也 、以下「センシンロボティクス」） は、写真から3D空間を生成する新技術「3DG...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000151.000028447.html",
+      "publishedAt": "2026-08-20T13:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T13:25:48.325271Z",
+      "tags": [
+        "都市開発",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "c7fbb1228214b19849e1",
       "title": "品川区役所、対話型AI面接サービス「エンPeopleX AI面接」を導入",
@@ -56,6 +91,27 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 14
+    },
+    {
+      "id": "69e4f4d3d21241b97dee",
+      "title": "REACH大崎クラフトマーケット",
+      "summary": "2026年9月2日（水）、JR大崎駅南口東西自由通路夢さん橋にて「REACH大崎クラフトマーケット」が開催されます。 雑貨やアクセサリーなど、個性豊かな作品が集まる毎月恒例の「手作り市」。大崎駅から徒歩0分というアクセスの良さで、周辺住民だけでなくオフィスワーカーにも人気のクラフトマーケットです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202609",
+      "publishedAt": "2026-08-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T13:25:48.325271Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
     },
     {
       "id": "ba247023fa940e6677df",
@@ -6041,7 +6097,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 9
+      "accepted": 8
     },
     {
       "source": "警視庁",
@@ -6064,7 +6120,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 552,
+      "scanned": 541,
       "accepted": 0
     },
     {
