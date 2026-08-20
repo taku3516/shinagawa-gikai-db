@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-20T01:57:36.389751Z",
+  "generatedAt": "2026-08-20T04:05:18.212404Z",
   "items": [
     {
       "id": "810f426108594805a7dc",
@@ -20,6 +20,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 14
+    },
+    {
+      "id": "f989c49d2fac5b93a9ef",
+      "title": "【令和8年8月26日（水）】Ｊアラートを用いた全国一斉の緊急情報伝達試験の実施",
+      "summary": "令和8年8月26日（水）午前11時00分、Ｊアラート（全国瞬時警報システム）による緊急情報の伝達試験のため、 防災行政無線スピーカーから区内一斉に試験放送を行います。 なお、「品川区防災ラジオ」をお持ちの方は、防災ラジオからも同じ試験内容が放送（受信）されます。 ご理解とご協力をお願いします。 「放送内容」 【放送内容】 防災行政無線チャイム ＋ 「これは、Ｊアラートのテストです。」×3回 ＋ 「こちらは、品川区役所です。」 ＋ 防災行政無線チャイム 防災課 計画担当 電話…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai2/20230606170141.html",
+      "publishedAt": "2026-08-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T04:04:53.277768Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 24
     },
     {
       "id": "d72bf6216af184430233",
@@ -5972,7 +5991,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2843, column 42"
+      "message": "not well-formed (invalid token): line 3002, column 42"
     },
     {
       "source": "朝日新聞",
