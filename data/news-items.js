@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-20T13:26:17.313783Z",
+  "generatedAt": "2026-08-20T19:09:34.724289Z",
   "items": [
+    {
+      "id": "f0085228e601e2a90620",
+      "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
+      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、8月19日の「世界写真の日」に合わせ、写真の魅力や撮ることの楽しさを伝...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
+      "publishedAt": "2026-08-20T16:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T13:23:04.852236Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "天王洲アイル駅",
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 20
+    },
     {
       "id": "74e0e2dd698ac3769ae8",
       "title": "フォーカスシステムズ、第2種医療機器製造販売業許可を取得",
@@ -186,27 +207,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "f0085228e601e2a90620",
-      "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
-      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、8月19日の「世界写真の日」に合わせ、写真の魅力や撮ることの楽しさを伝...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
-      "publishedAt": "2026-08-19T20:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-18T13:23:04.852236Z",
-      "tags": [
-        "交通"
-      ],
-      "locations": [
-        "天王洲アイル駅",
-        "天王洲アイル",
-        "天王洲"
-      ],
-      "relevanceScore": 20
     },
     {
       "id": "d1ef78d94a37cfc791c1",
@@ -6120,7 +6120,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 541,
+      "scanned": 531,
       "accepted": 0
     },
     {
@@ -6145,7 +6145,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
