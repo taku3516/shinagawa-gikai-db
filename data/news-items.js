@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-21T07:16:14.327769Z",
+  "generatedAt": "2026-08-21T09:58:56.061267Z",
   "items": [
+    {
+      "id": "da46ab76075f33a3c4b3",
+      "title": "「未定事件簿×THEキャラ 5周年イベント～あなたが私の心を動かす唯一の真実～」の事後通販スタート！",
+      "summary": "[株式会社コンテンツシード] 株式会社コンテンツシード（東京都品川区、代表取締役：大塚 則和）は2026年8月21日(金)より「未定事件簿×THEキャラ 5周年イベント～あなたが私の心を動かす唯一の真実～」の事後通販をTHEキャラ通販サイトにて開...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001055.000069812.html",
+      "publishedAt": "2026-08-21T09:15:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T09:58:38.198926Z",
+      "tags": [
+        "事件事故",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "c71c12c930bf0f64500a",
+      "title": "「地球の歩き方」史上初の“超狭域版”『日本橋』が2026年12月発売決定！ 日本橋だけを1冊まるごと深掘り。クチコミも大募集",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 地球の歩き方（東京都品川区／代表取締役社長：新井邦弘）は、『地球の歩き方 日本橋』の発売情報（2026年12...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009338.000002535.html",
+      "publishedAt": "2026-08-21T09:15:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T09:58:38.198926Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "a5839e229e656f17d134",
       "title": "“美容室でアデランス!?”※1 サロンクチュール新TV-CM『ウィッグ身近に』篇 『ウィッグ後押し』篇",
@@ -257,6 +292,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 14
+    },
+    {
+      "id": "548d33ccd5f2a495f8e9",
+      "title": "品川区わかちあいの会（身近な人を自死で亡くされた方の集い）",
+      "summary": "自死遺族のための関連リンク（品川区以外のわかちあいの会など） とうきょう自死遺族総合支援窓口 （主催：東京都保健医療局） 電 話 03-5357-1536 月曜日～金曜日 午後2時から6時、日曜日 午後1時から5時（祝祭日は休み） 他、メール相談もあります 詳細はこちら（別ウィンドウ表示） 自死遺族相談ダイヤル （自死遺族のための電話相談） （主催：NPO 法人全国自死遺族総合支援センター( グリーフサポートリンク）） 電 話 03-3261-4350 木曜 午前10時から…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/hpg000030395.html",
+      "publishedAt": "2026-08-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T09:58:38.198926Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "a1a69a3b1dff368656dd",
@@ -6269,7 +6321,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1305, column 43"
+      "message": "not well-formed (invalid token): line 1211, column 43"
     },
     {
       "source": "朝日新聞",
@@ -6293,7 +6345,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
