@@ -1,7 +1,62 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-21T02:07:10.672324Z",
+  "generatedAt": "2026-08-21T04:08:27.434067Z",
   "items": [
+    {
+      "id": "a5839e229e656f17d134",
+      "title": "“美容室でアデランス!?”※1 サロンクチュール新TV-CM『ウィッグ身近に』篇 『ウィッグ後押し』篇",
+      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランス（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、行きつけの理美容室※1でオーダーメイド・ウィッグのご試着からお渡しま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001042.000010292.html",
+      "publishedAt": "2026-08-21T03:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T04:07:54.360410Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5e6c075849453baf9e54",
+      "title": "1分単位で利用できるシェアオフィス「BIZcomfort大井町」9月1日（火） オープン",
+      "summary": "[WOOC] コワーキングスペース・レンタルオフィスのBIZcomfort（ビズコンフォート）を全国約200拠点運営する、株式会社WOOC（読み方：ウォーク 、所在地：東京都品川区、代表取締役社長：清水 裕久 以下、WOOC）は、2026...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000221.000043878.html",
+      "publishedAt": "2026-08-21T03:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T04:07:54.360410Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "0b0c05ad7b8209157c46",
+      "title": "プロダンスチーム「DYM MESSENGERS」「SHIBUYA CITY FC」と合同スポンサー企業交流会を開催！",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000517.000027235.html",
+      "publishedAt": "2026-08-21T03:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T04:07:54.360410Z",
+      "tags": [
+        "福祉",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "e1e232ca5c2f64142430",
       "title": "8月24日開催の委員会の予定を掲載。",
@@ -168,6 +223,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 14
+    },
+    {
+      "id": "a1a69a3b1dff368656dd",
+      "title": "まちかど（荏原第一地域新聞）第235号",
+      "summary": "荏原第一地域センター 電話：03-3786-2000 FAX：03-3786-5385 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba1/shisetsu-kuyakusyo-chiiki-eba1-machikado/20260820170408.html",
+      "publishedAt": "2026-08-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T04:07:54.360410Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "0e34b7c64b0a5ef9e46c",
@@ -6159,7 +6233,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 9,
+      "scanned": 10,
       "accepted": 0
     },
     {
@@ -6178,7 +6252,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1370, column 43"
+      "message": "not well-formed (invalid token): line 1419, column 43"
     },
     {
       "source": "朝日新聞",
@@ -6202,7 +6276,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 3
     },
     {
       "source": "東急ニュースリリース",
@@ -6259,9 +6333,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
