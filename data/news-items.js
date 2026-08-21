@@ -1,7 +1,63 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-20T19:09:34.724289Z",
+  "generatedAt": "2026-08-21T02:07:10.672324Z",
   "items": [
+    {
+      "id": "e1e232ca5c2f64142430",
+      "title": "8月24日開催の委員会の予定を掲載。",
+      "summary": "8月24日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20740.html",
+      "publishedAt": "2026-08-21T01:00:59Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T02:05:24.555099Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "dbb2da915a49979307f3",
+      "title": "世代間交流事業「昔のあそびをしませんか」開催",
+      "summary": "大井第三地域センター 電話：03-3773-2000 FAX：03-3771-3735",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260819133200.html",
+      "publishedAt": "2026-08-21T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T02:05:24.555099Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-21T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "f0085228e601e2a90620",
       "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
@@ -114,6 +170,24 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
+      "id": "0e34b7c64b0a5ef9e46c",
+      "title": "品川区民作品展2026「しながわみんなの展覧会」 出展作品募集(令和8年9月1日～10月16日)",
+      "summary": "絵を描いたり、写真を撮ったり、ものづくりをしたり――あなたの「好き」や「がんばったこと」を、区民作品展で紹介してみませんか。 品川区では、区民の皆さんの作品を展示する「品川区民作品展」を12月に開催します。 今年からは「しながわみんなの展覧会」というタイトルをつけ、子どもから大人まで、より多くの皆さんに楽しんでいただける展覧会としてスケールアップします。 絵画、書道、写真、手工芸など、ジャンルはさまざま。 区内在住・在学・在勤の方が心を込めてつくった作品なら、気軽にご応募い…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/sangyo-bunka-bunnkaevento-sakuhinten/20220717104141.html",
+      "publishedAt": "2026-08-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T02:05:24.555099Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
       "id": "69e4f4d3d21241b97dee",
       "title": "REACH大崎クラフトマーケット",
       "summary": "2026年9月2日（水）、JR大崎駅南口東西自由通路夢さん橋にて「REACH大崎クラフトマーケット」が開催されます。 雑貨やアクセサリーなど、個性豊かな作品が集まる毎月恒例の「手作り市」。大崎駅から徒歩0分というアクセスの良さで、周辺住民だけでなくオフィスワーカーにも人気のクラフトマーケットです。",
@@ -190,23 +264,6 @@ window.SHINAGAWA_NEWS = {
         "品川区役所"
       ],
       "relevanceScore": 24
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-20T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "d1ef78d94a37cfc791c1",
@@ -6119,9 +6176,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 531,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1370, column 43"
     },
     {
       "source": "朝日新聞",
@@ -6145,7 +6202,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -6202,9 +6259,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
