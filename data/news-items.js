@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-21T04:08:27.434067Z",
+  "generatedAt": "2026-08-21T07:16:14.327769Z",
   "items": [
     {
       "id": "a5839e229e656f17d134",
@@ -78,6 +78,23 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
+      "id": "0ce3b8d6e6e519ba3403",
+      "title": "新型コロナウイルス感染症",
+      "summary": "手洗い手順（別ウィンドウ表示） 〔東京都感染症情報センター〕 身のまわりを清潔にしましょう。（PDF：805KB） 〔厚生労働省、消費者庁 他〕",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/20230424110159.html",
+      "publishedAt": "2026-08-21T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T07:15:48.878191Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
       "id": "dbb2da915a49979307f3",
       "title": "世代間交流事業「昔のあそびをしませんか」開催",
       "summary": "大井第三地域センター 電話：03-3773-2000 FAX：03-3771-3735",
@@ -112,6 +129,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
+    },
+    {
+      "id": "dbe3cd7369c456dd28f3",
+      "title": "しながわ電気・ガス料金緊急支援事業",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
+      "publishedAt": "2026-08-21T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "f0085228e601e2a90620",
@@ -867,23 +901,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-14T03:04:54.234228Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "dbe3cd7369c456dd28f3",
-      "title": "しながわ電気・ガス料金緊急支援事業",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
-      "publishedAt": "2026-08-14T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -6239,7 +6256,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 138,
+      "scanned": 136,
       "accepted": 0
     },
     {
@@ -6252,7 +6269,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1419, column 43"
+      "message": "not well-formed (invalid token): line 1305, column 43"
     },
     {
       "source": "朝日新聞",
@@ -6276,7 +6293,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 3
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
