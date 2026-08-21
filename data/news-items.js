@@ -1,7 +1,48 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-21T09:58:56.061267Z",
+  "generatedAt": "2026-08-21T13:25:32.665860Z",
   "items": [
+    {
+      "id": "f0085228e601e2a90620",
+      "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
+      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、8月19日の「世界写真の日」に合わせ、写真の魅力や撮ることの楽しさを伝...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
+      "publishedAt": "2026-08-21T12:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T13:23:04.852236Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "天王洲アイル駅",
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "8608d028159caa7e76e3",
+      "title": "戸越に古書店「小川書店」が移転・再始動 戸越銀座、三田の実店舗閉店を経て",
+      "summary": "古書店「小川書店」（品川区戸越4、TEL 03-6421-5611）が宮前商店街に移転オープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5061",
+      "publishedAt": "2026-08-21T11:46:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T13:25:12.605988Z",
+      "tags": [
+        "地域イベント",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "da46ab76075f33a3c4b3",
       "title": "「未定事件簿×THEキャラ 5周年イベント～あなたが私の心を動かす唯一の真実～」の事後通販スタート！",
@@ -181,27 +222,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "f0085228e601e2a90620",
-      "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
-      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、8月19日の「世界写真の日」に合わせ、写真の魅力や撮ることの楽しさを伝...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
-      "publishedAt": "2026-08-20T16:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-18T13:23:04.852236Z",
-      "tags": [
-        "交通"
-      ],
-      "locations": [
-        "天王洲アイル駅",
-        "天王洲アイル",
-        "天王洲"
-      ],
-      "relevanceScore": 20
     },
     {
       "id": "74e0e2dd698ac3769ae8",
@@ -6321,7 +6341,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1211, column 43"
+      "message": "not well-formed (invalid token): line 1365, column 43"
     },
     {
       "source": "朝日新聞",
@@ -6345,7 +6365,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
