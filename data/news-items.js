@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-21T13:25:32.665860Z",
+  "generatedAt": "2026-08-21T15:57:00.802006Z",
   "items": [
+    {
+      "id": "a5839e229e656f17d134",
+      "title": "“美容室でアデランス!?”※1 サロンクチュール新TV-CM『ウィッグ身近に』篇 『ウィッグ後押し』篇",
+      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランス（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、行きつけの理美容室※1でオーダーメイド・ウィッグのご試着からお渡しま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001042.000010292.html",
+      "publishedAt": "2026-08-21T14:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T04:07:54.360410Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5bfbf297e93d61442728",
+      "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
+      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也 、以下「センシンロボティクス」） は、写真から3D空間を生成する新技術「3DG...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000151.000028447.html",
+      "publishedAt": "2026-08-21T13:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T13:25:48.325271Z",
+      "tags": [
+        "都市開発",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "f0085228e601e2a90620",
       "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
@@ -74,23 +109,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-21T09:58:38.198926Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "a5839e229e656f17d134",
-      "title": "“美容室でアデランス!?”※1 サロンクチュール新TV-CM『ウィッグ身近に』篇 『ウィッグ後押し』篇",
-      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランス（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、行きつけの理美容室※1でオーダーメイド・ウィッグのご試着からお渡しま...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000001042.000010292.html",
-      "publishedAt": "2026-08-21T03:40:45Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-21T04:07:54.360410Z",
-      "tags": [
-        "福祉"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -236,24 +254,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-20T13:25:48.325271Z",
       "tags": [
         "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "5bfbf297e93d61442728",
-      "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
-      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也 、以下「センシンロボティクス」） は、写真から3D空間を生成する新技術「3DG...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000151.000028447.html",
-      "publishedAt": "2026-08-20T13:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-20T13:25:48.325271Z",
-      "tags": [
-        "都市開発",
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -6341,7 +6341,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1365, column 43"
+      "message": "not well-formed (invalid token): line 1332, column 43"
     },
     {
       "source": "朝日新聞",
@@ -6365,7 +6365,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
