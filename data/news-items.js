@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-21T21:46:12.420939Z",
+  "generatedAt": "2026-08-22T01:56:23.048272Z",
   "items": [
     {
       "id": "5bfbf297e93d61442728",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000151.000028447.html",
-      "publishedAt": "2026-08-21T19:40:02Z",
+      "publishedAt": "2026-08-22T01:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-20T13:25:48.325271Z",
       "tags": [
@@ -28,7 +28,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
-      "publishedAt": "2026-08-21T18:40:02Z",
+      "publishedAt": "2026-08-22T00:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-18T13:23:04.852236Z",
       "tags": [
@@ -40,6 +40,26 @@ window.SHINAGAWA_NEWS = {
         "天王洲"
       ],
       "relevanceScore": 20
+    },
+    {
+      "id": "3e3d0c46b290270cd30e",
+      "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 9月",
+      "summary": "「Tokyo City Flea Market」は毎週土曜日・日曜日に大井競馬場第一駐車場で開催される都内最大級のフリーマーケットです。 （※9月26日(土)の開催はありません） 専門的なお店も多数出店。バラエティ豊かな品揃えで、地元客だけでなく海外からの観光客も訪れます。週末は、大井競馬場でお宝探しはいかがでしょう。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyo-city-flea-market-202609",
+      "publishedAt": "2026-08-22T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-22T01:56:02.148020Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 10
     },
     {
       "id": "a5839e229e656f17d134",
@@ -6341,7 +6361,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1306, column 43"
+      "message": "not well-formed (invalid token): line 1922, column 42"
     },
     {
       "source": "朝日新聞",
@@ -6365,7 +6385,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
