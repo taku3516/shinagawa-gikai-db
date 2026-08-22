@@ -202,7 +202,12 @@
       return `<a class="fulltext-link" href="kaigiroku.html#plenary-${esc(start.sessionId)}-${anchor}">会議録の原文を読む（${esc(question.member)}議員の質問全文へ）</a>`;
     }
     function sessionsHtml(sessions,pending) {
-      const published=sessions.map((session)=>`<article class="committee-session" id="committee-${esc(session.id)}"><h3>${esc(session.date)} ${esc(session.committee)}</h3><p>${esc(session.time||"")}／${esc(session.status||"")}</p><p>${esc(session.overview||"")}</p>${(session.topics||[]).map((topic)=>`<section class="committee-topic"><h4>${esc(topic.title)}</h4><div class="qa-grid">${(topic.exchanges||[]).map((x)=>`<article class="qa exchange" id="committee-${esc(session.id)}-${esc(x.id)}"><h4>${esc(x.title||x.speaker)}</h4><dl><dt>発言者</dt><dd>${esc(x.speaker)}</dd><dt>${esc(x.kind||"質問")}</dt><dd>${esc(x.question)}</dd><dt>答弁・対応</dt><dd>${esc(x.answer)}</dd>${x.respondent?`<dt>答弁者</dt><dd>${esc(x.respondent)}</dd>`:""}</dl>${fullTextLink(session,x.voiceIndex)}</article>`).join("")}</div></section>`).join("")}${fullTextLink(session)}${pills(session.links)}</article>`).join("");
+      // 委員会は会議録の全文だけを載せる。全文は kaigiroku.html が描くので、
+      // ここは会議の見出しと全文への入口にとどめる。正式会議録がまだ無い
+      // 校正原稿の会議だけ、抜き出した質疑を従来どおり並べる。
+      const exchangesHtml=(session)=>(session.topics||[]).map((topic)=>`<section class="committee-topic"><h4>${esc(topic.title)}</h4><div class="qa-grid">${(topic.exchanges||[]).map((x)=>`<article class="qa exchange" id="committee-${esc(session.id)}-${esc(x.id)}"><h4>${esc(x.title||x.speaker)}</h4><dl><dt>発言者</dt><dd>${esc(x.speaker)}</dd><dt>${esc(x.kind||"質問")}</dt><dd>${esc(x.question)}</dd><dt>答弁・対応</dt><dd>${esc(x.answer)}</dd>${x.respondent?`<dt>答弁者</dt><dd>${esc(x.respondent)}</dd>`:""}</dl>${fullTextLink(session,x.voiceIndex)}</article>`).join("")}</div></section>`).join("");
+      const overview=(session)=>session.hasFullText?`${session.committee}の公式会議録を、要約せずそのまま全文で掲載しています。`:(session.overview||"");
+      const published=sessions.map((session)=>`<article class="committee-session" id="committee-${esc(session.id)}"><h3>${esc(session.date)} ${esc(session.committee)}</h3><p>${esc(session.time||"")}／${esc(session.status||"")}</p><p>${esc(overview(session))}</p>${session.hasFullText?"":exchangesHtml(session)}${fullTextLink(session)}${pills(session.links)}</article>`).join("");
       const waiting=pending.map((x)=>`<article class="card"><h3>${esc(x.date)} ${esc(x.committee)}</h3><p>${esc(x.status||"会議録公開待ち")}</p>${x.officialUrl?pills([{type:"official",label:"公式情報を見る",url:x.officialUrl}]):""}</article>`).join("");
       return published+waiting;
     }
