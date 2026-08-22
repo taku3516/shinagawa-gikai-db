@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-22T15:43:37.077558Z",
+  "generatedAt": "2026-08-22T18:55:55.692858Z",
   "items": [
+    {
+      "id": "f0085228e601e2a90620",
+      "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
+      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、8月19日の「世界写真の日」に合わせ、写真の魅力や撮ることの楽しさを伝...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
+      "publishedAt": "2026-08-22T18:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T13:23:04.852236Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "天王洲アイル駅",
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 20
+    },
     {
       "id": "5bfbf297e93d61442728",
       "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
@@ -19,27 +40,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "f0085228e601e2a90620",
-      "title": "アマナ、8月19日「世界写真の日」に合わせ、写真の魅力を伝える自社広告を天王洲アイル駅に掲出",
-      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、8月19日の「世界写真の日」に合わせ、写真の魅力や撮ることの楽しさを伝...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000550.000040283.html",
-      "publishedAt": "2026-08-22T12:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-18T13:23:04.852236Z",
-      "tags": [
-        "交通"
-      ],
-      "locations": [
-        "天王洲アイル駅",
-        "天王洲アイル",
-        "天王洲"
-      ],
-      "relevanceScore": 20
     },
     {
       "id": "3e3d0c46b290270cd30e",
@@ -6361,7 +6361,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 976, column 45"
+      "message": "not well-formed (invalid token): line 1031, column 45"
     },
     {
       "source": "朝日新聞",
