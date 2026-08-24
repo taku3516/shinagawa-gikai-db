@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-24T04:12:54.575968Z",
+  "generatedAt": "2026-08-24T07:35:37.175638Z",
   "items": [
     {
       "id": "5bb1b777908702746a79",
@@ -57,6 +57,25 @@ window.SHINAGAWA_NEWS = {
         "東五反田"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "822df1388bdec4f5dc7b",
+      "title": "【9/12,13限定】しながわクルーズ「天王洲周遊アートクルーズ」",
+      "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9月12日（土）、13日（日）は、天王洲で開催されるアートイベント「 TENNOZ ART WEEK 2026 」に合わせ、天王洲を囲む運河でアートクルーズを運航します。ビルに描かれた大型壁画などを船上から鑑賞し、普段とは異なる視点で天王洲の街並みとアートをお楽しみいただけます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawacruise202609tennoz",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-24T07:34:48.202749Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 14
     },
     {
       "id": "c2239cc31b8a79cf085f",
@@ -6456,7 +6475,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1430, column 38"
+      "message": "not well-formed (invalid token): line 1665, column 38"
     },
     {
       "source": "朝日新聞",
