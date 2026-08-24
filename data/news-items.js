@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-23T21:43:25.808936Z",
+  "generatedAt": "2026-08-24T02:05:29.636238Z",
   "items": [
+    {
+      "id": "383036eff7836b78f813",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月24日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年8月24日号(令和8年8月17日～令和8年8月23日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62528.html",
+      "publishedAt": "2026-08-24T02:05:04.785408Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-24T02:05:04.785408Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "5bfbf297e93d61442728",
       "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
@@ -228,23 +262,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-21T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
       "id": "dbe3cd7369c456dd28f3",
       "title": "しながわ電気・ガス料金緊急支援事業",
       "summary": "",
@@ -410,7 +427,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "ba247023fa940e6677df",
-      "title": "第36回 大崎ニューシティ盆踊り大会",
+      "title": "【終了】第36回 大崎ニューシティ盆踊り大会",
       "summary": "2026年8月21日（金）、22日（土）、「第36回 大崎ニューシティ盆踊り大会」が開催されます。 盆踊りや地元ダンスチームによるステージ、ものまねショーなど楽しい企画がもりだくさんです。 詳しくは こちら",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -580,7 +597,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "0c9ab36ee4031f4e9684",
-      "title": "居木神社 例大祭（大崎祭）",
+      "title": "【終了】居木神社 例大祭（大崎祭）",
       "summary": "2026年8月21日（金）～23日（日）、大崎の居木神社にて「例大祭（大崎祭）」が開催されます。 8月21日（金）宵宮祭 13:00～17:00 各町御神酒所修祓御霊入れ 17:30～18:30 子供神輿渡御（シンクパーク並びに神社周辺） 18:00～ 奉納演芸（19:00～ビンゴゲーム大会）",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -1088,7 +1105,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "e2bd0470b0ea2959d262",
-      "title": "第72回 大井どんたく 夏まつり 2026",
+      "title": "【終了】第72回 大井どんたく 夏まつり 2026",
       "summary": "2026年8月22日（土）・23日（日）、大井町駅前中央通りにて「第72回大井どんたく夏まつり」が開催されます。 盆踊りやダンス、音楽ステージや、バラエティ豊かなグルメコーナー、屋台の出店など、さまざまなイベントを予定しています。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -6361,7 +6378,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 934, column 38"
+      "message": "not well-formed (invalid token): line 1075, column 38"
     },
     {
       "source": "朝日新聞",
@@ -6385,7 +6402,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
