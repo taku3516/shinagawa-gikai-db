@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-24T13:29:09.455793Z",
+  "generatedAt": "2026-08-24T16:02:59.716719Z",
   "items": [
+    {
+      "id": "60ca5f6b5ae1451c94ff",
+      "title": "ボラミニ情報更新しました！",
+      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62439.html",
+      "publishedAt": "2026-08-24T16:02:34.540533Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-24T16:02:34.540533Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "5bfbf297e93d61442728",
       "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
@@ -6495,7 +6512,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 552,
+      "scanned": 555,
       "accepted": 0
     },
     {
@@ -6513,14 +6530,14 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "時事ドットコム アクセスランキング",
       "status": "ok",
-      "scanned": 10,
+      "scanned": 9,
       "accepted": 0
     },
     {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
