@@ -1,7 +1,46 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-24T10:09:35.190923Z",
+  "generatedAt": "2026-08-24T13:29:09.455793Z",
   "items": [
+    {
+      "id": "5bfbf297e93d61442728",
+      "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
+      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也 、以下「センシンロボティクス」） は、写真から3D空間を生成する新技術「3DG...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000151.000028447.html",
+      "publishedAt": "2026-08-24T13:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T13:25:48.325271Z",
+      "tags": [
+        "都市開発",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5ed571223136f777bcb4",
+      "title": "旗の台にマーラータン専門店「湯火功夫麻辣湯」 中国発、都内2店舗目",
+      "summary": "マーラータン専門店「湯火功夫（トウカコウフ）麻辣湯（マーラータン）旗の台店」（品川区旗の台3、TEL 03-6426-2553）が旗の台駅東口近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5062",
+      "publishedAt": "2026-08-24T10:15:24Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-24T13:28:45.200282Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "旗の台",
+        "旗の台駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "5bb1b777908702746a79",
       "title": "8月25日開催の委員会の予定を掲載。",
@@ -151,24 +190,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "5bfbf297e93d61442728",
-      "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
-      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也 、以下「センシンロボティクス」） は、写真から3D空間を生成する新技術「3DG...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000151.000028447.html",
-      "publishedAt": "2026-08-23T19:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-20T13:25:48.325271Z",
-      "tags": [
-        "都市開発",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "f0085228e601e2a90620",
@@ -6473,14 +6494,14 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2328, column 38"
+      "status": "ok",
+      "scanned": 552,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 38,
       "accepted": 0
     },
     {
