@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-24T07:35:37.175638Z",
+  "generatedAt": "2026-08-24T10:09:35.190923Z",
   "items": [
     {
       "id": "5bb1b777908702746a79",
@@ -129,6 +129,25 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-30T17:15:06.084594Z",
       "tags": [
         "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "0c964b32671e1f1c9a31",
+      "title": "第2回品川区特別支援教育推進計画検討委員会の開催について",
+      "summary": "教育総合支援センター 特別支援教育担当 電話：03-3490-8202 FAX：03-3490-2007",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-sesaku/20260716125556.html",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-21T08:08:25.204546Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 8
@@ -4684,25 +4703,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 24
     },
     {
-      "id": "0c964b32671e1f1c9a31",
-      "title": "第1回品川区特別支援教育推進計画検討委員会の開催について",
-      "summary": "教育総合支援センター 特別支援教育担当 電話：03-3490-8202 FAX：03-3490-2007",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-sesaku/20260716125556.html",
-      "publishedAt": "2026-07-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T08:08:25.204546Z",
-      "tags": [
-        "子育て教育",
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
       "id": "d46e42579d0333c62b17",
       "title": "大井町にじゃじゃ麺専門店「じゃじゃまる」 盛岡のソウルフードを用意",
       "summary": "盛岡じゃじゃ麺専門店「じゃじゃまる」（品川区大井1、TEL 03-6303-7510）が6月12日、大井町駅近くの光学通り沿いにオープンした。 #品川経済新聞",
@@ -6475,7 +6475,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1665, column 38"
+      "message": "not well-formed (invalid token): line 2328, column 38"
     },
     {
       "source": "朝日新聞",
