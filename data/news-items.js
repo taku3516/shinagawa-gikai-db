@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-24T02:05:29.636238Z",
+  "generatedAt": "2026-08-24T04:12:54.575968Z",
   "items": [
+    {
+      "id": "5bb1b777908702746a79",
+      "title": "8月25日開催の委員会の予定を掲載。",
+      "summary": "8月25日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20759.html",
+      "publishedAt": "2026-08-24T03:03:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-24T04:12:27.033580Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "383036eff7836b78f813",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月24日号）を公開しました‼",
@@ -15,6 +35,64 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-24T02:05:04.785408Z",
       "tags": [
         "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "a80b05589736f71b3b52",
+      "title": "【日本コムシス】令和８年度総務省「こども霞が関見学デー」に参加しました",
+      "summary": "[コムシスホールディングス株式会社] コムシスホールディングス株式会社（本社：東京都品川区 代表取締役社長 田辺 博）のグループ会社である日本コムシス株式会社（本社：東京都品川区東五反田 代表取締役社長 田辺 博）は、総務省からの依頼を受け...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000033.000183413.html",
+      "publishedAt": "2026-08-24T01:15:28Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-24T04:12:27.033580Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "c2239cc31b8a79cf085f",
+      "title": "小山両社祭",
+      "summary": "2026年9月6日（日）、 小山八幡神社 ・ 三谷八幡神社 の例大祭「小山両社祭」が行われます 。 両神社の氏子町会神輿７基が17:00に武蔵小山駅前に集結。町内を練り歩き、19:00頃に西小山駅前に到着予定です。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/koyamaryoushasai2026",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-24T04:12:27.033580Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山駅",
+        "西小山駅"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "33cb30c95125db231a4f",
+      "title": "にほんの夏フェス2026",
+      "summary": "2026年9月1日（火）～ 19日（土）、品川駅港南口にある品川インターシティ・品川グランドコモンズの屋外空間・屋内アトリウムにて、日本の文化を体験できる「にほんの夏フェス2026」が開催されます。 古くから、日本・東京の玄関口として知られる品川を舞台に、日本の伝統芸能を披露するステージパフォーマンスや和文化を体験できるワークショップや各種ブースが出展します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nihon-no-natsu2026",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-24T04:12:27.033580Z",
+      "tags": [
+        "交通",
+        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -6378,7 +6456,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1075, column 38"
+      "message": "not well-formed (invalid token): line 1430, column 38"
     },
     {
       "source": "朝日新聞",
@@ -6402,7 +6480,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
