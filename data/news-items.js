@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-24T16:02:59.716719Z",
+  "generatedAt": "2026-08-24T21:51:36.991630Z",
   "items": [
+    {
+      "id": "5bfbf297e93d61442728",
+      "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
+      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也 、以下「センシンロボティクス」） は、写真から3D空間を生成する新技術「3DG...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000151.000028447.html",
+      "publishedAt": "2026-08-24T19:10:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-20T13:25:48.325271Z",
+      "tags": [
+        "都市開発",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "60ca5f6b5ae1451c94ff",
       "title": "ボラミニ情報更新しました！",
@@ -18,24 +36,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "5bfbf297e93d61442728",
-      "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
-      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也 、以下「センシンロボティクス」） は、写真から3D空間を生成する新技術「3DG...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000151.000028447.html",
-      "publishedAt": "2026-08-24T13:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-20T13:25:48.325271Z",
-      "tags": [
-        "都市開発",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "5ed571223136f777bcb4",
@@ -6512,7 +6512,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 555,
+      "scanned": 553,
       "accepted": 0
     },
     {
@@ -6530,14 +6530,14 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "時事ドットコム アクセスランキング",
       "status": "ok",
-      "scanned": 9,
+      "scanned": 10,
       "accepted": 0
     },
     {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
