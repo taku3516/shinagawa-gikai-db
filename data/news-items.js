@@ -1,7 +1,48 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-25T04:06:52.692689Z",
+  "generatedAt": "2026-08-25T07:23:52.428128Z",
   "items": [
+    {
+      "id": "2088cd448e48f907bee1",
+      "title": "荏原町にかき氷専門店「スノーカフェ」 店主はソムリエ、ワイン使うかき氷も",
+      "summary": "かき氷専門店「スノーカフェ」（品川区中延5）が8月3日、荏原町駅近くの立会川緑道沿いにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5063",
+      "publishedAt": "2026-08-25T04:24:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-25T07:23:32.506022Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "中延",
+        "荏原",
+        "荏原町駅"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "bc895e030fee800ef410",
+      "title": "【新店情報】『串カツ田中 京成曳舟店』が8月25日(火)にオープン！",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）の子会社である株式会社串カツ田中は、2026年8月25日(火)に「串カツ田中 京成曳舟店」をオープンいたします。 [...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000622.000027839.html",
+      "publishedAt": "2026-08-25T04:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-25T07:23:32.506022Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "1be647070c7981ca56ca",
       "title": "『地球の歩き方 沖縄』2026年11月の大幅リニューアルに向け、沖縄LOVERのリアルな声を大募集！",
@@ -6605,7 +6646,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 556,
+      "scanned": 566,
       "accepted": 0
     },
     {
