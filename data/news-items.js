@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-25T01:58:23.314383Z",
+  "generatedAt": "2026-08-25T04:06:52.692689Z",
   "items": [
+    {
+      "id": "1be647070c7981ca56ca",
+      "title": "『地球の歩き方 沖縄』2026年11月の大幅リニューアルに向け、沖縄LOVERのリアルな声を大募集！",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 地球の歩き方（東京都品川区／代表取締役社長：新井邦弘）は、『地球の歩き方 沖縄』の発売情報（2026年11月...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009348.000002535.html",
+      "publishedAt": "2026-08-25T03:15:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-25T04:06:32.095460Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "cb4d1ef17f4e512f75b1",
       "title": "8月26日開催の委員会の予定を掲載。",
@@ -21,6 +38,25 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "c82c90e11d1025dc968c",
+      "title": "ハッピーサマーフェス in えばらまち商店街",
+      "summary": "2026年8月29日（土）、30日（日）荏原町公園にて「ハッピーサマーフェス in えばらまち商店街」が開催されます。 荏原町公園を会場に、地元アーティストやパフォーマーが大集結。ライブと屋台で、ご家族やお友達と夏の夜を満喫してみては。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/summerfes-ebaramachi2026",
+      "publishedAt": "2026-08-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-25T04:06:32.095460Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 6
     },
     {
       "id": "d72bf6216af184430233",
