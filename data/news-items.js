@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-26T07:23:50.230573Z",
+  "generatedAt": "2026-08-26T13:32:16.629938Z",
   "items": [
+    {
+      "id": "17209426b3df43209130",
+      "title": "中延でグループ展「散らかしガーデンプレイス」 作品を「散らかして」展示",
+      "summary": "グループ展「散らかしガーデンプレイス2 －酷暑天国－」が8月28日から、アトリエ・サロン「コウシンキョク」（品川区二葉4）で開催される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5064",
+      "publishedAt": "2026-08-26T10:21:51Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-26T13:31:57.961307Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "二葉",
+        "中延"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "457bae5618a40808692f",
       "title": "8月27日開催の委員会の予定を掲載。",
@@ -116,6 +136,24 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
+    },
+    {
+      "id": "3dc9119c7e9163bba125",
+      "title": "高齢者のスマートフォン購入費助成",
+      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
+      "publishedAt": "2026-08-26T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "2088cd448e48f907bee1",
@@ -2777,24 +2815,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "3dc9119c7e9163bba125",
-      "title": "高齢者のスマートフォン購入費助成",
-      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉",
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "e22328178d9f5f9cf435",
@@ -6703,9 +6723,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 559,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2090, column 45"
     },
     {
       "source": "朝日新聞",
