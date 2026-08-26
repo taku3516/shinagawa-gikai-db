@@ -1,7 +1,85 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-26T02:07:14.125756Z",
+  "generatedAt": "2026-08-26T04:10:35.354520Z",
   "items": [
+    {
+      "id": "5bb1b777908702746a79",
+      "title": "8月25日開催の委員会の結果を掲載。",
+      "summary": "8月25日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20759.html",
+      "publishedAt": "2026-08-26T03:03:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-24T04:12:27.033580Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "e1e232ca5c2f64142430",
+      "title": "8月24日開催の委員会の結果を掲載。",
+      "summary": "8月24日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20740.html",
+      "publishedAt": "2026-08-26T03:00:59Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-21T02:05:24.555099Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "9e6e3e1f28e32637d49b",
+      "title": "区議会だより第319号を掲載。",
+      "summary": "区議会だより第319号を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20766.html",
+      "publishedAt": "2026-08-26T02:44:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-26T04:08:52.450840Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "703a3d8520911332c95b",
+      "title": "ユニバーサル・ペーパー「JAPAN DIY HOMECENTER SHOW 2026」に出展",
+      "summary": "[ユニバーサル・ペーパー株式会社] ユニバーサル・ペーパー株式会社（本社:東京都品川区東五反田/CEO: 清水亮介）は、2026年8月27日（木）から29日（土）まで幕張メッセで開催される「第62回 JAPAN DIY HOMECENTER SHOW 2026」に出展いたします。当...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000024.000064584.html",
+      "publishedAt": "2026-08-26T01:41:08Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-26T04:08:52.450840Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "d72bf6216af184430233",
       "title": "品川区世論調査の回答について",
@@ -188,26 +266,6 @@ window.SHINAGAWA_NEWS = {
         "旗の台駅"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "5bb1b777908702746a79",
-      "title": "8月25日開催の委員会の予定を掲載。",
-      "summary": "8月25日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20759.html",
-      "publishedAt": "2026-08-24T03:03:38Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-24T04:12:27.033580Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "383036eff7836b78f813",
@@ -489,26 +547,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "e1e232ca5c2f64142430",
-      "title": "8月24日開催の委員会の予定を掲載。",
-      "summary": "8月24日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20740.html",
-      "publishedAt": "2026-08-21T01:00:59Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-21T02:05:24.555099Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "0ce3b8d6e6e519ba3403",
@@ -6646,7 +6684,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 576,
+      "scanned": 570,
       "accepted": 0
     },
     {
@@ -6671,7 +6709,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -6728,9 +6766,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
