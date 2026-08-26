@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-26T04:10:35.354520Z",
+  "generatedAt": "2026-08-26T07:23:50.230573Z",
   "items": [
+    {
+      "id": "457bae5618a40808692f",
+      "title": "8月27日開催の委員会の予定を掲載。",
+      "summary": "8月27日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20786.html",
+      "publishedAt": "2026-08-26T06:47:32Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-26T07:23:26.439634Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "5bb1b777908702746a79",
       "title": "8月25日開催の委員会の結果を掲載。",
@@ -6684,7 +6704,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 570,
+      "scanned": 559,
       "accepted": 0
     },
     {
@@ -6709,7 +6729,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -6766,9 +6786,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
