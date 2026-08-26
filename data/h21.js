@@ -100,6 +100,14 @@ window.SHINAGAWA_DB.years["h21"] = {
       "questionsSection": {
         "title": "代表質問・一般質問（全項目・答弁要約）",
         "lead": "公式掲載の14名・53項目を省略せず掲載し、正式会議録から質問と答弁の要点をまとめています。"
+      },
+      "billsSection": {
+        "title": "提出議案（全件）",
+        "lead": "公式ページ掲載の50件を省略せず掲載しています。"
+      },
+      "petitionsSection": {
+        "title": "請願・陳情（全件）",
+        "lead": "公式ページ掲載の16件を省略せず掲載しています。"
       }
     },
     {
@@ -159,6 +167,14 @@ window.SHINAGAWA_DB.years["h21"] = {
       "questionsSection": {
         "title": "代表質問・一般質問（全項目・答弁要約）",
         "lead": "公式掲載の10名・36項目を省略せず掲載し、正式会議録から質問と答弁の要点をまとめています。"
+      },
+      "billsSection": {
+        "title": "提出議案（全件）",
+        "lead": "公式ページ掲載の19件を省略せず掲載しています。"
+      },
+      "petitionsSection": {
+        "title": "請願・陳情（全件）",
+        "lead": "公式ページ掲載の10件を省略せず掲載しています。"
       }
     },
     {
@@ -218,6 +234,14 @@ window.SHINAGAWA_DB.years["h21"] = {
       "questionsSection": {
         "title": "代表質問・一般質問（全項目・答弁要約）",
         "lead": "公式掲載の10名・36項目を省略せず掲載し、正式会議録から質問と答弁の要点をまとめています。"
+      },
+      "billsSection": {
+        "title": "提出議案（全件）",
+        "lead": "公式ページ掲載の8件を省略せず掲載しています。"
+      },
+      "petitionsSection": {
+        "title": "請願・陳情（全件）",
+        "lead": "公式ページ掲載の1件を省略せず掲載しています。"
       }
     },
     {
@@ -277,11 +301,2218 @@ window.SHINAGAWA_DB.years["h21"] = {
       "questionsSection": {
         "title": "代表質問・一般質問（全項目・答弁要約）",
         "lead": "公式掲載の10名・32項目を省略せず掲載し、正式会議録から質問と答弁の要点をまとめています。"
+      },
+      "billsSection": {
+        "title": "提出議案（全件）",
+        "lead": "公式ページ掲載の14件を省略せず掲載しています。"
+      },
+      "petitionsSection": {
+        "title": "請願・陳情（全件）",
+        "lead": "公式ページ掲載の16件を省略せず掲載しています。"
       }
     }
   ],
-  "bills": [],
-  "petitions": [],
+  "bills": [
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区の組織改正に伴う関係条例の整理に関する条例",
+      "summary": "品川区組織条例の改正に伴い、関係条例の規定を整備する。 〔改正する条例〕 (1) 品川区附属機関の構成員の報酬および費用弁償に関する条例 (2) 品川区奨学金運営委員会条例 (3) 品川区立文化センター条例 (4) 品川区立体育館条例 (5) 品川区建築審査会条例 (6) 職員の定年等に関する条例 (7) 品川区立品川歴史館条例 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区地域振興基金条例",
+      "summary": "品川区地域振興基金を設置する。 〔規定する事項〕 (1) 基金の額 (2) 基金の管理 (3) 運用益金の処理 (4) 基金の処分 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区職員定数条例の一部を改正する条例",
+      "summary": "行財政の見直しに伴い、職員の定数上の措置を行うほか、区が独自に学校教育職員を採用することに伴い、規定を整備する。 〔現 行〕 ２，６０６人 〔改正後〕 ２，５７８人 （平成２２年３月３１日までは、３０人を限度として定数外とする。） 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "職員の勤務時間、休日、休暇等に関する条例の一部を改正する条例",
+      "summary": "職員の勤務時間を短縮するとともに、休息時間を廃止し、休憩時間を改めるほか、区が独自に学校教育職員を採用することに伴い、規定を整備する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "職員の育児休業等に関する条例の一部を改正する条例",
+      "summary": "育児短時間勤務における勤務時間を短縮するほか、区が独自に学校教育職員を採用することに伴い、規定を整備する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "職員団体のための職員の行為の制限の特例に関する条例および外国の地方公共団体の機関等に派遣される職員の処遇等に関する条例の一部を改正する条例",
+      "summary": "区が独自に学校教育職員を採用することに伴い、関係条例の規定を整備する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "職員の給与に関する条例の一部を改正する条例",
+      "summary": "病気休職者に対する給与の支給期間を短縮するとともに、勤勉手当の算定方法を改めるほか、区が独自に学校教育職員を採用することに伴い、規定を整備する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "職員の特殊勤務手当に関する条例の一部を改正する条例",
+      "summary": "組織改正等に伴い、防疫等業務手当および清掃業務手当に係る規定を整備する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "職員の退職手当に関する条例の一部を改正する条例",
+      "summary": "準定年制度を廃止するとともに、勧奨退職制度を見直すほか、区が独自に学校教育職員を採用することに伴い、規定を整備する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区職員福利厚生基金条例を廃止する条例",
+      "summary": "品川区職員福利厚生基金を廃止する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区中小企業事業資金融資あつ旋条例の一部を改正する条例",
+      "summary": "ワークライフバランス企業支援資金を設置するほか、創業支援資金の融資限度額を引き上げる。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立工場アパート条例の一部を改正する条例",
+      "summary": "中小企業者の創業を支援するため、事務室の入居の要件を見直し、新たに創業を予定している事業者を対象に加える。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区国民健康保険条例の一部を改正する条例",
+      "summary": "基礎賦課額、後期高齢者支援金等賦課額および介護納付金賦課額の保険料率を改める。 〔改正前〕 基礎賦課額 所得割 １００分の９０ 均等割 ２万８，８００円 後期高齢者支援金等賦課額 所得割 １００分の２７ 均等割 ８，１００円 介護納付金賦課額 所得割 １００分の１８ 介護納付金賦課限度額 ９万円 〔改正後〕 基礎賦課額 所得割 １００分の６８ 均等割 ２万７，６００円 後期高齢者支援金等賦課額 所得割 １００分の２６ 均等割 ９，６００円 介護納付金賦課額 所得割 １００分の１５ 介護納付金賦課限度額 １０万円 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区ひとり親家庭等の医療費の助成に関する条例の一部を改正する条例",
+      "summary": "児童福祉法が改正されたことに伴い、助成対象の範囲を改める。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区子どもの医療費の助成に関する条例の一部を改正する条例",
+      "summary": "児童福祉法が改正されたことに伴い、助成対象の範囲を改める。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区介護保険制度に関する条例の一部を改正する条例",
+      "summary": "平成２１年度から平成２３年度までにおける保険料率を定めるとともに、新たな特別給付を行う。 (1) 第一号被保険者の保険料（基準額） 月額３，９００円 (2) 新たに行う特別給付 ① 要支援者夜間対応サービス特別給付 ② 通院等外出介助サービス特別給付 ③ 地域密着型ケアハウスサービス提供費特別給付 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区介護従事者処遇改善基金条例",
+      "summary": "品川区介護従事者処遇改善基金を設置する。 〔規定する事項〕 (1) 基金の額 (2) 基金の管理 (3) 運用益金の処理 (4) 基金の処分 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立心身障害者福祉会館条例の一部を改正する条例",
+      "summary": "心身障害者福祉会館で行う旧知的障害者福祉法に基づく事業を障害者自立支援法に基づく事業へと移行する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立知的障害者援護施設条例の一部を改正する条例",
+      "summary": "知的障害者援護施設で行う旧知的障害者福祉法に基づく事業を障害者自立支援法に基づく事業へと移行するとともに、名称を「品川区立知的障害者福祉施設」に改める。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区自転車等の放置防止および自転車等駐車場の整備に関する条例の一部を改正する条例",
+      "summary": "戸越公園駅および下神明駅周辺の区営自転車等駐車場を再整備する。 〔改正前〕 〔改正後〕 戸越公園駅第１区営自転車等駐車場 （現行のとおり） 戸越公園駅第２区営自転車等駐車場 （廃止） 戸越公園駅第３区営自転車等駐車場 戸越公園駅第２区営自転車等駐車場 下神明駅第１区営自転車等駐車場 下神明駅区営自転車等駐車場 下神明駅第２区営自転車等駐車場 （廃止） 下神明駅第３区営自転車等駐車場 （廃止） 施行期日 平成２１年９月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区地球環境基金条例",
+      "summary": "品川区地球環境基金を設置する。 〔規定する事項〕 (1) 基金の額 (2) 基金の管理 (3) 運用益金の処理 (4) 基金の処分 その他 付則において、品川区みどりの基金条例および品川区地球環境リサイクル基金条例を廃止する。 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立従前居住者用住宅条例の一部を改正する条例",
+      "summary": "市街地整備に係る国の事業体系の再編に伴い、規定を整備する。 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区手数料条例の一部を改正する条例",
+      "summary": "長期優良住宅建築等計画の認定申請等に対する審査手数料を新設するほか、組織改正に伴い規定を整備する。 〔長期優良住宅建築等計画の認定申請に係る審査手数料の額〕 事前に区長が指定する機関による審査を受けた場合 １００m2以内 ７，２００円 １００m2を超え５００m2以内 １３，０００円 など それ以外の場合 １００m2以内 ４７，０００円 １００m2を超え５００m2以内 １０９，０００円 など 施行期日 平成２１年４月１日（長期優良住宅の普及の促進に関する法律の制定に伴う改正規定は、同法の施行の日）",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "幼稚園教育職員の勤務時間、休日、休暇等に関する条例の一部を改正する条例",
+      "summary": "幼稚園教育職員の勤務時間を短縮するほか、休息時間を廃止し、休憩時間を改める。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "幼稚園教育職員の給与に関する条例の一部を改正する条例",
+      "summary": "病気休職者に対する給与の支給期間を短縮するとともに、勤勉手当の算定方法を改めるほか、義務教育等教員特別手当の額を改める。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立学校の学校医、学校歯科医および学校薬剤師の公務災害補償に関する条例の一部を改正する条例",
+      "summary": "「公立学校の学校医、学校歯科医及び学校薬剤師の公務災害補償の基準を定める政令」等が改正されたことに伴い、補償基礎額および介護補償の額を改める。 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "学校教育職員の給与に関する条例の一部を改正する条例",
+      "summary": "区が独自に採用する学校教育職員の給与を改定する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "学校教育職員の給与等に関する特別措置に関する条例",
+      "summary": "区が独自に採用する学校教育職員の教職調整額その他の勤務条件を定める。 〔規定する事項〕 (1) 教職調整額の支給額 (2) 教職調整額の支給対象者 (3) 超過勤務および休日勤務の特例 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "学校教育職員の旅費に関する条例",
+      "summary": "区が独自に採用する学校教育職員の旅費を定める。 〔規定する事項〕 (1) 旅費の種類および額 (2) 旅費の支給要件 その他 付則において、職員の旅費に関する条例の一部を改正する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区議会議員および品川区長の選挙における選挙運動の公費負担に関する条例の一部を改正する条例",
+      "summary": "公職選挙法が改正され、長の選挙におけるビラの作成費用を公費で負担することができることとなったことから、公費負担について必要な事項を定める。 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）荏原西地区小中一貫校新築工事請負契約の変更について",
+      "summary": "(1) 契約金額の変更について 〔変更前〕４５億８，３６７万円 〔変更後〕４８億２，３９１万円 (2) 支出科目等の変更について 〔変更前〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 〔変更後〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 平成２２年度 債務負担行為",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）荏原西地区小中一貫校新築給排水衛生設備工事請負契約の変更について",
+      "summary": "支出科目等の変更について 〔変更前〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 〔変更後〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 平成２２年度 債務負担行為",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）荏原西地区小中一貫校新築空気調和設備工事請負契約の変更について",
+      "summary": "支出科目等の変更について 〔変更前〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 〔変更後〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 平成２２年度 債務負担行為",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）荏原西地区小中一貫校新築電気設備工事請負契約の変更について",
+      "summary": "支出科目等の変更について 〔変更前〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 〔変更後〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 平成２２年度 債務負担行為",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区土地開発公社定款の変更について",
+      "summary": "公有地の拡大の推進に関する法律等の改正に伴い、品川区土地開発公社の定款を変更する。",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２０年度品川区一般会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 ７１７，７４１千円追加 （補正後の歳入歳出予算額 １３９，７８３，８０７千円） ２． 繰越明許費 ２件 ３． 債務負担行為補正件数 追加 ２件 変更 ６件",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２０年度品川区国民健康保険事業会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 １７０，０６７千円追加 （補正後の歳入歳出予算額 ３６，００８，８７３千円）",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２０年度品川区老人保健医療特別会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 ４２０，１３３千円追加 （補正後の歳入歳出予算額 ３，０３０，４１４千円）",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２０年度品川区後期高齢者医療特別会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 ５７０，７９７千円減額 （補正後の歳入歳出予算額 ５，５１０，１１８千円）",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２０年度品川区介護保険特別会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 ５０７，０１５千円追加 （補正後の歳入歳出予算額 １７，７９５，５９８千円）",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２０年度品川区一般会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 ５，５５２，２１３千円追加 （補正後の歳入歳出予算額 １４５，３３６，０２０千円） ２． 繰越明許費 ２件",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区一般会計予算",
+      "summary": "１． 歳入歳出予算額 １３９，０８８，７１４千円 ２． 債務負担行為 ３２件 ３． 一時借入金 最高額 ５０億円",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区国民健康保険事業会計予算",
+      "summary": "１． 歳入歳出予算額 ３７，３１１，３５６千円",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区老人保健医療特別会計予算",
+      "summary": "１． 歳入歳出予算額 ５４，４０９千円",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区後期高齢者医療特別会計予算",
+      "summary": "１． 歳入歳出予算額 ６，１５８，４３９千円",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区介護保険特別会計予算",
+      "summary": "１． 歳入歳出予算額 １７，０８１，９５０千円",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "教育委員会委員の任命同意について",
+      "summary": "地方教育行政の組織及び運営に関する法律第４条の規定により、若月秀夫氏を教育委員会委員に任命することに同意した。",
+      "tags": [
+        "その他の議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "人権擁護委員の推薦につき意見を求めることについて",
+      "summary": "人権擁護委員法第６条第３項の規定に基づき、小越是誠氏を人権擁護委員に推薦することに同意した。",
+      "tags": [
+        "その他の議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "議員提出",
+      "title": "品川区高齢者医療入院時負担軽減支援金の支給に関する条例",
+      "summary": "高齢者の入院費用等に対する支援金を支給する。 施行期日 平成２１年４月１日",
+      "tags": [
+        "その他の議案"
+      ],
+      "result": "否決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "",
+      "proposer": "議員提出",
+      "title": "品川区議会委員会条例の一部を改正する条例",
+      "summary": "区の組織改正に伴い、常任委員会の所管事項等を改める。 施行期日 平成２１年４月１日",
+      "tags": [
+        "その他の議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区行政委員会の委員の報酬および費用弁償に関する条例および品川区監査委員の給与等に関する条例の一部を改正する条例",
+      "summary": "行政委員会の委員および監査委員の出会に係る費用弁償の額を改める。 〔現行〕 ６，０００円 〔改正後〕 ４，０００円 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区特別区税条例の一部を改正する条例",
+      "summary": "地方税法等が改正されたことに伴い、条例の一部を改正する。 (1) 新たな住宅借入金等特別税額控除制度を創設する。 (2) 平成２１年１月１日から平成２２年１２月３１日までの間に取得した土地等の譲渡に係る長期譲渡所得について、区民税の課税の特例を定める。 (3) 公的年金等からの区民税の特別徴収について、規定整備を行う。 (4) 租税特別措置法の改正に伴い、規定整備を行う。 施行期日 公布の日（新たな住宅借入金等特別税額控除制度の創設に関する改正規定は平成２２年１月１日、長期譲渡所得に係る区民税の課税の特例に関する改正規定は平成２２年４月１日、先物取引に係る雑所得等に係る区民税の課税の特例に関する改正規定は平成２３年１月１日）",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区地域センターの設置に関する条例の一部を改正する条例",
+      "summary": "大崎第二地域センターの位置を変更する。 〔現行〕 品川区大崎二丁目７番１３号 〔改正後〕 品川区大崎二丁目９番４号 施行期日 平成２１年１１月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立区民集会所条例の一部を改正する条例",
+      "summary": "大崎第二区民集会所の位置を変更するとともに、集会所における設備の使用料に係る上限額を定める。 〔位置〕 現行 品川区大崎二丁目７番１３号 改正後 品川区大崎二丁目９番４号 〔設備使用料に係る上限額〕 １，７００円 施行期日 平成２１年１１月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区介護保険制度に関する条例および品川区後期高齢者医療に関する条例の一部を改正する条例",
+      "summary": "健康保険法等に基づく保険料の延滞金に係る利率の軽減期間が延長されたことから、介護保険および後期高齢者医療の保険料についても同様の取扱いとする。 〔軽減期間〕 現行 納期限の翌日から１月を経過する日まで 改正後 納期限の翌日から３月を経過する日まで 施行期日 平成２２年１月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区国民健康保険条例の一部を改正する条例",
+      "summary": "健康保険法等が改正されたことから、所要の改正を行う。 (1) 平成２１年１０月１日から平成２３年３月３１日までの出産に係る出産育児一時金の額を引き上げる。 〔出産育児一時金の額〕 現行 ３８万円 改正後 ４２万円 (2) 保険料の延滞金に係る利率の軽減期間を延長する。 (3) 上場株式の配当所得に係る申告分離課税制度の導入に伴う規定整備を行う。 (4) 保険料率の算定に係る規定整備を行う。 施行期日 平成２１年１０月１日（保険料率の算定に係る改正規定は公布の日、保険料の延滞金に係る改正規定および上場株式の配当所得に係る改正規定は平成２２年１月１日）",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立学校設置条例の一部を改正する条例",
+      "summary": "八潮学園小学校および八潮学園中学校の位置を変更する。 〔八潮学園小学校〕 現行 品川区八潮五丁目９番１１号 改正後 品川区八潮五丁目１１番２号 〔八潮学園中学校〕 現行 品川区八潮五丁目９番２号 改正後 品川区八潮五丁目１１番２号 施行期日 平成２１年９月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）武蔵小山駅前創業支援等施設新築工事請負契約",
+      "summary": "・契約の方法 制限付き一般競争入札による契約 ・契約金額 265,650,000円 ・契約の相手方 仲岡建設株式会社 ・工 期 契約締結の日の翌日～平成22年６月18日 （施設の概要） 構造 鉄骨造 地上６階建 １階 起業者向け貸店舗 ２・３階 認証保育所 ４階 行政サービスコーナー等 ５階 会議室等 ６階 起業者向け貸事務所",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "八潮北公園野球場改修工事請負契約",
+      "summary": "・契約の方法 制限付き一般競争入札による契約 ・契約金額 317,100,000円 ・契約の相手方 大旺新洋株式会社東京支店 ・工 期 契約締結の日の翌日～平成22年３月31日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "第一日野小学校・幼保一体施設および（仮称）教育複合施設改築外構その他工事請負契約",
+      "summary": "・契約の方法 制限付き一般競争入札による契約 ・契約金額 346,500,000円 ・契約の相手方 戸田建設株式会社東京支店 ・工 期 契約締結の日の翌日～平成22年７月30日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）品川地区小中一貫校新築工事請負契約",
+      "summary": "・契約の方法 制限付き一般競争入札による契約 ・契約金額 4,494,000,000円 ・契約の相手方 鴻池・冨士工・丸磯・圓山建設共同企業体 ・工 期 契約締結の日の翌日～平成２３年３月１０日 （施設の概要） 校舎・アリーナ棟 構造 鉄筋コンクリート造 一部鉄骨鉄筋コンクリート造および鉄骨造 地上４階 塔屋１階建 各階 普通教室 １階 校務センターおよび屋内運動場 ２階 すまいるスクール専用室 ３階 柔剣道場 ４階 スチューデントシティおよびファイナンスパーク専用室 幼保・プール棟 構造 鉄筋コンクリート造 一部鉄骨鉄筋コンクリート造および鉄骨造 地上３階 地下１階建 １階 ３歳児から５歳児の各保育室およびプール ２階 ０歳児・１歳児の乳児室および２歳児の保育室 その他 道路を挟んで建設される両棟を３階部分でつなぐ渡り廊下を設置",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）品川地区小中一貫校新築給排水衛生設備工事請負契約",
+      "summary": "・契約の方法 制限付き一般競争入札による契約 ・契約金額 470,400,000円 ・契約の相手方 東海管・池田建設共同企業体 ・工 期 契約締結の日の翌日～平成23年３月10日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）品川地区小中一貫校新築空気調和設備工事請負契約",
+      "summary": "・契約の方法 制限付き一般競争入札による契約 ・契約金額 945,000,000円 ・契約の相手方 大成温・塩谷建設共同企業体 ・工 期 契約締結の日の翌日～平成23年３月10日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）品川地区小中一貫校新築電気設備工事請負契約",
+      "summary": "・契約の方法 制限付き一般競争入札による契約 ・契約金額 601,650,000円 ・契約の相手方 野里・山梨建設共同企業体 ・工 期 契約締結の日の翌日～平成23年３月10日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "小中一貫校八潮学園建設建築工事請負契約の変更について",
+      "summary": "契約金額の変更について 〔変更前〕 1,098,195,000円 〔変更後〕 1,105,963,950円",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "指定管理者の指定について",
+      "summary": "公の施設の管理を行わせるため、指定管理者を指定する。 ・施設の名称 戸越公園駅第１区営自転車等駐車場 戸越公園駅第２区営自転車等駐車場 下神明駅区営自転車等駐車場 ・指定管理者 日本コンピュータ・ダイナミクス株式会社 ・指定管理者 平成21年９月１日～平成24年３月31日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区一般会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 １３７，６３３千円追加 （補正後の歳入歳出予算額 １３９，２２６，３４７千円）",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区国民健康保険事業会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 １０，０００千円追加 （補正後の歳入歳出予算額 ３７，３２１，３５６千円）",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "教育委員会委員の任命同意について",
+      "summary": "地方教育行政の組織及び運営に関する法律第４条の規定により、鈴木敏夫氏を教育委員会委員に任命することに同意した。",
+      "tags": [
+        "その他の議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-3t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区地区計画等の区域内における建築物の制限に関する条例の一部を改正する条例",
+      "summary": "地区計画の決定および変更が行われたことに伴い、当該地区計画の区域内における建築物について制限を定める。 〔地区計画が決定された地区〕 八潮五丁目地区 滝王子通り地区 〔地区計画が変更された地区〕 西大井駅周辺地区 東五反田地区 武蔵小山駅東地区 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_03/h21_03t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-3t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "大崎駅西口駅前交通広場（Ｃ地区デッキ部）整備工事委託契約",
+      "summary": "・契約の方法 随意契約 ・契約金額 1,191,015,000円 ・契約の相手方 独立行政法人都市再生機構東京都心支社 ・工 期 協定締結の日～平成23年３月31日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_03/h21_03t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-3t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）荏原西地区小中一貫校新築外構その他工事請負契約",
+      "summary": "・契約の方法 制限付き一般競争入札による契約 ・契約金額 374,850,000円 ・契約の相手方 戸田建設株式会社東京支店 ・工 期 契約締結の日の翌日～平成22年９月30日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_03/h21_03t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-3t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "理科・算数教材の買入れについて",
+      "summary": "・種類および数量 理科・算数教材一式 ・買入価格 48,895,000円 ・契約の方法 制限付き一般競争入札による契約 ・契約の相手方 有限会社育健 ・納期 契約締結の日～平成22年１月29日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_03/h21_03t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-3t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "大井一丁目地内特別区道路線の認定について",
+      "summary": "大井一丁目地内において特別区道路線を認定する。 ・位置 品川区大井一丁目地内 ・延長 59.13m ・幅員 6.00m ・面積 362.51m 2",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_03/h21_03t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-3t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区一般会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 １，６４２，９０７千円追加 （補正後の歳入歳出予算額 １４０，８６９，２５４千円） ２． 債務負担行為補正件数 追加 ２件",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_03/h21_03t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-3t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区後期高齢者医療特別会計補正予算",
+      "summary": "歳入歳出予算補正額 ３２，９６２千円追加 （補正後の歳入歳出予算額 ６，１９１，４０１千円）",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_03/h21_03t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-3t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区介護保険特別会計補正予算",
+      "summary": "歳入歳出予算補正額 １６３，２９２千円追加 （補正後の歳入歳出予算額 １７，２４５，２４２千円）",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_03/h21_03t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立創業支援施設条例",
+      "summary": "品川区内において創業する者、新たに別の分野へ進出する中小企業者等を支援するため、武蔵小山創業支援センターを設置するとともに、既存の創業支援センター２施設を公の施設として位置付ける。 〔創業支援施設の名称および所在地〕 天王洲創業支援センター 品川区東品川二丁目２番２５号 西大井創業支援センター 品川区西大井一丁目１番２号 武蔵小山創業支援センター 品川区小山三丁目２７番５号 〔創業支援施設に設ける施設〕 事務室、共同事務室、店舗、会議室 施行期日 規則で定める日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立学校設置条例の一部を改正する条例",
+      "summary": "第一日野小学校の位置を変更する。 〔現 行〕 品川区西五反田六丁目６番１９号 〔改正後〕 品川区西五反田六丁目５番３２号 施行期日 平成２２年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区立幼稚園条例の一部を改正する条例",
+      "summary": "第一日野幼稚園の位置を変更する。 〔現 行〕 品川区西五反田六丁目６番６号 〔改正後〕 品川区西五反田六丁目５番６号 施行期日 平成２２年４月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区行政委員会の委員の報酬および費用弁償に関する条例の一部を改正する条例",
+      "summary": "月額報酬を受ける行政委員会の委員等が、月の途中で就職、退職などをした場合における報酬を、日割りにより計算し、支給する。 施行期日 平成２２年１月１日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区長および副区長の給与および旅費条例の一部を改正する条例",
+      "summary": "区長、副区長および区議会議員の期末手当の支給月数を、０．２８月分引き下げる。 なお、本年度については、６月の期末手当の凍結分０．１５月分を支給しないこととし、残りの０．１３月分を１２月の期末手当から差し引く。 また、代表監査委員の期末手当についても、同様の引き下げとする。 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "品川区教育委員会教育長の給与および旅費ならびに勤務時間その他の勤務条件に関する条例の一部を改正する条例",
+      "summary": "教育委員会教育長の期末手当の支給月数を、０．２８月分引き下げる。 なお、本年度については、６月の期末手当の凍結分０．１５月分を支給しないこととし、残りの０．１３月分を１２月の期末手当から差し引く。 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "職員の給与に関する条例の一部を改正する条例",
+      "summary": "特別区人事委員会勧告に基づき、職員の給与に関し、所要の改正を行う。 (1) 地域手当の支給割合を１６％から１７％へ引き上げるとともに、給料表の引き下げ改定を行い、月例給与を１，６０５円程度の減額とする。 (2) 期末・勤勉手当の支給月数を６月の期末・勤勉手当の凍結部分と合わせて、０．３５月分引き下げる。 施行期日 平成２２年１月１日（勤勉手当に係る改正規定は、公布の日）",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "幼稚園教育職員の給与に関する条例の一部を改正する条例",
+      "summary": "特別区人事委員会勧告に基づき、幼稚園教育職員の給与に関し、所要の改正を行う。 (1) 地域手当の支給割合を１６％から１７％へ引き上げるとともに、給料表の引き下げ改定を行い、月例給与を１，６０５円程度の減額とする。 (2) 期末・勤勉手当の支給月数を６月の期末・勤勉手当の凍結部分と合わせて、０．３５月分引き下げる。 施行期日 平成２２年１月１日（勤勉手当に係る改正規定は、公布の日）",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "学校教育職員の給与に関する条例の一部を改正する条例",
+      "summary": "特別区人事委員会勧告に基づき、学校教育職員の給与に関し、所要の改正を行う。 (1) 地域手当の支給割合を１６％から１７％へ引き上げるとともに、給料表の引き下げ改定を行い、月例給与を１，６０５円程度の減額とする。 (2) 期末・勤勉手当の支給月数を６月の期末・勤勉手当の凍結部分と合わせて、０．３５月分引き下げる。 施行期日 平成２２年１月１日（勤勉手当に係る改正規定は、公布の日）",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "（仮称）八潮南小学校跡区民活動交流施設等改修工事請負契約",
+      "summary": "・契約の方法 制限付き一般競争入札による契約 ・契約金額 231,000,000円 ・契約の相手方 大久建設株式会社 ・工 期 契約締結の日の翌日～平成22年11月30日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "東品川橋架替工事（下部工その１）請負契約の変更について",
+      "summary": "(1) 契約金額の変更について 〔変更前〕 1,449,000,000円 〔変更後〕 2,027,084,850円 (2) 支出科目等の変更について 〔変更前〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 平成２２年度 債務負担行為 〔変更後〕 支出科目等 平成２０年度 一般会計 平成２１年度 債務負担行為 平成２２年度 債務負担行為 平成２３年度 債務負担行為 平成２４年度 債務負担行為",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "戸越幹線貯留管中流部整備工事（シールド工）請負契約の変更について",
+      "summary": "契約金額の変更について 〔変更前〕 1,522,500,000円 〔変更後〕 1,506,550,500円",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "区長提出",
+      "title": "平成２１年度品川区一般会計補正予算",
+      "summary": "１． 歳入歳出予算補正額 ２８６，９５６千円追加 （補正後の歳入歳出予算額 １４１，１５６，２１０千円） ２． 債務負担行為補正件数 追加 ２件 廃止 １件 変更 ２件",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "",
+      "proposer": "議員提出",
+      "title": "品川区議会議員の議員報酬、費用弁償及び期末手当に関する条例の一部を改正する条例",
+      "summary": "区議会議員の議員報酬の支給に係る算定方法を改める。 施行期日 平成２２年１月１日",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    }
+  ],
+  "petitions": [
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 陳情第６号",
+      "title": "品川区独自の非正規社員の雇用対策に関する陳情",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第２号",
+      "title": "所得税法第５６条廃止の意見書提出を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２０年 請願第32号",
+      "title": "介護保険の改善を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第３号",
+      "title": "医療依存度の高い障害者（児）の在宅生活を支える福祉支援を品川区に求める請願",
+      "result": "継続審査",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第４号",
+      "title": "無料で利用できる緊急通報システムの復活を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第５号",
+      "title": "後期高齢者医療制度の中止を国に求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第６号",
+      "title": "介護保険の改善を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第７号",
+      "title": "都南病院跡地のケアホーム利用料減額に６５歳以上の介護保険料を使わないことを求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第９号",
+      "title": "緊急通報システムの費用負担軽減と消防庁直結型の設置を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 陳情第８号",
+      "title": "丸山寺墓地に関する陳情",
+      "result": "採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第１号",
+      "title": "「品川区上大崎三丁目地区再開発」まちづくり都有地活用に関する請願",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第８号",
+      "title": "区営住宅建設と都営住宅の区移管の推進を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 陳情第２号",
+      "title": "大井町駅前ロータリー（旧阪急百貨店側）中央における障害者専用駐車マークがあるスペースに関する陳情",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 請願第10号",
+      "title": "区立城南第二小学校特別支援学級の存続を求める請願",
+      "result": "継続審査",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 陳情第３号",
+      "title": "生涯学習課スポーツ係の業務改善に関する陳情",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-1t",
+      "number": "２１年 陳情第４号",
+      "title": "生涯学習課スポーツ係の業務改善に関する陳情",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_01/h21_01t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 陳情第９号",
+      "title": "品川区役所第二駐車場における身体障害者専用駐車場の運営・管理に関する陳情",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 陳情第10号",
+      "title": "品川区役所第二駐車場における身体障害者専用駐車場の運営・管理に関する陳情",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 陳情第11号",
+      "title": "品川区役所第二駐車場における身体障害者専用駐車場の運営・管理に関する陳情",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 陳情第12号",
+      "title": "品川区役所第二駐車場における身体障害者専用駐車場の運営・管理に関する陳情",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 陳情第13号",
+      "title": "品川区役所第二駐車場における身体障害者専用駐車場の運営・管理に関する陳情",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 陳情第14号",
+      "title": "品川区路上喫煙禁止地区美化推進地区内の品川区喫煙場に関する改善の陳情",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 請願第３号",
+      "title": "医療依存度の高い障害者（児）の在宅生活を支える福祉支援を品川区に求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 陳情第15号",
+      "title": "品川区公園運動施設を身体障害者や高年齢者が、気軽に安心して安全に利用する為に環境設備の見直しに関する陳情",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 請願第10号",
+      "title": "区立城南第二小学校特別支援学級の存続を求める請願",
+      "result": "継続審査",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-2t",
+      "number": "２１年 請願第11号",
+      "title": "認可保育園の増設を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_02/h21_02t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-3t",
+      "number": "２１年 請願第12号",
+      "title": "しながわ区民公園少年野球場の存続に関する請願",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_03/h21_03t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第13号",
+      "title": "小規模住宅用地の都市計画税の軽減措置の継続についての意見書の提出を求める請願",
+      "result": "採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第14号",
+      "title": "小規模非住宅用地の固定資産税等の減免措置の継続についての意見書の提出を求める請願",
+      "result": "採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第15号",
+      "title": "商業地等の固定資産税等の負担水準の上限を引き下げる減額措置の継続についての意見書の提出を求める請願",
+      "result": "採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第16号",
+      "title": "償却資産に係る固定資産税の改正要望についての意見書の提出を求める請願",
+      "result": "採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第17号",
+      "title": "小規模住宅用地の都市計画税の軽減措置の継続についての意見書の提出を求める請願",
+      "result": "採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第18号",
+      "title": "小規模非住宅用地の固定資産税等の減免措置の継続についての意見書の提出を求める請願",
+      "result": "採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第19号",
+      "title": "商業地等の固定資産税等の負担水準の上限を引き下げる減額措置の継続についての意見書の提出を求める請願",
+      "result": "採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第20号",
+      "title": "償却資産に係る固定資産税の改正要望についての意見書の提出を求める請願",
+      "result": "採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第24号",
+      "title": "品川の工業集積と商店街振興のための緊急支援を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第25号",
+      "title": "品川の工業集積と商店街振興のための緊急支援を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第26号",
+      "title": "品川の工業集積と商店街振興のための緊急支援を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第27号",
+      "title": "品川の工業集積と商店街振興のための緊急支援を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第10号",
+      "title": "区立城南第二小学校特別支援学級の存続を求める請願",
+      "result": "取り下げ",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第21号",
+      "title": "品川区私立幼稚園児保護者負担教育費軽減の為の請願",
+      "result": "趣旨採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第22号",
+      "title": "どの子も良い環境で育てたい。認可保育園増設を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    },
+    {
+      "meetingId": "h21-4t",
+      "number": "２１年 請願第23号",
+      "title": "一人ひとりの子どもが大切にされる品川区を求める請願",
+      "result": "不採択",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式資料を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/h21_04/h21_04t"
+        }
+      ]
+    }
+  ],
   "questions": [
     {
       "meetingId": "h21-1t",

@@ -42,6 +42,8 @@ CACHE_DIR = ROOT / "scripts/cache/history"
 OUT_DIR = ROOT / "scripts/out/history"
 # 請願・陳情の受理年は元号表記。平成の年も同じ列に入るため両方を見る。
 ERA_YEAR_PATTERN = r"(?:令和(?:元|\d+)|平成\d+)年"
+# 受理年の表記。平成20年前後のページは元号を省いて「２０年」とだけ書く年がある。
+RECEIPT_YEAR_PATTERN = rf"(?:{ERA_YEAR_PATTERN}|\d{{1,2}}年)"
 
 
 def year_token(value: str | int) -> str:
@@ -124,10 +126,17 @@ def clean_soup(raw_html: str) -> BeautifulSoup:
 
 
 def text_without_document_suffix(cell) -> str:
-    clone = BeautifulSoup(str(cell), "html.parser")
-    for anchor in clone.select("a"):
-        anchor.decompose()
-    value = compact(clone.get_text(" ", strip=True))
+    """議案名のセルから、題名だけを取り出す。
+
+    年によって題名とPDFリンクの入れ子が逆転する点に注意する。
+      令和5年以降 : <td>題名（<a>.pdf.19KB</a>）</td>  題名はリンクの外
+      平成29年〜令和元年: <td><a>題名(.pdf.19KB)</a></td>  題名ごとリンクの中
+    そのためaタグを一律に削ると後者で題名が消える。セル全体の文字列を取ってから、
+    末尾のファイル情報だけを落とす。
+    """
+    value = compact(cell.get_text(" ", strip=True))
+    # 末尾の「（ .pdf.19KB）」「(.pdf)」などを落とす（拡張子を手がかりにする）
+    value = re.sub(r"[（(]?\s*\.?\s*(?:pdf|xlsx?|docx?)\b[^）)]*[）)]?\s*$", "", value, flags=re.I)
     return re.sub(r"[（(]\s*(?:/\s*)*[）)]\s*$", "", value).strip()
 
 
@@ -165,21 +174,23 @@ def parse_proposals_and_petitions(raw_html: str, page_url: str, meeting_id: str)
                 if len(cells) < 4:
                     continue
                 values = [compact(cell.get_text(" ", strip=True)) for cell in cells]
-                # 令和2〜6年形式は末尾が「結果・備考」、令和7年形式は末尾が「結果」。
-                # 件名自体に「撤回」「採択」を含む例があるため、文言検索で列判定しない。
-                result_index = len(values) - 2 if "付託委員会" in header_text else len(values) - 1
+                # 結果は原則いちばん右の列。「備考」列がある形式（令和2〜6年）のときだけ
+                # ひとつ手前になる。以前は「付託委員会」の有無で判定していたが、平成20年〜
+                # 令和元年は付託委員会があっても備考が無く、受理番号を結果として拾っていた。
+                # 件名自体に「撤回」「採択」を含む例があるため、文言検索で列判定はしない。
+                result_index = len(values) - 2 if "備考" in header_text else len(values) - 1
                 before_result = values[:result_index]
                 title_candidates = [
                     value for value in before_result
                     if value
-                    and not re.fullmatch(ERA_YEAR_PATTERN, value)
+                    and not re.fullmatch(RECEIPT_YEAR_PATTERN, value)
                     and not re.fullmatch(r"(?:請願|陳情)?第?\d+号", value)
                     and not ("委員会" in value and len(value) <= 12)
                 ]
                 title = max(title_candidates, key=len, default="")
                 number_parts = [
                     value for value in before_result
-                    if value != title and re.search(rf"{ERA_YEAR_PATTERN}|請願|陳情|第\d+号", value)
+                    if value != title and re.search(rf"{RECEIPT_YEAR_PATTERN}|請願|陳情|第\d+号", value)
                 ]
                 petitions.append({
                     "meetingId": meeting_id,
@@ -199,18 +210,35 @@ def parse_proposals_and_petitions(raw_html: str, page_url: str, meeting_id: str)
         category = compact(previous_h4.get_text(" ", strip=True)) if previous_h4 else "議員提案"
         category = re.sub(r"^[（(]?\d+[）)]?", "", category).strip() or "議案"
 
+        # 平成28年以前は「番号」列が無く、議案名から始まる（番号は本文に載らない）。
+        has_number_column = "番号" in header_text
+
         for row in table.select("tr"):
-            cells = row.select("td")
+            # 予算議案の欄は表の中に表を入れ子にしている年がある。入れ子側の行は議案ではない。
+            if row.find_parent("table") is not table:
+                continue
+            # 同じ理由で、入れ子の表のセルを拾わないよう直接の子だけを見る。
+            cells = row.find_all("td", recursive=False)
             if len(cells) < 3:
                 continue
-            number = compact(cells[0].get_text(" ", strip=True))
-            if "議案" not in number:
+
+            if has_number_column:
+                number = compact(cells[0].get_text(" ", strip=True))
+                if "議案" not in number:
+                    continue
+                title_cell, summary_index = cells[1], 2
+            else:
+                number = ""
+                title_cell, summary_index = cells[0], 1
+
+            title = text_without_document_suffix(title_cell)
+            if not title:
                 continue
-            title = text_without_document_suffix(cells[1])
             result = compact(cells[-1].get_text(" ", strip=True))
-            summary = compact(cells[2].get_text(" ", strip=True)) if len(cells) >= 4 else "議員提出の意見書・決議です。"
+            summary = compact(cells[summary_index].get_text(" ", strip=True)) \
+                if len(cells) > summary_index + 1 else "議員提出の意見書・決議です。"
             links = [{"type": "official", "label": "公式の議案一覧を見る", "url": page_url}]
-            links.extend(document_links(cells[1]))
+            links.extend(document_links(title_cell))
             bills.append({
                 "meetingId": meeting_id,
                 "number": number,
