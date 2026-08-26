@@ -243,6 +243,10 @@
     details[open] > summary .committee-toggle-icon::before { content: "−"; }
     .committee-session__content { border-top: 1px solid var(--c-border); padding: 18px; }
     .committee-topics { display: grid; gap: 12px; }
+    /* 会議録の全文には、議題の区切りに使う罫線（─の連続）など折り返せない文字列が
+       入っている。グリッドの子は既定が min-width:auto なので、そのままでは列が
+       その最小幅まで広がり、狭い画面で横にはみ出す。 */
+    .committee-topics > *, .committee-voices > * { min-width: 0; }
     .committee-topic { border: 1px solid var(--c-rule); border-radius: 3px; background: #fff; overflow: clip; }
     .committee-topic h4 { margin: 0; color: var(--c-main-dark); font-size: 16px; }
     .committee-topic__agenda { margin: 0 0 12px; color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
@@ -276,7 +280,7 @@
     .committee-voice__speaker { margin: 0 0 4px; color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
     .committee-voice__no { margin-right: 6px; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
     /* 公式会議録の改行ごとに1段落。長い答弁でも読める間隔にする */
-    .committee-voice__text { margin: 0; font-size: 14px; line-height: 1.9; }
+    .committee-voice__text { margin: 0; font-size: 14px; line-height: 1.9; overflow-wrap: anywhere; }
     .committee-voice__text + .committee-voice__text { margin-top: 8px; }
     .committee-voice:target { background: var(--c-highlight); }
     .committee-voice:target .committee-voice__speaker { text-decoration: underline; }
@@ -362,7 +366,12 @@
       .qa-summary dd + dt { margin-top: 6px; }
       .committee-session > summary, .committee-topic > summary,
       .committee-fulltext > summary { min-height: 72px; padding: 13px; }
-      .committee-session__content { padding: 12px; }
+      /* 会議録の全文は「会議 → 資料種別 → 会議 → 全文」と入れ子の底にあるため、
+         狭い画面では枠と余白で幅の4割が消えて1行15文字ほどになる。外側から順に
+         余白を詰めて行長を確保する（縦の余白・背景色・左罫は残す）。 */
+      .meeting-accordion__content .container { width: calc(100% - 16px); }
+      .committee-session__content { padding: 12px 0; }
+      .committee-fulltext__content { padding: 14px 6px; }
       .committee-session h3 { font-size: 16px; }
       .committee-session__count, .committee-topic__count { white-space: normal; text-align: right; }
       .committee-exchange { padding: 13px 14px; }
@@ -380,7 +389,7 @@
       .record-section { margin-top: 22px; }
       .record-section > summary { min-height: 64px; padding: 12px; }
       .record-section__title strong { font-size: 16px; }
-      .record-section__content { padding: 12px; }
+      .record-section__content { padding: 12px 6px; }
       .q__content { padding: 16px; }
 
       /* 指でタップしやすいようリンクピルを大きくする */
@@ -608,9 +617,8 @@
       if (related.bills.length > 0) counts.push(`議案 ${related.bills.length}件`);
       if (related.petitions.length > 0) counts.push(`請願・陳情 ${related.petitions.length}件`);
       if (related.questions.length > 0) counts.push(`質問者 ${related.questions.length}名`);
-      const committeeExchangeCount = related.committeeSessions.reduce((total, session) =>
-        total + (session.topics || []).reduce((topicTotal, topic) => topicTotal + (topic.exchanges || []).length, 0), 0);
-      if (committeeExchangeCount > 0) counts.push(`委員会質疑 ${committeeExchangeCount}件`);
+      // 委員会は全文を載せるので、会議の数で示す（抜粋の件数は画面に出ない）。
+      if (related.committeeSessions.length > 0) counts.push(`委員会 ${related.committeeSessions.length}会議`);
       if (related.committeePending.length > 0) counts.push(`会議録待ち ${related.committeePending.length}会議`);
       if (counts.length === 0) return "";
       return `<span class="meeting-accordion__counts">${counts.map((count) =>
@@ -951,6 +959,13 @@
         各質問者の「原文を読む」から、その議員が質問を始めた発言へ移動できます。</p>`;
     }
 
+    // 見出しの説明。session.overview は抜粋の件数を述べる文なので、全文を載せる
+    // 会議では中身と合わない。全文が在る会議は分量で示す。
+    function committeeSessionOverview(session) {
+      if (!session.hasFullText) return session.overview;
+      return `${session.committee}の公式会議録を、要約せずそのまま全文で掲載しています。`;
+    }
+
     // 初期DOMを軽くするため、会議見出しだけを先に描画し、開いた会議の中身だけを生成する。
     function committeeSessionsHtml(sessions, pending) {
       const published = sessions.map((session) => `<details class="committee-session" id="committee-${esc(session.id)}" data-session-id="${esc(session.id)}">
@@ -960,16 +975,18 @@
               <span class="tag">${esc(session.status || "委員会質疑")}</span>
               <h3>${esc(session.date)} ${esc(session.committee)}</h3>
             </span>
-            <span class="committee-session__overview">${esc(session.overview)}</span>
+            <span class="committee-session__overview">${esc(committeeSessionOverview(session))}</span>
           </span>
-          <span class="committee-session__count">${committeeExchangeCount(session)}件</span>
+          <span class="committee-session__count">${session.hasFullText
+            ? esc(fullTextSummaryLabel(session))
+            : `${committeeExchangeCount(session)}件`}</span>
           <span class="committee-toggle-icon" aria-hidden="true"></span>
         </summary>
         <div class="committee-session__content" data-session-content></div>
       </details>`).join("");
       const waiting = pending.map((session) => `<article class="committee-pending" id="committee-${esc(session.id)}">
         <strong>${esc(session.date)} ${esc(session.committee)}</strong>
-        <p>${esc(session.status)} — 会議録が公開されるまで要約は作成しません。
+        <p>${esc(session.status)} — 会議録が公開されるまで掲載しません。
           ${session.officialUrl ? `<a href="${esc(session.officialUrl)}" target="_blank" rel="noopener">公式カレンダーを確認</a>` : ""}</p>
       </article>`).join("");
       return `<div class="committee-topics">${published}${waiting}</div>`;
@@ -1013,15 +1030,24 @@
       const session = (activeYear.committeeSessions || []).find((item) => item.id === details.dataset.sessionId);
       const content = details.querySelector("[data-session-content]");
       if (!session || !content) return;
+      // 委員会は会議録の全文だけを載せる。議題別の抜粋は、発言の一部しか拾えず
+      // 答弁が文の途中で切れるものが多いため、全文が在る会議では出さない。
+      // 全文がまだ無いのは校正原稿だけなので、そこは抜粋を残す。
       content.innerHTML = `
         ${session.time ? `<p class="committee-session__meta">開催時間：${esc(session.time)}</p>` : ""}
-        <div class="committee-topics">${(session.topics || []).map((topic) => committeeTopicHtml(session, topic)).join("")}${fullTextDetailsHtml(session)}</div>
-        <p class="fine-print qa-summary-note">※上の議題別の質問・答弁は、会議録の該当発言から要点を含む文を抜き出して掲載しています（要約ではありません）。発言の一部のみを載せているため、${session.hasFullText
-          ? "前後の文脈は「会議録全文」または公式の会議録をご確認ください。各質疑の「原文を読む」から全文の該当発言へ移動できます。"
-          : "前後の文脈は公式の会議録をご確認ください。"}明確な回答が記録されていない発言には、その旨を記載しています。</p>
+        <div class="committee-topics">${session.hasFullText
+          ? fullTextDetailsHtml(session)
+          : (session.topics || []).map((topic) => committeeTopicHtml(session, topic)).join("")}</div>
+        ${session.hasFullText ? "" : `<p class="fine-print qa-summary-note">※この会議はまだ正式な会議録が公開されていないため、校正原稿から質問・答弁の該当箇所を抜き出して掲載しています。発言の一部のみのため、前後の文脈は公式の会議録をご確認ください。明確な回答が記録されていない発言には、その旨を記載しています。</p>`}
         <div class="committee-session__links">${pillsHtml(session.links, activeSite)}</div>`;
       details.dataset.rendered = "true";
       setupDetailsAccessibility(content);
+      // 全文が会議の中身そのものになったので、開いた時点で読み込んで表示する。
+      const fullText = content.querySelector(".committee-fulltext");
+      if (fullText) {
+        fullText.open = true;
+        renderFullText(fullText);
+      }
     }
 
     // 会議1件分の詳細セクション（タイムライン＋関連する議案・請願・質問）
@@ -1050,13 +1076,20 @@
 
       // 公開済み委員会の質疑・答弁と、会議録公開待ちの台帳
       if (committeeSessions.length > 0 || committeePending.length > 0) {
-        const exchangeCount = committeeSessions.reduce((total, session) =>
+        // 正式会議録が公開されている会議は全文、まだの会議は校正原稿からの抜粋。
+        // 見出しの件数も、全文の会議は発言数で数える。
+        const draftSessions = committeeSessions.filter((session) => !session.hasFullText);
+        const exchangeCount = draftSessions.reduce((total, session) =>
           total + (session.topics || []).reduce((topicTotal, topic) => topicTotal + (topic.exchanges || []).length, 0), 0);
+        const voiceCount = committeeSessions.reduce(
+          (total, session) => total + (session.hasFullText ? (session.sourceMeta || {}).voices || 0 : 0), 0);
         html += recordSectionHtml({
           id: `committee-qa-${meeting.id}`,
           title: "委員会での質疑・答弁",
-          lead: "公式会議録または校正原稿から、質問・確認・意見・要望と答弁・対応を議題別に整理しています。",
-          countLabel: `${committeeSessions.length}会議・${exchangeCount}件${committeePending.length ? `／公開待ち等${committeePending.length}会議` : ""}`,
+          lead: draftSessions.length
+            ? "正式会議録が公開されている会議は、公式会議録の全文をそのまま掲載しています。公開前の会議は校正原稿から質問・答弁を抜き出して掲載しています。"
+            : "公式会議録の全文を、要約せずそのまま掲載しています。",
+          countLabel: `${committeeSessions.length}会議${voiceCount ? `・${voiceCount}発言` : ""}${exchangeCount ? `・抜粋${exchangeCount}件` : ""}${committeePending.length ? `／公開待ち等${committeePending.length}会議` : ""}`,
           content: committeeSessionsHtml(committeeSessions, committeePending),
           open: false
         });

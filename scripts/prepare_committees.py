@@ -1058,9 +1058,6 @@ def meeting_shells_for(sessions: list[dict]) -> list[dict]:
     for meeting_id, items in grouped.items():
         first = min(item["dateIso"] for item in items)
         last = max(item["dateIso"] for item in items)
-        exchange_count = sum(
-            len(topic["exchanges"]) for item in items for topic in item["topics"]
-        )
         if meeting_id.endswith("-c-budget"):
             name = "予算特別委員会"
             month_label = "2〜3月"
@@ -1083,9 +1080,10 @@ def meeting_shells_for(sessions: list[dict]) -> list[dict]:
             "id": meeting_id,
             "monthLabel": month_label,
             "name": name,
-            "summary": f"{period}に開催された委員会の質疑・答弁{exchange_count}件を掲載しています。",
+            # 委員会は会議録の全文を掲載する（抜粋は横断検索の手がかりとして索引に残すだけ）。
+            "summary": f"{period}に開催された委員会{len(items)}会議の会議録を全文で掲載しています。",
             "detailTitle": f"{YEAR_LABEL} {name}",
-            "detailLead": "公式会議録から、実質的な質問・確認・意見・要望と答弁・対応の発言を、議題別に抜き出しています。",
+            "detailLead": "公式会議録の全文を、要約せずそのまま掲載しています。正式会議録が公開される前の会議は、校正原稿から質問・答弁を抜き出して掲載しています。",
             "events": [],
             "links": [
                 {"type": "official", "label": "公式の会議録検索", "url": "https://gikai.city.shinagawa.tokyo.jp/search"}
