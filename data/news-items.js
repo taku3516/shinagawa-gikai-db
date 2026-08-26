@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-26T13:32:16.629938Z",
+  "generatedAt": "2026-08-26T16:36:11.289131Z",
   "items": [
     {
       "id": "17209426b3df43209130",
@@ -117,6 +117,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "5a0a830e0c25150f1ca8",
+      "title": "グループ展「散らかしガーデンプレイス2 -酷暑天国-」",
+      "summary": "2026年8月28日（金）～9月6日（日）、品川区二葉の アトリエ サロン-コウシンキョクにて、『散らかしガーデンプレイス2 -酷暑天国-』 が開催されます。 アーティスト・ 藤城嘘 が主催するグループ展『散らかしガーデンプレイス2 -酷暑天国-』。「散らかし」は、作品を整然と商品然に並べるのではなく、あえてカジュアルに展示し、一見すると「散らかった」状態そのものを楽しむグループ展です。今回は40名を超える作家が参加し、作品やグッズの販売が行われます。会場は、即売会や学園祭…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/cgp2",
+      "publishedAt": "2026-08-26T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-26T16:35:49.657836Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "二葉"
       ],
       "relevanceScore": 12
     },
@@ -6725,7 +6744,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2090, column 45"
+      "message": "not well-formed (invalid token): line 2162, column 45"
     },
     {
       "source": "朝日新聞",
