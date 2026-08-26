@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-25T07:23:52.428128Z",
+  "generatedAt": "2026-08-26T02:07:14.125756Z",
   "items": [
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-26T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "2088cd448e48f907bee1",
       "title": "荏原町にかき氷専門店「スノーカフェ」 店主はソムリエ、ワイン使うかき氷も",
@@ -98,23 +115,6 @@ window.SHINAGAWA_NEWS = {
         "荏原"
       ],
       "relevanceScore": 6
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-25T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "dbe3cd7369c456dd28f3",
@@ -6646,13 +6646,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 566,
+      "scanned": 576,
       "accepted": 0
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 38,
+      "scanned": 40,
       "accepted": 0
     },
     {
@@ -6671,7 +6671,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
