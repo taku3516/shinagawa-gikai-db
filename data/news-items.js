@@ -1,7 +1,168 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-27T00:55:47.226342Z",
+  "generatedAt": "2026-08-27T14:23:51.483897Z",
   "items": [
+    {
+      "id": "e021d5506d13f3860ad4",
+      "title": "令和9年度 奨学研究資金奨学生募集",
+      "summary": "奨学研究資金とは、ひとり親世帯の生活の安定と人材の育成を図るため、学費の一部を交付する制度（給付型）です。昭和50年9月に区内篤志家の寄付金をもとに創設されました。現在は、品川区内の町会・自治会をはじめ、区民の皆様にご支援いただいている「歳末たすけあい募金」を原資とし交付しています。 (1)申請の日の1年前から、引き続き区内に住所を有する ひとり親世帯 のお子さん。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62231.html",
+      "publishedAt": "2026-08-27T14:23:22.387210Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-27T14:23:22.387210Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "69467107379ad8ed0433",
+      "title": "令和8年熊本地震により被災した世帯に対する「生活福祉資金緊急小口資金（災害時特例貸付）」のご案内",
+      "summary": "令和8年熊本地震により被災した地域から都内へ避難してきた世帯へ対する貸付です。申込先は避難先の区市町村の社会福祉協議会です。 令和8年熊本地震により災害救助法の適用となった地域に住所を有し、当座の生活費を必要とする世帯（都内避難者に限ります）",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62567.html",
+      "publishedAt": "2026-08-27T14:23:22.387210Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-27T14:23:22.387210Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
+    {
+      "id": "ea2c7d25f4764e17502f",
+      "title": "武蔵小山に「立呑みバル TOKIDOKI」 マーケターがパパ友を誘って開業",
+      "summary": "居酒屋「立呑（の）みバルTOKIDOKI （トキドキ）武蔵小山」（品川区小山4、TEL 050-5869-4921）が東急目黒線武蔵小山駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5065",
+      "publishedAt": "2026-08-27T01:35:22Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-27T14:23:22.387210Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "cb4d1ef17f4e512f75b1",
+      "title": "8月26日開催の委員会の結果を掲載。",
+      "summary": "8月26日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20763.html",
+      "publishedAt": "2026-08-27T01:00:58Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-25T01:57:59.202837Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "d671ae7409ffbe893d0f",
+      "title": "令和8年千葉豪雨被災者の区立住宅への受け入れ",
+      "summary": "木密整備推進課 電話：03-5742-6925 FAX：03-5742-6756",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinenhachigatsuchibagouu/20260826155152.html",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-27T14:23:22.387210Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1b9a56144f7ad5fd2554",
+      "title": "OIMACHI Wine Picnic",
+      "summary": "2026年9月4日（金）～6日（日）、OIMACHI TRACKS内、TRACKS PARKにて、日本各地の個性豊かな日本ワインを楽しむイベント「OIMACHI Wine Picnic」が開催されます。 国内外で注目を集める日本ワイン。その魅力は、地域ごとの風土や気候、生産者の想いによって生み出される多様な味わいにあります。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/oimachi-wine-picnic",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-27T14:23:22.387210Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "187a80c8c5be2070f4a2",
+      "title": "品川宿交流館「第一回 品川宿場寄席」",
+      "summary": "2026年9月17日（木）、18日（金）、19日（土）、品川宿交流館にて「品川宿場寄席」が開かれます。 出演は、品川区在住、真打落語家の柳家吉緑さん、二つ目講談師の一龍齋貞奈さん。今回は、品川にまつわる話特集として、「品川心中」（17日）、「紀伊国屋文左衛門 かっぽれの由来」（18日）、「居残り佐平治」（19日）を披露。日替わりゲストも迎え、楽しいひとときとなりそうです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shukubayose1",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-27T14:23:22.387210Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "53a157b7e809d8beb52c",
+      "title": "令和8年熊本地震被災者の区立住宅への受け入れ",
+      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756 メール：mokumitsu-seibi@city.shinagawa.tokyo.jp 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260805090700.html",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "d72bf6216af184430233",
       "title": "品川区世論調査の回答について",
@@ -231,26 +392,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "cb4d1ef17f4e512f75b1",
-      "title": "8月26日開催の委員会の予定を掲載。",
-      "summary": "8月26日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20763.html",
-      "publishedAt": "2026-08-25T01:33:58Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-25T01:57:59.202837Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "c82c90e11d1025dc968c",
@@ -1018,23 +1159,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "53a157b7e809d8beb52c",
-      "title": "令和8年熊本地震被災者の公営住宅への受け入れ",
-      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756 メール：mokumitsu-seibi@city.shinagawa.tokyo.jp 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260805090700.html",
-      "publishedAt": "2026-08-19T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T07:50:23.345001Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "f71d621ea9ccb1a8c63d",
       "title": "平成25年生活扶助基準改定に係る最高裁判決を踏まえた保護費の追加給付",
       "summary": "",
@@ -1258,23 +1382,6 @@ window.SHINAGAWA_NEWS = {
         "荏原"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "141bbb2b714a15ff5e66",
@@ -6731,7 +6838,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 136,
+      "scanned": 139,
       "accepted": 0
     },
     {
@@ -6742,9 +6849,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2492, column 45"
+      "status": "ok",
+      "scanned": 588,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -6791,7 +6898,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 25,
+      "scanned": 26,
       "accepted": 0
     },
     {
