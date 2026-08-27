@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-26T16:36:11.289131Z",
+  "generatedAt": "2026-08-27T00:55:47.226342Z",
   "items": [
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "17209426b3df43209130",
       "title": "中延でグループ展「散らかしガーデンプレイス」 作品を「散らかして」展示",
@@ -138,23 +155,6 @@ window.SHINAGAWA_NEWS = {
         "二葉"
       ],
       "relevanceScore": 12
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-26T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "3dc9119c7e9163bba125",
@@ -6744,7 +6744,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2162, column 45"
+      "message": "not well-formed (invalid token): line 2492, column 45"
     },
     {
       "source": "朝日新聞",
