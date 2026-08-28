@@ -1,7 +1,161 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-28T00:29:12.237895Z",
+  "generatedAt": "2026-08-28T15:32:34.952935Z",
   "items": [
+    {
+      "id": "7b84c98f35bf001aa9d9",
+      "title": "【品川介護福祉専門学校】8月16日 オープンキャンパス「車いす操作」を行いました！！",
+      "summary": "当日は高校生、社会人の方々、保護者の方、オープンキャンパスにご来場いただきましてありがとう 介助する側、介助される側の両方を体験し注意点などを学びました。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62711.html",
+      "publishedAt": "2026-08-28T15:32:11.027247Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-28T15:32:11.027247Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 6
+    },
+    {
+      "id": "14cbbaef95cf45d1bd18",
+      "title": "「エールしながわ通信」9月号を発行しました！",
+      "summary": "ひきこもりなどでお悩みのご本人やご家族の社会参加を応援する「エールしながわ」では、毎月広報誌を発行しています。 9月号ではエール社会体験の様子、報告記事を掲載しています。ぜひ、下記のリンクよりご覧ください！ ※過去の通信もご覧にいただけます エールしながわ通信：https://shinashakyo.jp/yell/magazine.html",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62708.html",
+      "publishedAt": "2026-08-28T15:32:11.027247Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-28T15:32:11.027247Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "df72be3051e85c1271ea",
+      "title": "令和の大阪で繰り広げられる、小学校中学年向け読み物『まいど！ ようかい不動産 203号室は、トイレの花子さんの部屋？』が発売！",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年8月6日に『まいど！ ようかい不動産 203号室...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009363.000002535.html",
+      "publishedAt": "2026-08-28T15:10:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-28T15:32:11.027247Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5c1ac8c51630a0c9f83a",
+      "title": "西小山に中華料理店「ラララ」 ナチュラルワインとの組み合わせを提案",
+      "summary": "中華料理とナチュラルワインの店「中華とワインのお店 ラララ」（品川区小山6、090-8055-4238）が、西小山駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5066",
+      "publishedAt": "2026-08-28T09:31:14Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-28T15:32:11.027247Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "西小山駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "457bae5618a40808692f",
+      "title": "8月27日開催の委員会の結果を掲載。",
+      "summary": "8月27日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20786.html",
+      "publishedAt": "2026-08-28T01:37:32Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-26T07:23:26.439634Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "76e14d5146e8c32fa6b6",
+      "title": "第3回定例会のポスターを掲載。",
+      "summary": "第3回定例会のポスターを掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20792.html",
+      "publishedAt": "2026-08-28T01:35:24Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-28T15:32:11.027247Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "e0324acff032d8220ede",
+      "title": "バスの日イベント2026 in大井競馬場",
+      "summary": "2026年9月26日（土）、大井競馬場ウマイルスクエアにて「 バスの日イベント2026 in大井競馬場」が開催され ます。 車両撮影会や運転席での記念撮影のほか、マスコットキャラクターが勢ぞろいするステージイベント、グッズ販売など、お子様連れのご家族からバスファンまで楽しめる企画が盛りだくさんです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/busfes2026",
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-28T15:32:11.027247Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "107f06b55f761dd1069b",
+      "title": "品川区民芸術祭 品川アーティスト展2026",
+      "summary": "2026年9月12日（土）・13日（日）、きゅりあんにて「品川区民芸術祭 品川アーティスト展2026」が開催されます。 今年で18回目をむかえる、子どもから大人まで楽しめるアートイベント！ 品川ゆかりアーティストによる作品展示、アート体験のほか、ファミリーコンサートなど、楽しい企画がいっぱい。 特設フォトスポットでは毎年好評の”しなーと”と”シナガワン”とのコラボ撮影会も実施予定！",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/artist2026",
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-28T15:32:11.027247Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "きゅりあん"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "d72bf6216af184430233",
       "title": "品川区世論調査の回答について",
@@ -18,6 +172,24 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
+    },
+    {
+      "id": "3dc9119c7e9163bba125",
+      "title": "高齢者のスマートフォン購入費助成",
+      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "e021d5506d13f3860ad4",
@@ -94,6 +266,25 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "6a7013a186d29d28037d",
+      "title": "「早川の大自然でフィールドサイエンスキャンプ」実施報告",
+      "summary": "大崎第二地域センター 電話：03-3492-2000 FAX：03-3492-2095",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-oosaki2/shisetsu-kuyakusyo-chiiki-oosaki2-oshirase/20260826150955.html",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-28T15:32:11.027247Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "d671ae7409ffbe893d0f",
@@ -201,26 +392,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
-      "id": "457bae5618a40808692f",
-      "title": "8月27日開催の委員会の予定を掲載。",
-      "summary": "8月27日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20786.html",
-      "publishedAt": "2026-08-26T06:47:32Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-26T07:23:26.439634Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
-    },
-    {
       "id": "5bb1b777908702746a79",
       "title": "8月25日開催の委員会の結果を掲載。",
       "summary": "8月25日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
@@ -316,24 +487,6 @@ window.SHINAGAWA_NEWS = {
         "二葉"
       ],
       "relevanceScore": 12
-    },
-    {
-      "id": "3dc9119c7e9163bba125",
-      "title": "高齢者のスマートフォン購入費助成",
-      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
-      "publishedAt": "2026-08-26T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉",
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "2088cd448e48f907bee1",
@@ -6850,7 +7003,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 582,
+      "scanned": 572,
       "accepted": 0
     },
     {
@@ -6875,7 +7028,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
