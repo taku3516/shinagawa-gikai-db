@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-28T15:32:34.952935Z",
+  "generatedAt": "2026-08-29T10:17:08.235683Z",
   "items": [
+    {
+      "id": "438c9ff2d8105fbcd63d",
+      "title": "看護と介護の垣根を越えて、「その人らしく」を支える。 ベルウイング上平塚、2026年1月の開設から利用が拡大",
+      "summary": "[社会福祉法人征峯会] 「施設を利用したら、家族として介護を諦めたことになるのではないか」 「医療的ケアが必要になり、退院後の生活場所が見つからない」 「自宅での介護を続けたいが、家族の体力も限界に近づいている」 [画像1: ht...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000046.000108127.html",
+      "publishedAt": "2026-08-29T09:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-29T10:16:47.821581Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "平塚"
+      ],
+      "relevanceScore": 10
+    },
     {
       "id": "7b84c98f35bf001aa9d9",
       "title": "【品川介護福祉専門学校】8月16日 オープンキャンパス「車いす操作」を行いました！！",
@@ -7002,9 +7021,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 572,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2854, column 47"
     },
     {
       "source": "朝日新聞",
