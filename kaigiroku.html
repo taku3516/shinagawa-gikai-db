@@ -1373,9 +1373,11 @@
 
     // 年データ全体の描画（会議をすべて並べた後、会議録コーナーを必ず最後尾に置く）
     /* ===== 議員で絞った質疑（giin.html から ?member=&year= で来る） =====
-       対応表 data/speaker-members.js の resolveSpeakerMember で、索引層の
-       exchanges をこの議員のものだけに絞る。索引層に memberId は入れていない
-       （約370ファイルが差分になるため）ので、引き当ては画面側で行う。 */
+       委員会は索引層の exchanges を、対応表 data/speaker-members.js の
+       resolveSpeakerMember で絞る（索引層に memberId を入れると約370ファイルが
+       差分になるため、引き当ては画面側で行う）。本会議は questions が元から
+       memberId を持っているのでそのまま使う。
+       両方を同じ形の「グループ」に揃えて、表示・件数・プロンプトを共通にする。 */
 
     function memberFilterId() {
       try {
@@ -1391,8 +1393,12 @@
       return hit ? hit.name : memberId;
     }
 
-    // この年の、この議員の質疑を会議ごとにまとめる
-    function collectMemberExchanges(year, memberId) {
+    function textChars(question, answer) {
+      return String(question || "").length + String(answer || "").length;
+    }
+
+    // 委員会：この年の、この議員の質疑を会議ごとにまとめる
+    function committeeGroups(year, memberId) {
       const resolve = window.SHINAGAWA_DB.resolveSpeakerMember;
       if (typeof resolve !== "function") return [];
       const groups = [];
@@ -1401,16 +1407,66 @@
         for (const topic of session.topics || []) {
           for (const item of topic.exchanges || []) {
             if (resolve(item.speaker, session.dateIso) !== memberId) continue;
-            items.push({ topic: topic, item: item });
+            items.push({
+              id: item.id,
+              kind: item.kind || "質問",
+              speaker: item.speaker,
+              question: item.question,
+              respondent: item.respondent,
+              answer: item.answer,
+              chars: textChars(item.question, item.answer)
+            });
           }
         }
-        if (items.length) groups.push({ session: session, items: items });
+        if (!items.length) continue;
+        groups.push({
+          key: session.id,
+          date: session.dateIso || "",
+          label: `${session.date}　${session.committee}`,
+          sourceUrl: session.sourceUrl
+            || ((session.links || []).find((link) => /^https?:/.test(String(link.url))) || {}).url || "",
+          items: items
+        });
       }
       return groups;
     }
 
-    function exchangeChars(item) {
-      return String(item.question || "").length + String(item.answer || "").length;
+    // 本会議：questions は元から memberId を持つ。日付は全文の入口（sessionId）から引く。
+    function plenaryGroups(year, memberId) {
+      const minutes = year.plenaryMinutes || [];
+      const groups = [];
+      for (const question of year.questions || []) {
+        if (question.memberId !== memberId) continue;
+        const summaries = question.qaSummaries || [];
+        if (!summaries.length) continue;
+        const meeting = (year.meetings || []).find((m) => m.id === question.meetingId);
+        const day = question.fullText
+          ? minutes.find((m) => m.id === question.fullText.sessionId)
+          : null;
+        groups.push({
+          key: `${question.meetingId}-${memberId}`,
+          date: (day && day.dateIso) || "",
+          label: `${meeting ? meeting.name : question.meetingId}　${question.kind || "質問"}`,
+          sourceUrl: (day && day.sourceUrl)
+            || ((question.links || []).find((link) => /^https?:/.test(String(link.url))) || {}).url || "",
+          items: summaries.map((summary, index) => ({
+            id: `qa-${index}`,
+            kind: summary.title || question.kind || "質問",
+            speaker: question.member,
+            question: summary.question,
+            respondent: "",
+            answer: summary.answer,
+            chars: textChars(summary.question, summary.answer)
+          }))
+        });
+      }
+      return groups;
+    }
+
+    // 本会議と委員会を日付の新しい順に並べる。日付が取れないものは末尾へ。
+    function collectMemberGroups(year, memberId) {
+      const groups = plenaryGroups(year, memberId).concat(committeeGroups(year, memberId));
+      return groups.sort((a, b) => String(b.date).localeCompare(String(a.date)));
     }
 
     // AIに渡す聞き方。会議録は公文書なので、推測で補わせない指示を必ず添える。
@@ -1425,7 +1481,7 @@
         instruction: "同じ論点が繰り返し取り上げられているものを挙げ、区の回答がどう変化したかを示してください。" }
     ];
 
-    function buildMemberPrompt(memberId, year, groups, presetId) {
+    function buildMemberPrompt(memberId, groups, presetId) {
       const preset = MEMBER_PROMPT_PRESETS.find((p) => p.id === presetId) || MEMBER_PROMPT_PRESETS[0];
       const lines = [
         "以下は東京都品川区議会の会議録から抜き出した、" + memberDisplayName(memberId) + "議員の質疑応答です。",
@@ -1434,16 +1490,13 @@
         ""
       ];
       for (const group of groups) {
-        const session = group.session;
-        const url = session.sourceUrl
-          || ((session.links || []).find((link) => /^https?:/.test(String(link.url))) || {}).url || "";
-        lines.push("## " + session.committee + "（" + session.date + "）");
-        if (url) lines.push("出典: " + url);
-        for (const row of group.items) {
+        lines.push("## " + group.label);
+        if (group.sourceUrl) lines.push("出典: " + group.sourceUrl);
+        for (const item of group.items) {
           lines.push("");
-          lines.push("【" + (row.item.kind || "質問") + "】" + row.item.speaker);
-          lines.push("Q: " + row.item.question);
-          lines.push("A: " + (row.item.respondent || "") + " " + row.item.answer);
+          lines.push("【" + item.kind + "】" + (item.speaker || ""));
+          lines.push("Q: " + item.question);
+          lines.push("A: " + (item.respondent ? item.respondent + " " : "") + item.answer);
         }
         lines.push("");
       }
@@ -1452,32 +1505,31 @@
 
     function memberPanelHtml(year, memberId) {
       const name = memberDisplayName(memberId);
-      const groups = collectMemberExchanges(year, memberId);
-      const total = groups.reduce((sum, g) => sum + g.items.length, 0);
-      const chars = groups.reduce((sum, g) =>
-        sum + g.items.reduce((n, row) => n + exchangeChars(row.item), 0), 0);
+      const groups = collectMemberGroups(year, memberId);
+      const total = groups.reduce((sum, group) => sum + group.items.length, 0);
+      const chars = groups.reduce((sum, group) =>
+        sum + group.items.reduce((n, item) => n + item.chars, 0), 0);
 
       if (total === 0) {
         return `<div class="member-panel">
           <h2>${esc(name)}議員の質疑</h2>
-          <p class="member-panel__lead">${esc(year.label)}の委員会では、この議員の質疑が見つかりませんでした。
+          <p class="member-panel__lead">${esc(year.label)}では、この議員の質疑が見つかりませんでした。
           年を切り替えるか、<a href="giin.html#member-${esc(memberId)}">議員名簿</a>から年度を選び直してください。</p>
         </div>`;
       }
 
       let body = "";
       for (const group of groups) {
-        const session = group.session;
         body += `<div class="member-session">
-          <h3>${esc(session.date)}　${esc(session.committee)}<span class="chip">${group.items.length}件</span></h3>`;
-        for (const row of group.items) {
-          const id = `${session.id}-${row.item.id}`;
+          <h3>${esc(group.label)}<span class="chip">${group.items.length}件</span></h3>`;
+        for (const item of group.items) {
+          const id = `${group.key}-${item.id}`;
           body += `<label class="member-item" for="mq-${esc(id)}">
-            <input type="checkbox" id="mq-${esc(id)}" data-mq="${esc(session.id)}" data-mq-item="${esc(row.item.id)}"
-                   data-mq-chars="${exchangeChars(row.item)}"${group === groups[0] ? " checked" : ""} />
+            <input type="checkbox" id="mq-${esc(id)}" data-mq="${esc(group.key)}" data-mq-item="${esc(item.id)}"
+                   data-mq-chars="${item.chars}"${group === groups[0] ? " checked" : ""} />
             <dl>
-              <dt>質問</dt><dd>${esc(row.item.question)}</dd>
-              <dt>答弁</dt><dd>${esc(row.item.respondent || "")}　${esc(row.item.answer)}</dd>
+              <dt>質問</dt><dd>${esc(item.question)}</dd>
+              <dt>答弁</dt><dd>${esc(item.respondent || "")}　${esc(item.answer)}</dd>
             </dl>
           </label>`;
         }
@@ -1488,7 +1540,7 @@
         .map((preset) => `<option value="${esc(preset.id)}">${esc(preset.label)}</option>`).join("");
       return `<div class="member-panel" data-member-panel="${esc(memberId)}">
         <h2>${esc(name)}議員の質疑</h2>
-        <p class="member-panel__lead">${esc(year.label)}の委員会から${total}件（約${chars.toLocaleString()}字）。
+        <p class="member-panel__lead">${esc(year.label)}の本会議・委員会から${total}件（約${chars.toLocaleString()}字）。
           選んだ質疑を、お使いの生成AIに貼り付けて要約させることができます。
           はじめは直近の会議だけを選んであります。</p>
         <div class="member-panel__bar">
@@ -1516,8 +1568,9 @@
     function setupMemberPanel(year, memberId) {
       const panel = document.querySelector("[data-member-panel]");
       if (!panel) return;
-      const groups = collectMemberExchanges(year, memberId);
+      const groups = collectMemberGroups(year, memberId);
       const countLabel = panel.querySelector("[data-mq-count]");
+      const warnLabel = panel.querySelector("[data-mq-warn]");
       const copyButton = panel.querySelector("[data-mq-copy]");
       const presetSelect = panel.querySelector("[data-mq-preset]");
       const boxes = () => Array.from(panel.querySelectorAll("input[data-mq]"));
@@ -1527,14 +1580,15 @@
           .map((box) => `${box.dataset.mq}\t${box.dataset.mqItem}`));
         return groups
           .map((group) => ({
-            session: group.session,
-            items: group.items.filter((row) => chosen.has(`${group.session.id}\t${row.item.id}`))
+            label: group.label,
+            sourceUrl: group.sourceUrl,
+            items: group.items.filter((item) => chosen.has(`${group.key}\t${item.id}`))
           }))
           .filter((group) => group.items.length > 0);
       }
 
       function currentPrompt() {
-        return buildMemberPrompt(memberId, year, selectedGroups(), presetSelect.value);
+        return buildMemberPrompt(memberId, selectedGroups(), presetSelect.value);
       }
 
       function refresh() {
@@ -1542,13 +1596,12 @@
         const chars = chosen.reduce((sum, box) => sum + Number(box.dataset.mqChars || 0), 0);
         countLabel.textContent = `選択 ${chosen.length}件・約${chars.toLocaleString()}字`;
         copyButton.disabled = chosen.length === 0;
-        const warn = panel.querySelector("[data-mq-warn]");
         if (chars > MEMBER_PROMPT_LIMIT) {
-          warn.hidden = false;
-          warn.textContent = `長すぎます（目安 ${MEMBER_PROMPT_LIMIT.toLocaleString()}字）。`
+          warnLabel.hidden = false;
+          warnLabel.textContent = `長すぎます（目安 ${MEMBER_PROMPT_LIMIT.toLocaleString()}字）。`
             + "AI側で途中まで読んだ要約が返ることがあります。会議を絞ってください。";
         } else {
-          warn.hidden = true;
+          warnLabel.hidden = true;
         }
         // 日本語はURLに入れると1文字が9文字に膨らむ。長いものは貼り付けでしか渡せない。
         const short = chars > 0 && chars <= 800;
