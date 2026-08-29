@@ -221,6 +221,41 @@ def test_unresolved_reports_candidates() -> None:
           unknown.describe())
 
 
+def test_term_index_splits_on_defeat() -> None:
+    """落選を挟んだ議員は、任期が別物として数えられる。"""
+    reg = registry()
+    person = reg.by_id["x-ishida-shingo"]
+    check("2期ある", len(person.terms) == 2, str(person.terms))
+    check("1期目", person.term_index("2017-06-01") == 0)
+    check("落選期間は任期に入らない", person.term_index("2021-06-01") is None)
+    check("2期目は別の番号", person.term_index("2024-06-01") == 1)
+
+
+def test_spans_split_on_term_gap() -> None:
+    """対応表の区間は、落選期間をまたいで繋がらない。
+
+    区間を「同じ議員IDが続く限り伸ばす」だけにすると、落選期間に会議が
+    無いせいで前後が1本に繋がり、在職していない日にも議員IDを返してしまう。
+    """
+    import build_speaker_members as bsm
+
+    reg = registry()
+    # 落選（2019-04-21〜2023-04-23）を挟んで発言している並び
+    pairs = {(date, "石田（し）委員"): 1 for date in
+             ("2017-06-01", "2018-06-01", "2024-06-01", "2025-06-01")}
+    spans, _ = bsm.build_spans(pairs, reg)
+    rows = spans["石田（し）委員"]
+    check("2区間に分かれる", len(rows) == 2, str(rows))
+    check("1区間目は落選前で閉じる", rows[0][1] == "2018-06-01", str(rows[0]))
+    check("2区間目は返り咲き後から", rows[1][0] == "2024-06-01", str(rows[1]))
+    check("落選期間は答えない",
+          bsm.lookup(spans, "石田（し）委員", "2021-06-01") is None)
+    check("区間の内側は答える",
+          bsm.lookup(spans, "石田（し）委員", "2018-06-01") == "x-ishida-shingo")
+    check("観測した日の外は答えない",
+          bsm.lookup(spans, "石田（し）委員", "2026-06-01") is None)
+
+
 def test_override_table() -> None:
     """上書き表があれば、自動で絞れないものもそれで決まる。"""
     reg = registry(overrides={("2017-06-01", "石田委員"): "hideo_ishida"})

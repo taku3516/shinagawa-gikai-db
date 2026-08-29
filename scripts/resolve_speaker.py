@@ -152,7 +152,19 @@ class Person:
     terms: list[tuple[str, str]] = field(default_factory=list)
 
     def in_office(self, date: str) -> bool:
-        return any(start <= date < end for start, end in self.terms)
+        return self.term_index(date) is not None
+
+    def term_index(self, date: str) -> int | None:
+        """その日が何期目の任期に入るか。在職していなければ None。
+
+        落選を挟んで返り咲いた議員は任期が複数に分かれる。同じ議員でも別の
+        任期なら別物として扱わないと、空白期間をまたいで在職していたことに
+        なってしまう。
+        """
+        for index, (start, end) in enumerate(self.terms):
+            if start <= date < end:
+                return index
+        return None
 
     def given_names(self) -> list[str]:
         """括弧のヒントと突き合わせる「名」の候補。

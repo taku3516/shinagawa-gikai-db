@@ -33,6 +33,7 @@ on:
       - "scripts/check_speaker_resolution.py"
       - "scripts/test_speaker_resolution.py"
       - "scripts/speaker-overrides.tsv"
+      - "scripts/build_speaker_members.py"
       - ".github/workflows/check-qa-summaries.yml"
   pull_request:
     paths:
@@ -52,6 +53,7 @@ on:
       - "scripts/check_speaker_resolution.py"
       - "scripts/test_speaker_resolution.py"
       - "scripts/speaker-overrides.tsv"
+      - "scripts/build_speaker_members.py"
   workflow_dispatch:
 
 permissions:
@@ -106,3 +108,9 @@ jobs:
         # （scripts/speaker-overrides.tsv）に誤りがないかを見る。
         # 未解決が残っていても失敗させない（--strict を付けると失敗する）
         run: python scripts/check_speaker_resolution.py
+
+      - name: 発言者と議員の対応表が最新か見る
+        # data/speaker-members.js は索引層と名簿から作る。索引層を作り直したり
+        # 上書き表を足したりしたのに作り直し忘れると、画面の議員ページだけが
+        # 古い対応で動いてしまうので、古ければ失敗させる
+        run: python scripts/build_speaker_members.py --check
