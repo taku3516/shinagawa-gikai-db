@@ -104,10 +104,11 @@ jobs:
         run: python scripts/check_minutes_fulltext.py --details
 
       - name: 発言者の名寄せを検査する
-        # 索引層は変更しない。どこまで議員IDに解決できるかと、上書き表
-        # （scripts/speaker-overrides.tsv）に誤りがないかを見る。
-        # 未解決が残っていても失敗させない（--strict を付けると失敗する）
-        run: python scripts/check_speaker_resolution.py
+        # 全161,816件が議員IDに解決できる状態を保つ。新しい会議録で未解決が
+        # 出たら（新人議員・同姓の増加など）ここで失敗するので、
+        # scripts/speaker-overrides.tsv に追記するか人物台帳を直す。
+        # 上書き表の議員IDの打ち間違いと、在職していない人を指す行も落とす。
+        run: python scripts/check_speaker_resolution.py --strict
 
       - name: 発言者と議員の対応表が最新か見る
         # data/speaker-members.js は索引層と名簿から作る。索引層を作り直したり

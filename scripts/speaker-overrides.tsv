@@ -1,6 +1,166 @@
 # 名寄せ手動上書き表
 # 自動で絞れなかった (会議日, 発言者) を議員IDに割り当てる。
-# 列: 会議日(YYYY-MM-DD)\t発言者名\t議員ID    「#」以降は注記。
+# 列: 会議日(YYYY-MM-DD)	発言者名	議員ID    「#」以降は注記。
 #
 # ここに書いた行は check_speaker_resolution.py が検査する。
 # 議員IDの打ち間違いと、その日に在職していない人を指す行は失敗する。
+#
+# 出どころ: 品川区議会 会議録検索システムの「発言者でさがす」。
+# 同姓の候補それぞれで発言者検索を行い、その会議（日付＋会議名）が
+# 一覧に出るかで判定した。2026-08-30 実施。
+#   石田しんご/慎吾 456文書・石田秀男 1,011文書・石田ちひろ 477文書
+#   鈴木ひろ子 910・鈴木真澄 850・鈴木博 293・鈴木雄二 4
+#   高橋しんじ/慎司 555・高橋伸明 384
+#   林和也 123・林宏 331・原浩三 207・原雅美 216
+#
+# 2002-07-01 総務委員会 だけは検索で両名が該当した。会議録の全文に
+# 「林（宏）委員」と「林委員」が同居しているため、括弧なしは消去法で和也。
+2002-07-01	林委員	x-hayashi-kazuya
+2005-04-13	林委員	x-hayashi-kazuya
+2007-02-28	原委員	x-hara-masami
+2007-11-07	石田委員	hideo_ishida
+2008-04-18	石田委員	x-ishida-shingo
+2008-08-26	石田委員	x-ishida-shingo
+2009-05-12	石田委員	x-ishida-shingo
+2009-06-25	石田委員	x-ishida-shingo
+2009-08-24	鈴木委員	x-suzuki-yuji
+2009-08-26	石田委員	x-ishida-shingo
+2009-09-24	石田委員	x-ishida-shingo
+2009-09-24	鈴木委員	x-suzuki-yuji
+2009-09-25	石田委員	x-ishida-shingo
+2009-09-25	鈴木委員	x-suzuki-yuji
+2009-09-30	石田委員	x-ishida-shingo
+2009-09-30	鈴木委員	x-suzuki-masumi
+2009-10-02	鈴木委員	x-suzuki-masumi
+2009-10-05	石田委員	x-ishida-shingo
+2009-10-05	鈴木委員	x-suzuki-masumi
+2009-10-06	石田委員	x-ishida-shingo
+2009-10-06	鈴木委員	x-suzuki-masumi
+2009-10-07	鈴木委員	x-suzuki-masumi
+2009-10-13	石田委員	x-ishida-shingo
+2009-10-13	鈴木委員	x-suzuki-masumi
+2009-10-15	石田委員	x-ishida-shingo
+2009-10-15	鈴木委員	x-suzuki-masumi
+2009-11-05	石田委員	x-ishida-shingo
+2009-11-05	鈴木委員	x-suzuki-masumi
+2009-11-06	石田委員	x-ishida-shingo
+2009-11-30	石田委員	x-ishida-shingo
+2009-11-30	鈴木委員	x-suzuki-masumi
+2009-12-01	石田委員	x-ishida-shingo
+2009-12-01	鈴木委員	x-suzuki-masumi
+2010-01-19	石田委員	x-ishida-shingo
+2010-01-19	鈴木委員	x-suzuki-masumi
+2010-03-01	石田委員	x-ishida-shingo
+2010-03-01	鈴木委員	x-suzuki-masumi
+2010-03-02	石田委員	x-ishida-shingo
+2010-03-02	鈴木委員	x-suzuki-masumi
+2010-03-05	鈴木委員	x-suzuki-masumi
+2010-03-08	石田委員	x-ishida-shingo
+2010-03-08	鈴木委員	x-suzuki-masumi
+2010-03-09	石田委員	x-ishida-shingo
+2010-03-09	鈴木委員	x-suzuki-masumi
+2010-03-11	鈴木委員	x-suzuki-masumi
+2010-03-12	石田委員	x-ishida-shingo
+2010-03-12	鈴木委員	x-suzuki-masumi
+2010-03-15	石田委員	x-ishida-shingo
+2010-03-15	鈴木委員	x-suzuki-masumi
+2010-03-16	石田委員	x-ishida-shingo
+2010-03-16	鈴木委員	x-suzuki-masumi
+2010-03-23	鈴木委員	x-suzuki-masumi
+2010-03-31	石田委員	x-ishida-shingo
+2010-03-31	鈴木委員	x-suzuki-masumi
+2010-04-13	石田委員	x-ishida-shingo
+2010-04-13	鈴木委員	x-suzuki-masumi
+2010-04-15	石田委員	x-ishida-shingo
+2010-05-10	石田委員	x-ishida-shingo
+2010-05-10	鈴木委員	x-suzuki-masumi
+2010-05-13	石田委員	x-ishida-shingo
+2010-06-02	鈴木委員	x-suzuki-masumi
+2010-06-28	石田委員	x-ishida-shingo
+2010-06-28	鈴木委員長	x-suzuki-masumi
+2010-06-29	石田委員	x-ishida-shingo
+2010-07-06	鈴木委員	x-suzuki-masumi
+2010-07-20	石田委員	x-ishida-shingo
+2010-07-21	石田委員	x-ishida-shingo
+2010-07-21	鈴木委員	x-suzuki-masumi
+2010-08-24	石田委員	x-ishida-shingo
+2010-08-25	石田委員	x-ishida-shingo
+2010-09-14	石田委員	x-ishida-shingo
+2010-09-15	石田委員	x-ishida-shingo
+2010-09-15	鈴木委員	x-suzuki-masumi
+2010-10-25	石田委員	x-ishida-shingo
+2010-10-25	鈴木委員長	x-suzuki-masumi
+2010-10-26	石田委員	x-ishida-shingo
+2010-10-27	鈴木委員	x-suzuki-masumi
+2010-10-29	石田委員	x-ishida-shingo
+2010-11-01	石田委員	x-ishida-shingo
+2010-11-01	鈴木委員長	x-suzuki-masumi
+2010-11-04	石田委員	x-ishida-shingo
+2010-11-08	石田委員	x-ishida-shingo
+2010-11-09	石田委員	x-ishida-shingo
+2010-12-13	石田委員	x-ishida-shingo
+2010-12-15	鈴木委員	x-suzuki-masumi
+2011-01-17	石田委員	x-ishida-shingo
+2011-01-17	鈴木委員長	x-suzuki-masumi
+2011-01-18	石田委員	x-ishida-shingo
+2011-01-18	鈴木委員	x-suzuki-masumi
+2011-02-28	石田委員	x-ishida-shingo
+2011-03-01	石田委員	x-ishida-shingo
+2011-03-02	石田委員	x-ishida-shingo
+2011-03-02	鈴木委員	x-suzuki-masumi
+2011-03-07	石田委員	x-ishida-shingo
+2011-03-07	鈴木委員	x-suzuki-masumi
+2011-03-08	石田委員	x-ishida-shingo
+2011-03-08	鈴木委員	x-suzuki-masumi
+2011-03-10	石田委員	x-ishida-shingo
+2011-03-10	鈴木委員	x-suzuki-masumi
+2011-03-11	石田委員	x-ishida-shingo
+2011-03-11	鈴木委員	x-suzuki-masumi
+2011-03-15	石田委員	x-ishida-shingo
+2011-03-15	鈴木委員	x-suzuki-masumi
+2011-03-16	鈴木委員	x-suzuki-masumi
+2011-03-22	石田委員	x-ishida-shingo
+2011-03-22	鈴木委員	x-suzuki-masumi
+2011-06-06	石田副委員長	x-ishida-shingo
+2011-06-06	鈴木委員	x-suzuki-masumi
+2011-06-27	石田副委員長	x-ishida-shingo
+2011-06-27	鈴木委員	x-suzuki-masumi
+2011-06-28	石田副委員長	hideo_ishida
+2011-06-28	鈴木委員	x-suzuki-masumi
+2011-07-25	石田副委員長	x-ishida-shingo
+2011-08-22	石田副委員長	x-ishida-shingo
+2011-09-26	石田副委員長	x-ishida-shingo
+2011-09-27	石田副委員長	x-ishida-shingo
+2011-11-07	石田副委員長	x-ishida-shingo
+2012-01-23	石田副委員長	x-ishida-shingo
+2013-07-04	鈴木委員長	hiroko_suzuki
+2014-06-09	石田委員	hideo_ishida
+2015-05-26	高橋委員	shinji_takahashi
+2015-07-29	高橋委員	nobuaki_takahashi
+2015-09-25	石田委員	hideo_ishida
+2022-10-26	石田委員	chihiro_ishida
+2022-10-31	石田委員	chihiro_ishida
+2022-11-01	石田委員	chihiro_ishida
+2022-11-09	石田委員	chihiro_ishida
+2022-11-11	石田委員	chihiro_ishida
+2022-11-14	石田委員	chihiro_ishida
+2022-11-15	石田委員	chihiro_ishida
+2022-11-17	石田委員	chihiro_ishida
+2022-11-24	石田委員	chihiro_ishida
+2022-12-22	石田委員	chihiro_ishida
+2022-12-23	石田委員	chihiro_ishida
+2023-01-11	石田委員	chihiro_ishida
+2023-01-12	石田委員	chihiro_ishida
+2023-01-23	石田委員	chihiro_ishida
+2023-02-20	石田委員	chihiro_ishida
+2023-02-27	石田委員	chihiro_ishida
+2023-02-28	石田委員	chihiro_ishida
+2023-03-06	石田委員	chihiro_ishida
+2023-03-07	石田委員	chihiro_ishida
+2023-03-09	石田委員	chihiro_ishida
+2023-03-10	石田委員	chihiro_ishida
+2023-03-15	石田委員	chihiro_ishida
+2023-03-16	石田委員	chihiro_ishida
+2023-03-22	石田委員	chihiro_ishida
+2023-03-27	石田委員	chihiro_ishida
+2026-06-08	高橋委員	nobuaki_takahashi

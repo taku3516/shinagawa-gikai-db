@@ -727,6 +727,16 @@ window.SHINAGAWA_DB.peopleData = {
       ]
     },
     {
+      "id": "x-suzuki-yuji",
+      "name": "鈴木 雄二",
+      "status": "元職",
+      "aliases": [],
+      "seenIn": [
+        "h17",
+        "h21"
+      ]
+    },
+    {
       "id": "x-suzuki-masumi",
       "name": "鈴木 真澄",
       "status": "元職",

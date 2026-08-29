@@ -339,13 +339,21 @@ class Registry:
         ここで弾く。通してしまうと、誤りが画面上は正常に見えてしまう。
         """
         problems: list[str] = []
+        self.unverifiable_overrides: list[str] = []
         for (date, speaker), member_id in sorted(self.overrides.items()):
             person = self.by_id.get(member_id)
             if person is None:
                 problems.append(f"{date} {speaker}: 議員ID「{member_id}」が人物台帳にない")
                 continue
+            if not person.terms:
+                # 区議選の記録に当選が無い議員（繰り上げ当選など）。任期が作れないので
+                # 在職を確かめようがない。ここで落とすと、会議録検索システムで裏を
+                # 取った事実まで書けなくなるため、報告に留める。
+                self.unverifiable_overrides.append(
+                    f"{date} {speaker}: {person.name} は区議選の当選記録が無く在職を確かめられない")
+                continue
             if not person.in_office(date):
-                spans = "、".join(f"{s}〜{e}" for s, e in person.terms) or "（当選記録なし）"
+                spans = "、".join(f"{s}〜{e}" for s, e in person.terms)
                 problems.append(
                     f"{date} {speaker}: {person.name} はこの日に在職していない（任期 {spans}）")
         if problems:

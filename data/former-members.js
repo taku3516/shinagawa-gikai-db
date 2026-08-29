@@ -911,6 +911,17 @@ window.SHINAGAWA_DB.formerMembersData = {
       ]
     },
     {
+      "id": "x-suzuki-yuji",
+      "name": "鈴木 雄二",
+      "statusLabel": "元職（区議会DB収録範囲で在職確認）",
+      "party": "—",
+      "serviceHistory": "平成17年〜平成21年",
+      "questionYears": "",
+      "elections": "",
+      "electionHistory": [],
+      "fundReports": []
+    },
+    {
       "id": "x-suzuki-masumi",
       "name": "鈴木 真澄",
       "statusLabel": "元職（区議会DB収録範囲で在職確認）",
