@@ -35,14 +35,20 @@ OVERRIDES_PATH = ROOT / "scripts" / "speaker-overrides.tsv"
 FIELD_PATTERN = re.compile(r'"dateIso":"(\d{4}-\d{2}-\d{2})"|"speaker":"((?:[^"\\]|\\.)*)"')
 
 
-def collect_pairs(data_dir: Path) -> dict[tuple[str, str], int]:
-    """索引層から (会議の日付, 発言者名) と、その出現件数を集める。"""
+def collect_pairs(data_dir: Path) -> dict[tuple[str, str, str], int]:
+    """索引層から (年度ID, 会議の日付, 発言者名) と、その出現件数を集める。
+
+    年度IDはファイル名の先頭（`r07-committees-part-01.js` なら `r07`）。
+    会議の日付から導かず、ファイルの置かれ方に従う。年度の境目は暦年と
+    ずれることがあり、導出すると索引層と食い違うため。
+    """
     paths = sorted(data_dir.glob("*-committees-part-*.js"))
     if not paths:
         raise FileNotFoundError(f"{data_dir} に委員会の索引層が見つかりません")
 
-    pairs: dict[tuple[str, str], int] = defaultdict(int)
+    pairs: dict[tuple[str, str, str], int] = defaultdict(int)
     for path in paths:
+        year = path.name.split("-", 1)[0]
         try:
             text = path.read_text(encoding="utf-8")
         except OSError as error:
@@ -56,7 +62,7 @@ def collect_pairs(data_dir: Path) -> dict[tuple[str, str], int]:
                 # 会議の日付より前に発言者が出るのは索引層の作りが変わったとき。
                 # 黙って捨てると解決率だけが下がって原因が分からなくなる。
                 raise ValueError(f"{path}: dateIso より先に speaker が現れました")
-            pairs[(date, match.group(2))] += 1
+            pairs[(year, date, match.group(2))] += 1
     return dict(pairs)
 
 
@@ -89,7 +95,7 @@ def main() -> int:
     total_voices = 0
     unresolved: dict[str, list[tuple[str, int, str, list[str]]]] = defaultdict(list)
 
-    for (date, speaker), count in pairs.items():
+    for (_year, date, speaker), count in pairs.items():
         total_voices += count
         result = registry.resolve(speaker, date)
         if result.member_id:

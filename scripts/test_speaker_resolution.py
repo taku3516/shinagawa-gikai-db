@@ -240,9 +240,11 @@ def test_spans_split_on_term_gap() -> None:
     import build_speaker_members as bsm
 
     reg = registry()
-    # 落選（2019-04-21〜2023-04-23）を挟んで発言している並び
-    pairs = {(date, "石田（し）委員"): 1 for date in
-             ("2017-06-01", "2018-06-01", "2024-06-01", "2025-06-01")}
+    # 落選（2019-04-21〜2023-04-23）を挟んで発言している並び。
+    # キーは索引層と同じ (年度ID, 会議日, 発言者名)。
+    pairs = {(year, date, "石田（し）委員"): 1 for year, date in
+             (("h29", "2017-06-01"), ("h30", "2018-06-01"),
+              ("r06", "2024-06-01"), ("r07", "2025-06-01"))}
     spans, _ = bsm.build_spans(pairs, reg)
     rows = spans["石田（し）委員"]
     check("2区間に分かれる", len(rows) == 2, str(rows))
@@ -254,6 +256,11 @@ def test_spans_split_on_term_gap() -> None:
           bsm.lookup(spans, "石田（し）委員", "2018-06-01") == "x-ishida-shingo")
     check("観測した日の外は答えない",
           bsm.lookup(spans, "石田（し）委員", "2026-06-01") is None)
+
+    # 議員ごとの年度索引でも、落選期間の年度が空く
+    index = bsm.build_member_index(pairs, reg)
+    years = sorted(index.get("x-ishida-shingo", {}))
+    check("年度索引は落選期間を飛ばす", years == ["h29", "h30", "r06", "r07"], str(years))
 
 
 def test_override_table() -> None:

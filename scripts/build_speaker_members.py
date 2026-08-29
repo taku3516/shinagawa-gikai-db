@@ -50,6 +50,13 @@ HEADER = """\
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.speakerMembers = """
 
+MIDDLE = """;
+
+/* memberQuestionIndex[議員ID] = { 年度ID: 質疑の件数 }
+   議員ページから「この議員はどの年に質疑しているか」を、年データ（1年6MB）を
+   読まずに出すための索引。年度IDは索引層のファイル名に合わせている。 */
+window.SHINAGAWA_DB.memberQuestionIndex = """
+
 FOOTER = """;
 /* 発言者名と会議の日付から議員IDを引く。特定できていなければ null を返す。 */
 window.SHINAGAWA_DB.resolveSpeakerMember = function (speaker, dateIso) {
@@ -65,7 +72,7 @@ window.SHINAGAWA_DB.resolveSpeakerMember = function (speaker, dateIso) {
 """
 
 
-def build_spans(pairs: dict[tuple[str, str], int],
+def build_spans(pairs: dict[tuple[str, str, str], int],
                 registry: Registry) -> tuple[dict[str, list[list]], dict[str, int]]:
     """発言者名ごとに「この日から誰」の区切りを作る。
 
@@ -74,7 +81,7 @@ def build_spans(pairs: dict[tuple[str, str], int],
     """
     dates_by_speaker: dict[str, list[str]] = defaultdict(list)
     voices_by_speaker: dict[str, int] = defaultdict(int)
-    for (date, speaker), count in pairs.items():
+    for (_year, date, speaker), count in pairs.items():
         dates_by_speaker[speaker].append(date)
         voices_by_speaker[speaker] += count
 
@@ -100,12 +107,25 @@ def build_spans(pairs: dict[tuple[str, str], int],
         stats["spans"] += len(rows)
         stats["unresolved_spans"] += sum(1 for _, _, member_id in rows if member_id is None)
 
-    for (date, speaker), count in pairs.items():
+    for (_year, date, speaker), count in pairs.items():
         if registry.resolve(speaker, date).member_id:
             stats["resolved_voices"] += count
         else:
             stats["unresolved_voices"] += count
     return spans, stats
+
+
+def build_member_index(pairs: dict[tuple[str, str, str], int],
+                       registry: Registry) -> dict[str, dict[str, int]]:
+    """議員ID → { 年度ID: 質疑の件数 }。特定できなかった分は数えない。"""
+    index: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    for (year, date, speaker), count in pairs.items():
+        member_id = registry.resolve(speaker, date).member_id
+        if not member_id:
+            continue
+        index[member_id][year] += count
+    return {member_id: dict(sorted(years.items()))
+            for member_id, years in sorted(index.items())}
 
 
 def lookup(spans: dict[str, list[list]], speaker: str, date: str) -> str | None:
@@ -118,11 +138,11 @@ def lookup(spans: dict[str, list[list]], speaker: str, date: str) -> str | None:
     return None
 
 
-def verify(pairs: dict[tuple[str, str], int], spans: dict[str, list[list]],
+def verify(pairs: dict[tuple[str, str, str], int], spans: dict[str, list[list]],
            registry: Registry) -> list[str]:
     """索引層に実在する全ての (日付, 発言者) で、表と判定器が一致するか見る。"""
     problems: list[str] = []
-    for date, speaker in pairs:
+    for _year, date, speaker in pairs:
         expected = registry.resolve(speaker, date).member_id
         got = lookup(spans, speaker, date)
         if expected != got:
@@ -130,11 +150,11 @@ def verify(pairs: dict[tuple[str, str], int], spans: dict[str, list[list]],
     return problems
 
 
-def render(spans: dict[str, list[list]]) -> str:
+def render(spans: dict[str, list[list]], member_index: dict[str, dict[str, int]]) -> str:
     """データファイルの中身を組み立てる。差分を安定させるためキーは昇順。"""
-    body = json.dumps(spans, ensure_ascii=False, sort_keys=True,
-                      separators=(",", ":"))
-    return HEADER + body + FOOTER
+    dump = lambda value: json.dumps(value, ensure_ascii=False, sort_keys=True,
+                                    separators=(",", ":"))
+    return HEADER + dump(spans) + MIDDLE + dump(member_index) + FOOTER
 
 
 def main() -> int:
@@ -163,7 +183,8 @@ def main() -> int:
             print(f"  {row}")
         return 1
 
-    text = render(spans)
+    member_index = build_member_index(pairs, registry)
+    text = render(spans, member_index)
 
     total_voices = stats["resolved_voices"] + stats["unresolved_voices"]
     print(f"発言者名 {stats['speakers']:,}種類 → 区切り {stats['spans']:,}行"
@@ -171,6 +192,8 @@ def main() -> int:
     print(f"発言件数 {total_voices:,}  特定 {stats['resolved_voices']:,} "
           f"({stats['resolved_voices'] / total_voices * 100:.2f}%)  "
           f"未特定 {stats['unresolved_voices']:,}")
+    years_total = sum(len(years) for years in member_index.values())
+    print(f"議員ごとの年度索引 {len(member_index):,}名 / {years_total:,}行")
     print(f"ファイル {len(text.encode('utf-8')) / 1024:.0f} KB")
 
     existing = OUTPUT_PATH.read_text(encoding="utf-8") if OUTPUT_PATH.exists() else None
