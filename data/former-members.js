@@ -913,9 +913,9 @@ window.SHINAGAWA_DB.formerMembersData = {
     {
       "id": "x-suzuki-yuji",
       "name": "鈴木 雄二",
-      "statusLabel": "元職（区議会DB収録範囲で在職確認）",
+      "statusLabel": "在職未確認（会議録の発言者索引にのみ登場）",
       "party": "—",
-      "serviceHistory": "平成17年〜平成21年",
+      "serviceHistory": "平成17年・平成21年に発言記録あり（区議選の当選記録なし）",
       "questionYears": "",
       "elections": "",
       "electionHistory": [],
