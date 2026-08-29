@@ -88,7 +88,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "name": "せりざわ 裕次郎",
       "statusLabel": "元職（区議会DB収録範囲で在職確認）",
       "party": "自民",
-      "serviceHistory": "令和元年〜令和6年",
+      "serviceHistory": "平成30年〜令和6年",
       "questionYears": "令和6年、令和4年、令和3年、令和2年、令和元年",
       "elections": "4回",
       "electionHistory": [
@@ -130,7 +130,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "name": "ひがし ゆき",
       "statusLabel": "元職（区議会DB収録範囲で在職確認）",
       "party": "未来",
-      "serviceHistory": "令和6年〜令和7年",
+      "serviceHistory": "令和5年〜令和7年",
       "questionYears": "令和7年、令和6年",
       "elections": "2回",
       "electionHistory": [
@@ -401,7 +401,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "name": "大西 光広",
       "statusLabel": "元職（区議会DB収録範囲で在職確認）",
       "party": "み・無",
-      "serviceHistory": "平成15年〜平成25年",
+      "serviceHistory": "平成15年〜平成19年、平成22年〜平成25年",
       "questionYears": "平成25年、平成23年、平成18年、平成16年、平成15年",
       "elections": "3回",
       "electionHistory": [
@@ -763,7 +763,7 @@ window.SHINAGAWA_DB.formerMembersData = {
       "name": "石田 しんご",
       "statusLabel": "元職（区議会DB収録範囲で在職確認）",
       "party": "無所属",
-      "serviceHistory": "平成19年〜令和6年",
+      "serviceHistory": "平成19年〜平成31年、令和5年〜令和7年",
       "questionYears": "令和6年、平成28年、平成27年、平成26年、平成25年、平成24年、平成22年、平成21年、平成20年、平成19年",
       "elections": "4回",
       "electionHistory": [
