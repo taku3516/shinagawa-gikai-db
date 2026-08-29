@@ -83,8 +83,6 @@ def main() -> int:
         return 1
 
     print(f"上書き表: {len(overrides)}行（{OVERRIDES_PATH.relative_to(ROOT)}）")
-    for note in getattr(registry, "unverifiable_overrides", []):
-        print(f"  在職を確かめられない行: {note}")
 
     try:
         pairs = collect_pairs(ROOT / "data")
