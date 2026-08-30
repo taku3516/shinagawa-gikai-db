@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-30T12:04:33.270103Z",
+  "generatedAt": "2026-08-30T16:52:32.801454Z",
   "items": [
+    {
+      "id": "fa3cae7a0a275e978d61",
+      "title": "休日・夜間（平日・土曜日）の診療",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
+      "publishedAt": "2026-08-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "438c9ff2d8105fbcd63d",
       "title": "看護と介護の垣根を越えて、「その人らしく」を支える。 ベルウイング上平塚、2026年1月の開設から利用が拡大",
@@ -10,7 +27,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000046.000108127.html",
-      "publishedAt": "2026-08-30T09:40:02Z",
+      "publishedAt": "2026-08-30T15:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-29T10:16:47.821581Z",
       "tags": [
@@ -3939,23 +3956,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
-      "id": "fa3cae7a0a275e978d61",
-      "title": "休日・夜間（平日・土曜日）の診療",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
-      "publishedAt": "2026-07-27T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "999becf2d88735d82866",
       "title": "赤外線深層加熱 ×「1台で2度吸える」新体験。IQOSイルマ用スティック対応の完全1台完結型デバイス『Sixhill LUOS Pro』発売",
       "summary": "[株式会社シェード] 株式会社シェード（本社：東京都品川区西五反田）は、加熱式たばこ互換機ブランド「Sixhill（シックスヒル）」より、1台で\"2度吸い\"まで完結できる次世代加熱式たばこデバイス『Sixhill LUOS Pro（シックスヒル ...",
@@ -7058,7 +7058,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 228,
+      "scanned": 222,
       "accepted": 0
     },
     {
