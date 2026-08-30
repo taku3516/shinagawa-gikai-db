@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-30T05:35:46.982970Z",
+  "generatedAt": "2026-08-30T12:04:33.270103Z",
   "items": [
     {
       "id": "438c9ff2d8105fbcd63d",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000046.000108127.html",
-      "publishedAt": "2026-08-30T03:40:02Z",
+      "publishedAt": "2026-08-30T09:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-29T10:16:47.821581Z",
       "tags": [
@@ -7040,7 +7040,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 7,
       "accepted": 0
     },
     {
@@ -7058,7 +7058,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 281,
+      "scanned": 228,
       "accepted": 0
     },
     {
