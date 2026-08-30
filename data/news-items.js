@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-29T23:28:27.107990Z",
+  "generatedAt": "2026-08-30T05:35:46.982970Z",
   "items": [
     {
       "id": "438c9ff2d8105fbcd63d",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000046.000108127.html",
-      "publishedAt": "2026-08-29T21:40:02Z",
+      "publishedAt": "2026-08-30T03:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-29T10:16:47.821581Z",
       "tags": [
@@ -20,6 +20,42 @@ window.SHINAGAWA_NEWS = {
         "平塚"
       ],
       "relevanceScore": 10
+    },
+    {
+      "id": "bf5932747fb8c3d99be9",
+      "title": "戸越八幡神社 例大祭",
+      "summary": "2026年9月12（土）・13日（日）、 戸越八幡神社 例大祭が開催されます。境内では、9月12日（土）に大祭式、9月13日（日）には奉納演芸が予定されています。 戸越八幡神社で、華やかな秋のお祭りを楽しんでみてはいかがでしょうか。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/togoshireitaisai2026",
+      "publishedAt": "2026-08-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-30T05:35:22.559135Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "46062a765612006c5c73",
+      "title": "第33回 しながわ宿場まつり",
+      "summary": "2026年9月26日（土）・27日（日）、品川宿にて、33回目となる「しながわ宿場まつり」が開催されます。 江戸時代、東海道一の宿として栄えた品川。その伝統と文化を若い世代に伝え地域の発展をめざして始まったのが「しながわ宿場まつり」。しながわ宿場まつり行列をはじめステージや物産展、模擬店などイベントが盛りだくさんです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shukubamatsuri2026",
+      "publishedAt": "2026-08-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-30T05:35:22.559135Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "7b84c98f35bf001aa9d9",
@@ -7021,9 +7057,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2238, column 47"
+      "status": "ok",
+      "scanned": 281,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
