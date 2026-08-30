@@ -1,7 +1,49 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-30T16:52:32.801454Z",
+  "generatedAt": "2026-08-30T23:39:10.465725Z",
   "items": [
+    {
+      "id": "8fe7f0e92a45a393f2af",
+      "title": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業および鉄道付属街路事業と戸越公園駅の交通広場整備事業",
+      "summary": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業及び鉄道付属街路事業と戸越公園駅交通広場整備事業について、用地補償説明会を開催いたします。 日程 令和8年8月28日（金） 午後7時00分～午後8時30分（開場午後6時30分） 令和8年8月29日（土） 午後1時30分～午後3時00分（開場午後1時00分） ※両日とも説明内容は同じです。 会場 荏原第五地域センター第一集会室 （品川区二葉1丁目1番2号） 定員 各回100名 ※事前申し込み制となっております。 用地補償説明会…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shigaichi/togoshirenritsu.html",
+      "publishedAt": "2026-08-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-04T23:55:10.934887Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "二葉",
+        "荏原",
+        "大井",
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
+      ],
+      "relevanceScore": 34
+    },
+    {
+      "id": "d72bf6216af184430233",
+      "title": "品川区世論調査の回答について",
+      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
+      "publishedAt": "2026-08-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-30T17:15:06.084594Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "fa3cae7a0a275e978d61",
       "title": "休日・夜間（平日・土曜日）の診療",
@@ -20,6 +62,26 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
+      "id": "5b8fff265a6efc9f45e8",
+      "title": "終活専門家相談会を開催します",
+      "summary": "司法書士による終活無料相談会（1人40分程度）を行います 日時：9月16日（水）午後1時30分～4時30分 会場：社会福祉協議会（大井1-14-1） 定員：３名（先着順） 申込方法：電話で9月11日までに品川成年後見センター（03-5718-7174）へ。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62543.html",
+      "publishedAt": "2026-08-30T23:38:46.791238Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-30T23:38:46.791238Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 6
+    },
+    {
       "id": "438c9ff2d8105fbcd63d",
       "title": "看護と介護の垣根を越えて、「その人らしく」を支える。 ベルウイング上平塚、2026年1月の開設から利用が拡大",
       "summary": "[社会福祉法人征峯会] 「施設を利用したら、家族として介護を諦めたことになるのではないか」 「医療的ケアが必要になり、退院後の生活場所が見つからない」 「自宅での介護を続けたいが、家族の体力も限界に近づいている」 [画像1: ht...",
@@ -27,7 +89,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000046.000108127.html",
-      "publishedAt": "2026-08-30T15:40:02Z",
+      "publishedAt": "2026-08-30T21:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-08-29T10:16:47.821581Z",
       "tags": [
@@ -227,23 +289,6 @@ window.SHINAGAWA_NEWS = {
         "きゅりあん"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "3dc9119c7e9163bba125",
@@ -2543,31 +2588,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "8fe7f0e92a45a393f2af",
-      "title": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業および鉄道付属街路事業と戸越公園駅の交通広場整備事業",
-      "summary": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業及び鉄道付属街路事業と戸越公園駅交通広場整備事業について、用地補償説明会を開催いたします。 日程 令和8年8月28日（金） 午後7時00分～午後8時30分（開場午後6時30分） 令和8年8月29日（土） 午後1時30分～午後3時00分（開場午後1時00分） ※両日とも説明内容は同じです。 会場 荏原第五地域センター第一集会室 （品川区二葉1丁目1番2号） 定員 各回100名 ※事前申し込み制となっております。 用地補償説明会…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shigaichi/togoshirenritsu.html",
-      "publishedAt": "2026-08-05T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-04T23:55:10.934887Z",
-      "tags": [
-        "交通",
-        "地域イベント"
-      ],
-      "locations": [
-        "二葉",
-        "荏原",
-        "大井",
-        "戸越",
-        "戸越公園駅",
-        "戸越公園"
-      ],
-      "relevanceScore": 34
     },
     {
       "id": "81876b44e4956718ddac",
@@ -7046,7 +7066,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 139,
+      "scanned": 140,
       "accepted": 0
     },
     {
@@ -7058,7 +7078,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 222,
+      "scanned": 220,
       "accepted": 0
     },
     {
