@@ -1,7 +1,48 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-31T05:51:35.259028Z",
+  "generatedAt": "2026-08-31T14:13:31.548863Z",
   "items": [
+    {
+      "id": "2d5ac76e68b3f6c40ebf",
+      "title": "戸越銀座に猫カフェ「ファボキャット」 ミヌエットなどの猫が在籍",
+      "summary": "猫カフェ・ショップ「favcat（ファボキャット）」（品川区豊町1、TEL 050-1972-1128）が8月29日、戸越銀座商店街の銀六会ゾーンにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5067",
+      "publishedAt": "2026-08-31T10:57:23Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T14:13:07.521277Z",
+      "tags": [
+        "地域イベント",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "豊町",
+        "戸越",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "e62507344d2ca73db196",
+      "title": "第３回定例会の議会放送番組表を掲載。",
+      "summary": "第３回定例会の議会放送番組表を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20800.html",
+      "publishedAt": "2026-08-31T09:11:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T14:13:07.521277Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "0b6690352cbad52e9e17",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月31日号）を公開しました‼",
@@ -35,6 +76,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 12
+    },
+    {
+      "id": "70c3c2946791fc087fc5",
+      "title": "旧荏原第四中学校跡地ＰＦＩ事業",
+      "summary": "企画経営部 企画課 政策推進担当 電話：03-5742-7863 FAX：03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-zaisei/kuseizyoho-siryo-zaisei-plan/20251027113427.html",
+      "publishedAt": "2026-08-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T14:13:07.521277Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 6
     },
     {
       "id": "7bed8ba3b5bad3827de1",
@@ -103,6 +163,23 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
       "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
+      "publishedAt": "2026-08-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "19413da7c891952f8507",
+      "title": "羽田空港の機能強化について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/haneda/hpg000023398.html",
       "publishedAt": "2026-08-31T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -3423,23 +3500,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "19413da7c891952f8507",
-      "title": "羽田空港の機能強化について",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/haneda/hpg000023398.html",
-      "publishedAt": "2026-07-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "0fa40ee5175e45d402f6",
@@ -7106,12 +7166,12 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 8
+      "accepted": 9
     },
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 7,
+      "scanned": 6,
       "accepted": 0
     },
     {
@@ -7129,7 +7189,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 269,
+      "scanned": 542,
       "accepted": 0
     },
     {
@@ -7154,7 +7214,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
