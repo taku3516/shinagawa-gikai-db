@@ -1,7 +1,58 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-30T23:39:10.465725Z",
+  "generatedAt": "2026-08-31T05:51:35.259028Z",
   "items": [
+    {
+      "id": "0b6690352cbad52e9e17",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年8月31日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年8月31日号(令和8年8月24日～令和8年8月30日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/08/post-62819.html",
+      "publishedAt": "2026-08-31T05:51:11.262433Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-08-31T05:51:11.262433Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "0f81be782d0b1ff9cea1",
+      "title": "【9月1日は防災の日】災害時も日常もあなたを守る！ 30通りの使い方で便利＆安心な『マイメロディ＆クロミのおまもりふろしき』発売",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年8月31日にGakken Mook『マイメロディ＆クロミ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009366.000002535.html",
+      "publishedAt": "2026-08-31T05:41:08Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T05:51:11.262433Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "7bed8ba3b5bad3827de1",
+      "title": "五反田 TOC「徳の市」",
+      "summary": "2026年9月11日（金）、12日（土）、13日（日） の3日間 、 五反田 TOCビル にて「徳の市」が開催されます。 メーカー御売りが出品する直売ビックセール。 ファッション、雑貨、インテリア、食品など 約170店舗 が出店し、さまざまな商品がお得な価格で売り出されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/toctokunoichi202609",
+      "publishedAt": "2026-08-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T05:51:11.262433Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "8fe7f0e92a45a393f2af",
       "title": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業および鉄道付属街路事業と戸越公園駅の交通広場整備事業",
@@ -7078,13 +7129,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 220,
+      "scanned": 269,
       "accepted": 0
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 37,
       "accepted": 0
     },
     {
