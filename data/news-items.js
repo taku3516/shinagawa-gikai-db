@@ -1,7 +1,236 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-31T14:13:31.548863Z",
+  "generatedAt": "2026-08-31T20:55:22.258921Z",
   "items": [
+    {
+      "id": "fb333fda39962c20da89",
+      "title": "令和８年度秋季品川区囲碁大会 参加者募集 （募集締切：９月30日）",
+      "summary": "1． 住所 2． 氏名(フリガナ) 3. 中学生以下 の場合は保護者 氏名 4． 年齢 5． 電話番号・FAX番号 6． 棋力[段・級の自己申告可] ※お預かりした個人情報は、主催者および運営団体で共有し、参加者への連絡・受付のため使用いたします。 また、当課のイベントと囲碁イベントのご案内を送付する場合もございます。 なお、大会の模様は「ケーブルテレビ品川」での放映および区のホームページ等に掲載される場合がございますので、ご理解とご協力をお願いいたします。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/sangyo-bunka-bunnkaevento-reku/20230826143934.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "cf42c0e94b4a13257d2d",
+      "title": "第58回スポーツ推進委員会杯スポーツ大会",
+      "summary": "スポーツ推進委員会杯スポーツ大会ちらし(PDF : 127KB) (別ウインドウ表示) スポーツ推進委員会杯スポーツ大会共通申込書(PDF : 121KB) (別ウインドウ表示)",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/sposin/20230913152738.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "cd538324c5cb0c4be763",
+      "title": "【しながわシティバスケットボール公式戦】10月2日（金）・3日（土） 親子25組50人をご招待",
+      "summary": "スポーツ推進課スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20240110135206.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "abbf6c06ca8a92321b38",
+      "title": "小学生向けマラソン教室",
+      "summary": "（公財）品川区スポーツ協会（別ウィンドウ表示） 電話：03-3449-4400 FAX：03-3449-4401 スポーツ推進課少年少女スポーツ担当 電話：03-5742-6943 FAX：03-5742-6585",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20221207095328.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "a144a8b8ec51060f2a9b",
+      "title": "【10月25日（日）開催】親子deヨガ教室",
+      "summary": "【場所】 総合体育館 柔道場（東五反田2-11-2） 【講師】 石田友美氏（こどもヨガプロジェクトWAPPY 主宰） 【申込方法】 下記のいずれかの方法で 令和8年9月30日（水）【必着】 までにお申し込みください。 (1) 品川区電子申請サービス 申込フォームはこちら(別ウィンドウ表示)",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20190605141658.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "a07fb0810c56af1623f2",
+      "title": "【9月20日、10月18日実施】プロスポーツ連携事業 フットサル＆バスケットボール教室",
+      "summary": "品川区のプロスポーツチーム「しながわシティフットサルクラブ・しながわシティバスケットボールクラブ」の現役プロ選手による教室です。 楽しく体を動かしてプロスポーツの魅力を体験しましょう。初めての方でも、大歓迎です。 【日時】 （1）令和8年9月20日（日） （2）令和8年10月18日（日） （ 小学1から2年生の部 ）午前9時30分から午前10時30分 （ 小学3から6年生の部 ）午前11時15分から午後0時30分 【会場】 （1）こみゅにてぃぷらざ八潮（八潮5-9-11）…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20250829132008.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "八潮"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "9ee0b945e94bf2037083",
+      "title": "しながわ学びの杜人権啓発・社会同和教育講座「服飾と人権」（10月15日～11月19日実施）",
+      "summary": "品川区では平成5年（1993年）4月、「平和で心ゆたかな人間尊重の社会の実現」をめざし、「人権尊重都市品川宣言」を制定しました。 この宣言を普及し、個々の人権問題に対する正しい認識を確立し、人権尊重意識の定着を図るため、啓発活動を積極的に推進しています。 文化観光戦略課でも、あらゆる人権問題の解決をめざして、人権啓発・社会同和教育講座を開催しています。 令和8年は、「服飾と人権」をテーマに全6回開催します。 日常で切り離すことのできないもののひとつである服飾を「人権」という…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20230801160302.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "2268e967941f9a0bba8d",
+      "title": "清泉女子大学パートナーシップ講座「地球市民セミナー（後期）」(10月7日～1月13日実施)",
+      "summary": "令和8年度清泉女子大学パートナーシップ講座「地球市民セミナー（後期）」 品川区内および近隣区の学校と連携して各学校の特色を生かし、様々な分野における専門的な講座を行います。 令和8年度清泉女子大学パートナーシップ講座地球市民セミナー（後期）は、「地域共生の実践ー地域をつなぐ、世界とつなぐー」をテーマとし実施します。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20250803105952.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "0176e94ba924d2c72372",
+      "title": "きせつ風(品川第二地域ニュース)令和8年9月号 No.246",
+      "summary": "地域活動課 品川第二地域センター 電話：03-3472-2000 FAX：03-3472-2058 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-shina2/shisetsu-kuyakusyo-chiiki-shina2-kisetsukaze/2023517427684152947456203202.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "0f7ef77bb30180cd3552",
+      "title": "西品川二・三丁目地区地区計画",
+      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/20251014165418.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T01:57:49.746937Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西品川"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "7e43a87d9921fb67a169",
+      "title": "インクルーシブスポーツチャレンジデー(9月26日開催)",
+      "summary": "スポーツ推進課インクルーシブスポーツ担当 電話：03-5742-3854 FAX：03-5742-6585",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20180813123848.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T07:50:23.345001Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "4e9c4ce1aa25196522e2",
+      "title": "女性相談員による総合相談（法律・DV・カウンセリング）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000021243.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "05d2881202cfc94d034c",
+      "title": "英語授業お助けAIアプリ「TOC-ME！assistant（トクミーアシスタント）」に新機能！ 生徒の音声ファイルをAIが自動採点",
+      "summary": "[光村図書出版株式会社] 小・中・高等学校向けの教科書を発行する光村図書出版株式会社（所在地：東京都品川区、代表取締役社長：吉田直樹）は、英語授業に特化したAIアプリ「TOC-ME！assistant（トクミーアシスタント）」に、生徒の音...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000083.000073231.html",
+      "publishedAt": "2026-08-31T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "2d5ac76e68b3f6c40ebf",
       "title": "戸越銀座に猫カフェ「ファボキャット」 ミヌエットなどの猫が在籍",
@@ -1671,25 +1900,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "0f7ef77bb30180cd3552",
-      "title": "西品川二・三丁目地区地区計画",
-      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/20251014165418.html",
-      "publishedAt": "2026-08-18T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-18T01:57:49.746937Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "西品川"
-      ],
-      "relevanceScore": 4
-    },
-    {
       "id": "4cc28f4961b9caee25c7",
       "title": "【8/19開催】tenso Logi-link、海外販売初心者を対象に「越境ビジネスポリシー実務講座」をeBayと開催",
       "summary": "[BEENOS株式会社] 国際配送代行サービスtenso Logi-linkを運営するtenso株式会社（本社：東京都品川区、代表取締役社長：直井 聖太、以下「tenso」）は、イーベイ・ジャパンと合同で、初心者向け越境ビジネスポリシーに関する実...",
@@ -2383,23 +2593,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-07T07:50:23.345001Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "7e43a87d9921fb67a169",
-      "title": "インクルーシブスポーツチャレンジデー(9月26日開催)",
-      "summary": "スポーツ推進課インクルーシブスポーツ担当 電話：03-5742-3854 FAX：03-5742-6585",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20180813123848.html",
-      "publishedAt": "2026-08-07T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T07:50:23.345001Z",
-      "tags": [
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -3297,23 +3490,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 12
-    },
-    {
-      "id": "4e9c4ce1aa25196522e2",
-      "title": "女性相談員による総合相談（法律・DV・カウンセリング）",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000021243.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "e22328178d9f5f9cf435",
@@ -7177,7 +7353,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 140,
+      "scanned": 139,
       "accepted": 0
     },
     {
@@ -7189,7 +7365,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 542,
+      "scanned": 540,
       "accepted": 0
     },
     {
@@ -7214,7 +7390,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
