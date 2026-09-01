@@ -25,7 +25,7 @@
   padding: 8px 13px;
   color: var(--c-main-dark);
   font: inherit;
-  font-size: 14px;
+  font-size: calc(14px * var(--fs));
   font-weight: 900;
   box-shadow: 0 3px 12px rgba(26, 26, 26, 0.22);
   cursor: pointer;
@@ -47,10 +47,10 @@
   box-shadow: 0 8px 28px rgba(26, 26, 26, 0.3);
 }
 .a11y-panel__head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-.a11y-panel__head h2 { flex: 1; margin: 0; font-size: 20px; }
+.a11y-panel__head h2 { flex: 1; margin: 0; font-size: calc(20px * var(--fs)); }
 .a11y-panel__close {
   width: 44px; height: 44px; border: 1px solid var(--c-border); border-radius: 4px;
-  background: #fff; color: var(--c-ink); font: inherit; font-size: 22px; cursor: pointer;
+  background: #fff; color: var(--c-ink); font: inherit; font-size: calc(22px * var(--fs)); cursor: pointer;
 }
 .a11y-group { margin: 0 0 18px; border: 0; padding: 0; }
 .a11y-group legend { margin-bottom: 8px; font-weight: 900; }
@@ -58,7 +58,7 @@
 .a11y-options label {
   display: grid; place-items: center; min-height: 44px; border: 1px solid var(--c-border-strong);
   border-radius: 4px; background: #fff; padding: 7px; text-align: center;
-  font-size: 13px; font-weight: 800; cursor: pointer;
+  font-size: calc(13px * var(--fs)); font-weight: 800; cursor: pointer;
 }
 .a11y-options label:has(input:checked) {
   border: 3px solid var(--c-main); background: var(--c-main-pale); padding: 5px;
@@ -72,10 +72,12 @@
   width: 100%; min-height: 44px; border: 1px solid var(--c-main); border-radius: 4px;
   background: #fff; color: var(--c-main-dark); font: inherit; font-weight: 900; cursor: pointer;
 }
-.a11y-note { margin: 12px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.7; }
+.a11y-note { margin: 12px 0 0; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); line-height: 1.7; }
 
-html[data-font-size="large"] { font-size: 112.5%; }
-html[data-font-size="xlarge"] { font-size: 125%; }
+/* px指定は html の font-size では拡大しないため、倍率 --fs を切り替える
+   （site-theme.css で --fs: 1 を定義している） */
+html[data-font-size="large"] { --fs: 1.125; }
+html[data-font-size="xlarge"] { --fs: 1.25; }
 /* ハイコントラスト時の変数の中身は site-theme.css 側にまとめている */
 html[data-contrast="high"] a { text-decoration-thickness: 2px !important; }
 html[data-motion="reduced"] { scroll-behavior: auto !important; }

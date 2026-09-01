@@ -32,28 +32,28 @@
       border-radius: 4px;
       background: var(--c-card);
       padding: 13px 15px;
-      font-size: 14px;
+      font-size: calc(14px * var(--fs));
       line-height: 1.75;
     }
     .notice strong { color: var(--c-main-dark); }
     main { padding: 30px 0 56px; }
     .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
     .stat { border: 1px solid var(--c-border); border-top: 3px solid var(--c-main); background: var(--c-card); padding: 14px 16px; }
-    .stat strong { display: block; color: var(--c-main); font-size: 26px; line-height: 1.2; }
-    .stat span { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .stat strong { display: block; color: var(--c-main); font-size: calc(26px * var(--fs)); line-height: 1.2; }
+    .stat span { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .map-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr); gap: 18px; align-items: start; }
     .panel { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); }
     .map-panel { overflow: hidden; }
     #chokai-map { width: 100%; min-height: 590px; background: var(--c-map-bg); }
     .map-fallback { display: grid; place-items: center; min-height: 590px; padding: 24px; text-align: center; line-height: 1.8; }
-    .map-caption { border-top: 1px solid var(--c-border); padding: 10px 14px; color: var(--c-ink-soft); font-size: 12px; line-height: 1.65; }
+    .map-caption { border-top: 1px solid var(--c-border); padding: 10px 14px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); line-height: 1.65; }
     .sidebar { position: sticky; top: 12px; overflow: hidden; }
     .controls { display: grid; gap: 12px; padding: 18px; border-bottom: 1px solid var(--c-border); }
     .control { display: grid; gap: 5px; }
-    .control label { font-size: 13px; font-weight: 800; }
+    .control label { font-size: calc(13px * var(--fs)); font-weight: 800; }
     .control input, .control select {
       width: 100%; min-height: 46px; border: 1px solid var(--c-border-strong); border-radius: 3px;
-      background: #fff; padding: 9px 11px; color: var(--c-ink); font-size: 16px;
+      background: #fff; padding: 9px 11px; color: var(--c-ink); font-size: calc(16px * var(--fs));
     }
     /* フォーカスリングは site-theme.css で全ページ共通に定義している */
     .button-row { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -62,7 +62,7 @@
       background: var(--c-main); padding: 8px 13px; color: #fff; font-weight: 800;
     }
     .button--secondary { background: #fff; color: var(--c-main-dark); }
-    .result-status { margin: 0; padding: 14px 18px; color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
+    .result-status { margin: 0; padding: 14px 18px; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .results { max-height: 570px; overflow: auto; border-top: 1px solid var(--c-rule); }
     .association { border-bottom: 1px solid var(--c-rule); }
     .association:last-child { border-bottom: 0; }
@@ -70,47 +70,47 @@
     .association summary::-webkit-details-marker { display: none; }
     .association summary:hover, .association[open] summary { background: var(--c-main-pale); }
     .association__title { flex: 1; font-weight: 800; line-height: 1.45; }
-    .association__region { display: block; margin-top: 3px; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
-    .association__count { white-space: nowrap; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
-    .association__icon { color: var(--c-main); font-size: 19px; font-weight: 900; }
+    .association__region { display: block; margin-top: 3px; color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); font-weight: 700; }
+    .association__count { white-space: nowrap; color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); font-weight: 700; }
+    .association__icon { color: var(--c-main); font-size: calc(19px * var(--fs)); font-weight: 900; }
     .association__icon::before { content: "+"; }
     .association[open] .association__icon::before { content: "−"; }
     .association__body { border-top: 1px solid var(--c-border); padding: 13px 16px 16px; }
     .region-badge {
       display: inline-block; margin-bottom: 10px; border: 1px solid var(--c-border-strong); border-radius: 999px;
-      background: var(--c-surface-sub); padding: 3px 9px; color: var(--c-main-dark); font-size: 12px; font-weight: 800;
+      background: var(--c-surface-sub); padding: 3px 9px; color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 800;
     }
     .info-section + .info-section { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--c-rule); }
-    .info-section h3 { margin: 0 0 8px; color: var(--c-main-dark); font-size: 14px; }
+    .info-section h3 { margin: 0 0 8px; color: var(--c-main-dark); font-size: calc(14px * var(--fs)); }
     .info-grid { display: grid; grid-template-columns: minmax(100px, 0.35fr) minmax(0, 1fr); margin: 0; }
-    .info-grid dt, .info-grid dd { margin: 0; border-top: 1px solid var(--c-border); padding: 7px 8px; font-size: 13px; line-height: 1.65; }
+    .info-grid dt, .info-grid dd { margin: 0; border-top: 1px solid var(--c-border); padding: 7px 8px; font-size: calc(13px * var(--fs)); line-height: 1.65; }
     .info-grid dt { color: var(--c-ink-soft); font-weight: 800; }
     .info-grid dd { background: #fff; }
-    .profile-text { margin: 0; font-size: 13px; line-height: 1.8; white-space: pre-line; }
+    .profile-text { margin: 0; font-size: calc(13px * var(--fs)); line-height: 1.8; white-space: pre-line; }
     .profile-text + .profile-text { margin-top: 9px; }
-    .profile-source-label { color: var(--c-ink-soft); font-size: 11px; font-weight: 800; }
+    .profile-source-label { color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); font-weight: 800; }
     .profile-links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px; }
     .profile-link {
       display: inline-block; border: 1px solid var(--c-border-strong); border-radius: 3px;
-      background: #fff; padding: 6px 9px; font-size: 12px; font-weight: 800;
+      background: #fff; padding: 6px 9px; font-size: calc(12px * var(--fs)); font-weight: 800;
     }
-    .source-list { margin: 7px 0 0; padding-left: 19px; font-size: 12px; line-height: 1.7; }
+    .source-list { margin: 7px 0 0; padding-left: 19px; font-size: calc(12px * var(--fs)); line-height: 1.7; }
     .area-list { margin: 0; padding-left: 21px; line-height: 1.75; }
     .area-list li + li { margin-top: 4px; }
-    .source-link { display: inline-block; margin-top: 10px; font-size: 12px; }
+    .source-link { display: inline-block; margin-top: 10px; font-size: calc(12px * var(--fs)); }
     .empty { padding: 28px 18px; color: var(--c-ink-soft); text-align: center; line-height: 1.75; }
     .about { margin-top: 24px; padding: 22px; }
-    .about h2 { margin: 0 0 12px; color: var(--c-main-dark); font-size: 21px; }
-    .about p, .about li { font-size: 14px; line-height: 1.8; }
+    .about h2 { margin: 0 0 12px; color: var(--c-main-dark); font-size: calc(21px * var(--fs)); }
+    .about p, .about li { font-size: calc(14px * var(--fs)); line-height: 1.8; }
     .about ul { margin: 10px 0 0; padding-left: 22px; }
     .leaflet-popup-content { line-height: 1.6; }
     .map-legend {
       max-width: 210px; border: 1px solid var(--c-border-strong); border-radius: 3px;
       background: rgb(255 255 255 / 94%); padding: 8px 10px; color: var(--c-ink);
-      box-shadow: 0 1px 5px rgb(0 0 0 / 20%); font-size: 11px; line-height: 1.55;
+      box-shadow: 0 1px 5px rgb(0 0 0 / 20%); font-size: calc(11px * var(--fs)); line-height: 1.55;
       pointer-events: none;
     }
-    .map-legend strong { display: block; margin-bottom: 3px; font-size: 12px; }
+    .map-legend strong { display: block; margin-bottom: 3px; font-size: calc(12px * var(--fs)); }
     .map-legend__sample {
       display: inline-block; width: 19px; height: 12px; margin-right: 5px;
       border: 2px solid var(--c-border-strong); background: var(--c-chart-1); vertical-align: -2px;
@@ -118,7 +118,7 @@
     .location-control button {
       min-width: 104px; min-height: 38px; border: 0; border-radius: 3px;
       background: #fff; padding: 6px 9px; color: var(--c-main-dark);
-      box-shadow: 0 1px 5px rgb(0 0 0 / 28%); font-size: 13px; font-weight: 900;
+      box-shadow: 0 1px 5px rgb(0 0 0 / 28%); font-size: calc(13px * var(--fs)); font-weight: 900;
     }
     .location-control button:hover { background: var(--c-main-pale); }
     .location-control button[aria-pressed="true"] { background: var(--c-main); color: #fff; }

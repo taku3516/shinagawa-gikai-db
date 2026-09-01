@@ -17,7 +17,7 @@
     .disclaimer {
       max-width: 900px; margin-top: 18px; padding: 14px 16px;
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main);
-      border-radius: 3px; background: var(--c-card); font-size: 14px; line-height: 1.8;
+      border-radius: 3px; background: var(--c-card); font-size: calc(14px * var(--fs)); line-height: 1.8;
     }
     main section { padding: 32px 0 48px; }
     .reference-panel {
@@ -25,8 +25,8 @@
       border: 1px solid var(--c-border); border-top: 4px solid var(--c-main);
       border-radius: 3px; background: var(--c-card);
     }
-    .reference-panel h2 { margin: 0 0 6px; font-size: 20px; }
-    .reference-panel > p { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .reference-panel h2 { margin: 0 0 6px; font-size: calc(20px * var(--fs)); }
+    .reference-panel > p { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.8; }
     .reference-list { display: grid; gap: 10px; margin: 16px 0 10px; padding: 0; list-style: none; }
     .reference-list a {
       display: flex; min-height: 44px; gap: 10px; align-items: center; justify-content: space-between;
@@ -36,19 +36,19 @@
     .reference-list a:hover { background: var(--c-soft-blue); }
     .reference-role {
       flex: 0 0 auto; padding: 3px 8px; border-radius: 3px;
-      background: var(--c-soft-blue); color: var(--c-main-dark); font-size: 12px;
+      background: var(--c-soft-blue); color: var(--c-main-dark); font-size: calc(12px * var(--fs));
     }
     .controls {
       display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
       margin-bottom: 18px;
     }
-    .controls label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; }
+    .controls label { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); font-weight: 800; }
     select, #candidate-search {
       min-height: 42px; border: 1px solid var(--c-border); border-radius: 3px;
-      background: var(--c-card); padding: 8px 12px; color: var(--c-ink); font-size: 15px;
+      background: var(--c-card); padding: 8px 12px; color: var(--c-ink); font-size: calc(15px * var(--fs));
     }
     #candidate-search { width: min(100%, 240px); }
-    #hit-count { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
+    #hit-count { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .election-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
     .election-card {
       min-width: 0;
@@ -65,33 +65,33 @@
     .date { color: var(--c-ink); font-variant-numeric: tabular-nums; }
     .tag {
       display: inline-flex; padding: 3px 9px; border-radius: 3px;
-      background: var(--c-soft-blue); color: var(--c-main-dark); font-size: 12px;
+      background: var(--c-soft-blue); color: var(--c-main-dark); font-size: calc(12px * var(--fs));
     }
-    .summary-meta { display: block; margin: 6px 0 0 20px; color: var(--c-ink-soft); font-size: 13px; }
+    .summary-meta { display: block; margin: 6px 0 0 20px; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); }
     .election-body { padding: 0 20px 20px; border-top: 1px solid var(--c-border); }
-    .election-body h3 { margin: 20px 0 10px; font-size: 17px; }
+    .election-body h3 { margin: 20px 0 10px; font-size: calc(17px * var(--fs)); }
     .stats {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 8px; margin-top: 16px;
     }
     .stat { padding: 10px 12px; border: 1px solid var(--c-border); background: var(--c-surface-sub); }
-    .stat dt { color: var(--c-ink-soft); font-size: 12px; font-weight: 800; }
-    .stat dd { margin: 4px 0 0; font-size: 16px; font-weight: 800; }
+    .stat dt { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 800; }
+    .stat dd { margin: 4px 0 0; font-size: calc(16px * var(--fs)); font-weight: 800; }
     .table-wrap { overflow-x: auto; border: 1px solid var(--c-border); }
-    table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 13px; }
+    table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: calc(13px * var(--fs)); }
     th, td { padding: 9px 10px; border-bottom: 1px solid var(--c-border); text-align: left; }
     th { background: var(--c-soft-blue); white-space: nowrap; }
     td.number { text-align: right; font-variant-numeric: tabular-nums; }
     .pill {
       display: inline-flex; min-height: 36px; align-items: center; margin: 4px 6px 0 0;
       border: 1px solid var(--c-border); border-radius: 3px; padding: 6px 12px;
-      background: var(--c-card); font-size: 13px;
+      background: var(--c-card); font-size: calc(13px * var(--fs));
     }
     .empty-state {
       padding: 30px; border: 1px dashed var(--c-border); border-radius: 3px;
       background: var(--c-card); line-height: 1.9;
     }
-    .empty-state h2 { margin: 0 0 8px; font-size: 21px; }
+    .empty-state h2 { margin: 0 0 8px; font-size: calc(21px * var(--fs)); }
     .empty-state p { margin: 0; color: var(--c-ink-soft); }
     .visually-hidden {
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -101,13 +101,13 @@
       .controls { align-items: stretch; }
       .controls label { width: 100%; margin-bottom: -8px; }
       /* iOSで入力・選択時に画面が自動で拡大しないよう16pxにする */
-      select, #candidate-search { width: 100%; font-size: 16px; }
+      select, #candidate-search { width: 100%; font-size: calc(16px * var(--fs)); }
       .reference-panel { padding: 16px; }
       .reference-list a { align-items: flex-start; flex-direction: column; }
       .summary-meta { margin-left: 0; }
       .election-card summary, .election-body { padding-left: 14px; padding-right: 14px; }
       /* 表の横スクロール量を減らす */
-      table { min-width: 560px; font-size: 12px; }
+      table { min-width: 560px; font-size: calc(12px * var(--fs)); }
       th, td { padding: 8px 7px; }
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }

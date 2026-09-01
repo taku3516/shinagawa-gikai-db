@@ -14,23 +14,23 @@
   <style>
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
-    .notice { margin-top:18px; border:1px solid var(--c-border); border-left:4px solid var(--c-main); background:var(--c-main-pale); padding:12px 14px; font-size:13px; line-height:1.75; }
+    .notice { margin-top:18px; border:1px solid var(--c-border); border-left:4px solid var(--c-main); background:var(--c-main-pale); padding:12px 14px; font-size: calc(13px * var(--fs)); line-height:1.75; }
     .chooser-wrap { position:sticky; top:0; z-index:30; border-bottom:1px solid var(--c-border); background:rgba(242, 242, 242, 0.94); box-shadow:0 2px 8px rgba(26, 26, 26,.12); backdrop-filter:blur(8px); }
     .chooser { display:grid; grid-template-columns:minmax(130px,220px) minmax(250px,1fr) auto; gap:10px; align-items:end; padding:12px 0; }
-    .field label { display:block; margin-bottom:4px; color:var(--c-ink-soft); font-size:12px; font-weight:900; }
-    select { width:100%; min-height:44px; border:1px solid var(--c-border); border-radius:4px; background:#fff; padding:8px 10px; color:var(--c-ink); font:inherit; font-size:16px; font-weight:800; }
+    .field label { display:block; margin-bottom:4px; color:var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight:900; }
+    select { width:100%; min-height:44px; border:1px solid var(--c-border); border-radius:4px; background:#fff; padding:8px 10px; color:var(--c-ink); font:inherit; font-size: calc(16px * var(--fs)); font-weight:800; }
     .copy-link { min-height:44px; border:1px solid var(--c-main); border-radius:4px; background:#fff; padding:8px 13px; color:var(--c-main-dark); font:inherit; font-weight:850; cursor:pointer; }
     main section { padding:26px 0 42px; }
     .loading,.error { border:1px dashed var(--c-border); border-radius:4px; background:var(--c-card); padding:24px; }
     .meeting-head { border:1px solid var(--c-border); border-top:5px solid var(--c-main); border-radius:5px; background:var(--c-card); padding:22px; }
-    .eyebrow,.badge { display:inline-flex; align-items:center; min-height:26px; border:1px solid var(--c-border); border-radius:999px; background:var(--c-surface-sub); padding:3px 10px; color:var(--c-main-dark); font-size:12px; font-weight:900; }
-    .meeting-head h2 { margin:12px 0 8px; font-size:clamp(24px,4vw,38px); line-height:1.25; }
+    .eyebrow,.badge { display:inline-flex; align-items:center; min-height:26px; border:1px solid var(--c-border); border-radius:999px; background:var(--c-surface-sub); padding:3px 10px; color:var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight:900; }
+    .meeting-head h2 { margin:12px 0 8px; font-size: calc(clamp(24px,4vw,38px) * var(--fs)); line-height:1.25; }
     .meeting-head p { margin:0; color:var(--c-ink-soft); line-height:1.85; }
     .badges { display:flex; flex-wrap:wrap; gap:7px; margin:16px 0 0; }
     .badge--video { border-color:var(--c-video-border); background:var(--c-video-bg); color:var(--c-video); }
     .badge--minutes { border-color:var(--c-minutes-border); background:var(--c-minutes-bg); color:var(--c-minutes); }
     .pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
-    .pill { display:inline-flex; align-items:center; min-height:44px; border:1px solid var(--c-border); border-radius:4px; background:#fff; padding:7px 12px; font-size:13px; font-weight:850; }
+    .pill { display:inline-flex; align-items:center; min-height:44px; border:1px solid var(--c-border); border-radius:4px; background:#fff; padding:7px 12px; font-size: calc(13px * var(--fs)); font-weight:850; }
     .pill--video { border-color:var(--c-video-border); background:var(--c-video-bg); color:var(--c-video); }
     .pill--minutes { border-color:var(--c-minutes-border); background:var(--c-minutes-bg); color:var(--c-minutes); }
     .one-stop-grid { display:grid; gap:14px; margin-top:18px; }
@@ -38,9 +38,9 @@
     details.block > summary { display:grid; grid-template-columns:1fr auto auto; gap:12px; align-items:center; min-height:64px; padding:14px 16px; cursor:pointer; list-style:none; }
     details.block > summary::-webkit-details-marker { display:none; }
     details.block > summary:hover, details.block[open] > summary { background:var(--c-main-pale); }
-    .block-title { font-size:18px; font-weight:900; }
-    .count { color:var(--c-ink-soft); font-size:12px; font-weight:850; white-space:nowrap; }
-    .toggle { display:grid; place-items:center; width:34px; height:34px; border-radius:4px; background:var(--c-main); color:#fff; font-size:20px; font-weight:900; }
+    .block-title { font-size: calc(18px * var(--fs)); font-weight:900; }
+    .count { color:var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight:850; white-space:nowrap; }
+    .toggle { display:grid; place-items:center; width:34px; height:34px; border-radius:4px; background:var(--c-main); color:#fff; font-size: calc(20px * var(--fs)); font-weight:900; }
     .toggle::before { content:"+"; } details[open] > summary .toggle::before { content:"−"; }
     .block-body { border-top:1px solid var(--c-border); padding:18px; }
     .timeline { display:grid; gap:10px; }
@@ -49,7 +49,7 @@
     .timeline-item p { margin:5px 0 0; color:var(--c-ink-soft); line-height:1.75; }
     .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
     .card,.exchange { border:1px solid var(--c-rule); border-radius:4px; background:#fff; padding:15px; }
-    .card h3,.exchange h4 { margin:0 0 8px; font-size:16px; line-height:1.55; }
+    .card h3,.exchange h4 { margin:0 0 8px; font-size: calc(16px * var(--fs)); line-height:1.55; }
     .card p { margin:0; color:var(--c-ink-soft); line-height:1.75; }
     .questioner,.committee-session { border:1px solid var(--c-rule); border-radius:4px; background:#fff; padding:16px; margin-bottom:12px; }
     .questioner h3,.committee-session h3 { margin:0 0 6px; }
@@ -58,12 +58,12 @@
     .qa { border-left:4px solid var(--c-main); border-radius:3px; background:var(--c-surface-sub); padding:14px; scroll-margin-top:100px; }
     .qa h4 { margin:0 0 9px; line-height:1.5; }
     dl { display:grid; grid-template-columns:6em 1fr; gap:7px 12px; margin:0; }
-    dt { color:var(--c-main-dark); font-size:13px; font-weight:900; }
+    dt { color:var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight:900; }
     dd { margin:0; color:var(--c-ink-soft); line-height:1.75; }
     .video-connection { margin-top:10px; padding-top:9px; border-top:1px dashed var(--c-border); }
     .committee-topic { margin-top:12px; border-top:1px solid var(--c-rule); padding-top:12px; }
     .committee-topic h4 { margin:0 0 10px; }
-    .fulltext-link { display:inline-block; margin-top:10px; color:var(--c-main-dark); font-size:12px; font-weight:800; }
+    .fulltext-link { display:inline-block; margin-top:10px; color:var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight:800; }
     .empty { color:var(--c-ink-soft); }
     @media(max-width:720px) {
       .chooser { grid-template-columns:1fr; }

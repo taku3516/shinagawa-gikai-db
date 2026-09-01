@@ -17,38 +17,38 @@
     .warn {
       max-width: 900px; margin-top: 18px; padding: 14px 16px;
       border: 1px solid var(--c-seigan-border); border-left: 4px solid var(--c-seigan);
-      border-radius: 3px; background: var(--c-seigan-bg); font-size: 14px; line-height: 1.8;
+      border-radius: 3px; background: var(--c-seigan-bg); font-size: calc(14px * var(--fs)); line-height: 1.8;
     }
     .warn strong { color: var(--c-seigan); }
-    h2.section-title { margin: 0 0 14px; font-size: 20px; border-left: 5px solid var(--c-seigan); padding-left: 12px; }
+    h2.section-title { margin: 0 0 14px; font-size: calc(20px * var(--fs)); border-left: 5px solid var(--c-seigan); padding-left: 12px; }
     /* 制度の説明 */
     .about { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); padding: 20px; margin-bottom: 26px; }
-    .about h3 { margin: 0 0 6px; font-size: 15px; }
-    .about p { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.9; }
+    .about h3 { margin: 0 0 6px; font-size: calc(15px * var(--fs)); }
+    .about p { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.9; }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .about-box { border: 1px solid var(--c-rule); border-radius: 3px; background: #fff; padding: 14px 16px; }
-    .about-note { margin: 16px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.9; }
+    .about-note { margin: 16px 0 0; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); line-height: 1.9; }
     /* 集計 */
     .stat-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
     .stat { flex: 1 1 150px; border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 13px 16px; }
-    .stat strong { display: block; color: var(--c-seigan); font-size: 26px; line-height: 1.2; }
-    .stat span { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .stat strong { display: block; color: var(--c-seigan); font-size: calc(26px * var(--fs)); line-height: 1.2; }
+    .stat span { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     /* 絞り込み */
     .filters { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); padding: 16px 18px; margin-bottom: 20px; }
     .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px 14px; }
-    .filter label { display: block; margin-bottom: 5px; color: var(--c-ink-soft); font-size: 12px; font-weight: 800; }
+    .filter label { display: block; margin-bottom: 5px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 800; }
     /* 16px未満だとiOSがフォーカス時に画面を自動ズームするため16pxにする */
     .filter select, .filter input {
       width: 100%; min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px; background: #fff;
-      padding: 9px 11px; color: var(--c-ink); font-size: 16px; font-weight: 700;
+      padding: 9px 11px; color: var(--c-ink); font-size: calc(16px * var(--fs)); font-weight: 700;
     }
     .filter-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 14px; }
     .filter-actions button {
       min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px; background: #fff;
-      padding: 8px 16px; color: var(--c-main-dark); font-size: 13px; font-weight: 800; cursor: pointer;
+      padding: 8px 16px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800; cursor: pointer;
     }
     .filter-actions button:hover { background: var(--c-main-pale); }
-    .hit-count { color: var(--c-ink-soft); font-size: 13px; font-weight: 800; }
+    .hit-count { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 800; }
     /* 一覧 */
     .list { display: grid; gap: 10px; }
     .petition {
@@ -56,13 +56,13 @@
       border-radius: 3px; background: var(--c-card); padding: 14px 16px; scroll-margin-top: 16px;
     }
     .petition__head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
-    .petition__number { color: var(--c-seigan); font-size: 13px; font-weight: 900; }
-    .petition h3 { margin: 7px 0 6px; font-size: 16px; line-height: 1.6; }
+    .petition__number { color: var(--c-seigan); font-size: calc(13px * var(--fs)); font-weight: 900; }
+    .petition h3 { margin: 7px 0 6px; font-size: calc(16px * var(--fs)); line-height: 1.6; }
     .petition h3 a { color: var(--c-ink); }
-    .petition__meta { margin: 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.9; }
+    .petition__meta { margin: 0; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); line-height: 1.9; }
     .tag {
       display: inline-flex; align-items: center; border: 1px solid var(--c-none-border); border-radius: 3px;
-      background: var(--c-none-bg); padding: 2px 8px; color: var(--c-none); font-size: 11px; font-weight: 800;
+      background: var(--c-none-bg); padding: 2px 8px; color: var(--c-none); font-size: calc(11px * var(--fs)); font-weight: 800;
     }
     .tag[data-result="採択"], .tag[data-result="趣旨採択"] { border-color: var(--c-pass-border); background: var(--c-pass-bg); color: var(--c-pass); }
     .tag[data-result="不採択"] { border-color: var(--c-fail-border); background: var(--c-fail-bg); color: var(--c-fail); }
@@ -72,37 +72,37 @@
     .more-row { margin-top: 16px; text-align: center; }
     .more-row button {
       min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
-      padding: 11px 22px; color: var(--c-main-dark); font-size: 14px; font-weight: 800; cursor: pointer;
+      padding: 11px 22px; color: var(--c-main-dark); font-size: calc(14px * var(--fs)); font-weight: 800; cursor: pointer;
     }
     /* 個別表示 */
     .detail { border: 1px solid var(--c-border); border-top: 4px solid var(--c-seigan); border-radius: 4px; background: var(--c-card); padding: 24px; }
     .detail__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-    .detail h2 { margin: 10px 0 14px; font-size: clamp(20px, 3.4vw, 28px); line-height: 1.5; }
-    .detail h3 { margin: 26px 0 10px; font-size: 16px; border-left: 4px solid var(--c-seigan); padding-left: 10px; }
+    .detail h2 { margin: 10px 0 14px; font-size: calc(clamp(20px, 3.4vw, 28px) * var(--fs)); line-height: 1.5; }
+    .detail h3 { margin: 26px 0 10px; font-size: calc(16px * var(--fs)); border-left: 4px solid var(--c-seigan); padding-left: 10px; }
     .facts { display: grid; grid-template-columns: 9em 1fr; gap: 8px 14px; margin: 0; }
-    .facts dt { color: var(--c-seigan); font-size: 13px; font-weight: 800; }
-    .facts dd { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .facts dt { color: var(--c-seigan); font-size: calc(13px * var(--fs)); font-weight: 800; }
+    .facts dd { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
     .timeline { border-left: 3px solid var(--c-seigan-border); margin-left: 6px; padding-left: 16px; display: grid; gap: 14px; }
     .timeline-item { position: relative; }
     .timeline-item::before {
       content: ""; position: absolute; left: -22px; top: 6px; width: 10px; height: 10px;
       border: 2px solid var(--c-seigan); border-radius: 50%; background: var(--c-card);
     }
-    .timeline-item strong { display: block; font-size: 15px; }
-    .timeline-item p { margin: 4px 0 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .timeline-item strong { display: block; font-size: calc(15px * var(--fs)); }
+    .timeline-item p { margin: 4px 0 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.8; }
     .committee-item { border: 1px solid var(--c-rule); border-radius: 3px; background: #fff; padding: 12px 14px; margin-bottom: 10px; }
-    .committee-item strong { display: block; font-size: 14px; }
-    .committee-item p { margin: 4px 0 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .committee-item strong { display: block; font-size: calc(14px * var(--fs)); }
+    .committee-item p { margin: 4px 0 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.8; }
     .pill {
       display: inline-flex; align-items: center; min-height: 44px; margin: 8px 6px 0 0;
       border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
-      padding: 6px 12px; color: var(--c-main-dark); font-size: 13px; font-weight: 800;
+      padding: 6px 12px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800;
     }
     .pill--seigan { border-color: var(--c-seigan-border); background: var(--c-seigan-bg); color: var(--c-seigan); }
     .note-box {
       margin-top: 16px; border: 1px solid var(--c-hold-border); border-left: 4px solid var(--c-hold);
       border-radius: 3px; background: var(--c-hold-bg); padding: 12px 14px; color: var(--c-hold);
-      font-size: 13px; line-height: 1.8;
+      font-size: calc(13px * var(--fs)); line-height: 1.8;
     }
     @media (max-width: 700px) {
       .about-grid { grid-template-columns: 1fr; }
@@ -284,7 +284,7 @@
           <div class="stat"><strong>${esc((summary.itemCount || DATA.items.length).toLocaleString())}</strong><span>収録している案件</span></div>
           <div class="stat"><strong>${esc((summary.recordCount || 0).toLocaleString())}</strong><span>延べ審査件数（定例会ごと）</span></div>
           <div class="stat"><strong>${esc((summary.withCommittee || 0).toLocaleString())}</strong><span>委員会の質疑を紐付けた案件</span></div>
-          <div class="stat"><strong style="font-size:19px">${esc(coverage)}</strong><span>収録している受理年（${esc(yearCount)}年分）</span></div>
+          <div class="stat"><strong style="font-size: calc(19px * var(--fs))">${esc(coverage)}</strong><span>収録している受理年（${esc(yearCount)}年分）</span></div>
         </div>
 
         <h2 class="section-title">案件をさがす</h2>

@@ -32,6 +32,11 @@ html {
 
 body {
   margin: 0;
+  /* font-size を書いていなかったので、指定の無い要素だけブラウザ既定の16pxに
+     据え置かれ、文字サイズ設定で拡大されなかった（2,566件中126件）。
+     1rem を基準にすることで、ブラウザ側で既定文字サイズを大きくしている人の
+     設定も尊重したまま倍率を掛けられる */
+  font-size: calc(1rem * var(--fs));
   background: var(--c-bg);
   color: var(--c-ink);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
@@ -71,13 +76,13 @@ a:hover { text-decoration-thickness: 2px; }
    display が違う。まとめずに別々に指定する */
 .breadcrumb {
   margin: 0 0 12px;
-  font-size: 14px;
+  font-size: calc(14px * var(--fs));
 }
 
 .back {
   display: inline-block;
   margin: 0 0 18px;
-  font-size: 14px;
+  font-size: calc(14px * var(--fs));
 }
 
 /* --------------------------------------------------------------------------
@@ -97,7 +102,7 @@ a:hover { text-decoration-thickness: 2px; }
 h1 {
   margin: 0 0 12px;
   color: var(--c-main-dark);
-  font-size: clamp(28px, 5vw, 48px);
+  font-size: calc(clamp(28px, 5vw, 48px) * var(--fs));
   line-height: 1.15;
 }
 
@@ -105,7 +110,7 @@ h1 {
   max-width: 860px;
   margin: 0;
   color: var(--c-ink-soft);
-  font-size: 16px;
+  font-size: calc(16px * var(--fs));
   line-height: 1.9;
 }
 
@@ -118,7 +123,7 @@ section { padding: 34px 0; }
 .fine-print {
   margin: 18px 0 0;
   color: var(--c-ink-soft);
-  font-size: 12px;
+  font-size: calc(12px * var(--fs));
   line-height: 1.8;
 }
 
@@ -127,7 +132,7 @@ footer {
   background: var(--c-main-dark);
   padding: 30px 0;
   color: #ffffff;
-  font-size: 13px;
+  font-size: calc(13px * var(--fs));
   line-height: 1.8;
   text-align: center;
 }
@@ -146,7 +151,7 @@ footer {
   border: 1px dashed var(--c-border);
   border-radius: 3px;
   background: var(--c-card);
-  font-size: 14px;
+  font-size: calc(14px * var(--fs));
   line-height: 1.9;
 }
 
@@ -169,7 +174,7 @@ footer {
   .hero { padding: 32px 0 24px; }
 
   .lead {
-    font-size: 16px;
+    font-size: calc(16px * var(--fs));
     line-height: 1.8;
   }
 
