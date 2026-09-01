@@ -4,9 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0017c1" />
-  <title>会議録を見る | 品川区議会DB</title>
+  <title>会議録・録画 | 品川区議会DB</title>
   <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
@@ -14,70 +16,37 @@
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
 
-    * { box-sizing: border-box; }
-
-    html {
-      /* スマホの画面回転時に文字サイズが勝手に拡大されるのを防ぐ */
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-      background: var(--c-bg);
-      color: var(--c-ink);
-      /* 長いURL・英数字の連続でも画面外にはみ出さないよう折り返す */
-      overflow-wrap: break-word;
-    }
-
-    a { color: var(--c-main-dark); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    a:hover { text-decoration-thickness: 2px; }
-
-    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-
-    .breadcrumb { margin: 0 0 14px; font-size: 14px; }
-
     /* ===== ヒーロー ===== */
-    .hero {
-      padding: 46px 0 34px; border-top: 6px solid var(--c-main); border-bottom: 1px solid var(--c-rule);
-      background: var(--c-card);
-    }
-    .hero h1 { margin: 0 0 16px; color: var(--c-main-dark); font-size: clamp(34px, 6vw, 60px); line-height: 1.08; letter-spacing: -0.025em; }
-    .hero .lead { max-width: 780px; margin: 0; font-size: 18px; line-height: 1.9; }
     .disclaimer {
       margin-top: 24px; max-width: none; padding: 14px 16px;
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
-      background: var(--c-card); font-size: clamp(11px, 1.25vw, 14px); line-height: 1.7;
+      background: var(--c-card); font-size: calc(clamp(11px, 1.25vw, 14px) * var(--fs)); line-height: 1.7;
       white-space: nowrap;
     }
     /* 狭い画面では1行に収まらないため折り返す */
     @media (max-width: 860px) {
       .disclaimer { white-space: normal; }
     }
-    .hero-links { margin: 16px 0 0; }
 
     /* ===== 統計カード（定例会ごとの会期・議案数） ===== */
     .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 28px; }
     .stats--section { margin: 0 0 24px; }
     .stat { border: 1px solid var(--c-border); border-top: 3px solid var(--c-main); border-radius: 3px; background: var(--c-card); padding: 16px; }
-    .stat strong { display: block; color: var(--c-main); font-size: 28px; line-height: 1.1; }
-    .stat span { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
+    .stat strong { display: block; color: var(--c-main); font-size: calc(28px * var(--fs)); line-height: 1.1; }
+    .stat span { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
 
     /* ===== セクション共通 ===== */
-    section { padding: 40px 0; }
-    h2 { margin: 0 0 20px; font-size: 24px; }
+    h2 { margin: 0 0 20px; font-size: calc(24px * var(--fs)); }
     h2.sub { margin-top: 36px; }
     h3.group-title { margin: 32px 0 12px; }
-    .section-lead { max-width: 760px; margin: -8px 0 24px; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .section-lead { max-width: 760px; margin: -8px 0 24px; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
 
     /* ===== リンクピル（種類別に色分け） ===== */
     .pill {
       display: inline-flex; align-items: center; margin: 14px 6px 0 0;
       border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 6px 12px;
-      color: var(--c-main-dark); font-size: 13px; font-weight: 800;
+      color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700;
     }
     .pill--video { border-color: var(--c-video-border); background: var(--c-video-bg); color: var(--c-video-text); }
     .pill--minutes { border-color: var(--c-minutes-border); background: var(--c-minutes-bg); color: var(--c-minutes-text); }
@@ -86,34 +55,34 @@
     .tag {
       display: inline-flex; margin: 0 8px 12px 0; border-radius: 3px;
       background: var(--c-main-pale); padding: 4px 9px;
-      color: var(--c-main-dark); font-size: 12px; font-weight: 800;
+      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700;
     }
     .tag--result { background: var(--c-result-bg); color: var(--c-result-text); }
     .chip {
       display: inline-flex; margin-bottom: 10px; border: 1px solid var(--c-border); border-radius: 3px;
-      background: var(--c-surface-sub); padding: 3px 9px; color: var(--c-ink-soft); font-size: 12px; font-weight: 800;
+      background: var(--c-surface-sub); padding: 3px 9px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700;
     }
 
     /* ===== 年切り替え ===== */
     .year-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 20px; }
-    .year-row label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; white-space: nowrap; }
+    .year-row label { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); font-weight: 700; white-space: nowrap; }
     #year-select {
       /* 16px未満だとiOSがフォーカス時に画面を自動ズームするため16pxにする */
       width: min(100%, 320px); border: 1px solid var(--c-border); border-radius: 3px;
-      background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: 16px; font-weight: 800;
+      background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: calc(16px * var(--fs)); font-weight: 700;
     }
     .year-summary {
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 18px; margin-bottom: 18px;
     }
-    .year-summary h3 { margin: 0 0 8px; font-size: 18px; }
-    .year-summary p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .year-summary h3 { margin: 0 0 8px; font-size: calc(18px * var(--fs)); }
+    .year-summary p { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
 
     /* ===== 会議カード ===== */
     .meeting-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
     .meeting-card { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 18px; }
-    .meeting-card h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.45; }
-    .meeting-card p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.75; }
+    .meeting-card h3 { margin: 0 0 8px; font-size: calc(17px * var(--fs)); line-height: 1.45; }
+    .meeting-card p { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.75; }
 
     /* ===== 会議ごとの折りたたみ ===== */
     .accordion-controls {
@@ -124,19 +93,19 @@
       backdrop-filter: blur(8px);
     }
     .accordion-controls__inner { display: flex; align-items: center; gap: 8px; }
-    .accordion-controls__label { margin-right: auto; font-size: 14px; font-weight: 800; }
-    .accordion-controls__status { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .accordion-controls__label { margin-right: auto; font-size: calc(14px * var(--fs)); font-weight: 700; }
+    .accordion-controls__status { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .accordion-button {
       min-height: 40px; border: 1px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 8px 14px; color: var(--c-main-dark);
-      font: inherit; font-size: 13px; font-weight: 800; cursor: pointer;
+      font: inherit; font-size: calc(13px * var(--fs)); font-weight: 700; cursor: pointer;
     }
     .accordion-button:hover { background: var(--c-main-pale); }
     /* フォーカスリングは site-theme.css で全ページ共通に定義している */
     .accordion-button:disabled { opacity: 0.45; cursor: default; }
     .accordion-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 24px 0 40px; }
     .meeting-accordion {
-      overflow: clip; border: 1px solid var(--c-border); border-radius: 4px;
+      overflow: clip; border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); scroll-margin-top: 76px;
     }
     .meeting-accordion[open] { box-shadow: 0 3px 10px rgba(26, 26, 26, 0.08); }
@@ -151,20 +120,20 @@
     }
     .meeting-accordion__heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
     .meeting-accordion__heading .chip { margin: 0; }
-    .meeting-accordion__title { font-size: 21px; font-weight: 800; line-height: 1.35; }
+    .meeting-accordion__title { font-size: calc(21px * var(--fs)); font-weight: 700; line-height: 1.35; }
     .meeting-accordion__summary {
       grid-column: 1 / -1; margin: 2px 0 0; color: var(--c-ink-soft);
-      font-size: 14px; line-height: 1.7;
+      font-size: calc(14px * var(--fs)); line-height: 1.7;
     }
     .meeting-accordion__counts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
     .meeting-accordion__count {
       border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-surface-sub); padding: 3px 9px;
-      color: var(--c-ink-soft); font-size: 12px; font-weight: 800;
+      color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700;
     }
     .meeting-accordion__icon {
       display: inline-grid; place-items: center; width: 36px; height: 36px;
       border-radius: 3px; background: var(--c-main); color: #fff;
-      font-size: 22px; font-weight: 800; line-height: 1;
+      font-size: calc(22px * var(--fs)); font-weight: 700; line-height: 1;
     }
     .meeting-accordion__icon::before { content: "+"; }
     .meeting-accordion[open] .meeting-accordion__icon::before { content: "−"; }
@@ -177,44 +146,44 @@
       border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 16px;
     }
-    .timeline-item time { color: var(--c-main); font-weight: 800; }
-    .timeline-item p { margin: 6px 0 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.75; }
+    .timeline-item time { color: var(--c-main); font-weight: 700; }
+    .timeline-item p { margin: 6px 0 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.75; }
 
     /* ===== カードグリッド（議案・質問） ===== */
     .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
     .card-grid.pushed { margin-top: 20px; }
     .card { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 20px; }
-    .card h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.5; }
-    .card p { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
-    .card ul { margin: 0; padding-left: 20px; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .card h3 { margin: 0 0 10px; font-size: calc(18px * var(--fs)); line-height: 1.5; }
+    .card p { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
+    .card ul { margin: 0; padding-left: 20px; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
     .card.q { padding: 0; overflow: clip; }
     .card.q > summary { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 14px 16px; cursor: pointer; list-style: none; }
     .card.q > summary::-webkit-details-marker { display: none; }
     .card.q > summary:hover, .card.q[open] > summary { background: var(--c-main-pale); }
-    .card.q > summary h3 { flex: 1; margin: 0; font-size: 16px; }
-    .q__count { color: var(--c-ink-soft); font-size: 12px; font-weight: 800; white-space: nowrap; }
-    .q__icon { color: var(--c-main); font-size: 20px; font-weight: 900; }
+    .card.q > summary h3 { flex: 1; margin: 0; font-size: calc(16px * var(--fs)); }
+    .q__count { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; white-space: nowrap; }
+    .q__icon { color: var(--c-main); font-size: calc(20px * var(--fs)); font-weight: 700; }
     .q__icon::before { content: "+"; }
     .card.q[open] .q__icon::before { content: "−"; }
     .q__content { border-top: 1px solid var(--c-border); padding: 18px 20px 20px; }
     .question-card-grid--summaries { grid-template-columns: 1fr; }
     .q__topics-label {
       margin: 0 0 4px !important; color: var(--c-ink) !important;
-      font-size: 13px !important; font-weight: 800;
+      font-size: calc(13px * var(--fs)) !important; font-weight: 700;
     }
     .qa-summaries {
       display: grid; gap: 12px; margin-top: 20px; padding-top: 18px;
       border-top: 1px solid var(--c-border);
     }
-    .qa-summaries > h4 { margin: 0; font-size: 15px; }
+    .qa-summaries > h4 { margin: 0; font-size: calc(15px * var(--fs)); }
     .qa-summary {
-      border-left: 4px solid var(--c-main); border-radius: 2px;
+      border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-surface-sub); padding: 14px 16px;
     }
-    .qa-summary h5 { margin: 0 0 10px; font-size: 15px; line-height: 1.55; }
+    .qa-summary h5 { margin: 0 0 10px; font-size: calc(15px * var(--fs)); line-height: 1.55; }
     .qa-summary dl { display: grid; grid-template-columns: 5em 1fr; gap: 8px 12px; margin: 0; }
-    .qa-summary dt { color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
-    .qa-summary dd { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
+    .qa-summary dt { color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; }
+    .qa-summary dd { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
     .qa-summary-note { margin-top: 14px !important; }
     .video-connection { margin-top: 10px; padding-top: 9px; border-top: 1px dashed var(--c-border); }
 
@@ -234,94 +203,98 @@
     .committee-session__summary-main, .committee-topic__summary-main { flex: 1; min-width: 0; }
     .committee-session__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .committee-session__head .tag { margin: 0; }
-    .committee-session h3 { width: 100%; margin: 4px 0 0; font-size: 18px; }
-    .committee-session__meta { margin: 0 0 12px; color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
-    .committee-session__overview { margin: 7px 0 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.65; }
-    .committee-session__count, .committee-topic__count { color: var(--c-main-dark); font-size: 12px; font-weight: 900; white-space: nowrap; }
-    .committee-toggle-icon { color: var(--c-main); font-size: 22px; font-weight: 900; }
+    .committee-session h3 { width: 100%; margin: 4px 0 0; font-size: calc(18px * var(--fs)); }
+    .committee-session__meta { margin: 0 0 12px; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
+    .committee-session__overview { margin: 7px 0 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.65; }
+    .committee-session__count, .committee-topic__count { color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700; white-space: nowrap; }
+    .committee-toggle-icon { color: var(--c-main); font-size: calc(22px * var(--fs)); font-weight: 700; }
     .committee-toggle-icon::before { content: "+"; }
     details[open] > summary .committee-toggle-icon::before { content: "−"; }
     .committee-session__content { border-top: 1px solid var(--c-border); padding: 18px; }
     .committee-topics { display: grid; gap: 12px; }
+    /* 会議録の全文には、議題の区切りに使う罫線（─の連続）など折り返せない文字列が
+       入っている。グリッドの子は既定が min-width:auto なので、そのままでは列が
+       その最小幅まで広がり、狭い画面で横にはみ出す。 */
+    .committee-topics > *, .committee-voices > * { min-width: 0; }
     .committee-topic { border: 1px solid var(--c-rule); border-radius: 3px; background: #fff; overflow: clip; }
-    .committee-topic h4 { margin: 0; color: var(--c-main-dark); font-size: 16px; }
-    .committee-topic__agenda { margin: 0 0 12px; color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .committee-topic h4 { margin: 0; color: var(--c-main-dark); font-size: calc(16px * var(--fs)); }
+    .committee-topic__agenda { margin: 0 0 12px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .committee-topic__content { border-top: 1px solid var(--c-rule); padding: 14px; }
     /* ===== 議員で絞った質疑（giin.html から ?member= で来る） ===== */
     .member-panel { border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px; background: var(--c-card); padding: 18px 20px; margin-bottom: 20px; }
-    .member-panel h2 { margin: 0 0 4px; font-size: 20px; }
-    .member-panel__lead { margin: 0 0 14px; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .member-panel h2 { margin: 0 0 4px; font-size: calc(20px * var(--fs)); }
+    .member-panel__lead { margin: 0 0 14px; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.8; }
     .member-panel__bar { position: sticky; top: 60px; z-index: 5; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
       border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-surface-sub); padding: 10px 12px; margin-bottom: 14px; }
     .member-panel__bar button, .member-panel__bar select { min-height: 36px; border: 1px solid var(--c-border); border-radius: 3px;
-      background: var(--c-card); padding: 6px 12px; color: var(--c-main-dark); font-size: 13px; font-weight: 800; cursor: pointer; }
+      background: var(--c-card); padding: 6px 12px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; cursor: pointer; }
     .member-panel__bar button.is-primary { background: var(--c-main); border-color: var(--c-main); color: #fff; }
     .member-panel__bar button:disabled { opacity: .5; cursor: not-allowed; }
-    .member-panel__count { color: var(--c-ink-soft); font-size: 13px; font-weight: 800; }
+    .member-panel__count { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .member-panel__warn { border-radius: 3px; background: var(--c-video-bg); border: 1px solid var(--c-video-border);
-      padding: 4px 10px; color: var(--c-ink); font-size: 12px; font-weight: 800; }
-    .member-panel__note { margin: 10px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.7; }
+      padding: 4px 10px; color: var(--c-ink); font-size: calc(12px * var(--fs)); font-weight: 700; }
+    .member-panel__note { margin: 10px 0 0; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); line-height: 1.7; }
     .member-session { border-top: 1px solid var(--c-border); padding-top: 12px; margin-top: 12px; }
-    .member-session h3 { margin: 0 0 8px; font-size: 15px; }
-    .member-session h3 .chip { margin-left: 8px; border-radius: 3px; background: var(--c-surface-sub); padding: 2px 8px; color: var(--c-ink-soft); font-size: 12px; }
+    .member-session h3 { margin: 0 0 8px; font-size: calc(15px * var(--fs)); }
+    .member-session h3 .chip { margin-left: 8px; border-radius: 3px; background: var(--c-surface-sub); padding: 2px 8px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); }
     .member-item { display: flex; gap: 10px; border-left: 3px solid var(--c-main-pale); padding: 8px 0 8px 10px; margin-bottom: 8px; }
     .member-item input { margin-top: 3px; width: 18px; height: 18px; flex: none; }
-    .member-item dl { display: grid; grid-template-columns: 5em 1fr; gap: 4px 10px; margin: 0; font-size: 13px; }
-    .member-item dt { color: var(--c-main-dark); font-weight: 800; }
+    .member-item dl { display: grid; grid-template-columns: 5em 1fr; gap: 4px 10px; margin: 0; font-size: calc(13px * var(--fs)); }
+    .member-item dt { color: var(--c-main-dark); font-weight: 700; }
     .member-item dd { margin: 0; color: var(--c-ink-soft); line-height: 1.8; }
     @media (max-width: 640px) {
       .member-panel__bar { position: static; }
       .member-item dl { grid-template-columns: 1fr; }
     }
     .committee-exchanges { display: grid; gap: 12px; }
-    .committee-exchange { border-left: 4px solid var(--c-main); border-radius: 2px; background: var(--c-surface-sub); padding: 14px 16px; }
+    .committee-exchange { border-left: 4px solid var(--c-main); border-radius: 3px; background: var(--c-surface-sub); padding: 14px 16px; }
     .committee-exchange__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
-    .committee-exchange__head h5 { margin: 0; font-size: 15px; }
-    .committee-exchange__speaker { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
-    .committee-exchange__kind { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 2px 7px; color: var(--c-main-dark); font-size: 11px; font-weight: 800; }
+    .committee-exchange__head h5 { margin: 0; font-size: calc(15px * var(--fs)); }
+    .committee-exchange__speaker { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
+    .committee-exchange__kind { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 2px 7px; color: var(--c-main-dark); font-size: calc(11px * var(--fs)); font-weight: 700; }
     .committee-exchange dl { display: grid; grid-template-columns: 8em 1fr; gap: 8px 12px; margin: 0; }
-    .committee-exchange dt { color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
-    .committee-exchange dd { margin: 0; color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; }
-    .committee-exchange__source { margin: 10px 0 0; text-align: right; font-size: 12px; }
-    .committee-exchange__source a { color: var(--c-main-dark); font-weight: 800; }
+    .committee-exchange dt { color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; }
+    .committee-exchange dd { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
+    .committee-exchange__source { margin: 10px 0 0; text-align: right; font-size: calc(12px * var(--fs)); }
+    .committee-exchange__source a { color: var(--c-main-dark); font-weight: 700; }
     .committee-session__links { margin-top: 18px; }
 
     /* ===== 会議録全文（開いたときだけ data/minutes/ から読み込む） ===== */
     .committee-fulltext { border: 1px solid var(--c-rule); border-radius: 3px; background: #fff; overflow: clip; }
-    .committee-fulltext h4 { margin: 0; color: var(--c-main-dark); font-size: 16px; }
+    .committee-fulltext h4 { margin: 0; color: var(--c-main-dark); font-size: calc(16px * var(--fs)); }
     .committee-fulltext__content { border-top: 1px solid var(--c-rule); padding: 14px; }
     .committee-fulltext__source {
       margin: 0 0 14px; padding: 10px 12px;
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
-      background: var(--c-card); color: var(--c-ink-soft); font-size: 12px; line-height: 1.7;
+      background: var(--c-card); color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); line-height: 1.7;
     }
-    .committee-fulltext__state { margin: 0; color: var(--c-ink-soft); font-size: 13px; }
+    .committee-fulltext__state { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); }
     .committee-voices { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
     .committee-voice { border-left: 3px solid var(--c-rule); padding: 0 0 0 12px; }
     .committee-voice--member { border-left-color: var(--c-main); }
-    .committee-voice__speaker { margin: 0 0 4px; color: var(--c-main-dark); font-size: 13px; font-weight: 800; }
-    .committee-voice__no { margin-right: 6px; color: var(--c-ink-soft); font-size: 11px; font-weight: 700; }
+    .committee-voice__speaker { margin: 0 0 4px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; }
+    .committee-voice__no { margin-right: 6px; color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); font-weight: 700; }
     /* 公式会議録の改行ごとに1段落。長い答弁でも読める間隔にする */
-    .committee-voice__text { margin: 0; font-size: 14px; line-height: 1.9; }
+    .committee-voice__text { margin: 0; font-size: calc(14px * var(--fs)); line-height: 1.9; overflow-wrap: anywhere; }
     .committee-voice__text + .committee-voice__text { margin-top: 8px; }
     .committee-voice:target { background: var(--c-highlight); }
     .committee-voice:target .committee-voice__speaker { text-decoration: underline; }
 
     .committee-pending { border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-surface-sub); padding: 14px 16px; }
     .committee-pending strong { display: block; margin-bottom: 5px; }
-    .committee-pending p { margin: 0; color: var(--c-ink-soft); font-size: 13px; }
+    .committee-pending p { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); }
 
     /* ===== 一覧行（請願・会議録） ===== */
     .rows { display: grid; gap: 10px; }
     .rows .row {
       display: grid; grid-template-columns: minmax(150px, 210px) 1fr auto; gap: 12px; align-items: start;
       border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
-      padding: 14px; font-size: 14px;
+      padding: 14px; font-size: calc(14px * var(--fs));
     }
-    .row .key { color: var(--c-main-dark); font-weight: 800; }
+    .row .key { color: var(--c-main-dark); font-weight: 700; }
     .row .result {
       border-radius: 3px; background: var(--c-result-bg); color: var(--c-result-text);
-      padding: 4px 10px; font-size: 12px; font-weight: 800; white-space: nowrap;
+      padding: 4px 10px; font-size: calc(12px * var(--fs)); font-weight: 700; white-space: nowrap;
     }
     .row .pill { margin-top: 0; }
 
@@ -329,26 +302,14 @@
     .notice {
       margin: 0 0 20px; padding: 14px 16px;
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
-      background: var(--c-card); font-size: 14px; line-height: 1.7;
+      background: var(--c-card); font-size: calc(14px * var(--fs)); line-height: 1.7;
     }
-    .fine-print { margin: 10px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.7; }
 
     /* ===== 参照元・フッター ===== */
     .sources { border-top: 1px solid var(--c-border); background: var(--c-card); }
     .sources ul { margin: 0; padding-left: 20px; line-height: 1.9; }
-    footer {
-      border-top: 1px solid var(--c-border);
-      background: var(--c-main-dark);
-      padding: 32px 0; text-align: center; font-size: 13px; line-height: 1.8; color: #fff;
-    }
 
     /* ===== エラー表示 ===== */
-    .load-error {
-      margin: 40px auto; max-width: 720px; padding: 20px;
-      border: 1px solid var(--c-video-border); border-radius: 8px;
-      background: var(--c-video-bg); font-size: 14px; line-height: 1.9;
-    }
-    .load-error code { background: #fff; padding: 2px 6px; border-radius: 4px; }
 
     /* アンカーリンクで飛んだとき固定操作バーの下に見出しが収まるよう余白を取る */
     section[id], h2[id], h3[id], .card.q[id], .record-section[id],
@@ -360,10 +321,10 @@
     .record-section > summary::-webkit-details-marker { display: none; }
     .record-section > summary:hover, .record-section[open] > summary { background: var(--c-main-pale); }
     .record-section__title { flex: 1; min-width: 0; }
-    .record-section__title strong { display: block; color: var(--c-main-dark); font-size: 18px; }
-    .record-section__title span { display: block; margin-top: 3px; color: var(--c-ink-soft); font-size: 13px; line-height: 1.55; }
-    .record-section__count { color: var(--c-main-dark); font-size: 13px; font-weight: 900; white-space: nowrap; }
-    .record-section__icon { color: var(--c-main); font-size: 22px; font-weight: 900; }
+    .record-section__title strong { display: block; color: var(--c-main-dark); font-size: calc(18px * var(--fs)); }
+    .record-section__title span { display: block; margin-top: 3px; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.55; }
+    .record-section__count { color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; white-space: nowrap; }
+    .record-section__icon { color: var(--c-main); font-size: calc(22px * var(--fs)); font-weight: 700; }
     .record-section__icon::before { content: "+"; }
     .record-section[open] .record-section__icon::before { content: "−"; }
     .record-section__content { border-top: 1px solid var(--c-border); padding: 18px; }
@@ -375,11 +336,8 @@
       .row .result { justify-self: start; }
 
       /* 余白を詰めて1画面の情報量を確保する */
-      .hero { padding: 36px 0 28px; }
-      section { padding: 28px 0; }
-      .hero .lead { font-size: 16px; line-height: 1.8; }
-      .disclaimer { font-size: 13px; white-space: normal; }
-      h2 { font-size: 21px; }
+      .disclaimer { font-size: calc(13px * var(--fs)); white-space: normal; }
+      h2 { font-size: calc(21px * var(--fs)); }
       .card { padding: 16px; }
       .card.q { padding: 0; }
       .meeting-card { padding: 16px; }
@@ -388,8 +346,13 @@
       .qa-summary dd + dt { margin-top: 6px; }
       .committee-session > summary, .committee-topic > summary,
       .committee-fulltext > summary { min-height: 72px; padding: 13px; }
-      .committee-session__content { padding: 12px; }
-      .committee-session h3 { font-size: 16px; }
+      /* 会議録の全文は「会議 → 資料種別 → 会議 → 全文」と入れ子の底にあるため、
+         狭い画面では枠と余白で幅の4割が消えて1行15文字ほどになる。外側から順に
+         余白を詰めて行長を確保する（縦の余白・背景色・左罫は残す）。 */
+      .meeting-accordion__content .container { width: calc(100% - 16px); }
+      .committee-session__content { padding: 12px 0; }
+      .committee-fulltext__content { padding: 14px 6px; }
+      .committee-session h3 { font-size: calc(16px * var(--fs)); }
       .committee-session__count, .committee-topic__count { white-space: normal; text-align: right; }
       .committee-exchange { padding: 13px 14px; }
       .committee-exchange dl { grid-template-columns: 1fr; gap: 4px; }
@@ -398,19 +361,19 @@
       .accordion-controls__inner { flex-wrap: nowrap; gap: 6px; }
       .accordion-controls__label { display: none; }
       .accordion-controls__status { margin-right: auto; }
-      .accordion-button { min-height: 44px; padding: 8px 9px; font-size: 12px; }
+      .accordion-button { min-height: 44px; padding: 8px 9px; font-size: calc(12px * var(--fs)); }
       .accordion-list { padding-top: 16px; }
       .meeting-accordion > summary { grid-template-columns: minmax(0, 1fr) auto; min-height: 96px; padding: 16px; }
-      .meeting-accordion__title { font-size: 18px; }
-      .meeting-accordion__summary { font-size: 13px; }
+      .meeting-accordion__title { font-size: calc(18px * var(--fs)); }
+      .meeting-accordion__summary { font-size: calc(13px * var(--fs)); }
       .record-section { margin-top: 22px; }
       .record-section > summary { min-height: 64px; padding: 12px; }
-      .record-section__title strong { font-size: 16px; }
-      .record-section__content { padding: 12px; }
+      .record-section__title strong { font-size: calc(16px * var(--fs)); }
+      .record-section__content { padding: 12px 6px; }
       .q__content { padding: 16px; }
 
       /* 指でタップしやすいようリンクピルを大きくする */
-      .pill { padding: 9px 14px; font-size: 14px; }
+      .pill { padding: 9px 14px; font-size: calc(14px * var(--fs)); }
     }
 
     @media print {
@@ -588,8 +551,8 @@
     // ※会期・議案数などの統計は年間で共通ではないため、各定例会のセクションに表示する
     function renderHero(site) {
       document.getElementById("hero-root").innerHTML = `
-        <h1>${esc(site.siteName)}</h1>
-        <p class="lead">${esc(site.lead)}</p>
+        <h1>会議録・録画</h1>
+        <p class="lead">年ごとの会議の流れをたどり、会議録の全文、校正原稿PDF、公式録画への入口をまとめています。</p>
         <div class="disclaimer">${esc(site.disclaimer)}</div>`;
     }
 
@@ -636,9 +599,8 @@
       if (related.bills.length > 0) counts.push(`議案 ${related.bills.length}件`);
       if (related.petitions.length > 0) counts.push(`請願・陳情 ${related.petitions.length}件`);
       if (related.questions.length > 0) counts.push(`質問者 ${related.questions.length}名`);
-      const committeeExchangeCount = related.committeeSessions.reduce((total, session) =>
-        total + (session.topics || []).reduce((topicTotal, topic) => topicTotal + (topic.exchanges || []).length, 0), 0);
-      if (committeeExchangeCount > 0) counts.push(`委員会質疑 ${committeeExchangeCount}件`);
+      // 委員会は全文を載せるので、会議の数で示す（抜粋の件数は画面に出ない）。
+      if (related.committeeSessions.length > 0) counts.push(`委員会 ${related.committeeSessions.length}会議`);
       if (related.committeePending.length > 0) counts.push(`会議録待ち ${related.committeePending.length}会議`);
       if (counts.length === 0) return "";
       return `<span class="meeting-accordion__counts">${counts.map((count) =>
@@ -979,6 +941,13 @@
         各質問者の「原文を読む」から、その議員が質問を始めた発言へ移動できます。</p>`;
     }
 
+    // 見出しの説明。session.overview は抜粋の件数を述べる文なので、全文を載せる
+    // 会議では中身と合わない。全文が在る会議は分量で示す。
+    function committeeSessionOverview(session) {
+      if (!session.hasFullText) return session.overview;
+      return `${session.committee}の公式会議録を、要約せずそのまま全文で掲載しています。`;
+    }
+
     // 初期DOMを軽くするため、会議見出しだけを先に描画し、開いた会議の中身だけを生成する。
     function committeeSessionsHtml(sessions, pending) {
       const published = sessions.map((session) => `<details class="committee-session" id="committee-${esc(session.id)}" data-session-id="${esc(session.id)}">
@@ -988,16 +957,18 @@
               <span class="tag">${esc(session.status || "委員会質疑")}</span>
               <h3>${esc(session.date)} ${esc(session.committee)}</h3>
             </span>
-            <span class="committee-session__overview">${esc(session.overview)}</span>
+            <span class="committee-session__overview">${esc(committeeSessionOverview(session))}</span>
           </span>
-          <span class="committee-session__count">${committeeExchangeCount(session)}件</span>
+          <span class="committee-session__count">${session.hasFullText
+            ? esc(fullTextSummaryLabel(session))
+            : `${committeeExchangeCount(session)}件`}</span>
           <span class="committee-toggle-icon" aria-hidden="true"></span>
         </summary>
         <div class="committee-session__content" data-session-content></div>
       </details>`).join("");
       const waiting = pending.map((session) => `<article class="committee-pending" id="committee-${esc(session.id)}">
         <strong>${esc(session.date)} ${esc(session.committee)}</strong>
-        <p>${esc(session.status)} — 会議録が公開されるまで要約は作成しません。
+        <p>${esc(session.status)} — 会議録が公開されるまで掲載しません。
           ${session.officialUrl ? `<a href="${esc(session.officialUrl)}" target="_blank" rel="noopener">公式カレンダーを確認</a>` : ""}</p>
       </article>`).join("");
       return `<div class="committee-topics">${published}${waiting}</div>`;
@@ -1041,15 +1012,24 @@
       const session = (activeYear.committeeSessions || []).find((item) => item.id === details.dataset.sessionId);
       const content = details.querySelector("[data-session-content]");
       if (!session || !content) return;
+      // 委員会は会議録の全文だけを載せる。議題別の抜粋は、発言の一部しか拾えず
+      // 答弁が文の途中で切れるものが多いため、全文が在る会議では出さない。
+      // 全文がまだ無いのは校正原稿だけなので、そこは抜粋を残す。
       content.innerHTML = `
         ${session.time ? `<p class="committee-session__meta">開催時間：${esc(session.time)}</p>` : ""}
-        <div class="committee-topics">${(session.topics || []).map((topic) => committeeTopicHtml(session, topic)).join("")}${fullTextDetailsHtml(session)}</div>
-        <p class="fine-print qa-summary-note">※上の議題別の質問・答弁は、会議録の該当発言から要点を含む文を抜き出して掲載しています（要約ではありません）。発言の一部のみを載せているため、${session.hasFullText
-          ? "前後の文脈は「会議録全文」または公式の会議録をご確認ください。各質疑の「原文を読む」から全文の該当発言へ移動できます。"
-          : "前後の文脈は公式の会議録をご確認ください。"}明確な回答が記録されていない発言には、その旨を記載しています。</p>
+        <div class="committee-topics">${session.hasFullText
+          ? fullTextDetailsHtml(session)
+          : (session.topics || []).map((topic) => committeeTopicHtml(session, topic)).join("")}</div>
+        ${session.hasFullText ? "" : `<p class="fine-print qa-summary-note">※この会議はまだ正式な会議録が公開されていないため、校正原稿から質問・答弁の該当箇所を抜き出して掲載しています。発言の一部のみのため、前後の文脈は公式の会議録をご確認ください。明確な回答が記録されていない発言には、その旨を記載しています。</p>`}
         <div class="committee-session__links">${pillsHtml(session.links, activeSite)}</div>`;
       details.dataset.rendered = "true";
       setupDetailsAccessibility(content);
+      // 全文が会議の中身そのものになったので、開いた時点で読み込んで表示する。
+      const fullText = content.querySelector(".committee-fulltext");
+      if (fullText) {
+        fullText.open = true;
+        renderFullText(fullText);
+      }
     }
 
     // 会議1件分の詳細セクション（タイムライン＋関連する議案・請願・質問）
@@ -1078,13 +1058,20 @@
 
       // 公開済み委員会の質疑・答弁と、会議録公開待ちの台帳
       if (committeeSessions.length > 0 || committeePending.length > 0) {
-        const exchangeCount = committeeSessions.reduce((total, session) =>
+        // 正式会議録が公開されている会議は全文、まだの会議は校正原稿からの抜粋。
+        // 見出しの件数も、全文の会議は発言数で数える。
+        const draftSessions = committeeSessions.filter((session) => !session.hasFullText);
+        const exchangeCount = draftSessions.reduce((total, session) =>
           total + (session.topics || []).reduce((topicTotal, topic) => topicTotal + (topic.exchanges || []).length, 0), 0);
+        const voiceCount = committeeSessions.reduce(
+          (total, session) => total + (session.hasFullText ? (session.sourceMeta || {}).voices || 0 : 0), 0);
         html += recordSectionHtml({
           id: `committee-qa-${meeting.id}`,
           title: "委員会での質疑・答弁",
-          lead: "公式会議録または校正原稿から、質問・確認・意見・要望と答弁・対応を議題別に整理しています。",
-          countLabel: `${committeeSessions.length}会議・${exchangeCount}件${committeePending.length ? `／公開待ち等${committeePending.length}会議` : ""}`,
+          lead: draftSessions.length
+            ? "正式会議録が公開されている会議は、公式会議録の全文をそのまま掲載しています。公開前の会議は校正原稿から質問・答弁を抜き出して掲載しています。"
+            : "公式会議録の全文を、要約せずそのまま掲載しています。",
+          countLabel: `${committeeSessions.length}会議${voiceCount ? `・${voiceCount}発言` : ""}${exchangeCount ? `・抜粋${exchangeCount}件` : ""}${committeePending.length ? `／公開待ち等${committeePending.length}会議` : ""}`,
           content: committeeSessionsHtml(committeeSessions, committeePending),
           open: false
         });
