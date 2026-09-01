@@ -8,13 +8,25 @@
 |---|---|---|---|
 | GitHub Pagesへ公開 | `.github/workflows/pages.yml` | `main`へのpush、手動 | 静的サイトをGitHub Pagesへ公開 |
 | 公開設定の秘密情報チェック | `.github/workflows/check-public-config.yml` | push、pull request | 公開ファイルへ秘密情報が混入していないか検査 |
-| 質問・答弁要約を検査 | `.github/workflows/check-qa-summaries.yml` | 関連ファイルのpush、pull request、手動 | 要約の欠落や機械的な品質問題、会議録全文との整合を検査 |
+| 質問・答弁要約を検査 | `.github/workflows/check-qa-summaries.yml` | 関連ファイルのpush、pull request、手動 | 要約の欠落や機械的な品質問題、会議録全文との整合、発言者と議員の名寄せを検査 |
 | 本会議の会議録全文を作る | `.github/workflows/rebuild-plenary-fulltext.yml` | 手動 | 指定した年の本会議の全文と、質問者から原文への入口を作成 |
 | 品川区ニュースを収集 | `.github/workflows/collect-news.yml` | 3時間ごと、手動 | ニュースを収集し、変更がある場合だけ保存 |
 | 請願・陳情を収集 | `.github/workflows/collect-petitions.yml` | 毎週月曜、手動 | 公式ページから審議状況を取得して台帳を更新 |
 | 町会・自治会区域データを更新 | `.github/workflows/update-chokai.yml` | 毎週月曜、手動 | 町会一覧、境界、プロフィール、KMLを更新 |
 | 委員会質疑を会議録から作り直す | `.github/workflows/rebuild-committees.yml` | 手動 | 指定年の委員会質疑・答弁要約を再生成 |
 | 本会議の質問・答弁を会議録から作り直す | `.github/workflows/rebuild-plenary.yml` | 手動 | 指定した平成年の本会議要約を再生成 |
+
+## 名寄せの検査
+
+`check-qa-summaries.yml`には、発言者と議員の名寄せに関する検査が3つ入っています。
+
+| 手順 | 内容 | 失敗する条件 |
+|---|---|---|
+| 発言者の名寄せを試す | `scripts/test_speaker_resolution.py` | 会議録なしで動く単体試験。日付での任期の切り分け、括弧＝名の先頭1文字、落選を挟む議員が空白期間で候補から外れることを見る |
+| 発言者の名寄せを検査する | `scripts/check_speaker_resolution.py --strict` | **未解決が1件でもあれば失敗。** 上書き表の議員IDの打ち間違い、在職していない人を指す行でも失敗 |
+| 発言者と議員の対応表が最新か見る | `scripts/build_speaker_members.py --check` | `data/speaker-members.js`が索引層・名簿と食い違っていれば失敗 |
+
+現在は161,816件すべてが解決した状態です。新しい会議録で未解決が出たら（新人議員の当選、同姓の増加など）2番目で止まります。`scripts/speaker-overrides.tsv`に追記するか人物台帳を直したうえで、`python3 scripts/build_speaker_members.py`で対応表を作り直してください。
 
 ## 定期実行の時刻
 

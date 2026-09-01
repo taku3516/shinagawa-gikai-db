@@ -4,11 +4,13 @@
 索引層（`data/<年>-committees-part-NN.js`）の `speaker` を会議の日付ごとに
 拾い、`resolve_speaker` で議員IDに名寄せして、解決率と未解決の一覧を出す。
 
-**この検査はデータを1バイトも変えない。** 索引層に `memberId` を入れるのは
-次の段階で、その前にどこまで自動で解けるか・何が残るかを見るためのもの。
+**索引層には `memberId` を入れない。** 入れると約370ファイルが差分になり容量も
+約4.8MB増えるため、対応表だけを `data/speaker-members.js` に出す方式を採った
+（`build_speaker_members.py`、32KB）。この検査はデータを1バイトも変えず、
+その対応表を作れる状態が保たれているかを見る。
 
     python3 scripts/check_speaker_resolution.py            # 報告するだけ
-    python3 scripts/check_speaker_resolution.py --strict   # 未解決があれば失敗
+    python3 scripts/check_speaker_resolution.py --strict   # 未解決があれば失敗（CIはこちら）
 
 上書き表（`scripts/speaker-overrides.tsv`）に誤りがあるときは、`--strict` の
 有無にかかわらず失敗する。手で書く表なので、打ち間違いを通すと、
