@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-01T14:14:57.584139Z",
+  "generatedAt": "2026-09-01T18:41:04.164973Z",
   "items": [
+    {
+      "id": "b62e32b94defe36818e7",
+      "title": "藤田医科大学での18F-FBPAを用いた特定臨床研究の開始",
+      "summary": "[住友重機械工業株式会社] 住友重機械工業株式会社（本社：東京都品川区、代表取締役社長：渡部敏朗、以下「当社」）は、2024年12月に学校法人藤田学園（愛知県豊明市、理事長：星長 清隆）らと 「BNCT（ホウ素中性子捕捉療法）による深部...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000153.000100192.html",
+      "publishedAt": "2026-09-01T17:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T18:40:37.378572Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "815d4470403d0d0d02c4",
       "title": "一人一人の学びを支え、「読み」や「理解」に寄り添う／光村図書×筑波大学、デジタル教科書の支援機能に関する共同研究を開始",
@@ -111,6 +128,42 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "b5b1ac98cd01202eb056",
+      "title": "Meguro River Night Ambience（メグロ・リバー・ナイト・アンビエンス）",
+      "summary": "2026年9月4日（金）～22日（火・祝） 目黒川沿い遊歩道、五反田ふれあい水辺広場を中心に「Meguro River Night Ambience」 が開催されます。 中心となるのは、アーティスト・國本怜（Ray Kunimoto）によるサウンドインスタレーション《KAZE — body》。風を受けて音を発する“音の彫刻”を載せた船が目黒川を往来し、川辺のサウンド、映像上映、ライブパフォーマンスとともに、都市と自然を「聴く」体験をつくります。イベントの詳しい内容は こちら",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/mrna",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T18:40:37.378572Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "27c5da6936e127864824",
+      "title": "ガイドしながわ「ガイドと歩く 鎌倉古道をたどる大井の歴史さんぽ」",
+      "summary": "2026年10月10日（土）、ガイドしながわによるガイドと歩くしながわとその周辺「鎌倉古道をたどる大井の歴史さんぽ」が開催されます。 縄文の大森貝塚から、中世の寺社、現代の大井町トラックスへ。悠久の大井を巡ります。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/guide-oi",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T18:40:37.378572Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "b2b1d209dda35001ced3",
@@ -7584,7 +7637,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 5,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -7603,7 +7656,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2256, column 53"
+      "message": "not well-formed (invalid token): line 2291, column 53"
     },
     {
       "source": "朝日新聞",
@@ -7684,9 +7737,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
