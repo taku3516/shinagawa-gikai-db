@@ -29,6 +29,11 @@ on:
       - "scripts/test_minutes_fulltext.py"
       - "scripts/prepare_plenary_fulltext.py"
       - "scripts/test_plenary_fulltext.py"
+      - "scripts/resolve_speaker.py"
+      - "scripts/check_speaker_resolution.py"
+      - "scripts/test_speaker_resolution.py"
+      - "scripts/speaker-overrides.tsv"
+      - "scripts/build_speaker_members.py"
       - ".github/workflows/check-qa-summaries.yml"
   pull_request:
     paths:
@@ -44,6 +49,11 @@ on:
       - "scripts/test_minutes_fulltext.py"
       - "scripts/prepare_plenary_fulltext.py"
       - "scripts/test_plenary_fulltext.py"
+      - "scripts/resolve_speaker.py"
+      - "scripts/check_speaker_resolution.py"
+      - "scripts/test_speaker_resolution.py"
+      - "scripts/speaker-overrides.tsv"
+      - "scripts/build_speaker_members.py"
   workflow_dispatch:
 
 permissions:
@@ -82,8 +92,26 @@ jobs:
         # 分かれること、質問者の入口がその議員の質問を指すことを見る
         run: python scripts/test_plenary_fulltext.py
 
+      - name: 発言者の名寄せを試す
+        # 会議録なしで動く。日付で任期を切ること、括弧＝名の先頭1文字、
+        # 落選を挟む議員が空白期間で候補から外れることを見る
+        run: python scripts/test_speaker_resolution.py
+
       - name: 要約を検査する
         run: python scripts/check_qa_summaries.py --by-year --details --limit 3
 
       - name: 会議録全文を検査する
         run: python scripts/check_minutes_fulltext.py --details
+
+      - name: 発言者の名寄せを検査する
+        # 全161,816件が議員IDに解決できる状態を保つ。新しい会議録で未解決が
+        # 出たら（新人議員・同姓の増加など）ここで失敗するので、
+        # scripts/speaker-overrides.tsv に追記するか人物台帳を直す。
+        # 上書き表の議員IDの打ち間違いと、在職していない人を指す行も落とす。
+        run: python scripts/check_speaker_resolution.py --strict
+
+      - name: 発言者と議員の対応表が最新か見る
+        # data/speaker-members.js は索引層と名簿から作る。索引層を作り直したり
+        # 上書き表を足したりしたのに作り直し忘れると、画面の議員ページだけが
+        # 古い対応で動いてしまうので、古ければ失敗させる
+        run: python scripts/build_speaker_members.py --check

@@ -220,6 +220,32 @@
     .committee-topic h4 { margin: 0; color: var(--c-main-dark); font-size: calc(16px * var(--fs)); }
     .committee-topic__agenda { margin: 0 0 12px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .committee-topic__content { border-top: 1px solid var(--c-rule); padding: 14px; }
+    /* ===== 議員で絞った質疑（giin.html から ?member= で来る） ===== */
+    .member-panel { border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px; background: var(--c-card); padding: 18px 20px; margin-bottom: 20px; }
+    .member-panel h2 { margin: 0 0 4px; font-size: calc(20px * var(--fs)); }
+    .member-panel__lead { margin: 0 0 14px; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.8; }
+    .member-panel__bar { position: sticky; top: 60px; z-index: 5; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+      border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-surface-sub); padding: 10px 12px; margin-bottom: 14px; }
+    .member-panel__bar button, .member-panel__bar select { min-height: 36px; border: 1px solid var(--c-border); border-radius: 3px;
+      background: var(--c-card); padding: 6px 12px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; cursor: pointer; }
+    .member-panel__bar button.is-primary { background: var(--c-main); border-color: var(--c-main); color: #fff; }
+    .member-panel__bar button:disabled { opacity: .5; cursor: not-allowed; }
+    .member-panel__count { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
+    .member-panel__warn { border-radius: 3px; background: var(--c-video-bg); border: 1px solid var(--c-video-border);
+      padding: 4px 10px; color: var(--c-ink); font-size: calc(12px * var(--fs)); font-weight: 700; }
+    .member-panel__note { margin: 10px 0 0; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); line-height: 1.7; }
+    .member-session { border-top: 1px solid var(--c-border); padding-top: 12px; margin-top: 12px; }
+    .member-session h3 { margin: 0 0 8px; font-size: calc(15px * var(--fs)); }
+    .member-session h3 .chip { margin-left: 8px; border-radius: 3px; background: var(--c-surface-sub); padding: 2px 8px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); }
+    .member-item { display: flex; gap: 10px; border-left: 3px solid var(--c-main-pale); padding: 8px 0 8px 10px; margin-bottom: 8px; }
+    .member-item input { margin-top: 3px; width: 18px; height: 18px; flex: none; }
+    .member-item dl { display: grid; grid-template-columns: 5em 1fr; gap: 4px 10px; margin: 0; font-size: calc(13px * var(--fs)); }
+    .member-item dt { color: var(--c-main-dark); font-weight: 700; }
+    .member-item dd { margin: 0; color: var(--c-ink-soft); line-height: 1.8; }
+    @media (max-width: 640px) {
+      .member-panel__bar { position: static; }
+      .member-item dl { grid-template-columns: 1fr; }
+    }
     .committee-exchanges { display: grid; gap: 12px; }
     .committee-exchange { border-left: 4px solid var(--c-main); border-radius: 3px; background: var(--c-surface-sub); padding: 14px 16px; }
     .committee-exchange__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
@@ -407,6 +433,8 @@
 
   <!-- データ読み込み（script形式なので file:// のダブルクリックでも動く） -->
   <script src="data/site.js"></script>
+  <script src="data/people.js"></script>
+  <script src="data/speaker-members.js"></script>
   <script src="data/r08.js"></script>
   <script src="data/r08-complete.js"></script>
   <script src="data/r08-committees.js"></script>
@@ -1331,13 +1359,309 @@
     }
 
     // 年データ全体の描画（会議をすべて並べた後、会議録コーナーを必ず最後尾に置く）
+    /* ===== 議員で絞った質疑（giin.html から ?member=&year= で来る） =====
+       委員会は索引層の exchanges を、対応表 data/speaker-members.js の
+       resolveSpeakerMember で絞る（索引層に memberId を入れると約370ファイルが
+       差分になるため、引き当ては画面側で行う）。本会議は questions が元から
+       memberId を持っているのでそのまま使う。
+       両方を同じ形の「グループ」に揃えて、表示・件数・プロンプトを共通にする。 */
+
+    function memberFilterId() {
+      try {
+        return new URLSearchParams(location.search).get("member") || "";
+      } catch (error) {
+        return "";                                   // 古い環境での保険
+      }
+    }
+
+    function memberDisplayName(memberId) {
+      const people = ((window.SHINAGAWA_DB.peopleData || {}).people) || [];
+      const hit = people.find((person) => person.id === memberId);
+      return hit ? hit.name : memberId;
+    }
+
+    function textChars(question, answer) {
+      return String(question || "").length + String(answer || "").length;
+    }
+
+    // 委員会：この年の、この議員の質疑を会議ごとにまとめる
+    function committeeGroups(year, memberId) {
+      const resolve = window.SHINAGAWA_DB.resolveSpeakerMember;
+      if (typeof resolve !== "function") return [];
+      const groups = [];
+      for (const session of year.committeeSessions || []) {
+        const items = [];
+        for (const topic of session.topics || []) {
+          for (const item of topic.exchanges || []) {
+            if (resolve(item.speaker, session.dateIso) !== memberId) continue;
+            items.push({
+              id: item.id,
+              kind: item.kind || "質問",
+              speaker: item.speaker,
+              question: item.question,
+              respondent: item.respondent,
+              answer: item.answer,
+              chars: textChars(item.question, item.answer)
+            });
+          }
+        }
+        if (!items.length) continue;
+        groups.push({
+          key: session.id,
+          date: session.dateIso || "",
+          label: `${session.date}　${session.committee}`,
+          sourceUrl: session.sourceUrl
+            || ((session.links || []).find((link) => /^https?:/.test(String(link.url))) || {}).url || "",
+          items: items
+        });
+      }
+      return groups;
+    }
+
+    // 本会議：questions は元から memberId を持つ。日付は全文の入口（sessionId）から引く。
+    function plenaryGroups(year, memberId) {
+      const minutes = year.plenaryMinutes || [];
+      const groups = [];
+      for (const question of year.questions || []) {
+        if (question.memberId !== memberId) continue;
+        const summaries = question.qaSummaries || [];
+        if (!summaries.length) continue;
+        const meeting = (year.meetings || []).find((m) => m.id === question.meetingId);
+        const day = question.fullText
+          ? minutes.find((m) => m.id === question.fullText.sessionId)
+          : null;
+        groups.push({
+          key: `${question.meetingId}-${memberId}`,
+          date: (day && day.dateIso) || "",
+          label: `${meeting ? meeting.name : question.meetingId}　${question.kind || "質問"}`,
+          sourceUrl: (day && day.sourceUrl)
+            || ((question.links || []).find((link) => /^https?:/.test(String(link.url))) || {}).url || "",
+          items: summaries.map((summary, index) => ({
+            id: `qa-${index}`,
+            kind: summary.title || question.kind || "質問",
+            speaker: question.member,
+            question: summary.question,
+            respondent: "",
+            answer: summary.answer,
+            chars: textChars(summary.question, summary.answer)
+          }))
+        });
+      }
+      return groups;
+    }
+
+    // 本会議と委員会を日付の新しい順に並べる。日付が取れないものは末尾へ。
+    function collectMemberGroups(year, memberId) {
+      const groups = plenaryGroups(year, memberId).concat(committeeGroups(year, memberId));
+      return groups.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+    }
+
+    // AIに渡す聞き方。会議録は公文書なので、推測で補わせない指示を必ず添える。
+    const MEMBER_PROMPT_PRESETS = [
+      { id: "summary", label: "要約する",
+        instruction: "会議ごとに見出しを立て、「何を聞き、区が何と答えたか」を1件ずつ簡潔にまとめてください。"
+          + "質問と答弁がかみ合っていない場合は、その旨も書いてください。" },
+      { id: "stance", label: "区の回答を仕分ける",
+        instruction: "答弁を次の4つに仕分けて、それぞれ箇条書きで挙げてください。"
+          + "(1) 実施する・約束した (2) 検討する・持ち帰ると述べた (3) 実施しないと述べた "
+          + "(4) 質問に正面から答えていない。判断の根拠となる答弁の文言を必ず引用してください。" },
+      { id: "plain", label: "やさしく説明する",
+        instruction: "区政に詳しくない人に向けて説明してください。行政用語（所管・スキーム・附帯決議など）は"
+          + "そのつど言い換え、この質疑が区民の暮らしのどこに関わるのかを一言添えてください。" },
+      { id: "timeline", label: "経過を追う",
+        instruction: "同じ論点が複数の会議で取り上げられているものを選び、日付順に並べて、"
+          + "区の答弁がどう変わったか（進んだ・変わらない・後退した）を示してください。"
+          + "1回しか出てこない論点は除いてください。" },
+      { id: "followup", label: "次に聞くべきことを挙げる",
+        instruction: "答弁で明らかにならなかった点を挙げ、次の委員会で確認すべき質問案を作ってください。"
+          + "なぜその点が未解明なのか、根拠となる答弁を引用して示してください。" }
+    ];
+
+    function buildMemberPrompt(memberId, groups, presetId) {
+      const preset = MEMBER_PROMPT_PRESETS.find((p) => p.id === presetId) || MEMBER_PROMPT_PRESETS[0];
+      const lines = [
+        "以下は東京都品川区議会の会議録から取り出した、" + memberDisplayName(memberId) + "議員の質疑応答です。",
+        "",
+        preset.instruction,
+        "",
+        "次の点を必ず守ってください。",
+        // 委員会の答弁は平均91字しかなく、文の途中で切れているものが多い。
+        // これを伝えないと、切れた文から結論を読み取られてしまう。
+        "・各項目は会議録の全文ではありません。委員会分は答弁から要点を含む文を抜き出したもので、"
+          + "文が途中で切れていることがあります。本会議分は要約です。",
+        "・切れていて判断できない箇所は、無理に補わず「この抜粋では判断できない」と書いてください。",
+        "・記載のない事項は推測で補わず「記載なし」としてください。",
+        "・引用するときは会議名と日付を添えてください。出典URLは各会議の見出しの下にあります。",
+        ""
+      ];
+      for (const group of groups) {
+        lines.push("## " + group.label);
+        if (group.sourceUrl) lines.push("出典: " + group.sourceUrl);
+        for (const item of group.items) {
+          lines.push("");
+          lines.push("【" + item.kind + "】" + (item.speaker || ""));
+          lines.push("Q: " + item.question);
+          lines.push("A: " + (item.respondent ? item.respondent + " " : "") + item.answer);
+        }
+        lines.push("");
+      }
+      return lines.join("\n");
+    }
+
+    function memberPanelHtml(year, memberId) {
+      const name = memberDisplayName(memberId);
+      const groups = collectMemberGroups(year, memberId);
+      const total = groups.reduce((sum, group) => sum + group.items.length, 0);
+      const chars = groups.reduce((sum, group) =>
+        sum + group.items.reduce((n, item) => n + item.chars, 0), 0);
+
+      if (total === 0) {
+        return `<div class="member-panel">
+          <h2>${esc(name)}議員の質疑</h2>
+          <p class="member-panel__lead">${esc(year.label)}では、この議員の質疑が見つかりませんでした。
+          年を切り替えるか、<a href="giin.html#member-${esc(memberId)}">議員名簿</a>から年度を選び直してください。</p>
+        </div>`;
+      }
+
+      let body = "";
+      for (const group of groups) {
+        body += `<div class="member-session">
+          <h3>${esc(group.label)}<span class="chip">${group.items.length}件</span></h3>`;
+        for (const item of group.items) {
+          const id = `${group.key}-${item.id}`;
+          body += `<label class="member-item" for="mq-${esc(id)}">
+            <input type="checkbox" id="mq-${esc(id)}" data-mq="${esc(group.key)}" data-mq-item="${esc(item.id)}"
+                   data-mq-chars="${item.chars}"${group === groups[0] ? " checked" : ""} />
+            <dl>
+              <dt>質問</dt><dd>${esc(item.question)}</dd>
+              <dt>答弁</dt><dd>${esc(item.respondent || "")}　${esc(item.answer)}</dd>
+            </dl>
+          </label>`;
+        }
+        body += `</div>`;
+      }
+
+      const options = MEMBER_PROMPT_PRESETS
+        .map((preset) => `<option value="${esc(preset.id)}">${esc(preset.label)}</option>`).join("");
+      return `<div class="member-panel" data-member-panel="${esc(memberId)}">
+        <h2>${esc(name)}議員の質疑</h2>
+        <p class="member-panel__lead">${esc(year.label)}の本会議・委員会から${total}件（約${chars.toLocaleString()}字）。
+          選んだ質疑を、お使いの生成AIに貼り付けて要約させることができます。
+          はじめは直近の会議だけを選んであります。</p>
+        <div class="member-panel__bar">
+          <button type="button" data-mq-all>全部選ぶ</button>
+          <button type="button" data-mq-none>選択を外す</button>
+          <span class="member-panel__count" data-mq-count></span>
+          <span class="member-panel__warn" data-mq-warn hidden></span>
+          <select data-mq-preset aria-label="AIへの聞き方">${options}</select>
+          <button type="button" class="is-primary" data-mq-copy>プロンプトをコピー</button>
+          <a class="pill" data-mq-open="chatgpt" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPTを開く</a>
+          <a class="pill" data-mq-open="claude" href="https://claude.ai/new" target="_blank" rel="noopener">Claudeを開く</a>
+          <a class="pill" data-mq-open="gemini" href="https://gemini.google.com/app" target="_blank" rel="noopener">Geminiを開く</a>
+        </div>
+        ${body}
+        <p class="member-panel__note">AIによる要約は誤りを含むことがあります。必ず会議録の原文をご確認ください。
+        掲載しているのは会議録から抜き出した質問・答弁で、発言の全文ではありません。</p>
+      </div>`;
+    }
+
+    // AIに一度で渡せる目安。超えると、多くのサービスで黙って切り詰められ、
+    // 「前半だけ読んだ要約」が全体の要約として返ってくる。件数を減らすよう促す。
+    const MEMBER_PROMPT_LIMIT = 20000;
+
+    // 選択状態に応じて件数・文字数を出し、コピーの中身を組み立て直す
+    function setupMemberPanel(year, memberId) {
+      const panel = document.querySelector("[data-member-panel]");
+      if (!panel) return;
+      const groups = collectMemberGroups(year, memberId);
+      const countLabel = panel.querySelector("[data-mq-count]");
+      const warnLabel = panel.querySelector("[data-mq-warn]");
+      const copyButton = panel.querySelector("[data-mq-copy]");
+      const presetSelect = panel.querySelector("[data-mq-preset]");
+      const boxes = () => Array.from(panel.querySelectorAll("input[data-mq]"));
+
+      function selectedGroups() {
+        const chosen = new Set(boxes().filter((box) => box.checked)
+          .map((box) => `${box.dataset.mq}\t${box.dataset.mqItem}`));
+        return groups
+          .map((group) => ({
+            label: group.label,
+            sourceUrl: group.sourceUrl,
+            items: group.items.filter((item) => chosen.has(`${group.key}\t${item.id}`))
+          }))
+          .filter((group) => group.items.length > 0);
+      }
+
+      function currentPrompt() {
+        return buildMemberPrompt(memberId, selectedGroups(), presetSelect.value);
+      }
+
+      function refresh() {
+        const chosen = boxes().filter((box) => box.checked);
+        const chars = chosen.reduce((sum, box) => sum + Number(box.dataset.mqChars || 0), 0);
+        countLabel.textContent = `選択 ${chosen.length}件・約${chars.toLocaleString()}字`;
+        copyButton.disabled = chosen.length === 0;
+        if (chars > MEMBER_PROMPT_LIMIT) {
+          warnLabel.hidden = false;
+          warnLabel.textContent = `長すぎます（目安 ${MEMBER_PROMPT_LIMIT.toLocaleString()}字）。`
+            + "AI側で途中まで読んだ要約が返ることがあります。会議を絞ってください。";
+        } else {
+          warnLabel.hidden = true;
+        }
+        // 日本語はURLに入れると1文字が9文字に膨らむ。長いものは貼り付けでしか渡せない。
+        const short = chars > 0 && chars <= 800;
+        const prompt = short ? encodeURIComponent(currentPrompt()) : "";
+        panel.querySelectorAll("[data-mq-open]").forEach((link) => {
+          const service = link.dataset.mqOpen;
+          if (service === "chatgpt") link.href = short ? `https://chatgpt.com/?q=${prompt}` : "https://chatgpt.com/";
+          else if (service === "claude") link.href = short ? `https://claude.ai/new?q=${prompt}` : "https://claude.ai/new";
+          else link.href = "https://gemini.google.com/app";   // Geminiは事前入力の仕様が公開されていない
+          link.title = short ? "選んだ質疑を渡して開きます" : "先にコピーしてから貼り付けてください";
+        });
+      }
+
+      panel.addEventListener("change", (event) => {
+        if (event.target.matches("input[data-mq]") || event.target.matches("[data-mq-preset]")) refresh();
+      });
+      panel.querySelector("[data-mq-all]").addEventListener("click", () => {
+        boxes().forEach((box) => { box.checked = true; });
+        refresh();
+      });
+      panel.querySelector("[data-mq-none]").addEventListener("click", () => {
+        boxes().forEach((box) => { box.checked = false; });
+        refresh();
+      });
+      copyButton.addEventListener("click", async () => {
+        const text = currentPrompt();
+        try {
+          await navigator.clipboard.writeText(text);
+          copyButton.textContent = "コピーしました";
+        } catch (error) {
+          // clipboard は https か localhost でしか使えない。file:// 用の逃げ道。
+          const area = document.createElement("textarea");
+          area.value = text;
+          area.style.position = "fixed";
+          area.style.opacity = "0";
+          document.body.appendChild(area);
+          area.select();
+          const ok = document.execCommand("copy");
+          document.body.removeChild(area);
+          copyButton.textContent = ok ? "コピーしました" : "コピーできません";
+        }
+        setTimeout(() => { copyButton.textContent = "プロンプトをコピー"; }, 2000);
+      });
+      refresh();
+    }
+
     function renderYear(year, site) {
       activeYear = year;
       activeSite = site;
       renderHero(site);
       renderYearOverview(year, site);
 
+      const memberId = memberFilterId();
       let html = `<div class="container accordion-list">`;
+      if (memberId) html += memberPanelHtml(year, memberId);
       for (const meeting of orderedMeetings(year)) {
         if (hasMeetingDetails(meeting, year)) {
           html += meetingSectionHtml(meeting, year, site);
@@ -1348,6 +1672,7 @@
 
       document.getElementById("detail-root").innerHTML = html;
       setupAccordions();
+      if (memberId) setupMemberPanel(year, memberId);
       renderFooter(site, year);
     }
 
@@ -1403,10 +1728,18 @@
       sel.addEventListener("change", () => showYear(sel.value));
       window.addEventListener("hashchange", showHashTarget);
 
-      // 会議アンカーが指定されていれば、その会議が属する年を最初に表示する
+      // 会議アンカーが指定されていれば、その会議が属する年を最初に表示する。
+      // 議員名簿から ?member=&year= で来た場合はその年を開く。
       const hashId = decodedHashId();
       const hashYear = site.years.find((y) => hashBelongsToYear(hashId, y.id) && y.available);
-      await showYear(hashYear ? hashYear.id : site.defaultYear);
+      let requestedYear = "";
+      try {
+        requestedYear = new URLSearchParams(location.search).get("year") || "";
+      } catch (error) {
+        requestedYear = "";
+      }
+      const queryYear = site.years.find((y) => y.id === requestedYear && y.available);
+      await showYear((hashYear || queryYear || { id: site.defaultYear }).id);
       await openAccordionForHash(true);
     }
 
