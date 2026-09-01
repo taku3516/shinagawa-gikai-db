@@ -6,88 +6,66 @@
   <meta name="theme-color" content="#0017c1" />
   <title>政務活動費 | 品川区議会DB</title>
   <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
-    body {
-      margin: 0; background: var(--c-bg); color: var(--c-ink);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-      overflow-wrap: break-word;
-    }
-    a { color: var(--c-main-dark); font-weight: 700; text-underline-offset: 3px; }
-    a:hover { text-decoration-thickness: 2px; }
-    button, input, select { font: inherit; }
     /* フォーカスリングは site-theme.css で全ページ共通に定義している */
-    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-    .hero {
-      padding: 40px 0 28px; border-top: 6px solid var(--c-main); border-bottom: 1px solid var(--c-rule);
-      background: var(--c-card);
-    }
-    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
-    h1 { margin: 0 0 12px; color: var(--c-main-dark); font-size: clamp(30px, 5vw, 50px); line-height: 1.12; }
-    .lead { max-width: 840px; margin: 0; color: var(--c-ink-soft); font-size: 16px; line-height: 1.9; }
     .notice {
       margin-top: 18px; padding: 14px 16px; border: 1px solid var(--c-border); border-left: 4px solid var(--c-main);
-      border-radius: 3px; background: var(--c-surface-sub); font-size: 13px; line-height: 1.8;
+      border-radius: 3px; background: var(--c-surface-sub); font-size: calc(13px * var(--fs)); line-height: 1.8;
     }
     main > section { padding: 32px 0 52px; }
     .overview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 24px; }
     .overview-card {
-      border: 1px solid var(--c-border); border-top: 4px solid var(--c-main); border-radius: 4px;
+      border: 1px solid var(--c-border); border-top: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 16px;
     }
-    .overview-card strong { display: block; margin-bottom: 5px; color: var(--c-main-dark); font-size: 19px; }
-    .overview-card span { color: var(--c-ink-soft); font-size: 13px; line-height: 1.7; }
+    .overview-card strong { display: block; margin-bottom: 5px; color: var(--c-main-dark); font-size: calc(19px * var(--fs)); }
+    .overview-card span { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.7; }
     .rules {
-      margin-bottom: 24px; border: 1px solid var(--c-expense-border); border-left: 4px solid var(--c-expense);
-      border-radius: 4px; background: var(--c-expense-pale); padding: 16px;
+      margin-bottom: 24px; border: 1px solid var(--c-expense-border); border-left: 4px solid var(--c-main);
+      border-radius: 3px; background: var(--c-expense-pale); padding: 16px;
     }
-    .rules h2 { margin: 0 0 8px; font-size: 18px; }
-    .rules p { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.8; }
+    .rules h2 { margin: 0 0 8px; font-size: calc(18px * var(--fs)); }
+    .rules p { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.8; }
     .rule-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .controls {
       display: grid; grid-template-columns: minmax(190px, 280px) minmax(240px, 1fr); gap: 10px;
-      margin-bottom: 18px; padding: 14px; border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card);
+      margin-bottom: 18px; padding: 14px; border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
     }
-    .field { display: grid; gap: 5px; }
-    .field label { color: var(--c-ink-soft); font-size: 12px; font-weight: 800; }
-    .field select, .field input {
-      width: 100%; min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px;
-      background: #fff; padding: 8px 11px; color: var(--c-ink); font-size: 16px;
-    }
-    .status-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 12px; color: var(--c-ink-soft); font-size: 13px; }
+    .status-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-bottom: 12px; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); }
     .year-card { margin-bottom: 20px; scroll-margin-top: 16px; }
     .year-heading { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: baseline; margin: 0 0 10px; }
-    .year-heading h2 { margin: 0; color: var(--c-main-dark); font-size: 25px; }
+    .year-heading h2 { margin: 0; color: var(--c-main-dark); font-size: calc(25px * var(--fs)); }
     .count-badge {
       display: inline-flex; border-radius: 999px; background: var(--c-main-pale); padding: 3px 10px;
-      color: var(--c-main-dark); font-size: 12px; font-weight: 800;
+      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700;
     }
     .period-card {
-      margin-bottom: 12px; border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card);
+      margin-bottom: 12px; border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
       scroll-margin-top: 16px; overflow: hidden;
     }
     .period-card > summary {
       display: flex; min-height: 58px; align-items: center; gap: 10px; padding: 12px 16px;
-      color: var(--c-main-dark); font-weight: 900; cursor: pointer; list-style: none;
+      color: var(--c-main-dark); font-weight: 700; cursor: pointer; list-style: none;
     }
     .period-card > summary::-webkit-details-marker { display: none; }
-    .period-card > summary::before { content: "＋"; flex: 0 0 auto; width: 1.25em; font-size: 18px; }
+    .period-card > summary::before { content: "＋"; flex: 0 0 auto; width: 1.25em; font-size: calc(18px * var(--fs)); }
     .period-card[open] > summary::before { content: "−"; }
     .period-card > summary:hover { background: var(--c-main-pale); }
     .period-summary { display: flex; flex: 1 1 auto; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; align-items: baseline; }
-    .period-summary small { color: var(--c-ink-soft); font-size: 12px; }
+    .period-summary small { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); }
     .period-body { border-top: 1px solid var(--c-border); padding: 16px; }
     .document-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
     .doc-link {
       display: inline-flex; min-height: 42px; align-items: center; justify-content: center;
       border: 1px solid var(--c-border); border-radius: 3px; background: #fff; padding: 7px 11px;
-      color: var(--c-main-dark); font-size: 12px; font-weight: 800; text-align: center;
+      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700; text-align: center;
     }
     .doc-link--primary { border-color: var(--c-main); background: var(--c-main); color: #fff; }
     .doc-link--source { background: var(--c-main-pale); }
@@ -97,17 +75,12 @@
       border-top: 1px solid var(--c-rule); padding: 12px 0; scroll-margin-top: 18px;
     }
     .recipient:first-child { border-top: 0; }
-    .recipient-name { margin: 0; font-size: 14px; line-height: 1.6; }
-    .recipient-name span { display: inline-flex; margin-right: 7px; color: var(--c-ink-soft); font-size: 11px; }
+    .recipient-name { margin: 0; font-size: calc(14px * var(--fs)); line-height: 1.6; }
+    .recipient-name span { display: inline-flex; margin-right: 7px; color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); }
     .recipient-docs { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
     .empty {
-      border: 1px dashed var(--c-border); border-radius: 4px; background: var(--c-card);
+      border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-card);
       padding: 34px 18px; color: var(--c-ink-soft); text-align: center; line-height: 1.8;
-    }
-    .fine-print { margin: 18px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }
-    footer {
-      padding: 30px 0; border-top: 1px solid var(--c-border); background: var(--c-main-dark);
-      color: #fff; text-align: center; font-size: 13px; line-height: 1.8;
     }
     @media (max-width: 720px) {
       .overview-grid, .controls { grid-template-columns: 1fr; }
