@@ -585,17 +585,40 @@
     }
 
     // タイムラインまたは関連情報を持つ会議だけ詳細を表示する
+    // その会議に属する本会議の全文（開催日ごと）
+    function plenaryDaysOf(meetingId, year) {
+      return ((year || {}).plenaryMinutes || [])
+        .filter((day) => day.meetingId === meetingId && day.hasFullText);
+    }
+
+    // 会議録の表題から会議の名前を作る。
+    // 「2006年1月17日 平成18年_第１回臨時会（第１日目）」→「平成18年第1回臨時会」
+    // 目次が meetingName を持っていればそれを使う（作り直したあとのデータ用）。
+    const PLENARY_MEETING_NAME = /([^\s_（]+年)_(第[０-９0-9]+回(?:定例会|臨時会))/;
+    const ZENKAKU_DIGITS = "０１２３４５６７８９";
+    function plenaryMeetingName(day) {
+      if (day.meetingName) return day.meetingName;
+      const found = PLENARY_MEETING_NAME.exec(day.title || "");
+      if (!found) return "";
+      return (found[1] + found[2]).replace(/[０-９]/g, (c) => String(ZENKAKU_DIGITS.indexOf(c)));
+    }
+
     function hasMeetingDetails(meeting, year) {
       const related = relatedItems(meeting, year);
       return (meeting.events && meeting.events.length > 0) ||
         related.bills.length > 0 || related.petitions.length > 0 || related.questions.length > 0 ||
-        related.committeeSessions.length > 0 || related.committeePending.length > 0;
+        related.committeeSessions.length > 0 || related.committeePending.length > 0 ||
+        // 臨時会は議案も質問も載っていないことがある。全文だけがある会議を
+        // ここで落とすと、データはあるのに画面から到達できなくなる。
+        plenaryDaysOf(meeting.id, year).length > 0;
     }
 
     // 折りたたみ見出しに表示する件数
-    function meetingCountsHtml(meeting, related) {
+    function meetingCountsHtml(meeting, related, year) {
       const counts = [];
       if (meeting.events && meeting.events.length > 0) counts.push(`日程 ${meeting.events.length}件`);
+      const plenaryDays = plenaryDaysOf(meeting.id, year).length;
+      if (plenaryDays > 0) counts.push(`本会議の全文 ${plenaryDays}日`);
       if (related.bills.length > 0) counts.push(`議案 ${related.bills.length}件`);
       if (related.petitions.length > 0) counts.push(`請願・陳情 ${related.petitions.length}件`);
       if (related.questions.length > 0) counts.push(`質問者 ${related.questions.length}名`);
@@ -1045,7 +1068,7 @@
               <span class="meeting-accordion__title">${esc(meeting.name)}</span>
             </span>
             <span class="meeting-accordion__summary">${esc(meeting.summary)}</span>
-            ${meetingCountsHtml(meeting, related)}
+            ${meetingCountsHtml(meeting, related, year)}
           </span>
           <span class="meeting-accordion__icon" aria-hidden="true"></span>
         </summary>
@@ -1104,8 +1127,7 @@
       }
 
       // 本会議の会議録全文（開催日ごと）
-      const plenaryDays = (year.plenaryMinutes || [])
-        .filter((day) => day.meetingId === meeting.id && day.hasFullText);
+      const plenaryDays = plenaryDaysOf(meeting.id, year);
       if (plenaryDays.length > 0) {
         const characters = plenaryDays.reduce((total, day) => total + (day.characters || 0), 0);
         html += recordSectionHtml({
@@ -1135,6 +1157,45 @@
 
       html += `</div></section></div></details>`;
       return html;
+    }
+
+    // 年データに会議として載っていない本会議を、全文だけの開閉として出す。
+    // 臨時会は議案・質問の一覧が公式サイトに無いため、年データにも入って
+    // いない年が多い。会議録は公開されているので、全文はここから読める。
+    function orphanPlenaryHtml(year, shown) {
+      const groups = new Map();
+      for (const day of (year.plenaryMinutes || [])) {
+        if (!day.hasFullText || shown.has(day.meetingId)) continue;
+        const key = day.meetingId || day.dateIso;
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(day);
+      }
+      if (groups.size === 0) return "";
+      return [...groups.entries()].map(([key, days]) => {
+        const characters = days.reduce((total, day) => total + (day.characters || 0), 0);
+        const name = plenaryMeetingName(days[0]) || key;
+        return `<details class="meeting-accordion" id="meeting-${esc(key)}">
+          <summary>
+            <span>
+              <span class="meeting-accordion__heading">
+                <span class="chip">本会議</span>
+                <span class="meeting-accordion__title">${esc(name)}</span>
+              </span>
+              <span class="meeting-accordion__summary">会議録の全文を掲載しています。</span>
+              <span class="meeting-accordion__counts"><span class="meeting-accordion__count">${
+                esc(`本会議の全文 ${days.length}日`)}</span><span class="meeting-accordion__count">${
+                esc(`約${Math.max(1, Math.round(characters / 10000))}万字`)}</span></span>
+            </span>
+            <span class="meeting-accordion__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="meeting-accordion__content"><section><div class="container">
+            <h2>${esc(name)}</h2>
+            <p class="section-lead">公式の正式会議録を、開催日ごとに全文そのまま掲載しています。
+              議案・質問の一覧は公式サイトに掲載がないため、この会議は全文のみの掲載です。</p>
+            ${plenaryFullTextHtml(days)}
+          </div></section></div>
+        </details>`;
+      }).join("");
     }
 
     // 会議録（議事録）コーナー
@@ -1662,11 +1723,17 @@
       const memberId = memberFilterId();
       let html = `<div class="container accordion-list">`;
       if (memberId) html += memberPanelHtml(year, memberId);
+      const shown = new Set();
       for (const meeting of orderedMeetings(year)) {
         if (hasMeetingDetails(meeting, year)) {
           html += meetingSectionHtml(meeting, year, site);
+          shown.add(meeting.id);
         }
       }
+      // 年データに載っていない本会議（臨時会がほとんど）。会議録には全文が
+      // あるので、会議録の表題から見出しを作って出す。ここが無いと、平成の
+      // 臨時会が画面から到達できない。
+      html += orphanPlenaryHtml(year, shown);
       if (year.minutes) html += minutesSectionHtml(year.minutes, site);
       html += `</div>`;
 
