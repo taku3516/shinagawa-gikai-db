@@ -22,7 +22,7 @@
     .warn strong { color: var(--c-seigan); }
     h2.section-title { margin: 0 0 14px; font-size: calc(20px * var(--fs)); border-left: 5px solid var(--c-seigan); padding-left: 12px; }
     /* 制度の説明 */
-    .about { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); padding: 20px; margin-bottom: 26px; }
+    .about { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 20px; margin-bottom: 26px; }
     .about h3 { margin: 0 0 6px; font-size: calc(15px * var(--fs)); }
     .about p { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.9; }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -34,9 +34,9 @@
     .stat strong { display: block; color: var(--c-seigan); font-size: calc(26px * var(--fs)); line-height: 1.2; }
     .stat span { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     /* 絞り込み */
-    .filters { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); padding: 16px 18px; margin-bottom: 20px; }
+    .filters { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 16px 18px; margin-bottom: 20px; }
     .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px 14px; }
-    .filter label { display: block; margin-bottom: 5px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 800; }
+    .filter label { display: block; margin-bottom: 5px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     /* 16px未満だとiOSがフォーカス時に画面を自動ズームするため16pxにする */
     .filter select, .filter input {
       width: 100%; min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px; background: #fff;
@@ -45,10 +45,10 @@
     .filter-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 14px; }
     .filter-actions button {
       min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px; background: #fff;
-      padding: 8px 16px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800; cursor: pointer;
+      padding: 8px 16px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; cursor: pointer;
     }
     .filter-actions button:hover { background: var(--c-main-pale); }
-    .hit-count { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 800; }
+    .hit-count { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
     /* 一覧 */
     .list { display: grid; gap: 10px; }
     .petition {
@@ -56,13 +56,13 @@
       border-radius: 3px; background: var(--c-card); padding: 14px 16px; scroll-margin-top: 16px;
     }
     .petition__head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
-    .petition__number { color: var(--c-seigan); font-size: calc(13px * var(--fs)); font-weight: 900; }
+    .petition__number { color: var(--c-seigan); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .petition h3 { margin: 7px 0 6px; font-size: calc(16px * var(--fs)); line-height: 1.6; }
     .petition h3 a { color: var(--c-ink); }
     .petition__meta { margin: 0; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); line-height: 1.9; }
     .tag {
       display: inline-flex; align-items: center; border: 1px solid var(--c-none-border); border-radius: 3px;
-      background: var(--c-none-bg); padding: 2px 8px; color: var(--c-none); font-size: calc(11px * var(--fs)); font-weight: 800;
+      background: var(--c-none-bg); padding: 2px 8px; color: var(--c-none); font-size: calc(11px * var(--fs)); font-weight: 700;
     }
     .tag[data-result="採択"], .tag[data-result="趣旨採択"] { border-color: var(--c-pass-border); background: var(--c-pass-bg); color: var(--c-pass); }
     .tag[data-result="不採択"] { border-color: var(--c-fail-border); background: var(--c-fail-bg); color: var(--c-fail); }
@@ -72,15 +72,15 @@
     .more-row { margin-top: 16px; text-align: center; }
     .more-row button {
       min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
-      padding: 11px 22px; color: var(--c-main-dark); font-size: calc(14px * var(--fs)); font-weight: 800; cursor: pointer;
+      padding: 11px 22px; color: var(--c-main-dark); font-size: calc(14px * var(--fs)); font-weight: 700; cursor: pointer;
     }
     /* 個別表示 */
-    .detail { border: 1px solid var(--c-border); border-top: 4px solid var(--c-seigan); border-radius: 4px; background: var(--c-card); padding: 24px; }
+    .detail { border: 1px solid var(--c-border); border-top: 4px solid var(--c-seigan); border-radius: 3px; background: var(--c-card); padding: 24px; }
     .detail__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .detail h2 { margin: 10px 0 14px; font-size: calc(clamp(20px, 3.4vw, 28px) * var(--fs)); line-height: 1.5; }
     .detail h3 { margin: 26px 0 10px; font-size: calc(16px * var(--fs)); border-left: 4px solid var(--c-seigan); padding-left: 10px; }
     .facts { display: grid; grid-template-columns: 9em 1fr; gap: 8px 14px; margin: 0; }
-    .facts dt { color: var(--c-seigan); font-size: calc(13px * var(--fs)); font-weight: 800; }
+    .facts dt { color: var(--c-seigan); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .facts dd { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
     .timeline { border-left: 3px solid var(--c-seigan-border); margin-left: 6px; padding-left: 16px; display: grid; gap: 14px; }
     .timeline-item { position: relative; }
@@ -96,7 +96,7 @@
     .pill {
       display: inline-flex; align-items: center; min-height: 44px; margin: 8px 6px 0 0;
       border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
-      padding: 6px 12px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800;
+      padding: 6px 12px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700;
     }
     .pill--seigan { border-color: var(--c-seigan-border); background: var(--c-seigan-bg); color: var(--c-seigan); }
     .note-box {

@@ -33,7 +33,7 @@
       padding: 11px 15px;
       border: 1px solid var(--c-border);
       border-left: 4px solid var(--c-main);
-      border-radius: 4px;
+      border-radius: 3px;
       background: var(--c-card);
       font-size: calc(13px * var(--fs));
       line-height: 1.7;
@@ -54,7 +54,7 @@
       width: 100%;
       min-height: 48px;
       border: 1px solid var(--c-border);
-      border-radius: 4px;
+      border-radius: 3px;
       background: var(--c-card);
       padding: 11px 48px 11px 14px;
       color: var(--c-ink);
@@ -78,12 +78,12 @@
     #sort-order {
       min-height: 48px;
       border: 1px solid var(--c-border);
-      border-radius: 4px;
+      border-radius: 3px;
       background: var(--c-card);
       padding: 9px 34px 9px 12px;
       color: var(--c-ink);
       font-size: calc(14px * var(--fs));
-      font-weight: 800;
+      font-weight: 700;
     }
     /* 大分類の絞り込みは site-controls.css の .chips（件数付きチップ）。
        「すべて」を含む絞り込みなので、排他セグメント（.seg）ではなくチップを使う */
@@ -95,7 +95,7 @@
       min-height: 36px;
       color: var(--c-main-dark);
       font-size: calc(13px * var(--fs));
-      font-weight: 800;
+      font-weight: 700;
       cursor: pointer;
     }
     .filter-panel summary::after { content: "▾"; margin-left: 7px; }
@@ -107,11 +107,11 @@
       margin-top: 8px;
       padding: 12px;
       border: 1px solid var(--c-border);
-      border-radius: 4px;
+      border-radius: 3px;
       background: var(--c-card);
     }
     .filter-field { display: grid; gap: 4px; }
-    .filter-field label { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 800; }
+    .filter-field label { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .filter-field select {
       width: 100%;
       min-height: 42px;
@@ -132,7 +132,7 @@
       color: var(--c-main-dark);
       padding: 8px 12px;
       font-size: calc(13px * var(--fs));
-      font-weight: 800;
+      font-weight: 700;
     }
     .content-section { padding: 22px 0 52px; }
     .status-row {
@@ -143,18 +143,18 @@
       gap: 8px;
       margin-bottom: 12px;
     }
-    #hit { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 800; }
+    #hit { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .loading-status {
       color: var(--c-main-dark);
       font-size: calc(12px * var(--fs));
-      font-weight: 800;
+      font-weight: 700;
     }
     .loading-status[hidden] { display: none; }
     .rows { display: grid; gap: 11px; }
     .hitrow {
       border: 1px solid var(--c-border);
       border-left: 4px solid var(--c-main);
-      border-radius: 4px;
+      border-radius: 3px;
       background: var(--c-card);
       padding: 15px 17px;
     }
@@ -163,7 +163,7 @@
        色数だけが増えていた。カテゴリはバッジの文字が示すので、
        左罫はすべてキーカラーに統一する */
     .hitrow h2 { margin: 1px 0 7px; font-size: calc(17px * var(--fs)); line-height: 1.55; }
-    .meta { margin: 0 0 7px; color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 800; line-height: 1.6; }
+    .meta { margin: 0 0 7px; color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700; line-height: 1.6; }
     .summary { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.75; }
     .qa-summary {
       display: grid;
@@ -173,7 +173,7 @@
       font-size: calc(13px * var(--fs));
       line-height: 1.75;
     }
-    .qa-summary dt { color: var(--c-main-dark); font-weight: 800; }
+    .qa-summary dt { color: var(--c-main-dark); font-weight: 700; }
     .qa-summary dd { margin: 0; color: var(--c-ink-soft); }
     .badges { margin-bottom: 5px; }
     .badge {
@@ -184,7 +184,7 @@
       padding: 3px 9px;
       color: var(--c-main-dark);
       font-size: calc(11px * var(--fs));
-      font-weight: 800;
+      font-weight: 700;
     }
     .badge--year { background: var(--c-surface-sub); color: var(--c-ink-soft); }
     .badge--result { background: var(--c-result-bg); color: var(--c-result-text); }
@@ -203,17 +203,17 @@
       padding: 6px 11px;
       color: var(--c-main-dark);
       font-size: calc(12px * var(--fs));
-      font-weight: 800;
+      font-weight: 700;
     }
     /* 出典・議事録は標準のリンク見た目、録画だけ映像とわかるライトブルーにする */
     .pill--source, .pill--minutes {
       border-color: var(--c-minutes-border); background: var(--c-minutes-bg); color: var(--c-minutes-text);
     }
     .pill--video { border-color: var(--c-video-border); background: var(--c-video-bg); color: var(--c-video-text); }
-    mark { border-radius: 2px; background: var(--c-highlight); color: inherit; padding: 0 .08em; }
+    mark { border-radius: 3px; background: var(--c-highlight); color: inherit; padding: 0 .08em; }
     .guide {
       border: 1px dashed var(--c-border);
-      border-radius: 4px;
+      border-radius: 3px;
       background: rgba(255, 255, 255, 0.72);
       padding: 28px 20px;
       color: var(--c-ink-soft);
@@ -232,15 +232,15 @@
       min-width: 92px;
       min-height: 42px;
       border: 1px solid var(--c-border);
-      border-radius: 4px;
+      border-radius: 3px;
       background: var(--c-card);
       color: var(--c-main-dark);
       padding: 8px 12px;
       font-size: calc(13px * var(--fs));
-      font-weight: 800;
+      font-weight: 700;
     }
     .page-button:disabled { cursor: default; opacity: .45; }
-    .page-position { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 800; font-variant-numeric: tabular-nums; }
+    .page-position { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; font-variant-numeric: tabular-nums; }
     @media (max-width: 820px) {
       .filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .filter-actions { grid-column: span 2; }

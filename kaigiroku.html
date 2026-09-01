@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0017c1" />
-  <title>会議録を見る | 品川区議会DB</title>
+  <title>会議録・録画 | 品川区議会DB</title>
   <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
@@ -46,7 +46,7 @@
       display: inline-flex; align-items: center; margin: 14px 6px 0 0;
       border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 6px 12px;
-      color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800;
+      color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700;
     }
     .pill--video { border-color: var(--c-video-border); background: var(--c-video-bg); color: var(--c-video-text); }
     .pill--minutes { border-color: var(--c-minutes-border); background: var(--c-minutes-bg); color: var(--c-minutes-text); }
@@ -55,21 +55,21 @@
     .tag {
       display: inline-flex; margin: 0 8px 12px 0; border-radius: 3px;
       background: var(--c-main-pale); padding: 4px 9px;
-      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 800;
+      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700;
     }
     .tag--result { background: var(--c-result-bg); color: var(--c-result-text); }
     .chip {
       display: inline-flex; margin-bottom: 10px; border: 1px solid var(--c-border); border-radius: 3px;
-      background: var(--c-surface-sub); padding: 3px 9px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 800;
+      background: var(--c-surface-sub); padding: 3px 9px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700;
     }
 
     /* ===== 年切り替え ===== */
     .year-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 20px; }
-    .year-row label { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); font-weight: 800; white-space: nowrap; }
+    .year-row label { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); font-weight: 700; white-space: nowrap; }
     #year-select {
       /* 16px未満だとiOSがフォーカス時に画面を自動ズームするため16pxにする */
       width: min(100%, 320px); border: 1px solid var(--c-border); border-radius: 3px;
-      background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: calc(16px * var(--fs)); font-weight: 800;
+      background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: calc(16px * var(--fs)); font-weight: 700;
     }
     .year-summary {
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
@@ -93,19 +93,19 @@
       backdrop-filter: blur(8px);
     }
     .accordion-controls__inner { display: flex; align-items: center; gap: 8px; }
-    .accordion-controls__label { margin-right: auto; font-size: calc(14px * var(--fs)); font-weight: 800; }
+    .accordion-controls__label { margin-right: auto; font-size: calc(14px * var(--fs)); font-weight: 700; }
     .accordion-controls__status { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .accordion-button {
       min-height: 40px; border: 1px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 8px 14px; color: var(--c-main-dark);
-      font: inherit; font-size: calc(13px * var(--fs)); font-weight: 800; cursor: pointer;
+      font: inherit; font-size: calc(13px * var(--fs)); font-weight: 700; cursor: pointer;
     }
     .accordion-button:hover { background: var(--c-main-pale); }
     /* フォーカスリングは site-theme.css で全ページ共通に定義している */
     .accordion-button:disabled { opacity: 0.45; cursor: default; }
     .accordion-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 24px 0 40px; }
     .meeting-accordion {
-      overflow: clip; border: 1px solid var(--c-border); border-radius: 4px;
+      overflow: clip; border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); scroll-margin-top: 76px;
     }
     .meeting-accordion[open] { box-shadow: 0 3px 10px rgba(26, 26, 26, 0.08); }
@@ -120,7 +120,7 @@
     }
     .meeting-accordion__heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
     .meeting-accordion__heading .chip { margin: 0; }
-    .meeting-accordion__title { font-size: calc(21px * var(--fs)); font-weight: 800; line-height: 1.35; }
+    .meeting-accordion__title { font-size: calc(21px * var(--fs)); font-weight: 700; line-height: 1.35; }
     .meeting-accordion__summary {
       grid-column: 1 / -1; margin: 2px 0 0; color: var(--c-ink-soft);
       font-size: calc(14px * var(--fs)); line-height: 1.7;
@@ -128,12 +128,12 @@
     .meeting-accordion__counts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
     .meeting-accordion__count {
       border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-surface-sub); padding: 3px 9px;
-      color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 800;
+      color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700;
     }
     .meeting-accordion__icon {
       display: inline-grid; place-items: center; width: 36px; height: 36px;
       border-radius: 3px; background: var(--c-main); color: #fff;
-      font-size: calc(22px * var(--fs)); font-weight: 800; line-height: 1;
+      font-size: calc(22px * var(--fs)); font-weight: 700; line-height: 1;
     }
     .meeting-accordion__icon::before { content: "+"; }
     .meeting-accordion[open] .meeting-accordion__icon::before { content: "−"; }
@@ -146,7 +146,7 @@
       border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 16px;
     }
-    .timeline-item time { color: var(--c-main); font-weight: 800; }
+    .timeline-item time { color: var(--c-main); font-weight: 700; }
     .timeline-item p { margin: 6px 0 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.75; }
 
     /* ===== カードグリッド（議案・質問） ===== */
@@ -161,15 +161,15 @@
     .card.q > summary::-webkit-details-marker { display: none; }
     .card.q > summary:hover, .card.q[open] > summary { background: var(--c-main-pale); }
     .card.q > summary h3 { flex: 1; margin: 0; font-size: calc(16px * var(--fs)); }
-    .q__count { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 800; white-space: nowrap; }
-    .q__icon { color: var(--c-main); font-size: calc(20px * var(--fs)); font-weight: 900; }
+    .q__count { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; white-space: nowrap; }
+    .q__icon { color: var(--c-main); font-size: calc(20px * var(--fs)); font-weight: 700; }
     .q__icon::before { content: "+"; }
     .card.q[open] .q__icon::before { content: "−"; }
     .q__content { border-top: 1px solid var(--c-border); padding: 18px 20px 20px; }
     .question-card-grid--summaries { grid-template-columns: 1fr; }
     .q__topics-label {
       margin: 0 0 4px !important; color: var(--c-ink) !important;
-      font-size: calc(13px * var(--fs)) !important; font-weight: 800;
+      font-size: calc(13px * var(--fs)) !important; font-weight: 700;
     }
     .qa-summaries {
       display: grid; gap: 12px; margin-top: 20px; padding-top: 18px;
@@ -177,12 +177,12 @@
     }
     .qa-summaries > h4 { margin: 0; font-size: calc(15px * var(--fs)); }
     .qa-summary {
-      border-left: 4px solid var(--c-main); border-radius: 2px;
+      border-left: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-surface-sub); padding: 14px 16px;
     }
     .qa-summary h5 { margin: 0 0 10px; font-size: calc(15px * var(--fs)); line-height: 1.55; }
     .qa-summary dl { display: grid; grid-template-columns: 5em 1fr; gap: 8px 12px; margin: 0; }
-    .qa-summary dt { color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800; }
+    .qa-summary dt { color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .qa-summary dd { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
     .qa-summary-note { margin-top: 14px !important; }
     .video-connection { margin-top: 10px; padding-top: 9px; border-top: 1px dashed var(--c-border); }
@@ -206,8 +206,8 @@
     .committee-session h3 { width: 100%; margin: 4px 0 0; font-size: calc(18px * var(--fs)); }
     .committee-session__meta { margin: 0 0 12px; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .committee-session__overview { margin: 7px 0 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.65; }
-    .committee-session__count, .committee-topic__count { color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 900; white-space: nowrap; }
-    .committee-toggle-icon { color: var(--c-main); font-size: calc(22px * var(--fs)); font-weight: 900; }
+    .committee-session__count, .committee-topic__count { color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700; white-space: nowrap; }
+    .committee-toggle-icon { color: var(--c-main); font-size: calc(22px * var(--fs)); font-weight: 700; }
     .committee-toggle-icon::before { content: "+"; }
     details[open] > summary .committee-toggle-icon::before { content: "−"; }
     .committee-session__content { border-top: 1px solid var(--c-border); padding: 18px; }
@@ -221,16 +221,16 @@
     .committee-topic__agenda { margin: 0 0 12px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .committee-topic__content { border-top: 1px solid var(--c-rule); padding: 14px; }
     .committee-exchanges { display: grid; gap: 12px; }
-    .committee-exchange { border-left: 4px solid var(--c-main); border-radius: 2px; background: var(--c-surface-sub); padding: 14px 16px; }
+    .committee-exchange { border-left: 4px solid var(--c-main); border-radius: 3px; background: var(--c-surface-sub); padding: 14px 16px; }
     .committee-exchange__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
     .committee-exchange__head h5 { margin: 0; font-size: calc(15px * var(--fs)); }
     .committee-exchange__speaker { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
-    .committee-exchange__kind { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 2px 7px; color: var(--c-main-dark); font-size: calc(11px * var(--fs)); font-weight: 800; }
+    .committee-exchange__kind { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 2px 7px; color: var(--c-main-dark); font-size: calc(11px * var(--fs)); font-weight: 700; }
     .committee-exchange dl { display: grid; grid-template-columns: 8em 1fr; gap: 8px 12px; margin: 0; }
-    .committee-exchange dt { color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800; }
+    .committee-exchange dt { color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .committee-exchange dd { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
     .committee-exchange__source { margin: 10px 0 0; text-align: right; font-size: calc(12px * var(--fs)); }
-    .committee-exchange__source a { color: var(--c-main-dark); font-weight: 800; }
+    .committee-exchange__source a { color: var(--c-main-dark); font-weight: 700; }
     .committee-session__links { margin-top: 18px; }
 
     /* ===== 会議録全文（開いたときだけ data/minutes/ から読み込む） ===== */
@@ -246,7 +246,7 @@
     .committee-voices { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
     .committee-voice { border-left: 3px solid var(--c-rule); padding: 0 0 0 12px; }
     .committee-voice--member { border-left-color: var(--c-main); }
-    .committee-voice__speaker { margin: 0 0 4px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800; }
+    .committee-voice__speaker { margin: 0 0 4px; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .committee-voice__no { margin-right: 6px; color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); font-weight: 700; }
     /* 公式会議録の改行ごとに1段落。長い答弁でも読める間隔にする */
     .committee-voice__text { margin: 0; font-size: calc(14px * var(--fs)); line-height: 1.9; overflow-wrap: anywhere; }
@@ -265,10 +265,10 @@
       border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
       padding: 14px; font-size: calc(14px * var(--fs));
     }
-    .row .key { color: var(--c-main-dark); font-weight: 800; }
+    .row .key { color: var(--c-main-dark); font-weight: 700; }
     .row .result {
       border-radius: 3px; background: var(--c-result-bg); color: var(--c-result-text);
-      padding: 4px 10px; font-size: calc(12px * var(--fs)); font-weight: 800; white-space: nowrap;
+      padding: 4px 10px; font-size: calc(12px * var(--fs)); font-weight: 700; white-space: nowrap;
     }
     .row .pill { margin-top: 0; }
 
@@ -297,8 +297,8 @@
     .record-section__title { flex: 1; min-width: 0; }
     .record-section__title strong { display: block; color: var(--c-main-dark); font-size: calc(18px * var(--fs)); }
     .record-section__title span { display: block; margin-top: 3px; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.55; }
-    .record-section__count { color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 900; white-space: nowrap; }
-    .record-section__icon { color: var(--c-main); font-size: calc(22px * var(--fs)); font-weight: 900; }
+    .record-section__count { color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; white-space: nowrap; }
+    .record-section__icon { color: var(--c-main); font-size: calc(22px * var(--fs)); font-weight: 700; }
     .record-section__icon::before { content: "+"; }
     .record-section[open] .record-section__icon::before { content: "−"; }
     .record-section__content { border-top: 1px solid var(--c-border); padding: 18px; }
@@ -523,8 +523,8 @@
     // ※会期・議案数などの統計は年間で共通ではないため、各定例会のセクションに表示する
     function renderHero(site) {
       document.getElementById("hero-root").innerHTML = `
-        <h1>${esc(site.siteName)}</h1>
-        <p class="lead">${esc(site.lead)}</p>
+        <h1>会議録・録画</h1>
+        <p class="lead">年ごとの会議の流れをたどり、会議録の全文、校正原稿PDF、公式録画への入口をまとめています。</p>
         <div class="disclaimer">${esc(site.disclaimer)}</div>`;
     }
 

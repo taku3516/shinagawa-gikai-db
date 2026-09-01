@@ -22,24 +22,24 @@
     main > section { padding: 32px 0 52px; }
     .overview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 24px; }
     .overview-card {
-      border: 1px solid var(--c-border); border-top: 4px solid var(--c-main); border-radius: 4px;
+      border: 1px solid var(--c-border); border-top: 4px solid var(--c-main); border-radius: 3px;
       background: var(--c-card); padding: 16px;
     }
     .overview-card strong { display: block; margin-bottom: 5px; color: var(--c-main-dark); font-size: calc(19px * var(--fs)); }
     .overview-card span { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.7; }
     .rules {
       margin-bottom: 24px; border: 1px solid var(--c-expense-border); border-left: 4px solid var(--c-expense);
-      border-radius: 4px; background: var(--c-expense-pale); padding: 16px;
+      border-radius: 3px; background: var(--c-expense-pale); padding: 16px;
     }
     .rules h2 { margin: 0 0 8px; font-size: calc(18px * var(--fs)); }
     .rules p { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.8; }
     .rule-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .controls {
       display: grid; grid-template-columns: minmax(190px, 280px) minmax(240px, 1fr); gap: 10px;
-      margin-bottom: 18px; padding: 14px; border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card);
+      margin-bottom: 18px; padding: 14px; border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
     }
     .field { display: grid; gap: 5px; }
-    .field label { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 800; }
+    .field label { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .field select, .field input {
       width: 100%; min-height: 44px; border: 1px solid var(--c-border); border-radius: 3px;
       background: #fff; padding: 8px 11px; color: var(--c-ink); font-size: calc(16px * var(--fs));
@@ -50,15 +50,15 @@
     .year-heading h2 { margin: 0; color: var(--c-main-dark); font-size: calc(25px * var(--fs)); }
     .count-badge {
       display: inline-flex; border-radius: 999px; background: var(--c-main-pale); padding: 3px 10px;
-      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 800;
+      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700;
     }
     .period-card {
-      margin-bottom: 12px; border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card);
+      margin-bottom: 12px; border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
       scroll-margin-top: 16px; overflow: hidden;
     }
     .period-card > summary {
       display: flex; min-height: 58px; align-items: center; gap: 10px; padding: 12px 16px;
-      color: var(--c-main-dark); font-weight: 900; cursor: pointer; list-style: none;
+      color: var(--c-main-dark); font-weight: 700; cursor: pointer; list-style: none;
     }
     .period-card > summary::-webkit-details-marker { display: none; }
     .period-card > summary::before { content: "＋"; flex: 0 0 auto; width: 1.25em; font-size: calc(18px * var(--fs)); }
@@ -71,7 +71,7 @@
     .doc-link {
       display: inline-flex; min-height: 42px; align-items: center; justify-content: center;
       border: 1px solid var(--c-border); border-radius: 3px; background: #fff; padding: 7px 11px;
-      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 800; text-align: center;
+      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700; text-align: center;
     }
     .doc-link--primary { border-color: var(--c-main); background: var(--c-main); color: #fff; }
     .doc-link--source { background: var(--c-main-pale); }
@@ -85,7 +85,7 @@
     .recipient-name span { display: inline-flex; margin-right: 7px; color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); }
     .recipient-docs { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
     .empty {
-      border: 1px dashed var(--c-border); border-radius: 4px; background: var(--c-card);
+      border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-card);
       padding: 34px 18px; color: var(--c-ink-soft); text-align: center; line-height: 1.8;
     }
     @media (max-width: 720px) {
