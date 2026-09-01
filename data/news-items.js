@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-01T08:48:52.532603Z",
+  "generatedAt": "2026-09-01T14:14:57.584139Z",
   "items": [
+    {
+      "id": "815d4470403d0d0d02c4",
+      "title": "一人一人の学びを支え、「読み」や「理解」に寄り添う／光村図書×筑波大学、デジタル教科書の支援機能に関する共同研究を開始",
+      "summary": "[光村図書出版株式会社] 光村図書出版株式会社（本社：東京都品川区、代表取締役社長：吉田直樹）と国立大学法人筑波大学（所在地：茨城県つくば市、学長：永田恭介、以下「筑波大学」）人間系丹治敬之准教授は、多様な子どもたちの学...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000082.000073231.html",
+      "publishedAt": "2026-09-01T13:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T14:13:12.177768Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "68845dd149bd6b98a5d2",
+      "title": "品川区が全世帯に電気・ガス料金4,000円支援 LINE申請で当日受け取りに",
+      "summary": "電気・ガス料金を1世帯当たり4,000円支給する「しながわ電気・ガス料金緊急支援事業」の申請受け付けが9月1日、始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5068",
+      "publishedAt": "2026-09-01T09:37:10Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T14:13:12.177768Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "c99c40bde6cf4fea8664",
       "title": "安否確認システムの入れ替えに関する実態調査 53.6%が「災害情報と連動した自動送信機能」を重視",
@@ -344,6 +379,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "b89ae5af8cd1c50a029b",
+      "title": "高齢者歯科健康診査",
+      "summary": "令和元年度から6年度までの後期高齢者歯科健診の結果から、口腔に関する意識の向上や口腔健康の維持がフレイル予防に 極めて有効であることが確認されました。フレイルとは、加齢とともに筋力や運動機能、認知機能などの活力が低下する状態です。 【関連記事】オーラルフレイル フッ化物入り歯みがき剤を使用している人はフレイルになりにくい結果が出ています。 ご自分の歯を健康に保つためには、歯質を強化することが大切です。 日常のケアとして、フッ化物入りの歯みがき剤を取り入れましょう。 フッ化物…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-koukikoureisyairyo/hpg11111111.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-05T07:34:37.995725Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "dbe3cd7369c456dd28f3",
@@ -3531,23 +3583,6 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 10
-    },
-    {
-      "id": "b89ae5af8cd1c50a029b",
-      "title": "高齢者歯科健康診査",
-      "summary": "令和元年度から6年度までの後期高齢者歯科健診の結果から、口腔に関する意識の向上や口腔健康の維持がフレイル予防に 極めて有効であることが確認されました。フレイルとは、加齢とともに筋力や運動機能、認知機能などの活力が低下する状態です。 【関連記事】オーラルフレイル フッ化物入り歯みがき剤を使用している人はフレイルになりにくい結果が出ています。 ご自分の歯を健康に保つためには、歯質を強化することが大切です。 日常のケアとして、フッ化物入りの歯みがき剤を取り入れましょう。 フッ化物…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-koukikoureisyairyo/hpg11111111.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-05T07:34:37.995725Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "5f1544a68f321fef43c0",
@@ -7566,14 +7601,14 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 550,
-      "accepted": 1
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2256, column 53"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 38,
+      "scanned": 39,
       "accepted": 0
     },
     {
@@ -7649,9 +7684,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
