@@ -93,7 +93,11 @@
 
   function renderLink(item) {
     const url = resolveUrl(item.url);
-    const isExternal = /^https?:/i.test(url);
+    // 外部かどうかは、書かれたURL（item.url）で判定する。resolveUrl の結果で
+    // 判定すると、別ドメインから配信している news.html を開いたときに
+    // サイト内のリンク14本が絶対URLになり、すべて外部リンクの見た目になって
+    // 新しいタブで開いてしまう。行き先が同じサイトかどうかはデータ側が持っている。
+    const isExternal = /^https?:/i.test(String(item.url || ""));
     const active = isCurrent(item.url);
 
     const classNames = ["site-nav__link"];
