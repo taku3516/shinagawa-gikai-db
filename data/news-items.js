@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-01T00:42:12.610327Z",
+  "generatedAt": "2026-09-01T08:48:52.532603Z",
   "items": [
+    {
+      "id": "c99c40bde6cf4fea8664",
+      "title": "安否確認システムの入れ替えに関する実態調査 53.6%が「災害情報と連動した自動送信機能」を重視",
+      "summary": "[トヨクモ株式会社] 【シンプルだから、みんな使える。カンターン トヨクモ】 誰でも簡単に使えるビジネス向けのクラウドサービスを提供するトヨクモ株式会社（本社：東京都品川区、代表取締役社長：山本 裕次、以下トヨクモ）は、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000258.000032205.html",
+      "publishedAt": "2026-09-01T08:40:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T08:48:26.899424Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "fd0a74165b1053790b4f",
+      "title": "物価高対応の子育て支援給付金 対象者の一部に案内通知を送らず 職員に戒告の懲戒処分 宮城・大崎市",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/n/mmt/category/society/mmabdf3f788a154c66b5e9a98e8be4b265",
+      "publishedAt": "2026-09-01T05:24:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T08:48:26.899424Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "経済"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "f15c378336cce923f02d",
       "title": "成年後見制度普及啓発講座を開催します",
@@ -38,6 +76,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "b2b1d209dda35001ced3",
+      "title": "令和8年度清泉女子大学パートナーシップ講座「土曜自由大学」秋のコース（第44回）10月10日、17日実施）",
+      "summary": "※10月10日は、午後1時10分より開講式挨拶を行います。 ※当日、内容等変更になる場合があります。ご了承ください。 品川区 文化観光スポーツ振興部 文化観光戦略課 生涯学習係",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20220308150841.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T08:48:26.899424Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
     },
     {
       "id": "ed6f13e63b8c9df0a416",
@@ -451,6 +506,25 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
+      "id": "097fae3e140d8803e10b",
+      "title": "南品川児童センター休館のお知らせ",
+      "summary": "子ども育成課児童センター管理運営係 電話：03-5742-7823 FAX：03-5742-6351",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-zidoucenter/20260831170351.html",
+      "publishedAt": "2026-08-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T08:48:26.899424Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [
+        "南品川"
+      ],
+      "relevanceScore": 6
+    },
+    {
       "id": "70c3c2946791fc087fc5",
       "title": "旧荏原第四中学校跡地ＰＦＩ事業",
       "summary": "企画経営部 企画課 政策推進担当 電話：03-5742-7863 FAX：03-5742-6870",
@@ -749,6 +823,24 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "48f4700ea5a87a18ab11",
+      "title": "こども未来ミーティング～みんなでつくろう！こどもの権利条例～",
+      "summary": "令和10年度の「（仮称）品川区こどもの権利条例」の制定に向けて、広く区民の皆様から意見をいただくため、今年度4回の区民ワークショップ「こども未来ミーティング」を開催します。 本ワークショップでは、こどもと大人が一緒にグループを作り、条例に盛り込む内容について、それぞれの経験・視点から話し合います。 区内在住・在学の「こども」と「大人」（年齢は問いません。） ※小学4年生以下の方は、保護者の同伴が必須となります。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/child_rights/20260604164736.html",
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T08:48:26.899424Z",
+      "tags": [
+        "行政",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "e0324acff032d8220ede",
@@ -1294,7 +1386,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "822df1388bdec4f5dc7b",
-      "title": "【9/12,13限定】しながわクルーズ「天王洲周遊アートクルーズ」",
+      "title": "【9/12,13限定】しながわクルーズ「天王洲周遊アートクルーズ」 2026/09/12(土), 2026/09/13(日) 遊ぶ 観る",
       "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9月12日（土）、13日（日）は、天王洲で開催されるアートイベント「 TENNOZ ART WEEK 2026 」に合わせ、天王洲を囲む運河でアートクルーズを運航します。ビルに描かれた大型壁画などを船上から鑑賞し、普段とは異なる視点で天王洲の街並みとアートをお楽しみいただけます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -7457,7 +7549,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 6,
+      "scanned": 5,
       "accepted": 0
     },
     {
@@ -7475,13 +7567,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 535,
-      "accepted": 0
+      "scanned": 550,
+      "accepted": 1
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 37,
+      "scanned": 38,
       "accepted": 0
     },
     {
@@ -7500,7 +7592,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -7558,8 +7650,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "しながわ観光協会",
       "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
