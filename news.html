@@ -16,7 +16,7 @@
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
     .notice {
-      margin-top: 20px; border: 1px solid var(--border); border-left: 4px solid var(--main);
+      margin-top: 20px; border: 1px solid var(--border); border-left: 4px solid var(--c-main);
       border-radius: 3px; background: var(--c-surface-sub); padding: 12px 14px; font-size: calc(13px * var(--fs)); line-height: 1.7;
     }
     .controls-wrap { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border); background: rgba(242, 242, 242, 0.94); box-shadow: 0 2px 6px rgba(26, 26, 26,.08); backdrop-filter: blur(8px); }
@@ -61,7 +61,7 @@
     main { padding: 28px 0 56px; }
     .sync-panel {
       display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 18px; align-items: center;
-      margin-bottom: 22px; border: 1px solid var(--border); border-left: 4px solid var(--main);
+      margin-bottom: 22px; border: 1px solid var(--border); border-left: 4px solid var(--c-main);
       border-radius: 3px; background: var(--card); padding: 14px 16px;
     }
     .sync-panel[hidden] { display: none; }

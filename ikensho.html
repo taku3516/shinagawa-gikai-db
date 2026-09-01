@@ -14,7 +14,7 @@
   <style>
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
-    .notice { margin-top:18px; border:1px solid var(--c-border); border-left:4px solid var(--c-accent); border-radius: 3px; background:var(--c-accent-pale); padding:13px 15px; font-size: calc(13px * var(--fs)); line-height:1.8; }
+    .notice { margin-top:18px; border:1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px; background:var(--c-accent-pale); padding:13px 15px; font-size: calc(13px * var(--fs)); line-height:1.8; }
     main section { padding:32px 0 44px; }
     .stats { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; }
     .stat { flex:1 1 150px; border:1px solid var(--c-border); border-top:3px solid var(--c-accent); border-radius: 3px; background:var(--c-card); padding:14px; }
@@ -22,7 +22,6 @@
     .stat span { color:var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .filters { border:1px solid var(--c-border); border-radius: 3px; background:var(--c-card); padding:16px; margin-bottom:20px; }
     .filter-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:12px; }
-    .field label { display:block; margin-bottom:5px; color:var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     input,select { width:100%; min-height:44px; border:1px solid var(--c-border); border-radius: 3px; background:#fff; padding:8px 10px; color:var(--c-ink); font:inherit; font-size: calc(16px * var(--fs)); }
     .filter-foot { display:flex; align-items:center; gap:12px; margin-top:12px; }
     .reset { min-height:44px; border:1px solid var(--c-main); border-radius: 3px; background:#fff; padding:8px 14px; color:var(--c-main-dark); font:inherit; font-weight: 700; cursor:pointer; }
@@ -36,7 +35,7 @@
     .toggle { display:grid; place-items:center; width:34px; height:34px; border-radius: 3px; background:var(--c-main); color:#fff; font-size: calc(20px * var(--fs)); font-weight: 700; }
     .toggle::before { content:"+"; } details[open] > summary .toggle::before { content:"−"; }
     .year-body { border-top:1px solid var(--c-border); padding:14px; display:grid; gap:10px; }
-    .item { border:1px solid var(--c-rule); border-left:4px solid var(--c-accent); border-radius: 3px; background:#fff; padding:14px 16px; scroll-margin-top:16px; }
+    .item { border:1px solid var(--c-rule); border-left: 4px solid var(--c-main); border-radius: 3px; background:#fff; padding:14px 16px; scroll-margin-top:16px; }
     .item-head { display:flex; flex-wrap:wrap; gap:7px; align-items:center; }
     .tag { display:inline-flex; border:1px solid var(--c-border); border-radius:999px; background:var(--c-accent-pale); padding:3px 9px; color:var(--c-accent); font-size: calc(11px * var(--fs)); font-weight: 700; }
     .date { color:var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
