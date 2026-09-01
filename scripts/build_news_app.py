@@ -39,6 +39,7 @@ FILES = [
     "site-nav.js",
     "site-theme.css",
     "site-nav.css",
+    "site-controls.css",
     "site-a11y.js",
     "site-a11y.css",
     "site-mobile.css",
