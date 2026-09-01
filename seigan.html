@@ -16,11 +16,11 @@
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
     .warn {
       max-width: 900px; margin-top: 18px; padding: 14px 16px;
-      border: 1px solid var(--c-seigan-border); border-left: 4px solid var(--c-seigan);
+      border: 1px solid var(--c-seigan-border); border-left: 4px solid var(--c-main);
       border-radius: 3px; background: var(--c-seigan-bg); font-size: calc(14px * var(--fs)); line-height: 1.8;
     }
     .warn strong { color: var(--c-seigan); }
-    h2.section-title { margin: 0 0 14px; font-size: calc(20px * var(--fs)); border-left: 5px solid var(--c-seigan); padding-left: 12px; }
+    h2.section-title { margin: 0 0 14px; font-size: calc(20px * var(--fs)); border-left: 4px solid var(--c-main); padding-left: 12px; }
     /* 制度の説明 */
     .about { border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card); padding: 20px; margin-bottom: 26px; }
     .about h3 { margin: 0 0 6px; font-size: calc(15px * var(--fs)); }
@@ -52,7 +52,7 @@
     /* 一覧 */
     .list { display: grid; gap: 10px; }
     .petition {
-      border: 1px solid var(--c-border); border-left: 4px solid var(--c-seigan);
+      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main);
       border-radius: 3px; background: var(--c-card); padding: 14px 16px; scroll-margin-top: 16px;
     }
     .petition__head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
@@ -78,7 +78,7 @@
     .detail { border: 1px solid var(--c-border); border-top: 4px solid var(--c-seigan); border-radius: 3px; background: var(--c-card); padding: 24px; }
     .detail__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .detail h2 { margin: 10px 0 14px; font-size: calc(clamp(20px, 3.4vw, 28px) * var(--fs)); line-height: 1.5; }
-    .detail h3 { margin: 26px 0 10px; font-size: calc(16px * var(--fs)); border-left: 4px solid var(--c-seigan); padding-left: 10px; }
+    .detail h3 { margin: 26px 0 10px; font-size: calc(16px * var(--fs)); border-left: 4px solid var(--c-main); padding-left: 10px; }
     .facts { display: grid; grid-template-columns: 9em 1fr; gap: 8px 14px; margin: 0; }
     .facts dt { color: var(--c-seigan); font-size: calc(13px * var(--fs)); font-weight: 700; }
     .facts dd { margin: 0; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }

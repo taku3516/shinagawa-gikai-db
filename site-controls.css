@@ -148,19 +148,25 @@
   gap: 10px 16px;
 }
 
-.control-field {
+/* .field は .control-field の古い名前。5ページが独自に3通りの定義を
+   持っていたので、ここに寄せる（新しく書くときは .control-field を使う） */
+.control-field,
+.field {
   display: grid;
   gap: 4px;
   min-width: 0;
 }
 
-.control-field > label {
+.control-field > label,
+.field label {
   color: var(--c-ink-mute);
   font-size: calc(12px * var(--fs));
   font-weight: 700;
 }
 
-.control-field > select {
+.control-field > select,
+.field select,
+.field input {
   min-height: 44px;
   padding: 9px 12px;
   border: 1px solid var(--c-border-strong);
@@ -181,7 +187,10 @@
   }
 
   .control-row > .control-field,
-  .control-row > .control-field > select {
+  .control-row > .control-field > select,
+  .field,
+  .field select,
+  .field input {
     width: 100%;
   }
 }
