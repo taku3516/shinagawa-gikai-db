@@ -4,98 +4,107 @@ window.SHINAGAWA_DB.site = {
   "siteName": "品川区議会DB",
   "lead": "品川区議会の公式情報を基に、住民が読みやすい形に整理したページです。",
   "disclaimer": "これは品川区が運営しているものではありません。正確な議決結果・日程・資料は必ず品川区議会公式サイトを確認してください。",
-  "heroRow1": [
+  // 共通ナビの中身。役割で4群に分け、群ごとに見出しを出す（site-nav.js）。
+  // ラベルは名詞にする。「〜を見る」を付けると分類名が動詞に埋もれ、
+  // どのリンクも同じ長さの帯に見えてしまう。
+  // url はページのファイル名そのままにすること。現在地の判定に使っている。
+  // type は "video"（録画・中継）のときだけ指定する。
+  "navGroups": [
     {
-      "type": "minutes",
-      "label": "会議録を読む",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/search"
+      "label": "議会",
+      "items": [
+        {
+          "label": "会議のまとめ",
+          "url": "kaigi.html"
+        },
+        {
+          "label": "会議録・録画",
+          "url": "kaigiroku.html"
+        },
+        {
+          "label": "請願・陳情",
+          "url": "seigan.html"
+        },
+        {
+          "label": "意見書・決議",
+          "url": "ikensho.html"
+        },
+        {
+          "label": "予算・決算",
+          "url": "yosan-kessan.html"
+        },
+        {
+          "label": "行政評価",
+          "url": "gyosei.html"
+        }
+      ]
     },
     {
-      "type": "video",
-      "label": "品川区議会インターネット中継へ",
-      "url": "https://gikaichukei.city.shinagawa.tokyo.jp/"
+      "label": "人とお金",
+      "items": [
+        {
+          "label": "政治家名簿",
+          "url": "giin.html"
+        },
+        {
+          "label": "選挙",
+          "url": "senkyo.html"
+        },
+        {
+          "label": "政務活動費",
+          "url": "seimu.html"
+        },
+        {
+          "label": "政治資金",
+          "url": "seijishikin.html"
+        },
+        {
+          "label": "選挙収支",
+          "url": "senkyo-shushi.html"
+        }
+      ]
     },
     {
-      "type": "video",
-      "label": "録画を会議名で探す",
-      "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_list"
+      "label": "地域・検索",
+      "items": [
+        {
+          "label": "区のニュース",
+          "url": "news.html"
+        },
+        {
+          "label": "町会区域",
+          "url": "chokai-map.html"
+        },
+        {
+          "label": "横断検索",
+          "url": "kensaku.html"
+        }
+      ]
     },
     {
-      "type": "video",
-      "label": "録画を議員名で探す",
-      "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=speaker_list"
-    }
-  ],
-  "heroRow2": [
-    {
-      "type": "official",
-      "label": "会議をまとめて見る",
-      "url": "kaigi.html"
-    },
-    {
-      "type": "official",
-      "label": "会議録を見る",
-      "url": "kaigiroku.html"
-    },
-    {
-      "type": "official",
-      "label": "意見書・決議等を見る",
-      "url": "ikensho.html"
-    },
-    {
-      "type": "official",
-      "label": "請願・陳情を見る",
-      "url": "seigan.html"
-    },
-    {
-      "type": "official",
-      "label": "予算・決算を見る",
-      "url": "yosan-kessan.html"
-    },
-    {
-      "type": "official",
-      "label": "行政評価を見る",
-      "url": "gyosei.html"
-    },
-    {
-      "type": "official",
-      "label": "政治家名簿を見る",
-      "url": "giin.html"
-    },
-    {
-      "type": "official",
-      "label": "品川区の選挙を見る",
-      "url": "senkyo.html"
-    },
-    {
-      "type": "official",
-      "label": "政務活動費を見る",
-      "url": "seimu.html"
-    },
-    {
-      "type": "official",
-      "label": "政治資金収支報告書を見る",
-      "url": "seijishikin.html"
-    },
-    {
-      "type": "official",
-      "label": "選挙収支報告書を読む",
-      "url": "senkyo-shushi.html"
-    },
-    {
-      "type": "official",
-      "label": "品川区ニュースを見る",
-      "url": "news.html"
-    },
-    {
-      "type": "official",
-      "label": "町会区域を探す",
-      "url": "chokai-map.html"
-    },
-    {
-      "type": "official",
-      "label": "横断検索",
-      "url": "kensaku.html"
+      "label": "公式サイト",
+      "items": [
+        {
+          "type": "minutes",
+          "label": "会議録検索システム",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/search"
+        },
+        {
+          "type": "video",
+          "label": "インターネット中継",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/"
+        },
+        {
+          "type": "video",
+          "label": "録画（会議名から）",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_list"
+        },
+        {
+          "type": "video",
+          "label": "録画（議員名から）",
+          "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=speaker_list"
+        }
+      ]
     }
   ],
   "years": [

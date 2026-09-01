@@ -7,6 +7,7 @@
   <title>横断検索 | 品川区議会DB</title>
   <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
@@ -105,33 +106,9 @@
       font-size: 14px;
       font-weight: 800;
     }
-    .category-tabs {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-      overflow-x: auto;
-      padding: 1px 1px 3px;
-      scrollbar-width: thin;
-    }
-    .category-button {
-      display: inline-flex;
-      flex: 0 0 auto;
-      align-items: center;
-      min-height: 40px;
-      border: 1px solid var(--c-border);
-      border-radius: 4px;
-      background: var(--c-card);
-      padding: 7px 12px;
-      color: var(--c-ink-soft);
-      font-size: 13px;
-      font-weight: 800;
-    }
-    .category-button[aria-pressed="true"] {
-      border-color: var(--c-main);
-      background: var(--c-main);
-      color: #fff;
-    }
-    .category-count { margin-left: 6px; font-size: 11px; font-variant-numeric: tabular-nums; opacity: .84; }
+    /* 大分類の絞り込みは site-controls.css の .chips（件数付きチップ）。
+       「すべて」を含む絞り込みなので、排他セグメント（.seg）ではなくチップを使う */
+    .category-tabs { margin-top: 10px; }
     .filter-panel { margin-top: 7px; }
     .filter-panel summary {
       display: inline-flex;
@@ -348,7 +325,7 @@
           </select>
         </div>
 
-        <div id="category-tabs" class="category-tabs" role="group" aria-label="検索する大分類"></div>
+        <div id="category-tabs" class="chips category-tabs" role="group" aria-label="検索する大分類"></div>
 
         <details id="filter-panel" class="filter-panel">
           <summary>詳しく絞り込む</summary>
@@ -1162,8 +1139,8 @@
       elements.categoryTabs.innerHTML = CATEGORY_DEFS.map((category) => {
         const isPartial = councilDataIsPartial && (category.id === "all" || category.id === "council");
         const count = Number(counts[category.id] || 0).toLocaleString("ja-JP");
-        return `<button class="category-button" type="button" data-category="${category.id}" aria-pressed="${state.category === category.id}">
-          ${esc(category.label)}<span class="category-count" aria-label="${isPartial ? `${count}件以上` : `${count}件`}">${count}${isPartial ? "+" : ""}</span>
+        return `<button type="button" data-category="${category.id}" aria-pressed="${state.category === category.id}">
+          ${esc(category.label)}<span class="chips__count" aria-label="${isPartial ? `${count}件以上` : `${count}件`}">${count}${isPartial ? "+" : ""}</span>
         </button>`;
       }).join("");
     }

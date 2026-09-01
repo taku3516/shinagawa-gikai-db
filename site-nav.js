@@ -11,36 +11,57 @@
 
   const currentFile = (decodeURIComponent(window.location.pathname).split("/").pop() || "index.html").toLowerCase();
 
-  const row1Data = (site && Array.isArray(site.heroRow1)) ? site.heroRow1 : [
-    { type: "minutes", label: "会議録を読む", url: "https://gikai.city.shinagawa.tokyo.jp/search" },
-    { type: "video", label: "品川区議会インターネット中継へ", url: "https://gikaichukei.city.shinagawa.tokyo.jp/" },
-    { type: "video", label: "録画を会議名で探す", url: "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_list" },
-    { type: "video", label: "録画を議員名で探す", url: "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=speaker_list" }
+  // ------------------------------------------------------------------
+  // ナビの中身。data/site.js の navGroups が正で、ここは同じ内容の控え
+  // （data/site.js が古いまま配信されても表示が壊れないようにするため）。
+  //
+  // 群の分け方と並び順を変えたいときは、まず data/site.js の navGroups を
+  // 直すこと。ラベルは名詞にする（「会議録を見る」ではなく「会議録・録画」）。
+  // ------------------------------------------------------------------
+  const DEFAULT_NAV_GROUPS = [
+    {
+      label: "議会",
+      items: [
+        { label: "会議のまとめ", url: "kaigi.html" },
+        { label: "会議録・録画", url: "kaigiroku.html" },
+        { label: "請願・陳情", url: "seigan.html" },
+        { label: "意見書・決議", url: "ikensho.html" },
+        { label: "予算・決算", url: "yosan-kessan.html" },
+        { label: "行政評価", url: "gyosei.html" }
+      ]
+    },
+    {
+      label: "人とお金",
+      items: [
+        { label: "政治家名簿", url: "giin.html" },
+        { label: "選挙", url: "senkyo.html" },
+        { label: "政務活動費", url: "seimu.html" },
+        { label: "政治資金", url: "seijishikin.html" },
+        { label: "選挙収支", url: "senkyo-shushi.html" }
+      ]
+    },
+    {
+      label: "地域・検索",
+      items: [
+        { label: "区のニュース", url: "news.html" },
+        { label: "町会区域", url: "chokai-map.html" },
+        { label: "横断検索", url: "kensaku.html" }
+      ]
+    },
+    {
+      label: "公式サイト",
+      items: [
+        { type: "minutes", label: "会議録検索システム", url: "https://gikai.city.shinagawa.tokyo.jp/search" },
+        { type: "video", label: "インターネット中継", url: "https://gikaichukei.city.shinagawa.tokyo.jp/" },
+        { type: "video", label: "録画（会議名から）", url: "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_list" },
+        { type: "video", label: "録画（議員名から）", url: "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=speaker_list" }
+      ]
+    }
   ];
 
-  const row2Data = (site && Array.isArray(site.heroRow2)) ? site.heroRow2 : [
-    { type: "official", label: "会議をまとめて見る", url: "kaigi.html" },
-    { type: "official", label: "会議録を見る", url: "kaigiroku.html" },
-    { type: "official", label: "意見書・決議等を見る", url: "ikensho.html" },
-    { type: "official", label: "請願・陳情を見る", url: "seigan.html" },
-    { type: "official", label: "予算・決算を見る", url: "yosan-kessan.html" },
-    { type: "official", label: "行政評価を見る", url: "gyosei.html" },
-    { type: "official", label: "政治家名簿を見る", url: "giin.html" },
-    { type: "official", label: "品川区の選挙を見る", url: "senkyo.html" },
-    { type: "official", label: "政務活動費を見る", url: "seimu.html" },
-    { type: "official", label: "政治資金収支報告書を見る", url: "seijishikin.html" },
-    { type: "official", label: "選挙収支報告書を読む", url: "senkyo-shushi.html" },
-    { type: "official", label: "品川区ニュースを見る", url: "news.html" },
-    { type: "official", label: "町会区域を探す", url: "chokai-map.html" },
-    { type: "official", label: "横断検索", url: "kensaku.html" }
-  ];
-
-  const classByType = {
-    official: "pill",
-    video: "pill pill--video",
-    minutes: "pill pill--minutes",
-    minutesDraft: "pill pill--minutes"
-  };
+  const navGroups = (site && Array.isArray(site.navGroups) && site.navGroups.length)
+    ? site.navGroups
+    : DEFAULT_NAV_GROUPS;
 
   // ニュースページだけは Firebase Hosting から配信している。Googleログインは
   // 配信元と authDomain のドメインが一致していないと iPhone・iPad で完了できないため
@@ -61,56 +82,48 @@
     return u;
   }
 
-  function isCurrent(rawUrl, label) {
-    const cleanUrl = (rawUrl.split(/[?#]/)[0] || "").toLowerCase();
-    
-    // サブページファイル名との完全一致 (例: giin.html === currentFile)
-    if (cleanUrl && cleanUrl === currentFile && cleanUrl !== "index.html") {
-      return true;
-    }
-
-    // 各機能ページとボタンの正確なマッピング
-    if (currentFile === "giin.html" && label === "政治家名簿を見る") return true;
-    if (currentFile === "senkyo.html" && label === "品川区の選挙を見る") return true;
-    if (currentFile === "news.html" && label === "品川区ニュースを見る") return true;
-    if (currentFile === "chokai-map.html" && label === "町会区域を探す") return true;
-    if (currentFile === "yosan-kessan.html" && label === "予算・決算を見る") return true;
-    if (currentFile === "gyosei.html" && label === "行政評価を見る") return true;
-    if (currentFile === "kensaku.html" && label === "横断検索") return true;
-    if (currentFile === "seimu.html" && label === "政務活動費を見る") return true;
-    if (currentFile === "seijishikin.html" && label === "政治資金収支報告書を見る") return true;
-    if (currentFile === "senkyo-shushi.html" && label === "選挙収支報告書を読む") return true;
-    if (currentFile === "kaigiroku.html" && label === "会議録を見る") return true;
-    if (currentFile === "kaigi.html" && label === "会議をまとめて見る") return true;
-    if (currentFile === "ikensho.html" && label === "意見書・決議等を見る") return true;
-    if (currentFile === "seigan.html" && label === "請願・陳情を見る") return true;
-
-    return false;
+  // 現在地の判定はファイル名の一致だけで足りる。navGroups の url は
+  // すべてページのファイル名そのものなので、ラベルごとの対応表は要らない。
+  // news.html は Firebase Hosting でもファイル名が news.html のままなので
+  // 同じ判定で当たる。
+  function isCurrent(rawUrl) {
+    const cleanUrl = (String(rawUrl || "").split(/[?#]/)[0] || "").toLowerCase();
+    return Boolean(cleanUrl) && cleanUrl === currentFile && cleanUrl !== "index.html";
   }
 
   function renderLink(item) {
     const url = resolveUrl(item.url);
     const isExternal = /^https?:/i.test(url);
-    const target = isExternal ? ' target="_blank" rel="noopener"' : "";
-    const active = isCurrent(item.url, item.label);
-    const baseClass = classByType[item.type] || "pill";
-    const className = active ? `${baseClass} is-active` : baseClass;
-    const currentAttr = active ? ' aria-current="page"' : "";
-    const badge = active ? ' <span class="nav-active-badge">📍表示中</span>' : "";
-    const externalMark = isExternal ? ' <span style="font-size:0.9em;opacity:0.85">↗</span>' : "";
+    const active = isCurrent(item.url);
 
-    return `<a class="${className}" href="${escapeHtml(url)}"${target}${currentAttr}>${escapeHtml(item.label)}${externalMark}${badge}</a>`;
+    const classNames = ["site-nav__link"];
+    if (isExternal) classNames.push("site-nav__link--external");
+    if (item.type === "video") classNames.push("site-nav__link--video");
+
+    const target = isExternal ? ' target="_blank" rel="noopener"' : "";
+    const currentAttr = active ? ' aria-current="page"' : "";
+
+    return `<li><a class="${classNames.join(" ")}" href="${escapeHtml(url)}"${target}${currentAttr}>${escapeHtml(item.label)}</a></li>`;
   }
 
-  const row1Html = row1Data.map(renderLink).join("\n");
-  const row2Html = row2Data.map(renderLink).join("\n");
+  function renderGroup(group, panelId, index) {
+    const labelId = `${panelId}-label-${index + 1}`;
+    const items = (group.items || []).map(renderLink).join("");
+    return `
+      <div class="site-nav__group">
+        <span class="site-nav__group-label" id="${labelId}">${escapeHtml(group.label)}</span>
+        <ul class="site-nav__list" aria-labelledby="${labelId}">${items}</ul>
+      </div>`;
+  }
 
   // スマートフォンでは折りたたみメニューにするため、現在地の短い名前を用意する
   function currentPageLabel() {
     if (currentFile === "index.html") return "トップ";
-    const hit = row2Data.find(item => isCurrent(item.url, item.label));
-    if (!hit) return "";
-    return hit.label.replace(/を(見る|読む)$/, "");
+    for (const group of navGroups) {
+      const hit = (group.items || []).find(item => isCurrent(item.url));
+      if (hit) return hit.label;
+    }
+    return "";
   }
 
   const currentLabel = currentPageLabel();
@@ -119,6 +132,7 @@
     : "";
 
   function navHtml(panelId) {
+    const groups = navGroups.map((group, index) => renderGroup(group, panelId, index)).join("");
     return `
     <div class="site-nav" data-nav-open="false">
       <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="${panelId}">
@@ -127,10 +141,7 @@
         ${currentHtml}
         <span class="site-nav-toggle__chevron" aria-hidden="true"></span>
       </button>
-      <div class="hero-links" id="${panelId}">
-        <div class="hero-links-row">${row1Html}</div>
-        <div class="hero-links-row">${row2Html}</div>
-      </div>
+      <div class="site-nav__panel" id="${panelId}">${groups}</div>
     </div>`;
   }
 
