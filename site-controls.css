@@ -39,9 +39,13 @@
   background: var(--c-surface-sub);
 }
 
+/* 枠で囲まれた操作部品なので、下線は付けない。本文中のリンクと違って
+   「押せる」ことは囲みとホバーで伝わるため、色だけに頼っていない
+   （site-base.css で本文リンクの下線は残している） */
 .seg > a,
 .seg > button {
   display: inline-flex;
+  text-decoration: none;
   align-items: center;
   justify-content: center;
   min-height: 40px;
@@ -51,7 +55,7 @@
   background: transparent;
   color: var(--c-main-dark);
   font: inherit;
-  font-size: 14px;
+  font-size: calc(14px * var(--fs));
   font-weight: 400;
   text-align: center;
   cursor: pointer;
@@ -92,6 +96,7 @@
 .chips > button,
 .chips > a {
   display: inline-flex;
+  text-decoration: none;
   flex: 0 0 auto;
   align-items: center;
   min-height: 40px;
@@ -101,7 +106,7 @@
   background: var(--c-card);
   color: var(--c-ink-soft);
   font: inherit;
-  font-size: 13px;
+  font-size: calc(13px * var(--fs));
   font-weight: 400;
   text-decoration: none;
   cursor: pointer;
@@ -123,7 +128,7 @@
 /* 件数。桁がそろうよう等幅数字にする */
 .chips__count {
   margin-left: 6px;
-  font-size: 12px;
+  font-size: calc(12px * var(--fs));
   font-variant-numeric: tabular-nums;
   opacity: 0.85;
 }
@@ -151,7 +156,7 @@
 
 .control-field > label {
   color: var(--c-ink-mute);
-  font-size: 12px;
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
 }
 
@@ -163,7 +168,7 @@
   background: var(--c-card);
   color: var(--c-ink);
   font: inherit;
-  font-size: 16px;
+  font-size: calc(16px * var(--fs));
 }
 
 /* --------------------------------------------------------------------------

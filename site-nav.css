@@ -49,7 +49,7 @@
    見出しとリンクが同じ強さになり、群に分けた意味が消える */
 .site-nav__group-label {
   color: var(--c-ink-mute);
-  font-size: 12px;
+  font-size: calc(12px * var(--fs));
   font-weight: 700;
   line-height: 1.4;
   white-space: nowrap;
@@ -79,7 +79,7 @@
   padding: 2px 0;
   border-bottom: 2px solid transparent;
   color: var(--c-main-dark);
-  font-size: 14px;
+  font-size: calc(14px * var(--fs));
   font-weight: 400;
   line-height: 1.4;
   text-decoration: underline;
@@ -172,7 +172,7 @@
     background: var(--c-main-dark);
     color: #ffffff;
     font: inherit;
-    font-size: 15px;
+    font-size: calc(15px * var(--fs));
     font-weight: 700;
     text-align: left;
     cursor: pointer;
@@ -192,7 +192,7 @@
     border-radius: 3px;
     background: rgba(255, 255, 255, 0.22);
     padding: 3px 8px;
-    font-size: 12px;
+    font-size: calc(12px * var(--fs));
     font-weight: 700;
   }
 
@@ -244,7 +244,7 @@
 
   .site-nav__link {
     min-height: 44px;
-    font-size: 15px;
+    font-size: calc(15px * var(--fs));
   }
 
   .site-nav__link--external {

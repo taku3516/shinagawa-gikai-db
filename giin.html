@@ -19,7 +19,7 @@
     .disclaimer {
       margin-top: 18px; max-width: 840px; padding: 14px 16px;
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
-      background: var(--c-card); font-size: 14px; line-height: 1.7;
+      background: var(--c-card); font-size: calc(14px * var(--fs)); line-height: 1.7;
     }
     /* 名簿8区分の切り替えは site-controls.css の .seg（枠で囲んだセグメント）。
        枠があるのは「このページの中の切り替え」だから。別ページへ行くリンクは
@@ -31,15 +31,15 @@
       display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
       margin: 0 0 8px;
     }
-    .controls label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; }
+    .controls label { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); font-weight: 800; }
     #search-box, #party-select {
       border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 10px 12px;
-      color: var(--c-ink); font-size: 15px;
+      color: var(--c-ink); font-size: calc(15px * var(--fs));
     }
     #search-box { width: min(100%, 320px); }
     #party-select { font-weight: 800; }
-    #hit-count { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
+    #hit-count { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
 
     /* ===== 議員カード ===== */
     .member-grid {
@@ -55,45 +55,45 @@
     .member-card.is-focused {
       border-left-color: var(--c-main); box-shadow: 0 0 0 3px var(--c-main-pale-2);
     }
-    .member-card h2 { margin: 0; font-size: 20px; line-height: 1.4; }
-    .member-card .kana { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
+    .member-card h2 { margin: 0; font-size: calc(20px * var(--fs)); line-height: 1.4; }
+    .member-card .kana { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
 
     .tag {
       display: inline-flex; margin: 0 6px 4px 0; border-radius: 3px;
       background: var(--c-main-pale); padding: 4px 10px;
-      color: var(--c-main-dark); font-size: 12px; font-weight: 800;
+      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 800;
     }
     .chip {
       display: inline-flex; margin: 0 6px 4px 0; border-radius: 3px;
       background: var(--c-surface-sub); padding: 4px 10px; color: var(--c-ink-soft);
-      font-size: 12px; font-weight: 800;
+      font-size: calc(12px * var(--fs)); font-weight: 800;
     }
 
-    .committee { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.7; }
+    .committee { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.7; }
     .committee strong { color: var(--c-ink); }
 
     .pill {
       display: inline-flex; align-items: center; margin: 4px 6px 0 0;
       border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 6px 12px;
-      color: var(--c-main-dark); font-size: 13px; font-weight: 800;
+      color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800;
     }
 
     /* 後から情報を入れる枠（SNS・選挙履歴・政治資金収支報告書・政務活動費） */
-    .extra-slot { font-size: 13px; line-height: 1.9; }
+    .extra-slot { font-size: calc(13px * var(--fs)); line-height: 1.9; }
     .extra-slot .slot-name { color: var(--c-ink); font-weight: 800; }
     .pending {
       display: inline-flex; border-radius: 3px; background: var(--c-surface-sub);
-      padding: 2px 10px; color: var(--c-ink-mute); font-size: 12px; font-weight: 700;
+      padding: 2px 10px; color: var(--c-ink-mute); font-size: calc(12px * var(--fs)); font-weight: 700;
     }
 
     /* 詳細の開閉 */
     details { margin-top: 8px; border-top: 1px solid var(--c-border); padding-top: 10px; }
     summary {
-      cursor: pointer; color: var(--c-main-dark); font-size: 13px; font-weight: 800;
+      cursor: pointer; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 800;
       list-style-position: inside;
     }
-    .detail-table { width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 13px; }
+    .detail-table { width: 100%; margin-top: 10px; border-collapse: collapse; font-size: calc(13px * var(--fs)); }
     .detail-table th, .detail-table td {
       border: 1px solid var(--c-border); padding: 8px 10px;
       text-align: left; vertical-align: top; line-height: 1.7;
@@ -108,13 +108,13 @@
       grid-column: 1 / -1; padding: 28px; border: 1px dashed var(--c-border);
       border-radius: 3px; background: var(--c-card); line-height: 1.9;
     }
-    .empty-state h2 { margin: 0 0 8px; font-size: 20px; }
+    .empty-state h2 { margin: 0 0 8px; font-size: calc(20px * var(--fs)); }
     .empty-state p { margin: 0; color: var(--c-ink-soft); }
 
     @media (max-width: 640px) {
       .member-grid { grid-template-columns: 1fr; }
       /* iOSで入力・選択時に画面が自動で拡大しないよう16pxにする */
-      #search-box, #party-select { width: 100%; font-size: 16px; }
+      #search-box, #party-select { width: 100%; font-size: calc(16px * var(--fs)); }
       .controls { flex-direction: column; align-items: stretch; }
       /* 「詳しい情報を見る」を指で押しやすい高さにする */
       summary { min-height: 44px; padding: 11px 2px; }
