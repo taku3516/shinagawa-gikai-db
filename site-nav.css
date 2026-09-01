@@ -1,160 +1,108 @@
-/* ==========================================================================
-   共通ナビゲーション
-
-   全15ページの <nav data-site-nav> に site-nav.js が描画する。
-   ここを直すと全ページに効く。
-
-   設計の考え方（デジタル庁「ダッシュボードデザイン実践ガイドブック」の
-   「見る人の行動や意思決定に寄与する情報表現」＝優先順位のない一覧は
-   情報表現として成立しない、という原則に合わせている）。
-
-     1. 18本のリンクを役割で4群に分け、各群に見出しを付ける。
-        利用者は群の名前を手がかりに走査でき、全部を読まずに済む。
-     2. サイト内のリンクは枠を付けない。枠で囲むのは「このページの中の
-        操作」だけ（site-controls.css）。囲みの有無が意味を持つ。
-     3. 現在地は塗りつぶさず、下線タブで示す。塗りつぶすと「押せるボタン」
-        に見えるうえ、ナビ全体がボタンの壁になる。
-     4. ラベルは名詞にする（「会議録を見る」ではなく「会議録・録画」）。
-        動詞を付けると分類名が埋もれ、どれも同じ長さの帯に見える。
-
-   site-theme.css の後に読み込む。
-   ========================================================================== */
-
-.site-nav {
-  margin-top: 16px;
+/* ===== 共通ナビゲーションコンテナ ===== */
+.hero-links {
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.site-nav__panel {
-  border-top: 1px solid var(--c-rule);
-  border-bottom: 1px solid var(--c-rule);
-}
-
-/* --------------------------------------------------------------------------
-   群（見出し＋リンクの行）
-   -------------------------------------------------------------------------- */
-
-.site-nav__group {
-  display: grid;
-  grid-template-columns: 5.5em minmax(0, 1fr);
-  gap: 2px 14px;
-  align-items: baseline;
-  padding: 3px 0;
-}
-
-.site-nav__group + .site-nav__group {
-  border-top: 1px solid var(--c-rule);
-}
-
-/* 群の見出し。ナビ本体より弱く出す。ここを太くすると
-   見出しとリンクが同じ強さになり、群に分けた意味が消える */
-.site-nav__group-label {
-  color: var(--c-ink-mute);
-  font-size: calc(12px * var(--fs));
-  font-weight: 700;
-  line-height: 1.4;
-  white-space: nowrap;
-}
-
-.site-nav__list {
+.hero-links-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0 18px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  gap: 6px 8px;
 }
 
-/* --------------------------------------------------------------------------
-   リンク（サイト内）
-
-   下線付きの素のリンク。透明な下罫をあらかじめ確保しておき、
-   現在地になったときに色が付くだけにする（行の高さが動かない）。
-   -------------------------------------------------------------------------- */
-
-.site-nav__link {
+/* ===== リンクピル（共通・標準ボタン） ===== */
+.hero-links-row .pill,
+.site-function-nav__link {
   display: inline-flex;
   align-items: center;
-  min-height: 30px;
-  padding: 2px 0;
-  border-bottom: 2px solid transparent;
+  justify-content: center;
+  margin: 0;
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  background: var(--c-card);
+  padding: 6px 10px;
   color: var(--c-main-dark);
-  font-size: calc(14px * var(--fs));
-  font-weight: 400;
-  line-height: 1.4;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  transition: all 0.15s ease;
+  position: relative;
 }
 
-.site-nav__link:hover {
+.hero-links-row .pill:hover,
+.site-function-nav__link:hover {
+  background: var(--c-main-pale);
   text-decoration-thickness: 2px;
 }
 
-/* 現在地。色・太さ・下罫の3つで示し、絵文字バッジは使わない。
-   読み上げには aria-current="page" が付く（site-nav.js） */
-.site-nav__link[aria-current="page"] {
-  border-bottom-color: var(--c-main);
-  color: var(--c-ink);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-/* --------------------------------------------------------------------------
-   リンク（外部＝品川区議会の公式サイト）
-
-   行き先がサイトの外なので、素のリンクとは別の形にする。
-   矢印はCSSで付ける（以前はJS側でインラインstyleを書いていた）。
-   -------------------------------------------------------------------------- */
-
-.site-nav__link--external {
-  min-height: 28px;
-  padding: 3px 9px;
-  border: 1px solid var(--c-border);
-  border-bottom-width: 1px;
-  border-radius: 3px;
-  background: var(--c-card);
-  text-decoration: none;
-}
-
-.site-nav__link--external::after {
-  content: "↗";
-  margin-left: 5px;
-  font-size: 0.9em;
-}
-
-.site-nav__link--external:hover {
-  background: var(--c-main-pale);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-/* 録画・中継。赤は「否決」などの状態に使う色なので、ここでは使わない。
-   キーカラーと同系のライトブルーで「映像」であることだけを示す
-   （site-theme.css の方針） */
-.site-nav__link--video {
+/* 録画・中継（映像への導線）。
+   赤は「否決」などの状態に使う色なので、ここでは使わない。
+   キーカラーと同系のライトブルーで「映像」であることだけを示す */
+.hero-links-row .pill--video {
   border-color: var(--c-video-border);
   background: var(--c-video-bg);
   color: var(--c-video-text);
 }
-
-.site-nav__link--video:hover {
+.hero-links-row .pill--video:hover {
   background: var(--c-video-hover);
 }
 
-/* 区のニュースは Firebase Hosting から配信していて行き先が別ドメインになる。
-   外部リンクの枠が付くぶん、現在地の下罫が枠の色で消えてしまうので
-   ここで上書きする（news.html を開いているときだけ効く） */
-.site-nav__link--external[aria-current="page"] {
-  border-color: var(--c-border-strong);
-  border-bottom: 2px solid var(--c-main);
-  color: var(--c-ink);
+/* 議事録・会議録（文書への導線）。
+   ふつうの資料リンクなので、標準のリンクと同じ見た目にする */
+.hero-links-row .pill--minutes {
+  border-color: var(--c-minutes-border);
+  background: var(--c-minutes-bg);
+  color: var(--c-minutes-text);
+}
+.hero-links-row .pill--minutes:hover {
+  background: var(--c-minutes-hover);
 }
 
-/* --------------------------------------------------------------------------
-   スマートフォン用の開閉メニュー（640px以下でのみ表示）
-   -------------------------------------------------------------------------- */
+/* ===== 現在地（アクティブ）ボタンのハイライトスタイル ===== */
+.hero-links-row .pill[aria-current="page"],
+.hero-links-row .pill.is-active,
+.site-function-nav__link[aria-current="page"],
+.site-function-nav__link.is-active {
+  background: var(--c-main) !important;
+  color: #ffffff !important;
+  border-color: var(--c-main) !important;
+  text-decoration: none !important;
+  font-weight: 900;
+}
 
+/* 現在地は「今どこにいるか」という状態なので、リンクの種類（映像／文書）に
+   関係なく同じキーカラーで塗りつぶす。種類ごとに色を変えると、
+   現在地の印なのか種類の印なのか読み取れなくなる */
+.hero-links-row .pill--minutes[aria-current="page"],
+.hero-links-row .pill--minutes.is-active,
+.hero-links-row .pill--video[aria-current="page"],
+.hero-links-row .pill--video.is-active {
+  background: var(--c-main) !important;
+  color: #ffffff !important;
+  border-color: var(--c-main) !important;
+}
+
+/* 現在地を示すバッジ */
+.nav-active-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 5px;
+  background: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+}
+
+/* ===== スマートフォン用の開閉メニュー（640px以下でのみ表示） ===== */
 .site-nav-toggle {
   display: none;
 }
@@ -166,14 +114,15 @@
     gap: 9px;
     width: 100%;
     min-height: 48px;
-    padding: 8px 12px;
+    margin-top: 16px;
     border: 1px solid var(--c-main-dark);
-    border-radius: 3px;
+    border-radius: 4px;
     background: var(--c-main-dark);
+    padding: 8px 12px;
     color: #ffffff;
     font: inherit;
-    font-size: calc(15px * var(--fs));
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 800;
     text-align: left;
     cursor: pointer;
   }
@@ -189,11 +138,11 @@
 
   .site-nav-toggle__current {
     margin-left: auto;
-    border-radius: 3px;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.22);
     padding: 3px 8px;
-    font-size: calc(12px * var(--fs));
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 800;
   }
 
   .site-nav-toggle__chevron {
@@ -205,7 +154,7 @@
     transition: transform 0.15s ease;
   }
 
-  /* 現在地の名前が無いページ（トップ）では矢印を右端に寄せる */
+  /* 現在地バッジが無いページでは矢印を右端に寄せる */
   .site-nav-toggle__text + .site-nav-toggle__chevron {
     margin-left: auto;
   }
@@ -214,42 +163,36 @@
     transform: rotate(180deg);
   }
 
-  .site-nav[data-nav-open="false"] .site-nav__panel {
+  .site-nav[data-nav-open="false"] > .hero-links {
     display: none;
   }
 
-  .site-nav[data-nav-open="true"] .site-nav__panel {
+  .site-nav[data-nav-open="true"] > .hero-links {
     max-height: 66vh;
     overflow-y: auto;
     margin-top: 10px;
     border: 1px solid var(--c-border);
-    border-radius: 3px;
-    padding: 4px 12px;
+    border-radius: 4px;
+    padding: 10px;
     background: var(--c-card);
   }
 
-  /* 折りたたみメニューの中は、見出しを上に置いて縦一列にする。
-     指で押せるよう1件44px以上を確保する */
-  .site-nav__group {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0;
-    padding: 10px 0;
-  }
-
-  .site-nav__list {
+  /* 折りたたみメニュー内は縦一列にして、指で押しやすくする */
+  .site-nav .hero-links-row {
     flex-direction: column;
     align-items: stretch;
-    gap: 0;
+    gap: 6px;
   }
 
-  .site-nav__link {
-    min-height: 44px;
-    font-size: calc(15px * var(--fs));
-  }
-
-  .site-nav__link--external {
+  .site-nav .hero-links-row .pill {
     justify-content: flex-start;
     min-height: 44px;
-    margin: 3px 0;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .hero-links-row .pill {
+    padding: 7px 10px;
+    font-size: 13px;
   }
 }

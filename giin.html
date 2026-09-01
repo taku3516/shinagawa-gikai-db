@@ -6,9 +6,7 @@
   <meta name="theme-color" content="#0017c1" />
   <title>現職区議名簿 | 品川区議会DB</title>
   <link rel="stylesheet" href="site-theme.css" />
-  <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
-  <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
   <style>
@@ -16,30 +14,74 @@
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
 
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: var(--c-bg);
+      color: var(--c-ink);
+      /* 長いURL・英数字の連続でも画面外にはみ出さないよう折り返す */
+      overflow-wrap: break-word;
+    }
+
+    a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .hero {
+      padding: 40px 0 28px; border-top: 6px solid var(--c-main); border-bottom: 1px solid var(--c-border);
+      background: var(--c-card);
+    }
+    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
+    .hero h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 48px); line-height: 1.1; }
+    .hero .lead { max-width: 780px; margin: 0; font-size: 16px; line-height: 1.9; }
     .disclaimer {
       margin-top: 18px; max-width: 840px; padding: 14px 16px;
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
-      background: var(--c-card); font-size: calc(14px * var(--fs)); line-height: 1.7;
+      background: var(--c-card); font-size: 14px; line-height: 1.7;
     }
-    /* 名簿8区分の切り替えは site-controls.css の .seg（枠で囲んだセグメント）。
-       枠があるのは「このページの中の切り替え」だから。別ページへ行くリンクは
-       共通ナビ側に置き、枠を付けない */
-    .roster-switch { margin-top: 18px; }
+    .roster-switch {
+      display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 4px; width: min(100%, 840px); margin-top: 18px; padding: 4px;
+      border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-surface-sub);
+    }
+    .roster-switch a {
+      min-height: 40px; display: inline-flex; align-items: center; justify-content: center;
+      padding: 8px 16px; border-radius: 3px; color: var(--c-main-dark); font-size: 14px;
+    }
+    .roster-switch a[aria-current="page"] {
+      background: var(--c-main); color: #fff; text-decoration: none;
+    }
+    .related-services {
+      width: min(100%, 840px); margin-top: 14px; padding: 14px;
+      border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-surface-sub);
+    }
+    .related-services p { margin: 0 0 9px; color: var(--c-ink-soft); font-size: 12px; font-weight: 800; }
+    .related-services__links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+    .related-services__links a {
+      display: inline-flex; min-height: 44px; align-items: center; justify-content: center;
+      border: 1px solid var(--c-border); border-radius: 3px; background: var(--c-card);
+      padding: 7px 9px; color: var(--c-main-dark); font-size: 12px; font-weight: 800; text-align: center;
+    }
+
+    section { padding: 32px 0 48px; }
 
     /* ===== 絞り込み ===== */
     .controls {
       display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
       margin: 0 0 8px;
     }
-    .controls label { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); font-weight: 700; }
+    .controls label { color: var(--c-ink-soft); font-size: 14px; font-weight: 800; }
     #search-box, #party-select {
       border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 10px 12px;
-      color: var(--c-ink); font-size: calc(15px * var(--fs));
+      color: var(--c-ink); font-size: 15px;
     }
     #search-box { width: min(100%, 320px); }
-    #party-select { font-weight: 700; }
-    #hit-count { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
+    #party-select { font-weight: 800; }
+    #hit-count { color: var(--c-ink-soft); font-size: 13px; font-weight: 700; }
 
     /* ===== 議員カード ===== */
     .member-grid {
@@ -55,69 +97,84 @@
     .member-card.is-focused {
       border-left-color: var(--c-main); box-shadow: 0 0 0 3px var(--c-main-pale-2);
     }
-    .member-card h2 { margin: 0; font-size: calc(20px * var(--fs)); line-height: 1.4; }
-    .member-card .kana { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
+    .member-card h2 { margin: 0; font-size: 20px; line-height: 1.4; }
+    .member-card .kana { color: var(--c-ink-soft); font-size: 12px; font-weight: 700; }
 
     .tag {
       display: inline-flex; margin: 0 6px 4px 0; border-radius: 3px;
       background: var(--c-main-pale); padding: 4px 10px;
-      color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700;
+      color: var(--c-main-dark); font-size: 12px; font-weight: 800;
     }
     .chip {
       display: inline-flex; margin: 0 6px 4px 0; border-radius: 3px;
       background: var(--c-surface-sub); padding: 4px 10px; color: var(--c-ink-soft);
-      font-size: calc(12px * var(--fs)); font-weight: 700;
+      font-size: 12px; font-weight: 800;
     }
 
-    .committee { margin: 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); line-height: 1.7; }
+    .committee { margin: 0; color: var(--c-ink-soft); font-size: 13px; line-height: 1.7; }
     .committee strong { color: var(--c-ink); }
 
     .pill {
       display: inline-flex; align-items: center; margin: 4px 6px 0 0;
       border: 1px solid var(--c-border); border-radius: 3px;
       background: var(--c-card); padding: 6px 12px;
-      color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700;
+      color: var(--c-main-dark); font-size: 13px; font-weight: 800;
     }
 
     /* 後から情報を入れる枠（SNS・選挙履歴・政治資金収支報告書・政務活動費） */
-    .extra-slot { font-size: calc(13px * var(--fs)); line-height: 1.9; }
-    .extra-slot .slot-name { color: var(--c-ink); font-weight: 700; }
+    .extra-slot { font-size: 13px; line-height: 1.9; }
+    .extra-slot .slot-name { color: var(--c-ink); font-weight: 800; }
     .pending {
       display: inline-flex; border-radius: 3px; background: var(--c-surface-sub);
-      padding: 2px 10px; color: var(--c-ink-mute); font-size: calc(12px * var(--fs)); font-weight: 700;
+      padding: 2px 10px; color: var(--c-ink-mute); font-size: 12px; font-weight: 700;
     }
 
     /* 詳細の開閉 */
     details { margin-top: 8px; border-top: 1px solid var(--c-border); padding-top: 10px; }
     summary {
-      cursor: pointer; color: var(--c-main-dark); font-size: calc(13px * var(--fs)); font-weight: 700;
+      cursor: pointer; color: var(--c-main-dark); font-size: 13px; font-weight: 800;
       list-style-position: inside;
     }
     .question-years { margin-top: 6px; width: 100%; }
-    .question-years summary { cursor: pointer; color: var(--c-main-dark); font-size: calc(12px * var(--fs)); font-weight: 700; }
+    .question-years summary { cursor: pointer; color: var(--c-main-dark); font-size: 12px; font-weight: 700; }
     .question-years > div { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-    .detail-table { width: 100%; margin-top: 10px; border-collapse: collapse; font-size: calc(13px * var(--fs)); }
+    .detail-table { width: 100%; margin-top: 10px; border-collapse: collapse; font-size: 13px; }
     .detail-table th, .detail-table td {
       border: 1px solid var(--c-border); padding: 8px 10px;
       text-align: left; vertical-align: top; line-height: 1.7;
     }
     .detail-table th {
       width: 34%; background: var(--c-main-pale);
-      color: var(--c-ink); font-weight: 700; white-space: nowrap;
+      color: var(--c-ink); font-weight: 800; white-space: nowrap;
     }
     .detail-table td { color: var(--c-ink-soft); }
 
+    .fine-print { margin: 24px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.7; }
+
+    footer {
+      border-top: 1px solid var(--c-border);
+      background: var(--c-main-dark);
+      padding: 32px 0; text-align: center; font-size: 13px; line-height: 1.8; color: #fff;
+    }
+
+    .load-error {
+      margin: 40px auto; max-width: 720px; padding: 20px;
+      border: 1px solid var(--c-video-border); border-radius: 8px;
+      background: var(--c-video-bg); font-size: 14px; line-height: 1.9;
+    }
     .empty-state {
       grid-column: 1 / -1; padding: 28px; border: 1px dashed var(--c-border);
       border-radius: 3px; background: var(--c-card); line-height: 1.9;
     }
-    .empty-state h2 { margin: 0 0 8px; font-size: calc(20px * var(--fs)); }
+    .empty-state h2 { margin: 0 0 8px; font-size: 20px; }
     .empty-state p { margin: 0; color: var(--c-ink-soft); }
 
     @media (max-width: 640px) {
+      .roster-switch { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .related-services__links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .member-grid { grid-template-columns: 1fr; }
       /* iOSで入力・選択時に画面が自動で拡大しないよう16pxにする */
-      #search-box, #party-select { width: 100%; font-size: calc(16px * var(--fs)); }
+      #search-box, #party-select { width: 100%; font-size: 16px; }
       .controls { flex-direction: column; align-items: stretch; }
       /* 「詳しい情報を見る」を指で押しやすい高さにする */
       summary { min-height: 44px; padding: 11px 2px; }
@@ -138,7 +195,7 @@
           これは品川区が運営しているものではありません。掲載情報は品川区議会公式サイトからの転記です。最新かつ正確な情報は必ず<a href="https://gikai.city.shinagawa.tokyo.jp/profile/50on" target="_blank" rel="noopener">公式の議員紹介ページ</a>を確認してください。
         </div>
         <nav data-site-nav></nav>
-        <nav class="seg roster-switch" aria-label="政治家名簿の切り替え">
+        <nav class="roster-switch" aria-label="政治家名簿の切り替え">
           <a data-roster="current-ward" href="giin.html">現職区議</a>
           <a data-roster="former-ward" href="giin.html?view=former-ward">元職区議</a>
           <a data-roster="current-tokyo" href="giin.html?view=current-tokyo">現職都議</a>
@@ -147,6 +204,15 @@
           <a data-roster="former-house" href="giin.html?view=former-house">元職衆議</a>
           <a data-roster="current-mayor" href="giin.html?view=current-mayor">現職区長</a>
           <a data-roster="former-mayor" href="giin.html?view=former-mayor">元職区長</a>
+        </nav>
+        <nav class="related-services" aria-label="政治家に関連する公開情報">
+          <p>政治家に関連する公開情報</p>
+          <div class="related-services__links">
+            <a href="senkyo.html">選挙・得票を見る</a>
+            <a href="senkyo-shushi.html">選挙収支報告書を読む</a>
+            <a href="seimu.html">政務活動費を見る</a>
+            <a href="seijishikin.html">政治資金収支報告書を見る</a>
+          </div>
         </nav>
       </div>
     </div>
