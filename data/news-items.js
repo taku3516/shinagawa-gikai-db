@@ -1,7 +1,100 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-08-31T20:55:22.258921Z",
+  "generatedAt": "2026-09-01T00:42:12.610327Z",
   "items": [
+    {
+      "id": "f15c378336cce923f02d",
+      "title": "成年後見制度普及啓発講座を開催します",
+      "summary": "■後見制度啓発講座「あんしんの先へ！高齢期の住まいのいろは」を開催します。 日時／10月14日（木）午後２時～４時 場所／品川区社会福祉協議会３階会議室（大井１‐14‐１） 講師／株式会社えんカウント 満田将太氏 内容／本講座では高齢期の住まいについて専門家より学びます。後半は成年後見制度に関しての事業案内をいたします。 参加者／30人（先着） 参加費／無料 申込み／10月7日（水）午後５時までに、電話かFAXで品川成年後見センター（電話5718-7174，FAX6429-…",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-62834.html",
+      "publishedAt": "2026-09-01T00:41:47.659181Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-01T00:41:47.659181Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "c3d7b57c26878f790d26",
+      "title": "「しながわ社協だより9月号」 更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-62882.html",
+      "publishedAt": "2026-09-01T00:41:47.659181Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-01T00:41:47.659181Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "ed6f13e63b8c9df0a416",
+      "title": "品川区一般任期付職員（児童相談所長（部長級）・相談援助担当（課長級））採用選考",
+      "summary": "品川区役所区長室人事課人事係 電話：03－5742－7140 ＦＡＸ：03－5742－6872 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20251120182608.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T00:41:47.659181Z",
+      "tags": [
+        "行政",
+        "子育て教育"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "a53131987fd8b7531565",
+      "title": "LINEを活用した避難者把握システム",
+      "summary": "防災課避難体制係 電話： 03-5742-6941 FAX：03-3777-1181",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai2/jishin/20260812163301.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T00:41:47.659181Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "14b06ff6322ec72e7579",
+      "title": "令和8年度精神保健講演会",
+      "summary": "荏原保健センター 電話：03-5487-1311 FAX：03-5487-1320 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/20261005.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T00:41:47.659181Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "fb333fda39962c20da89",
       "title": "令和８年度秋季品川区囲碁大会 参加者募集 （募集締切：９月30日）",
@@ -193,6 +286,57 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-07T07:50:23.345001Z",
       "tags": [
         "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "dbe3cd7369c456dd28f3",
+      "title": "しながわ電気・ガス料金緊急支援事業【申請期間：9月1日～10月31日】",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "94c5b1f801589ffe8100",
+      "title": "整備地域等不燃化集中促進事業",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/20260326182608.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "7aedc314cb283da8039c",
+      "title": "ヒカリの水辺プロジェクト",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-mizube/hpg000024873.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -1040,23 +1184,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 6
     },
     {
-      "id": "dbe3cd7369c456dd28f3",
-      "title": "しながわ電気・ガス料金緊急支援事業",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
-      "publishedAt": "2026-08-25T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "5bfbf297e93d61442728",
       "title": "写真から始める現場の3D化、センシンロボティクスが「3DGS活用入門」無料オンラインセミナーを開催",
       "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也 、以下「センシンロボティクス」） は、写真から3D空間を生成する新技術「3DG...",
@@ -1077,7 +1204,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "60ca5f6b5ae1451c94ff",
       "title": "ボラミニ情報更新しました！",
-      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -2028,6 +2155,23 @@ window.SHINAGAWA_NEWS = {
         "小山"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "a9ff9dc245bbdfb42d8f",
+      "title": "エシカルカフェ第3回「エシカル」をおいしく楽しむヴィーガンランチ",
+      "summary": "消費者センター 電話：03-6421-6136 FAX：03-6421-6132",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260814094535.html",
+      "publishedAt": "2026-08-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T00:41:47.659181Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "9321b17422dcc167934b",
@@ -4284,7 +4428,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "df72cd728c73806c0afc",
       "title": "ボラミニ情報更新しました！",
-      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -6445,23 +6589,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "94c5b1f801589ffe8100",
-      "title": "整備地域等不燃化集中促進事業",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/20260326182608.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "81008b4e5a0e9fbfa0d9",
       "title": "学校プール夏季一般開放",
       "summary": "",
@@ -6617,23 +6744,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "7aedc314cb283da8039c",
-      "title": "ヒカリの水辺プロジェクト",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-mizube/hpg000024873.html",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "62e909e9cbd9625d1e96",
@@ -7365,7 +7475,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 540,
+      "scanned": 535,
       "accepted": 0
     },
     {
@@ -7390,7 +7500,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -7413,7 +7523,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 26,
+      "scanned": 28,
       "accepted": 0
     },
     {
