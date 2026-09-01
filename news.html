@@ -28,27 +28,27 @@
     .view-switch { display: flex; gap: 6px; }
     .view-button {
       min-height: 44px; border: 1px solid var(--main); border-radius: 3px; background: var(--card);
-      padding: 8px 12px; color: var(--main-dark); font-weight: 800; cursor: pointer; white-space: nowrap;
+      padding: 8px 12px; color: var(--main-dark); font-weight: 700; cursor: pointer; white-space: nowrap;
     }
     .view-button[aria-pressed="true"] { background: var(--main); color: #fff; }
     .source-filter { position: relative; }
     .source-filter-button {
       width: 100%; min-height: 44px; border: 1px solid var(--border); border-radius: 3px;
-      background: var(--card); padding: 8px 11px; color: var(--main-dark); font-weight: 800;
+      background: var(--card); padding: 8px 11px; color: var(--main-dark); font-weight: 700;
       cursor: pointer; white-space: nowrap;
     }
     .source-filter-button::after { content: "▾"; margin-left: 7px; font-size: calc(12px * var(--fs)); }
     .source-filter-button[aria-expanded="true"]::after { content: "▴"; }
     .source-filter-panel {
       position: absolute; top: calc(100% + 7px); right: 0; width: min(390px, calc(100vw - 24px));
-      max-height: min(520px, 62vh); overflow: auto; border: 1px solid var(--border); border-radius: 4px;
+      max-height: min(520px, 62vh); overflow: auto; border: 1px solid var(--border); border-radius: 3px;
       background: var(--card); padding: 12px; box-shadow: 0 10px 28px rgba(26, 26, 26,.18);
     }
     .source-filter-panel[hidden] { display: none; }
     .source-filter-actions { display: flex; gap: 8px; margin-bottom: 9px; padding-bottom: 9px; border-bottom: 1px solid var(--rule); }
     .source-filter-actions button {
       min-height: 38px; flex: 1; border: 1px solid var(--main); border-radius: 3px;
-      background: var(--card); color: var(--main-dark); font-size: calc(13px * var(--fs)); font-weight: 800; cursor: pointer;
+      background: var(--card); color: var(--main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; cursor: pointer;
     }
     .source-option {
       display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: center;
@@ -62,20 +62,20 @@
     .sync-panel {
       display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 18px; align-items: center;
       margin-bottom: 22px; border: 1px solid var(--border); border-left: 4px solid var(--main);
-      border-radius: 4px; background: var(--card); padding: 14px 16px;
+      border-radius: 3px; background: var(--card); padding: 14px 16px;
     }
     .sync-panel[hidden] { display: none; }
     .sync-copy { min-width: 0; }
-    .sync-title { margin: 0 0 4px; color: var(--main-dark); font-size: calc(15px * var(--fs)); font-weight: 900; }
+    .sync-title { margin: 0 0 4px; color: var(--main-dark); font-size: calc(15px * var(--fs)); font-weight: 700; }
     .sync-status { margin: 0; color: var(--soft); font-size: calc(12px * var(--fs)); line-height: 1.6; }
-    .sync-status[data-error="true"] { color: var(--c-fail); font-weight: 800; }
-    .sync-account { color: var(--ink); font-weight: 800; }
+    .sync-status[data-error="true"] { color: var(--c-fail); font-weight: 700; }
+    .sync-account { color: var(--ink); font-weight: 700; }
     .sync-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; align-items: center; }
     .sync-remember { display: inline-flex; gap: 6px; align-items: center; color: var(--soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .sync-remember input { width: 18px; height: 18px; margin: 0; accent-color: var(--main); }
     .sync-button {
       min-height: 40px; border: 1px solid var(--main); border-radius: 3px; background: var(--main);
-      padding: 7px 12px; color: #fff; font-size: calc(13px * var(--fs)); font-weight: 800; cursor: pointer;
+      padding: 7px 12px; color: #fff; font-size: calc(13px * var(--fs)); font-weight: 700; cursor: pointer;
     }
     .sync-button.secondary { background: var(--card); color: var(--main-dark); }
     .sync-button.danger { border-color: var(--c-fail-border); background: var(--card); color: var(--c-fail); }
@@ -88,7 +88,7 @@
     .news-card {
       /* 1fr のままだと長い見出しで左列が縮まず、スマホで画面外にはみ出すため minmax(0,1fr) にする */
       display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 18px;
-      border: 1px solid var(--border); border-radius: 4px; background: var(--card); padding: 18px;
+      border: 1px solid var(--border); border-radius: 3px; background: var(--card); padding: 18px;
     }
     /* 長い見出しやURLがあってもカードが横にはみ出さないようにする */
     .news-card > * { min-width: 0; }
@@ -97,7 +97,7 @@
     .news-card h3 { margin: 0; font-size: calc(18px * var(--fs)); line-height: 1.55; }
     .news-card p { margin: 10px 0 0; color: var(--soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
-    .tag { border-radius: 3px; background: var(--main-pale); padding: 4px 8px; color: var(--main-dark); font-size: calc(11px * var(--fs)); font-weight: 800; }
+    .tag { border-radius: 3px; background: var(--main-pale); padding: 4px 8px; color: var(--main-dark); font-size: calc(11px * var(--fs)); font-weight: 700; }
     .location { border: 1px solid var(--border); background: var(--c-surface-sub); }
     .star-button {
       align-self: start; display: inline-grid; place-items: center; width: 44px; height: 44px;
@@ -108,13 +108,13 @@
     .news-actions { display: flex; flex-direction: column; gap: 8px; align-items: stretch; }
     .hide-button {
       min-width: 72px; min-height: 40px; border: 1px solid var(--border); border-radius: 3px;
-      background: var(--card); padding: 7px 9px; color: var(--soft); font-size: calc(12px * var(--fs)); font-weight: 800;
+      background: var(--card); padding: 7px 9px; color: var(--soft); font-size: calc(12px * var(--fs)); font-weight: 700;
       cursor: pointer; white-space: nowrap;
     }
     .hide-button:hover { border-color: var(--main); background: var(--main-pale); color: var(--main-dark); }
     /* フォーカスリングは site-theme.css で全ページ共通に定義している */
-    .empty { border: 1px dashed var(--border); border-radius: 4px; background: var(--card); padding: 42px 20px; text-align: center; color: var(--soft); line-height: 1.8; }
-    .load-more { display: block; min-height: 44px; margin: 22px auto 0; border: 1px solid var(--main); border-radius: 3px; background: var(--card); padding: 9px 22px; color: var(--main-dark); font-weight: 800; cursor: pointer; }
+    .empty { border: 1px dashed var(--border); border-radius: 3px; background: var(--card); padding: 42px 20px; text-align: center; color: var(--soft); line-height: 1.8; }
+    .load-more { display: block; min-height: 44px; margin: 22px auto 0; border: 1px solid var(--main); border-radius: 3px; background: var(--card); padding: 9px 22px; color: var(--main-dark); font-weight: 700; cursor: pointer; }
     .load-more[hidden] { display: none; }
     .sources { margin-top: 42px; border-top: 1px solid var(--rule); padding-top: 28px; }
     .sources h2 { margin: 0 0 10px; font-size: calc(20px * var(--fs)); }
@@ -123,14 +123,14 @@
     .source-list li { break-inside: avoid; }
     .undo-notice {
       position: fixed; z-index: 30; right: 18px; bottom: 18px; display: flex; align-items: center; gap: 12px;
-      max-width: min(520px, calc(100vw - 36px)); border: 1px solid var(--main-dark); border-radius: 4px;
+      max-width: min(520px, calc(100vw - 36px)); border: 1px solid var(--main-dark); border-radius: 3px;
       background: var(--main-dark); padding: 11px 12px 11px 15px; color: #fff;
       box-shadow: 0 8px 24px rgba(26, 26, 26,.28); font-size: calc(13px * var(--fs)); font-weight: 700;
     }
     .undo-notice[hidden] { display: none; }
     .undo-notice button {
       min-height: 38px; border: 1px solid #fff; border-radius: 3px; background: #fff;
-      padding: 6px 11px; color: var(--main-dark); font-weight: 900; cursor: pointer; white-space: nowrap;
+      padding: 6px 11px; color: var(--main-dark); font-weight: 700; cursor: pointer; white-space: nowrap;
     }
     /* 横向きのスマートフォンや小さめのタブレットでは、絞り込み欄が1行に収まらず
        ページ全体が横スクロールしてしまうため、2段に折り返す */
