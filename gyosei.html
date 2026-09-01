@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#0017c1" />
   <title>行政評価（事務事業評価） | 品川区議会DB</title>
   <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
@@ -13,25 +14,12 @@
   <style>
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
-    body { margin: 0; background: var(--c-bg); color: var(--c-ink);
-           font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-           overflow-wrap: break-word; }
-    a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-    .hero { padding: 40px 0 26px; border-top: 6px solid var(--c-fiscal); border-bottom: 1px solid var(--c-rule); background: var(--c-card); }
-    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
-    h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 48px); line-height: 1.15; }
-    .lead { max-width: 860px; margin: 0; font-size: 16px; line-height: 1.9; }
     .warn {
       max-width: 900px; margin-top: 18px; padding: 14px 16px;
       border: 1px solid var(--c-fiscal-border); border-left: 4px solid var(--c-fiscal);
       border-radius: 3px; background: var(--c-fiscal-bg); font-size: 14px; line-height: 1.8;
     }
     .warn strong { color: var(--c-fiscal); }
-    section { padding: 34px 0; }
     h2.section-title { margin: 0 0 14px; font-size: 20px; border-left: 5px solid var(--c-fiscal); padding-left: 12px; }
     /* 制度の説明 */
     .about { border: 1px solid var(--c-border); border-radius: 4px; background: var(--c-card); padding: 20px; margin-bottom: 30px; }
@@ -80,10 +68,6 @@
     .col-box { border: 1px solid var(--c-rule); border-radius: 3px; background: var(--c-surface-sub); padding: 12px 14px; }
     .col-box h4 { margin: 0 0 8px; font-size: 13px; color: var(--c-ink-soft); }
     .status-note { color: var(--c-ink-soft); font-size: 14px; line-height: 1.8; margin: 6px 0 0; }
-    .fine-print { margin-top: 20px; color: var(--c-ink-soft); font-size: 12px; line-height: 1.8; }
-    footer { padding: 30px 0; border-top: 1px solid var(--c-border); background: var(--c-main-dark);
-             color: #fff; text-align: center; font-size: 13px; line-height: 1.8; }
-    .load-error { padding: 24px; border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-card); }
     @media (max-width: 700px) {
       .two-col { grid-template-columns: 1fr; }
       .fy-card { padding: 16px; }

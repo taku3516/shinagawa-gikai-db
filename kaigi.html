@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#0017c1" />
   <title>会議をまとめて見る | 品川区議会DB</title>
   <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
@@ -13,15 +14,6 @@
   <style>
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
-    body { margin:0; background:var(--c-bg); color:var(--c-ink); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif; overflow-wrap:anywhere; }
-    a { color:var(--c-main-dark); font-weight:750; text-underline-offset:3px; }
-    .container { width:min(1120px,calc(100% - 32px)); margin:auto; }
-    .hero { border-top:6px solid var(--c-main); border-bottom:1px solid var(--c-rule); background:var(--c-card); padding:40px 0 26px; }
-    .breadcrumb { margin:0 0 12px; font-size:14px; }
-    h1 { margin:0 0 12px; color:var(--c-main-dark); font-size:clamp(30px,5vw,50px); line-height:1.15; }
-    .lead { max-width:900px; margin:0; line-height:1.9; }
     .notice { margin-top:18px; border:1px solid var(--c-border); border-left:4px solid var(--c-main); background:var(--c-main-pale); padding:12px 14px; font-size:13px; line-height:1.75; }
     .chooser-wrap { position:sticky; top:0; z-index:30; border-bottom:1px solid var(--c-border); background:rgba(242, 242, 242, 0.94); box-shadow:0 2px 8px rgba(26, 26, 26,.12); backdrop-filter:blur(8px); }
     .chooser { display:grid; grid-template-columns:minmax(130px,220px) minmax(250px,1fr) auto; gap:10px; align-items:end; padding:12px 0; }
@@ -73,7 +65,6 @@
     .committee-topic h4 { margin:0 0 10px; }
     .fulltext-link { display:inline-block; margin-top:10px; color:var(--c-main-dark); font-size:12px; font-weight:800; }
     .empty { color:var(--c-ink-soft); }
-    footer { border-top:1px solid var(--c-border); background:var(--c-main-dark); padding:28px 0; color:#fff; text-align:center; font-size:13px; line-height:1.8; }
     @media(max-width:720px) {
       .chooser { grid-template-columns:1fr; }
       .chooser-wrap { position:static; }

@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#0017c1" />
   <title>現職区議名簿 | 品川区議会DB</title>
   <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
@@ -15,29 +16,6 @@
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
 
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-      background: var(--c-bg);
-      color: var(--c-ink);
-      /* 長いURL・英数字の連続でも画面外にはみ出さないよう折り返す */
-      overflow-wrap: break-word;
-    }
-
-    a { color: var(--c-main-dark); font-weight: 700; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-
-    .hero {
-      padding: 40px 0 28px; border-top: 6px solid var(--c-main); border-bottom: 1px solid var(--c-border);
-      background: var(--c-card);
-    }
-    .breadcrumb { margin: 0 0 12px; font-size: 14px; }
-    .hero h1 { margin: 0 0 12px; font-size: clamp(28px, 5vw, 48px); line-height: 1.1; }
-    .hero .lead { max-width: 780px; margin: 0; font-size: 16px; line-height: 1.9; }
     .disclaimer {
       margin-top: 18px; max-width: 840px; padding: 14px 16px;
       border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
@@ -47,8 +25,6 @@
        枠があるのは「このページの中の切り替え」だから。別ページへ行くリンクは
        共通ナビ側に置き、枠を付けない */
     .roster-switch { margin-top: 18px; }
-
-    section { padding: 32px 0 48px; }
 
     /* ===== 絞り込み ===== */
     .controls {
@@ -128,19 +104,6 @@
     }
     .detail-table td { color: var(--c-ink-soft); }
 
-    .fine-print { margin: 24px 0 0; color: var(--c-ink-soft); font-size: 12px; line-height: 1.7; }
-
-    footer {
-      border-top: 1px solid var(--c-border);
-      background: var(--c-main-dark);
-      padding: 32px 0; text-align: center; font-size: 13px; line-height: 1.8; color: #fff;
-    }
-
-    .load-error {
-      margin: 40px auto; max-width: 720px; padding: 20px;
-      border: 1px solid var(--c-video-border); border-radius: 8px;
-      background: var(--c-video-bg); font-size: 14px; line-height: 1.9;
-    }
     .empty-state {
       grid-column: 1 / -1; padding: 28px; border: 1px dashed var(--c-border);
       border-radius: 3px; background: var(--c-card); line-height: 1.9;

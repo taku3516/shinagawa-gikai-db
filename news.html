@@ -7,6 +7,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230017c1'/%3E%3Cpath d='M8 9h16v3H8zm0 6h16v3H8zm0 6h11v3H8z' fill='white'/%3E%3C/svg%3E" />
   <title>品川区ニュース | 品川区議会DB</title>
   <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
   <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
@@ -14,20 +15,6 @@
   <style>
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-    body {
-      margin: 0; background: var(--bg); color: var(--ink);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-      overflow-wrap: break-word;
-    }
-    a { color: var(--main-dark); font-weight: 700; text-underline-offset: 3px; }
-    button, input, select { font: inherit; }
-    .container { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
-    .hero { border-top: 6px solid var(--main); border-bottom: 1px solid var(--rule); background: var(--card); padding: 36px 0 28px; }
-    .back { display: inline-block; margin-bottom: 18px; font-size: 14px; }
-    h1 { margin: 0 0 12px; color: var(--main-dark); font-size: clamp(32px, 6vw, 52px); line-height: 1.12; }
-    .lead { max-width: 780px; margin: 0; color: var(--soft); line-height: 1.8; }
     .notice {
       margin-top: 20px; border: 1px solid var(--border); border-left: 4px solid var(--main);
       border-radius: 3px; background: var(--c-surface-sub); padding: 12px 14px; font-size: 13px; line-height: 1.7;
@@ -145,7 +132,6 @@
       min-height: 38px; border: 1px solid #fff; border-radius: 3px; background: #fff;
       padding: 6px 11px; color: var(--main-dark); font-weight: 900; cursor: pointer; white-space: nowrap;
     }
-    footer { border-top: 1px solid var(--rule); background: var(--card); padding: 24px 0; color: var(--soft); font-size: 12px; line-height: 1.7; }
     /* 横向きのスマートフォンや小さめのタブレットでは、絞り込み欄が1行に収まらず
        ページ全体が横スクロールしてしまうため、2段に折り返す */
     @media (max-width: 940px) {
@@ -155,7 +141,6 @@
       .view-button { flex: 1; padding-inline: 8px; }
     }
     @media (max-width: 760px) {
-      .container { width: min(100% - 22px, 1080px); }
       .controls { grid-template-columns: 1fr 1fr; }
       .controls input { grid-column: 1 / -1; }
       .source-filter-panel { position: fixed; top: 132px; right: 11px; left: 11px; width: auto; max-height: calc(100vh - 148px); }
