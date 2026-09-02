@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-02T11:33:16.591644Z",
+  "generatedAt": "2026-09-02T16:44:06.310744Z",
   "items": [
+    {
+      "id": "9552fe42dc84a987eedf",
+      "title": "BtoBサービス比較メディア「BIZNAVI byDYM」を正式リリース",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など、多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅、以下「DYM」）は、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000520.000027235.html",
+      "publishedAt": "2026-09-02T15:15:25Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-02T16:43:43.887789Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "68ebd725ff5007dee0c6",
       "title": "【児童相談所】会計年度任用職員募集（一般事務・令和8年11月1日以降採用）",
@@ -7690,7 +7707,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2412, column 32"
+      "message": "not well-formed (invalid token): line 2699, column 32"
     },
     {
       "source": "朝日新聞",
@@ -7714,7 +7731,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
