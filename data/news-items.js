@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-01T18:41:04.164973Z",
+  "generatedAt": "2026-09-02T04:50:15.090924Z",
   "items": [
+    {
+      "id": "68ebd725ff5007dee0c6",
+      "title": "【児童相談所】会計年度任用職員募集（一般事務・令和8年11月1日以降採用）",
+      "summary": "※ 令和8年11月1日以降の採用になりますので、ご了承ください。 令和8年9月2日（水）～令和8年9月16日（水）午後5時 電子申請による申込みを受け付けています。 （※郵送での申込みは受け付けていません。） 品川区電子申請サービスはこちら(別ウィンドウ表示)",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260902.html",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-02T04:49:56.785498Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "b62e32b94defe36818e7",
       "title": "藤田医科大学での18F-FBPAを用いた特定臨床研究の開始",
@@ -128,6 +145,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "60a1d4de272749d45871",
+      "title": "【参加者募集】品川区制80周年 しながわシティラン2027（令和9年3月14日開催）",
+      "summary": "スポーツ推進課 スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/run/20240222144009.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-02T04:49:56.785498Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "b5b1ac98cd01202eb056",
@@ -449,6 +483,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "64080d59b64e7e43348a",
+      "title": "「細街路拡幅整備協議書（様式）」等の受付（令和8年7月1日から適用）",
+      "summary": "建築課 細街路担当 電話 03-5742-6772 FAX 03-5742-6898",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/kankyo-toshiseibi-shien-saigairokakuhuku/kankyo-toshiseibi-shien-saigairokakuhuku-yoko/20260728155902.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "dbe3cd7369c456dd28f3",
@@ -3780,23 +3831,6 @@ window.SHINAGAWA_NEWS = {
         "荏原"
       ],
       "relevanceScore": 4
-    },
-    {
-      "id": "64080d59b64e7e43348a",
-      "title": "「細街路拡幅整備協議書（様式）」等の変更（令和8年7月1日から適用）",
-      "summary": "建築課 細街路担当 電話 03-5742-6772 FAX 03-5742-6898",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/kankyo-toshiseibi-shien-saigairokakuhuku/kankyo-toshiseibi-shien-saigairokakuhuku-yoko/20260728155902.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T15:54:35.184829Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "04d381d9ef912d30d4cc",
@@ -7637,13 +7671,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 4,
+      "scanned": 3,
       "accepted": 0
     },
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 139,
+      "scanned": 138,
       "accepted": 0
     },
     {
@@ -7656,12 +7690,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2291, column 53"
+      "message": "not well-formed (invalid token): line 2595, column 53"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
@@ -7680,7 +7714,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
