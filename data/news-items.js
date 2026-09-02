@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-02T04:50:15.090924Z",
+  "generatedAt": "2026-09-02T11:33:16.591644Z",
   "items": [
     {
       "id": "68ebd725ff5007dee0c6",
@@ -18,6 +18,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "b62e32b94defe36818e7",
@@ -1202,23 +1219,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-08-27T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "53a157b7e809d8beb52c",
@@ -7666,7 +7666,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 9
+      "accepted": 8
     },
     {
       "source": "警視庁",
@@ -7690,7 +7690,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2595, column 53"
+      "message": "not well-formed (invalid token): line 2412, column 32"
     },
     {
       "source": "朝日新聞",
