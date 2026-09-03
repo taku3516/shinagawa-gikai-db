@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-03T16:35:26.219730Z",
+  "generatedAt": "2026-09-03T21:11:22.045270Z",
   "items": [
+    {
+      "id": "ddaa9d77e1b146873079",
+      "title": "大成温調、本社を「OIMACHI TRACKS」へ移転",
+      "summary": "[大成温調株式会社] 大成温調株式会社（本社：東京都品川区、代表取締役 社長執行役員：水谷 憲一、以下、大成温調）は、2026年9月1日付で本社を「OIMACHI TRACKS BUSINESS TOWER」（東京都品川区広町）へ移転したことをお知らせいた...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000051.000098021.html",
+      "publishedAt": "2026-09-03T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T21:10:58.010277Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "広町"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "1ea6e2d72433c34a1679",
       "title": "大森に博多B級グルメの店「鉄板焼肉 大当り」 南福岡出身の社長が経営",
@@ -7856,7 +7875,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2734, column 61"
+      "message": "not well-formed (invalid token): line 2745, column 61"
     },
     {
       "source": "朝日新聞",
