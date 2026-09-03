@@ -1,7 +1,30 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-02T16:44:06.310744Z",
+  "generatedAt": "2026-09-03T04:49:31.225996Z",
   "items": [
+    {
+      "id": "836a27b0187b5d13c4be",
+      "title": "昭和通り商店会101周年『盆踊り大会』",
+      "summary": "2026年9月13日（日）、荏原中延駅近くの昭和通りにて『盆踊り大会』が開催されます。 盆踊りのリードは品川区内外で活躍する「 晴盆 」さん、 会場には、近隣の人気飲食店の屋台が並びます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/showa-bon2026",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T04:49:10.047310Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "中延",
+        "荏原",
+        "荏原中延駅",
+        "中延駅"
+      ],
+      "relevanceScore": 24
+    },
     {
       "id": "9552fe42dc84a987eedf",
       "title": "BtoBサービス比較メディア「BIZNAVI byDYM」を正式リリース",
@@ -18,6 +41,57 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "da75b8b1283511190a61",
+      "title": "2022-003「第2期品川区子ども・若者計画」に関する結果公表",
+      "summary": "「第2期品川区子ども・若者計画」 の 作成に当たり、計画案に対する意見募集を行ったところ、38人の方から80件のご意見をいただきました。 令和4年11月11日(金)から令和4年12月9日(金)まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/202303031635.html",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T04:49:10.047310Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "cf3070d7a2893375eae4",
+      "title": "2023-005「住民基本台帳事務および地方税賦課徴収事務に関する特定個人情報保護評価書(全項目評価)の再評価案」に関する結果公表",
+      "summary": "「住民基本台帳事務および地方税賦課徴収事務に関する特定個人情報保護評価書(全項目評価)の再評価案」 の 作成に当たり、計画案に対する意見募集を行ったところ、1人の方から3件のご意見をいただきました。 令和5年12月1日(金)から令和5年12月21日(木)まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20240314141332.html",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T04:49:10.047310Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "47fc03e1b2131bbacdec",
+      "title": "2024-001「予防接種事務に関する特定個人情報保護評価書（全項目評価書）の再評価案」に関する結果公表",
+      "summary": "「予防接種事務に関する特定個人情報保護評価書（全項目評価書）の再評価案」 の 作成に当たり、計画案に対する意見募集を行ったところ、1人の方から3件のご意見をいただきました。 令和6年7月11日(木)から令和6年8月12日(月)まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20241122112834.html",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T04:49:10.047310Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "68ebd725ff5007dee0c6",
@@ -7688,13 +7762,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 3,
+      "scanned": 2,
       "accepted": 0
     },
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 138,
+      "scanned": 139,
       "accepted": 0
     },
     {
@@ -7707,7 +7781,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2699, column 32"
+      "message": "not well-formed (invalid token): line 3119, column 32"
     },
     {
       "source": "朝日新聞",
@@ -7731,7 +7805,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
