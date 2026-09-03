@@ -1,7 +1,63 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-03T04:49:31.225996Z",
+  "generatedAt": "2026-09-03T11:29:21.268001Z",
   "items": [
+    {
+      "id": "1ea6e2d72433c34a1679",
+      "title": "大森に博多B級グルメの店「鉄板焼肉 大当り」 南福岡出身の社長が経営",
+      "summary": "大衆居酒屋「鉄板焼肉 大当り 大森店」（南大井6、TEL03-6450-0329）が大森エリアにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5070",
+      "publishedAt": "2026-09-03T09:31:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T11:28:57.417652Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "南大井"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "57d50c69d9d17177c42a",
+      "title": "【事後レポート】Dynagon×日本シグマックスによる「“酷暑対策”と“化学物質管理”の矛盾」に関する合同記者発表会",
+      "summary": "[株式会社Dynagon] 化学物質に起因した事故の根絶を目指してSDS（※1）関連サービスを展開する株式会社Dynagon（本社：東京都品川区、代表：坂本 晋悟）は、年々激しさを増す日本の酷暑を背景に、整形外科向けの医療機器やスポーツ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000016.000155054.html",
+      "publishedAt": "2026-09-03T07:40:52Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T11:28:57.417652Z",
+      "tags": [
+        "事件事故",
+        "行政",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "796ca194f956f7eebb2f",
+      "title": "下神明天祖神社 例大祭 2026",
+      "summary": "9月16日（水）、18日（金）19日（土）20日（日）、下神明天祖神社にて例大祭が行われます。 【祭礼予定】 9月16日（水） 16:00 稲荷社斎田抜穂祭",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shimoshinmeitensojinjyareitaisai2026",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T11:28:57.417652Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "836a27b0187b5d13c4be",
       "title": "昭和通り商店会101周年『盆踊り大会』",
@@ -24,6 +80,24 @@ window.SHINAGAWA_NEWS = {
         "中延駅"
       ],
       "relevanceScore": 24
+    },
+    {
+      "id": "3dc9119c7e9163bba125",
+      "title": "高齢者のスマートフォン購入費補助金",
+      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "9552fe42dc84a987eedf",
@@ -941,7 +1015,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "bf5932747fb8c3d99be9",
-      "title": "戸越八幡神社 例大祭",
+      "title": "戸越八幡神社 例大祭 2026",
       "summary": "2026年9月12（土）・13日（日）、 戸越八幡神社 例大祭が開催されます。境内では、9月12日（土）に大祭式、9月13日（日）には奉納演芸が予定されています。 戸越八幡神社で、華やかな秋のお祭りを楽しんでみてはいかがでしょうか。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -1146,24 +1220,6 @@ window.SHINAGAWA_NEWS = {
         "きゅりあん"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "3dc9119c7e9163bba125",
-      "title": "高齢者のスマートフォン購入費助成",
-      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
-      "publishedAt": "2026-08-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉",
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "e021d5506d13f3860ad4",
@@ -7757,12 +7813,12 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 8
+      "accepted": 9
     },
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 2,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -7781,7 +7837,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3119, column 32"
+      "message": "not well-formed (invalid token): line 2563, column 61"
     },
     {
       "source": "朝日新聞",
@@ -7805,7 +7861,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -7822,7 +7878,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 報道発表",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 9,
       "accepted": 0
     },
     {
