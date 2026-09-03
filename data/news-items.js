@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-03T11:29:21.268001Z",
+  "generatedAt": "2026-09-03T16:35:26.219730Z",
   "items": [
     {
       "id": "1ea6e2d72433c34a1679",
@@ -39,6 +39,25 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "e337152d21a8c87683c4",
+      "title": "大井新地 講談会 vol.26",
+      "summary": "2026年9月20日（日）、大井蔵王権現神社にて「大井新地 講談会 vol.26」が開催されます。 ※チケットのご予約、購入はインスタグラムのダイレクトメール、お電話（090-1813-7229/企画：ゼロメートル先）、またはイベントチラシの掲示してある大井新地（品川区大井1-21）の協力店にて。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/oikodan-26",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T16:34:59.995790Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
       "relevanceScore": 12
     },
     {
@@ -347,7 +366,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "b5b1ac98cd01202eb056",
-      "title": "Meguro River Night Ambience（メグロ・リバー・ナイト・アンビエンス）",
+      "title": "Meguro River Night Ambience（目黒川ナイトアンビエンス）",
       "summary": "2026年9月4日（金）～22日（火・祝） 目黒川沿い遊歩道、五反田ふれあい水辺広場を中心に「Meguro River Night Ambience」 が開催されます。 中心となるのは、アーティスト・國本怜（Ray Kunimoto）によるサウンドインスタレーション《KAZE — body》。風を受けて音を発する“音の彫刻”を載せた船が目黒川を往来し、川辺のサウンド、映像上映、ライブパフォーマンスとともに、都市と自然を「聴く」体験をつくります。イベントの詳しい内容は こちら",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -7837,7 +7856,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2563, column 61"
+      "message": "not well-formed (invalid token): line 2734, column 61"
     },
     {
       "source": "朝日新聞",
