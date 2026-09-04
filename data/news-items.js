@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-04T11:32:34.400716Z",
+  "generatedAt": "2026-09-04T20:55:33.759929Z",
   "items": [
+    {
+      "id": "14f99e822a19544ca347",
+      "title": "品川区、「子ども参観日」を初開催‐子どもの職業観育成と、職員のモチベーション向上目指して",
+      "summary": "[品川区] 品川区は8月19日、区役所で「子ども参観日」を行いました。 保護者（職員）の職場見学等を通して、職員の子どもの職業観を養うとともに、職員のモチベーション向上や家庭でのコミュニケーション機会の増加、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000242.000087362.html",
+      "publishedAt": "2026-09-04T20:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T20:53:56.430011Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "d205ca7c42c8e247ac27",
       "title": "東五反田に焼き鳥居酒屋「炭火焼鳥くわどり」 大阪に10店舗、都内初出店",
@@ -7948,7 +7966,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 580,
+      "scanned": 560,
       "accepted": 0
     },
     {
@@ -7973,7 +7991,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -8030,9 +8048,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
