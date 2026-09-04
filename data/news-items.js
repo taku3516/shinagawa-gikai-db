@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-03T21:11:22.045270Z",
+  "generatedAt": "2026-09-04T04:50:18.104424Z",
   "items": [
+    {
+      "id": "52b18889c8c79e4ca111",
+      "title": "令和８年度(９年度採用)品川区立学校教育職員採用候補者選考【第二次選考合格発表】",
+      "summary": "指導課 教職員人事係 電話：03-5742-6831 FAX：03-5742-6892 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20260903083637.html",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T04:49:53.314029Z",
+      "tags": [
+        "行政",
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "ddaa9d77e1b146873079",
       "title": "大成温調、本社を「OIMACHI TRACKS」へ移転",
@@ -118,6 +136,23 @@ window.SHINAGAWA_NEWS = {
         "中延駅"
       ],
       "relevanceScore": 24
+    },
+    {
+      "id": "dbe3cd7369c456dd28f3",
+      "title": "しながわ電気・ガス料金緊急支援事業【申請期間：9月1日～10月31日】",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "3dc9119c7e9163bba125",
@@ -717,23 +752,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-31T15:54:35.184829Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "dbe3cd7369c456dd28f3",
-      "title": "しながわ電気・ガス料金緊急支援事業【申請期間：9月1日～10月31日】",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -7856,7 +7874,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 4,
+      "scanned": 6,
       "accepted": 0
     },
     {
@@ -7875,7 +7893,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2745, column 61"
+      "message": "not well-formed (invalid token): line 3013, column 61"
     },
     {
       "source": "朝日新聞",
@@ -7899,7 +7917,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
