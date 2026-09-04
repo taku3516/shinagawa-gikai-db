@@ -1,7 +1,63 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-04T04:50:18.104424Z",
+  "generatedAt": "2026-09-04T11:32:34.400716Z",
   "items": [
+    {
+      "id": "d205ca7c42c8e247ac27",
+      "title": "東五反田に焼き鳥居酒屋「炭火焼鳥くわどり」 大阪に10店舗、都内初出店",
+      "summary": "「炭火焼鳥くわどり 五反田店」（品川区東五反田1、TEL 03-5422-9937）が8月31日、五反田駅東口近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5071",
+      "publishedAt": "2026-09-04T06:04:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T11:32:09.614198Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "c5415cca366ad7a37268",
+      "title": "令和8年8月福井豪雨 ふるさと納税による災害支援の代理寄附を開始",
+      "summary": "税務課 ふるさと納税担当 電話03-5742-3857 FAX03-5742-7108",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinensakaishishien/20260903100340.html",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T11:32:09.614198Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "98e5addbbfcc6e061f4f",
+      "title": "コンビニ交付サービス 休止日のお知らせ",
+      "summary": "デジタル推進課 情報推進担当（住基） 電話：03-5742-6619 FAX：03-5742-7164",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-mynumber/hpg000029341.html",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T11:32:09.614198Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "52b18889c8c79e4ca111",
       "title": "令和８年度(９年度採用)品川区立学校教育職員採用候補者選考【第二次選考合格発表】",
@@ -19,6 +75,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "ddaa9d77e1b146873079",
@@ -256,23 +329,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-09-02T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "b62e32b94defe36818e7",
@@ -7891,9 +7947,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 3013, column 61"
+      "status": "ok",
+      "scanned": 580,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
