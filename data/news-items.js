@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-05T20:33:25.256594Z",
+  "generatedAt": "2026-09-05T23:03:59.088742Z",
   "items": [
+    {
+      "id": "14f99e822a19544ca347",
+      "title": "品川区、「子ども参観日」を初開催‐子どもの職業観育成と、職員のモチベーション向上目指して",
+      "summary": "[品川区] 品川区は8月19日、区役所で「子ども参観日」を行いました。 保護者（職員）の職場見学等を通して、職員の子どもの職業観を養うとともに、職員のモチベーション向上や家庭でのコミュニケーション機会の増加、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000242.000087362.html",
+      "publishedAt": "2026-09-05T20:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T20:53:56.430011Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "ddaa9d77e1b146873079",
       "title": "大成温調、本社を「OIMACHI TRACKS」へ移転",
@@ -20,24 +38,6 @@ window.SHINAGAWA_NEWS = {
         "広町"
       ],
       "relevanceScore": 12
-    },
-    {
-      "id": "14f99e822a19544ca347",
-      "title": "品川区、「子ども参観日」を初開催‐子どもの職業観育成と、職員のモチベーション向上目指して",
-      "summary": "[品川区] 品川区は8月19日、区役所で「子ども参観日」を行いました。 保護者（職員）の職場見学等を通して、職員の子どもの職業観を養うとともに、職員のモチベーション向上や家庭でのコミュニケーション機会の増加、...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000242.000087362.html",
-      "publishedAt": "2026-09-05T14:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-04T20:53:56.430011Z",
-      "tags": [
-        "子育て教育",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "d205ca7c42c8e247ac27",
@@ -7967,7 +7967,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1054, column 54"
+      "message": "not well-formed (invalid token): line 1087, column 54"
     },
     {
       "source": "朝日新聞",
@@ -8048,9 +8048,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
