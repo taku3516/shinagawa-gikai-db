@@ -1,7 +1,62 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-07T12:50:54.609958Z",
+  "generatedAt": "2026-09-07T19:18:22.940828Z",
   "items": [
+    {
+      "id": "0f7ef77bb30180cd3552",
+      "title": "西品川二・三丁目地区地区計画",
+      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/20251014165418.html",
+      "publishedAt": "2026-09-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T01:57:49.746937Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西品川"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "8dceb7af38a50bb914ff",
+      "title": "DYM MESSENGERS 第一生命D.LEAGUE26-27 SEASON新体制のお知らせ",
+      "summary": "[DYM] WEB事業や人材事業、海外医療事業等を行う株式会社 DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンスチーム「DYM MESSENGERS」（読み：ディーワイエム メッセン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000524.000027235.html",
+      "publishedAt": "2026-09-07T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-07T19:18:03.625487Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "fbc30327c352ccb8deea",
+      "title": "目黒川をサウンドインスタレーション載せた船が往来 音楽ライブも",
+      "summary": "アートプロジェクト「Meguro River Night Ambience（メグロ・リバー・ナイト・アンビエンス）」（品川区小山5）が9月5日、目黒川で始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5072",
+      "publishedAt": "2026-09-07T12:30:43Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-07T19:18:03.625487Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "小山"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "3580325e6d02fa109d01",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年9月7日号）を公開しました‼",
@@ -796,25 +851,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "0f7ef77bb30180cd3552",
-      "title": "西品川二・三丁目地区地区計画",
-      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/20251014165418.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-18T01:57:49.746937Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "西品川"
-      ],
-      "relevanceScore": 4
     },
     {
       "id": "7e43a87d9921fb67a169",
@@ -8004,7 +8040,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3027, column 66"
+      "message": "not well-formed (invalid token): line 2232, column 31"
     },
     {
       "source": "朝日新聞",
@@ -8028,7 +8064,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
