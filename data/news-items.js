@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-07T19:18:22.940828Z",
+  "generatedAt": "2026-09-07T23:38:00.044942Z",
   "items": [
     {
       "id": "0f7ef77bb30180cd3552",
@@ -20,6 +20,24 @@ window.SHINAGAWA_NEWS = {
         "西品川"
       ],
       "relevanceScore": 4
+    },
+    {
+      "id": "14f99e822a19544ca347",
+      "title": "品川区、「子ども参観日」を初開催‐子どもの職業観育成と、職員のモチベーション向上目指して",
+      "summary": "[品川区] 品川区は8月19日、区役所で「子ども参観日」を行いました。 保護者（職員）の職場見学等を通して、職員の子どもの職業観を養うとともに、職員のモチベーション向上や家庭でのコミュニケーション機会の増加、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000242.000087362.html",
+      "publishedAt": "2026-09-07T20:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T20:53:56.430011Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "8dceb7af38a50bb914ff",
@@ -93,24 +111,6 @@ window.SHINAGAWA_NEWS = {
         "荏原"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "14f99e822a19544ca347",
-      "title": "品川区、「子ども参観日」を初開催‐子どもの職業観育成と、職員のモチベーション向上目指して",
-      "summary": "[品川区] 品川区は8月19日、区役所で「子ども参観日」を行いました。 保護者（職員）の職場見学等を通して、職員の子どもの職業観を養うとともに、職員のモチベーション向上や家庭でのコミュニケーション機会の増加、...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000242.000087362.html",
-      "publishedAt": "2026-09-06T20:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-04T20:53:56.430011Z",
-      "tags": [
-        "子育て教育",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "ddaa9d77e1b146873079",
@@ -1103,7 +1103,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "7bed8ba3b5bad3827de1",
-      "title": "五反田 TOC「徳の市」",
+      "title": "【終了】五反田 TOC「徳の市」",
       "summary": "2026年9月11日（金）、12日（土）、13日（日） の3日間 、 五反田 TOCビル にて「徳の市」が開催されます。 メーカー御売りが出品する直売ビックセール。 ファッション、雑貨、インテリア、食品など 約170店舗 が出店し、さまざまな商品がお得な価格で売り出されます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -8040,7 +8040,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2232, column 31"
+      "message": "not well-formed (invalid token): line 2203, column 31"
     },
     {
       "source": "朝日新聞",
