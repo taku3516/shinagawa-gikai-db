@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-06T22:57:20.678576Z",
+  "generatedAt": "2026-09-07T04:59:15.537988Z",
   "items": [
+    {
+      "id": "3580325e6d02fa109d01",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年9月7日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年9月7日号(令和8年8月31日～令和8年9月6日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-62994.html",
+      "publishedAt": "2026-09-07T04:58:53.547385Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-07T04:58:53.547385Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "14f99e822a19544ca347",
       "title": "品川区、「子ども参観日」を初開催‐子どもの職業観育成と、職員のモチベーション向上目指して",
@@ -132,7 +149,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "1ea6e2d72433c34a1679",
-      "title": "大森に博多B級グルメの店「鉄板焼肉 大当り」 南福岡出身の社長が経営",
+      "title": "大森に「鉄板焼肉 大当り」 博多B級グルメ専門店、3店舗目",
       "summary": "大衆居酒屋「鉄板焼肉 大当り 大森店」（南大井6、TEL03-6450-0329）が大森エリアにオープンして2カ月がたった。 #品川経済新聞",
       "source": "品川経済新聞",
       "sourceId": "shinagawa-keizai",
@@ -7948,7 +7965,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 6,
+      "scanned": 7,
       "accepted": 0
     },
     {
@@ -7967,7 +7984,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1063, column 66"
+      "message": "not well-formed (invalid token): line 1547, column 66"
     },
     {
       "source": "朝日新聞",
@@ -7991,7 +8008,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
