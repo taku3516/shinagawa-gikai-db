@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-07T04:59:15.537988Z",
+  "generatedAt": "2026-09-07T12:50:54.609958Z",
   "items": [
     {
       "id": "3580325e6d02fa109d01",
@@ -18,6 +18,26 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "022bb9c294e2bb3a26eb",
+      "title": "品川区民まつり荏原第二地区会場『ふるさとまつり』開催のお知らせ",
+      "summary": "品川区民まつり荏原第二地区会場『ふるさとまつり』を開催します。 当日は、模擬店やゲームコーナーなど盛り沢山 皆さま、ぜひお越しください。 荏原第二地区ふるさとまつりチラシ(PDF : 417KB) 【模擬店】 焼きそば、磯辺焼、かき氷、フランクフルトなど美味しい模擬店がたくさんあります。 【イベント】 午後1時 荏原第六中学校 吹奏楽部 午後2時 荏原第五中学校 吹奏楽部 午後3時 盆踊り（自由参加） 【その他イベント】 児童センター・荏原第六中学校生徒によるゲームコーナー…",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba2/shisetsu-kuyakusyo-chiiki-eba2-oshirase/r8-furusato-matsuri-info.html",
+      "publishedAt": "2026-09-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-07T12:50:30.891813Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 14
     },
     {
       "id": "14f99e822a19544ca347",
@@ -846,6 +866,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "1cbad4981952da923fb9",
+      "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
+      "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T02:00:04.964019Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "94c5b1f801589ffe8100",
@@ -2926,23 +2963,6 @@ window.SHINAGAWA_NEWS = {
         "大井",
         "大井町駅"
       ],
-      "relevanceScore": 8
-    },
-    {
-      "id": "1cbad4981952da923fb9",
-      "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
-      "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
-      "publishedAt": "2026-08-12T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-27T02:00:04.964019Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
       "relevanceScore": 8
     },
     {
@@ -7971,7 +7991,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 139,
+      "scanned": 138,
       "accepted": 0
     },
     {
@@ -7984,7 +8004,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1547, column 66"
+      "message": "not well-formed (invalid token): line 3027, column 66"
     },
     {
       "source": "朝日新聞",
