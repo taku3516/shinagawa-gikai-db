@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-07T23:38:00.044942Z",
+  "generatedAt": "2026-09-08T04:56:11.785540Z",
   "items": [
+    {
+      "id": "c73d47196e58b6361fd7",
+      "title": "施設予約システムメンテナンスのお知らせ",
+      "summary": "デジタル推進課 情報推進担当（内部情報） 電話：03-5742-6618 FAX：03-5742-7164",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-bunka/shisetsuyoyaku/20260908112551.html",
+      "publishedAt": "2026-09-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-08T04:55:44.820519Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "0f7ef77bb30180cd3552",
       "title": "西品川二・三丁目地区地区計画",
@@ -221,6 +238,24 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "0e04e9da6208f916483d",
+      "title": "第3回品川区障害福祉計画等策定委員会開催のお知らせ（令和8年10月6日開催）",
+      "summary": "障害者施策推進課 計画推進係 電話：03-5742-6762 FAX：03-3775-2000",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/shogaifukushikeikaku/shogaifukushikeikaku/20260114153134.html",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "1ea6e2d72433c34a1679",
@@ -6724,24 +6759,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "0e04e9da6208f916483d",
-      "title": "第2回品川区障害福祉計画等策定委員会開催のお知らせ（令和8年8月4日開催）",
-      "summary": "障害者施策推進課 計画推進係 電話：03-5742-6762 FAX：03-3775-2000",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/shogaifukushikeikaku/shogaifukushikeikaku/20260114153134.html",
-      "publishedAt": "2026-07-08T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "44d4738a2d7db9a57fa2",
       "title": "戸越銀座に日本茶専門店「ユノミマッチャ」 注文ごとに抹茶をたてて提供",
       "summary": "日本茶専門店「Yunomi.Matcha（ユノミマッチャ）」（品川区豊町1、TEL 080-7595-0964）が6月24日、戸越銀座商店街にオープンした。 #品川経済新聞",
@@ -8040,12 +8057,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2203, column 31"
+      "message": "not well-formed (invalid token): line 2371, column 31"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 39,
       "accepted": 0
     },
     {
@@ -8064,7 +8081,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
