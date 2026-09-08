@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-08T11:32:32.716514Z",
+  "generatedAt": "2026-09-08T16:46:13.457037Z",
   "items": [
+    {
+      "id": "972f5eb85827cdb3875d",
+      "title": "約10年ぶりに復活！次世代の写真家を世界へ送り出す「IMA Portfolio Review 2026」応募者募集開始",
+      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、“LIVING WITH PHOTOGRAPHY”をコンセプトに雑誌やオンラインでアートフォ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000559.000040283.html",
+      "publishedAt": "2026-09-08T14:15:17Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-08T16:45:49.856635Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "a313606e28e0614f2f73",
       "title": "【令和9年4月1日採用】応募者説明会を実施します",
@@ -8068,7 +8085,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 9
+      "accepted": 8
     },
     {
       "source": "警視庁",
@@ -8092,7 +8109,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3007, column 31"
+      "message": "not well-formed (invalid token): line 2123, column 20"
     },
     {
       "source": "朝日新聞",
@@ -8116,7 +8133,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
