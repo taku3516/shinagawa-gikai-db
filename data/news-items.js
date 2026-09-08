@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-08T04:56:11.785540Z",
+  "generatedAt": "2026-09-08T11:32:32.716514Z",
   "items": [
+    {
+      "id": "a313606e28e0614f2f73",
+      "title": "【令和9年4月1日採用】応募者説明会を実施します",
+      "summary": "品川社協では現在、令和9年4月1日付採用職員を募集しています。 応募をお考えの方に、少しでも品川社協を知っていただく機会として、以下の3日間で説明会を開催いたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-49217.html",
+      "publishedAt": "2026-09-08T11:32:06.430299Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-08T11:32:06.430299Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "3f30e71ea2a0c9f35314",
+      "title": "『CHIeru Magazine (チエルマガジン)小学校・中学校版』2026秋冬号を刊行！ 全国の教職員や学校関係者に無料配布を開始",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）は、2026年10月1日（木）、学校教育現場のICT活性化マガジン『CHIeru Magazine（チエルマガジン）小学校・中学校...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000184.000067516.html",
+      "publishedAt": "2026-09-08T08:40:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-08T11:32:06.430299Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "c73d47196e58b6361fd7",
       "title": "施設予約システムメンテナンスのお知らせ",
@@ -8057,12 +8092,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2371, column 31"
+      "message": "not well-formed (invalid token): line 3007, column 31"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
@@ -8081,7 +8116,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
