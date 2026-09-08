@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-08T16:46:13.457037Z",
+  "generatedAt": "2026-09-08T21:17:43.798096Z",
   "items": [
     {
       "id": "972f5eb85827cdb3875d",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000559.000040283.html",
-      "publishedAt": "2026-09-08T14:15:17Z",
+      "publishedAt": "2026-09-08T20:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-09-08T16:45:49.856635Z",
       "tags": [
@@ -8109,7 +8109,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2123, column 20"
+      "message": "not well-formed (invalid token): line 2141, column 20"
     },
     {
       "source": "朝日新聞",
@@ -8133,7 +8133,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
