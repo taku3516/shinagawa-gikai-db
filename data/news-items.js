@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-09T11:37:40.600239Z",
+  "generatedAt": "2026-09-09T16:48:33.350569Z",
   "items": [
+    {
+      "id": "68c36f8643051c55ec55",
+      "title": "Amazon.co.jp立ち上げを率いた長谷川純一氏が登壇。顧客起点の事業づくりと、プラットフォームによる成長の好循環を語る。",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年9月2日（水...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000526.000027235.html",
+      "publishedAt": "2026-09-09T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-09T04:56:12.792564Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "48b7768fc4667e4682f5",
       "title": "「中延ねぶた祭り」開催へ 19回目、黒石市「境松ねぷた愛好会」初参加",
@@ -39,23 +56,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 6
-    },
-    {
-      "id": "68c36f8643051c55ec55",
-      "title": "Amazon.co.jp立ち上げを率いた長谷川純一氏が登壇。顧客起点の事業づくりと、プラットフォームによる成長の好循環を語る。",
-      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年9月2日（水...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000526.000027235.html",
-      "publishedAt": "2026-09-09T04:40:41Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-09T04:56:12.792564Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "e35a4e63876ac540ffe9",
@@ -8200,7 +8200,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3122, column 20"
+      "message": "not well-formed (invalid token): line 2074, column 14"
     },
     {
       "source": "朝日新聞",
@@ -8224,7 +8224,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
