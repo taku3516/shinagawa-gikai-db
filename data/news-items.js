@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-09T04:57:54.928166Z",
+  "generatedAt": "2026-09-09T11:37:40.600239Z",
   "items": [
+    {
+      "id": "48b7768fc4667e4682f5",
+      "title": "「中延ねぶた祭り」開催へ 19回目、黒石市「境松ねぷた愛好会」初参加",
+      "summary": "「第19回中延ねぶた祭り」が9月19日に中延エリアで開催される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5074",
+      "publishedAt": "2026-09-09T06:13:26Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-09T11:37:17.100170Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延"
+      ],
+      "relevanceScore": 6
+    },
     {
       "id": "7d04452075c1b1235853",
       "title": "【品川介護福祉専門学校】８月３０日オープンキャンパスを行いました！",
@@ -37,6 +56,42 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "e35a4e63876ac540ffe9",
+      "title": "【9/26限定】しながわクルーズ「しながわ宿場まつり特別便」",
+      "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9月26日（土）は、品川宿で開催される「しながわ宿場まつり」に合わせて、「しながわ宿場まつり特別便」が運航します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawacruise2026shukuba",
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-09T11:37:17.100170Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "461aa6268fac142bd5d6",
+      "title": "氷川神社 例大祭",
+      "summary": "2026年9月11日 （金）～9月13日（日）、氷川神社 例大祭が開催されます。11日（金）の前夜祭・連合渡御から始まり、12日（土）祭典式、13日（日）には大神輿渡御が行われます。神賑行事として、桐若囃子、里神楽、浦安の舞なども実施されます。 【公式】しながわ観光協会 SHINAGAWA TOURISM ASSOCIATION [OFFICIAL](@shinagawonder)がシェアした投稿",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hikawajinjyareitaisai2026",
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-09T11:37:17.100170Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "972f5eb85827cdb3875d",
@@ -726,7 +781,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "27c5da6936e127864824",
-      "title": "ガイドしながわ「ガイドと歩く 鎌倉古道をたどる大井の歴史さんぽ」",
+      "title": "【受付終了】ガイドしながわ「ガイドと歩く 鎌倉古道をたどる大井の歴史さんぽ」",
       "summary": "2026年10月10日（土）、ガイドしながわによるガイドと歩くしながわとその周辺「鎌倉古道をたどる大井の歴史さんぽ」が開催されます。 縄文の大森貝塚から、中世の寺社、現代の大井町トラックスへ。悠久の大井を巡ります。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -8145,7 +8200,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2501, column 20"
+      "message": "not well-formed (invalid token): line 3122, column 20"
     },
     {
       "source": "朝日新聞",
@@ -8169,7 +8224,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -8226,9 +8281,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
