@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-08T21:17:43.798096Z",
+  "generatedAt": "2026-09-09T04:57:54.928166Z",
   "items": [
+    {
+      "id": "7d04452075c1b1235853",
+      "title": "【品川介護福祉専門学校】８月３０日オープンキャンパスを行いました！",
+      "summary": "夏休み最後の日曜日に、たくさんの方がオープンキャンパスに参加してくださいました！ ２回目以上のご参加の方もいらっしゃり、またお会いできたことが大変うれしいです。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63183.html",
+      "publishedAt": "2026-09-09T04:56:12.792564Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-09T04:56:12.792564Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 6
+    },
+    {
+      "id": "68c36f8643051c55ec55",
+      "title": "Amazon.co.jp立ち上げを率いた長谷川純一氏が登壇。顧客起点の事業づくりと、プラットフォームによる成長の好循環を語る。",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年9月2日（水...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000526.000027235.html",
+      "publishedAt": "2026-09-09T04:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-09T04:56:12.792564Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "972f5eb85827cdb3875d",
       "title": "約10年ぶりに復活！次世代の写真家を世界へ送り出す「IMA Portfolio Review 2026」応募者募集開始",
@@ -8109,7 +8145,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2141, column 20"
+      "message": "not well-formed (invalid token): line 2501, column 20"
     },
     {
       "source": "朝日新聞",
@@ -8190,9 +8226,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
