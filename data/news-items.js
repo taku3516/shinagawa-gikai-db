@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-10T11:37:33.728447Z",
+  "generatedAt": "2026-09-10T16:34:15.642789Z",
   "items": [
     {
       "id": "57a79f8fb59f95760ed1",
@@ -1355,7 +1355,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "7bed8ba3b5bad3827de1",
-      "title": "【終了】五反田 TOC「徳の市」",
+      "title": "五反田 TOC「徳の市」",
       "summary": "2026年9月11日（金）、12日（土）、13日（日） の3日間 、 五反田 TOCビル にて「徳の市」が開催されます。 メーカー御売りが出品する直売ビックセール。 ファッション、雑貨、インテリア、食品など 約170店舗 が出店し、さまざまな商品がお得な価格で売り出されます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -8255,7 +8255,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 7,
+      "scanned": 6,
       "accepted": 0
     },
     {
@@ -8272,9 +8272,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2914, column 14"
+      "status": "ok",
+      "scanned": 546,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -8298,7 +8298,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -8355,9 +8355,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
