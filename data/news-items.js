@@ -1,7 +1,83 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-09T16:48:33.350569Z",
+  "generatedAt": "2026-09-10T11:37:33.728447Z",
   "items": [
+    {
+      "id": "57a79f8fb59f95760ed1",
+      "title": "武蔵小山に「鉄板焼酒場 小鉄」 鉄板焼きの調理を客に見せるスタイルで",
+      "summary": "「鉄板焼酒場 小鉄」（品川区小山3、TEL 03-6426-4390）が，武蔵小山商店街パルム近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5075",
+      "publishedAt": "2026-09-10T10:59:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "地域イベント",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山商店街"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "3a4b61325b8132f0c787",
+      "title": "電子カルテシステム「PlusUs」における生成AIサービスの提供開始について",
+      "summary": "[ソフトマックス株式会社] 医療情報システムの開発・提供を行うソフトマックス株式会社（本社：東京都品川区、代表取締役：萩原 千恵子、以下「当社」）は、電子カルテシステム「PlusUs」で医療文書の作成や診療記録の要約等を支援する生成...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000004.000163440.html",
+      "publishedAt": "2026-09-10T08:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "d3220f1fed67b5977044",
+      "title": "令和8年度 環境保全活動顕彰の募集",
+      "summary": "「ゼロカーボンシティしながわ」の実現に貢献する、持続可能な環境にやさしい活動や取り組みを募集します。 皆さんが普段行っている活動の中で関連する環境活動等がございましたら、ぜひご応募ください。 受賞者は令和9年2月11日（木）に品川区立環境学習交流施設エコルとごしにて行われる「環境表彰式」にて、顕彰します。 他の規範となる環境保全活動を行っている企業、団体または個人を顕彰し、その活動内容を広く紹介することにより、環境保全に関する自主的な取り組みを促進することを目的としています。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-event/hpg000012278.html",
+      "publishedAt": "2026-09-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [
+        "エコルとごし"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "70c3c2946791fc087fc5",
+      "title": "旧荏原第四中学校跡地ＰＦＩ事業",
+      "summary": "企画経営部 企画課 政策推進担当 電話：03-5742-7863 FAX：03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-zaisei/kuseizyoho-siryo-zaisei-plan/20251027113427.html",
+      "publishedAt": "2026-09-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T14:13:07.521277Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 6
+    },
     {
       "id": "68c36f8643051c55ec55",
       "title": "Amazon.co.jp立ち上げを率いた長谷川純一氏が登壇。顧客起点の事業づくりと、プラットフォームによる成長の好循環を語る。",
@@ -21,7 +97,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "48b7768fc4667e4682f5",
-      "title": "「中延ねぶた祭り」開催へ 19回目、黒石市「境松ねぷた愛好会」初参加",
+      "title": "「中延ねぶた祭り」開催へ 19回目、黒石市「境松ねぷた愛好会」の参加も",
       "summary": "「第19回中延ねぶた祭り」が9月19日に中延エリアで開催される。 #品川経済新聞",
       "source": "品川経済新聞",
       "sourceId": "shinagawa-keizai",
@@ -746,6 +822,23 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
+      "id": "93646144c953831b0287",
+      "title": "リユース容器の活用",
+      "summary": "環境課環境推進係 電話：03-5742-6755 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/20250930.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
       "id": "60a1d4de272749d45871",
       "title": "【参加者募集】品川区制80周年 しながわシティラン2027（令和9年3月14日開催）",
       "summary": "スポーツ推進課 スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
@@ -1257,25 +1350,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "南品川"
-      ],
-      "relevanceScore": 6
-    },
-    {
-      "id": "70c3c2946791fc087fc5",
-      "title": "旧荏原第四中学校跡地ＰＦＩ事業",
-      "summary": "企画経営部 企画課 政策推進担当 電話：03-5742-7863 FAX：03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-zaisei/kuseizyoho-siryo-zaisei-plan/20251027113427.html",
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-31T14:13:07.521277Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [
-        "荏原"
       ],
       "relevanceScore": 6
     },
@@ -8200,7 +8274,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2074, column 14"
+      "message": "not well-formed (invalid token): line 2914, column 14"
     },
     {
       "source": "朝日新聞",
@@ -8281,9 +8355,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
