@@ -1,7 +1,59 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-10T16:34:15.642789Z",
+  "generatedAt": "2026-09-10T21:02:54.401069Z",
   "items": [
+    {
+      "id": "a4f68e5847079aef7747",
+      "title": "小学生のふでばこに、ある日とつぜん、「小さなおじいさん」があらわれた！／幼年童話『ふでばこじいさん』9月10日（木）発売！",
+      "summary": "[光村図書出版株式会社] 小・中・高等学校向けの教科書を発行する光村図書出版株式会社（所在地：東京都品川区、代表取締役 社長：吉田直樹）は、幼年童話『ふでばこじいさん』（もとしたいづみ 作／室木おすし 絵）を9月10日に発売いた...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000084.000073231.html",
+      "publishedAt": "2026-09-10T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T21:01:10.805654Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "f4afbecb48568f74573d",
+      "title": "韓国・大邱ソフトウェアマイスター高等学校が「Findy Team+」を導入！教育現場での採用は国内外で初。AI人材育成を加速する韓国の職業系高校で「チームで開発する力」の育成を支援",
+      "summary": "[ファインディ] エンジニアプラットフォームを提供するファインディ株式会社（東京都品川区、代表取締役：山田 裕一朗、以下 当社）は、韓国・大邱広域市の大邱ソフトウェアマイスター高等学校（대구소프트웨어마이스터고등학교...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000269.000045379.html",
+      "publishedAt": "2026-09-10T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T21:01:10.805654Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "3a4b61325b8132f0c787",
+      "title": "電子カルテシステム「PlusUs」における生成AIサービスの提供開始について",
+      "summary": "[ソフトマックス株式会社] 医療情報システムの開発・提供を行うソフトマックス株式会社（本社：東京都品川区、代表取締役：萩原 千恵子、以下「当社」）は、電子カルテシステム「PlusUs」で医療文書の作成や診療記録の要約等を支援する生成...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000004.000163440.html",
+      "publishedAt": "2026-09-10T18:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "57a79f8fb59f95760ed1",
       "title": "武蔵小山に「鉄板焼酒場 小鉄」 鉄板焼きの調理を客に見せるスタイルで",
@@ -22,23 +74,6 @@ window.SHINAGAWA_NEWS = {
         "武蔵小山商店街"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "3a4b61325b8132f0c787",
-      "title": "電子カルテシステム「PlusUs」における生成AIサービスの提供開始について",
-      "summary": "[ソフトマックス株式会社] 医療情報システムの開発・提供を行うソフトマックス株式会社（本社：東京都品川区、代表取締役：萩原 千恵子、以下「当社」）は、電子カルテシステム「PlusUs」で医療文書の作成や診療記録の要約等を支援する生成...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000004.000163440.html",
-      "publishedAt": "2026-09-10T08:40:45Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-10T11:35:47.365946Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "d3220f1fed67b5977044",
@@ -8273,7 +8308,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 546,
+      "scanned": 542,
       "accepted": 0
     },
     {
@@ -8298,7 +8333,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 3
     },
     {
       "source": "東急ニュースリリース",
@@ -8355,9 +8390,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
