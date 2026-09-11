@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-11T16:38:53.629619Z",
+  "generatedAt": "2026-09-11T23:24:59.201523Z",
   "items": [
+    {
+      "id": "6d15a6a17cd0f3891d52",
+      "title": "天祖・諏訪神社 例大祭",
+      "summary": "2026年9月16日（水）、18（金）～20日（日）、天祖・諏訪神社 例大祭が開催されます。 本年は二年に一度の「総町神輿（そうちょうみこし）」が行われる年です。18日の夜の宮出しでは、境内には十一町会の神輿が集まり、御分霊が各神輿へと遷された後、暗夜の中をそれぞれの町会へ向けて練り歩きます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tensosuwa2026",
+      "publishedAt": "2026-09-12T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T23:24:24.003836Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "b604a3811087552e3b6b",
       "title": "DYM MESSENGERS所属ダンサーが国内外の大会で相次ぎ優勝！ 世界的ダンスバトルやJAPAN DANCE DELIGHTなど6組が快挙",
@@ -8454,7 +8471,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2075, column 43"
+      "message": "not well-formed (invalid token): line 2145, column 43"
     },
     {
       "source": "朝日新聞",
@@ -8478,7 +8495,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
