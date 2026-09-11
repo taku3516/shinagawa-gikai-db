@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-11T11:37:48.008386Z",
+  "generatedAt": "2026-09-11T16:38:53.629619Z",
   "items": [
+    {
+      "id": "b604a3811087552e3b6b",
+      "title": "DYM MESSENGERS所属ダンサーが国内外の大会で相次ぎ優勝！ 世界的ダンスバトルやJAPAN DANCE DELIGHTなど6組が快挙",
+      "summary": "",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000527.000027235.html",
+      "publishedAt": "2026-09-11T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T16:38:34.936406Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5d545a2e1b817943dfea",
+      "title": "武蔵小山のベーカリー「ヨシナカブレッド」が店舗ロゴ作成 創業73年目で初",
+      "summary": "武蔵小山のベーカリー「ヨシナカブレッド」（品川区小山2、TEL 03-3785-2628）が9月3日、創業73年で初めてオリジナル店舗ロゴを導入した。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5076",
+      "publishedAt": "2026-09-11T14:26:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T16:38:34.936406Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "小山"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "a67fb8962e409cfc1da0",
       "title": "ふくしまつり開催（９/２６）に伴う休業のお知らせ",
@@ -2515,7 +2551,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "0b0c05ad7b8209157c46",
       "title": "プロダンスチーム「DYM MESSENGERS」「SHIBUYA CITY FC」と合同スポンサー企業交流会を開催！",
-      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "summary": "",
       "source": "PR TIMES",
       "sourceId": "pr-times",
       "sourceType": "rss",
@@ -4652,7 +4688,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "236991e4588a4fc91ae2",
       "title": "DYM MESSENGERS、CONVERSEの「CONS ACCELERATOR LOW」を着用したストリートムービーを7月30日に公開",
-      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "summary": "",
       "source": "PR TIMES",
       "sourceId": "pr-times",
       "sourceType": "rss",
@@ -8418,7 +8454,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1959, column 43"
+      "message": "not well-formed (invalid token): line 2075, column 43"
     },
     {
       "source": "朝日新聞",
@@ -8442,7 +8478,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
