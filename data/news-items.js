@@ -1,7 +1,116 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-10T21:02:54.401069Z",
+  "generatedAt": "2026-09-11T04:55:59.520173Z",
   "items": [
+    {
+      "id": "a67fb8962e409cfc1da0",
+      "title": "ふくしまつり開催（９/２６）に伴う休業のお知らせ",
+      "summary": "令和８年９月２６日（土）に障害者団体・福祉施設・ボランティア団体・民生員協議会など福祉関係者が一堂に会する「みんな集まれ！ふくしまつり２０２６」を開催します。 ふくしまつり開催に伴い、ボランティアセンターは１日休業とさせていただきます。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63140.html",
+      "publishedAt": "2026-09-11T04:55:28.961722Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "2df38cba873af59a2224",
+      "title": "「みんな集まれ！ふくしまつり２０２６」開催のお知らせ",
+      "summary": "「ふくしまつり」とは障害者団体・福祉施設、ボランティア団体、民生委員協議会など、福祉関係者が一堂に会する区内最大の福祉イベントです。模擬店、バザー、ステージ、体験コーナーなど、皆さんに喜んでいただけるような内容が盛りだくさんです。また、スポーツ室ではインクルーシブ盆踊りを今年は２部制で行います。わわわ！品川社協音頭はもちろんの事、様々な音楽で盆踊りを楽しみましょう。生歌演奏の盆踊りにもチャレンジ！是非、お誘いあわせの上、ご来場ください！ 日時：令和８年９月２６日（土）午前１…",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63060.html",
+      "publishedAt": "2026-09-11T04:55:28.961722Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "faca383d8fa668303951",
+      "title": "シアターH「Mother～特攻の母 鳥濱トメ物語～」",
+      "summary": "2026年10月21日（水）～10月25日（日）、シアターHにて舞台「Mother～特攻の母 鳥濱トメ物語～」が上演されます。 この作品は、鹿児島県南九州市知覧町郡に実在した「富屋食堂」を舞台に、特攻隊員たちから“母”と慕われ、戦後「特攻の母」と呼ばれた鳥濱トメの半生を描いたものです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/mother",
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "c0a862a979d7cb4cc5e4",
+      "title": "第39回 しながわ夢さん橋2026",
+      "summary": "2026年10月10日（土）・11日（日）・12日（月祝）、大崎駅 南口東西自由通路及び大崎駅周辺にて「第39回 しながわ夢さん橋2026」が開催されます。 今年も盛大に元気に楽しく3日間開催！しながわ観光協会もブースを出展いたします。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawa-yume2026",
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 10
+    },
+    {
+      "id": "4c21ad23d6d280555081",
+      "title": "しろへびサミット in 蛇窪スネークタウン 2026",
+      "summary": "2026年9月19日(土)、20日（日）、 蛇窪神社 にてしろへびサミット in 蛇窪スネークタウンが開催されます。 9月19日（土） 13:00 サボテンブラザーズのフリオ 13:30 胡喋蘭 14:00 白蛇神楽 吉福社中 15:00 サボテンブラザーズのフリオ 16:00 富士見台中学校吹奏楽部 16:30 白蛇神楽 吉福社中 17:20 飛鳥とも美（歌手） 18:15 はやぶさ（歌手） 19:00 日本舞踊 20:00 SEGA SAMMY LUX（プロダンスチーム…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/sirohebisummit2026",
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "168c26536fdcae603a14",
+      "title": "蛇窪祭 2026",
+      "summary": "2026年9月18日（金）、19日（土）20日（日）、蛇窪神社にて例大祭「蛇窪祭」が開催されます。 9月18日（金） 19:00 蛇窪祭式典執行 21:00 神輿神霊遷し",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hebikubosai2026",
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "a4f68e5847079aef7747",
       "title": "小学生のふでばこに、ある日とつぜん、「小さなおじいさん」があらわれた！／幼年童話『ふでばこじいさん』9月10日（木）発売！",
@@ -8308,7 +8417,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 542,
+      "scanned": 533,
       "accepted": 0
     },
     {
@@ -8333,7 +8442,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 3
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -8390,9 +8499,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
