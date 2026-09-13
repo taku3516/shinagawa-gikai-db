@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-11T23:24:59.201523Z",
+  "generatedAt": "2026-09-13T16:32:11.396213Z",
   "items": [
+    {
+      "id": "651567d587878853053c",
+      "title": "納付案内センターからのご案内",
+      "summary": "国保医療年金課収納係 電話：03-5742-6678 FAX：03-5742-6876",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/procedure-kenkouhoken-hokenryo/hpg000021698.html",
+      "publishedAt": "2026-09-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-13T16:31:46.062194Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
     {
       "id": "6d15a6a17cd0f3891d52",
       "title": "天祖・諏訪神社 例大祭",
@@ -8452,7 +8469,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 6,
+      "scanned": 7,
       "accepted": 0
     },
     {
@@ -8471,7 +8488,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2145, column 43"
+      "message": "not well-formed (invalid token): line 1103, column 40"
     },
     {
       "source": "朝日新聞",
