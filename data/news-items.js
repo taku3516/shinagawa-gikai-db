@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-13T16:32:11.396213Z",
+  "generatedAt": "2026-09-14T05:12:48.151692Z",
   "items": [
+    {
+      "id": "1c58b1ad6babbdbf6a61",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年9月14日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年9月14日号(令和8年9月7日～令和8年9月13日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63245.html",
+      "publishedAt": "2026-09-14T05:12:23.904554Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-14T05:12:23.904554Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "651567d587878853053c",
       "title": "納付案内センターからのご案内",
@@ -18,6 +35,42 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "3b02c62cbde230a675f7",
+      "title": "令和8年度庁舎広告(壁面ポスター)の第2次募集開始",
+      "summary": "掲載箇所は、下記ファイル(庁舎広告掲載箇所のご案内)をご覧ください。 庁舎広告掲載箇所のご案内（品川区役所3階平面図）(PDF : 723KB) 掲載場所の空き状況は、下記ファイルよりご確認ください。(令和8年7月21日現在) R8庁舎内広告受付状況(PDF : 44KB) 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
+      "publishedAt": "2026-09-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T01:46:19.238621Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 22
+    },
+    {
+      "id": "dbe3cd7369c456dd28f3",
+      "title": "しながわ電気・ガス料金緊急支援事業【申請期間：9月1日～10月31日】",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
+      "publishedAt": "2026-09-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "6d15a6a17cd0f3891d52",
@@ -787,23 +840,6 @@ window.SHINAGAWA_NEWS = {
         "中延駅"
       ],
       "relevanceScore": 24
-    },
-    {
-      "id": "dbe3cd7369c456dd28f3",
-      "title": "しながわ電気・ガス料金緊急支援事業【申請期間：9月1日～10月31日】",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
-      "publishedAt": "2026-09-03T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "3dc9119c7e9163bba125",
@@ -3466,25 +3502,6 @@ window.SHINAGAWA_NEWS = {
         "大井町駅"
       ],
       "relevanceScore": 8
-    },
-    {
-      "id": "3b02c62cbde230a675f7",
-      "title": "令和8年度庁舎広告(壁面ポスター)の第2次募集開始",
-      "summary": "掲載箇所は、下記ファイル(庁舎広告掲載箇所のご案内)をご覧ください。 庁舎広告掲載箇所のご案内（品川区役所3階平面図）(PDF : 723KB) 掲載場所の空き状況は、下記ファイルよりご確認ください。(令和8年7月21日現在) R8庁舎内広告受付状況(PDF : 44KB) 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
-      "publishedAt": "2026-08-12T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-22T01:46:19.238621Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [
-        "品川区役所"
-      ],
-      "relevanceScore": 22
     },
     {
       "id": "34bd6cfd994803640b58",
@@ -8475,7 +8492,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 138,
+      "scanned": 137,
       "accepted": 0
     },
     {
@@ -8488,7 +8505,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1103, column 40"
+      "message": "not well-formed (invalid token): line 952, column 39"
     },
     {
       "source": "朝日新聞",
