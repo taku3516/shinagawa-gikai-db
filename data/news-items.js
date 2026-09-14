@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-14T05:12:48.151692Z",
+  "generatedAt": "2026-09-14T13:08:49.731834Z",
   "items": [
+    {
+      "id": "877f1421f45549b9bb0b",
+      "title": "青物横丁にフットケア専門店「アルクスモア」 スポーツクラブ内にブース出店",
+      "summary": "「爪切りと足の専門店 アルクスモア 品川店」（品川区東品川4、TEL 070-9104-1070）が青物横丁エリアにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5077",
+      "publishedAt": "2026-09-14T10:45:55Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T13:07:09.798582Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "1c58b1ad6babbdbf6a61",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年9月14日号）を公開しました‼",
@@ -35,6 +54,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-09-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "3b02c62cbde230a675f7",
@@ -230,23 +266,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-09-11T04:55:28.961722Z",
       "tags": [
         "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-09-11T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -8505,7 +8524,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 952, column 39"
+      "message": "not well-formed (invalid token): line 2137, column 67"
     },
     {
       "source": "朝日新聞",
@@ -8586,9 +8605,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
