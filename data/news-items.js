@@ -1,7 +1,61 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-14T13:08:49.731834Z",
+  "generatedAt": "2026-09-14T19:53:28.266760Z",
   "items": [
+    {
+      "id": "cfe9e9c79b0d62021052",
+      "title": "ジェンダー平等推進フォーラム2026",
+      "summary": "区では、区民一人ひとりが、互いに人権を尊重し、多様な生き方に配慮しつつ、責任を分かち合い、能力と個性を発揮して、 誰もが自分らしく、生き生きと安心して暮らせるジェンダー平等と性の多様性を尊重し合う社会の実現に向けて取り組んでいます。 この取り組みの一環として、公募した区民が中心となり企画した「ジェンダー平等推進フォーラム」を開催します。 【講演会】 事前申込制（先着） 会場参加 200人 オンライン参加250人",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000012738.html",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T19:53:06.427217Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "4ba1f068e48aefe7df44",
+      "title": "2026-002「品川区大井町駅周辺地区バリアフリー計画」に関する結果公表",
+      "summary": "「品川区大井町駅周辺地区バリアフリー計画」の作成に当たり、計画案に対する意見募集を行ったところ、22人の方から31件のご意見をいただきました。 令和8年6月1日(月)から令和8年6月30日(火)まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20260909152352.html",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T19:53:06.427217Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 18
+    },
+    {
+      "id": "90f3293b5b16dc5d8a74",
+      "title": "「KLP塾2026」が開講、次世代リーダー育成が本格始動吉村洋文大阪府知事、溝畑宏塾長が第1・2回にそれぞれ登壇",
+      "summary": "[ワクセル] ソーシャルビジネスコミュニティ「ワクセル」（所在地：東京都品川区、主催：嶋村吉洋、総合プロデューサー：住谷知厚）が協力する、KLP合同会社（代表：島田 大輝）と公益財団法人大阪観光局（理事長：溝畑 宏）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000295.000052391.html",
+      "publishedAt": "2026-09-14T19:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T19:53:06.427217Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "877f1421f45549b9bb0b",
       "title": "青物横丁にフットケア専門店「アルクスモア」 スポーツクラブ内にブース出店",
@@ -8524,7 +8578,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2137, column 67"
+      "message": "not well-formed (invalid token): line 2201, column 67"
     },
     {
       "source": "朝日新聞",
@@ -8548,7 +8602,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -8605,9 +8659,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 13,
+      "accepted": 13
     }
   ]
 };
