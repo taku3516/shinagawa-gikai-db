@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-15T17:10:55.553489Z",
+  "generatedAt": "2026-09-15T21:34:03.427886Z",
   "items": [
+    {
+      "id": "faf5adaa61043ba59e1c",
+      "title": "特別価格で増毛体験とクレンジングがセットに！ 期間限定増毛キャンペーン 「ステップアップ増毛 1,100本＋すっきりスカルプケア」",
+      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランス（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、全国のアデランスサロン、レディスアデランスサロンにて、9月15日（火）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001048.000010292.html",
+      "publishedAt": "2026-09-15T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T21:33:44.291440Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0fc9409aaf0bbb2af39f",
+      "title": "岸田産業株式会社と株式会社クラダシが協業し、防災備蓄品のフードロス削減を推進",
+      "summary": "[岸田産業株式会社] 岸田産業株式会社本社：福井県小浜市、代表取締役：岸田卓磨、以下「岸田産業」）は、ソーシャルグッドマーケット「Kuradashi」を運営する株式会社クラダシ（本社：東京都品川区、代表取締役社長CEO：河村晃平、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000003.000162675.html",
+      "publishedAt": "2026-09-15T19:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T21:33:44.291440Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "e794556502aa5e296796",
       "title": "「ゲームは教育だ。」― 品川学藝高等学校×慶應義塾大学SFC、東京ゲームショウ2026に出展",
@@ -8710,7 +8744,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 551,
+      "scanned": 552,
       "accepted": 0
     },
     {
