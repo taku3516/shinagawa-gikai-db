@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-15T11:56:55.933855Z",
+  "generatedAt": "2026-09-15T17:10:55.553489Z",
   "items": [
+    {
+      "id": "e794556502aa5e296796",
+      "title": "「ゲームは教育だ。」― 品川学藝高等学校×慶應義塾大学SFC、東京ゲームショウ2026に出展",
+      "summary": "[学校法人三浦学園] 学校法人三浦学園 品川学藝高等学校（東京都品川区、理事長：三浦裕明、校長：若林彰）は、慶應義塾大学 湘南藤沢キャンパス（SFC）と共同で、2026年9月17日（木）から21日（月・祝）まで幕張メッセで開催される...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000020.000065607.html",
+      "publishedAt": "2026-09-15T16:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T17:10:32.447733Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "90f3293b5b16dc5d8a74",
+      "title": "「KLP塾2026」が開講、次世代リーダー育成が本格始動吉村洋文大阪府知事、溝畑宏塾長が第1・2回にそれぞれ登壇",
+      "summary": "[ワクセル] ソーシャルビジネスコミュニティ「ワクセル」（所在地：東京都品川区、主催：嶋村吉洋、総合プロデューサー：住谷知厚）が協力する、KLP合同会社（代表：島田 大輝）と公益財団法人大阪観光局（理事長：溝畑 宏）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000295.000052391.html",
+      "publishedAt": "2026-09-15T15:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T19:53:06.427217Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "ebe0f53bfd95dae486bd",
       "title": "中延に台湾料理店「台湾茶房」 3人の料理人は全員台湾出身、ランチ営業も",
@@ -80,6 +115,25 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
+      "id": "0d16e8252e7f33df7ca2",
+      "title": "第14回 BON DANCE フェスティバル",
+      "summary": "2026年9月19日（土）、旗の台東口通りにて「第14回 BON DANCEフェスティバル」が開催されます。 10:30～ 野菜・果物大特価市 12:30～17:30 日光さる軍団「猿まわし」 13:00～18:00 BON DANCE パフォーマンス 18:00～ 太鼓の演奏 18:30～20:30 盆踊り大会 16:00～20:30 商店会による露店販売",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bon-dance-festival2026",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T17:10:32.447733Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "旗の台"
+      ],
+      "relevanceScore": 4
+    },
+    {
       "id": "77f656bfe536211a28ee",
       "title": "北品川本通り商店会「第7回 しながわ宿場ナイト」",
       "summary": "2026年9月26日（土）、北品川本通り商店会エリアで第7回目の「しながわ宿場ナイト」が開催されます。 旧東海道沿いの今も宿場町の面影を残す北品川本通り商店会エリアに、江戸風俗衣装を着た人々が出没し、商店街を盛り上げます。協力店舗は赤いちょうちんが目印です。",
@@ -134,23 +188,6 @@ window.SHINAGAWA_NEWS = {
         "大井町駅"
       ],
       "relevanceScore": 18
-    },
-    {
-      "id": "90f3293b5b16dc5d8a74",
-      "title": "「KLP塾2026」が開講、次世代リーダー育成が本格始動吉村洋文大阪府知事、溝畑宏塾長が第1・2回にそれぞれ登壇",
-      "summary": "[ワクセル] ソーシャルビジネスコミュニティ「ワクセル」（所在地：東京都品川区、主催：嶋村吉洋、総合プロデューサー：住谷知厚）が協力する、KLP合同会社（代表：島田 大輝）と公益財団法人大阪観光局（理事長：溝畑 宏）...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000295.000052391.html",
-      "publishedAt": "2026-09-14T19:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-14T19:53:06.427217Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "877f1421f45549b9bb0b",
@@ -2580,7 +2617,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "822df1388bdec4f5dc7b",
-      "title": "【9/12,13限定】しながわクルーズ「天王洲周遊アートクルーズ」 2026/09/12(土), 2026/09/13(日) 遊ぶ 観る",
+      "title": "【終了：9/12,13限定】しながわクルーズ「天王洲周遊アートクルーズ」 2026/09/12(土), 2026/09/13(日) 遊ぶ 観る",
       "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9月12日（土）、13日（日）は、天王洲で開催されるアートイベント「 TENNOZ ART WEEK 2026 」に合わせ、天王洲を囲む運河でアートクルーズを運航します。ビルに描かれた大型壁画などを船上から鑑賞し、普段とは異なる視点で天王洲の街並みとアートをお楽しみいただけます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -8673,7 +8710,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 548,
+      "scanned": 551,
       "accepted": 0
     },
     {
