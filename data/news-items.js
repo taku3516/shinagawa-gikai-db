@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-14T19:53:28.266760Z",
+  "generatedAt": "2026-09-15T05:06:43.609152Z",
   "items": [
+    {
+      "id": "77f656bfe536211a28ee",
+      "title": "北品川本通り商店会「第7回 しながわ宿場ナイト」",
+      "summary": "2026年9月26日（土）、北品川本通り商店会エリアで第7回目の「しながわ宿場ナイト」が開催されます。 旧東海道沿いの今も宿場町の面影を残す北品川本通り商店会エリアに、江戸風俗衣装を着た人々が出没し、商店街を盛り上げます。協力店舗は赤いちょうちんが目印です。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shukubanite2026a",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T05:06:20.617779Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "北品川"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "cfe9e9c79b0d62021052",
       "title": "ジェンダー平等推進フォーラム2026",
@@ -893,7 +912,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "836a27b0187b5d13c4be",
-      "title": "昭和通り商店会101周年『盆踊り大会』",
+      "title": "【終了】昭和通り商店会101周年『盆踊り大会』",
       "summary": "2026年9月13日（日）、荏原中延駅近くの昭和通りにて『盆踊り大会』が開催されます。 盆踊りのリードは品川区内外で活躍する「 晴盆 」さん、 会場には、近隣の人気飲食店の屋台が並びます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -8559,7 +8578,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 7,
+      "scanned": 8,
       "accepted": 0
     },
     {
@@ -8578,7 +8597,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2201, column 67"
+      "message": "not well-formed (invalid token): line 2617, column 66"
     },
     {
       "source": "朝日新聞",
@@ -8602,7 +8621,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
