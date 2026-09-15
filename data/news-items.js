@@ -1,7 +1,84 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-15T05:06:43.609152Z",
+  "generatedAt": "2026-09-15T11:56:55.933855Z",
   "items": [
+    {
+      "id": "ebe0f53bfd95dae486bd",
+      "title": "中延に台湾料理店「台湾茶房」 3人の料理人は全員台湾出身、ランチ営業も",
+      "summary": "「台湾茶房」（品川区中延4）が8月18日、中延駅近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5078",
+      "publishedAt": "2026-09-15T10:46:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "中延",
+        "中延駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "00d45250d85971220d65",
+      "title": "高齢者施設向け給食の「栄養強化」と「省人化」を両立 シダックス「元気ごはん with Oisix」がLacuSと「すごカロスープ」を共同開発",
+      "summary": "[株式会社シダックスフードサービス] オイシックス株式会社（本社：東京都品川区、代表取締役社長：高島 宏平、以下 オイシックス）の子会社で、全国の高齢者施設や病院、保育施設、企業の社員食堂などで給食事業を展開する株式会社シダックスフー...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000012.000180760.html",
+      "publishedAt": "2026-09-15T08:40:42Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "364f43e95cc52655a143",
+      "title": "新潟発のフードテックスタートアップとオイシックスグループが協業 シダックスの高齢者施設向け給食「元気ごはん with Oisix」でスープを共同開発",
+      "summary": "[オイシックス株式会社] 食品のサブスクリプションサービスを提供するオイシックス株式会社（本社：東京都品川区、代表取締役社長：高島 宏平、以下 当社）は、当社の子会社で高齢者施設や病院、保育施設、企業の社員食堂などで給食事...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001239.000008895.html",
+      "publishedAt": "2026-09-15T08:15:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "b317e5dc8b1d8c6a6385",
+      "title": "9月16日開催の委員会の予定を掲載。",
+      "summary": "9月16日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20813.html",
+      "publishedAt": "2026-09-15T05:54:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "77f656bfe536211a28ee",
       "title": "北品川本通り商店会「第7回 しながわ宿場ナイト」",
@@ -8595,9 +8672,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2617, column 66"
+      "status": "ok",
+      "scanned": 548,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -8621,7 +8698,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
