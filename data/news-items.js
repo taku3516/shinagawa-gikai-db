@@ -1,7 +1,47 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-15T21:34:03.427886Z",
+  "generatedAt": "2026-09-16T05:01:46.974628Z",
   "items": [
+    {
+      "id": "847ac32ee8cdec90cba0",
+      "title": "【新店情報】『串カツ田中 津田沼店』が9月17日(木)にオープン！",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）の子会社である株式会社串カツ田中は、2026年9月17日(木)に「串カツ田中 津田沼店」をオープンいたします。 [画...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000630.000027839.html",
+      "publishedAt": "2026-09-16T04:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T05:01:20.374371Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "5f14c45fc02e04c3db97",
+      "title": "【出展作品募集中～10/16まで】品川区民作品展「しながわみんなの展覧会」",
+      "summary": "2026年12月9日（水）～13日（日）、きゅりあんにて「しながわみんなの展覧会」が開催されます。 毎冬開催されている品川区民作品展。今年からは会場を大井町の「きゅりあん」に移し、子どもから大人まで楽しめる「しながわみんなの展覧会」としてスケールアップし開催されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/m-tenrankai",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T05:01:20.374371Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "きゅりあん"
+      ],
+      "relevanceScore": 20
+    },
     {
       "id": "faf5adaa61043ba59e1c",
       "title": "特別価格で増毛体験とクレンジングがセットに！ 期間限定増毛キャンペーン 「ステップアップ増毛 1,100本＋すっきりスカルプケア」",
@@ -147,6 +187,25 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "0009d13eafedd4ea13b4",
+      "title": "住宅改善工事助成事業(エコ＆バリアフリー住宅改修)",
+      "summary": "＜申込期間＞ 令和8年4月1日（火）～令和9年1月29日（金） ※工事前と工事後に、書類を提出していただきます。工事完了後1カ月以内に助成申請書の提出をお願いします。 ※工事完了と助成申請書の提出は、 令和9年2月26日（金）まで です。 ※助成交付額が予算総額に達した時点で受付を終了します。 ＜既存の住宅に対して行うリフォーム工事で、次に掲げるもの＞",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kenchiku/kankyo-kenchiku-assen/20211221163556.html",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T05:01:20.374371Z",
+      "tags": [
+        "都市開発",
+        "選挙政治",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 4
     },
     {
       "id": "0d16e8252e7f33df7ca2",
@@ -2651,7 +2710,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "822df1388bdec4f5dc7b",
-      "title": "【終了：9/12,13限定】しながわクルーズ「天王洲周遊アートクルーズ」 2026/09/12(土), 2026/09/13(日) 遊ぶ 観る",
+      "title": "【終了：9/12,13限定】しながわクルーズ「天王洲周遊アートクルーズ」",
       "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9月12日（土）、13日（日）は、天王洲で開催されるアートイベント「 TENNOZ ART WEEK 2026 」に合わせ、天王洲を囲む運河でアートクルーズを運航します。ビルに描かれた大型壁画などを船上から鑑賞し、普段とは異なる視点で天王洲の街並みとアートをお楽しみいただけます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -3823,7 +3882,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "916479465b78b4a0fd04",
-      "title": "しながわクルーズ 9・10・11月",
+      "title": "しながわクルーズ 9・10・11月 2026/09/12(土) ~ 2026/11/22(日) 遊ぶ 観る",
       "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9～11月の「しながわクルーズ」は、月ごとに東京湾の魅力を発見できるコースとなっています。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -5074,7 +5133,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "f6bb985bfd5c48aa47e2",
-      "title": "しながわ水族館「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」",
+      "title": "しながわ水族館「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」 2026/07/25(土) ~ 2026/12/25(金) 遊ぶ 観る 知る 大森海岸駅, 大森駅",
       "summary": "2026年7月25日（土）～12月25日（金）、 しながわ水族館 にて「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」が開催されます。 今年10月に開館35周年を迎えるしながわ水族館と、世界的ベストセラー絵本「はらぺこあおむし」日本語版刊行50周年をあわせて記念する特別展。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -8726,7 +8785,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 9,
       "accepted": 0
     },
     {
@@ -8744,7 +8803,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 552,
+      "scanned": 561,
       "accepted": 0
     },
     {
@@ -8769,7 +8828,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -8827,8 +8886,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "しながわ観光協会",
       "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
