@@ -1,7 +1,47 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-16T05:01:46.974628Z",
+  "generatedAt": "2026-09-16T11:52:50.854743Z",
   "items": [
+    {
+      "id": "cf305d289646a8dbf10f",
+      "title": "不動前にサンドイッチ店「メルシー」 5店目、毎月3日は3割引サービスも",
+      "summary": "サンドイッチ店「Merci（メルシー） 不動前店」（品川区西五反田4、TEL 03-6275-3377）が不動前駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5079",
+      "publishedAt": "2026-09-16T11:00:57Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "不動前駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "3d98bd65011411eb1f3e",
+      "title": "9月17日（木）午後１時、9月18日（金）午前１０時から第３回定例会のインターネット生中継を放映。",
+      "summary": "9月17日（木）午後１時、9月18日（金）午前１０時から第３回定例会のインターネット生中継を放映。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20817.html",
+      "publishedAt": "2026-09-16T05:24:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "847ac32ee8cdec90cba0",
       "title": "【新店情報】『串カツ田中 津田沼店』が9月17日(木)にオープン！",
@@ -20,6 +60,62 @@ window.SHINAGAWA_NEWS = {
         "東五反田"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "ceb17d0ef5b09de83d18",
+      "title": "JR東日本 謎解き宝探し「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」",
+      "summary": "2026年9月30日（水）～2027年3月22日（月）、謎解き宝探し「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」が開催されます。 本イベントは、広域品川圏の5駅（大井町駅・品川駅・高輪ゲートウェイ駅・田町駅・浜松町駅）を巡りながら楽しむ、体験型の謎解きイベント。街歩きと謎解き宝探しを組み合わせた新しい周遊型イベントです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/greatershinagawa-nazo",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "694f576469a36b601f7d",
+      "title": "ふるさと納税代理寄附（災害支援）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/20260903092526.html",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "4e855ecc63705e4de535",
+      "title": "品川区福祉オンブズマン制度",
+      "summary": "福祉計画課施設担当 電話：03-5742-6917 FAX：03-5742-6797",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/soudanmado/soudanmado-hukushi/20260616181542.html",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "5f14c45fc02e04c3db97",
@@ -41,6 +137,61 @@ window.SHINAGAWA_NEWS = {
         "きゅりあん"
       ],
       "relevanceScore": 20
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "5ec7be4997a108ed82b0",
+      "title": "グリーフケア電話相談・遺族のつどい",
+      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/shinagawagriefcare2.html",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T09:22:28.623619Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "877e45ac9a8423466279",
+      "title": "グリーフケア電話相談・遺族のつどい",
+      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/shinagawagriefcare.html",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "faf5adaa61043ba59e1c",
@@ -334,23 +485,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-09-14T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "3b02c62cbde230a675f7",
@@ -974,7 +1108,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "c5415cca366ad7a37268",
       "title": "令和8年8月福井豪雨 ふるさと納税による災害支援の代理寄附を開始",
-      "summary": "税務課 ふるさと納税担当 電話03-5742-3857 FAX03-5742-7108",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -4604,7 +4738,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "eadc8c2bedad2ec109e0",
       "title": "令和8年熊本地震 ふるさと納税による災害支援の代理寄附を開始",
-      "summary": "税務課 ふるさと納税担当 電話03-5742-3857 FAX03-5742-7108",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -4838,25 +4972,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
-      "id": "5ec7be4997a108ed82b0",
-      "title": "グリーフケア電話相談・遺族のつどい",
-      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/shinagawagriefcare2.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-03T09:22:28.623619Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 4
-    },
-    {
       "id": "0e6611abc3b198320c7d",
       "title": "区登録文化財制度スタート",
       "summary": "区では、地域の歴史や文化を未来へ受け継いでいくため、「区登録文化財制度」を創設しました。 区内には、地域の歴史や文化を伝える貴重な文化財が数多くあります。その中には、区指定文化財には至らないものの、地域にとって大切な価値を持つ文化財も少なくありません。区登録文化財制度は、このような身近な文化財を登録し、その魅力や価値を広く知っていただくとともに、保護と活用を進めていく制度です。 また、本制度では、区民や文化財所有者などが登録を希望する文化財について区へ申し出ることができる「…",
@@ -4943,25 +5058,6 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 4
-    },
-    {
-      "id": "877e45ac9a8423466279",
-      "title": "グリーフケア電話相談・遺族のつどい",
-      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/shinagawagriefcare.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T15:54:35.184829Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "荏原"
-      ],
       "relevanceScore": 4
     },
     {
@@ -8780,7 +8876,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 8
+      "accepted": 9
     },
     {
       "source": "警視庁",
@@ -8802,9 +8898,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 561,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1248, column 35"
     },
     {
       "source": "朝日新聞",
@@ -8828,7 +8924,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
