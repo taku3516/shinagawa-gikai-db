@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-17T11:55:44.920741Z",
+  "generatedAt": "2026-09-17T17:10:46.169778Z",
   "items": [
+    {
+      "id": "90f3293b5b16dc5d8a74",
+      "title": "「KLP塾2026」が開講、次世代リーダー育成が本格始動吉村洋文大阪府知事、溝畑宏塾長が第1・2回にそれぞれ登壇",
+      "summary": "[ワクセル] ソーシャルビジネスコミュニティ「ワクセル」（所在地：東京都品川区、主催：嶋村吉洋、総合プロデューサー：住谷知厚）が協力する、KLP合同会社（代表：島田 大輝）と公益財団法人大阪観光局（理事長：溝畑 宏）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000295.000052391.html",
+      "publishedAt": "2026-09-17T16:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T19:53:06.427217Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "faf08d3ac532304e791f",
+      "title": "戸越八幡神社で「一箱古本市」開催へ 10回目記念リーフレットを無料配布",
+      "summary": "「戸越八幡神社 一箱古本市」が9月26日、戸越八幡神社（品川区戸越2、TEL 03-3781-4186）で開かれる。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5080",
+      "publishedAt": "2026-09-17T12:08:55Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T17:10:22.226803Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "9f3517b3577540f1a195",
       "title": "冷凍食品・アイス好きから寄せられたエピソードを実写×生成AIでドラマ化。景井ひなさん出演「マイ・フローズンライフ」配信",
@@ -112,7 +148,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "cf305d289646a8dbf10f",
       "title": "不動前にサンドイッチ店「メルシー」 5店目、毎月3日は3割引サービスも",
-      "summary": "サンドイッチ店「Merci（メルシー） 不動前店」（品川区西五反田4、TEL 03-6275-3377）が不動前駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "summary": "「サンドイッチのお店Merci（メルシー） 不動前店」（品川区西五反田4、TEL 03-6275-3377）が不動前駅近くにオープンして1カ月がたった。 #品川経済新聞",
       "source": "品川経済新聞",
       "sourceId": "shinagawa-keizai",
       "sourceType": "rss",
@@ -348,23 +384,6 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "子育て教育",
         "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "90f3293b5b16dc5d8a74",
-      "title": "「KLP塾2026」が開講、次世代リーダー育成が本格始動吉村洋文大阪府知事、溝畑宏塾長が第1・2回にそれぞれ登壇",
-      "summary": "[ワクセル] ソーシャルビジネスコミュニティ「ワクセル」（所在地：東京都品川区、主催：嶋村吉洋、総合プロデューサー：住谷知厚）が協力する、KLP合同会社（代表：島田 大輝）と公益財団法人大阪観光局（理事長：溝畑 宏）...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000295.000052391.html",
-      "publishedAt": "2026-09-15T15:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-14T19:53:06.427217Z",
-      "tags": [
-        "その他"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -9003,7 +9022,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 579,
+      "scanned": 575,
       "accepted": 0
     },
     {
