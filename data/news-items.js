@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-17T05:05:06.807104Z",
+  "generatedAt": "2026-09-17T11:55:44.920741Z",
   "items": [
+    {
+      "id": "9f3517b3577540f1a195",
+      "title": "冷凍食品・アイス好きから寄せられたエピソードを実写×生成AIでドラマ化。景井ひなさん出演「マイ・フローズンライフ」配信",
+      "summary": "[株式会社日本アクセス] 食品総合卸の株式会社日本アクセス（所在地：東京都品川区、代表取締役社長 社長執行役員 CEO：服部真也）は、一般の方々から募集した冷凍食品・アイス・冷凍ペットフードにまつわるエピソードをもとに制作したオ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000182.000023710.html",
+      "publishedAt": "2026-09-17T08:40:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T11:55:15.197370Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "41d0c1c70ed5912c2843",
+      "title": "会派構成が変更になりました。",
+      "summary": "会派構成が変更になりました。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20821.html",
+      "publishedAt": "2026-09-17T08:03:39Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T11:55:15.197370Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "bdfd60013cb9b52dc384",
       "title": "地元 21 団体と築く防災の輪「新たな備えサポート隊in 松山」2026 年度も継続",
@@ -38,6 +74,23 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "291bb50939219d393243",
+      "title": "旗岡八幡神社 例大祭 2026",
+      "summary": "2026年9月26日（土）、27日（日）、 旗岡八幡神社 にて例大祭が開催されます。 神楽殿では、両日とも里神楽が奉奏され、境内にはたくさんの露店が立ち並び多くの人で賑わいます。 また、27日（日）には宮神輿の渡御も行われます。（宮出し8:30／宮入り19:00） 【公式】しながわ観光協会 SHINAGAWA TOURISM ASSOCIATION [OFFICIAL](@shinagawonder)がシェアした投稿",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hataokahachimanreitaisai2026",
+      "publishedAt": "2026-09-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T11:55:15.197370Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "64262452e46e30f3ab78",
@@ -8932,7 +8985,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 7,
       "accepted": 0
     },
     {
@@ -8949,9 +9002,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 1255, column 35"
+      "status": "ok",
+      "scanned": 579,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -8992,7 +9045,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 報道発表",
       "status": "ok",
-      "scanned": 9,
+      "scanned": 10,
       "accepted": 0
     },
     {
@@ -9032,9 +9085,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
