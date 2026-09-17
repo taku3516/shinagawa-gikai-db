@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-17T17:10:46.169778Z",
+  "generatedAt": "2026-09-17T21:33:38.646700Z",
   "items": [
+    {
+      "id": "285e99ed4019b2756b13",
+      "title": "漫画『たぬきはたぬき』×東武動物公園コラボイベント「冷やしタヌキ祭り」大好評御礼！描き下ろしイラストTシャツ発売開始！",
+      "summary": "[徳間書店] 株式会社徳間書店（東京・品川区、代表取締役社長：小宮英行）は、漫画『たぬきはたぬき』（リュウコミックス）（https://amzn.asia/d/0edDIOLM）と東武動物公園のコラボイベント「冷やしタヌキ祭り」が大好評と...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001121.000016935.html",
+      "publishedAt": "2026-09-17T20:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T21:33:18.766505Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
     {
       "id": "90f3293b5b16dc5d8a74",
       "title": "「KLP塾2026」が開講、次世代リーダー育成が本格始動吉村洋文大阪府知事、溝畑宏塾長が第1・2回にそれぞれ登壇",
@@ -9022,7 +9039,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 575,
+      "scanned": 578,
       "accepted": 0
     },
     {
