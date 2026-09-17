@@ -1,7 +1,61 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-16T11:52:50.854743Z",
+  "generatedAt": "2026-09-17T05:05:06.807104Z",
   "items": [
+    {
+      "id": "bdfd60013cb9b52dc384",
+      "title": "地元 21 団体と築く防災の輪「新たな備えサポート隊in 松山」2026 年度も継続",
+      "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社：東京都品川区、代表取締役社長 兼 CEO：石黒 靖規）は、発 起人となり2022年に発足した「新たな備えサポート隊 in 松山」の活動に、 2026年度も引き続き参画してまいりま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000433.000022024.html",
+      "publishedAt": "2026-09-17T04:41:14Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T05:03:22.000533Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "b317e5dc8b1d8c6a6385",
+      "title": "9月16日開催の委員会の結果を掲載。",
+      "summary": "9月16日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20813.html",
+      "publishedAt": "2026-09-17T01:54:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "64262452e46e30f3ab78",
+      "title": "eLTAXやeL-QRのサービスが停止します（令和8年9月19日～9月24日）",
+      "summary": "令和8年9月のeLTAXのシステム更改に伴い、次の期間中、eLTAXのサービスが停止されます。 サービス停止期間中は、eLTAXやeL-QRを利用した地方税の電子申告、電子納付等の手続きができないため、ご注意ください。 【サービス停止期間】 令和8年9月19日（土曜日）午前0時 ～ 令和8年9月24日（木曜日）午前8時30分(予定) 詳細は、以下のリンク先をご覧ください。 令和8年9月のeLTAX更改に伴うサービス停止について（eLTAXホームページ）（別ウィンドウ表示）…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-zeikin/procedure-zeikin-oshirase/20260916163201.html",
+      "publishedAt": "2026-09-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T05:03:22.000533Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "cf305d289646a8dbf10f",
       "title": "不動前にサンドイッチ店「メルシー」 5店目、毎月3日は3割引サービスも",
@@ -320,24 +374,21 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "b317e5dc8b1d8c6a6385",
-      "title": "9月16日開催の委員会の予定を掲載。",
-      "summary": "9月16日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20813.html",
-      "publishedAt": "2026-09-15T05:54:41Z",
+      "id": "a1dc4fcc463d9c7d3c89",
+      "title": "住民票の写しや戸籍証明書のオンライン請求",
+      "summary": "申請前に電子証明用アプリ『マイナアプリ』をインストールしてください スマートフォンでマイナンバーカードを読み取って、本人確認（電子署名）を行うためです。 インストールする際に、スマートフォンに設定したパスワードの入力が必要な場合があります。 〈iPhoneをご利用の方〉 AppStore から『マイナアプリ』を入手 （別ウィンドウで表示） 〈Androidをご利用の方〉 GooglePlay から『マイナアプリ』を入手 （別ウィンドウで表示） よくある質問 オンライン申請は…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/20220119173146.html",
+      "publishedAt": "2026-09-15T00:00:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "collectedAt": "2026-09-17T05:03:22.000533Z",
       "tags": [
-        "選挙政治",
-        "地域イベント"
+        "その他"
       ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "0009d13eafedd4ea13b4",
@@ -8881,7 +8932,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 9,
+      "scanned": 8,
       "accepted": 0
     },
     {
@@ -8900,7 +8951,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1248, column 35"
+      "message": "not well-formed (invalid token): line 1255, column 35"
     },
     {
       "source": "朝日新聞",
@@ -8924,7 +8975,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -8981,9 +9032,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
