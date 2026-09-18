@@ -1,7 +1,67 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-18T11:33:04.863345Z",
+  "generatedAt": "2026-09-18T16:36:16.340733Z",
   "items": [
+    {
+      "id": "0fa40ee5175e45d402f6",
+      "title": "介護をしている家族への支援",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kaigo1/hpg000002404.html",
+      "publishedAt": "2026-09-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "5469bce268b63b6dc47a",
+      "title": "アデランスグループで初出展！ウィッグのポップカルチャー領域を強化 ロサンゼルス最大のコミック＆ポップカルチャーイベント「L.A. Comic Con」へブース出展",
+      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランスグループ（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、10月30日（金）～11月1 日（日）の3日間、ロサンゼルスにて開催...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001050.000010292.html",
+      "publishedAt": "2026-09-18T16:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T16:35:50.519787Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "54a3b438a3997d2448cc",
+      "title": "西大井・三間通り沿いに「フタバティースタンド」 店主は「介護漫才師」",
+      "summary": "テイクアウト店「Futaba Tea Stand（フタバティースタンド）」（品川区二葉2）がJR大井町駅と西大井駅間、三間通り沿いの住宅街にオープンして3カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5081",
+      "publishedAt": "2026-09-18T12:09:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T16:35:50.519787Z",
+      "tags": [
+        "福祉",
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "二葉",
+        "大井",
+        "西大井",
+        "西大井駅",
+        "大井町駅"
+      ],
+      "relevanceScore": 30
+    },
     {
       "id": "860d8b3d3d88fb8b2a45",
       "title": "【コムシス情報システム】AIJO配筋王関連技術が国交省の工事公告に掲載",
@@ -55,6 +115,25 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "359621920adaee5a392d",
+      "title": "第19回 中延ねぶた祭り 2026",
+      "summary": "2026年9月19日（土）、中延商店街にて「中延ねぶた祭り」が開催されます。 2年に1度開催される「中延ねぶた祭り」では、お囃子、跳人（ハネト）、そして新たな「ねぶた山車」が参加してお祭りを大いに盛りあげます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nebutafestival2026",
+      "publishedAt": "2026-09-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T16:35:50.519787Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延"
+      ],
+      "relevanceScore": 6
     },
     {
       "id": "285e99ed4019b2756b13",
@@ -5476,23 +5555,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "0fa40ee5175e45d402f6",
-      "title": "介護をしている家族への支援",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kaigo1/hpg000002404.html",
-      "publishedAt": "2026-07-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "731f59c4cd817ae0a070",
       "title": "NHKで品川成年後見センターが紹介されます（再放送）",
       "summary": "7/4（土）NHK番組「NEWSおはよう日本」で紹介された内容が再放送されます！ 日時：８月4日（火）午後３時10分～６時10分 ※放映時間は未定",
@@ -9112,7 +9174,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 3997, column 27"
+      "message": "not well-formed (invalid token): line 4081, column 27"
     },
     {
       "source": "朝日新聞",
@@ -9136,7 +9198,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
