@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-18T16:36:16.340733Z",
+  "generatedAt": "2026-09-18T21:04:07.479471Z",
   "items": [
     {
       "id": "0fa40ee5175e45d402f6",
@@ -18,6 +18,26 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "6701d33d8ec1a71542d8",
+      "title": "日本ファンタジーの金字塔・荻原規子「勾玉三部作」完結30周年記念！ 文庫新装版全巻を収めた特別な美装箱セットが発売！",
+      "summary": "[徳間書店] 株式会社徳間書店（本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、日本ファンタジーの旗手・荻原規子による「勾玉三部作」の完結30周年を記念し、文庫新装版全5冊を特製の美装箱に収めたセットを、各...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001124.000016935.html",
+      "publishedAt": "2026-09-18T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T21:03:48.825490Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
     },
     {
       "id": "5469bce268b63b6dc47a",
@@ -9174,7 +9194,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 4081, column 27"
+      "message": "not well-formed (invalid token): line 4056, column 27"
     },
     {
       "source": "朝日新聞",
