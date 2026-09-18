@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-18T21:04:07.479471Z",
+  "generatedAt": "2026-09-18T23:25:41.771790Z",
   "items": [
     {
       "id": "0fa40ee5175e45d402f6",
@@ -18,6 +18,24 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
+    },
+    {
+      "id": "5469bce268b63b6dc47a",
+      "title": "アデランスグループで初出展！ウィッグのポップカルチャー領域を強化 ロサンゼルス最大のコミック＆ポップカルチャーイベント「L.A. Comic Con」へブース出展",
+      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランスグループ（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、10月30日（金）～11月1 日（日）の3日間、ロサンゼルスにて開催...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001050.000010292.html",
+      "publishedAt": "2026-09-18T22:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T16:35:50.519787Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "6701d33d8ec1a71542d8",
@@ -38,24 +56,6 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "5469bce268b63b6dc47a",
-      "title": "アデランスグループで初出展！ウィッグのポップカルチャー領域を強化 ロサンゼルス最大のコミック＆ポップカルチャーイベント「L.A. Comic Con」へブース出展",
-      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランスグループ（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、10月30日（金）～11月1 日（日）の3日間、ロサンゼルスにて開催...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000001050.000010292.html",
-      "publishedAt": "2026-09-18T16:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-18T16:35:50.519787Z",
-      "tags": [
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "54a3b438a3997d2448cc",
@@ -9194,7 +9194,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 4056, column 27"
+      "message": "not well-formed (invalid token): line 3991, column 27"
     },
     {
       "source": "朝日新聞",
