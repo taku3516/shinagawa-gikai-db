@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-18T04:56:38.374564Z",
+  "generatedAt": "2026-09-18T11:33:04.863345Z",
   "items": [
+    {
+      "id": "860d8b3d3d88fb8b2a45",
+      "title": "【コムシス情報システム】AIJO配筋王関連技術が国交省の工事公告に掲載",
+      "summary": "[コムシスホールディングス株式会社] コムシスホールディングス株式会社（本社：東京都品川区、代表取締役社長 田辺 博）のグループ会社であるコムシス情報システム株式会社（本社：東京都品川区、代表取締役社長 森木 哲朗 以下 コムシス情報...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000046.000183413.html",
+      "publishedAt": "2026-09-18T06:41:07Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T11:32:40.029965Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "947dfe2353b1e8401ced",
+      "title": "北海道白糠町の「ふるさと納税を起点としたまちづくり」を一冊に『ふるさと納税から始まるまちづくり』を自費出版",
+      "summary": "[株式会社イミュー] 株式会社イミュー（所在地：東京都品川区、代表：黒田 康平）は、北海道白糠町（しらぬかちょう）における、ふるさと納税を基軸としたまちづくりの取り組みをまとめた書籍『ふるさと納税から始まるまちづくり』...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000079.000081865.html",
+      "publishedAt": "2026-09-18T06:15:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T11:32:40.029965Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "fc420ec49fd9cacc8ab7",
       "title": "9月24,25日開催の委員会の予定を掲載。",
@@ -1663,6 +1697,24 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "c98d4c66e51c1b9bbfce",
+      "title": "令和8年度秋季プレミアム付区内共通商品券",
+      "summary": "品川区商店街連合会 電話：03-5498-5931 FAX：03-5498-5933 地域産業振興課 商店街支援係 電話：03-5498-6332 FAX：03-3787-7961",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-syomono/sangyo-syomono-syogyo/20220325103036.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T11:32:40.029965Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "93646144c953831b0287",
@@ -9047,7 +9099,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 137,
+      "scanned": 139,
       "accepted": 0
     },
     {
@@ -9058,9 +9110,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 565,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 3997, column 27"
     },
     {
       "source": "朝日新聞",
@@ -9084,7 +9136,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
