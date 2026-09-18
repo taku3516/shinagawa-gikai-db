@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-17T21:33:38.646700Z",
+  "generatedAt": "2026-09-18T04:56:38.374564Z",
   "items": [
+    {
+      "id": "fc420ec49fd9cacc8ab7",
+      "title": "9月24,25日開催の委員会の予定を掲載。",
+      "summary": "9月24,25日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20830.html",
+      "publishedAt": "2026-09-18T01:41:39Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T04:56:13.906985Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "285e99ed4019b2756b13",
       "title": "漫画『たぬきはたぬき』×東武動物公園コラボイベント「冷やしタヌキ祭り」大好評御礼！描き下ろしイラストTシャツ発売開始！",
@@ -9021,7 +9041,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 7,
+      "scanned": 9,
       "accepted": 0
     },
     {
@@ -9039,7 +9059,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 578,
+      "scanned": 565,
       "accepted": 0
     },
     {
@@ -9064,7 +9084,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
