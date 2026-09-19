@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-18T23:25:41.771790Z",
+  "generatedAt": "2026-09-19T11:18:04.639995Z",
   "items": [
+    {
+      "id": "6420ea0e76c2150f536d",
+      "title": "大口契約の締結に関するお知らせ",
+      "summary": "[データセクション株式会社] データセクション株式会社（本社：東京都品川区、代表取締役社長執行役員CEO：石原紀彦、東証グロース：3905、以下「当社」）は、米国に本社を置く世界有数のAIインフラプラットフォーム提供企業との間で、AIイン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000090.000036921.html",
+      "publishedAt": "2026-09-19T08:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-19T11:16:22.652516Z",
+      "tags": [
+        "都市開発",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "63ad2afc582747b4f080",
+      "title": "歌手の小川みすずさん、交通安全呼びかけ 秋の全国交通安全運動を前に 東京・品川区",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/81b3e78ca60b46b1b98e3c3b8dae6f74",
+      "publishedAt": "2026-09-19T07:05:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-19T11:16:22.652516Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "0fa40ee5175e45d402f6",
       "title": "介護をしている家族への支援",
@@ -9192,9 +9227,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 3991, column 27"
+      "status": "ok",
+      "scanned": 317,
+      "accepted": 1
     },
     {
       "source": "朝日新聞",
@@ -9275,9 +9310,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
