@@ -1,7 +1,62 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-20T05:06:31.737170Z",
+  "generatedAt": "2026-09-20T11:39:51.833643Z",
   "items": [
+    {
+      "id": "85b5011a6dd6d19c10ab",
+      "title": "「あらゆるものが、子どもの宝ものになる」素材との出会いを楽しむ「こども・そざい・みゅーじあむ2026」を品川区で開催",
+      "summary": "[株式会社えんのした] [画像1: https://prcdn.freetls.fastly.net/release_image/170813/5/170813-5-f0dbab6937e26e9ed62e2b3651253baa-2360x1237.png?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000005.000170813.html",
+      "publishedAt": "2026-09-20T08:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-20T11:39:29.244792Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "7d6624ec3d1f70dd1cf6",
+      "title": "誕生八幡神社例大祭 2026",
+      "summary": "2026年10月3日（土）・4日（日）、誕生八幡神社例大祭が行われます。 大きな2本のイチョウの木が目印の誕生八幡神社は、太田道灌が夫人の安産を祈り勧請、安産の守り神として信仰されています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tanjohachiman-reitaisai2026",
+      "publishedAt": "2026-09-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-20T11:39:29.244792Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "29b302cf25774f566515",
+      "title": "第43回 秋の品川納涼祭",
+      "summary": "2026年10月3日（土）、西大井広場公園にて「品川納涼祭」が開催されます。 毎年恒例の納涼祭。広場の中央に櫓が立ち、皆で盆踊りを踊って盛り上がります。地元商店街による模擬店や能登の名産品コーナーなどグルメも充実。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawa-noukyousai2026",
+      "publishedAt": "2026-09-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-20T11:39:29.244792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "西大井"
+      ],
+      "relevanceScore": 10
+    },
     {
       "id": "6420ea0e76c2150f536d",
       "title": "大口契約の締結に関するお知らせ",
@@ -9229,7 +9284,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1146, column 52"
+      "message": "not well-formed (invalid token): line 948, column 85"
     },
     {
       "source": "朝日新聞",
@@ -9253,7 +9308,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
