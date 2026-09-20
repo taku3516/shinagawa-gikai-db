@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-20T11:39:51.833643Z",
+  "generatedAt": "2026-09-20T16:20:29.561189Z",
   "items": [
     {
       "id": "85b5011a6dd6d19c10ab",
@@ -19,6 +19,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "2ed9938925b0d3898b1e",
+      "title": "第10回 戸越八幡神社「一箱古本市」",
+      "summary": "2026年9月26日（土）戸越八幡神社にて「第10回 戸越八幡神社一箱古本市」が開催されます。 一箱古本市とは、ミカン箱程度の一箱に自分の本を持ち寄り、一日だけの「本屋さんごっこ」を楽しむイベント。今回で10回目を迎えます。 当日は10回記念のリーフレットを無料配布予定。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hitohako10",
+      "publishedAt": "2026-09-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-20T16:20:02.645523Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "7d6624ec3d1f70dd1cf6",
@@ -9284,7 +9303,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 948, column 85"
+      "message": "not well-formed (invalid token): line 1012, column 85"
     },
     {
       "source": "朝日新聞",
