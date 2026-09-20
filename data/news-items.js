@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-19T11:18:04.639995Z",
+  "generatedAt": "2026-09-20T05:06:31.737170Z",
   "items": [
     {
       "id": "6420ea0e76c2150f536d",
@@ -173,7 +173,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "359621920adaee5a392d",
-      "title": "第19回 中延ねぶた祭り 2026",
+      "title": "【終了】第19回 中延ねぶた祭り 2026",
       "summary": "2026年9月19日（土）、中延商店街にて「中延ねぶた祭り」が開催されます。 2年に1度開催される「中延ねぶた祭り」では、お囃子、跳人（ハネト）、そして新たな「ねぶた山車」が参加してお祭りを大いに盛りあげます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -852,7 +852,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "6d15a6a17cd0f3891d52",
-      "title": "天祖・諏訪神社 例大祭",
+      "title": "天祖・諏訪神社 例大祭 2026",
       "summary": "2026年9月16日（水）、18（金）～20日（日）、天祖・諏訪神社 例大祭が開催されます。 本年は二年に一度の「総町神輿（そうちょうみこし）」が行われる年です。18日の夜の宮出しでは、境内には十一町会の神輿が集まり、御分霊が各神輿へと遷された後、暗夜の中をそれぞれの町会へ向けて練り歩きます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -9227,9 +9227,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 317,
-      "accepted": 1
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1146, column 52"
     },
     {
       "source": "朝日新聞",
@@ -9253,7 +9253,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -9310,9 +9310,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
