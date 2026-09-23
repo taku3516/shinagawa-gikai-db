@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-20T16:20:29.561189Z",
+  "generatedAt": "2026-09-23T11:54:36.339346Z",
   "items": [
+    {
+      "id": "140c072768ca04450ed3",
+      "title": "REACH大崎クラフトマーケット",
+      "summary": "2026年10月7日（水）、JR大崎駅南口東西自由通路夢さん橋にて「REACH大崎クラフトマーケット」が開催されます。 雑貨やアクセサリーなど、個性豊かな作品が集まる毎月恒例の「手作り市」。大崎駅から徒歩0分というアクセスの良さで、周辺住民だけでなくオフィスワーカーにも人気のクラフトマーケットです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202610",
+      "publishedAt": "2026-09-23T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-23T11:54:08.738362Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "85b5011a6dd6d19c10ab",
       "title": "「あらゆるものが、子どもの宝ものになる」素材との出会いを楽しむ「こども・そざい・みゅーじあむ2026」を品川区で開催",
@@ -9303,7 +9324,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1012, column 85"
+      "message": "not well-formed (invalid token): line 1616, column 15"
     },
     {
       "source": "朝日新聞",
@@ -9327,7 +9348,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
