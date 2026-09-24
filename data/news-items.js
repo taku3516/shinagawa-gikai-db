@@ -1,7 +1,60 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-24T12:01:44.577135Z",
+  "generatedAt": "2026-09-24T17:24:57.236333Z",
   "items": [
+    {
+      "id": "886cf8c58c6e03750613",
+      "title": "ボラミニ情報更新しました！",
+      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63267.html",
+      "publishedAt": "2026-09-24T17:24:30.049429Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-24T17:24:30.049429Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "a0d6d6e38f273f5c10a3",
+      "title": "オルビス、小児がんと向き合う子どもたちのご家族へスキンケア商品などのセットを提供",
+      "summary": "[オルビス株式会社] オルビス株式会社（本社：東京都品川区、代表取締役社長：山口裕絵）は、「世界小児がん啓発月間」である9月に、特定非営利活動法人ジャパンハート（以下、ジャパンハート）を通じて、小児がんと向き合う子ども...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000736.000002061.html",
+      "publishedAt": "2026-09-24T14:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T05:06:49.633256Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "8a2bb7874eff4bb3ccbb",
+      "title": "大井新地にスポーツバー「ちりスポ」 競技経験者が日替わり店長に",
+      "summary": "スポーツバー「ちりスポ」（品川区大井1）が9月1日、大井新地飲食街にオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5082",
+      "publishedAt": "2026-09-24T12:17:42Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T17:24:30.049429Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "5de0194be5dd35b4d2d1",
       "title": "子どもと学校のお悩みは、「ポジティブ行動支援」に！ 書籍『マンガと図解でわかる はじめてのPBS』発売",
@@ -21,23 +74,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "a0d6d6e38f273f5c10a3",
-      "title": "オルビス、小児がんと向き合う子どもたちのご家族へスキンケア商品などのセットを提供",
-      "summary": "[オルビス株式会社] オルビス株式会社（本社：東京都品川区、代表取締役社長：山口裕絵）は、「世界小児がん啓発月間」である9月に、特定非営利活動法人ジャパンハート（以下、ジャパンハート）を通じて、小児がんと向き合う子ども...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000736.000002061.html",
-      "publishedAt": "2026-09-24T04:40:38Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-24T05:06:49.633256Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "f0bb4b7d1da093143b70",
       "title": "9月26日(土)18:00～｜『“予算”と“品質”で失敗しない！物件購入×リノベーション』をテーマに株式会社ウィローズ代表取締役 朝倉大樹（不動産ポリス）がセミナーを開催します",
       "summary": "[株式会社ウィローズ] 株式会社ウィローズ（本社：東京都品川区、代表取締役：朝倉大樹）は、グループ会社の株式会社ウィローズクラフトと共同で、2026年9月26日（土）18:00より、オンラインセミナー『\"予算\"と\"品質\"で失敗しない！物...",
@@ -54,6 +90,42 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "e63aafb9e7ffbd3ead62",
+      "title": "WHAT MUSEUM 「座標」",
+      "summary": "2026年10月10日（土）～12月20日（日）、WHAT MUSEUMにてTOKYO ATLAS関連企画の展覧会「座標」が開催されます。 本展は、アートの世界における才能を発見し、その活躍を支援するプラットフォームの取組として開催。東京都がこれまで支援してきた新進気鋭のアーティストやキュレーター、マネジメント人材が一堂に会し、それぞれの活動を異なる視座から見つめなおし、新たな「座標」として結ぶことを目指しています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/coordinates",
+      "publishedAt": "2026-09-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T17:24:30.049429Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "7c00d7758d526b0bb114",
+      "title": "雉子神社例大祭 2026",
+      "summary": "2026年10月3日 （土）、4日（日）雉子神社（きじじんじゃ） 例大祭が行われます。 3日（土）の前夜祭に始まり、4日（日）に祭典式が行われます。神賑行事として、3日（土）には日本舞踊やフラダンス、清泉女子大学のクラブ発表、4日（日）には、子ども神輿の御宮入り、里神楽の奉納があります。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/kijijinjareitaisai2026",
+      "publishedAt": "2026-09-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T17:24:30.049429Z",
+      "tags": [
+        "行政",
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "140c072768ca04450ed3",
@@ -9376,7 +9448,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 515,
+      "scanned": 522,
       "accepted": 0
     },
     {
