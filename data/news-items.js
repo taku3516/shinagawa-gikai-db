@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-24T05:07:14.325996Z",
+  "generatedAt": "2026-09-24T12:01:44.577135Z",
   "items": [
+    {
+      "id": "5de0194be5dd35b4d2d1",
+      "title": "子どもと学校のお悩みは、「ポジティブ行動支援」に！ 書籍『マンガと図解でわかる はじめてのPBS』発売",
+      "summary": "[株式会社 学研ホールディングス] 株式会社学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年9月24日に『マンガと図解でわかる はじめてのPBS...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009467.000002535.html",
+      "publishedAt": "2026-09-24T08:40:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T12:01:16.449573Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
     {
       "id": "a0d6d6e38f273f5c10a3",
       "title": "オルビス、小児がんと向き合う子どもたちのご家族へスキンケア商品などのセットを提供",
@@ -9357,14 +9375,14 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2129, column 15"
+      "status": "ok",
+      "scanned": 515,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
@@ -9383,7 +9401,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
