@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-23T11:54:36.339346Z",
+  "generatedAt": "2026-09-24T05:07:14.325996Z",
   "items": [
+    {
+      "id": "a0d6d6e38f273f5c10a3",
+      "title": "オルビス、小児がんと向き合う子どもたちのご家族へスキンケア商品などのセットを提供",
+      "summary": "[オルビス株式会社] オルビス株式会社（本社：東京都品川区、代表取締役社長：山口裕絵）は、「世界小児がん啓発月間」である9月に、特定非営利活動法人ジャパンハート（以下、ジャパンハート）を通じて、小児がんと向き合う子ども...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000736.000002061.html",
+      "publishedAt": "2026-09-24T04:40:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T05:06:49.633256Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "f0bb4b7d1da093143b70",
+      "title": "9月26日(土)18:00～｜『“予算”と“品質”で失敗しない！物件購入×リノベーション』をテーマに株式会社ウィローズ代表取締役 朝倉大樹（不動産ポリス）がセミナーを開催します",
+      "summary": "[株式会社ウィローズ] 株式会社ウィローズ（本社：東京都品川区、代表取締役：朝倉大樹）は、グループ会社の株式会社ウィローズクラフトと共同で、2026年9月26日（土）18:00より、オンラインセミナー『\"予算\"と\"品質\"で失敗しない！物...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000004.000189746.html",
+      "publishedAt": "2026-09-24T02:10:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T05:06:49.633256Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "140c072768ca04450ed3",
       "title": "REACH大崎クラフトマーケット",
@@ -947,7 +982,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "6d15a6a17cd0f3891d52",
-      "title": "天祖・諏訪神社 例大祭 2026",
+      "title": "【終了】天祖・諏訪神社 例大祭 2026",
       "summary": "2026年9月16日（水）、18（金）～20日（日）、天祖・諏訪神社 例大祭が開催されます。 本年は二年に一度の「総町神輿（そうちょうみこし）」が行われる年です。18日の夜の宮出しでは、境内には十一町会の神輿が集まり、御分霊が各神輿へと遷された後、暗夜の中をそれぞれの町会へ向けて練り歩きます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -1981,7 +2016,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "b5b1ac98cd01202eb056",
-      "title": "Meguro River Night Ambience（目黒川ナイトアンビエンス）",
+      "title": "【終了】Meguro River Night Ambience（目黒川ナイトアンビエンス）",
       "summary": "2026年9月4日（金）～22日（火・祝） 目黒川沿い遊歩道、五反田ふれあい水辺広場を中心に「Meguro River Night Ambience」 が開催されます。 中心となるのは、アーティスト・國本怜（Ray Kunimoto）によるサウンドインスタレーション《KAZE — body》。風を受けて音を発する“音の彫刻”を載せた船が目黒川を往来し、川辺のサウンド、映像上映、ライブパフォーマンスとともに、都市と自然を「聴く」体験をつくります。イベントの詳しい内容は こちら",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -9305,7 +9340,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 9,
+      "scanned": 7,
       "accepted": 0
     },
     {
@@ -9324,12 +9359,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1616, column 15"
+      "message": "not well-formed (invalid token): line 2129, column 15"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 39,
       "accepted": 0
     },
     {
@@ -9348,7 +9383,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
