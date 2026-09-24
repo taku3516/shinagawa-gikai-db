@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-24T17:24:57.236333Z",
+  "generatedAt": "2026-09-24T21:38:49.355057Z",
   "items": [
+    {
+      "id": "150c5e6ff49117a5f215",
+      "title": "「警視庁特殊詐欺被害防止アドバイザー」委嘱状の交付を受けました",
+      "summary": "[株式会社ケーブルテレビ品川] 株式会社ケーブルテレビ品川(本社：東京都品川区 代表取締役執行役員社長：橋本夏代 以下、ケーブルテレビ品川)は、品川区の通信・放送インフラを担う企業として、安全・安心な街づくりに取り組んでいます。 ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000007.000143385.html",
+      "publishedAt": "2026-09-24T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T21:38:29.350195Z",
+      "tags": [
+        "都市開発",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "a0d6d6e38f273f5c10a3",
+      "title": "オルビス、小児がんと向き合う子どもたちのご家族へスキンケア商品などのセットを提供",
+      "summary": "[オルビス株式会社] オルビス株式会社（本社：東京都品川区、代表取締役社長：山口裕絵）は、「世界小児がん啓発月間」である9月に、特定非営利活動法人ジャパンハート（以下、ジャパンハート）を通じて、小児がんと向き合う子ども...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000736.000002061.html",
+      "publishedAt": "2026-09-24T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T05:06:49.633256Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "886cf8c58c6e03750613",
       "title": "ボラミニ情報更新しました！",
@@ -18,23 +53,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "a0d6d6e38f273f5c10a3",
-      "title": "オルビス、小児がんと向き合う子どもたちのご家族へスキンケア商品などのセットを提供",
-      "summary": "[オルビス株式会社] オルビス株式会社（本社：東京都品川区、代表取締役社長：山口裕絵）は、「世界小児がん啓発月間」である9月に、特定非営利活動法人ジャパンハート（以下、ジャパンハート）を通じて、小児がんと向き合う子ども...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000736.000002061.html",
-      "publishedAt": "2026-09-24T14:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-24T05:06:49.633256Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "8a2bb7874eff4bb3ccbb",
@@ -9448,7 +9466,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 522,
+      "scanned": 518,
       "accepted": 0
     },
     {
@@ -9473,7 +9491,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
