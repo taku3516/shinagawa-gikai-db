@@ -1,7 +1,60 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-25T12:02:45.544823Z",
+  "generatedAt": "2026-09-25T17:24:13.533152Z",
   "items": [
+    {
+      "id": "640fa84cb78807452e7e",
+      "title": "美容クリニック向け｜医療広告ガイドラインと通信費削減戦略の最前線レポート【2026年9月版】",
+      "summary": "[株式会社中央構想研究所] 株式会社中央構想研究所（東京都品川区、代表取締役社長、信谷康邦、以下「当社」）は、「美容クリニックの通信費見直しレポート」2026年9月版（全25ページ）を無料公開いたしました。 [画像1: https://prcdn.fre...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000003.000190769.html",
+      "publishedAt": "2026-09-25T14:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "f7f4474e76997afbe770",
+      "title": "【PISOLA九州初進出！全国75店舗へ】2031年全国300店舗を見据え、PISOLA熊本嘉島店を10月21日オープン",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）のグループ会社である株式会社ピソラ（本社：滋賀県草津市、代表取締役：鬼界 友則）は、2026年10月21日、九州...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000635.000027839.html",
+      "publishedAt": "2026-09-25T14:10:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T17:23:47.246928Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "c02fabb15cc92812d6f1",
+      "title": "藤沢市の観光パンフレット『地球の歩き方 湘南・江の島 2026～27』を10月より配布開始",
+      "summary": "[株式会社 学研ホールディングス] 株式会社学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社地球の歩き方（東京都品川区／代表取締役社長：新井邦弘）は、藤沢市から制作委託を受け観光総合パンフレット...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009466.000002535.html",
+      "publishedAt": "2026-09-25T14:10:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T17:23:47.246928Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "6ac09dcdef79864d1f74",
       "title": "DYM MESSENGERS、新体制初のチームイベント「26-27 SEASON 決起会」を開催",
@@ -70,23 +123,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 12
-    },
-    {
-      "id": "640fa84cb78807452e7e",
-      "title": "美容クリニック向け｜医療広告ガイドラインと通信費削減戦略の最前線レポート【2026年9月版】",
-      "summary": "[株式会社中央構想研究所] 株式会社中央構想研究所（東京都品川区、代表取締役社長、信谷康邦、以下「当社」）は、「美容クリニックの通信費見直しレポート」2026年9月版（全25ページ）を無料公開いたしました。 [画像1: https://prcdn.fre...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000003.000190769.html",
-      "publishedAt": "2026-09-25T04:40:45Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-25T05:09:00.556953Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "751f748cf02d2799eb4f",
@@ -9648,7 +9684,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 553,
+      "scanned": 548,
       "accepted": 0
     },
     {
@@ -9673,7 +9709,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 3
     },
     {
       "source": "東急ニュースリリース",
