@@ -1,7 +1,48 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-25T17:24:13.533152Z",
+  "generatedAt": "2026-09-25T21:43:53.802357Z",
   "items": [
+    {
+      "id": "cf3186129b3518f1ccce",
+      "title": "三井住友カード、トピー工業が「primeNumber DATA SUMMIT 2026」に登壇決定",
+      "summary": "[株式会社primeNumber] データとAIを企業の成長エンジンへと進化させるデータテクノロジーカンパニーの株式会社primeNumber（本社：東京都品川区、代表取締役CEO 田邊 雄樹）は、2026年10月15日（木）に天王洲 キャナルイーストで開催す...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000143.000039164.html",
+      "publishedAt": "2026-09-25T19:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T21:43:33.188182Z",
+      "tags": [
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "054685ff9fad96a26c3c",
+      "title": "【3人制バスケ】品川CC ワイルドキャッツ、10月18日に東品川海上公園でPLCO 3XSホームゲームを開催",
+      "summary": "[品川CC] 「天王洲をホームコートに」3人制バスケットボールの熱戦を観戦無料で開催 [画像1: https://prcdn.freetls.fastly.net/release_image/77565/121/77565-121-20d35ae2e6f6fbe53613828a9d6c9d35-1909x2700.jpg?width...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000121.000077565.html",
+      "publishedAt": "2026-09-25T18:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T21:43:33.188182Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川",
+        "天王洲"
+      ],
+      "relevanceScore": 10
+    },
     {
       "id": "640fa84cb78807452e7e",
       "title": "美容クリニック向け｜医療広告ガイドラインと通信費削減戦略の最前線レポート【2026年9月版】",
@@ -9684,7 +9725,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 548,
+      "scanned": 539,
       "accepted": 0
     },
     {
@@ -9709,7 +9750,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 3
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
