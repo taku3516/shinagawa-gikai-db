@@ -1,7 +1,116 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-24T21:38:49.355057Z",
+  "generatedAt": "2026-09-25T05:09:23.220676Z",
   "items": [
+    {
+      "id": "0bc9b2728ece8dc845e3",
+      "title": "【令和９年４月１日採用】応募者説明会を実施します",
+      "summary": "品川社協では現在、令和９年４月１日付採用職員を募集しています。 応募をお考えの方に、少しでも品川社協を知っていただく機会として、以下の３日間で説明会を開催いたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63162.html",
+      "publishedAt": "2026-09-25T05:09:00.556953Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "bef8fd993055f69749cf",
+      "title": "DYM M&Aコンサルティング、北洋銀行「北海道マザーファンド」第1号案件を支援。MOEホールディングスによる北海道帯広市の介護施設法人のグループ会社化が成約",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）のグループ会社である...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000510.000027235.html",
+      "publishedAt": "2026-09-25T04:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "640fa84cb78807452e7e",
+      "title": "美容クリニック向け｜医療広告ガイドラインと通信費削減戦略の最前線レポート【2026年9月版】",
+      "summary": "[株式会社中央構想研究所] 株式会社中央構想研究所（東京都品川区、代表取締役社長、信谷康邦、以下「当社」）は、「美容クリニックの通信費見直しレポート」2026年9月版（全25ページ）を無料公開いたしました。 [画像1: https://prcdn.fre...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000003.000190769.html",
+      "publishedAt": "2026-09-25T04:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "751f748cf02d2799eb4f",
+      "title": "9月28日開催の委員会の予定を掲載。",
+      "summary": "9月28日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20868.html",
+      "publishedAt": "2026-09-25T01:34:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "19a8bfdea720dba07777",
+      "title": "声の区議会だよりを掲載。",
+      "summary": "声の区議会だよりを掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20862.html",
+      "publishedAt": "2026-09-25T01:26:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "8ca1e758d642ce021417",
+      "title": "屋形船でめぐる東京港歴史体感クルーズ",
+      "summary": "2026年10月31日（土）、しながわ観光協会は、「屋形船でめぐる東京港歴史体感クルーズ」を開催します。 東京都が主催する国際美術展「TOKYO ATLAS」の開催に合わせ、東京港の魅力と歴史を再発見する当クルーズでは、品川歴史館学芸員による解説のもと、品川浦から屋形船に乗り東京港の歴史を学び、船清女将よる東京港観光ガイドを楽しみます。昼食には、「品川めし」風のお弁当をご堪能ください。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyobay2026",
+      "publishedAt": "2026-09-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "品川歴史館"
+      ],
+      "relevanceScore": 6
+    },
     {
       "id": "150c5e6ff49117a5f215",
       "title": "「警視庁特殊詐欺被害防止アドバイザー」委嘱状の交付を受けました",
@@ -111,7 +220,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "e63aafb9e7ffbd3ead62",
-      "title": "WHAT MUSEUM 「座標」",
+      "title": "WHAT MUSEUM：TOKYO ATLAS関連企画 「座標」",
       "summary": "2026年10月10日（土）～12月20日（日）、WHAT MUSEUMにてTOKYO ATLAS関連企画の展覧会「座標」が開催されます。 本展は、アートの世界における才能を発見し、その活躍を支援するプラットフォームの取組として開催。東京都がこれまで支援してきた新進気鋭のアーティストやキュレーター、マネジメント人材が一堂に会し、それぞれの活動を異なる視座から見つめなおし、新たな「座標」として結ぶことを目指しています。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -9454,7 +9563,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 139,
+      "scanned": 138,
       "accepted": 0
     },
     {
@@ -9466,7 +9575,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 518,
+      "scanned": 523,
       "accepted": 0
     },
     {
