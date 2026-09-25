@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-25T05:09:23.220676Z",
+  "generatedAt": "2026-09-25T12:02:45.544823Z",
   "items": [
+    {
+      "id": "6ac09dcdef79864d1f74",
+      "title": "DYM MESSENGERS、新体制初のチームイベント「26-27 SEASON 決起会」を開催",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000536.000027235.html",
+      "publishedAt": "2026-09-25T09:15:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T12:02:17.775966Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "81d15eeb72ffeb871404",
+      "title": "セーフィー、映像上のキロポスト情報表示サービスをNEXCO中日本エリアへ提供拡大",
+      "summary": "[セーフィー株式会社] クラウド録画サービスシェアNo.1（※1）のセーフィー株式会社（東京都品川区：代表取締役社長CEO 佐渡島 隆平、以下「セーフィー」）は、クラウドカメラ「Safie（セーフィー）」の映像データに高速道路のキロポ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000374.000017641.html",
+      "publishedAt": "2026-09-25T07:15:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T12:02:17.775966Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "0bc9b2728ece8dc845e3",
       "title": "【令和９年４月１日採用】応募者説明会を実施します",
@@ -91,6 +126,44 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "35e8c372c53ef997e3fb",
+      "title": "品川歴史館特別展「品川湾から東京港へー未完の港湾都市ー」",
+      "summary": "2026年10月10日（土）～12月20日（日）、 品川歴史館 にて、特別展「品川湾から東京港へー未完の港湾都市ー」が開催されます。 御台場の築造で変わる臨海部、明治時代以降の海の変化について、品川湾から東京港への変遷、発展の歴史を紹介。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/port-of-tokyo",
+      "publishedAt": "2026-09-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T12:02:17.775966Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "品川歴史館"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "1e873b538e7e169bc093",
+      "title": "止水板設置等助成 (防水板設置工事助成)",
+      "summary": "浸水被害の軽減を図るために、住宅・店舗・事務所等の出入口に止水板を設置する方に対し、設置費用の一部を助成します。 ※申請年度内に設置・工事を完了していただき、現場立ち合い（完了検査）が必要な場合があります。 令和8年度の申請受付は、11月末までを予定しています。 予算額に達した場合は、受付を終了することがあります。 申請期限が近づいていますので、申請を検討されている方はお早めにご相談・ご申請ください。 令和8年度申請受付終了後は、令和9年度申請として、4月1日（木）から順次…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-mizube/flood-prevention-subsidy/hpg000003880.html",
+      "publishedAt": "2026-09-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T12:02:17.775966Z",
+      "tags": [
+        "都市開発",
+        "選挙政治",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 6
     },
     {
       "id": "8ca1e758d642ce021417",
@@ -9575,7 +9648,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 523,
+      "scanned": 553,
       "accepted": 0
     },
     {
