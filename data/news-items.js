@@ -1,7 +1,60 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-27T05:30:08.519942Z",
+  "generatedAt": "2026-09-27T17:06:49.672588Z",
   "items": [
+    {
+      "id": "bb8d5a262ee8c716e2a7",
+      "title": "令和8年度思春期講演会",
+      "summary": "大井保健センター 電話：03-3772-2666 FAX：03-3772-2570 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/sisyunkiR6.html",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-27T17:06:25.503279Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "3178e8fca9e05d6ad964",
+      "title": "品川CCパペレシアルのブラインドサッカー体験教室",
+      "summary": "パラリンピックの正式競技でもあるブラインドサッカーの体験会を開催します。 品川区をホームタウンとして活動する品川CCパペレシアルの皆さんを講師にお迎えし、 ブラインドサッカーの視覚OFF体験やゲーム感覚で楽しめるコンテンツを実施します。 ブラインドサッカー競技の特徴であるコミュニケーションやチームワークの大切さを再認識できるイベントとなっております。 体験教室の最後には選手との座談会も予定しており、 選手たちと近い距離で楽しめる内容となっておりますので、ぜひお申込みください…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20260507201318.html",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-27T17:06:25.503279Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "fa3cae7a0a275e978d61",
+      "title": "休日・夜間（平日・土曜日）の診療",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "09554b617205a928dbf3",
       "title": "「DYMスカウト」にインターン検索機能を実装。スキル・勤務地・業界から、自分に合うインターンを検索可能",
@@ -2971,23 +3024,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "fa3cae7a0a275e978d61",
-      "title": "休日・夜間（平日・土曜日）の診療",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "19413da7c891952f8507",
@@ -9760,7 +9796,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 840, column 34"
+      "message": "not well-formed (invalid token): line 836, column 36"
     },
     {
       "source": "朝日新聞",
