@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-25T21:43:53.802357Z",
+  "generatedAt": "2026-09-27T05:30:08.519942Z",
   "items": [
+    {
+      "id": "09554b617205a928dbf3",
+      "title": "「DYMスカウト」にインターン検索機能を実装。スキル・勤務地・業界から、自分に合うインターンを検索可能",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、同社が運営する就...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000532.000027235.html",
+      "publishedAt": "2026-09-27T01:40:39Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-27T05:29:43.070877Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "91e192eca2d53d25e976",
+      "title": "品川宿交流館「第ニ回 品川宿場寄席」",
+      "summary": "2026年10月13日（火）、14日（水）、15日（木）、品川宿交流館にて「品川宿場寄席」が開かれます。 出演は、品川区在住、真打落語家の柳家吉緑、二つ目講談師の一龍齋貞奈。日替わりゲストも迎え、楽しいひとときとなりそうです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shukubayose2",
+      "publishedAt": "2026-09-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-27T05:29:43.070877Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "cf3186129b3518f1ccce",
       "title": "三井住友カード、トピー工業が「primeNumber DATA SUMMIT 2026」に登壇決定",
@@ -9724,9 +9758,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 539,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 840, column 34"
     },
     {
       "source": "朝日新聞",
@@ -9750,7 +9784,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
