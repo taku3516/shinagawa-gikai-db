@@ -1,7 +1,101 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-27T17:06:49.672588Z",
+  "generatedAt": "2026-09-28T05:38:53.936702Z",
   "items": [
+    {
+      "id": "bd1b4d265825ebbe1565",
+      "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動にご協力をお願いいたします （10/6に変更となりました）",
+      "summary": "８月に発生した千葉・北陸豪雨により、千葉県、石川県、富山県、福井県を中心に甚大な被害が発生いたしました。品川ボランティアセンターでは「令和８年８月千葉・北陸豪雨 被災者支援街頭募金活動」を下記の通り実施することとなりました。 ここ大井町から被災地千葉、北陸へ皆様の温かいお気持ちを届けます。皆様の温かいお気持ちとご協力をお願いいたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-62638.html",
+      "publishedAt": "2026-09-28T05:38:22.929973Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "b5090bc72b6b6876a9e9",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年9月14日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年9月28日号(令和8年9月14日～令和8年9月27日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63390.html",
+      "publishedAt": "2026-09-28T05:38:22.929973Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "951dd366fbbdd0ff17cf",
+      "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動実施日延期のご案内",
+      "summary": "８月に発生した千葉・北陸豪雨により、千葉県、石川県、富山県、福井県を中心に甚大な被害が発生いたしました。品川ボランティアセンターでは９月３０日に「令和８年８月千葉・北陸豪雨 被災者支援街頭募金活動」を予定しておりましたが、台風２６号接近に伴い荒天が予想されるため、下記日時に変更し実施することとなりました。 ここ大井町から被災地千葉、北陸へ皆様の温かいお気持ちを届けます。皆様の温かいお気持ちとご協力をお願いいたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63406.html",
+      "publishedAt": "2026-09-28T05:38:22.929973Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "4787ca9a9c8b8039797f",
+      "title": "9月29日開催の委員会の予定を掲載。",
+      "summary": "9月29日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20872.html",
+      "publishedAt": "2026-09-28T04:46:05Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "f4c6f9002fd5c59f0816",
+      "title": "目黒川Eボート体験",
+      "summary": "2026年10月11（日）、「目黒川Eボート体験」が開催されます。 目黒川の美しいリボン装飾を眺めながら、手漕ぎボート（Eボート）で東品川海上公園～五反田ふれあい水辺広場間の水上ルートを体験できる特別なイベントです。 普段は見ることのできない東京の水辺の魅力を、冒険気分で楽しく発見してみてはいかがでしょうか。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/eboat",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 6
+    },
     {
       "id": "bb8d5a262ee8c716e2a7",
       "title": "令和8年度思春期講演会",
@@ -347,6 +441,23 @@ window.SHINAGAWA_NEWS = {
         "品川歴史館"
       ],
       "relevanceScore": 6
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-09-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "150c5e6ff49117a5f215",
@@ -994,6 +1105,25 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
+      "id": "7330196997c9d56e31bd",
+      "title": "第44回大崎第二地区運動会開催のお知らせ",
+      "summary": "",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-oosaki2/shisetsu-kuyakusyo-chiiki-oosaki2-oshirase/20260915094955.html",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 4
+    },
+    {
       "id": "ceb17d0ef5b09de83d18",
       "title": "JR東日本 謎解き宝探し「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」",
       "summary": "2026年9月30日（水）～2027年3月22日（月）、謎解き宝探し「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」が開催されます。 本イベントは、広域品川圏の5駅（大井町駅・品川駅・高輪ゲートウェイ駅・田町駅・浜松町駅）を巡りながら楽しむ、体験型の謎解きイベント。街歩きと謎解き宝探しを組み合わせた新しい周遊型イベントです。",
@@ -1069,23 +1199,6 @@ window.SHINAGAWA_NEWS = {
         "きゅりあん"
       ],
       "relevanceScore": 20
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-09-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "5ec7be4997a108ed82b0",
@@ -1507,7 +1620,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "2df38cba873af59a2224",
-      "title": "「みんな集まれ！ふくしまつり２０２６」開催のお知らせ",
+      "title": "「みんな集まれ！ふくしまつり２０２６」開催のお知らせ （終了ました）",
       "summary": "「ふくしまつり」とは障害者団体・福祉施設、ボランティア団体、民生委員協議会など、福祉関係者が一堂に会する区内最大の福祉イベントです。模擬店、バザー、ステージ、体験コーナーなど、皆さんに喜んでいただけるような内容が盛りだくさんです。また、スポーツ室ではインクルーシブ盆踊りを今年は２部制で行います。わわわ！品川社協音頭はもちろんの事、様々な音楽で盆踊りを楽しみましょう。生歌演奏の盆踊りにもチャレンジ！是非、お誘いあわせの上、ご来場ください！ 日時：令和８年９月２６日（土）午前１…",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
@@ -3368,7 +3481,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "6a7013a186d29d28037d",
       "title": "「早川の大自然でフィールドサイエンスキャンプ」実施報告",
-      "summary": "大崎第二地域センター 電話：03-3492-2000 FAX：03-3492-2095",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -8674,7 +8787,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "7ccd4a65450a3ed6c15f",
       "title": "令和8年度品川区民まつり（大崎第二地区）を開催",
-      "summary": "大崎第二地域センター 電話：03-3492-2000 FAX：03-3492-2095",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -9783,7 +9896,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 138,
+      "scanned": 137,
       "accepted": 0
     },
     {
@@ -9796,7 +9909,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 836, column 36"
+      "message": "not well-formed (invalid token): line 972, column 30"
     },
     {
       "source": "朝日新聞",
@@ -9820,7 +9933,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
