@@ -1,7 +1,49 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-28T05:38:53.936702Z",
+  "generatedAt": "2026-09-28T14:16:36.031821Z",
   "items": [
+    {
+      "id": "58d0944cf3f328737191",
+      "title": "五反田に「ザ・リッタースペースコーヒー」 韓国の大容量カフェが日本進出",
+      "summary": "コーヒーテイクアウト専門店「THE LITER SPACE COFFEE（ザ・リッタースペースコーヒー） 五反田店」（西五反田8）が、五反田エリア・大崎広小路駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5084",
+      "publishedAt": "2026-09-28T10:08:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T14:16:08.909015Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大崎",
+        "西五反田",
+        "大崎広小路駅"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "1e5e9be0c46488d95297",
+      "title": "9月24日開催の委員会の結果を掲載。",
+      "summary": "9月24日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20882.html",
+      "publishedAt": "2026-09-28T06:18:59Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T14:16:08.909015Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "bd1b4d265825ebbe1565",
       "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動にご協力をお願いいたします （10/6に変更となりました）",
@@ -76,6 +118,25 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "4d0630e995eba9756ef5",
+      "title": "天王洲キャナルフェス 2026 秋冬",
+      "summary": "2026年10月30日（金）～11月1日（日）、「天王洲キャナルフェス2026秋冬」が開催されます。 今回の「天王洲キャナルフェス2026秋冬」では、神輿や太鼓の伝統を守り続ける「 宮本卯之助商店 」との特別コラボが実現。 “祭×現代アート”が出会うことで、職人の技とアーティストの感性が交差する3日間が天王洲に生まれます。アートと水辺の街ならではの熱気あふれる体験を楽しんでみてはいかがでしょうか。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/canalfes26aw",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T14:16:08.909015Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "f4c6f9002fd5c59f0816",
@@ -643,7 +704,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "2ed9938925b0d3898b1e",
-      "title": "第10回 戸越八幡神社「一箱古本市」",
+      "title": "【終了】第10回 戸越八幡神社「一箱古本市」",
       "summary": "2026年9月26日（土）戸越八幡神社にて「第10回 戸越八幡神社一箱古本市」が開催されます。 一箱古本市とは、ミカン箱程度の一箱に自分の本を持ち寄り、一日だけの「本屋さんごっこ」を楽しむイベント。今回で10回目を迎えます。 当日は10回記念のリーフレットを無料配布予定。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -9909,7 +9970,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 972, column 30"
+      "message": "not well-formed (invalid token): line 2206, column 29"
     },
     {
       "source": "朝日新聞",
