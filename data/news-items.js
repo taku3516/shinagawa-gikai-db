@@ -1,7 +1,158 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-29T01:07:51.127771Z",
+  "generatedAt": "2026-09-29T10:00:56.160598Z",
   "items": [
+    {
+      "id": "fc420ec49fd9cacc8ab7",
+      "title": "9月25日開催の委員会の結果を掲載。",
+      "summary": "9月25日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20830.html",
+      "publishedAt": "2026-09-29T05:30:39Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T04:56:13.906985Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "751f748cf02d2799eb4f",
+      "title": "9月28日開催の委員会の結果を掲載。",
+      "summary": "9月28日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20868.html",
+      "publishedAt": "2026-09-29T02:34:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "fe3922dde886f20b3cd3",
+      "title": "自転車文化センター テーマ展示「昭和を駆けた自転車たち展 ー暮らしとともに歩んだ64年ー」",
+      "summary": "2026年9月30日（水）～12月20日（日）、自転車文化センターにて、令和8年度 第2回 テーマ展示「昭和を駆けた自転車たち展 ー暮らしとともに歩んだ64年ー」が開催されます。 昭和という64年の時代は、戦争と復興、高度経済成長、レジャー文化の発展など、日本の社会や人々の暮らしが大きく変化した時代でした。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bcc-showa",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "7d721d8bdbed1de06286",
+      "title": "みんなの五反田フェスティバル 2026",
+      "summary": "2026年10月11日（日）五反田駅 東口 ロータリーにて「みんなの五反田フェスティバル」が開催されます。 多彩なステージパフォーマンスや近隣商店街の飲食店、世界各地の味が楽しめる屋台などが並びます。 詳しくは こちら",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/gotafes2026",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "五反田駅"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "19d653dd88fb696ae97d",
+      "title": "しながわ盆フェス 2026",
+      "summary": "2026年10月31日（土）、11月1日（日）、大井競馬場にて「しながわ盆フェス2026」が開催されます。 冬を彩るイルミネーション「 東京メガイルミ 」の開幕に合わせ、盆踊りを中心としたイベント「しながわ盆フェス2026」が開催されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bonfes2026",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "1610e597ee2ba2d90c4f",
+      "title": "五反田 にぎわいイベント「ゴタンダデシタンダ！！」",
+      "summary": "2026年10月4日（日）五反田 学研本社ビル1階芝生広場などで「ゴタンダデシタンダ!!」が開催されます。 「ゴタンダデシタンダ!!」は、毎年10月初旬に行われる地域の神事である雉子神社例大祭の時期に合わせ、開催される地域にぎわいイベント。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/gotashita2026",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1579c0f6303047b3466c",
+      "title": "戸越銀座 秋のふるさとフェスタ",
+      "summary": "2026年10月10日（土）、戸越銀座にて「秋のふるさとフェスタ」が開催されます。 商店街の各所で阿波踊りや三味線の演奏が繰 り広げられます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/furusato2026a",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "48f4700ea5a87a18ab11",
+      "title": "こども未来ミーティング～みんなでつくろう！こどもの権利条例～",
+      "summary": "令和10年度の「（仮称）品川区こどもの権利条例」の制定に向けて、広く区民の皆様から意見をいただくため、今年度4回の区民ワークショップ「こども未来ミーティング」を開催します。 本ワークショップでは、こどもと大人が一緒にグループを作り、条例に盛り込む内容について、それぞれの経験・視点から話し合います。 区内在住・在学の「こども」と「大人」（年齢は問いません。） ※小学4年生以下の方は、保護者の同伴が必須となります。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/child_rights/20260604164736.html",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T08:48:26.899424Z",
+      "tags": [
+        "行政",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "064c6abf260eca5e4ffe",
       "title": "ウェルビーイング・ＳＤＧｓ推進ファンド事業",
@@ -425,26 +576,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "751f748cf02d2799eb4f",
-      "title": "9月28日開催の委員会の予定を掲載。",
-      "summary": "9月28日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20868.html",
-      "publishedAt": "2026-09-25T01:34:48Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-25T05:09:00.556953Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
-    },
-    {
       "id": "19a8bfdea720dba07777",
       "title": "声の区議会だよりを掲載。",
       "summary": "声の区議会だよりを掲載。 は 品川区議会 で公開された投稿です。",
@@ -462,6 +593,25 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "d6f079419574dca07959",
+      "title": "ペンライト作り＆コンサート・ぐるっぽみんな食堂開催のお知らせ",
+      "summary": "福祉部障害者支援課事業者支援担当 （区役所本庁舎3階） 電話：03-5742-7844 FAX：03-3775-2000",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20260909083004.html",
+      "publishedAt": "2026-09-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "福祉",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "35e8c372c53ef997e3fb",
@@ -923,26 +1073,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "fc420ec49fd9cacc8ab7",
-      "title": "9月24,25日開催の委員会の予定を掲載。",
-      "summary": "9月24,25日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20830.html",
-      "publishedAt": "2026-09-18T01:41:39Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-18T04:56:13.906985Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "359621920adaee5a392d",
@@ -3420,24 +3550,6 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "48f4700ea5a87a18ab11",
-      "title": "こども未来ミーティング～みんなでつくろう！こどもの権利条例～",
-      "summary": "令和10年度の「（仮称）品川区こどもの権利条例」の制定に向けて、広く区民の皆様から意見をいただくため、今年度4回の区民ワークショップ「こども未来ミーティング」を開催します。 本ワークショップでは、こどもと大人が一緒にグループを作り、条例に盛り込む内容について、それぞれの経験・視点から話し合います。 区内在住・在学の「こども」と「大人」（年齢は問いません。） ※小学4年生以下の方は、保護者の同伴が必須となります。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/child_rights/20260604164736.html",
-      "publishedAt": "2026-08-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-01T08:48:26.899424Z",
-      "tags": [
-        "行政",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "e0324acff032d8220ede",
@@ -9970,7 +10082,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2439, column 29"
+      "message": "not well-formed (invalid token): line 2099, column 49"
     },
     {
       "source": "朝日新聞",
@@ -10051,9 +10163,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
