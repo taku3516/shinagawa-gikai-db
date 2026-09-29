@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-28T14:16:36.031821Z",
+  "generatedAt": "2026-09-29T01:07:51.127771Z",
   "items": [
+    {
+      "id": "064c6abf260eca5e4ffe",
+      "title": "ウェルビーイング・ＳＤＧｓ推進ファンド事業",
+      "summary": "ウェルビーイング・ＳＤＧｓ推進事業実行委員会事務局 （品川区企画経営部企画課内） 電話：03-5742-7864 FAX：03-5742-6870 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/sdgs/sdgsfundzigyou.html",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T23:51:47.393458Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "58d0944cf3f328737191",
       "title": "五反田に「ザ・リッタースペースコーヒー」 韓国の大容量カフェが日本進出",
@@ -6650,23 +6667,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
-      "id": "064c6abf260eca5e4ffe",
-      "title": "ウェルビーイング・ＳＤＧｓ推進ファンド事業",
-      "summary": "ウェルビーイング・ＳＤＧｓ推進事業実行委員会事務局 （品川区企画経営部企画課内） 電話：03-5742-7864 FAX：03-5742-6870 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/sdgs/sdgsfundzigyou.html",
-      "publishedAt": "2026-07-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-28T23:51:47.393458Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
       "id": "97364a2cbe01b6b3f137",
       "title": "英語授業お助けAIアプリ「TOC-ME！assistant（トクミーアシスタント）」に新機能！ スピーキングテスト「スピチャレ」をリリース",
       "summary": "[光村図書出版株式会社] 小・中・高等学校向けの教科書を発行する光村図書出版株式会社（所在地：東京都品川区、代表取締役社長：吉田直樹）は、英語授業にフォーカスしたAIアプリ「TOC-ME！assistant」（以下、トクミーアシスタント）...",
@@ -9970,7 +9970,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2206, column 29"
+      "message": "not well-formed (invalid token): line 2439, column 29"
     },
     {
       "source": "朝日新聞",
@@ -10051,9 +10051,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
