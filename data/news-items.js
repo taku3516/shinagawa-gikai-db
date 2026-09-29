@@ -1,7 +1,64 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-29T10:00:56.160598Z",
+  "generatedAt": "2026-09-29T18:10:20.185840Z",
   "items": [
+    {
+      "id": "f4a70b2a65c54a4aa6a1",
+      "title": "しながわ地域貢献活動展 開催",
+      "summary": "地域の課題解決をめざすNPO法人やボランティア団体などと交流できるイベントです。 それぞれの団体がブースごとに活動を紹介します。 活動分野ごとにバラエティに富んだワークショップや物品販売もあり、対象は子どもから高齢者までさまざまです。 地域の活動を応援したい方も、自分で活動してみたい方も、意外と身近にある地域貢献に触れてみませんか。 電話：03-5742-6605（直通） Fax:03-5742-6878",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-kyodo/chiiki-kyodo-kumin/20260924103431.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T18:09:54.506488Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
+    {
+      "id": "d3220f1fed67b5977044",
+      "title": "令和8年度 環境保全活動顕彰の募集",
+      "summary": "「ゼロカーボンシティしながわ」の実現に貢献する、持続可能な環境にやさしい活動や取り組みを募集します。 皆さんが普段行っている活動の中で関連する環境活動等がございましたら、ぜひご応募ください。 受賞者は令和9年2月11日（木）に品川区立環境学習交流施設エコルとごしにて行われる「環境表彰式」にて、顕彰します。 他の規範となる環境保全活動を行っている企業、団体または個人を顕彰し、その活動内容を広く紹介することにより、環境保全に関する自主的な取り組みを促進することを目的としています。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-event/hpg000012278.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [
+        "エコルとごし"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "a48b82eef1c1045ba112",
+      "title": "大井新地にマグロ専門店「鮪一刀流囮」 目黒に次ぐ2店舗目、20部位を用意",
+      "summary": "本マグロ専門店「鮪（まぐろ）一刀流 囮 OTORI」（品川区大井1）が9月29日、大井新地にオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5085",
+      "publishedAt": "2026-09-29T11:07:52Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T18:09:54.506488Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "fc420ec49fd9cacc8ab7",
       "title": "9月25日開催の委員会の結果を掲載。",
@@ -1989,25 +2046,6 @@ window.SHINAGAWA_NEWS = {
         "武蔵小山商店街"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "d3220f1fed67b5977044",
-      "title": "令和8年度 環境保全活動顕彰の募集",
-      "summary": "「ゼロカーボンシティしながわ」の実現に貢献する、持続可能な環境にやさしい活動や取り組みを募集します。 皆さんが普段行っている活動の中で関連する環境活動等がございましたら、ぜひご応募ください。 受賞者は令和9年2月11日（木）に品川区立環境学習交流施設エコルとごしにて行われる「環境表彰式」にて、顕彰します。 他の規範となる環境保全活動を行っている企業、団体または個人を顕彰し、その活動内容を広く紹介することにより、環境保全に関する自主的な取り組みを促進することを目的としています。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-event/hpg000012278.html",
-      "publishedAt": "2026-09-10T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-10T11:35:47.365946Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [
-        "エコルとごし"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "70c3c2946791fc087fc5",
@@ -10082,7 +10120,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2099, column 49"
+      "message": "not well-formed (invalid token): line 2124, column 55"
     },
     {
       "source": "朝日新聞",
