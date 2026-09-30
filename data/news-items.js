@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-30T05:46:53.002700Z",
+  "generatedAt": "2026-09-30T12:51:05.672626Z",
   "items": [
+    {
+      "id": "fb6fc1d98d2c4973a752",
+      "title": "渋谷区の中学校で企業連携授業を開始！中学生がゼロから考える「役に立つ・売れる」モノづくり",
+      "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社︓東京都品川区、代表取締役社長 兼 CEO︓石黒 靖規）の グループ会社であるＤＣＭ株式会社（以下、ＤＣＭ）の体験型店舗DCM DIY placeでは渋谷区教育委員会と連携しながら...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000436.000022024.html",
+      "publishedAt": "2026-09-30T12:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T12:50:39.727307Z",
+      "tags": [
+        "子育て教育",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "9b07c1873aa9db05ed5f",
+      "title": "体験型謎解きイベント「広域品川圏の歩き方」始まる JR東日本が主催",
+      "summary": "体験型謎解きイベント「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」が9月30日、浜松町・田町・高輪ゲートウェイ・品川・大井町の5駅周辺エリアで始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5086",
+      "publishedAt": "2026-09-30T12:16:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T12:50:39.727307Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "e56a49d657c7bed33935",
       "title": "ファミサポ通信更新しました！",
@@ -55,6 +93,43 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "c038311121fab0e4cf36",
+      "title": "品川×大田 旧東海道でつながるまち WAKU☆WAKU ラリー",
+      "summary": "2026年10月15日（木）～11月29日（日）、（一社）しながわ観光協会と（一社）大田観光協会は、品川区と大田区が交わる旧東海道および大森エリアで「品川×大田 旧東海道でつながるまち WAKU☆WAKU ラリー」を開催します。 今からおよそ400年前、徳川家康が整備した五街道のひとつ「東海道」。江戸・日本橋から京都・三条大橋までに53の宿場が置かれました。東海道第一の宿の品川宿から大森・六郷へと続く道は、今もまちの中にその面影を残しています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/wakuwaku2026",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T12:50:39.727307Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "90451c32d4e1446aff1f",
+      "title": "大井蔵王権現神社 福禄寿祭",
+      "summary": "2026年10月4日（日）、大井蔵王権現神社にて「福禄寿祭」が開催されます。 大井蔵王権現神社には、荏原七福神の福禄寿が祀られており、財産・出世・長寿にご利益があると言われています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/fukurokuzyusai2026",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T12:50:39.727307Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原",
+        "大井"
+      ],
+      "relevanceScore": 8
     },
     {
       "id": "a8fd6e30265693165961",
@@ -151,6 +226,74 @@ window.SHINAGAWA_NEWS = {
         "エコルとごし"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "dbe3cd7369c456dd28f3",
+      "title": "しながわ電気・ガス料金緊急支援事業【申請期間：9月1日～10月31日】",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1e6eef794530f6c56cdc",
+      "title": "「あなた」と「しながわ」をつなぐふるさと納税",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/hpg000029194.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "19413da7c891952f8507",
+      "title": "羽田空港の機能強化",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/haneda/hpg000023398.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "a48b82eef1c1045ba112",
@@ -818,23 +961,6 @@ window.SHINAGAWA_NEWS = {
         "品川歴史館"
       ],
       "relevanceScore": 6
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-09-25T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "150c5e6ff49117a5f215",
@@ -1886,23 +2012,6 @@ window.SHINAGAWA_NEWS = {
         "品川区役所"
       ],
       "relevanceScore": 22
-    },
-    {
-      "id": "dbe3cd7369c456dd28f3",
-      "title": "しながわ電気・ガス料金緊急支援事業【申請期間：9月1日～10月31日】",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
-      "publishedAt": "2026-09-14T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "6d15a6a17cd0f3891d52",
@@ -3475,23 +3584,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "19413da7c891952f8507",
-      "title": "羽田空港の機能強化について",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/haneda/hpg000023398.html",
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "5b8fff265a6efc9f45e8",
@@ -7074,23 +7166,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "1e6eef794530f6c56cdc",
-      "title": "「あなた」と「しながわ」をつなぐふるさと納税",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/hpg000029194.html",
-      "publishedAt": "2026-07-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "36ce439794a0bf7caf58",
       "title": "外国語の電話、AIが受けて日本語で記録。AIコールセンター「ContactX」、英語・中国語・韓国語など50以上の言語のリアルタイム書き起こし・翻訳に対応",
       "summary": "[X-HACK] ITシステムの受託開発と生成AI・Local LLM導入支援を手がける株式会社X-HACK（本社：東京都品川区東五反田2-5-2 THE CASK GOTANDA 702、代表：松田信介）は、2026年7月23日、AIコールセンター支援サービス「Conta...",
@@ -10199,7 +10274,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 137,
+      "scanned": 138,
       "accepted": 0
     },
     {
@@ -10212,7 +10287,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2220, column 43"
+      "message": "not well-formed (invalid token): line 2575, column 52"
     },
     {
       "source": "朝日新聞",
@@ -10236,7 +10311,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
