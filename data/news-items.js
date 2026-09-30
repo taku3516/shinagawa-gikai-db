@@ -1,7 +1,119 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-29T18:10:20.185840Z",
+  "generatedAt": "2026-09-30T05:46:53.002700Z",
   "items": [
+    {
+      "id": "e56a49d657c7bed33935",
+      "title": "ファミサポ通信更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63530.html",
+      "publishedAt": "2026-09-30T05:46:26.423098Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "ae431a32ffe8cde9017e",
+      "title": "ニュース「さわやかさん」更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63526.html",
+      "publishedAt": "2026-09-30T05:46:26.423098Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "4787ca9a9c8b8039797f",
+      "title": "9月29日開催の委員会の結果を掲載。",
+      "summary": "9月29日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20872.html",
+      "publishedAt": "2026-09-30T01:30:05Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "a8fd6e30265693165961",
+      "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 10月",
+      "summary": "「Tokyo City Flea Market」は毎週土曜日・日曜日に大井競馬場第一駐車場で開催される都内最大級のフリーマーケットです。 （※10月4日(日)、10日(土）、11日(日)、17日(土）、18日(日)の開催はありません。また、10月31日（土）は, 東京メガイルミ初日のため、8：45〜12：00の時短開催となります。） 専門的なお店も多数出店。バラエティ豊かな品揃えで、地元客だけでなく海外からの観光客も訪れます。週末は、大井競馬場でお宝探しはいかがでしょう。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyo-city-flea-market-202610",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 10
+    },
+    {
+      "id": "4c2b76e997c22e3142d2",
+      "title": "健康大学しながわ 地域で活躍する健康づくり講座",
+      "summary": "健康大学しながわでは、健康寿命の延伸やウェルビーイングの実現に向けて、健康に関する知識と実践方法を学びます。 学んだ知識を自身の健康管理に活かすとともに、地域へ健康の輪を広げる活動や健康イベントにも参加できます、 ご自身と地域の健康について、一緒に考えてみませんか。 第一部 がんを予防し健康寿命を延ばそう がん予防の重要性と具体的な実践方法を学びます。 講師：国際医療福祉大学大学院医学研究科 教授 津金 昌一郎 氏 第二部 健康の土台を学ぶ「からだマネジメントセミナー」 自…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-dukuri/20180829101907.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 6
+    },
+    {
+      "id": "20817480a2e93ea82a8d",
+      "title": "しながわ水辺の観光フェスタ 2026",
+      "summary": "2026年10月9日（金）～11月8日（日）の週末、品川区内の水辺エリア各所で「しながわ水辺の観光フェスタ」が開催されます。 品川区には、目黒川や品川浦、京浜運河、天王洲アイルなど、季節や時間によって多彩な表情を見せる豊かな水辺空間が広がっています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/mizubenokankoufesta2026",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 18
+    },
     {
       "id": "f4a70b2a65c54a4aa6a1",
       "title": "しながわ地域貢献活動展 開催",
@@ -43,7 +155,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "a48b82eef1c1045ba112",
       "title": "大井新地にマグロ専門店「鮪一刀流囮」 目黒に次ぐ2店舗目、20部位を用意",
-      "summary": "本マグロ専門店「鮪（まぐろ）一刀流 囮 OTORI」（品川区大井1）が9月29日、大井新地にオープンした。 #品川経済新聞",
+      "summary": "本マグロ専門店「鮪（まぐろ）一刀流 囮 OTORI」（品川区大井1）が9月1日、大井新地にオープンした。 #品川経済新聞",
       "source": "品川経済新聞",
       "sourceId": "shinagawa-keizai",
       "sourceType": "rss",
@@ -323,26 +435,6 @@ window.SHINAGAWA_NEWS = {
         "大井"
       ],
       "relevanceScore": 4
-    },
-    {
-      "id": "4787ca9a9c8b8039797f",
-      "title": "9月29日開催の委員会の予定を掲載。",
-      "summary": "9月29日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20872.html",
-      "publishedAt": "2026-09-28T04:46:05Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-28T05:38:22.929973Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "4d0630e995eba9756ef5",
@@ -782,7 +874,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "886cf8c58c6e03750613",
       "title": "ボラミニ情報更新しました！",
-      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -10101,7 +10193,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 7,
+      "scanned": 8,
       "accepted": 0
     },
     {
@@ -10120,7 +10212,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2124, column 55"
+      "message": "not well-formed (invalid token): line 2220, column 43"
     },
     {
       "source": "朝日新聞",
