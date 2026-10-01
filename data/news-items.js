@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-01T10:20:34.862643Z",
+  "generatedAt": "2026-10-01T18:31:24.774386Z",
   "items": [
+    {
+      "id": "7100e4a91dc5fe474fdb",
+      "title": "夏期防犯パトロール実施（八潮地区）",
+      "summary": "八潮地区では、小中学校の夏休み期間中、子供たちが安心して夏休みを過ごせるよう、地域の団体が協力して夏期防犯パトロールを実施しました。 実施日時：令和8年7月23日（木）～8月28日（金） 午後7時30分～ ※期間内の5日間 主催：八潮自治会連合会 協力団体：青少年対策八潮地区委員会、品川区防災協議会八潮地区協議会、八潮学園ＰＴＡ他 八潮地域センター 電話：03-3799-2000 FAX：03-3799-3310",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-yashio/shisetsu-kuyakusyo-chiiki-yashio-oshirase/20180727102035.html",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T18:29:41.415529Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [
+        "八潮"
+      ],
+      "relevanceScore": 18
+    },
     {
       "id": "44f8bf24c189e54bf3b3",
       "title": "成年後見制度普及啓発講座を開催します。",
@@ -10667,12 +10686,12 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 9
+      "accepted": 8
     },
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 7,
+      "scanned": 8,
       "accepted": 0
     },
     {
@@ -10690,7 +10709,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 571,
+      "scanned": 600,
       "accepted": 0
     },
     {
@@ -10772,9 +10791,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
