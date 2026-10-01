@@ -1,7 +1,79 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-30T20:10:55.095074Z",
+  "generatedAt": "2026-10-01T00:39:32.308640Z",
   "items": [
+    {
+      "id": "c1e22a594430a738f0f2",
+      "title": "品川区ファミリー・サポート・センター提供会員養成講座",
+      "summary": "地域の中で、子育てのサポートをしたい方の養成講座です。 対象：区内在住・在勤・在学で２０歳以上の方１５名（先着）",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63471.html",
+      "publishedAt": "2026-10-01T00:39:14.021352Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-01T00:39:14.021352Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "3ff002fc356981e636f9",
+      "title": "11/8災害ボランティアセンター設置運営訓練：ボランティア役募集のお知らせ",
+      "summary": "品川区内で首都直下地震や豪雨災害など大規模な災害が発生した時などに、被災者された方の支援のために設置される「災害ボランティアセンター」の設置運営訓練を、以下のとおり実施します。訓練実施にあたって、ボランティア役として参加いただける方を募集します。 日本各地で災害が多発する中、品川区で、いざという時の備えのために、皆さまのご協力をお願いいたします。 日 時 ： １１月８日（日） ０９：００～１２：００",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63602.html",
+      "publishedAt": "2026-10-01T00:39:14.021352Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-01T00:39:14.021352Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "5f334f7a2e55558ace4b",
+      "title": "グリーフケア講演会",
+      "summary": "荏原保健センター 電話：03-3788-7015 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/20260903172517.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T00:39:14.021352Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "0a61ec312156a0bc74fb",
+      "title": "10月は「国保基本健診・後期高齢者健康診査 受診推進月間」",
+      "summary": "国保医療年金課 保健指導係 電話：03-5742-6902 FAX：03-5742-6876",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20220913093018.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T00:39:14.021352Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
     {
       "id": "f9cd7dda0e5464990523",
       "title": "てのひら(ボランティア情報紙)2026年秋号",
@@ -176,6 +248,23 @@ window.SHINAGAWA_NEWS = {
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "cd538324c5cb0c4be763",
+      "title": "【しながわシティバスケットボール公式戦】10月23日（金）・24日（土） 親子25組50人をご招待",
+      "summary": "スポーツ推進課スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20240110135206.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
       "tags": [
         "交通"
       ],
@@ -3398,23 +3487,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-31T20:54:55.827675Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "cd538324c5cb0c4be763",
-      "title": "【しながわシティバスケットボール公式戦】10月2日（金）・3日（土） 親子25組50人をご招待",
-      "summary": "スポーツ推進課スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20240110135206.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-31T20:54:55.827675Z",
-      "tags": [
-        "交通"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -10454,7 +10526,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 138,
+      "scanned": 139,
       "accepted": 0
     },
     {
@@ -10467,7 +10539,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2746, column 52"
+      "message": "not well-formed (invalid token): line 2854, column 52"
     },
     {
       "source": "朝日新聞",
@@ -10491,7 +10563,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -10514,7 +10586,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 28,
+      "scanned": 31,
       "accepted": 0
     },
     {
