@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-01T00:39:32.308640Z",
+  "generatedAt": "2026-10-01T10:20:34.862643Z",
   "items": [
+    {
+      "id": "44f8bf24c189e54bf3b3",
+      "title": "成年後見制度普及啓発講座を開催します。",
+      "summary": "■後見制度啓発講座「あんしんの先へ！成年後見制度の活用」を開催します。 日時／11月24日（火）午後2時～4時 場所／品川区社会福祉協議会3階会議室（大井1-14-1） 講師／品川成年後見センター職員 内容／本講座では、成年後見制度の活用についての講座、終活に向けた事業案内を行います。 参加者／30人（先着） 参加費／無料 申込／11月17日（火）午後5時までに、電話かFAXで品川成年後見センター（電話５７１８－７１７４ FAX６４２９－７６００）へ © Shinagawa…",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63527.html",
+      "publishedAt": "2026-10-01T10:20:03.375555Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "c1e22a594430a738f0f2",
       "title": "品川区ファミリー・サポート・センター提供会員養成講座",
@@ -37,6 +57,138 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 12
+    },
+    {
+      "id": "f574f7782f69d5309159",
+      "title": "「明和電機 ジョリジョリジャーニー展」",
+      "summary": "2026年9月21日（月・祝）〜10月18日（日）、武蔵小山商店街パルム イベントスペースにて「47都道府県ひとり全国ツアーの軌跡 明和電機ジョリジョリジャーニー展」が開催されます。 武蔵小山を拠点に活動するアートユニット 「明和電機」。プロデューサー・土佐信道氏が1998年に武蔵小山へアトリエを構えて以来、28年にわたり数々の“ナンセンスマシーン”を生み出してきました。世界で200万本を超える大ヒットとなった「オタマトーン」もその代表作で、まさに “メイドイン武蔵小山”…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/meiwadenki-jolijoli",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山商店街"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "9d50801e8d63fc7cbee5",
+      "title": "「出張！国保基本健診」（集団健診）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20240806141224.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "7c7e86208fad0f5e414f",
+      "title": "令和8年度 生活習慣改善セミナー その不調、理由があるのかも？こころとからだのセルフケア ～頑張らない食事・運動・睡眠のコツ～",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-dukuri/20241017180143.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "7bb4781be0dc0263defc",
+      "title": "東京メガイルミ 2026-2027",
+      "summary": "2026年10月31日（土）～2027年1月10日（日）、大井競馬場にて「東京メガイルミ」が開催されます。 9シーズン目となる今季、ファイナルシーズンを迎えます。長さ100mを誇る光の回廊「江戸桜トンネル」や日本の美しい情緒を表現した「日本原風景」など、和のきらめきが広がるエリアのほか、幻想的な光を放つ巨大シンボル「メガツリー」も今季をもって見納めとなります。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/megaillumi2026",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "6d07642e3dd482ee0859",
+      "title": "多文化共生講演会2026「アフリカ少年と考えるー違いを越えて、同じ明日の作りかた」（申込10月23日（金）〆）",
+      "summary": "総務課 平和・国際担当 電話：03-5742-6691（平日 午前8時30分～午後5時15分） FAX：03-3774-6356",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/kokusai/tabunka/20261001100641.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "58760241e31ef3f35e3f",
+      "title": "まちぐるみ文化イベント 2026「あつまれ！えばら」",
+      "summary": "2026年11月3日（火・祝）、「あつまれ！えばら」が開催されます。 「あつまれ！えばら」は、子どもから大人まで楽しめる品川区荏原地域のまちぐるみ都市型カルチャーフェスティバル。 品川区・荏原地域を中心としたお店や団体・人々とアーティストたちが一緒につくりあげる文化の祭典「あつえば」へ遊びに行こう！",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ebaramachigurumi2026",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "4e8c31d87229de83b318",
+      "title": "Roblox（ロブロックス）X 品川区「しなにゃんを探せ！しながわ大冒険！」",
+      "summary": "オンラインで様々なゲームを楽しむことができる「Roblox（ロブロックス）」に、品川区を舞台にしたバーチャル空間「しなにゃんを探せ！しながわ大冒険！」が公開されました。 バーチャル空間では、 しなロケ(品川区内の映画・ドラマのロケ地） として注目を集める、 しながわ水族館や戸越銀座商店街など、品川区を代表する街並みが再現されています。プレイヤーは、しながわ散策を楽しみながら、街中に隠れたしながわ観光協会公式キャラクター「しなにゃん」を探し、コレクションしていきます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/robloxnyan",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "しながわ水族館",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 22
     },
     {
       "id": "5f334f7a2e55558ace4b",
@@ -272,6 +424,23 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
+      "id": "1cbad4981952da923fb9",
+      "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
+      "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T02:00:04.964019Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
       "id": "ea3a744a4dd308b003ed",
       "title": "しながわ生活応援事業",
       "summary": "所得制限なし。全区民の皆様に1人1枚、一律5,000円相当のバニラVISAギフトカードをお配りいたします。 ポスターと一緒に貼られている「現金併用可」の朱書きの表示が、 品川区内の現金併用可能店舗 である目印です。 利用せず長期間保管していると、紛失のおそれがあります。 その場合、 カードの再発行はできません。大切に保管のうえ、お早めにご利用ください。 品川区内のうれしなカード利用可能店舗は こちら",
@@ -287,6 +456,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "c0b57ca97a47ad3bb98b",
+      "title": "令和8年度（令和9年4月1日異動）公立小・中学校等教員の公募",
+      "summary": "東京都区市町村立小・中・特別支援学校に勤務している正規教員の異動形態の一つです。 品川区教育委員会では、区部公立小中学校教員公募を実施します。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20230926124056.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "b9f20bc7abb09cdfa856",
@@ -730,7 +916,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "19d653dd88fb696ae97d",
-      "title": "しながわ盆フェス 2026",
+      "title": "しながわ盆フェス 2026 2026/10/31(土), 2026/11/01(日) 観る 遊ぶ 食べる 大井競馬場前駅, 立会川駅",
       "summary": "2026年10月31日（土）、11月1日（日）、大井競馬場にて「しながわ盆フェス2026」が開催されます。 冬を彩るイルミネーション「 東京メガイルミ 」の開幕に合わせ、盆踊りを中心としたイベント「しながわ盆フェス2026」が開催されます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -3649,23 +3835,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "1cbad4981952da923fb9",
-      "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
-      "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-27T02:00:04.964019Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "94c5b1f801589ffe8100",
@@ -7143,7 +7312,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "9f2c02f2f75d60694bd0",
       "title": "「こんにちは国保基本健診」",
-      "summary": "国保医療年金課保健指導係 電話：03-5742-6902 FAX：03-5742-6876",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -9117,23 +9286,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "c0b57ca97a47ad3bb98b",
-      "title": "令和8年度（令和9年4月1日異動）公立小・中学校等教員の公募について",
-      "summary": "東京都区市町村立小・中・特別支援学校に勤務している正規教員の異動形態の一つです。 品川区教育委員会では、区部公立小中学校教員公募を実施します。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20230926124056.html",
-      "publishedAt": "2026-07-10T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "4fee21b1381bbac1a891",
       "title": "MATSURI JAPAN 2026",
       "summary": "2026年8月8日（土）、9日（日）、TAKANAWA GATEWAY Convention Center LINKPILLAR Hallにて「MATSURI JAPAN 2026」（祭ジャパン2026）が開催されます。 ステージでは、北海道のYOSAKOIソーラン祭り、山形の黒獅子まつり、島根の石見神楽、沖縄のエイサーなど、全国の祭りが次々と登場。都心にいながら、迫力ある伝統芸能を“体感”できる貴重な機会です。 今年は、鳥取のしゃんしゃん傘踊りや島根の石見神楽東京社中など…",
@@ -10537,9 +10689,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2854, column 52"
+      "status": "ok",
+      "scanned": 571,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -10586,7 +10738,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 31,
+      "scanned": 34,
       "accepted": 0
     },
     {
