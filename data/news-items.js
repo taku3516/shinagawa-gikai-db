@@ -1,7 +1,44 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-01T18:31:24.774386Z",
+  "generatedAt": "2026-10-02T00:58:24.317279Z",
   "items": [
+    {
+      "id": "1b7eacdb75ebb4abd359",
+      "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動にご協力をお願いいたします （実施場所が変更になりました）",
+      "summary": "８月に発生した千葉・北陸豪雨により、千葉県、石川県、富山県、福井県を中心に甚大な被害が発生いたしました。品川ボランティアセンターでは「令和８年８月千葉・北陸豪雨 被災者支援街頭募金活動」を下記の通り実施することとなりました。 ここ大井町から被災地千葉、北陸へ皆様の温かいお気持ちを届けます。皆様の温かいお気持ちとご協力をお願いいたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63622.html",
+      "publishedAt": "2026-10-02T00:57:59.432114Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-02T00:57:59.432114Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "ee8a24fa7cd0f2107250",
+      "title": "令和8年度(9年度採用)品川区立学校教育職員採用候補者選考【採用面接選考 採用内定者発表】",
+      "summary": "指導課 教職員人事係 電話：03-5742-6831 FAX ：03-5742-6892",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20250929085556.html",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-02T00:57:59.432114Z",
+      "tags": [
+        "行政",
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "7100e4a91dc5fe474fdb",
       "title": "夏期防犯パトロール実施（八潮地区）",
@@ -10709,7 +10746,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 600,
+      "scanned": 598,
       "accepted": 0
     },
     {
@@ -10791,9 +10828,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
