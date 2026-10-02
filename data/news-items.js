@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-02T09:57:18.470206Z",
+  "generatedAt": "2026-10-02T22:24:33.275002Z",
   "items": [
+    {
+      "id": "fb6fc1d98d2c4973a752",
+      "title": "渋谷区の中学校で企業連携授業を開始！中学生がゼロから考える「役に立つ・売れる」モノづくり",
+      "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社︓東京都品川区、代表取締役社長 兼 CEO︓石黒 靖規）の グループ会社であるＤＣＭ株式会社（以下、ＤＣＭ）の体験型店舗DCM DIY placeでは渋谷区教育委員会と連携しながら...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000436.000022024.html",
+      "publishedAt": "2026-10-02T22:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T12:50:39.727307Z",
+      "tags": [
+        "子育て教育",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "1b7eacdb75ebb4abd359",
       "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動にご協力をお願いいたします （実施場所が変更になりました）",
@@ -667,24 +685,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
-    },
-    {
-      "id": "fb6fc1d98d2c4973a752",
-      "title": "渋谷区の中学校で企業連携授業を開始！中学生がゼロから考える「役に立つ・売れる」モノづくり",
-      "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社︓東京都品川区、代表取締役社長 兼 CEO︓石黒 靖規）の グループ会社であるＤＣＭ株式会社（以下、ＤＣＭ）の体験型店舗DCM DIY placeでは渋谷区教育委員会と連携しながら...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000436.000022024.html",
-      "publishedAt": "2026-09-30T18:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-30T12:50:39.727307Z",
-      "tags": [
-        "子育て教育",
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "9b07c1873aa9db05ed5f",
@@ -10776,7 +10776,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 8
+      "accepted": 7
     },
     {
       "source": "警視庁",
@@ -10798,9 +10798,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 555,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1978, column 49"
     },
     {
       "source": "朝日新聞",
@@ -10824,7 +10824,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
