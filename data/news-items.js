@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-02T00:58:24.317279Z",
+  "generatedAt": "2026-10-02T09:57:18.470206Z",
   "items": [
     {
       "id": "1b7eacdb75ebb4abd359",
@@ -20,6 +20,42 @@ window.SHINAGAWA_NEWS = {
         "大井"
       ],
       "relevanceScore": 4
+    },
+    {
+      "id": "acff6bbc28d05f32a9ca",
+      "title": "大井第三地区「みかん狩りとさつまいも掘り」開催のお知らせ",
+      "summary": "",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260828151641.html",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-02T09:56:57.327353Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "80d79487bf7968ddffee",
+      "title": "令和8年度第2回品川区公契約審議会の開催について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-keiyaku/kuseizyoho-siryo-keiyaku-keiyakukakarikara/202610021500.html",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-02T09:56:57.327353Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "ee8a24fa7cd0f2107250",
@@ -57,6 +93,23 @@ window.SHINAGAWA_NEWS = {
         "八潮"
       ],
       "relevanceScore": 18
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "44f8bf24c189e54bf3b3",
@@ -113,6 +166,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 12
+    },
+    {
+      "id": "dfb2469d3c02f3695ac9",
+      "title": "品川区防災ポータル・品川区防災アプリ",
+      "summary": "防災課 計画担当 電話：03-5742-6695 FAX：03-3777-1181 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai2/kanrensiryo/20250212.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-02T09:56:57.327353Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "f574f7782f69d5309159",
@@ -463,6 +533,23 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
+      "id": "93646144c953831b0287",
+      "title": "リユース容器の活用",
+      "summary": "環境課環境推進係 電話：03-5742-6755 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/20250930.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
       "id": "cd538324c5cb0c4be763",
       "title": "【しながわシティバスケットボール公式戦】10月23日（金）・24日（土） 親子25組50人をご招待",
       "summary": "スポーツ推進課スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
@@ -805,23 +892,6 @@ window.SHINAGAWA_NEWS = {
         "エコルとごし"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-09-30T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "dbe3cd7369c456dd28f3",
@@ -3557,23 +3627,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
-      "id": "93646144c953831b0287",
-      "title": "リユース容器の活用",
-      "summary": "環境課環境推進係 電話：03-5742-6755 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/20250930.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-10T11:35:47.365946Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "60a1d4de272749d45871",
       "title": "【参加者募集】品川区制80周年 しながわシティラン2027（令和9年3月14日開催）",
       "summary": "スポーツ推進課 スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
@@ -5039,7 +5092,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "dbb2da915a49979307f3",
       "title": "世代間交流事業「昔のあそびをしませんか」開催",
-      "summary": "大井第三地域センター 電話：03-3773-2000 FAX：03-3771-3735",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -6207,7 +6260,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "b7d0726dec6ea1c7e9c8",
       "title": "大井第三地区「清流あそび」を実施",
-      "summary": "大井第三地域センター 電話：03-3773-2000 FAX：03-3771-3735",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -10734,7 +10787,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 139,
+      "scanned": 138,
       "accepted": 0
     },
     {
@@ -10746,7 +10799,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 598,
+      "scanned": 555,
       "accepted": 0
     },
     {
