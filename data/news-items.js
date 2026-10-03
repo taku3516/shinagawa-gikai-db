@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-02T22:24:33.275002Z",
+  "generatedAt": "2026-10-03T11:52:07.343971Z",
   "items": [
+    {
+      "id": "994925c958a1bf32a9d6",
+      "title": "東品川海上公園Park‐PFI導入事業の施設の運営開始",
+      "summary": "公園課 公園建設担当 電話：03-5742-6801 FAX：03-5742-9127",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-park/20221012221135.html",
+      "publishedAt": "2026-10-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-03T11:51:46.171933Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 6
+    },
     {
       "id": "fb6fc1d98d2c4973a752",
       "title": "渋谷区の中学校で企業連携授業を開始！中学生がゼロから考える「役に立つ・売れる」モノづくり",
@@ -10781,7 +10800,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 7,
       "accepted": 0
     },
     {
@@ -10800,7 +10819,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1978, column 49"
+      "message": "not well-formed (invalid token): line 1623, column 49"
     },
     {
       "source": "朝日新聞",
@@ -10824,7 +10843,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
