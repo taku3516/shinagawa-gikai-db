@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-05T05:59:34.886274Z",
+  "generatedAt": "2026-10-05T15:04:28.246057Z",
   "items": [
+    {
+      "id": "b9c9d1dc788077c9c174",
+      "title": "東品川海上公園がパークPFIで再生 ドッグランやビアレストランを新設",
+      "summary": "天王洲アイルエリアの「東品川海上公園」（品川区東品川2・3）が10月4日、リニューアル開業した。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5089",
+      "publishedAt": "2026-10-05T10:34:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-05T15:04:04.518582Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東品川",
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 22
+    },
     {
       "id": "5ad3fcf8ba9d1fa9fb1f",
       "title": "リサイクル自転車の販売（八潮地域センターフェスティバル出店）",
@@ -1017,6 +1038,23 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
         "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "b74252e82496dafe6f61",
+      "title": "マイナンバーカードに関する各手続きについて（紛失、暗証番号ロック、電子証明書、住所・氏名変更など）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/mynumbercard/202401268888.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "行政"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -8416,23 +8454,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 28
     },
     {
-      "id": "b74252e82496dafe6f61",
-      "title": "マイナンバーカードに関する各手続きについて（紛失、暗証番号ロック、電子証明書、住所・氏名変更など）",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/mynumbercard/202401268888.html",
-      "publishedAt": "2026-07-18T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "bd93f5a3fa1f5e212b8e",
       "title": "大井町で「マツケンサンバコンサート」開催へ 品川区民がダンサー出演",
       "summary": "きゅりあん（品川区東大井5）で10月10日に開催される品川文化振興事業団40周年記念公演「マツケンサンバコンサート2026」のチケット販売が、7月21日に始まる。 #品川経済新聞",
@@ -10911,7 +10932,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 733, column 63"
+      "message": "not well-formed (invalid token): line 1468, column 63"
     },
     {
       "source": "朝日新聞",
@@ -10935,7 +10956,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
