@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-03T11:52:07.343971Z",
+  "generatedAt": "2026-10-05T00:02:43.094809Z",
   "items": [
+    {
+      "id": "047be9b864ee8b62b7e1",
+      "title": "リサイクル自転車の販売スケジュール",
+      "summary": "ふれあい作業所西品川からリサイクル自転車販売のご案内です。 リサイクル自転車の抽選販売会は、毎月第２火曜日の13時30分から実施いたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63599.html",
+      "publishedAt": "2026-10-05T00:02:19.802940Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-05T00:02:19.802940Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西品川"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "994925c958a1bf32a9d6",
       "title": "東品川海上公園Park‐PFI導入事業の施設の運営開始",
@@ -10800,7 +10819,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 7,
+      "scanned": 5,
       "accepted": 0
     },
     {
@@ -10819,7 +10838,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1623, column 49"
+      "message": "not well-formed (invalid token): line 538, column 63"
     },
     {
       "source": "朝日新聞",
