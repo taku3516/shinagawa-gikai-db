@@ -1,7 +1,80 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-05T00:02:43.094809Z",
+  "generatedAt": "2026-10-05T05:59:34.886274Z",
   "items": [
+    {
+      "id": "5ad3fcf8ba9d1fa9fb1f",
+      "title": "リサイクル自転車の販売（八潮地域センターフェスティバル出店）",
+      "summary": "ふれあい作業所西品川からリサイクル自転車販売のご案内です ふれあい作業所のリサイクル自転車を【八潮地域センターフェスティバル】で販売いたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63674.html",
+      "publishedAt": "2026-10-05T05:59:14.000136Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-05T05:59:14.000136Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西品川",
+        "八潮"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "3959f57ad893599ea61f",
+      "title": "協力会員募集説明会を開催します！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-58691.html",
+      "publishedAt": "2026-10-05T05:59:14.000136Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-05T05:59:14.000136Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "344495b44c5377ce2960",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月5日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年10月5日号(令和8年9月24日～令和8年10月4日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63702.html",
+      "publishedAt": "2026-10-05T05:59:14.000136Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-05T05:59:14.000136Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1449d41951971624786c",
+      "title": "東品川海上公園Park-PFI導入事業施設の運営開始",
+      "summary": "[品川区] 品川区は、多様なニーズに対応した魅力ある都市公園の創出を目指し、区立公園内に民間施設を設置することで、公園の活性化やイベントの開催など、にぎわいの創出につながることから、東品川海上公園においてPar...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000244.000087362.html",
+      "publishedAt": "2026-10-05T05:40:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-05T05:59:14.000136Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "047be9b864ee8b62b7e1",
       "title": "リサイクル自転車の販売スケジュール",
@@ -6151,7 +6224,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "db321cfdabbce5f73614",
       "title": "協力会員募集説明会を開催します！",
-      "summary": "さわやかサービスの活動について写真などを使ってご説明します。 また、ご希望の方はその場で会員登録することもできます。",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -8609,7 +8682,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "a1ae65d2c4255e18e49a",
       "title": "協力会員募集説明会を開催します！",
-      "summary": "さわやかサービスの活動について写真などを使ってご説明します。 また、ご希望の方はその場で会員登録することもできます。",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -10838,7 +10911,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 538, column 63"
+      "message": "not well-formed (invalid token): line 733, column 63"
     },
     {
       "source": "朝日新聞",
@@ -10862,7 +10935,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
