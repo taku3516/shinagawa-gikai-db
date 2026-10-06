@@ -1,7 +1,84 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-05T15:04:28.246057Z",
+  "generatedAt": "2026-10-06T06:37:53.357167Z",
   "items": [
+    {
+      "id": "d05f58bd337a81051b78",
+      "title": "議長の出席会議等（令和8年7月～9月）を掲載。",
+      "summary": "議長の出席会議等（令和8年7月～9月）を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20917.html",
+      "publishedAt": "2026-10-06T06:05:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T06:37:28.526888Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "50399719ed68cb230c18",
+      "title": "議長交際費の支出状況（令和8年7月～9月）を掲載。",
+      "summary": "議長交際費の支出状況（令和8年7月～9月）を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20916.html",
+      "publishedAt": "2026-10-06T06:05:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T06:37:28.526888Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "d48f27c65aa1277de2c3",
+      "title": "決算特別委員会(総括質疑)の議会放送番組表を掲載。",
+      "summary": "決算特別委員会(総括質疑)の議会放送番組表を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20909.html",
+      "publishedAt": "2026-10-06T02:41:13Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T06:37:28.526888Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "3f19438d60abb837ae54",
+      "title": "「秋の運河花火まつり2026」 in しながわ水辺の観光フェスタ 2026",
+      "summary": "2026年10月10日（土）、11日（日）、東品川海上公園および天王洲公園にて「秋の運河花火まつり」in しながわ水辺の観光フェスタ 2026 が開催されます。 飲食ブース、屋台、ステージパフォーマンス、移動動物園など楽しい企画が盛りだくさんです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ungahanabi2026",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T06:37:28.526888Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川",
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "b9c9d1dc788077c9c174",
       "title": "東品川海上公園がパークPFIで再生 ドッグランやビアレストランを新設",
@@ -10932,7 +11009,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1468, column 63"
+      "message": "not well-formed (invalid token): line 2312, column 65"
     },
     {
       "source": "朝日新聞",
