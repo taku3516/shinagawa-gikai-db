@@ -1,7 +1,46 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-06T06:37:53.357167Z",
+  "generatedAt": "2026-10-06T16:05:07.999498Z",
   "items": [
+    {
+      "id": "6c64cb03e526f1aa749c",
+      "title": "美容医療業界向け｜外注費の削減戦略と最新トレンドレポート【2026年10月版】",
+      "summary": "[株式会社中央構想研究所] 株式会社中央構想研究所（東京都品川区、代表取締役社長、信谷康邦、以下「当社」）は、「外注費の削減戦略と最新トレンド」2026年10月版（全26ページ）を無料公開いたしました。 [画像1: https://prcdn.freetls....",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000014.000190769.html",
+      "publishedAt": "2026-10-06T14:40:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "240e4cf0b1e5fb9636cf",
+      "title": "大井町にイタリアン「カンビアーレ」 計画変更を経て出店、夫婦で切り盛り",
+      "summary": "イタリアン「Cambiare（カンビアーレ）」（品川区東大井6、TEL 050-5872-5396）が大井町駅近くにオープンして3カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5090",
+      "publishedAt": "2026-10-06T08:38:10Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "東大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 20
+    },
     {
       "id": "d05f58bd337a81051b78",
       "title": "議長の出席会議等（令和8年7月～9月）を掲載。",
@@ -58,6 +97,42 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "fffcac8a0d5cb83bf28c",
+      "title": "目黒川 オータムプロムナード",
+      "summary": "2026年10月10日（土）～31日（土）、目黒川の大崎・五反田間（御成橋～山本橋）にて、「目黒川 オータムプロムナード」が開催されます。 多様な街の魅力を表現した約3,000本のリボンが目黒川を彩ります。飾りつけには、地域のみなさんも参加しました。色とりどりのリボンが風に揺れる景色をお楽しみください。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/autumnpromunade2026",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "eda97869c79126a6f680",
+      "title": "しながわ観光大使 ”見習い” ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー",
+      "summary": "2026年10月1日（木）～11月15日（日）、「しながわ観光大使 ”見習い” ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー」が開催されます。 品川区内で行われる期間限定のイベント会場や、品川区と連携協定を結んでいる福井県坂井市のアンテナショップなどを巡りながらスタンプを集め、品川区・坂井市の魅力を感じられるスタンプラリー。3個以上のスタンプを集め、専用はがきで応募すると、坂井市の特産品グルメ10,000円相当などが当たる抽選に参加できます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ryoma-hoyamaru",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "3f19438d60abb837ae54",
@@ -392,6 +467,25 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "ee9b0e8688e626befe94",
+      "title": "【10月12日開催】スポーツの日記念イベント",
+      "summary": "スポーツの日にあわせて、区立体育館を無料開放します。 また、体験型のスポーツイベントを実施します。 この機会にスポーツやレクリエーションをはじめてみませんか。 スポーツの日記念イベントちらし(PDF : 7MB) 【開催日】 令和8年10月12日(月・祝) 【開催時間】午前9時00分から午後4時50分まで 【会場】 総合体育館・戸越体育館 【主催】 品川区スポーツ協会 電話：03-3449-4400 FAX : 03-3449-4401 詳細は品川区スポーツ協会ホームページ…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20221003101124.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
       "relevanceScore": 12
     },
     {
@@ -988,7 +1082,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "90451c32d4e1446aff1f",
-      "title": "大井蔵王権現神社 福禄寿祭",
+      "title": "【終了】大井蔵王権現神社 福禄寿祭",
       "summary": "2026年10月4日（日）、大井蔵王権現神社にて「福禄寿祭」が開催されます。 大井蔵王権現神社には、荏原七福神の福禄寿が祀られており、財産・出世・長寿にご利益があると言われています。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -1288,7 +1382,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "1610e597ee2ba2d90c4f",
-      "title": "五反田 にぎわいイベント「ゴタンダデシタンダ！！」",
+      "title": "【終了】五反田 にぎわいイベント「ゴタンダデシタンダ！！」",
       "summary": "2026年10月4日（日）五反田 学研本社ビル1階芝生広場などで「ゴタンダデシタンダ!!」が開催されます。 「ゴタンダデシタンダ!!」は、毎年10月初旬に行われる地域の神事である雉子神社例大祭の時期に合わせ、開催される地域にぎわいイベント。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -6244,7 +6338,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "916479465b78b4a0fd04",
-      "title": "しながわクルーズ 9・10・11月 2026/09/12(土) ~ 2026/11/22(日) 遊ぶ 観る",
+      "title": "しながわクルーズ 9・10・11月",
       "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9～11月の「しながわクルーズ」は、月ごとに東京湾の魅力を発見できるコースとなっています。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -11009,7 +11103,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2312, column 65"
+      "message": "not well-formed (invalid token): line 2855, column 65"
     },
     {
       "source": "朝日新聞",
@@ -11033,7 +11127,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
