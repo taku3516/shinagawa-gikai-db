@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-06T16:05:07.999498Z",
+  "generatedAt": "2026-10-07T06:15:03.672376Z",
   "items": [
+    {
+      "id": "4096ee5998c0957ca401",
+      "title": "“金沢カレー”をモス流にアレンジ 能登豚を使用したカレーソースで復興支援「金沢カレーカツバーガー」が販売店舗を拡大して今年も登場！中京地区限定で「金沢カレーメンチカツバーガー」新発売",
+      "summary": "[株式会社モスフードサービス] モスバーガーを展開する株式会社モスフードサービス（代表取締役社長：中村 栄輔、本社：東京都品川区）は、令和6年能登半島災害復興を支援するため、2026年10月14日（水）から東京都（一部店舗除く）と北陸地方...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000630.000075449.html",
+      "publishedAt": "2026-10-07T05:15:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "430e713594205c523e8e",
+      "title": "令和8年度品川区こども会議",
+      "summary": "子ども育成課子ども育成係 電話：03-5742-6720 FAX：03-5742-6351",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomokaigi/20260407090839.html",
+      "publishedAt": "2026-10-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "6c64cb03e526f1aa749c",
       "title": "美容医療業界向け｜外注費の削減戦略と最新トレンドレポート【2026年10月版】",
@@ -97,6 +132,44 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "dd2bc3d3ddfdd4af112d",
+      "title": "エコルとごし「エコルフェス -2026 AUTUMN-」",
+      "summary": "2026年10月18日（日）、 エコルとごし にて「エコルフェス -2026 AUTUMN-」が開催されます。 エコルとごしは、戸越公園内にある品川区立環境学習交流施設。秋の一大イベントとして、館内と戸越公園内で環境を楽しく学ぶ講座・ワークショップなどが楽しめます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ecorufes2026autumn",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園",
+        "エコルとごし"
+      ],
+      "relevanceScore": 24
+    },
+    {
+      "id": "c93e091c41461e677567",
+      "title": "品川 港南「東京食肉市場まつり 2026」",
+      "summary": "2026年10月17日（土）、18日（日）、東京都中央卸売市場食肉市場にて「東京食肉市場まつり2026」が開催されます。 今年で45回目の開催となる「東京食肉市場まつり2026」は、国内産の牛肉・豚肉の消費拡大、市場の存在についての認知と役割の理解促進、また「ブランド牛は、おいしくて安心」のイメージ確立を目的に、市場を年に一度だけ特別に開放し、開催するお肉のフェスティバルです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nikumatsuri2026",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
     },
     {
       "id": "fffcac8a0d5cb83bf28c",
@@ -1062,6 +1135,25 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "c7ae2f0abc5f086e3a62",
+      "title": "アレルギーおしゃべり会（11月）大崎ゆうゆうプラザで開催",
+      "summary": "日時：令和8年11月15日(日) 午前10時～午後3時 会場：大崎ゆうゆうプラザ 2階 コミュニティ室 PAE(小児アレルギーエデュケーター)としても活躍されている看護師さんと一緒におしゃべりしませんか？ アレルギーおしゃべり会は、 お子様の食物アレルギー・ぜん息・アトピー性皮膚炎・花粉症など アレルギーで気になることを何でもおしゃべりしています。 保育スタッフが同じお部屋にいて、お子様と遊んでくれます。 おしゃべり会は、参加も同室保育も『予約不要・無料』です。 参加状況に…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-kateisoudan/kodomo-kateisoudan-kosodateouen/20251128093912.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "c038311121fab0e4cf36",
@@ -11101,9 +11193,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2855, column 65"
+      "status": "ok",
+      "scanned": 515,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
