@@ -1,7 +1,46 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-07T06:15:03.672376Z",
+  "generatedAt": "2026-10-07T13:40:35.993675Z",
   "items": [
+    {
+      "id": "8eeda9a3200e731d42d6",
+      "title": "公共施設へのペロブスカイト太陽電池導入について検討の手順と留意点を体系化",
+      "summary": "[株式会社日本総合研究所] 株式会社日本総合研究所（本社：東京都品川区、代表取締役社長：内川淳、以下「日本総研」）は、自治体などの公的機関が公共施設へのペロブスカイト太陽電池の導入を検討する際に必要となる考え方や実務上の留...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000217.000068011.html",
+      "publishedAt": "2026-10-07T13:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T13:40:06.897657Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "dbadb964755ec811a12a",
+      "title": "鮫洲に軽食スタンド「ベカ」 トルコ伝統料理「ゴズレメ」とコーヒーを用意",
+      "summary": "トルコ料理とコーヒーのテイクアウト専門店「BeKa Turkish Bites & Coffee（ベカ・ターキッシュ・バイツ・アンド・コーヒー）」（品川区東大井1）が、京急鮫洲駅近くにオープンして3カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5091",
+      "publishedAt": "2026-10-07T09:07:11Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T13:40:06.897657Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "東大井",
+        "鮫洲駅"
+      ],
+      "relevanceScore": 20
+    },
     {
       "id": "4096ee5998c0957ca401",
       "title": "“金沢カレー”をモス流にアレンジ 能登豚を使用したカレーソースで復興支援「金沢カレーカツバーガー」が販売店舗を拡大して今年も登場！中京地区限定で「金沢カレーメンチカツバーガー」新発売",
@@ -19,6 +58,26 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "0e476494f521a31d312d",
+      "title": "info＆cafe SQUARE「ボードゲームで学ぶ」",
+      "summary": "2026年10月18日（日）、スクエア荏原1階 info＆cafe SQUARE（インフォアンドカフェスクエア）にて「ボードゲームで学ぶ」が開催されます。 世界のボードゲームの中から厳選した、誰でもできるボードゲームが10種類以上！無料で体験できます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/infows20261018",
+      "publishedAt": "2026-10-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T13:40:06.897657Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原",
+        "スクエア荏原"
+      ],
+      "relevanceScore": 8
     },
     {
       "id": "430e713594205c523e8e",
@@ -11194,7 +11253,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 515,
+      "scanned": 539,
       "accepted": 0
     },
     {
