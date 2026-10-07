@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-07T13:40:35.993675Z",
+  "generatedAt": "2026-10-07T20:41:55.994068Z",
   "items": [
     {
       "id": "8eeda9a3200e731d42d6",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000217.000068011.html",
-      "publishedAt": "2026-10-07T13:10:02Z",
+      "publishedAt": "2026-10-07T19:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-10-07T13:40:06.897657Z",
       "tags": [
@@ -18,6 +18,43 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "9e2b1f4c98a254cb3d4a",
+      "title": "品川区、「ハタチの龍馬×坂井市公式キャラ 坂井ほや丸 スタンプラリー」開催",
+      "summary": "[品川区] 品川区は10月1日～11月15日、「しながわ観光大使“見習い”ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー」を開催します。 本イベントでは、品川区内で行われるイベントや福井県坂井市アン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000246.000087362.html",
+      "publishedAt": "2026-10-07T17:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T20:41:35.095946Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "cf52d0f44c8ed6bcb6d9",
+      "title": "品プリが野外スポーツ「ロゲイニング」開催へ 「広域品川圏」を歩いて得点競う",
+      "summary": "品川プリンスホテル（港区高輪4）が10月1日、浜松町・田町・高輪ゲートウェイ・品川・大井町の5駅周辺エリアで野外スポーツ「シナプリ ロゲイニング」を開始した。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5092",
+      "publishedAt": "2026-10-07T15:00:55Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T20:41:35.095946Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "dbadb964755ec811a12a",
@@ -11253,7 +11290,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 539,
+      "scanned": 552,
       "accepted": 0
     },
     {
@@ -11278,7 +11315,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
