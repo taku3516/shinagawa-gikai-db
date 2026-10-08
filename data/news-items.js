@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-07T20:41:55.994068Z",
+  "generatedAt": "2026-10-08T01:08:22.196585Z",
   "items": [
+    {
+      "id": "9e2b1f4c98a254cb3d4a",
+      "title": "品川区、「ハタチの龍馬×坂井市公式キャラ 坂井ほや丸 スタンプラリー」開催",
+      "summary": "[品川区] 品川区は10月1日～11月15日、「しながわ観光大使“見習い”ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー」を開催します。 本イベントでは、品川区内で行われるイベントや福井県坂井市アン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000246.000087362.html",
+      "publishedAt": "2026-10-07T23:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T20:41:35.095946Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "8eeda9a3200e731d42d6",
       "title": "公共施設へのペロブスカイト太陽電池導入について検討の手順と留意点を体系化",
@@ -15,23 +32,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-10-07T13:40:06.897657Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "9e2b1f4c98a254cb3d4a",
-      "title": "品川区、「ハタチの龍馬×坂井市公式キャラ 坂井ほや丸 スタンプラリー」開催",
-      "summary": "[品川区] 品川区は10月1日～11月15日、「しながわ観光大使“見習い”ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー」を開催します。 本イベントでは、品川区内で行われるイベントや福井県坂井市アン...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000246.000087362.html",
-      "publishedAt": "2026-10-07T17:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-07T20:41:35.095946Z",
-      "tags": [
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -11290,7 +11290,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 552,
+      "scanned": 556,
       "accepted": 0
     },
     {
@@ -11315,7 +11315,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
