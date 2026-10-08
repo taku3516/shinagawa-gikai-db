@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-08T01:08:22.196585Z",
+  "generatedAt": "2026-10-08T10:48:09.410335Z",
   "items": [
+    {
+      "id": "c62826b734c90e3f6aba",
+      "title": "リニア中央新幹線（品川・名古屋間）について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/riniashinkansenn/index.html",
+      "publishedAt": "2026-10-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-08T10:47:40.069207Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "299b46906880c7127996",
+      "title": "にしこやまつり2026",
+      "summary": "2026年10月25日（日）、西小山エリアにて「にしこやまつり」が開催されます。 駅前広場でのステージと、物販・飲食などのブース、また西小山駅周辺の飲食店各店舗でカレーにちなんだメニューを楽しめる「カレーフェス」などを予定しております。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nishikoyamatsuri2026",
+      "publishedAt": "2026-10-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-08T10:47:40.069207Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "小山",
+        "西小山駅"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "9e2b1f4c98a254cb3d4a",
       "title": "品川区、「ハタチの龍馬×坂井市公式キャラ 坂井ほや丸 スタンプラリー」開催",
@@ -39,7 +77,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "cf52d0f44c8ed6bcb6d9",
       "title": "品プリが野外スポーツ「ロゲイニング」開催へ 「広域品川圏」を歩いて得点競う",
-      "summary": "品川プリンスホテル（港区高輪4）が10月1日、浜松町・田町・高輪ゲートウェイ・品川・大井町の5駅周辺エリアで野外スポーツ「シナプリ ロゲイニング」を開始した。 #品川経済新聞",
+      "summary": "品川プリンスホテル（港区高輪4）は10月1日、高輪ゲートウェイ駅、品川駅、大井町駅などを含む「広域品川圏」で、野外スポーツ「シナプリ ロゲイニング」を開始した。 #品川経済新聞",
       "source": "品川経済新聞",
       "sourceId": "shinagawa-keizai",
       "sourceType": "rss",
@@ -52,9 +90,10 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [
-        "大井"
+        "大井",
+        "大井町駅"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 8
     },
     {
       "id": "dbadb964755ec811a12a",
@@ -11278,7 +11317,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 138,
+      "scanned": 139,
       "accepted": 0
     },
     {
@@ -11290,7 +11329,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 556,
+      "scanned": 582,
       "accepted": 0
     },
     {
@@ -11315,7 +11354,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -11338,7 +11377,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 34,
+      "scanned": 35,
       "accepted": 0
     },
     {
