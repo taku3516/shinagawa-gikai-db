@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-08T10:48:09.410335Z",
+  "generatedAt": "2026-10-08T18:56:37.061574Z",
   "items": [
+    {
+      "id": "0d15cdf9d9a311b0c5b4",
+      "title": "旗の台稲荷通り商店会「子どもが楽しむ 盆踊り & ハロウィン」",
+      "summary": "2026年10月18日（日）、 旗の台稲荷通り商店会 にて「子どもが楽しむ 盆踊り & ハロウィン」が開催されます。 秋の夜を彩る、旗の台ならではのユニークなイベント。地元のダンススタジオによるキッズダンスや生バンドの演奏、18:00からは、「旗の台音頭」やロックのリズムに合わせて踊る「盆ROCK（盆踊り）」をお楽しみいただけます。盆踊りに参加した小学生以下のお子様には、お菓子のプレゼントも（先着200名、無くなり次第終了）。ハロウィンの仮装での参加も大歓迎です。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bonrock2026",
+      "publishedAt": "2026-10-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-08T18:56:11.919795Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "旗の台"
+      ],
+      "relevanceScore": 6
+    },
     {
       "id": "c62826b734c90e3f6aba",
       "title": "リニア中央新幹線（品川・名古屋間）について",
@@ -11329,7 +11349,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 582,
+      "scanned": 579,
       "accepted": 0
     },
     {
