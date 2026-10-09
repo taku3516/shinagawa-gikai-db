@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-09T10:46:54.015048Z",
+  "generatedAt": "2026-10-09T18:27:02.068330Z",
   "items": [
+    {
+      "id": "dc8f091dbb63aae7e27e",
+      "title": "北品川に焼き菓子店「マウントベイク」 週3営業、日替わりメニューで",
+      "summary": "焼き菓子店「MT.BAKE （マウントベイク）」（品川区北品川1）が、京急本線北品川駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5093",
+      "publishedAt": "2026-10-09T10:50:33Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-09T18:26:39.883853Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "北品川",
+        "北品川駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "19075d30a3e2e0e627c4",
       "title": "令和8年度 しながわゼロカーボンアクション助成",
@@ -11343,12 +11364,12 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 7
+      "accepted": 8
     },
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 4,
+      "scanned": 3,
       "accepted": 0
     },
     {
@@ -11366,7 +11387,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 559,
+      "scanned": 514,
       "accepted": 0
     },
     {
