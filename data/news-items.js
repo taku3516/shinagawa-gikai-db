@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-08T18:56:37.061574Z",
+  "generatedAt": "2026-10-09T01:18:35.324749Z",
   "items": [
+    {
+      "id": "b4ce19b8bdf35537133f",
+      "title": "【あなたが寝ている間、AIは社内の何を見ていますか】生成AI利用率95.7%・事故経験78.5%が浮き彫りにする“権限設計の遅れ”。『AI × Data Weekly Insight』を無料公開",
+      "summary": "[株式会社パタンナー] 株式会社パタンナー（本社：東京都品川区、代表取締役：深野 嗣）のデータチームは、生成AI・AIエージェントとデータ基盤の最新動向を読み解く総括レポート『あなたが寝ている間、AIは社内の何を見ていますか 生...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000141.000105601.html",
+      "publishedAt": "2026-10-08T23:50:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-09T01:18:15.237536Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "0d15cdf9d9a311b0c5b4",
       "title": "旗の台稲荷通り商店会「子どもが楽しむ 盆踊り & ハロウィン」",
@@ -11337,7 +11354,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 139,
+      "scanned": 142,
       "accepted": 0
     },
     {
@@ -11349,7 +11366,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 579,
+      "scanned": 569,
       "accepted": 0
     },
     {
@@ -11374,7 +11391,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
