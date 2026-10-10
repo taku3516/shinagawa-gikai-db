@@ -1,7 +1,46 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-09T18:27:02.068330Z",
+  "generatedAt": "2026-10-10T10:02:06.117713Z",
   "items": [
+    {
+      "id": "14136b55538cba77e267",
+      "title": "この秋、品川・天王洲がアートの舞台に！～美術展「TOKYO ATLAS」と多彩な関連イベントを開催、特別クルーズ船運航も～",
+      "summary": "[品川区] 「ARTE TOKYO（東京国際文化芸術祭）」のハイライトプログラムとして、国際美術展「TOKYO ATLAS」が10月10日に開幕。品川区内では、「アイルしながわ」と「WHAT MUSEUM」で多彩な現代アートを楽しめます。 ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000245.000087362.html",
+      "publishedAt": "2026-10-10T07:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-10T10:01:43.786948Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "092ae94221ea794e792b",
+      "title": "徳間書店文芸編集部が文学フリマ東京43に初出店!! 名作Tシャツ、人気作家のサインアクリルスタンドなど、公式グッズ全8種を発売",
+      "summary": "[徳間書店] 株式会社徳間書店（本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、初となる文芸編集部公式グッズを発売します。販売は、11月8日（日）に開催される文学フリマ東京43（東京ビッグサイト南1～4ホール）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001132.000016935.html",
+      "publishedAt": "2026-10-10T07:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-10T10:01:43.786948Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "dc8f091dbb63aae7e27e",
       "title": "北品川に焼き菓子店「マウントベイク」 週3営業、日替わりメニューで",
@@ -11387,7 +11426,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 514,
+      "scanned": 396,
       "accepted": 0
     },
     {
@@ -11412,7 +11451,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
