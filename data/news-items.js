@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-13T02:39:13.907636Z",
+  "generatedAt": "2026-10-13T10:51:47.406908Z",
   "items": [
+    {
+      "id": "2b6f57aa466beeb4098f",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月13日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年10月13日号(令和8年10月5日～令和8年10月12日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63755.html",
+      "publishedAt": "2026-10-13T10:51:23.389935Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-13T10:51:23.389935Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "b7cd9b98e74af5cb99cf",
       "title": "品川区、暑熱対策実証実験で大井町駅西口に仮設「日カサ」を設置",
@@ -61,6 +78,28 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 16
+    },
+    {
+      "id": "ad2655bc916ccd241bb1",
+      "title": "ガイドしながわ「大崎・戸越銀座・戸越公園 3つの街を歩く」",
+      "summary": "2026年11月21日（土）、ガイドしながわによるガイドと歩くしながわとその周辺「大崎・戸越銀座・戸越公園 3つの街を歩く」が開催されます。 高層ビルが立ち並ぶ大崎、活気あふれる戸越銀座、緑豊かで落ち着いた戸越公園。 隣り合う3つの街ですが、歩いてみると全く違う表情が見えてきます。 川や鉄道、商店街、住宅地…何気ない街の風景にも、それぞれの街が歩んできた歴史が息づいています。 街並みを見比べながら、今の姿につながる歴史を探しに出かけてみてはいかがでしょうか。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/togoshi",
+      "publishedAt": "2026-10-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T10:51:23.389935Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "戸越",
+        "戸越公園"
+      ],
+      "relevanceScore": 14
     },
     {
       "id": "14136b55538cba77e267",
@@ -537,7 +576,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "3f19438d60abb837ae54",
-      "title": "「秋の運河花火まつり2026」 in しながわ水辺の観光フェスタ 2026",
+      "title": "【終了】「秋の運河花火まつり2026」 in しながわ水辺の観光フェスタ 2026",
       "summary": "2026年10月10日（土）、11日（日）、東品川海上公園および天王洲公園にて「秋の運河花火まつり」in しながわ水辺の観光フェスタ 2026 が開催されます。 飲食ブース、屋台、ステージパフォーマンス、移動動物園など楽しい企画が盛りだくさんです。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -11505,7 +11544,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 442,
+      "scanned": 520,
       "accepted": 0
     },
     {
@@ -11530,7 +11569,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 3
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
