@@ -1,7 +1,67 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-10T17:24:53.047367Z",
+  "generatedAt": "2026-10-13T02:39:13.907636Z",
   "items": [
+    {
+      "id": "b7cd9b98e74af5cb99cf",
+      "title": "品川区、暑熱対策実証実験で大井町駅西口に仮設「日カサ」を設置",
+      "summary": "[品川区] 品川区は、株式会社オープン・エー（中央区日本橋馬喰町2）公共R不動産、延世大学産学協力団・気候適応リビングラボ研究事業団と連携し、大井町駅西口の交差点横断歩道前の歩道上に仮設の日カサを設置する実証...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000247.000087362.html",
+      "publishedAt": "2026-10-13T01:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "603f4655998ed654a290",
+      "title": "薬用せっけんミューズが8年ぶりにブランド刷新！生活のあらゆる場面で「ばい菌から手肌を守る」ブランドとしてロゴと泡ハンドソープのデザインをリニューアル・順次出荷開始。大容量1000mLサイズを発売。",
+      "summary": "[レキットベンキーザー・ジャパン株式会社] レキットベンキーザー・ジャパン株式会社（本社：東京都品川区東五反田/代表取締役：スチュアート・ウィザビー）は、70年以上の歴史を持つ薬用せっけんミューズのブランドロゴ、泡ハンドソープのデザインをリニ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000042.000034481.html",
+      "publishedAt": "2026-10-13T01:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "25361c6b99afa07900e1",
+      "title": "警察小説、ハードボイルドの名手・香納諒一氏が贈る、シリーズ最大のスケールで描く書下し長篇ミステリー『川崎警察 遠雷雨』、徳間書店より発売！ 冒頭先行公開もあり！",
+      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、香納諒一氏の長篇小説『川崎警察 遠雷雨』（https://www.tokuma.jp/book/b680879.html）を10月16日（金）に発売いたします。また、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001130.000016935.html",
+      "publishedAt": "2026-10-13T01:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "14136b55538cba77e267",
       "title": "この秋、品川・天王洲がアートの舞台に！～美術展「TOKYO ATLAS」と多彩な関連イベントを開催、特別クルーズ船運航も～",
@@ -61,6 +121,25 @@ window.SHINAGAWA_NEWS = {
         "北品川駅"
       ],
       "relevanceScore": 16
+    },
+    {
+      "id": "7fe290e295d5ff4236d5",
+      "title": "令和8年度第2回品川区地域自立支援協議会開催のお知らせ（令和8年10月28日）",
+      "summary": "障害者支援課 事業者支援担当 電話：03-5742-7844 FAX：03-3775-2000",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-kyogikai/20230217161144.html",
+      "publishedAt": "2026-10-09T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "福祉",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "19075d30a3e2e0e627c4",
@@ -11414,7 +11493,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 142,
+      "scanned": 140,
       "accepted": 0
     },
     {
@@ -11426,7 +11505,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 280,
+      "scanned": 442,
       "accepted": 0
     },
     {
@@ -11451,7 +11530,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 3
     },
     {
       "source": "東急ニュースリリース",
