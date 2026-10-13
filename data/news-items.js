@@ -1,7 +1,48 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-13T10:51:47.406908Z",
+  "generatedAt": "2026-10-13T19:24:28.409549Z",
   "items": [
+    {
+      "id": "b7cd9b98e74af5cb99cf",
+      "title": "品川区、暑熱対策実証実験で大井町駅西口に仮設「日カサ」を設置",
+      "summary": "[品川区] 品川区は、株式会社オープン・エー（中央区日本橋馬喰町2）公共R不動産、延世大学産学協力団・気候適応リビングラボ研究事業団と連携し、大井町駅西口の交差点横断歩道前の歩道上に仮設の日カサを設置する実証...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000247.000087362.html",
+      "publishedAt": "2026-10-13T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "25361c6b99afa07900e1",
+      "title": "警察小説、ハードボイルドの名手・香納諒一氏が贈る、シリーズ最大のスケールで描く書下し長篇ミステリー『川崎警察 遠雷雨』、徳間書店より発売！ 冒頭先行公開もあり！",
+      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、香納諒一氏の長篇小説『川崎警察 遠雷雨』（https://www.tokuma.jp/book/b680879.html）を10月16日（金）に発売いたします。また、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001130.000016935.html",
+      "publishedAt": "2026-10-13T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "2b6f57aa466beeb4098f",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月13日号）を公開しました‼",
@@ -20,25 +61,26 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "b7cd9b98e74af5cb99cf",
-      "title": "品川区、暑熱対策実証実験で大井町駅西口に仮設「日カサ」を設置",
-      "summary": "[品川区] 品川区は、株式会社オープン・エー（中央区日本橋馬喰町2）公共R不動産、延世大学産学協力団・気候適応リビングラボ研究事業団と連携し、大井町駅西口の交差点横断歩道前の歩道上に仮設の日カサを設置する実証...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
+      "id": "13140533180af194a750",
+      "title": "戸越公園にカレー店「スリランカスタイル パル」 週1ランチ営業から独立",
+      "summary": "スリランカカレー店「Sri Lanka Style Pal（スリランカスタイル パル）」（品川区戸越5）が戸越公園駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
       "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000247.000087362.html",
-      "publishedAt": "2026-10-13T01:00:00Z",
+      "url": "http://shinagawa.keizai.biz/headline/5094",
+      "publishedAt": "2026-10-13T10:50:53Z",
       "dateKind": "published",
-      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "collectedAt": "2026-10-13T19:24:07.246516Z",
       "tags": [
         "交通",
         "店舗開店閉店"
       ],
       "locations": [
-        "大井",
-        "大井町駅"
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
       ],
-      "relevanceScore": 16
+      "relevanceScore": 22
     },
     {
       "id": "603f4655998ed654a290",
@@ -58,26 +100,6 @@ window.SHINAGAWA_NEWS = {
         "東五反田"
       ],
       "relevanceScore": 12
-    },
-    {
-      "id": "25361c6b99afa07900e1",
-      "title": "警察小説、ハードボイルドの名手・香納諒一氏が贈る、シリーズ最大のスケールで描く書下し長篇ミステリー『川崎警察 遠雷雨』、徳間書店より発売！ 冒頭先行公開もあり！",
-      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、香納諒一氏の長篇小説『川崎警察 遠雷雨』（https://www.tokuma.jp/book/b680879.html）を10月16日（金）に発売いたします。また、...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000001130.000016935.html",
-      "publishedAt": "2026-10-13T01:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-13T02:38:49.560794Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "上大崎",
-        "大崎"
-      ],
-      "relevanceScore": 16
     },
     {
       "id": "ad2655bc916ccd241bb1",
@@ -11544,7 +11566,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 520,
+      "scanned": 535,
       "accepted": 0
     },
     {
@@ -11569,7 +11591,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
