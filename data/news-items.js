@@ -1,7 +1,81 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-13T19:24:28.409549Z",
+  "generatedAt": "2026-10-14T08:54:13.938989Z",
   "items": [
+    {
+      "id": "48027ec351a17575ebb0",
+      "title": "終活専門家相談会を開催します",
+      "summary": "日時：10月23日（金）午後1時30分～4時30分 場所：社会福祉協議会（大井1-14-1） 定員：３名（予約制・先着順） 申込期限：10月16日（金）まで ファイナンシャルプランナーによる終活無料相談会（１人４５分程度）を開催します。 お申し込みは、お電話で、品川成年後見センター（03-3718-7174）へ。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63768.html",
+      "publishedAt": "2026-10-14T08:53:47.528849Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "962f2ed0b9662964ea7b",
+      "title": "チエル、統合ID管理システム「ExtraConsole(R) ID Manager」 Version 6.6でBoxとの連携に対応",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦、以下チエル）は、統合ID管理システム『ExtraConsole(R) ID Manager』（エクストラコンソール アイディーマネージ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000186.000067516.html",
+      "publishedAt": "2026-10-14T08:15:23Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "bb7f61734085de39d24b",
+      "title": "立正大学「仏教オールスター寄席」",
+      "summary": "2026年11月28日（土）、立正大学ロータスホールにて、「仏教オールスター寄席」が開催されます。 仏教・和の伝統文化・エンタメなど、各界から6人のスーパースターがロータスホールに集います。学生の方から、お子様、ご年配の方まで、楽しめるイベントです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ris-rakugo",
+      "publishedAt": "2026-10-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1f26a77489db4e0f5bde",
+      "title": "鹿嶋神社 大祭 2026",
+      "summary": "2026年10月17日 （土）、18日（日）鹿嶋神社例大祭が行われます。 鹿嶋神社 は、大井村の総鎮守として親しまれ、毎年10月に例大祭が行われます。 当日はお神輿や、山車の渡御が行われます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/kashimajinja-reitaisai2026",
+      "publishedAt": "2026-10-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "b7cd9b98e74af5cb99cf",
       "title": "品川区、暑熱対策実証実験で大井町駅西口に仮設「日カサ」を設置",
@@ -182,6 +256,23 @@ window.SHINAGAWA_NEWS = {
         "北品川駅"
       ],
       "relevanceScore": 16
+    },
+    {
+      "id": "9abd21d3140f1efc98cb",
+      "title": "令和8年度 薬と健康の週間",
+      "summary": "品川区保健所生活衛生課医薬担当 電話 03-5742-9137 FAX 03-5742-9104",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-izi_yakuzi/hpg000014305.html",
+      "publishedAt": "2026-10-09T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
     },
     {
       "id": "7fe290e295d5ff4236d5",
@@ -11566,7 +11657,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 535,
+      "scanned": 518,
       "accepted": 0
     },
     {
@@ -11591,7 +11682,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
