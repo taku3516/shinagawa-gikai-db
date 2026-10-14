@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-14T19:32:33.047300Z",
+  "generatedAt": "2026-10-14T23:59:53.050473Z",
   "items": [
+    {
+      "id": "5e82fa2e4fcfca37509a",
+      "title": "エシカル消費イベント in しながわ「shinagawa ETHICAL 2026」",
+      "summary": "消費者センター 電話：03-6421-6136 FAX：03-6421-6132",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260902135700.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T23:59:28.946016Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "b4bc4778f5b9de49b241",
       "title": "品川区セーフティネット住宅入居者募集",
@@ -44,7 +61,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000154.000043752.html",
-      "publishedAt": "2026-10-14T16:40:02Z",
+      "publishedAt": "2026-10-14T22:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-10-14T19:32:11.536084Z",
       "tags": [
@@ -61,7 +78,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000600.000016467.html",
-      "publishedAt": "2026-10-14T14:10:02Z",
+      "publishedAt": "2026-10-14T20:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-10-14T14:35:24.666244Z",
       "tags": [
@@ -11748,7 +11765,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 543,
+      "scanned": 546,
       "accepted": 0
     },
     {
