@@ -1,7 +1,58 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-14T14:35:46.224785Z",
+  "generatedAt": "2026-10-14T19:32:33.047300Z",
   "items": [
+    {
+      "id": "b4bc4778f5b9de49b241",
+      "title": "品川区セーフティネット住宅入居者募集",
+      "summary": "住宅課 居住支援係 電話：03-5742-6777 FAX：03-5742-6963 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kenchiku/kyojushien/20260603115846.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T19:32:11.536084Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "66c0b822ccc6edf99ae8",
+      "title": "区政資料コーナー 資料の点検・整理に伴う休業のお知らせ",
+      "summary": "区政資料コーナー（第三庁舎3階）は区政資料の点検・整理のため、 令和8年10月19日（月）・10月20日（火）は休業します。 皆様にはご不便をおかけしますが、ご理解ご協力のほどよろしくお願いいたします。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/20210928131805.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T19:32:11.536084Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "3df1c3afccf3879ec4d1",
+      "title": "学校法人文教大学学園が創立100周年記念サイトに「人間愛、100年。想い、未来へ」を公開",
+      "summary": "[文教大学学園] 学校法人文教大学学園（東京都品川区／理事長 野島正也）は、1927 年 10 月 17 日に創立し、 2027 年に創立 100 周年を迎えます。このたび、創立100周年記念サイトに「人間愛、100年。想い、未来へ」を公開しま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000154.000043752.html",
+      "publishedAt": "2026-10-14T16:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T19:32:11.536084Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "673b5ef962911465d4a2",
       "title": "ジール、株式会社primeNumber主催 「primeNumber DATA SUMMIT 2026」に出展",
@@ -11697,7 +11748,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 556,
+      "scanned": 543,
       "accepted": 0
     },
     {
