@@ -1,7 +1,47 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-14T08:54:13.938989Z",
+  "generatedAt": "2026-10-14T14:35:46.224785Z",
   "items": [
+    {
+      "id": "673b5ef962911465d4a2",
+      "title": "ジール、株式会社primeNumber主催 「primeNumber DATA SUMMIT 2026」に出展",
+      "summary": "[アバントグループ] アバントグループで、デジタルトランスフォーメーション（以下「DX」）推進事業を展開する株式会社ジール（本社：東京都品川区、代表取締役社長：沼田 善之、以下「ジール」）は、2026年10月15日（木）に天王洲 ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000600.000016467.html",
+      "publishedAt": "2026-10-14T14:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T14:35:24.666244Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "9fdf53593af8acc06317",
+      "title": "武蔵小山に飲食店「アトラス」 昼は総菜・弁当販売、夜は立ち飲み店に",
+      "summary": "総菜・弁当店とスタンディングバー「atlas（アトラス）」（品川区小山4）が武蔵小山駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5095",
+      "publishedAt": "2026-10-14T12:38:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T14:35:24.666244Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "48027ec351a17575ebb0",
       "title": "終活専門家相談会を開催します",
@@ -75,6 +115,42 @@ window.SHINAGAWA_NEWS = {
         "大井"
       ],
       "relevanceScore": 4
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-10-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "3b02c62cbde230a675f7",
+      "title": "令和8年度庁舎広告(壁面ポスター)の第2次募集開始",
+      "summary": "掲載箇所は、下記ファイル(庁舎広告掲載箇所のご案内)をご覧ください。 庁舎広告掲載箇所のご案内（品川区役所3階平面図）(PDF : 723KB) 掲載場所の空き状況は、下記ファイルよりご確認ください。(令和8年7月21日現在) R8庁舎内広告受付状況(PDF : 44KB) 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
+      "publishedAt": "2026-10-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T01:46:19.238621Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 22
     },
     {
       "id": "b7cd9b98e74af5cb99cf",
@@ -198,6 +274,44 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
+      "id": "5ec7be4997a108ed82b0",
+      "title": "グリーフケア電話相談・遺族のつどい",
+      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/shinagawagriefcare2.html",
+      "publishedAt": "2026-10-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T09:22:28.623619Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "877e45ac9a8423466279",
+      "title": "グリーフケア電話相談・遺族のつどい",
+      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/shinagawagriefcare.html",
+      "publishedAt": "2026-10-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
+    },
+    {
       "id": "14136b55538cba77e267",
       "title": "この秋、品川・天王洲がアートの舞台に！～美術展「TOKYO ATLAS」と多彩な関連イベントを開催、特別クルーズ船運航も～",
       "summary": "[品川区] 「ARTE TOKYO（東京国際文化芸術祭）」のハイライトプログラムとして、国際美術展「TOKYO ATLAS」が10月10日に開幕。品川区内では、「アイルしながわ」と「WHAT MUSEUM」で多彩な現代アートを楽しめます。 ...",
@@ -292,23 +406,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-10-09T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "b4ce19b8bdf35537133f",
@@ -3191,44 +3288,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 20
     },
     {
-      "id": "5ec7be4997a108ed82b0",
-      "title": "グリーフケア電話相談・遺族のつどい",
-      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/shinagawagriefcare2.html",
-      "publishedAt": "2026-09-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-03T09:22:28.623619Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 4
-    },
-    {
-      "id": "877e45ac9a8423466279",
-      "title": "グリーフケア電話相談・遺族のつどい",
-      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/shinagawagriefcare.html",
-      "publishedAt": "2026-09-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T15:54:35.184829Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 4
-    },
-    {
       "id": "faf5adaa61043ba59e1c",
       "title": "特別価格で増毛体験とクレンジングがセットに！ 期間限定増毛キャンペーン 「ステップアップ増毛 1,100本＋すっきりスカルプケア」",
       "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランス（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、全国のアデランスサロン、レディスアデランスサロンにて、9月15日（火）...",
@@ -3500,25 +3559,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
-    },
-    {
-      "id": "3b02c62cbde230a675f7",
-      "title": "令和8年度庁舎広告(壁面ポスター)の第2次募集開始",
-      "summary": "掲載箇所は、下記ファイル(庁舎広告掲載箇所のご案内)をご覧ください。 庁舎広告掲載箇所のご案内（品川区役所3階平面図）(PDF : 723KB) 掲載場所の空き状況は、下記ファイルよりご確認ください。(令和8年7月21日現在) R8庁舎内広告受付状況(PDF : 44KB) 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
-      "publishedAt": "2026-09-14T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-22T01:46:19.238621Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [
-        "品川区役所"
-      ],
-      "relevanceScore": 22
     },
     {
       "id": "6d15a6a17cd0f3891d52",
@@ -11657,7 +11697,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 518,
+      "scanned": 556,
       "accepted": 0
     },
     {
@@ -11682,7 +11722,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
