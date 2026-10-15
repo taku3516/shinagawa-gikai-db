@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-14T23:59:53.050473Z",
+  "generatedAt": "2026-10-15T04:56:26.431319Z",
   "items": [
+    {
+      "id": "cae07df5f331d002227e",
+      "title": "「令和8年度高次脳機能障害啓発講座」開催のお知らせ",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20241226105112.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T04:56:01.750679Z",
+      "tags": [
+        "福祉",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
     {
       "id": "5e82fa2e4fcfca37509a",
       "title": "エシカル消費イベント in しながわ「shinagawa ETHICAL 2026」",
@@ -459,7 +478,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "7fe290e295d5ff4236d5",
       "title": "令和8年度第2回品川区地域自立支援協議会開催のお知らせ（令和8年10月28日）",
-      "summary": "障害者支援課 事業者支援担当 電話：03-5742-7844 FAX：03-3775-2000",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -8368,7 +8387,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "7f8fed3bfe331bd4872e",
       "title": "知的・精神障害者（児）移動支援従業者養成研修の受講生募集",
-      "summary": "障害者支援課 事業者支援担当 電話：03-5742-7844 FAX：03-3775-2000",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -11765,7 +11784,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 546,
+      "scanned": 559,
       "accepted": 0
     },
     {
@@ -11790,7 +11809,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
