@@ -1,7 +1,44 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-15T04:56:26.431319Z",
+  "generatedAt": "2026-10-15T11:50:14.595182Z",
   "items": [
+    {
+      "id": "62171eb1d5dd57de47bc",
+      "title": "大崎のO美術館で「小林敬生展」 木口木版画70点超、ギャラリートークも",
+      "summary": "企画展「陽はまた昇る Sunrise Again 小林敬生（けいせい）展 版画 1967-2024」が10月17日、大崎ニューシティ2号館2階のO美術館（品川区大崎1、TEL 03-3495-4040）で始まる。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5096",
+      "publishedAt": "2026-10-15T11:07:25Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T11:49:49.286174Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大崎",
+        "大崎ニューシティ"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "a49faa8726a3a9f1bf6d",
+      "title": "品川＆早川ふるさと交流『伝統のみそ作り体験と星空観察ツアー』参加者募集",
+      "summary": "総務課官民共創担当 電話03-5742-6856 FAX03-3774-6356 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-shityoson/hpg000026265.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T11:49:49.286174Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
     {
       "id": "cae07df5f331d002227e",
       "title": "「令和8年度高次脳機能障害啓発講座」開催のお知らせ",
@@ -71,6 +108,23 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "9d50801e8d63fc7cbee5",
+      "title": "「出張！国保基本健診」（集団健診）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20240806141224.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "3df1c3afccf3879ec4d1",
@@ -1244,23 +1298,6 @@ window.SHINAGAWA_NEWS = {
         "武蔵小山商店街"
       ],
       "relevanceScore": 8
-    },
-    {
-      "id": "9d50801e8d63fc7cbee5",
-      "title": "「出張！国保基本健診」（集団健診）",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20240806141224.html",
-      "publishedAt": "2026-10-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-01T10:20:03.375555Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "7c7e86208fad0f5e414f",
@@ -11784,7 +11821,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 559,
+      "scanned": 560,
       "accepted": 0
     },
     {
