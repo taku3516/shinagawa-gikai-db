@@ -1,7 +1,42 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-15T11:50:14.595182Z",
+  "generatedAt": "2026-10-15T21:36:06.618359Z",
   "items": [
+    {
+      "id": "f4293883782e2b77f64b",
+      "title": "美容医療業界向け｜AI内製によるSaaS費削減の最新の動向と戦略レポート【2026年10月版】",
+      "summary": "[株式会社中央構想研究所] 株式会社中央構想研究所（東京都品川区、代表取締役社長、信谷康邦、以下「当社」）は、「AI内製によるSaaS費削減の最新の動向と戦略レポート」美容医療業界向け 2026年10月版（全23ページ）を無料公開いたしまし...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000036.000190769.html",
+      "publishedAt": "2026-10-15T20:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T21:34:26.291873Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "837eadbebc66391dacb4",
+      "title": "企業の健康経営ニーズ拡大に応える「健康経営トータルサポート」、産業医・産業保健師の登録数が1万人突破",
+      "summary": "[株式会社エムステージグループ] 事業場向け健康経営支援、医療人材総合サービスを提供する株式会社エムステージ（本社：東京都品川区、代表取締役：杉田雄二）は、企業の健康経営を包括的に支援するサービス「健康経営トータルサポート」におい...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000236.000019504.html",
+      "publishedAt": "2026-10-15T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T21:34:26.291873Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "62171eb1d5dd57de47bc",
       "title": "大崎のO美術館で「小林敬生展」 木口木版画70点超、ギャラリートークも",
@@ -11821,7 +11856,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 560,
+      "scanned": 555,
       "accepted": 0
     },
     {
@@ -11846,7 +11881,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
@@ -11903,9 +11938,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
