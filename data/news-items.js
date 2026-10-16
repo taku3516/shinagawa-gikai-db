@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-16T11:42:51.227554Z",
+  "generatedAt": "2026-10-16T21:27:40.845874Z",
   "items": [
+    {
+      "id": "2a070f7fb3b4b62b6f07",
+      "title": "【大反響につき、発売即追加生産決定！】荻原規子〈勾玉三部作〉完結30周年記念「文庫新装版・美装箱セット」、全国の書店で販売開始！",
+      "summary": "[徳間書店] 株式会社徳間書店（本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、日本ファンタジーの旗手・荻原規子による〈勾玉三部作〉の完結30周年を記念した「文庫新装版・美装箱セット」について、好評につき...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001135.000016935.html",
+      "publishedAt": "2026-10-16T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T21:27:17.716290Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "f5e568d461c14bfe32dc",
       "title": "西小山にカカオジェラート専門店「リエノ」 酒場「オニール」営業時間外に",
@@ -12009,7 +12029,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 579,
+      "scanned": 561,
       "accepted": 0
     },
     {
@@ -12034,7 +12054,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
