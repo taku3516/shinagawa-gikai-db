@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-15T21:36:06.618359Z",
+  "generatedAt": "2026-10-16T04:46:50.337642Z",
   "items": [
+    {
+      "id": "469482ba9632379c5186",
+      "title": "【いよいよ全国制覇！】『串カツ田中 和歌山駅前店』が10月23日(金)にオープン！",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）の子会社である株式会社串カツ田中は、2026年10月23日(金)に「串カツ田中 和歌山駅前店」をオープンいたします...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000638.000027839.html",
+      "publishedAt": "2026-10-16T02:40:43Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T04:46:25.871391Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "f4293883782e2b77f64b",
       "title": "美容医療業界向け｜AI内製によるSaaS費削減の最新の動向と戦略レポート【2026年10月版】",
@@ -11844,7 +11864,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 140,
+      "scanned": 141,
       "accepted": 0
     },
     {
@@ -11856,7 +11876,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 555,
+      "scanned": 588,
       "accepted": 0
     },
     {
@@ -11881,7 +11901,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -11938,9 +11958,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
