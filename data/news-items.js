@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-16T04:46:50.337642Z",
+  "generatedAt": "2026-10-16T11:42:51.227554Z",
   "items": [
+    {
+      "id": "f5e568d461c14bfe32dc",
+      "title": "西小山にカカオジェラート専門店「リエノ」 酒場「オニール」営業時間外に",
+      "summary": "カカオジェラート専門店「LLENO（リエノ） cacao&gelato」（品川区小山6）が、西小山駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5097",
+      "publishedAt": "2026-10-16T06:47:46Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "西小山駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "469482ba9632379c5186",
       "title": "【いよいよ全国制覇！】『串カツ田中 和歌山駅前店』が10月23日(金)にオープン！",
@@ -21,6 +42,137 @@ window.SHINAGAWA_NEWS = {
         "東五反田"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "ed91bf4ad80a95881ef4",
+      "title": "ARTE TOKYO（アルテ トウキョウ）",
+      "summary": "2026年10月10日（土）～12月31日（木）、「ARTE TOKYO （東京国際文化芸術祭） 」が開催されます。 ARTE TOKYOは、東京で催されるアート、演劇、音楽、イルミネーション、エンターテインメントなど多彩なプログラムを結び合わせ、ひとつひとつの輝きを都市全体の魅力として描き出すフェスティバルです。初開催となる2026年は、臨海エリア、日比谷・丸の内エリア、代々木・渋谷エリアをコアエリアとして、東京2020大会文化プログラムのリバイバルをはじめとする多数のア…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/arte-tokjyo",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "7daa639150cc69e916d9",
+      "title": "ARTE TOKYO CRUISE（アルテ トウキョウ クルーズ）",
+      "summary": "2026年10月10日(土)～12月20 日（日）の週末・祝日、ARTE TOKYO CRUISE（アルテ トウキョウ クルーズ）が運航されます。 ARTE TOKYOの会期中、国際美術展「TOKYO ATLAS」との連携企画として、会場となる天王洲アイルとお台場をはじめとする臨海エリアを結ぶ特別クルーズ船「ARTE TOKYO CRUISE」が東京都、品川区及び東京国際文化芸術祭実行委員会の共催で運航されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/artecruise",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "6c3a27597d0453b17adc",
+      "title": "国際美術展 TOKYO ATLAS (東京アトラス）",
+      "summary": "2026年10月10日（土）～12月20日（日）、天王洲・台場・青海エリアで「国際美術展 TOKYO ATLAS」 が開催中です。 本イベントでは、東京の臨海エリアに国内外のアーティストが集い、都市と水辺が響き合うダイナミックな空間で“新しい東京の風景”をアートとして描き出します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyo-atlas",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "22fd391481d793ba07a8",
+      "title": "大井町トラックス「第2回 鉄道FESTA！」",
+      "summary": "2026年10 月17 日（土）、OIMACHI TRACKS内、TRACKS PARK にて「第2回 鉄道FESTA」が開催されます。 今年4月に大盛況に終わった「鉄道FESTA！」が、さらにパワーアップ。今回は、大井町にゆかりのあるJR東日本、JR東日本ステーションサービス、東急電鉄、東京臨海高速鉄道の4社が大集合して、鉄道の魅力を楽しく体験できるイベントを開催します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/trainfesta2",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "0f33fa1328ecded92694",
+      "title": "目黒川 秋の歴史クルーズ ～目黒川から台場跡をめぐる～",
+      "summary": "2026年10月31日（土）、「目黒川 秋の歴史クルーズ ～目黒川から台場跡をめぐる～」が運航します。 毎回大好評の目黒川の歴史クルーズ。船に乗りながら、ガイドが目黒川沿いや台場跡周辺の名所や歴史を解説します。普段は見られない船の上からの街の景色を眺めながら歴史に思いを馳せてみてはいかがでしょう。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/autmuncruise2026",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "07a7c3725db94bf7e59a",
+      "title": "八潮地区総合防災訓練を実施",
+      "summary": "八潮地域センター 電話：03-3799-2000 FAX：03-3799-3310",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-yashio/shisetsu-kuyakusyo-chiiki-yashio-oshirase/hpg000020753.html",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "八潮"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "70c3c2946791fc087fc5",
+      "title": "旧荏原第四中学校跡地ＰＦＩ事業",
+      "summary": "企画経営部 企画課 政策推進担当 電話：03-5742-7863 FAX：03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-zaisei/kuseizyoho-siryo-zaisei-plan/20251027113427.html",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T14:13:07.521277Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 6
     },
     {
       "id": "f4293883782e2b77f64b",
@@ -3973,25 +4125,6 @@ window.SHINAGAWA_NEWS = {
         "武蔵小山商店街"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "70c3c2946791fc087fc5",
-      "title": "旧荏原第四中学校跡地ＰＦＩ事業",
-      "summary": "企画経営部 企画課 政策推進担当 電話：03-5742-7863 FAX：03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-zaisei/kuseizyoho-siryo-zaisei-plan/20251027113427.html",
-      "publishedAt": "2026-09-10T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-31T14:13:07.521277Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 6
     },
     {
       "id": "68c36f8643051c55ec55",
@@ -11853,7 +11986,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 8
+      "accepted": 9
     },
     {
       "source": "警視庁",
@@ -11876,7 +12009,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 588,
+      "scanned": 579,
       "accepted": 0
     },
     {
@@ -11901,7 +12034,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
