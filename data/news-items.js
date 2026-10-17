@@ -1,7 +1,46 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-16T21:27:40.845874Z",
+  "generatedAt": "2026-10-17T04:45:37.820471Z",
   "items": [
+    {
+      "id": "9611f23817dff95859cb",
+      "title": "品川ハロウィン（シナハロ） 2026",
+      "summary": "2026年10月10日（土）～18日（日）、品川シーズンテラスおよび近隣エリアにて「品川ハロウィン2026」が開催されます。品川港南エリアの住民・企業が連携し、楽しいお祭りを、みんなが出会い交流できる場をつくろう！と始まった「品川ハロウィン」。子どもが安心できるまちづくりを目指し開催される楽しいイベントです。 【公式】しながわ観光協会 SHINAGAWA TOURISM ASSOCIATION [OFFICIAL](@shinagawonder)がシェアした投稿",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinahallo2026",
+      "publishedAt": "2026-10-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-17T04:45:16.231193Z",
+      "tags": [
+        "子育て教育",
+        "都市開発",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 6
+    },
+    {
+      "id": "35d23af52fe4493da4bb",
+      "title": "品川区 文化財一般公開 2026",
+      "summary": "2026年10月31日（土）～11月3日（火・祝）、品川区内各地にて秋の恒例「文化財一般公開」が行われます。 （※今年度は伊藤博文墓の公開は予定されておりません） ▼品川エリア ●旧品川警察署品川橋交通待機所 （令和5年度国登録有形文化財） 場所：南品川櫻河岸まちなか観光案内所 南品川1-3-4 （※17:00まで）",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bunkazaikoukai2026",
+      "publishedAt": "2026-10-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-17T04:45:16.231193Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "南品川"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "2a070f7fb3b4b62b6f07",
       "title": "【大反響につき、発売即追加生産決定！】荻原規子〈勾玉三部作〉完結30周年記念「文庫新装版・美装箱セット」、全国の書店で販売開始！",
@@ -12029,7 +12068,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 561,
+      "scanned": 501,
       "accepted": 0
     },
     {
@@ -12054,7 +12093,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
