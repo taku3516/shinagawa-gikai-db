@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-19T05:00:12.257127Z",
+  "generatedAt": "2026-10-19T13:45:05.216405Z",
   "items": [
+    {
+      "id": "b3f5765a3bafa4dff965",
+      "title": "しながわ水族館が開業35周年 記念式典で新水族館構想のアイデア表彰",
+      "summary": "「しながわ水族館」（品川区勝島3）は10月18日、イルカ・アシカスタジアムで開業35周年を記念したセレモニーを行った。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5098",
+      "publishedAt": "2026-10-19T09:55:56Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-19T13:44:39.751209Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "勝島",
+        "しながわ水族館"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "732bdb45d65108e90816",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月19日号）を公開しました‼",
@@ -54,6 +74,27 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "364d8bccc22a7fa91f03",
+      "title": "大井町イルミネーション 2026",
+      "summary": "2026年10月31日（土）～2027年1月11日（月・祝）、 大井町駅周辺にて 「大井町イルミネーション」が開催されます。 幻想的な光とともに、品川区と木材活用に関する協定を結ぶ高知県木材協会の協力を得て、同県の木材を活用したシンボルツリーも設置されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026",
+      "publishedAt": "2026-10-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-19T13:44:39.751209Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 16
     },
     {
       "id": "9611f23817dff95859cb",
@@ -12098,7 +12139,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 9
+      "accepted": 10
     },
     {
       "source": "警視庁",
@@ -12120,9 +12161,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 1301, column 14"
+      "status": "ok",
+      "scanned": 540,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -12146,7 +12187,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
