@@ -1,7 +1,60 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-17T04:45:37.820471Z",
+  "generatedAt": "2026-10-19T05:00:12.257127Z",
   "items": [
+    {
+      "id": "732bdb45d65108e90816",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月19日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年10月19日号(令和8年10月13日～令和8年10月18日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63808.html",
+      "publishedAt": "2026-10-19T04:59:47.330210Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-19T04:59:47.330210Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "d02deb03d88a207811d1",
+      "title": "「採用して終わり」から「長くともに働く」医療現場へ。「採用・予防・対処」の3フェーズで医療人材の離職防止を実現する「アシタバプロジェクト」を開始",
+      "summary": "[株式会社エムステージグループ] 株式会社エムステージグループ（本社：東京都品川区、代表取締役：杉田雄二）は、医療従事者や職員の離職防止と組織定着を実現し、持続可能な医療経営を支える新プロジェクト「アシタバプロジェクト」を2026年10...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000237.000019504.html",
+      "publishedAt": "2026-10-19T04:40:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-19T04:59:47.330210Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "164d53c3c6dbbc00b151",
+      "title": "高校生からも「選挙の推し活化」「情報の偏り」を懸念する声。公平・中立な政策比較の場として『品川区長選挙ネット討論会』開催【11月9日(月)20:30～配信】",
+      "summary": "[公益社団法人東京青年会議所] [画像: https://prcdn.freetls.fastly.net/release_image/73012/373/73012-373-1d81ba27c800c2b5fec2d8ffea3248de-1280x720.png?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000373.000073012.html",
+      "publishedAt": "2026-10-19T04:20:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-19T04:59:47.330210Z",
+      "tags": [
+        "行政",
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "9611f23817dff95859cb",
       "title": "品川ハロウィン（シナハロ） 2026",
@@ -104,7 +157,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "ed91bf4ad80a95881ef4",
-      "title": "ARTE TOKYO（アルテ トウキョウ）",
+      "title": "ARTE TOKYO（アルテ トーキョー）",
       "summary": "2026年10月10日（土）～12月31日（木）、「ARTE TOKYO （東京国際文化芸術祭） 」が開催されます。 ARTE TOKYOは、東京で催されるアート、演劇、音楽、イルミネーション、エンターテインメントなど多彩なプログラムを結び合わせ、ひとつひとつの輝きを都市全体の魅力として描き出すフェスティバルです。初開催となる2026年は、臨海エリア、日比谷・丸の内エリア、代々木・渋谷エリアをコアエリアとして、東京2020大会文化プログラムのリバイバルをはじめとする多数のア…",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -121,7 +174,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "7daa639150cc69e916d9",
-      "title": "ARTE TOKYO CRUISE（アルテ トウキョウ クルーズ）",
+      "title": "ARTE TOKYO CRUISE（アルテ トーキョー クルーズ）",
       "summary": "2026年10月10日(土)～12月20 日（日）の週末・祝日、ARTE TOKYO CRUISE（アルテ トウキョウ クルーズ）が運航されます。 ARTE TOKYOの会期中、国際美術展「TOKYO ATLAS」との連携企画として、会場となる天王洲アイルとお台場をはじめとする臨海エリアを結ぶ特別クルーズ船「ARTE TOKYO CRUISE」が東京都、品川区及び東京国際文化芸術祭実行委員会の共催で運航されます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -12050,13 +12103,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 3,
+      "scanned": 2,
       "accepted": 0
     },
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 141,
+      "scanned": 139,
       "accepted": 0
     },
     {
@@ -12067,9 +12120,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 501,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1301, column 14"
     },
     {
       "source": "朝日新聞",
@@ -12093,7 +12146,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
