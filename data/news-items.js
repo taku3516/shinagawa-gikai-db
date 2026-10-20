@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-19T13:45:05.216405Z",
+  "generatedAt": "2026-10-20T00:30:13.697337Z",
   "items": [
+    {
+      "id": "3157e5c07e0c197d5f07",
+      "title": "【アンケート】子育て支援情報発信アプリ「しながわこどもぽけっと」満足度調査",
+      "summary": "子ども育成課 子ども育成係 電話：03-5742-6720 FAX：03-5742-6351",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-kateisoudan/20260217155258.html",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T00:28:31.044767Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
     {
       "id": "b3f5765a3bafa4dff965",
       "title": "しながわ水族館が開業35周年 記念式典で新水族館構想のアイデア表彰",
@@ -12162,7 +12180,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 540,
+      "scanned": 544,
       "accepted": 0
     },
     {
@@ -12244,9 +12262,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
