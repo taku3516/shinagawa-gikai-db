@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-20T00:30:13.697337Z",
+  "generatedAt": "2026-10-20T08:44:52.187332Z",
   "items": [
+    {
+      "id": "9b42e07962b6e9c4411d",
+      "title": "ニュース「さわやかさん」更新しました！",
+      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63821.html",
+      "publishedAt": "2026-10-20T08:44:31.703491Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-20T08:44:31.703491Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "79cc7a0e0d0a96025a32",
+      "title": "ファミサポ通信更新しました！",
+      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63831.html",
+      "publishedAt": "2026-10-20T08:44:31.703491Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-20T08:44:31.703491Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "3157e5c07e0c197d5f07",
       "title": "【アンケート】子育て支援情報発信アプリ「しながわこどもぽけっと」満足度調査",
@@ -12162,13 +12196,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 2,
+      "scanned": 3,
       "accepted": 0
     },
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 139,
+      "scanned": 138,
       "accepted": 0
     },
     {
@@ -12180,7 +12214,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 544,
+      "scanned": 568,
       "accepted": 0
     },
     {
@@ -12244,15 +12278,15 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "品川区 新着情報",
-      "status": "ok",
-      "scanned": 40,
-      "accepted": 40
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 404: Not Found"
     },
     {
       "source": "品川区 地域センター新着情報",
       "status": "ok",
-      "scanned": 30,
-      "accepted": 30
+      "scanned": 0,
+      "accepted": 0
     },
     {
       "source": "品川区社会福祉協議会",
@@ -12262,9 +12296,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
