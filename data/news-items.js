@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-20T08:44:52.187332Z",
+  "generatedAt": "2026-10-20T14:24:35.854453Z",
   "items": [
     {
       "id": "9b42e07962b6e9c4411d",
@@ -35,6 +35,99 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "3a858034f362d0a7ff3d",
+      "title": "3社連携で「循環型GPUサーバー」を活用した新たなAIインフラ事業を開始",
+      "summary": "[エクストリーム−Ｄ株式会社] エクストリームーD株式会社（本社：東京都品川区、代表取締役：柴田 直樹、以下「エクストリームーD」）、TES-AMM JAPAN株式会社（本社：神奈川県相模原市中央区、代表取締役：小沢 国彦、以下「TES-AMM」）、Cor...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000061.000021585.html",
+      "publishedAt": "2026-10-20T07:41:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "86a6fcaceab2cb381ff4",
+      "title": "中延ハロウィンスタンプラリー 2026",
+      "summary": "2026年10月25日（日）、中延商店街「なかのぶスキップロード」にて「中延ハロウィンスタンプラリー」が開催されます。 商店街にちりばめられたネームスタンプを5個集めると、お菓子のつかみどりができます。混雑解消のため整理券を配布。イベントの詳細は 公式ホームページ よりご確認ください。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nakanobuhallo2026",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "71ceedf3656586e42d03",
+      "title": "五反田 ハロウィンスタンプラリー 2026",
+      "summary": "2026年10月25日（日）五反田 目黒川沿いの一角で「五反田ハロウィンスタンプラリー」が開催されます。 お菓子やくじ引きなど、子どもから大人まで楽しめる地域イベント。お子様（15歳以下）には、お菓子の詰め合わせをプレゼント（先着600名様）",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/gotandahallow2026",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
+    {
+      "id": "49352511603b6f5cdd3c",
+      "title": "とごしぎんざハロウィン2026",
+      "summary": "2026年10月25日（日）、「とごしぎんざハロウィン2026 」が開催されます。 お菓子の配布は、中学生以下のお子様が対象。10月15日（木）～10月25日（日）の期間中に「ほっとスポット戸越銀座」で参加用紙を入手しご参加ください（数に限り有り、無くなり次第終了）。詳しくは こちら",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/togoshihallo2026",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "16d78fe1021b98d46fbf",
+      "title": "ゲートシティ大崎 「HAPPY HALLOWEEN EVENT」（ハッピーハロウィンイベント）2026",
+      "summary": "2026年10月24日（土）に、大崎ゲートシティにて「HAPPY HALLOWEEN EVENT」が開催されます。 ふわふわ遊具やジャンボスライダー、ステージイベント「パウ・パトロール パウフェクトショー」やお子様へのお菓子の配布、LINEスタンプラリー抽選会など、楽しいイベントが盛りだくさんです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/osakihallo2026",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "ゲートシティ大崎"
+      ],
+      "relevanceScore": 8
     },
     {
       "id": "3157e5c07e0c197d5f07",
@@ -150,7 +243,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "9611f23817dff95859cb",
-      "title": "品川ハロウィン（シナハロ） 2026",
+      "title": "【終了】品川ハロウィン（シナハロ） 2026",
       "summary": "2026年10月10日（土）～18日（日）、品川シーズンテラスおよび近隣エリアにて「品川ハロウィン2026」が開催されます。品川港南エリアの住民・企業が連携し、楽しいお祭りを、みんなが出会い交流できる場をつくろう！と始まった「品川ハロウィン」。子どもが安心できるまちづくりを目指し開催される楽しいイベントです。 【公式】しながわ観光協会 SHINAGAWA TOURISM ASSOCIATION [OFFICIAL](@shinagawonder)がシェアした投稿",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -306,7 +399,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "22fd391481d793ba07a8",
-      "title": "大井町トラックス「第2回 鉄道FESTA！」",
+      "title": "【終了】大井町トラックス「第2回 鉄道FESTA！」",
       "summary": "2026年10 月17 日（土）、OIMACHI TRACKS内、TRACKS PARK にて「第2回 鉄道FESTA」が開催されます。 今年4月に大盛況に終わった「鉄道FESTA！」が、さらにパワーアップ。今回は、大井町にゆかりのあるJR東日本、JR東日本ステーションサービス、東急電鉄、東京臨海高速鉄道の4社が大集合して、鉄道の魅力を楽しく体験できるイベントを開催します。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -12191,7 +12284,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 10
+      "accepted": 9
     },
     {
       "source": "警視庁",
@@ -12214,7 +12307,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 568,
+      "scanned": 574,
       "accepted": 0
     },
     {
@@ -12239,7 +12332,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
