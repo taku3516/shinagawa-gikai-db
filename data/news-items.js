@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-21T12:07:30.178934Z",
+  "generatedAt": "2026-10-21T21:52:19.034804Z",
   "items": [
+    {
+      "id": "8ae6ed8114f79e7b702d",
+      "title": "KLP塾2026、高知県室戸市で初のフィールドワークを実施！第4回ではMGM大阪・渡辺会長が登壇",
+      "summary": "[ワクセル] ソーシャルビジネスコミュニティ「ワクセル」（所在地：東京都品川区、主催：嶋村吉洋、総合プロデューサー：住谷知厚）がメディアで全面協力している、KLP合同会社（代表社員：島田大輝）と公益財団法人大阪観光...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000316.000052391.html",
+      "publishedAt": "2026-10-21T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T21:51:58.772555Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "4e5c91cd6cdb2b167ac7",
       "title": "五反田駅近くにレストラン＆カフェ「茶房〇△□」 都心で自然を感じる空間に",
@@ -12360,9 +12377,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "品川経済新聞",
-      "status": "ok",
-      "scanned": 10,
-      "accepted": 9
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 404: Not Found"
     },
     {
       "source": "警視庁",
@@ -12385,7 +12402,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 582,
+      "scanned": 585,
       "accepted": 1
     },
     {
@@ -12410,7 +12427,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
