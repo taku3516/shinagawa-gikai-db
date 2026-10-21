@@ -1,7 +1,68 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-21T05:05:13.879314Z",
+  "generatedAt": "2026-10-21T12:07:30.178934Z",
   "items": [
+    {
+      "id": "4e5c91cd6cdb2b167ac7",
+      "title": "五反田駅近くにレストラン＆カフェ「茶房〇△□」 都心で自然を感じる空間に",
+      "summary": "レストラン＆カフェ「茶房〇△□（まるさんかくしかく）」（品川区東五反田2、TEL 03-5860-2357）が10月1日、五反田駅近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5100",
+      "publishedAt": "2026-10-21T10:43:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T12:07:10.601491Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "47a3a5a8886a2c4cac02",
+      "title": "10月22日開催の委員会の予定を掲載。",
+      "summary": "10月22日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20927.html",
+      "publishedAt": "2026-10-21T07:09:43Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T12:07:10.601491Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "aa544cf6bc75bfc7c799",
+      "title": "埼玉・八潮市の道路陥没事故めぐり遺族が慰謝料など約1億2500万円求め県を提訴",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/be34305cf02044168e4b64039797ad7d",
+      "publishedAt": "2026-10-21T06:58:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T12:07:10.601491Z",
+      "tags": [
+        "事件事故",
+        "交通"
+      ],
+      "locations": [
+        "八潮"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "e58d80b74d88b156b00d",
       "title": "DYM MESSENGERS、新体制で挑んだD.LEAGUE 26-27 SEASON開幕戦で勝利！",
@@ -12324,13 +12385,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 561,
-      "accepted": 0
+      "scanned": 582,
+      "accepted": 1
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
@@ -12349,7 +12410,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
