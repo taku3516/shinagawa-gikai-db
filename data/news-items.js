@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-20T14:24:35.854453Z",
+  "generatedAt": "2026-10-21T05:05:13.879314Z",
   "items": [
+    {
+      "id": "e58d80b74d88b156b00d",
+      "title": "DYM MESSENGERS、新体制で挑んだD.LEAGUE 26-27 SEASON開幕戦で勝利！",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000550.000027235.html",
+      "publishedAt": "2026-10-21T04:40:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T05:04:52.945908Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "9b42e07962b6e9c4411d",
       "title": "ニュース「さわやかさん」更新しました！",
@@ -12289,7 +12306,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 3,
+      "scanned": 5,
       "accepted": 0
     },
     {
@@ -12307,13 +12324,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 574,
+      "scanned": 561,
       "accepted": 0
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 39,
       "accepted": 0
     },
     {
