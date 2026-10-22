@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-22T05:07:43.847120Z",
+  "generatedAt": "2026-10-22T12:11:51.438892Z",
   "items": [
+    {
+      "id": "0448c5bb54544d6504b0",
+      "title": "西五反田に居酒屋「酒肴あおもん穣」 地下本店の真上、魚の炭火焼きも提供",
+      "summary": "居酒屋「酒肴（しゅこう）あおもん穣（じょう）」（品川区西五反田2、TEL 03-6420-3949）が大崎郵便局近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5101",
+      "publishedAt": "2026-10-22T10:15:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大崎",
+        "西五反田"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "0aa0d75ad4615e85bc2d",
       "title": "10月23日（金）午後１時から第３回定例会のインターネット生中継を放映。",
@@ -37,6 +57,27 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "06aa0e2e23220124638e",
+      "title": "五反田駅近くにレストラン＆カフェ「茶房〇△□」 都心で自然を感じる空間に",
+      "summary": "レストラン＆カフェ「茶房〇△□（まるさんかくしかく）」（品川区東五反田2、TEL 03-5860-2357）が10月1日、五反田駅近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5100",
+      "publishedAt": "2026-10-21T10:43:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
     },
     {
       "id": "4e5c91cd6cdb2b167ac7",
@@ -262,6 +303,26 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
+      "id": "bc5b21697a19e36205a6",
+      "title": "しながわ水族館が開業35周年 記念式典で新水族館構想のアイデア表彰",
+      "summary": "「しながわ水族館」（品川区勝島3）は10月18日、イルカ・アシカスタジアムで開業35周年を記念したセレモニーを行った。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5098",
+      "publishedAt": "2026-10-19T09:55:56Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "勝島",
+        "しながわ水族館"
+      ],
+      "relevanceScore": 16
+    },
+    {
       "id": "b3f5765a3bafa4dff965",
       "title": "しながわ水族館が開業35周年 記念式典で新水族館構想のアイデア表彰",
       "summary": "「しながわ水族館」（品川区勝島3）は10月18日、イルカ・アシカスタジアムで開業35周年を記念したセレモニーを行った。 #品川経済新聞",
@@ -411,6 +472,27 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "上大崎",
         "大崎"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "10673a0e3c6a973de545",
+      "title": "西小山にカカオジェラート専門店「リエノ」 酒場「オニール」営業時間外に",
+      "summary": "カカオジェラート専門店「LLENO（リエノ） cacao&gelato」（品川区小山6）が、西小山駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5097",
+      "publishedAt": "2026-10-16T06:47:46Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "西小山駅"
       ],
       "relevanceScore": 16
     },
@@ -622,6 +704,26 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
+      "id": "bba78c6eeac346ef6416",
+      "title": "大崎のO美術館で「小林敬生展」 木口木版画70点超、ギャラリートークも",
+      "summary": "企画展「陽はまた昇る Sunrise Again 小林敬生（けいせい）展 版画 1967-2024」が10月17日、大崎ニューシティ2号館2階のO美術館（品川区大崎1、TEL 03-3495-4040）で始まる。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5096",
+      "publishedAt": "2026-10-15T11:07:25Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大崎",
+        "大崎ニューシティ"
+      ],
+      "relevanceScore": 16
+    },
+    {
       "id": "62171eb1d5dd57de47bc",
       "title": "大崎のO美術館で「小林敬生展」 木口木版画70点超、ギャラリートークも",
       "summary": "企画展「陽はまた昇る Sunrise Again 小林敬生（けいせい）展 版画 1967-2024」が10月17日、大崎ニューシティ2号館2階のO美術館（品川区大崎1、TEL 03-3495-4040）で始まる。 #品川経済新聞",
@@ -780,6 +882,27 @@ window.SHINAGAWA_NEWS = {
         "天王洲"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "749f991b9eb44f9446f2",
+      "title": "武蔵小山に飲食店「アトラス」 昼は総菜・弁当販売、夜は立ち飲み店に",
+      "summary": "総菜・弁当店とスタンディングバー「atlas（アトラス）」（品川区小山4）が武蔵小山駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5095",
+      "publishedAt": "2026-10-14T12:38:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 16
     },
     {
       "id": "9fdf53593af8acc06317",
@@ -971,6 +1094,28 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
+      "id": "bb16fd374206a771d0df",
+      "title": "戸越公園にカレー店「スリランカスタイル パル」 週1ランチ営業から独立",
+      "summary": "スリランカカレー店「Sri Lanka Style Pal（スリランカスタイル パル）」（品川区戸越5）が戸越公園駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5094",
+      "publishedAt": "2026-10-13T10:50:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
+      ],
+      "relevanceScore": 22
+    },
+    {
       "id": "13140533180af194a750",
       "title": "戸越公園にカレー店「スリランカスタイル パル」 週1ランチ営業から独立",
       "summary": "スリランカカレー店「Sri Lanka Style Pal（スリランカスタイル パル）」（品川区戸越5）が戸越公園駅近くにオープンして1カ月がたった。 #品川経済新聞",
@@ -1107,6 +1252,27 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "上大崎",
         "大崎"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "4f7a1ea87e79d11555ef",
+      "title": "北品川に焼き菓子店「マウントベイク」 週3営業、日替わりメニューで",
+      "summary": "焼き菓子店「MT.BAKE （マウントベイク）」（品川区北品川1）が、京急本線北品川駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5093",
+      "publishedAt": "2026-10-09T10:50:33Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "北品川",
+        "北品川駅"
       ],
       "relevanceScore": 16
     },
@@ -1275,6 +1441,27 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "aaf0c66fe2f55bac1e5f",
+      "title": "品プリが野外スポーツ「ロゲイニング」開催へ 「広域品川圏」を歩いて得点競う",
+      "summary": "品川プリンスホテル（港区高輪4）は10月1日、高輪ゲートウェイ駅、品川駅、大井町駅などを含む「広域品川圏」で、野外スポーツ「シナプリ ロゲイニング」を開始した。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5092",
+      "publishedAt": "2026-10-07T15:00:55Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 8
     },
     {
       "id": "cf52d0f44c8ed6bcb6d9",
@@ -12396,9 +12583,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "品川経済新聞",
-      "status": "error",
-      "accepted": 0,
-      "message": "HTTP Error 404: Not Found"
+      "status": "ok",
+      "scanned": 10,
+      "accepted": 9
     },
     {
       "source": "警視庁",
@@ -12421,8 +12608,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 583,
-      "accepted": 1
+      "scanned": 608,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
