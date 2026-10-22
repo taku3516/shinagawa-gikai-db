@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-21T21:52:19.034804Z",
+  "generatedAt": "2026-10-22T05:07:43.847120Z",
   "items": [
+    {
+      "id": "0aa0d75ad4615e85bc2d",
+      "title": "10月23日（金）午後１時から第３回定例会のインターネット生中継を放映。",
+      "summary": "10月23日（金）午後１時から第３回定例会のインターネット生中継を放映。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20929.html",
+      "publishedAt": "2026-10-22T04:37:06Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T05:07:22.596216Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "8ae6ed8114f79e7b702d",
       "title": "KLP塾2026、高知県室戸市で初のフィールドワークを実施！第4回ではMGM大阪・渡辺会長が登壇",
@@ -12389,9 +12408,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "東京消防庁",
-      "status": "ok",
-      "scanned": 138,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "syntax error: line 1, column 0"
     },
     {
       "source": "NHK NEWS",
@@ -12402,7 +12421,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 585,
+      "scanned": 583,
       "accepted": 1
     },
     {
@@ -12427,7 +12446,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
