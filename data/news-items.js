@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-22T17:26:10.929164Z",
+  "generatedAt": "2026-10-22T21:48:07.345780Z",
   "items": [
+    {
+      "id": "8461308f888f81c1217d",
+      "title": "天王洲をスタートアップの集積拠点へ。寺田倉庫、ワークプレイス事業「Creation Hub TENNOZ」を始動",
+      "summary": "[寺田倉庫] 寺田倉庫株式会社（東京都品川区 代表取締役社長：寺田航平）は、スタートアップの成長支援および天王洲におけるビジネスイノベーション拠点の形成を目的に、スタートアップ向けワークプレイス事業「Creation Hub...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000498.000014158.html",
+      "publishedAt": "2026-10-22T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T21:47:46.752099Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "0448c5bb54544d6504b0",
       "title": "西五反田に居酒屋「酒肴あおもん穣」 地下本店の真上、魚の炭火焼きも提供",
@@ -12652,7 +12671,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
