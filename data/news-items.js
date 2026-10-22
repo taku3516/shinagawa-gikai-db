@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-22T12:11:51.438892Z",
+  "generatedAt": "2026-10-22T17:26:10.929164Z",
   "items": [
     {
       "id": "0448c5bb54544d6504b0",
@@ -40,6 +40,25 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "99f28ecfc0a8dd397328",
+      "title": "旗ヶ岡商店街「たまご祭り」",
+      "summary": "2026年10月23日（金）、旗の台・旗ヶ岡商店街にて「たまご祭り」が開催されます。 旗が岡商店会の7軒の飲食店が「たまご」をテーマにコラボレーション。 「卵」を通じて 『食べて、飲んで、楽しんで』 旗ヶ岡商店会から 新たなムーブメントが産み落とされるかもしれません。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tamago",
+      "publishedAt": "2026-10-22T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T17:25:45.941309Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "旗の台"
+      ],
+      "relevanceScore": 6
     },
     {
       "id": "8ae6ed8114f79e7b702d",
@@ -12608,7 +12627,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 608,
+      "scanned": 597,
       "accepted": 0
     },
     {
