@@ -1,7 +1,65 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-22T21:48:07.345780Z",
+  "generatedAt": "2026-10-23T05:07:19.588997Z",
   "items": [
+    {
+      "id": "449bd29a12a17ccdb880",
+      "title": "躯体工事の次世代の担い手へ。躯体サブコンのエルライン、2027年卒内定式を開催",
+      "summary": "[株式会社エルライン] 株式会社エルライン（本社：東京都品川区東品川2-1-11 ハーバープレミアムビル5階、代表取締役社長：浅野勝人、以下エルライン）は、2026年10月1日（木）、エルライン本社にて「2027年卒 内定式」を開催し、グル...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000018.000093600.html",
+      "publishedAt": "2026-10-23T04:40:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T05:06:58.097240Z",
+      "tags": [
+        "都市開発",
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "f53627a5d03ccade8540",
+      "title": "AIインフラ及びGPUコンピュートサービスの提供開始に関するお知らせ",
+      "summary": "[データセクション株式会社] データセクション株式会社（本社：東京都品川区、代表取締役社長執行役員CEO：石原紀彦、東証グロース：3905、以下「当社」）は、2026年9月18日付プレスリリース「大口契約の締結に関するお知らせ」にて公表しま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000091.000036921.html",
+      "publishedAt": "2026-10-23T03:41:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T05:06:58.097240Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "045b53ecc8db09d2c217",
+      "title": "「縁線図鑑 ～気づけばほら、つながりだらけ。～」開設２周年 「１１月５日(木) いいご縁の日 縁線図鑑の奢りデー」を開催！ 学芸大学駅、武蔵小山駅、三軒茶屋駅など東急線沿線の２６店舗で、 “最初の１杯”が無料！いいご縁の日は東急線沿線で乾杯！",
+      "summary": "",
+      "source": "東急からのお知らせ",
+      "sourceId": "tokyu-information",
+      "sourceType": "rss",
+      "url": "https://www.tokyu.co.jp/company/information/detail/62311.html",
+      "publishedAt": "2026-10-23T01:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T05:06:58.097240Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "8461308f888f81c1217d",
       "title": "天王洲をスタートアップの集積拠点へ。寺田倉庫、ワークプレイス事業「Creation Hub TENNOZ」を始動",
@@ -12633,9 +12691,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "東京消防庁",
-      "status": "error",
-      "accepted": 0,
-      "message": "syntax error: line 1, column 0"
+      "status": "ok",
+      "scanned": 141,
+      "accepted": 0
     },
     {
       "source": "NHK NEWS",
@@ -12646,7 +12704,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 597,
+      "scanned": 615,
       "accepted": 0
     },
     {
@@ -12671,7 +12729,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
@@ -12683,7 +12741,7 @@ window.SHINAGAWA_NEWS = {
       "source": "東急からのお知らせ",
       "status": "ok",
       "scanned": 10,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東京都下水道局 報道発表",
@@ -12694,7 +12752,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 35,
+      "scanned": 36,
       "accepted": 0
     },
     {
