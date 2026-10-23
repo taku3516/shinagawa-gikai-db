@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-23T11:54:42.541078Z",
+  "generatedAt": "2026-10-23T17:20:06.048558Z",
   "items": [
+    {
+      "id": "f271ebfcdac7459c0c6d",
+      "title": "SNSフォロワー25万人超！ 国内外でカリスマ的人気を誇るイラストレーターかずのこ氏、初のストーリーイラストブック『しくみ博物館』、徳間書店より発売！",
+      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、かずのこ氏のストーリーイラストブック『しくみ博物館(https://www.amazon.co.jp/dp/4198662622/)』を10月24日（土）に発売いたしま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001143.000016935.html",
+      "publishedAt": "2026-10-23T15:10:04Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T17:19:41.701744Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "12c7ef96456a783e7157",
       "title": "天王洲で展覧会「雨穴の変な世界展。」 ホラー作家・雨穴さんの世界を再現",
@@ -117,6 +137,25 @@ window.SHINAGAWA_NEWS = {
         "武蔵小山駅"
       ],
       "relevanceScore": 8
+    },
+    {
+      "id": "3a1843e992fbc7f724f5",
+      "title": "品川らくご会 Vol.1 柳家吉緑独演「芝浜」",
+      "summary": "2026年11月28日（土）、品川区立品川歴史館 2階講堂にて、「品川らくご会 Vol.1 」が開催されます。 初回となる今回は、品川区在住の真打・柳家吉緑の独演会です。同館で開催中の特別展「 品川湾から東京港へー未完の港湾都市ー 」に合わせ、情緒あふれる人情噺の名作『芝浜』を口演します。 記念すべき第一回目のゲストは、動物ものまねでお馴染みの江戸家猫八師匠です。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/rakugo1",
+      "publishedAt": "2026-10-23T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T17:19:41.701744Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "品川歴史館"
+      ],
+      "relevanceScore": 12
     },
     {
       "id": "8461308f888f81c1217d",
@@ -12742,7 +12781,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 572,
+      "scanned": 560,
       "accepted": 0
     },
     {
@@ -12824,9 +12863,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "error",
-      "accepted": 0,
-      "message": "<urlopen error timed out>"
+      "status": "ok",
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
