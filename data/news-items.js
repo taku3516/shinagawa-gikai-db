@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-23T17:20:06.048558Z",
+  "generatedAt": "2026-10-23T21:33:34.316240Z",
   "items": [
     {
       "id": "f271ebfcdac7459c0c6d",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000001143.000016935.html",
-      "publishedAt": "2026-10-23T15:10:04Z",
+      "publishedAt": "2026-10-23T21:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-10-23T17:19:41.701744Z",
       "tags": [
@@ -21,6 +21,24 @@ window.SHINAGAWA_NEWS = {
         "大崎"
       ],
       "relevanceScore": 16
+    },
+    {
+      "id": "308ab02f95c0d12b3a2b",
+      "title": "がん患者さまやご家族を支援するチャリティイベント 「リレー・フォー・ライフ・ジャパン2026東京上野」に出展",
+      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランス（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、9月26日（土）～27日（日）に上野恩賜公園噴水広場（竹の台広場）で開催...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001058.000010292.html",
+      "publishedAt": "2026-10-23T19:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T21:33:11.502483Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
     },
     {
       "id": "12c7ef96456a783e7157",
@@ -12781,7 +12799,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 560,
+      "scanned": 549,
       "accepted": 0
     },
     {
@@ -12806,7 +12824,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
