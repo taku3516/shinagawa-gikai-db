@@ -1,7 +1,65 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-23T05:07:19.588997Z",
+  "generatedAt": "2026-10-23T11:54:42.541078Z",
   "items": [
+    {
+      "id": "12c7ef96456a783e7157",
+      "title": "天王洲で展覧会「雨穴の変な世界展。」 ホラー作家・雨穴さんの世界を再現",
+      "summary": "展覧会「雨穴（うけつ）の変な世界展。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5102",
+      "publishedAt": "2026-10-23T08:27:33Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T11:53:03.744011Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "d86df5d87d6d1734fcf5",
+      "title": "第4回定例会のポスターを掲載。",
+      "summary": "第4回定例会のポスターを掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20936.html",
+      "publishedAt": "2026-10-23T08:16:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T11:53:03.744011Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "47a3a5a8886a2c4cac02",
+      "title": "10月22日開催の委員会の結果を掲載。",
+      "summary": "10月22日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20927.html",
+      "publishedAt": "2026-10-23T05:01:43Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T12:07:10.601491Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "449bd29a12a17ccdb880",
       "title": "躯体工事の次世代の担い手へ。躯体サブコンのエルライン、2027年卒内定式を開催",
@@ -195,26 +253,6 @@ window.SHINAGAWA_NEWS = {
         "五反田駅"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "47a3a5a8886a2c4cac02",
-      "title": "10月22日開催の委員会の予定を掲載。",
-      "summary": "10月22日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20927.html",
-      "publishedAt": "2026-10-21T07:09:43Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-21T12:07:10.601491Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "aa544cf6bc75bfc7c799",
@@ -12686,7 +12724,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 5,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -12704,7 +12742,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 615,
+      "scanned": 572,
       "accepted": 0
     },
     {
@@ -12729,7 +12767,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -12786,9 +12824,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "しながわ観光協会",
-      "status": "ok",
-      "scanned": 14,
-      "accepted": 14
+      "status": "error",
+      "accepted": 0,
+      "message": "<urlopen error timed out>"
     }
   ]
 };
