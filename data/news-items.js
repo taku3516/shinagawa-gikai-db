@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-23T21:33:34.316240Z",
+  "generatedAt": "2026-10-25T16:38:47.081857Z",
   "items": [
+    {
+      "id": "c8e5dd7bbb3f06ed79ec",
+      "title": "ホテルメトロポリタン大井町トラックス 「COLOR TRANSFORM -MASQUERADE BAR-」",
+      "summary": "2026年10月29日（木）、30日（金） 、の2日間、ホテルメトロポリタン大井町トラックス26階の「The TRAVELERS HOUSE ROOFTOP BAR」にて、大人のハロウィンイベント「COLOR TRANSFORM -MASQUERADE BAR-」が開催されます。 ルーフトップから望む東京の夜景とともに、ハロウィンを楽しむ夜を大井町で過ごしてみては。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/cot",
+      "publishedAt": "2026-10-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-25T16:38:23.990009Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "f271ebfcdac7459c0c6d",
       "title": "SNSフォロワー25万人超！ 国内外でカリスマ的人気を誇るイラストレーターかずのこ氏、初のストーリーイラストブック『しくみ博物館』、徳間書店より発売！",
@@ -12781,7 +12800,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 4,
+      "scanned": 3,
       "accepted": 0
     },
     {
@@ -12799,7 +12818,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 549,
+      "scanned": 263,
       "accepted": 0
     },
     {
@@ -12824,7 +12843,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
