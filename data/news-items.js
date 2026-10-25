@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-25T16:38:47.081857Z",
+  "generatedAt": "2026-10-25T21:01:15.951011Z",
   "items": [
+    {
+      "id": "10e3bd6a4cc922cfef2a",
+      "title": "ボラミニ情報更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63939.html",
+      "publishedAt": "2026-10-25T21:00:58.246577Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-25T21:00:58.246577Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "c8e5dd7bbb3f06ed79ec",
       "title": "ホテルメトロポリタン大井町トラックス 「COLOR TRANSFORM -MASQUERADE BAR-」",
@@ -370,7 +387,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "9b42e07962b6e9c4411d",
       "title": "ニュース「さわやかさん」更新しました！",
-      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -387,7 +404,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "79cc7a0e0d0a96025a32",
       "title": "ファミサポ通信更新しました！",
-      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -12818,7 +12835,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 263,
+      "scanned": 267,
       "accepted": 0
     },
     {
