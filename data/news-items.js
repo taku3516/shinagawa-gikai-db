@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-25T21:01:15.951011Z",
+  "generatedAt": "2026-10-26T05:04:55.189047Z",
   "items": [
+    {
+      "id": "11ee887640bf3c6fd795",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月26日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年10月26日号(令和8年10月19日～令和8年10月25日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-64009.html",
+      "publishedAt": "2026-10-26T05:04:32.365725Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-26T05:04:32.365725Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "cd7b93c9a64780bdb74a",
+      "title": "REACH大崎クラフトマーケット",
+      "summary": "2026年11月4日（水）、JR大崎駅南口東西自由通路夢さん橋にて「REACH大崎クラフトマーケット」が開催されます。 雑貨やアクセサリーなど、個性豊かな作品が集まる毎月恒例の「手作り市」。大崎駅から徒歩0分というアクセスの良さで、周辺住民だけでなくオフィスワーカーにも人気のクラフトマーケットです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202611",
+      "publishedAt": "2026-10-26T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-26T05:04:32.365725Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "10e3bd6a4cc922cfef2a",
       "title": "ボラミニ情報更新しました！",
@@ -12835,7 +12873,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 267,
+      "scanned": 316,
       "accepted": 0
     },
     {
