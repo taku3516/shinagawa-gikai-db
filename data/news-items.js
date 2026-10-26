@@ -1,7 +1,29 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-26T05:04:55.189047Z",
+  "generatedAt": "2026-10-26T13:23:16.737663Z",
   "items": [
+    {
+      "id": "25a051e6ff31b6926e7a",
+      "title": "グリーンパーク戸越で「ハロウィン農園マルシェ」開催迫る お菓子配布も",
+      "summary": "「ハロウィン農園マルシェ」が10月31日、戸越公園駅近くの会員制シェア農園「Green Park TOGOSHI（グリーンパーク戸越）」（品川区戸越6）で開催される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5103",
+      "publishedAt": "2026-10-26T11:21:37Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-26T13:22:56.535720Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
+      ],
+      "relevanceScore": 22
+    },
     {
       "id": "11ee887640bf3c6fd795",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月26日号）を公開しました‼",
@@ -18,6 +40,44 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "eafa979a8e68729e1d22",
+      "title": "2026大井町ハロウィン",
+      "summary": "2026年10月31日（土）、「大井町ハロウィン」が開催されます。 ハロウィンこどもマルシェやフォトスポットラリー、 ステージでは、ハロウィンダンスやファッションショー、ミュージックステージが予定されています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/2026ooihalloween",
+      "publishedAt": "2026-10-26T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-26T13:22:56.535720Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "0880f980bb40e04cf77a",
+      "title": "【11/6,7,8限定】しながわクルーズ「水上オペラ特別便」（夜）",
+      "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 11月6日（金）、7日（土）、8日（日）は、「 天王洲水上オペラ2026『リトルマーメイド』」の公演に合わせ、開演前にロマンチックな天王洲の夜景とレインボーブリッジを船上から楽しむ特別クルーズを運航。船内では1ドリンクをお楽しみいただけます。また、オペラ観覧（SS席）がセットになったセットチケットもご用意しています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawacruise202611opera",
+      "publishedAt": "2026-10-26T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-26T13:22:56.535720Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 14
     },
     {
       "id": "cd7b93c9a64780bdb74a",
@@ -880,7 +940,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "0f33fa1328ecded92694",
-      "title": "目黒川 秋の歴史クルーズ ～目黒川から台場跡をめぐる～",
+      "title": "【受付終了】目黒川 秋の歴史クルーズ ～目黒川から台場跡をめぐる～",
       "summary": "2026年10月31日（土）、「目黒川 秋の歴史クルーズ ～目黒川から台場跡をめぐる～」が運航します。 毎回大好評の目黒川の歴史クルーズ。船に乗りながら、ガイドが目黒川沿いや台場跡周辺の名所や歴史を解説します。普段は見られない船の上からの街の景色を眺めながら歴史に思いを馳せてみてはいかがでしょう。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -12855,7 +12915,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 3,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -12872,9 +12932,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 316,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1276, column 42"
     },
     {
       "source": "朝日新聞",
