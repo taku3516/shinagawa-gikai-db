@@ -1,7 +1,61 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-27T09:13:16.061388Z",
+  "generatedAt": "2026-10-27T15:28:05.296752Z",
   "items": [
+    {
+      "id": "1578f738651034967046",
+      "title": "DYM人事部主催「第23回 人事クラブ（人事交流会）」開催",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年10月14日（...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000554.000027235.html",
+      "publishedAt": "2026-10-27T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-27T15:27:45.040386Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0530fdd0c4760c8074a1",
+      "title": "株式会社PR TIMES・山口拓己氏が登壇。「20期連続黒字の裏側と経営の鉄則～上場と失敗から学んだ持続的成長の思考法～」を語る。",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年10月19日（...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000555.000027235.html",
+      "publishedAt": "2026-10-27T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-27T15:27:45.040386Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0c951d62bef0ed3c5fae",
+      "title": "天王洲で水上オペラ「リトルマーメイド」開催へ 運河上の特設ステージで公演",
+      "summary": "「天王洲水上オペラ2026 ～Harmonious nights between art and canal～」が11月6日〜8日、天王洲運河の特設水上ステージで上演される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5104",
+      "publishedAt": "2026-10-27T10:02:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-27T15:27:45.040386Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "67ef2924f23e968fba95",
       "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 11月",
@@ -12954,7 +13008,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2716, column 45"
+      "message": "not well-formed (invalid token): line 2103, column 83"
     },
     {
       "source": "朝日新聞",
@@ -12978,7 +13032,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
