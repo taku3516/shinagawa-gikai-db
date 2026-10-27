@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-26T13:23:16.737663Z",
+  "generatedAt": "2026-10-27T09:13:16.061388Z",
   "items": [
+    {
+      "id": "67ef2924f23e968fba95",
+      "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 11月",
+      "summary": "「Tokyo City Flea Market」は毎週土曜日・日曜日に大井競馬場第一駐車場で開催される都内最大級のフリーマーケットです。 専門的なお店も多数出店。バラエティ豊かな品揃えで、地元客だけでなく海外からの観光客も訪れます。週末は、大井競馬場でお宝探しはいかがでしょう。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyo-city-flea-market-202611",
+      "publishedAt": "2026-10-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-27T09:12:52.738199Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 10
+    },
     {
       "id": "25a051e6ff31b6926e7a",
       "title": "グリーンパーク戸越で「ハロウィン農園マルシェ」開催迫る お菓子配布も",
@@ -2228,7 +2248,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "1b7eacdb75ebb4abd359",
-      "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動にご協力をお願いいたします （実施場所が変更になりました）",
+      "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動にご協力をお願いいたします （ご協力ありがとうございました）",
       "summary": "８月に発生した千葉・北陸豪雨により、千葉県、石川県、富山県、福井県を中心に甚大な被害が発生いたしました。品川ボランティアセンターでは「令和８年８月千葉・北陸豪雨 被災者支援街頭募金活動」を下記の通り実施することとなりました。 ここ大井町から被災地千葉、北陸へ皆様の温かいお気持ちを届けます。皆様の温かいお気持ちとご協力をお願いいたします。",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
@@ -12915,13 +12935,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 4,
+      "scanned": 5,
       "accepted": 0
     },
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 141,
+      "scanned": 142,
       "accepted": 0
     },
     {
@@ -12934,7 +12954,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1276, column 42"
+      "message": "not well-formed (invalid token): line 2716, column 45"
     },
     {
       "source": "朝日新聞",
