@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-27T15:28:05.296752Z",
+  "generatedAt": "2026-10-28T05:59:40.258217Z",
   "items": [
+    {
+      "id": "7ec0cfc2bfaabe26f63e",
+      "title": "STUDIO EASE 目黒「日本蒸奇博覧会 2026」",
+      "summary": "2026年10月31日（土）、11月1日（日）目黒駅より徒歩5分のSTUDIO EASE目黒にて今年も「日本蒸奇博覧会 2026」が開催されます。主催は 一般社団法人スチームパンク協会 。 「スチームパンク（Steampunk）」とは、今の世界とは異なる文化や科学技術で発展した「未来世界」を意味するSFジャンルのひとつ。まるで海外の街角のようなSTUDIO EASEを会場に、 全国から集うクリエイターや職人によるオリジナル作品即売会をメインに、フォト体験、音楽ライブ、個性派…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/steampunk2026",
+      "publishedAt": "2026-10-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-28T05:59:17.229604Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "目黒駅"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "52c50a4fb4174f902fd4",
+      "title": "大盛湯 Ｘ 筆文字アート体験",
+      "summary": "2026年11月1日（日）～3日（火・祝）、大盛湯にて「筆文字アート体験」が開催されます。 主催は、合同会社梵梵 Terrace。開店前の静かな時間帯に、脱衣所を貸し切った特別な空間で筆文字アートを楽しめる約1時間半の体験イベントです。 アート体験のあとは、開店直後の澄んだお湯にゆっくり浸かれる入浴チケットが付いています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bonbon",
+      "publishedAt": "2026-10-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-28T05:59:17.229604Z",
+      "tags": [
+        "地域イベント",
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
     {
       "id": "1578f738651034967046",
       "title": "DYM人事部主催「第23回 人事クラブ（人事交流会）」開催",
@@ -12995,7 +13033,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 142,
+      "scanned": 141,
       "accepted": 0
     },
     {
@@ -13008,7 +13046,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2103, column 83"
+      "message": "not well-formed (invalid token): line 2317, column 71"
     },
     {
       "source": "朝日新聞",
@@ -13032,7 +13070,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
