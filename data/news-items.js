@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-28T05:59:40.258217Z",
+  "generatedAt": "2026-10-28T13:18:20.444250Z",
   "items": [
+    {
+      "id": "66d8a3da42b5e58cdcee",
+      "title": "西大井のニコンミュージアムで企画展「ファインダーの秘密」 仕組みを解説",
+      "summary": "企画展「ファインダーの秘密−のぞいてみる。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5105",
+      "publishedAt": "2026-10-28T08:36:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-28T13:18:01.880921Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大井",
+        "西大井"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "7ec0cfc2bfaabe26f63e",
       "title": "STUDIO EASE 目黒「日本蒸奇博覧会 2026」",
@@ -13033,7 +13053,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 141,
+      "scanned": 142,
       "accepted": 0
     },
     {
@@ -13046,7 +13066,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2317, column 71"
+      "message": "not well-formed (invalid token): line 2258, column 40"
     },
     {
       "source": "朝日新聞",
