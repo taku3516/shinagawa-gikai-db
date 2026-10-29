@@ -1,7 +1,85 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-29T01:06:48.143635Z",
+  "generatedAt": "2026-10-29T10:16:12.306030Z",
   "items": [
+    {
+      "id": "04d783a01f54ae459e82",
+      "title": "JR大崎駅近くで銅線約220キロ窃盗か 男（26）逮捕",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/ea67f5acea454b0ebcf05e6bcd0fac68",
+      "publishedAt": "2026-10-29T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T10:15:53.320004Z",
+      "tags": [
+        "事件事故",
+        "交通"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "40a15c10203fb7254812",
+      "title": "【サイバー攻撃や外部サービスの障害でも、現場の重要業務を止めない】イオレ、液浸冷却を活用した「閉域エッジ基盤」のPoCを実施、参加事業者およびセキュリティパートナーを募集",
+      "summary": "[株式会社イオレ] 株式会社イオレ（本社：東京都港区、代表取締役社長 兼 CEO：瀧野 諭吾、以下イオレ）と、イオレが本年11月末に完全子会社化を予定しているWOODMAN株式会社（本社：東京都品川区、代表取締役：小野 慎二郎、以...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000328.000030850.html",
+      "publishedAt": "2026-10-29T06:45:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T10:15:53.320004Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "efeca1ee018ad7fa3221",
+      "title": "子どもの“好き嫌い”と“栄養バランス”の両立を「食」と「腸内環境」から考える 保育・教育フェア「保育博2026」で「すくすくOisix」責任者がセミナー登壇",
+      "summary": "[オイシックス株式会社] 食品のサブスクリプションサービスを提供するオイシックス株式会社（本社：東京都品川区、代表取締役社長：高島 宏平）が展開する、保育園・幼稚園などの保育施設向け給食サービス「すくすくOisix」は、2026年1...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001256.000008895.html",
+      "publishedAt": "2026-10-29T06:41:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T10:15:53.320004Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "78861a1568c7c5bfe632",
+      "title": "不動前に「立ち飲み 上機嫌」 武蔵小山の居酒屋「シュチニクリン」系列店",
+      "summary": "「立ち飲み 上機嫌」（品川区西五反田5）が不動前駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5106",
+      "publishedAt": "2026-10-29T05:10:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T10:15:53.320004Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "小山",
+        "不動前駅"
+      ],
+      "relevanceScore": 20
+    },
     {
       "id": "66d8a3da42b5e58cdcee",
       "title": "西大井のニコンミュージアムで企画展「ファインダーの秘密」 仕組みを解説",
@@ -13071,7 +13149,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 142,
+      "scanned": 141,
       "accepted": 0
     },
     {
@@ -13082,9 +13160,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2624, column 40"
+      "status": "ok",
+      "scanned": 522,
+      "accepted": 1
     },
     {
       "source": "朝日新聞",
@@ -13108,7 +13186,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
