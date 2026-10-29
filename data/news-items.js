@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-28T13:18:20.444250Z",
+  "generatedAt": "2026-10-29T01:06:48.143635Z",
   "items": [
     {
       "id": "66d8a3da42b5e58cdcee",
@@ -21,6 +21,24 @@ window.SHINAGAWA_NEWS = {
         "西大井"
       ],
       "relevanceScore": 8
+    },
+    {
+      "id": "0ed95f11ac1ea53b3d80",
+      "title": "ダーツライブが協賛する「Space Rover Cup 2026」が開催 ー筑波大学・大阪工業大学チームが優勝",
+      "summary": "[株式会社ダーツライブ] セガサミーグループの株式会社ダーツライブ（本社：東京都品川区、代表取締役 社長執行役員：阿部 東）は、東京情報大学（設置者：学校法人東京農業大学）が主催する、宇宙開発・ロボティクス分野に関心を持つ学...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000206.000043246.html",
+      "publishedAt": "2026-10-28T06:15:26Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T01:06:29.423639Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "7ec0cfc2bfaabe26f63e",
@@ -13066,7 +13084,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2258, column 40"
+      "message": "not well-formed (invalid token): line 2624, column 40"
     },
     {
       "source": "朝日新聞",
@@ -13090,7 +13108,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
