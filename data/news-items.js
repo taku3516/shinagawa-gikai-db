@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-30T10:17:49.234410Z",
+  "generatedAt": "2026-10-30T18:07:06.845664Z",
   "items": [
+    {
+      "id": "6a222274d58ea5a9d003",
+      "title": "米国中間選挙を前に、MFN政策の日本・欧州市場への影響に注目 e-Projection長手代表が国際学会で講演",
+      "summary": "[株式会社e-Projection] 医薬品の売上予測・事業性評価、薬価・マーケットアクセス戦略を専門とする株式会社e-Projection（本社：東京都品川区、代表取締役：長手寿明）は、2026年10月27日、オランダ・アムステルダムで開催された国際会...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000005.000193279.html",
+      "publishedAt": "2026-10-30T16:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T01:11:39.300502Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "c4dc9f7d651988309d55",
       "title": "不動前で飲食イベント「不動前バル」開催迫る 新たな試み「外バル」も",
@@ -40,24 +58,6 @@ window.SHINAGAWA_NEWS = {
         "東五反田"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "6a222274d58ea5a9d003",
-      "title": "米国中間選挙を前に、MFN政策の日本・欧州市場への影響に注目 e-Projection長手代表が国際学会で講演",
-      "summary": "[株式会社e-Projection] 医薬品の売上予測・事業性評価、薬価・マーケットアクセス戦略を専門とする株式会社e-Projection（本社：東京都品川区、代表取締役：長手寿明）は、2026年10月27日、オランダ・アムステルダムで開催された国際会...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000005.000193279.html",
-      "publishedAt": "2026-10-30T00:40:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-30T01:11:39.300502Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "c3eda51f122be5594d20",
@@ -13292,7 +13292,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2954, column 35"
+      "message": "not well-formed (invalid token): line 2990, column 35"
     },
     {
       "source": "朝日新聞",
@@ -13316,7 +13316,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
