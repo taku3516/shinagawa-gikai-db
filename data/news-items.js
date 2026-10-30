@@ -1,7 +1,44 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-29T10:16:12.306030Z",
+  "generatedAt": "2026-10-30T01:11:59.230889Z",
   "items": [
+    {
+      "id": "d5143625913018c7aaef",
+      "title": "【PISOLA初の公園内出店！】PISOLA千葉公園店が2026年11月11日（水）オープン",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）のグループ会社である株式会社ピソラ（本社：滋賀県草津市、代表取締役：鬼界 友則）は、2026年11月11日（水）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000640.000027839.html",
+      "publishedAt": "2026-10-30T00:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T01:11:39.300502Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "6a222274d58ea5a9d003",
+      "title": "米国中間選挙を前に、MFN政策の日本・欧州市場への影響に注目 e-Projection長手代表が国際学会で講演",
+      "summary": "[株式会社e-Projection] 医薬品の売上予測・事業性評価、薬価・マーケットアクセス戦略を専門とする株式会社e-Projection（本社：東京都品川区、代表取締役：長手寿明）は、2026年10月27日、オランダ・アムステルダムで開催された国際会...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000005.000193279.html",
+      "publishedAt": "2026-10-30T00:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T01:11:39.300502Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "04d783a01f54ae459e82",
       "title": "JR大崎駅近くで銅線約220キロ窃盗か 男（26）逮捕",
@@ -13160,9 +13197,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 522,
-      "accepted": 1
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2134, column 35"
     },
     {
       "source": "朝日新聞",
@@ -13209,7 +13246,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 36,
+      "scanned": 37,
       "accepted": 0
     },
     {
