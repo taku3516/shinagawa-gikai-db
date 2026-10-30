@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-30T01:11:59.230889Z",
+  "generatedAt": "2026-10-30T10:17:49.234410Z",
   "items": [
+    {
+      "id": "c4dc9f7d651988309d55",
+      "title": "不動前で飲食イベント「不動前バル」開催迫る 新たな試み「外バル」も",
+      "summary": "飲食イベント「不動前ほおバルよくバルはしご酒」（通称・不動前バル）が11月5日〜7日、東急目黒線・不動前駅周辺で開催される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5107",
+      "publishedAt": "2026-10-30T07:53:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "不動前駅"
+      ],
+      "relevanceScore": 4
+    },
     {
       "id": "d5143625913018c7aaef",
       "title": "【PISOLA初の公園内出店！】PISOLA千葉公園店が2026年11月11日（水）オープン",
@@ -38,6 +58,79 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "c3eda51f122be5594d20",
+      "title": "第8回 品川国際映画祭 2026",
+      "summary": "2026年11月9日（月）～14日（土）、品川インターシティにて「品川国際映画祭」が開催されます。 品川インターシティに、幻想的で非日常的なアウトドアシアターが登場し、世界各国から厳選されたショートフィルムを上映します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "9c42652a0b7e08426d36",
+      "title": "物流博物館 企画展「馬で運ぶ」",
+      "summary": "2026年10月20日（火）～12月20日（日）、物流博物館にて企画展「馬で運ぶ」が開催されます。 私たちの暮らしを支えてきた「物流」の歴史をたどる企画展。 かつて物流の主役だった馬や牛による輸送の歩みを、貴重な館蔵資料とともに紹介します。見どころは、江戸時代の京都で活躍した馬借「山城屋」と「亀屋」の豪華な馬飾り。両家の馬飾りがそろうのは25年ぶりです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/lmuse-hourse",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "5737865272e7146826ab",
+      "title": "o-i STUDIO「アトマト in 大井町」",
+      "summary": "10月31日（土）～11月3日（火・祝）、 o-i STUDIO にて「 アトマトin大井町 」が開催されます。 106組の作家によるアートグッズのイベントが大井町にて開催。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/o-i-studio_artmart2026",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "24fe579f69829b753f40",
+      "title": "ニコンミュージアム 企画展「ファインダーの秘密—のぞいてみる。カメラで見る世界。」",
+      "summary": "2026年10月22日（木）～2027年2月27日（土）、西大井のニコンミュージアムにて企画展「ファインダーの秘密—のぞいてみる。カメラで見る世界。」が開催されます。 レンジファインダー、一眼レフ、ミラーレス。カメラが変われば、世界の見え方も変わります。それぞれの方式は、何が、どのように違うのでしょう。 本企画展では、ファインダーの仕組みを体感できる3つのエリアで方式の違いによるファインダーの見え方の違いや、その仕組みについて、実機や模型などを使い分かりやすく解説します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nikon_finder",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "西大井"
+      ],
+      "relevanceScore": 8
     },
     {
       "id": "04d783a01f54ae459e82",
@@ -13199,7 +13292,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2134, column 35"
+      "message": "not well-formed (invalid token): line 2954, column 35"
     },
     {
       "source": "朝日新聞",
@@ -13223,7 +13316,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -13240,7 +13333,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 報道発表",
       "status": "ok",
-      "scanned": 10,
+      "scanned": 11,
       "accepted": 0
     },
     {
