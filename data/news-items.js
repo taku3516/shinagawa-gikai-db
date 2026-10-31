@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-10-31T12:53:17.709764Z",
+  "generatedAt": "2026-10-31T19:24:57.632442Z",
   "items": [
     {
       "id": "6a222274d58ea5a9d003",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000005.000193279.html",
-      "publishedAt": "2026-10-31T10:40:03Z",
+      "publishedAt": "2026-10-31T16:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-10-30T01:11:39.300502Z",
       "tags": [
@@ -19,6 +19,29 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "8fbe8a4a1c6a441d7e9e",
+      "title": "リアル謎解きゲーム in しながわ「探偵しなにゃん ザ・ファーストミッション ～商店街からの挑戦状～ 」",
+      "summary": "品川区としながわ観光協会は、品川区内の３つの商店街（中延商店街、戸越銀座商店街、武蔵小山商店街パルム）を巡りながら物語を進めていく、「リアル謎解きゲーム in しながわ『探偵しなにゃん ザ・ファーストミッション ～商店街からの挑戦状～』」を開催します。 今回は“各商店街のマスコットキャラクター”たちからの挑戦状を受けて、前作にも登場した“しながわ観光協会公式キャラクター しなにゃん”とともに、商店街に潜む新たな謎を解き明かしていきます。 全ての謎を解きゲームをクリアすると、…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nazonyan2026",
+      "publishedAt": "2026-10-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-31T19:24:36.129689Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延",
+        "小山",
+        "戸越",
+        "戸越銀座商店街",
+        "武蔵小山商店街"
+      ],
+      "relevanceScore": 30
     },
     {
       "id": "c4dc9f7d651988309d55",
@@ -13292,7 +13315,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1113, column 29"
+      "message": "not well-formed (invalid token): line 1084, column 29"
     },
     {
       "source": "朝日新聞",
