@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-01T00:15:43.718667Z",
+  "generatedAt": "2026-11-01T06:32:17.539223Z",
   "items": [
+    {
+      "id": "dff36fedb5a1762f951d",
+      "title": "五反田に海賊をテーマにした 隠れ家Bar「Bar MYTAS(マイタス)」 11月11日(水)グランドオープン！",
+      "summary": "[株式会社 MYTAS] 株式会社 MYTAS（本社：東京都港区、代表取締役社長：鈴木貴之）は、2026年11月11日（水）、東京都品川区東五反田に、海賊をテーマにした隠れ家「Bar MYTAS（バーマイタス）」をグランドオープンします。 [画像1:...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000002.000193733.html",
+      "publishedAt": "2026-11-01T05:40:46Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-01T06:31:59.884411Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "6a222274d58ea5a9d003",
       "title": "米国中間選挙を前に、MFN政策の日本・欧州市場への影響に注目 e-Projection長手代表が国際学会で講演",
@@ -10,7 +29,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000005.000193279.html",
-      "publishedAt": "2026-10-31T22:40:02Z",
+      "publishedAt": "2026-11-01T04:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-10-30T01:11:39.300502Z",
       "tags": [
@@ -13313,9 +13332,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 1135, column 29"
+      "status": "ok",
+      "scanned": 243,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -13339,7 +13358,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
