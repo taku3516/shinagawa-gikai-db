@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-01T06:32:17.539223Z",
+  "generatedAt": "2026-11-01T16:11:16.512800Z",
   "items": [
+    {
+      "id": "fde7cc4f856228595e01",
+      "title": "平田梨奈×「推しガチャ(R)」コラボ企画を10月31日より開催！サイン入りチェキ付きSOLUNAグッズや、あなたの質問に答える個別動画が登場",
+      "summary": "[株式会社Ｏｓｈｉｍａｔｅ] 株式会社Oshimate（本社：東京都品川区西五反田3丁目15番6号、代表取締役：孫 熙久）は、同社が企画・運営するオンラインくじサービス「推しガチャ(R)」において、平田梨奈との期間限定コラボ企画「ひらりーから...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000006.000188689.html",
+      "publishedAt": "2026-11-01T13:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-01T16:10:57.254773Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "dff36fedb5a1762f951d",
       "title": "五反田に海賊をテーマにした 隠れ家Bar「Bar MYTAS(マイタス)」 11月11日(水)グランドオープン！",
@@ -13302,9 +13321,9 @@ window.SHINAGAWA_NEWS = {
   "reports": [
     {
       "source": "品川区議会",
-      "status": "ok",
-      "scanned": 10,
-      "accepted": 10
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "品川経済新聞",
@@ -13332,9 +13351,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 243,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 885, column 46"
     },
     {
       "source": "朝日新聞",
@@ -13358,7 +13377,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
@@ -13374,21 +13393,21 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "東京都下水道局 報道発表",
-      "status": "ok",
-      "scanned": 11,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "東京都下水道局 トピックス",
-      "status": "ok",
-      "scanned": 37,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "東京都下水道局 イベント",
-      "status": "ok",
-      "scanned": 2,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "東京都公式サイト",
@@ -13399,13 +13418,13 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "status": "error",
       "accepted": 0,
-      "message": "HTTP Error 404: Not Found"
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "品川区 地域センター新着情報",
-      "status": "ok",
-      "scanned": 0,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "品川区社会福祉協議会",
