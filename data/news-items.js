@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-01T16:11:16.512800Z",
+  "generatedAt": "2026-11-01T22:14:26.074796Z",
   "items": [
     {
       "id": "fde7cc4f856228595e01",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000006.000188689.html",
-      "publishedAt": "2026-11-01T13:40:02Z",
+      "publishedAt": "2026-11-01T19:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-11-01T16:10:57.254773Z",
       "tags": [
@@ -3688,7 +3688,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "19d653dd88fb696ae97d",
-      "title": "しながわ盆フェス 2026 2026/10/31(土), 2026/11/01(日) 観る 遊ぶ 食べる 大井競馬場前駅, 立会川駅",
+      "title": "【終了】しながわ盆フェス 2026 2026/10/31(土), 2026/11/01(日) 観る 遊ぶ 食べる 大井競馬場前駅, 立会川駅",
       "summary": "2026年10月31日（土）、11月1日（日）、大井競馬場にて「しながわ盆フェス2026」が開催されます。 冬を彩るイルミネーション「 東京メガイルミ 」の開幕に合わせ、盆踊りを中心としたイベント「しながわ盆フェス2026」が開催されます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -13321,9 +13321,9 @@ window.SHINAGAWA_NEWS = {
   "reports": [
     {
       "source": "品川区議会",
-      "status": "error",
-      "accepted": 0,
-      "message": "HTTP Error 403: Forbidden"
+      "status": "ok",
+      "scanned": 10,
+      "accepted": 10
     },
     {
       "source": "品川経済新聞",
@@ -13353,7 +13353,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 885, column 46"
+      "message": "not well-formed (invalid token): line 983, column 46"
     },
     {
       "source": "朝日新聞",
@@ -13393,21 +13393,21 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "東京都下水道局 報道発表",
-      "status": "error",
-      "accepted": 0,
-      "message": "HTTP Error 403: Forbidden"
+      "status": "ok",
+      "scanned": 11,
+      "accepted": 0
     },
     {
       "source": "東京都下水道局 トピックス",
-      "status": "error",
-      "accepted": 0,
-      "message": "HTTP Error 403: Forbidden"
+      "status": "ok",
+      "scanned": 37,
+      "accepted": 0
     },
     {
       "source": "東京都下水道局 イベント",
-      "status": "error",
-      "accepted": 0,
-      "message": "HTTP Error 403: Forbidden"
+      "status": "ok",
+      "scanned": 2,
+      "accepted": 0
     },
     {
       "source": "東京都公式サイト",
@@ -13418,13 +13418,13 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "status": "error",
       "accepted": 0,
-      "message": "HTTP Error 403: Forbidden"
+      "message": "HTTP Error 404: Not Found"
     },
     {
       "source": "品川区 地域センター新着情報",
-      "status": "error",
-      "accepted": 0,
-      "message": "HTTP Error 403: Forbidden"
+      "status": "ok",
+      "scanned": 0,
+      "accepted": 0
     },
     {
       "source": "品川区社会福祉協議会",
