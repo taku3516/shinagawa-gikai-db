@@ -1,7 +1,93 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-01T22:14:26.074796Z",
+  "generatedAt": "2026-11-02T06:32:46.140582Z",
   "items": [
+    {
+      "id": "e41ec5c5b3a3c4d2a251",
+      "title": "令和9年度 奨学研究資金奨学生募集",
+      "summary": "奨学研究資金とは、ひとり親世帯の生活の安定と人材の育成を図るため、学費の一部を交付する制度（給付型）です。昭和50年9月に区内篤志家の寄付金をもとに創設されました。現在は、品川区内の町会・自治会をはじめ、区民の皆様にご支援いただいている「歳末たすけあい募金」を原資とし交付しています。 (1)申請の日の1年前から、引き続き区内に住所を有する ひとり親世帯 のお子さん。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-62231.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "91a7c4c347eab060bb6b",
+      "title": "「エールしながわ通信」11月号を発行しました！",
+      "summary": "ひきこもりなどでお悩みのご本人やご家族の社会参加を応援する「エールしながわ」では、毎月広報誌を発行しています。 11月号ではエール社会体験の様子、報告記事を掲載しています。ぜひ、下記のリンクよりご覧ください！ ※過去の通信もご覧にいただけます エールしながわ通信：https://shinashakyo.jp/yell/magazine.html",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64116.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1032c789f7b1ba220dcb",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年11月2日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年11月2日号(令和8年10月26日～令和8年11月1日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64157.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "0e6ace1e437742587039",
+      "title": "「しながわ社協だより11月号」 更新しました！",
+      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64181.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "0887244fdea40d5c3e00",
+      "title": "令和９年・２０２７年版カレンダー・手帳のご寄付承ります！",
+      "summary": "企業や個人の方々からのカレンダーのご寄付を今年も承ります。 いただいたカレンダーは民生委員の方等を通じ、ひとり暮らしの高齢者の方や必要とされる方にお配りする予定です。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64098.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
     {
       "id": "fde7cc4f856228595e01",
       "title": "平田梨奈×「推しガチャ(R)」コラボ企画を10月31日より開催！サイン入りチェキ付きSOLUNAグッズや、あなたの質問に答える個別動画が登場",
@@ -13340,7 +13426,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 141,
+      "scanned": 142,
       "accepted": 0
     },
     {
@@ -13353,7 +13439,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 983, column 46"
+      "message": "not well-formed (invalid token): line 1174, column 43"
     },
     {
       "source": "朝日新聞",
@@ -13377,7 +13463,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -13400,7 +13486,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 37,
+      "scanned": 39,
       "accepted": 0
     },
     {
