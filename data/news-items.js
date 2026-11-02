@@ -1,7 +1,48 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-02T06:32:46.140582Z",
+  "generatedAt": "2026-11-02T19:39:04.358339Z",
   "items": [
+    {
+      "id": "192b768ccc2b0066fb19",
+      "title": "西五反田にラーメン店「札幌みその」 都内2店舗目、五反田店限定セットも",
+      "summary": "ラーメン店「札幌みその 五反田店」（品川区西五反田1）が五反田駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5108",
+      "publishedAt": "2026-11-02T11:47:51Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-02T19:38:44.437160Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "54168d6bf1da33397873",
+      "title": "11月4日開催の委員会の予定を掲載。",
+      "summary": "11月4日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20958.html",
+      "publishedAt": "2026-11-02T08:37:12Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-02T19:38:44.437160Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "e41ec5c5b3a3c4d2a251",
       "title": "令和9年度 奨学研究資金奨学生募集",
@@ -13439,7 +13480,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1174, column 43"
+      "message": "not well-formed (invalid token): line 2413, column 45"
     },
     {
       "source": "朝日新聞",
