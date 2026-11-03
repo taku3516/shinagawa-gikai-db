@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-02T19:39:04.358339Z",
+  "generatedAt": "2026-11-03T02:58:53.902777Z",
   "items": [
+    {
+      "id": "d11214a3c5d6040f7572",
+      "title": "アトミックソフトウェア、SBCメディカルグループホールディングスとの資本業務提携で資金調達を実施、シリーズCラウンドで6億円を調達",
+      "summary": "[アトミックソフトウェア株式会社] クリニック向けオールインワンSaaS「medicalforce」を提供するアトミックソフトウェア株式会社（本社：東京都品川区、代表取締役CEO：畠中 翔一、以下「当社」）は、国内外の医療機関に経営支援を行うSBCメディカ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000003.000176667.html",
+      "publishedAt": "2026-11-03T01:40:34Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-03T02:58:36.908619Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "192b768ccc2b0066fb19",
       "title": "西五反田にラーメン店「札幌みその」 都内2店舗目、五反田店限定セットも",
@@ -13480,7 +13497,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2413, column 45"
+      "message": "not well-formed (invalid token): line 2571, column 45"
     },
     {
       "source": "朝日新聞",
@@ -13504,7 +13521,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
