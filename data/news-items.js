@@ -1,7 +1,47 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-04T11:19:38.152561Z",
+  "generatedAt": "2026-11-04T19:56:20.472609Z",
   "items": [
+    {
+      "id": "bfc485834043723ff476",
+      "title": "大井競馬場再整備で最後の「東京メガイルミ」 近隣在住、在勤学者に特典も",
+      "summary": "イルミネーションイベント「東京メガイルミ2026-2027」が10月31日、東京シティ競馬（大井競馬場、品川区勝島2）で始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5109",
+      "publishedAt": "2026-11-04T12:35:15Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T19:55:58.685584Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "勝島",
+        "大井競馬場"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "d5f267cc019c6945ac8f",
+      "title": "戸越銀座の中華料理店で火事 食料品や油などの保管倉庫から出火 1人ケガ 東京・品川区",
+      "summary": "戸越銀座の中華料理店で火事 食料品や油などの保管倉庫から出火 1人ケガ 東京・品川区",
+      "source": "FNNプライムオンライン",
+      "sourceId": "fnn-news",
+      "sourceType": "rss",
+      "url": "https://www.fnn.jp/articles/-/1146014",
+      "publishedAt": "2026-11-04T10:09:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T19:55:58.685584Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "814e2895ccbe7b813f4c",
       "title": "チエル、クラウド型英語ニュース教材『ABLish(R)』Version 3.5を提供開始",
@@ -37,6 +77,26 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "15aef7e8927d05a62e03",
+      "title": "【速報】戸越銀座商店街で火事 中華料理店から出火 現在も延焼中",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/79a26315a4154100b16ec616975b8bc2",
+      "publishedAt": "2026-11-04T08:08:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T19:55:58.685584Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 8
     },
     {
       "id": "5387f993d40e48ca949f",
@@ -13546,7 +13606,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 9
+      "accepted": 10
     },
     {
       "source": "警視庁",
@@ -13568,9 +13628,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2907, column 14"
+      "status": "ok",
+      "scanned": 572,
+      "accepted": 1
     },
     {
       "source": "朝日新聞",
@@ -13582,7 +13642,7 @@ window.SHINAGAWA_NEWS = {
       "source": "FNNプライムオンライン",
       "status": "ok",
       "scanned": 50,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "時事ドットコム アクセスランキング",
@@ -13594,7 +13654,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
