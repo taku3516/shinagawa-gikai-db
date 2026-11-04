@@ -1,7 +1,80 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-03T11:09:14.571871Z",
+  "generatedAt": "2026-11-04T11:19:38.152561Z",
   "items": [
+    {
+      "id": "814e2895ccbe7b813f4c",
+      "title": "チエル、クラウド型英語ニュース教材『ABLish(R)』Version 3.5を提供開始",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦、以下チエル）は、クラウド型英語ニュース教材『ABLish(R)』の最新版「Version 3.5」の提供を開始したことをお知...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000189.000067516.html",
+      "publishedAt": "2026-11-04T08:15:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "18f0a336b1a6f575ec1a",
+      "title": "チエルネクサス、さくらインターネット主催ウェビナー「300万人の学びを支えるサービスから学ぶ！」に登壇",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）のグループ会社である、チエルネクサス株式会社（本社：東京都品川区、代表取締役：品田 淳智）は、2026年11月24...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000190.000067516.html",
+      "publishedAt": "2026-11-04T08:15:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5387f993d40e48ca949f",
+      "title": "11月5日開催の委員会の予定を掲載。",
+      "summary": "11月5日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20963.html",
+      "publishedAt": "2026-11-04T04:27:31Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "2a6248b419ee670d96dd",
+      "title": "品川宿交流館「第三回 品川宿場寄席」",
+      "summary": "2026年11月18日（水）、19日（木）、20日（金）、品川宿交流館にて「品川宿場寄席」が開かれます。 出演は、品川区在住、真打落語家の柳家吉緑、二つ目講談師の一龍齋貞奈。日替わりゲストも迎え、楽しいひとときとなりそうです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shukubayose3",
+      "publishedAt": "2026-11-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "d11214a3c5d6040f7572",
       "title": "アトミックソフトウェア、SBCメディカルグループホールディングスとの資本業務提携で資金調達を実施、シリーズCラウンドで6億円を調達",
@@ -1326,7 +1399,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "35d23af52fe4493da4bb",
-      "title": "品川区 文化財一般公開 2026",
+      "title": "【終了】品川区 文化財一般公開 2026",
       "summary": "2026年10月31日（土）～11月3日（火・祝）、品川区内各地にて秋の恒例「文化財一般公開」が行われます。 （※今年度は伊藤博文墓の公開は予定されておりません） ▼品川エリア ●旧品川警察署品川橋交通待機所 （令和5年度国登録有形文化財） 場所：南品川櫻河岸まちなか観光案内所 南品川1-3-4 （※17:00まで）",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -13478,7 +13551,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 5,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -13497,12 +13570,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1934, column 40"
+      "message": "not well-formed (invalid token): line 2907, column 14"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 38,
       "accepted": 0
     },
     {
@@ -13521,7 +13594,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
