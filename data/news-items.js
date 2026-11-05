@@ -1,7 +1,87 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-05T01:34:04.584180Z",
+  "generatedAt": "2026-11-05T11:17:47.233135Z",
   "items": [
+    {
+      "id": "54168d6bf1da33397873",
+      "title": "11月4日開催の委員会の結果を掲載。",
+      "summary": "11月4日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20958.html",
+      "publishedAt": "2026-11-05T09:37:12Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-02T19:38:44.437160Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "aa7c6a126607e2612128",
+      "title": "下神明におでん店「はちこう」 大井町「八幸」4店舗目、鶏白湯のだし使う",
+      "summary": "「鶏だしおでん はちこう 下神明店」（品川区西品川1、TEL 03-6426-9611）が下神明駅近くにオープンして3カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5110",
+      "publishedAt": "2026-11-05T08:12:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西品川",
+        "大井",
+        "下神明駅"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "ef990392ebf6b7e2ad18",
+      "title": "festariaの新たなオリジナルカットダイヤモンド「Star Princess」誕生",
+      "summary": "[フェスタリアホールディングス株式会社] フェスタリアホールディングス株式会社（本社：東京都品川区西五反田、代表取締役社長：貞松 隆弥）は、オリジナルカッティングダイヤモンド ”Wish upon a star(R)” の精神を受け継ぎ、新たなオリジナルカットダ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000113.000017694.html",
+      "publishedAt": "2026-11-05T07:45:23Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "6c451630e325c07d7a93",
+      "title": "第４回定例会の議会放送番組表を掲載。",
+      "summary": "第４回定例会の議会放送番組表を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20971.html",
+      "publishedAt": "2026-11-05T05:54:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "eb6fda9acc0fe8286a96",
       "title": "11月6日開催の委員会の予定を掲載。",
@@ -21,6 +101,26 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "e312ca6f91b75e19fc38",
+      "title": "不動前 ほおバル よくバル はしご酒 2026",
+      "summary": "2026年11月5日（木）～7日（土）、「不動前 ほおバルよくバル はしご酒」が開催されます。 不動前駅前通り商店街の人気のバルイベント。 従来の参加店を巡る街バルイベント「中バル」に加え、今年から新たに駅通りの商店街を中心とした「外バル」が登場。外呑みスペースや露店、イベントブースなどが並びます。（外バルの開催は、6日と7日の2日間のみ）",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hoobaluyokubalu2026",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "不動前駅"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "bfc485834043723ff476",
@@ -192,26 +292,6 @@ window.SHINAGAWA_NEWS = {
         "五反田駅"
       ],
       "relevanceScore": 16
-    },
-    {
-      "id": "54168d6bf1da33397873",
-      "title": "11月4日開催の委員会の予定を掲載。",
-      "summary": "11月4日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20958.html",
-      "publishedAt": "2026-11-02T08:37:12Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-02T19:38:44.437160Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "e41ec5c5b3a3c4d2a251",
@@ -1082,6 +1162,23 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "64800a2045e100f3cd01",
+      "title": "「きみの“すき”はどんないろ？」をテーマに展開する学童向け鉛筆『uni Palette（ユニ パレット）』より 子どもたちの“すき”をかたちにする、新デザインが登場 11月6日（金）より新発売",
+      "summary": "[三菱鉛筆株式会社] 三菱鉛筆株式会社（本社：東京都品川区 社長：数原滋彦）は、「きみの“すき”はどんないろ？」をテーマに展開する学童向け鉛筆『uni Palette（ユニ パレット）』より、子どもたちの“すき”をかたちにする新デザ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000313.000028890.html",
+      "publishedAt": "2026-10-22T03:41:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
     },
     {
       "id": "99f28ecfc0a8dd397328",
@@ -2815,7 +2912,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "5ad3fcf8ba9d1fa9fb1f",
-      "title": "リサイクル自転車の販売（八潮地域センターフェスティバル出店）",
+      "title": "リサイクル自転車の販売（八潮地域センターフェスティバル出店）【終了しました】",
       "summary": "ふれあい作業所西品川からリサイクル自転車販売のご案内です ふれあい作業所のリサイクル自転車を【八潮地域センターフェスティバル】で販売いたします。",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
@@ -13631,7 +13728,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 4,
+      "scanned": 5,
       "accepted": 0
     },
     {
@@ -13649,20 +13746,20 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 579,
-      "accepted": 1
+      "scanned": 542,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
       "source": "FNNプライムオンライン",
       "status": "ok",
       "scanned": 50,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "時事ドットコム アクセスランキング",
@@ -13674,7 +13771,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
