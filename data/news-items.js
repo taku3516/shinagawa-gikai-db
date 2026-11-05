@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-04T19:56:20.472609Z",
+  "generatedAt": "2026-11-05T01:34:04.584180Z",
   "items": [
+    {
+      "id": "eb6fda9acc0fe8286a96",
+      "title": "11月6日開催の委員会の予定を掲載。",
+      "summary": "11月6日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20967.html",
+      "publishedAt": "2026-11-05T01:04:47Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T01:33:42.073247Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
     {
       "id": "bfc485834043723ff476",
       "title": "大井競馬場再整備で最後の「東京メガイルミ」 近隣在住、在勤学者に特典も",
@@ -13629,13 +13649,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 572,
+      "scanned": 579,
       "accepted": 1
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 38,
+      "scanned": 39,
       "accepted": 0
     },
     {
@@ -13677,7 +13697,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
