@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-05T11:17:47.233135Z",
+  "generatedAt": "2026-11-05T20:10:00.948891Z",
   "items": [
     {
       "id": "54168d6bf1da33397873",
@@ -101,6 +101,26 @@ window.SHINAGAWA_NEWS = {
         "品川区議会"
       ],
       "relevanceScore": 14
+    },
+    {
+      "id": "c53dfc45fbc7c075e53e",
+      "title": "大崎ニューシティ「第5回 パン＆スイーツマルシェ」",
+      "summary": "2026年11月15日（日）・16日（月）、「大崎ニューシティパン＆スイーツマルシェ」が開催されます。 品川区内の人気店が大崎ニューシティに大集合。パンやスイーツを販売します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/breadmarche2026",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T20:09:38.691567Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎ニューシティ"
+      ],
+      "relevanceScore": 16
     },
     {
       "id": "e312ca6f91b75e19fc38",
@@ -13746,7 +13766,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 542,
+      "scanned": 520,
       "accepted": 0
     },
     {
@@ -13771,7 +13791,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
