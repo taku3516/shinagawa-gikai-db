@@ -1,7 +1,26 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-06T11:14:41.794353Z",
+  "generatedAt": "2026-11-06T19:36:35.152655Z",
   "items": [
+    {
+      "id": "70b753ef092c6076ce19",
+      "title": "旗の台に「カフェ楽屋」 きょうだいで出店、個室の占いスペースも用意",
+      "summary": "「カフェ楽屋」（品川区旗の台4、TEL 03-6426-9808）が旗の台エリアにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5111",
+      "publishedAt": "2026-11-06T12:27:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-06T19:36:18.282954Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "旗の台"
+      ],
+      "relevanceScore": 12
+    },
     {
       "id": "7c1cc2d2f0a11f41d298",
       "title": "11月9日開催の委員会の予定を掲載。",
@@ -13789,7 +13808,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 5,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -13807,7 +13826,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 556,
+      "scanned": 566,
       "accepted": 0
     },
     {
