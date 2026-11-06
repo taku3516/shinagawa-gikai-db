@@ -1,7 +1,68 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-05T20:10:00.948891Z",
+  "generatedAt": "2026-11-06T11:14:41.794353Z",
   "items": [
+    {
+      "id": "7c1cc2d2f0a11f41d298",
+      "title": "11月9日開催の委員会の予定を掲載。",
+      "summary": "11月9日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20987.html",
+      "publishedAt": "2026-11-06T03:59:04Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-06T11:14:18.583664Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "5387f993d40e48ca949f",
+      "title": "11月5日開催の委員会の結果を掲載。",
+      "summary": "11月5日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20963.html",
+      "publishedAt": "2026-11-06T02:00:31Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "68f69737a828564a6e8a",
+      "title": "第7回 和文化フェスタ in スクエア荏原",
+      "summary": "2026年12月20日（日）、「第7回 和文化フェスタ in スクエア荏原」が開催されます。 日本の伝統文化の魅力を気軽に体感できる催し。 今年は年末の開催に合わせ、お正月が待ち遠しくなるような企画が盛りだくさん。 子どもから大人まで楽しめるイベントです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/wabunka2026",
+      "publishedAt": "2026-11-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-06T11:14:18.583664Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原",
+        "スクエア荏原"
+      ],
+      "relevanceScore": 10
+    },
     {
       "id": "54168d6bf1da33397873",
       "title": "11月4日開催の委員会の結果を掲載。",
@@ -237,26 +298,6 @@ window.SHINAGAWA_NEWS = {
         "戸越銀座商店街"
       ],
       "relevanceScore": 8
-    },
-    {
-      "id": "5387f993d40e48ca949f",
-      "title": "11月5日開催の委員会の予定を掲載。",
-      "summary": "11月5日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20963.html",
-      "publishedAt": "2026-11-04T04:27:31Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-04T11:19:21.330749Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "2a6248b419ee670d96dd",
@@ -13754,7 +13795,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 142,
+      "scanned": 143,
       "accepted": 0
     },
     {
@@ -13766,7 +13807,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 520,
+      "scanned": 556,
       "accepted": 0
     },
     {
@@ -13791,7 +13832,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
