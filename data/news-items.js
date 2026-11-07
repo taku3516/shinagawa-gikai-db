@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-06T19:36:35.152655Z",
+  "generatedAt": "2026-11-07T10:30:53.316236Z",
   "items": [
+    {
+      "id": "18f0a336b1a6f575ec1a",
+      "title": "チエルネクサス、さくらインターネット主催ウェビナー「300万人の学びを支えるサービスから学ぶ！」に登壇",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）のグループ会社である、チエルネクサス株式会社（本社：東京都品川区、代表取締役：品田 淳智）は、2026年11月24...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000190.000067516.html",
+      "publishedAt": "2026-11-07T10:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "70b753ef092c6076ce19",
       "title": "旗の台に「カフェ楽屋」 きょうだいで出店、個室の占いスペースも用意",
@@ -270,24 +288,6 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000189.000067516.html",
-      "publishedAt": "2026-11-04T08:15:20Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-04T11:19:21.330749Z",
-      "tags": [
-        "子育て教育",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "18f0a336b1a6f575ec1a",
-      "title": "チエルネクサス、さくらインターネット主催ウェビナー「300万人の学びを支えるサービスから学ぶ！」に登壇",
-      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）のグループ会社である、チエルネクサス株式会社（本社：東京都品川区、代表取締役：品田 淳智）は、2026年11月24...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000190.000067516.html",
       "publishedAt": "2026-11-04T08:15:20Z",
       "dateKind": "published",
       "collectedAt": "2026-11-04T11:19:21.330749Z",
@@ -13825,9 +13825,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 566,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 1713, column 32"
     },
     {
       "source": "朝日新聞",
@@ -13851,7 +13851,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
