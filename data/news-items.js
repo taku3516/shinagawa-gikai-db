@@ -1,7 +1,63 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-07T17:48:28.985824Z",
+  "generatedAt": "2026-11-08T06:25:03.292185Z",
   "items": [
+    {
+      "id": "d2318cabb61098920a22",
+      "title": "乗用車がトラックに衝突 4人ケガ…病院に搬送 東京・品川区",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/063ef539f8f64b90baa5872ae1c9d401",
+      "publishedAt": "2026-11-08T05:38:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-08T06:24:43.257488Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "27cde6ea381a075a882a",
+      "title": "【京急本線「新馬場駅/青物横丁駅」4分/9分】トランクルーム「スペラボ 南品川1丁目店」が2026年12月1日にオープン！",
+      "summary": "[株式会社UKCorporation] [画像1: https://prcdn.freetls.fastly.net/release_image/62166/879/62166-879-c524af7ba174cba4d9403cb07bb98bbf-600x400.png?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000879.000062166.html",
+      "publishedAt": "2026-11-08T04:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-08T06:24:43.257488Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "南品川",
+        "新馬場駅",
+        "青物横丁駅"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "0162099f40f4c9a55f5b",
+      "title": "乗用車がトラックに衝突 2人ケガ 東京・品川区",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/f6d587d24b9f45cc8554f2bf65194434",
+      "publishedAt": "2026-11-08T04:40:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-08T06:24:43.257488Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "18f0a336b1a6f575ec1a",
       "title": "チエルネクサス、さくらインターネット主催ウェビナー「300万人の学びを支えるサービスから学ぶ！」に登壇",
@@ -10,7 +66,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000190.000067516.html",
-      "publishedAt": "2026-11-07T16:10:03Z",
+      "publishedAt": "2026-11-08T04:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-11-04T11:19:21.330749Z",
       "tags": [
@@ -13825,9 +13881,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 1471, column 32"
+      "status": "ok",
+      "scanned": 269,
+      "accepted": 2
     },
     {
       "source": "朝日新聞",
@@ -13851,7 +13907,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
