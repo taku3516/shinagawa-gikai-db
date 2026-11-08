@@ -1,7 +1,25 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-08T06:25:03.292185Z",
+  "generatedAt": "2026-11-08T13:46:12.072342Z",
   "items": [
+    {
+      "id": "18f0a336b1a6f575ec1a",
+      "title": "チエルネクサス、さくらインターネット主催ウェビナー「300万人の学びを支えるサービスから学ぶ！」に登壇",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）のグループ会社である、チエルネクサス株式会社（本社：東京都品川区、代表取締役：品田 淳智）は、2026年11月24...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000190.000067516.html",
+      "publishedAt": "2026-11-08T10:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "d2318cabb61098920a22",
       "title": "乗用車がトラックに衝突 4人ケガ…病院に搬送 東京・品川区",
@@ -57,24 +75,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "18f0a336b1a6f575ec1a",
-      "title": "チエルネクサス、さくらインターネット主催ウェビナー「300万人の学びを支えるサービスから学ぶ！」に登壇",
-      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）のグループ会社である、チエルネクサス株式会社（本社：東京都品川区、代表取締役：品田 淳智）は、2026年11月24...",
-      "source": "PR TIMES",
-      "sourceId": "pr-times",
-      "sourceType": "rss",
-      "url": "https://prtimes.jp/main/html/rd/p/000000190.000067516.html",
-      "publishedAt": "2026-11-08T04:10:02Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-04T11:19:21.330749Z",
-      "tags": [
-        "子育て教育",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "70b753ef092c6076ce19",
@@ -13882,7 +13882,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 269,
+      "scanned": 261,
       "accepted": 2
     },
     {
@@ -13907,7 +13907,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
