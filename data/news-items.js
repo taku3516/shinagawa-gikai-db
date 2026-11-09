@@ -1,7 +1,29 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-09T11:54:50.698086Z",
+  "generatedAt": "2026-11-09T22:35:20.688992Z",
   "items": [
+    {
+      "id": "2c3c90b77a20442b7571",
+      "title": "品川シーサイドにベーカリー「アールベイカー」 初のオフィスビル内店舗",
+      "summary": "ベーカリー「R Baker（アールベイカー） 品川イノベーションパーク店」（品川区東品川4）が、品川シーサイド駅近くのオフィスビル「品川イノベーションパーク」内にオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5112",
+      "publishedAt": "2026-11-09T13:29:14Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-09T22:35:00.843100Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東品川",
+        "品川シーサイド駅",
+        "品川シーサイド"
+      ],
+      "relevanceScore": 20
+    },
     {
       "id": "18cf9b18eba4790cfe9e",
       "title": "熊本地震で被災された熊本県に、品川区議会議員有志から災害義援金を届けました。",
@@ -13918,7 +13940,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 4,
+      "scanned": 3,
       "accepted": 0
     },
     {
@@ -13937,7 +13959,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2103, column 31"
+      "message": "not well-formed (invalid token): line 2278, column 31"
     },
     {
       "source": "朝日新聞",
