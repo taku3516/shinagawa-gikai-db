@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-09T01:03:49.580598Z",
+  "generatedAt": "2026-11-09T11:54:50.698086Z",
   "items": [
+    {
+      "id": "18cf9b18eba4790cfe9e",
+      "title": "熊本地震で被災された熊本県に、品川区議会議員有志から災害義援金を届けました。",
+      "summary": "令和８年７月の熊本地震で被災された熊本県に対し、品川区議会議員有志から寄せられた災害義援金35万円を、議長および副議長が１０月２６日に熊本県東京事務所へお届けしました。 賛同有志（五十音順） あくつ広王・安藤たい作・石田... 熊本地震で被災された熊本県に、品川区議会議員有志から災害義援金を届けました。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20991.html",
+      "publishedAt": "2026-11-09T05:08:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-09T11:54:32.921747Z",
+      "tags": [
+        "事件事故",
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "865b195271ea71925884",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年11月9日号）を公開しました‼",
@@ -18,6 +38,26 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "eb6fda9acc0fe8286a96",
+      "title": "11月6日開催の委員会の結果を掲載。",
+      "summary": "11月6日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20967.html",
+      "publishedAt": "2026-11-09T01:00:47Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T01:33:42.073247Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
     },
     {
       "id": "18f0a336b1a6f575ec1a",
@@ -271,26 +311,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "eb6fda9acc0fe8286a96",
-      "title": "11月6日開催の委員会の予定を掲載。",
-      "summary": "11月6日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20967.html",
-      "publishedAt": "2026-11-05T01:04:47Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-05T01:33:42.073247Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
-    },
-    {
       "id": "c53dfc45fbc7c075e53e",
       "title": "大崎ニューシティ「第5回 パン＆スイーツマルシェ」",
       "summary": "2026年11月15日（日）・16日（月）、「大崎ニューシティパン＆スイーツマルシェ」が開催されます。 品川区内の人気店が大崎ニューシティに大集合。パンやスイーツを販売します。",
@@ -312,7 +332,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "e312ca6f91b75e19fc38",
-      "title": "不動前 ほおバル よくバル はしご酒 2026",
+      "title": "【終了】不動前 ほおバル よくバル はしご酒 2026",
       "summary": "2026年11月5日（木）～7日（土）、「不動前 ほおバルよくバル はしご酒」が開催されます。 不動前駅前通り商店街の人気のバルイベント。 従来の参加店を巡る街バルイベント「中バル」に加え、今年から新たに駅通りの商店街を中心とした「外バル」が登場。外呑みスペースや露店、イベントブースなどが並びます。（外バルの開催は、6日と7日の2日間のみ）",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -13904,7 +13924,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 143,
+      "scanned": 142,
       "accepted": 0
     },
     {
@@ -13915,21 +13935,21 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 240,
-      "accepted": 2
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2103, column 31"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 39,
+      "scanned": 40,
       "accepted": 0
     },
     {
       "source": "FNNプライムオンライン",
       "status": "ok",
       "scanned": 50,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "時事ドットコム アクセスランキング",
@@ -13941,7 +13961,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -13964,7 +13984,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 41,
       "accepted": 0
     },
     {
