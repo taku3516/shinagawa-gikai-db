@@ -1,7 +1,24 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-08T19:50:26.797793Z",
+  "generatedAt": "2026-11-09T01:03:49.580598Z",
   "items": [
+    {
+      "id": "865b195271ea71925884",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年11月9日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年11月9日号(令和8年11月2日～令和8年11月8日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64227.html",
+      "publishedAt": "2026-11-09T01:03:28.462282Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-09T01:03:28.462282Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "18f0a336b1a6f575ec1a",
       "title": "チエルネクサス、さくらインターネット主催ウェビナー「300万人の学びを支えるサービスから学ぶ！」に登壇",
@@ -10,12 +27,29 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000190.000067516.html",
-      "publishedAt": "2026-11-08T16:10:02Z",
+      "publishedAt": "2026-11-08T22:10:02Z",
       "dateKind": "published",
       "collectedAt": "2026-11-04T11:19:21.330749Z",
       "tags": [
         "子育て教育",
         "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "2f32af5e33ee425a0966",
+      "title": "トラックと車が衝突事故 歩行者巻き込み4人けが 東京・品川区",
+      "summary": "トラックと車が衝突事故 歩行者巻き込み4人けが 東京・品川区",
+      "source": "FNNプライムオンライン",
+      "sourceId": "fnn-news",
+      "sourceType": "rss",
+      "url": "https://www.fnn.jp/articles/-/1148566",
+      "publishedAt": "2026-11-08T21:56:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-09T01:03:28.462282Z",
+      "tags": [
+        "事件事故"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -13882,7 +13916,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 238,
+      "scanned": 240,
       "accepted": 2
     },
     {
@@ -13895,7 +13929,7 @@ window.SHINAGAWA_NEWS = {
       "source": "FNNプライムオンライン",
       "status": "ok",
       "scanned": 50,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "時事ドットコム アクセスランキング",
