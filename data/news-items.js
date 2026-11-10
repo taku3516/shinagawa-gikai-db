@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-10T07:34:23.065561Z",
+  "generatedAt": "2026-11-10T17:10:47.908432Z",
   "items": [
+    {
+      "id": "d7566a5a0f0725621781",
+      "title": "西五反田に「しゃぶしゃぶすき焼き 千宮」 2店舗目、一人鍋ニーズに対応",
+      "summary": "「しゃぶしゃぶすき焼き 千宮 五反田店」（品川区西五反田1）が、五反田駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5113",
+      "publishedAt": "2026-11-10T12:50:24Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T17:10:27.530082Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "38443e9390acc2c29fe7",
       "title": "データセクション、元Microsoft IsraelカントリーゼネラルマネージャーのAlon Haimovichが参画",
@@ -36,6 +57,25 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "052a92e163be57c79e37",
+      "title": "大井町トラックス「防災アクション」",
+      "summary": "2026年11 月15 日（日）、OIMACHI TRACKS内、TRACKS PARK にて「防災アクション」が開催されます。 今回は、OIMACHI TRACKSの中にある防災クイズを巡る「クイズ＆防災体験ラリー」をはじめ、大井消防署・仁医会ミラベル健診プラザ大井町・品川区防災課による防災・健康にまつわるさまざまな体験や、身体を動かして楽しむ「防災スポーツ®」など、防災について「知る・学ぶ・楽しむ」コンテンツが盛りだくさんです。さらに、「クイズ＆防災体験ラリー」の条件を…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bosai-a",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T17:10:27.530082Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
       ],
       "relevanceScore": 14
     },
@@ -14025,9 +14065,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2628, column 31"
+      "status": "ok",
+      "scanned": 529,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
