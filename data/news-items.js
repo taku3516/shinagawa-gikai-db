@@ -1,7 +1,95 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-09T22:35:20.688992Z",
+  "generatedAt": "2026-11-10T07:34:23.065561Z",
   "items": [
+    {
+      "id": "38443e9390acc2c29fe7",
+      "title": "データセクション、元Microsoft IsraelカントリーゼネラルマネージャーのAlon Haimovichが参画",
+      "summary": "[データセクション株式会社] データセクション株式会社（本社：東京都品川区、代表取締役社長執行役員CEO：石原紀彦、東証グロース：3905、以下「当社」）は、グローバルなAIインフラ事業のさらなる成長と経営体制の強化を目的として、Micros...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000092.000036921.html",
+      "publishedAt": "2026-11-10T06:15:24Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T07:34:01.294427Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "7c1cc2d2f0a11f41d298",
+      "title": "11月9日開催の委員会の結果を掲載。",
+      "summary": "11月9日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20987.html",
+      "publishedAt": "2026-11-10T01:00:04Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-06T11:14:18.583664Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "de41042df8e99a2c9476",
+      "title": "「みんなでつくろう！品川汁 〜江戸東京野菜で楽しむ、まちの食卓交流会 〜」",
+      "summary": "2026年11月23日（月・祝）、 CAFE & HALL ours にて「みんなでつくろう！品川汁 〜江戸東京野菜で楽しむ、まちの食卓交流会 〜」が開催されます。 かつて品川宿周辺で栽培されていた「品川蕪（かぶ）」。 明治以降に姿を消しましたが、2004年に「 特定非営利活動法人 東海道品川宿なすびの花 」の皆さんが復活させました。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawa-soup2026",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T07:34:01.294427Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "a4a431368d97de69b7d8",
+      "title": "下神明天祖神社「しんめい縁日」",
+      "summary": "2026年11月28日（土）、29日（日） 下神明天祖神社 境内にて「しんめい縁日」が開催されます。 地域の商店や町会による出店や様々な屋台が並びます。詳しい内容は特設ページ（ https://shin-en.site/ ）よりご覧ください。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinmei-ennichi202611",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T07:34:01.294427Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "3c0e90790f3501e401c0",
+      "title": "立会川龍馬通り繁栄会「龍馬祭」",
+      "summary": "2026年11月14日（土）、立会川龍馬通りにて「龍馬祭」が開催されます。 若き龍馬が滞在していたと伝わる立会川。坂本龍馬像の建つ商店街、立会川龍馬通り繁栄会で行われる「龍馬祭」では、露店や縁日が並び、同商店街のマスコットキャラクター「りょうくん」とのじゃんけん対決や「草履飛ばし」なども開催されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T07:34:01.294427Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "2c3c90b77a20442b7571",
       "title": "品川シーサイドにベーカリー「アールベイカー」 初のオフィスビル内店舗",
@@ -190,26 +278,6 @@ window.SHINAGAWA_NEWS = {
         "旗の台"
       ],
       "relevanceScore": 12
-    },
-    {
-      "id": "7c1cc2d2f0a11f41d298",
-      "title": "11月9日開催の委員会の予定を掲載。",
-      "summary": "11月9日開催の委員会の予定を掲載。 は 品川区議会 で公開された投稿です。",
-      "source": "品川区議会",
-      "sourceId": "shinagawa-council",
-      "sourceType": "rss",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20987.html",
-      "publishedAt": "2026-11-06T03:59:04Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-06T11:14:18.583664Z",
-      "tags": [
-        "選挙政治",
-        "地域イベント"
-      ],
-      "locations": [
-        "品川区議会"
-      ],
-      "relevanceScore": 14
     },
     {
       "id": "5387f993d40e48ca949f",
@@ -13946,7 +14014,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 142,
+      "scanned": 143,
       "accepted": 0
     },
     {
@@ -13959,7 +14027,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2278, column 31"
+      "message": "not well-formed (invalid token): line 2628, column 31"
     },
     {
       "source": "朝日新聞",
@@ -13983,7 +14051,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
