@@ -1,7 +1,43 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-11T06:52:31.017541Z",
+  "generatedAt": "2026-11-11T17:18:59.860848Z",
   "items": [
+    {
+      "id": "373aa1538f7d31bc824f",
+      "title": "災害ボランティア養成講座を開催いたします！！",
+      "summary": "災害時に備えて、講座を受講し、ボランティアとして活動してみませんか？ 品川区内在住・在勤・在学で災害ボランティアに興味のある方",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64260.html",
+      "publishedAt": "2026-11-11T17:18:39.933610Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-11T17:18:39.933610Z",
+      "tags": [
+        "事件事故",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "ead6b07f9d5e6e66be2b",
+      "title": "品川区長選、期日前投票所に「オリヒメ」設置 オンライン立会人の実証実験で",
+      "summary": "品川区が11月9・10日、品川区長選挙（11月15日投開票）の期日前投票所で、分身ロボット「OriHime（オリヒメ）」を活用したオンライン投票立ち会いの実証実験を行った。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5114",
+      "publishedAt": "2026-11-11T10:56:24Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-11T17:18:39.933610Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "d7566a5a0f0725621781",
       "title": "西五反田に「しゃぶしゃぶすき焼き 千宮」 2店舗目、一人鍋ニーズに対応",
@@ -14067,12 +14103,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2265, column 20"
+      "message": "not well-formed (invalid token): line 2731, column 20"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 40,
+      "scanned": 38,
       "accepted": 0
     },
     {
