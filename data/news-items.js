@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-10T17:10:47.908432Z",
+  "generatedAt": "2026-11-11T06:52:31.017541Z",
   "items": [
     {
       "id": "d7566a5a0f0725621781",
@@ -4916,7 +4916,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "35e8c372c53ef997e3fb",
-      "title": "品川歴史館特別展「品川湾から東京港へー未完の港湾都市ー」",
+      "title": "品川歴史館特別展「品川湾から東京港へー未完の港湾都市ー」 2026/10/10(土) ~ 2026/12/20(日) 観る 知る 大井町駅, 立会川駅, 大森駅",
       "summary": "2026年10月10日（土）～12月20日（日）、 品川歴史館 にて、特別展「品川湾から東京港へー未完の港湾都市ー」が開催されます。 御台場の築造で変わる臨海部、明治時代以降の海の変化について、品川湾から東京港への変遷、発展の歴史を紹介。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -14048,7 +14048,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 3,
+      "scanned": 4,
       "accepted": 0
     },
     {
@@ -14065,9 +14065,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 529,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2265, column 20"
     },
     {
       "source": "朝日新聞",
@@ -14091,7 +14091,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -14103,7 +14103,7 @@ window.SHINAGAWA_NEWS = {
       "source": "東急からのお知らせ",
       "status": "ok",
       "scanned": 10,
-      "accepted": 1
+      "accepted": 0
     },
     {
       "source": "東京都下水道局 報道発表",
