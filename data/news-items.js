@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-13T01:59:45.771055Z",
+  "generatedAt": "2026-11-13T11:20:08.516630Z",
   "items": [
+    {
+      "id": "e8b58f4b986604c16fa4",
+      "title": "不動前にキンパ専門店「リキンパ」 韓国発、日本第1号店",
+      "summary": "キンパ専門店「LEE GIMBAP（リキンパ）目黒不動前店」（品川区西五反田3）が10月22日、不動前駅近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5116",
+      "publishedAt": "2026-11-13T08:26:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T11:19:44.371902Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "不動前駅"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "60d01c8a9c2c31ef48f1",
       "title": "品川成年後見センター活動実績を更新しました",
@@ -18,6 +39,58 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "dcdcf58e3a1afbda27cd",
+      "title": "大商業まつり2026",
+      "summary": "2026年11月21日（土）、「大商業まつり2026」が開催されます。主催は品川区商店街連合会。 品川区内の商店街店舗や友好都市、企業のブースが約50軒、屋外のステージでは楽しいイベントが開催されます。また各種スポーツ体験や、ワークショップも。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/dsmatsuri2026",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T11:19:44.371902Z",
+      "tags": [
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "b972f33506e30b524cbd",
+      "title": "物流博物館 映画上映会「里馬の森から」",
+      "summary": "2026年11月22日（日）、12月5日（土）、物流博物館 企画展「馬で運ぶ」映画上映会「里馬の森から」が上映されます。 「里馬の森から－森を活かす古くて新しい技術・馬搬」作品紹介 今の日本では人と馬がともに暮らす姿はあまり見ることがなくなりました。山から木を馬と共に搬出する「馬搬（ばはん）」を生業とする馬方は、 馬搬が盛んだった東北地方でも岩手県の74歳の職人とその弟子38 歳の2人だけになり、全国でも数名を残すのみ。今、 機械に頼らない、山や自然を壊さない生き方が注目さ…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/lmuse-bahan",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T11:19:44.371902Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "32c1ed8d4244d4cce1e5",
+      "title": "TOKYO周穫祭2026",
+      "summary": "2026年11月21日（土）・22日（日）、東京国際フォーラムにて「TOKYO周穫祭2026」が開催されます。 東京の各地域をもっと皆さんに知ってほしい！という想いから、各地の観光情報・特産品をぎゅっと集めたイベントが開催！ 食べて触れて・・・まるで旅をしているかのような気分があじわえる、そんなイベントです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/syuukaku2026",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T11:19:44.371902Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
     },
     {
       "id": "4bd2d33696d821e56b2d",
@@ -14124,7 +14197,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 144,
+      "scanned": 142,
       "accepted": 0
     },
     {
@@ -14137,7 +14210,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2174, column 42"
+      "message": "not well-formed (invalid token): line 2753, column 42"
     },
     {
       "source": "朝日新聞",
