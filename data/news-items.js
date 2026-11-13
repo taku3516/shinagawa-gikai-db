@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-11T17:18:59.860848Z",
+  "generatedAt": "2026-11-13T01:59:45.771055Z",
   "items": [
+    {
+      "id": "60d01c8a9c2c31ef48f1",
+      "title": "品川成年後見センター活動実績を更新しました",
+      "summary": "「品川成年後見センター活動実績（令和8年9月30日現在）」を掲載しました。 品川成年後見センターの取組｜品川成年後見センター｜社会福祉法人 品川区社会福祉協議会 （別ページに移動します）",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64291.html",
+      "publishedAt": "2026-11-13T01:59:22.005425Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-13T01:59:22.005425Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "4bd2d33696d821e56b2d",
+      "title": "五反田 TOC「徳の市」",
+      "summary": "2026年12月11日（金）、12日（土）、13日（日） の3日間 、 五反田 TOCビル にて「徳の市」が開催されます。 メーカー御売りが出品する直売ビックセール。 ファッション、雑貨、インテリア、食品など 約130店舗 が出店し、さまざまな商品がお得な価格で売り出されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/toctokunoichi202611",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T01:59:22.005425Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
     {
       "id": "373aa1538f7d31bc824f",
       "title": "災害ボランティア養成講座を開催いたします！！",
@@ -14079,7 +14113,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 10
+      "accepted": 9
     },
     {
       "source": "警視庁",
@@ -14090,7 +14124,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 143,
+      "scanned": 144,
       "accepted": 0
     },
     {
@@ -14103,12 +14137,12 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2731, column 20"
+      "message": "not well-formed (invalid token): line 2174, column 42"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 38,
+      "scanned": 40,
       "accepted": 0
     },
     {
