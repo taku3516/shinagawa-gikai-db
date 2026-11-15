@@ -175,13 +175,13 @@
     {
       "id": "shinagawa-city-new",
       "name": "品川区 新着情報",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/re_direct/hpg000016838.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/news/newslist.html",
       "scope": "local",
       "trustedLocal": true,
       "minScore": 0,
       "sameHostOnly": true,
-      "requiredAncestorClass": "news-list-txt",
-      "dateAncestorClass": "news-list-date",
+      "requiredAncestorClass": "newsli",
+      "dateAncestorClass": "date",
       "maxItems": 40,
       "detailMaxItems": 12,
       "enabled": true
@@ -189,13 +189,12 @@
     {
       "id": "shinagawa-city-community",
       "name": "品川区 地域センター新着情報",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/hpg000016394.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008163.html",
       "scope": "local",
       "trustedLocal": true,
       "minScore": 0,
       "sameHostOnly": true,
-      "requiredAncestorClass": "news-list-txt",
-      "dateAncestorClass": "news-list-date",
+      "requiredAncestorClass": "objectlink",
       "maxItems": 30,
       "detailMaxItems": 10,
       "enabled": true
