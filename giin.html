@@ -334,7 +334,7 @@
         <article class="member-card" id="member-${esc(m.id)}" data-party="${esc(partyName(m))}">
           <div>
             <h2>${esc(m.name)}</h2>
-            <span class="kana">${esc(m.kana)}</span>
+            ${m.kana ? `<span class="kana">${esc(m.kana)}</span>` : ""}
           </div>
           <div>
             <span class="tag">${esc(m.party || m.office || m.statusLabel || "掲載準備中")}</span>

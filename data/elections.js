@@ -7,8 +7,8 @@
 // proportionalResults[{ name, votesDisplay, votesValue }], sources[{ label, url }], verifiedAt
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.electionsData = {
-  "updatedAt": "2026-07-25",
-  "note": "品川区に関わる選挙（区議選・区議補選・区長選・都議選・都議補選の品川区選挙区）を1997年まで遡って掲載しています。得票数・得票率・党派は選挙ドットコムの公表データ、投票率・有権者数は各選挙の公式発表に基づきます。得票数に小数があるものは、選挙管理委員会発表に準拠した按分票です。",
+  "updatedAt": "2026-11-15",
+  "note": "品川区に関わる選挙（区議選・区議補選・区長選・都議選・都議補選の品川区選挙区・衆院選の東京都第3区）を掲載しています。区長選は1947年、そのほかは1997年まで遡っています。1997年以降の得票数・得票率・党派は選挙ドットコムの公表データ、投票率・有権者数は各選挙の公式発表に基づきます。1995年以前の区長選と区長公選制の沿革は、提供された集計表「歴代区長選」によるもので、一次資料は未確認です。得票数に小数があるものは、選挙管理委員会発表に準拠した按分票です。",
   "types": [
     {
       "id": "ward-assembly",
@@ -905,7 +905,9 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "森沢 きょうこ",
           "party": "無所属",
           "votesDisplay": "40,695票",
-          "voteShare": "38.6%"
+          "voteShare": "38.6%",
+          "age": "44",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -914,7 +916,10 @@ window.SHINAGAWA_DB.electionsData = {
           "party": "無所属",
           "votesDisplay": "23,208.138票",
           "voteShare": "22.0%",
-          "personUrl": "giin.html"
+          "personUrl": "giin.html",
+          "endorsement": "自民",
+          "age": "63",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -923,7 +928,10 @@ window.SHINAGAWA_DB.electionsData = {
           "party": "無所属",
           "votesDisplay": "20,054票",
           "voteShare": "19.0%",
-          "personUrl": "giin.html"
+          "personUrl": "giin.html",
+          "support": "立憲、生ネ",
+          "age": "46",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -932,7 +940,10 @@ window.SHINAGAWA_DB.electionsData = {
           "party": "無所属",
           "votesDisplay": "11,386票",
           "voteShare": "10.8%",
-          "personUrl": "giin.html"
+          "personUrl": "giin.html",
+          "endorsement": "自由を守る会",
+          "age": "61",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -940,7 +951,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "村川 ひろかず",
           "party": "無所属",
           "votesDisplay": "7,042票",
-          "voteShare": "6.7%"
+          "voteShare": "6.7%",
+          "endorsement": "共産",
+          "age": "75",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -948,7 +962,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "石田 しんご",
           "party": "無所属",
           "votesDisplay": "3,113.861票",
-          "voteShare": "3.0%"
+          "voteShare": "3.0%",
+          "endorsement": "国民",
+          "age": "43",
+          "incumbency": "新人"
         }
       ],
       "sources": [
@@ -1065,7 +1082,9 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "森沢 きょうこ",
           "party": "無所属",
           "votesDisplay": "27,759票",
-          "voteShare": "24.5%"
+          "voteShare": "24.5%",
+          "age": "43",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -1074,7 +1093,10 @@ window.SHINAGAWA_DB.electionsData = {
           "party": "無所属",
           "votesDisplay": "26,308票",
           "voteShare": "23.2%",
-          "personUrl": "giin.html"
+          "personUrl": "giin.html",
+          "endorsement": "自民",
+          "age": "63",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -1083,7 +1105,10 @@ window.SHINAGAWA_DB.electionsData = {
           "party": "無所属",
           "votesDisplay": "24,669票",
           "voteShare": "21.8%",
-          "personUrl": "giin.html"
+          "personUrl": "giin.html",
+          "support": "立憲、生ネ",
+          "age": "46",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -1092,7 +1117,10 @@ window.SHINAGAWA_DB.electionsData = {
           "party": "無所属",
           "votesDisplay": "18,559票",
           "voteShare": "16.4%",
-          "personUrl": "giin.html"
+          "personUrl": "giin.html",
+          "endorsement": "自由を守る会",
+          "age": "61",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -1100,7 +1128,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "村川 ひろかず",
           "party": "無所属",
           "votesDisplay": "8,279票",
-          "voteShare": "7.3%"
+          "voteShare": "7.3%",
+          "endorsement": "共産",
+          "age": "75",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -1108,7 +1139,9 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "おおにし 光広",
           "party": "品川に維新を起こす会",
           "votesDisplay": "7,821票",
-          "voteShare": "6.9%"
+          "voteShare": "6.9%",
+          "age": "65",
+          "incumbency": "新人"
         }
       ],
       "sources": [
@@ -1828,7 +1861,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "浜野 健",
           "party": "無所属",
           "votesDisplay": "49,965票",
-          "voteShare": "48.1%"
+          "voteShare": "48.1%",
+          "endorsement": "自・公・連合東京",
+          "age": "71",
+          "incumbency": "現職"
         },
         {
           "result": "落選",
@@ -1836,7 +1872,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "佐藤 裕彦",
           "party": "無所属",
           "votesDisplay": "37,607票",
-          "voteShare": "36.2%"
+          "voteShare": "36.2%",
+          "endorsement": "立・共・由・都民フ",
+          "age": "60",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -1845,7 +1884,10 @@ window.SHINAGAWA_DB.electionsData = {
           "party": "無所属",
           "votesDisplay": "16,240票",
           "voteShare": "15.6%",
-          "personUrl": "giin.html"
+          "personUrl": "giin.html",
+          "endorsement": "自由を守る会",
+          "age": "57",
+          "incumbency": "新人"
         }
       ],
       "sources": [
@@ -2595,7 +2637,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "浜野 健",
           "party": "無所属",
           "votesDisplay": "51,378票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "自・民・公",
+          "age": "67",
+          "incumbency": "現職"
         },
         {
           "result": "落選",
@@ -2603,7 +2648,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "原田 泰雄",
           "party": "無所属",
           "votesDisplay": "17,427票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "共",
+          "age": "74",
+          "incumbency": "新人"
         }
       ],
       "sources": [
@@ -3286,7 +3334,7 @@ window.SHINAGAWA_DB.electionsData = {
       "seats": 1,
       "candidateCount": 2,
       "electorate": "296,897",
-      "turnout": "33.92",
+      "turnout": "31.75",
       "previousTurnout": "33.92",
       "candidates": [
         {
@@ -3295,7 +3343,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "はまの 健",
           "party": "無所属",
           "votesDisplay": "66,315票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "民・自・公・社",
+          "age": "63",
+          "incumbency": "現職"
         },
         {
           "result": "落選",
@@ -3303,7 +3354,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "沢田 英次",
           "party": "無所属",
           "votesDisplay": "25,716票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "共",
+          "age": "67",
+          "incumbency": "新人"
         }
       ],
       "sources": [
@@ -3982,7 +4036,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "浜野 健",
           "party": "無所属",
           "votesDisplay": "35,422票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "自・民・公・社",
+          "age": "59",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -3990,7 +4047,9 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "内藤 尚",
           "party": "無所属",
           "votesDisplay": "31,778票",
-          "voteShare": ""
+          "voteShare": "",
+          "age": "60",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -3998,7 +4057,11 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "桜井 恵子",
           "party": "無所属",
           "votesDisplay": "20,088票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "共",
+          "support": "新社会",
+          "age": "59",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -4006,7 +4069,9 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "佐藤 完二",
           "party": "無所属",
           "votesDisplay": "5,877票",
-          "voteShare": ""
+          "voteShare": "",
+          "age": "56",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -4014,7 +4079,9 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "金尾 丹",
           "party": "無所属",
           "votesDisplay": "1,914票",
-          "voteShare": ""
+          "voteShare": "",
+          "age": "60",
+          "incumbency": "新人"
         }
       ],
       "sources": [
@@ -4225,7 +4292,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "高橋 久二",
           "party": "無所属",
           "votesDisplay": "48,829票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "自・民・公・由・社",
+          "age": "74",
+          "incumbency": "現職"
         },
         {
           "result": "落選",
@@ -4233,7 +4303,9 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "内藤 尚",
           "party": "無所属",
           "votesDisplay": "33,927票",
-          "voteShare": ""
+          "voteShare": "",
+          "age": "56",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -4241,7 +4313,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "桜井 恵子",
           "party": "無所属",
           "votesDisplay": "19,794票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "共",
+          "age": "56",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -4249,7 +4324,9 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "船波 恵子",
           "party": "無所属",
           "votesDisplay": "6,648票",
-          "voteShare": ""
+          "voteShare": "",
+          "age": "37",
+          "incumbency": "新人"
         },
         {
           "result": "落選",
@@ -4257,7 +4334,9 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "神野 吉弘",
           "party": "無所属",
           "votesDisplay": "4,830票",
-          "voteShare": ""
+          "voteShare": "",
+          "age": "45",
+          "incumbency": "新人"
         }
       ],
       "sources": [
@@ -4813,7 +4892,7 @@ window.SHINAGAWA_DB.electionsData = {
       "candidateCount": 2,
       "electorate": "261,277",
       "turnout": "45.7",
-      "previousTurnout": "",
+      "previousTurnout": "43.27",
       "candidates": [
         {
           "result": "当選",
@@ -4821,7 +4900,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "高橋 久二",
           "party": "無所属",
           "votesDisplay": "79,988票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "自・民・公・由・社",
+          "age": "70",
+          "incumbency": "現職"
         },
         {
           "result": "落選",
@@ -4829,7 +4911,10 @@ window.SHINAGAWA_DB.electionsData = {
           "name": "原田 泰雄",
           "party": "無所属",
           "votesDisplay": "34,812票",
-          "voteShare": ""
+          "voteShare": "",
+          "endorsement": "共",
+          "age": "59",
+          "incumbency": "新人"
         }
       ],
       "sources": [
@@ -5354,6 +5439,429 @@ window.SHINAGAWA_DB.electionsData = {
         }
       ],
       "verifiedAt": "2026-07-30"
+    },
+    {
+      "id": "ward-mayor-19950423",
+      "type": "ward-mayor",
+      "title": "品川区長選挙",
+      "electionDate": "1995-04-23",
+      "district": "品川区全域",
+      "seats": 1,
+      "candidateCount": 2,
+      "electorate": "",
+      "turnout": "43.27",
+      "previousTurnout": "46.45",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "高橋 久二",
+          "party": "無所属",
+          "votesDisplay": "77,482票",
+          "voteShare": "",
+          "endorsement": "自・進・社・さ・公",
+          "age": "66",
+          "incumbency": "現職"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "増田 勉",
+          "party": "無所属",
+          "votesDisplay": "28,975票",
+          "voteShare": "",
+          "endorsement": "共",
+          "age": "62",
+          "incumbency": "新人"
+        }
+      ],
+      "sources": [
+        {
+          "label": "提供された集計表「歴代区長選」（一次資料は未確認）"
+        }
+      ],
+      "verifiedAt": "2026-11-15"
+    },
+    {
+      "id": "ward-mayor-19910421",
+      "type": "ward-mayor",
+      "title": "品川区長選挙",
+      "electionDate": "1991-04-21",
+      "district": "品川区全域",
+      "seats": 1,
+      "candidateCount": 3,
+      "electorate": "",
+      "turnout": "46.45",
+      "previousTurnout": "48.74",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "高橋 久二",
+          "party": "無所属",
+          "votesDisplay": "83,354票",
+          "voteShare": "",
+          "endorsement": "自・社・公・民",
+          "age": "62",
+          "incumbency": "現職"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "長沢 利雄",
+          "party": "無所属",
+          "votesDisplay": "29,686票",
+          "voteShare": "",
+          "endorsement": "共",
+          "age": "63",
+          "incumbency": "新人"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "沢尾 正一",
+          "party": "優政会",
+          "votesDisplay": "1,514票",
+          "voteShare": "",
+          "age": "39",
+          "incumbency": "新人"
+        }
+      ],
+      "sources": [
+        {
+          "label": "提供された集計表「歴代区長選」（一次資料は未確認）"
+        }
+      ],
+      "verifiedAt": "2026-11-15"
+    },
+    {
+      "id": "ward-mayor-19870426",
+      "type": "ward-mayor",
+      "title": "品川区長選挙",
+      "electionDate": "1987-04-26",
+      "district": "品川区全域",
+      "seats": 1,
+      "candidateCount": 2,
+      "electorate": "",
+      "turnout": "48.74",
+      "previousTurnout": "50.67",
+      "summary": "高橋久二が初当選し、以後5期にわたって区長を務めることになった選挙です。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "高橋 久二",
+          "party": "無所属",
+          "votesDisplay": "72,922票",
+          "voteShare": "",
+          "endorsement": "自・社・公・民",
+          "age": "58"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "原田 泰雄",
+          "party": "無所属",
+          "votesDisplay": "43,163票",
+          "voteShare": "",
+          "endorsement": "共",
+          "age": "47"
+        }
+      ],
+      "sources": [
+        {
+          "label": "提供された集計表「歴代区長選」（一次資料は未確認）"
+        }
+      ],
+      "verifiedAt": "2026-11-15"
+    },
+    {
+      "id": "ward-mayor-19830424",
+      "type": "ward-mayor",
+      "title": "品川区長選挙",
+      "electionDate": "1983-04-24",
+      "district": "品川区全域",
+      "seats": 1,
+      "candidateCount": 3,
+      "electorate": "",
+      "turnout": "50.67",
+      "previousTurnout": "",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "多賀 栄太郎",
+          "party": "無所属",
+          "votesDisplay": "80,078票",
+          "voteShare": "",
+          "endorsement": "自・社・公・民・ク",
+          "age": "72",
+          "incumbency": "現職"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "岡部 達男",
+          "party": "無所属",
+          "votesDisplay": "34,640票",
+          "voteShare": "",
+          "endorsement": "共",
+          "age": "56",
+          "incumbency": "新人"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "中島 恒夫",
+          "party": "無所属",
+          "votesDisplay": "7,993票",
+          "voteShare": "",
+          "age": "55",
+          "incumbency": "新人"
+        }
+      ],
+      "sources": [
+        {
+          "label": "提供された集計表「歴代区長選」（一次資料は未確認）"
+        }
+      ],
+      "verifiedAt": "2026-11-15"
+    },
+    {
+      "id": "ward-mayor-19790422",
+      "type": "ward-mayor",
+      "title": "品川区長選挙",
+      "electionDate": "1979-04-22",
+      "district": "品川区全域",
+      "seats": 1,
+      "candidateCount": 2,
+      "electorate": "",
+      "turnout": "",
+      "previousTurnout": "55.20",
+      "summary": "集計表に投票率の記載がありません。多賀栄太郎の得票105,684票は、収録している区長選のなかで最も多い得票です。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "多賀 栄太郎",
+          "party": "無所属",
+          "votesDisplay": "105,684票",
+          "voteShare": "",
+          "endorsement": "自・社・公・民・ク・連",
+          "age": "68",
+          "incumbency": "現職"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "川上 允",
+          "party": "日本共産党",
+          "votesDisplay": "28,015票",
+          "voteShare": "",
+          "endorsement": "革自連",
+          "age": "41",
+          "incumbency": "新人"
+        }
+      ],
+      "sources": [
+        {
+          "label": "提供された集計表「歴代区長選」（一次資料は未確認）"
+        }
+      ],
+      "verifiedAt": "2026-11-15"
+    },
+    {
+      "id": "ward-mayor-19750427",
+      "type": "ward-mayor",
+      "title": "品川区長選挙",
+      "electionDate": "1975-04-27",
+      "district": "品川区全域",
+      "seats": 1,
+      "candidateCount": 3,
+      "electorate": "",
+      "turnout": "55.20",
+      "previousTurnout": "",
+      "summary": "1974年に区長公選制が復活して最初の区長選挙です。多賀栄太郎は1972年の準公選を経て区長を務めていましたが、公選としては初めての立候補のため集計表では新人として扱われています。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "多賀 栄太郎",
+          "party": "無所属",
+          "votesDisplay": "77,317票",
+          "voteShare": "",
+          "endorsement": "社・共・民",
+          "support": "公",
+          "age": "64",
+          "incumbency": "新人"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "永井 辰男",
+          "party": "無所属",
+          "votesDisplay": "38,704票",
+          "voteShare": "",
+          "endorsement": "自",
+          "age": "59",
+          "incumbency": "新人"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "千葉 才智",
+          "party": "無所属",
+          "votesDisplay": "22,523票",
+          "voteShare": "",
+          "age": "48",
+          "incumbency": "新人"
+        }
+      ],
+      "sources": [
+        {
+          "label": "提供された集計表「歴代区長選」（一次資料は未確認）"
+        }
+      ],
+      "verifiedAt": "2026-11-15"
+    },
+    {
+      "id": "ward-mayor-19510423",
+      "type": "ward-mayor",
+      "title": "品川区長選挙",
+      "electionDate": "1951-04-23",
+      "district": "品川区全域",
+      "seats": 1,
+      "candidateCount": 3,
+      "electorate": "",
+      "turnout": "77.59",
+      "previousTurnout": "63.01",
+      "summary": "区長公選制が廃止される前の最後の区長選挙です。投票率77.59%は、収録している選挙のなかで最も高い値です。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "鏑木 忠正",
+          "party": "自由党",
+          "votesDisplay": "53,803票",
+          "voteShare": "",
+          "incumbency": "現職"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "西本 哲",
+          "party": "無所属",
+          "votesDisplay": "42,512票",
+          "voteShare": "",
+          "incumbency": "新人"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "石塚 幸治郎",
+          "party": "日本社会党",
+          "votesDisplay": "29,360票",
+          "voteShare": "",
+          "incumbency": "新人"
+        }
+      ],
+      "sources": [
+        {
+          "label": "提供された集計表「歴代区長選」（一次資料は未確認）"
+        }
+      ],
+      "verifiedAt": "2026-11-15"
+    },
+    {
+      "id": "ward-mayor-19470405",
+      "type": "ward-mayor",
+      "title": "品川区長選挙",
+      "electionDate": "1947-04-05",
+      "district": "品川区全域",
+      "seats": 1,
+      "candidateCount": 3,
+      "electorate": "",
+      "turnout": "63.01",
+      "previousTurnout": "",
+      "summary": "収録しているなかで最も古い区長選挙です。地方自治法の施行に合わせて、区長を住民が直接選ぶ制度のもとで行われました。",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "鏑木 忠正",
+          "party": "日本自由党",
+          "votesDisplay": "37,834票",
+          "voteShare": "",
+          "incumbency": "新人"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "浜田 慶ニ",
+          "party": "日本社会党",
+          "votesDisplay": "25,758票",
+          "voteShare": "",
+          "incumbency": "新人"
+        },
+        {
+          "result": "落選",
+          "rank": 3,
+          "name": "平沢 実三",
+          "party": "無所属",
+          "votesDisplay": "4,627票",
+          "voteShare": "",
+          "incumbency": "新人"
+        }
+      ],
+      "sources": [
+        {
+          "label": "提供された集計表「歴代区長選」（一次資料は未確認）"
+        }
+      ],
+      "verifiedAt": "2026-11-15"
     }
-  ]
+  ],
+  "mayorHistory": {
+    "label": "区長公選制の沿革",
+    "range": "1952〜1974",
+    "note": "この期間は区長を住民が直接選ぶ制度がなく、掲載できる投票結果がありません。提供された集計表「歴代区長選」に沿って、制度の変化と当時の区長を年表にしています。1952年から1955年までの区長は集計表に記載がありません。",
+    "sortDate": "1974-12-31",
+    "items": [
+      {
+        "period": "1974年",
+        "title": "区長公選制が復活",
+        "detail": "区長を住民の直接選挙で選ぶ制度が戻りました。復活後最初の区長選挙は1975年4月27日です。"
+      },
+      {
+        "period": "1972年〜1975年",
+        "title": "多賀 栄太郎 が区長",
+        "detail": "1972年の準公選を経て区長を務め、1975年の公選でも当選しました。"
+      },
+      {
+        "period": "1972年",
+        "title": "区長準公選",
+        "detail": "公選制がない時期に、区民の意向を問うために行われた準公選です。投票率は38.70%でした。"
+      },
+      {
+        "period": "1968年〜1972年",
+        "title": "杉本 重蔵 が区長",
+        "detail": ""
+      },
+      {
+        "period": "1955年〜1967年",
+        "title": "島本 正一 が区長",
+        "detail": ""
+      },
+      {
+        "period": "1952年",
+        "title": "区長公選制が廃止",
+        "detail": "区長の直接選挙がなくなり、区議会が都知事の同意を得て区長を選ぶ方式に変わりました。廃止前最後の区長選挙は1951年4月23日です。"
+      }
+    ],
+    "sources": [
+      {
+        "label": "提供された集計表「歴代区長選」（一次資料は未確認）"
+      }
+    ]
+  }
 };

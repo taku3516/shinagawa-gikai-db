@@ -87,6 +87,21 @@
       border: 1px solid var(--c-border); border-radius: 3px; padding: 6px 12px;
       background: var(--c-card); font-size: calc(13px * var(--fs));
     }
+    /* リンク先のない出典（提供資料など）。破線で「押せない」ことを形で示す */
+    .pill-plain { border-style: dashed; color: var(--c-ink-soft); }
+    /* 推薦・支援・年齢の列が出る選挙は、列が9本になるので最低幅を広げる */
+    .table--wide { min-width: 880px; }
+    /* 沿革カード。選挙ではないので左罫を青にしない */
+    .history-card { border-left-color: var(--c-border-strong); }
+    .history-list { margin: 16px 0 0; padding: 0; list-style: none; }
+    .history-list li {
+      display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 4px 16px;
+      padding: 12px 0; border-top: 1px solid var(--c-border);
+    }
+    .history-list li:first-child { border-top: 0; }
+    .history-period { color: var(--c-ink-soft); font-weight: 700; font-variant-numeric: tabular-nums; }
+    .history-title { font-weight: 700; }
+    .history-detail { grid-column: 2; margin: 0; color: var(--c-ink-soft); }
     .empty-state {
       padding: 30px; border: 1px dashed var(--c-border); border-radius: 3px;
       background: var(--c-card); line-height: 1.9;
@@ -108,6 +123,9 @@
       .election-card summary, .election-body { padding-left: 14px; padding-right: 14px; }
       /* 表の横スクロール量を減らす */
       table { min-width: 560px; font-size: calc(12px * var(--fs)); }
+      .table--wide { min-width: 760px; }
+      .history-list li { grid-template-columns: minmax(0, 1fr); }
+      .history-detail { grid-column: 1; }
       th, td { padding: 8px 7px; }
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
@@ -121,7 +139,7 @@
         <h1>品川区の選挙アーカイブ</h1>
         <p class="lead">品川区で行われた区議選、区長選、都議選、衆議院選を、新しいものから振り返るためのページです。</p>
         <div class="disclaimer">
-          現在は画面とデータ形式、参考にするサイトのみ準備しています。選挙名、候補者、得票数、投票率などの個別情報はまだ掲載していません。
+          区長選は1947年以降、区議選・都議選・衆議院選は1997年以降を掲載しています。1995年以前の区長選と、区長公選制がなかった1952〜1974年の沿革は、提供された集計表によるもので一次資料は未確認です。
         </div>
         <nav data-site-nav></nav>
       </div>
@@ -218,11 +236,13 @@
       return `<div class="stat"><dt>${esc(label)}</dt><dd>${esc(value)}${esc(suffix)}</dd></div>`;
     }
 
+    // 出典にURLがないものがある（提供された集計表など）。リンクにできないので押せない見た目にする
     function sourceLinksHtml(sources) {
       if (!sources || !sources.length) return `<span class="tag">参考リンク準備中</span>`;
-      return sources.map((source) =>
-        `<a class="pill" href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.label)}</a>`
-      ).join("");
+      return sources.map((source) => (source.url
+        ? `<a class="pill" href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.label)}</a>`
+        : `<span class="pill pill-plain">${esc(source.label)}</span>`
+      )).join("");
     }
 
     // ───── 候補者名 → 議員名簿の逆リンク ─────
@@ -303,21 +323,32 @@
       </a></li>`).join("")}</ul><p class="fine-print">外部サイトが開きます。掲載内容を追加する際は、品川区公式サイトを一次情報として確認します。</p>`;
     }
 
+    // 推薦・支援・年齢・現元新は区長選にしか揃っていない。全選挙で9列にすると
+    // 都議選・衆院選で空列が並ぶので、値のある選挙だけ列を足す。
     function candidatesHtml(election, matcher) {
       const candidates = (election.candidates || []).filter(candidate => !matcher || !matcher.active || matcher.test(candidate));
       if (!candidates.length) return `<p><span class="tag">候補者・得票情報準備中</span></p>`;
+      const showEndorsement = candidates.some((candidate) => candidate.endorsement);
+      const showSupport = candidates.some((candidate) => candidate.support);
+      const showProfile = candidates.some((candidate) => candidate.incumbency || candidate.age);
+      const profileText = (candidate) => [candidate.incumbency, candidate.age ? `${candidate.age}歳` : ""].filter(Boolean).join(" ");
+      const columns = [
+        { label: "順位", cell: (c) => `<td class="number">${esc(c.rank)}</td>` },
+        { label: "当落", cell: (c) => `<td>${esc(c.result)}</td>` },
+        { label: "候補者", cell: (c) => `<td>${candidateNameHtml(c, election)}</td>` },
+        { label: "党派", cell: (c) => `<td>${esc(c.party)}</td>` },
+        showEndorsement ? { label: "推薦", cell: (c) => `<td>${esc(c.endorsement)}</td>` } : null,
+        showSupport ? { label: "支援", cell: (c) => `<td>${esc(c.support)}</td>` } : null,
+        showProfile ? { label: "現・元・新／年齢", cell: (c) => `<td>${esc(profileText(c))}</td>` } : null,
+        { label: "得票数", cell: (c) => `<td class="number">${esc(c.votesDisplay)}</td>` },
+        { label: "得票率", cell: (c) => `<td class="number">${esc(c.voteShare)}</td>` }
+      ].filter(Boolean);
+      const wide = columns.length > 6 ? " table--wide" : "";
       return `<p class="table-scroll-hint">← 表は横にスクロールできます →</p>
-      <div class="table-wrap"><table>
+      <div class="table-wrap"><table class="${esc(wide.trim())}">
         <caption class="visually-hidden">${esc(election.title)}の候補者別結果</caption>
-        <thead><tr><th>順位</th><th>当落</th><th>候補者</th><th>党派</th><th>得票数</th><th>得票率</th></tr></thead>
-        <tbody>${candidates.map((candidate) => `<tr>
-          <td class="number">${esc(candidate.rank)}</td>
-          <td>${esc(candidate.result)}</td>
-          <td>${candidateNameHtml(candidate, election)}</td>
-          <td>${esc(candidate.party)}</td>
-          <td class="number">${esc(candidate.votesDisplay)}</td>
-          <td class="number">${esc(candidate.voteShare)}</td>
-        </tr>`).join("")}</tbody>
+        <thead><tr>${columns.map((column) => `<th>${esc(column.label)}</th>`).join("")}</tr></thead>
+        <tbody>${candidates.map((candidate) => `<tr>${columns.map((column) => column.cell(candidate)).join("")}</tr>`).join("")}</tbody>
       </table></div>`;
     }
 
@@ -336,6 +367,29 @@
           <td class="number">${esc(result.voteShare)}</td>
         </tr>`).join("")}</tbody>
       </table></div>`;
+    }
+
+    // 区長公選制がなかった期間（1952〜1974）の年表。投票結果が無いので選挙カードとは別の形にする。
+    function mayorHistoryHtml(history) {
+      const items = history.items || [];
+      return `<article class="election-card history-card" id="mayor-history">
+        <details>
+          <summary>
+            <span class="summary-main"><span class="date">${esc(history.range)}</span><span>${esc(history.label)}</span><span class="tag">沿革</span></span>
+            <span class="summary-meta">区長を直接選ぶ制度がなかった期間</span>
+          </summary>
+          <div class="election-body">
+            ${history.note ? `<p>${esc(history.note)}</p>` : ""}
+            <ul class="history-list">${items.map((item) => `<li>
+              <span class="history-period">${esc(item.period)}</span>
+              <span class="history-title">${esc(item.title)}</span>
+              ${item.detail ? `<p class="history-detail">${esc(item.detail)}</p>` : ""}
+            </li>`).join("")}</ul>
+            <h3>公式資料・参考リンク</h3>
+            <div>${sourceLinksHtml(history.sources)}</div>
+          </div>
+        </details>
+      </article>`;
     }
 
     function electionHtml(data, election, shouldOpen, matcher) {
@@ -415,8 +469,19 @@
           .filter((item) => (!type || item.type === type) && (!year || String(item.electionDate).startsWith(year)))
           .filter((item) => !matcher.active || (item.candidates || []).some(matcher.test))
           .sort((a, b) => String(b.electionDate).localeCompare(String(a.electionDate)));
-        root.innerHTML = list.length
-          ? list.map((item) => electionHtml(data, item, matcher.active, matcher)).join("")
+        // 沿革は選挙ではないので、区長選を見ているときだけ、1951年と1975年の間に差し込む。
+        // 年で絞ったときと候補者を探しているときは該当しないので出さない。
+        // 変数名を history にすると、この関数の末尾で使う window.history を隠してしまう
+        const mayorHistory = data.mayorHistory;
+        const showHistory = Boolean(mayorHistory) && (!type || type === "ward-mayor") && !year && !matcher.active;
+        const cards = list.map((item) => ({
+          sortDate: String(item.electionDate || ""),
+          html: electionHtml(data, item, matcher.active, matcher)
+        }));
+        if (showHistory) cards.push({ sortDate: String(mayorHistory.sortDate || ""), html: mayorHistoryHtml(mayorHistory) });
+        cards.sort((a, b) => b.sortDate.localeCompare(a.sortDate));
+        root.innerHTML = cards.length
+          ? cards.map((card) => card.html).join("")
           : `<div class="empty-state" role="status"><h2>選挙情報は準備中です</h2><p>個別の選挙情報はまだ掲載していません。資料を確認後、新しい選挙から順に追加できる枠組みです。</p></div>`;
         document.getElementById("hit-count").textContent = `${list.length}件`;
         const nextParams = new URLSearchParams();
