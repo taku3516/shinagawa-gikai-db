@@ -38,7 +38,7 @@ window.SHINAGAWA_DB.electionsData = {
   "referenceSites": [
     {
       "label": "品川区公式サイト「過去の選挙結果」",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html",
       "role": "一次情報"
     },
     {
@@ -109,7 +109,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 衆議院議員選挙の結果（公式・品川区分）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/r8shuugi/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-25"
@@ -215,7 +215,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -296,7 +296,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 衆議院議員選挙の結果（公式・品川区分）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/syugi/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-25"
@@ -354,7 +354,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -881,7 +881,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -975,7 +975,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -1058,7 +1058,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -1151,7 +1151,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -1236,7 +1236,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -1374,7 +1374,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -1837,7 +1837,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -1897,7 +1897,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -1963,7 +1963,7 @@ window.SHINAGAWA_DB.electionsData = {
         },
         {
           "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -2090,8 +2090,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/15497/24930"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -2567,8 +2566,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9903"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -2660,8 +2658,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/6317"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -2745,8 +2742,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9904"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -2835,8 +2831,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9858/13887"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -3314,12 +3309,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9905"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
-        },
-        {
-          "label": "品川区 開票結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/kuseizyoho-senkyo-kekka-230424/hpg000015470.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -3366,8 +3356,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/368"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -3466,8 +3455,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9906"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -3550,8 +3538,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9862/13934"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -4007,12 +3994,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9907"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
-        },
-        {
-          "label": "品川区 開票結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/kuseizyoho-senkyo-kekka-190422/hpg000001901.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -4090,8 +4072,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/1072"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -4189,12 +4170,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9908"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
-        },
-        {
-          "label": "品川区 開票結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/kuseizyoho-senkyo-kekka-181008/hpg000001756.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -4267,8 +4243,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9864/13983"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -4345,8 +4320,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/3897"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -4761,8 +4735,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9909"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -4875,8 +4848,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/21828/42450"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -4923,8 +4895,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/3896"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -5336,8 +5307,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/9910"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"
@@ -5434,8 +5404,7 @@ window.SHINAGAWA_DB.electionsData = {
           "url": "https://go2senkyo.com/local/senkyo/25161/47216"
         },
         {
-          "label": "品川区 過去の選挙結果（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html"
+          "label": "品川区 過去の選挙結果（公式・当該選挙は未掲載）"
         }
       ],
       "verifiedAt": "2026-07-30"

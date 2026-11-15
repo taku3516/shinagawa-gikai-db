@@ -473,7 +473,7 @@ window.SHINAGAWA_DB.politiciansData = {
             "森沢恭子",
             "森澤恭子"
           ],
-          "profileUrl": "https://www.city.shinagawa.tokyo.jp/PC/kucho/index.html",
+          "profileUrl": "https://www.city.shinagawa.tokyo.jp/kucho/index.html",
           "websiteUrl": "https://kyokomorisawa.jp/",
           "career": "日本テレビ記者、森ビル勤務を経て、平成29年に東京都議会議員に当選（2期）。令和4年12月の品川区長選挙（再選挙）で当選し、品川区長に就任。選挙により「森沢 恭子」表記もある。",
           "electionHistory": [
