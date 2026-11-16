@@ -1,7 +1,45 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-13T11:20:08.516630Z",
+  "generatedAt": "2026-11-16T06:56:54.025881Z",
   "items": [
+    {
+      "id": "1ba3b2e96b01b561695f",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年11月16日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年11月16日号(令和8年11月9日～令和8年11月15日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64319.html",
+      "publishedAt": "2026-11-16T06:56:29.103096Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-16T06:56:29.103096Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "24ff03ddfd2746b014f0",
+      "title": "REACH大崎クラフトマーケット",
+      "summary": "2026年12月2日（水）、JR大崎駅南口東西自由通路夢さん橋にて「REACH大崎クラフトマーケット」が開催されます。 雑貨やアクセサリーなど、個性豊かな作品が集まる毎月恒例の「手作り市」。大崎駅から徒歩0分というアクセスの良さで、周辺住民だけでなくオフィスワーカーにも人気のクラフトマーケットです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202612",
+      "publishedAt": "2026-11-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-16T06:56:29.103096Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "e8b58f4b986604c16fa4",
       "title": "不動前にキンパ専門店「リキンパ」 韓国発、日本第1号店",
@@ -258,7 +296,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "3c0e90790f3501e401c0",
-      "title": "立会川龍馬通り繁栄会「龍馬祭」",
+      "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
       "summary": "2026年11月14日（土）、立会川龍馬通りにて「龍馬祭」が開催されます。 若き龍馬が滞在していたと伝わる立会川。坂本龍馬像の建つ商店街、立会川龍馬通り繁栄会で行われる「龍馬祭」では、露店や縁日が並び、同商店街のマスコットキャラクター「りょうくん」とのじゃんけん対決や「草履飛ばし」なども開催されます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -14208,9 +14246,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2753, column 42"
+      "status": "ok",
+      "scanned": 325,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
