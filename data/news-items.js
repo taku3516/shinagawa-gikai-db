@@ -1,7 +1,27 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-16T06:56:54.025881Z",
+  "generatedAt": "2026-11-16T19:44:45.591038Z",
   "items": [
+    {
+      "id": "4930b28aa61edabcaa4e",
+      "title": "品川歴史館で「品川らくご会」初回開催へ 柳家吉緑さん独演会、「芝浜」口演",
+      "summary": "「品川らくご会Vol.1」が11月28日、品川区立品川歴史館（品川区大井6）2階講堂で開催される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5117",
+      "publishedAt": "2026-11-16T07:35:06Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-16T19:44:27.669782Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "品川歴史館"
+      ],
+      "relevanceScore": 16
+    },
     {
       "id": "1ba3b2e96b01b561695f",
       "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年11月16日号）を公開しました‼",
@@ -14246,9 +14266,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 325,
-      "accepted": 0
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2395, column 36"
     },
     {
       "source": "朝日新聞",
@@ -14272,7 +14292,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東急ニュースリリース",
