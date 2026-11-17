@@ -62,6 +62,30 @@ def item_id(url: str) -> str:
     return hashlib.sha256(normalized_url(url).encode("utf-8")).hexdigest()[:20]
 
 
+def build_url_index(items: list[dict]) -> dict[str, str]:
+    """既存記事を正規化URLで引ける索引にする。URLかIDが無い記事は入れない。"""
+    index: dict[str, str] = {}
+    for item in items:
+        url = (item.get("url") or "").strip()
+        stored_id = item.get("id")
+        if url and stored_id:
+            index.setdefault(normalized_url(url), stored_id)
+    return index
+
+
+def reuse_existing_id(item: dict, url_index: dict[str, str]) -> dict:
+    """同じURLの記事が既にあれば、そのIDを引き継ぐ。
+
+    公式サイトのリニューアルで既存記事のURLだけを書き換えたため、
+    id ≠ sha256(url) の記事がある。IDだけで突き合わせると同じ記事を
+    新IDでもう1件足してしまうので、URLでも突き合わせる。
+    """
+    previous_id = url_index.get(normalized_url(item.get("url", "")))
+    if previous_id:
+        item["id"] = previous_id
+    return item
+
+
 def iso_date(value: str | None) -> str:
     if not value:
         return ""
@@ -435,6 +459,7 @@ def collect(config: dict, existing: list[dict]) -> tuple[list[dict], list[dict]]
     classifier = Classifier(config)
     collected_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     items_by_id = {item["id"]: item for item in existing if item.get("id")}
+    url_index = build_url_index(existing)
     known_ids = set(items_by_id)
     reports: list[dict] = []
 
@@ -459,6 +484,7 @@ def collect(config: dict, existing: list[dict]) -> tuple[list[dict], list[dict]]
                     item = build_item(raw, source, classifier, collected_at)
                     if item is None:
                         continue
+                    reuse_existing_id(item, url_index)
                     previous = items_by_id.get(item["id"])
                     if previous:
                         item["collectedAt"] = previous.get("collectedAt", item["collectedAt"])
@@ -471,6 +497,7 @@ def collect(config: dict, existing: list[dict]) -> tuple[list[dict], list[dict]]
                             item["publishedAt"] = previous.get("publishedAt", item["publishedAt"])
                             item["dateKind"] = previous.get("dateKind", item["dateKind"])
                     items_by_id[item["id"]] = item
+                    url_index.setdefault(normalized_url(item["url"]), item["id"])
                     accepted += 1
                 reports.append({"source": source["name"], "status": "ok", "scanned": scanned, "accepted": accepted})
             except (ET.ParseError, HTTPError, URLError, TimeoutError, UnicodeError, OSError) as error:

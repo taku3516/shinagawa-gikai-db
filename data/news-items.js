@@ -1987,7 +1987,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-kateisoudan/20260217155258.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kosodate/1009436/1011654.html",
       "publishedAt": "2026-10-20T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-20T00:28:31.044767Z",
@@ -2333,7 +2333,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-yashio/shisetsu-kuyakusyo-chiiki-yashio-oshirase/hpg000020753.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008139/1008155/1011789.html",
       "publishedAt": "2026-10-16T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-16T11:42:22.728128Z",
@@ -2352,7 +2352,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-zaisei/kuseizyoho-siryo-zaisei-plan/20251027113427.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/shisakukeikaku/1009646/1005154.html",
       "publishedAt": "2026-10-16T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-31T14:13:07.521277Z",
@@ -2440,30 +2440,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
-      "id": "a49faa8726a3a9f1bf6d",
-      "title": "品川＆早川ふるさと交流『伝統のみそ作り体験と星空観察ツアー』参加者募集",
-      "summary": "総務課官民共創担当 電話03-5742-6856 FAX03-3774-6356 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-shityoson/hpg000026265.html",
-      "publishedAt": "2026-10-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-15T11:49:49.286174Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "cae07df5f331d002227e",
       "title": "「令和8年度高次脳機能障害啓発講座」開催のお知らせ",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20241226105112.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1009484/1011550.html",
       "publishedAt": "2026-10-15T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-15T04:56:01.750679Z",
@@ -2476,30 +2459,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
-      "id": "5e82fa2e4fcfca37509a",
-      "title": "エシカル消費イベント in しながわ「shinagawa ETHICAL 2026」",
-      "summary": "消費者センター 電話：03-6421-6136 FAX：03-6421-6132",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260902135700.html",
-      "publishedAt": "2026-10-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-14T23:59:28.946016Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "b4bc4778f5b9de49b241",
       "title": "品川区セーフティネット住宅入居者募集",
       "summary": "住宅課 居住支援係 電話：03-5742-6777 FAX：03-5742-6963 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kenchiku/kyojushien/20260603115846.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1004314/1011528.html",
       "publishedAt": "2026-10-15T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-14T19:32:11.536084Z",
@@ -2510,30 +2476,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "66c0b822ccc6edf99ae8",
-      "title": "区政資料コーナー 資料の点検・整理に伴う休業のお知らせ",
-      "summary": "区政資料コーナー（第三庁舎3階）は区政資料の点検・整理のため、 令和8年10月19日（月）・10月20日（火）は休業します。 皆様にはご不便をおかけしますが、ご理解ご協力のほどよろしくお願いいたします。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/20210928131805.html",
-      "publishedAt": "2026-10-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-14T19:32:11.536084Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "9d50801e8d63fc7cbee5",
       "title": "「出張！国保基本健診」（集団健診）",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20240806141224.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/kokuhoken/1001801/1001809.html",
       "publishedAt": "2026-10-15T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-01T10:20:03.375555Z",
@@ -2702,7 +2651,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/kankyo/1004110/1004154.html",
       "publishedAt": "2026-10-14T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-07T10:23:48.255849Z",
@@ -2719,7 +2668,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1009755/1006626.html",
       "publishedAt": "2026-10-14T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-22T01:46:19.238621Z",
@@ -2881,29 +2830,10 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/shinagawagriefcare2.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002425/1010024.html",
       "publishedAt": "2026-10-13T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-03T09:22:28.623619Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 4
-    },
-    {
-      "id": "877e45ac9a8423466279",
-      "title": "グリーフケア電話相談・遺族のつどい",
-      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/shinagawagriefcare.html",
-      "publishedAt": "2026-10-13T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T15:54:35.184829Z",
       "tags": [
         "その他"
       ],
@@ -3000,7 +2930,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-izi_yakuzi/hpg000014305.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002360/1003200.html",
       "publishedAt": "2026-10-09T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-14T08:53:47.528849Z",
@@ -3017,7 +2947,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-kyogikai/20230217161144.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002946/1002905/1002914.html",
       "publishedAt": "2026-10-09T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-13T02:38:49.560794Z",
@@ -3073,7 +3003,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/riniashinkansenn/index.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/toshiseibi/1009613/1004470.html",
       "publishedAt": "2026-10-08T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-08T10:47:40.069207Z",
@@ -3239,23 +3169,6 @@ window.SHINAGAWA_NEWS = {
         "スクエア荏原"
       ],
       "relevanceScore": 8
-    },
-    {
-      "id": "430e713594205c523e8e",
-      "title": "令和8年度品川区こども会議",
-      "summary": "子ども育成課子ども育成係 電話：03-5742-6720 FAX：03-5742-6351",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomokaigi/20260407090839.html",
-      "publishedAt": "2026-10-07T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-07T06:14:40.913674Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "6c64cb03e526f1aa749c",
@@ -3567,7 +3480,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-park/20221012221135.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009600/1004637.html",
       "publishedAt": "2026-10-03T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-03T11:51:46.171933Z",
@@ -3617,32 +3530,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "acff6bbc28d05f32a9ca",
-      "title": "大井第三地区「みかん狩りとさつまいも掘り」開催のお知らせ",
-      "summary": "",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260828151641.html",
-      "publishedAt": "2026-10-02T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-02T09:56:57.327353Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [
-        "大井"
-      ],
-      "relevanceScore": 4
-    },
-    {
       "id": "80d79487bf7968ddffee",
       "title": "令和8年度第2回品川区公契約審議会の開催について",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-keiyaku/kuseizyoho-siryo-keiyaku-keiyakukakarikara/202610021500.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/nyusatsukeiyaku/1005322/1011799.html",
       "publishedAt": "2026-10-02T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-02T09:56:57.327353Z",
@@ -3659,7 +3553,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20250929085556.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1007835/1011306.html",
       "publishedAt": "2026-10-02T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-02T00:57:59.432114Z",
@@ -3677,7 +3571,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-yashio/shisetsu-kuyakusyo-chiiki-yashio-oshirase/20180727102035.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008139/1008155/1011308.html",
       "publishedAt": "2026-10-02T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-01T18:29:41.415529Z",
@@ -3746,32 +3640,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "ee9b0e8688e626befe94",
-      "title": "【10月12日開催】スポーツの日記念イベント",
-      "summary": "スポーツの日にあわせて、区立体育館を無料開放します。 また、体験型のスポーツイベントを実施します。 この機会にスポーツやレクリエーションをはじめてみませんか。 スポーツの日記念イベントちらし(PDF : 7MB) 【開催日】 令和8年10月12日(月・祝) 【開催時間】午前9時00分から午後4時50分まで 【会場】 総合体育館・戸越体育館 【主催】 品川区スポーツ協会 電話：03-3449-4400 FAX : 03-3449-4401 詳細は品川区スポーツ協会ホームページ…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20221003101124.html",
-      "publishedAt": "2026-10-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-06T16:04:40.058522Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [
-        "戸越"
-      ],
-      "relevanceScore": 12
-    },
-    {
       "id": "dfb2469d3c02f3695ac9",
       "title": "品川区防災ポータル・品川区防災アプリ",
       "summary": "防災課 計画担当 電話：03-5742-6695 FAX：03-3777-1181 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai2/kanrensiryo/20250212.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bosai/bosai/1009491/1003379.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-02T09:56:57.327353Z",
@@ -3808,7 +3683,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-dukuri/20241017180143.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/kokuhoken/1001801/1011735.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-01T10:20:03.375555Z",
@@ -3837,23 +3712,6 @@ window.SHINAGAWA_NEWS = {
         "大井競馬場"
       ],
       "relevanceScore": 8
-    },
-    {
-      "id": "6d07642e3dd482ee0859",
-      "title": "多文化共生講演会2026「アフリカ少年と考えるー違いを越えて、同じ明日の作りかた」（申込10月23日（金）〆）",
-      "summary": "総務課 平和・国際担当 電話：03-5742-6691（平日 午前8時30分～午後5時15分） FAX：03-3774-6356",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/kokusai/tabunka/20261001100641.html",
-      "publishedAt": "2026-10-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-01T10:20:03.375555Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "58760241e31ef3f35e3f",
@@ -3903,7 +3761,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/20260903172517.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002425/1011165.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-01T00:39:14.021352Z",
@@ -3922,7 +3780,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20220913093018.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/kokuhoken/1001801/1011660.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-10-01T00:39:14.021352Z",
@@ -3939,7 +3797,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-shina2/shisetsu-kuyakusyo-chiiki-shina2-oshirase/202610011687115618541754144.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007915/1007916/1011309.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-30T20:10:28.070419Z",
@@ -3956,7 +3814,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/20230818103656.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkageijutsu/1003658/1011323.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-30T20:10:28.070419Z",
@@ -3973,7 +3831,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/hpg000026780.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/shogaigakushu/1003706/1003708/1011328.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-30T20:10:28.070419Z",
@@ -3991,7 +3849,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20231026172313.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/boshu/shokuinboshu/1011690.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-30T20:10:28.070419Z",
@@ -4011,7 +3869,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/sangyo-bunka-bunnkaevento-reku/hpg000012604.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkageijutsu/1003658/1011325.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-30T20:10:28.070419Z",
@@ -4028,7 +3886,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-dukuri/20200601141146.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002360/1002367.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-30T20:10:28.070419Z",
@@ -4043,31 +3901,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "4582ce7e91fa78238c03",
-      "title": "令和8年度(12月採用予定) 品川区教育委員会事務局会計年度任用職員募集【教育総合支援センター】（教育心理相談員・心理職）",
-      "summary": "教育総合支援センター いじめ対策担当 電話：03-3490-2008 FAX：03-3490-2007 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/kukyoi-bosyu-rinziteki/20260924142326.html",
-      "publishedAt": "2026-10-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-30T20:10:28.070419Z",
-      "tags": [
-        "子育て教育",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "450cc474a181b89bd3b3",
       "title": "品川区麻雀大会(11月23日開催)【参加者募集締切：10月30日(金)】",
       "summary": "1．住所 2．氏名(ふりがな) 3．電話番号 4．年齢 5．在勤・在学の方は勤務先の 名称・所在地・学校名 ※お預かりした個人情報は、主催者および運営団体で共有し、参加者への連絡・受付のため使用いたします。また、当課のイベントのご案内を送付する場合もございます。なお、大会の模様はケーブルテレビ品川での放映および区のホームページ等に掲載される場合がございますので、ご理解とご協力をお願いいたします。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/sangyo-bunka-bunnkaevento-reku/20230926210800.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkageijutsu/1003658/1011324.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-30T20:10:28.070419Z",
@@ -4077,40 +3917,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 12
-    },
-    {
-      "id": "23f2bce7c00e20ad6f2a",
-      "title": "昭和医科大学パートナーシップ講座（11月7日（土）実施）",
-      "summary": "品川区 文化観光スポーツ振興部 文化観光戦略課 生涯学習係 電話：03-5742-6837 FAX： 03-5742-6893",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20260727141140.html",
-      "publishedAt": "2026-10-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-30T20:10:28.070419Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 12
-    },
-    {
-      "id": "206913b17f780f32fdf9",
-      "title": "駅前放置自転車クリーンキャンペーン",
-      "summary": "『自転車の 代わりに置こう 思いやり』 放置自転車問題を広く周知し、放置防止の行動に繋げてもらうため、「第43回駅前放置自転車クリーンキャンペーン」を東京都と連携し、実施いたします。 自転車等が駅周辺に放置されると、歩行者の通行の妨げとなるほか、街の美観が損なわれるなど、多くの問題を引き起こします。 今年もキャンペーン標語「自転車の 代わりに置こう 思いやり」のもと、放置自転車解消に取り組んでいきます。 1 実施期間 令和8年10月22日（木）から10月31日（土）まで 2…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-zitensyataisaku/20260928110924.html",
-      "publishedAt": "2026-10-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-30T20:10:28.070419Z",
-      "tags": [
-        "交通"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "93646144c953831b0287",
@@ -4119,7 +3925,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/20250930.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/kankyo/1009565/1004248.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-10T11:35:47.365946Z",
@@ -4136,7 +3942,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20240110135206.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009520/1011321.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-31T20:54:55.827675Z",
@@ -4153,7 +3959,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002312/1008896.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-27T02:00:04.964019Z",
@@ -4170,7 +3976,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20251222141006.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009376/1004748.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -4187,7 +3993,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20230926124056.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1007835/1007853.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -4198,30 +4004,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
-      "id": "b9f20bc7abb09cdfa856",
-      "title": "【10月31日（土）・11月21日（土）開催】しながわシティ公式戦に親子25組50人をご招待",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/20260507103832.html",
-      "publishedAt": "2026-10-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "4e9c4ce1aa25196522e2",
       "title": "女性相談員による総合相談（法律・DV・カウンセリング）",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000021243.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sodan/1009422/1006767.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -4238,7 +4027,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kaigo1/hpg000002404.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kaigo/1000108/1002656.html",
       "publishedAt": "2026-10-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -4323,25 +4112,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "c7ae2f0abc5f086e3a62",
-      "title": "アレルギーおしゃべり会（11月）大崎ゆうゆうプラザで開催",
-      "summary": "日時：令和8年11月15日(日) 午前10時～午後3時 会場：大崎ゆうゆうプラザ 2階 コミュニティ室 PAE(小児アレルギーエデュケーター)としても活躍されている看護師さんと一緒におしゃべりしませんか？ アレルギーおしゃべり会は、 お子様の食物アレルギー・ぜん息・アトピー性皮膚炎・花粉症など アレルギーで気になることを何でもおしゃべりしています。 保育スタッフが同じお部屋にいて、お子様と遊んでくれます。 おしゃべり会は、参加も同室保育も『予約不要・無料』です。 参加状況に…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-kateisoudan/kodomo-kateisoudan-kosodateouen/20251128093912.html",
-      "publishedAt": "2026-09-30T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-07T06:14:40.913674Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [
-        "大崎"
-      ],
-      "relevanceScore": 4
-    },
-    {
       "id": "c038311121fab0e4cf36",
       "title": "品川×大田 旧東海道でつながるまち WAKU☆WAKU ラリー",
       "summary": "2026年10月15日（木）～11月29日（日）、（一社）しながわ観光協会と（一社）大田観光協会は、品川区と大田区が交わる旧東海道および大森エリアで「品川×大田 旧東海道でつながるまち WAKU☆WAKU ラリー」を開催します。 今からおよそ400年前、徳川家康が整備した五街道のひとつ「東海道」。江戸・日本橋から京都・三条大橋までに53の宿場が置かれました。東海道第一の宿の品川宿から大森・六郷へと続く道は、今もまちの中にその面影を残しています。",
@@ -4405,7 +4175,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-dukuri/20180829101907.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002360/1011166.html",
       "publishedAt": "2026-09-30T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-30T05:46:26.423098Z",
@@ -4443,7 +4213,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-kyodo/chiiki-kyodo-kumin/20260924103431.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/renkeikyodo/1004676/1011295.html",
       "publishedAt": "2026-09-30T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-29T18:09:54.506488Z",
@@ -4462,7 +4232,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-event/hpg000012278.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/kankyo/1004086/1011319.html",
       "publishedAt": "2026-09-30T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-10T11:35:47.365946Z",
@@ -4481,7 +4251,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009376/1008959.html",
       "publishedAt": "2026-09-30T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -4498,7 +4268,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/mynumbercard/202401268888.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/mynumber/1001850/1001855.html",
       "publishedAt": "2026-09-30T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -4515,7 +4285,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/hpg000029194.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/zeikin/1009363/1007100.html",
       "publishedAt": "2026-09-30T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -4532,7 +4302,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/haneda/hpg000023398.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/kankyo/1004369/1004370.html",
       "publishedAt": "2026-09-30T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -4695,31 +4465,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "48f4700ea5a87a18ab11",
-      "title": "こども未来ミーティング～みんなでつくろう！こどもの権利条例～",
-      "summary": "令和10年度の「（仮称）品川区こどもの権利条例」の制定に向けて、広く区民の皆様から意見をいただくため、今年度4回の区民ワークショップ「こども未来ミーティング」を開催します。 本ワークショップでは、こどもと大人が一緒にグループを作り、条例に盛り込む内容について、それぞれの経験・視点から話し合います。 区内在住・在学の「こども」と「大人」（年齢は問いません。） ※小学4年生以下の方は、保護者の同伴が必須となります。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/child_rights/20260604164736.html",
-      "publishedAt": "2026-09-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-01T08:48:26.899424Z",
-      "tags": [
-        "行政",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "064c6abf260eca5e4ffe",
       "title": "ウェルビーイング・ＳＤＧｓ推進ファンド事業",
       "summary": "ウェルビーイング・ＳＤＧｓ推進事業実行委員会事務局 （品川区企画経営部企画課内） 電話：03-5742-7864 FAX：03-5742-6870 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/sdgs/sdgsfundzigyou.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/shisakukeikaku/1007129/1007134.html",
       "publishedAt": "2026-09-29T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-28T23:51:47.393458Z",
@@ -4871,7 +4623,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/sisyunkiR6.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kosodate/1001928/1011749.html",
       "publishedAt": "2026-09-28T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-27T17:06:25.503279Z",
@@ -4884,30 +4636,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "3178e8fca9e05d6ad964",
-      "title": "品川CCパペレシアルのブラインドサッカー体験教室",
-      "summary": "パラリンピックの正式競技でもあるブラインドサッカーの体験会を開催します。 品川区をホームタウンとして活動する品川CCパペレシアルの皆さんを講師にお迎えし、 ブラインドサッカーの視覚OFF体験やゲーム感覚で楽しめるコンテンツを実施します。 ブラインドサッカー競技の特徴であるコミュニケーションやチームワークの大切さを再認識できるイベントとなっております。 体験教室の最後には選手との座談会も予定しており、 選手たちと近い距離で楽しめる内容となっておりますので、ぜひお申込みください…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20260507201318.html",
-      "publishedAt": "2026-09-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-27T17:06:25.503279Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
       "id": "fa3cae7a0a275e978d61",
       "title": "休日・夜間（平日・土曜日）の診療",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1009460/1002452.html",
       "publishedAt": "2026-09-28T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -5140,7 +4875,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20260909083004.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1009484/1011170.html",
       "publishedAt": "2026-09-25T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-29T10:00:31.468521Z",
@@ -5178,7 +4913,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-mizube/flood-prevention-subsidy/hpg000003880.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/mizubegesuido/1010838/1010647.html",
       "publishedAt": "2026-09-25T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-25T12:02:17.775966Z",
@@ -5742,23 +5477,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
-      "id": "64262452e46e30f3ab78",
-      "title": "eLTAXやeL-QRのサービスが停止します（令和8年9月19日～9月24日）",
-      "summary": "令和8年9月のeLTAXのシステム更改に伴い、次の期間中、eLTAXのサービスが停止されます。 サービス停止期間中は、eLTAXやeL-QRを利用した地方税の電子申告、電子納付等の手続きができないため、ご注意ください。 【サービス停止期間】 令和8年9月19日（土曜日）午前0時 ～ 令和8年9月24日（木曜日）午前8時30分(予定) 詳細は、以下のリンク先をご覧ください。 令和8年9月のeLTAX更改に伴うサービス停止について（eLTAXホームページ）（別ウィンドウ表示）…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-zeikin/procedure-zeikin-oshirase/20260916163201.html",
-      "publishedAt": "2026-09-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-17T05:03:22.000533Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "cf305d289646a8dbf10f",
       "title": "不動前にサンドイッチ店「メルシー」 5店目、毎月3日は3割引サービスも",
       "summary": "「サンドイッチのお店Merci（メルシー） 不動前店」（品川区西五反田4、TEL 03-6275-3377）が不動前駅近くにオープンして1カ月がたった。 #品川経済新聞",
@@ -5824,7 +5542,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-oosaki2/shisetsu-kuyakusyo-chiiki-oosaki2-oshirase/20260915094955.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007964/1007966/1011313.html",
       "publishedAt": "2026-09-16T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-28T05:38:22.929973Z",
@@ -5864,7 +5582,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/20260903092526.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/zeikin/1009363/1010658.html",
       "publishedAt": "2026-09-16T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-16T11:52:29.909327Z",
@@ -5882,7 +5600,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/soudanmado/soudanmado-hukushi/20260616181542.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/chiikifukushi/1009466/1009345.html",
       "publishedAt": "2026-09-16T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-16T11:52:29.909327Z",
@@ -6029,7 +5747,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/20220119173146.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/juminkoseki/1001579/1001880.html",
       "publishedAt": "2026-09-15T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-17T05:03:22.000533Z",
@@ -6046,7 +5764,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kenchiku/kankyo-kenchiku-assen/20211221163556.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1004280/1004283.html",
       "publishedAt": "2026-09-15T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-16T05:01:20.374371Z",
@@ -6097,30 +5815,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "cfe9e9c79b0d62021052",
-      "title": "ジェンダー平等推進フォーラム2026",
-      "summary": "区では、区民一人ひとりが、互いに人権を尊重し、多様な生き方に配慮しつつ、責任を分かち合い、能力と個性を発揮して、 誰もが自分らしく、生き生きと安心して暮らせるジェンダー平等と性の多様性を尊重し合う社会の実現に向けて取り組んでいます。 この取り組みの一環として、公募した区民が中心となり企画した「ジェンダー平等推進フォーラム」を開催します。 【講演会】 事前申込制（先着） 会場参加 200人 オンライン参加250人",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000012738.html",
-      "publishedAt": "2026-09-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-14T19:53:06.427217Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "4ba1f068e48aefe7df44",
       "title": "2026-002「品川区大井町駅周辺地区バリアフリー計画」に関する結果公表",
       "summary": "「品川区大井町駅周辺地区バリアフリー計画」の作成に当たり、計画案に対する意見募集を行ったところ、22人の方から31件のご意見をいただきました。 令和8年6月1日(月)から令和8年6月30日(火)まで",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20260909152352.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/jinkenjyenda/1009666/index.html",
       "publishedAt": "2026-09-15T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-14T19:53:06.427217Z",
@@ -6176,7 +5877,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/procedure-kenkouhoken-hokenryo/hpg000021698.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/kokuhoken/1001767/1001762.html",
       "publishedAt": "2026-09-14T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-13T16:31:46.062194Z",
@@ -6565,30 +6266,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "c73d47196e58b6361fd7",
-      "title": "施設予約システムメンテナンスのお知らせ",
-      "summary": "デジタル推進課 情報推進担当（内部情報） 電話：03-5742-6618 FAX：03-5742-7164",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-bunka/shisetsuyoyaku/20260908112551.html",
-      "publishedAt": "2026-09-08T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-08T04:55:44.820519Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "0f7ef77bb30180cd3552",
       "title": "西品川二・三丁目地区地区計画",
       "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/20251014165418.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/toshikeikaku/1009606/1004502.html",
       "publishedAt": "2026-09-08T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-18T01:57:49.746937Z",
@@ -6672,26 +6356,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "022bb9c294e2bb3a26eb",
-      "title": "品川区民まつり荏原第二地区会場『ふるさとまつり』開催のお知らせ",
-      "summary": "品川区民まつり荏原第二地区会場『ふるさとまつり』を開催します。 当日は、模擬店やゲームコーナーなど盛り沢山 皆さま、ぜひお越しください。 荏原第二地区ふるさとまつりチラシ(PDF : 417KB) 【模擬店】 焼きそば、磯辺焼、かき氷、フランクフルトなど美味しい模擬店がたくさんあります。 【イベント】 午後1時 荏原第六中学校 吹奏楽部 午後2時 荏原第五中学校 吹奏楽部 午後3時 盆踊り（自由参加） 【その他イベント】 児童センター・荏原第六中学校生徒によるゲームコーナー…",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba2/shisetsu-kuyakusyo-chiiki-eba2-oshirase/r8-furusato-matsuri-info.html",
-      "publishedAt": "2026-09-07T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-07T12:50:30.891813Z",
-      "tags": [
-        "子育て教育",
-        "地域イベント"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 14
-    },
-    {
       "id": "ddaa9d77e1b146873079",
       "title": "大成温調、本社を「OIMACHI TRACKS」へ移転",
       "summary": "[大成温調株式会社] 大成温調株式会社（本社：東京都品川区、代表取締役 社長執行役員：水谷 憲一、以下、大成温調）は、2026年9月1日付で本社を「OIMACHI TRACKS BUSINESS TOWER」（東京都品川区広町）へ移転したことをお知らせいた...",
@@ -6738,7 +6402,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinensakaishishien/20260903100340.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bosai/bosai/1009493/1003400/1010668/1010669.html",
       "publishedAt": "2026-09-04T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-04T11:32:09.614198Z",
@@ -6756,7 +6420,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-mynumber/hpg000029341.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/mynumber/1009372/1007125.html",
       "publishedAt": "2026-09-04T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-04T11:32:09.614198Z",
@@ -6765,42 +6429,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "52b18889c8c79e4ca111",
-      "title": "令和８年度(９年度採用)品川区立学校教育職員採用候補者選考【第二次選考合格発表】",
-      "summary": "指導課 教職員人事係 電話：03-5742-6831 FAX：03-5742-6892 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20260903083637.html",
-      "publishedAt": "2026-09-04T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-04T04:49:53.314029Z",
-      "tags": [
-        "行政",
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "0e04e9da6208f916483d",
-      "title": "第3回品川区障害福祉計画等策定委員会開催のお知らせ（令和8年10月6日開催）",
-      "summary": "障害者施策推進課 計画推進係 電話：03-5742-6762 FAX：03-3775-2000",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/shogaifukushikeikaku/shogaifukushikeikaku/20260114153134.html",
-      "publishedAt": "2026-09-04T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "1ea6e2d72433c34a1679",
@@ -6907,7 +6535,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/koreisha/1009473/1008913.html",
       "publishedAt": "2026-09-03T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -6942,7 +6570,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/202303031635.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006717/1006731.html",
       "publishedAt": "2026-09-02T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-03T04:49:10.047310Z",
@@ -6959,7 +6587,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20240314141332.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006688/1006712.html",
       "publishedAt": "2026-09-02T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-03T04:49:10.047310Z",
@@ -6976,7 +6604,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20241122112834.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006661/1006687.html",
       "publishedAt": "2026-09-02T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-03T04:49:10.047310Z",
@@ -6985,23 +6613,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
-    },
-    {
-      "id": "68ebd725ff5007dee0c6",
-      "title": "【児童相談所】会計年度任用職員募集（一般事務・令和8年11月1日以降採用）",
-      "summary": "※ 令和8年11月1日以降の採用になりますので、ご了承ください。 令和8年9月2日（水）～令和8年9月16日（水）午後5時 電子申請による申込みを受け付けています。 （※郵送での申込みは受け付けていません。） 品川区電子申請サービスはこちら(別ウィンドウ表示)",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260902.html",
-      "publishedAt": "2026-09-02T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-02T04:49:56.785498Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "b62e32b94defe36818e7",
@@ -7137,7 +6748,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-syomono/sangyo-syomono-syogyo/20220325103036.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009385/1003546.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-18T11:32:40.029965Z",
@@ -7155,7 +6766,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/run/20240222144009.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009520/1003654/1003655.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-02T04:49:56.785498Z",
@@ -7202,50 +6813,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "b2b1d209dda35001ced3",
-      "title": "令和8年度清泉女子大学パートナーシップ講座「土曜自由大学」秋のコース（第44回）10月10日、17日実施）",
-      "summary": "※10月10日は、午後1時10分より開講式挨拶を行います。 ※当日、内容等変更になる場合があります。ご了承ください。 品川区 文化観光スポーツ振興部 文化観光戦略課 生涯学習係",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20220308150841.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-01T08:48:26.899424Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 12
-    },
-    {
-      "id": "ed6f13e63b8c9df0a416",
-      "title": "品川区一般任期付職員（児童相談所長（部長級）・相談援助担当（課長級））採用選考",
-      "summary": "品川区役所区長室人事課人事係 電話：03－5742－7140 ＦＡＸ：03－5742－6872 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20251120182608.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-01T00:41:47.659181Z",
-      "tags": [
-        "行政",
-        "子育て教育"
-      ],
-      "locations": [
-        "品川区役所"
-      ],
-      "relevanceScore": 20
-    },
-    {
       "id": "a53131987fd8b7531565",
       "title": "LINEを活用した避難者把握システム",
       "summary": "防災課避難体制係 電話： 03-5742-6941 FAX：03-3777-1181",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai2/jishin/20260812163301.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bosai/bosai/1003281/1010821.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-01T00:41:47.659181Z",
@@ -7256,32 +6830,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
-      "id": "14b06ff6322ec72e7579",
-      "title": "令和8年度精神保健講演会",
-      "summary": "荏原保健センター 電話：03-5487-1311 FAX：03-5487-1320 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/20261005.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-01T00:41:47.659181Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 4
-    },
-    {
       "id": "fb333fda39962c20da89",
       "title": "令和８年度秋季品川区囲碁大会 参加者募集 （募集締切：９月30日）",
       "summary": "1． 住所 2． 氏名(フリガナ) 3. 中学生以下 の場合は保護者 氏名 4． 年齢 5． 電話番号・FAX番号 6． 棋力[段・級の自己申告可] ※お預かりした個人情報は、主催者および運営団体で共有し、参加者への連絡・受付のため使用いたします。 また、当課のイベントと囲碁イベントのご案内を送付する場合もございます。 なお、大会の模様は「ケーブルテレビ品川」での放映および区のホームページ等に掲載される場合がございますので、ご理解とご協力をお願いいたします。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/sangyo-bunka-bunnkaevento-reku/20230826143934.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkageijutsu/1003658/1003663.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-31T20:54:55.827675Z",
@@ -7298,7 +6853,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/sposin/20230913152738.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009520/1011115.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-31T20:54:55.827675Z",
@@ -7309,49 +6864,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "abbf6c06ca8a92321b38",
-      "title": "小学生向けマラソン教室",
-      "summary": "（公財）品川区スポーツ協会（別ウィンドウ表示） 電話：03-3449-4400 FAX：03-3449-4401 スポーツ推進課少年少女スポーツ担当 電話：03-5742-6943 FAX：03-5742-6585",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20221207095328.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-31T20:54:55.827675Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
-      "id": "a144a8b8ec51060f2a9b",
-      "title": "【10月25日（日）開催】親子deヨガ教室",
-      "summary": "【場所】 総合体育館 柔道場（東五反田2-11-2） 【講師】 石田友美氏（こどもヨガプロジェクトWAPPY 主宰） 【申込方法】 下記のいずれかの方法で 令和8年9月30日（水）【必着】 までにお申し込みください。 (1) 品川区電子申請サービス 申込フォームはこちら(別ウィンドウ表示)",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20190605141658.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-31T20:54:55.827675Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [
-        "東五反田"
-      ],
-      "relevanceScore": 12
-    },
-    {
       "id": "a07fb0810c56af1623f2",
       "title": "【9月20日、10月18日実施】プロスポーツ連携事業 フットサル＆バスケットボール教室",
       "summary": "品川区のプロスポーツチーム「しながわシティフットサルクラブ・しながわシティバスケットボールクラブ」の現役プロ選手による教室です。 楽しく体を動かしてプロスポーツの魅力を体験しましょう。初めての方でも、大歓迎です。 【日時】 （1）令和8年9月20日（日） （2）令和8年10月18日（日） （ 小学1から2年生の部 ）午前9時30分から午前10時30分 （ 小学3から6年生の部 ）午前11時15分から午後0時30分 【会場】 （1）こみゅにてぃぷらざ八潮（八潮5-9-11）…",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20250829132008.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009520/1003634.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-31T20:54:55.827675Z",
@@ -7364,71 +6883,18 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "9ee0b945e94bf2037083",
-      "title": "しながわ学びの杜人権啓発・社会同和教育講座「服飾と人権」（10月15日～11月19日実施）",
-      "summary": "品川区では平成5年（1993年）4月、「平和で心ゆたかな人間尊重の社会の実現」をめざし、「人権尊重都市品川宣言」を制定しました。 この宣言を普及し、個々の人権問題に対する正しい認識を確立し、人権尊重意識の定着を図るため、啓発活動を積極的に推進しています。 文化観光戦略課でも、あらゆる人権問題の解決をめざして、人権啓発・社会同和教育講座を開催しています。 令和8年は、「服飾と人権」をテーマに全6回開催します。 日常で切り離すことのできないもののひとつである服飾を「人権」という…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20230801160302.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-31T20:54:55.827675Z",
-      "tags": [
-        "子育て教育",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 12
-    },
-    {
-      "id": "2268e967941f9a0bba8d",
-      "title": "清泉女子大学パートナーシップ講座「地球市民セミナー（後期）」(10月7日～1月13日実施)",
-      "summary": "令和8年度清泉女子大学パートナーシップ講座「地球市民セミナー（後期）」 品川区内および近隣区の学校と連携して各学校の特色を生かし、様々な分野における専門的な講座を行います。 令和8年度清泉女子大学パートナーシップ講座地球市民セミナー（後期）は、「地域共生の実践ー地域をつなぐ、世界とつなぐー」をテーマとし実施します。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20250803105952.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-31T20:54:55.827675Z",
-      "tags": [
-        "子育て教育",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 12
-    },
-    {
       "id": "0176e94ba924d2c72372",
       "title": "きせつ風(品川第二地域ニュース)令和8年9月号 No.246",
       "summary": "地域活動課 品川第二地域センター 電話：03-3472-2000 FAX：03-3472-2058 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-shina2/shisetsu-kuyakusyo-chiiki-shina2-kisetsukaze/2023517427684152947456203202.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007915/1007926/1010796.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-31T20:54:55.827675Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "7e43a87d9921fb67a169",
-      "title": "インクルーシブスポーツチャレンジデー(9月26日開催)",
-      "summary": "スポーツ推進課インクルーシブスポーツ担当 電話：03-5742-3854 FAX：03-5742-6585",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20180813123848.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T07:50:23.345001Z",
-      "tags": [
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -7440,7 +6906,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-koukikoureisyairyo/hpg11111111.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/kokuhoken/1001801/1001803.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-05T07:34:37.995725Z",
@@ -7457,7 +6923,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/kankyo-toshiseibi-shien-saigairokakuhuku/kankyo-toshiseibi-shien-saigairokakuhuku-yoko/20260728155902.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/kenchiku/1004381/1009810.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-31T15:54:35.184829Z",
@@ -7474,7 +6940,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/20260326182608.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/toshiseibi/1010840/1009812.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -7491,7 +6957,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-mizube/hpg000024873.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/mizubegesuido/1009592/1004075.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -7600,7 +7066,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-zidoucenter/20260831170351.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kodomoshisetsu/1002139/1010777.html",
       "publishedAt": "2026-08-31T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-09-01T08:48:26.899424Z",
@@ -7636,7 +7102,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shigaichi/togoshirenritsu.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/toshiseibi/1004415/1004422.html",
       "publishedAt": "2026-08-31T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-04T23:55:10.934887Z",
@@ -7653,23 +7119,6 @@ window.SHINAGAWA_NEWS = {
         "戸越公園"
       ],
       "relevanceScore": 34
-    },
-    {
-      "id": "d72bf6216af184430233",
-      "title": "品川区世論調査の回答について",
-      "summary": "※郵送またはインターネットのうち、どちらか一方でのご回答をお願いいたします。 ※本調査は、株式会社ＣＣＮグループに委託して実施しています。 戦略広報課 電話：03-5742-6643 FAX : 03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/oshirase/20200819145742.html",
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T17:15:06.084594Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "5b8fff265a6efc9f45e8",
@@ -7983,7 +7432,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-oosaki2/shisetsu-kuyakusyo-chiiki-oosaki2-oshirase/20260826150955.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007942/1007943/1010794.html",
       "publishedAt": "2026-08-27T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-28T15:32:11.027247Z",
@@ -8002,7 +7451,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinenhachigatsuchibagouu/20260826155152.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bosai/bosai/1009493/1003400/1010667/1010666.html",
       "publishedAt": "2026-08-27T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-27T14:23:22.387210Z",
@@ -8053,7 +7502,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260805090700.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bosai/bosai/1009493/1003400/1010852/1010670.html",
       "publishedAt": "2026-08-27T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-07T07:50:23.345001Z",
@@ -8356,7 +7805,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-zidoucenter/20260127111826.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kodomoshisetsu/1002139/1011676.html",
       "publishedAt": "2026-08-24T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-25T01:57:59.202837Z",
@@ -8423,25 +7872,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "0c964b32671e1f1c9a31",
-      "title": "第2回品川区特別支援教育推進計画検討委員会の開催について",
-      "summary": "教育総合支援センター 特別支援教育担当 電話：03-3490-8202 FAX：03-3490-2007",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-sesaku/20260716125556.html",
-      "publishedAt": "2026-08-24T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T08:08:25.204546Z",
-      "tags": [
-        "子育て教育",
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 8
     },
     {
       "id": "f0085228e601e2a90620",
@@ -8601,7 +8031,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/20230424110159.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002398/1002415.html",
       "publishedAt": "2026-08-21T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-21T07:15:48.878191Z",
@@ -8618,7 +8048,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260819133200.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007991/1008011/1010788.html",
       "publishedAt": "2026-08-21T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-21T02:05:24.555099Z",
@@ -8709,7 +8139,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/hpg000030395.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002425/1002430.html",
       "publishedAt": "2026-08-20T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-21T09:58:38.198926Z",
@@ -8726,7 +8156,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba1/shisetsu-kuyakusyo-chiiki-eba1-machikado/20260820170408.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008014/1008016/1010782.html",
       "publishedAt": "2026-08-20T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-21T04:07:54.360410Z",
@@ -8745,7 +8175,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/sangyo-bunka-bunnkaevento-sakuhinten/20220717104141.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkageijutsu/1003658/1010038.html",
       "publishedAt": "2026-08-20T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-21T02:05:24.555099Z",
@@ -8814,25 +8244,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "f989c49d2fac5b93a9ef",
-      "title": "【令和8年8月26日（水）】Ｊアラートを用いた全国一斉の緊急情報伝達試験の実施",
-      "summary": "令和8年8月26日（水）午前11時00分、Ｊアラート（全国瞬時警報システム）による緊急情報の伝達試験のため、 防災行政無線スピーカーから区内一斉に試験放送を行います。 なお、「品川区防災ラジオ」をお持ちの方は、防災ラジオからも同じ試験内容が放送（受信）されます。 ご理解とご協力をお願いします。 「放送内容」 【放送内容】 防災行政無線チャイム ＋ 「これは、Ｊアラートのテストです。」×3回 ＋ 「こちらは、品川区役所です。」 ＋ 防災行政無線チャイム 防災課 計画担当 電話…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai2/20230606170141.html",
-      "publishedAt": "2026-08-20T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-20T04:04:53.277768Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [
-        "品川区役所"
-      ],
-      "relevanceScore": 24
     },
     {
       "id": "d1ef78d94a37cfc791c1",
@@ -8950,24 +8361,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "3a990a44adc412e8f37d",
-      "title": "【令和8年10月15日以降採用予定】会計年度任用職員(福祉専門員)募集",
-      "summary": "令和8年8月19日（水）～令和8年9月1日（火）【郵送の場合は必着】 【郵送方法】 Ａ4判が入る大きさ（角形2号）の封筒に入れ、表に赤字で「品川区会計年度任用職員採用選考申込書在中」と明記し、 必ず簡易書留で郵送してください。 簡易書留によらないものの事故については責任を負いません。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20261015saiyo.html",
-      "publishedAt": "2026-08-19T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-20T01:57:16.670411Z",
-      "tags": [
-        "事件事故",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 14
-    },
-    {
       "id": "0c9ab36ee4031f4e9684",
       "title": "【終了】居木神社 例大祭（大崎祭）",
       "summary": "2026年8月21日（金）～23日（日）、大崎の居木神社にて「例大祭（大崎祭）」が開催されます。 8月21日（金）宵宮祭 13:00～17:00 各町御神酒所修祓御霊入れ 17:30～18:30 子供神輿渡御（シンクパーク並びに神社周辺） 18:00～ 奉納演芸（19:00～ビンゴゲーム大会）",
@@ -8993,7 +8386,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/20260330161446.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/seikatsushien/1009487/1003074.html",
       "publishedAt": "2026-08-19T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -9173,33 +8566,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "604d9e047ab548b9fe1c",
-      "title": "『小学生紙ヒコーキグランプリ 荏原第二地区大会』開催",
-      "summary": "令和8年8月1日（土）、品川区青少年対策荏原第二地区委員会による「第2回 小学生紙ヒコーキグランプリ 荏原第二地区大会」 が開催されました。 当日は約100人が参加し、様々な飛行機が宙を舞いました。 参加者は、思い思いに紙飛行機を作り、その距離を競いました。 子どもも大人も熱心に紙を折り、親子が揃って投げる場面も見受けられるなど、家族で楽しんでいただけるイベントとなりました。 今後も荏原第二地区委員会は、地域の皆様とともに楽しいイベントを企画しますので、ぜひご参加ください。…",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba2/shisetsu-kuyakusyo-chiiki-eba2-oshirase/r7_mini-sports-fes_report.html",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-17T07:31:35.725143Z",
-      "tags": [
-        "子育て教育",
-        "地域イベント"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 14
-    },
-    {
       "id": "141bbb2b714a15ff5e66",
       "title": "避暑シェルターの利用",
       "summary": "総務課 総務係 電話：03-5742-6625 FAX：03-3774-3656",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/hpg000022596.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/kankyo/1008924/1009867.html",
       "publishedAt": "2026-08-17T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -9231,67 +8604,16 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "a9ff9dc245bbdfb42d8f",
-      "title": "エシカルカフェ第3回「エシカル」をおいしく楽しむヴィーガンランチ",
-      "summary": "消費者センター 電話：03-6421-6136 FAX：03-6421-6132",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260814094535.html",
-      "publishedAt": "2026-08-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-01T00:41:47.659181Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "9321b17422dcc167934b",
       "title": "消費者力アップ連続講座2026受講者募集",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260813091746.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009384/1010817.html",
       "publishedAt": "2026-08-15T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-17T07:31:35.725143Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 4
-    },
-    {
-      "id": "be9a65534fd3d7b1e8e1",
-      "title": "【参加者募集】令和8年度 初心者硬式テニス教室～スポーツデビュープログラム～",
-      "summary": "令和8年10月2日(金)、10月9日(金)、10月16日(金)、10月23日(金) (1)午前の部：午前10時15分から11時45分まで (2)午後の部：午後1時15分から2時45分まで スポーツ推進課地域スポーツ推進係 電話：03-5742-6838 FAX：03-5742-6585",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20260807144845.html",
-      "publishedAt": "2026-08-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-14T16:13:39.403142Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
-      "id": "affc6439f2ab61bcce46",
-      "title": "【参加者募集中】多文化共生講座 ～教えて！外国人の日本生活～",
-      "summary": "総務課 平和・国際担当 電話：03-5742-6691（平日 午前8時30分～午後5時15分） FAX：03-3774-6356",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/kokusai/tabunka/20220921100641.html",
-      "publishedAt": "2026-08-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-14T16:13:39.403142Z",
       "tags": [
         "地域イベント"
       ],
@@ -9316,31 +8638,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "5de5e6936dd1d8b2892e",
-      "title": "令和8年度(9年度採用)品川区立学校教育職員採用候補者選考【第一次選考合格発表】",
-      "summary": "指導課 教職員人事係 電話：03-5742-6831 FAX：03-5742-6892 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20260814senkou.html",
-      "publishedAt": "2026-08-14T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-14T03:04:54.234228Z",
-      "tags": [
-        "行政",
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "0aeb208ea30c1c1f46fa",
       "title": "税務職員等をかたる「還付金詐欺」にご注意ください",
       "summary": "税務課 税務係 電話03-5742-6662 FAX03-5742-7108",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-zeikin/procedure-zeikin-oshirase/20260713133411.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/zeikin/1001623/1010807.html",
       "publishedAt": "2026-08-14T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-14T03:04:54.234228Z",
@@ -9596,23 +8900,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "fbea1a6dca20027a595c",
-      "title": "ドコモ・バイクシェアのサービス提供一時停止のお知らせ（品川区シェアサイクル事業）",
-      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/20250313190123.html",
-      "publishedAt": "2026-08-10T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-04T10:27:17.898259Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
       "id": "3f4df165a67e1881fcc1",
       "title": "『エレガンス』で「このミス」8位ランクインの石川智健氏、最新書下し長篇『ストーリーランド』、徳間書店より8/28発売！ 発売前に冒頭部分、特別無料公開中！",
       "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、石川智健氏の長篇小説『ストーリーランド』（https://www.tokuma.jp/book/b679235.html）を8月28日（金）に発売いたします。また、...",
@@ -9763,30 +9050,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "a7fed6a35ee8c79af854",
-      "title": "施設予約システムメンテナンスのお知らせ",
-      "summary": "デジタル推進課 電話：03-5742-6618 FAX：03-5742-7164",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-bunka/shisetsuyoyaku/20260807091608.html",
-      "publishedAt": "2026-08-07T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T07:50:23.345001Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "b7d0726dec6ea1c7e9c8",
       "title": "大井第三地区「清流あそび」を実施",
       "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260728130000.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007991/1008011/1010075.html",
       "publishedAt": "2026-08-07T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-07T03:26:29.316446Z",
@@ -9805,7 +9075,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260729151707.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bosai/bosai/1009493/1003400/1010852/1009863.html",
       "publishedAt": "2026-08-07T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-29T08:21:12.534425Z",
@@ -9897,23 +9167,6 @@ window.SHINAGAWA_NEWS = {
       "publishedAt": "2026-08-06T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-06T04:56:37.838139Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "4937041db3db77764d2a",
-      "title": "令和8年熊本地震被災者の公営住宅への受け入れ",
-      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/20260805090700.html",
-      "publishedAt": "2026-08-06T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-05T23:49:54.308453Z",
       "tags": [
         "その他"
       ],
@@ -10075,41 +9328,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "34a389453b93d61f6b2e",
-      "title": "令和8年度第1回家庭教育講演会＜品川区教育委員会＞",
-      "summary": "品川区教育委員会からのお知らせです。 教育委員会主催の令和8年度第1回家庭教育講演会の動画を「品川区公式チャンネルしながわネットTV（YouTube）」にて公開しています。 講師：堀内祐子さん（『ゆるみ子育て』代表、自閉症スペクトラム支援士） 期間：令和8年8月1日（土）午前9時～令和8年8月31日（月）正午 テーマ：「本人の意思を尊重する子育て～なんとかしなくちゃを手放したら子どもは自分から動き出す～」 配信期間を過ぎると映像は見られなくなりますので、期間内にご覧ください…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/20260803174855.html",
-      "publishedAt": "2026-08-05T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-05T04:56:20.960588Z",
-      "tags": [
-        "子育て教育",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "81876b44e4956718ddac",
-      "title": "【児童相談所】会計年度任用職員募集（一時保護所日中児童指導員・令和8年10月1日以降採用）",
-      "summary": "※ 令和8年10月1日以降の採用になりますので、ご了承ください。 令和8年8月5日（水）～令和8年8月19日（水）午後5時 電子申請による申込みを受け付けています。 （※郵送での申込みは受け付けていません。） 品川区電子申請サービスはこちら(別ウィンドウ表示)",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260805.html",
-      "publishedAt": "2026-08-05T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-04T23:55:10.934887Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "8c49055db298f2f75b44",
       "title": "大人向け本格DIYから子どもの自由研究まで【DCM DIY place】8月の特別講座を開催",
       "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社：東京都品川区、代表取締役社長 兼 CEO：石黒 靖規）の グループ会社であるＤＣＭ株式会社（代表取締役社長：神谷 浩邦）が運営する体験型店舗「DCM DIY place」は、2026年...",
@@ -10211,7 +9429,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kutyokugirikkouho/hpg000030941.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1009265/1009999.html",
       "publishedAt": "2026-08-04T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-05T01:43:44.908185Z",
@@ -10249,7 +9467,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-keiyaku/kuseizyoho-siryo-keiyaku-keiyakukakarikara/202508191042009.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/nyusatsukeiyaku/1005322/1009834.html",
       "publishedAt": "2026-08-04T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-04T04:54:52.692408Z",
@@ -10266,7 +9484,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinennkumamotojisin/20260731110406.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bosai/bosai/1009493/1003400/1010852/1009865.html",
       "publishedAt": "2026-08-04T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-31T08:35:02.289088Z",
@@ -10369,23 +9587,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "50fbfbe9c4eabbd15233",
-      "title": "【令和8年11月1日以降採用予定】令和8年度会計年度任用職員（福祉専門員）募集",
-      "summary": "生活福祉課 保護事務係 電話：03-5742-6713 FAX：03-5742-6798",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260731162210.html",
-      "publishedAt": "2026-08-03T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-03T09:22:28.623619Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 4
-    },
-    {
       "id": "e816e7ee7a41d33640e3",
       "title": "大井町トラックス「SUMMER DISCOVERY 2026 -まだまだ知らない海のこと-」",
       "summary": "2026年7 月18 日（土）～8月31日（月）、OIMACHI TRACKS SHOPS & RESTAURANTSにて「OIMACHI TRACKS SUMMER DISCOVERY 2026 -まだまだ知らない海のこと-」が開催されます。 今夏、OIMACHI TRACKS SHOPS & RESTAURANTS では、知的好奇心を刺激する「発見の旅」をテーマとした、夏の体験型エデュテインメント（教育＋エンターテインメント）の企画が開催されます。",
@@ -10406,30 +9607,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "6d2064646574bbea4f96",
-      "title": "エシカルカフェ第2回【夏休みの自由課題に】「おいしい」をずっと楽しむために、あなたの“推し”エシカルをプリマハム＆日本アクセスと見つけよう！",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260727143628.html",
-      "publishedAt": "2026-08-03T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-03T05:32:58.168975Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "ae3f935605c56566602c",
       "title": "飼い猫の不妊・去勢手術費の一部助成",
       "summary": "品川区保健所生活衛生課管理係 電話：03-5742-9132 FAX：03-5742-9104 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-pet/neko/hpg000000916.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/pet/1003219/1003221.html",
       "publishedAt": "2026-08-03T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-02T15:53:54.098065Z",
@@ -10479,30 +9663,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "5f1544a68f321fef43c0",
-      "title": "品川シルバー大学うるおい塾（秋期）受講生募集(令和8年8月13日午後5時まで)",
-      "summary": "何か新しいことを始めたい、仲間と趣味を楽しみたい方など大募集 うるおい塾では、初心者向けの入門教室（各教室全10回）を開催します。 下記「令和8年度品川シルバー大学 うるおい塾（秋期）募集案内」「プログラム一覧」にて詳細をご確認の上、ご応募ください。 区内在住で、令和8年9月1日現在60歳以上の方 各教室20人程度（抽選） ※定員は教室によって異なります。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20260209162601.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-04T04:54:52.692408Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "0e6611abc3b198320c7d",
       "title": "区登録文化財制度スタート",
       "summary": "区では、地域の歴史や文化を未来へ受け継いでいくため、「区登録文化財制度」を創設しました。 区内には、地域の歴史や文化を伝える貴重な文化財が数多くあります。その中には、区指定文化財には至らないものの、地域にとって大切な価値を持つ文化財も少なくありません。区登録文化財制度は、このような身近な文化財を登録し、その魅力や価値を広く知っていただくとともに、保護と活用を進めていく制度です。 また、本制度では、区民や文化財所有者などが登録を希望する文化財について区へ申し出ることができる「…",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunkazai/20260713160320.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1010046.html",
       "publishedAt": "2026-08-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-08-01T05:46:15.873427Z",
@@ -10513,32 +9680,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "b2c6581f58bc18105d71",
-      "title": "【品川区健康推進部保健センター】専門職職員（歯科衛生士）募集",
-      "summary": "品川区健康推進部荏原保健センター 電話：03-3788-7015（歯科担当直通） FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260610161057.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T23:57:41.605121Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 14
-    },
-    {
       "id": "5be050056a568efa2213",
       "title": "品川区職員再採用選考（カムバック採用）募集",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260703160842.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/boshu/shokuinboshu/1010109.html",
       "publishedAt": "2026-08-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-31T23:57:41.605121Z",
@@ -10549,49 +9697,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "c5475cf4b9e0f03867fc",
-      "title": "しなカレント講座 第3回「気象災害から身を守る」（9月10日(木)実施）",
-      "summary": "生涯にわたるまなびのきっかけづくりとして、気軽に参加しやすい1回限りで実施する学びの場です。 品川シルバー大学ふれあいアカデミーふれあいコースの講座を一般公開いたします。 詳しくは チラシpdf(PDF : 2MB) をご覧ください。 第4回 「魚と海から考える日本の国の姿」 については こちら をご覧ください。 往復はがきもしくは電子申請にてお申し込みください。 申込期間 令和8年8月1日(土)～令和8年8月14日(金) 必着",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/shinakarento003.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T15:54:35.184829Z",
-      "tags": [
-        "事件事故",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 4
-    },
-    {
-      "id": "b6922c7e5ccd940d1bbe",
-      "title": "しなカレント講座 第4回「魚と海から考える日本の国の姿」（10月22日(木)実施）",
-      "summary": "しなカレント講座 第4回「魚と海から考える日本の国の姿」 生涯にわたるまなびのきっかけづくりとして、気軽に参加しやすい1回限りで実施する学びの場です。 品川シルバー大学ふれあいアカデミーふれあいコースの講座を一般公開いたします。 詳しくは チラシpdf(PDF : 2MB) をご覧ください。 第3回「気象災害から身を守る」については こちら をご覧ください。 （申込締切8月14日（金）の翌日以降は表示されません。）",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/shinakarento002.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T15:54:35.184829Z",
-      "tags": [
-        "事件事故",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 4
-    },
-    {
       "id": "04d381d9ef912d30d4cc",
       "title": "2026-004「第12次品川区交通安全計画（素案）」に対する意見募集",
       "summary": "区では、区内の交通安全対策を総合的・計画的に推進し、交通安全の更なる向上を図るため、「第12次品川区交通安全計画」を策定します。 本計画は、交通安全対策基本法に基づく計画であり、令和8年度から令和12年度までの5か年において、品川区および区内を管轄する関係行政機関等が実施する交通安全関連施策の大綱となるものです。 区民の皆さんから頂いたご意見を踏まえ、令和8年12月頃結果を公表する予定です。 「第12次品川区交通安全計画（素案）」の全文は、品川区ホームページ、地域交通政策課…",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20260727122823.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006651/1006653/1009856.html",
       "publishedAt": "2026-08-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-31T15:54:35.184829Z",
@@ -10731,27 +9843,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "a7bfff2890998cdbf0ac",
-      "title": "第4回品川区大井町駅周辺地区バリアフリー計画改定協議会の開催",
-      "summary": "地域交通政策課 地域交通担当 電話：03-5742-7138 FAX：03-5742-6887",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-barrier_free/hpg000032257.html",
-      "publishedAt": "2026-07-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T08:35:02.289088Z",
-      "tags": [
-        "交通",
-        "地域イベント"
-      ],
-      "locations": [
-        "大井",
-        "大井町駅"
-      ],
-      "relevanceScore": 16
-    },
-    {
       "id": "f6bb985bfd5c48aa47e2",
       "title": "しながわ水族館「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」 2026/07/25(土) ~ 2026/12/25(金) 遊ぶ 観る 知る 大森海岸駅, 大森駅",
       "summary": "2026年7月25日（土）～12月25日（金）、 しながわ水族館 にて「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」が開催されます。 今年10月に開館35周年を迎えるしながわ水族館と、世界的ベストセラー絵本「はらぺこあおむし」日本語版刊行50周年をあわせて記念する特別展。",
@@ -10777,7 +9868,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20260727164220.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006651/1006653/1009857.html",
       "publishedAt": "2026-07-31T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-30T17:15:06.084594Z",
@@ -10905,31 +9996,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "7f8fed3bfe331bd4872e",
-      "title": "知的・精神障害者（児）移動支援従業者養成研修の受講生募集",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20240709164401.html",
-      "publishedAt": "2026-07-30T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-30T12:23:43.393816Z",
-      "tags": [
-        "福祉",
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "91c2c51e193aee6d7d67",
       "title": "品川区における障害者就労施設等からの物品等の調達方針",
       "summary": "障害者就労施設で就労する障害者や在宅で就業する障害者の経済的な自立を進めるためには、障害者雇用を推進するための仕組みを整えるとともに、障害者が就労する施設等が供給する物品やサービスを優先的・積極的に調達することが重要です。 このため、国等による障害者就労施設等からの物品等の調達の推進等に関する法律に基づき、「品川区における障害者就労施設等からの物品等の調達方針」を策定しました。区は、この調達方針に基づき障害者就労施設等からの物品等の調達に努めます。 福祉部障害者支援課障害者…",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/hpg000018674.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002766/1002956.html",
       "publishedAt": "2026-07-30T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-30T10:13:03.196425Z",
@@ -10947,7 +10020,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20241205110439.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/kokuhoken/1001801/1001808.html",
       "publishedAt": "2026-07-30T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-29T23:53:33.829433Z",
@@ -11076,7 +10149,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-seikatsukomaru/20230428084925.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/seikatsushien/1009752/1010023.html",
       "publishedAt": "2026-07-29T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-29T05:00:13.997606Z",
@@ -11214,24 +10287,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "463472f552ac5242a13b",
-      "title": "手話体験講座開催のお知らせ",
-      "summary": "品川区立障害児者総合支援施設 地域活動支援センター 電話：03-6712-4406 FAX：03-5460-5303",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20250812155505.html",
-      "publishedAt": "2026-07-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-28T07:33:40.750778Z",
-      "tags": [
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "0e38ff3b5f693bbe6a6d",
       "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 8月",
       "summary": "「Tokyo City Flea Market」は毎週土曜日・日曜日に大井競馬場第一駐車場で開催される都内最大級のフリーマーケットです。 （※8月15日(土)、16日(日）の開催はありません） 専門的なお店も多数出店。バラエティ豊かな品揃えで、地元客だけでなく海外からの観光客も訪れます。週末は、大井競馬場でお宝探しはいかがでしょう。",
@@ -11311,7 +10366,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-park/20250703120141.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/koenryokka/1009601/1004618.html",
       "publishedAt": "2026-07-27T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-27T23:55:43.879919Z",
@@ -11444,7 +10499,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260722160841.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007991/1008011/1010074.html",
       "publishedAt": "2026-07-24T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-24T10:54:00.690356Z",
@@ -11463,7 +10518,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/20250829182718.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1010866/1006735.html",
       "publishedAt": "2026-07-24T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-23T15:47:58.231874Z",
@@ -11555,7 +10610,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-project/202510251114.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/machizukuri/1004430/1004456.html",
       "publishedAt": "2026-07-23T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-23T08:12:38.929564Z",
@@ -11575,7 +10630,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20220908152604.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002360/1003204.html",
       "publishedAt": "2026-07-23T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-23T01:53:33.844235Z",
@@ -11771,30 +10826,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "887c5a1b6bcbcd9505eb",
-      "title": "【清掃一組からのお知らせ】大田清掃工場で「区民との意見交換会」開催",
-      "summary": "品川区清掃事務所 庶務係 電話：03-3490-7705 FAX：03-3490-7041",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/gomi-keihatu/20260218133625.html",
-      "publishedAt": "2026-07-21T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T10:56:36.711431Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
       "id": "20bb2950b7bda51e088d",
       "title": "感染性胃腸炎について",
       "summary": "品川区保健所保健予防課感染症保健担当 電話：03-5742-7836 FAX：03-5742-9158",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/20231213124112.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/kenkoiryo/1002398/1002411.html",
       "publishedAt": "2026-07-21T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-21T05:00:15.438506Z",
@@ -11811,7 +10849,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba3/shisetsu-kuyakusyo-chiiki-eba3-monogatari/20260721.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008054/1008056/1010063.html",
       "publishedAt": "2026-07-21T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-20T23:47:41.301266Z",
@@ -12506,84 +11544,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "abea3866fef64d514615",
-      "title": "第12回品川区地域公共交通会議の開催について",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-chiikikokyokotsu/hpg000032257.html",
-      "publishedAt": "2026-07-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T05:00:15.438506Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
-      "id": "132b66e9e99d191315a9",
-      "title": "品川区運賃協議会の開催について",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-chiikikokyokotsu/20250313190123.html",
-      "publishedAt": "2026-07-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-21T05:00:15.438506Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
-      "id": "ad20e0f04985fa2e6ea7",
-      "title": "「品川区AIオンデマンド交通（大崎地区）の運賃について」ご意見募集中",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-chiikikokyokotsu/20260717114036.html",
-      "publishedAt": "2026-07-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T06:01:15.006857Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "大崎"
-      ],
-      "relevanceScore": 14
-    },
-    {
-      "id": "fccb41bb33bc3883c155",
-      "title": "第1回品川区障害福祉計画等策定委員会(令和8年5月22日開催)",
-      "summary": "障害者施策推進課 計画推進係 電話：03-5742-6762 FAX：03-3775-2000",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/shogaifukushikeikaku/shogaifukushikeikaku/20260323.html",
-      "publishedAt": "2026-07-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "b86a82946b3866c1c068",
       "title": "令和8年度 荏原第二地区「春の企画 潮干狩り」を実施",
       "summary": "荏原第二地域センター 電話：03-3782-2000 FAX：03-3782-2511",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba2/shisetsu-kuyakusyo-chiiki-eba2-oshirase/r8_spring_report.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008036/1008050/1010066.html",
       "publishedAt": "2026-07-17T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -12657,47 +11624,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
-      "id": "6f29b8df0827f646ccb9",
-      "title": "品川＆早川ふるさと交流「稲刈り・サツマイモ堀り体験とお餅つきツアー」参加者募集",
-      "summary": "・品川区民（品川区に在住・在勤・在学）限定。品川区に在勤・在学の方については、それを証明するもののコピー等が必ず必要となります。 証明ができない場合は、お申し込みができませんのでご注意ください。 ・自然災害等で中止とさせていただく場合があります。 総務課官民共創担当 電話03-5742-6856 FAX03-3774-6356",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-shityoson/20190729182801.html",
-      "publishedAt": "2026-07-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
-      "id": "361545ddec0f11b12db6",
-      "title": "エシカルカフェ第1回「【夏休みの自由課題に】みんなで作ろう 地域の色 自分の色 ～「どろ絵の具」ワークショップ～」",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260707094025.html",
-      "publishedAt": "2026-07-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "20a9599086301215d750",
       "title": "2026-003「予防接種事務に関する特定個人情報保護評価書（全項目評価書）の再評価案」に対する意見募集",
       "summary": "「行政手続における特定の個人を識別するための番号の利用等に関する法律」（平成25年法律第27号）第28条により、地方公共団体には特定個人情報保護評価の実施が義務付けられています。 特定個人情報保護評価とは、特定個人情報ファイル（マイナンバーをその内容に含む個人情報ファイルまたは個人情報データベース等）を保有しようとするまたは保有する国の行政機関や地方公共団体等が、個人のプライバシー等の権利利益に与える影響を予測した上で、特定個人情報の漏えいその他の事態を発生させるリスクを分…",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20260709162629.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006651/1006653/1009855.html",
       "publishedAt": "2026-07-15T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -12748,32 +11681,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "7c7cac1e64ba98df1fb9",
-      "title": "品川区営住宅・品川区立区民住宅（ファミーユ西五反田西館・東館を除く）指定管理者の候補者公募について",
-      "summary": "住宅課住宅運営担当 電話：03-5742-6776 FAX：03-5742-6963",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kenchiku/20210706103917.html",
-      "publishedAt": "2026-07-14T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "西五反田"
-      ],
-      "relevanceScore": 12
-    },
-    {
       "id": "53618bc6613c5998a618",
       "title": "振り込め詐欺の電話にご注意ください",
       "summary": "国保医療年金課 保険事業係 電話03-5742-6675 FAX03-5742-6876",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20260713133411.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/kokuhoken/1001738/1010091.html",
       "publishedAt": "2026-07-14T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -12953,24 +11867,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "6c72fe658ac943f237d3",
-      "title": "【急募】令和8年度(9月採用予定) 品川区教育委員会事務局会計年度任用職員募集（教育総合支援センター）スクールソーシャルワーカー",
-      "summary": "教育総合支援センター 学校支援担当 電話：03-5740-8203 FAX：03-3490-2007 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/kukyoi-bosyu-rinziteki/20260406152314.html",
-      "publishedAt": "2026-07-09T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "子育て教育",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "0cf497d5044dfc907f1c",
       "title": "物流博物館 夏休み工作イベント「ダンボールで運ぶのりものを作ろう！」",
       "summary": "2026年8月8日（土）・9日（日）、 物流博物館 にて夏休み工作イベント「ダンボールで運ぶのりものを作ろう！」が開催されます。 段ボールを使って貨物を運ぶ乗り物（車・船・機関車）が作れます。 ※要電話予約・先着順",
@@ -13052,7 +11948,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-seikatsu/hpg000033532.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/shisetsu/chiikishisetsu/1008298/1008301.html",
       "publishedAt": "2026-07-07T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13069,7 +11965,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-seikatsu/hpg000000159.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/shisetsu/chiikishisetsu/1008298/1008300.html",
       "publishedAt": "2026-07-07T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13101,30 +11997,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
-      "id": "dcdd09272c76b2c15138",
-      "title": "地域ニュース『お～い』令和8年7月号 No.262",
-      "summary": "",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-ooi/20260703092000.html",
-      "publishedAt": "2026-07-06T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "b9010c31cd94fc778929",
       "title": "大井第三地区「映画会」開催のお知らせ",
       "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260702123734.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007991/1008011/1010073.html",
       "publishedAt": "2026-07-06T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13185,7 +12064,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba2/shisetsu-kuyakusyo-chiiki-eba2-oshirase/r7_elem-paper-airplane-gp_recruitment.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008036/1008050/1010067.html",
       "publishedAt": "2026-07-03T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13204,7 +12083,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-oosaki2/shisetsu-kuyakusyo-chiiki-oosaki2-oshirase/20260625102900.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007964/1007966/1009288.html",
       "publishedAt": "2026-07-03T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13283,7 +12162,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/20190913113645.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/toshiseibi/1009617/1004411.html",
       "publishedAt": "2026-07-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13301,7 +12180,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-zaisei/kuseizyoho-siryo-zaisei-plan/hpg000000320.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/shisakukeikaku/1009646/1008979.html",
       "publishedAt": "2026-07-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13314,30 +12193,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "b638dbc3006d959d8ec2",
-      "title": "しながわ区民公園屋外プールの利用案内",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kakushisetsu/sangyo-bunka-kakushisetsu-kouen/hpg000006489.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "b527d276aa0767257913",
       "title": "品川区営自転車等駐車場指定管理者の候補者公募について",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-zitensyataisaku/20260624162301.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/kotsujigyosha/1009564/1008947.html",
       "publishedAt": "2026-07-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13354,7 +12216,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/20230330161204.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/toshiseibi/1009617/1004408.html",
       "publishedAt": "2026-07-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13372,7 +12234,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kenchiku/kankyo-kenchiku-assen/20260603115846.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1004280/1008920.html",
       "publishedAt": "2026-07-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13407,7 +12269,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-shina2/shisetsu-kuyakusyo-chiiki-shina2-kisetsukaze/2023517427689152947456203202.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007915/1007926/1009273.html",
       "publishedAt": "2026-07-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13416,23 +12278,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "81008b4e5a0e9fbfa0d9",
-      "title": "学校プール夏季一般開放",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/gakkoukaihou/hpgsp07190803.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "7ce40649df45d103119a",
@@ -13441,7 +12286,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-shina2/shisetsu-kuyakusyo-chiiki-shina2-oshirase/202607011687115618541754144.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007915/1007916/1010080.html",
       "publishedAt": "2026-07-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13450,40 +12295,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "504a2111ca681e39fd56",
-      "title": "小学生向け認知症VR体験＆認知症サポーター養成講座",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/ninchisyo/20230619163238.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
-      "id": "4bf29be04e78cf91970e",
-      "title": "令和8年度 障害者を対象とする品川区会計年度任用職員募集",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260624140311.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "3f0ff42012b9f47f2277",
@@ -13492,29 +12303,12 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kenchiku/20260625133005.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009378/1008919.html",
       "publishedAt": "2026-07-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
         "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "16ee7159cc962dea3fc3",
-      "title": "夏休み親子消費生活教室「クイズやゲームでお金の使い方達人をめざそう！」",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260622110301.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -13526,7 +12320,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/kankyo-toshiseibi-shien-saigairokakuhuku/kankyo-toshiseibi-shien-saigairokakuhuku-yoko/20260609103428.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/kenchiku/1004381/1008931.html",
       "publishedAt": "2026-07-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13557,58 +12351,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "99e0d827d738f8eb5854",
-      "title": "令和8年度品川区職員〈福祉（保育士・児童指導）〉採用選考",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20231110164930.html",
-      "publishedAt": "2026-06-30T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "子育て教育",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "62e909e9cbd9625d1e96",
-      "title": "【受付は終了しました】令和8年度(9年度採用)品川区立学校学校教育職員採用候補者選考の実施について",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/hpg000033554.html",
-      "publishedAt": "2026-06-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "3ed0c0aea2e485118d6d",
-      "title": "お肉の情報館 夏休み臨時開館",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/eventcalendar/eventcalendar-202607/hpg000028628.html",
-      "publishedAt": "2026-06-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "7107b878121b5dc6aa31",
       "title": "6月24日開催の委員会の結果を掲載。",
       "summary": "6月24日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
@@ -13635,7 +12377,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi2/shisetsu-kuyakusyo-chiiki-ooi2-oshirase/20260622133825.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007982/1007985/1009283.html",
       "publishedAt": "2026-06-23T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13654,7 +12396,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba1/shisetsu-kuyakusyo-chiiki-eba1-machikado/20260625155436.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008014/1008016/1009289.html",
       "publishedAt": "2026-06-22T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13673,7 +12415,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-chiiki/hpg000022716.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008161.html",
       "publishedAt": "2026-05-28T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13690,7 +12432,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260501124059.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007991/1008011/1009279.html",
       "publishedAt": "2026-05-25T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13701,25 +12443,6 @@ window.SHINAGAWA_NEWS = {
         "大井"
       ],
       "relevanceScore": 4
-    },
-    {
-      "id": "338d4c2695e7e96d20f1",
-      "title": "令和8年度品川区民まつり（大崎第二地区） 開催のお知らせ",
-      "summary": "",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-oosaki2/shisetsu-kuyakusyo-chiiki-oosaki2-oshirase/20250611152155.html",
-      "publishedAt": "2026-05-21T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [
-        "大崎"
-      ],
-      "relevanceScore": 12
     },
     {
       "id": "6ce8426e1787df7f7542",
@@ -13744,30 +12467,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
-      "id": "6b32aa1500e8947c32b1",
-      "title": "地域ニュース『お～い』令和8年5月号 No.261",
-      "summary": "",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-ooi/20260430093109.html",
-      "publishedAt": "2026-05-07T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "adb59656a442ff55cd7b",
       "title": "きせつ風(品川第二地域ニュース)令和8年5月号 No.244",
       "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-shina2/shisetsu-kuyakusyo-chiiki-shina2-kisetsukaze/2025617427689152947456203202.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007915/1007926/1009274.html",
       "publishedAt": "2026-05-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13778,32 +12484,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "a3744dd95c7d90d704b8",
-      "title": "来て、見て、遊ぼう 大井第三地区区民まつり",
-      "summary": "",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20240626171000.html",
-      "publishedAt": "2026-04-27T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "大井"
-      ],
-      "relevanceScore": 4
-    },
-    {
       "id": "bea4411ba999c6cd1bd2",
       "title": "まちかど（荏原第一地域新聞）第233号",
       "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba1/shisetsu-kuyakusyo-chiiki-eba1-machikado/20260421135431.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008014/1008016/1009290.html",
       "publishedAt": "2026-04-20T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13822,7 +12509,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-oosaki2/shisetsu-kuyakusyo-chiiki-oosaki2-oshirase/20260407112736.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007964/1007966/1009287.html",
       "publishedAt": "2026-04-20T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13841,48 +12528,12 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-shina2/shisetsu-kuyakusyo-chiiki-shina2-oshirase/202504011687115618541754144.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007915/1007916/1007918.html",
       "publishedAt": "2026-04-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "d87db71245a8940fab99",
-      "title": "交流・研修事業部研修会を実施（八潮自治会連合会）",
-      "summary": "",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-yashio/shisetsu-kuyakusyo-chiiki-yashio-oshirase/20180501165429.html",
-      "publishedAt": "2026-03-25T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "八潮"
-      ],
-      "relevanceScore": 4
-    },
-    {
-      "id": "3440e412ba7143ea7dea",
-      "title": "第42回小学生マラソン大会を開催",
-      "summary": "",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba4/shisetsu-kuyakusyo-chiiki-eba4-oshirase/20250310181538.html",
-      "publishedAt": "2026-03-13T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -13894,7 +12545,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba3/shisetsu-kuyakusyo-chiiki-eba3-monogatari/20260305.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008054/1008056/1008057.html",
       "publishedAt": "2026-03-05T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13911,7 +12562,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-ooi/20260303112522.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007991/1007992/1007993.html",
       "publishedAt": "2026-03-05T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13924,32 +12575,13 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "fdaf80d500e8b6d5f5d0",
-      "title": "高齢福祉事業部講演会を実施（八潮自治会連合会）",
-      "summary": "",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-yashio/shisetsu-kuyakusyo-chiiki-yashio-oshirase/20210331135811.html",
-      "publishedAt": "2026-03-02T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [
-        "八潮"
-      ],
-      "relevanceScore": 6
-    },
-    {
       "id": "2d0e524219f9c4e2acb8",
       "title": "荏原第二地区 『かけっこ教室』開催",
       "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba2/shisetsu-kuyakusyo-chiiki-eba2-oshirase/r7_kakekko_report.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008036/1008050/1008053.html",
       "publishedAt": "2026-03-02T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -13968,30 +12600,12 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-shina2/shisetsu-kuyakusyo-chiiki-shina2-kisetsukaze/2026017427689152947456203202.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007915/1007926/1007927.html",
       "publishedAt": "2026-03-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "5ba16b76848677ddcfcf",
-      "title": "令和7年度「親子で冬を遊ぼう！！～冬の親子バスハイク～」を開催",
-      "summary": "",
-      "source": "品川区 地域センター新着情報",
-      "sourceId": "shinagawa-city-community",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-oosaki2/shisetsu-kuyakusyo-chiiki-oosaki2-oshirase/20250226153731.html",
-      "publishedAt": "2026-02-20T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "交通",
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -14003,7 +12617,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba1/shisetsu-kuyakusyo-chiiki-eba1-machikado/20260217141640.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008014/1008016/1008017.html",
       "publishedAt": "2026-02-20T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -14039,7 +12653,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi2/shisetsu-kuyakusyo-chiiki-ooi2-oshirase/20260216154750.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007982/1007985/1007990.html",
       "publishedAt": "2026-02-18T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -14058,7 +12672,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba4/shisetsu-kuyakusyo-chiiki-eba4-oshirase/20260121100911.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008070/1008087/1008089.html",
       "publishedAt": "2026-02-10T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -14075,7 +12689,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260128104057.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007991/1008011/1008012.html",
       "publishedAt": "2026-01-28T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -14236,7 +12850,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "shinagawa-city-new",
       "name": "品川区 新着情報",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/re_direct/hpg000016838.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/news/newslist.html",
       "type": "html",
       "enabled": true,
       "requiresApproval": false,
@@ -14245,7 +12859,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "shinagawa-city-community",
       "name": "品川区 地域センター新着情報",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/hpg000016394.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008163.html",
       "type": "html",
       "enabled": true,
       "requiresApproval": false,
