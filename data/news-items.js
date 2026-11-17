@@ -1,7 +1,7060 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-09-01T08:48:52.532603Z",
+  "generatedAt": "2026-11-17T04:02:46.590278Z",
   "items": [
+    {
+      "id": "bda8ab9d32b834c1bf1b",
+      "title": "【製造業・建設業・医療の現場におけるノウハウ継承に関する実態調査】後任からの質問・相談でもっとも多いのは「異常・トラブル時の対応」で27.6%",
+      "summary": "[トヨクモ株式会社] 【シンプルだから、みんな使える。カンターン トヨクモ】 誰でも簡単に使えるビジネス向けのクラウドサービスを提供するトヨクモ株式会社（本社：東京都品川区、代表取締役社長：山本 裕次、以下トヨクモ）は、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000274.000032205.html",
+      "publishedAt": "2026-11-17T03:40:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T04:02:25.213301Z",
+      "tags": [
+        "福祉",
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "3ae3c295e00c9b7993c1",
+      "title": "商業不動産の“新規テナント開拓”をAIで支援する「SHOPCOUNTER リーシング」を提供開始",
+      "summary": "[株式会社カウンターワークス] 商業不動産をデジタル化し、新たなインフラの創造を目指す株式会社COUNTERWORKS（本社：東京都品川区、代表取締役CEO：三瓶 直樹、以下「カウンターワークス」）は、商業不動産のリーシング（テナント誘致）業務...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000217.000013729.html",
+      "publishedAt": "2026-11-17T03:15:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T04:02:25.213301Z",
+      "tags": [
+        "福祉",
+        "都市開発",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "4930b28aa61edabcaa4e",
+      "title": "品川歴史館で「品川らくご会」初回開催へ 柳家吉緑さん独演会、「芝浜」口演",
+      "summary": "「品川らくご会Vol.1」が11月28日、品川区立品川歴史館（品川区大井6）2階講堂で開催される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5117",
+      "publishedAt": "2026-11-16T07:35:06Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-16T19:44:27.669782Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "品川歴史館"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "1ba3b2e96b01b561695f",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年11月16日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年11月16日号(令和8年11月9日～令和8年11月15日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64319.html",
+      "publishedAt": "2026-11-16T06:56:29.103096Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-16T06:56:29.103096Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "24ff03ddfd2746b014f0",
+      "title": "REACH大崎クラフトマーケット",
+      "summary": "2026年12月2日（水）、JR大崎駅南口東西自由通路夢さん橋にて「REACH大崎クラフトマーケット」が開催されます。 雑貨やアクセサリーなど、個性豊かな作品が集まる毎月恒例の「手作り市」。大崎駅から徒歩0分というアクセスの良さで、周辺住民だけでなくオフィスワーカーにも人気のクラフトマーケットです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202612",
+      "publishedAt": "2026-11-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-16T06:56:29.103096Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "e8b58f4b986604c16fa4",
+      "title": "不動前にキンパ専門店「リキンパ」 韓国発、日本第1号店",
+      "summary": "キンパ専門店「LEE GIMBAP（リキンパ）目黒不動前店」（品川区西五反田3）が10月22日、不動前駅近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5116",
+      "publishedAt": "2026-11-13T08:26:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T11:19:44.371902Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "不動前駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "60d01c8a9c2c31ef48f1",
+      "title": "品川成年後見センター活動実績を更新しました",
+      "summary": "「品川成年後見センター活動実績（令和8年9月30日現在）」を掲載しました。 品川成年後見センターの取組｜品川成年後見センター｜社会福祉法人 品川区社会福祉協議会 （別ページに移動します）",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64291.html",
+      "publishedAt": "2026-11-13T01:59:22.005425Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-13T01:59:22.005425Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "dcdcf58e3a1afbda27cd",
+      "title": "大商業まつり2026",
+      "summary": "2026年11月21日（土）、「大商業まつり2026」が開催されます。主催は品川区商店街連合会。 品川区内の商店街店舗や友好都市、企業のブースが約50軒、屋外のステージでは楽しいイベントが開催されます。また各種スポーツ体験や、ワークショップも。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/dsmatsuri2026",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T11:19:44.371902Z",
+      "tags": [
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "b972f33506e30b524cbd",
+      "title": "物流博物館 映画上映会「里馬の森から」",
+      "summary": "2026年11月22日（日）、12月5日（土）、物流博物館 企画展「馬で運ぶ」映画上映会「里馬の森から」が上映されます。 「里馬の森から－森を活かす古くて新しい技術・馬搬」作品紹介 今の日本では人と馬がともに暮らす姿はあまり見ることがなくなりました。山から木を馬と共に搬出する「馬搬（ばはん）」を生業とする馬方は、 馬搬が盛んだった東北地方でも岩手県の74歳の職人とその弟子38 歳の2人だけになり、全国でも数名を残すのみ。今、 機械に頼らない、山や自然を壊さない生き方が注目さ…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/lmuse-bahan",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T11:19:44.371902Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "32c1ed8d4244d4cce1e5",
+      "title": "TOKYO周穫祭2026",
+      "summary": "2026年11月21日（土）・22日（日）、東京国際フォーラムにて「TOKYO周穫祭2026」が開催されます。 東京の各地域をもっと皆さんに知ってほしい！という想いから、各地の観光情報・特産品をぎゅっと集めたイベントが開催！ 食べて触れて・・・まるで旅をしているかのような気分があじわえる、そんなイベントです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/syuukaku2026",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T11:19:44.371902Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "4bd2d33696d821e56b2d",
+      "title": "五反田 TOC「徳の市」",
+      "summary": "2026年12月11日（金）、12日（土）、13日（日） の3日間 、 五反田 TOCビル にて「徳の市」が開催されます。 メーカー御売りが出品する直売ビックセール。 ファッション、雑貨、インテリア、食品など 約130店舗 が出店し、さまざまな商品がお得な価格で売り出されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/toctokunoichi202611",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-13T01:59:22.005425Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "373aa1538f7d31bc824f",
+      "title": "災害ボランティア養成講座を開催いたします！！",
+      "summary": "災害時に備えて、講座を受講し、ボランティアとして活動してみませんか？ 品川区内在住・在勤・在学で災害ボランティアに興味のある方",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64260.html",
+      "publishedAt": "2026-11-11T17:18:39.933610Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-11T17:18:39.933610Z",
+      "tags": [
+        "事件事故",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "ead6b07f9d5e6e66be2b",
+      "title": "品川区長選、期日前投票所に「オリヒメ」設置 オンライン立会人の実証実験で",
+      "summary": "品川区が11月9・10日、品川区長選挙（11月15日投開票）の期日前投票所で、分身ロボット「OriHime（オリヒメ）」を活用したオンライン投票立ち会いの実証実験を行った。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5114",
+      "publishedAt": "2026-11-11T10:56:24Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-11T17:18:39.933610Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "d7566a5a0f0725621781",
+      "title": "西五反田に「しゃぶしゃぶすき焼き 千宮」 2店舗目、一人鍋ニーズに対応",
+      "summary": "「しゃぶしゃぶすき焼き 千宮 五反田店」（品川区西五反田1）が、五反田駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5113",
+      "publishedAt": "2026-11-10T12:50:24Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T17:10:27.530082Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "38443e9390acc2c29fe7",
+      "title": "データセクション、元Microsoft IsraelカントリーゼネラルマネージャーのAlon Haimovichが参画",
+      "summary": "[データセクション株式会社] データセクション株式会社（本社：東京都品川区、代表取締役社長執行役員CEO：石原紀彦、東証グロース：3905、以下「当社」）は、グローバルなAIインフラ事業のさらなる成長と経営体制の強化を目的として、Micros...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000092.000036921.html",
+      "publishedAt": "2026-11-10T06:15:24Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T07:34:01.294427Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "7c1cc2d2f0a11f41d298",
+      "title": "11月9日開催の委員会の結果を掲載。",
+      "summary": "11月9日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20987.html",
+      "publishedAt": "2026-11-10T01:00:04Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-06T11:14:18.583664Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "052a92e163be57c79e37",
+      "title": "大井町トラックス「防災アクション」",
+      "summary": "2026年11 月15 日（日）、OIMACHI TRACKS内、TRACKS PARK にて「防災アクション」が開催されます。 今回は、OIMACHI TRACKSの中にある防災クイズを巡る「クイズ＆防災体験ラリー」をはじめ、大井消防署・仁医会ミラベル健診プラザ大井町・品川区防災課による防災・健康にまつわるさまざまな体験や、身体を動かして楽しむ「防災スポーツ®」など、防災について「知る・学ぶ・楽しむ」コンテンツが盛りだくさんです。さらに、「クイズ＆防災体験ラリー」の条件を…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bosai-a",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T17:10:27.530082Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "de41042df8e99a2c9476",
+      "title": "「みんなでつくろう！品川汁 〜江戸東京野菜で楽しむ、まちの食卓交流会 〜」",
+      "summary": "2026年11月23日（月・祝）、 CAFE & HALL ours にて「みんなでつくろう！品川汁 〜江戸東京野菜で楽しむ、まちの食卓交流会 〜」が開催されます。 かつて品川宿周辺で栽培されていた「品川蕪（かぶ）」。 明治以降に姿を消しましたが、2004年に「 特定非営利活動法人 東海道品川宿なすびの花 」の皆さんが復活させました。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawa-soup2026",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T07:34:01.294427Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "a4a431368d97de69b7d8",
+      "title": "下神明天祖神社「しんめい縁日」",
+      "summary": "2026年11月28日（土）、29日（日） 下神明天祖神社 境内にて「しんめい縁日」が開催されます。 地域の商店や町会による出店や様々な屋台が並びます。詳しい内容は特設ページ（ https://shin-en.site/ ）よりご覧ください。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinmei-ennichi202611",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T07:34:01.294427Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "3c0e90790f3501e401c0",
+      "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
+      "summary": "2026年11月14日（土）、立会川龍馬通りにて「龍馬祭」が開催されます。 若き龍馬が滞在していたと伝わる立会川。坂本龍馬像の建つ商店街、立会川龍馬通り繁栄会で行われる「龍馬祭」では、露店や縁日が並び、同商店街のマスコットキャラクター「りょうくん」とのじゃんけん対決や「草履飛ばし」なども開催されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-10T07:34:01.294427Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "2c3c90b77a20442b7571",
+      "title": "品川シーサイドにベーカリー「アールベイカー」 初のオフィスビル内店舗",
+      "summary": "ベーカリー「R Baker（アールベイカー） 品川イノベーションパーク店」（品川区東品川4）が、品川シーサイド駅近くのオフィスビル「品川イノベーションパーク」内にオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5112",
+      "publishedAt": "2026-11-09T13:29:14Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-09T22:35:00.843100Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東品川",
+        "品川シーサイド駅",
+        "品川シーサイド"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "18cf9b18eba4790cfe9e",
+      "title": "熊本地震で被災された熊本県に、品川区議会議員有志から災害義援金を届けました。",
+      "summary": "令和８年７月の熊本地震で被災された熊本県に対し、品川区議会議員有志から寄せられた災害義援金35万円を、議長および副議長が１０月２６日に熊本県東京事務所へお届けしました。 賛同有志（五十音順） あくつ広王・安藤たい作・石田... 熊本地震で被災された熊本県に、品川区議会議員有志から災害義援金を届けました。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20991.html",
+      "publishedAt": "2026-11-09T05:08:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-09T11:54:32.921747Z",
+      "tags": [
+        "事件事故",
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "865b195271ea71925884",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年11月9日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年11月9日号(令和8年11月2日～令和8年11月8日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64227.html",
+      "publishedAt": "2026-11-09T01:03:28.462282Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-09T01:03:28.462282Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "eb6fda9acc0fe8286a96",
+      "title": "11月6日開催の委員会の結果を掲載。",
+      "summary": "11月6日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20967.html",
+      "publishedAt": "2026-11-09T01:00:47Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T01:33:42.073247Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "18f0a336b1a6f575ec1a",
+      "title": "チエルネクサス、さくらインターネット主催ウェビナー「300万人の学びを支えるサービスから学ぶ！」に登壇",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）のグループ会社である、チエルネクサス株式会社（本社：東京都品川区、代表取締役：品田 淳智）は、2026年11月24...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000190.000067516.html",
+      "publishedAt": "2026-11-08T22:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "2f32af5e33ee425a0966",
+      "title": "トラックと車が衝突事故 歩行者巻き込み4人けが 東京・品川区",
+      "summary": "トラックと車が衝突事故 歩行者巻き込み4人けが 東京・品川区",
+      "source": "FNNプライムオンライン",
+      "sourceId": "fnn-news",
+      "sourceType": "rss",
+      "url": "https://www.fnn.jp/articles/-/1148566",
+      "publishedAt": "2026-11-08T21:56:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-09T01:03:28.462282Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "d2318cabb61098920a22",
+      "title": "乗用車がトラックに衝突 4人ケガ…病院に搬送 東京・品川区",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/063ef539f8f64b90baa5872ae1c9d401",
+      "publishedAt": "2026-11-08T05:38:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-08T06:24:43.257488Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "27cde6ea381a075a882a",
+      "title": "【京急本線「新馬場駅/青物横丁駅」4分/9分】トランクルーム「スペラボ 南品川1丁目店」が2026年12月1日にオープン！",
+      "summary": "[株式会社UKCorporation] [画像1: https://prcdn.freetls.fastly.net/release_image/62166/879/62166-879-c524af7ba174cba4d9403cb07bb98bbf-600x400.png?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000879.000062166.html",
+      "publishedAt": "2026-11-08T04:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-08T06:24:43.257488Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "南品川",
+        "新馬場駅",
+        "青物横丁駅"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "0162099f40f4c9a55f5b",
+      "title": "乗用車がトラックに衝突 2人ケガ 東京・品川区",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/f6d587d24b9f45cc8554f2bf65194434",
+      "publishedAt": "2026-11-08T04:40:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-08T06:24:43.257488Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "70b753ef092c6076ce19",
+      "title": "旗の台に「カフェ楽屋」 きょうだいで出店、個室の占いスペースも用意",
+      "summary": "「カフェ楽屋」（品川区旗の台4、TEL 03-6426-9808）が旗の台エリアにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5111",
+      "publishedAt": "2026-11-06T12:27:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-06T19:36:18.282954Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "旗の台"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "5387f993d40e48ca949f",
+      "title": "11月5日開催の委員会の結果を掲載。",
+      "summary": "11月5日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20963.html",
+      "publishedAt": "2026-11-06T02:00:31Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "68f69737a828564a6e8a",
+      "title": "第7回 和文化フェスタ in スクエア荏原",
+      "summary": "2026年12月20日（日）、「第7回 和文化フェスタ in スクエア荏原」が開催されます。 日本の伝統文化の魅力を気軽に体感できる催し。 今年は年末の開催に合わせ、お正月が待ち遠しくなるような企画が盛りだくさん。 子どもから大人まで楽しめるイベントです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/wabunka2026",
+      "publishedAt": "2026-11-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-06T11:14:18.583664Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原",
+        "スクエア荏原"
+      ],
+      "relevanceScore": 10
+    },
+    {
+      "id": "54168d6bf1da33397873",
+      "title": "11月4日開催の委員会の結果を掲載。",
+      "summary": "11月4日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20958.html",
+      "publishedAt": "2026-11-05T09:37:12Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-02T19:38:44.437160Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "aa7c6a126607e2612128",
+      "title": "下神明におでん店「はちこう」 大井町「八幸」4店舗目、鶏白湯のだし使う",
+      "summary": "「鶏だしおでん はちこう 下神明店」（品川区西品川1、TEL 03-6426-9611）が下神明駅近くにオープンして3カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5110",
+      "publishedAt": "2026-11-05T08:12:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西品川",
+        "大井",
+        "下神明駅"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "ef990392ebf6b7e2ad18",
+      "title": "festariaの新たなオリジナルカットダイヤモンド「Star Princess」誕生",
+      "summary": "[フェスタリアホールディングス株式会社] フェスタリアホールディングス株式会社（本社：東京都品川区西五反田、代表取締役社長：貞松 隆弥）は、オリジナルカッティングダイヤモンド ”Wish upon a star(R)” の精神を受け継ぎ、新たなオリジナルカットダ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000113.000017694.html",
+      "publishedAt": "2026-11-05T07:45:23Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "6c451630e325c07d7a93",
+      "title": "第４回定例会の議会放送番組表を掲載。",
+      "summary": "第４回定例会の議会放送番組表を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20971.html",
+      "publishedAt": "2026-11-05T05:54:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "c53dfc45fbc7c075e53e",
+      "title": "大崎ニューシティ「第5回 パン＆スイーツマルシェ」",
+      "summary": "2026年11月15日（日）・16日（月）、「大崎ニューシティパン＆スイーツマルシェ」が開催されます。 品川区内の人気店が大崎ニューシティに大集合。パンやスイーツを販売します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/breadmarche2026",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T20:09:38.691567Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎ニューシティ"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "e312ca6f91b75e19fc38",
+      "title": "【終了】不動前 ほおバル よくバル はしご酒 2026",
+      "summary": "2026年11月5日（木）～7日（土）、「不動前 ほおバルよくバル はしご酒」が開催されます。 不動前駅前通り商店街の人気のバルイベント。 従来の参加店を巡る街バルイベント「中バル」に加え、今年から新たに駅通りの商店街を中心とした「外バル」が登場。外呑みスペースや露店、イベントブースなどが並びます。（外バルの開催は、6日と7日の2日間のみ）",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hoobaluyokubalu2026",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "不動前駅"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "bfc485834043723ff476",
+      "title": "大井競馬場再整備で最後の「東京メガイルミ」 近隣在住、在勤学者に特典も",
+      "summary": "イルミネーションイベント「東京メガイルミ2026-2027」が10月31日、東京シティ競馬（大井競馬場、品川区勝島2）で始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5109",
+      "publishedAt": "2026-11-04T12:35:15Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T19:55:58.685584Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "勝島",
+        "大井競馬場"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "d5f267cc019c6945ac8f",
+      "title": "戸越銀座の中華料理店で火事 食料品や油などの保管倉庫から出火 1人ケガ 東京・品川区",
+      "summary": "戸越銀座の中華料理店で火事 食料品や油などの保管倉庫から出火 1人ケガ 東京・品川区",
+      "source": "FNNプライムオンライン",
+      "sourceId": "fnn-news",
+      "sourceType": "rss",
+      "url": "https://www.fnn.jp/articles/-/1146014",
+      "publishedAt": "2026-11-04T10:09:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T19:55:58.685584Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "814e2895ccbe7b813f4c",
+      "title": "チエル、クラウド型英語ニュース教材『ABLish(R)』Version 3.5を提供開始",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦、以下チエル）は、クラウド型英語ニュース教材『ABLish(R)』の最新版「Version 3.5」の提供を開始したことをお知...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000189.000067516.html",
+      "publishedAt": "2026-11-04T08:15:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "15aef7e8927d05a62e03",
+      "title": "【速報】戸越銀座商店街で火事 中華料理店から出火 現在も延焼中",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/79a26315a4154100b16ec616975b8bc2",
+      "publishedAt": "2026-11-04T08:08:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T19:55:58.685584Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "2a6248b419ee670d96dd",
+      "title": "品川宿交流館「第三回 品川宿場寄席」",
+      "summary": "2026年11月18日（水）、19日（木）、20日（金）、品川宿交流館にて「品川宿場寄席」が開かれます。 出演は、品川区在住、真打落語家の柳家吉緑、二つ目講談師の一龍齋貞奈。日替わりゲストも迎え、楽しいひとときとなりそうです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shukubayose3",
+      "publishedAt": "2026-11-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-04T11:19:21.330749Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "d11214a3c5d6040f7572",
+      "title": "アトミックソフトウェア、SBCメディカルグループホールディングスとの資本業務提携で資金調達を実施、シリーズCラウンドで6億円を調達",
+      "summary": "[アトミックソフトウェア株式会社] クリニック向けオールインワンSaaS「medicalforce」を提供するアトミックソフトウェア株式会社（本社：東京都品川区、代表取締役CEO：畠中 翔一、以下「当社」）は、国内外の医療機関に経営支援を行うSBCメディカ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000003.000176667.html",
+      "publishedAt": "2026-11-03T07:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-03T02:58:36.908619Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "192b768ccc2b0066fb19",
+      "title": "西五反田にラーメン店「札幌みその」 都内2店舗目、五反田店限定セットも",
+      "summary": "ラーメン店「札幌みその 五反田店」（品川区西五反田1）が五反田駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5108",
+      "publishedAt": "2026-11-02T11:47:51Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-02T19:38:44.437160Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "e41ec5c5b3a3c4d2a251",
+      "title": "令和9年度 奨学研究資金奨学生募集",
+      "summary": "奨学研究資金とは、ひとり親世帯の生活の安定と人材の育成を図るため、学費の一部を交付する制度（給付型）です。昭和50年9月に区内篤志家の寄付金をもとに創設されました。現在は、品川区内の町会・自治会をはじめ、区民の皆様にご支援いただいている「歳末たすけあい募金」を原資とし交付しています。 (1)申請の日の1年前から、引き続き区内に住所を有する ひとり親世帯 のお子さん。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-62231.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "91a7c4c347eab060bb6b",
+      "title": "「エールしながわ通信」11月号を発行しました！",
+      "summary": "ひきこもりなどでお悩みのご本人やご家族の社会参加を応援する「エールしながわ」では、毎月広報誌を発行しています。 11月号ではエール社会体験の様子、報告記事を掲載しています。ぜひ、下記のリンクよりご覧ください！ ※過去の通信もご覧にいただけます エールしながわ通信：https://shinashakyo.jp/yell/magazine.html",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64116.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1032c789f7b1ba220dcb",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年11月2日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年11月2日号(令和8年10月26日～令和8年11月1日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64157.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "0e6ace1e437742587039",
+      "title": "「しながわ社協だより11月号」 更新しました！",
+      "summary": "© Shinagawa Ward Council on Social Welfare, All rights reserved.",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64181.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "0887244fdea40d5c3e00",
+      "title": "令和９年・２０２７年版カレンダー・手帳のご寄付承ります！",
+      "summary": "企業や個人の方々からのカレンダーのご寄付を今年も承ります。 いただいたカレンダーは民生委員の方等を通じ、ひとり暮らしの高齢者の方や必要とされる方にお配りする予定です。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-64098.html",
+      "publishedAt": "2026-11-02T06:32:29.494615Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-02T06:32:29.494615Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "fde7cc4f856228595e01",
+      "title": "平田梨奈×「推しガチャ(R)」コラボ企画を10月31日より開催！サイン入りチェキ付きSOLUNAグッズや、あなたの質問に答える個別動画が登場",
+      "summary": "[株式会社Ｏｓｈｉｍａｔｅ] 株式会社Oshimate（本社：東京都品川区西五反田3丁目15番6号、代表取締役：孫 熙久）は、同社が企画・運営するオンラインくじサービス「推しガチャ(R)」において、平田梨奈との期間限定コラボ企画「ひらりーから...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000006.000188689.html",
+      "publishedAt": "2026-11-01T19:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-01T16:10:57.254773Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "dff36fedb5a1762f951d",
+      "title": "五反田に海賊をテーマにした 隠れ家Bar「Bar MYTAS(マイタス)」 11月11日(水)グランドオープン！",
+      "summary": "[株式会社 MYTAS] 株式会社 MYTAS（本社：東京都港区、代表取締役社長：鈴木貴之）は、2026年11月11日（水）、東京都品川区東五反田に、海賊をテーマにした隠れ家「Bar MYTAS（バーマイタス）」をグランドオープンします。 [画像1:...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000002.000193733.html",
+      "publishedAt": "2026-11-01T05:40:46Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-01T06:31:59.884411Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "6a222274d58ea5a9d003",
+      "title": "米国中間選挙を前に、MFN政策の日本・欧州市場への影響に注目 e-Projection長手代表が国際学会で講演",
+      "summary": "[株式会社e-Projection] 医薬品の売上予測・事業性評価、薬価・マーケットアクセス戦略を専門とする株式会社e-Projection（本社：東京都品川区、代表取締役：長手寿明）は、2026年10月27日、オランダ・アムステルダムで開催された国際会...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000005.000193279.html",
+      "publishedAt": "2026-11-01T04:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T01:11:39.300502Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "8fbe8a4a1c6a441d7e9e",
+      "title": "リアル謎解きゲーム in しながわ「探偵しなにゃん ザ・ファーストミッション ～商店街からの挑戦状～ 」",
+      "summary": "品川区としながわ観光協会は、品川区内の３つの商店街（中延商店街、戸越銀座商店街、武蔵小山商店街パルム）を巡りながら物語を進めていく、「リアル謎解きゲーム in しながわ『探偵しなにゃん ザ・ファーストミッション ～商店街からの挑戦状～』」を開催します。 今回は“各商店街のマスコットキャラクター”たちからの挑戦状を受けて、前作にも登場した“しながわ観光協会公式キャラクター しなにゃん”とともに、商店街に潜む新たな謎を解き明かしていきます。 全ての謎を解きゲームをクリアすると、…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nazonyan2026",
+      "publishedAt": "2026-10-31T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-31T19:24:36.129689Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延",
+        "小山",
+        "戸越",
+        "戸越銀座商店街",
+        "武蔵小山商店街"
+      ],
+      "relevanceScore": 30
+    },
+    {
+      "id": "c4dc9f7d651988309d55",
+      "title": "不動前で飲食イベント「不動前バル」開催迫る 新たな試み「外バル」も",
+      "summary": "飲食イベント「不動前ほおバルよくバルはしご酒」（通称・不動前バル）が11月5日〜7日、東急目黒線・不動前駅周辺で開催される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5107",
+      "publishedAt": "2026-10-30T07:53:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "不動前駅"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "d5143625913018c7aaef",
+      "title": "【PISOLA初の公園内出店！】PISOLA千葉公園店が2026年11月11日（水）オープン",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）のグループ会社である株式会社ピソラ（本社：滋賀県草津市、代表取締役：鬼界 友則）は、2026年11月11日（水）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000640.000027839.html",
+      "publishedAt": "2026-10-30T00:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T01:11:39.300502Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "c3eda51f122be5594d20",
+      "title": "第8回 品川国際映画祭 2026",
+      "summary": "2026年11月9日（月）～14日（土）、品川インターシティにて「品川国際映画祭」が開催されます。 品川インターシティに、幻想的で非日常的なアウトドアシアターが登場し、世界各国から厳選されたショートフィルムを上映します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "9c42652a0b7e08426d36",
+      "title": "物流博物館 企画展「馬で運ぶ」",
+      "summary": "2026年10月20日（火）～12月20日（日）、物流博物館にて企画展「馬で運ぶ」が開催されます。 私たちの暮らしを支えてきた「物流」の歴史をたどる企画展。 かつて物流の主役だった馬や牛による輸送の歩みを、貴重な館蔵資料とともに紹介します。見どころは、江戸時代の京都で活躍した馬借「山城屋」と「亀屋」の豪華な馬飾り。両家の馬飾りがそろうのは25年ぶりです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/lmuse-hourse",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "5737865272e7146826ab",
+      "title": "o-i STUDIO「アトマト in 大井町」",
+      "summary": "10月31日（土）～11月3日（火・祝）、 o-i STUDIO にて「 アトマトin大井町 」が開催されます。 106組の作家によるアートグッズのイベントが大井町にて開催。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/o-i-studio_artmart2026",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "24fe579f69829b753f40",
+      "title": "ニコンミュージアム 企画展「ファインダーの秘密—のぞいてみる。カメラで見る世界。」",
+      "summary": "2026年10月22日（木）～2027年2月27日（土）、西大井のニコンミュージアムにて企画展「ファインダーの秘密—のぞいてみる。カメラで見る世界。」が開催されます。 レンジファインダー、一眼レフ、ミラーレス。カメラが変われば、世界の見え方も変わります。それぞれの方式は、何が、どのように違うのでしょう。 本企画展では、ファインダーの仕組みを体感できる3つのエリアで方式の違いによるファインダーの見え方の違いや、その仕組みについて、実機や模型などを使い分かりやすく解説します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nikon_finder",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-30T10:17:27.713792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "西大井"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "04d783a01f54ae459e82",
+      "title": "JR大崎駅近くで銅線約220キロ窃盗か 男（26）逮捕",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/ea67f5acea454b0ebcf05e6bcd0fac68",
+      "publishedAt": "2026-10-29T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T10:15:53.320004Z",
+      "tags": [
+        "事件事故",
+        "交通"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "40a15c10203fb7254812",
+      "title": "【サイバー攻撃や外部サービスの障害でも、現場の重要業務を止めない】イオレ、液浸冷却を活用した「閉域エッジ基盤」のPoCを実施、参加事業者およびセキュリティパートナーを募集",
+      "summary": "[株式会社イオレ] 株式会社イオレ（本社：東京都港区、代表取締役社長 兼 CEO：瀧野 諭吾、以下イオレ）と、イオレが本年11月末に完全子会社化を予定しているWOODMAN株式会社（本社：東京都品川区、代表取締役：小野 慎二郎、以...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000328.000030850.html",
+      "publishedAt": "2026-10-29T06:45:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T10:15:53.320004Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "efeca1ee018ad7fa3221",
+      "title": "子どもの“好き嫌い”と“栄養バランス”の両立を「食」と「腸内環境」から考える 保育・教育フェア「保育博2026」で「すくすくOisix」責任者がセミナー登壇",
+      "summary": "[オイシックス株式会社] 食品のサブスクリプションサービスを提供するオイシックス株式会社（本社：東京都品川区、代表取締役社長：高島 宏平）が展開する、保育園・幼稚園などの保育施設向け給食サービス「すくすくOisix」は、2026年1...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001256.000008895.html",
+      "publishedAt": "2026-10-29T06:41:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T10:15:53.320004Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "78861a1568c7c5bfe632",
+      "title": "不動前に「立ち飲み 上機嫌」 武蔵小山の居酒屋「シュチニクリン」系列店",
+      "summary": "「立ち飲み 上機嫌」（品川区西五反田5）が不動前駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5106",
+      "publishedAt": "2026-10-29T05:10:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T10:15:53.320004Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "小山",
+        "不動前駅"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "66d8a3da42b5e58cdcee",
+      "title": "西大井のニコンミュージアムで企画展「ファインダーの秘密」 仕組みを解説",
+      "summary": "企画展「ファインダーの秘密−のぞいてみる。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5105",
+      "publishedAt": "2026-10-28T08:36:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-28T13:18:01.880921Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大井",
+        "西大井"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "0ed95f11ac1ea53b3d80",
+      "title": "ダーツライブが協賛する「Space Rover Cup 2026」が開催 ー筑波大学・大阪工業大学チームが優勝",
+      "summary": "[株式会社ダーツライブ] セガサミーグループの株式会社ダーツライブ（本社：東京都品川区、代表取締役 社長執行役員：阿部 東）は、東京情報大学（設置者：学校法人東京農業大学）が主催する、宇宙開発・ロボティクス分野に関心を持つ学...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000206.000043246.html",
+      "publishedAt": "2026-10-28T06:15:26Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-29T01:06:29.423639Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "7ec0cfc2bfaabe26f63e",
+      "title": "STUDIO EASE 目黒「日本蒸奇博覧会 2026」",
+      "summary": "2026年10月31日（土）、11月1日（日）目黒駅より徒歩5分のSTUDIO EASE目黒にて今年も「日本蒸奇博覧会 2026」が開催されます。主催は 一般社団法人スチームパンク協会 。 「スチームパンク（Steampunk）」とは、今の世界とは異なる文化や科学技術で発展した「未来世界」を意味するSFジャンルのひとつ。まるで海外の街角のようなSTUDIO EASEを会場に、 全国から集うクリエイターや職人によるオリジナル作品即売会をメインに、フォト体験、音楽ライブ、個性派…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/steampunk2026",
+      "publishedAt": "2026-10-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-28T05:59:17.229604Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "目黒駅"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "52c50a4fb4174f902fd4",
+      "title": "大盛湯 Ｘ 筆文字アート体験",
+      "summary": "2026年11月1日（日）～3日（火・祝）、大盛湯にて「筆文字アート体験」が開催されます。 主催は、合同会社梵梵 Terrace。開店前の静かな時間帯に、脱衣所を貸し切った特別な空間で筆文字アートを楽しめる約1時間半の体験イベントです。 アート体験のあとは、開店直後の澄んだお湯にゆっくり浸かれる入浴チケットが付いています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bonbon",
+      "publishedAt": "2026-10-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-28T05:59:17.229604Z",
+      "tags": [
+        "地域イベント",
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "1578f738651034967046",
+      "title": "DYM人事部主催「第23回 人事クラブ（人事交流会）」開催",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年10月14日（...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000554.000027235.html",
+      "publishedAt": "2026-10-27T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-27T15:27:45.040386Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0530fdd0c4760c8074a1",
+      "title": "株式会社PR TIMES・山口拓己氏が登壇。「20期連続黒字の裏側と経営の鉄則～上場と失敗から学んだ持続的成長の思考法～」を語る。",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年10月19日（...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000555.000027235.html",
+      "publishedAt": "2026-10-27T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-27T15:27:45.040386Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0c951d62bef0ed3c5fae",
+      "title": "天王洲で水上オペラ「リトルマーメイド」開催へ 運河上の特設ステージで公演",
+      "summary": "「天王洲水上オペラ2026 ～Harmonious nights between art and canal～」が11月6日〜8日、天王洲運河の特設水上ステージで上演される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5104",
+      "publishedAt": "2026-10-27T10:02:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-27T15:27:45.040386Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "67ef2924f23e968fba95",
+      "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 11月",
+      "summary": "「Tokyo City Flea Market」は毎週土曜日・日曜日に大井競馬場第一駐車場で開催される都内最大級のフリーマーケットです。 専門的なお店も多数出店。バラエティ豊かな品揃えで、地元客だけでなく海外からの観光客も訪れます。週末は、大井競馬場でお宝探しはいかがでしょう。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyo-city-flea-market-202611",
+      "publishedAt": "2026-10-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-27T09:12:52.738199Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 10
+    },
+    {
+      "id": "25a051e6ff31b6926e7a",
+      "title": "グリーンパーク戸越で「ハロウィン農園マルシェ」開催迫る お菓子配布も",
+      "summary": "「ハロウィン農園マルシェ」が10月31日、戸越公園駅近くの会員制シェア農園「Green Park TOGOSHI（グリーンパーク戸越）」（品川区戸越6）で開催される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5103",
+      "publishedAt": "2026-10-26T11:21:37Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-26T13:22:56.535720Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
+      ],
+      "relevanceScore": 22
+    },
+    {
+      "id": "11ee887640bf3c6fd795",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月26日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年10月26日号(令和8年10月19日～令和8年10月25日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-64009.html",
+      "publishedAt": "2026-10-26T05:04:32.365725Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-26T05:04:32.365725Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "eafa979a8e68729e1d22",
+      "title": "2026大井町ハロウィン",
+      "summary": "2026年10月31日（土）、「大井町ハロウィン」が開催されます。 ハロウィンこどもマルシェやフォトスポットラリー、 ステージでは、ハロウィンダンスやファッションショー、ミュージックステージが予定されています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/2026ooihalloween",
+      "publishedAt": "2026-10-26T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-26T13:22:56.535720Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "0880f980bb40e04cf77a",
+      "title": "【11/6,7,8限定】しながわクルーズ「水上オペラ特別便」（夜）",
+      "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 11月6日（金）、7日（土）、8日（日）は、「 天王洲水上オペラ2026『リトルマーメイド』」の公演に合わせ、開演前にロマンチックな天王洲の夜景とレインボーブリッジを船上から楽しむ特別クルーズを運航。船内では1ドリンクをお楽しみいただけます。また、オペラ観覧（SS席）がセットになったセットチケットもご用意しています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawacruise202611opera",
+      "publishedAt": "2026-10-26T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-26T13:22:56.535720Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "cd7b93c9a64780bdb74a",
+      "title": "REACH大崎クラフトマーケット",
+      "summary": "2026年11月4日（水）、JR大崎駅南口東西自由通路夢さん橋にて「REACH大崎クラフトマーケット」が開催されます。 雑貨やアクセサリーなど、個性豊かな作品が集まる毎月恒例の「手作り市」。大崎駅から徒歩0分というアクセスの良さで、周辺住民だけでなくオフィスワーカーにも人気のクラフトマーケットです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202611",
+      "publishedAt": "2026-10-26T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-26T05:04:32.365725Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "10e3bd6a4cc922cfef2a",
+      "title": "ボラミニ情報更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63939.html",
+      "publishedAt": "2026-10-25T21:00:58.246577Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-25T21:00:58.246577Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "c8e5dd7bbb3f06ed79ec",
+      "title": "ホテルメトロポリタン大井町トラックス 「COLOR TRANSFORM -MASQUERADE BAR-」",
+      "summary": "2026年10月29日（木）、30日（金） 、の2日間、ホテルメトロポリタン大井町トラックス26階の「The TRAVELERS HOUSE ROOFTOP BAR」にて、大人のハロウィンイベント「COLOR TRANSFORM -MASQUERADE BAR-」が開催されます。 ルーフトップから望む東京の夜景とともに、ハロウィンを楽しむ夜を大井町で過ごしてみては。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/cot",
+      "publishedAt": "2026-10-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-25T16:38:23.990009Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "f271ebfcdac7459c0c6d",
+      "title": "SNSフォロワー25万人超！ 国内外でカリスマ的人気を誇るイラストレーターかずのこ氏、初のストーリーイラストブック『しくみ博物館』、徳間書店より発売！",
+      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、かずのこ氏のストーリーイラストブック『しくみ博物館(https://www.amazon.co.jp/dp/4198662622/)』を10月24日（土）に発売いたしま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001143.000016935.html",
+      "publishedAt": "2026-10-23T21:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T17:19:41.701744Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "308ab02f95c0d12b3a2b",
+      "title": "がん患者さまやご家族を支援するチャリティイベント 「リレー・フォー・ライフ・ジャパン2026東京上野」に出展",
+      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランス（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、9月26日（土）～27日（日）に上野恩賜公園噴水広場（竹の台広場）で開催...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001058.000010292.html",
+      "publishedAt": "2026-10-23T19:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T21:33:11.502483Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "12c7ef96456a783e7157",
+      "title": "天王洲で展覧会「雨穴の変な世界展。」 ホラー作家・雨穴さんの世界を再現",
+      "summary": "展覧会「雨穴（うけつ）の変な世界展。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5102",
+      "publishedAt": "2026-10-23T08:27:33Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T11:53:03.744011Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "d86df5d87d6d1734fcf5",
+      "title": "第4回定例会のポスターを掲載。",
+      "summary": "第4回定例会のポスターを掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20936.html",
+      "publishedAt": "2026-10-23T08:16:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T11:53:03.744011Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "47a3a5a8886a2c4cac02",
+      "title": "10月22日開催の委員会の結果を掲載。",
+      "summary": "10月22日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20927.html",
+      "publishedAt": "2026-10-23T05:01:43Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T12:07:10.601491Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "449bd29a12a17ccdb880",
+      "title": "躯体工事の次世代の担い手へ。躯体サブコンのエルライン、2027年卒内定式を開催",
+      "summary": "[株式会社エルライン] 株式会社エルライン（本社：東京都品川区東品川2-1-11 ハーバープレミアムビル5階、代表取締役社長：浅野勝人、以下エルライン）は、2026年10月1日（木）、エルライン本社にて「2027年卒 内定式」を開催し、グル...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000018.000093600.html",
+      "publishedAt": "2026-10-23T04:40:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T05:06:58.097240Z",
+      "tags": [
+        "都市開発",
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "f53627a5d03ccade8540",
+      "title": "AIインフラ及びGPUコンピュートサービスの提供開始に関するお知らせ",
+      "summary": "[データセクション株式会社] データセクション株式会社（本社：東京都品川区、代表取締役社長執行役員CEO：石原紀彦、東証グロース：3905、以下「当社」）は、2026年9月18日付プレスリリース「大口契約の締結に関するお知らせ」にて公表しま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000091.000036921.html",
+      "publishedAt": "2026-10-23T03:41:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T05:06:58.097240Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "045b53ecc8db09d2c217",
+      "title": "「縁線図鑑 ～気づけばほら、つながりだらけ。～」開設２周年 「１１月５日(木) いいご縁の日 縁線図鑑の奢りデー」を開催！ 学芸大学駅、武蔵小山駅、三軒茶屋駅など東急線沿線の２６店舗で、 “最初の１杯”が無料！いいご縁の日は東急線沿線で乾杯！",
+      "summary": "",
+      "source": "東急からのお知らせ",
+      "sourceId": "tokyu-information",
+      "sourceType": "rss",
+      "url": "https://www.tokyu.co.jp/company/information/detail/62311.html",
+      "publishedAt": "2026-10-23T01:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T05:06:58.097240Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "3a1843e992fbc7f724f5",
+      "title": "品川らくご会 Vol.1 柳家吉緑独演「芝浜」",
+      "summary": "2026年11月28日（土）、品川区立品川歴史館 2階講堂にて、「品川らくご会 Vol.1 」が開催されます。 初回となる今回は、品川区在住の真打・柳家吉緑の独演会です。同館で開催中の特別展「 品川湾から東京港へー未完の港湾都市ー 」に合わせ、情緒あふれる人情噺の名作『芝浜』を口演します。 記念すべき第一回目のゲストは、動物ものまねでお馴染みの江戸家猫八師匠です。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/rakugo1",
+      "publishedAt": "2026-10-23T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-23T17:19:41.701744Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "品川歴史館"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "8461308f888f81c1217d",
+      "title": "天王洲をスタートアップの集積拠点へ。寺田倉庫、ワークプレイス事業「Creation Hub TENNOZ」を始動",
+      "summary": "[寺田倉庫] 寺田倉庫株式会社（東京都品川区 代表取締役社長：寺田航平）は、スタートアップの成長支援および天王洲におけるビジネスイノベーション拠点の形成を目的に、スタートアップ向けワークプレイス事業「Creation Hub...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000498.000014158.html",
+      "publishedAt": "2026-10-22T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T21:47:46.752099Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "0448c5bb54544d6504b0",
+      "title": "西五反田に居酒屋「酒肴あおもん穣」 地下本店の真上、魚の炭火焼きも提供",
+      "summary": "居酒屋「酒肴（しゅこう）あおもん穣（じょう）」（品川区西五反田2、TEL 03-6420-3949）が大崎郵便局近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5101",
+      "publishedAt": "2026-10-22T10:15:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大崎",
+        "西五反田"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "0aa0d75ad4615e85bc2d",
+      "title": "10月23日（金）午後１時から第３回定例会のインターネット生中継を放映。",
+      "summary": "10月23日（金）午後１時から第３回定例会のインターネット生中継を放映。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20929.html",
+      "publishedAt": "2026-10-22T04:37:06Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T05:07:22.596216Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "64800a2045e100f3cd01",
+      "title": "「きみの“すき”はどんないろ？」をテーマに展開する学童向け鉛筆『uni Palette（ユニ パレット）』より 子どもたちの“すき”をかたちにする、新デザインが登場 11月6日（金）より新発売",
+      "summary": "[三菱鉛筆株式会社] 三菱鉛筆株式会社（本社：東京都品川区 社長：数原滋彦）は、「きみの“すき”はどんないろ？」をテーマに展開する学童向け鉛筆『uni Palette（ユニ パレット）』より、子どもたちの“すき”をかたちにする新デザ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000313.000028890.html",
+      "publishedAt": "2026-10-22T03:41:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-05T11:17:27.383505Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "99f28ecfc0a8dd397328",
+      "title": "旗ヶ岡商店街「たまご祭り」",
+      "summary": "2026年10月23日（金）、旗の台・旗ヶ岡商店街にて「たまご祭り」が開催されます。 旗が岡商店会の7軒の飲食店が「たまご」をテーマにコラボレーション。 「卵」を通じて 『食べて、飲んで、楽しんで』 旗ヶ岡商店会から 新たなムーブメントが産み落とされるかもしれません。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tamago",
+      "publishedAt": "2026-10-22T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T17:25:45.941309Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "旗の台"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "8ae6ed8114f79e7b702d",
+      "title": "KLP塾2026、高知県室戸市で初のフィールドワークを実施！第4回ではMGM大阪・渡辺会長が登壇",
+      "summary": "[ワクセル] ソーシャルビジネスコミュニティ「ワクセル」（所在地：東京都品川区、主催：嶋村吉洋、総合プロデューサー：住谷知厚）がメディアで全面協力している、KLP合同会社（代表社員：島田大輝）と公益財団法人大阪観光...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000316.000052391.html",
+      "publishedAt": "2026-10-21T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T21:51:58.772555Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "06aa0e2e23220124638e",
+      "title": "五反田駅近くにレストラン＆カフェ「茶房〇△□」 都心で自然を感じる空間に",
+      "summary": "レストラン＆カフェ「茶房〇△□（まるさんかくしかく）」（品川区東五反田2、TEL 03-5860-2357）が10月1日、五反田駅近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5100",
+      "publishedAt": "2026-10-21T10:43:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "4e5c91cd6cdb2b167ac7",
+      "title": "五反田駅近くにレストラン＆カフェ「茶房〇△□」 都心で自然を感じる空間に",
+      "summary": "レストラン＆カフェ「茶房〇△□（まるさんかくしかく）」（品川区東五反田2、TEL 03-5860-2357）が10月1日、五反田駅近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5100",
+      "publishedAt": "2026-10-21T10:43:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T12:07:10.601491Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "aa544cf6bc75bfc7c799",
+      "title": "埼玉・八潮市の道路陥没事故めぐり遺族が慰謝料など約1億2500万円求め県を提訴",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/be34305cf02044168e4b64039797ad7d",
+      "publishedAt": "2026-10-21T06:58:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T12:07:10.601491Z",
+      "tags": [
+        "事件事故",
+        "交通"
+      ],
+      "locations": [
+        "八潮"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "e58d80b74d88b156b00d",
+      "title": "DYM MESSENGERS、新体制で挑んだD.LEAGUE 26-27 SEASON開幕戦で勝利！",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000550.000027235.html",
+      "publishedAt": "2026-10-21T04:40:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-21T05:04:52.945908Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "9b42e07962b6e9c4411d",
+      "title": "ニュース「さわやかさん」更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63821.html",
+      "publishedAt": "2026-10-20T08:44:31.703491Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-20T08:44:31.703491Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "79cc7a0e0d0a96025a32",
+      "title": "ファミサポ通信更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63831.html",
+      "publishedAt": "2026-10-20T08:44:31.703491Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-20T08:44:31.703491Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "3a858034f362d0a7ff3d",
+      "title": "3社連携で「循環型GPUサーバー」を活用した新たなAIインフラ事業を開始",
+      "summary": "[エクストリーム−Ｄ株式会社] エクストリームーD株式会社（本社：東京都品川区、代表取締役：柴田 直樹、以下「エクストリームーD」）、TES-AMM JAPAN株式会社（本社：神奈川県相模原市中央区、代表取締役：小沢 国彦、以下「TES-AMM」）、Cor...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000061.000021585.html",
+      "publishedAt": "2026-10-20T07:41:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "86a6fcaceab2cb381ff4",
+      "title": "中延ハロウィンスタンプラリー 2026",
+      "summary": "2026年10月25日（日）、中延商店街「なかのぶスキップロード」にて「中延ハロウィンスタンプラリー」が開催されます。 商店街にちりばめられたネームスタンプを5個集めると、お菓子のつかみどりができます。混雑解消のため整理券を配布。イベントの詳細は 公式ホームページ よりご確認ください。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nakanobuhallo2026",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "71ceedf3656586e42d03",
+      "title": "五反田 ハロウィンスタンプラリー 2026",
+      "summary": "2026年10月25日（日）五反田 目黒川沿いの一角で「五反田ハロウィンスタンプラリー」が開催されます。 お菓子やくじ引きなど、子どもから大人まで楽しめる地域イベント。お子様（15歳以下）には、お菓子の詰め合わせをプレゼント（先着600名様）",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/gotandahallow2026",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
+    {
+      "id": "49352511603b6f5cdd3c",
+      "title": "とごしぎんざハロウィン2026",
+      "summary": "2026年10月25日（日）、「とごしぎんざハロウィン2026 」が開催されます。 お菓子の配布は、中学生以下のお子様が対象。10月15日（木）～10月25日（日）の期間中に「ほっとスポット戸越銀座」で参加用紙を入手しご参加ください（数に限り有り、無くなり次第終了）。詳しくは こちら",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/togoshihallo2026",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "16d78fe1021b98d46fbf",
+      "title": "ゲートシティ大崎 「HAPPY HALLOWEEN EVENT」（ハッピーハロウィンイベント）2026",
+      "summary": "2026年10月24日（土）に、大崎ゲートシティにて「HAPPY HALLOWEEN EVENT」が開催されます。 ふわふわ遊具やジャンボスライダー、ステージイベント「パウ・パトロール パウフェクトショー」やお子様へのお菓子の配布、LINEスタンプラリー抽選会など、楽しいイベントが盛りだくさんです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/osakihallo2026",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T14:24:11.748476Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "ゲートシティ大崎"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "3157e5c07e0c197d5f07",
+      "title": "【アンケート】子育て支援情報発信アプリ「しながわこどもぽけっと」満足度調査",
+      "summary": "子ども育成課 子ども育成係 電話：03-5742-6720 FAX：03-5742-6351",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-kateisoudan/20260217155258.html",
+      "publishedAt": "2026-10-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T00:28:31.044767Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "bc5b21697a19e36205a6",
+      "title": "しながわ水族館が開業35周年 記念式典で新水族館構想のアイデア表彰",
+      "summary": "「しながわ水族館」（品川区勝島3）は10月18日、イルカ・アシカスタジアムで開業35周年を記念したセレモニーを行った。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5098",
+      "publishedAt": "2026-10-19T09:55:56Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "勝島",
+        "しながわ水族館"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "b3f5765a3bafa4dff965",
+      "title": "しながわ水族館が開業35周年 記念式典で新水族館構想のアイデア表彰",
+      "summary": "「しながわ水族館」（品川区勝島3）は10月18日、イルカ・アシカスタジアムで開業35周年を記念したセレモニーを行った。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5098",
+      "publishedAt": "2026-10-19T09:55:56Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-19T13:44:39.751209Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "勝島",
+        "しながわ水族館"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "732bdb45d65108e90816",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月19日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年10月19日号(令和8年10月13日～令和8年10月18日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63808.html",
+      "publishedAt": "2026-10-19T04:59:47.330210Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-19T04:59:47.330210Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "d02deb03d88a207811d1",
+      "title": "「採用して終わり」から「長くともに働く」医療現場へ。「採用・予防・対処」の3フェーズで医療人材の離職防止を実現する「アシタバプロジェクト」を開始",
+      "summary": "[株式会社エムステージグループ] 株式会社エムステージグループ（本社：東京都品川区、代表取締役：杉田雄二）は、医療従事者や職員の離職防止と組織定着を実現し、持続可能な医療経営を支える新プロジェクト「アシタバプロジェクト」を2026年10...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000237.000019504.html",
+      "publishedAt": "2026-10-19T04:40:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-19T04:59:47.330210Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "164d53c3c6dbbc00b151",
+      "title": "高校生からも「選挙の推し活化」「情報の偏り」を懸念する声。公平・中立な政策比較の場として『品川区長選挙ネット討論会』開催【11月9日(月)20:30～配信】",
+      "summary": "[公益社団法人東京青年会議所] [画像: https://prcdn.freetls.fastly.net/release_image/73012/373/73012-373-1d81ba27c800c2b5fec2d8ffea3248de-1280x720.png?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000373.000073012.html",
+      "publishedAt": "2026-10-19T04:20:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-19T04:59:47.330210Z",
+      "tags": [
+        "行政",
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "364d8bccc22a7fa91f03",
+      "title": "大井町イルミネーション 2026",
+      "summary": "2026年10月31日（土）～2027年1月11日（月・祝）、 大井町駅周辺にて 「大井町イルミネーション」が開催されます。 幻想的な光とともに、品川区と木材活用に関する協定を結ぶ高知県木材協会の協力を得て、同県の木材を活用したシンボルツリーも設置されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026",
+      "publishedAt": "2026-10-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-19T13:44:39.751209Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "9611f23817dff95859cb",
+      "title": "【終了】品川ハロウィン（シナハロ） 2026",
+      "summary": "2026年10月10日（土）～18日（日）、品川シーズンテラスおよび近隣エリアにて「品川ハロウィン2026」が開催されます。品川港南エリアの住民・企業が連携し、楽しいお祭りを、みんなが出会い交流できる場をつくろう！と始まった「品川ハロウィン」。子どもが安心できるまちづくりを目指し開催される楽しいイベントです。 【公式】しながわ観光協会 SHINAGAWA TOURISM ASSOCIATION [OFFICIAL](@shinagawonder)がシェアした投稿",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinahallo2026",
+      "publishedAt": "2026-10-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-17T04:45:16.231193Z",
+      "tags": [
+        "子育て教育",
+        "都市開発",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 6
+    },
+    {
+      "id": "35d23af52fe4493da4bb",
+      "title": "【終了】品川区 文化財一般公開 2026",
+      "summary": "2026年10月31日（土）～11月3日（火・祝）、品川区内各地にて秋の恒例「文化財一般公開」が行われます。 （※今年度は伊藤博文墓の公開は予定されておりません） ▼品川エリア ●旧品川警察署品川橋交通待機所 （令和5年度国登録有形文化財） 場所：南品川櫻河岸まちなか観光案内所 南品川1-3-4 （※17:00まで）",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bunkazaikoukai2026",
+      "publishedAt": "2026-10-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-17T04:45:16.231193Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "南品川"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "2a070f7fb3b4b62b6f07",
+      "title": "【大反響につき、発売即追加生産決定！】荻原規子〈勾玉三部作〉完結30周年記念「文庫新装版・美装箱セット」、全国の書店で販売開始！",
+      "summary": "[徳間書店] 株式会社徳間書店（本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、日本ファンタジーの旗手・荻原規子による〈勾玉三部作〉の完結30周年を記念した「文庫新装版・美装箱セット」について、好評につき...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001135.000016935.html",
+      "publishedAt": "2026-10-16T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T21:27:17.716290Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "10673a0e3c6a973de545",
+      "title": "西小山にカカオジェラート専門店「リエノ」 酒場「オニール」営業時間外に",
+      "summary": "カカオジェラート専門店「LLENO（リエノ） cacao&gelato」（品川区小山6）が、西小山駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5097",
+      "publishedAt": "2026-10-16T06:47:46Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "西小山駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "f5e568d461c14bfe32dc",
+      "title": "西小山にカカオジェラート専門店「リエノ」 酒場「オニール」営業時間外に",
+      "summary": "カカオジェラート専門店「LLENO（リエノ） cacao&gelato」（品川区小山6）が、西小山駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5097",
+      "publishedAt": "2026-10-16T06:47:46Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "西小山駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "469482ba9632379c5186",
+      "title": "【いよいよ全国制覇！】『串カツ田中 和歌山駅前店』が10月23日(金)にオープン！",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）の子会社である株式会社串カツ田中は、2026年10月23日(金)に「串カツ田中 和歌山駅前店」をオープンいたします...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000638.000027839.html",
+      "publishedAt": "2026-10-16T02:40:43Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T04:46:25.871391Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "ed91bf4ad80a95881ef4",
+      "title": "ARTE TOKYO（アルテ トーキョー）",
+      "summary": "2026年10月10日（土）～12月31日（木）、「ARTE TOKYO （東京国際文化芸術祭） 」が開催されます。 ARTE TOKYOは、東京で催されるアート、演劇、音楽、イルミネーション、エンターテインメントなど多彩なプログラムを結び合わせ、ひとつひとつの輝きを都市全体の魅力として描き出すフェスティバルです。初開催となる2026年は、臨海エリア、日比谷・丸の内エリア、代々木・渋谷エリアをコアエリアとして、東京2020大会文化プログラムのリバイバルをはじめとする多数のア…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/arte-tokjyo",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "7daa639150cc69e916d9",
+      "title": "ARTE TOKYO CRUISE（アルテ トーキョー クルーズ）",
+      "summary": "2026年10月10日(土)～12月20 日（日）の週末・祝日、ARTE TOKYO CRUISE（アルテ トウキョウ クルーズ）が運航されます。 ARTE TOKYOの会期中、国際美術展「TOKYO ATLAS」との連携企画として、会場となる天王洲アイルとお台場をはじめとする臨海エリアを結ぶ特別クルーズ船「ARTE TOKYO CRUISE」が東京都、品川区及び東京国際文化芸術祭実行委員会の共催で運航されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/artecruise",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "6c3a27597d0453b17adc",
+      "title": "国際美術展 TOKYO ATLAS (東京アトラス）",
+      "summary": "2026年10月10日（土）～12月20日（日）、天王洲・台場・青海エリアで「国際美術展 TOKYO ATLAS」 が開催中です。 本イベントでは、東京の臨海エリアに国内外のアーティストが集い、都市と水辺が響き合うダイナミックな空間で“新しい東京の風景”をアートとして描き出します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyo-atlas",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "22fd391481d793ba07a8",
+      "title": "【終了】大井町トラックス「第2回 鉄道FESTA！」",
+      "summary": "2026年10 月17 日（土）、OIMACHI TRACKS内、TRACKS PARK にて「第2回 鉄道FESTA」が開催されます。 今年4月に大盛況に終わった「鉄道FESTA！」が、さらにパワーアップ。今回は、大井町にゆかりのあるJR東日本、JR東日本ステーションサービス、東急電鉄、東京臨海高速鉄道の4社が大集合して、鉄道の魅力を楽しく体験できるイベントを開催します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/trainfesta2",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "0f33fa1328ecded92694",
+      "title": "【受付終了】目黒川 秋の歴史クルーズ ～目黒川から台場跡をめぐる～",
+      "summary": "2026年10月31日（土）、「目黒川 秋の歴史クルーズ ～目黒川から台場跡をめぐる～」が運航します。 毎回大好評の目黒川の歴史クルーズ。船に乗りながら、ガイドが目黒川沿いや台場跡周辺の名所や歴史を解説します。普段は見られない船の上からの街の景色を眺めながら歴史に思いを馳せてみてはいかがでしょう。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/autmuncruise2026",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "07a7c3725db94bf7e59a",
+      "title": "八潮地区総合防災訓練を実施",
+      "summary": "八潮地域センター 電話：03-3799-2000 FAX：03-3799-3310",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-yashio/shisetsu-kuyakusyo-chiiki-yashio-oshirase/hpg000020753.html",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-16T11:42:22.728128Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "八潮"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "70c3c2946791fc087fc5",
+      "title": "旧荏原第四中学校跡地ＰＦＩ事業",
+      "summary": "企画経営部 企画課 政策推進担当 電話：03-5742-7863 FAX：03-5742-6870",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-zaisei/kuseizyoho-siryo-zaisei-plan/20251027113427.html",
+      "publishedAt": "2026-10-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T14:13:07.521277Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "f4293883782e2b77f64b",
+      "title": "美容医療業界向け｜AI内製によるSaaS費削減の最新の動向と戦略レポート【2026年10月版】",
+      "summary": "[株式会社中央構想研究所] 株式会社中央構想研究所（東京都品川区、代表取締役社長、信谷康邦、以下「当社」）は、「AI内製によるSaaS費削減の最新の動向と戦略レポート」美容医療業界向け 2026年10月版（全23ページ）を無料公開いたしまし...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000036.000190769.html",
+      "publishedAt": "2026-10-15T20:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T21:34:26.291873Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "837eadbebc66391dacb4",
+      "title": "企業の健康経営ニーズ拡大に応える「健康経営トータルサポート」、産業医・産業保健師の登録数が1万人突破",
+      "summary": "[株式会社エムステージグループ] 事業場向け健康経営支援、医療人材総合サービスを提供する株式会社エムステージ（本社：東京都品川区、代表取締役：杉田雄二）は、企業の健康経営を包括的に支援するサービス「健康経営トータルサポート」におい...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000236.000019504.html",
+      "publishedAt": "2026-10-15T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T21:34:26.291873Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "bba78c6eeac346ef6416",
+      "title": "大崎のO美術館で「小林敬生展」 木口木版画70点超、ギャラリートークも",
+      "summary": "企画展「陽はまた昇る Sunrise Again 小林敬生（けいせい）展 版画 1967-2024」が10月17日、大崎ニューシティ2号館2階のO美術館（品川区大崎1、TEL 03-3495-4040）で始まる。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5096",
+      "publishedAt": "2026-10-15T11:07:25Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大崎",
+        "大崎ニューシティ"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "62171eb1d5dd57de47bc",
+      "title": "大崎のO美術館で「小林敬生展」 木口木版画70点超、ギャラリートークも",
+      "summary": "企画展「陽はまた昇る Sunrise Again 小林敬生（けいせい）展 版画 1967-2024」が10月17日、大崎ニューシティ2号館2階のO美術館（品川区大崎1、TEL 03-3495-4040）で始まる。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5096",
+      "publishedAt": "2026-10-15T11:07:25Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T11:49:49.286174Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大崎",
+        "大崎ニューシティ"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "a49faa8726a3a9f1bf6d",
+      "title": "品川＆早川ふるさと交流『伝統のみそ作り体験と星空観察ツアー』参加者募集",
+      "summary": "総務課官民共創担当 電話03-5742-6856 FAX03-3774-6356 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-shityoson/hpg000026265.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T11:49:49.286174Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "cae07df5f331d002227e",
+      "title": "「令和8年度高次脳機能障害啓発講座」開催のお知らせ",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20241226105112.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T04:56:01.750679Z",
+      "tags": [
+        "福祉",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "5e82fa2e4fcfca37509a",
+      "title": "エシカル消費イベント in しながわ「shinagawa ETHICAL 2026」",
+      "summary": "消費者センター 電話：03-6421-6136 FAX：03-6421-6132",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-syohiseikatsu/20260902135700.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T23:59:28.946016Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "b4bc4778f5b9de49b241",
+      "title": "品川区セーフティネット住宅入居者募集",
+      "summary": "住宅課 居住支援係 電話：03-5742-6777 FAX：03-5742-6963 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kenchiku/kyojushien/20260603115846.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T19:32:11.536084Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "66c0b822ccc6edf99ae8",
+      "title": "区政資料コーナー 資料の点検・整理に伴う休業のお知らせ",
+      "summary": "区政資料コーナー（第三庁舎3階）は区政資料の点検・整理のため、 令和8年10月19日（月）・10月20日（火）は休業します。 皆様にはご不便をおかけしますが、ご理解ご協力のほどよろしくお願いいたします。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/20210928131805.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T19:32:11.536084Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "9d50801e8d63fc7cbee5",
+      "title": "「出張！国保基本健診」（集団健診）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20240806141224.html",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "3df1c3afccf3879ec4d1",
+      "title": "学校法人文教大学学園が創立100周年記念サイトに「人間愛、100年。想い、未来へ」を公開",
+      "summary": "[文教大学学園] 学校法人文教大学学園（東京都品川区／理事長 野島正也）は、1927 年 10 月 17 日に創立し、 2027 年に創立 100 周年を迎えます。このたび、創立100周年記念サイトに「人間愛、100年。想い、未来へ」を公開しま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000154.000043752.html",
+      "publishedAt": "2026-10-14T22:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T19:32:11.536084Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "673b5ef962911465d4a2",
+      "title": "ジール、株式会社primeNumber主催 「primeNumber DATA SUMMIT 2026」に出展",
+      "summary": "[アバントグループ] アバントグループで、デジタルトランスフォーメーション（以下「DX」）推進事業を展開する株式会社ジール（本社：東京都品川区、代表取締役社長：沼田 善之、以下「ジール」）は、2026年10月15日（木）に天王洲 ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000600.000016467.html",
+      "publishedAt": "2026-10-14T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T14:35:24.666244Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "749f991b9eb44f9446f2",
+      "title": "武蔵小山に飲食店「アトラス」 昼は総菜・弁当販売、夜は立ち飲み店に",
+      "summary": "総菜・弁当店とスタンディングバー「atlas（アトラス）」（品川区小山4）が武蔵小山駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5095",
+      "publishedAt": "2026-10-14T12:38:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "9fdf53593af8acc06317",
+      "title": "武蔵小山に飲食店「アトラス」 昼は総菜・弁当販売、夜は立ち飲み店に",
+      "summary": "総菜・弁当店とスタンディングバー「atlas（アトラス）」（品川区小山4）が武蔵小山駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5095",
+      "publishedAt": "2026-10-14T12:38:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T14:35:24.666244Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "48027ec351a17575ebb0",
+      "title": "終活専門家相談会を開催します",
+      "summary": "日時：10月23日（金）午後1時30分～4時30分 場所：社会福祉協議会（大井1-14-1） 定員：３名（予約制・先着順） 申込期限：10月16日（金）まで ファイナンシャルプランナーによる終活無料相談会（１人４５分程度）を開催します。 お申し込みは、お電話で、品川成年後見センター（03-3718-7174）へ。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63768.html",
+      "publishedAt": "2026-10-14T08:53:47.528849Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "962f2ed0b9662964ea7b",
+      "title": "チエル、統合ID管理システム「ExtraConsole(R) ID Manager」 Version 6.6でBoxとの連携に対応",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦、以下チエル）は、統合ID管理システム『ExtraConsole(R) ID Manager』（エクストラコンソール アイディーマネージ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000186.000067516.html",
+      "publishedAt": "2026-10-14T08:15:23Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "bb7f61734085de39d24b",
+      "title": "立正大学「仏教オールスター寄席」",
+      "summary": "2026年11月28日（土）、立正大学ロータスホールにて、「仏教オールスター寄席」が開催されます。 仏教・和の伝統文化・エンタメなど、各界から6人のスーパースターがロータスホールに集います。学生の方から、お子様、ご年配の方まで、楽しめるイベントです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ris-rakugo",
+      "publishedAt": "2026-10-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1f26a77489db4e0f5bde",
+      "title": "鹿嶋神社 大祭 2026",
+      "summary": "2026年10月17日 （土）、18日（日）鹿嶋神社例大祭が行われます。 鹿嶋神社 は、大井村の総鎮守として親しまれ、毎年10月に例大祭が行われます。 当日はお神輿や、山車の渡御が行われます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/kashimajinja-reitaisai2026",
+      "publishedAt": "2026-10-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "19075d30a3e2e0e627c4",
+      "title": "令和8年度 しながわゼロカーボンアクション助成",
+      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
+      "publishedAt": "2026-10-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-07T10:23:48.255849Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "3b02c62cbde230a675f7",
+      "title": "令和8年度庁舎広告(壁面ポスター)の第2次募集開始",
+      "summary": "掲載箇所は、下記ファイル(庁舎広告掲載箇所のご案内)をご覧ください。 庁舎広告掲載箇所のご案内（品川区役所3階平面図）(PDF : 723KB) 掲載場所の空き状況は、下記ファイルよりご確認ください。(令和8年7月21日現在) R8庁舎内広告受付状況(PDF : 44KB) 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
+      "publishedAt": "2026-10-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-22T01:46:19.238621Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 22
+    },
+    {
+      "id": "b7cd9b98e74af5cb99cf",
+      "title": "品川区、暑熱対策実証実験で大井町駅西口に仮設「日カサ」を設置",
+      "summary": "[品川区] 品川区は、株式会社オープン・エー（中央区日本橋馬喰町2）公共R不動産、延世大学産学協力団・気候適応リビングラボ研究事業団と連携し、大井町駅西口の交差点横断歩道前の歩道上に仮設の日カサを設置する実証...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000247.000087362.html",
+      "publishedAt": "2026-10-13T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "25361c6b99afa07900e1",
+      "title": "警察小説、ハードボイルドの名手・香納諒一氏が贈る、シリーズ最大のスケールで描く書下し長篇ミステリー『川崎警察 遠雷雨』、徳間書店より発売！ 冒頭先行公開もあり！",
+      "summary": "[徳間書店] 株式会社徳間書店 （本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、香納諒一氏の長篇小説『川崎警察 遠雷雨』（https://www.tokuma.jp/book/b680879.html）を10月16日（金）に発売いたします。また、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001130.000016935.html",
+      "publishedAt": "2026-10-13T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "2b6f57aa466beeb4098f",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月13日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年10月13日号(令和8年10月5日～令和8年10月12日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63755.html",
+      "publishedAt": "2026-10-13T10:51:23.389935Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-13T10:51:23.389935Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "bb16fd374206a771d0df",
+      "title": "戸越公園にカレー店「スリランカスタイル パル」 週1ランチ営業から独立",
+      "summary": "スリランカカレー店「Sri Lanka Style Pal（スリランカスタイル パル）」（品川区戸越5）が戸越公園駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5094",
+      "publishedAt": "2026-10-13T10:50:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
+      ],
+      "relevanceScore": 22
+    },
+    {
+      "id": "13140533180af194a750",
+      "title": "戸越公園にカレー店「スリランカスタイル パル」 週1ランチ営業から独立",
+      "summary": "スリランカカレー店「Sri Lanka Style Pal（スリランカスタイル パル）」（品川区戸越5）が戸越公園駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5094",
+      "publishedAt": "2026-10-13T10:50:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T19:24:07.246516Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
+      ],
+      "relevanceScore": 22
+    },
+    {
+      "id": "603f4655998ed654a290",
+      "title": "薬用せっけんミューズが8年ぶりにブランド刷新！生活のあらゆる場面で「ばい菌から手肌を守る」ブランドとしてロゴと泡ハンドソープのデザインをリニューアル・順次出荷開始。大容量1000mLサイズを発売。",
+      "summary": "[レキットベンキーザー・ジャパン株式会社] レキットベンキーザー・ジャパン株式会社（本社：東京都品川区東五反田/代表取締役：スチュアート・ウィザビー）は、70年以上の歴史を持つ薬用せっけんミューズのブランドロゴ、泡ハンドソープのデザインをリニ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000042.000034481.html",
+      "publishedAt": "2026-10-13T01:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "ad2655bc916ccd241bb1",
+      "title": "ガイドしながわ「大崎・戸越銀座・戸越公園 3つの街を歩く」",
+      "summary": "2026年11月21日（土）、ガイドしながわによるガイドと歩くしながわとその周辺「大崎・戸越銀座・戸越公園 3つの街を歩く」が開催されます。 高層ビルが立ち並ぶ大崎、活気あふれる戸越銀座、緑豊かで落ち着いた戸越公園。 隣り合う3つの街ですが、歩いてみると全く違う表情が見えてきます。 川や鉄道、商店街、住宅地…何気ない街の風景にも、それぞれの街が歩んできた歴史が息づいています。 街並みを見比べながら、今の姿につながる歴史を探しに出かけてみてはいかがでしょうか。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/togoshi",
+      "publishedAt": "2026-10-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T10:51:23.389935Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "戸越",
+        "戸越公園"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "5ec7be4997a108ed82b0",
+      "title": "グリーフケア電話相談・遺族のつどい",
+      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/shinagawagriefcare2.html",
+      "publishedAt": "2026-10-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-03T09:22:28.623619Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "877e45ac9a8423466279",
+      "title": "グリーフケア電話相談・遺族のつどい",
+      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/shinagawagriefcare.html",
+      "publishedAt": "2026-10-13T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "14136b55538cba77e267",
+      "title": "この秋、品川・天王洲がアートの舞台に！～美術展「TOKYO ATLAS」と多彩な関連イベントを開催、特別クルーズ船運航も～",
+      "summary": "[品川区] 「ARTE TOKYO（東京国際文化芸術祭）」のハイライトプログラムとして、国際美術展「TOKYO ATLAS」が10月10日に開幕。品川区内では、「アイルしながわ」と「WHAT MUSEUM」で多彩な現代アートを楽しめます。 ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000245.000087362.html",
+      "publishedAt": "2026-10-10T13:10:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-10T10:01:43.786948Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "092ae94221ea794e792b",
+      "title": "徳間書店文芸編集部が文学フリマ東京43に初出店!! 名作Tシャツ、人気作家のサインアクリルスタンドなど、公式グッズ全8種を発売",
+      "summary": "[徳間書店] 株式会社徳間書店（本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、初となる文芸編集部公式グッズを発売します。販売は、11月8日（日）に開催される文学フリマ東京43（東京ビッグサイト南1～4ホール）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001132.000016935.html",
+      "publishedAt": "2026-10-10T07:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-10T10:01:43.786948Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "4f7a1ea87e79d11555ef",
+      "title": "北品川に焼き菓子店「マウントベイク」 週3営業、日替わりメニューで",
+      "summary": "焼き菓子店「MT.BAKE （マウントベイク）」（品川区北品川1）が、京急本線北品川駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5093",
+      "publishedAt": "2026-10-09T10:50:33Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "北品川",
+        "北品川駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "dc8f091dbb63aae7e27e",
+      "title": "北品川に焼き菓子店「マウントベイク」 週3営業、日替わりメニューで",
+      "summary": "焼き菓子店「MT.BAKE （マウントベイク）」（品川区北品川1）が、京急本線北品川駅近くにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5093",
+      "publishedAt": "2026-10-09T10:50:33Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-09T18:26:39.883853Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "北品川",
+        "北品川駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "9abd21d3140f1efc98cb",
+      "title": "令和8年度 薬と健康の週間",
+      "summary": "品川区保健所生活衛生課医薬担当 電話 03-5742-9137 FAX 03-5742-9104",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-izi_yakuzi/hpg000014305.html",
+      "publishedAt": "2026-10-09T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T08:53:47.528849Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "7fe290e295d5ff4236d5",
+      "title": "令和8年度第2回品川区地域自立支援協議会開催のお知らせ（令和8年10月28日）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-kyogikai/20230217161144.html",
+      "publishedAt": "2026-10-09T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-13T02:38:49.560794Z",
+      "tags": [
+        "福祉",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "b4ce19b8bdf35537133f",
+      "title": "【あなたが寝ている間、AIは社内の何を見ていますか】生成AI利用率95.7%・事故経験78.5%が浮き彫りにする“権限設計の遅れ”。『AI × Data Weekly Insight』を無料公開",
+      "summary": "[株式会社パタンナー] 株式会社パタンナー（本社：東京都品川区、代表取締役：深野 嗣）のデータチームは、生成AI・AIエージェントとデータ基盤の最新動向を読み解く総括レポート『あなたが寝ている間、AIは社内の何を見ていますか 生...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000141.000105601.html",
+      "publishedAt": "2026-10-08T23:50:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-09T01:18:15.237536Z",
+      "tags": [
+        "事件事故"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0d15cdf9d9a311b0c5b4",
+      "title": "旗の台稲荷通り商店会「子どもが楽しむ 盆踊り & ハロウィン」",
+      "summary": "2026年10月18日（日）、 旗の台稲荷通り商店会 にて「子どもが楽しむ 盆踊り & ハロウィン」が開催されます。 秋の夜を彩る、旗の台ならではのユニークなイベント。地元のダンススタジオによるキッズダンスや生バンドの演奏、18:00からは、「旗の台音頭」やロックのリズムに合わせて踊る「盆ROCK（盆踊り）」をお楽しみいただけます。盆踊りに参加した小学生以下のお子様には、お菓子のプレゼントも（先着200名、無くなり次第終了）。ハロウィンの仮装での参加も大歓迎です。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bonrock2026",
+      "publishedAt": "2026-10-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-08T18:56:11.919795Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "旗の台"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "c62826b734c90e3f6aba",
+      "title": "リニア中央新幹線（品川・名古屋間）について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/riniashinkansenn/index.html",
+      "publishedAt": "2026-10-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-08T10:47:40.069207Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "299b46906880c7127996",
+      "title": "にしこやまつり2026",
+      "summary": "2026年10月25日（日）、西小山エリアにて「にしこやまつり」が開催されます。 駅前広場でのステージと、物販・飲食などのブース、また西小山駅周辺の飲食店各店舗でカレーにちなんだメニューを楽しめる「カレーフェス」などを予定しております。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nishikoyamatsuri2026",
+      "publishedAt": "2026-10-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-08T10:47:40.069207Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "小山",
+        "西小山駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "9e2b1f4c98a254cb3d4a",
+      "title": "品川区、「ハタチの龍馬×坂井市公式キャラ 坂井ほや丸 スタンプラリー」開催",
+      "summary": "[品川区] 品川区は10月1日～11月15日、「しながわ観光大使“見習い”ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー」を開催します。 本イベントでは、品川区内で行われるイベントや福井県坂井市アン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000246.000087362.html",
+      "publishedAt": "2026-10-07T23:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T20:41:35.095946Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "8eeda9a3200e731d42d6",
+      "title": "公共施設へのペロブスカイト太陽電池導入について検討の手順と留意点を体系化",
+      "summary": "[株式会社日本総合研究所] 株式会社日本総合研究所（本社：東京都品川区、代表取締役社長：内川淳、以下「日本総研」）は、自治体などの公的機関が公共施設へのペロブスカイト太陽電池の導入を検討する際に必要となる考え方や実務上の留...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000217.000068011.html",
+      "publishedAt": "2026-10-07T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T13:40:06.897657Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "aaf0c66fe2f55bac1e5f",
+      "title": "品プリが野外スポーツ「ロゲイニング」開催へ 「広域品川圏」を歩いて得点競う",
+      "summary": "品川プリンスホテル（港区高輪4）は10月1日、高輪ゲートウェイ駅、品川駅、大井町駅などを含む「広域品川圏」で、野外スポーツ「シナプリ ロゲイニング」を開始した。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "https://shinagawa.keizai.biz/headline/5092",
+      "publishedAt": "2026-10-07T15:00:55Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-22T12:11:35.158630Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "cf52d0f44c8ed6bcb6d9",
+      "title": "品プリが野外スポーツ「ロゲイニング」開催へ 「広域品川圏」を歩いて得点競う",
+      "summary": "品川プリンスホテル（港区高輪4）は10月1日、高輪ゲートウェイ駅、品川駅、大井町駅などを含む「広域品川圏」で、野外スポーツ「シナプリ ロゲイニング」を開始した。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5092",
+      "publishedAt": "2026-10-07T15:00:55Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T20:41:35.095946Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "dbadb964755ec811a12a",
+      "title": "鮫洲に軽食スタンド「ベカ」 トルコ伝統料理「ゴズレメ」とコーヒーを用意",
+      "summary": "トルコ料理とコーヒーのテイクアウト専門店「BeKa Turkish Bites & Coffee（ベカ・ターキッシュ・バイツ・アンド・コーヒー）」（品川区東大井1）が、京急鮫洲駅近くにオープンして3カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5091",
+      "publishedAt": "2026-10-07T09:07:11Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T13:40:06.897657Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "東大井",
+        "鮫洲駅"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "4096ee5998c0957ca401",
+      "title": "“金沢カレー”をモス流にアレンジ 能登豚を使用したカレーソースで復興支援「金沢カレーカツバーガー」が販売店舗を拡大して今年も登場！中京地区限定で「金沢カレーメンチカツバーガー」新発売",
+      "summary": "[株式会社モスフードサービス] モスバーガーを展開する株式会社モスフードサービス（代表取締役社長：中村 栄輔、本社：東京都品川区）は、令和6年能登半島災害復興を支援するため、2026年10月14日（水）から東京都（一部店舗除く）と北陸地方...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000630.000075449.html",
+      "publishedAt": "2026-10-07T05:15:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0e476494f521a31d312d",
+      "title": "info＆cafe SQUARE「ボードゲームで学ぶ」",
+      "summary": "2026年10月18日（日）、スクエア荏原1階 info＆cafe SQUARE（インフォアンドカフェスクエア）にて「ボードゲームで学ぶ」が開催されます。 世界のボードゲームの中から厳選した、誰でもできるボードゲームが10種類以上！無料で体験できます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/infows20261018",
+      "publishedAt": "2026-10-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T13:40:06.897657Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原",
+        "スクエア荏原"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "430e713594205c523e8e",
+      "title": "令和8年度品川区こども会議",
+      "summary": "子ども育成課子ども育成係 電話：03-5742-6720 FAX：03-5742-6351",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomokaigi/20260407090839.html",
+      "publishedAt": "2026-10-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "6c64cb03e526f1aa749c",
+      "title": "美容医療業界向け｜外注費の削減戦略と最新トレンドレポート【2026年10月版】",
+      "summary": "[株式会社中央構想研究所] 株式会社中央構想研究所（東京都品川区、代表取締役社長、信谷康邦、以下「当社」）は、「外注費の削減戦略と最新トレンド」2026年10月版（全26ページ）を無料公開いたしました。 [画像1: https://prcdn.freetls....",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000014.000190769.html",
+      "publishedAt": "2026-10-06T14:40:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "240e4cf0b1e5fb9636cf",
+      "title": "大井町にイタリアン「カンビアーレ」 計画変更を経て出店、夫婦で切り盛り",
+      "summary": "イタリアン「Cambiare（カンビアーレ）」（品川区東大井6、TEL 050-5872-5396）が大井町駅近くにオープンして3カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5090",
+      "publishedAt": "2026-10-06T08:38:10Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "東大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "d05f58bd337a81051b78",
+      "title": "議長の出席会議等（令和8年7月～9月）を掲載。",
+      "summary": "議長の出席会議等（令和8年7月～9月）を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20917.html",
+      "publishedAt": "2026-10-06T06:05:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T06:37:28.526888Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "50399719ed68cb230c18",
+      "title": "議長交際費の支出状況（令和8年7月～9月）を掲載。",
+      "summary": "議長交際費の支出状況（令和8年7月～9月）を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20916.html",
+      "publishedAt": "2026-10-06T06:05:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T06:37:28.526888Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "d48f27c65aa1277de2c3",
+      "title": "決算特別委員会(総括質疑)の議会放送番組表を掲載。",
+      "summary": "決算特別委員会(総括質疑)の議会放送番組表を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20909.html",
+      "publishedAt": "2026-10-06T02:41:13Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T06:37:28.526888Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "dd2bc3d3ddfdd4af112d",
+      "title": "エコルとごし「エコルフェス -2026 AUTUMN-」",
+      "summary": "2026年10月18日（日）、 エコルとごし にて「エコルフェス -2026 AUTUMN-」が開催されます。 エコルとごしは、戸越公園内にある品川区立環境学習交流施設。秋の一大イベントとして、館内と戸越公園内で環境を楽しく学ぶ講座・ワークショップなどが楽しめます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ecorufes2026autumn",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園",
+        "エコルとごし"
+      ],
+      "relevanceScore": 24
+    },
+    {
+      "id": "c93e091c41461e677567",
+      "title": "品川 港南「東京食肉市場まつり 2026」",
+      "summary": "2026年10月17日（土）、18日（日）、東京都中央卸売市場食肉市場にて「東京食肉市場まつり2026」が開催されます。 今年で45回目の開催となる「東京食肉市場まつり2026」は、国内産の牛肉・豚肉の消費拡大、市場の存在についての認知と役割の理解促進、また「ブランド牛は、おいしくて安心」のイメージ確立を目的に、市場を年に一度だけ特別に開放し、開催するお肉のフェスティバルです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nikumatsuri2026",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "fffcac8a0d5cb83bf28c",
+      "title": "目黒川 オータムプロムナード",
+      "summary": "2026年10月10日（土）～31日（土）、目黒川の大崎・五反田間（御成橋～山本橋）にて、「目黒川 オータムプロムナード」が開催されます。 多様な街の魅力を表現した約3,000本のリボンが目黒川を彩ります。飾りつけには、地域のみなさんも参加しました。色とりどりのリボンが風に揺れる景色をお楽しみください。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/autumnpromunade2026",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "eda97869c79126a6f680",
+      "title": "しながわ観光大使 ”見習い” ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー",
+      "summary": "2026年10月1日（木）～11月15日（日）、「しながわ観光大使 ”見習い” ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー」が開催されます。 品川区内で行われる期間限定のイベント会場や、品川区と連携協定を結んでいる福井県坂井市のアンテナショップなどを巡りながらスタンプを集め、品川区・坂井市の魅力を感じられるスタンプラリー。3個以上のスタンプを集め、専用はがきで応募すると、坂井市の特産品グルメ10,000円相当などが当たる抽選に参加できます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ryoma-hoyamaru",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "3f19438d60abb837ae54",
+      "title": "【終了】「秋の運河花火まつり2026」 in しながわ水辺の観光フェスタ 2026",
+      "summary": "2026年10月10日（土）、11日（日）、東品川海上公園および天王洲公園にて「秋の運河花火まつり」in しながわ水辺の観光フェスタ 2026 が開催されます。 飲食ブース、屋台、ステージパフォーマンス、移動動物園など楽しい企画が盛りだくさんです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ungahanabi2026",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T06:37:28.526888Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川",
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "b9c9d1dc788077c9c174",
+      "title": "東品川海上公園がパークPFIで再生 ドッグランやビアレストランを新設",
+      "summary": "天王洲アイルエリアの「東品川海上公園」（品川区東品川2・3）が10月4日、リニューアル開業した。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5089",
+      "publishedAt": "2026-10-05T10:34:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-05T15:04:04.518582Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東品川",
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 22
+    },
+    {
+      "id": "5ad3fcf8ba9d1fa9fb1f",
+      "title": "リサイクル自転車の販売（八潮地域センターフェスティバル出店）【終了しました】",
+      "summary": "ふれあい作業所西品川からリサイクル自転車販売のご案内です ふれあい作業所のリサイクル自転車を【八潮地域センターフェスティバル】で販売いたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63674.html",
+      "publishedAt": "2026-10-05T05:59:14.000136Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-05T05:59:14.000136Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西品川",
+        "八潮"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "3959f57ad893599ea61f",
+      "title": "協力会員募集説明会を開催します！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-58691.html",
+      "publishedAt": "2026-10-05T05:59:14.000136Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-05T05:59:14.000136Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "344495b44c5377ce2960",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年10月5日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年10月5日号(令和8年9月24日～令和8年10月4日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63702.html",
+      "publishedAt": "2026-10-05T05:59:14.000136Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-05T05:59:14.000136Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1449d41951971624786c",
+      "title": "東品川海上公園Park-PFI導入事業施設の運営開始",
+      "summary": "[品川区] 品川区は、多様なニーズに対応した魅力ある都市公園の創出を目指し、区立公園内に民間施設を設置することで、公園の活性化やイベントの開催など、にぎわいの創出につながることから、東品川海上公園においてPar...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000244.000087362.html",
+      "publishedAt": "2026-10-05T05:40:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-05T05:59:14.000136Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "047be9b864ee8b62b7e1",
+      "title": "リサイクル自転車の販売スケジュール",
+      "summary": "ふれあい作業所西品川からリサイクル自転車販売のご案内です。 リサイクル自転車の抽選販売会は、毎月第２火曜日の13時30分から実施いたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63599.html",
+      "publishedAt": "2026-10-05T00:02:19.802940Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-05T00:02:19.802940Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西品川"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "994925c958a1bf32a9d6",
+      "title": "東品川海上公園Park‐PFI導入事業の施設の運営開始",
+      "summary": "公園課 公園建設担当 電話：03-5742-6801 FAX：03-5742-9127",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-park/20221012221135.html",
+      "publishedAt": "2026-10-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-03T11:51:46.171933Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "fb6fc1d98d2c4973a752",
+      "title": "渋谷区の中学校で企業連携授業を開始！中学生がゼロから考える「役に立つ・売れる」モノづくり",
+      "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社︓東京都品川区、代表取締役社長 兼 CEO︓石黒 靖規）の グループ会社であるＤＣＭ株式会社（以下、ＤＣＭ）の体験型店舗DCM DIY placeでは渋谷区教育委員会と連携しながら...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000436.000022024.html",
+      "publishedAt": "2026-10-02T22:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T12:50:39.727307Z",
+      "tags": [
+        "子育て教育",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "1b7eacdb75ebb4abd359",
+      "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動にご協力をお願いいたします （ご協力ありがとうございました）",
+      "summary": "８月に発生した千葉・北陸豪雨により、千葉県、石川県、富山県、福井県を中心に甚大な被害が発生いたしました。品川ボランティアセンターでは「令和８年８月千葉・北陸豪雨 被災者支援街頭募金活動」を下記の通り実施することとなりました。 ここ大井町から被災地千葉、北陸へ皆様の温かいお気持ちを届けます。皆様の温かいお気持ちとご協力をお願いいたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63622.html",
+      "publishedAt": "2026-10-02T00:57:59.432114Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-02T00:57:59.432114Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "acff6bbc28d05f32a9ca",
+      "title": "大井第三地区「みかん狩りとさつまいも掘り」開催のお知らせ",
+      "summary": "",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-ooi3/shisetsu-kuyakusyo-chiiki-ooi3-oshirase/20260828151641.html",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-02T09:56:57.327353Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "80d79487bf7968ddffee",
+      "title": "令和8年度第2回品川区公契約審議会の開催について",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-keiyaku/kuseizyoho-siryo-keiyaku-keiyakukakarikara/202610021500.html",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-02T09:56:57.327353Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "ee8a24fa7cd0f2107250",
+      "title": "令和8年度(9年度採用)品川区立学校教育職員採用候補者選考【採用面接選考 採用内定者発表】",
+      "summary": "指導課 教職員人事係 電話：03-5742-6831 FAX ：03-5742-6892",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20250929085556.html",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-02T00:57:59.432114Z",
+      "tags": [
+        "行政",
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "7100e4a91dc5fe474fdb",
+      "title": "夏期防犯パトロール実施（八潮地区）",
+      "summary": "八潮地区では、小中学校の夏休み期間中、子供たちが安心して夏休みを過ごせるよう、地域の団体が協力して夏期防犯パトロールを実施しました。 実施日時：令和8年7月23日（木）～8月28日（金） 午後7時30分～ ※期間内の5日間 主催：八潮自治会連合会 協力団体：青少年対策八潮地区委員会、品川区防災協議会八潮地区協議会、八潮学園ＰＴＡ他 八潮地域センター 電話：03-3799-2000 FAX：03-3799-3310",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-yashio/shisetsu-kuyakusyo-chiiki-yashio-oshirase/20180727102035.html",
+      "publishedAt": "2026-10-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T18:29:41.415529Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [
+        "八潮"
+      ],
+      "relevanceScore": 18
+    },
+    {
+      "id": "44f8bf24c189e54bf3b3",
+      "title": "成年後見制度普及啓発講座を開催します。",
+      "summary": "■後見制度啓発講座「あんしんの先へ！成年後見制度の活用」を開催します。 日時／11月24日（火）午後2時～4時 場所／品川区社会福祉協議会3階会議室（大井1-14-1） 講師／品川成年後見センター職員 内容／本講座では、成年後見制度の活用についての講座、終活に向けた事業案内を行います。 参加者／30人（先着） 参加費／無料 申込／11月17日（火）午後5時までに、電話かFAXで品川成年後見センター（電話５７１８－７１７４ FAX６４２９－７６００）へ © Shinagawa…",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63527.html",
+      "publishedAt": "2026-10-01T10:20:03.375555Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "c1e22a594430a738f0f2",
+      "title": "品川区ファミリー・サポート・センター提供会員養成講座",
+      "summary": "地域の中で、子育てのサポートをしたい方の養成講座です。 対象：区内在住・在勤・在学で２０歳以上の方１５名（先着）",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63471.html",
+      "publishedAt": "2026-10-01T00:39:14.021352Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-01T00:39:14.021352Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "3ff002fc356981e636f9",
+      "title": "11/8災害ボランティアセンター設置運営訓練：ボランティア役募集のお知らせ",
+      "summary": "品川区内で首都直下地震や豪雨災害など大規模な災害が発生した時などに、被災者された方の支援のために設置される「災害ボランティアセンター」の設置運営訓練を、以下のとおり実施します。訓練実施にあたって、ボランティア役として参加いただける方を募集します。 日本各地で災害が多発する中、品川区で、いざという時の備えのために、皆さまのご協力をお願いいたします。 日 時 ： １１月８日（日） ０９：００～１２：００",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/10/post-63602.html",
+      "publishedAt": "2026-10-01T00:39:14.021352Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-10-01T00:39:14.021352Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "ee9b0e8688e626befe94",
+      "title": "【10月12日開催】スポーツの日記念イベント",
+      "summary": "スポーツの日にあわせて、区立体育館を無料開放します。 また、体験型のスポーツイベントを実施します。 この機会にスポーツやレクリエーションをはじめてみませんか。 スポーツの日記念イベントちらし(PDF : 7MB) 【開催日】 令和8年10月12日(月・祝) 【開催時間】午前9時00分から午後4時50分まで 【会場】 総合体育館・戸越体育館 【主催】 品川区スポーツ協会 電話：03-3449-4400 FAX : 03-3449-4401 詳細は品川区スポーツ協会ホームページ…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20221003101124.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-06T16:04:40.058522Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "dfb2469d3c02f3695ac9",
+      "title": "品川区防災ポータル・品川区防災アプリ",
+      "summary": "防災課 計画担当 電話：03-5742-6695 FAX：03-3777-1181 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai2/kanrensiryo/20250212.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-02T09:56:57.327353Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "f574f7782f69d5309159",
+      "title": "「明和電機 ジョリジョリジャーニー展」",
+      "summary": "2026年9月21日（月・祝）〜10月18日（日）、武蔵小山商店街パルム イベントスペースにて「47都道府県ひとり全国ツアーの軌跡 明和電機ジョリジョリジャーニー展」が開催されます。 武蔵小山を拠点に活動するアートユニット 「明和電機」。プロデューサー・土佐信道氏が1998年に武蔵小山へアトリエを構えて以来、28年にわたり数々の“ナンセンスマシーン”を生み出してきました。世界で200万本を超える大ヒットとなった「オタマトーン」もその代表作で、まさに “メイドイン武蔵小山”…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/meiwadenki-jolijoli",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山商店街"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "7c7e86208fad0f5e414f",
+      "title": "令和8年度 生活習慣改善セミナー その不調、理由があるのかも？こころとからだのセルフケア ～頑張らない食事・運動・睡眠のコツ～",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-dukuri/20241017180143.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "7bb4781be0dc0263defc",
+      "title": "東京メガイルミ 2026-2027",
+      "summary": "2026年10月31日（土）～2027年1月10日（日）、大井競馬場にて「東京メガイルミ」が開催されます。 9シーズン目となる今季、ファイナルシーズンを迎えます。長さ100mを誇る光の回廊「江戸桜トンネル」や日本の美しい情緒を表現した「日本原風景」など、和のきらめきが広がるエリアのほか、幻想的な光を放つ巨大シンボル「メガツリー」も今季をもって見納めとなります。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/megaillumi2026",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "6d07642e3dd482ee0859",
+      "title": "多文化共生講演会2026「アフリカ少年と考えるー違いを越えて、同じ明日の作りかた」（申込10月23日（金）〆）",
+      "summary": "総務課 平和・国際担当 電話：03-5742-6691（平日 午前8時30分～午後5時15分） FAX：03-3774-6356",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/kokusai/tabunka/20261001100641.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "58760241e31ef3f35e3f",
+      "title": "まちぐるみ文化イベント 2026「あつまれ！えばら」",
+      "summary": "2026年11月3日（火・祝）、「あつまれ！えばら」が開催されます。 「あつまれ！えばら」は、子どもから大人まで楽しめる品川区荏原地域のまちぐるみ都市型カルチャーフェスティバル。 品川区・荏原地域を中心としたお店や団体・人々とアーティストたちが一緒につくりあげる文化の祭典「あつえば」へ遊びに行こう！",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/ebaramachigurumi2026",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "4e8c31d87229de83b318",
+      "title": "Roblox（ロブロックス）X 品川区「しなにゃんを探せ！しながわ大冒険！」",
+      "summary": "オンラインで様々なゲームを楽しむことができる「Roblox（ロブロックス）」に、品川区を舞台にしたバーチャル空間「しなにゃんを探せ！しながわ大冒険！」が公開されました。 バーチャル空間では、 しなロケ(品川区内の映画・ドラマのロケ地） として注目を集める、 しながわ水族館や戸越銀座商店街など、品川区を代表する街並みが再現されています。プレイヤーは、しながわ散策を楽しみながら、街中に隠れたしながわ観光協会公式キャラクター「しなにゃん」を探し、コレクションしていきます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/robloxnyan",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T10:20:03.375555Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "しながわ水族館",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 22
+    },
+    {
+      "id": "5f334f7a2e55558ace4b",
+      "title": "グリーフケア講演会",
+      "summary": "荏原保健センター 電話：03-3788-7015 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/20260903172517.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T00:39:14.021352Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "0a61ec312156a0bc74fb",
+      "title": "10月は「国保基本健診・後期高齢者健康診査 受診推進月間」",
+      "summary": "国保医療年金課 保健指導係 電話：03-5742-6902 FAX：03-5742-6876",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/20220913093018.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-01T00:39:14.021352Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
+    {
+      "id": "f9cd7dda0e5464990523",
+      "title": "てのひら(ボランティア情報紙)2026年秋号",
+      "summary": "",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-shina2/shisetsu-kuyakusyo-chiiki-shina2-oshirase/202610011687115618541754144.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "9be7057543dcb7e8aee1",
+      "title": "2026品川区民秋のコンサート【令和8年11月21日(土)開催】",
+      "summary": "2026品川区民秋のコンサートチラシ(PDF : 2MB) ※演奏中、1歳～就学前(公演日時点)のひとり遊びのできるお子さんの保育を行います。 【定員】10人(先着) 【費用】おやつ代として100円 (アレルギーのあるお子さんは、おやつ代の代わりにお子さんが食べられるおやつと飲み物を少量お持ちください)",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/20230818103656.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "9505c1cb56bb6d4aa59b",
+      "title": "杉野学園パートナーシップ講座「ファッションの未来～日本のテキスタイル産地を歩いて～」（10月31日実施）",
+      "summary": "令和8年度しながわ学びの杜杉野学園パートナーシップ講座（秋期）「ファッションの未来～日本のテキスタイル産地を歩いて～」 あらゆる世代に多彩な生涯学習講座を提供する「しながわ学びの杜」 品川区内および近隣区の学校と連携して、各学校の特色や強みをいかした講座です。 様々な分野における、専門的でより深い学習の機会を創出します。 令和8年度杉野学園パートナーシップ講座（秋期）は、「ファッションの未来～日本のテキスタイル産地を歩いて～」をテーマに実施します。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/hpg000026780.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "813ddfcf1938f0d8ee6e",
+      "title": "品川区一般任期付職員（児童心理司・係長級）採用選考",
+      "summary": "品川区役所区長室人事課人事係 電話：03－5742－7140 ＦＡＸ：03－5742－6872 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20231026172313.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "行政",
+        "子育て教育"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "81189a3852ad8ec3e54b",
+      "title": "秋季品川区将棋大会（11月8日開催）【参加者募集締切：10月20日（火）消印有効】",
+      "summary": "※参加費用は、無料です。 秋季品川区将棋大会チラシ(PDF : 530KB) 電子申請はこちら（別ウィンドウ表示） 【往復はがき記入例】 （往信側）",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/sangyo-bunka-bunnkaevento-reku/hpg000012604.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "7eebef0f2910ade78a61",
+      "title": "しながわ出会いの湯",
+      "summary": "R8年度しながわ出会いの湯リーフレット(PDF : 3MB) R8年度しながわ出会いの湯カレンダー（品川・大崎・大井地区）(PDF : 114KB) R8年度しながわ出会いの湯カレンダー（荏原地区）(PDF : 114KB) 健康課健康づくり係 電話：03-5742-6746 FAX：03-5742-6883",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-dukuri/20200601141146.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大崎",
+        "荏原",
+        "大井"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "4582ce7e91fa78238c03",
+      "title": "令和8年度(12月採用予定) 品川区教育委員会事務局会計年度任用職員募集【教育総合支援センター】（教育心理相談員・心理職）",
+      "summary": "教育総合支援センター いじめ対策担当 電話：03-3490-2008 FAX：03-3490-2007 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/kukyoi-bosyu-rinziteki/20260924142326.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "450cc474a181b89bd3b3",
+      "title": "品川区麻雀大会(11月23日開催)【参加者募集締切：10月30日(金)】",
+      "summary": "1．住所 2．氏名(ふりがな) 3．電話番号 4．年齢 5．在勤・在学の方は勤務先の 名称・所在地・学校名 ※お預かりした個人情報は、主催者および運営団体で共有し、参加者への連絡・受付のため使用いたします。また、当課のイベントのご案内を送付する場合もございます。なお、大会の模様はケーブルテレビ品川での放映および区のホームページ等に掲載される場合がございますので、ご理解とご協力をお願いいたします。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-bunnkaevento/sangyo-bunka-bunnkaevento-reku/20230926210800.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "23f2bce7c00e20ad6f2a",
+      "title": "昭和医科大学パートナーシップ講座（11月7日（土）実施）",
+      "summary": "品川区 文化観光スポーツ振興部 文化観光戦略課 生涯学習係 電話：03-5742-6837 FAX： 03-5742-6893",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-kouza/sangyo-bunka-kouza-bosyutyu/20260727141140.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "206913b17f780f32fdf9",
+      "title": "駅前放置自転車クリーンキャンペーン",
+      "summary": "『自転車の 代わりに置こう 思いやり』 放置自転車問題を広く周知し、放置防止の行動に繋げてもらうため、「第43回駅前放置自転車クリーンキャンペーン」を東京都と連携し、実施いたします。 自転車等が駅周辺に放置されると、歩行者の通行の妨げとなるほか、街の美観が損なわれるなど、多くの問題を引き起こします。 今年もキャンペーン標語「自転車の 代わりに置こう 思いやり」のもと、放置自転車解消に取り組んでいきます。 1 実施期間 令和8年10月22日（木）から10月31日（土）まで 2…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosai/bosai-zitensyataisaku/20260928110924.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T20:10:28.070419Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "93646144c953831b0287",
+      "title": "リユース容器の活用",
+      "summary": "環境課環境推進係 電話：03-5742-6755 FAX：03-5742-6853",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/20250930.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "cd538324c5cb0c4be763",
+      "title": "【しながわシティバスケットボール公式戦】10月23日（金）・24日（土） 親子25組50人をご招待",
+      "summary": "スポーツ推進課スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20240110135206.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-31T20:54:55.827675Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1cbad4981952da923fb9",
+      "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
+      "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-27T02:00:04.964019Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "ea3a744a4dd308b003ed",
+      "title": "しながわ生活応援事業",
+      "summary": "所得制限なし。全区民の皆様に1人1枚、一律5,000円相当のバニラVISAギフトカードをお配りいたします。 ポスターと一緒に貼られている「現金併用可」の朱書きの表示が、 品川区内の現金併用可能店舗 である目印です。 利用せず長期間保管していると、紛失のおそれがあります。 その場合、 カードの再発行はできません。大切に保管のうえ、お早めにご利用ください。 品川区内のうれしなカード利用可能店舗は こちら",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20251222141006.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "c0b57ca97a47ad3bb98b",
+      "title": "令和8年度（令和9年4月1日異動）公立小・中学校等教員の公募",
+      "summary": "東京都区市町村立小・中・特別支援学校に勤務している正規教員の異動形態の一つです。 品川区教育委員会では、区部公立小中学校教員公募を実施します。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20230926124056.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "b9f20bc7abb09cdfa856",
+      "title": "【10月31日（土）・11月21日（土）開催】しながわシティ公式戦に親子25組50人をご招待",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/20260507103832.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "4e9c4ce1aa25196522e2",
+      "title": "女性相談員による総合相談（法律・DV・カウンセリング）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000021243.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "0fa40ee5175e45d402f6",
+      "title": "介護をしている家族への支援",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kaigo1/hpg000002404.html",
+      "publishedAt": "2026-10-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "9b07c1873aa9db05ed5f",
+      "title": "体験型謎解きイベント「広域品川圏の歩き方」始まる JR東日本が主催",
+      "summary": "体験型謎解きイベント「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」が9月30日、浜松町・田町・高輪ゲートウェイ・品川・大井町の5駅周辺エリアで始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5086",
+      "publishedAt": "2026-09-30T12:16:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T12:50:39.727307Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "e56a49d657c7bed33935",
+      "title": "ファミサポ通信更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63530.html",
+      "publishedAt": "2026-09-30T05:46:26.423098Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "ae431a32ffe8cde9017e",
+      "title": "ニュース「さわやかさん」更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63526.html",
+      "publishedAt": "2026-09-30T05:46:26.423098Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "4787ca9a9c8b8039797f",
+      "title": "9月29日開催の委員会の結果を掲載。",
+      "summary": "9月29日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20872.html",
+      "publishedAt": "2026-09-30T01:30:05Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "c7ae2f0abc5f086e3a62",
+      "title": "アレルギーおしゃべり会（11月）大崎ゆうゆうプラザで開催",
+      "summary": "日時：令和8年11月15日(日) 午前10時～午後3時 会場：大崎ゆうゆうプラザ 2階 コミュニティ室 PAE(小児アレルギーエデュケーター)としても活躍されている看護師さんと一緒におしゃべりしませんか？ アレルギーおしゃべり会は、 お子様の食物アレルギー・ぜん息・アトピー性皮膚炎・花粉症など アレルギーで気になることを何でもおしゃべりしています。 保育スタッフが同じお部屋にいて、お子様と遊んでくれます。 おしゃべり会は、参加も同室保育も『予約不要・無料』です。 参加状況に…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/kodomo-kateisoudan/kodomo-kateisoudan-kosodateouen/20251128093912.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-07T06:14:40.913674Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "c038311121fab0e4cf36",
+      "title": "品川×大田 旧東海道でつながるまち WAKU☆WAKU ラリー",
+      "summary": "2026年10月15日（木）～11月29日（日）、（一社）しながわ観光協会と（一社）大田観光協会は、品川区と大田区が交わる旧東海道および大森エリアで「品川×大田 旧東海道でつながるまち WAKU☆WAKU ラリー」を開催します。 今からおよそ400年前、徳川家康が整備した五街道のひとつ「東海道」。江戸・日本橋から京都・三条大橋までに53の宿場が置かれました。東海道第一の宿の品川宿から大森・六郷へと続く道は、今もまちの中にその面影を残しています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/wakuwaku2026",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T12:50:39.727307Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "90451c32d4e1446aff1f",
+      "title": "【終了】大井蔵王権現神社 福禄寿祭",
+      "summary": "2026年10月4日（日）、大井蔵王権現神社にて「福禄寿祭」が開催されます。 大井蔵王権現神社には、荏原七福神の福禄寿が祀られており、財産・出世・長寿にご利益があると言われています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/fukurokuzyusai2026",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T12:50:39.727307Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原",
+        "大井"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "a8fd6e30265693165961",
+      "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 10月",
+      "summary": "「Tokyo City Flea Market」は毎週土曜日・日曜日に大井競馬場第一駐車場で開催される都内最大級のフリーマーケットです。 （※10月4日(日)、10日(土）、11日(日)、17日(土）、18日(日)の開催はありません。また、10月31日（土）は, 東京メガイルミ初日のため、8：45〜12：00の時短開催となります。） 専門的なお店も多数出店。バラエティ豊かな品揃えで、地元客だけでなく海外からの観光客も訪れます。週末は、大井競馬場でお宝探しはいかがでしょう。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyo-city-flea-market-202610",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 10
+    },
+    {
+      "id": "4c2b76e997c22e3142d2",
+      "title": "健康大学しながわ 地域で活躍する健康づくり講座",
+      "summary": "健康大学しながわでは、健康寿命の延伸やウェルビーイングの実現に向けて、健康に関する知識と実践方法を学びます。 学んだ知識を自身の健康管理に活かすとともに、地域へ健康の輪を広げる活動や健康イベントにも参加できます、 ご自身と地域の健康について、一緒に考えてみませんか。 第一部 がんを予防し健康寿命を延ばそう がん予防の重要性と具体的な実践方法を学びます。 講師：国際医療福祉大学大学院医学研究科 教授 津金 昌一郎 氏 第二部 健康の土台を学ぶ「からだマネジメントセミナー」 自…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-dukuri/20180829101907.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 6
+    },
+    {
+      "id": "20817480a2e93ea82a8d",
+      "title": "しながわ水辺の観光フェスタ 2026",
+      "summary": "2026年10月9日（金）～11月8日（日）の週末、品川区内の水辺エリア各所で「しながわ水辺の観光フェスタ」が開催されます。 品川区には、目黒川や品川浦、京浜運河、天王洲アイルなど、季節や時間によって多彩な表情を見せる豊かな水辺空間が広がっています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/mizubenokankoufesta2026",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-30T05:46:26.423098Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲アイル",
+        "天王洲"
+      ],
+      "relevanceScore": 18
+    },
+    {
+      "id": "f4a70b2a65c54a4aa6a1",
+      "title": "しながわ地域貢献活動展 開催",
+      "summary": "地域の課題解決をめざすNPO法人やボランティア団体などと交流できるイベントです。 それぞれの団体がブースごとに活動を紹介します。 活動分野ごとにバラエティに富んだワークショップや物品販売もあり、対象は子どもから高齢者までさまざまです。 地域の活動を応援したい方も、自分で活動してみたい方も、意外と身近にある地域貢献に触れてみませんか。 電話：03-5742-6605（直通） Fax:03-5742-6878",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-kyodo/chiiki-kyodo-kumin/20260924103431.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T18:09:54.506488Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
+    {
+      "id": "d3220f1fed67b5977044",
+      "title": "令和8年度 環境保全活動顕彰の募集",
+      "summary": "「ゼロカーボンシティしながわ」の実現に貢献する、持続可能な環境にやさしい活動や取り組みを募集します。 皆さんが普段行っている活動の中で関連する環境活動等がございましたら、ぜひご応募ください。 受賞者は令和9年2月11日（木）に品川区立環境学習交流施設エコルとごしにて行われる「環境表彰式」にて、顕彰します。 他の規範となる環境保全活動を行っている企業、団体または個人を顕彰し、その活動内容を広く紹介することにより、環境保全に関する自主的な取り組みを促進することを目的としています。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-event/hpg000012278.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [
+        "エコルとごし"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "dbe3cd7369c456dd28f3",
+      "title": "しながわ電気・ガス料金緊急支援事業【申請期間：9月1日～10月31日】",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "b74252e82496dafe6f61",
+      "title": "マイナンバーカードに関する各手続きについて（紛失、暗証番号ロック、電子証明書、住所・氏名変更など）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/mynumbercard/202401268888.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1e6eef794530f6c56cdc",
+      "title": "「あなた」と「しながわ」をつなぐふるさと納税",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/hpg000029194.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "19413da7c891952f8507",
+      "title": "羽田空港の機能強化",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/haneda/hpg000023398.html",
+      "publishedAt": "2026-09-30T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "a48b82eef1c1045ba112",
+      "title": "大井新地にマグロ専門店「鮪一刀流囮」 目黒に次ぐ2店舗目、20部位を用意",
+      "summary": "本マグロ専門店「鮪（まぐろ）一刀流 囮 OTORI」（品川区大井1）が9月1日、大井新地にオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5085",
+      "publishedAt": "2026-09-29T11:07:52Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T18:09:54.506488Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "fc420ec49fd9cacc8ab7",
+      "title": "9月25日開催の委員会の結果を掲載。",
+      "summary": "9月25日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20830.html",
+      "publishedAt": "2026-09-29T05:30:39Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T04:56:13.906985Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "751f748cf02d2799eb4f",
+      "title": "9月28日開催の委員会の結果を掲載。",
+      "summary": "9月28日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20868.html",
+      "publishedAt": "2026-09-29T02:34:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "fe3922dde886f20b3cd3",
+      "title": "自転車文化センター テーマ展示「昭和を駆けた自転車たち展 ー暮らしとともに歩んだ64年ー」",
+      "summary": "2026年9月30日（水）～12月20日（日）、自転車文化センターにて、令和8年度 第2回 テーマ展示「昭和を駆けた自転車たち展 ー暮らしとともに歩んだ64年ー」が開催されます。 昭和という64年の時代は、戦争と復興、高度経済成長、レジャー文化の発展など、日本の社会や人々の暮らしが大きく変化した時代でした。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bcc-showa",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "7d721d8bdbed1de06286",
+      "title": "みんなの五反田フェスティバル 2026",
+      "summary": "2026年10月11日（日）五反田駅 東口 ロータリーにて「みんなの五反田フェスティバル」が開催されます。 多彩なステージパフォーマンスや近隣商店街の飲食店、世界各地の味が楽しめる屋台などが並びます。 詳しくは こちら",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/gotafes2026",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "五反田駅"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "19d653dd88fb696ae97d",
+      "title": "【終了】しながわ盆フェス 2026 2026/10/31(土), 2026/11/01(日) 観る 遊ぶ 食べる 大井競馬場前駅, 立会川駅",
+      "summary": "2026年10月31日（土）、11月1日（日）、大井競馬場にて「しながわ盆フェス2026」が開催されます。 冬を彩るイルミネーション「 東京メガイルミ 」の開幕に合わせ、盆踊りを中心としたイベント「しながわ盆フェス2026」が開催されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bonfes2026",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井競馬場"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "1610e597ee2ba2d90c4f",
+      "title": "【終了】五反田 にぎわいイベント「ゴタンダデシタンダ！！」",
+      "summary": "2026年10月4日（日）五反田 学研本社ビル1階芝生広場などで「ゴタンダデシタンダ!!」が開催されます。 「ゴタンダデシタンダ!!」は、毎年10月初旬に行われる地域の神事である雉子神社例大祭の時期に合わせ、開催される地域にぎわいイベント。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/gotashita2026",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "1579c0f6303047b3466c",
+      "title": "戸越銀座 秋のふるさとフェスタ",
+      "summary": "2026年10月10日（土）、戸越銀座にて「秋のふるさとフェスタ」が開催されます。 商店街の各所で阿波踊りや三味線の演奏が繰 り広げられます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/furusato2026a",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "48f4700ea5a87a18ab11",
+      "title": "こども未来ミーティング～みんなでつくろう！こどもの権利条例～",
+      "summary": "令和10年度の「（仮称）品川区こどもの権利条例」の制定に向けて、広く区民の皆様から意見をいただくため、今年度4回の区民ワークショップ「こども未来ミーティング」を開催します。 本ワークショップでは、こどもと大人が一緒にグループを作り、条例に盛り込む内容について、それぞれの経験・視点から話し合います。 区内在住・在学の「こども」と「大人」（年齢は問いません。） ※小学4年生以下の方は、保護者の同伴が必須となります。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/child_rights/20260604164736.html",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T08:48:26.899424Z",
+      "tags": [
+        "行政",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "064c6abf260eca5e4ffe",
+      "title": "ウェルビーイング・ＳＤＧｓ推進ファンド事業",
+      "summary": "ウェルビーイング・ＳＤＧｓ推進事業実行委員会事務局 （品川区企画経営部企画課内） 電話：03-5742-7864 FAX：03-5742-6870 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/sdgs/sdgsfundzigyou.html",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-28T23:51:47.393458Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "58d0944cf3f328737191",
+      "title": "五反田に「ザ・リッタースペースコーヒー」 韓国の大容量カフェが日本進出",
+      "summary": "コーヒーテイクアウト専門店「THE LITER SPACE COFFEE（ザ・リッタースペースコーヒー） 五反田店」（西五反田8）が、五反田エリア・大崎広小路駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5084",
+      "publishedAt": "2026-09-28T10:08:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T14:16:08.909015Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大崎",
+        "西五反田",
+        "大崎広小路駅"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "1e5e9be0c46488d95297",
+      "title": "9月24日開催の委員会の結果を掲載。",
+      "summary": "9月24日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20882.html",
+      "publishedAt": "2026-09-28T06:18:59Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T14:16:08.909015Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "bd1b4d265825ebbe1565",
+      "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動にご協力をお願いいたします （10/6に変更となりました）",
+      "summary": "８月に発生した千葉・北陸豪雨により、千葉県、石川県、富山県、福井県を中心に甚大な被害が発生いたしました。品川ボランティアセンターでは「令和８年８月千葉・北陸豪雨 被災者支援街頭募金活動」を下記の通り実施することとなりました。 ここ大井町から被災地千葉、北陸へ皆様の温かいお気持ちを届けます。皆様の温かいお気持ちとご協力をお願いいたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-62638.html",
+      "publishedAt": "2026-09-28T05:38:22.929973Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "b5090bc72b6b6876a9e9",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年9月14日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年9月28日号(令和8年9月14日～令和8年9月27日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63390.html",
+      "publishedAt": "2026-09-28T05:38:22.929973Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "951dd366fbbdd0ff17cf",
+      "title": "令和８年８月千葉・北陸豪雨被災者支援のための街頭募金活動実施日延期のご案内",
+      "summary": "８月に発生した千葉・北陸豪雨により、千葉県、石川県、富山県、福井県を中心に甚大な被害が発生いたしました。品川ボランティアセンターでは９月３０日に「令和８年８月千葉・北陸豪雨 被災者支援街頭募金活動」を予定しておりましたが、台風２６号接近に伴い荒天が予想されるため、下記日時に変更し実施することとなりました。 ここ大井町から被災地千葉、北陸へ皆様の温かいお気持ちを届けます。皆様の温かいお気持ちとご協力をお願いいたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63406.html",
+      "publishedAt": "2026-09-28T05:38:22.929973Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "4d0630e995eba9756ef5",
+      "title": "天王洲キャナルフェス 2026 秋冬",
+      "summary": "2026年10月30日（金）～11月1日（日）、「天王洲キャナルフェス2026秋冬」が開催されます。 今回の「天王洲キャナルフェス2026秋冬」では、神輿や太鼓の伝統を守り続ける「 宮本卯之助商店 」との特別コラボが実現。 “祭×現代アート”が出会うことで、職人の技とアーティストの感性が交差する3日間が天王洲に生まれます。アートと水辺の街ならではの熱気あふれる体験を楽しんでみてはいかがでしょうか。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/canalfes26aw",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T14:16:08.909015Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "f4c6f9002fd5c59f0816",
+      "title": "目黒川Eボート体験",
+      "summary": "2026年10月11（日）、「目黒川Eボート体験」が開催されます。 目黒川の美しいリボン装飾を眺めながら、手漕ぎボート（Eボート）で東品川海上公園～五反田ふれあい水辺広場間の水上ルートを体験できる特別なイベントです。 普段は見ることのできない東京の水辺の魅力を、冒険気分で楽しく発見してみてはいかがでしょうか。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/eboat",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "bb8d5a262ee8c716e2a7",
+      "title": "令和8年度思春期講演会",
+      "summary": "大井保健センター 電話：03-3772-2666 FAX：03-3772-2570 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/sisyunkiR6.html",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-27T17:06:25.503279Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "3178e8fca9e05d6ad964",
+      "title": "品川CCパペレシアルのブラインドサッカー体験教室",
+      "summary": "パラリンピックの正式競技でもあるブラインドサッカーの体験会を開催します。 品川区をホームタウンとして活動する品川CCパペレシアルの皆さんを講師にお迎えし、 ブラインドサッカーの視覚OFF体験やゲーム感覚で楽しめるコンテンツを実施します。 ブラインドサッカー競技の特徴であるコミュニケーションやチームワークの大切さを再認識できるイベントとなっております。 体験教室の最後には選手との座談会も予定しており、 選手たちと近い距離で楽しめる内容となっておりますので、ぜひお申込みください…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20260507201318.html",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-27T17:06:25.503279Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "fa3cae7a0a275e978d61",
+      "title": "休日・夜間（平日・土曜日）の診療",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "09554b617205a928dbf3",
+      "title": "「DYMスカウト」にインターン検索機能を実装。スキル・勤務地・業界から、自分に合うインターンを検索可能",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、同社が運営する就...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000532.000027235.html",
+      "publishedAt": "2026-09-27T01:40:39Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-27T05:29:43.070877Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "91e192eca2d53d25e976",
+      "title": "品川宿交流館「第ニ回 品川宿場寄席」",
+      "summary": "2026年10月13日（火）、14日（水）、15日（木）、品川宿交流館にて「品川宿場寄席」が開かれます。 出演は、品川区在住、真打落語家の柳家吉緑、二つ目講談師の一龍齋貞奈。日替わりゲストも迎え、楽しいひとときとなりそうです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shukubayose2",
+      "publishedAt": "2026-09-27T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-27T05:29:43.070877Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "cf3186129b3518f1ccce",
+      "title": "三井住友カード、トピー工業が「primeNumber DATA SUMMIT 2026」に登壇決定",
+      "summary": "[株式会社primeNumber] データとAIを企業の成長エンジンへと進化させるデータテクノロジーカンパニーの株式会社primeNumber（本社：東京都品川区、代表取締役CEO 田邊 雄樹）は、2026年10月15日（木）に天王洲 キャナルイーストで開催す...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000143.000039164.html",
+      "publishedAt": "2026-09-25T19:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T21:43:33.188182Z",
+      "tags": [
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "054685ff9fad96a26c3c",
+      "title": "【3人制バスケ】品川CC ワイルドキャッツ、10月18日に東品川海上公園でPLCO 3XSホームゲームを開催",
+      "summary": "[品川CC] 「天王洲をホームコートに」3人制バスケットボールの熱戦を観戦無料で開催 [画像1: https://prcdn.freetls.fastly.net/release_image/77565/121/77565-121-20d35ae2e6f6fbe53613828a9d6c9d35-1909x2700.jpg?width...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000121.000077565.html",
+      "publishedAt": "2026-09-25T18:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T21:43:33.188182Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "東品川",
+        "天王洲"
+      ],
+      "relevanceScore": 10
+    },
+    {
+      "id": "640fa84cb78807452e7e",
+      "title": "美容クリニック向け｜医療広告ガイドラインと通信費削減戦略の最前線レポート【2026年9月版】",
+      "summary": "[株式会社中央構想研究所] 株式会社中央構想研究所（東京都品川区、代表取締役社長、信谷康邦、以下「当社」）は、「美容クリニックの通信費見直しレポート」2026年9月版（全25ページ）を無料公開いたしました。 [画像1: https://prcdn.fre...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000003.000190769.html",
+      "publishedAt": "2026-09-25T14:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "f7f4474e76997afbe770",
+      "title": "【PISOLA九州初進出！全国75店舗へ】2031年全国300店舗を見据え、PISOLA熊本嘉島店を10月21日オープン",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）のグループ会社である株式会社ピソラ（本社：滋賀県草津市、代表取締役：鬼界 友則）は、2026年10月21日、九州...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000635.000027839.html",
+      "publishedAt": "2026-09-25T14:10:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T17:23:47.246928Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "c02fabb15cc92812d6f1",
+      "title": "藤沢市の観光パンフレット『地球の歩き方 湘南・江の島 2026～27』を10月より配布開始",
+      "summary": "[株式会社 学研ホールディングス] 株式会社学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社地球の歩き方（東京都品川区／代表取締役社長：新井邦弘）は、藤沢市から制作委託を受け観光総合パンフレット...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009466.000002535.html",
+      "publishedAt": "2026-09-25T14:10:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T17:23:47.246928Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "6ac09dcdef79864d1f74",
+      "title": "DYM MESSENGERS、新体制初のチームイベント「26-27 SEASON 決起会」を開催",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000536.000027235.html",
+      "publishedAt": "2026-09-25T09:15:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T12:02:17.775966Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "81d15eeb72ffeb871404",
+      "title": "セーフィー、映像上のキロポスト情報表示サービスをNEXCO中日本エリアへ提供拡大",
+      "summary": "[セーフィー株式会社] クラウド録画サービスシェアNo.1（※1）のセーフィー株式会社（東京都品川区：代表取締役社長CEO 佐渡島 隆平、以下「セーフィー」）は、クラウドカメラ「Safie（セーフィー）」の映像データに高速道路のキロポ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000374.000017641.html",
+      "publishedAt": "2026-09-25T07:15:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T12:02:17.775966Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0bc9b2728ece8dc845e3",
+      "title": "【令和９年４月１日採用】応募者説明会を実施します",
+      "summary": "品川社協では現在、令和９年４月１日付採用職員を募集しています。 応募をお考えの方に、少しでも品川社協を知っていただく機会として、以下の３日間で説明会を開催いたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63162.html",
+      "publishedAt": "2026-09-25T05:09:00.556953Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "bef8fd993055f69749cf",
+      "title": "DYM M&Aコンサルティング、北洋銀行「北海道マザーファンド」第1号案件を支援。MOEホールディングスによる北海道帯広市の介護施設法人のグループ会社化が成約",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）のグループ会社である...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000510.000027235.html",
+      "publishedAt": "2026-09-25T04:40:45Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "19a8bfdea720dba07777",
+      "title": "声の区議会だよりを掲載。",
+      "summary": "声の区議会だよりを掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20862.html",
+      "publishedAt": "2026-09-25T01:26:19Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "d6f079419574dca07959",
+      "title": "ペンライト作り＆コンサート・ぐるっぽみんな食堂開催のお知らせ",
+      "summary": "福祉部障害者支援課事業者支援担当 （区役所本庁舎3階） 電話：03-5742-7844 FAX：03-3775-2000",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/kenkou-syogai-oshiraselink/20260909083004.html",
+      "publishedAt": "2026-09-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-29T10:00:31.468521Z",
+      "tags": [
+        "福祉",
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "35e8c372c53ef997e3fb",
+      "title": "品川歴史館特別展「品川湾から東京港へー未完の港湾都市ー」 2026/10/10(土) ~ 2026/12/20(日) 観る 知る 大井町駅, 立会川駅, 大森駅",
+      "summary": "2026年10月10日（土）～12月20日（日）、 品川歴史館 にて、特別展「品川湾から東京港へー未完の港湾都市ー」が開催されます。 御台場の築造で変わる臨海部、明治時代以降の海の変化について、品川湾から東京港への変遷、発展の歴史を紹介。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/port-of-tokyo",
+      "publishedAt": "2026-09-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T12:02:17.775966Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "品川歴史館"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "1e873b538e7e169bc093",
+      "title": "止水板設置等助成 (防水板設置工事助成)",
+      "summary": "浸水被害の軽減を図るために、住宅・店舗・事務所等の出入口に止水板を設置する方に対し、設置費用の一部を助成します。 ※申請年度内に設置・工事を完了していただき、現場立ち合い（完了検査）が必要な場合があります。 令和8年度の申請受付は、11月末までを予定しています。 予算額に達した場合は、受付を終了することがあります。 申請期限が近づいていますので、申請を検討されている方はお早めにご相談・ご申請ください。 令和8年度申請受付終了後は、令和9年度申請として、4月1日（木）から順次…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-mizube/flood-prevention-subsidy/hpg000003880.html",
+      "publishedAt": "2026-09-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T12:02:17.775966Z",
+      "tags": [
+        "都市開発",
+        "選挙政治",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 6
+    },
+    {
+      "id": "8ca1e758d642ce021417",
+      "title": "屋形船でめぐる東京港歴史体感クルーズ",
+      "summary": "2026年10月31日（土）、しながわ観光協会は、「屋形船でめぐる東京港歴史体感クルーズ」を開催します。 東京都が主催する国際美術展「TOKYO ATLAS」の開催に合わせ、東京港の魅力と歴史を再発見する当クルーズでは、品川歴史館学芸員による解説のもと、品川浦から屋形船に乗り東京港の歴史を学び、船清女将よる東京港観光ガイドを楽しみます。昼食には、「品川めし」風のお弁当をご堪能ください。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyobay2026",
+      "publishedAt": "2026-09-25T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-25T05:09:00.556953Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "品川歴史館"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "150c5e6ff49117a5f215",
+      "title": "「警視庁特殊詐欺被害防止アドバイザー」委嘱状の交付を受けました",
+      "summary": "[株式会社ケーブルテレビ品川] 株式会社ケーブルテレビ品川(本社：東京都品川区 代表取締役執行役員社長：橋本夏代 以下、ケーブルテレビ品川)は、品川区の通信・放送インフラを担う企業として、安全・安心な街づくりに取り組んでいます。 ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000007.000143385.html",
+      "publishedAt": "2026-09-24T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T21:38:29.350195Z",
+      "tags": [
+        "都市開発",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "a0d6d6e38f273f5c10a3",
+      "title": "オルビス、小児がんと向き合う子どもたちのご家族へスキンケア商品などのセットを提供",
+      "summary": "[オルビス株式会社] オルビス株式会社（本社：東京都品川区、代表取締役社長：山口裕絵）は、「世界小児がん啓発月間」である9月に、特定非営利活動法人ジャパンハート（以下、ジャパンハート）を通じて、小児がんと向き合う子ども...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000736.000002061.html",
+      "publishedAt": "2026-09-24T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T05:06:49.633256Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "886cf8c58c6e03750613",
+      "title": "ボラミニ情報更新しました！",
+      "summary": "",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63267.html",
+      "publishedAt": "2026-09-24T17:24:30.049429Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-24T17:24:30.049429Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "8a2bb7874eff4bb3ccbb",
+      "title": "大井新地にスポーツバー「ちりスポ」 競技経験者が日替わり店長に",
+      "summary": "スポーツバー「ちりスポ」（品川区大井1）が9月1日、大井新地飲食街にオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5082",
+      "publishedAt": "2026-09-24T12:17:42Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T17:24:30.049429Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "5de0194be5dd35b4d2d1",
+      "title": "子どもと学校のお悩みは、「ポジティブ行動支援」に！ 書籍『マンガと図解でわかる はじめてのPBS』発売",
+      "summary": "[株式会社 学研ホールディングス] 株式会社学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年9月24日に『マンガと図解でわかる はじめてのPBS...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009467.000002535.html",
+      "publishedAt": "2026-09-24T08:40:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T12:01:16.449573Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "f0bb4b7d1da093143b70",
+      "title": "9月26日(土)18:00～｜『“予算”と“品質”で失敗しない！物件購入×リノベーション』をテーマに株式会社ウィローズ代表取締役 朝倉大樹（不動産ポリス）がセミナーを開催します",
+      "summary": "[株式会社ウィローズ] 株式会社ウィローズ（本社：東京都品川区、代表取締役：朝倉大樹）は、グループ会社の株式会社ウィローズクラフトと共同で、2026年9月26日（土）18:00より、オンラインセミナー『\"予算\"と\"品質\"で失敗しない！物...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000004.000189746.html",
+      "publishedAt": "2026-09-24T02:10:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T05:06:49.633256Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "e63aafb9e7ffbd3ead62",
+      "title": "WHAT MUSEUM：TOKYO ATLAS関連企画 「座標」",
+      "summary": "2026年10月10日（土）～12月20日（日）、WHAT MUSEUMにてTOKYO ATLAS関連企画の展覧会「座標」が開催されます。 本展は、アートの世界における才能を発見し、その活躍を支援するプラットフォームの取組として開催。東京都がこれまで支援してきた新進気鋭のアーティストやキュレーター、マネジメント人材が一堂に会し、それぞれの活動を異なる視座から見つめなおし、新たな「座標」として結ぶことを目指しています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/coordinates",
+      "publishedAt": "2026-09-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T17:24:30.049429Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "7c00d7758d526b0bb114",
+      "title": "雉子神社例大祭 2026",
+      "summary": "2026年10月3日 （土）、4日（日）雉子神社（きじじんじゃ） 例大祭が行われます。 3日（土）の前夜祭に始まり、4日（日）に祭典式が行われます。神賑行事として、3日（土）には日本舞踊やフラダンス、清泉女子大学のクラブ発表、4日（日）には、子ども神輿の御宮入り、里神楽の奉納があります。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/kijijinjareitaisai2026",
+      "publishedAt": "2026-09-24T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-24T17:24:30.049429Z",
+      "tags": [
+        "行政",
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "140c072768ca04450ed3",
+      "title": "REACH大崎クラフトマーケット",
+      "summary": "2026年10月7日（水）、JR大崎駅南口東西自由通路夢さん橋にて「REACH大崎クラフトマーケット」が開催されます。 雑貨やアクセサリーなど、個性豊かな作品が集まる毎月恒例の「手作り市」。大崎駅から徒歩0分というアクセスの良さで、周辺住民だけでなくオフィスワーカーにも人気のクラフトマーケットです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202610",
+      "publishedAt": "2026-09-23T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-23T11:54:08.738362Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "85b5011a6dd6d19c10ab",
+      "title": "「あらゆるものが、子どもの宝ものになる」素材との出会いを楽しむ「こども・そざい・みゅーじあむ2026」を品川区で開催",
+      "summary": "[株式会社えんのした] [画像1: https://prcdn.freetls.fastly.net/release_image/170813/5/170813-5-f0dbab6937e26e9ed62e2b3651253baa-2360x1237.png?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000005.000170813.html",
+      "publishedAt": "2026-09-20T08:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-20T11:39:29.244792Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "2ed9938925b0d3898b1e",
+      "title": "【終了】第10回 戸越八幡神社「一箱古本市」",
+      "summary": "2026年9月26日（土）戸越八幡神社にて「第10回 戸越八幡神社一箱古本市」が開催されます。 一箱古本市とは、ミカン箱程度の一箱に自分の本を持ち寄り、一日だけの「本屋さんごっこ」を楽しむイベント。今回で10回目を迎えます。 当日は10回記念のリーフレットを無料配布予定。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hitohako10",
+      "publishedAt": "2026-09-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-20T16:20:02.645523Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "7d6624ec3d1f70dd1cf6",
+      "title": "誕生八幡神社例大祭 2026",
+      "summary": "2026年10月3日（土）・4日（日）、誕生八幡神社例大祭が行われます。 大きな2本のイチョウの木が目印の誕生八幡神社は、太田道灌が夫人の安産を祈り勧請、安産の守り神として信仰されています。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tanjohachiman-reitaisai2026",
+      "publishedAt": "2026-09-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-20T11:39:29.244792Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "29b302cf25774f566515",
+      "title": "第43回 秋の品川納涼祭",
+      "summary": "2026年10月3日（土）、西大井広場公園にて「品川納涼祭」が開催されます。 毎年恒例の納涼祭。広場の中央に櫓が立ち、皆で盆踊りを踊って盛り上がります。地元商店街による模擬店や能登の名産品コーナーなどグルメも充実。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawa-noukyousai2026",
+      "publishedAt": "2026-09-20T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-20T11:39:29.244792Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "西大井"
+      ],
+      "relevanceScore": 10
+    },
+    {
+      "id": "6420ea0e76c2150f536d",
+      "title": "大口契約の締結に関するお知らせ",
+      "summary": "[データセクション株式会社] データセクション株式会社（本社：東京都品川区、代表取締役社長執行役員CEO：石原紀彦、東証グロース：3905、以下「当社」）は、米国に本社を置く世界有数のAIインフラプラットフォーム提供企業との間で、AIイン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000090.000036921.html",
+      "publishedAt": "2026-09-19T08:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-19T11:16:22.652516Z",
+      "tags": [
+        "都市開発",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "63ad2afc582747b4f080",
+      "title": "歌手の小川みすずさん、交通安全呼びかけ 秋の全国交通安全運動を前に 東京・品川区",
+      "summary": "",
+      "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "sourceType": "rss",
+      "url": "https://news.ntv.co.jp/category/society/81b3e78ca60b46b1b98e3c3b8dae6f74",
+      "publishedAt": "2026-09-19T07:05:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-19T11:16:22.652516Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "5469bce268b63b6dc47a",
+      "title": "アデランスグループで初出展！ウィッグのポップカルチャー領域を強化 ロサンゼルス最大のコミック＆ポップカルチャーイベント「L.A. Comic Con」へブース出展",
+      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランスグループ（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、10月30日（金）～11月1 日（日）の3日間、ロサンゼルスにて開催...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001050.000010292.html",
+      "publishedAt": "2026-09-18T22:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T16:35:50.519787Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "6701d33d8ec1a71542d8",
+      "title": "日本ファンタジーの金字塔・荻原規子「勾玉三部作」完結30周年記念！ 文庫新装版全巻を収めた特別な美装箱セットが発売！",
+      "summary": "[徳間書店] 株式会社徳間書店（本社：東京都品川区上大崎 代表取締役社長：小宮英行）は、日本ファンタジーの旗手・荻原規子による「勾玉三部作」の完結30周年を記念し、文庫新装版全5冊を特製の美装箱に収めたセットを、各...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001124.000016935.html",
+      "publishedAt": "2026-09-18T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T21:03:48.825490Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "上大崎",
+        "大崎"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "54a3b438a3997d2448cc",
+      "title": "西大井・三間通り沿いに「フタバティースタンド」 店主は「介護漫才師」",
+      "summary": "テイクアウト店「Futaba Tea Stand（フタバティースタンド）」（品川区二葉2）がJR大井町駅と西大井駅間、三間通り沿いの住宅街にオープンして3カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5081",
+      "publishedAt": "2026-09-18T12:09:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T16:35:50.519787Z",
+      "tags": [
+        "福祉",
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "二葉",
+        "大井",
+        "西大井",
+        "西大井駅",
+        "大井町駅"
+      ],
+      "relevanceScore": 30
+    },
+    {
+      "id": "860d8b3d3d88fb8b2a45",
+      "title": "【コムシス情報システム】AIJO配筋王関連技術が国交省の工事公告に掲載",
+      "summary": "[コムシスホールディングス株式会社] コムシスホールディングス株式会社（本社：東京都品川区、代表取締役社長 田辺 博）のグループ会社であるコムシス情報システム株式会社（本社：東京都品川区、代表取締役社長 森木 哲朗 以下 コムシス情報...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000046.000183413.html",
+      "publishedAt": "2026-09-18T06:41:07Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T11:32:40.029965Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "947dfe2353b1e8401ced",
+      "title": "北海道白糠町の「ふるさと納税を起点としたまちづくり」を一冊に『ふるさと納税から始まるまちづくり』を自費出版",
+      "summary": "[株式会社イミュー] 株式会社イミュー（所在地：東京都品川区、代表：黒田 康平）は、北海道白糠町（しらぬかちょう）における、ふるさと納税を基軸としたまちづくりの取り組みをまとめた書籍『ふるさと納税から始まるまちづくり』...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000079.000081865.html",
+      "publishedAt": "2026-09-18T06:15:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T11:32:40.029965Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "359621920adaee5a392d",
+      "title": "【終了】第19回 中延ねぶた祭り 2026",
+      "summary": "2026年9月19日（土）、中延商店街にて「中延ねぶた祭り」が開催されます。 2年に1度開催される「中延ねぶた祭り」では、お囃子、跳人（ハネト）、そして新たな「ねぶた山車」が参加してお祭りを大いに盛りあげます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/nebutafestival2026",
+      "publishedAt": "2026-09-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T16:35:50.519787Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "285e99ed4019b2756b13",
+      "title": "漫画『たぬきはたぬき』×東武動物公園コラボイベント「冷やしタヌキ祭り」大好評御礼！描き下ろしイラストTシャツ発売開始！",
+      "summary": "[徳間書店] 株式会社徳間書店（東京・品川区、代表取締役社長：小宮英行）は、漫画『たぬきはたぬき』（リュウコミックス）（https://amzn.asia/d/0edDIOLM）と東武動物公園のコラボイベント「冷やしタヌキ祭り」が大好評と...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001121.000016935.html",
+      "publishedAt": "2026-09-17T20:15:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T21:33:18.766505Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "90f3293b5b16dc5d8a74",
+      "title": "「KLP塾2026」が開講、次世代リーダー育成が本格始動吉村洋文大阪府知事、溝畑宏塾長が第1・2回にそれぞれ登壇",
+      "summary": "[ワクセル] ソーシャルビジネスコミュニティ「ワクセル」（所在地：東京都品川区、主催：嶋村吉洋、総合プロデューサー：住谷知厚）が協力する、KLP合同会社（代表：島田 大輝）と公益財団法人大阪観光局（理事長：溝畑 宏）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000295.000052391.html",
+      "publishedAt": "2026-09-17T16:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T19:53:06.427217Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "faf08d3ac532304e791f",
+      "title": "戸越八幡神社で「一箱古本市」開催へ 10回目記念リーフレットを無料配布",
+      "summary": "「戸越八幡神社 一箱古本市」が9月26日、戸越八幡神社（品川区戸越2、TEL 03-3781-4186）で開かれる。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5080",
+      "publishedAt": "2026-09-17T12:08:55Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T17:10:22.226803Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "9f3517b3577540f1a195",
+      "title": "冷凍食品・アイス好きから寄せられたエピソードを実写×生成AIでドラマ化。景井ひなさん出演「マイ・フローズンライフ」配信",
+      "summary": "[株式会社日本アクセス] 食品総合卸の株式会社日本アクセス（所在地：東京都品川区、代表取締役社長 社長執行役員 CEO：服部真也）は、一般の方々から募集した冷凍食品・アイス・冷凍ペットフードにまつわるエピソードをもとに制作したオ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000182.000023710.html",
+      "publishedAt": "2026-09-17T08:40:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T11:55:15.197370Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "41d0c1c70ed5912c2843",
+      "title": "会派構成が変更になりました。",
+      "summary": "会派構成が変更になりました。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20821.html",
+      "publishedAt": "2026-09-17T08:03:39Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T11:55:15.197370Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "bdfd60013cb9b52dc384",
+      "title": "地元 21 団体と築く防災の輪「新たな備えサポート隊in 松山」2026 年度も継続",
+      "summary": "[ＤＣＭホールディングス株式会社] ＤＣＭホールディングス株式会社（本社：東京都品川区、代表取締役社長 兼 CEO：石黒 靖規）は、発 起人となり2022年に発足した「新たな備えサポート隊 in 松山」の活動に、 2026年度も引き続き参画してまいりま...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000433.000022024.html",
+      "publishedAt": "2026-09-17T04:41:14Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T05:03:22.000533Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "b317e5dc8b1d8c6a6385",
+      "title": "9月16日開催の委員会の結果を掲載。",
+      "summary": "9月16日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20813.html",
+      "publishedAt": "2026-09-17T01:54:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "291bb50939219d393243",
+      "title": "旗岡八幡神社 例大祭 2026",
+      "summary": "2026年9月26日（土）、27日（日）、 旗岡八幡神社 にて例大祭が開催されます。 神楽殿では、両日とも里神楽が奉奏され、境内にはたくさんの露店が立ち並び多くの人で賑わいます。 また、27日（日）には宮神輿の渡御も行われます。（宮出し8:30／宮入り19:00） 【公式】しながわ観光協会 SHINAGAWA TOURISM ASSOCIATION [OFFICIAL](@shinagawonder)がシェアした投稿",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hataokahachimanreitaisai2026",
+      "publishedAt": "2026-09-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T11:55:15.197370Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "64262452e46e30f3ab78",
+      "title": "eLTAXやeL-QRのサービスが停止します（令和8年9月19日～9月24日）",
+      "summary": "令和8年9月のeLTAXのシステム更改に伴い、次の期間中、eLTAXのサービスが停止されます。 サービス停止期間中は、eLTAXやeL-QRを利用した地方税の電子申告、電子納付等の手続きができないため、ご注意ください。 【サービス停止期間】 令和8年9月19日（土曜日）午前0時 ～ 令和8年9月24日（木曜日）午前8時30分(予定) 詳細は、以下のリンク先をご覧ください。 令和8年9月のeLTAX更改に伴うサービス停止について（eLTAXホームページ）（別ウィンドウ表示）…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-zeikin/procedure-zeikin-oshirase/20260916163201.html",
+      "publishedAt": "2026-09-17T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T05:03:22.000533Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "cf305d289646a8dbf10f",
+      "title": "不動前にサンドイッチ店「メルシー」 5店目、毎月3日は3割引サービスも",
+      "summary": "「サンドイッチのお店Merci（メルシー） 不動前店」（品川区西五反田4、TEL 03-6275-3377）が不動前駅近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5079",
+      "publishedAt": "2026-09-16T11:00:57Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田",
+        "不動前駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "3d98bd65011411eb1f3e",
+      "title": "9月17日（木）午後１時、9月18日（金）午前１０時から第３回定例会のインターネット生中継を放映。",
+      "summary": "9月17日（木）午後１時、9月18日（金）午前１０時から第３回定例会のインターネット生中継を放映。 は 品川区議会 で公開された投稿です。",
+      "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "sourceType": "rss",
+      "url": "https://gikai.city.shinagawa.tokyo.jp/news/20817.html",
+      "publishedAt": "2026-09-16T05:24:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "選挙政治"
+      ],
+      "locations": [
+        "品川区議会"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "847ac32ee8cdec90cba0",
+      "title": "【新店情報】『串カツ田中 津田沼店』が9月17日(木)にオープン！",
+      "summary": "[株式会社ユニシアホールディングス（旧 串カツ田中ホールディングス）] 株式会社ユニシアホールディングス（本社：東京都品川区東五反田、代表取締役会長兼社長：貫 啓二）の子会社である株式会社串カツ田中は、2026年9月17日(木)に「串カツ田中 津田沼店」をオープンいたします。 [画...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000630.000027839.html",
+      "publishedAt": "2026-09-16T04:40:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T05:01:20.374371Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "7330196997c9d56e31bd",
+      "title": "第44回大崎第二地区運動会開催のお知らせ",
+      "summary": "",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-oosaki2/shisetsu-kuyakusyo-chiiki-oosaki2-oshirase/20260915094955.html",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-28T05:38:22.929973Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "ceb17d0ef5b09de83d18",
+      "title": "JR東日本 謎解き宝探し「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」",
+      "summary": "2026年9月30日（水）～2027年3月22日（月）、謎解き宝探し「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」が開催されます。 本イベントは、広域品川圏の5駅（大井町駅・品川駅・高輪ゲートウェイ駅・田町駅・浜松町駅）を巡りながら楽しむ、体験型の謎解きイベント。街歩きと謎解き宝探しを組み合わせた新しい周遊型イベントです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/greatershinagawa-nazo",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "694f576469a36b601f7d",
+      "title": "ふるさと納税代理寄附（災害支援）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/20260903092526.html",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "4e855ecc63705e4de535",
+      "title": "品川区福祉オンブズマン制度",
+      "summary": "福祉計画課施設担当 電話：03-5742-6917 FAX：03-5742-6797",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/soudanmado/soudanmado-hukushi/20260616181542.html",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T11:52:29.909327Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5f14c45fc02e04c3db97",
+      "title": "【出展作品募集中～10/16まで】品川区民作品展「しながわみんなの展覧会」",
+      "summary": "2026年12月9日（水）～13日（日）、きゅりあんにて「しながわみんなの展覧会」が開催されます。 毎冬開催されている品川区民作品展。今年からは会場を大井町の「きゅりあん」に移し、子どもから大人まで楽しめる「しながわみんなの展覧会」としてスケールアップし開催されます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/m-tenrankai",
+      "publishedAt": "2026-09-16T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T05:01:20.374371Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "きゅりあん"
+      ],
+      "relevanceScore": 20
+    },
+    {
+      "id": "faf5adaa61043ba59e1c",
+      "title": "特別価格で増毛体験とクレンジングがセットに！ 期間限定増毛キャンペーン 「ステップアップ増毛 1,100本＋すっきりスカルプケア」",
+      "summary": "[株式会社アデランス] 毛髪・美容・健康・医療のウェルネス事業をグローバル展開する株式会社アデランス（本社：東京都品川区、代表取締役社長 鈴木 洋昌）は、全国のアデランスサロン、レディスアデランスサロンにて、9月15日（火）...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001048.000010292.html",
+      "publishedAt": "2026-09-15T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T21:33:44.291440Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0fc9409aaf0bbb2af39f",
+      "title": "岸田産業株式会社と株式会社クラダシが協業し、防災備蓄品のフードロス削減を推進",
+      "summary": "[岸田産業株式会社] 岸田産業株式会社本社：福井県小浜市、代表取締役：岸田卓磨、以下「岸田産業」）は、ソーシャルグッドマーケット「Kuradashi」を運営する株式会社クラダシ（本社：東京都品川区、代表取締役社長CEO：河村晃平、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000003.000162675.html",
+      "publishedAt": "2026-09-15T19:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T21:33:44.291440Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "e794556502aa5e296796",
+      "title": "「ゲームは教育だ。」― 品川学藝高等学校×慶應義塾大学SFC、東京ゲームショウ2026に出展",
+      "summary": "[学校法人三浦学園] 学校法人三浦学園 品川学藝高等学校（東京都品川区、理事長：三浦裕明、校長：若林彰）は、慶應義塾大学 湘南藤沢キャンパス（SFC）と共同で、2026年9月17日（木）から21日（月・祝）まで幕張メッセで開催される...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000020.000065607.html",
+      "publishedAt": "2026-09-15T16:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T17:10:32.447733Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "ebe0f53bfd95dae486bd",
+      "title": "中延に台湾料理店「台湾茶房」 3人の料理人は全員台湾出身、ランチ営業も",
+      "summary": "「台湾茶房」（品川区中延4）が8月18日、中延駅近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5078",
+      "publishedAt": "2026-09-15T10:46:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "中延",
+        "中延駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "00d45250d85971220d65",
+      "title": "高齢者施設向け給食の「栄養強化」と「省人化」を両立 シダックス「元気ごはん with Oisix」がLacuSと「すごカロスープ」を共同開発",
+      "summary": "[株式会社シダックスフードサービス] オイシックス株式会社（本社：東京都品川区、代表取締役社長：高島 宏平、以下 オイシックス）の子会社で、全国の高齢者施設や病院、保育施設、企業の社員食堂などで給食事業を展開する株式会社シダックスフー...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000012.000180760.html",
+      "publishedAt": "2026-09-15T08:40:42Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "364f43e95cc52655a143",
+      "title": "新潟発のフードテックスタートアップとオイシックスグループが協業 シダックスの高齢者施設向け給食「元気ごはん with Oisix」でスープを共同開発",
+      "summary": "[オイシックス株式会社] 食品のサブスクリプションサービスを提供するオイシックス株式会社（本社：東京都品川区、代表取締役社長：高島 宏平、以下 当社）は、当社の子会社で高齢者施設や病院、保育施設、企業の社員食堂などで給食事...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000001239.000008895.html",
+      "publishedAt": "2026-09-15T08:15:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T11:56:30.393298Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "a1dc4fcc463d9c7d3c89",
+      "title": "住民票の写しや戸籍証明書のオンライン請求",
+      "summary": "申請前に電子証明用アプリ『マイナアプリ』をインストールしてください スマートフォンでマイナンバーカードを読み取って、本人確認（電子署名）を行うためです。 インストールする際に、スマートフォンに設定したパスワードの入力が必要な場合があります。 〈iPhoneをご利用の方〉 AppStore から『マイナアプリ』を入手 （別ウィンドウで表示） 〈Androidをご利用の方〉 GooglePlay から『マイナアプリ』を入手 （別ウィンドウで表示） よくある質問 オンライン申請は…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/20220119173146.html",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-17T05:03:22.000533Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "0009d13eafedd4ea13b4",
+      "title": "住宅改善工事助成事業(エコ＆バリアフリー住宅改修)",
+      "summary": "＜申込期間＞ 令和8年4月1日（火）～令和9年1月29日（金） ※工事前と工事後に、書類を提出していただきます。工事完了後1カ月以内に助成申請書の提出をお願いします。 ※工事完了と助成申請書の提出は、 令和9年2月26日（金）まで です。 ※助成交付額が予算総額に達した時点で受付を終了します。 ＜既存の住宅に対して行うリフォーム工事で、次に掲げるもの＞",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kenchiku/kankyo-kenchiku-assen/20211221163556.html",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-16T05:01:20.374371Z",
+      "tags": [
+        "都市開発",
+        "選挙政治",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 4
+    },
+    {
+      "id": "0d16e8252e7f33df7ca2",
+      "title": "第14回 BON DANCE フェスティバル",
+      "summary": "2026年9月19日（土）、旗の台東口通りにて「第14回 BON DANCEフェスティバル」が開催されます。 10:30～ 野菜・果物大特価市 12:30～17:30 日光さる軍団「猿まわし」 13:00～18:00 BON DANCE パフォーマンス 18:00～ 太鼓の演奏 18:30～20:30 盆踊り大会 16:00～20:30 商店会による露店販売",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/bon-dance-festival2026",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T17:10:32.447733Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "旗の台"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "77f656bfe536211a28ee",
+      "title": "北品川本通り商店会「第7回 しながわ宿場ナイト」",
+      "summary": "2026年9月26日（土）、北品川本通り商店会エリアで第7回目の「しながわ宿場ナイト」が開催されます。 旧東海道沿いの今も宿場町の面影を残す北品川本通り商店会エリアに、江戸風俗衣装を着た人々が出没し、商店街を盛り上げます。協力店舗は赤いちょうちんが目印です。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shukubanite2026a",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-15T05:06:20.617779Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "北品川"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "cfe9e9c79b0d62021052",
+      "title": "ジェンダー平等推進フォーラム2026",
+      "summary": "区では、区民一人ひとりが、互いに人権を尊重し、多様な生き方に配慮しつつ、責任を分かち合い、能力と個性を発揮して、 誰もが自分らしく、生き生きと安心して暮らせるジェンダー平等と性の多様性を尊重し合う社会の実現に向けて取り組んでいます。 この取り組みの一環として、公募した区民が中心となり企画した「ジェンダー平等推進フォーラム」を開催します。 【講演会】 事前申込制（先着） 会場参加 200人 オンライン参加250人",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000012738.html",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T19:53:06.427217Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "4ba1f068e48aefe7df44",
+      "title": "2026-002「品川区大井町駅周辺地区バリアフリー計画」に関する結果公表",
+      "summary": "「品川区大井町駅周辺地区バリアフリー計画」の作成に当たり、計画案に対する意見募集を行ったところ、22人の方から31件のご意見をいただきました。 令和8年6月1日(月)から令和8年6月30日(火)まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20260909152352.html",
+      "publishedAt": "2026-09-15T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T19:53:06.427217Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "大井",
+        "大井町駅"
+      ],
+      "relevanceScore": 18
+    },
+    {
+      "id": "877f1421f45549b9bb0b",
+      "title": "青物横丁にフットケア専門店「アルクスモア」 スポーツクラブ内にブース出店",
+      "summary": "「爪切りと足の専門店 アルクスモア 品川店」（品川区東品川4、TEL 070-9104-1070）が青物横丁エリアにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5077",
+      "publishedAt": "2026-09-14T10:45:55Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-14T13:07:09.798582Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "1c58b1ad6babbdbf6a61",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年9月14日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年9月14日号(令和8年9月7日～令和8年9月13日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63245.html",
+      "publishedAt": "2026-09-14T05:12:23.904554Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-14T05:12:23.904554Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "651567d587878853053c",
+      "title": "納付案内センターからのご案内",
+      "summary": "国保医療年金課収納係 電話：03-5742-6678 FAX：03-5742-6876",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-kenkouhoken/procedure-kenkouhoken-hokenryo/hpg000021698.html",
+      "publishedAt": "2026-09-14T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-13T16:31:46.062194Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "6d15a6a17cd0f3891d52",
+      "title": "【終了】天祖・諏訪神社 例大祭 2026",
+      "summary": "2026年9月16日（水）、18（金）～20日（日）、天祖・諏訪神社 例大祭が開催されます。 本年は二年に一度の「総町神輿（そうちょうみこし）」が行われる年です。18日の夜の宮出しでは、境内には十一町会の神輿が集まり、御分霊が各神輿へと遷された後、暗夜の中をそれぞれの町会へ向けて練り歩きます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/tensosuwa2026",
+      "publishedAt": "2026-09-12T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T23:24:24.003836Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "b604a3811087552e3b6b",
+      "title": "DYM MESSENGERS所属ダンサーが国内外の大会で相次ぎ優勝！ 世界的ダンスバトルやJAPAN DANCE DELIGHTなど6組が快挙",
+      "summary": "",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000527.000027235.html",
+      "publishedAt": "2026-09-11T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T16:38:34.936406Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "5d545a2e1b817943dfea",
+      "title": "武蔵小山のベーカリー「ヨシナカブレッド」が店舗ロゴ作成 創業73年目で初",
+      "summary": "武蔵小山のベーカリー「ヨシナカブレッド」（品川区小山2、TEL 03-3785-2628）が9月3日、創業73年で初めてオリジナル店舗ロゴを導入した。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5076",
+      "publishedAt": "2026-09-11T14:26:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T16:38:34.936406Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "小山"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "a67fb8962e409cfc1da0",
+      "title": "ふくしまつり開催（９/２６）に伴う休業のお知らせ",
+      "summary": "令和８年９月２６日（土）に障害者団体・福祉施設・ボランティア団体・民生員協議会など福祉関係者が一堂に会する「みんな集まれ！ふくしまつり２０２６」を開催します。 ふくしまつり開催に伴い、ボランティアセンターは１日休業とさせていただきます。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63140.html",
+      "publishedAt": "2026-09-11T04:55:28.961722Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "2df38cba873af59a2224",
+      "title": "「みんな集まれ！ふくしまつり２０２６」開催のお知らせ （終了ました）",
+      "summary": "「ふくしまつり」とは障害者団体・福祉施設、ボランティア団体、民生委員協議会など、福祉関係者が一堂に会する区内最大の福祉イベントです。模擬店、バザー、ステージ、体験コーナーなど、皆さんに喜んでいただけるような内容が盛りだくさんです。また、スポーツ室ではインクルーシブ盆踊りを今年は２部制で行います。わわわ！品川社協音頭はもちろんの事、様々な音楽で盆踊りを楽しみましょう。生歌演奏の盆踊りにもチャレンジ！是非、お誘いあわせの上、ご来場ください！ 日時：令和８年９月２６日（土）午前１…",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63060.html",
+      "publishedAt": "2026-09-11T04:55:28.961722Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "faca383d8fa668303951",
+      "title": "シアターH「Mother～特攻の母 鳥濱トメ物語～」",
+      "summary": "2026年10月21日（水）～10月25日（日）、シアターHにて舞台「Mother～特攻の母 鳥濱トメ物語～」が上演されます。 この作品は、鹿児島県南九州市知覧町郡に実在した「富屋食堂」を舞台に、特攻隊員たちから“母”と慕われ、戦後「特攻の母」と呼ばれた鳥濱トメの半生を描いたものです。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/mother",
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "c0a862a979d7cb4cc5e4",
+      "title": "第39回 しながわ夢さん橋2026",
+      "summary": "2026年10月10日（土）・11日（日）・12日（月祝）、大崎駅 南口東西自由通路及び大崎駅周辺にて「第39回 しながわ夢さん橋2026」が開催されます。 今年も盛大に元気に楽しく3日間開催！しながわ観光協会もブースを出展いたします。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawa-yume2026",
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎駅"
+      ],
+      "relevanceScore": 10
+    },
+    {
+      "id": "4c21ad23d6d280555081",
+      "title": "しろへびサミット in 蛇窪スネークタウン 2026",
+      "summary": "2026年9月19日(土)、20日（日）、 蛇窪神社 にてしろへびサミット in 蛇窪スネークタウンが開催されます。 9月19日（土） 13:00 サボテンブラザーズのフリオ 13:30 胡喋蘭 14:00 白蛇神楽 吉福社中 15:00 サボテンブラザーズのフリオ 16:00 富士見台中学校吹奏楽部 16:30 白蛇神楽 吉福社中 17:20 飛鳥とも美（歌手） 18:15 はやぶさ（歌手） 19:00 日本舞踊 20:00 SEGA SAMMY LUX（プロダンスチーム…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/sirohebisummit2026",
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "168c26536fdcae603a14",
+      "title": "蛇窪祭 2026",
+      "summary": "2026年9月18日（金）、19日（土）20日（日）、蛇窪神社にて例大祭「蛇窪祭」が開催されます。 9月18日（金） 19:00 蛇窪祭式典執行 21:00 神輿神霊遷し",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hebikubosai2026",
+      "publishedAt": "2026-09-11T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-11T04:55:28.961722Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "a4f68e5847079aef7747",
+      "title": "小学生のふでばこに、ある日とつぜん、「小さなおじいさん」があらわれた！／幼年童話『ふでばこじいさん』9月10日（木）発売！",
+      "summary": "[光村図書出版株式会社] 小・中・高等学校向けの教科書を発行する光村図書出版株式会社（所在地：東京都品川区、代表取締役 社長：吉田直樹）は、幼年童話『ふでばこじいさん』（もとしたいづみ 作／室木おすし 絵）を9月10日に発売いた...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000084.000073231.html",
+      "publishedAt": "2026-09-10T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T21:01:10.805654Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "f4afbecb48568f74573d",
+      "title": "韓国・大邱ソフトウェアマイスター高等学校が「Findy Team+」を導入！教育現場での採用は国内外で初。AI人材育成を加速する韓国の職業系高校で「チームで開発する力」の育成を支援",
+      "summary": "[ファインディ] エンジニアプラットフォームを提供するファインディ株式会社（東京都品川区、代表取締役：山田 裕一朗、以下 当社）は、韓国・大邱広域市の大邱ソフトウェアマイスター高等学校（대구소프트웨어마이스터고등학교...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000269.000045379.html",
+      "publishedAt": "2026-09-10T19:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T21:01:10.805654Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "3a4b61325b8132f0c787",
+      "title": "電子カルテシステム「PlusUs」における生成AIサービスの提供開始について",
+      "summary": "[ソフトマックス株式会社] 医療情報システムの開発・提供を行うソフトマックス株式会社（本社：東京都品川区、代表取締役：萩原 千恵子、以下「当社」）は、電子カルテシステム「PlusUs」で医療文書の作成や診療記録の要約等を支援する生成...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000004.000163440.html",
+      "publishedAt": "2026-09-10T18:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "57a79f8fb59f95760ed1",
+      "title": "武蔵小山に「鉄板焼酒場 小鉄」 鉄板焼きの調理を客に見せるスタイルで",
+      "summary": "「鉄板焼酒場 小鉄」（品川区小山3、TEL 03-6426-4390）が，武蔵小山商店街パルム近くにオープンして1カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5075",
+      "publishedAt": "2026-09-10T10:59:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-10T11:35:47.365946Z",
+      "tags": [
+        "地域イベント",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山商店街"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "68c36f8643051c55ec55",
+      "title": "Amazon.co.jp立ち上げを率いた長谷川純一氏が登壇。顧客起点の事業づくりと、プラットフォームによる成長の好循環を語る。",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年9月2日（水...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000526.000027235.html",
+      "publishedAt": "2026-09-09T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-09T04:56:12.792564Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "48b7768fc4667e4682f5",
+      "title": "「中延ねぶた祭り」開催へ 19回目、黒石市「境松ねぷた愛好会」の参加も",
+      "summary": "「第19回中延ねぶた祭り」が9月19日に中延エリアで開催される。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5074",
+      "publishedAt": "2026-09-09T06:13:26Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-09T11:37:17.100170Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延"
+      ],
+      "relevanceScore": 6
+    },
+    {
+      "id": "7d04452075c1b1235853",
+      "title": "【品川介護福祉専門学校】８月３０日オープンキャンパスを行いました！",
+      "summary": "夏休み最後の日曜日に、たくさんの方がオープンキャンパスに参加してくださいました！ ２回目以上のご参加の方もいらっしゃり、またお会いできたことが大変うれしいです。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-63183.html",
+      "publishedAt": "2026-09-09T04:56:12.792564Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-09T04:56:12.792564Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 6
+    },
+    {
+      "id": "e35a4e63876ac540ffe9",
+      "title": "【9/26限定】しながわクルーズ「しながわ宿場まつり特別便」",
+      "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9月26日（土）は、品川宿で開催される「しながわ宿場まつり」に合わせて、「しながわ宿場まつり特別便」が運航します。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawacruise2026shukuba",
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-09T11:37:17.100170Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "461aa6268fac142bd5d6",
+      "title": "氷川神社 例大祭",
+      "summary": "2026年9月11日 （金）～9月13日（日）、氷川神社 例大祭が開催されます。11日（金）の前夜祭・連合渡御から始まり、12日（土）祭典式、13日（日）には大神輿渡御が行われます。神賑行事として、桐若囃子、里神楽、浦安の舞なども実施されます。 【公式】しながわ観光協会 SHINAGAWA TOURISM ASSOCIATION [OFFICIAL](@shinagawonder)がシェアした投稿",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/hikawajinjyareitaisai2026",
+      "publishedAt": "2026-09-09T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-09T11:37:17.100170Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "972f5eb85827cdb3875d",
+      "title": "約10年ぶりに復活！次世代の写真家を世界へ送り出す「IMA Portfolio Review 2026」応募者募集開始",
+      "summary": "[株式会社アマナ] コミュニケーション変革をクリエイティブで実現する株式会社アマナ（本社：東京都品川区、代表取締役社長：金子剛章、以下「アマナ」）は、“LIVING WITH PHOTOGRAPHY”をコンセプトに雑誌やオンラインでアートフォ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000559.000040283.html",
+      "publishedAt": "2026-09-08T20:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-08T16:45:49.856635Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "a313606e28e0614f2f73",
+      "title": "【令和9年4月1日採用】応募者説明会を実施します",
+      "summary": "品川社協では現在、令和9年4月1日付採用職員を募集しています。 応募をお考えの方に、少しでも品川社協を知っていただく機会として、以下の3日間で説明会を開催いたします。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-49217.html",
+      "publishedAt": "2026-09-08T11:32:06.430299Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-08T11:32:06.430299Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "3f30e71ea2a0c9f35314",
+      "title": "『CHIeru Magazine (チエルマガジン)小学校・中学校版』2026秋冬号を刊行！ 全国の教職員や学校関係者に無料配布を開始",
+      "summary": "[チエル株式会社] 学校教育におけるICT利活用を支援するチエル株式会社（本社：東京都品川区、代表取締役：川居 睦）は、2026年10月1日（木）、学校教育現場のICT活性化マガジン『CHIeru Magazine（チエルマガジン）小学校・中学校...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000184.000067516.html",
+      "publishedAt": "2026-09-08T08:40:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-08T11:32:06.430299Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "c73d47196e58b6361fd7",
+      "title": "施設予約システムメンテナンスのお知らせ",
+      "summary": "デジタル推進課 情報推進担当（内部情報） 電話：03-5742-6618 FAX：03-5742-7164",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-bunka/shisetsuyoyaku/20260908112551.html",
+      "publishedAt": "2026-09-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-08T04:55:44.820519Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "0f7ef77bb30180cd3552",
+      "title": "西品川二・三丁目地区地区計画",
+      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/20251014165418.html",
+      "publishedAt": "2026-09-08T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-08-18T01:57:49.746937Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "西品川"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "14f99e822a19544ca347",
+      "title": "品川区、「子ども参観日」を初開催‐子どもの職業観育成と、職員のモチベーション向上目指して",
+      "summary": "[品川区] 品川区は8月19日、区役所で「子ども参観日」を行いました。 保護者（職員）の職場見学等を通して、職員の子どもの職業観を養うとともに、職員のモチベーション向上や家庭でのコミュニケーション機会の増加、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000242.000087362.html",
+      "publishedAt": "2026-09-07T20:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T20:53:56.430011Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "8dceb7af38a50bb914ff",
+      "title": "DYM MESSENGERS 第一生命D.LEAGUE26-27 SEASON新体制のお知らせ",
+      "summary": "[DYM] WEB事業や人材事業、海外医療事業等を行う株式会社 DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンスチーム「DYM MESSENGERS」（読み：ディーワイエム メッセン...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000524.000027235.html",
+      "publishedAt": "2026-09-07T15:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-07T19:18:03.625487Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "fbc30327c352ccb8deea",
+      "title": "目黒川をサウンドインスタレーション載せた船が往来 音楽ライブも",
+      "summary": "アートプロジェクト「Meguro River Night Ambience（メグロ・リバー・ナイト・アンビエンス）」（品川区小山5）が9月5日、目黒川で始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5072",
+      "publishedAt": "2026-09-07T12:30:43Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-07T19:18:03.625487Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "小山"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "3580325e6d02fa109d01",
+      "title": "【無料職業紹介所：サポしながわ】求人票一覧（令和8年9月7日号）を公開しました‼",
+      "summary": "★１２時～１３時は昼休みにより相談窓口でお待ちいただく場合がありますのでご了承願います★ 「新着求人」令和8年9月7日号(令和8年8月31日～令和8年9月6日)",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/09/post-62994.html",
+      "publishedAt": "2026-09-07T04:58:53.547385Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-09-07T04:58:53.547385Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "022bb9c294e2bb3a26eb",
+      "title": "品川区民まつり荏原第二地区会場『ふるさとまつり』開催のお知らせ",
+      "summary": "品川区民まつり荏原第二地区会場『ふるさとまつり』を開催します。 当日は、模擬店やゲームコーナーなど盛り沢山 皆さま、ぜひお越しください。 荏原第二地区ふるさとまつりチラシ(PDF : 417KB) 【模擬店】 焼きそば、磯辺焼、かき氷、フランクフルトなど美味しい模擬店がたくさんあります。 【イベント】 午後1時 荏原第六中学校 吹奏楽部 午後2時 荏原第五中学校 吹奏楽部 午後3時 盆踊り（自由参加） 【その他イベント】 児童センター・荏原第六中学校生徒によるゲームコーナー…",
+      "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-eba2/shisetsu-kuyakusyo-chiiki-eba2-oshirase/r8-furusato-matsuri-info.html",
+      "publishedAt": "2026-09-07T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-07T12:50:30.891813Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 14
+    },
+    {
+      "id": "ddaa9d77e1b146873079",
+      "title": "大成温調、本社を「OIMACHI TRACKS」へ移転",
+      "summary": "[大成温調株式会社] 大成温調株式会社（本社：東京都品川区、代表取締役 社長執行役員：水谷 憲一、以下、大成温調）は、2026年9月1日付で本社を「OIMACHI TRACKS BUSINESS TOWER」（東京都品川区広町）へ移転したことをお知らせいた...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000051.000098021.html",
+      "publishedAt": "2026-09-05T18:10:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T21:10:58.010277Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "広町"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "d205ca7c42c8e247ac27",
+      "title": "東五反田に焼き鳥居酒屋「炭火焼鳥くわどり」 大阪に10店舗、都内初出店",
+      "summary": "「炭火焼鳥くわどり 五反田店」（品川区東五反田1、TEL 03-5422-9937）が8月31日、五反田駅東口近くにオープンした。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5071",
+      "publishedAt": "2026-09-04T06:04:48Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T11:32:09.614198Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田",
+        "五反田駅"
+      ],
+      "relevanceScore": 16
+    },
+    {
+      "id": "c5415cca366ad7a37268",
+      "title": "令和8年8月福井豪雨 ふるさと納税による災害支援の代理寄附を開始",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/reiwahachinensakaishishien/20260903100340.html",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T11:32:09.614198Z",
+      "tags": [
+        "事件事故",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "98e5addbbfcc6e061f4f",
+      "title": "コンビニ交付サービス 休止日のお知らせ",
+      "summary": "デジタル推進課 情報推進担当（住基） 電話：03-5742-6619 FAX：03-5742-7164",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-mynumber/hpg000029341.html",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T11:32:09.614198Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "52b18889c8c79e4ca111",
+      "title": "令和８年度(９年度採用)品川区立学校教育職員採用候補者選考【第二次選考合格発表】",
+      "summary": "指導課 教職員人事係 電話：03-5742-6831 FAX：03-5742-6892 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20260903083637.html",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-04T04:49:53.314029Z",
+      "tags": [
+        "行政",
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "0e04e9da6208f916483d",
+      "title": "第3回品川区障害福祉計画等策定委員会開催のお知らせ（令和8年10月6日開催）",
+      "summary": "障害者施策推進課 計画推進係 電話：03-5742-6762 FAX：03-3775-2000",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/shogaifukushikeikaku/shogaifukushikeikaku/20260114153134.html",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "1ea6e2d72433c34a1679",
+      "title": "大森に「鉄板焼肉 大当り」 博多B級グルメ専門店、3店舗目",
+      "summary": "大衆居酒屋「鉄板焼肉 大当り 大森店」（南大井6、TEL03-6450-0329）が大森エリアにオープンして2カ月がたった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5070",
+      "publishedAt": "2026-09-03T09:31:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T11:28:57.417652Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "大井",
+        "南大井"
+      ],
+      "relevanceScore": 8
+    },
+    {
+      "id": "57d50c69d9d17177c42a",
+      "title": "【事後レポート】Dynagon×日本シグマックスによる「“酷暑対策”と“化学物質管理”の矛盾」に関する合同記者発表会",
+      "summary": "[株式会社Dynagon] 化学物質に起因した事故の根絶を目指してSDS（※1）関連サービスを展開する株式会社Dynagon（本社：東京都品川区、代表：坂本 晋悟）は、年々激しさを増す日本の酷暑を背景に、整形外科向けの医療機器やスポーツ...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000016.000155054.html",
+      "publishedAt": "2026-09-03T07:40:52Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T11:28:57.417652Z",
+      "tags": [
+        "事件事故",
+        "行政",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "e337152d21a8c87683c4",
+      "title": "大井新地 講談会 vol.26",
+      "summary": "2026年9月20日（日）、大井蔵王権現神社にて「大井新地 講談会 vol.26」が開催されます。 ※チケットのご予約、購入はインスタグラムのダイレクトメール、お電話（090-1813-7229/企画：ゼロメートル先）、またはイベントチラシの掲示してある大井新地（品川区大井1-21）の協力店にて。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/oikodan-26",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T16:34:59.995790Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "796ca194f956f7eebb2f",
+      "title": "下神明天祖神社 例大祭 2026",
+      "summary": "9月16日（水）、18日（金）19日（土）20日（日）、下神明天祖神社にて例大祭が行われます。 【祭礼予定】 9月16日（水） 16:00 稲荷社斎田抜穂祭",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shimoshinmeitensojinjyareitaisai2026",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T11:28:57.417652Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "836a27b0187b5d13c4be",
+      "title": "【終了】昭和通り商店会101周年『盆踊り大会』",
+      "summary": "2026年9月13日（日）、荏原中延駅近くの昭和通りにて『盆踊り大会』が開催されます。 盆踊りのリードは品川区内外で活躍する「 晴盆 」さん、 会場には、近隣の人気飲食店の屋台が並びます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/showa-bon2026",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T04:49:10.047310Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "中延",
+        "荏原",
+        "荏原中延駅",
+        "中延駅"
+      ],
+      "relevanceScore": 24
+    },
+    {
+      "id": "3dc9119c7e9163bba125",
+      "title": "高齢者のスマートフォン購入費補助金",
+      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "9552fe42dc84a987eedf",
+      "title": "BtoBサービス比較メディア「BIZNAVI byDYM」を正式リリース",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など、多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅、以下「DYM」）は、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000520.000027235.html",
+      "publishedAt": "2026-09-02T15:15:25Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-02T16:43:43.887789Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "da75b8b1283511190a61",
+      "title": "2022-003「第2期品川区子ども・若者計画」に関する結果公表",
+      "summary": "「第2期品川区子ども・若者計画」 の 作成に当たり、計画案に対する意見募集を行ったところ、38人の方から80件のご意見をいただきました。 令和4年11月11日(金)から令和4年12月9日(金)まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/202303031635.html",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T04:49:10.047310Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 12
+    },
+    {
+      "id": "cf3070d7a2893375eae4",
+      "title": "2023-005「住民基本台帳事務および地方税賦課徴収事務に関する特定個人情報保護評価書(全項目評価)の再評価案」に関する結果公表",
+      "summary": "「住民基本台帳事務および地方税賦課徴収事務に関する特定個人情報保護評価書(全項目評価)の再評価案」 の 作成に当たり、計画案に対する意見募集を行ったところ、1人の方から3件のご意見をいただきました。 令和5年12月1日(金)から令和5年12月21日(木)まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20240314141332.html",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T04:49:10.047310Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "47fc03e1b2131bbacdec",
+      "title": "2024-001「予防接種事務に関する特定個人情報保護評価書（全項目評価書）の再評価案」に関する結果公表",
+      "summary": "「予防接種事務に関する特定個人情報保護評価書（全項目評価書）の再評価案」 の 作成に当たり、計画案に対する意見募集を行ったところ、1人の方から3件のご意見をいただきました。 令和6年7月11日(木)から令和6年8月12日(月)まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zyouhoukoukai/kuseizyoho-zyouhoukoukai-pabukome/20241122112834.html",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-03T04:49:10.047310Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "68ebd725ff5007dee0c6",
+      "title": "【児童相談所】会計年度任用職員募集（一般事務・令和8年11月1日以降採用）",
+      "summary": "※ 令和8年11月1日以降の採用になりますので、ご了承ください。 令和8年9月2日（水）～令和8年9月16日（水）午後5時 電子申請による申込みを受け付けています。 （※郵送での申込みは受け付けていません。） 品川区電子申請サービスはこちら(別ウィンドウ表示)",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/bosyu/bosyu-syokuinbosyulink/20260902.html",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-02T04:49:56.785498Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "b62e32b94defe36818e7",
+      "title": "藤田医科大学での18F-FBPAを用いた特定臨床研究の開始",
+      "summary": "[住友重機械工業株式会社] 住友重機械工業株式会社（本社：東京都品川区、代表取締役社長：渡部敏朗、以下「当社」）は、2024年12月に学校法人藤田学園（愛知県豊明市、理事長：星長 清隆）らと 「BNCT（ホウ素中性子捕捉療法）による深部...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000153.000100192.html",
+      "publishedAt": "2026-09-01T17:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T18:40:37.378572Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "815d4470403d0d0d02c4",
+      "title": "一人一人の学びを支え、「読み」や「理解」に寄り添う／光村図書×筑波大学、デジタル教科書の支援機能に関する共同研究を開始",
+      "summary": "[光村図書出版株式会社] 光村図書出版株式会社（本社：東京都品川区、代表取締役社長：吉田直樹）と国立大学法人筑波大学（所在地：茨城県つくば市、学長：永田恭介、以下「筑波大学」）人間系丹治敬之准教授は、多様な子どもたちの学...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000082.000073231.html",
+      "publishedAt": "2026-09-01T13:40:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T14:13:12.177768Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "68845dd149bd6b98a5d2",
+      "title": "品川区が全世帯に電気・ガス料金4,000円支援 LINE申請で当日受け取りに",
+      "summary": "電気・ガス料金を1世帯当たり4,000円支給する「しながわ電気・ガス料金緊急支援事業」の申請受け付けが9月1日、始まった。 #品川経済新聞",
+      "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "sourceType": "rss",
+      "url": "http://shinagawa.keizai.biz/headline/5068",
+      "publishedAt": "2026-09-01T09:37:10Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T14:13:12.177768Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "c99c40bde6cf4fea8664",
       "title": "安否確認システムの入れ替えに関する実態調査 53.6%が「災害情報と連動した自動送信機能」を重視",
@@ -76,6 +7129,77 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
+    },
+    {
+      "id": "c98d4c66e51c1b9bbfce",
+      "title": "令和8年度秋季プレミアム付区内共通商品券",
+      "summary": "品川区商店街連合会 電話：03-5498-5931 FAX：03-5498-5933 地域産業振興課 商店街支援係 電話：03-5498-6332 FAX：03-3787-7961",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-syomono/sangyo-syomono-syogyo/20220325103036.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-18T11:32:40.029965Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "60a1d4de272749d45871",
+      "title": "【参加者募集】品川区制80周年 しながわシティラン2027（令和9年3月14日開催）",
+      "summary": "スポーツ推進課 スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/run/20240222144009.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-02T04:49:56.785498Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "b5b1ac98cd01202eb056",
+      "title": "【終了】Meguro River Night Ambience（目黒川ナイトアンビエンス）",
+      "summary": "2026年9月4日（金）～22日（火・祝） 目黒川沿い遊歩道、五反田ふれあい水辺広場を中心に「Meguro River Night Ambience」 が開催されます。 中心となるのは、アーティスト・國本怜（Ray Kunimoto）によるサウンドインスタレーション《KAZE — body》。風を受けて音を発する“音の彫刻”を載せた船が目黒川を往来し、川辺のサウンド、映像上映、ライブパフォーマンスとともに、都市と自然を「聴く」体験をつくります。イベントの詳しい内容は こちら",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/mrna",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T18:40:37.378572Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "27c5da6936e127864824",
+      "title": "【受付終了】ガイドしながわ「ガイドと歩く 鎌倉古道をたどる大井の歴史さんぽ」",
+      "summary": "2026年10月10日（土）、ガイドしながわによるガイドと歩くしながわとその周辺「鎌倉古道をたどる大井の歴史さんぽ」が開催されます。 縄文の大森貝塚から、中世の寺社、現代の大井町トラックスへ。悠久の大井を巡ります。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/guide-oi",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-01T18:40:37.378572Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 4
     },
     {
       "id": "b2b1d209dda35001ced3",
@@ -180,23 +7304,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-08-31T20:54:55.827675Z",
       "tags": [
         "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "cd538324c5cb0c4be763",
-      "title": "【しながわシティバスケットボール公式戦】10月2日（金）・3日（土） 親子25組50人をご招待",
-      "summary": "スポーツ推進課スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/sangyo-bunka-sports/20240110135206.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-31T20:54:55.827675Z",
-      "tags": [
-        "交通"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -310,25 +7417,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "0f7ef77bb30180cd3552",
-      "title": "西品川二・三丁目地区地区計画",
-      "summary": "木密整備推進課 木密整備担当 電話：03-5742-6925 FAX：03-5742-6756",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/20251014165418.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-18T01:57:49.746937Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "西品川"
-      ],
-      "relevanceScore": 4
-    },
-    {
       "id": "7e43a87d9921fb67a169",
       "title": "インクルーシブスポーツチャレンジデー(9月26日開催)",
       "summary": "スポーツ推進課インクルーシブスポーツ担当 電話：03-5742-3854 FAX：03-5742-6585",
@@ -346,18 +7434,35 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
-      "id": "dbe3cd7369c456dd28f3",
-      "title": "しながわ電気・ガス料金緊急支援事業【申請期間：9月1日～10月31日】",
-      "summary": "",
+      "id": "b89ae5af8cd1c50a029b",
+      "title": "高齢者歯科健康診査",
+      "summary": "令和元年度から6年度までの後期高齢者歯科健診の結果から、口腔に関する意識の向上や口腔健康の維持がフレイル予防に 極めて有効であることが確認されました。フレイルとは、加齢とともに筋力や運動機能、認知機能などの活力が低下する状態です。 【関連記事】オーラルフレイル フッ化物入り歯みがき剤を使用している人はフレイルになりにくい結果が出ています。 ご自分の歯を健康に保つためには、歯質を強化することが大切です。 日常のケアとして、フッ化物入りの歯みがき剤を取り入れましょう。 フッ化物…",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20260521143719.html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-koukikoureisyairyo/hpg11111111.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "collectedAt": "2026-08-05T07:34:37.995725Z",
       "tags": [
         "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "64080d59b64e7e43348a",
+      "title": "「細街路拡幅整備協議書（様式）」等の受付（令和8年7月1日から適用）",
+      "summary": "建築課 細街路担当 電話 03-5742-6772 FAX 03-5742-6898",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/kankyo-toshiseibi-shien-saigairokakuhuku/kankyo-toshiseibi-shien-saigairokakuhuku-yoko/20260728155902.html",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-31T15:54:35.184829Z",
+      "tags": [
+        "その他"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -387,23 +7492,6 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
       "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-mizube/hpg000024873.html",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "4e9c4ce1aa25196522e2",
-      "title": "女性相談員による総合相談（法律・DV・カウンセリング）",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-zinken/kuseizyoho-zinken-kyodosankaku/hpg000021243.html",
       "publishedAt": "2026-09-01T00:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-07-17T05:43:09.171245Z",
@@ -525,25 +7613,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 6
     },
     {
-      "id": "70c3c2946791fc087fc5",
-      "title": "旧荏原第四中学校跡地ＰＦＩ事業",
-      "summary": "企画経営部 企画課 政策推進担当 電話：03-5742-7863 FAX：03-5742-6870",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo/kuseizyoho-siryo-zaisei/kuseizyoho-siryo-zaisei-plan/20251027113427.html",
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-31T14:13:07.521277Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 6
-    },
-    {
       "id": "7bed8ba3b5bad3827de1",
       "title": "五反田 TOC「徳の市」",
       "summary": "2026年9月11日（金）、12日（土）、13日（日） の3日間 、 五反田 TOCビル にて「徳の市」が開催されます。 メーカー御売りが出品する直売ビックセール。 ファッション、雑貨、インテリア、食品など 約170店舗 が出店し、さまざまな商品がお得な価格で売り出されます。",
@@ -603,40 +7672,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
-      "id": "fa3cae7a0a275e978d61",
-      "title": "休日・夜間（平日・土曜日）の診療",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kyuzitsu/index.html",
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "19413da7c891952f8507",
-      "title": "羽田空港の機能強化について",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/haneda/hpg000023398.html",
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "5b8fff265a6efc9f45e8",
       "title": "終活専門家相談会を開催します",
       "summary": "司法書士による終活無料相談会（1人40分程度）を行います 日時：9月16日（水）午後1時30分～4時30分 会場：社会福祉協議会（大井1-14-1） 定員：３名（先着順） 申込方法：電話で9月11日までに品川成年後見センター（03-5718-7174）へ。",
@@ -677,7 +7712,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "bf5932747fb8c3d99be9",
-      "title": "戸越八幡神社 例大祭",
+      "title": "戸越八幡神社 例大祭 2026",
       "summary": "2026年9月12（土）・13日（日）、 戸越八幡神社 例大祭が開催されます。境内では、9月12日（土）に大祭式、9月13日（日）には奉納演芸が予定されています。 戸越八幡神社で、華やかな秋のお祭りを楽しんでみてはいかがでしょうか。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -825,24 +7860,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "48f4700ea5a87a18ab11",
-      "title": "こども未来ミーティング～みんなでつくろう！こどもの権利条例～",
-      "summary": "令和10年度の「（仮称）品川区こどもの権利条例」の制定に向けて、広く区民の皆様から意見をいただくため、今年度4回の区民ワークショップ「こども未来ミーティング」を開催します。 本ワークショップでは、こどもと大人が一緒にグループを作り、条例に盛り込む内容について、それぞれの経験・視点から話し合います。 区内在住・在学の「こども」と「大人」（年齢は問いません。） ※小学4年生以下の方は、保護者の同伴が必須となります。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kodomo/child_rights/20260604164736.html",
-      "publishedAt": "2026-08-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-01T08:48:26.899424Z",
-      "tags": [
-        "行政",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
       "id": "e0324acff032d8220ede",
       "title": "バスの日イベント2026 in大井競馬場",
       "summary": "2026年9月26日（土）、大井競馬場ウマイルスクエアにて「 バスの日イベント2026 in大井競馬場」が開催され ます。 車両撮影会や運転席での記念撮影のほか、マスコットキャラクターが勢ぞろいするステージイベント、グッズ販売など、お子様連れのご家族からバスファンまで楽しめる企画が盛りだくさんです。",
@@ -882,24 +7899,6 @@ window.SHINAGAWA_NEWS = {
         "きゅりあん"
       ],
       "relevanceScore": 14
-    },
-    {
-      "id": "3dc9119c7e9163bba125",
-      "title": "高齢者のスマートフォン購入費助成",
-      "summary": "スマートフォンを初めて購入する高齢者や、お持ちのスマートフォンが東京都公式アプリ「東京アプリ」に対応していない、または、NFC認証機能未対応の機種から買替えをする高齢者に対し、3万円を上限としてスマートフォン購入費用を補助します。 ※詳細が決まり次第、改めて区ホームページを更新します。 ※以下の内容は現時点での予定であり、変更となる可能性があります。 （1）購入日時点で品川区に住民登録がある方 （2）令和9年3月31日時点で満65歳以上である方 （3）区が指定する店舗におい…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-koureisya/20260610150954.html",
-      "publishedAt": "2026-08-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉",
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "e021d5506d13f3860ad4",
@@ -980,7 +7979,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "6a7013a186d29d28037d",
       "title": "「早川の大自然でフィールドサイエンスキャンプ」実施報告",
-      "summary": "大崎第二地域センター 電話：03-3492-2000 FAX：03-3492-2095",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -1046,23 +8045,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
-    },
-    {
-      "id": "19075d30a3e2e0e627c4",
-      "title": "令和8年度 しながわゼロカーボンアクション助成",
-      "summary": "環境課 環境管理係 電話：03-5742-6949 FAX：03-5742-6853",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-kankyo/kankyo-kankyo-zyosei/20250310125732.html",
-      "publishedAt": "2026-08-27T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-07T10:23:48.255849Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "53a157b7e809d8beb52c",
@@ -1386,7 +8368,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "822df1388bdec4f5dc7b",
-      "title": "【9/12,13限定】しながわクルーズ「天王洲周遊アートクルーズ」 2026/09/12(土), 2026/09/13(日) 遊ぶ 観る",
+      "title": "【終了：9/12,13限定】しながわクルーズ「天王洲周遊アートクルーズ」",
       "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、屋形船や観光船で巡る「しながわクルーズ」を年間を通じて運航しています。 9月12日（土）、13日（日）は、天王洲で開催されるアートイベント「 TENNOZ ART WEEK 2026 」に合わせ、天王洲を囲む運河でアートクルーズを運航します。ビルに描かれた大型壁画などを船上から鑑賞し、普段とは異なる視点で天王洲の街並みとアートをお楽しみいただけます。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -1596,7 +8578,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "0b0c05ad7b8209157c46",
       "title": "プロダンスチーム「DYM MESSENGERS」「SHIBUYA CITY FC」と合同スポンサー企業交流会を開催！",
-      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "summary": "",
       "source": "PR TIMES",
       "sourceId": "pr-times",
       "sourceType": "rss",
@@ -1632,7 +8614,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "dbb2da915a49979307f3",
       "title": "世代間交流事業「昔のあそびをしませんか」開催",
-      "summary": "大井第三地域センター 電話：03-3773-2000 FAX：03-3771-3735",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -2479,42 +9461,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
-      "id": "1cbad4981952da923fb9",
-      "title": "しながわボウルプロジェクト（自然と健康になれる食環境整備）",
-      "summary": "品川区保健所生活衛生課栄養管理担当 電話：03-5742-7124 FAX：03-5742-9104",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-eisei/kenkou-eisei-eiyoukanri/20260424223340.html",
-      "publishedAt": "2026-08-12T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-27T02:00:04.964019Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
-      "id": "3b02c62cbde230a675f7",
-      "title": "令和8年度庁舎広告(壁面ポスター)の第2次募集開始",
-      "summary": "掲載箇所は、下記ファイル(庁舎広告掲載箇所のご案内)をご覧ください。 庁舎広告掲載箇所のご案内（品川区役所3階平面図）(PDF : 723KB) 掲載場所の空き状況は、下記ファイルよりご確認ください。(令和8年7月21日現在) R8庁舎内広告受付状況(PDF : 44KB) 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-koho/kuseizyoho-koho-sonota/20251224115417.html",
-      "publishedAt": "2026-08-12T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-22T01:46:19.238621Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [
-        "品川区役所"
-      ],
-      "relevanceScore": 22
-    },
-    {
       "id": "34bd6cfd994803640b58",
       "title": "【終了】第26回「大崎コミックシェルター2026夏」",
       "summary": "2026年8月15日（土）、16日（日）、大崎駅南改札出口付近にて「大崎コミックシェルター2026 夏」が開催されます。お台場・国際展示場に全国から人が集結する「コミックマーケット」開催に合わせ、りんかい線・JR乗換駅となる大崎で「休憩場所＝シェルター」とおもてなしを提供する恒例イベントです。 イベントの最新情報は公式Xよりご確認ください。 https://x.com/osakicomishel",
@@ -2689,7 +9635,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "db321cfdabbce5f73614",
       "title": "協力会員募集説明会を開催します！",
-      "summary": "さわやかサービスの活動について写真などを使ってご説明します。 また、ご希望の方はその場で会員登録することもできます。",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -2836,7 +9782,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "b7d0726dec6ea1c7e9c8",
       "title": "大井第三地区「清流あそび」を実施",
-      "summary": "大井第三地域センター 電話：03-3773-2000 FAX：03-3771-3735",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -3316,7 +10262,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "eadc8c2bedad2ec109e0",
       "title": "令和8年熊本地震 ふるさと納税による災害支援の代理寄附を開始",
-      "summary": "税務課 ふるさと納税担当 電話03-5742-3857 FAX03-5742-7108",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -3533,23 +10479,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "b89ae5af8cd1c50a029b",
-      "title": "高齢者歯科健康診査",
-      "summary": "令和元年度から6年度までの後期高齢者歯科健診の結果から、口腔に関する意識の向上や口腔健康の維持がフレイル予防に 極めて有効であることが確認されました。フレイルとは、加齢とともに筋力や運動機能、認知機能などの活力が低下する状態です。 【関連記事】オーラルフレイル フッ化物入り歯みがき剤を使用している人はフレイルになりにくい結果が出ています。 ご自分の歯を健康に保つためには、歯質を強化することが大切です。 日常のケアとして、フッ化物入りの歯みがき剤を取り入れましょう。 フッ化物…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/procedure-koukikoureisyairyo/hpg11111111.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-05T07:34:37.995725Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "5f1544a68f321fef43c0",
       "title": "品川シルバー大学うるおい塾（秋期）受講生募集(令和8年8月13日午後5時まで)",
       "summary": "何か新しいことを始めたい、仲間と趣味を楽しみたい方など大募集 うるおい塾では、初心者向けの入門教室（各教室全10回）を開催します。 下記「令和8年度品川シルバー大学 うるおい塾（秋期）募集案内」「プログラム一覧」にて詳細をご確認の上、ご応募ください。 区内在住で、令和8年9月1日現在60歳以上の方 各教室20人程度（抽選） ※定員は教室によって異なります。",
@@ -3565,25 +10494,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 2
-    },
-    {
-      "id": "5ec7be4997a108ed82b0",
-      "title": "グリーフケア電話相談・遺族のつどい",
-      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/shinagawagriefcare2.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-08-03T09:22:28.623619Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 4
     },
     {
       "id": "0e6611abc3b198320c7d",
@@ -3675,42 +10585,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 4
     },
     {
-      "id": "877e45ac9a8423466279",
-      "title": "グリーフケア電話相談・遺族のつどい",
-      "summary": "荏原保健センター 電話：03-3788-7016 FAX：03-3788-7900 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-byouki/kenkou-byouki-kokorosoudan/shinagawagriefcare.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T15:54:35.184829Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "荏原"
-      ],
-      "relevanceScore": 4
-    },
-    {
-      "id": "64080d59b64e7e43348a",
-      "title": "「細街路拡幅整備協議書（様式）」等の変更（令和8年7月1日から適用）",
-      "summary": "建築課 細街路担当 電話 03-5742-6772 FAX 03-5742-6898",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-toshiseibi/kankyo-toshiseibi-shien/kankyo-toshiseibi-shien-saigairokakuhuku/kankyo-toshiseibi-shien-saigairokakuhuku-yoko/20260728155902.html",
-      "publishedAt": "2026-08-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-31T15:54:35.184829Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "04d381d9ef912d30d4cc",
       "title": "2026-004「第12次品川区交通安全計画（素案）」に対する意見募集",
       "summary": "区では、区内の交通安全対策を総合的・計画的に推進し、交通安全の更なる向上を図るため、「第12次品川区交通安全計画」を策定します。 本計画は、交通安全対策基本法に基づく計画であり、令和8年度から令和12年度までの5か年において、品川区および区内を管轄する関係行政機関等が実施する交通安全関連施策の大綱となるものです。 区民の皆さんから頂いたご意見を踏まえ、令和8年12月頃結果を公表する予定です。 「第12次品川区交通安全計画（素案）」の全文は、品川区ホームページ、地域交通政策課…",
@@ -3784,7 +10658,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "236991e4588a4fc91ae2",
       "title": "DYM MESSENGERS、CONVERSEの「CONS ACCELERATOR LOW」を着用したストリートムービーを7月30日に公開",
-      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
+      "summary": "",
       "source": "PR TIMES",
       "sourceId": "pr-times",
       "sourceType": "rss",
@@ -3879,7 +10753,7 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "id": "f6bb985bfd5c48aa47e2",
-      "title": "しながわ水族館「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」",
+      "title": "しながわ水族館「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」 2026/07/25(土) ~ 2026/12/25(金) 遊ぶ 観る 知る 大森海岸駅, 大森駅",
       "summary": "2026年7月25日（土）～12月25日（金）、 しながわ水族館 にて「エリック・カールと いのちの色ー同じ世界で、ちがう色ー」が開催されます。 今年10月に開館35周年を迎えるしながわ水族館と、世界的ベストセラー絵本「はらぺこあおむし」日本語版刊行50周年をあわせて記念する特別展。",
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
@@ -3912,23 +10786,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
-    },
-    {
-      "id": "0fa40ee5175e45d402f6",
-      "title": "介護をしている家族への支援",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kaigo1/hpg000002404.html",
-      "publishedAt": "2026-07-31T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 2
     },
     {
       "id": "731f59c4cd817ae0a070",
@@ -4050,7 +10907,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "7f8fed3bfe331bd4872e",
       "title": "知的・精神障害者（児）移動支援従業者養成研修の受講生募集",
-      "summary": "障害者支援課 事業者支援担当 電話：03-5742-7844 FAX：03-3775-2000",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -4086,7 +10943,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "9f2c02f2f75d60694bd0",
       "title": "「こんにちは国保基本健診」",
-      "summary": "国保医療年金課保健指導係 電話：03-5742-6902 FAX：03-5742-6876",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -4225,23 +11082,6 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-07-29T05:00:13.997606Z",
       "tags": [
         "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 8
-    },
-    {
-      "id": "064c6abf260eca5e4ffe",
-      "title": "ウェルビーイング・ＳＤＧｓ推進ファンド事業",
-      "summary": "ウェルビーイング・ＳＤＧｓ推進事業実行委員会事務局 （品川区企画経営部企画課内） 電話：03-5742-7864 FAX：03-5742-6870 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/sdgs/sdgsfundzigyou.html",
-      "publishedAt": "2026-07-29T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-28T23:51:47.393458Z",
-      "tags": [
-        "その他"
       ],
       "locations": [],
       "relevanceScore": 8
@@ -4410,23 +11250,6 @@ window.SHINAGAWA_NEWS = {
         "大井競馬場"
       ],
       "relevanceScore": 10
-    },
-    {
-      "id": "1e6eef794530f6c56cdc",
-      "title": "「あなた」と「しながわ」をつなぐふるさと納税",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-kihu/hpg000029194.html",
-      "publishedAt": "2026-07-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
     },
     {
       "id": "36ce439794a0bf7caf58",
@@ -5004,23 +11827,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 28
     },
     {
-      "id": "b74252e82496dafe6f61",
-      "title": "マイナンバーカードに関する各手続きについて（紛失、暗証番号ロック、電子証明書、住所・氏名変更など）",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/procedure/mynumbercard/202401268888.html",
-      "publishedAt": "2026-07-18T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "bd93f5a3fa1f5e212b8e",
       "title": "大井町で「マツケンサンバコンサート」開催へ 品川区民がダンサー出演",
       "summary": "きゅりあん（品川区東大井5）で10月10日に開催される品川文化振興事業団40周年記念公演「マツケンサンバコンサート2026」のチケット販売が、7月21日に始まる。 #品川経済新聞",
@@ -5270,7 +12076,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "a1ae65d2c4255e18e49a",
       "title": "協力会員募集説明会を開催します！",
-      "summary": "さわやかサービスの活動について写真などを使ってご説明します。 また、ご希望の方はその場で会員登録することもできます。",
+      "summary": "",
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
       "sourceType": "html",
@@ -5851,23 +12657,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
-      "id": "ea3a744a4dd308b003ed",
-      "title": "しながわ生活応援事業について",
-      "summary": "所得制限なし。全区民の皆様に1人1枚、一律5,000円相当のバニラVISAギフトカードをお配りいたします。 ポスターと一緒に貼られている「現金併用可」の朱書きの表示が、 品川区内の現金併用可能店舗 である目印です。 利用せず長期間保管していると、紛失のおそれがあります。 その場合、 カードの再発行はできません。大切に保管のうえ、お早めにご利用ください。 品川区内のうれしなカード利用可能店舗は こちら",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/20251222141006.html",
-      "publishedAt": "2026-07-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
       "id": "6f29b8df0827f646ccb9",
       "title": "品川＆早川ふるさと交流「稲刈り・サツマイモ堀り体験とお餅つきツアー」参加者募集",
       "summary": "・品川区民（品川区に在住・在勤・在学）限定。品川区に在勤・在学の方については、それを証明するもののコピー等が必ず必要となります。 証明ができない場合は、お申し込みができませんのでご注意ください。 ・自然災害等で中止とさせていただく場合があります。 総務課官民共創担当 電話03-5742-6856 FAX03-3774-6356",
@@ -6111,23 +12900,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 14
     },
     {
-      "id": "c0b57ca97a47ad3bb98b",
-      "title": "令和8年度（令和9年4月1日異動）公立小・中学校等教員の公募について",
-      "summary": "東京都区市町村立小・中・特別支援学校に勤務している正規教員の異動形態の一つです。 品川区教育委員会では、区部公立小中学校教員公募を実施します。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kukyoi/kukyoi-bosyu/20230926124056.html",
-      "publishedAt": "2026-07-10T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "4fee21b1381bbac1a891",
       "title": "MATSURI JAPAN 2026",
       "summary": "2026年8月8日（土）、9日（日）、TAKANAWA GATEWAY Convention Center LINKPILLAR Hallにて「MATSURI JAPAN 2026」（祭ジャパン2026）が開催されます。 ステージでは、北海道のYOSAKOIソーラン祭り、山形の黒獅子まつり、島根の石見神楽、沖縄のエイサーなど、全国の祭りが次々と登場。都心にいながら、迫力ある伝統芸能を“体感”できる貴重な機会です。 今年は、鳥取のしゃんしゃん傘踊りや島根の石見神楽東京社中など…",
@@ -6250,24 +13022,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "0e04e9da6208f916483d",
-      "title": "第2回品川区障害福祉計画等策定委員会開催のお知らせ（令和8年8月4日開催）",
-      "summary": "障害者施策推進課 計画推進係 電話：03-5742-6762 FAX：03-3775-2000",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kenkou/kenkou-syogai/shogaifukushikeikaku/shogaifukushikeikaku/20260114153134.html",
-      "publishedAt": "2026-07-08T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "44d4738a2d7db9a57fa2",
@@ -6446,7 +13200,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "7ccd4a65450a3ed6c15f",
       "title": "令和8年度品川区民まつり（大崎第二地区）を開催",
-      "summary": "大崎第二地域センター 電話：03-3492-2000 FAX：03-3492-2095",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -6536,23 +13290,6 @@ window.SHINAGAWA_NEWS = {
       "tags": [
         "福祉",
         "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "b9f20bc7abb09cdfa856",
-      "title": "【8月3日（月）開催】しながわシティ公式戦に親子25組50人をご招待",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/sangyo/sangyo-bunka/20260507103832.html",
-      "publishedAt": "2026-07-01T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "地域イベント"
       ],
       "locations": [],
       "relevanceScore": 0
@@ -6666,7 +13403,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "964d117ffb414badb3d6",
       "title": "きせつ風(品川第二地域ニュース)令和8年7月号 No.245",
-      "summary": "品川第二地域センター 電話：03-3472-2000 FAX：03-3472-2058 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -6700,7 +13437,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "7ce40649df45d103119a",
       "title": "てのひら(ボランティア情報紙)2026年夏号",
-      "summary": "品川第二地域センター 電話：03-3472-2000 FAX：03-3472-2058 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
+      "summary": "",
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
       "sourceType": "html",
@@ -7549,13 +14286,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "status": "ok",
-      "scanned": 5,
+      "scanned": 4,
       "accepted": 0
     },
     {
       "source": "東京消防庁",
       "status": "ok",
-      "scanned": 139,
+      "scanned": 142,
       "accepted": 0
     },
     {
@@ -7566,14 +14303,14 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "ok",
-      "scanned": 550,
-      "accepted": 1
+      "status": "error",
+      "accepted": 0,
+      "message": "not well-formed (invalid token): line 2705, column 36"
     },
     {
       "source": "朝日新聞",
       "status": "ok",
-      "scanned": 38,
+      "scanned": 40,
       "accepted": 0
     },
     {
@@ -7592,7 +14329,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
@@ -7609,13 +14346,13 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 報道発表",
       "status": "ok",
-      "scanned": 8,
+      "scanned": 11,
       "accepted": 0
     },
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 28,
+      "scanned": 41,
       "accepted": 0
     },
     {
@@ -7631,15 +14368,15 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "品川区 新着情報",
-      "status": "ok",
-      "scanned": 40,
-      "accepted": 40
+      "status": "error",
+      "accepted": 0,
+      "message": "HTTP Error 404: Not Found"
     },
     {
       "source": "品川区 地域センター新着情報",
       "status": "ok",
-      "scanned": 30,
-      "accepted": 30
+      "scanned": 0,
+      "accepted": 0
     },
     {
       "source": "品川区社会福祉協議会",
@@ -7650,8 +14387,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "しながわ観光協会",
       "status": "ok",
-      "scanned": 13,
-      "accepted": 13
+      "scanned": 14,
+      "accepted": 14
     }
   ]
 };
