@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-17T10:22:46.471496Z",
+  "generatedAt": "2026-11-17T23:57:09.959506Z",
   "events": [
     {
       "id": "8c8e2e66944f32bfab29",
@@ -1503,28 +1503,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-08-25"
     },
     {
-      "id": "50410fbcb69b4a1ce52d",
-      "title": "8月26日開催の委員会の結果を掲載。",
-      "summary": "8月26日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20763.html",
-      "sourceId": "news",
-      "source": "品川区議会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-08-26"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "品川区議会",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "cb4d1ef17f4e512f75b1",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-26"
-    },
-    {
       "id": "e9f2638029e366cf50a4",
       "title": "公共施設等整備特別委員会",
       "summary": "○新庁舎および大井町駅周辺地区に関すること ○都市部の住まいに関すること",
@@ -1546,28 +1524,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-08-26"
     },
     {
-      "id": "0ee8e762a2d853145875",
-      "title": "8月27日開催の委員会の結果を掲載。",
-      "summary": "8月27日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20786.html",
-      "sourceId": "news",
-      "source": "品川区議会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-08-27"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "品川区議会",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "457bae5618a40808692f",
-      "startDate": "2026-08-27",
-      "endDate": "2026-08-27"
-    },
-    {
       "id": "cdbb3d4810318477aba9",
       "title": "議会運営委員会",
       "summary": "○品川区選挙管理委員および同補充員の任期満了について ○令和９年度予算（議会費）について ○令和８年第３回定例会について ○広報会議からの報告事項について ○その他",
@@ -1587,51 +1543,6 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "published",
       "startDate": "2026-08-27",
       "endDate": "2026-08-27"
-    },
-    {
-      "id": "53da0ffdeff57d0bf75e",
-      "title": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業および鉄道付属街路事業と戸越公園駅の交通広場整備事業",
-      "summary": "東急電鉄大井町線（戸越公園駅付近）連続立体交差事業及び鉄道付属街路事業と戸越公園駅交通広場整備事業について、用地補償説明会を開催いたします。 日程 令和8年8月28日（金） 午後7時00分～午後8時30分（開場午後6時30分） 令和8年8月29日（土） 午後1時30分～午後3時00分（開場午後1時00分） ※両日とも説明内容は同じです。 会場 荏原第五地域センター第一集会室 （品川区二葉1丁目1番2号） 定員 各回100名 ※事前申し込み制となっております。 用地補償説明会…",
-      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/toshiseibi/1004415/1004422.html",
-      "sourceId": "news",
-      "source": "品川区 新着情報",
-      "category": "地域イベント",
-      "dates": [
-        "2026-08-28",
-        "2026-08-29"
-      ],
-      "startTime": "19:00",
-      "endTime": "20:30",
-      "timeText": "",
-      "place": "二葉 荏原 大井 戸越 戸越公園駅 戸越公園",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "8fe7f0e92a45a393f2af",
-      "startDate": "2026-08-28",
-      "endDate": "2026-08-29"
-    },
-    {
-      "id": "2d10e7e8b641f1c80670",
-      "title": "戸越銀座に猫カフェ「ファボキャット」 ミヌエットなどの猫が在籍",
-      "summary": "猫カフェ・ショップ「favcat（ファボキャット）」（品川区豊町1、TEL 050-1972-1128）が8月29日、戸越銀座商店街の銀六会ゾーンにオープンした。 #品川経済新聞",
-      "url": "http://shinagawa.keizai.biz/headline/5067",
-      "sourceId": "news",
-      "source": "品川経済新聞",
-      "category": "地域イベント",
-      "dates": [
-        "2026-08-29"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "豊町 戸越 戸越銀座商店街",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "2d5ac76e68b3f6c40ebf",
-      "startDate": "2026-08-29",
-      "endDate": "2026-08-29"
     },
     {
       "id": "08d3cc1445bce43be896",
@@ -1742,28 +1653,6 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "official",
       "startDate": "2026-09-03",
       "endDate": "2027-03-27"
-    },
-    {
-      "id": "f34649149ffe73f5ee65",
-      "title": "【終了】Meguro River Night Ambience（目黒川ナイトアンビエンス）",
-      "summary": "2026年9月4日（金）～22日（火・祝） 目黒川沿い遊歩道、五反田ふれあい水辺広場を中心に「Meguro River Night Ambience」 が開催されます。 中心となるのは、アーティスト・國本怜（Ray Kunimoto）によるサウンドインスタレーション《KAZE — body》。風を受けて音を発する“音の彫刻”を載せた船が目黒川を往来し、川辺のサウンド、映像上映、ライブパフォーマンスとともに、都市と自然を「聴く」体験をつくります。イベントの詳しい内容は こちら",
-      "url": "https://shinagawa-kanko.or.jp/event/mrna",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-04"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "b5b1ac98cd01202eb056",
-      "startDate": "2026-09-04",
-      "endDate": "2026-09-04"
     },
     {
       "id": "356504ef6617f4a51c39",
@@ -1938,28 +1827,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2027-03-04"
     },
     {
-      "id": "c23af40c1f2eb5ad33ed",
-      "title": "五反田 TOC「徳の市」",
-      "summary": "2026年9月11日（金）、12日（土）、13日（日） の3日間 、 五反田 TOCビル にて「徳の市」が開催されます。 メーカー御売りが出品する直売ビックセール。 ファッション、雑貨、インテリア、食品など 約170店舗 が出店し、さまざまな商品がお得な価格で売り出されます。",
-      "url": "https://shinagawa-kanko.or.jp/event/toctokunoichi202609",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-11"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "7bed8ba3b5bad3827de1",
-      "startDate": "2026-09-11",
-      "endDate": "2026-09-11"
-    },
-    {
       "id": "9f311c1e708c5b290323",
       "title": "氷川神社 例大祭",
       "summary": "2026年9月11日 （金）～9月13日（日）、氷川神社 例大祭が開催されます。11日（金）の前夜祭・連合渡御から始まり、12日（土）祭典式、13日（日）には大神輿渡御が行われます。神賑行事として、桐若囃子、里神楽、浦安の舞なども実施されます。 【公式】しながわ観光協会 SHINAGAWA TOURISM ASSOCIATION [OFFICIAL](@shinagawonder)がシェアした投稿",
@@ -1983,27 +1850,25 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-09-13"
     },
     {
-      "id": "4feac2548ed3a6bd7d7d",
-      "title": "終活専門家相談会を開催します",
-      "summary": "司法書士による終活無料相談会（1人40分程度）を行います 日時：9月16日（水）午後1時30分～4時30分 会場：社会福祉協議会（大井1-14-1） 定員：３名（先着順） 申込方法：電話で9月11日までに品川成年後見センター（03-5718-7174）へ。",
-      "url": "https://shinashakyo.jp/news/2026/08/post-62543.html",
-      "sourceId": "news",
-      "source": "品川区社会福祉協議会",
-      "category": "地域イベント",
+      "id": "18cc65e2957c1a3695c4",
+      "title": "しながわクルーズ 9・10・11月",
+      "summary": "2026年9月12日(土)、13日(日)、10月31日(土)、11月1日(日)、21日(土)、22日(日) 料金 大人:2,000円~4,500円 小学生~高校生(18歳になる年度の3/31まで):1,000円~2,500円 ※未就学児は、大人1名につき1名は無料 電話番号 一般社団法人 天王洲・キャナルサイド活性化",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawacruise202609/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
       "dates": [
-        "2026-09-11",
-        "2026-09-16"
+        "2026-09-12"
       ],
-      "startTime": "13:30",
-      "endTime": "16:30",
-      "timeText": "",
-      "place": "大井",
+      "startTime": "",
+      "endTime": "",
+      "timeText": "2026年9月12日(土)、13日(日)、10月31日(土)、11月1日(日)、21日(土)、22日(日) 料金 大人:2,000円~4,500円 小学生~高校",
+      "place": "",
       "application": "",
       "deadline": "",
-      "confidence": "estimated",
-      "newsId": "5b8fff265a6efc9f45e8",
-      "startDate": "2026-09-11",
-      "endDate": "2026-09-16"
+      "confidence": "published",
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-12"
     },
     {
       "id": "b5dd11ca9b2e0fb9d695",
@@ -2042,51 +1907,6 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "official",
       "startDate": "2026-09-12",
       "endDate": "2027-03-28"
-    },
-    {
-      "id": "1de5194509c0f818d7e0",
-      "title": "品川区民芸術祭 品川アーティスト展2026",
-      "summary": "2026年9月12日（土）・13日（日）、きゅりあんにて「品川区民芸術祭 品川アーティスト展2026」が開催されます。 今年で18回目をむかえる、子どもから大人まで楽しめるアートイベント！ 品川ゆかりアーティストによる作品展示、アート体験のほか、ファミリーコンサートなど、楽しい企画がいっぱい。 特設フォトスポットでは毎年好評の”しなーと”と”シナガワン”とのコラボ撮影会も実施予定！",
-      "url": "https://shinagawa-kanko.or.jp/event/artist2026",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-12"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "きゅりあん",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "107f06b55f761dd1069b",
-      "startDate": "2026-09-12",
-      "endDate": "2026-09-12"
-    },
-    {
-      "id": "6ba032ce9ad1b95d58ac",
-      "title": "戸越八幡神社 例大祭 2026",
-      "summary": "2026年9月12（土）・13日（日）、 戸越八幡神社 例大祭が開催されます。境内では、9月12日（土）に大祭式、9月13日（日）には奉納演芸が予定されています。 戸越八幡神社で、華やかな秋のお祭りを楽しんでみてはいかがでしょうか。",
-      "url": "https://shinagawa-kanko.or.jp/event/togoshireitaisai2026",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-12",
-        "2026-09-13"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "戸越",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "bf5932747fb8c3d99be9",
-      "startDate": "2026-09-12",
-      "endDate": "2026-09-13"
     },
     {
       "id": "792543ecd7005b57faee",
@@ -2892,28 +2712,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-09-26"
     },
     {
-      "id": "5c72bb340d11015d62ef",
-      "title": "バスの日イベント2026 in大井競馬場",
-      "summary": "2026年9月26日（土）、大井競馬場ウマイルスクエアにて「 バスの日イベント2026 in大井競馬場」が開催され ます。 車両撮影会や運転席での記念撮影のほか、マスコットキャラクターが勢ぞろいするステージイベント、グッズ販売など、お子様連れのご家族からバスファンまで楽しめる企画が盛りだくさんです。",
-      "url": "https://shinagawa-kanko.or.jp/event/busfes2026",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-26"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "大井 大井競馬場",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "e0324acff032d8220ede",
-      "startDate": "2026-09-26",
-      "endDate": "2026-09-26"
-    },
-    {
       "id": "74617287990cdb4e0bf8",
       "title": "北品川本通り商店会「第7回 しながわ宿場ナイト」",
       "summary": "2026年9月26日（土）、北品川本通り商店会エリアで第7回目の「しながわ宿場ナイト」が開催されます。 旧東海道沿いの今も宿場町の面影を残す北品川本通り商店会エリアに、江戸風俗衣装を着た人々が出没し、商店街を盛り上げます。協力店舗は赤いちょうちんが目印です。",
@@ -2976,28 +2774,6 @@ window.SHINAGAWA_EVENTS = {
       "deadline": "",
       "confidence": "estimated",
       "newsId": "291bb50939219d393243",
-      "startDate": "2026-09-26",
-      "endDate": "2026-09-26"
-    },
-    {
-      "id": "771677d978da4412742f",
-      "title": "第33回 しながわ宿場まつり",
-      "summary": "2026年9月26日（土）・27日（日）、品川宿にて、33回目となる「しながわ宿場まつり」が開催されます。 江戸時代、東海道一の宿として栄えた品川。その伝統と文化を若い世代に伝え地域の発展をめざして始まったのが「しながわ宿場まつり」。しながわ宿場まつり行列をはじめステージや物産展、模擬店などイベントが盛りだくさんです。",
-      "url": "https://shinagawa-kanko.or.jp/event/shukubamatsuri2026",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-26"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "46062a765612006c5c73",
       "startDate": "2026-09-26",
       "endDate": "2026-09-26"
     },
@@ -3159,49 +2935,34 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-09-29"
     },
     {
-      "id": "e45a717a835bc2e3d9cc",
+      "id": "b5cc403af20d3d0c1911",
       "title": "JR東日本 謎解き宝探し「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」",
-      "summary": "2026年9月30日（水）～2027年3月22日（月）、謎解き宝探し「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」が開催されます。 本イベントは、広域品川圏の5駅（大井町駅・品川駅・高輪ゲートウェイ駅・田町駅・浜松町駅）を巡りながら楽しむ、体験型の謎解きイベント。街歩きと謎解き宝探しを組み合わせた新しい周遊型イベントです。",
-      "url": "https://shinagawa-kanko.or.jp/event/greatershinagawa-nazo",
-      "sourceId": "news",
+      "summary": "2026年9月30日(水)~2027年3月22日(月) 開催場所 広域品川圏5駅 (JR浜松町駅・田町駅・高輪ゲートウェイ駅・品川駅・大井町駅) 料金 参加無料 URL 備考 ※イベントの詳細は公式ホームページにてご確認",
+      "url": "https://shinagawa-kanko.or.jp/event/greatershinagawa-nazo/",
+      "sourceId": "kanko",
       "source": "しながわ観光協会",
-      "category": "地域イベント",
+      "category": "文化・観光・スポーツ",
       "dates": [
         "2026-09-30",
         "2027-03-22"
       ],
       "startTime": "",
       "endTime": "",
-      "timeText": "",
-      "place": "大井 大井町駅",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "ceb17d0ef5b09de83d18",
-      "startDate": "2026-09-30",
-      "endDate": "2027-03-22"
-    },
-    {
-      "id": "808c20e0d995f3579f1d",
-      "title": "令和８年度秋季品川区囲碁大会 参加者募集 （募集締切：９月30日）",
-      "summary": "1． 住所 2． 氏名(フリガナ) 3. 中学生以下 の場合は保護者 氏名 4． 年齢 5． 電話番号・FAX番号 6． 棋力[段・級の自己申告可] ※お預かりした個人情報は、主催者および運営団体で共有し、参加者への連絡・受付のため使用いたします。 また、当課のイベントと囲碁イベントのご案内を送付する場合もございます。 なお、大会の模様は「ケーブルテレビ品川」での放映および区のホームページ等に掲載される場合がございますので、ご理解とご協力をお願いいたします。",
-      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkageijutsu/1003658/1003663.html",
-      "sourceId": "news",
-      "source": "品川区 新着情報",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-30"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
+      "timeText": "2026年9月30日(水)~2027年3月22日(月) 開催場所 広域品川圏5駅 (JR浜松町駅・田町駅・高輪ゲートウェイ駅・品川駅・大井町駅) 料金 参加無料",
       "place": "",
       "application": "",
       "deadline": "",
-      "confidence": "estimated",
-      "newsId": "fb333fda39962c20da89",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/greatershinagawa-nazo",
+          "title": "JR東日本 謎解き宝探し「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」"
+        }
+      ],
       "startDate": "2026-09-30",
-      "endDate": "2026-09-30"
+      "endDate": "2027-03-22"
     },
     {
       "id": "98883e8df2c05dbd95b6",
@@ -3279,32 +3040,25 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-25"
     },
     {
-      "id": "336fc5a27509613819dd",
+      "id": "eb29a4ff44068d351cfe",
       "title": "しながわ観光大使 ”見習い” ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー",
-      "summary": "2026年10月1日(木)~11月15日(日) 開催場所 品川区内のイベント会場(上記1~4)、福井県坂井市アンテナショップ(上記5) 料金 参加費無料 イベントカレンダー一覧に戻る 周辺スポット スポット エキゾチックカフェ「CBC(シービーシー)」武蔵小山 2024年3月22日 武蔵小山・使い勝手のよいエスニック",
-      "url": "https://shinagawa-kanko.or.jp/event/ryoma-hoyamaru/",
-      "sourceId": "kanko",
+      "summary": "2026年10月1日（木）～11月15日（日）、「しながわ観光大使 ”見習い” ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー」が開催されます。 品川区内で行われる期間限定のイベント会場や、品川区と連携協定を結んでいる福井県坂井市のアンテナショップなどを巡りながらスタンプを集め、品川区・坂井市の魅力を感じられるスタンプラリー。3個以上のスタンプを集め、専用はがきで応募すると、坂井市の特産品グルメ10,000円相当などが当たる抽選に参加できます。",
+      "url": "https://shinagawa-kanko.or.jp/event/ryoma-hoyamaru",
+      "sourceId": "news",
       "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
+      "category": "地域イベント",
       "dates": [
         "2026-10-01",
         "2026-11-15"
       ],
       "startTime": "",
       "endTime": "",
-      "timeText": "2026年10月1日(木)~11月15日(日) 開催場所 品川区内のイベント会場(上記1~4)、福井県坂井市アンテナショップ(上記5) 料金 参加費無料 イベン",
+      "timeText": "",
       "place": "",
       "application": "",
       "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/ryoma-hoyamaru",
-          "title": "しながわ観光大使 ”見習い” ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー"
-        }
-      ],
+      "confidence": "estimated",
+      "newsId": "eda97869c79126a6f680",
       "startDate": "2026-10-01",
       "endDate": "2026-11-15"
     },
@@ -3764,46 +3518,31 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-10"
     },
     {
-      "id": "d29e05aa4f42b57a3423",
-      "title": "【受付終了】ガイドしながわ「ガイドと歩く 鎌倉古道をたどる大井の歴史さんぽ」",
-      "summary": "2026年10月10日（土）、ガイドしながわによるガイドと歩くしながわとその周辺「鎌倉古道をたどる大井の歴史さんぽ」が開催されます。 縄文の大森貝塚から、中世の寺社、現代の大井町トラックスへ。悠久の大井を巡ります。",
-      "url": "https://shinagawa-kanko.or.jp/event/guide-oi",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-10"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "大井",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "27c5da6936e127864824",
-      "startDate": "2026-10-10",
-      "endDate": "2026-10-10"
-    },
-    {
-      "id": "d3b0fa6bfedda0536d26",
+      "id": "827e49984b2028c091a5",
       "title": "【終了】「秋の運河花火まつり2026」 in しながわ水辺の観光フェスタ 2026",
-      "summary": "2026年10月10日（土）、11日（日）、東品川海上公園および天王洲公園にて「秋の運河花火まつり」in しながわ水辺の観光フェスタ 2026 が開催されます。 飲食ブース、屋台、ステージパフォーマンス、移動動物園など楽しい企画が盛りだくさんです。",
-      "url": "https://shinagawa-kanko.or.jp/event/ungahanabi2026",
-      "sourceId": "news",
+      "summary": "2026年10月10日(土)、11日(日) 10日(土)11:00~21:00 11日(日)11:00~15:00 開催場所 東品川海上公園および天王洲公園 交通アクセス りんかい線・東京モノレール 天王洲アイル駅 徒歩5分 京急線 新馬場駅 徒歩10分 URL 備考 ※10",
+      "url": "https://shinagawa-kanko.or.jp/event/ungahanabi2026/",
+      "sourceId": "kanko",
       "source": "しながわ観光協会",
-      "category": "地域イベント",
+      "category": "文化・観光・スポーツ",
       "dates": [
         "2026-10-10"
       ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "東品川 天王洲",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "timeText": "2026年10月10日(土)、11日(日) 10日(土)11:00~21:00 11日(日)11:00~15:00 開催場所 東品川海上公園および天王洲公園 交",
+      "place": "",
       "application": "",
       "deadline": "",
-      "confidence": "estimated",
-      "newsId": "3f19438d60abb837ae54",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/ungahanabi2026",
+          "title": "【終了】「秋の運河花火まつり2026」 in しながわ水辺の観光フェスタ 2026"
+        }
+      ],
       "startDate": "2026-10-10",
       "endDate": "2026-10-10"
     },
@@ -4239,35 +3978,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-23"
     },
     {
-      "id": "ae768ff9166719e34278",
-      "title": "【終了】品川 港南「東京食肉市場まつり 2026」",
-      "summary": "2026年10月17日(土)、18日(日) 17日:10:00~16:00 18日:10:00~15:00 ※入場は、各日終了時間の30分前まで 開催場所 東京都中央卸売市場食肉市場 東京都港区港南2-7-19 交通アクセス JR 品川駅 港南口 徒歩3分 料金 入場無料 URL",
-      "url": "https://shinagawa-kanko.or.jp/event/nikumatsuri2026/",
-      "sourceId": "kanko",
-      "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-10-17"
-      ],
-      "startTime": "10:00",
-      "endTime": "16:00",
-      "timeText": "2026年10月17日(土)、18日(日) 17日:10:00~16:00 18日:10:00~15:00 ※入場は、各日終了時間の30分前まで 開催場所 東京",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/nikumatsuri2026",
-          "title": "品川 港南「東京食肉市場まつり 2026」"
-        }
-      ],
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17"
-    },
-    {
       "id": "cf8ed90355c0171bbee5",
       "title": "【終了】大井町トラックス「第2回 鉄道FESTA！」",
       "summary": "2026年10 月17 日（土）、OIMACHI TRACKS内、TRACKS PARK にて「第2回 鉄道FESTA」が開催されます。 今年4月に大盛況に終わった「鉄道FESTA！」が、さらにパワーアップ。今回は、大井町にゆかりのあるJR東日本、JR東日本ステーションサービス、東急電鉄、東京臨海高速鉄道の4社が大集合して、鉄道の魅力を楽しく体験できるイベントを開催します。",
@@ -4333,6 +4043,28 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-17"
     },
     {
+      "id": "d9c69df90aea7652f462",
+      "title": "品川 港南「東京食肉市場まつり 2026」",
+      "summary": "2026年10月17日（土）、18日（日）、東京都中央卸売市場食肉市場にて「東京食肉市場まつり2026」が開催されます。 今年で45回目の開催となる「東京食肉市場まつり2026」は、国内産の牛肉・豚肉の消費拡大、市場の存在についての認知と役割の理解促進、また「ブランド牛は、おいしくて安心」のイメージ確立を目的に、市場を年に一度だけ特別に開放し、開催するお肉のフェスティバルです。",
+      "url": "https://shinagawa-kanko.or.jp/event/nikumatsuri2026",
+      "sourceId": "news",
+      "source": "しながわ観光協会",
+      "category": "地域イベント",
+      "dates": [
+        "2026-10-17"
+      ],
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "c93e091c41461e677567",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17"
+    },
+    {
       "id": "331390f0ffb3d53aa192",
       "title": "info＆cafe SQUARE「ボードゲームで学ぶ」",
       "summary": "2026年10月18日（日）、スクエア荏原1階 info＆cafe SQUARE（インフォアンドカフェスクエア）にて「ボードゲームで学ぶ」が開催されます。 世界のボードゲームの中から厳選した、誰でもできるボードゲームが10種類以上！無料で体験できます。",
@@ -4377,6 +4109,35 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-18"
     },
     {
+      "id": "826da08503d28d2fa101",
+      "title": "【終了】エコルとごし「エコルフェス -2026 AUTUMN-」",
+      "summary": "2026年10月18日(日) 10:00~15:30 ※小雨決行 (荒天の場合、戸越公園内のイベントは中止) 開催場所 エコルとごしおよび戸越公園 品川区豊町2-1-30 交通アクセス 東急大井町線 戸越公園駅・下神明駅 徒歩7分 都営浅草線 戸越駅 徒歩12分 東急池上線 戸越銀座駅 徒歩15分 料金 入場無料 ※",
+      "url": "https://shinagawa-kanko.or.jp/event/ecorufes2026autumn/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-10-18"
+      ],
+      "startTime": "10:00",
+      "endTime": "15:30",
+      "timeText": "2026年10月18日(日) 10:00~15:30 ※小雨決行 (荒天の場合、戸越公園内のイベントは中止) 開催場所 エコルとごしおよび戸越公園 品川区豊町2",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/ecorufes2026autumn",
+          "title": "エコルとごし「エコルフェス -2026 AUTUMN-」"
+        }
+      ],
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18"
+    },
+    {
       "id": "eb4d6296ae1057323053",
       "title": "【終了】旗の台稲荷通り商店会「子どもが楽しむ 盆踊り & ハロウィン」",
       "summary": "2026年10月18日(日) 15:00 ~ 19:00 盆踊りは18:00~19:00 開催場所 旗の台稲荷通り商店会 三軒通り周辺 交通アクセス 東急大井町線・池上線 旗の台駅 すぐ 料金 無料 URL マップ イ",
@@ -4402,28 +4163,6 @@ window.SHINAGAWA_EVENTS = {
           "title": "旗の台稲荷通り商店会「子どもが楽しむ 盆踊り & ハロウィン」"
         }
       ],
-      "startDate": "2026-10-18",
-      "endDate": "2026-10-18"
-    },
-    {
-      "id": "442b4d4be2fdfd206451",
-      "title": "エコルとごし「エコルフェス -2026 AUTUMN-」",
-      "summary": "2026年10月18日（日）、 エコルとごし にて「エコルフェス -2026 AUTUMN-」が開催されます。 エコルとごしは、戸越公園内にある品川区立環境学習交流施設。秋の一大イベントとして、館内と戸越公園内で環境を楽しく学ぶ講座・ワークショップなどが楽しめます。",
-      "url": "https://shinagawa-kanko.or.jp/event/ecorufes2026autumn",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-18"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "戸越 戸越公園 エコルとごし",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "dd2bc3d3ddfdd4af112d",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18"
     },
@@ -4734,7 +4473,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "77c4a0f6b894b2d86ac8",
       "title": "【終了】にしこやまつり2026",
-      "summary": "2026年10月25日(日) 11:00~16:00(予定) 開催場所 西小山周辺 交通アクセス 東急目黒線 西小山駅 備考 ※内容は予告なく変更になる場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット S/S/A/W「エジプト塩食堂」 2018年8月3日 心も身体も喜ぶ、四季のごはん 食",
+      "summary": "2026年10月25日(日) 11:00~16:00(予定) 開催場所 西小山周辺 交通アクセス 東急目黒線 西小山駅 備考 ※内容は予告なく変更になる場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 荏原南(えばらみなみ)公園 2025年7月4日 涼やかなミストの岩山と広場が魅力 遊ぶ",
       "url": "https://shinagawa-kanko.or.jp/event/nishikoyamatsuri2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5032,27 +4771,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-03"
     },
     {
-      "id": "71970fe4ff05ebd662cb",
-      "title": "【受付終了】目黒川 秋の歴史クルーズ ～目黒川から台場跡をめぐる～",
-      "summary": "2026年10月31日(土) (1) 12:00~13:30 (2) 14:00~15:30 所要時間:1クルーズ約1時間30分(乗降時間を含む) 開催場所 五反田リバーステーション 品川区西五反田1-10 大崎橋隣接 交通アクセス JR・東急線・都営浅草線 五反田駅 徒歩3分 料金 2,500円(税込) ※Peat",
-      "url": "https://shinagawa-kanko.or.jp/event/autmuncruise2026/",
-      "sourceId": "kanko",
-      "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-10-31"
-      ],
-      "startTime": "12:00",
-      "endTime": "13:30",
-      "timeText": "2026年10月31日(土) (1) 12:00~13:30 (2) 14:00~15:30 所要時間:1クルーズ約1時間30分(乗降時間を含む) 開催場所 五",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "published",
-      "startDate": "2026-10-31",
-      "endDate": "2026-10-31"
-    },
-    {
       "id": "5a26474a425c28619ecc",
       "title": "【終了】しながわ盆フェス 2026 2026/10/31(土), 2026/11/01(日) 観る 遊ぶ 食べる 大井競馬場前駅, 立会川駅",
       "summary": "2026年10月31日（土）、11月1日（日）、大井競馬場にて「しながわ盆フェス2026」が開催されます。 冬を彩るイルミネーション「 東京メガイルミ 」の開幕に合わせ、盆踊りを中心としたイベント「しながわ盆フェス2026」が開催されます。",
@@ -5218,7 +4936,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "0fdf4a53173e91f6b621",
       "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 料理屋 幸森 2023年12月1日 豊洲から仕入れる旬の鮮魚と日本酒の店",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 立呑み8(タチノミ ハチ) OIMACHI TRACKS店 2026年5月",
       "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5493,31 +5211,24 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-04"
     },
     {
-      "id": "81f38c0671862670fedb",
+      "id": "be2d8c5c5cdc243d6127",
       "title": "REACH大崎クラフトマーケット",
-      "summary": "2026年11月4日(水)12:00~20:30 ※雨天中止。中止の場合、翌週11月11日(水)に延期となります。 開催場所 JR 大崎駅 南口 東西自由通路「夢さん橋」デッキ上 交通アクセス JR 大崎駅 徒歩0分 URL マップ イベントカレンダー一覧に戻る",
-      "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202611/",
-      "sourceId": "kanko",
+      "summary": "2026年11月4日（水）、JR大崎駅南口東西自由通路夢さん橋にて「REACH大崎クラフトマーケット」が開催されます。 雑貨やアクセサリーなど、個性豊かな作品が集まる毎月恒例の「手作り市」。大崎駅から徒歩0分というアクセスの良さで、周辺住民だけでなくオフィスワーカーにも人気のクラフトマーケットです。",
+      "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202611",
+      "sourceId": "news",
       "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
+      "category": "地域イベント",
       "dates": [
         "2026-11-04"
       ],
-      "startTime": "12:00",
-      "endTime": "20:30",
-      "timeText": "2026年11月4日(水)12:00~20:30 ※雨天中止。中止の場合、翌週11月11日(水)に延期となります。 開催場所 JR 大崎駅 南口 東西自由通路「",
-      "place": "",
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "大崎 大崎駅",
       "application": "",
       "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/reachcraftmarket-202611",
-          "title": "REACH大崎クラフトマーケット"
-        }
-      ],
+      "confidence": "estimated",
+      "newsId": "cd7b93c9a64780bdb74a",
       "startDate": "2026-11-04",
       "endDate": "2026-11-04"
     },
@@ -5779,23 +5490,24 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-06"
     },
     {
-      "id": "5769b5449e3730d99ff0",
-      "title": "【11/6,7,8限定】しながわクルーズ「水上オペラ特別便」（夜）",
-      "summary": "2026年11月6日(金)、7日(土)、8日(日) 17:40 (所要時間:約50分) 料金 セットチケット(クルーズ乗船+水上オペラ観覧):17,000円(税込) (中学生以上の方限定の「クルーズ乗船」と「水上オペラ観覧SS 席」のセットチケットです) 乗船チケット(クルーズ乗船のみ):大人 5,000円/小人(高",
-      "url": "https://shinagawa-kanko.or.jp/event/shinagawacruise202611opera/",
-      "sourceId": "kanko",
-      "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
+      "id": "5c471076055bc69bd355",
+      "title": "DYMグループ主催の経営者コミュニティ「Salon de CEO」、初の親睦ゴルフコンペを開催",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年11月6日（...",
+      "url": "https://prtimes.jp/main/html/rd/p/000000562.000027235.html",
+      "sourceId": "news",
+      "source": "PR TIMES",
+      "category": "地域イベント",
       "dates": [
         "2026-11-06"
       ],
-      "startTime": "17:40",
+      "startTime": "",
       "endTime": "",
-      "timeText": "2026年11月6日(金)、7日(土)、8日(日) 17:40 (所要時間:約50分) 料金 セットチケット(クルーズ乗船+水上オペラ観覧):17,000円(税",
+      "timeText": "",
       "place": "",
       "application": "",
       "deadline": "",
-      "confidence": "published",
+      "confidence": "estimated",
+      "newsId": "e5239111236088aed7af",
       "startDate": "2026-11-06",
       "endDate": "2026-11-06"
     },
@@ -5984,7 +5696,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット THE CITY",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 登龍 2019年2",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -6200,31 +5912,24 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-15"
     },
     {
-      "id": "83f90463f02e72539819",
+      "id": "e44e2395c3badf6d5f22",
       "title": "大井町トラックス「防災アクション」",
-      "summary": "2026年11月15日(日) 11:00~16:00 開催場所 大井町トラックス トラックスパーク 品川区広町2-2-9 交通アクセス 大井町トラックス JR・東急大井町線・りんかい線「トラックス口」直結 料金 参加無料 URL",
-      "url": "https://shinagawa-kanko.or.jp/event/bosai-a/",
-      "sourceId": "kanko",
+      "summary": "2026年11 月15 日（日）、OIMACHI TRACKS内、TRACKS PARK にて「防災アクション」が開催されます。 今回は、OIMACHI TRACKSの中にある防災クイズを巡る「クイズ＆防災体験ラリー」をはじめ、大井消防署・仁医会ミラベル健診プラザ大井町・品川区防災課による防災・健康にまつわるさまざまな体験や、身体を動かして楽しむ「防災スポーツ®」など、防災について「知る・学ぶ・楽しむ」コンテンツが盛りだくさんです。さらに、「クイズ＆防災体験ラリー」の条件を…",
+      "url": "https://shinagawa-kanko.or.jp/event/bosai-a",
+      "sourceId": "news",
       "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
+      "category": "地域イベント",
       "dates": [
         "2026-11-15"
       ],
-      "startTime": "11:00",
-      "endTime": "16:00",
-      "timeText": "2026年11月15日(日) 11:00~16:00 開催場所 大井町トラックス トラックスパーク 品川区広町2-2-9 交通アクセス 大井町トラックス JR・",
-      "place": "",
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "大井",
       "application": "",
       "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/bosai-a",
-          "title": "大井町トラックス「防災アクション」"
-        }
-      ],
+      "confidence": "estimated",
+      "newsId": "052a92e163be57c79e37",
       "startDate": "2026-11-15",
       "endDate": "2026-11-15"
     },
@@ -6598,6 +6303,12 @@ window.SHINAGAWA_EVENTS = {
           "source": "しながわ観光協会",
           "url": "https://shinagawa-kanko.or.jp/event/hoshi-univ-yakuso2026/",
           "title": "星薬科大学公開講座「秋の薬草見学会」"
+        },
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/hoshi-univ-yakuso2026",
+          "title": "星薬科大学公開講座「秋の薬草見学会」"
         }
       ],
       "startDate": "2026-11-21",
@@ -6624,6 +6335,35 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "official",
       "startDate": "2026-11-21",
       "endDate": "2026-11-21"
+    },
+    {
+      "id": "ba8c03a4a04d4cf75005",
+      "title": "小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 荏原南(えばら",
+      "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-11-22"
+      ],
+      "startTime": "",
+      "endTime": "",
+      "timeText": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL https://koy",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026",
+          "title": "小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」"
+        }
+      ],
+      "startDate": "2026-11-22",
+      "endDate": "2026-11-22"
     },
     {
       "id": "83e94b71cc81c70379d7",
@@ -6995,6 +6735,28 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-12-02"
     },
     {
+      "id": "e2b61f6d51a432402301",
+      "title": "品川区立品川児童学園講演会（12月3日開催）",
+      "summary": "本講演では、WISC-V新指標の開発にも携わられた日本臨床発達心理士会茨城支部支部長大六一志先生をお招きして、 これらの理論的背景、導入の経緯と意義、そして臨床現場でどのように活用していくべきかについてお話しいただきます。ぜひご参加ください。 区内在住の方、品川区で子どもに関わるお仕事をしている方",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002946/1012255.html",
+      "sourceId": "news",
+      "source": "品川区 新着情報",
+      "category": "地域イベント",
+      "dates": [
+        "2026-12-03"
+      ],
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "edd12a6bf0cd3edbb893",
+      "startDate": "2026-12-03",
+      "endDate": "2026-12-03"
+    },
+    {
       "id": "631dbcd53af375662456",
       "title": "「スマイルシティ・しながわデー」 大井競馬場L－WING5階来賓室へのご招待",
       "summary": "大井競馬場L－WING5階来賓室に抽選で15組30人をご招待します。",
@@ -7257,6 +7019,28 @@ window.SHINAGAWA_EVENTS = {
       "newsId": "5f14c45fc02e04c3db97",
       "startDate": "2026-12-09",
       "endDate": "2026-12-09"
+    },
+    {
+      "id": "a0e04469e8bf860fb865",
+      "title": "DYM人事部主催、「第24回 人事クラブ（人事交流会）」を2026年12月10日（木）に大阪で開催",
+      "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）は、2026年12月10日（...",
+      "url": "https://prtimes.jp/main/html/rd/p/000000561.000027235.html",
+      "sourceId": "news",
+      "source": "PR TIMES",
+      "category": "地域イベント",
+      "dates": [
+        "2026-12-10"
+      ],
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "70d83e9e7393b6d98b7c",
+      "startDate": "2026-12-10",
+      "endDate": "2026-12-10"
     },
     {
       "id": "121d317884b4c68a0501",
@@ -7728,28 +7512,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2027-01-31"
     },
     {
-      "id": "eea6398abdda49ad6db6",
-      "title": "【参加者募集】品川区制80周年 しながわシティラン2027（令和9年3月14日開催）",
-      "summary": "スポーツ推進課 スポーツ振興担当 電話：03-5742-7218 FAX：03-5742-6585",
-      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009520/1003654/1003655.html",
-      "sourceId": "news",
-      "source": "品川区 新着情報",
-      "category": "地域イベント",
-      "dates": [
-        "2027-03-14"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "60a1d4de272749d45871",
-      "startDate": "2027-03-14",
-      "endDate": "2027-03-14"
-    },
-    {
       "id": "ffdb2d1abe8c85794bbb",
       "title": "【令和９年４月１日採用】応募者説明会を実施します",
       "summary": "品川社協では現在、令和９年４月１日付採用職員を募集しています。 応募をお考えの方に、少しでも品川社協を知っていただく機会として、以下の３日間で説明会を開催いたします。",
@@ -8133,14 +7895,14 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "kanko",
       "source": "しながわ観光協会",
       "status": "ok",
-      "accepted": 35,
+      "accepted": 34,
       "scanned": 39
     },
     {
       "sourceId": "news",
       "source": "区のニュース",
       "status": "ok",
-      "accepted": 136
+      "accepted": 127
     }
   ]
 };
