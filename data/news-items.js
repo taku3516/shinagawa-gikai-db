@@ -1,7 +1,44 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-16T19:44:45.591038Z",
+  "generatedAt": "2026-11-17T04:02:46.590278Z",
   "items": [
+    {
+      "id": "bda8ab9d32b834c1bf1b",
+      "title": "【製造業・建設業・医療の現場におけるノウハウ継承に関する実態調査】後任からの質問・相談でもっとも多いのは「異常・トラブル時の対応」で27.6%",
+      "summary": "[トヨクモ株式会社] 【シンプルだから、みんな使える。カンターン トヨクモ】 誰でも簡単に使えるビジネス向けのクラウドサービスを提供するトヨクモ株式会社（本社：東京都品川区、代表取締役社長：山本 裕次、以下トヨクモ）は、...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000274.000032205.html",
+      "publishedAt": "2026-11-17T03:40:44Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T04:02:25.213301Z",
+      "tags": [
+        "福祉",
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "3ae3c295e00c9b7993c1",
+      "title": "商業不動産の“新規テナント開拓”をAIで支援する「SHOPCOUNTER リーシング」を提供開始",
+      "summary": "[株式会社カウンターワークス] 商業不動産をデジタル化し、新たなインフラの創造を目指す株式会社COUNTERWORKS（本社：東京都品川区、代表取締役CEO：三瓶 直樹、以下「カウンターワークス」）は、商業不動産のリーシング（テナント誘致）業務...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000217.000013729.html",
+      "publishedAt": "2026-11-17T03:15:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T04:02:25.213301Z",
+      "tags": [
+        "福祉",
+        "都市開発",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "4930b28aa61edabcaa4e",
       "title": "品川歴史館で「品川らくご会」初回開催へ 柳家吉緑さん独演会、「芝浜」口演",
@@ -14268,7 +14305,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2395, column 36"
+      "message": "not well-formed (invalid token): line 2705, column 36"
     },
     {
       "source": "朝日新聞",
@@ -14292,7 +14329,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 1
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
