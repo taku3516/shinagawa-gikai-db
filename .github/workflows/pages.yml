@@ -26,6 +26,10 @@ jobs:
         run: python3 scripts/check_firebase_sync.py
       - name: 出典リンクを検査
         run: node --test scripts/source-link.test.mjs
+      - name: カレンダーの書き出しを検査
+        run: |
+          node --test scripts/events-ics.test.mjs
+          python3 -m unittest scripts.test_events_core scripts.test_events_ics
       - name: 公開ファイルを生成
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}

@@ -1,0 +1,57 @@
+name: 品川区のイベントを収集
+
+# 区の公式イベントカレンダー・区議会の委員会日程・しながわ観光協会・区内ニュースから
+# イベントを集め、購読用の .ics を書き出す。
+#
+# 購読したカレンダーはGoogleが数時間から1日おきに取りに来る。ここが止まると
+# 利用者のカレンダーは古いまま固まり、本人からは「増えないだけ」にしか見えない。
+# 失敗したら気づけるよう、収集が全滅したときは終了コードで落とす（collect_events.py）。
+
+on:
+  schedule:
+    # 1日2回（UTCの5時35分・17時35分＝日本時間 14:35, 翌2:35）。
+    # イベントの告知はニュースほど頻繁には増えないので3時間おきにはしない。
+    # 毎時00分はGitHub全体で予約が集中して実行が飛ぶことがあるため、混雑を避けた分に寄せている。
+    - cron: "35 5,17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-shinagawa-events
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    # 収集は1分ほどで終わるが、この上限には実行待ちの時間も含まれる。
+    timeout-minutes: 45
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v6
+        with:
+          # push が競合したときに rebase できるよう、履歴ごと取得する
+          fetch-depth: 0
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: 収集前の検査
+        run: python -m unittest scripts.test_events_core scripts.test_events_ics
+
+      - name: イベントを収集
+        run: python scripts/collect_events.py
+
+      - name: 購読用の .ics を書き出す
+        run: python scripts/build_events_ics.py
+
+      - name: 変更があれば保存
+        run: |
+          scripts/commit_data_update.sh "品川区のイベントを自動更新" \
+            data/events.js \
+            exports/shinagawa-events.ics \
+            exports/shinagawa-events-confirmed.ics \
+            exports/shinagawa-gikai.ics

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Build the Firebase Hosting artifact that serves only the news page.
+"""Build the Firebase Hosting artifact that serves the login-backed pages.
 
-ニュースページだけを Firebase Hosting から配信する。Googleログインは配信元と
-authDomain のドメインが一致していないと iPhone・iPad で完了できないため
-（docs/firebase-sync-setup.md）。
+ニュースページとイベントカレンダーを Firebase Hosting から配信する。
+Googleログインは配信元と authDomain のドメインが一致していないと
+iPhone・iPad で完了できないため（docs/firebase-sync-setup.md）。
 
 会議録全文をはじめとする残りのサイトは GitHub Pages に置いたままにする。
 Firebase Hosting の無料枠は転送量 360MB/日で、サイト全体を移すと届いてしまう。
@@ -32,6 +32,9 @@ SITE_BASE = "https://taku3516.github.io/shinagawa-gikai-db/"
 # 取りこぼしは check_referenced_assets() がビルド時に検出する。
 FILES = [
     "news.html",
+    "events.html",
+    "events-page.js",
+    "events-ics.js",
     "news-sync.js",
     "news-sync-environment.js",
     "news-migration.js",
@@ -46,7 +49,12 @@ FILES = [
     "site-mobile.css",
     "data/site.js",
     "data/news-items.js",
+    "data/events.js",
 ]
+
+# 基準URLの差し込みが要るページ。site-url.js より前に window.SHINAGAWA_SITE_BASE を
+# 置かないと、他ページへのリンクが別ドメインのまま解決されない。
+PAGES = ("news.html", "events.html")
 
 # 配信時に生成するので、コピー対象には無くてよいファイル。
 GENERATED_FILES = {"data/firebase-config.js"}
@@ -130,8 +138,8 @@ def referenced_assets(html: str) -> list[str]:
     return found
 
 
-def check_referenced_assets(html: str) -> None:
-    """news.html の読み込み先が配信対象から漏れていないか確かめる。
+def check_referenced_assets(html: str, name: str = "news.html") -> None:
+    """ページの読み込み先が配信対象から漏れていないか確かめる。
 
     漏れていても表示自体は出るため、崩れたまま公開されてしまう。
     ここで止めて気づけるようにする。
@@ -145,27 +153,27 @@ def check_referenced_assets(html: str) -> None:
     ]
     if missing:
         raise ValueError(
-            "news.html が読み込んでいるファイルが配信対象にありません: "
+            f"{name} が読み込んでいるファイルが配信対象にありません: "
             + ", ".join(missing)
             + "\nscripts/build_news_app.py の FILES と "
             ".github/workflows/firebase-hosting.yml の paths に足してください。"
         )
 
 
-def news_html() -> str:
-    """基準URLの指定を差し込んだ news.html を返す。"""
-    source = (ROOT / "news.html").read_text(encoding="utf-8")
-    check_referenced_assets(source)
+def page_html(name: str) -> str:
+    """基準URLの指定を差し込んだページを返す。"""
+    source = (ROOT / name).read_text(encoding="utf-8")
+    check_referenced_assets(source, name)
     marker = '<script src="site-url.js"></script>'
     if marker not in source:
-        raise ValueError("news.html に site-url.js の読み込みが見当たりません")
+        raise ValueError(f"{name} に site-url.js の読み込みが見当たりません")
     # site-url.js より前に基準URLを置く必要がある。
     return source.replace(marker, SITE_BASE_SNIPPET + marker, 1)
 
 
 def build(output: Path, api_key: str) -> None:
     # 出力を作る前に検査する。読み込み先の漏れはここで止める。
-    page = news_html()
+    pages = {name: page_html(name) for name in PAGES}
 
     if output.exists() and any(output.iterdir()):
         raise ValueError(f"出力先が空ではありません: {output}")
@@ -179,7 +187,8 @@ def build(output: Path, api_key: str) -> None:
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
 
-    (output / "news.html").write_text(page, encoding="utf-8")
+    for name, page in pages.items():
+        (output / name).write_text(page, encoding="utf-8")
     (output / "index.html").write_text(INDEX_HTML, encoding="utf-8")
     (output / "data" / "firebase-config.js").write_text(
         firebase_config(api_key), encoding="utf-8"
