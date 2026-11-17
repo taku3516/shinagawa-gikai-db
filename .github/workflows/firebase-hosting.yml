@@ -1,17 +1,21 @@
-name: Firebase Hostingへ公開（ニュースページ）
+name: Firebase Hostingへ公開（ニュース・イベントカレンダー）
 
-# ニュースページだけを Firebase Hosting から配信する。Googleログインは配信元と
-# authDomain のドメインが一致していないと iPhone・iPad で完了できないため
-# （docs/firebase-sync-setup.md）。
+# ニュースページとイベントカレンダーを Firebase Hosting から配信する。
+# Googleログインは配信元と authDomain のドメインが一致していないと
+# iPhone・iPad で完了できないため（docs/firebase-sync-setup.md）。
 #
 # サイト本体は従来どおり GitHub Pages（pages.yml）から配信する。
-# ここで配るのは 0.1MB 未満で、無料枠の転送量 360MB/日に十分収まる。
+# カレンダーの購読用 .ics は exports/ に置き、GitHub Pages 側から配る。
+# Googleが定期的に取りに来るため、無料枠のある Firebase からは配らない。
 
 on:
   push:
     branches: [main]
     paths:
       - news.html
+      - events.html
+      - events-page.js
+      - events-ics.js
       - news-sync.js
       - news-sync-environment.js
       - news-migration.js
@@ -26,6 +30,7 @@ on:
       - site-mobile.css
       - data/site.js
       - data/news-items.js
+      - data/events.js
       - firebase.json
       - .firebaserc
       - scripts/build_news_app.py
@@ -55,6 +60,10 @@ jobs:
           node --test scripts/news-migration.test.mjs
           node --test scripts/site-url.test.mjs
           node --test scripts/source-link.test.mjs
+          node --test scripts/events-ics.test.mjs
+
+      - name: 配信ファイルの組み立てを検査
+        run: python3 -m unittest scripts.test_build_news_app
 
       - name: 配信ファイルを生成
         env:

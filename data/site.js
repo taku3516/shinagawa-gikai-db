@@ -72,6 +72,10 @@ window.SHINAGAWA_DB.site = {
           "url": "news.html"
         },
         {
+          "label": "イベントカレンダー",
+          "url": "events.html"
+        },
+        {
           "label": "町会区域",
           "url": "chokai-map.html"
         },

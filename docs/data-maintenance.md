@@ -139,6 +139,59 @@ python3 scripts/collect_news.py
 
 任意ログイン・同期を有効にする場合は[Firebase同期の設定手順](firebase-sync-setup.md)に沿って所有者設定を行います。未設定でもニュースページは動作します。
 
+## イベントカレンダー
+
+### 関連ファイル
+
+- `events.html` / `events-page.js` — 月カレンダーと一覧、絞り込み、Googleカレンダーへの受け渡し
+- `events-ics.js` — 絞り込んだ分をブラウザで `.ics` に組み立てる
+- `data/events.js` — 収集済みイベント（`window.SHINAGAWA_EVENTS`）
+- `scripts/collect_events.py` — 4つの収集元からの収集・重複統合
+- `scripts/events_core.py` — 日付と時刻の読み取り、同一判定
+- `scripts/events_ics.py` / `scripts/build_events_ics.py` — 購読用 `.ics` の書き出し
+- `exports/shinagawa-events*.ics` / `exports/shinagawa-gikai.ics` — Googleカレンダーの「URLで追加」に貼る購読用ファイル
+
+```bash
+python3 scripts/collect_events.py       # 収集して data/events.js を更新
+python3 scripts/build_events_ics.py     # exports/*.ics を書き出す
+```
+
+### 収集元と開催日の確度
+
+同じ配列に入れていますが、開催日の確かさが3段階に分かれます。`confidence` で区別し、
+画面では破線とただし書きで示します。
+
+| confidence | 収集元 | 開催日の出どころ |
+| --- | --- | --- |
+| `official` | 品川区 イベントカレンダー（`https://www.city.shinagawa.tokyo.jp/event.js`） | 区が構造化して公開している開催日 |
+| `published` | 区議会の各委員会、しながわ観光協会 | ページに明記された年月日 |
+| `estimated` | 区のニュース（`data/news-items.js`） | 記事本文の「M月D日」から推定 |
+
+区の `event.js` は `event_calendar.html` が読んでいる実データです。HTMLを解析せずに
+開催日・会場・申込・締切まで取れます。形が変わったら `parse_city_calendar()` が例外で止まります。
+
+### 気をつけること
+
+- **期間ものを1日ずつ出さない。** 区のデータの `opendays` は期間も定期開催も1日ずつ展開済みで、
+  259日続く催しもあります。`kikandays` のある催しは `periods` として持ち、`.ics` でもカレンダー表示でも
+  1件にまとめます。1日ずつ出すと、1つの催しで予定表が埋まります。
+- **ニュースから推定した日は「午後」の省略に弱い。** 「午後2時～4時」の4時は午後4時です
+  （`events_core.parse_time_range`）。引き継がないと終了が開始より前になります。
+- **`.ics` は2か所で作っています。** 購読用は `scripts/events_ics.py`、画面の保存は `events-ics.js`。
+  出力が食い違うと同じ催しが二重に入るので、`scripts/events-ics.test.mjs` が
+  Python側の出力と1バイト単位で突き合わせています。片方だけ直さないこと。
+- **購読は止まったことが利用者から見えません。** Googleは数時間から1日おきに取りに来るだけなので、
+  収集が止まってもカレンダーは古いまま残ります。`collect-events.yml` の失敗に気づける状態を保つこと。
+- **要約にURLを入れない。** 収集元が本文に古いURLを書いていることがあります
+  （観光協会のページに区公式の旧URLが残っていました）。`events_core.summary_text()` が落とします。
+
+### 配信先
+
+ページとデータは Firebase Hosting から配信します（`scripts/build_news_app.py` の `FILES` と `PAGES`）。
+ニュースの★と同じ仕組みに将来乗せられるようにするためです。
+購読用の `.ics` は GitHub Pages 側の `exports/` に置きます。Googleが定期的に取りに来るため、
+転送量に上限のある Firebase からは配りません。
+
 ## 請願・陳情
 
 `seigan.html`は、年データに入っている定例会ごとの請願・陳情を受理番号で名寄せした`data/petitions.js`を読みます。年データや委員会データを更新したら、外部サイトへ接続せずに台帳を作り直せます。

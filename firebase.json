@@ -19,6 +19,24 @@
         ]
       },
       {
+        "source": "/events.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "/data/events.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
         "source": "/data/news-items.js",
         "headers": [
           {

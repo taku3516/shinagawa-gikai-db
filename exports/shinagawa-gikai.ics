@@ -1,0 +1,1462 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Shinagawa Council DB//Event Calendar//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:品川区議会の日程
+X-WR-CALDESC:品川区議会の委員会の予定・結果です。
+X-WR-TIMEZONE:Asia/Tokyo
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:424bc22516b7dc09e877-20260527@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:SDGs推進特別委員会
+DESCRIPTION:○正副委員長互選\n出典: 品川区議会\nhttps://gika
+ i.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/sdgs\n品川区議会DB 
+ https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/sdgs
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:c3aa50bfa359a19425b8-20260527@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:公共施設等整備特別委員会
+DESCRIPTION:○正副委員長互選\n出典: 品川区議会\nhttps://gika
+ i.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo\n品川区議会D
+ B https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:13e5837d280d6f002873-20260527@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:共生社会推進特別委員会
+DESCRIPTION:○正副委員長互選\n出典: 品川区議会\nhttps://gika
+ i.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kyosei\n品川区議会D
+ B https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kyosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:798e92278930723532c6-20260527@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:区民委員会
+DESCRIPTION:○正副委員長互選\n出典: 品川区議会\nhttps://gika
+ i.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin\n品川区議会DB
+  https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7417b5f24d6f918b1447-20260527@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:厚生委員会
+DESCRIPTION:○正副委員長互選\n出典: 品川区議会\nhttps://gika
+ i.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei\n品川区議会DB
+  https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f15099e253e4fd43636a-20260527@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:建設委員会
+DESCRIPTION:○正副委員長互選\n出典: 品川区議会\nhttps://gika
+ i.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu\n品川区議
+ 会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:207edf9af88ae3dac433-20260527@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:文教委員会
+DESCRIPTION:○正副委員長互選\n出典: 品川区議会\nhttps://gika
+ i.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo\n品川区議会D
+ B https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:acb77ad1cd3d40de3fe8-20260527@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:総務委員会
+DESCRIPTION:○正副委員長互選\n出典: 品川区議会\nhttps://gika
+ i.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu\n品川区議会DB
+  https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ca91e2901d0ab74a2d0e-20260527@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:議会運営委員会
+DESCRIPTION:○正副委員長互選\n出典: 品川区議会\nhttps://gika
+ i.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_unei\n品川区議
+ 会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_une
+ i
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cda7d91eba0551ca2035-20260608@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260608
+DTEND;VALUE=DATE:20260609
+SUMMARY:区民委員会
+DESCRIPTION:○地域振興部 ○文化観光スポーツ振興部 ○令
+ 和８年度 区民まつりの予定について ○しながわシティ
+ ラン開催報告および次回開催に向けた進捗について\n出
+ 典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai
+ -schedule/kumin\n品川区議会DB https://taku3516.github.io/shinagawa-gi
+ kai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:c666469c6fc8f4c346d7-20260608@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260608
+DTEND;VALUE=DATE:20260609
+SUMMARY:厚生委員会
+DESCRIPTION:○福祉部 ○健康推進部・品川区保健所 ○その
+ 他\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsud
+ ou/inkai-schedule/kosei\n品川区議会DB https://taku3516.github.io/shin
+ agawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:fcc9f2b6644bad65130b-20260608@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260608
+DTEND;VALUE=DATE:20260609
+SUMMARY:建設委員会
+DESCRIPTION:○都市環境部 ○防災まちづくり部 ○災害対策
+ 担当 ○その他（ .pdf.219KB / .docx.34KB ）\n出典: 品川区議
+ 会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensets
+ u\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.
+ html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:3c7373bd53d220d353d2-20260608@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260608
+DTEND;VALUE=DATE:20260609
+SUMMARY:文教委員会
+DESCRIPTION:○教育委員会事務局 ○子ども未来部 ○品川区
+ 児童相談所\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tok
+ yo.jp/katsudou/inkai-schedule/bunkyo\n品川区議会DB https://taku3516.g
+ ithub.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1c06bbb94b6d8ebd4ee6-20260608@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260608
+DTEND;VALUE=DATE:20260609
+SUMMARY:総務委員会
+DESCRIPTION:○企画経営部 ○区長室 ○会計管理室 ○選挙管
+ 理委員会事務局 ○監査委員事務局\n出典: 品川区議会\nh
+ ttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu\n品川
+ 区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0ffe36c2074a30c1e2eb-20260609@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260609
+DTEND;VALUE=DATE:20260610
+SUMMARY:SDGs推進特別委員会
+DESCRIPTION:○SDGｓ推進事業に関すること ○行財政に関す
+ ること ○公共施設・公有地等に関すること\n出典: 品川
+ 区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/s
+ dgs\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/event
+ s.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/sdgs
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:518b95a2745266650a3f-20260609@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260609
+DTEND;VALUE=DATE:20260610
+SUMMARY:共生社会推進特別委員会
+DESCRIPTION:○幼稚園・保育園等に関すること ○若者に関
+ すること ○重層的支援体制に関すること（ .pdf.550KB / .d
+ ocx.842KB ）\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo
+ .jp/katsudou/inkai-schedule/kyosei\n品川区議会DB https://taku3516.git
+ hub.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kyosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:56259cc39a00e7ea77cd-20260610@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20260611
+SUMMARY:公共施設等整備特別委員会
+DESCRIPTION:○新庁舎および大井町駅周辺地区に関すること
+  ○地域公共交通に関すること ○都市部の住まいに関す
+ ること ○子育て世帯への住まいの支援について\n出典: 
+ 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-sche
+ dule/koukyo\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-
+ db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:aab46f67ae0ebda98313-20260612@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260612
+DTEND;VALUE=DATE:20260613
+SUMMARY:議会運営委員会
+DESCRIPTION:○事務局の概要について ○令和８年第２回定
+ 例会について ○その他\n出典: 品川区議会\nhttps://gikai.ci
+ ty.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_unei\n品川区議会D
+ B https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_une
+ i
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7a9d8fa8d557096b9f36-20260624@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:議会運営委員会
+DESCRIPTION:○令和８年第２回定例会について ○令和８年
+ 第３回定例会の日程について ○区民と議会の交流会議
+ からの報告事項について ○その他\n出典: 品川区議会\nh
+ ttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_unei\n
+ 品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.htm
+ l
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_une
+ i
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2fc8fdb28edf1f3bf3b8-20260629@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:区民委員会
+DESCRIPTION:○令和８年陳情第２２号 自衛官募集事務に係
+ る個人情報提供について、事前通知及び情報提供前の
+ 除外申請機会の確保を求める陳情 ○令和８年度 防犯支
+ 援事業について ○スポーツ×エンタメ 多彩カイギの実
+ 施について ○令和８年度文化センター他工事等による
+ 休室・休館予定について ○夏季屋外プールの開放につ
+ いて\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/kat
+ sudou/inkai-schedule/kumin\n品川区議会DB https://taku3516.github.io/s
+ hinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:04b7f63cefb284cb1c64-20260629@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:厚生委員会
+DESCRIPTION:○第６４号議案 品川区介護保険制度に関する
+ 条例の一部を改正する条例（ .pdf.436KB / .docx.57KB ） ○第
+ ５９号議案 令和８年度品川区一般会計補正予算(歳出等
+  厚生委員会所管分) ○令和８年請願第３号 ヘルパーの
+ 警鐘を国に伝えてください～介護報酬大幅引き上げの
+ 意見書を国に提出するよう求める請願 ○令和８年陳情
+ 第１７号 住宅宿泊事業における「家主同居型」の営業
+ 制限緩和に関する陳情 ○令和８年陳情第１８号 心身障
+ 害者福祉会館の整備を迅速に進めるよう区に求める…\n
+ 出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/in
+ kai-schedule/kosei\n品川区議会DB https://taku3516.github.io/shinagawa
+ -gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:dbae0268b94e4e7f257c-20260629@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:建設委員会
+DESCRIPTION:○第６５号議案 品川区手数料条例の一部を改
+ 正する条例 ○第６６号議案 品川区地区計画等の区域内
+ における建築物の制限に関する条例の一部を改正する
+ 条例 ○第５９号議案 令和８年度品川区一般会計補正予
+ 算（歳出等 建設委員会所管分） ○令和８年請願第４号
+  先日ギックリ腰になりました。ベンチがなくて辛かっ
+ たです～ベンチ増設の請願（ .pdf.428KB / .docx.4\,266KB ） 
+ ○令和８年請願第５号 リニア中央新幹線工事再開に対
+ し再度住民説明会を求める請願（ .pdf.28…\n出典: 品川
+ 区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/k
+ ensetsu\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/e
+ vents.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b2a9634a403e21e99537-20260629@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:文教委員会
+DESCRIPTION:○第６２号議案 品川区立就学前乳幼児教育施
+ 設条例の一部を改正する条例（ .pdf.282KB / .docx.40KB ） ○
+ 第６３号議案 品川区立保育所における時間外保育等に
+ 関する条例の一部を改正する条例（ .pdf.282KB / .docx.40KB 
+ ） ○第６７号議案 品川区文化財保護条例の一部を改正
+ する条例 ○第６８号議案 品川区立学校の学校医、学校
+ 歯科医および学校薬剤師の公務災害補償に関する条例
+ の一部を改正する条例 ○第６９号議案 品川区立幼稚園
+ 条例の一部を改正…\n出典: 品川区議会\nhttps://gikai.city.s
+ hinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo\n品川区議会DB https:
+ //taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ef0692e3745e81e9d415-20260629@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260629
+DTEND;VALUE=DATE:20260630
+SUMMARY:総務委員会
+DESCRIPTION:○第６０号議案 品川区特別区税条例の一部を
+ 改正する条例 ○第６１号議案 品川区附属機関の構成員
+ の報酬および費用弁償に関する条例の一部を改正する
+ 条例 ○第７０号議案 東五反田保育園・児童センター改
+ 築工事請負契約 ○第７１号議案 東五反田保育園・児童
+ センター改築機械設備工事請負契約 ○第７２号議案 東
+ 五反田保育園・児童センター改築電気設備工事請負契
+ 約 ○第７３号議案 品川区清掃事務所北品川分室新築工
+ 事請負契約 ○第７４号議案 品川区清掃事務所北品川分
+ 室新築機械設備工事請負契約…\n出典: 品川区議会\nhttps
+ ://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu\n品川区
+ 議会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0579b7d0fbe450780561-20260630@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260630
+DTEND;VALUE=DATE:20260701
+SUMMARY:区民委員会
+DESCRIPTION:○品川区立五反田文化センター\n出典: 品川区
+ 議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumi
+ n\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.
+ html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b610fe2d1d18086e6213-20260630@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260630
+DTEND;VALUE=DATE:20260701
+SUMMARY:厚生委員会
+DESCRIPTION:○令和７年度品川区障害福祉計画等実績につい
+ て ○令和７年度品川区介護保険制度の運営状況 ○予防
+ 接種に関する事務における「特定個人情報保護評価」
+ の見直しについて（ .pdf.286KB / .docx.24KB ） ○令和７年度
+ ５歳児健康診査事業の検証結果と令和８年度の取組み
+ について（ .pdf.297KB / .docx.22KB ） ○荏原複合施設\n出典:
+  品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-sch
+ edule/kosei\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-
+ db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:14365334bf2441c536f9-20260630@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260630
+DTEND;VALUE=DATE:20260701
+SUMMARY:建設委員会
+DESCRIPTION:○大崎西口駅前地区（大崎駅西口F東地区）の
+ 再開発事業に係る事業者による近隣説明会の開催につ
+ いて ○「第12次品川区交通安全計画（素案）」に係る
+ パブリックコメントの実施について ○電線共同溝等工
+ 事（特別区道Ⅰ－２４１号）の委託について（ .pdf.241KB
+  / .docx.2\,241KB ） ○（仮称）勝島人道橋上部工の架設に
+ ついて（ .pdf.517KB / .docx.4\,759KB ） ○子どもの森公園改
+ 修工事について（ .pdf.267KB / .docx.1\,48…\n出典: 品川区議
+ 会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensets
+ u\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.
+ html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f7c3d139c0780c50b8f8-20260630@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260630
+DTEND;VALUE=DATE:20260701
+SUMMARY:文教委員会
+DESCRIPTION:○学校改築の進捗について ○令和９年度 新入
+ 学者の受入枠について ○「品川区附属機関の構成員の
+ 報酬および費用弁償に関する条例の一部を改正する条
+ 例」の概要 ○区立学校におけるいじめの重大事態の発
+ 生状況について ○「品川区特別支援教育推進計画」の
+ 策定について（ .pdf.399KB / .docx.26KB ） ○「（仮称）品川
+ 区こどもの権利条例」の制定について（ .pdf.136KB / .docx.
+ 29KB ）\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/k
+ atsudou/inkai-schedule/bunkyo\n品川区議会DB https://taku3516.github.i
+ o/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8b4a10f605dfe3b8fed2-20260630@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260630
+DTEND;VALUE=DATE:20260701
+SUMMARY:総務委員会
+DESCRIPTION:○第５９号議案 令和８年度品川区一般会計補
+ 正予算 ○三木小学校外壁改修その他工事請負契約 ○令
+ 和７年度庁舎使用料等未請求事故について\n出典: 品川
+ 区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/s
+ oumu\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/even
+ ts.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:c4a5ed3a496dd6b92513-20260701@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:SDGs推進特別委員会
+DESCRIPTION:○行財政に関すること\n出典: 品川区議会\nhttps:
+ //gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/sdgs\n品川区議
+ 会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/sdgs
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:72e59b6b14accb0f27e7-20260701@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:共生社会推進特別委員会
+DESCRIPTION:○幼稚園・保育園等に関すること（ .pdf.163KB / .
+ docx.33KB ）\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo
+ .jp/katsudou/inkai-schedule/kyosei\n品川区議会DB https://taku3516.git
+ hub.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kyosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:85846f4081c9bbc8d2e5-20260702@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260702
+DTEND;VALUE=DATE:20260703
+SUMMARY:公共施設等整備特別委員会
+DESCRIPTION:○地域公共交通に関すること ○令和８年陳情
+ 第１９号 東大井・南大井地区と大井町を結ぶ交通の確
+ 保に関する陳情（ .pdf.232KB / .docx.7\,093KB ）\n出典: 品川
+ 区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/k
+ oukyo\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/eve
+ nts.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7c30ad5ef226523b500a-20260708@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260708
+DTEND;VALUE=DATE:20260709
+SUMMARY:議会運営委員会
+DESCRIPTION:○令和８年第２回定例会について ○その他\n出
+ 典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai
+ -schedule/gikai_unei\n品川区議会DB https://taku3516.github.io/shinaga
+ wa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_une
+ i
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cb3eb8e28161df38f804-20260727@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260727
+DTEND;VALUE=DATE:20260728
+SUMMARY:区民委員会
+DESCRIPTION:○夏休み期間中における地域センターでの自習
+ 室の開設について ○令和８年度地域振興基金を活用し
+ た区民活動助成制度の審査結果について ○令和８年８
+ 月８日婚姻届臨時受付窓口の開設について\n出典: 品川
+ 区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/k
+ umin\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/even
+ ts.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:882245f9a065f4854331-20260727@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260727
+DTEND;VALUE=DATE:20260728
+SUMMARY:厚生委員会
+DESCRIPTION:○令和８年陳情第３０号 品川区障害福祉計画
+ 等策定委員会の下部に専門部会（ワーキンググループ
+ ）の設置を品川区に求める陳情 ○「品川区新型インフ
+ ルエンザ等対策行動計画」素案にかかるパブリックコ
+ メントの実施結果および同計画の改定について ○グリ
+ ーフケア事業の実施について（ .pdf.99KB / .docx.23KB ）\n出
+ 典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai
+ -schedule/kosei\n品川区議会DB https://taku3516.github.io/shinagawa-gi
+ kai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:334367b11a06a4c96e8e-20260727@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260727
+DTEND;VALUE=DATE:20260728
+SUMMARY:建設委員会
+DESCRIPTION:○令和８年陳情第３２号 大崎西口駅前市街地
+ 再開発事業に関する都市計画素案、企画提案書提出の
+ 場合の取り扱いに関する陳情（ .pdf.668KB / .docx.1\,351KB ）
+  ○令和８年陳情第３３号 大崎西口駅前市街地再開発事
+ 業の手続きに関する陳情（ .pdf.668KB / .docx.1\,351KB ） ○
+ 令和８年８月都営住宅入居者募集について（ .pdf.113KB / 
+ .docx.34KB ） ○西品川2・3丁目地区における地区計画の策
+ 定について ○旗台小学校前地…\n出典: 品川区議会\nhttp
+ s://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu\n品川
+ 区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f1a8cefaa92bdca0b6a2-20260727@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260727
+DTEND;VALUE=DATE:20260728
+SUMMARY:文教委員会
+DESCRIPTION:○品川コミュニティ・スクールの法定化につい
+ て ○区立学校におけるいじめの重大事態の調査結果に
+ ついて（ .pdf.345KB / .docx.26KB ） ○子育て世帯へのお米支
+ 援プロジェクト申請状況について（ .pdf.382KB / .docx.28KB 
+ ）\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsud
+ ou/inkai-schedule/bunkyo\n品川区議会DB https://taku3516.github.io/shi
+ nagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:05120b5007c076e28e39-20260727@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260727
+DTEND;VALUE=DATE:20260728
+SUMMARY:総務委員会
+DESCRIPTION:○令和８年陳情第３１号 包括外部監査制度の
+ 導入による区政のコンプライアンス強化を求める陳情 
+ ○品川南ふ頭公園ナイター照明ＬＥＤ化その他電気設
+ 備工事請負契約 ○立会小学校外壁改修その他工事請負
+ 契約 ○小山台小学校外壁改修その他工事請負契約 ○鈴
+ ケ森中学校外壁改修その他工事請負契約 ○住民税の誤
+ 徴収について（ .pdf.93KB / .docx.24KB ） ○再採用選考（カ
+ ムバック採用）の実施について ○令和8年11月15日執行 
+ 品川区長選挙 執行計画について\n出典: 品川区議会\nhttp
+ s://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu\n品川区
+ 議会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4ad9f477e915823fc05b-20260728@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20260729
+SUMMARY:SDGs推進特別委員会
+DESCRIPTION:○SDGs推進事業に関すること ○公共施設・公有
+ 地等に関すること\n出典: 品川区議会\nhttps://gikai.city.shin
+ agawa.tokyo.jp/katsudou/inkai-schedule/sdgs\n品川区議会DB https://tak
+ u3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/sdgs
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8dbe2ad05d092ff4471a-20260728@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20260729
+SUMMARY:共生社会推進特別委員会
+DESCRIPTION:○幼稚園・保育園等に関すること（ .pdf.352KB / .
+ docx.37KB ）\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo
+ .jp/katsudou/inkai-schedule/kyosei\n品川区議会DB https://taku3516.git
+ hub.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kyosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f6e8b5e54098b2cae48d-20260729@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:公共施設等整備特別委員会
+DESCRIPTION:○地域公共交通に関すること ○都市部の住ま
+ いに関すること ○品川区庁舎跡地活用プラン策定委員
+ 会について（ .pdf.375KB / .docx.31KB ）\n出典: 品川区議会\nh
+ ttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo\n品
+ 川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:becd0378a643770f79e3-20260730@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+SUMMARY:議会運営委員会
+DESCRIPTION:○令和８年第３回定例会について ○令和９年
+ 度予算（議会費）について ○その他\n出典: 品川区議会
+ \nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_unei
+ \n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.h
+ tml
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_une
+ i
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5135def1e3f542d7adc0-20260806@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+SUMMARY:建設委員会
+DESCRIPTION:○「東京河川改修促進連盟」の総会および促進
+ 大会について（ .pdf.99KB / .docx.34KB ） ○東京河川改修促
+ 進連盟の総会および促進大会への参加\n出典: 品川区議
+ 会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensets
+ u\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.
+ html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bb6f33f8edd201eed1ce-20260824@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY:区民委員会
+DESCRIPTION:○光林荘に係る施設活用方針の見直しについて
+  ○しながわ電気・ガス料金緊急支援事業の申請開始に
+ ついて ○品川区民芸術祭2026の開催について ○しなが
+ わシティラン2027の参加者募集について ○インクルーシ
+ ブスポーツチャレンジデーの開催について ○創業・ス
+ タートアップ支援について\n出典: 品川区議会\nhttps://gik
+ ai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin\n品川区議会D
+ B https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:37d137501f8f9f61f684-20260824@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY:厚生委員会
+DESCRIPTION:○令和８年度高齢者福祉行事について ○品川
+ 区立心身障害者福祉会館 ○Ｋｉｔａｒａ\n出典: 品川区
+ 議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kose
+ i\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.
+ html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0295f5481cc59e5b51e5-20260824@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY:建設委員会
+DESCRIPTION:○令和８年９月区民住宅（空き室）入居予定者
+ 登録募集について（ .pdf.95KB / .docx.21KB ） ○旧荏原第四
+ 中学校南側区道拡幅整備について（ .pdf.587KB / .docx.9\,611
+ KB ） ○（仮称）大井町駅西口Ｅ地区まちづくりガイド
+ ライン（案）について ○台場歩道橋補修工事について
+ （ .pdf.410KB / .docx.2\,952KB ） ○防災対策について ○その
+ 他\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsud
+ ou/inkai-schedule/kensetsu\n品川区議会DB https://taku3516.github.io/s
+ hinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ccbd4aa8ba8e9475168c-20260824@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY:文教委員会
+DESCRIPTION:○移動教室・林間学園の今後の実施方法につい
+ て（ .pdf.127KB / .docx.22KB ） ○令和７年度品川区立学校に
+ おける体罰等の実態把握について（ .pdf.164KB / .doc.56KB 
+ ） ○区立学校におけるいじめの重大事態の発生状況お
+ よび調査結果について（ .pdf.377KB / .docx.28KB ） ○伊藤児
+ 童センターの休館について（ .pdf.104KB / .docx.2\,613KB ） 
+ ○児童育成手当の所得限度額の改定について（ .pdf…\n
+ 出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/in
+ kai-schedule/bunkyo\n品川区議会DB https://taku3516.github.io/shinagaw
+ a-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f6d55365bb0ce90d4b8f-20260824@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260824
+DTEND;VALUE=DATE:20260825
+SUMMARY:総務委員会
+DESCRIPTION:○令和８年度都区財政調整交付金当初算定結果
+ について ○伊藤保育園・伊藤児童センター外壁および
+ 屋上防水改修工事請負契約 ○台場歩道橋補修工事請負
+ 契約 ○令和８年熊本地震に対する区の対応について ○
+ 保有個人情報開示請求の電子申請の受付開始について 
+ ○会計年度任用職員の再度任用制度の導入について ○
+ 公職選挙法ほかの一部を改正する法律について ○特別
+ 区競馬組合（大井競馬場）\n出典: 品川区議会\nhttps://gik
+ ai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu\n品川区議会D
+ B https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ae46a1ddcfd874c5eaad-20260825@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+SUMMARY:SDGs推進特別委員会
+DESCRIPTION:○公共施設・公有地等に関すること ○品川区
+ 清掃事務所 中延中継所の跡地活用について ○本の森ち
+ ゅうおう（中央区立京橋図書館・中央区立郷土資料館
+ ）\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsud
+ ou/inkai-schedule/sdgs\n品川区議会DB https://taku3516.github.io/shina
+ gawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/sdgs
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a0c591e7ecb12508db3b-20260825@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260825
+DTEND;VALUE=DATE:20260826
+SUMMARY:共生社会推進特別委員会
+DESCRIPTION:○幼稚園・保育園等に関すること\n出典: 品川
+ 区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/k
+ yosei\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/eve
+ nts.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kyosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e9f2638029e366cf50a4-20260826@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:公共施設等整備特別委員会
+DESCRIPTION:○新庁舎および大井町駅周辺地区に関すること
+  ○都市部の住まいに関すること\n出典: 品川区議会\nhttp
+ s://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo\n品川
+ 区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cdbb3d4810318477aba9-20260827@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+SUMMARY:議会運営委員会
+DESCRIPTION:○品川区選挙管理委員および同補充員の任期満
+ 了について ○令和９年度予算（議会費）について ○令
+ 和８年第３回定例会について ○広報会議からの報告事
+ 項について ○その他\n出典: 品川区議会\nhttps://gikai.city.
+ shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_unei\n品川区議会DB h
+ ttps://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_une
+ i
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2f226b409f72c0878825-20260916@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:議会運営委員会
+DESCRIPTION:○会派変更届について ○議会構成等について 
+ ○令和８年第３回定例会について ○決算特別委員会に
+ ついて ○令和８年第４回定例会について ○令和８年度
+ 『児童・生徒×区議会＠学校』の開催について ○その
+ 他\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsud
+ ou/inkai-schedule/gikai_unei\n品川区議会DB https://taku3516.github.io
+ /shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_une
+ i
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8731c211b5cc077e4253-20260924@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:区民委員会
+DESCRIPTION:○第８５号議案 品川区印鑑条例の一部を改正
+ する条例 ○第９６号議案 品川区の特定の事務を取り扱
+ う郵便局の指定について ○「エシカル消費イベント㏌
+ しながわ shinagawa ETHICAL 2026」の開催について ○東京都
+ ファーストカスタマー・アライアンス事業への参画に
+ ついて ○令和７年度指定管理者による管理に対するモ
+ ニタリング・評価の結果について\n出典: 品川区議会\nht
+ tps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin\n品川
+ 区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bf20427da141ee9805d1-20260924@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:厚生委員会
+DESCRIPTION:○副委員長互選 ○第９８号議案 指定管理者の
+ 指定について ○第９９号議案 指定管理者の指定につい
+ て ○第１００号議案 指定管理者の指定について ○第
+ １０１号議案 指定管理者の指定について ○第１０２号
+ 議案 指定管理者の指定について ○第１０３号議案 指
+ 定管理者の指定について ○第１０４号議案 指定管理者
+ の指定について ○第１０５号議案 指定管理者の指定に
+ ついて ○第８４号議案 令和８年度品川区一般会計補正
+ 予算（歳出等 厚生委員会所管分） ○令和８年陳情第３
+ ４号 障害者福祉施…\n出典: 品川区議会\nhttps://gikai.city.
+ shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei\n品川区議会DB https:
+ //taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a32d7e1296d622cdad3b-20260924@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:建設委員会
+DESCRIPTION:○第１０６号議案 戸越五丁目および戸越六丁
+ 目地内特別区道路線の認定について（ .pdf.333KB / .docx.11\
+ ,516KB ） ○第８４号議案 令和８年度品川区一般会計補
+ 正予算（歳出 建設委員会所管分） ○令和８年請願第７
+ 号 八潮地域における熱供給インフラの持続可能なあり
+ 方に関する請願 ○第３７回東京都道路整備事業推進大
+ 会について（ .pdf.100KB / .docx.24KB ） ○都市計画道路の計
+ 画変更について（ .pdf.566KB / .docx.28\,…\n出典: 品川区議
+ 会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensets
+ u\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.
+ html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bf84c34330eb49e5a05f-20260924@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:文教委員会
+DESCRIPTION:○第８６号議案 品川区一時保護委託者の登録
+ 等の基準に関する条例 ○第８７号議案 品川区家庭的保
+ 育事業等の設備および運営の基準に関する条例の一部
+ を改正する条例（ .pdf.288KB / .docx.60KB ） ○第８８号議案
+  品川区乳児等通園支援事業の設備および運営の基準に
+ 関する条例の一部を改正する条例（ .pdf.288KB / .docx.60KB 
+ ） ○第８９号議案 品川区特定教育・保育施設および特
+ 定地域型保育事業の運営の基準に関する条例の一部を
+ 改正する条例（ .p…\n出典: 品川区議会\nhttps://gikai.city.s
+ hinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo\n品川区議会DB https:
+ //taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:04a171456e23a0098ccf-20260924@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:総務委員会
+DESCRIPTION:○第９２号議案 荏原文化センター外壁改修そ
+ の他工事請負契約 ○第９３号議案 （仮称）子ども・若
+ 者活動拠点および南品川児童センター等整備工事請負
+ 契約 ○第９４号議案 （仮称）子ども・若者活動拠点お
+ よび南品川児童センター等整備電気設備工事請負契約 
+ ○第９５号議案 鈴ケ森小学校校舎改築機械設備工事請
+ 負契約 ○第９７号議案 食器洗浄機他の買入れについて
+  ○令和８年請願第６号 固定資産税及び都市計画税の軽
+ 減措置の継続について意見書の提出に関する請願 ○令
+ 和８年請願第８号 固定資産税及…\n出典: 品川区議会\nh
+ ttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu\n品川
+ 区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f2c292bd6bf8928f8ac2-20260925@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:区民委員会
+DESCRIPTION:○品川区青少年対策地区委員会発足７０周年記
+ 念事業について ○八潮地区における多文化共生事業の
+ 実施について ○臨海斎場施設整備事業の進捗について 
+ ○令和８年度秋冬期の主な事業について\n出典: 品川区
+ 議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumi
+ n\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.
+ html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:88a0f7333dbdb690ae14-20260925@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:厚生委員会
+DESCRIPTION:○二葉四丁目用地における認知症高齢者グルー
+ プホームの整備について（ .pdf.194KB / .docx.384KB ） ○令
+ 和７年度指定管理者の管理に対するモニタリング・評
+ 価の結果について ○品川区介護予防・日常生活圏域ニ
+ ーズ調査の結果報告について ○所得税・住民税の障害
+ 者控除における、対象者認定書の認定基準の見直しに
+ ついて（ .pdf.286KB / .docx.27KB ） ○令和９年度分品川区立
+ 高齢者住宅（単身用）補欠登録者の募集について\n出典
+ : 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-sc
+ hedule/kosei\n品川区議会DB https://taku3516.github.io/shinagawa-gikai
+ -db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1a4c8c7020bb0a09cf8d-20260925@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:建設委員会
+DESCRIPTION:○令和８年１１月都営住宅入居者募集について
+ （ .pdf.97KB / .docx.34KB ） ○武蔵小山駅東C地区の再開発事
+ 業に係る事業者による近隣説明会の開催について ○品
+ 川浦周辺地区におけるまちづくり意見交換会およびア
+ ンケート調査の実施について（ .pdf.352KB / .docx.1\,197KB ）
+  ○東品川海上公園におけるPark-PFIの施設の運営開始に
+ ついて（ .pdf.244KB / .docx.1\,519KB ） ○下水道耐震化推進
+ 事業について（ .pd…\n出典: 品川区議会\nhttps://gikai.city.
+ shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu\n品川区議会DB htt
+ ps://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:df2db7932bc815de86fe-20260925@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:文教委員会
+DESCRIPTION:○令和７年度保護者アンケートおよび児童・生
+ 徒アンケートの結果について ○令和７年度指定管理者
+ による管理に対するモニタリング・評価の結果につい
+ て ○「（仮称）品川区こどもの権利条例」の検討状況
+ について\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.
+ jp/katsudou/inkai-schedule/bunkyo\n品川区議会DB https://taku3516.gith
+ ub.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:9f8f6755f186d7edc637-20260925@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:総務委員会
+DESCRIPTION:○第８４号議案 令和８年度品川区一般会計補
+ 正予算 ○ケーブルテレビ品川の株式売却について ○品
+ 川区南大井二、六丁目付近管路耐震化工事請負契約 ○
+ 所得税・住民税の障害者控除における、対象者認定書
+ の認定基準の見直しについて ○品川区長選挙執行にお
+ けるオンライン立会人の実証実験について ○公共施設
+ マネジメントについて\n出典: 品川区議会\nhttps://gikai.cit
+ y.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu\n品川区議会DB http
+ s://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:3a6224680d3ca8ccfea7-20260928@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:SDGs推進特別委員会
+DESCRIPTION:○SDGｓ推進事業に関すること ○行財政に関す
+ ること ○公共施設・公有地等に関すること ○ふるさと
+ 納税の寄付額の見直しおよび使途の明確化について\n出
+ 典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai
+ -schedule/sdgs\n品川区議会DB https://taku3516.github.io/shinagawa-gik
+ ai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/sdgs
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ed8a2e3e441a5fbcddf9-20260928@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:共生社会推進特別委員会
+DESCRIPTION:○若者に関すること ○重層的支援体制に関す
+ ること\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/
+ katsudou/inkai-schedule/kyosei\n品川区議会DB https://taku3516.github.
+ io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kyosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:914b437bc7f1912fa487-20260929@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:公共施設等整備特別委員会
+DESCRIPTION:○地域公共交通に関すること ○しなるん（大
+ 崎地区）の運行開始について（ .pdf.422KB / .docx.1\,241KB ）
+ \n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/
+ inkai-schedule/koukyo\n品川区議会DB https://taku3516.github.io/shinag
+ awa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:90db77a236837b5ec849-20261022@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:議会運営委員会
+DESCRIPTION:○令和８年第３回定例会について ○令和８年
+ 第４回定例会について ○全国都市問題会議の報告につ
+ いて ○広報会議からの報告事項について ○その他\n出
+ 典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai
+ -schedule/gikai_unei\n品川区議会DB https://taku3516.github.io/shinaga
+ wa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_une
+ i
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:9a4021e99d048bb1b84c-20261104@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:区民委員会
+DESCRIPTION:○第２６回 品川区中学生の主張大会について 
+ ○しながわ地域貢献活動展の開催について ○ご近所交
+ 流会「おとなりんく2026」の実施について ○インクルー
+ シブスポーツについて\n出典: 品川区議会\nhttps://gikai.cit
+ y.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin\n品川区議会DB http
+ s://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kumin
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b0e48bfea197bddbdc8d-20261104@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:厚生委員会
+DESCRIPTION:○令和８年陳情第３９号 「なないろ小山」の
+ 適切な運営、入居選考の透明化、および速やかな契約
+ ・入居開始を求める陳情 ○令和８年陳情第４０号 品川
+ 区における介護認定審査の客観性・透明性の確保、お
+ よび公的委員選任基準の適正化を求める陳情 ○東品川
+ 三丁目における都有地（品川消防署東品川出張所跡地
+ ）を活用した認知症高齢者グループホームの整備・運
+ 営事業者の選定について ○品川区立八潮南特別養護老
+ 人ホーム等増改築工事の工期延伸および品川区立中延
+ 特別養護老人ホームの大規模改修工事について（…\n出
+ 典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai
+ -schedule/kosei\n品川区議会DB https://taku3516.github.io/shinagawa-gi
+ kai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:06d36bda6e01be09c329-20261104@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:建設委員会
+DESCRIPTION:○旗台小学校前地区に関する都市計画案につい
+ て ○西品川２・３丁目地区に関する地区計画案につい
+ て ○東五反田二丁目第４地区に関する都市計画案につ
+ いて ○大崎駅西口F東地区（大崎西口駅前地区）に関す
+ る都市計画案について ○大井町駅西口E地区の再開発事
+ 業に係る事業者による近隣説明会の開催について ○リ
+ ニア中央新幹線オープンハウス説明会の開催について 
+ ○品川区建築物再生可能エネルギー利用促進計画の策
+ 定（素案）について ○ごみの減量をテーマとした「し
+ ながわオープントーク」の実施について\n出典: 品川区
+ 議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kens
+ etsu\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/even
+ ts.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kensetsu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4a13bbb62fca20623005-20261104@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:文教委員会
+DESCRIPTION:○学校施設工事における未届事案の対応状況に
+ ついて（土壌汚染対策法等）（ .pdf.117KB / .docx.28KB ） ○
+ 令和８年度 感染症による臨時休業措置状況 ○学校給食
+ 飲用牛乳の異味・異臭事案について ○令和８年特別区
+ および東京都人事委員会勧告等について ○令和８年度
+ （９年度採用）品川区立学校教育職員採用候補者選考
+ 状況について ○令和８年度品川区学力定着度調査およ
+ び令和８年度全国学力・学習状況調査の結果について 
+ ○品川区学力定着度調査の今後について ○区立学校に
+ お…\n出典: 品川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/kat
+ sudou/inkai-schedule/bunkyo\n品川区議会DB https://taku3516.github.io/
+ shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/bunkyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a3461ea9ac12bbbb3b80-20261104@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:総務委員会
+DESCRIPTION:○令和８年請願第10号 非核三原則の堅持を国に
+ 要請する請願 ○令和８年 職員の給与等に関する報告及
+ び勧告の概要 ○人材育成について\n出典: 品川区議会\nh
+ ttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu\n品川
+ 区議会DB https://taku3516.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/soumu
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ab5b9f57d3dcddead6bc-20261105@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:SDGs推進特別委員会
+DESCRIPTION:○公共施設・公有地等に関すること\n出典: 品
+ 川区議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedul
+ e/sdgs\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/ev
+ ents.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/sdgs
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0bd9054381f5db33a04b-20261105@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:共生社会推進特別委員会
+DESCRIPTION:○若者に関すること ○南下浦コミュニティセ
+ ンター等施設\n出典: 品川区議会\nhttps://gikai.city.shinagawa.
+ tokyo.jp/katsudou/inkai-schedule/kyosei\n品川区議会DB https://taku351
+ 6.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/kyosei
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8671cc7548d0a96a991a-20261106@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:公共施設等整備特別委員会
+DESCRIPTION:○新庁舎および大井町駅周辺地区に関すること
+ （ .pdf.479KB / .docx.2\,908KB ） ○都市部の住まいに関する
+ こと ○新庁舎建設予定地 ○令和８年陳情第４２号 オ
+ ンデマンドバス「しなるん」と並行して、南大井・東
+ 大井から大井町駅へ向かう「しなバス」の運行ルート
+ 新設を含む京急バス１９系統に代わる交通手段を品川
+ 区議会から品川区に求めることと運転手不足解消のた
+ め品川区からバス会社への財政支援制度および２０２
+ ７年度予算に必要な経費を計上することを品川区議会
+ から品川区…\n出典: 品川区議会\nhttps://gikai.city.shinagawa.
+ tokyo.jp/katsudou/inkai-schedule/koukyo\n品川区議会DB https://taku351
+ 6.github.io/shinagawa-gikai-db/events.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/koukyo
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5d5ae1e12d3f62e57a92-20261109@shinagawa-gikai-db
+DTSTAMP:20261117T102246Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:議会運営委員会
+DESCRIPTION:○議員提出議案について ○品川区議会個人情
+ 報の保護に関する条例の一部改正について ○ＩＣＴ推
+ 進会議からの報告事項について ○その他\n出典: 品川区
+ 議会\nhttps://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gika
+ i_unei\n品川区議会DB https://taku3516.github.io/shinagawa-gikai-db/ev
+ ents.html
+LOCATION:品川区議会議事堂
+URL:https://gikai.city.shinagawa.tokyo.jp/katsudou/inkai-schedule/gikai_une
+ i
+CATEGORIES:区議会
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

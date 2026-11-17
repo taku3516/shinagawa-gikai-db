@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0017c1" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230017c1'/%3E%3Cpath d='M7 6h18v4H7zm0 7h4v4H7zm7 0h4v4h-4zm7 0h4v4h-4zM7 20h4v4H7zm7 0h4v4h-4z' fill='white'/%3E%3C/svg%3E" />
+  <title>イベントカレンダー | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
+  <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-controls.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
+  <link rel="stylesheet" href="site-a11y.css" />
+  <style>
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
+    /* 画面に出さず読み上げにだけ渡す。共通CSSに無いため senkyo.html と同じ定義を置く */
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .notice {
+      margin-top: 20px; border: 1px solid var(--border); border-left: 4px solid var(--c-main);
+      border-radius: 3px; background: var(--c-surface-sub); padding: 12px 14px;
+      font-size: calc(13px * var(--fs)); line-height: 1.7;
+    }
+    .controls-wrap {
+      position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border);
+      background: rgba(242, 242, 242, 0.94); box-shadow: 0 2px 6px rgba(26, 26, 26, .08);
+      backdrop-filter: blur(8px);
+    }
+    .controls { display: grid; grid-template-columns: minmax(200px, 1fr) 180px 180px auto; gap: 10px; padding: 12px 0; }
+    .controls input, .controls select {
+      width: 100%; min-height: 44px; border: 1px solid var(--border); border-radius: 3px;
+      background: var(--card); padding: 8px 11px; color: var(--ink); font-size: calc(16px * var(--fs));
+    }
+    .view-switch { display: flex; gap: 6px; }
+    .view-button {
+      min-height: 44px; border: 1px solid var(--main); border-radius: 3px; background: var(--card);
+      padding: 8px 14px; color: var(--main-dark); font-weight: 700; cursor: pointer; white-space: nowrap;
+    }
+    .view-button[aria-pressed="true"] { background: var(--main); color: #fff; }
+
+    main { padding: 24px 0 56px; }
+    .summary-row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: baseline; justify-content: space-between; margin-bottom: 12px; }
+    .summary-row h2 { margin: 0; font-size: calc(19px * var(--fs)); }
+    .result-status { color: var(--soft); font-size: calc(13px * var(--fs)); }
+
+    /* 推定の開催日を含めるかの切り替え */
+    .estimate-toggle {
+      display: inline-flex; gap: 8px; align-items: center; margin-bottom: 16px;
+      border: 1px solid var(--border); border-radius: 3px; background: var(--card);
+      padding: 9px 12px; color: var(--ink); font-size: calc(13px * var(--fs)); font-weight: 700; cursor: pointer;
+    }
+    .estimate-toggle input { width: 18px; height: 18px; margin: 0; accent-color: var(--main); }
+
+    /* 月カレンダー */
+    .month-bar { display: flex; gap: 10px; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .month-bar h3 { margin: 0; min-width: 9em; text-align: center; font-size: calc(18px * var(--fs)); font-variant-numeric: tabular-nums; }
+    .month-button {
+      min-width: 44px; min-height: 44px; border: 1px solid var(--main); border-radius: 3px;
+      background: var(--card); color: var(--main-dark); font-size: calc(15px * var(--fs)); font-weight: 700; cursor: pointer;
+    }
+    /* 長く続くイベントはマスの中に入れず、ここにまとめる。
+       マスに入れると、数か月続く催しが全部の日を埋めてしまう。 */
+    .long-running {
+      margin-bottom: 12px; border: 1px solid var(--border); border-left: 4px solid var(--c-accent);
+      border-radius: 3px; background: var(--c-surface-sub); padding: 10px 12px;
+    }
+    .long-running[hidden] { display: none; }
+    .long-title { margin: 0 0 7px; color: var(--main-dark); font-size: calc(13px * var(--fs)); font-weight: 700; }
+    .long-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .long-chip { width: auto; max-width: min(100%, 420px); border-left-color: var(--c-accent); background: var(--card); }
+    .calendar { width: 100%; border-collapse: collapse; table-layout: fixed; background: var(--card); }
+    .calendar th {
+      border: 1px solid var(--border); background: var(--c-surface-sub); padding: 7px 4px;
+      font-size: calc(12px * var(--fs)); font-weight: 700;
+    }
+    .calendar th.sat { color: #1a4fa0; }
+    .calendar th.sun { color: var(--c-fail); }
+    .calendar td { height: 104px; border: 1px solid var(--border); padding: 4px; vertical-align: top; }
+    .calendar td.other-month { background: var(--c-surface-sub); }
+    .calendar td.holiday, .calendar td.sun { background: rgba(200, 30, 30, .045); }
+    .calendar td.today { outline: 2px solid var(--main); outline-offset: -2px; }
+    .day-number { display: block; margin-bottom: 3px; font-size: calc(12px * var(--fs)); font-weight: 700; font-variant-numeric: tabular-nums; }
+    .day-number .holiday-name { margin-left: 4px; color: var(--c-fail); font-size: calc(10px * var(--fs)); font-weight: 400; }
+    .day-events { display: flex; flex-direction: column; gap: 2px; }
+    .chip {
+      display: block; width: 100%; overflow: hidden; border: 0; border-left: 3px solid var(--main);
+      border-radius: 2px; background: var(--main-pale); padding: 2px 4px; color: var(--ink);
+      text-align: left; font-size: calc(11px * var(--fs)); line-height: 1.35; text-overflow: ellipsis;
+      white-space: nowrap; cursor: pointer;
+    }
+    .chip:hover, .chip:focus-visible { background: var(--card); outline: 2px solid var(--c-focus); }
+    .chip[data-confidence="estimated"] { border-left-style: dashed; background: var(--c-surface-sub); color: var(--soft); }
+    .chip[data-source="gikai-committee"] { border-left-color: var(--c-accent); }
+    .more-link { padding: 1px 4px; color: var(--soft); font-size: calc(10px * var(--fs)); }
+    /* 狭い画面用。広い画面では出さない（チップで中身が読めるため） */
+    .day-count { display: none; }
+
+    /* 一覧 */
+    .day-group { margin-bottom: 22px; }
+    .day-heading {
+      margin: 0 0 8px; border-bottom: 2px solid var(--main); padding-bottom: 5px;
+      color: var(--main-dark); font-size: calc(15px * var(--fs)); font-variant-numeric: tabular-nums;
+    }
+    .event-card {
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px 16px;
+      margin-bottom: 9px; border: 1px solid var(--border); border-left: 4px solid var(--main);
+      border-radius: 3px; background: var(--card); padding: 12px 14px;
+    }
+    .event-card[data-confidence="estimated"] { border-left-style: dashed; }
+    .event-title { margin: 0 0 5px; font-size: calc(15px * var(--fs)); font-weight: 700; line-height: 1.5; }
+    .event-meta { display: flex; flex-wrap: wrap; gap: 5px 12px; color: var(--soft); font-size: calc(12px * var(--fs)); }
+    .event-summary { margin: 7px 0 0; color: var(--ink); font-size: calc(13px * var(--fs)); line-height: 1.7; }
+    .badge {
+      display: inline-block; border: 1px solid var(--c-main-border); border-radius: 2px;
+      background: var(--main-pale); padding: 1px 6px; color: var(--main-dark);
+      font-size: calc(11px * var(--fs)); font-weight: 700;
+    }
+    .badge.estimated { border-style: dashed; border-color: var(--border); background: var(--c-surface-sub); color: var(--soft); }
+    .event-actions { display: flex; flex-direction: column; gap: 6px; align-items: stretch; justify-content: flex-start; }
+    .action-button {
+      display: inline-block; min-height: 38px; border: 1px solid var(--main); border-radius: 3px;
+      background: var(--card); padding: 8px 12px; color: var(--main-dark); font-size: calc(12px * var(--fs));
+      font-weight: 700; text-align: center; text-decoration: none; white-space: nowrap; cursor: pointer;
+    }
+    .action-button.primary { background: var(--main); color: #fff; }
+
+    /* 購読の案内 */
+    .subscribe { margin: 34px 0 0; border: 1px solid var(--border); border-radius: 3px; background: var(--card); padding: 18px 18px 6px; }
+    .subscribe h2 { margin: 0 0 6px; font-size: calc(17px * var(--fs)); }
+    .subscribe p { margin: 0 0 14px; color: var(--ink); font-size: calc(13px * var(--fs)); line-height: 1.8; }
+    .feed { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 8px 10px; align-items: center; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+    .feed:last-of-type { border-bottom: 0; }
+    .feed-name { font-size: calc(13px * var(--fs)); font-weight: 700; }
+    .feed-note { grid-column: 1 / -1; margin: 0; color: var(--soft); font-size: calc(12px * var(--fs)); line-height: 1.6; }
+    .feed-url {
+      grid-column: 1 / -1; overflow-x: auto; border: 1px solid var(--border); border-radius: 2px;
+      background: var(--c-surface-sub); padding: 7px 9px; color: var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: calc(11px * var(--fs)); white-space: nowrap;
+    }
+    .steps { margin: 0 0 16px; padding-left: 1.4em; color: var(--ink); font-size: calc(13px * var(--fs)); line-height: 1.9; }
+
+    .sources { margin-top: 34px; border-top: 1px solid var(--rule); padding-top: 18px; }
+    .sources h2 { margin: 0 0 10px; font-size: calc(16px * var(--fs)); }
+    .source-line { margin: 0 0 7px; color: var(--ink); font-size: calc(13px * var(--fs)); line-height: 1.7; }
+    .empty { border: 1px dashed var(--border); border-radius: 3px; padding: 30px 16px; color: var(--soft); text-align: center; }
+
+    @media (max-width: 760px) {
+      .controls { grid-template-columns: 1fr 1fr; }
+      .controls input { grid-column: 1 / -1; }
+      .view-switch { grid-column: 1 / -1; }
+      /* 7列では催しの名前が「01:0…」までしか出ず読めない。件数だけ見せて、
+         押したらその日の一覧へ移る。 */
+      .calendar td { height: 58px; padding: 3px 2px; }
+      .day-events, .more-link { display: none; }
+      .day-count {
+        display: block; width: 100%; min-height: 28px; border: 1px solid var(--c-main-border);
+        border-radius: 3px; background: var(--main-pale); padding: 3px 2px; color: var(--main-dark);
+        font-size: calc(11px * var(--fs)); font-weight: 700; cursor: pointer;
+      }
+      .long-chip { max-width: 100%; }
+      .event-card { grid-template-columns: 1fr; }
+      .event-actions { flex-direction: row; flex-wrap: wrap; }
+      .action-button { flex: 1 1 auto; }
+      .feed { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <a class="back" href="index.html">← 品川区議会DB トップへ</a>
+      <h1>イベントカレンダー</h1>
+      <p class="lead">品川区の公式イベントカレンダー、区議会の委員会日程、しながわ観光協会、区内ニュースから催しを集めてひとつのカレンダーにまとめています。Googleカレンダーに購読登録すると、以後は自動で増えていきます。</p>
+      <div class="notice">
+        開催日や内容は変わることがあります。参加する前に、必ず各イベントの「出典」から発信元をご確認ください。
+        <strong>破線で示したものは、ニュース記事の本文から開催日を推定したもの</strong>です。発信元が開催日として発表したものではありません。
+      </div>
+      <nav data-site-nav></nav>
+    </div>
+  </header>
+
+  <div class="controls-wrap">
+    <div class="container controls" aria-label="イベントの絞り込み">
+      <input id="search" type="search" placeholder="イベント名、会場、内容で検索" aria-label="イベントを検索" />
+      <select id="category-filter" aria-label="分類で絞り込む"><option value="">すべての分類</option></select>
+      <select id="source-filter" aria-label="収集元で絞り込む"><option value="">すべての収集元</option></select>
+      <div class="view-switch" aria-label="表示の切り替え">
+        <button class="view-button" id="calendar-button" type="button" aria-pressed="true">カレンダー</button>
+        <button class="view-button" id="list-button" type="button" aria-pressed="false">一覧</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <label class="estimate-toggle">
+      <input id="include-estimated" type="checkbox" checked />
+      ニュースから推定した開催日も表示する
+    </label>
+
+    <div class="summary-row">
+      <h2 id="list-title">イベント</h2>
+      <div id="result-status" class="result-status" role="status" aria-live="polite"></div>
+    </div>
+
+    <section id="calendar-view" aria-label="月ごとのカレンダー">
+      <div class="month-bar">
+        <button id="prev-month" class="month-button" type="button" aria-label="前の月へ">←</button>
+        <h3 id="month-label">　</h3>
+        <button id="next-month" class="month-button" type="button" aria-label="次の月へ">→</button>
+        <button id="this-month" class="month-button" type="button" style="min-width:auto;padding:0 12px">今月</button>
+      </div>
+      <div id="long-running" class="long-running" hidden></div>
+      <table class="calendar">
+        <caption class="visually-hidden">月ごとのイベント一覧</caption>
+        <thead>
+          <tr>
+            <th class="sun" scope="col">日</th><th scope="col">月</th><th scope="col">火</th>
+            <th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th class="sat" scope="col">土</th>
+          </tr>
+        </thead>
+        <tbody id="calendar-body"></tbody>
+      </table>
+    </section>
+
+    <section id="list-view" aria-label="イベントの一覧" hidden></section>
+
+    <section class="subscribe" aria-labelledby="subscribe-title">
+      <h2 id="subscribe-title">Googleカレンダーに登録する</h2>
+      <p>
+        下のURLをGoogleカレンダーに登録すると、このカレンダーがあなたのカレンダーに重なって表示されます。
+        一度登録すれば、新しいイベントが増えたときに自動で反映されます（Googleが数時間から1日おきに取りに来ます）。
+        1件だけ入れたいときは、各イベントの「Googleカレンダーに追加」を押してください。
+      </p>
+      <ol class="steps">
+        <li>パソコンでGoogleカレンダーを開く</li>
+        <li>左側の「他のカレンダー」の <strong>＋</strong> から「<strong>URLで追加</strong>」を選ぶ</li>
+        <li>下のURLを貼り付けて「カレンダーを追加」</li>
+      </ol>
+      <div id="feeds"></div>
+      <p class="feed-note" style="margin-top:14px">
+        いま絞り込んでいる分だけをファイルで保存することもできます。
+        保存した .ics は、Googleカレンダーの「設定 → インポート」や、iPhone・Macのカレンダーからも取り込めます。
+      </p>
+      <p style="margin:10px 0 18px">
+        <button id="download-filtered" class="action-button primary" type="button">絞り込んだ分を .ics で保存</button>
+      </p>
+    </section>
+
+    <section class="sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">収集元</h2>
+      <div id="source-list"></div>
+      <p class="source-line" id="generated-at"></p>
+    </section>
+  </main>
+
+  <footer><div class="container">品川区議会DB — 開催日・内容は必ず各発信元のページで確認してください。</div></footer>
+
+  <script src="data/site.js"></script>
+  <!-- site-nav.js より前に読む。別ドメインから配信された場合のリンク解決に使う。 -->
+  <script src="site-url.js"></script>
+  <script src="site-nav.js"></script>
+  <script src="events-ics.js"></script>
+  <script src="data/events.js"></script>
+  <script src="events-page.js"></script>
+  <script src="site-a11y.js"></script>
+</body>
+</html>

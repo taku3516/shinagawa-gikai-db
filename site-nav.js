@@ -44,6 +44,7 @@
       label: "地域・検索",
       items: [
         { label: "区のニュース", url: "news.html" },
+        { label: "イベントカレンダー", url: "events.html" },
         { label: "町会区域", url: "chokai-map.html" },
         { label: "横断検索", url: "kensaku.html" }
       ]
@@ -67,10 +68,14 @@
   // 配信元と authDomain のドメインが一致していないと iPhone・iPad で完了できないため
   // （理由は docs/firebase-sync-setup.md）。どのページから押しても直接そこへ向ける。
   const NEWS_URL = "https://shinagawakugiakidb.firebaseapp.com/news.html";
+  // イベントカレンダーも同じ配信元に置いている（ニュースの★と同じ仕組みに
+  // 乗せられるようにするため）。どのページから押しても直接そこへ向ける。
+  const EVENTS_URL = "https://shinagawakugiakidb.firebaseapp.com/events.html";
 
   function resolveUrl(rawUrl) {
     const u = String(rawUrl || "");
     if (u === "news.html") return NEWS_URL;
+    if (u === "events.html") return EVENTS_URL;
     // ニュースページ自身は別ドメインにあるため、他ページへのリンクを絶対URLにする
     // （site-url.js）。同じドメインから配信されるページでは従来どおり相対リンク。
     if (window.SHINAGAWA_SITE_BASE && window.SHINAGAWA_URL) {
