@@ -23,15 +23,15 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 
-INDEX_URL = "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/index.html"
+INDEX_URL = "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/index.html"
 CSV_URL = "https://www.opendata.metro.tokyo.lg.jp/shinagawa/131091_shinagawaku_chokai.csv"
 OFFICIAL_MAP_URL = (
-    "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/"
-    "hpg000021724.html"
+    "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/"
+    "1004654.html"
 )
 CENTERS_URL = (
-    "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/"
-    "shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-chiiki/hpg000022716.html"
+    "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/"
+    "1008161.html"
 )
 USER_AGENT = (
     "shinagawa-gikai-db-chokai-updater/1.0 "
