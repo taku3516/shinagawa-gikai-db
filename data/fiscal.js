@@ -17,7 +17,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "令和8年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/2026tousyoyosan.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005654.html"
           }
         ],
         "council": [
@@ -39,11 +39,11 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "第2号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202502hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1008962/1005671.html"
           },
           {
             "label": "第1号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202601hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1008962/1008963.html"
           }
         ],
         "council": [
@@ -80,7 +80,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "令和7年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/2025tousyoyosan.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005655.html"
           }
         ],
         "council": [
@@ -98,31 +98,30 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "第6号補正予算（衆議院議員選挙費）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202506hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005665/1005667.html"
           },
           {
             "label": "第5号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202505hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005665/1005668.html"
           },
           {
             "label": "第4号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202504hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005665/1005669.html"
           },
           {
             "label": "第3号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202503hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005665/1005670.html"
           },
           {
-            "label": "第2号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/2025002hosei.html"
+            "label": "第2号補正予算(一般会計）（公式サイトに掲載なし）"
           },
           {
             "label": "第1号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202406hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005665/1005672.html"
           },
           {
             "label": "最終補正予算(一般会計・特別会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202507hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005665/1005666.html"
           }
         ],
         "council": [
@@ -188,7 +187,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "令和6年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20240208145918.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005656.html"
           }
         ],
         "council": [
@@ -206,31 +205,31 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "第6号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202406hosei2.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005673/1005675.html"
           },
           {
             "label": "第5号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202405hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005673/1005676.html"
           },
           {
             "label": "第4号補正予算（衆議院議員選挙費）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202404hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005673/1005677.html"
           },
           {
             "label": "第3号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202403hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005673/1005678.html"
           },
           {
             "label": "第2号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202402hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005673/1005679.html"
           },
           {
             "label": "第1号補正予算(一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202401hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005673/1005680.html"
           },
           {
             "label": "最終補正予算（一般会計・特別会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/202407hosei.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005673/1005674.html"
           }
         ],
         "council": [
@@ -278,22 +277,22 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "令和6年度 歳入歳出決算書1（PDF・14MB）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_18.pdf"
+            "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/005/751/r6/r6_1.pdf"
           },
           {
             "type": "official",
-            "label": "決算書2（PDF・19MB）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_19.pdf"
+            "label": "決算書2（PDF・18MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/005/751/r6/r6_2.pdf"
           },
           {
             "type": "official",
-            "label": "決算書3（PDF・12MB）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_20.pdf"
+            "label": "決算書3（PDF・11MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/005/751/r6/r6_3.pdf"
           },
           {
             "type": "official",
             "label": "決算書の公式ページ",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005750/1005751.html"
           }
         ],
         "council": [
@@ -311,7 +310,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "realBalance": "66億646万円の黒字",
         "amountSource": {
           "label": "品川区監査委員 決算審査意見書（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/kansa/1009678/1007081.html",
           "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
         }
       }
@@ -329,7 +328,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "令和5年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20230208174032.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005657.html"
           }
         ],
         "council": [
@@ -343,35 +342,35 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "第1号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230427144154.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005681/1005689.html"
           },
           {
             "label": "第2号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230524135008.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005681/1005688.html"
           },
           {
             "label": "第3号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230620185121.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005681/1005687.html"
           },
           {
             "label": "第4号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230912090108.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005681/1005686.html"
           },
           {
             "label": "第5号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20231108174541.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005681/1005685.html"
           },
           {
             "label": "第6号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20231211182007.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005681/1005684.html"
           },
           {
             "label": "第7号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20231226085742.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005681/1005683.html"
           },
           {
             "label": "最終補正予算（一般会計・特別会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20240208155539.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005681/1005682.html"
           }
         ],
         "council": []
@@ -381,18 +380,18 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "令和5年度 歳入歳出決算書1（PDF・13MB）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_15.pdf"
+            "label": "令和5年度 歳入歳出決算書1（PDF・7MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/005/751/20210301101047_27.pdf"
           },
           {
             "type": "official",
-            "label": "決算書2（PDF・23MB）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_16.pdf"
+            "label": "決算書2（PDF・17MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/005/751/20210301101047_28.pdf"
           },
           {
             "type": "official",
-            "label": "決算書3（PDF・10MB）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_17.pdf"
+            "label": "決算書3（PDF・6MB）",
+            "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/005/751/20210301101047_29.pdf"
           }
         ],
         "council": [
@@ -410,7 +409,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "realBalance": "58億9,419万円の黒字",
         "amountSource": {
           "label": "品川区監査委員 決算審査意見書（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/kansa/1009678/1007081.html",
           "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
         }
       }
@@ -428,7 +427,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "令和4年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20220210190000.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005658.html"
           }
         ],
         "council": [
@@ -442,27 +441,27 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "第1号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20220525135239.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005690/1005696.html"
           },
           {
             "label": "第2号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20220613132606.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005690/1005695.html"
           },
           {
             "label": "第3号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20221017132110.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005690/1005694.html"
           },
           {
             "label": "第4号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20221209201020.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005690/1005693.html"
           },
           {
             "label": "第5号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230110185330.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005690/1005692.html"
           },
           {
             "label": "最終補正予算（一般会計・特別会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20230208171732.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005690/1005691.html"
           }
         ],
         "council": []
@@ -472,18 +471,15 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "令和4年度 歳入歳出決算書1（PDF・8MB）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_9.pdf"
+            "label": "令和4年度 歳入歳出決算書1（公式サイトに掲載なし）"
           },
           {
             "type": "official",
-            "label": "決算書2（PDF・15MB）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_10.pdf"
+            "label": "決算書2（公式サイトに掲載なし）"
           },
           {
             "type": "official",
-            "label": "決算書3（PDF・5MB）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_11.pdf"
+            "label": "決算書3（公式サイトに掲載なし）"
           }
         ],
         "council": [
@@ -501,7 +497,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "realBalance": "62億6,078万円の黒字",
         "amountSource": {
           "label": "品川区監査委員 決算審査意見書（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/kansa/1009678/1007081.html",
           "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
         }
       }
@@ -519,7 +515,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "令和3年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20210121100139.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005659.html"
           }
         ],
         "council": [
@@ -533,39 +529,39 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "第1号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20210416192925.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005697/1005706.html"
           },
           {
             "label": "第2号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200325140104.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005697/1005705.html"
           },
           {
             "label": "第3号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20210615190353.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005697/1005704.html"
           },
           {
             "label": "第4号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20210825190810.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005697/1005703.html"
           },
           {
             "label": "第5号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20211117190456.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005697/1005702.html"
           },
           {
             "label": "第6号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20211210095625.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005697/1005701.html"
           },
           {
             "label": "第7号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20211224095649.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005697/1005700.html"
           },
           {
             "label": "第8号補正予算（一般会計・特別会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20220210170255.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005697/1005699.html"
           },
           {
             "label": "第9号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20220221181419.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005697/1005698.html"
           }
         ],
         "council": []
@@ -575,8 +571,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "令和3年度 各会計歳入歳出決算書（PDF）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_12.pdf"
+            "label": "令和3年度 各会計歳入歳出決算書（公式サイトに掲載なし）"
           }
         ],
         "council": [
@@ -594,7 +589,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "realBalance": "69億4,381万円の黒字",
         "amountSource": {
           "label": "品川区監査委員 決算審査意見書（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/kansa/1009678/1007081.html",
           "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
         }
       }
@@ -612,7 +607,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "令和2年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200326154523.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005660.html"
           }
         ],
         "council": [
@@ -626,31 +621,31 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "第1号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20211012175155.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005707/1005713.html"
           },
           {
             "label": "第1号補正予算（国民健康保険事業会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200424170734.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005707/1005714.html"
           },
           {
             "label": "第2号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200508131837.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005707/1005712.html"
           },
           {
             "label": "第3号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200612110703.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005707/1005711.html"
           },
           {
             "label": "第4号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200903154733.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005707/1005710.html"
           },
           {
             "label": "第5号補正予算（一般会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20201116110957.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005707/1005709.html"
           },
           {
             "label": "最終補正予算（一般会計・特別会計）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20210120154035.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005707/1005708.html"
           }
         ],
         "council": []
@@ -660,8 +655,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "令和2年度 各会計歳入歳出決算書（PDF）",
-            "url": "https://www.city.shinagawa.tokyo.jp/ct/pdf/20210301101047_5.pdf"
+            "label": "令和2年度 各会計歳入歳出決算書（公式サイトに掲載なし）"
           }
         ],
         "council": [
@@ -674,8 +668,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "expenditure": "2,363億1,670万円",
         "realBalance": "35億548万円の黒字",
         "amountSource": {
-          "label": "品川区監査委員 決算審査意見書（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "label": "品川区監査委員 決算審査意見書（公式・当該年度は未掲載）",
           "note": "各会計決算審査意見書の「一般会計 決算の概況」より"
         }
       }
@@ -693,7 +686,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "令和元年度（平成31年度）当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20190326141350.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005661.html"
           }
         ],
         "council": [
@@ -707,15 +700,15 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "6月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20190710133704.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005715/1005718.html"
           },
           {
             "label": "9月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20191023174449.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005715/1005717.html"
           },
           {
             "label": "最終補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20200306085840.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005715/1005716.html"
           }
         ],
         "council": []
@@ -739,8 +732,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "expenditure": "1,790億4,435万円",
         "realBalance": "50億7,509万円の黒字",
         "amountSource": {
-          "label": "品川区監査委員 決算審査意見書（公式）",
-          "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-siryo-kansa/hpg00002415001.html",
+          "label": "品川区監査委員 決算審査意見書（公式・当該年度は未掲載）",
           "note": "前年度分として同意見書に記載された額"
         }
       }
@@ -757,7 +749,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "平成30年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/hpg000033344.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005662.html"
           }
         ],
         "council": [
@@ -771,15 +763,15 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "10月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20190204095831.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005719/1005721.html"
           },
           {
             "label": "6月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20180711170836.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005719/1005722.html"
           },
           {
             "label": "最終補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/20190305114825.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005719/1005720.html"
           }
         ],
         "council": []
@@ -789,8 +781,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "決算書の公式ページ",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+            "label": "決算書（公式サイトに当該年度の掲載なし）"
           }
         ],
         "council": [
@@ -822,7 +813,7 @@ window.SHINAGAWA_DB.fiscalData = {
           {
             "type": "official",
             "label": "平成29年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/hpg000030788.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005663.html"
           }
         ],
         "council": [
@@ -836,19 +827,19 @@ window.SHINAGAWA_DB.fiscalData = {
         "official": [
           {
             "label": "7月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000031536.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005723/1005727.html"
           },
           {
             "label": "9月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000032097.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005723/1005725.html"
           },
           {
             "label": "9月補正予算（衆議院議員選挙費）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000032057.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005723/1005726.html"
           },
           {
             "label": "最終補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000033119.html"
+            "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005664/1005723/1005724.html"
           }
         ],
         "council": []
@@ -858,8 +849,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "決算書の公式ページ",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+            "label": "決算書（公式サイトに当該年度の掲載なし）"
           }
         ],
         "council": [
@@ -890,8 +880,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "平成28年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/hpg000027827.html"
+            "label": "平成28年度当初予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -904,24 +893,19 @@ window.SHINAGAWA_DB.fiscalData = {
       "supplements": {
         "official": [
           {
-            "label": "12月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000029967.html"
+            "label": "12月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "6月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000028664.html"
+            "label": "6月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "6月補正予算（都知事選挙費）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000028663.html"
+            "label": "6月補正予算（都知事選挙費）（公式サイトに掲載なし）"
           },
           {
-            "label": "9月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000029643.html"
+            "label": "9月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "最終補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000030484.html"
+            "label": "最終補正予算（公式サイトに掲載なし）"
           }
         ],
         "council": []
@@ -931,8 +915,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "決算書の公式ページ",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+            "label": "決算書（公式サイトに当該年度の掲載なし）"
           }
         ],
         "council": [
@@ -963,8 +946,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "平成27年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/hpg000024988.html"
+            "label": "平成27年度当初予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -977,24 +959,19 @@ window.SHINAGAWA_DB.fiscalData = {
       "supplements": {
         "official": [
           {
-            "label": "12月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000027079.html"
+            "label": "12月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "5月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000025469.html"
+            "label": "5月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "6月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000025710.html"
+            "label": "6月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "9月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000026432.html"
+            "label": "9月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "最終補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000027644.html"
+            "label": "最終補正予算（公式サイトに掲載なし）"
           }
         ],
         "council": []
@@ -1004,8 +981,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "決算書の公式ページ",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+            "label": "決算書（公式サイトに当該年度の掲載なし）"
           }
         ],
         "council": [
@@ -1036,8 +1012,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "平成26年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200928155106.html"
+            "label": "平成26年度当初予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1050,20 +1025,16 @@ window.SHINAGAWA_DB.fiscalData = {
       "supplements": {
         "official": [
           {
-            "label": "10月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000023866.html"
+            "label": "10月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "11月補正予算（衆議院議員選挙執行費）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000023961.html"
+            "label": "11月補正予算（衆議院議員選挙執行費）（公式サイトに掲載なし）"
           },
           {
-            "label": "6月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000022460.html"
+            "label": "6月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "最終補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000024806.html"
+            "label": "最終補正予算（公式サイトに掲載なし）"
           }
         ],
         "council": []
@@ -1073,8 +1044,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "決算書の公式ページ",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+            "label": "決算書（公式サイトに当該年度の掲載なし）"
           }
         ],
         "council": [
@@ -1105,8 +1075,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "平成25年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200928155010.html"
+            "label": "平成25年度当初予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1119,24 +1088,19 @@ window.SHINAGAWA_DB.fiscalData = {
       "supplements": {
         "official": [
           {
-            "label": "12月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000021100.html"
+            "label": "12月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "12月補正予算（都知事選挙費）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000021214.html"
+            "label": "12月補正予算（都知事選挙費）（公式サイトに掲載なし）"
           },
           {
-            "label": "6月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000019862.html"
+            "label": "6月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "9月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000020721.html"
+            "label": "9月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "最終補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000021503.html"
+            "label": "最終補正予算（公式サイトに掲載なし）"
           }
         ],
         "council": []
@@ -1146,8 +1110,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "決算書の公式ページ",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+            "label": "決算書（公式サイトに当該年度の掲載なし）"
           }
         ],
         "council": [
@@ -1178,8 +1141,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "平成24年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200928155539.html"
+            "label": "平成24年度当初予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1192,24 +1154,19 @@ window.SHINAGAWA_DB.fiscalData = {
       "supplements": {
         "official": [
           {
-            "label": "11月補正予算（衆議院議員選挙費）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000018289.html"
+            "label": "11月補正予算（衆議院議員選挙費）（公式サイトに掲載なし）"
           },
           {
-            "label": "11月補正予算（都知事選挙費）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000018046.html"
+            "label": "11月補正予算（都知事選挙費）（公式サイトに掲載なし）"
           },
           {
-            "label": "6月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000017310.html"
+            "label": "6月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "9月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000017862.html"
+            "label": "9月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "最終補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000019125.html"
+            "label": "最終補正予算（公式サイトに掲載なし）"
           }
         ],
         "council": []
@@ -1219,8 +1176,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "決算書の公式ページ",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+            "label": "決算書（公式サイトに当該年度の掲載なし）"
           }
         ],
         "council": [
@@ -1251,8 +1207,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "平成23年度当初予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/tousyo/20200928155325.html"
+            "label": "平成23年度当初予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1265,16 +1220,13 @@ window.SHINAGAWA_DB.fiscalData = {
       "supplements": {
         "official": [
           {
-            "label": "6月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000014458.html"
+            "label": "6月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "9月補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000015156.html"
+            "label": "9月補正予算（公式サイトに掲載なし）"
           },
           {
-            "label": "最終補正予算",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/hosei/hpg000016168.html"
+            "label": "最終補正予算（公式サイトに掲載なし）"
           }
         ],
         "council": []
@@ -1284,8 +1236,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "決算書の公式ページ",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/20210301101047.html"
+            "label": "決算書（公式サイトに当該年度の掲載なし）"
           }
         ],
         "council": [
@@ -1316,8 +1267,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1363,8 +1313,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1410,8 +1359,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1457,8 +1405,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1504,8 +1451,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1551,8 +1497,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1598,8 +1543,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1645,8 +1589,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1692,8 +1635,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [
@@ -1739,8 +1681,7 @@ window.SHINAGAWA_DB.fiscalData = {
         "links": [
           {
             "type": "official",
-            "label": "品川区 予算（公式）",
-            "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+            "label": "品川区 予算（公式・当該年度は未掲載）"
           }
         ],
         "council": [],
@@ -1774,11 +1715,11 @@ window.SHINAGAWA_DB.fiscalData = {
   "sources": [
     {
       "label": "品川区 予算（公式）",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/index.html"
     },
     {
       "label": "品川区 決算（公式）",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/index.html"
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005750/index.html"
     }
   ]
 };

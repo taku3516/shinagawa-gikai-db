@@ -64,6 +64,10 @@
     }
     .pill--fiscal { border-color: var(--c-fiscal-border); background: var(--c-fiscal-bg); color: var(--c-fiscal); }
     .pill .kind { margin-left: 8px; color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); font-weight: 700; }
+    /* リンク先のない資料。公式サイトのリニューアルで該当ページが無くなったものなど。
+       破線で「押せない」ことを形で示す（senkyo.html と同じ扱い） */
+    .pill-plain { border-style: dashed; color: var(--c-ink-soft); }
+    .plain { color: var(--c-ink-soft); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .col-box { border: 1px solid var(--c-rule); border-radius: 3px; background: var(--c-surface-sub); padding: 12px 14px; }
     .col-box h4 { margin: 0 0 8px; font-size: calc(13px * var(--fs)); color: var(--c-ink-soft); }
@@ -124,12 +128,14 @@
 
     // 資料リンク1件。外部サイトは新しいタブで開く
     function linkPill(link) {
-      const target = /^https?:/.test(link.url) ? ' target="_blank" rel="noopener"' : "";
       const kind = KIND_LABEL[link.kind] || "";
       const meta = [kind, link.size].filter(Boolean).join(" ");
+      const inner = esc(link.label) + (meta ? `<span class="kind">${esc(meta)}</span>` : "");
+      // 公式サイトに該当ページが無い資料はURLを持たない。リンクにはせず資料名だけ残す
+      if (!link.url) return `<span class="pill pill-plain">${inner}</span>`;
+      const target = /^https?:/.test(link.url) ? ' target="_blank" rel="noopener"' : "";
       const cls = link.kind === "page" ? "pill" : "pill pill--fiscal";
-      return `<a class="${cls}" href="${esc(link.url)}"${target}>${esc(link.label)}`
-        + (meta ? `<span class="kind">${esc(meta)}</span>` : "") + `</a>`;
+      return `<a class="${cls}" href="${esc(link.url)}"${target}>${inner}</a>`;
     }
 
     function linksHtml(links) {
@@ -189,8 +195,9 @@
       renderAbout(data);
       document.getElementById("source-note").innerHTML =
         esc(data.note) + " "
-        + (data.sources || []).map((s) =>
-            `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(" / ")
+        + (data.sources || []).map((s) => (s.url
+            ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`
+            : `<span class="plain">${esc(s.label)}</span>`)).join(" / ")
         + `（データ取得日: ${esc(data.updatedAt)}）`;
 
       const select = document.getElementById("fy-select");

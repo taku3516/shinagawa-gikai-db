@@ -9,12 +9,12 @@ window.SHINAGAWA_SENKYO_SHUSHI = {
   sources: [
     {
       label: "品川区 公費負担・収支報告など",
-      url: "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kutyokugirikkouho/20240209150058.html",
+      url: "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1009265/1009267.html",
       role: "品川区選挙管理委員会の制度案内"
     },
     {
       label: "品川区 過去の選挙結果",
-      url: "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kuseizyoho-sensei/kuseizyoho-senkyo/kuseizyoho-senkyo-kekka/index.html",
+      url: "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010843/1010763.html",
       role: "選挙名・候補者・執行日の確認"
     },
     {

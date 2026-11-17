@@ -3,10 +3,10 @@ window.SHINAGAWA_DB = window.SHINAGAWA_DB || {};
 window.SHINAGAWA_DB.chokai = {
   "schemaVersion": 1,
   "source": {
-    "areaIndexUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/index.html",
+    "areaIndexUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/index.html",
     "associationCsvUrl": "https://www.opendata.metro.tokyo.lg.jp/shinagawa/131091_shinagawaku_chokai.csv",
-    "officialMapUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000021724.html",
-    "centersUrl": "https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-kuyakusyo/shisetsu-kuyakusyo-chiiki/shisetsu-kuyakusyo-chiiki-chiiki/hpg000022716.html",
+    "officialMapUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004654.html",
+    "centersUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008161.html",
     "credit": "町会名: 東京都オープンデータカタログ（CC BY 4.0）、住所区域・地域センター所在地: 品川区公式サイト"
   },
   "regionCount": 13,
@@ -14,7 +14,7 @@ window.SHINAGAWA_DB.chokai = {
   "regions": [
     {
       "name": "品川第一地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011172.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004641.html",
       "sourceUpdated": "令和3年11月29日",
       "associations": [
         {
@@ -354,7 +354,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "品川第二地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011174.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004642.html",
       "sourceUpdated": "令和3年11月29日",
       "associations": [
         {
@@ -636,7 +636,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "大崎第一地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/chiiki-tyokai-oosaki1/index.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004643.html",
       "sourceUpdated": "平成31年4月26日",
       "associations": [
         {
@@ -1476,7 +1476,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "大崎第二地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011176.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004644.html",
       "sourceUpdated": "令和8年5月7日",
       "associations": [
         {
@@ -1750,7 +1750,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "大井第一地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011177.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004645.html",
       "sourceUpdated": "令和4年5月18日",
       "associations": [
         {
@@ -2084,7 +2084,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "大井第二地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/chiiki-tyokai-ooi2/index.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004646.html",
       "sourceUpdated": "令和3年11月22日",
       "associations": [
         {
@@ -2196,7 +2196,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "大井第三地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011179.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004647.html",
       "sourceUpdated": "令和6年5月22日",
       "associations": [
         {
@@ -2298,7 +2298,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "荏原第一地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011180.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004648.html",
       "sourceUpdated": "平成22年4月12日",
       "associations": [
         {
@@ -2526,7 +2526,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "荏原第二地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011181.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004649.html",
       "sourceUpdated": "令和6年5月23日",
       "associations": [
         {
@@ -2692,7 +2692,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "荏原第三地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011182.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004650.html",
       "sourceUpdated": "令和7年7月30日",
       "associations": [
         {
@@ -2968,7 +2968,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "荏原第四地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011183.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004651.html",
       "sourceUpdated": "令和3年9月15日",
       "associations": [
         {
@@ -3212,7 +3212,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "荏原第五地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011184.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004652.html",
       "sourceUpdated": "令和7年8月22日",
       "associations": [
         {
@@ -3380,7 +3380,7 @@ window.SHINAGAWA_DB.chokai = {
     },
     {
       "name": "八潮地域センター",
-      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/PC/chiiki/chiiki-tyokai/hpg000011185.html",
+      "sourceUrl": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004653.html",
       "sourceUpdated": "平成22年4月12日",
       "associations": [
         {

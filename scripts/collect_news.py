@@ -272,17 +272,31 @@ class ArticleParser(HTMLParser):
             self._buffer = []
 
 
+# 本文ではなく、どのページにも出る定型のお断り文。要約に混ざると中身が読めなくなる。
+# 2026年10月20日のリニューアルで表記が変わった（「JavaScriptを有効」→「javascriptの使用を有効」）ため、
+# 大文字小文字を無視して判定する。
+BOILERPLATE_MARKERS = (
+    "文字の大きさや色を変更する機能", "正しく動作させるには", "トップページ >",
+    "copyright", "〒", "このサイトでは", "javascriptを有効", "javascriptの使用を有効",
+    "当ウェブサイトではjavascript",
+    # リニューアル後のパンくずとページ情報
+    "現在の位置", "ページid：",
+)
+
+
+def is_boilerplate(paragraph: str) -> bool:
+    """定型のお断り文なら True。"""
+    lowered = paragraph.lower()
+    return any(marker.lower() in lowered for marker in BOILERPLATE_MARKERS)
+
+
 def article_details(url: str) -> dict[str, str]:
     payload, charset = fetch(url)
     parser = ArticleParser()
     parser.feed(decode(payload, charset))
-    excluded = (
-        "文字の大きさや色を変更する機能", "正しく動作させるには", "トップページ >",
-        "Copyright", "〒", "このサイトでは", "JavaScriptを有効",
-    )
     useful_paragraphs = [
         paragraph for paragraph in parser.paragraphs
-        if not any(marker in paragraph for marker in excluded)
+        if not is_boilerplate(paragraph)
     ]
     summary = " ".join(useful_paragraphs[:2]) or parser.description
     return {"title": parser.title, "summary": shorten(summary), "publishedAt": iso_date(parser.published)}

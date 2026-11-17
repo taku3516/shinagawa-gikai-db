@@ -363,11 +363,11 @@ window.SHINAGAWA_DB.site = {
     },
     {
       "label": "品川区 予算（公式）",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/yosan/index.html"
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/index.html"
     },
     {
       "label": "品川区 決算（公式）",
-      "url": "https://www.city.shinagawa.tokyo.jp/PC/kuseizyoho/kessan/index.html"
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005750/index.html"
     }
   ],
   "sourcesNote": "このサイトの内容は上記の公式ページのみを一次情報としています。要約・言い換えには誤りが含まれる可能性があるため、必ずリンク先の一次情報を確認してください。"
