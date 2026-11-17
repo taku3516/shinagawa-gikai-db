@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 
+import sys
 from pathlib import Path
+
+# scripts/ を import 先に加える。これが無いと単独では実行できず、
+# 他の検査と同時に走ったときだけ通るという紛らわしい状態になる。
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 import tempfile
 import unittest
 
