@@ -7,7 +7,7 @@
 // proportionalResults[{ name, votesDisplay, votesValue }], sources[{ label, url }], verifiedAt
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.electionsData = {
-  "updatedAt": "2026-11-15",
+  "updatedAt": "2026-11-17",
   "note": "品川区に関わる選挙（区議選・区議補選・区長選・都議選・都議補選の品川区選挙区・衆院選の東京都第3区）を掲載しています。区長選は1947年、そのほかは1997年まで遡っています。1997年以降の得票数・得票率・党派は選挙ドットコムの公表データ、投票率・有権者数は各選挙の公式発表に基づきます。1995年以前の区長選と区長公選制の沿革は、提供された集計表「歴代区長選」によるもので、一次資料は未確認です。得票数に小数があるものは、選挙管理委員会発表に準拠した按分票です。",
   "types": [
     {
@@ -48,6 +48,52 @@ window.SHINAGAWA_DB.electionsData = {
     }
   ],
   "elections": [
+    {
+      "id": "go2-26429",
+      "type": "ward-mayor",
+      "title": "品川区長選挙",
+      "electionDate": "2026-11-15",
+      "noticeDate": "2026-11-08",
+      "district": "品川区全域",
+      "seats": 1,
+      "candidateCount": 2,
+      "electorate": "340,423",
+      "turnout": "34.39",
+      "previousTurnout": "32.44",
+      "candidates": [
+        {
+          "result": "当選",
+          "rank": 1,
+          "name": "森沢 きょうこ",
+          "party": "無所属",
+          "votesDisplay": "103,407票",
+          "voteShare": "89.2%",
+          "age": "48",
+          "incumbency": "現職"
+        },
+        {
+          "result": "落選",
+          "rank": 2,
+          "name": "浜田 けんたろう",
+          "party": "無所属",
+          "votesDisplay": "12,560票",
+          "voteShare": "10.8%",
+          "age": "27",
+          "incumbency": "新人"
+        }
+      ],
+      "sources": [
+        {
+          "label": "選挙ドットコム（得票数・得票率）",
+          "url": "https://go2senkyo.com/local/senkyo/26429"
+        },
+        {
+          "label": "品川区 品川区長選挙 開票結果（公式）",
+          "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010746/1010757.html"
+        }
+      ],
+      "verifiedAt": "2026-11-17"
+    },
     {
       "id": "shugi-51-tokyo3",
       "type": "house",
