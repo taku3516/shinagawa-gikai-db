@@ -83,6 +83,45 @@ class RepairTest(unittest.TestCase):
         self.assertEqual(payload["sources"][0]["url"], NEW)
         self.assertEqual(payload["sources"][0]["name"], "品川区 新着情報")
 
+    def test_張り替え済みの記事とURLが重なっても1件にする(self) -> None:
+        """旧URLの記事が先、張り替え済みの記事が後、という並びでも重複を残さない。"""
+        pair = [
+            {"id": "aaa", "url": OLD, "title": "同じ記事"},
+            {"id": "bbb", "url": NEW, "title": "同じ記事"},
+        ]
+        result, report = repair_news_urls.apply_resolution(pair, {OLD: NEW})
+        self.assertEqual([item["id"] for item in result], ["aaa"])
+        self.assertEqual(report["merged"], 1)
+
+    def test_公式サイト以外でもURLが重なれば1件にする(self) -> None:
+        pair = [
+            {"id": "aaa", "url": KEPT, "title": "同じ記事"},
+            {"id": "bbb", "url": KEPT, "title": "同じ記事"},
+        ]
+        result, report = repair_news_urls.apply_resolution(pair, {})
+        self.assertEqual([item["id"] for item in result], ["aaa"])
+        self.assertEqual(report["merged"], 1)
+
+    def test_消えたと断定できる応答は404と410だけ(self) -> None:
+        """429や503は一時的な失敗。記事を消す根拠にしない。"""
+        self.assertTrue(repair_news_urls.is_gone(404))
+        self.assertTrue(repair_news_urls.is_gone(410))
+        for code in (403, 429, 500, 502, 503, 504):
+            self.assertFalse(repair_news_urls.is_gone(code), code)
+
+    def test_一時的な失敗は対応表を作らずに中断する(self) -> None:
+        original = repair_news_urls.resolve
+
+        def 失敗する(url: str):  # noqa: ANN202
+            raise repair_news_urls.TransientFailure(f"{url}: HTTP 503")
+
+        repair_news_urls.resolve = 失敗する
+        try:
+            with self.assertRaises(repair_news_urls.TransientFailure):
+                repair_news_urls.build_resolution([OLD], workers=1)
+        finally:
+            repair_news_urls.resolve = original
+
     def test_旧URLの見分け(self) -> None:
         self.assertTrue(repair_news_urls.is_old_official(OLD))
         self.assertTrue(repair_news_urls.is_old_official(

@@ -45,11 +45,25 @@ USER_AGENT = (
     "(+https://github.com/taku3516/shinagawa-gikai-db)"
 )
 TIMEOUT = 30
+REDIRECT_CODES = (301, 302, 303, 307, 308)
+
+
+class TransientFailure(RuntimeError):
+    """一時的な失敗。記事を消す根拠にならないので、張り替え自体を中断する。"""
 
 
 def is_old_official(url: str) -> bool:
     """リニューアル前の公式サイトURLかどうか。"""
     return str(url or "").startswith(OLD_PREFIXES)
+
+
+def is_gone(code: int) -> bool:
+    """ページが無いと断定できる応答か。
+
+    404と410だけを根拠にする。429や503は混雑や一時停止であって、
+    記事を消す理由にはならない。
+    """
+    return code in (404, 410)
 
 
 def apply_resolution(
@@ -59,6 +73,7 @@ def apply_resolution(
 
     resolution は 旧URL -> 新URL。値が None なら新サイトに無いという実測結果。
     対応表に載っていない旧URLは実測できなかったものとして、そのまま残す。
+    同じURLに行き着いた記事は、先に出てきた1件だけ残す。
     """
     kept: list[dict] = []
     seen_urls: set[str] = set()
@@ -66,32 +81,29 @@ def apply_resolution(
     for item in items:
         url = item.get("url", "")
         if not is_old_official(url):
-            report["untouched"] += 1
-            seen_urls.add(url)
-            kept.append(item)
-            continue
-        if url not in resolution:
-            report["unresolved"] += 1
-            kept.append(item)
-            continue
-        new_url = resolution[url]
-        if not new_url:
+            final_url, kind = url, "untouched"
+        elif url not in resolution:
+            final_url, kind = url, "unresolved"
+        elif not resolution[url]:
             report["dropped"] += 1
             continue
-        if new_url == url:
+        elif resolution[url] == url:
             # 転送が無くても200を返すURL。消えたわけではないので残す。
-            report["untouched"] += 1
-            kept.append(item)
-            continue
-        if new_url in seen_urls:
-            # 別々の旧URLが同じ新ページへ転送された。先に出てきた方を残す。
+            final_url, kind = url, "untouched"
+        else:
+            final_url, kind = resolution[url], "rewritten"
+
+        if final_url in seen_urls:
+            # 別の記事が同じページに行き着いた。先に出てきた方を残す。
+            # 旧URLからの張り替えでも、既に新URLを持つ記事とぶつかることがある。
             report["merged"] += 1
             continue
-        moved = dict(item)
-        moved["url"] = new_url
-        report["rewritten"] += 1
-        seen_urls.add(new_url)
-        kept.append(moved)
+        seen_urls.add(final_url)
+        report[kind] += 1
+        if kind == "rewritten":
+            item = dict(item)
+            item["url"] = final_url
+        kept.append(item)
     return kept, report
 
 
@@ -136,12 +148,14 @@ def resolve(url: str) -> tuple[str, str | None]:
         )
         return url, url  # 旧URLがそのまま200を返すなら張り替えない
     except urllib.error.HTTPError as error:
-        if error.code not in (301, 302, 303, 307, 308):
-            return url, None  # 404など。新サイトに無い
-        location = error.headers.get("Location", "") or ""
+        if error.code in REDIRECT_CODES:
+            location = error.headers.get("Location", "") or ""
+        elif is_gone(error.code):
+            return url, None  # 新サイトに無い
+        else:
+            raise TransientFailure(f"{url}: HTTP {error.code}") from error
     except (urllib.error.URLError, TimeoutError, OSError) as error:
-        print(f"WARN: {url}: {error}", file=sys.stderr)
-        raise
+        raise TransientFailure(f"{url}: {error}") from error
     if not location:
         return url, None
     target = urllib.parse.urljoin(url, location)
@@ -150,16 +164,21 @@ def resolve(url: str) -> tuple[str, str | None]:
             urllib.request.Request(target, headers={"User-Agent": USER_AGENT}, method="HEAD"),
             timeout=TIMEOUT,
         )
-    except urllib.error.HTTPError:
-        return url, None  # 転送先も消えている
+    except urllib.error.HTTPError as error:
+        if is_gone(error.code):
+            return url, None  # 転送先も消えている
+        raise TransientFailure(f"{target}: HTTP {error.code}") from error
     except (urllib.error.URLError, TimeoutError, OSError) as error:
-        print(f"WARN: {target}: {error}", file=sys.stderr)
-        raise
+        raise TransientFailure(f"{target}: {error}") from error
     return url, response.url
 
 
 def build_resolution(urls: list[str], workers: int = 5) -> dict[str, str | None]:
-    """旧URLを実測し、対応表を作る。1件でも通信に失敗したら中断する。"""
+    """旧URLを実測し、対応表を作る。
+
+    1件でも一時的な失敗（429・503・通信断など）があれば TransientFailure を投げて中断する。
+    混雑を「ページが消えた」と取り違えて記事を消さないため。
+    """
     with ThreadPoolExecutor(max_workers=workers) as pool:
         return dict(pool.map(resolve, urls))
 
@@ -195,7 +214,11 @@ def main() -> int:
             save_items(args.news, payload)
         return 0
     print(f"旧URL {len(targets)} 件を実測します。")
-    resolution = build_resolution(targets)
+    try:
+        resolution = build_resolution(targets)
+    except TransientFailure as error:
+        print(f"一時的な失敗のため中断します（書き換えていません）: {error}", file=sys.stderr)
+        return 1
     kept, report = apply_resolution(items, resolution)
     print(
         f"張り替え {report['rewritten']} / 削除 {report['dropped']} / "
