@@ -3,7 +3,8 @@
  * 実行: node --test scripts/source-link.test.mjs
  *
  * 品川区公式サイトは2026年10月20日のリニューアルで全ページのアドレスが変わり、
- * 旧形式 `https://www.city.shinagawa.tokyo.jp/PC/...` は301せず404になりました。
+ * 旧形式 `https://www.city.shinagawa.tokyo.jp/PC/...` と `/ct/...` が404になりました。
+ * 区は後日301リダイレクトを用意しましたが、消えたページには転送がありません。
  * 新サイトに該当ページが無い出典は、URLを落として文言だけを残す方針にしています。
  * そのため各ページは「URLの無い出典」を押せない見た目で描ける必要があります。
  */
@@ -12,13 +13,15 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
 
-const OLD_URL_PREFIX = "https://www.city.shinagawa.tokyo.jp/PC/";
+const OLD_URL_PREFIXES = [
+  "https://www.city.shinagawa.tokyo.jp/PC/",
+  "https://www.city.shinagawa.tokyo.jp/ct/",
+];
 
-/**
- * 自動生成ファイルは収集側（data/news-sources.json）を直す方針なので、
- * 旧URLの残存検査から外します。次回の自動更新で入れ替わります。
- */
-const GENERATED_FILES = new Set(["news-items.js"]);
+/** 文字列に含まれる旧URLの件数を数える。 */
+function countOldUrls(text) {
+  return OLD_URL_PREFIXES.reduce((total, prefix) => total + text.split(prefix).length - 1, 0);
+}
 
 /** HTMLに埋め込まれた名前付き関数を、波かっこを数えて切り出す。 */
 function extractFunction(htmlPath, name) {
@@ -79,26 +82,39 @@ test("gyosei.html: URLの無い出典をhref無しで描く", () => {
   assert.match(html, /pill-plain/);
 });
 
-test("data/*.js に公式サイトの旧URL(/PC/)が残っていない", () => {
-  const dir = new URL("../data/", import.meta.url);
+/**
+ * 旧URLの残存検査。自動生成ファイル（data/news-items.js、exports/*.kml）も含めます。
+ * ニュースは記事IDがURLから作られるため作り直しが効かず、
+ * scripts/repair_news_urls.py で張り替えました。KMLは書き出し直しが要ります。
+ */
+function assertNoOldUrls(dirPath, matches) {
+  const dir = new URL(dirPath, import.meta.url);
   const offenders = [];
   for (const name of readdirSync(dir)) {
-    if (!name.endsWith(".js") || GENERATED_FILES.has(name)) continue;
-    const text = readFileSync(new URL(name, dir), "utf-8");
-    const hits = text.split(OLD_URL_PREFIX).length - 1;
+    if (!matches(name)) continue;
+    const hits = countOldUrls(readFileSync(new URL(name, dir), "utf-8"));
     if (hits > 0) offenders.push(`${name}: ${hits}件`);
   }
   assert.deepEqual(offenders, [], `旧URLが残っています → ${offenders.join(", ")}`);
+}
+
+test("data/*.js に公式サイトの旧URLが残っていない", () => {
+  assertNoOldUrls("../data/", (name) => name.endsWith(".js"));
 });
 
-test("ルートの*.htmlに公式サイトの旧URL(/PC/)が残っていない", () => {
-  const dir = new URL("../", import.meta.url);
-  const offenders = [];
-  for (const name of readdirSync(dir)) {
-    if (!name.endsWith(".html")) continue;
-    const text = readFileSync(new URL(name, dir), "utf-8");
-    const hits = text.split(OLD_URL_PREFIX).length - 1;
-    if (hits > 0) offenders.push(`${name}: ${hits}件`);
-  }
-  assert.deepEqual(offenders, [], `旧URLが残っています → ${offenders.join(", ")}`);
+test("ルートの*.htmlに公式サイトの旧URLが残っていない", () => {
+  assertNoOldUrls("../", (name) => name.endsWith(".html"));
+});
+
+test("書き出し済みのexportsに公式サイトの旧URLが残っていない", () => {
+  assertNoOldUrls("../exports/", (name) => name.endsWith(".kml"));
+});
+
+test("収集スクリプトが公式サイトの旧URLを叩いていない", () => {
+  // repair_news_urls.py は旧URLを見分けるのが仕事なので、定義として持っています。
+  const exempt = new Set(["repair_news_urls.py"]);
+  assertNoOldUrls(
+    "../scripts/",
+    (name) => name.endsWith(".py") && !name.startsWith("test_") && !exempt.has(name),
+  );
 });

@@ -24,6 +24,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: 公開設定を検査
         run: python3 scripts/check_firebase_sync.py
+      - name: 出典リンクを検査
+        run: node --test scripts/source-link.test.mjs
       - name: 公開ファイルを生成
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}

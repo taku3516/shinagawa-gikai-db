@@ -33,6 +33,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: 収集前の検査
+        run: python -m unittest scripts.test_collect_news_identity scripts.test_collect_news_summary
+
       - name: ニュースを収集
         run: python scripts/collect_news.py
 

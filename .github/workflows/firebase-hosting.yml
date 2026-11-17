@@ -54,6 +54,7 @@ jobs:
           node --test scripts/news-sync-environment.test.mjs
           node --test scripts/news-migration.test.mjs
           node --test scripts/site-url.test.mjs
+          node --test scripts/source-link.test.mjs
 
       - name: 配信ファイルを生成
         env:

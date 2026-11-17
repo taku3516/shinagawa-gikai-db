@@ -190,6 +190,32 @@ python3 scripts/export_chokai_kml.py
 
 生成された`exports/shinagawa-chokai-map.kml`は、Googleマイマップの「レイヤを追加」→「インポート」から読み込めます。町会・自治会区域を淡い4色で表示し、町会名、地域区分、住所区域、公開プロフィール、出典を各区域の属性として取り込めます。
 
+## 公式サイトのURLが変わったとき
+
+品川区公式サイトは2026年10月20日のリニューアルで全ページのアドレスが変わりました
+（旧形式 `/PC/...` と `/ct/...`）。区は後日301リダイレクトを用意したので、
+旧URLを叩けば新URLを機械的に引けます。転送が無いページは新サイトから消えています。
+
+```bash
+# 収集済みニュースの出典URLを張り替える（転送が無い記事は落とす）
+python3 scripts/repair_news_urls.py --dry-run
+python3 scripts/repair_news_urls.py
+
+# 書き出し済みKMLは作り直す
+python3 scripts/export_chokai_kml.py
+
+# 旧URLの残存を検査する
+node --test scripts/source-link.test.mjs
+```
+
+ニュースの記事IDは正規化したURLのsha256から作りますが、張り替えのときIDは据え置きます。
+★（お気に入り）が端末内とFirestoreにID単位で保存されているためです。
+そのため `id ≠ sha256(url)` の記事が生まれます。`scripts/collect_news.py` は
+IDだけでなくURLでも既存記事と突き合わせるので、同じ記事が別IDで二重に入ることはありません。
+
+新サイトに該当ページが無い出典は、URLを落として資料名だけを残します。
+各ページはURLの無い出典を破線のpill（リンクなし）で描きます。
+
 ## 過去年・未来年の追加
 
 1. `data/r09.js`など、新しい年のファイルを既存年と同じ形式で作成します。登録先は`window.SHINAGAWA_DB.years["r09"]`のようにします。
