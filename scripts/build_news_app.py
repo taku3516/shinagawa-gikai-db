@@ -7,7 +7,14 @@ iPhone・iPad で完了できないため（docs/firebase-sync-setup.md）。
 
 会議録全文をはじめとする残りのサイトは GitHub Pages に置いたままにする。
 Firebase Hosting の無料枠は転送量 360MB/日で、サイト全体を移すと届いてしまう。
-ここで配るのは 0.1MB 未満なので、無料枠のまま毎日確実に配信できる。
+ここで配るのは記事とイベントのデータが大半で、1回の閲覧あたり
+ニュースで約0.65MB（うち data/news-items.js が0.6MB）、
+カレンダーで約0.4MB（うち data/events.js が0.34MB）。
+1日あたり数百回の閲覧までは無料枠に収まる計算になる。
+
+FILES に足すとこの数字がそのまま増える。足す前に、本当にこの配信元から
+配る必要があるかを確かめること。購読用の .ics を exports/ に置いて
+GitHub Pages から配っているのは、Googleが定期的に取りに来るため。
 """
 
 from argparse import ArgumentParser
