@@ -1,7 +1,44 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-18T01:04:40.038990Z",
+  "generatedAt": "2026-11-18T12:00:19.251084Z",
   "items": [
+    {
+      "id": "ab6d2afd87a624b369d3",
+      "title": "【事後レポート】製造業243社へのアンケート調査の公開と、明らかになった課題を解決する新サービス「スマートSDSコネクト」発表会",
+      "summary": "[株式会社Dynagon] 化学物質に起因した事故の根絶を目指して、SDS（※1）関連サービスを展開する株式会社Dynagon（本社：東京都品川区、代表：坂本 晋悟）は、製造業243社を対象に実施した化学物質管理の新制度施行（※2）から約2年...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000017.000155054.html",
+      "publishedAt": "2026-11-18T09:15:21Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "事件事故",
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "8419e20e3354be110cd3",
+      "title": "Taps株式会社、リリース1ヵ月で問い合わせ件数50件突破。現場ワーカー向け”スマホ1台で”手軽に学べる新しい学習体験を届ける。教育・学習SaaS「Taps」を正式リリース",
+      "summary": "[Taps株式会社] Taps株式会社（本社：東京品川区、代表取締役CEO：永田 圭）は、現場ワーカー向けマイクロ研修ツール「Taps（タップス）」を正式リリース致します。リリースから約1ヶ月で、飲食・介護・製造など幅広い業種の企業...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000001.000194609.html",
+      "publishedAt": "2026-11-18T05:41:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "子育て教育",
+        "福祉",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "1178d630f32df24e8e39",
       "title": "協力会員募集説明会を開催します！",
@@ -20,6 +57,98 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 2
     },
     {
+      "id": "f4e01815538d691d5233",
+      "title": "令和8年度品川区会計年度任用・障害者を対象とする会計年度任用職員募集(令和9年4月1日以降採用）",
+      "summary": "※ 会計年度任用職員とは、「地方公務員法」の規定に基づき、一会計年度（4/1～翌年3/31）の期間の範囲内で、あらかじめ任期を定めて採用する職員（パートタイム）です。 詳細は、「令和8年度品川区会計年度任用職員募集案内」または「令和8年度障害者を対処とする品川区会計年度任用職員募集案内」をご覧ください。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/boshu/shokuinboshu/1012230.html",
+      "publishedAt": "2026-11-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "e9981898a910ac2b76fa",
+      "title": "【12月4日開催】障害者グループホームセミナー",
+      "summary": "個別相談会への参加をきっかけに、実際の開設につながったグループホームを運営する一般社団法人MOTHER12様を講師にお招きし、開設までの経緯や開設時の実例、現在の運営についてお話しいただきます。 電話、ファクス、品川区電子申請サービス ※手話通訳が必要な方は11月18日（水曜日）までにお知らせください。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/kenkofukushi/1002987/1002990.html",
+      "publishedAt": "2026-11-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
+    {
+      "id": "bbd9483bd1563b5b941c",
+      "title": "マクセル アクアパーク品川「LittleTwinStars AQUARIUM」",
+      "summary": "2026年11月13日（金）～12月25日（金）、 マクセル アクアパーク品川 にて「LittleTwinStars AQUARIUM」が開催されます。 マクセル アクアパーク品川を舞台に、『リトルツインスターズ（キキ&ララ）』とコラボレーションした体験型アートイベント。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/aquapark_lts",
+      "publishedAt": "2026-11-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "6fbbc7f5ec643054a475",
+      "title": "旧東品川清掃作業所の活用",
+      "summary": "品川区では、旧東品川清掃作業所について、令和9年度以降の活用を検討しています。 今後は、既存建物の躯体を活用しながら、地域のにぎわい創出に資する拠点としての活用を目指すとともに、官民連携による効率的な施設運営を検討しています。 このたび、民間事業者の皆様との対話を通じて、施設の活用アイデアや事業スキーム、参画意向等を把握し、今後の事業化に向けた検討の参考とするため、現地見学会およびサウンディング調査を実施します。 ＜現地見学会＞ 令和8年11月30日（月曜日） ＜サウンディ…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/shisakukeikaku/1009646/1012380.html",
+      "publishedAt": "2026-11-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "160ad718de9a7faebe01",
+      "title": "令和8年11月28日（土曜日）開催「輪の品マルシェ」JR目黒駅中央改札外イベントスペース（みどりの窓口隣）",
+      "summary": "まごころとこだわりのつまった手作り製品を中心に販売する「輪の品マルシェ」を開催します。 区内障害者就労関係事業所がセレクトした製品を販売しますので、お気に入りのアイテムを探しに来てください。 ※全ての商品は手作りであるため、数に限りがあります。 売り切れの際は、ご容赦ください。 お支払いは現金と交通系ICカードです。 品川区障害者就労体験事業実施施設 Kitara 電話：03-6433-2579",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002766/1002781/1009482/1012462.html",
+      "publishedAt": "2026-11-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "福祉",
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "目黒駅"
+      ],
+      "relevanceScore": 12
+    },
+    {
       "id": "292a0ffa8e06035a6dc1",
       "title": "令和8年度第3回品川区公契約審議会の開催",
       "summary": "電話：03-5742-6641 ファクス：03-5742-6873 開庁時間：8時30分から17時 （土曜日・日曜日・祝日および12月29日から1月3日を除く）",
@@ -35,6 +164,26 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 8
+    },
+    {
+      "id": "1f1414cd111463c635c2",
+      "title": "「しながわ人権のひろば2026」 法律相談",
+      "summary": "毎年、人権のひろば開催にあわせ法律相談を行っております。希望される方は、ひとりで悩まずにぜひご利用ください。 荏原文化センター 2階 第2講習室 （品川区中延1－9－15）",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/jinkenjyenda/1009666/1011829.html",
+      "publishedAt": "2026-11-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延",
+        "荏原"
+      ],
+      "relevanceScore": 16
     },
     {
       "id": "e5239111236088aed7af",
@@ -360,26 +509,6 @@ window.SHINAGAWA_NEWS = {
         "大井"
       ],
       "relevanceScore": 10
-    },
-    {
-      "id": "1f1414cd111463c635c2",
-      "title": "「しながわ人権のひろば2026」 法律相談",
-      "summary": "毎年、人権のひろば開催にあわせ法律相談を行っております。希望される方は、ひとりで悩まずにぜひご利用ください。 荏原文化センター 2階 第2講習室 （品川区中延1－9－15）",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kusei/jinkenjyenda/1009666/1011829.html",
-      "publishedAt": "2026-11-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [
-        "中延",
-        "荏原"
-      ],
-      "relevanceScore": 16
     },
     {
       "id": "24ff03ddfd2746b014f0",
@@ -13639,7 +13768,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 8
+      "accepted": 7
     },
     {
       "source": "警視庁",
@@ -13663,7 +13792,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 2011, column 18"
+      "message": "not well-formed (invalid token): line 2895, column 18"
     },
     {
       "source": "朝日新聞",
@@ -13687,7 +13816,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 2
     },
     {
       "source": "東急ニュースリリース",
