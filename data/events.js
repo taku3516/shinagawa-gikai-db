@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-18T14:31:12.219434Z",
+  "generatedAt": "2026-11-18T23:33:49.189573Z",
   "events": [
     {
       "id": "8c8e2e66944f32bfab29",
@@ -1036,6 +1036,37 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "published",
       "startDate": "2026-07-01",
       "endDate": "2026-07-01"
+    },
+    {
+      "id": "0fdf4a53173e91f6b621",
+      "title": "大井町イルミネーション 2026",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット ピチピチミートファーム(バーベキュー) 2026年7月1日 都心で開放的な",
+      "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-07-01",
+        "2026-10-31",
+        "2027-01-11"
+      ],
+      "startTime": "17:00",
+      "endTime": "23:00",
+      "timeText": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026",
+          "title": "大井町イルミネーション 2026"
+        }
+      ],
+      "startDate": "2026-07-01",
+      "endDate": "2027-01-11"
     },
     {
       "id": "85846f4081c9bbc8d2e5",
@@ -4443,7 +4474,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "77c4a0f6b894b2d86ac8",
       "title": "【終了】にしこやまつり2026",
-      "summary": "2026年10月25日(日) 11:00~16:00(予定) 開催場所 西小山周辺 交通アクセス 東急目黒線 西小山駅 備考 ※内容は予告なく変更になる場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 一汁おにぎり 一粒万福 2025年10月1日 具材選びも楽しい、ふんわり大きなおにぎり",
+      "summary": "2026年10月25日(日) 11:00~16:00(予定) 開催場所 西小山周辺 交通アクセス 東急目黒線 西小山駅 備考 ※内容は予告なく変更になる場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット つくば鶏 銀や 2022年9月21日 焼き鳥を食べて心の交流!心があたたかくなるお店",
       "url": "https://shinagawa-kanko.or.jp/event/nishikoyamatsuri2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4902,36 +4933,6 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "official",
       "startDate": "2026-10-31",
       "endDate": "2026-10-31"
-    },
-    {
-      "id": "0fdf4a53173e91f6b621",
-      "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット COFFEE & SWEETS AWAYA(アワヤ洋菓子店) 2022年6",
-      "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
-      "sourceId": "kanko",
-      "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-10-31",
-        "2027-01-11"
-      ],
-      "startTime": "17:00",
-      "endTime": "23:00",
-      "timeText": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026",
-          "title": "大井町イルミネーション 2026"
-        }
-      ],
-      "startDate": "2026-10-31",
-      "endDate": "2027-01-11"
     },
     {
       "id": "39d7a5ef70e419ed4e36",
@@ -5666,7 +5667,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 手打ちそば しなが",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット breadwork",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5791,7 +5792,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "02cb779466e040ca1e46",
       "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
-      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット そば会席 立会川 吉田家 2018年3月9日 旧",
+      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 浜川砲台 2018年3月9日 幕末 土佐藩が設置",
       "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -6386,7 +6387,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "ba8c03a4a04d4cf75005",
       "title": "小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
-      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット cuisson",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット CHIISAK",
       "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
