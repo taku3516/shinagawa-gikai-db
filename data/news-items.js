@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-17T16:19:18.638403Z",
+  "generatedAt": "2026-11-18T01:04:40.038990Z",
   "items": [
+    {
+      "id": "1178d630f32df24e8e39",
+      "title": "協力会員募集説明会を開催します！",
+      "summary": "さわやかサービスの活動について写真などを使ってご説明します。 また、ご希望の方はその場で会員登録することもできます。",
+      "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "sourceType": "html",
+      "url": "https://shinashakyo.jp/news/2026/11/post-58691.html",
+      "publishedAt": "2026-11-18T01:04:22.337190Z",
+      "dateKind": "collected",
+      "collectedAt": "2026-11-18T01:04:22.337190Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2
+    },
+    {
+      "id": "292a0ffa8e06035a6dc1",
+      "title": "令和8年度第3回品川区公契約審議会の開催",
+      "summary": "電話：03-5742-6641 ファクス：03-5742-6873 開庁時間：8時30分から17時 （土曜日・日曜日・祝日および12月29日から1月3日を除く）",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/nyusatsukeiyaku/1005322/1012464.html",
+      "publishedAt": "2026-11-18T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T01:04:22.337190Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8
+    },
     {
       "id": "e5239111236088aed7af",
       "title": "DYMグループ主催の経営者コミュニティ「Salon de CEO」、初の親睦ゴルフコンペを開催",
@@ -544,7 +578,7 @@ window.SHINAGAWA_NEWS = {
     {
       "id": "4e855ecc63705e4de535",
       "title": "令和8年11月16日（月曜日）品川区福祉オンブズマン制度素案説明会開催",
-      "summary": "福祉計画課施設担当 電話：03-5742-6917 FAX：03-5742-6797",
+      "summary": "品川区は、障害者・高齢者向けの施設の開設や誘致等の取り組みを行うなど、障害のある方も高齢な方も住み慣れた地域で安心して暮らせる環境づくりを進めています。サービス供給量を増やすとともに、サービスの質を担保するための取り組みについても検討し、公的な制度として、福祉オンブズマン制度の導入を検討しています。 令和8年度は、福祉・法律の専門家が外部委員として参加する制度導入検討委員会を7月と9月に2回開催しました。令和8年11月15日（日曜日）からは、品川区福祉オンブズマン制度の素案…",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
       "sourceType": "html",
@@ -553,10 +587,11 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-09-16T11:52:29.909327Z",
       "tags": [
-        "福祉"
+        "福祉",
+        "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 12
     },
     {
       "id": "2c5bb2f5b1737c960da3",
@@ -13628,7 +13663,7 @@ window.SHINAGAWA_NEWS = {
       "source": "日テレNEWS NNN",
       "status": "error",
       "accepted": 0,
-      "message": "not well-formed (invalid token): line 1889, column 18"
+      "message": "not well-formed (invalid token): line 2011, column 18"
     },
     {
       "source": "朝日新聞",
@@ -13652,7 +13687,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
