@@ -1,7 +1,65 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-19T11:57:25.941524Z",
+  "generatedAt": "2026-11-19T12:15:38.246641Z",
   "items": [
+    {
+      "id": "68e043bcd1a46429a5b3",
+      "title": "名前も、キャラクターも、サービスも。若者の声で決めた品川区若者支援コーディネーター事業「Nēne（ねえね）」が始動",
+      "summary": "",
+      "source": "Googleニュース（品川区）",
+      "sourceId": "google-shinagawa",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5GZ0ZTSl9QME9OazFMNUlhMkxpNy1XclVEQ2x3MHc1aGFIc2lub2FzakFZU1R6SG1oZVh1SEJ2RmYwSjdyWnVKUk9keklIT1p3aW5xQ2NDUWhUTTJQNWctVVZOYkxlQ3d3RTl6dFpzVG9MbzBE?oc=5",
+      "publishedAt": "2026-11-19T11:15:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "Excite エキサイト",
+      "outletUrl": "http://www.excite.co.jp"
+    },
+    {
+      "id": "5a17a4ab6f50ef3bae25",
+      "title": "令和8年度第1回障害者差別解消支援地域協議会（令和8年9月4日開催）",
+      "summary": "当日の配付資料および議事要旨は、以下のとおりです。 ※参考資料2「障害者差別解消法ハンドブック改訂案」については、現在検討中の資料であり、 掲載内容等が今後変更となる可能性があるほか、使用素材の権利関係について調整中であるため、 ホームページへの掲載は行いません。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002946/1011519.html",
+      "publishedAt": "2026-11-19T08:00:09Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T11:57:05.480008Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "9ccb01102549c05e674c",
+      "title": "学校と家庭・地域とのより良好な関係づくりに係るガイドライン(品川区版)",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1002177/kankei.html",
+      "publishedAt": "2026-11-19T05:05:04Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 100
+    },
     {
       "id": "efe27d75f3ee41715376",
       "title": "【イベントレポート】 「縁線図鑑」開設２周年「１１月５日(木) いいご縁の日 縁線図鑑の奢りデー」 学芸大学駅、武蔵小山駅、三軒茶屋駅など東急線沿線の２６店舗で開催！ ～「縁線図鑑の奢りで」のひと声から生まれた、新たな“ご縁”～",
@@ -21,7 +79,49 @@ window.SHINAGAWA_NEWS = {
         "小山",
         "武蔵小山駅"
       ],
-      "relevanceScore": 8
+      "relevanceScore": 8,
+      "sourcePriority": 50
+    },
+    {
+      "id": "979f60bc653eadcaddcc",
+      "title": "【品川区】西五反田に町中華「新御茶ノ水 萬龍 西五反田店」が11月20日にグランドオープン",
+      "summary": "品川区西五反田1丁目に、町中華の「新御茶ノ水 萬龍 西五反田店」が2026年11月20日（金）にグランドオープンします。萬龍（本店）や東京ドーム店で大人気だという名物の「肉玉炒飯」が、五反田でも食べられるようになるそうで […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/19/manryu-nishigotanda",
+      "publishedAt": "2026-11-19T02:10:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "西五反田"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 60
+    },
+    {
+      "id": "5f54a62f617748655613",
+      "title": "【県人の店 寄ってみらんね】古里の味を広めたい 「居酒屋 楽縁」（東京都品川区）（熊本日日新聞）",
+      "summary": "",
+      "source": "Googleニュース（品川区）",
+      "sourceId": "google-shinagawa",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfUk1NTW5PcHAtNElKYUJhd3ZPX3ZiT1NfOXVGRHFKbWlLQ1Y2d1Juek1kemZfMnVtVjZLb19DYi05NEQ0ODhaQ2hIOXQzVWI0SlVKdkVMd1pNd2VFSXU5cTVldGpHRHNRbzFCY1VPbEMwUjF0aUV1alh3NmpMMjQ?oc=5",
+      "publishedAt": "2026-11-19T01:25:22Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "Yahoo!ニュース",
+      "outletUrl": "https://news.yahoo.co.jp"
     },
     {
       "id": "7f41174e82c26654c88e",
@@ -58,6 +158,27 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
+      "id": "04ab91840eee50d8694f",
+      "title": "大井町トラックス「LIGHTBEATS」（ライトビーツ～光の鼓動～）",
+      "summary": "2026年11月19日（木）～2027年1月31日（日）、広域品川圏内の３つの街、大井町のOIMACHI TRACKS、竹芝のWATERS takeshiba、高輪のTAKANAWA GATEWAY CITYでは 、光と音でつながる広域連動ライトインスタレーションイベント「LIGHTBEATS（ライトビーツ～光の鼓動～）」が初開催されます。 「LIGHTBEATS」は、光を「見る」だけでなく、来場者で「街の光をつくる」イベント。”WALKING（歩く時間）”と、”VIEWI…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/lightbeats",
+      "publishedAt": "2026-11-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町"
+      ],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
       "id": "a170b630618b2bfd7d1e",
       "title": "しながわクルーズ 12・1月「光の桜並木を水面から楽しむ 目黒川みんなのイルミネーション特別便」",
       "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、「しながわクルーズ」を年間を通じて運航しています。 12月から1月の週末は、「光の桜並木を水面から楽しむ 目黒川みんなのイルミネーション特別便」が運航されます。 「 目黒川みんなのイルミネーション 」のシーズンに桜色のイルミネーションに包まれた目黒川を船で観覧します。約41万球の桜色の光が目黒川沿い約2.2kmを彩り、街全体が美しいピンク色の光に包まれます。",
@@ -74,25 +195,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "天王洲"
       ],
-      "relevanceScore": 12
-    },
-    {
-      "id": "5a17a4ab6f50ef3bae25",
-      "title": "令和8年度第1回障害者差別解消支援地域協議会（令和8年9月4日開催）",
-      "summary": "当日の配付資料および議事要旨は、以下のとおりです。 ※参考資料2「障害者差別解消法ハンドブック改訂案」については、現在検討中の資料であり、 掲載内容等が今後変更となる可能性があるほか、使用素材の権利関係について調整中であるため、 ホームページへの掲載は行いません。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002946/1011519.html",
-      "publishedAt": "2026-11-19T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-19T11:57:05.480008Z",
-      "tags": [
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 12,
+      "sourcePriority": 100
     },
     {
       "id": "3e5d529a655db5d13d43",
@@ -111,24 +215,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "きゅりあん"
       ],
-      "relevanceScore": 4
-    },
-    {
-      "id": "9ccb01102549c05e674c",
-      "title": "学校と家庭・地域とのより良好な関係づくりに係るガイドライン(品川区版)",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1002177/kankei.html",
-      "publishedAt": "2026-11-19T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "ab6d2afd87a624b369d3",
@@ -168,6 +256,89 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
+      "id": "160ad718de9a7faebe01",
+      "title": "令和8年11月28日（土曜日）開催「輪の品マルシェ」JR目黒駅中央改札外イベントスペース（みどりの窓口隣）",
+      "summary": "まごころとこだわりのつまった手作り製品を中心に販売する「輪の品マルシェ」を開催します。 区内障害者就労関係事業所がセレクトした製品を販売しますので、お気に入りのアイテムを探しに来てください。 ※全ての商品は手作りであるため、数に限りがあります。 売り切れの際は、ご容赦ください。 お支払いは現金と交通系ICカードです。 品川区障害者就労体験事業実施施設 Kitara 電話：03-6433-2579",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002766/1002781/1009482/1012462.html",
+      "publishedAt": "2026-11-18T04:00:07Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "福祉",
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "目黒駅"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 100
+    },
+    {
+      "id": "e9981898a910ac2b76fa",
+      "title": "【12月4日開催】障害者グループホームセミナー",
+      "summary": "個別相談会への参加をきっかけに、実際の開設につながったグループホームを運営する一般社団法人MOTHER12様を講師にお招きし、開設までの経緯や開設時の実例、現在の運営についてお話しいただきます。 電話、ファクス、品川区電子申請サービス ※手話通訳が必要な方は11月18日（水曜日）までにお知らせください。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/kenkofukushi/1002987/1002990.html",
+      "publishedAt": "2026-11-18T03:05:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 100
+    },
+    {
+      "id": "ba8c1ba8107f14f81d03",
+      "title": "【品川区】大崎〜五反田の目黒川沿いを約41万球で照らす「目黒川みんなのイルミネーション2026」が12/4から",
+      "summary": "目黒川みんなのイルミネーション2026が、2026年12月4日（金）から2027年1月31日（日）までの59日間、品川区立五反田ふれあい水辺広場と目黒川沿道で開催されます。大崎〜五反田間の目黒川沿い約2.2km（両岸合計 […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/18/megurogawa-minna-illumi",
+      "publishedAt": "2026-11-18T02:10:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "目黒",
+        "大崎"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 60
+    },
+    {
+      "id": "1f1414cd111463c635c2",
+      "title": "「しながわ人権のひろば2026」 法律相談",
+      "summary": "毎年、人権のひろば開催にあわせ法律相談を行っております。希望される方は、ひとりで悩まずにぜひご利用ください。 荏原文化センター 2階 第2講習室 （品川区中延1－9－15）",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/jinkenjyenda/1009666/1011829.html",
+      "publishedAt": "2026-11-18T01:41:32Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延",
+        "荏原"
+      ],
+      "relevanceScore": 16,
+      "sourcePriority": 100
+    },
+    {
       "id": "1178d630f32df24e8e39",
       "title": "協力会員募集説明会を開催します！",
       "summary": "さわやかサービスの活動について写真などを使ってご説明します。 また、ご希望の方はその場で会員登録することもできます。",
@@ -182,7 +353,8 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "f4e01815538d691d5233",
@@ -190,34 +362,17 @@ window.SHINAGAWA_NEWS = {
       "summary": "※ 会計年度任用職員とは、「地方公務員法」の規定に基づき、一会計年度（4/1～翌年3/31）の期間の範囲内で、あらかじめ任期を定めて採用する職員（パートタイム）です。 詳細は、「令和8年度品川区会計年度任用職員募集案内」または「令和8年度障害者を対処とする品川区会計年度任用職員募集案内」をご覧ください。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/boshu/shokuinboshu/1012230.html",
-      "publishedAt": "2026-11-18T00:00:00Z",
+      "publishedAt": "2026-11-18T00:00:08Z",
       "dateKind": "published",
       "collectedAt": "2026-11-18T11:59:55.375814Z",
       "tags": [
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "e9981898a910ac2b76fa",
-      "title": "【12月4日開催】障害者グループホームセミナー",
-      "summary": "個別相談会への参加をきっかけに、実際の開設につながったグループホームを運営する一般社団法人MOTHER12様を講師にお招きし、開設までの経緯や開設時の実例、現在の運営についてお話しいただきます。 電話、ファクス、品川区電子申請サービス ※手話通訳が必要な方は11月18日（水曜日）までにお知らせください。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/kenkofukushi/1002987/1002990.html",
-      "publishedAt": "2026-11-18T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-18T11:59:55.375814Z",
-      "tags": [
-        "福祉",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 8
+      "relevanceScore": 10,
+      "sourcePriority": 100
     },
     {
       "id": "bbd9483bd1563b5b941c",
@@ -234,47 +389,8 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "6fbbc7f5ec643054a475",
-      "title": "旧東品川清掃作業所の活用",
-      "summary": "品川区では、旧東品川清掃作業所について、令和9年度以降の活用を検討しています。 今後は、既存建物の躯体を活用しながら、地域のにぎわい創出に資する拠点としての活用を目指すとともに、官民連携による効率的な施設運営を検討しています。 このたび、民間事業者の皆様との対話を通じて、施設の活用アイデアや事業スキーム、参画意向等を把握し、今後の事業化に向けた検討の参考とするため、現地見学会およびサウンディング調査を実施します。 ＜現地見学会＞ 令和8年11月30日（月曜日） ＜サウンディ…",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kusei/shisakukeikaku/1009646/1012380.html",
-      "publishedAt": "2026-11-18T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-18T11:59:55.375814Z",
-      "tags": [
-        "経済"
-      ],
-      "locations": [
-        "東品川"
-      ],
-      "relevanceScore": 12
-    },
-    {
-      "id": "160ad718de9a7faebe01",
-      "title": "令和8年11月28日（土曜日）開催「輪の品マルシェ」JR目黒駅中央改札外イベントスペース（みどりの窓口隣）",
-      "summary": "まごころとこだわりのつまった手作り製品を中心に販売する「輪の品マルシェ」を開催します。 区内障害者就労関係事業所がセレクトした製品を販売しますので、お気に入りのアイテムを探しに来てください。 ※全ての商品は手作りであるため、数に限りがあります。 売り切れの際は、ご容赦ください。 お支払いは現金と交通系ICカードです。 品川区障害者就労体験事業実施施設 Kitara 電話：03-6433-2579",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002766/1002781/1009482/1012462.html",
-      "publishedAt": "2026-11-18T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-18T11:59:55.375814Z",
-      "tags": [
-        "福祉",
-        "交通",
-        "地域イベント"
-      ],
-      "locations": [
-        "目黒駅"
-      ],
-      "relevanceScore": 12
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "292a0ffa8e06035a6dc1",
@@ -282,36 +398,41 @@ window.SHINAGAWA_NEWS = {
       "summary": "電話：03-5742-6641 ファクス：03-5742-6873 開庁時間：8時30分から17時 （土曜日・日曜日・祝日および12月29日から1月3日を除く）",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/nyusatsukeiyaku/1005322/1012464.html",
-      "publishedAt": "2026-11-18T00:00:00Z",
+      "publishedAt": "2026-11-17T23:00:05Z",
       "dateKind": "published",
       "collectedAt": "2026-11-18T01:04:22.337190Z",
       "tags": [
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 8
+      "relevanceScore": 8,
+      "sourcePriority": 100
     },
     {
-      "id": "1f1414cd111463c635c2",
-      "title": "「しながわ人権のひろば2026」 法律相談",
-      "summary": "毎年、人権のひろば開催にあわせ法律相談を行っております。希望される方は、ひとりで悩まずにぜひご利用ください。 荏原文化センター 2階 第2講習室 （品川区中延1－9－15）",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kusei/jinkenjyenda/1009666/1011829.html",
-      "publishedAt": "2026-11-18T00:00:00Z",
+      "id": "f040e40bb6c6653139ec",
+      "title": "品川区長選挙、森沢恭子さんの経歴と主張…子育て支援の拡充を（読売新聞オンライン）",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBVMkZoNjNaLWNSdV9Od0ZtdjB2QU1xTm5DWVdMcVVJUE1SRVFScDdSc1g5a3VkYjhla3ZQT0NOLUxtOHVTX09oa09sU1hlM19JQllSM3RlOE9NN2RubkppU2Y1SWU5UDQ0dXhtcXY5M1lua2Q2Qjg1dXFHX3hqNjA?oc=5",
+      "publishedAt": "2026-11-17T19:05:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
-        "地域イベント"
+        "行政",
+        "子育て教育",
+        "福祉",
+        "選挙政治"
       ],
-      "locations": [
-        "中延",
-        "荏原"
-      ],
-      "relevanceScore": 16
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "Yahoo!ニュース",
+      "outletUrl": "https://news.yahoo.co.jp"
     },
     {
       "id": "e5239111236088aed7af",
@@ -348,6 +469,99 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "6fbbc7f5ec643054a475",
+      "title": "旧東品川清掃作業所の活用",
+      "summary": "品川区では、旧東品川清掃作業所について、令和9年度以降の活用を検討しています。 今後は、既存建物の躯体を活用しながら、地域のにぎわい創出に資する拠点としての活用を目指すとともに、官民連携による効率的な施設運営を検討しています。 このたび、民間事業者の皆様との対話を通じて、施設の活用アイデアや事業スキーム、参画意向等を把握し、今後の事業化に向けた検討の参考とするため、現地見学会およびサウンディング調査を実施します。 ＜現地見学会＞ 令和8年11月30日（月曜日） ＜サウンディ…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/shisakukeikaku/1009646/1012380.html",
+      "publishedAt": "2026-11-17T15:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-18T11:59:55.375814Z",
+      "tags": [
+        "経済"
+      ],
+      "locations": [
+        "東品川"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 100
+    },
+    {
+      "id": "dbe3cd7369c456dd28f3",
+      "title": "しながわ電気・ガス料金緊急支援事業",
+      "summary": "全世帯を対象に、1世帯あたり4,000円を支給します。(申請が必要です) 円安や国際情勢の不安定化に起因する燃料価格高騰に対し、区民生活に与える影響を緩和するため、区独自の支援策として、電気・ガス料金の還元給付を実施します。 6～9月の4カ月間、1カ月あたり1,000円(合計4,000円)を、所得制限なく全世帯へ補助します。 これにより、家計負担の軽減を図るとともに、真夏におけるエアコンの使用抑制による熱中症リスクの低減を目指します。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009376/1008959.html",
+      "publishedAt": "2026-11-17T09:05:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2,
+      "sourcePriority": 100
+    },
+    {
+      "id": "4094d26693133b145bc7",
+      "title": "「にせ税理士」「にせ税理士法人」にご注意ください",
+      "summary": "税理士資格の無い者が税務相談、税務書類の作成、税務代理をすることは、法律で禁じられているばかりでなく、専門的知識が欠けている等のため依頼者（納税者）が不測の損害を被るおそれもあります。 「にせ税理士」及び「にせ税理士法人」にご注意ください。 税理士は、税理士証票を携帯し、税理士バッジを着用しています。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/zeikin/1001623/1012458.html",
+      "publishedAt": "2026-11-17T07:00:08Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "c3a190b76a8f8e7c24a7",
+      "title": "システム障害に伴うマイナンバー手続きの受付再開",
+      "summary": "M365の障害発生にともない、下記の業務の取扱いを停止しておりましたが、現在は取扱いを再開しております。 ご迷惑をおかけし誠に申し訳ございませんでした。 電話：03-5742-6660 ファクス：03-5709-7625",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/mynumber/1009372/1012453.html",
+      "publishedAt": "2026-11-17T05:00:56Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "行政",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "ea3a744a4dd308b003ed",
+      "title": "しながわ生活応援事業",
+      "summary": "うれしなカードの利用期限は2027年（令和9年）1月31日（日曜日）まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009376/1004748.html",
+      "publishedAt": "2026-11-17T04:00:04Z",
+      "dateKind": "published",
+      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "bda8ab9d32b834c1bf1b",
@@ -387,22 +601,24 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
-      "id": "c3a190b76a8f8e7c24a7",
-      "title": "システム障害に伴うマイナンバー手続きの受付再開",
-      "summary": "M365の障害発生にともない、下記の業務の取扱いを停止しておりましたが、現在は取扱いを再開しております。 ご迷惑をおかけし誠に申し訳ございませんでした。 電話：03-5742-6660 ファクス：03-5709-7625",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/mynumber/1009372/1012453.html",
-      "publishedAt": "2026-11-17T00:00:00Z",
+      "id": "de2d5fa03d7784e741c5",
+      "title": "【品川区】新馬場の寺子屋みろくで「Let’s hang out!マルシェ」11/28（土）開催",
+      "summary": "品川区北品川2丁目の「寺子屋みろく」で、2026年11月28日（土）に「第2回 Let’s hang out!マルシェ」が開かれます。占いやヒーリングのブース、オリジナルグッズの販売、ワークショップなどが集ま […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/17/lets-hang-out-marche",
+      "publishedAt": "2026-11-17T02:10:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
-        "行政",
-        "福祉"
+        "地域イベント"
       ],
-      "locations": [],
-      "relevanceScore": 0
+      "locations": [
+        "北品川"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 60
     },
     {
       "id": "5997c6febfb301b3eb87",
@@ -419,24 +635,8 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 2
-    },
-    {
-      "id": "4094d26693133b145bc7",
-      "title": "「にせ税理士」「にせ税理士法人」にご注意ください",
-      "summary": "税理士資格の無い者が税務相談、税務書類の作成、税務代理をすることは、法律で禁じられているばかりでなく、専門的知識が欠けている等のため依頼者（納税者）が不測の損害を被るおそれもあります。 「にせ税理士」及び「にせ税理士法人」にご注意ください。 税理士は、税理士証票を携帯し、税理士バッジを着用しています。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/zeikin/1001623/1012458.html",
-      "publishedAt": "2026-11-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "26ace96fcd3600159ffb",
@@ -455,41 +655,34 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "小山"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
-      "id": "ea3a744a4dd308b003ed",
-      "title": "うれしなカードの利用期限は2027年（令和9年）1月31日（日曜日）まで",
-      "summary": "所得制限なし。全区民の皆様に1人1枚、一律5,000円相当のバニラVISAギフトカードを配付しました。 利用期限は令和9年（2027年）1月31日（日曜日）までです。お早めにご利用ください。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009376/1004748.html",
-      "publishedAt": "2026-11-17T00:00:00Z",
+      "id": "52d01723f167bcf3af97",
+      "title": "品川区長選の後の駅頭は武蔵小山で",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5BMk56YWNhTDU4Q2t3Nlp3Nk93RncxOTB3RFQxeHFPSTZMZXBSNGliSFRWbjZDaHRzUXRVd3hOU0J6bGJKSHVGeU9mY0MyWk45ZGducmROQTBxbjJDOWx3?oc=5",
+      "publishedAt": "2026-11-16T10:42:17Z",
       "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
-        "その他"
+        "行政",
+        "交通",
+        "選挙政治"
       ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "dbe3cd7369c456dd28f3",
-      "title": "しながわ電気・ガス料金緊急支援事業",
-      "summary": "全世帯を対象に、1世帯あたり4,000円を支給します。(申請が必要です) 円安や国際情勢の不安定化に起因する燃料価格高騰に対し、区民生活に与える影響を緩和するため、区独自の支援策として、電気・ガス料金の還元給付を実施します。 6～9月の4カ月間、1カ月あたり1,000円(合計4,000円)を、所得制限なく全世帯へ補助します。 これにより、家計負担の軽減を図るとともに、真夏におけるエアコンの使用抑制による熱中症リスクの低減を目指します。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009376/1008959.html",
-      "publishedAt": "2026-11-17T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-07-17T05:43:09.171245Z",
-      "tags": [
-        "福祉"
+      "locations": [
+        "武蔵小山",
+        "小山"
       ],
-      "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 16,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "選挙ドットコム",
+      "outletUrl": "https://go2senkyo.com"
     },
     {
       "id": "4930b28aa61edabcaa4e",
@@ -503,13 +696,52 @@ window.SHINAGAWA_NEWS = {
       "dateKind": "published",
       "collectedAt": "2026-11-16T19:44:27.669782Z",
       "tags": [
-        "地域イベント"
+        "地域イベント",
+        "文化歴史"
       ],
       "locations": [
         "大井",
         "品川歴史館"
       ],
-      "relevanceScore": 16
+      "relevanceScore": 14,
+      "sourcePriority": 50
+    },
+    {
+      "id": "edd12a6bf0cd3edbb893",
+      "title": "品川区立品川児童学園講演会（12月3日開催）",
+      "summary": "本講演では、WISC-V新指標の開発にも携わられた日本臨床発達心理士会茨城支部支部長大六一志先生をお招きして、 これらの理論的背景、導入の経緯と意義、そして臨床現場でどのように活用していくべきかについてお話しいただきます。ぜひご参加ください。 区内在住の方、品川区で子どもに関わるお仕事をしている方",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002946/1012255.html",
+      "publishedAt": "2026-11-16T07:00:09Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 100
+    },
+    {
+      "id": "b678b78f45830cd9714f",
+      "title": "ペアレント・トレーニング実施のお知らせ",
+      "summary": "発達特性のある子どもの行動を理解し、適切な関わりを学ぶ保護者向けのプログラムです。 全6回のグループワークと、各回のテーマに合わせたホームワークの実践を通し、親子のより良い関係作りを目指します。 2027年1月9日（土曜日） 、1月23日（土曜日） 、2月6日（土曜日） 、2月20日（土曜日） 、3月6日（土曜日） 、3月20日（土曜日）",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1009484/1011997.html",
+      "publishedAt": "2026-11-16T07:00:05Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "1ba3b2e96b01b561695f",
@@ -526,78 +758,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "fc10d0160d1bb405e316",
-      "title": "講演会『知っておきたい 乳幼児のアレルギー ～発症させないコツ、悪くさせないコツ～』",
-      "summary": "「知っておきたい 乳幼児のアレルギー ～発症させないコツ、悪くさせないコツ～」 毎年定員になってしまう講演会です。お申し込みはぜひお早めに！！ 講演会のあとは14時までお部屋をご利用いただけます。 ランチなどご持参いただいても良いですし近所にコンビニもございますので、 ゆっくりお過ごしいただけます。 患者保護者のスタッフや保護者さま同士、おしゃべりしませんか？",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kosodate/1001928/1012238.html",
-      "publishedAt": "2026-11-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
-    },
-    {
-      "id": "edd12a6bf0cd3edbb893",
-      "title": "品川区立品川児童学園講演会（12月3日開催）",
-      "summary": "本講演では、WISC-V新指標の開発にも携わられた日本臨床発達心理士会茨城支部支部長大六一志先生をお招きして、 これらの理論的背景、導入の経緯と意義、そして臨床現場でどのように活用していくべきかについてお話しいただきます。ぜひご参加ください。 区内在住の方、品川区で子どもに関わるお仕事をしている方",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002946/1012255.html",
-      "publishedAt": "2026-11-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "子育て教育",
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 10
-    },
-    {
-      "id": "e0e8f52e9b955e6de9b5",
-      "title": "【電子入札】制限付き一般競争入札 工第113号（建築工事）",
-      "summary": "電子入札 工事件名：東海中学校屋内運動場防水改修その他工事 対象業種：建築工事 申請期限：令和8年11月25日 午後5時まで 詳細は、「東京電子自治体共同運営サービス＞電子調達＞入札情報＞発注案件情報」をご覧ください。 下記「関連情報」をクリックすると、該当画面が表示されます。発注案件表の案件情報を確認のうえ、 配布資料等欄に添付している「公告文」をよく読み、電子入札で希望申請してください。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/nyusatsukeiyaku/1005346/1011539/1012257.html",
-      "publishedAt": "2026-11-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "事件事故",
-        "子育て教育",
-        "都市開発"
-      ],
-      "locations": [],
-      "relevanceScore": 6
-    },
-    {
-      "id": "b678b78f45830cd9714f",
-      "title": "ペアレント・トレーニング実施のお知らせ",
-      "summary": "発達特性のある子どもの行動を理解し、適切な関わりを学ぶ保護者向けのプログラムです。 全6回のグループワークと、各回のテーマに合わせたホームワークの実践を通し、親子のより良い関係作りを目指します。 2027年1月9日（土曜日） 、1月23日（土曜日） 、2月6日（土曜日） 、2月20日（土曜日） 、3月6日（土曜日） 、3月20日（土曜日）",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1009484/1011997.html",
-      "publishedAt": "2026-11-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "56eb42e369da13e2b0d5",
@@ -605,9 +767,9 @@ window.SHINAGAWA_NEWS = {
       "summary": "令和9年4月以降に採用する会計年度任用職員（教育心理相談員・スクールソーシャルワーカー・教育支援員）の募集を行っています。 申込は令和8年12月18日（金曜日）まで 勤務場所は、区立学校、教育総合支援センター、教育支援センター等になります。 詳細については、添付の 「募集案内」 をご覧ください。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1007835/1012000.html",
-      "publishedAt": "2026-11-16T00:00:00Z",
+      "publishedAt": "2026-11-16T02:29:34Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
@@ -615,28 +777,65 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 12
+      "relevanceScore": 12,
+      "sourcePriority": 100
     },
     {
-      "id": "2d99bda6df8a903f71ab",
-      "title": "【電子入札】制限付き一般競争入札 工第112号（道路標示塗装）",
-      "summary": "電子入札 工事件名：自転車通行空間整備工事（大井） 対象業種：道路標示塗装 申請期限：令和8年11月25日 午後5時まで 詳細は、「東京電子自治体共同運営サービス＞電子調達＞入札情報＞発注案件情報」をご覧ください。 下記「関連情報」をクリックすると、該当画面が表示されます。発注案件表の案件情報を確認のうえ、 配布資料等欄に添付している「公告文」をよく読み、電子入札で希望申請してください。",
+      "id": "2fef9aa73cd207960bf8",
+      "title": "【品川区】池田山公園で11/21〜29、紅葉ライトアップ「燈明－みあかし－」が開かれます",
+      "summary": "品川区東五反田の池田山公園 紅葉ライトアップイベントが、2026年11月21日（土）から29日（日）まで開かれます。期間中は午後5時30分から8時30分まで、ライトアップによる光の演出で、公園を象徴するもみじの紅葉を彩る […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/16/ikedayama-park-lightup",
+      "publishedAt": "2026-11-16T02:10:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 14,
+      "sourcePriority": 60
+    },
+    {
+      "id": "b4bc4778f5b9de49b241",
+      "title": "品川区セーフティネット住宅入居者募集（募集期間延長）",
+      "summary": "「品川区セーフティネット住宅」は、独立行政法人都市再生機構「以下（UR）」より 住戸の提供をいただき、住宅セーフティネット制度を活用した住宅確保要配慮者のみが入居可能な 民間賃貸住宅として、品川区内のひとり親世帯を対象に入居支援をおこなう事業です。 入居者の方は一定期間、月額家賃（最大4万円）が減額されます。 品川区の補助要件（家賃補助を受けられる所得の上限）とURの入居資格（ご入居に必要な収入の下限）が 細かく定められており、双方を満たす必要があります。 ※詳細は募集案内…",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/nyusatsukeiyaku/1005346/1011539/1012429.html",
-      "publishedAt": "2026-11-16T00:00:00Z",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1004314/1011528.html",
+      "publishedAt": "2026-11-16T02:00:06Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-14T19:32:11.536084Z",
+      "tags": [
+        "行政",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12,
+      "sourcePriority": 100
+    },
+    {
+      "id": "fc10d0160d1bb405e316",
+      "title": "講演会『知っておきたい 乳幼児のアレルギー ～発症させないコツ、悪くさせないコツ～』",
+      "summary": "「知っておきたい 乳幼児のアレルギー ～発症させないコツ、悪くさせないコツ～」 毎年定員になってしまう講演会です。お申し込みはぜひお早めに！！ 講演会のあとは14時までお部屋をご利用いただけます。 ランチなどご持参いただいても良いですし近所にコンビニもございますので、 ゆっくりお過ごしいただけます。 患者保護者のスタッフや保護者さま同士、おしゃべりしませんか？",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kosodate/1001928/1012238.html",
+      "publishedAt": "2026-11-16T01:05:03Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
-        "事件事故",
-        "都市開発",
-        "交通"
+        "その他"
       ],
-      "locations": [
-        "大井"
-      ],
-      "relevanceScore": 10
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "24ff03ddfd2746b014f0",
@@ -657,111 +856,226 @@ window.SHINAGAWA_NEWS = {
         "大崎",
         "大崎駅"
       ],
-      "relevanceScore": 8
+      "relevanceScore": 8,
+      "sourcePriority": 100
     },
     {
-      "id": "b4bc4778f5b9de49b241",
-      "title": "品川区セーフティネット住宅入居者募集（募集期間延長）",
-      "summary": "「品川区セーフティネット住宅」は、独立行政法人都市再生機構「以下（UR）」より 住戸の提供をいただき、住宅セーフティネット制度を活用した住宅確保要配慮者のみが入居可能な 民間賃貸住宅として、品川区内のひとり親世帯を対象に入居支援をおこなう事業です。 入居者の方は一定期間、月額家賃（最大4万円）が減額されます。 品川区の補助要件（家賃補助を受けられる所得の上限）とURの入居資格（ご入居に必要な収入の下限）が 細かく定められており、双方を満たす必要があります。 ※詳細は募集案内…",
+      "id": "e0e8f52e9b955e6de9b5",
+      "title": "【電子入札】制限付き一般競争入札 工第113号（建築工事）",
+      "summary": "電子入札 工事件名：東海中学校屋内運動場防水改修その他工事 対象業種：建築工事 申請期限：令和8年11月25日 午後5時まで 詳細は、「東京電子自治体共同運営サービス＞電子調達＞入札情報＞発注案件情報」をご覧ください。 下記「関連情報」をクリックすると、該当画面が表示されます。発注案件表の案件情報を確認のうえ、 配布資料等欄に添付している「公告文」をよく読み、電子入札で希望申請してください。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1004314/1011528.html",
-      "publishedAt": "2026-11-16T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-14T19:32:11.536084Z",
-      "tags": [
-        "行政",
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 12
-    },
-    {
-      "id": "f8f016a4a6f58d4545ab",
-      "title": "令和9年4月採用 品川区教育委員会事務局会計年度任用職員採用選考（教育総合支援センター）教育アドバイザー",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1007835/1012010.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/nyusatsukeiyaku/1005346/1011539/1012257.html",
+      "publishedAt": "2026-11-15T23:05:03Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
+        "事件事故",
         "子育て教育",
-        "福祉"
+        "都市開発"
       ],
       "locations": [],
-      "relevanceScore": 8
+      "relevanceScore": 6,
+      "sourcePriority": 100
     },
     {
-      "id": "e5458db59db5ab941d73",
-      "title": "2026-005「品川区福祉オンブズマン制度(素案)」に対する意見募集",
-      "summary": "",
+      "id": "2d99bda6df8a903f71ab",
+      "title": "【電子入札】制限付き一般競争入札 工第112号（道路標示塗装）",
+      "summary": "電子入札 工事件名：自転車通行空間整備工事（大井） 対象業種：道路標示塗装 申請期限：令和8年11月25日 午後5時まで 詳細は、「東京電子自治体共同運営サービス＞電子調達＞入札情報＞発注案件情報」をご覧ください。 下記「関連情報」をクリックすると、該当画面が表示されます。発注案件表の案件情報を確認のうえ、 配布資料等欄に添付している「公告文」をよく読み、電子入札で希望申請してください。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006651/1006652/1012243.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/nyusatsukeiyaku/1005346/1011539/1012429.html",
+      "publishedAt": "2026-11-15T23:05:03Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 12
-    },
-    {
-      "id": "cf22683ab7902e3b92a1",
-      "title": "歴史講座「江戸の地図出版を読み解くー日本橋・芝から東海道・品川へー」",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/historyhp/event/moyoshi/1011978.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
-      "id": "b64ed8f26d9713ff5e50",
-      "title": "【12月19日、1月10日実施】プロスポーツ連携事業 フットサル＆バスケットボール教室",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009520/1011769.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
+        "事件事故",
+        "都市開発",
         "交通"
       ],
-      "locations": [],
-      "relevanceScore": 0
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 100
     },
     {
-      "id": "82a87bffb71bb6a7c875",
-      "title": "令和8年度第2回いきいきウオーキング",
+      "id": "74ffcfdb587596ad97e7",
+      "title": "最新モデルに改装した「イトーヨーカドー大井町店」の売り場＝13日午前、東京都品川区 - ヨーカ堂、店舗の6割改装 28年、鮮魚と総菜注力 - 写真・画像(1/1)",
       "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009525/1011754.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
+      "source": "Googleニュース（西大井・大井町・二葉・豊町）",
+      "sourceId": "google-area-oi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBnQlBlZDltMWJ5eFdoR3RhcFFOaVRFcmRSRVEzUmJLQnY4VGNINnljY1JUZjhadUtPZmNCbVI3cTlfVm5nV2gwdURNVXRpRlhWMFZwUHQxaw?oc=5",
+      "publishedAt": "2026-11-15T21:00:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
         "その他"
       ],
+      "locations": [
+        "大井",
+        "大井町"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "西日本新聞me",
+      "outletUrl": "https://www.nishinippon.co.jp"
+    },
+    {
+      "id": "263fa5dd246a02067c05",
+      "title": "新宿区長選・品川区長選・小金井市長選の結果 東京トリプル首長選 [東京都]",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE56LXRnaHR0MWhhTGV4SjJJZHpTeVd5bkQwSS04TnNEN0FTSkdiN2NZZ2ZDOXVGb2ttMnBweklTeGwzTjA0S3diSFVGY2VKbjc5M1hKZGtkd2JYaVpyelF5WTg3MHBvX2s?oc=5",
+      "publishedAt": "2026-11-15T14:55:42Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政"
+      ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "朝日新聞",
+      "outletUrl": "https://www.asahi.com"
+    },
+    {
+      "id": "2ac29d7a9ebbd17a2203",
+      "title": "東京 品川区長選挙 現職の森澤恭子氏が再選",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0yU2FxRXJMMlloX3QtRzhkMkhfNW5aaWZsWjlwVEVUTjFIZDg2Ul9VdmdCb3k2eThMOXRrSUZwRlUxdXo0N2JvS2tzVFJrRHVmZEJvdTFOS2FqTmxYNF8w?oc=5",
+      "publishedAt": "2026-11-15T14:16:12Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "NHKニュース",
+      "outletUrl": "https://news.web.nhk"
+    },
+    {
+      "id": "0be5ac14e7394652d749",
+      "title": "品川区長選挙、現職の森沢恭子氏が再選果たす…投票率３４・３９％（読売新聞オンライン）",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE01RG14MDNNV1lRRnh1WG5EUXE5YjJmZmZYTjJWd0JKaWc3NnF2RGgzMHFVSUFiU2sxWV9zU04ycS1OYjd3eTItOEhTeUVWOFYtNmtKVW5ybHJfNkxYLWMtbXU2Ym9WTVlRR2NTSmFodmV6MWFVQnRZQlNvQnN6V3M?oc=5",
+      "publishedAt": "2026-11-15T13:13:33Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "Yahoo!ニュース",
+      "outletUrl": "https://news.yahoo.co.jp"
+    },
+    {
+      "id": "96f42124f18e7ba5ae40",
+      "title": "品川区長選挙、現職の森沢恭子氏が再選果たす…投票率３４・３９％",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9yLWdjMjY2N0JsS2Y3MHQ0ejkwQzcwTExJUlMxVlJQWU9uOUdqNnp0T3pBX3J1NE1QbzBselF0Y1l4emNJSUlqVjMxaVRHanJQQlI5SXZyOUR4TVh2RkRMaXBtWTZ6Zw?oc=5",
+      "publishedAt": "2026-11-15T13:13:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "読売新聞",
+      "outletUrl": "https://www.yomiuri.co.jp"
+    },
+    {
+      "id": "712001da2da9238e9686",
+      "title": "品川区長選挙、現職の森沢恭子さんが再選決める 「政策実行率97％」を押し出し、新人の浜田健太郎さんを破る",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54NXgwQWpwRzVKX1NONTRuTW9FX19oM29VTV9QLVlqSGl2VEtUaktzOXdCLWZTWm11VFpfZG1reVE1ZTRzX19uSmk5Q1I3Vl9yS2Qw?oc=5",
+      "publishedAt": "2026-11-15T12:49:53Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東京新聞",
+      "outletUrl": "https://www.tokyo-np.co.jp"
+    },
+    {
+      "id": "bb961da7fef1e4dcd688",
+      "title": "品川区長選、現職の森沢恭子氏が当選 前回は異例の再選挙（朝日新聞）",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9GY0RIajNjR1ZiazB6eV9nOUxYRVhhWFc3Mk16cTFmT0RsZjRtMFVleG5rb1hTSTI5MGxQbGFiTFNVOWNvNmZIaDJXdHZkb043Z3pRSkpWOUYxMGpaMUJ1Q3o3a2xsN2Y5bVJVZ0xobndfcS1KYzVBOGxIcEN4NkE?oc=5",
+      "publishedAt": "2026-11-15T12:31:28Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "Yahoo!ニュース",
+      "outletUrl": "https://news.yahoo.co.jp"
+    },
+    {
+      "id": "47dc2ff89a9a0cbb7bd1",
+      "title": "自民も共産も相乗りした品川区長 圧倒的強さの先に「都知事選」の声 [東京都]",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1jaFJJVU1mT0FCN1RfNVlUZmRhN1JjSXRKMEJmRmpPbHVNeV9FUWl1UzVOeDhObXJ0NXhTcmJvTVR6bl9YUU5sRVNJM19qODJBWGxBdUNxV1FZVVJoMUtyWThFTDUyaFE?oc=5",
+      "publishedAt": "2026-11-15T11:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "朝日新聞",
+      "outletUrl": "https://www.asahi.com"
     },
     {
       "id": "7385e238118e6763d725",
@@ -769,16 +1083,17 @@ window.SHINAGAWA_NEWS = {
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1003539/1011826.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
+      "publishedAt": "2026-11-15T02:28:52Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "5b332aa414c2d4ed788e",
@@ -786,26 +1101,51 @@ window.SHINAGAWA_NEWS = {
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/boshu/shokuinboshu/1011536.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
+      "publishedAt": "2026-11-15T02:28:52Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
         "子育て教育"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
-      "id": "051e789e40dfdff6f37d",
-      "title": "令和9年4月採用 品川区教育委員会事務局会計年度任用職員採用選考（教育総合支援センター）部活動指導員",
+      "id": "f48e131ee60838d69cc0",
+      "title": "【品川区】30団体が活動を紹介「しながわ地域貢献活動展」11/21（土）きゅりあんで開催",
+      "summary": "NPO法人やボランティア団体など30団体が集まる「しながわ地域貢献活動展」が、2026年11月21日（土）に大井町駅前のきゅりあん7階イベントホールで開かれます。地域の課題解決をめざす団体と直接交流できるイベントで、入場 […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/15/chiiki-koken-katsudo",
+      "publishedAt": "2026-11-15T02:10:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "大井",
+        "大井町",
+        "大井町駅",
+        "きゅりあん"
+      ],
+      "relevanceScore": 20,
+      "sourcePriority": 60
+    },
+    {
+      "id": "f8f016a4a6f58d4545ab",
+      "title": "令和9年4月採用 品川区教育委員会事務局会計年度任用職員採用選考（教育総合支援センター）教育アドバイザー",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1007835/1011912.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1007835/1012010.html",
+      "publishedAt": "2026-11-14T22:23:54Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
@@ -813,17 +1153,91 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 8
+      "relevanceScore": 8,
+      "sourcePriority": 100
+    },
+    {
+      "id": "051e789e40dfdff6f37d",
+      "title": "令和9年4月採用 品川区教育委員会事務局会計年度任用職員採用選考（教育総合支援センター）部活動指導員",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1007835/1011912.html",
+      "publishedAt": "2026-11-14T22:23:54Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 100
+    },
+    {
+      "id": "e5458db59db5ab941d73",
+      "title": "2026-005「品川区福祉オンブズマン制度(素案)」に対する意見募集",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006651/1006652/1012243.html",
+      "publishedAt": "2026-11-14T22:05:28Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12,
+      "sourcePriority": 100
+    },
+    {
+      "id": "b64ed8f26d9713ff5e50",
+      "title": "【12月19日、1月10日実施】プロスポーツ連携事業 フットサル＆バスケットボール教室",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009520/1011769.html",
+      "publishedAt": "2026-11-14T22:05:20Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "82a87bffb71bb6a7c875",
+      "title": "令和8年度第2回いきいきウオーキング",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009525/1011754.html",
+      "publishedAt": "2026-11-14T22:05:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "4e855ecc63705e4de535",
-      "title": "令和8年11月16日（月曜日）品川区福祉オンブズマン制度素案説明会開催",
-      "summary": "品川区は、障害者・高齢者向けの施設の開設や誘致等の取り組みを行うなど、障害のある方も高齢な方も住み慣れた地域で安心して暮らせる環境づくりを進めています。サービス供給量を増やすとともに、サービスの質を担保するための取り組みについても検討し、公的な制度として、福祉オンブズマン制度の導入を検討しています。 令和8年度は、福祉・法律の専門家が外部委員として参加する制度導入検討委員会を7月と9月に2回開催しました。令和8年11月15日（日曜日）からは、品川区福祉オンブズマン制度の素案…",
+      "title": "品川区福祉オンブズマン制度",
+      "summary": "令和8年11月16日（月曜日）品川区福祉オンブズマン制度素案説明会開催",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/kenko/chiikifukushi/1009466/1009345.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
+      "publishedAt": "2026-11-14T22:05:09Z",
       "dateKind": "published",
       "collectedAt": "2026-09-16T11:52:29.909327Z",
       "tags": [
@@ -831,7 +1245,26 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 12
+      "relevanceScore": 10,
+      "sourcePriority": 100
+    },
+    {
+      "id": "cf22683ab7902e3b92a1",
+      "title": "歴史講座「江戸の地図出版を読み解くー日本橋・芝から東海道・品川へー」",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/historyhp/event/moyoshi/1011978.html",
+      "publishedAt": "2026-11-14T22:05:02Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "2c5bb2f5b1737c960da3",
@@ -839,9 +1272,9 @@ window.SHINAGAWA_NEWS = {
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/kusei/senkyo/1010746/index.html",
-      "publishedAt": "2026-11-14T00:00:00Z",
+      "publishedAt": "2026-11-14T12:00:27Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
@@ -849,7 +1282,8 @@ window.SHINAGAWA_NEWS = {
         "選挙政治"
       ],
       "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 10,
+      "sourcePriority": 100
     },
     {
       "id": "e8b58f4b986604c16fa4",
@@ -868,9 +1302,31 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [
         "西五反田",
+        "目黒",
         "不動前駅"
       ],
-      "relevanceScore": 16
+      "relevanceScore": 18,
+      "sourcePriority": 50
+    },
+    {
+      "id": "0797d98ca785ff6b7ea1",
+      "title": "【品川区】パン百名店が手がけるビストロ「Bistro IKEDAYAMA」が東五反田に11/28オープン",
+      "summary": "ビストロ「Bistro IKEDAYAMA（ビストロ イケダヤマ）」が、2026年11月28日（土）に東五反田1丁目の電波ビル1階にオープンします。2016年2月に五反田で開業したベーカリーカフェ「Bread&C […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/13/bistro-ikedayama-open",
+      "publishedAt": "2026-11-13T02:10:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "東五反田"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 60
     },
     {
       "id": "60d01c8a9c2c31ef48f1",
@@ -887,7 +1343,8 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 10,
+      "sourcePriority": 100
     },
     {
       "id": "902f3b5a869c69985f75",
@@ -895,16 +1352,17 @@ window.SHINAGAWA_NEWS = {
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkasports/1009534/1011581.html",
-      "publishedAt": "2026-11-13T00:00:00Z",
+      "publishedAt": "2026-11-13T01:15:44Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "dcdcf58e3a1afbda27cd",
@@ -922,7 +1380,8 @@ window.SHINAGAWA_NEWS = {
         "経済"
       ],
       "locations": [],
-      "relevanceScore": 8
+      "relevanceScore": 8,
+      "sourcePriority": 100
     },
     {
       "id": "b972f33506e30b524cbd",
@@ -939,7 +1398,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "32c1ed8d4244d4cce1e5",
@@ -956,7 +1416,8 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "4bd2d33696d821e56b2d",
@@ -973,24 +1434,91 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "696fe72b03d50240a71c",
+      "title": "品川区長選挙は現職と新人の戦い！11月15日投票 東京都",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1Xc3VuS0JRWkdzWDNnM1Z1RXhIdVVMbzVyaFZHQUJ5aUhfNzEtQngwVC1zbzBqVk5GVEQwQTNSWnBwTFlqRVkyc1J4UndVbFZGQktwblNCaHNtS0RWck9YYlNybw?oc=5",
+      "publishedAt": "2026-11-12T23:00:10Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "選挙ドットコム",
+      "outletUrl": "https://go2senkyo.com"
     },
     {
       "id": "3836cddb2df322214b04",
-      "title": "（仮称）品川区こどもの権利条例の制定に向けて、アンケートを実施します。",
-      "summary": "",
+      "title": "こどもの権利条例制定に向けたアンケート調査",
+      "summary": "（仮称）品川区こどもの権利条例の制定に向けて、アンケートを実施します。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/kodomo/seishonen/1008886/1011761.html",
-      "publishedAt": "2026-11-12T00:00:00Z",
+      "publishedAt": "2026-11-12T07:35:18Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
         "行政"
       ],
       "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 10,
+      "sourcePriority": 100
+    },
+    {
+      "id": "6507fb037695edbba280",
+      "title": "【品川区】大崎ニューシティに区内の人気パン・スイーツ店が集まる「第5回 パン＆スイーツマルシェ」が11/15・16に開催",
+      "summary": "2026年11月15日（日）・16日（月）の2日間、大崎ニューシティ5号館1階のイベント広場で「第5回 パン＆スイーツマルシェ」が開かれます。品川区内の人気店が大崎ニューシティに集まり、パンやスイーツを販売するそうです。 […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/12/osaki-bread-marche",
+      "publishedAt": "2026-11-12T02:55:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎",
+        "大崎ニューシティ"
+      ],
+      "relevanceScore": 14,
+      "sourcePriority": 60
+    },
+    {
+      "id": "9f158d4ddf26314679d3",
+      "title": "品川区長選挙に立候補した2氏の経歴・政策まとめ（選挙ドットコム）",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0tVy1qQUhhTmxZMGhGZG1MdG1ONXJ3Skc3QktQbUhBbDFuVldfZDlSRmJ2VkNybGdjYVc5a3JCWXF5YnV6elRXUTU4NWFxb0hRMkwwa3ZseGxiS3ZuV01MZ19rTllac3prM3FVaHJxYmZXcnhOQ0ZjOV84NU1RdkU?oc=5",
+      "publishedAt": "2026-11-12T00:31:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "Yahoo!ニュース",
+      "outletUrl": "https://news.yahoo.co.jp"
     },
     {
       "id": "373aa1538f7d31bc824f",
@@ -1008,7 +1536,8 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 12
+      "relevanceScore": 12,
+      "sourcePriority": 100
     },
     {
       "id": "ead6b07f9d5e6e66be2b",
@@ -1026,24 +1555,29 @@ window.SHINAGAWA_NEWS = {
         "選挙政治"
       ],
       "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 10,
+      "sourcePriority": 50
     },
     {
-      "id": "e202a7e326322583ca0c",
-      "title": "令和8年度品川区職員【看護師・歯科衛生・栄養士・臨時的任用（事務・保育士・栄養士・保健師）】募集",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/boshu/shokuinboshu/1011986.html",
-      "publishedAt": "2026-11-11T00:00:00Z",
+      "id": "be2db89cb280d95a28f9",
+      "title": "【品川区】大井町のOIMACHI TRACKSと竹芝・高輪が光と音でつながる「LIGHTBEATS」11/19から初開催",
+      "summary": "2026年11月19日（木）から2027年1月31日（日）まで、大井町のOIMACHI TRACKSなど3つの街を光と音でつなぐライトインスタレーションイベント「LIGHTBEATS（ライトビーツ ～光の鼓動～）」が初め […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/11/lightbeats-oimachi",
+      "publishedAt": "2026-11-11T02:10:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
-        "その他"
+        "地域イベント"
       ],
-      "locations": [],
-      "relevanceScore": 10
+      "locations": [
+        "大井",
+        "大井町"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 60
     },
     {
       "id": "9f836e05f173fcd2ff00",
@@ -1051,33 +1585,35 @@ window.SHINAGAWA_NEWS = {
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009378/1011996.html",
-      "publishedAt": "2026-11-11T00:00:00Z",
+      "publishedAt": "2026-11-11T01:56:33Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 8
+      "relevanceScore": 8,
+      "sourcePriority": 100
     },
     {
-      "id": "3700c39c6370db6c37f2",
-      "title": "都市計画の案の縦覧・意見書の提出・説明会",
+      "id": "e202a7e326322583ca0c",
+      "title": "令和8年度品川区職員【看護師・歯科衛生・栄養士・臨時的任用（事務・保育士・栄養士・保健師）】募集",
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/toshikeikaku/1009606/1011563/index.html",
-      "publishedAt": "2026-11-11T00:00:00Z",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/boshu/shokuinboshu/1011986.html",
+      "publishedAt": "2026-11-10T23:33:33Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
-        "都市開発"
+        "その他"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 10,
+      "sourcePriority": 100
     },
     {
       "id": "250f315b744b70de3ede",
@@ -1085,16 +1621,61 @@ window.SHINAGAWA_NEWS = {
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/nyusatsukeiyaku/1005346/1011539/1012234.html",
-      "publishedAt": "2026-11-11T00:00:00Z",
+      "publishedAt": "2026-11-10T23:32:21Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
         "都市開発"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 2,
+      "sourcePriority": 100
+    },
+    {
+      "id": "3700c39c6370db6c37f2",
+      "title": "都市計画の案の縦覧・意見書の提出・説明会",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kankyo/toshikeikaku/1009606/1011563/index.html",
+      "publishedAt": "2026-11-10T23:32:15Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 2,
+      "sourcePriority": 100
+    },
+    {
+      "id": "77bff546cc6cd6b95d69",
+      "title": "大井町駅周辺に新たな再開発 地上24階・高さ約100m、地上15階・高さ約65mの「大井町駅西口Ｅ地区第一種市街地再開発事業」",
+      "summary": "",
+      "source": "Googleニュース（西大井・大井町・二葉・豊町）",
+      "sourceId": "google-area-oi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE84ZTJ0bWJiYmtUclA3Nkh6NlZtdGxDWklBa1NlQWVwU3QwUlcyM1F2Q0NuRm11UTdZT3NSM0w3NVM3VUQ5VnlRTjAydVBsZ2tKWGRyLU5Icm5LOUMxaHp6aWZBekZiMEF2eTRGWUI3VzI3QkFMazNoWGl6cWUtdw?oc=5",
+      "publishedAt": "2026-11-10T20:30:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "都市開発",
+        "交通"
+      ],
+      "locations": [
+        "大井",
+        "大井町",
+        "大井町駅"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東京・大阪 都心上空ヘリコプター遊覧飛行",
+      "outletUrl": "https://building-pc.cocolog-nifty.com"
     },
     {
       "id": "d7566a5a0f0725621781",
@@ -1115,7 +1696,8 @@ window.SHINAGAWA_NEWS = {
         "西五反田",
         "五反田駅"
       ],
-      "relevanceScore": 16
+      "relevanceScore": 16,
+      "sourcePriority": 50
     },
     {
       "id": "38443e9390acc2c29fe7",
@@ -1135,6 +1717,49 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
+      "id": "5fad3e014d9d32231674",
+      "title": "【品川区】中延・戸越銀座・武蔵小山の3商店街を巡る謎解き「探偵しなにゃん」11/14から開催",
+      "summary": "品川区内の中延商店街・戸越銀座商店街・武蔵小山商店街パルムの3つの商店街を巡りながら物語を進めるリアル謎解きゲーム「探偵しなにゃん ザ・ファーストミッション ～商店街からの挑戦状～」が、2026年11月14日（土）から2 […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/10/shinanyan-nazotoki",
+      "publishedAt": "2026-11-10T05:14:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "武蔵小山",
+        "小山",
+        "中延",
+        "戸越銀座商店街",
+        "武蔵小山商店街"
+      ],
+      "relevanceScore": 28,
+      "sourcePriority": 60
+    },
+    {
+      "id": "653949fbea386e36b3ff",
+      "title": "障害者フライングディスク教室（参加者募集中）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009520/1011534.html",
+      "publishedAt": "2026-11-10T01:41:05Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 2,
+      "sourcePriority": 100
+    },
+    {
       "id": "7c1cc2d2f0a11f41d298",
       "title": "11月9日開催の委員会の結果を掲載。",
       "summary": "11月9日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
@@ -1152,24 +1777,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 14
-    },
-    {
-      "id": "653949fbea386e36b3ff",
-      "title": "障害者フライングディスク教室（参加者募集中）",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/bunka/sports/1009520/1011534.html",
-      "publishedAt": "2026-11-10T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 14,
+      "sourcePriority": 100
     },
     {
       "id": "052a92e163be57c79e37",
@@ -1205,7 +1814,8 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "a4a431368d97de69b7d8",
@@ -1261,7 +1871,8 @@ window.SHINAGAWA_NEWS = {
         "品川シーサイド駅",
         "品川シーサイド"
       ],
-      "relevanceScore": 20
+      "relevanceScore": 20,
+      "sourcePriority": 50
     },
     {
       "id": "18cf9b18eba4790cfe9e",
@@ -1281,7 +1892,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 16
+      "relevanceScore": 16,
+      "sourcePriority": 100
     },
     {
       "id": "865b195271ea71925884",
@@ -1298,7 +1910,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "eb6fda9acc0fe8286a96",
@@ -1318,24 +1931,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 14
-    },
-    {
-      "id": "b3ae72a92e396dfafa0d",
-      "title": "令和8年度品川区職員【福祉（保育士）】募集",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/boshu/shokuinboshu/1011962.html",
-      "publishedAt": "2026-11-09T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "福祉"
-      ],
-      "locations": [],
-      "relevanceScore": 12
+      "relevanceScore": 14,
+      "sourcePriority": 100
     },
     {
       "id": "2ba20cfdb7d86c24dc2a",
@@ -1343,16 +1940,35 @@ window.SHINAGAWA_NEWS = {
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/kusei/renkeikyodo/1004702/1004714.html",
-      "publishedAt": "2026-11-09T00:00:00Z",
+      "publishedAt": "2026-11-09T00:32:46Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "b3ae72a92e396dfafa0d",
+      "title": "令和8年度品川区職員【福祉（保育士）】募集",
+      "summary": "令和8年度品川区職員【福祉（保育士）】募集",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/boshu/shokuinboshu/1011962.html",
+      "publishedAt": "2026-11-09T00:26:32Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 12,
+      "sourcePriority": 100
     },
     {
       "id": "18f0a336b1a6f575ec1a",
@@ -1388,6 +2004,27 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "7bb52915bc7b849b1d7a",
+      "title": "商店街近くでトラックと乗用車が接触 歩行者ら4人けが 東京・品川区（テレビ朝日系（ANN））",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9tOE14aC1YM1Q0QlNid3dCRWZOb2NnSDVubVdwTWRhNl9KeDg3TGZDNk5oOFhpbDR0dDF2SUpXd000cXV0V1VXMXY3d1pEazFpR1BMQ18yNnBFczMyN2YxMnh3Skh2UnRRSjd2Q2VxanliUk5ybUw2YWFPbG44U1k?oc=5",
+      "publishedAt": "2026-11-08T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "Yahoo!ニュース",
+      "outletUrl": "https://news.yahoo.co.jp"
     },
     {
       "id": "d2318cabb61098920a22",
@@ -1462,7 +2099,46 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "旗の台"
       ],
-      "relevanceScore": 12
+      "relevanceScore": 12,
+      "sourcePriority": 50
+    },
+    {
+      "id": "f06ad88ad465012340e2",
+      "title": "品川歴史館の特別展・常設展の見どころポイントをご紹介！～展示解説ボランティアによるガイドツアー～",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/historyhp/event/moyoshi/1011994.html",
+      "publishedAt": "2026-11-06T05:00:09Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "品川歴史館"
+      ],
+      "relevanceScore": 4,
+      "sourcePriority": 100
+    },
+    {
+      "id": "45efbe0506710949e2af",
+      "title": "きせつ風(品川第二地域ニュース)令和8年11月号 No.247",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007915/1011817.html",
+      "publishedAt": "2026-11-06T03:00:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "5387f993d40e48ca949f",
@@ -1482,26 +2158,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 14
-    },
-    {
-      "id": "f06ad88ad465012340e2",
-      "title": "品川歴史館の特別展・常設展の見どころポイントをご紹介！～展示解説ボランティアによるガイドツアー～",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/historyhp/event/moyoshi/1011994.html",
-      "publishedAt": "2026-11-06T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "地域イベント"
-      ],
-      "locations": [
-        "品川歴史館"
-      ],
-      "relevanceScore": 4
+      "relevanceScore": 14,
+      "sourcePriority": 100
     },
     {
       "id": "74a6f81d0b67f9e8dc80",
@@ -1509,9 +2167,9 @@ window.SHINAGAWA_NEWS = {
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1008070/1008087/1011849.html",
-      "publishedAt": "2026-11-06T00:00:00Z",
+      "publishedAt": "2026-11-06T01:00:19Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
@@ -1521,24 +2179,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "荏原"
       ],
-      "relevanceScore": 14
-    },
-    {
-      "id": "45efbe0506710949e2af",
-      "title": "きせつ風(品川第二地域ニュース)令和8年11月号 No.247",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007915/1011817.html",
-      "publishedAt": "2026-11-06T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 14,
+      "sourcePriority": 100
     },
     {
       "id": "68f69737a828564a6e8a",
@@ -1579,7 +2221,28 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 14
+      "relevanceScore": 14,
+      "sourcePriority": 100
+    },
+    {
+      "id": "75570afbaa4a08e07d0d",
+      "title": "第44回大崎第二地区運動会を開催",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007964/1007966/1011694.html",
+      "publishedAt": "2026-11-05T09:00:04Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "aa7c6a126607e2612128",
@@ -1602,6 +2265,31 @@ window.SHINAGAWA_NEWS = {
         "下神明駅"
       ],
       "relevanceScore": 20
+    },
+    {
+      "id": "fa0dbef7303dab99c0e6",
+      "title": "戸越銀座商店街での火事",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBGZThyaFVRaWgweFNBVThxcHl0N0FfaDdtMWVEY2xUTDF2SDZSZEJaSTJ6REFEbnVkVWFmczNQNkxOU3lvSGx0WXRjVFQtb0JaUThWZFdIRzVUYzV2djkw?oc=5",
+      "publishedAt": "2026-11-05T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "選挙政治",
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "選挙ドットコム",
+      "outletUrl": "https://go2senkyo.com"
     },
     {
       "id": "ef990392ebf6b7e2ad18",
@@ -1639,26 +2327,28 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 14
+      "relevanceScore": 14,
+      "sourcePriority": 100
     },
     {
-      "id": "75570afbaa4a08e07d0d",
-      "title": "第44回大崎第二地区運動会を開催",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007964/1007966/1011694.html",
-      "publishedAt": "2026-11-05T00:00:00Z",
+      "id": "3f6587722484447cd782",
+      "title": "【品川区】7月から工事で休業していた五反田「桜田みそら」が11/10(火)に営業再開",
+      "summary": "西五反田2丁目の「濃厚背脂みそらーめん 桜田みそら」が、2026年11月10日（火）から営業を再開します。店舗の工事のため、7月から長く休業していました。 休業に入ったのは7月22日（水）で、そのときは営業再開の時期は未 […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/05/misora-sakurada-reopen",
+      "publishedAt": "2026-11-05T02:10:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
-        "地域イベント"
+        "都市開発"
       ],
       "locations": [
-        "大崎"
+        "西五反田"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 14,
+      "sourcePriority": 60
     },
     {
       "id": "c53dfc45fbc7c075e53e",
@@ -1779,21 +2469,28 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
-      "id": "fcac67a1e64070111ac6",
-      "title": "「やさしい日本語講座」開催",
+      "id": "005aeb46c4fee1d23d4b",
+      "title": "東京・品川区の戸越銀座商店街の飲食店で火事「1階の厨房から火」",
       "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/tabunka/1011708/1004734.html",
-      "publishedAt": "2026-11-04T00:00:00Z",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43OE5pMTdEdS1oZ1Nnclp5Xzk3MklTc3pLNk5kVFBmOWh6ekNHdTFCQ3RoZmNia3NjTjFLU2daaDlvYlM0bFpYbVFMV2xVeF8ycGxoMGlR?oc=5",
+      "publishedAt": "2026-11-04T08:00:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
         "地域イベント"
       ],
-      "locations": [],
-      "relevanceScore": 2
+      "locations": [
+        "戸越",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 16,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "KSBニュース",
+      "outletUrl": "https://news.ksb.co.jp"
     },
     {
       "id": "6901a352a962a9a04296",
@@ -1801,16 +2498,35 @@ window.SHINAGAWA_NEWS = {
       "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
+      "sourceType": "rss",
       "url": "https://www.city.shinagawa.tokyo.jp/kodomo/seishonen/1009456/1011969.html",
-      "publishedAt": "2026-11-04T00:00:00Z",
+      "publishedAt": "2026-11-04T07:00:08Z",
       "dateKind": "published",
       "collectedAt": "2026-11-17T16:18:53.602642Z",
       "tags": [
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 8
+      "relevanceScore": 8,
+      "sourcePriority": 100
+    },
+    {
+      "id": "fcac67a1e64070111ac6",
+      "title": "「やさしい日本語講座」開催",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/tabunka/1011708/1004734.html",
+      "publishedAt": "2026-11-04T02:01:04Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "2a6248b419ee670d96dd",
@@ -1868,6 +2584,42 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
+      "id": "156bb5f1ab461db11cc2",
+      "title": "令和8年度マンション管理セミナー（第一回）参加者募集（申込み11月19日まで）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009380/1011964.html",
+      "publishedAt": "2026-11-02T08:27:50Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 4,
+      "sourcePriority": 100
+    },
+    {
+      "id": "2174a969b4e9a345a1c4",
+      "title": "【令和9年度入園】申請に関する書類",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/hoikuenyochien/1002036/1011666.html",
+      "publishedAt": "2026-11-02T08:00:31Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
       "id": "e41ec5c5b3a3c4d2a251",
       "title": "令和9年度 奨学研究資金奨学生募集",
       "summary": "奨学研究資金とは、ひとり親世帯の生活の安定と人材の育成を図るため、学費の一部を交付する制度（給付型）です。昭和50年9月に区内篤志家の寄付金をもとに創設されました。現在は、品川区内の町会・自治会をはじめ、区民の皆様にご支援いただいている「歳末たすけあい募金」を原資とし交付しています。 (1)申請の日の1年前から、引き続き区内に住所を有する ひとり親世帯 のお子さん。",
@@ -1882,7 +2634,8 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 12
+      "relevanceScore": 12,
+      "sourcePriority": 100
     },
     {
       "id": "91a7c4c347eab060bb6b",
@@ -1899,7 +2652,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "1032c789f7b1ba220dcb",
@@ -1916,7 +2670,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "0e6ace1e437742587039",
@@ -1933,7 +2688,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "0887244fdea40d5c3e00",
@@ -1951,41 +2707,45 @@ window.SHINAGAWA_NEWS = {
         "経済"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
-      "id": "2174a969b4e9a345a1c4",
-      "title": "【令和9年度入園】申請に関する書類",
-      "summary": "",
+      "id": "e5bccfe155f88513ea33",
+      "title": "しながわ学びの杜 しなカレント講座第6回「子供のスポーツ傷害と中高年の関節の痛みを考える」（1月31日開催）",
+      "summary": "16歳以上の方 ※16歳未満の方も保護者同伴でご受講いただけます。 本講演では成長期の子供のスポーツ傷害から、中高年の方の様々な関節の痛みについて学んでいきます。スポーツ動作や日常生活の中で発する痛みについて解剖学・運動学を分かりやすく解説しながら痛みの原因や対処法について考えていきたいと思います。」",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/hoikuenyochien/1002036/1011666.html",
-      "publishedAt": "2026-11-02T00:00:00Z",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/shogaigakushu/1003706/1011815.html",
+      "publishedAt": "2026-11-02T01:00:08Z",
       "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
-        "その他"
+        "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
-      "id": "156bb5f1ab461db11cc2",
-      "title": "令和8年度マンション管理セミナー（第一回）参加者募集（申込み11月19日まで）",
-      "summary": "",
+      "id": "3f21a56b5127536f2d87",
+      "title": "しながわ学びの杜 しなカレント講座第5回「幕末の江戸幕府と小栗忠順-開明的な保守派」（12月21日開催）",
+      "summary": "生涯にわたる学びなおしのきっかけとして幅広いジャンルのテーマを設定し、多彩で充実した講座です。 幕末、地球を一周して帰ってきた開明的な旗本・小栗忠順は、滅びゆく幕府を支え続けたことで、新政府からは逆賊扱いで処刑されました。教科書に載らない2027年歴史ドラマの主人公を前向きにとらえ直す、楽しい講義です。",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009380/1011964.html",
-      "publishedAt": "2026-11-02T00:00:00Z",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/shogaigakushu/1003706/1003708/1011732.html",
+      "publishedAt": "2026-11-02T01:00:06Z",
       "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
-        "都市開発"
+        "地域イベント",
+        "文化歴史"
       ],
       "locations": [],
-      "relevanceScore": 4
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "fde7cc4f856228595e01",
@@ -2005,6 +2765,24 @@ window.SHINAGAWA_NEWS = {
         "西五反田"
       ],
       "relevanceScore": 12
+    },
+    {
+      "id": "83c8fd4aa20f8adcef64",
+      "title": "地域猫活動学びの会",
+      "summary": "地域猫活動の概要に加え、不妊・去勢手術後の猫の行方など、活動の実態に迫った内容となっております。 人にとっても猫にとっても快適な暮らしが送れる「きっかけ」となれば幸いです。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/pet/1003219/1011741.html",
+      "publishedAt": "2026-11-01T15:05:09Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "dff36fedb5a1762f951d",
@@ -2042,6 +2820,184 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "9a3092b495e1a10d770a",
+      "title": "区立高齢者住宅の募集案内を配布（11月2日（月曜日）から）",
+      "summary": "区内地域センター、シルバーセンター、サービスコーナー、品川区役所（高齢者地域支援課） ※添付資料からもダウンロードできますのでご活用ください。 期間／令和8年11月16日(月曜日)～11月25日(水曜日) ※土日・祝日を除く 時間／午前8時30分～午後5時 会場／本庁舎3階 高齢者地域支援課 高齢者住宅担当窓口",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/koreisha/1004284/1011730.html",
+      "publishedAt": "2026-10-31T23:05:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政",
+        "福祉"
+      ],
+      "locations": [
+        "品川区役所"
+      ],
+      "relevanceScore": 24,
+      "sourcePriority": 100
+    },
+    {
+      "id": "7d91c724a772b36d0398",
+      "title": "エシカルカフェ第4回「アラスカ写真家 松本紀生さんライブシアター」",
+      "summary": "エコルとごし 多目的スペース （東京都品川区豊町2-1-30） アラスカではほかの地域と比べて約3倍の速さで温暖化が進んでいるといわれます。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1003539/1011762.html",
+      "publishedAt": "2026-10-31T23:05:03Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "環境"
+      ],
+      "locations": [
+        "豊町",
+        "エコルとごし"
+      ],
+      "relevanceScore": 14,
+      "sourcePriority": 100
+    },
+    {
+      "id": "d070a7000a669f0b1d73",
+      "title": "東京都立産業技術大学院大学パートナーシップ講座「第34回AIITフォーラム」共同開催(12月1日～28日オンライン 講座)",
+      "summary": "あらゆる世代に多彩な生涯学習講座を提供する「しながわ学びの杜」。 産業や文化などをテーマに、日常生活に活かせるきっかけとなるような内容を、 様々な観点から学ぶ入門講座です。 東京都立産業技術大学院大学と品川区の共催で開催する、受講料無料の公開講座です。 パソコンやスマートフォンなどから視聴可能なオンラインでの開催です。 令和8年度は、「はじめて学ぶ生成AI」ー身近な活用例と社会との関わりーについてご紹介します。 2026年12月1日（火曜日）から2026年12月28日（月曜…",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/shogaigakushu/1003706/1011908.html",
+      "publishedAt": "2026-10-31T15:05:55Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント",
+        "文化歴史"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 100
+    },
+    {
+      "id": "6a5f824207b86a764dcc",
+      "title": "星薬科大学公開講座 秋の薬草見学会（11月21日 土曜日開催）",
+      "summary": "星薬科大学 （品川区荏原2－4－41） ※ご来場の際は公共交通機関をご利用ください。 あらゆる世代に多彩な生涯学習講座を提供する「しながわ学びの杜」 品川区内および近隣区の学校と連携して、各学校の特色や強みをいかした講座です。 様々な分野における、専門的でより深い学習の機会を創出します。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/shogaigakushu/1003706/1003708/1011765.html",
+      "publishedAt": "2026-10-31T15:05:42Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "子育て教育",
+        "地域イベント"
+      ],
+      "locations": [
+        "荏原"
+      ],
+      "relevanceScore": 16,
+      "sourcePriority": 100
+    },
+    {
+      "id": "688547586e9886be3689",
+      "title": "令和8年度品川区障害者作品展",
+      "summary": "障害者作品展は障害のある方への理解を深めるために開催される作品展です。 障害のある方が作成した、書道・絵画・手工芸の力作をぜひご覧ください。 2026年11月20日（金曜日）から2026年11月24日（火曜日）まで",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002758/1011763.html",
+      "publishedAt": "2026-10-31T15:05:40Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 100
+    },
+    {
+      "id": "551006ebcc66e0d7047d",
+      "title": "年末保育(令和8年度)",
+      "summary": "区内在住で、年末に保護者が就労のため保育が必要な満4カ月から就学前までのお子さんをお預かりします。 必要書類と利用料金を確認し、中延保育園は「品川区電子申請サービス」内「【保育施設運営課】年末保育受付申請」から、 大井保育園は「大井保育園のホームページ」からお申し込みください。 令和8年12月29日（火曜日）、30日（水曜日） 午前7時30分～午後6時30分の間で、保育が必要な時間",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/hoikuenyochien/1002030/1011596.html",
+      "publishedAt": "2026-10-31T15:05:36Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [
+        "大井",
+        "中延"
+      ],
+      "relevanceScore": 14,
+      "sourcePriority": 100
+    },
+    {
+      "id": "4e7f4537dacc711c447d",
+      "title": "「第8期障害福祉計画および第4期障害児福祉計画」素案説明会開催のお知らせ（令和8年11月25日開催）",
+      "summary": "「第7期品川区障害福祉計画・第3期品川区障害児福祉計画」（令和6年度～令和8年度）が令和8年度をもって期間満了となるため、新たに令和9年度を始期とする「第8期品川区障害福祉計画・第4期品川区障害児福祉計画」の策定を進めています。 このたび、品川区障害福祉計画等策定委員会における協議・検討を経て、計画の素案を作成いたしました。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002946/1002926/1002927/1011569.html",
+      "publishedAt": "2026-10-31T15:05:32Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 100
+    },
+    {
+      "id": "01feabed7c3029e38f68",
+      "title": "品川区居住支援セミナーの開催",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1004314/1011745.html",
+      "publishedAt": "2026-10-31T15:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 100
+    },
+    {
+      "id": "01709128b158a27b1519",
+      "title": "品川区障害者週間 記念のつどい",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1009484/1011796.html",
+      "publishedAt": "2026-10-31T15:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 100
     },
     {
       "id": "8fbe8a4a1c6a441d7e9e",
@@ -2085,6 +3041,42 @@ window.SHINAGAWA_NEWS = {
         "不動前駅"
       ],
       "relevanceScore": 4
+    },
+    {
+      "id": "505d464c8e34df3dec39",
+      "title": "「さとふる」メール配信サービスへの不正アクセスによる情報漏えい",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/zeikin/1009363/1011842.html",
+      "publishedAt": "2026-10-30T03:00:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "9c99360ee5c8a2ea5b4f",
+      "title": "「ふるさとチョイス」の個人情報流出に伴う注意喚起",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/zeikin/1009363/1011744.html",
+      "publishedAt": "2026-10-30T03:00:14Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "d5143625913018c7aaef",
@@ -2177,6 +3169,43 @@ window.SHINAGAWA_NEWS = {
         "西大井"
       ],
       "relevanceScore": 8
+    },
+    {
+      "id": "b1bac3e8f50d07a69c0d",
+      "title": "令和8年度第1回品川区医療的ケア児等支援関係機関連絡会開催（令和8年10月26日開催）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002946/1002939/1011523.html",
+      "publishedAt": "2026-10-29T11:00:05Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 100
+    },
+    {
+      "id": "69ea445a81fad5c26877",
+      "title": "空き家対策セミナーの開催（品川区後援）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1009378/1011737.html",
+      "publishedAt": "2026-10-29T09:00:16Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 100
     },
     {
       "id": "04d783a01f54ae459e82",
@@ -2443,7 +3472,26 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "2b81a37015aec22fd733",
+      "title": "令和8年11月1日（日曜日）開催「輪の品マルシェ」エシカル消費イベントinしながわ",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002766/1002781/1009482/1011648.html",
+      "publishedAt": "2026-10-26T00:00:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "eafa979a8e68729e1d22",
@@ -2519,7 +3567,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "c8e5dd7bbb3f06ed79ec",
@@ -2614,7 +3663,71 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 14
+      "relevanceScore": 14,
+      "sourcePriority": 100
+    },
+    {
+      "id": "3a2d7d5c51d61b229965",
+      "title": "大井第2地域情報ニュース 2026年11月号",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007982/1007985/1011779.html",
+      "publishedAt": "2026-10-23T07:00:17Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大井"
+      ],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "bb8d5a262ee8c716e2a7",
+      "title": "令和8年度思春期講演会",
+      "summary": "品川区在住・在勤の思春期のお子様のご家族、これから思春期を迎えるお子様のご家族、関心のある方 令和8年度のテーマは「思春期のこころとからだ～親が知っておきたい性の話～」です。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kosodate/1001928/1011749.html",
+      "publishedAt": "2026-10-23T07:00:15Z",
+      "dateKind": "published",
+      "collectedAt": "2026-09-27T17:06:25.503279Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 100
+    },
+    {
+      "id": "52ce7bfe8992f22d173a",
+      "title": "武蔵小山商店街パルム（東京都品川区）…友と集う一つ屋根の下",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBCWG85TmhZaFBEZlhfQkR1RTQyU0tNdHg0WXJJSW9lWmY5Tkp4RHFPM3ZwNUpHMG9lRGtzUXBMT2RWUnVrams5clZJOVNoMl9CYUJ3NTlmQkpwZ1E2Y0JTY1l2N2JfSVk4NVdn?oc=5",
+      "publishedAt": "2026-10-23T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "武蔵小山",
+        "小山",
+        "武蔵小山商店街"
+      ],
+      "relevanceScore": 18,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "読売新聞",
+      "outletUrl": "https://www.yomiuri.co.jp"
     },
     {
       "id": "47a3a5a8886a2c4cac02",
@@ -2634,7 +3747,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 14
+      "relevanceScore": 14,
+      "sourcePriority": 100
     },
     {
       "id": "449bd29a12a17ccdb880",
@@ -2789,6 +3903,24 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
+      "id": "f282f1f8ece610f64124",
+      "title": "区民住宅への入居案内",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1004280/1004272/1004275.html",
+      "publishedAt": "2026-10-22T01:00:15Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
       "id": "99f28ecfc0a8dd397328",
       "title": "旗ヶ岡商店街「たまご祭り」",
       "summary": "2026年10月23日（金）、旗の台・旗ヶ岡商店街にて「たまご祭り」が開催されます。 旗が岡商店会の7軒の飲食店が「たまご」をテーマにコラボレーション。 「卵」を通じて 『食べて、飲んで、楽しんで』 旗ヶ岡商店会から 新たなムーブメントが産み落とされるかもしれません。",
@@ -2867,6 +3999,24 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
+      "id": "1df121ecad590fb77efe",
+      "title": "文化財一般公開【令和8年10月31日（土曜日）〜令和8年11月3日（火曜日・祝日）】",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1011511.html",
+      "publishedAt": "2026-10-21T10:00:05Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "文化歴史"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
       "id": "aa544cf6bc75bfc7c799",
       "title": "埼玉・八潮市の道路陥没事故めぐり遺族が慰謝料など約1億2500万円求め県を提訴",
       "summary": "",
@@ -2887,6 +4037,44 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
+      "id": "270fff0d67e2496a0061",
+      "title": "離婚前後の親支援講座",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kodomoteate/1001965/1011649.html",
+      "publishedAt": "2026-10-21T06:00:27Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2,
+      "sourcePriority": 100
+    },
+    {
+      "id": "cae07df5f331d002227e",
+      "title": "「令和8年度高次脳機能障害啓発講座」開催のお知らせ",
+      "summary": "2026年12月2日（水曜日） 、12月9日（水曜日） 、12月16日（水曜日） （1）午後2時00分から3時30分 （2）午後6時00分から7時30分 ※（1）または（2）のいずれかをお選びください。 ※全3日間の開催となります。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1009484/1011550.html",
+      "publishedAt": "2026-10-21T06:00:25Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-15T04:56:01.750679Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 2,
+      "sourcePriority": 100
+    },
+    {
       "id": "e58d80b74d88b156b00d",
       "title": "DYM MESSENGERS、新体制で挑んだD.LEAGUE 26-27 SEASON開幕戦で勝利！",
       "summary": "[DYM] WEB事業、人材事業、海外医療事業などを中心に、M&A事業やスポーツ事業など多角的に事業を展開する株式会社DYM（読み：ディーワイエム、本社：東京都品川区、代表取締役社長：水谷佑毅）が運営するプロダンス...",
@@ -2904,6 +4092,45 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
+      "id": "d314fcb4976b3e7fefb6",
+      "title": "アレルギーおしゃべり会（11月）大崎ゆうゆうプラザで開催",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kosodate/1001928/1011692.html",
+      "publishedAt": "2026-10-20T09:00:41Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "3157e5c07e0c197d5f07",
+      "title": "【アンケート】子育て支援情報発信アプリ「しながわこどもぽけっと」満足度調査",
+      "summary": "いつも「しながわこどもぽけっと」をご利用いただきありがとうございます。 今後のサービス向上のため、アンケートを実施しております。 1分程度の簡単な内容ですので、ぜひご協力をお願いいたします。 実施期間：10月20日（火曜日）～11月20日（金曜日） 皆様からのご意見をお待ちしております。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kosodate/1009436/1011654.html",
+      "publishedAt": "2026-10-20T09:00:37Z",
+      "dateKind": "published",
+      "collectedAt": "2026-10-20T00:28:31.044767Z",
+      "tags": [
+        "子育て教育",
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
       "id": "9b42e07962b6e9c4411d",
       "title": "ニュース「さわやかさん」更新しました！",
       "summary": "",
@@ -2918,7 +4145,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "79cc7a0e0d0a96025a32",
@@ -2938,6 +4166,26 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 0
     },
     {
+      "id": "b599906413cc96db7596",
+      "title": "はなぐるま（大崎第一地域） 185号",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1008160/1007942/1007945/1011712.html",
+      "publishedAt": "2026-10-20T08:00:08Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "大崎"
+      ],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
       "id": "3a858034f362d0a7ff3d",
       "title": "3社連携で「循環型GPUサーバー」を活用した新たなAIインフラ事業を開始",
       "summary": "[エクストリーム−Ｄ株式会社] エクストリームーD株式会社（本社：東京都品川区、代表取締役：柴田 直樹、以下「エクストリームーD」）、TES-AMM JAPAN株式会社（本社：神奈川県相模原市中央区、代表取締役：小沢 国彦、以下「TES-AMM」）、Cor...",
@@ -2953,6 +4201,42 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 10
+    },
+    {
+      "id": "6767fefbc5404cad8369",
+      "title": "しながわWEB写真館をご利用の皆様へ（サービス休止のお知らせ）",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1009623/1011571.html",
+      "publishedAt": "2026-10-20T07:00:06Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "8d03ad09f0f69325f6db",
+      "title": "高齢者福祉施設",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/koreisha/1009471/1011503/index.html",
+      "publishedAt": "2026-10-20T04:34:13Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "福祉"
+      ],
+      "locations": [],
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "86a6fcaceab2cb381ff4",
@@ -3031,22 +4315,22 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 8
     },
     {
-      "id": "3157e5c07e0c197d5f07",
-      "title": "【アンケート】子育て支援情報発信アプリ「しながわこどもぽけっと」満足度調査",
-      "summary": "子ども育成課 子ども育成係 電話：03-5742-6720 FAX：03-5742-6351",
+      "id": "24629613fa137e25bed5",
+      "title": "創業・スタートアップ向け 情報サイトのご案内",
+      "summary": "",
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kosodate/1009436/1011654.html",
-      "publishedAt": "2026-10-20T00:00:00Z",
+      "sourceType": "rss",
+      "url": "https://www.city.shinagawa.tokyo.jp/jigyosha/shokorodo/1003597/1011557.html",
+      "publishedAt": "2026-10-19T15:00:00Z",
       "dateKind": "published",
-      "collectedAt": "2026-10-20T00:28:31.044767Z",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
-        "子育て教育",
-        "福祉"
+        "その他"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "bc5b21697a19e36205a6",
@@ -3103,7 +4387,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "d02deb03d88a207811d1",
@@ -3490,25 +4775,6 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
-      "id": "cae07df5f331d002227e",
-      "title": "「令和8年度高次脳機能障害啓発講座」開催のお知らせ",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1009484/1011550.html",
-      "publishedAt": "2026-10-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-10-15T04:56:01.750679Z",
-      "tags": [
-        "福祉",
-        "地域イベント",
-        "経済"
-      ],
-      "locations": [],
-      "relevanceScore": 2
-    },
-    {
       "id": "9d50801e8d63fc7cbee5",
       "title": "「出張！国保基本健診」（集団健診）",
       "summary": "",
@@ -3621,7 +4887,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 6
+      "relevanceScore": 6,
+      "sourcePriority": 100
     },
     {
       "id": "962f2ed0b9662964ea7b",
@@ -3769,7 +5036,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "bb16fd374206a771d0df",
@@ -3955,6 +5223,32 @@ window.SHINAGAWA_NEWS = {
         "北品川駅"
       ],
       "relevanceScore": 16
+    },
+    {
+      "id": "14459a613859a1bf12af",
+      "title": "29年度の着工目指す/18階建て1.2万平米住宅・店舗/武蔵小山駅東C地区再開発準備組合",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1TQ3VqS09FalN4eFpUSnRyLWpWc1dQbkJXcTVDMGRibk5ENk42VlRVYmt5ZC1RQ0lOV1B5N2JlVDk2WXlfeFZCX25IbVc0TkltM2daRmFqUEg?oc=5",
+      "publishedAt": "2026-10-09T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "都市開発",
+        "交通"
+      ],
+      "locations": [
+        "武蔵小山",
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "建設通信新聞Digital",
+      "outletUrl": "https://www.kensetsunews.com"
     },
     {
       "id": "9abd21d3140f1efc98cb",
@@ -4166,6 +5460,27 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 20
     },
     {
+      "id": "b13808f1cde819865e1e",
+      "title": "品川区『ハタチの龍馬』×坂井市『坂井ほや丸』がスタンプラリーでコラボ！秋の品川区はイベントが盛りだくさん！品川区内のイベント会場やショップを巡ってスタンプを集めると坂井市の豪華賞品が当たる！",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE91N0lrWGVoVXpZM24yX09hN1IzcEVjYkVnVFNEcGVWYjdzbzZuWS1mRXVmY2ppTDFJeXByWTgtcnlTNHhHZ1UwQjdPX2hRU3VtNWhyUDhGNC0zN2c2Q2tCZEwtb0ZyMXU3LWc?oc=5",
+      "publishedAt": "2026-10-07T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "PR TIMES",
+      "outletUrl": "https://prtimes.jp"
+    },
+    {
       "id": "4096ee5998c0957ca401",
       "title": "“金沢カレー”をモス流にアレンジ 能登豚を使用したカレーソースで復興支援「金沢カレーカツバーガー」が販売店舗を拡大して今年も登場！中京地区限定で「金沢カレーメンチカツバーガー」新発売",
       "summary": "[株式会社モスフードサービス] モスバーガーを展開する株式会社モスフードサービス（代表取締役社長：中村 栄輔、本社：東京都品川区）は、令和6年能登半島災害復興を支援するため、2026年10月14日（水）から東京都（一部店舗除く）と北陸地方...",
@@ -4259,7 +5574,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 14
+      "relevanceScore": 14,
+      "sourcePriority": 100
     },
     {
       "id": "50399719ed68cb230c18",
@@ -4278,7 +5594,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川区議会"
       ],
-      "relevanceScore": 14
+      "relevanceScore": 14,
+      "sourcePriority": 100
     },
     {
       "id": "d48f27c65aa1277de2c3",
@@ -4432,7 +5749,8 @@ window.SHINAGAWA_NEWS = {
         "西品川",
         "八潮"
       ],
-      "relevanceScore": 8
+      "relevanceScore": 8,
+      "sourcePriority": 100
     },
     {
       "id": "3959f57ad893599ea61f",
@@ -4466,7 +5784,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "1449d41951971624786c",
@@ -4504,7 +5823,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "西品川"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "994925c958a1bf32a9d6",
@@ -4560,7 +5880,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "80d79487bf7968ddffee",
@@ -4614,7 +5935,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "八潮"
       ],
-      "relevanceScore": 8
+      "relevanceScore": 8,
+      "sourcePriority": 100
     },
     {
       "id": "44f8bf24c189e54bf3b3",
@@ -4634,7 +5956,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 16
+      "relevanceScore": 16,
+      "sourcePriority": 100
     },
     {
       "id": "c1e22a594430a738f0f2",
@@ -4652,7 +5975,8 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 10
+      "relevanceScore": 10,
+      "sourcePriority": 100
     },
     {
       "id": "3ff002fc356981e636f9",
@@ -4670,7 +5994,8 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 12
+      "relevanceScore": 12,
+      "sourcePriority": 100
     },
     {
       "id": "dfb2469d3c02f3695ac9",
@@ -4839,7 +6164,8 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "9be7057543dcb7e8aee1",
@@ -5106,7 +6432,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "4787ca9a9c8b8039797f",
@@ -5332,6 +6659,30 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 12
     },
     {
+      "id": "1211cbf9565ddd38b1e7",
+      "title": "まいにちはむちま×戸越銀座商店街 コラボイベントを開催♪ - San-xネット",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAzU3c2b2RMYV9uSk13eWdqVlRQQlZOMzR3OGp3aTh2WS1YdFdhaVZXLTRmdk5MOHZleklfZ3VLUzJGdGREWlRaN0o3cjh6aW80dm5mUUdwbnowbWlSdGVZV0JDTQ?oc=5",
+      "publishedAt": "2026-09-29T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "San-xネット",
+      "outletUrl": "https://www.san-x.co.jp"
+    },
+    {
       "id": "fc420ec49fd9cacc8ab7",
       "title": "9月25日開催の委員会の結果を掲載。",
       "summary": "9月25日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
@@ -5540,7 +6891,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "b5090bc72b6b6876a9e9",
@@ -5557,7 +6909,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "951dd366fbbdd0ff17cf",
@@ -5576,7 +6929,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "4d0630e995eba9756ef5",
@@ -5615,25 +6969,6 @@ window.SHINAGAWA_NEWS = {
         "東品川"
       ],
       "relevanceScore": 6
-    },
-    {
-      "id": "bb8d5a262ee8c716e2a7",
-      "title": "令和8年度思春期講演会",
-      "summary": "大井保健センター 電話：03-3772-2666 FAX：03-3772-2570 本ページに掲載されたPDFファイルを表示・印刷するためには、アドビシステムズ株式会社のAdobe® Reader™（無料提供）が必要です。お持ちでない方は、Adobe® Reader™をダウンロードして下さい。",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/kosodate/1001928/1011749.html",
-      "publishedAt": "2026-09-28T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-09-27T17:06:25.503279Z",
-      "tags": [
-        "その他"
-      ],
-      "locations": [
-        "大井"
-      ],
-      "relevanceScore": 4
     },
     {
       "id": "fa3cae7a0a275e978d61",
@@ -5830,7 +7165,8 @@ window.SHINAGAWA_NEWS = {
         "地域イベント"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "bef8fd993055f69749cf",
@@ -5904,7 +7240,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "品川歴史館"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "1e873b538e7e169bc093",
@@ -5994,7 +7331,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "8a2bb7874eff4bb3ccbb",
@@ -6553,7 +7891,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大崎"
       ],
-      "relevanceScore": 6
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "ceb17d0ef5b09de83d18",
@@ -6852,7 +8191,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "651567d587878853053c",
@@ -7882,7 +9222,8 @@ window.SHINAGAWA_NEWS = {
         "福祉"
       ],
       "locations": [],
-      "relevanceScore": 2
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "b89ae5af8cd1c50a029b",
@@ -8427,7 +9768,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大崎"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "d671ae7409ffbe893d0f",
@@ -9044,7 +10386,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 6
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "74e0e2dd698ac3769ae8",
@@ -9152,7 +10495,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "荏原"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "0e34b7c64b0a5ef9e46c",
@@ -9906,6 +11250,30 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
+      "id": "930846e6b14ae564bf8d",
+      "title": "東京・東五反田二丁目で40階級の再開発計画が具体化。大崎～五反田間の次の焦点は旧耐震建物の更新と歩行者空間の整備へ",
+      "summary": "",
+      "source": "Googleニュース（再開発・都市計画・道路）",
+      "sourceId": "google-machi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE91QUdzanQzU3hCSUxxa21IZ2dlX1g3djdJODFXUllscVBtQXBfVlBSTnJMU3FsOEVEc2JZamllUzlXZWNqbjBFUWN2ak9FRXJCU3liR29mMTNSTFI5UUdMaEpxMA?oc=5",
+      "publishedAt": "2026-08-09T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [
+        "東五反田",
+        "大崎"
+      ],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "健美家",
+      "outletUrl": "https://www.kenbiya.com"
+    },
+    {
       "id": "db321cfdabbce5f73614",
       "title": "協力会員募集説明会を開催します！",
       "summary": "",
@@ -10052,7 +11420,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 6
+      "relevanceScore": 2,
+      "sourcePriority": 100
     },
     {
       "id": "36fd47db4758176599f2",
@@ -10845,7 +12214,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "しながわ水族館"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "69838780f455a4d81dc4",
@@ -11496,7 +12866,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 8
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "5afbd747be3cb63cb314",
@@ -11846,7 +13217,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "平塚"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "bd93f5a3fa1f5e212b8e",
@@ -12544,7 +13916,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "荏原"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "59fa57f1c3fcefc3f4e3",
@@ -12997,7 +14370,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "5311f0df648c0cf3e6e6",
@@ -13020,6 +14394,55 @@ window.SHINAGAWA_NEWS = {
         "大井町駅"
       ],
       "relevanceScore": 20
+    },
+    {
+      "id": "e43409032ebf5cad5583",
+      "title": "戸越銀座駅周辺のおすすめ観光スポット！食べ歩きやB級グルメも楽しめる",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNcG5HVEkyVGw4Q2h5bVRhSmFxY1dGYkxmaHN4UkxFY2JVZ1FLTmc4amp4OEdOYThvb3ZVYV9JN3V6RzY5cFVQckoyM2dCbHRaU1VDWVpuN2lEVFNwNy1icHpSMmttN1hGNEJrSHdLZWRDQlJZQ0J4cG54eWU5Sk5EOEJ2QmlZWW5CaEtZ?oc=5",
+      "publishedAt": "2026-07-03T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "戸越",
+        "戸越銀座駅"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東急・東急電鉄公式サイト",
+      "outletUrl": "https://www.tokyu.co.jp"
+    },
+    {
+      "id": "a543d80b7fc9c9c09ee2",
+      "title": "武蔵小山駅周辺のおすすめ銭湯4選！天然温泉やレトロ銭湯が楽しめる",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSVhWSjNqWHR3TDdwRXlGeC0wOXNwbkk1QXB4VzNLbmlGMVNiak9ucWNSanpFbGJuMTlZV0gwOUhiNWN3TFkxMG1XeXJDXy1GLXJYbFY4ZVJ6bjFYV3RpWUF0S3BHd1N0aXRoaDRUX3E0OFkxaWNrdXI1Sk5fbnFyN1RNVWw1V2VINUpCTg?oc=5",
+      "publishedAt": "2026-07-03T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "武蔵小山",
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東急・東急電鉄公式サイト",
+      "outletUrl": "https://www.tokyu.co.jp"
     },
     {
       "id": "f94de389073fe456bd89",
@@ -13058,7 +14481,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "荏原"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "7ccd4a65450a3ed6c15f",
@@ -13077,7 +14501,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大崎"
       ],
-      "relevanceScore": 12
+      "relevanceScore": 12,
+      "sourcePriority": 100
     },
     {
       "id": "0a4c1c3069dddb303b15",
@@ -13261,7 +14686,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "7ce40649df45d103119a",
@@ -13278,7 +14704,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "3f0ff42012b9f47f2277",
@@ -13371,7 +14798,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "e295e88bb87d51298849",
@@ -13390,7 +14818,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "荏原"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "302683649f2219c94f19",
@@ -13407,7 +14836,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "9c7c417f75c5793c3763",
@@ -13426,7 +14856,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "6ce8426e1787df7f7542",
@@ -13451,6 +14882,81 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 16
     },
     {
+      "id": "70a5fb258790130195d0",
+      "title": "西大井駅の天気予報(1時間・今日明日・週間)",
+      "summary": "",
+      "source": "Googleニュース（西大井・大井町・二葉・豊町）",
+      "sourceId": "google-area-oi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE83aE9QR0U0RGFaQWg5cmd2NE9iU1R6d1hycDJxWEdoMVl4b2wtRjRvaks2QVJjZUc2WV9ZVFlKN09CMGQxTDNfVXBUbE9NOUdRMVFBLXVUN0ZrM0k5M3llVFV6ekJEOHpaVWl5Mg?oc=5",
+      "publishedAt": "2026-05-06T17:31:01Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "西大井",
+        "大井",
+        "西大井駅"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "ウェザーニュース",
+      "outletUrl": "https://weathernews.jp"
+    },
+    {
+      "id": "003ce7c158fc6d923887",
+      "title": "戸越公園駅の天気予報(1時間・今日明日・週間)",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1HVkxKMGx1ZERFZzB1Y21fYzkwTVVOR093dmtmUmJINjA5NDNiYjJSdC1uQWtWTVFZSFNlbDk1ZDhnVWQ0NklXZ3h0WUd6dHcxSmdQV0pNby01Mm96aFJLWVJ4SnFRYUJoMFZTMw?oc=5",
+      "publishedAt": "2026-05-01T03:19:54Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
+      ],
+      "relevanceScore": 14,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "ウェザーニュース",
+      "outletUrl": "https://weathernews.jp"
+    },
+    {
+      "id": "6a58f8c324c93bd39300",
+      "title": "武蔵小山駅の2週間天気【予報精度No.1】",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5IaWlHWElLVTdnMHJxWG9YZF9nWmQ0c2lwUGJPUGY5ZjRrd3pfeVRTN0ItbWJKR3NaT3pBdGNxSDRCY05URVk4UTNDY2RwdHNiVmtGVDRSOGZoaVZmRFhCRWtELVQ4NGliZWhMem9PYU9YSWNkMnVJcw?oc=5",
+      "publishedAt": "2026-05-01T00:57:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "武蔵小山",
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "ウェザーニュース",
+      "outletUrl": "https://weathernews.jp"
+    },
+    {
       "id": "adb59656a442ff55cd7b",
       "title": "きせつ風(品川第二地域ニュース)令和8年5月号 No.244",
       "summary": "",
@@ -13465,7 +14971,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "bea4411ba999c6cd1bd2",
@@ -13484,7 +14991,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "荏原"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "8dd6f6897969e141cef1",
@@ -13503,7 +15011,83 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大崎"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
+    },
+    {
+      "id": "7f6a40ed9bd1f633729a",
+      "title": "補助第29号線（戸越公園駅周辺地区）",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQREV3bHREOENEOUV1cUNtOGRyc0lNdWtUYndMbGtLeXppaFJGdU1fdHM4VV9NSHpvakFJNXBVRHRaUldQZVNja2F6TjhqRzdndHU3WUczbjNvMEFBa2ozQ2NiTldjNVlwOWpKWU90STBmaUZ6UWYyeThPdHRuNTZfYWdWLVhxTXRU?oc=5",
+      "publishedAt": "2026-04-03T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園駅",
+        "戸越公園"
+      ],
+      "relevanceScore": 14,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東京都都市整備局",
+      "outletUrl": "https://www.toshiseibi.metro.tokyo.lg.jp"
+    },
+    {
+      "id": "412f3eeebfc89b664074",
+      "title": "旗の台駅が生まれ変わった！池上線の「木になるリニューアル」をご紹介",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOdVNBbEg5WnlzMFlOcXBuVDJtekxXVmNBOTFQeVVLMnlfb0R3WUxNX0p1Z3M1T2luSlhBRndHVHFQZFRZT2RheHZrMkU4Yzk5ZFVOQlNjQmYzZUZILTJzT1BJSWltczRBd1MzN00zSHllWUFhaWxVNThSWC1adXdoNXkyVkI5Zw?oc=5",
+      "publishedAt": "2026-04-03T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "旗の台",
+        "旗の台駅"
+      ],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東急・東急電鉄公式サイト",
+      "outletUrl": "https://www.tokyu.co.jp"
+    },
+    {
+      "id": "31b1476dab4c2c7cc939",
+      "title": "戸越銀座駅が生まれ変わった！池上線の「木になるリニューアル」をご紹介",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNeHJMckVRbFRBQXRrV21OdGpIZS1LblpkaEtjZnhOSTRqNXM2YTV5Ny1zbjdRUFU3R1VSQlZBZUlLMHFyNWlzWFhtVVMxczBsUmVQcnY4dTJ2NmdHaU01dWd1M0pjS1B3Zkg2TXo2S1lGQXdrVDNTQ3ctaENUZVVtVmFmYS1TUV9SY1hN?oc=5",
+      "publishedAt": "2026-04-03T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通",
+        "店舗開店閉店"
+      ],
+      "locations": [
+        "戸越",
+        "戸越銀座駅"
+      ],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東急・東急電鉄公式サイト",
+      "outletUrl": "https://www.tokyu.co.jp"
     },
     {
       "id": "b8df948ace73ad5f6c70",
@@ -13520,7 +15104,29 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
+    },
+    {
+      "id": "d01b342eb5a53cf83bc4",
+      "title": "「住民追い出し案」は品川区のお墨付き…再開発へ、準備組合との「二人三脚」ぶりが内部文書で明らかに",
+      "summary": "",
+      "source": "Googleニュース（再開発・都市計画・道路）",
+      "sourceId": "google-machi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9wOU5qaFdxODBPM2h4UEFBM19ZS2xsMkxMUWx4VE9lbklXOUl1QzI5RFpoN1A3eFh5Slh3aVN0UXd4azFJckhuVDAwdHl6SUpiNUtv?oc=5",
+      "publishedAt": "2026-03-28T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東京新聞",
+      "outletUrl": "https://www.tokyo-np.co.jp"
     },
     {
       "id": "d7051fdafece06da14c2",
@@ -13537,7 +15143,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "523100502c0d363e4fb1",
@@ -13556,7 +15163,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "2d0e524219f9c4e2acb8",
@@ -13575,7 +15183,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "荏原"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "f9bcca6d2d78b866a881",
@@ -13592,7 +15201,8 @@ window.SHINAGAWA_NEWS = {
         "その他"
       ],
       "locations": [],
-      "relevanceScore": 0
+      "relevanceScore": 0,
+      "sourcePriority": 100
     },
     {
       "id": "4facc4d291bf484acd54",
@@ -13611,7 +15221,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "荏原"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "c63fcbdd34fee4c86797",
@@ -13647,7 +15258,8 @@ window.SHINAGAWA_NEWS = {
       "locations": [
         "大井"
       ],
-      "relevanceScore": 4
+      "relevanceScore": 4,
+      "sourcePriority": 100
     },
     {
       "id": "19b68462f4862746ed63",
@@ -13684,9 +15296,332 @@ window.SHINAGAWA_NEWS = {
         "大井"
       ],
       "relevanceScore": 4
+    },
+    {
+      "id": "f414ffb68b6ec7861ed9",
+      "title": "【株式会社品川カルチャークラブ】品川区商店街加入促進に向けた地域貢献活動を開始",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5Rb3hhbFF0WjBiQjJqRHA1NVV2dnNwOGw0cENUbVhEcE1EMEpObXFoeXpPbGhZeFp5WkVZNlU4a1M0Ui1ZLS1BOF9LdmZIR1ZpMHF0eW9ybzhrWHlrWjNXS3BZU1JpOEdZeWc?oc=5",
+      "publishedAt": "2025-12-23T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "PR TIMES",
+      "outletUrl": "https://prtimes.jp"
+    },
+    {
+      "id": "26d0b36f8cac37a835ce",
+      "title": "東京・品川区の商店街で火災 住民が語る恐怖…クリスマス準備にも影響（2025年12月23日掲載）｜日テレNEWS NNN",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1Gd0lTd3BISjlvOU5USEVxcV9NV3VXcHI5Q2FISWdVcGZQNlNsWklkZktFYklpTXVlcE9oVVlFSzRxdzJKRFl0ak1ZdUxWV1lMNzV2U2xTRFhjN2Jrd0tLOXVxdERqRUlEUThLSU4wdDlsUXdaUjNRSDRsd2U?oc=5",
+      "publishedAt": "2025-12-23T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "事件事故",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "日テレNEWS NNN",
+      "outletUrl": "https://news.ntv.co.jp"
+    },
+    {
+      "id": "5071c69feb8138026757",
+      "title": "戸越公園・中延の旬スポットを歩く",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUDZDZGV3ZThITk9JTkJ5UXM0ZjU0R0N6WWNTMUNfWE9yZ1A2NGE4cGphdDM5WTRuMGRRdC1RWko1UEhnRVFlWVJIek0wMkJacDBlX1Utbml0U1pRWFBQSGJScHpFZ1k2a3h0SGpzdnpMSWN6UThiUW0wUEdZN25FUHBFb3dHS3dXWkE?oc=5",
+      "publishedAt": "2025-12-04T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "戸越",
+        "中延",
+        "戸越公園"
+      ],
+      "relevanceScore": 12,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東急・東急電鉄公式サイト",
+      "outletUrl": "https://www.tokyu.co.jp"
+    },
+    {
+      "id": "4f3a76e1f1dbe6dc9376",
+      "title": "「戸越と戸越」のあいだは商店街天国。戸越公園〜戸越銀座、徒歩20分の旅",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONXFvRmVCTzdfUmFValJDbU5Pem1MNzFrOEs3N0hKU3U0Nl82aEtnV2g2SE9NdG1PZ0dRcFVuZ1dNbnN2SktsVXVBZXNfdFB0NkN6RFFMS3ZQbDlpQ196aHVmNU5ESklINWFhX18xR2h4bkJhbjFEMDA0VHhsYVNUelNWRXJxemNmYTJv?oc=5",
+      "publishedAt": "2025-12-04T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越公園"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東急・東急電鉄公式サイト",
+      "outletUrl": "https://www.tokyu.co.jp"
+    },
+    {
+      "id": "189b42707f5ae2dcc6e6",
+      "title": "親子で楽しむ“探偵気分”のまち歩き！品川区の3つの商店街を自由に巡る参加費無料のリアル謎解きゲームを10/18(土)から開催",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBqSXlZb25hNmV1QUk4N1lkRGNWMTdsX240T09QM0VrSUc4SXpqTEltUW5FTV9Mb0RydXpyUzJKcjdIa3NOS25n?oc=5",
+      "publishedAt": "2025-10-08T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "Newscast.jp",
+      "outletUrl": "https://newscast.jp"
+    },
+    {
+      "id": "e24b101a97b47f37aa5c",
+      "title": "品川区、商店街謎解きイベント開催へ～区内3商店街でヒントを探しながら謎を解く～",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9NOFhtVWdSNWxqb0FUOWhOSEJmYXFDeUI5S2x0YTlTOEw2RDdQeTFtamRDd0N3Sy14aHNndHhnY2JuOVNfN3E1LXk3djZtLTZLUUZLOHkxOTBZaW8zT3MwdG9raHRBNGdqOUE?oc=5",
+      "publishedAt": "2025-10-01T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "PR TIMES",
+      "outletUrl": "https://prtimes.jp"
+    },
+    {
+      "id": "4e9f3c6576ea9c1a36f8",
+      "title": "品川区、商店街などの街路灯にデフリンピック啓発フラッグ",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1CVUc0cGZZcEpXaWhnQzR1YlFCZmtURGVZNmVHdFRtT25LaEpGMV9udkltLVAwSWlWRUE4d1FQakUzOTFMYk9QWmRrSm5rVzNRbDVuMDVMMmwxdloydVVMUUlXRUh3MTFuWnc?oc=5",
+      "publishedAt": "2025-07-08T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "PR TIMES",
+      "outletUrl": "https://prtimes.jp"
+    },
+    {
+      "id": "d97b51b6c2f894f75d38",
+      "title": "旗の台駅周辺（品川区）の商店街7選！おすすめグルメも紹介",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNUQzLXBBcnk4UHA2YlN6aExqMjFPazZmeGd2WFpNbHVYSnY5djFuUXF6OTNBQVduNFJqeDdPRkdGWFp3OC00ektUQWJHckpPVGFqMW5Vc2hBNjdNRnNrNnI0MlVtbXI2TEdJZGJHM2w2QjBsaHdKRUFkak56TWtJVzBQWWN4QQ?oc=5",
+      "publishedAt": "2025-06-07T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "旗の台",
+        "旗の台駅"
+      ],
+      "relevanceScore": 16,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東急・東急電鉄公式サイト",
+      "outletUrl": "https://www.tokyu.co.jp"
+    },
+    {
+      "id": "376bf8cb102b5322b1fd",
+      "title": "【三大銀座商店街】北区「十条銀座商店街」・品川区「戸越銀座商店街」もう一箇所は？魅力と歴史に迫る",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9SMzRocUM2OC0zeWlMOUNpa01qN3dER3V3WEtjalZxaHhXSFVsTmtLV25yc0preUJaem5rREtqNXU3dlc4LVJoZ0Y3QQ?oc=5",
+      "publishedAt": "2024-12-17T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント",
+        "文化歴史"
+      ],
+      "locations": [
+        "戸越",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 16,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "TABIZINE～人生に旅心を～",
+      "outletUrl": "https://tabizine.jp"
+    },
+    {
+      "id": "d260e1cc67771926926d",
+      "title": "品川区、体験型「商店街を巡る謎解きイベント」開催",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB6cFF2Nzk0NnlyN3NINFNUMUp4U1JPdVNKRTNySC1wTUR0aGk3Yk5TN0U1REdBMjBWRXByS29ENmRmRzBwMkN4WTAxbFduLWhQdk5tN3BEQ19YWmpKdTRSYnB4ZmI5cU9jd1E?oc=5",
+      "publishedAt": "2022-10-27T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "PR TIMES",
+      "outletUrl": "https://prtimes.jp"
+    },
+    {
+      "id": "3eb02b23918d5fc513c2",
+      "title": "品川区で4年ぶり 商店街を照らす中延ねぶたまつり",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB5b245dk9rN1BLTW92bVd3d1paOGRzcExPVDc0U0lRRFFmenhKWElTVVZmZXAtVkRTX1YzcXlNcEZnZ0VGS3g4bVFJNmN2c0JDMENVbHVWOFdVUUplX0xoU3dNNlBFSUJZV2Zndzd3?oc=5",
+      "publishedAt": "2022-09-26T07:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "中延"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "TOKYO MX",
+      "outletUrl": "https://s.mxtv.jp"
+    },
+    {
+      "id": "f359e083fafa78252f74",
+      "title": "品川区商店街連合会が「大商業まつりデジタルお買物ラリー」を開催します",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1mU0tyT0VqMTBZNFZrRUtxa0JmSHk4THkzRURCd1VLQnVIRXpCcDZUTG0zYk1senBMeE1HcTAyRC1sdFFxWkthbXUxZllYUVVaOWV3M2JSazllRkVnU0F5RmNNbEU2dDJJaGc?oc=5",
+      "publishedAt": "2021-11-16T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント",
+        "経済"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "PR TIMES",
+      "outletUrl": "https://prtimes.jp"
+    },
+    {
+      "id": "acbc9037b98e45e33d4e",
+      "title": "1924店舗ある品川区商店街の個人商店。全体の約5％が空き店舗でも、店主の4割近くは「貸す意思なし」。",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1JYVRlTzYtR1dmWGxCX3Q5dWs2TnlVazh0VjI1ZVlrcGJmSHBxMDFPcm5CcGFoV1YzdFh3VS1vNXo5Mjg?oc=5",
+      "publishedAt": "2019-02-18T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "BATONZ",
+      "outletUrl": "https://batonz.jp"
+    },
+    {
+      "id": "64f55fd76a5cee6897b4",
+      "title": "品川区イベントレポート 区制70周年を節目に地域資源を発信 | 2017年4月号",
+      "summary": "",
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1CZ2dZcjB6RkdDMVRCSnpXaDFOTWtrYUZqSG1mT2tCaTVkb3NMOGFmQWdpbll1N25nY01PXzVxdnF4YmFCTTJWWTNUbVVlNTcwYXVTaFpJWUN6R2FBWFdoYUx3Vi1IOXVtb3hZ?oc=5",
+      "publishedAt": "2017-03-01T01:15:59Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "月刊「事業構想」オンライン",
+      "outletUrl": "https://www.projectdesign.jp"
     }
   ],
   "sources": [
+    {
+      "id": "shinagawa-city-new",
+      "name": "品川区 新着情報",
+      "url": "https://www.city.shinagawa.tokyo.jp/news.rss",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "via": "",
+      "note": "区が公式に案内しているRSS。本文要約は記事ページから補う"
+    },
     {
       "id": "shinagawa-council",
       "name": "品川区議会",
@@ -13694,6 +15629,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13703,6 +15639,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13712,6 +15649,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13721,6 +15659,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13730,6 +15669,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13739,6 +15679,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13748,6 +15689,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13757,6 +15699,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13766,6 +15709,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13775,6 +15719,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13784,6 +15729,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13793,6 +15739,7 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13802,7 +15749,8 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
-      "note": ""
+      "via": "",
+      "note": "局独自のRSS案内（gesui.metro.tokyo.lg.jp/policy/rss）に再配布・申請の条項が無いため有効。都庁総合の申請条項は同サイトのRSSに向けたもので、ここには及ばない"
     },
     {
       "id": "gesui-topics",
@@ -13811,7 +15759,8 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
-      "note": ""
+      "via": "",
+      "note": "局独自のRSS案内（gesui.metro.tokyo.lg.jp/policy/rss）に再配布・申請の条項が無いため有効。都庁総合の申請条項は同サイトのRSSに向けたもので、ここには及ばない"
     },
     {
       "id": "gesui-events",
@@ -13820,7 +15769,8 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": true,
       "requiresApproval": false,
-      "note": ""
+      "via": "",
+      "note": "局独自のRSS案内（gesui.metro.tokyo.lg.jp/policy/rss）に再配布・申請の条項が無いため有効。都庁総合の申請条項は同サイトのRSSに向けたもので、ここには及ばない"
     },
     {
       "id": "tokyo-metropolitan",
@@ -13829,16 +15779,118 @@ window.SHINAGAWA_NEWS = {
       "type": "rss",
       "enabled": false,
       "requiresApproval": true,
-      "note": "再配信を伴う利用は東京都への事前申請が必要なため、承認取得後に有効化する"
+      "via": "",
+      "note": "都庁総合ホームページのRSS。利用条件（metro.tokyo.lg.jp/policy/rss）が「RSSを利用したサイトの構築は必ず事前に申請」と定めているため無効。承認取得後に有効化する"
     },
     {
-      "id": "shinagawa-city-new",
-      "name": "品川区 新着情報",
-      "url": "https://www.city.shinagawa.tokyo.jp/news/newslist.html",
-      "type": "html",
+      "id": "shinagawa-goguynet",
+      "name": "号外NET 品川区",
+      "url": "https://shinagawa.goguynet.jp/feed/",
+      "type": "rss",
       "enabled": true,
       "requiresApproval": false,
-      "note": ""
+      "via": "",
+      "note": "品川区専用の地域ニュース。サイトのフィード自動検出で確認した公式RSS"
+    },
+    {
+      "id": "toshiseibi-press",
+      "name": "東京都都市整備局 報道発表",
+      "url": "https://www.toshiseibi.metro.tokyo.lg.jp/index.html/-/asset_publisher/hyrh/rss",
+      "type": "rss",
+      "enabled": false,
+      "requiresApproval": true,
+      "via": "",
+      "note": "局独自のRSS案内ページが無く（/policy/rss は404）、どの利用条件が及ぶか確認できないため無効。2026-11-19時点では品川区関連の記事も0件で、有効化の実益が無い。都に適用範囲を確認できたら有効化する"
+    },
+    {
+      "id": "toshiseibi-topics",
+      "name": "東京都都市整備局 お知らせ",
+      "url": "https://www.toshiseibi.metro.tokyo.lg.jp/index.html/-/asset_publisher/bbol/rss",
+      "type": "rss",
+      "enabled": false,
+      "requiresApproval": true,
+      "via": "",
+      "note": "局独自のRSS案内ページが無く（/policy/rss は404）、どの利用条件が及ぶか確認できないため無効。2026-11-19時点では品川区関連の記事も0件で、有効化の実益が無い。都に適用範囲を確認できたら有効化する"
+    },
+    {
+      "id": "google-shinagawa",
+      "name": "Googleニュース（品川区）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA&hl=ja&gl=JP&ceid=JP:ja",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "via": "googleNews",
+      "note": "Googleニュース検索「品川区」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-kusei",
+      "name": "Googleニュース（議会・区政・区長）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E8%AD%B0%E4%BC%9A%20OR%20%E5%8C%BA%E6%94%BF%20OR%20%E5%8C%BA%E9%95%B7&hl=ja&gl=JP&ceid=JP:ja",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "via": "googleNews",
+      "note": "Googleニュース検索「品川区 議会 OR 区政 OR 区長」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-machi",
+      "name": "Googleニュース（再開発・都市計画・道路）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E5%86%8D%E9%96%8B%E7%99%BA%20OR%20%E9%83%BD%E5%B8%82%E8%A8%88%E7%94%BB%20OR%20%E9%81%93%E8%B7%AF%E6%95%B4%E5%82%99&hl=ja&gl=JP&ceid=JP:ja",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "via": "googleNews",
+      "note": "Googleニュース検索「品川区 再開発 OR 都市計画 OR 道路整備」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-kurashi",
+      "name": "Googleニュース（福祉・保育・学校・教育）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E7%A6%8F%E7%A5%89%20OR%20%E4%BF%9D%E8%82%B2%20OR%20%E5%AD%A6%E6%A0%A1%20OR%20%E6%95%99%E8%82%B2&hl=ja&gl=JP&ceid=JP:ja",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "via": "googleNews",
+      "note": "Googleニュース検索「品川区 福祉 OR 保育 OR 学校 OR 教育」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-bosai",
+      "name": "Googleニュース（防災・浸水・交通・事故）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E9%98%B2%E7%81%BD%20OR%20%E6%B5%B8%E6%B0%B4%20OR%20%E4%BA%A4%E9%80%9A%20OR%20%E4%BA%8B%E6%95%85&hl=ja&gl=JP&ceid=JP:ja",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "via": "googleNews",
+      "note": "Googleニュース検索「品川区 防災 OR 浸水 OR 交通 OR 事故」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-chiiki",
+      "name": "Googleニュース（商店街・祭り・イベント）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E5%95%86%E5%BA%97%E8%A1%97%20OR%20%E7%A5%AD%E3%82%8A%20OR%20%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&hl=ja&gl=JP&ceid=JP:ja",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "via": "googleNews",
+      "note": "Googleニュース検索「品川区 商店街 OR 祭り OR イベント」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-area-oi",
+      "name": "Googleニュース（西大井・大井町・二葉・豊町）",
+      "url": "https://news.google.com/rss/search?q=%E8%A5%BF%E5%A4%A7%E4%BA%95%20OR%20%E5%A4%A7%E4%BA%95%E7%94%BA%20OR%20%E4%BA%8C%E8%91%89%20OR%20%E8%B1%8A%E7%94%BA&hl=ja&gl=JP&ceid=JP:ja",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "via": "googleNews",
+      "note": "Googleニュース検索「西大井 OR 大井町 OR 二葉 OR 豊町」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-area-togoshi",
+      "name": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "url": "https://news.google.com/rss/search?q=%E6%88%B8%E8%B6%8A%20OR%20%E4%B8%AD%E5%BB%B6%20OR%20%E6%97%97%E3%81%AE%E5%8F%B0%20OR%20%E6%AD%A6%E8%94%B5%E5%B0%8F%E5%B1%B1&hl=ja&gl=JP&ceid=JP:ja",
+      "type": "rss",
+      "enabled": true,
+      "requiresApproval": false,
+      "via": "googleNews",
+      "note": "Googleニュース検索「戸越 OR 中延 OR 旗の台 OR 武蔵小山」。元記事へはGoogleの転送URL経由で開く"
     },
     {
       "id": "shinagawa-city-community",
@@ -13847,6 +15899,7 @@ window.SHINAGAWA_NEWS = {
       "type": "html",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13856,6 +15909,7 @@ window.SHINAGAWA_NEWS = {
       "type": "html",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     },
     {
@@ -13865,128 +15919,315 @@ window.SHINAGAWA_NEWS = {
       "type": "html",
       "enabled": true,
       "requiresApproval": false,
+      "via": "",
       "note": ""
     }
   ],
   "reports": [
     {
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1506,
+      "status": "ok",
+      "scanned": 75,
+      "accepted": 75,
+      "duplicates": 0
+    },
+    {
       "source": "品川区議会",
+      "sourceId": "shinagawa-council",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1492,
       "status": "ok",
       "scanned": 10,
-      "accepted": 10
+      "accepted": 10,
+      "duplicates": 0
     },
     {
       "source": "品川経済新聞",
+      "sourceId": "shinagawa-keizai",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1083,
       "status": "ok",
       "scanned": 10,
-      "accepted": 6
+      "accepted": 6,
+      "duplicates": 0
     },
     {
       "source": "警視庁",
+      "sourceId": "keishicho",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1222,
       "status": "ok",
       "scanned": 4,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "東京消防庁",
+      "sourceId": "tokyo-fire",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 439,
       "status": "ok",
       "scanned": 142,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "NHK NEWS",
+      "sourceId": "nhk",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 593,
       "status": "ok",
       "scanned": 7,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "日テレNEWS NNN",
+      "sourceId": "ntv-news",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 628,
       "status": "ok",
-      "scanned": 584,
-      "accepted": 0
+      "scanned": 200,
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "朝日新聞",
+      "sourceId": "asahi-news",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 439,
       "status": "ok",
       "scanned": 40,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "FNNプライムオンライン",
+      "sourceId": "fnn-news",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 415,
       "status": "ok",
       "scanned": 50,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "時事ドットコム アクセスランキング",
+      "sourceId": "jiji-ranking",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 423,
       "status": "ok",
       "scanned": 10,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 753,
       "status": "ok",
       "scanned": 200,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "東急ニュースリリース",
+      "sourceId": "tokyu-news",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 375,
       "status": "ok",
       "scanned": 10,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "東急からのお知らせ",
+      "sourceId": "tokyu-information",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 231,
       "status": "ok",
       "scanned": 10,
-      "accepted": 1
+      "accepted": 1,
+      "duplicates": 0
     },
     {
       "source": "東京都下水道局 報道発表",
+      "sourceId": "gesui-press",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 3379,
       "status": "ok",
       "scanned": 11,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "東京都下水道局 トピックス",
+      "sourceId": "gesui-topics",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1680,
       "status": "ok",
       "scanned": 42,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "東京都下水道局 イベント",
+      "sourceId": "gesui-events",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 618,
       "status": "ok",
       "scanned": 2,
-      "accepted": 0
+      "accepted": 0,
+      "duplicates": 0
     },
     {
       "source": "東京都公式サイト",
+      "sourceId": "tokyo-metropolitan",
       "status": "disabled",
       "accepted": 0
     },
     {
-      "source": "品川区 新着情報",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 702,
+      "status": "ok",
+      "scanned": 10,
+      "accepted": 10,
+      "duplicates": 0
+    },
+    {
+      "source": "東京都都市整備局 報道発表",
+      "sourceId": "toshiseibi-press",
+      "status": "disabled",
+      "accepted": 0
+    },
+    {
+      "source": "東京都都市整備局 お知らせ",
+      "sourceId": "toshiseibi-topics",
+      "status": "disabled",
+      "accepted": 0
+    },
+    {
+      "source": "Googleニュース（品川区）",
+      "sourceId": "google-shinagawa",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 734,
       "status": "ok",
       "scanned": 40,
-      "accepted": 40
+      "accepted": 2,
+      "duplicates": 1
+    },
+    {
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 705,
+      "status": "ok",
+      "scanned": 40,
+      "accepted": 11,
+      "duplicates": 0
+    },
+    {
+      "source": "Googleニュース（再開発・都市計画・道路）",
+      "sourceId": "google-machi",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1454,
+      "status": "ok",
+      "scanned": 40,
+      "accepted": 3,
+      "duplicates": 0
+    },
+    {
+      "source": "Googleニュース（福祉・保育・学校・教育）",
+      "sourceId": "google-kurashi",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1855,
+      "status": "ok",
+      "scanned": 40,
+      "accepted": 0,
+      "duplicates": 0
+    },
+    {
+      "source": "Googleニュース（防災・浸水・交通・事故）",
+      "sourceId": "google-bosai",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1822,
+      "status": "ok",
+      "scanned": 40,
+      "accepted": 0,
+      "duplicates": 0
+    },
+    {
+      "source": "Googleニュース（商店街・祭り・イベント）",
+      "sourceId": "google-chiiki",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 840,
+      "status": "ok",
+      "scanned": 40,
+      "accepted": 17,
+      "duplicates": 1
+    },
+    {
+      "source": "Googleニュース（西大井・大井町・二葉・豊町）",
+      "sourceId": "google-area-oi",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1703,
+      "status": "ok",
+      "scanned": 40,
+      "accepted": 3,
+      "duplicates": 0
+    },
+    {
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1294,
+      "status": "ok",
+      "scanned": 40,
+      "accepted": 13,
+      "duplicates": 2
     },
     {
       "source": "品川区 地域センター新着情報",
+      "sourceId": "shinagawa-city-community",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 2593,
       "status": "ok",
       "scanned": 30,
-      "accepted": 30
+      "accepted": 30,
+      "duplicates": 0
     },
     {
       "source": "品川区社会福祉協議会",
+      "sourceId": "shinagawa-shakyo",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 4444,
       "status": "ok",
       "scanned": 30,
-      "accepted": 30
+      "accepted": 30,
+      "duplicates": 0
     },
     {
       "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "fetchedAt": "2026-11-19T12:15:27.652210Z",
+      "durationMs": 1803,
       "status": "ok",
       "scanned": 14,
-      "accepted": 14
+      "accepted": 14,
+      "duplicates": 0
+    },
+    {
+      "source": "（重複除去）",
+      "sourceId": "_dedupe",
+      "status": "ok",
+      "accepted": 0,
+      "duplicates": 4
     }
   ]
 };

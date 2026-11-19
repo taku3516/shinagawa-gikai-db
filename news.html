@@ -94,6 +94,8 @@
     .news-card > * { min-width: 0; }
     .news-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-bottom: 8px; color: var(--soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
     .source { color: var(--main-dark); }
+    .outlet { color: var(--main-dark); }
+    .via { border: 1px solid var(--rule); border-radius: 3px; padding: 1px 6px; color: var(--soft); font-weight: 700; }
     .news-card h3 { margin: 0; font-size: calc(18px * var(--fs)); line-height: 1.55; }
     .news-card p { margin: 10px 0 0; color: var(--soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
@@ -335,7 +337,7 @@
           if (state.view !== "hidden" && state.hiddenSources.has(item.source)) return false;
           if (tag && !(item.tags || []).includes(tag)) return false;
           if (!query) return true;
-          const text = [item.title, item.summary, item.source, ...(item.tags || []), ...(item.locations || [])].join(" ").toLocaleLowerCase("ja");
+          const text = [item.title, item.summary, item.source, item.outlet || "", ...(item.tags || []), ...(item.locations || [])].join(" ").toLocaleLowerCase("ja");
           return text.includes(query);
         });
       }
@@ -346,7 +348,7 @@
         const locations = (item.locations || []).map(term => `<span class="tag location">${escapeHtml(term)}</span>`).join("");
         return `<article class="news-card">
           <div>
-            <div class="news-meta"><span class="source">${escapeHtml(item.source)}</span><time datetime="${escapeHtml(item.publishedAt)}">${item.dateKind === "collected" ? "取得 " : ""}${displayDate(item.publishedAt)}</time></div>
+            <div class="news-meta">${item.outlet ? `<span class="outlet">${escapeHtml(item.outlet)}</span>` : `<span class="source">${escapeHtml(item.source)}</span>`}${item.viaAggregator ? `<span class="via">${escapeHtml(item.viaAggregator)}経由</span>` : ""}<time datetime="${escapeHtml(item.publishedAt)}">${item.dateKind === "collected" ? "取得 " : ""}${displayDate(item.publishedAt)}</time></div>
             <h3><a href="${safeUrl(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a></h3>
             ${item.summary ? `<p>${escapeHtml(item.summary)}</p>` : ""}
             <div class="tags">${tags}${locations}</div>

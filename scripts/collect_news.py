@@ -10,6 +10,7 @@ import json
 import re
 import sys
 import time
+import unicodedata
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
@@ -19,7 +20,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable
 from urllib.error import HTTPError, URLError
-from urllib.parse import urljoin, urlparse, urlunparse
+from urllib.parse import parse_qsl, urlencode, urljoin, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
 
@@ -60,6 +61,121 @@ def normalized_url(value: str) -> str:
 
 def item_id(url: str) -> str:
     return hashlib.sha256(normalized_url(url).encode("utf-8")).hexdigest()[:20]
+
+
+# 計測用のクエリ。記事の中身は変わらないので、重複判定のときだけ落とす。
+TRACKING_PARAMS = re.compile(
+    r"^(?:utm_[a-z_]+|gclid|fbclid|yclid|dclid|msclkid|mc_cid|mc_eid|igshid|_ga|ref|ref_src|"
+    r"cmpid|cmp|spm|at_medium|at_campaign|from|src|source)$",
+    re.I,
+)
+# Googleニュースが見出しの末尾に付ける媒体名。「タイトル - 媒体名」の形。
+GOOGLE_TITLE_OUTLET = re.compile(r"\s+[-–—]\s+([^-–—]{2,60})$")
+# 配信元がtitleタグに付ける名乗り。「記事名｜品川区公式ウェブサイト」の形。
+SITE_NAME_SUFFIX = re.compile(r"\s*[|｜]\s*[^|｜]{2,40}$")
+# まとめサイト経由の記事を元記事と突き合わせるときに見る見出しの頭の長さ。
+# 短すぎると別の記事まで同じと見なす。長すぎると表記のゆれで取りこぼす。
+AGGREGATOR_TITLE_PREFIX = 30
+
+
+def dedupe_key(url: str) -> str:
+    """重複判定にだけ使うURLの鍵。
+
+    記事IDは normalized_url から作る。★（お気に入り）がID単位で保存されているため、
+    IDの作り方は変えられない（scripts/test_collect_news_identity.py）。
+    計測用パラメータを落とすのはこちらだけにして、IDには影響させない。
+    """
+    parsed = urlparse(normalized_url(url))
+    kept = [
+        (key, value)
+        for key, value in parse_qsl(parsed.query, keep_blank_values=True)
+        if not TRACKING_PARAMS.match(key)
+    ]
+    query = urlencode(sorted(kept))
+    return urlunparse((parsed.scheme, parsed.netloc, parsed.path, "", query, ""))
+
+
+def normalized_title(title: str) -> str:
+    """見出しの表記ゆれを吸収する。媒体名・サイト名・飾り・記号・空白を落とす。
+
+    「記事名 - 媒体名」（Googleニュース）と「記事名｜サイト名」（配信元のtitleタグ）は
+    どちらも同じ記事を指すことがあるため、末尾の名乗りを落としてから比べる。
+    """
+    value = unicodedata.normalize("NFKC", clean_text(title))
+    value = GOOGLE_TITLE_OUTLET.sub("", value)
+    value = SITE_NAME_SUFFIX.sub("", value)
+    value = re.sub(r"^[【\[（(][^】\]）)]{1,12}[】\]）)]\s*", "", value)
+    value = re.sub(r"[\s　|｜/／:：・,，.。!！?？\"'“”‘’\[\]【】（）()<>《》~〜～ー-]+", "", value)
+    return value.lower()
+
+
+def is_already_collected_outlet(raw: dict, excluded_hosts: list[str]) -> bool:
+    """その媒体を直接取得しているなら True。まとめサイト経由では採らない。"""
+    host = urlparse(raw.get("outletUrl") or "").netloc.lower()
+    label = (raw.get("outlet") or "").lower()
+    for excluded in excluded_hosts:
+        excluded = excluded.lower()
+        if host == excluded or host.endswith("." + excluded):
+            return True
+        if label == excluded or label.endswith("." + excluded):
+            return True
+    return False
+
+
+def published_day(value: str) -> str:
+    return (value or "")[:10]
+
+
+def deduplicate(items: list[dict]) -> tuple[list[dict], int]:
+    """同じ記事を1件に寄せる。優先度の高い配信元を残す。
+
+    - 計測用パラメータを除いたURLが一致すれば同じ記事。
+    - 見出しが一致する場合は、片方がGoogleニュース経由（viaAggregator）で
+      掲載日が3日以内のときだけ同じ記事とみなす。別の報道機関が独自に
+      取材した記事まで消さないため、直接取得した記事どうしは寄せない。
+    """
+    order = sorted(
+        range(len(items)),
+        key=lambda index: (
+            -int(items[index].get("sourcePriority", 0)),
+            bool(items[index].get("viaAggregator")),
+            index,
+        ),
+    )
+    kept: list[dict] = []
+    by_url: dict[str, dict] = {}
+    by_title: dict[str, list[dict]] = {}
+    dropped = 0
+    for index in order:
+        item = items[index]
+        url_key = dedupe_key(item.get("url", ""))
+        if url_key in by_url:
+            dropped += 1
+            continue
+        title_key = normalized_title(item.get("title", ""))
+        twin = None
+        if title_key:
+            for candidate in kept:
+                if same_article(item, candidate):
+                    twin = candidate
+                    break
+        if twin is not None:
+            dropped += 1
+            continue
+        by_url[url_key] = item
+        by_title.setdefault(title_key, []).append(item)
+        kept.append(item)
+    kept.sort(key=lambda item: items.index(item))
+    return kept, dropped
+
+
+def _days_between(left: str | None, right: str | None) -> float:
+    try:
+        a = datetime.fromisoformat((left or "").replace("Z", "+00:00"))
+        b = datetime.fromisoformat((right or "").replace("Z", "+00:00"))
+    except ValueError:
+        return 0.0
+    return (a - b).total_seconds() / 86400
 
 
 def build_url_index(items: list[dict]) -> dict[str, str]:
@@ -156,8 +272,38 @@ def first_child_text(node: ET.Element, names: Iterable[str]) -> str:
     return ""
 
 
-def rss_items(payload: bytes) -> list[dict[str, str]]:
-    root = ET.fromstring(payload)
+# XMLとして読めない文字。配信元の手違いで混ざることがある。
+INVALID_XML_CHARS = re.compile(rb"[\x00-\x08\x0b\x0c\x0e-\x1f]")
+BARE_AMPERSAND = re.compile(rb"&(?!#\d+;|#x[0-9A-Fa-f]+;|[A-Za-z][A-Za-z0-9]{1,30};)")
+
+
+def lenient_xml(payload: bytes) -> bytes:
+    """壊れたXMLを読める形に直す。
+
+    日テレNEWSのRSSのように、裸の「&」や制御文字が混ざると
+    ElementTree が丸ごと読めなくなり、そのフィードが1件も取れなくなる。
+    """
+    payload = INVALID_XML_CHARS.sub(b"", payload)
+    return BARE_AMPERSAND.sub(b"&amp;", payload)
+
+
+def parse_xml(payload: bytes) -> ET.Element:
+    try:
+        return ET.fromstring(payload)
+    except ET.ParseError:
+        return ET.fromstring(lenient_xml(payload))
+
+
+def split_google_title(title: str) -> tuple[str, str]:
+    """Googleニュースの「見出し - 媒体名」を分ける。"""
+    match = GOOGLE_TITLE_OUTLET.search(title)
+    if not match:
+        return title, ""
+    return title[: match.start()].strip(), match.group(1).strip()
+
+
+def rss_items(payload: bytes, google_news: bool = False) -> list[dict[str, str]]:
+    root = parse_xml(payload)
     candidates = [node for node in root.iter() if local_name(node.tag) in {"item", "entry"}]
     found: list[dict[str, str]] = []
     for node in candidates:
@@ -170,8 +316,23 @@ def rss_items(payload: bytes) -> list[dict[str, str]]:
                 if local_name(child.tag) == "link" and child.attrib.get("href"):
                     link = child.attrib["href"]
                     break
-        if title and link.startswith(("http://", "https://")):
-            found.append({"title": title, "summary": description, "publishedAt": published, "url": link})
+        if not (title and link.startswith(("http://", "https://"))):
+            continue
+        entry = {"title": title, "summary": description, "publishedAt": published, "url": link}
+        if google_news:
+            # Googleの description は元記事へのリンクと媒体名だけで、本文ではない。
+            # 要約として載せても読めないうえ、転載にもあたるので空にする。
+            entry["summary"] = ""
+            entry["title"], outlet = split_google_title(title)
+            outlet_url = ""
+            for child in node.iter():
+                if local_name(child.tag) == "source":
+                    outlet = clean_text(child.text) or outlet
+                    outlet_url = child.attrib.get("url", "")
+                    break
+            entry["outlet"] = outlet
+            entry["outletUrl"] = outlet_url
+        found.append(entry)
     return found
 
 
@@ -380,6 +541,17 @@ def html_index_items(source: dict, known_ids: set[str]) -> list[dict[str, str]]:
 
 
 class Classifier:
+    """記事が品川区の話かどうかを点数で判定する。
+
+    「品川」が入っているだけでは区の話とは限らない。品川駅は港区にあり、
+    区内の地名（大井・平塚・小山・大崎）は他の自治体とも同名である。
+    そこで語を3種に分ける。
+
+    - areas / stations / landmarks: 区内と判る固有の手がかり。そのまま加点する。
+    - ambiguousAreas: 他地域にもある地名。ほかに区内の手がかりがあるときだけ加点する。
+    - negativeTerms: 区外を指す語。「品川区」と書かれていないときだけ減点する。
+    """
+
     def __init__(self, config: dict) -> None:
         self.base = config["baseTerms"]
         self.areas = config["areas"]
@@ -387,23 +559,51 @@ class Classifier:
         self.landmarks = config["landmarks"]
         self.related = config["relatedTerms"]
         self.tag_rules = config["tagRules"]
+        self.ambiguous = config.get("ambiguousAreas", [])
+        self.negative = config.get("negativeTerms", [])
+        # 区外語を探す前に伏せる語。長いものから当てる。
+        self._local_terms = sorted(
+            set(self.areas + self.stations + self.landmarks), key=len, reverse=True
+        )
 
     def score(self, text: str, extra_terms: list[str] | None = None) -> int:
-        score = 0
-        score += 8 * sum(term in text for term in self.base)
-        score += 4 * sum(term in text for term in self.areas)
-        score += 4 * sum(term in text for term in self.stations)
-        score += 4 * sum(term in text for term in self.landmarks)
-        score += 2 * min(3, sum(term in text for term in self.related))
+        base_hits = sum(term in text for term in self.base)
+        strong_hits = (
+            sum(term in text for term in self.areas)
+            + sum(term in text for term in self.stations)
+            + sum(term in text for term in self.landmarks)
+        )
+        score = 8 * base_hits + 4 * strong_hits
         score += 8 * sum(term in text for term in (extra_terms or []))
-        return score
+        if base_hits or strong_hits:
+            # 紛らわしい地名は、区内の手がかりと一緒に出たときだけ効かせる。
+            score += 2 * min(3, sum(term in text for term in self.ambiguous))
+        score += 2 * min(3, sum(term in text for term in self.related))
+        if not base_hits:
+            # 「品川区」と明記されていれば、品川駅などの語があっても区の話として扱う。
+            score -= 4 * min(3, sum(term in self.without_local_terms(text) for term in self.negative))
+        return max(0, score)
+
+    def without_local_terms(self, text: str) -> str:
+        """区内の地名・駅名を伏せた文を返す。区外語の部分一致を防ぐ。
+
+        「北品川駅」には区外を指す「品川駅」が含まれる。そのまま探すと
+        区内の駅を巻き添えにして減点してしまう（北品川駅の人身事故が落ちた）。
+        長い語から先に伏せて、短い区外語が中に残らないようにする。
+        紛らわしい地名（大井町など）は伏せない。「足柄上郡大井町」のような
+        区外語を打ち消してしまうため。
+        """
+        for term in self._local_terms:
+            if term in text:
+                text = text.replace(term, "\u3000")
+        return text
 
     def tags(self, text: str) -> list[str]:
         tags = [tag for tag, terms in self.tag_rules.items() if any(term in text for term in terms)]
         return tags or ["その他"]
 
     def locations(self, text: str) -> list[str]:
-        terms = self.areas + self.stations + self.landmarks
+        terms = self.areas + self.ambiguous + self.stations + self.landmarks
         return list(dict.fromkeys(term for term in terms if term in text))[:8]
 
 
@@ -434,11 +634,14 @@ def build_item(raw: dict[str, str], source: dict, classifier: Classifier, collec
     url = raw.get("url", "").strip()
     if not title or not url.startswith(("http://", "https://")):
         return None
-    combined = f"{title} {summary}"
+    outlet = clean_text(raw.get("outlet", ""))
+    if source.get("format") == "googleNews" and is_already_collected_outlet(raw, source.get("excludedHosts", [])):
+        return None
+    combined = f"{title} {summary} {outlet}"
     score = classifier.score(combined, source.get("extraTerms"))
     if not source.get("trustedLocal") and score < int(source.get("minScore", 0)):
         return None
-    return {
+    item = {
         "id": item_id(url),
         "title": title,
         "summary": summary,
@@ -452,7 +655,55 @@ def build_item(raw: dict[str, str], source: dict, classifier: Classifier, collec
         "tags": classifier.tags(combined),
         "locations": classifier.locations(combined),
         "relevanceScore": score,
+        "sourcePriority": int(source.get("priority", 50)),
     }
+    if source.get("format") == "googleNews":
+        # Googleニュースは元記事に直接つながらない転送URLを配る。
+        # 無理に元記事URLを割り出さず、媒体名を添えてGoogle経由で開いてもらう。
+        item["viaAggregator"] = "Googleニュース"
+        if outlet:
+            item["outlet"] = outlet
+        if raw.get("outletUrl"):
+            item["outletUrl"] = raw["outletUrl"]
+    return item
+
+
+def fetch_source(source: dict, known_ids: set[str]) -> list[dict[str, str]]:
+    """1つの配信元から記事の素を取る。失敗はそのまま投げ、呼び元で1件ずつ受ける。"""
+    if source["sourceType"] == "rss":
+        payload, _ = fetch(source["url"], timeout=int(source.get("timeout", 12)))
+        raw_items = rss_items(payload, google_news=source.get("format") == "googleNews")
+        raw_items = raw_items[: int(source.get("maxItems", 200))]
+        if source.get("fetchDetails"):
+            raw_items = fill_missing_summaries(raw_items, source, known_ids)
+        return raw_items
+    return html_index_items(source, known_ids)
+
+
+def fill_missing_summaries(raw_items: list[dict[str, str]], source: dict, known_ids: set[str]) -> list[dict[str, str]]:
+    """要約が空のRSS（品川区公式など）を、記事ページから補う。
+
+    すでに取り込み済みの記事は取りに行かない。1回の実行で取りに行く本数も絞り、
+    配信元に負荷をかけない。
+    """
+    targets = [
+        raw for raw in raw_items
+        if not clean_text(raw.get("summary", "")) and item_id(raw.get("url", "")) not in known_ids
+    ][: int(source.get("detailMaxItems", 10))]
+    details: dict[str, dict[str, str]] = {}
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        futures = {executor.submit(article_details, raw["url"]): raw["url"] for raw in targets}
+        for future in as_completed(futures):
+            try:
+                details[futures[future]] = future.result()
+            except (HTTPError, URLError, TimeoutError, UnicodeError, OSError):
+                details[futures[future]] = {}
+    for raw in raw_items:
+        detail = details.get(raw.get("url", ""))
+        if detail:
+            raw["summary"] = raw.get("summary") or detail.get("summary", "")
+            raw["publishedAt"] = raw.get("publishedAt") or detail.get("publishedAt", "")
+    return raw_items
 
 
 def collect(config: dict, existing: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -463,46 +714,95 @@ def collect(config: dict, existing: list[dict]) -> tuple[list[dict], list[dict]]
     known_ids = set(items_by_id)
     reports: list[dict] = []
 
-    source_groups = (("rssFeeds", "rss"), ("htmlSources", "html"))
-    for key, source_type in source_groups:
+    sources: list[dict] = []
+    for key, source_type in (("rssFeeds", "rss"), ("htmlSources", "html")):
         for configured_source in config.get(key, []):
             source = dict(configured_source)
             source["sourceType"] = source_type
-            if not source.get("enabled"):
-                reports.append({"source": source["name"], "status": "disabled", "accepted": 0})
+            source.setdefault("excludedHosts", config.get("aggregatorExcludedHosts", []))
+            sources.append(source)
+
+    # 取得は並列、取り込みは設定順に行う。1つの配信元が落ちても他は止めない。
+    active = [source for source in sources if source.get("enabled")]
+    fetched: dict[str, list[dict[str, str]]] = {}
+    failures: dict[str, Exception] = {}
+    elapsed: dict[str, int] = {}
+    max_workers = max(1, int(config.get("maxConcurrentFetches", 4)))
+
+    def run(source: dict) -> None:
+        started = time.monotonic()
+        try:
+            fetched[source["id"]] = fetch_source(source, known_ids)
+        except (ET.ParseError, HTTPError, URLError, TimeoutError, UnicodeError, OSError) as error:
+            failures[source["id"]] = error
+        finally:
+            elapsed[source["id"]] = int((time.monotonic() - started) * 1000)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        list(executor.map(run, active))
+
+    # 既存記事を重複判定の土台にする。既にある記事は消さない。
+    seen_urls = {dedupe_key(item.get("url", "")): item for item in items_by_id.values()}
+    seen_titles: dict[str, list[dict]] = {}
+    for item in items_by_id.values():
+        index_title(item, seen_titles)
+    duplicates = 0
+
+    for source in sources:
+        if not source.get("enabled"):
+            reports.append({"source": source["name"], "sourceId": source["id"], "status": "disabled", "accepted": 0})
+            continue
+        report = {
+            "source": source["name"],
+            "sourceId": source["id"],
+            "fetchedAt": collected_at,
+            "durationMs": elapsed.get(source["id"], 0),
+        }
+        error = failures.get(source["id"])
+        if error is not None:
+            report.update({"status": "error", "accepted": 0, "message": str(error)[:180]})
+            reports.append(report)
+            print(f"WARN: {source['name']}: {error}", file=sys.stderr)
+            continue
+        raw_items = fetched.get(source["id"], [])
+        accepted = 0
+        skipped = 0
+        for raw in raw_items:
+            item = build_item(raw, source, classifier, collected_at)
+            if item is None:
                 continue
-            accepted = 0
-            scanned = 0
-            try:
-                if source_type == "rss":
-                    payload, _ = fetch(source["url"])
-                    raw_items = rss_items(payload)
-                else:
-                    raw_items = html_index_items(source, known_ids)
-                scanned = len(raw_items)
-                for raw in raw_items:
-                    item = build_item(raw, source, classifier, collected_at)
-                    if item is None:
+            reuse_existing_id(item, url_index)
+            previous = items_by_id.get(item["id"])
+            if previous is None:
+                replaced = find_duplicate(item, seen_urls, seen_titles)
+                if replaced is not None:
+                    if int(replaced.get("sourcePriority", 50)) >= item["sourcePriority"]:
+                        skipped += 1
+                        duplicates += 1
                         continue
-                    reuse_existing_id(item, url_index)
-                    previous = items_by_id.get(item["id"])
-                    if previous:
-                        item["collectedAt"] = previous.get("collectedAt", item["collectedAt"])
-                        if not item["summary"]:
-                            item["summary"] = previous.get("summary", "")
-                            item["tags"] = previous.get("tags", item["tags"])
-                            item["locations"] = previous.get("locations", item["locations"])
-                            item["relevanceScore"] = previous.get("relevanceScore", item["relevanceScore"])
-                        if not raw.get("publishedAt"):
-                            item["publishedAt"] = previous.get("publishedAt", item["publishedAt"])
-                            item["dateKind"] = previous.get("dateKind", item["dateKind"])
-                    items_by_id[item["id"]] = item
-                    url_index.setdefault(normalized_url(item["url"]), item["id"])
-                    accepted += 1
-                reports.append({"source": source["name"], "status": "ok", "scanned": scanned, "accepted": accepted})
-            except (ET.ParseError, HTTPError, URLError, TimeoutError, UnicodeError, OSError) as error:
-                reports.append({"source": source["name"], "status": "error", "accepted": 0, "message": str(error)[:180]})
-                print(f"WARN: {source['name']}: {error}", file=sys.stderr)
+                    # 配信元として確かな側（公式RSSなど）に入れ替える。
+                    # IDは元の記事のものを引き継ぐ。★と非表示がID単位のため。
+                    drop_from_index(replaced, seen_urls, seen_titles)
+                    items_by_id.pop(replaced.get("id", ""), None)
+                    inherit_identity(item, replaced)
+                    duplicates += 1
+            if previous:
+                item["collectedAt"] = previous.get("collectedAt", item["collectedAt"])
+                if not item["summary"]:
+                    item["summary"] = previous.get("summary", "")
+                    item["tags"] = previous.get("tags", item["tags"])
+                    item["locations"] = previous.get("locations", item["locations"])
+                    item["relevanceScore"] = previous.get("relevanceScore", item["relevanceScore"])
+                if not raw.get("publishedAt"):
+                    item["publishedAt"] = previous.get("publishedAt", item["publishedAt"])
+                    item["dateKind"] = previous.get("dateKind", item["dateKind"])
+            items_by_id[item["id"]] = item
+            url_index.setdefault(normalized_url(item["url"]), item["id"])
+            seen_urls[dedupe_key(item["url"])] = item
+            index_title(item, seen_titles)
+            accepted += 1
+        report.update({"status": "ok", "scanned": len(raw_items), "accepted": accepted, "duplicates": skipped})
+        reports.append(report)
 
     repeated_summaries: dict[tuple[str, str], int] = {}
     for item in items_by_id.values():
@@ -520,7 +820,85 @@ def collect(config: dict, existing: list[dict]) -> tuple[list[dict], list[dict]]
         key=lambda item: (item.get("publishedAt", ""), item.get("collectedAt", ""), item.get("id", "")),
         reverse=True,
     )[:MAX_ARCHIVE_ITEMS]
+    reports.append({"source": "（重複除去）", "sourceId": "_dedupe", "status": "ok", "accepted": 0, "duplicates": duplicates})
     return items, reports
+
+
+def find_duplicate(item: dict, seen_urls: dict[str, dict], seen_titles: dict[str, list[dict]]) -> dict | None:
+    """すでに持っている記事のうち、同じ記事と言えるものを返す。"""
+    twin = seen_urls.get(dedupe_key(item.get("url", "")))
+    if twin is not None:
+        return twin
+    title_key = normalized_title(item.get("title", ""))
+    if not title_key:
+        return None
+    for candidate in seen_titles.get(title_key, []):
+        if same_article(item, candidate):
+            return candidate
+    for candidate in seen_titles.get(title_key[:AGGREGATOR_TITLE_PREFIX], []):
+        if same_article(item, candidate):
+            return candidate
+    return None
+
+
+def same_article(item: dict, candidate: dict) -> bool:
+    """見出しから見て同じ記事かどうか。
+
+    見出し一致で消すのは、片方がまとめサイト（Googleニュース）経由のときだけにする。
+    別の報道機関が独自に取材した記事まで消さないため。
+    まとめサイトは見出しを切り詰めたり媒体名を足したりするので、
+    完全一致に加えて、見出しの頭が十分長く一致する場合も同じ記事とみなす。
+    """
+    if item is candidate or item.get("id") == candidate.get("id"):
+        return False
+    if not (item.get("viaAggregator") or candidate.get("viaAggregator")):
+        return False
+    if abs(_days_between(item.get("publishedAt"), candidate.get("publishedAt"))) > 3:
+        return False
+    left = normalized_title(item.get("title", ""))
+    right = normalized_title(candidate.get("title", ""))
+    if not left or not right:
+        return False
+    if left == right:
+        return True
+    shortest = min(len(left), len(right))
+    if shortest < AGGREGATOR_TITLE_PREFIX:
+        return False
+    return left[:AGGREGATOR_TITLE_PREFIX] == right[:AGGREGATOR_TITLE_PREFIX]
+
+
+def index_title(item: dict, seen_titles: dict[str, list[dict]]) -> None:
+    """見出しの全体と頭の両方で引けるようにする。"""
+    key = normalized_title(item.get("title", ""))
+    if not key:
+        return
+    for variant in {key, key[:AGGREGATOR_TITLE_PREFIX]}:
+        seen_titles.setdefault(variant, []).append(item)
+
+
+def inherit_identity(item: dict, replaced: dict) -> dict:
+    """入れ替え先の記事に、元の記事のIDと初出日時を引き継ぐ。
+
+    ★（お気に入り）と非表示は端末内とFirestoreに記事ID単位で保存されている
+    （news.html の state.favorites.has(item.id)）。まとめサイト経由で先に入った
+    記事を公式RSSの記事へ差し替えるときにIDを振り直すと、利用者の★が外れる。
+    id ≠ sha256(url) になるが、公式サイトのURL張り替えで既にそうなっており、
+    収集側はURLでも突き合わせる（reuse_existing_id）。
+    """
+    if replaced.get("id"):
+        item["id"] = replaced["id"]
+    if replaced.get("collectedAt"):
+        item["collectedAt"] = replaced["collectedAt"]
+    return item
+
+
+def drop_from_index(item: dict, seen_urls: dict[str, dict], seen_titles: dict[str, list[dict]]) -> None:
+    seen_urls.pop(dedupe_key(item.get("url", "")), None)
+    key = normalized_title(item.get("title", ""))
+    for variant in {key, key[:AGGREGATOR_TITLE_PREFIX]}:
+        bucket = seen_titles.get(variant)
+        if bucket and item in bucket:
+            bucket.remove(item)
 
 
 def write_output(path: Path, config: dict, items: list[dict], reports: list[dict]) -> bool:
@@ -535,6 +913,7 @@ def write_output(path: Path, config: dict, items: list[dict], reports: list[dict
                     "type": source_type,
                     "enabled": bool(source.get("enabled")),
                     "requiresApproval": bool(source.get("requiresApproval")),
+                    "via": "googleNews" if source.get("format") == "googleNews" else "",
                     "note": source.get("note", ""),
                 }
             )
