@@ -50,6 +50,13 @@
       ]
     },
     {
+      label: "品川の歴史",
+      items: [
+        { label: "歴史トップ", url: "rekishi.html" },
+        { label: "年表", url: "rekishi-nenpyo.html" }
+      ]
+    },
+    {
       label: "公式サイト",
       items: [
         { type: "minutes", label: "会議録検索システム", url: "https://gikai.city.shinagawa.tokyo.jp/search" },

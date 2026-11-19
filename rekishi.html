@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0017c1" />
+  <title>品川の歴史 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
+  <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-controls.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
+  <link rel="stylesheet" href="site-a11y.css" />
+  <style>
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
+    .notice { margin-top:18px; border:1px solid var(--c-border); border-left:4px solid var(--c-main); border-radius:3px; background:var(--c-accent-pale); padding:13px 15px; font-size:calc(13px * var(--fs)); line-height:1.8; }
+    main section { padding:32px 0 44px; }
+    main section + section { border-top:1px solid var(--c-border); }
+    h2 { margin:0 0 6px; font-size:calc(24px * var(--fs)); }
+    .section-lead { max-width:760px; margin:0 0 22px; color:var(--c-ink-soft); font-size:calc(14px * var(--fs)); line-height:1.8; }
+
+    .stats { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:22px; }
+    .stat { flex:1 1 150px; border:1px solid var(--c-border); border-top:3px solid var(--c-accent); border-radius:3px; background:var(--c-card); padding:14px; }
+    .stat strong { display:block; color:var(--c-accent); font-size:calc(25px * var(--fs)); }
+    .stat span { color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); font-weight:700; }
+
+    /* 入口の一覧。囲みは「ひとまとまりの内容」を示すためのもので、
+       移動そのものは中の見出しリンク（枠なし・下線あり）が担う。
+       site-controls.css の約束（枠＝ページ内の操作）を崩さないための分け方。 */
+    .cards { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:14px; }
+    .card { border:1px solid var(--c-border); border-left:4px solid var(--c-main); border-radius:3px; background:var(--c-card); padding:16px; }
+    .card--soon { border-left-color:var(--c-border-strong); background:var(--c-surface-sub); }
+    .card h3 { margin:0 0 8px; font-size:calc(17px * var(--fs)); line-height:1.5; }
+    .card p { margin:0; color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); line-height:1.8; }
+    .card .soon { display:inline-block; margin-bottom:8px; border:1px dashed var(--c-border-strong); border-radius:999px; padding:2px 10px; color:var(--c-ink-soft); font-size:calc(11px * var(--fs)); font-weight:700; }
+
+    .recent { display:grid; gap:10px; }
+    .entry { border:1px solid var(--c-rule); border-radius:3px; background:#fff; padding:13px 15px; }
+    .entry-head { display:flex; flex-wrap:wrap; gap:7px; align-items:center; margin-bottom:6px; }
+    .tag { display:inline-flex; border:1px solid var(--c-border); border-radius:999px; background:var(--c-accent-pale); padding:3px 9px; color:var(--c-accent); font-size:calc(11px * var(--fs)); font-weight:700; }
+    .when { color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); font-weight:700; }
+    .entry h3 { margin:0 0 5px; font-size:calc(16px * var(--fs)); line-height:1.6; }
+    .entry p { margin:0; color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); line-height:1.8; }
+
+    .sources-list { margin:0; padding-left:20px; line-height:2; font-size:calc(14px * var(--fs)); }
+    .sources-list li > span { color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); }
+    /* URLを持たない出典は押せない。線の種類でそれを示す（実線＝押せる、破線＝押せない）。 */
+    .source-pill { display:inline-block; border:1px dashed var(--c-border-strong); border-radius:999px; padding:2px 10px; font-size:calc(13px * var(--fs)); }
+
+    @media (max-width:640px) {
+      h2 { font-size:calc(21px * var(--fs)); }
+      .cards { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero"><div class="container">
+      <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
+      <h1>品川の歴史</h1>
+      <p class="lead">品川区の歴史を、できごと・場所・人物・地名から横断してたどれるようにしたページ群です。</p>
+      <div class="notice"><strong>出典を確認できた情報だけを掲載しています。</strong> 事実・伝承・俗説・推定は区別して示し、年代が分からないものは無理に確定させていません。詳しい内容は各項目の出典でご確認ください。</div>
+      <nav data-site-nav></nav>
+    </div></header>
+
+    <section><div class="container">
+      <h2>収録状況</h2>
+      <p class="section-lead">件数を増やすことよりも、出典が確認できていることを優先しています。</p>
+      <div class="stats" id="stats"></div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>調べ方を選ぶ</h2>
+      <p class="section-lead">同じ歴史の情報に、違う入口からたどり着けるようにしています。</p>
+      <div class="cards" id="cards"></div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>最近追加した項目</h2>
+      <p class="section-lead">出典を確認した日が新しいものから並べています。</p>
+      <div class="recent" id="recent"></div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>主な出典</h2>
+      <p class="section-lead">各項目には、どの資料のどこで確認したかを添えています。</p>
+      <ul class="sources-list" id="sources"></ul>
+    </div></section>
+  </main>
+
+  <footer><div class="container" id="footer-root"></div></footer>
+
+  <script src="data/site.js"></script>
+  <script src="data/rekishi.js"></script>
+  <script src="data/rekishi-events.js"></script>
+  <script src="data/rekishi-people.js"></script>
+  <script>
+    "use strict";
+
+    const DB = window.SHINAGAWA_DB || {};
+    const META = DB.rekishi || null;
+    const EVENTS = (DB.rekishiEvents && DB.rekishiEvents.items) || [];
+    const PEOPLE = (DB.rekishiPeople && DB.rekishiPeople.items) || [];
+
+    const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => (
+      { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+    ));
+
+    // 入口の一覧。url が無いものは、まだページを作っていない機能。
+    // リンクに見せないことで、押しても何も起きないという事故を防ぐ。
+    const FEATURES = [
+      { url: "rekishi-nenpyo.html", title: "歴史年表", text: "原始から現代までのできごとを年代順に並べ、時代・地域・カテゴリー・キーワードで絞り込めます。" },
+      { url: "", title: "歴史マップ", text: "史跡、神社仏閣、旧街道、坂や川、産業遺産などを地図から探せるようにします。現在は無い施設は、当時の位置であることを明示します。" },
+      { url: "", title: "地域別の歴史", text: "品川・大崎・大井・荏原・八潮の5地区と、旧町村・旧町名の単位で歴史をまとめます。" },
+      { url: "", title: "歴史人物事典", text: "品川区にゆかりのある人物の略歴と、区内のどこと結びつくのかを整理します。" },
+      { url: "", title: "地名の由来事典", text: "現在の町名のほか、旧町名・旧村名・坂・川・橋の由来を集めます。説が分かれるものは説ごとに示します。" },
+      { url: "", title: "古地図・今昔比較", text: "国土地理院の年代別の空中写真を重ね、透明度を変えながら現在の地図と見比べられるようにします。" }
+    ];
+
+    function showError(message) {
+      document.querySelector("main").insertAdjacentHTML("afterbegin",
+        `<div class="load-error container"><strong>歴史データを読み込めませんでした。</strong><br />${esc(message)}<br /><br />
+         <code>rekishi.html</code> と同じ場所に <code>data</code> フォルダ（data/rekishi.js など）があるか確認してください。</div>`);
+    }
+
+    function renderStats() {
+      const eras = new Set(EVENTS.map((x) => x.era).filter(Boolean));
+      document.getElementById("stats").innerHTML = [
+        { value: EVENTS.length, label: "できごと" },
+        { value: PEOPLE.length, label: "人物" },
+        { value: eras.size, label: "時代区分" },
+        { value: (META.sources || []).length, label: "出典資料" }
+      ].map((x) => `<div class="stat"><strong>${x.value}</strong><span>${esc(x.label)}</span></div>`).join("");
+    }
+
+    function renderCards() {
+      document.getElementById("cards").innerHTML = FEATURES.map((item) => {
+        if (!item.url) {
+          return `<article class="card card--soon">
+            <span class="soon">準備中</span>
+            <h3>${esc(item.title)}</h3>
+            <p>${esc(item.text)}</p>
+          </article>`;
+        }
+        return `<article class="card">
+          <h3><a href="${esc(item.url)}">${esc(item.title)}</a></h3>
+          <p>${esc(item.text)}</p>
+        </article>`;
+      }).join("");
+    }
+
+    // 「最近追加した項目」は、できごとと人物をまとめて確認日の新しい順に並べる。
+    // 同じ日のものは、年代の新しい順にして並びを安定させる。
+    function renderRecent() {
+      const eraLabel = new Map((META.eras || []).map((x) => [x.id, x.label]));
+      const entries = [
+        ...EVENTS.map((x) => ({ item: x, kind: "できごと", sortYear: x.year ?? -99999 })),
+        ...PEOPLE.map((x) => ({ item: x, kind: "人物", sortYear: x.birthYear ?? x.deathYear ?? -99999 }))
+      ];
+      entries.sort((a, b) => {
+        const byDate = String(b.item.verifiedAt || "").localeCompare(String(a.item.verifiedAt || ""));
+        return byDate !== 0 ? byDate : b.sortYear - a.sortYear;
+      });
+      document.getElementById("recent").innerHTML = entries.slice(0, 6).map(({ item, kind }) => {
+        const when = item.yearText || eraLabel.get(item.era) || "";
+        const link = kind === "できごと"
+          ? `<a href="rekishi-nenpyo.html#${esc(item.id)}">${esc(item.name)}</a>`
+          : esc(item.name);
+        return `<article class="entry">
+          <div class="entry-head"><span class="tag">${esc(kind)}</span><span class="when">${esc(when)}</span></div>
+          <h3>${link}</h3>
+          <p>${esc(item.summary)}</p>
+        </article>`;
+      }).join("");
+    }
+
+    function renderSources() {
+      document.getElementById("sources").innerHTML = (META.sources || []).map((source) => {
+        // URLのある出典はリンク、無い出典は破線の囲みにする。
+        const name = source.url
+          ? `<a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.label)}</a>`
+          : `<span class="source-pill">${esc(source.label)}</span>`;
+        const publisher = source.publisher ? `（${esc(source.publisher)}）` : "";
+        const note = source.note ? `<br /><span>${esc(source.note)}</span>` : "";
+        return `<li>${name}${publisher}${note}</li>`;
+      }).join("");
+    }
+
+    function init() {
+      if (!META) {
+        showError("data/rekishi.js が読み込まれていません");
+        return;
+      }
+      try {
+        renderStats();
+        renderCards();
+        renderRecent();
+        renderSources();
+      } catch (error) {
+        showError(error && error.message ? error.message : String(error));
+        return;
+      }
+      document.getElementById("footer-root").textContent =
+        `品川区議会DB — ${META.disclaimer || ""}`;
+    }
+
+    init();
+  </script>
+  <script src="site-nav.js"></script>
+  <script src="site-a11y.js"></script>
+</body>
+</html>

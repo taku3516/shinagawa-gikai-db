@@ -86,6 +86,19 @@ window.SHINAGAWA_DB.site = {
       ]
     },
     {
+      "label": "品川の歴史",
+      "items": [
+        {
+          "label": "歴史トップ",
+          "url": "rekishi.html"
+        },
+        {
+          "label": "年表",
+          "url": "rekishi-nenpyo.html"
+        }
+      ]
+    },
+    {
       "label": "公式サイト",
       "items": [
         {

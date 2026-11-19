@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0017c1" />
+  <title>品川区歴史年表 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
+  <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-controls.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
+  <link rel="stylesheet" href="site-a11y.css" />
+  <style>
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
+    .notice { margin-top:18px; border:1px solid var(--c-border); border-left:4px solid var(--c-main); border-radius:3px; background:var(--c-accent-pale); padding:13px 15px; font-size:calc(13px * var(--fs)); line-height:1.8; }
+    main section { padding:28px 0 44px; }
+
+    .filters { border:1px solid var(--c-border); border-radius:3px; background:var(--c-card); padding:16px; margin-bottom:18px; }
+    .filters .control-row { margin-bottom:12px; }
+    .filters .control-field { flex:1 1 180px; }
+    .filters .control-field--wide { flex:2 1 260px; }
+    .filter-foot { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:12px; }
+    .reset { min-height:44px; border:1px solid var(--c-main); border-radius:3px; background:#fff; padding:8px 14px; color:var(--c-main-dark); font:inherit; font-weight:700; cursor:pointer; }
+    .count { color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); font-weight:700; }
+    .chips-label { display:block; margin-bottom:6px; color:var(--c-ink-mute); font-size:calc(12px * var(--fs)); font-weight:700; }
+
+    .eras { display:grid; gap:14px; }
+    details.era { border:1px solid var(--c-border); border-radius:3px; background:var(--c-card); overflow:clip; }
+    details.era > summary { display:grid; grid-template-columns:1fr auto auto; gap:12px; align-items:center; min-height:62px; padding:14px 16px; list-style:none; cursor:pointer; }
+    details.era > summary::-webkit-details-marker { display:none; }
+    details.era > summary:hover, details.era[open] > summary { background:var(--c-main-pale); }
+    .era-title { font-size:calc(19px * var(--fs)); font-weight:700; }
+    .era-note { display:block; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); font-weight:400; }
+    .toggle { display:grid; place-items:center; width:34px; height:34px; border-radius:3px; background:var(--c-main); color:#fff; font-size:calc(20px * var(--fs)); font-weight:700; }
+    .toggle::before { content:"+"; }
+    details[open] > summary .toggle::before { content:"−"; }
+    .era-body { border-top:1px solid var(--c-border); padding:14px; display:grid; gap:12px; }
+
+    .event { border:1px solid var(--c-rule); border-left:4px solid var(--c-main); border-radius:3px; background:#fff; padding:15px 16px; scroll-margin-top:16px; }
+    .event-head { display:flex; flex-wrap:wrap; gap:7px; align-items:center; }
+    .year { color:var(--c-ink); font-size:calc(13px * var(--fs)); font-weight:700; }
+    .tag { display:inline-flex; border:1px solid var(--c-border); border-radius:999px; background:var(--c-accent-pale); padding:3px 9px; color:var(--c-accent); font-size:calc(11px * var(--fs)); font-weight:700; }
+    /* 確実性は色ではなく語で示す。色だけで区別すると、色の見分けが
+       つきにくい人に伝わらないため（WCAG 1.4.1）。 */
+    .certainty { display:inline-flex; border:1px solid var(--c-border-strong); border-radius:999px; background:var(--c-surface-sub); padding:3px 9px; color:var(--c-ink); font-size:calc(11px * var(--fs)); font-weight:700; }
+    .event h3 { margin:9px 0 7px; font-size:calc(17px * var(--fs)); line-height:1.6; }
+    .event .summary { margin:0 0 8px; font-size:calc(14px * var(--fs)); line-height:1.9; }
+    .event .description { margin:0; color:var(--c-ink-soft); font-size:calc(14px * var(--fs)); line-height:1.9; }
+
+    .related { margin-top:12px; border-top:1px dashed var(--c-border); padding-top:11px; }
+    .related h4 { margin:0 0 6px; color:var(--c-ink-mute); font-size:calc(12px * var(--fs)); font-weight:700; }
+    .related ul { margin:0 0 10px; padding-left:20px; font-size:calc(13px * var(--fs)); line-height:1.9; }
+    .related ul:last-child { margin-bottom:0; }
+    details.person { border:1px solid var(--c-border); border-radius:3px; background:var(--c-card); margin-bottom:8px; }
+    details.person > summary { min-height:44px; display:flex; align-items:center; padding:10px 13px; cursor:pointer; font-size:calc(13px * var(--fs)); font-weight:700; }
+    details.person > summary::-webkit-details-marker { display:none; }
+    details.person > summary::before { content:"▸"; margin-right:8px; color:var(--c-main); }
+    details.person[open] > summary::before { content:"▾"; }
+    .person-body { border-top:1px solid var(--c-border); padding:12px 13px; font-size:calc(13px * var(--fs)); line-height:1.9; }
+    .person-body p { margin:0 0 7px; }
+    .person-body p:last-child { margin-bottom:0; }
+    .person-body .label { color:var(--c-ink-mute); font-weight:700; }
+
+    .sources { margin-top:11px; border-top:1px dashed var(--c-border); padding-top:10px; font-size:calc(13px * var(--fs)); line-height:1.9; }
+    .sources .label { color:var(--c-ink-mute); font-size:calc(12px * var(--fs)); font-weight:700; }
+    /* URLを持たない出典は押せない。線の種類でそれを示す。 */
+    .source-pill { display:inline-block; border:1px dashed var(--c-border-strong); border-radius:999px; padding:2px 10px; }
+    .locator { color:var(--c-ink-soft); }
+
+    .empty { border:1px dashed var(--c-border); border-radius:3px; background:var(--c-card); padding:24px; color:var(--c-ink-soft); }
+
+    @media (max-width:640px) {
+      .era-title { font-size:calc(17px * var(--fs)); }
+      .filter-foot { align-items:flex-start; flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero"><div class="container">
+      <p class="breadcrumb"><a href="rekishi.html">← 品川の歴史へ</a></p>
+      <h1>品川区歴史年表</h1>
+      <p class="lead">品川区域のできごとを年代順に並べています。時代・地域・カテゴリー・確実性・キーワードで絞り込めます。</p>
+      <div class="notice"><strong>出典を確認できたできごとだけを掲載しています。</strong> 年代が確定できないものは年を空欄にし、分かる範囲の表記だけを載せています。事実・伝承・俗説・推定は「確からしさ」で区別しています。</div>
+      <nav data-site-nav></nav>
+    </div></header>
+
+    <section><div class="container">
+      <form class="filters" id="filters">
+        <div class="control-row">
+          <div class="control-field control-field--wide">
+            <label for="query">キーワード</label>
+            <input id="query" type="search" placeholder="例：東海道、硝子、本陣" />
+          </div>
+          <div class="control-field">
+            <label for="era">時代</label>
+            <select id="era"><option value="">すべて</option></select>
+          </div>
+          <div class="control-field">
+            <label for="area">地域</label>
+            <select id="area"><option value="">すべて</option></select>
+          </div>
+          <div class="control-field">
+            <label for="category">カテゴリー</label>
+            <select id="category"><option value="">すべて</option></select>
+          </div>
+        </div>
+        <span class="chips-label" id="certainty-label">確からしさ</span>
+        <div class="chips" id="certainty" role="group" aria-labelledby="certainty-label"></div>
+        <div class="filter-foot">
+          <button class="reset" type="reset">条件をリセット</button>
+          <span class="count" id="hit-count" aria-live="polite"></span>
+        </div>
+      </form>
+      <div class="eras" id="list"></div>
+    </div></section>
+  </main>
+
+  <footer><div class="container" id="footer-root"></div></footer>
+
+  <script src="data/site.js"></script>
+  <script src="data/rekishi.js"></script>
+  <script src="data/rekishi-events.js"></script>
+  <script src="data/rekishi-people.js"></script>
+  <script>
+    "use strict";
+
+    const DB = window.SHINAGAWA_DB || {};
+    const META = DB.rekishi || null;
+    const EVENTS = (DB.rekishiEvents && DB.rekishiEvents.items) || [];
+    const PEOPLE = (DB.rekishiPeople && DB.rekishiPeople.items) || [];
+
+    const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => (
+      { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+    ));
+    // 検索の表記ゆれを吸収する。既存ページ（ikensho.html など）と同じやり方にそろえる。
+    const normalize = (v) => String(v ?? "").normalize("NFKC").toLocaleLowerCase("ja").replace(/\s+/g, "");
+
+    function showError(message) {
+      document.getElementById("list").innerHTML =
+        `<div class="load-error"><strong>歴史データを読み込めませんでした。</strong><br />${esc(message)}<br /><br />
+         <code>rekishi-nenpyo.html</code> と同じ場所に <code>data</code> フォルダ（data/rekishi.js、data/rekishi-events.js）があるか確認してください。</div>`;
+    }
+
+    if (!META || !EVENTS.length) {
+      showError(!META ? "data/rekishi.js が読み込まれていません" : "data/rekishi-events.js にできごとがありません");
+    } else {
+      start();
+    }
+
+    function start() {
+      // 語彙は data/rekishi.js が正。ここでは引くための表に組み替えるだけにする。
+      const eras = (META.eras || []).slice().sort((a, b) => (a.order || 0) - (b.order || 0));
+      const areas = (META.areas || []).slice().sort((a, b) => (a.order || 0) - (b.order || 0));
+      const categories = (META.categories || []).slice().sort((a, b) => (a.order || 0) - (b.order || 0));
+      const certainties = META.certainty || [];
+
+      const eraById = new Map(eras.map((x) => [x.id, x]));
+      const areaLabel = new Map(areas.map((x) => [x.id, x.label]));
+      const categoryLabel = new Map(categories.map((x) => [x.id, x.label]));
+      const certaintyById = new Map(certainties.map((x) => [x.id, x]));
+      const sourceById = new Map((META.sources || []).map((x) => [x.id, x]));
+      const personById = new Map(PEOPLE.map((x) => [x.id, x]));
+      const eventById = new Map(EVENTS.map((x) => [x.id, x]));
+
+      // 年が無いできごとは、その時代の先頭あたりに置く。
+      // 分からない年を適当な数字で埋めると、確定した年と見分けがつかなくなるため、
+      // 並べ替えのためだけの値をここで作り、データには書き戻さない。
+      function sortKey(item) {
+        if (typeof item.year === "number") return item.year;
+        const era = eraById.get(item.era);
+        return (era && typeof era.fromYear === "number") ? era.fromYear - 0.5 : -99999;
+      }
+      const ordered = EVENTS.slice().sort((a, b) => sortKey(a) - sortKey(b));
+
+      // 検索対象の文字列は1件につき1回だけ作る。入力のたびに組み立て直すと、
+      // 件数が増えたときに打鍵が重くなる。
+      const haystack = new Map(ordered.map((item) => [item.id, normalize([
+        item.name, item.summary, item.description, item.yearText,
+        (item.areas || []).map((id) => areaLabel.get(id)).join(" "),
+        (item.categories || []).map((id) => categoryLabel.get(id)).join(" ")
+      ].join(" "))]));
+
+      const query = document.getElementById("query");
+      const eraSelect = document.getElementById("era");
+      const areaSelect = document.getElementById("area");
+      const categorySelect = document.getElementById("category");
+      const certaintyBox = document.getElementById("certainty");
+      let certaintyFilter = "";
+
+      // 選択肢は、実際に使われているものだけを出す。
+      // 空振りする選択肢が並ぶと、絞り込みの手応えが鈍くなる。
+      const usedEras = new Set(ordered.map((x) => x.era));
+      const usedAreas = new Set(ordered.flatMap((x) => x.areas || []));
+      const usedCategories = new Set(ordered.flatMap((x) => x.categories || []));
+      eraSelect.innerHTML += eras.filter((x) => usedEras.has(x.id))
+        .map((x) => `<option value="${esc(x.id)}">${esc(x.label)}</option>`).join("");
+      areaSelect.innerHTML += areas.filter((x) => usedAreas.has(x.id))
+        .map((x) => `<option value="${esc(x.id)}">${esc(x.label)}</option>`).join("");
+      categorySelect.innerHTML += categories.filter((x) => usedCategories.has(x.id))
+        .map((x) => `<option value="${esc(x.id)}">${esc(x.label)}</option>`).join("");
+
+      function matches(item, ignore) {
+        if (ignore !== "era" && eraSelect.value && item.era !== eraSelect.value) return false;
+        if (ignore !== "area" && areaSelect.value && !(item.areas || []).includes(areaSelect.value)) return false;
+        if (ignore !== "category" && categorySelect.value && !(item.categories || []).includes(categorySelect.value)) return false;
+        if (ignore !== "certainty" && certaintyFilter && item.certainty !== certaintyFilter) return false;
+        const key = normalize(query.value);
+        if (key && !(haystack.get(item.id) || "").includes(key)) return false;
+        return true;
+      }
+
+      // チップの件数は、確からしさ以外の条件を適用した状態で数える。
+      // 自分自身で絞ったあとの数を出すと、どのチップも押した瞬間に
+      // 自分だけが残って見えてしまう。
+      function renderCertaintyChips() {
+        const base = ordered.filter((item) => matches(item, "certainty"));
+        const buttons = [{ id: "", label: "すべて" }].concat(certainties).map((option) => {
+          const count = option.id ? base.filter((x) => x.certainty === option.id).length : base.length;
+          const pressed = certaintyFilter === option.id;
+          const title = option.description ? ` title="${esc(option.description)}"` : "";
+          return `<button type="button" data-certainty="${esc(option.id)}" aria-pressed="${pressed}"${title}>${esc(option.label)}<span class="chips__count">${count}</span></button>`;
+        }).join("");
+        certaintyBox.innerHTML = buttons;
+      }
+
+      function renderSources(item) {
+        const entries = (item.sources || []).map((entry) => {
+          const source = sourceById.get(entry.ref);
+          if (!source) return "";
+          const name = source.url
+            ? `<a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.label)}</a>`
+            : `<span class="source-pill">${esc(source.label)}</span>`;
+          const locator = entry.locator ? ` <span class="locator">${esc(entry.locator)}</span>` : "";
+          return `${name}${locator}`;
+        }).filter(Boolean).join(" ／ ");
+        if (!entries) return "";
+        return `<div class="sources"><span class="label">出典</span><br />${entries}</div>`;
+      }
+
+      function renderVariants(item) {
+        const variants = item.variants || [];
+        if (!variants.length) return "";
+        const rows = variants.map((variant) => {
+          const source = sourceById.get(variant.ref);
+          const where = source ? `（${esc(source.label)}${variant.locator ? " " + esc(variant.locator) : ""}）` : "";
+          return `<li>${esc(variant.claim)}${where}</li>`;
+        }).join("");
+        return `<div class="related"><h4>資料によって異なる記述</h4><ul>${rows}</ul></div>`;
+      }
+
+      function renderRelated(item) {
+        const people = (item.relatedPeople || []).map((id) => personById.get(id)).filter(Boolean);
+        const events = (item.relatedEvents || []).map((id) => eventById.get(id)).filter(Boolean);
+        if (!people.length && !events.length) return "";
+
+        // 人物事典のページはまだ無いので、ここで開いて読めるようにする。
+        // 人物の情報そのものは data/rekishi-people.js の1か所にしかなく、
+        // ここでは参照しているだけ。
+        const peopleHtml = people.map((person) => `
+          <details class="person">
+            <summary>${esc(person.name)}${person.yearText ? `（${esc(person.yearText)}）` : ""}</summary>
+            <div class="person-body">
+              <p>${esc(person.summary)}</p>
+              ${person.shinagawaRelation ? `<p><span class="label">品川区との関係</span><br />${esc(person.shinagawaRelation)}</p>` : ""}
+            </div>
+          </details>`).join("");
+
+        const eventsHtml = events.length
+          ? `<h4>関連するできごと</h4><ul>${events.map((x) =>
+              `<li><a href="#${esc(x.id)}">${esc(x.name)}</a>${x.yearText ? `（${esc(x.yearText)}）` : ""}</li>`).join("")}</ul>`
+          : "";
+
+        return `<div class="related">${people.length ? "<h4>関連する人物</h4>" + peopleHtml : ""}${eventsHtml}</div>`;
+      }
+
+      function renderEvent(item) {
+        const certainty = certaintyById.get(item.certainty);
+        const areaTags = (item.areas || []).map((id) =>
+          `<span class="tag">${esc(areaLabel.get(id) || id)}</span>`).join("");
+        const categoryTags = (item.categories || []).map((id) =>
+          `<span class="tag">${esc(categoryLabel.get(id) || id)}</span>`).join("");
+        return `<article class="event" id="${esc(item.id)}">
+          <div class="event-head">
+            <span class="year">${esc(item.yearText || "年代不明")}</span>
+            ${areaTags}${categoryTags}
+            ${certainty ? `<span class="certainty" title="${esc(certainty.description || "")}">確からしさ：${esc(certainty.label)}</span>` : ""}
+          </div>
+          <h3>${esc(item.name)}</h3>
+          <p class="summary">${esc(item.summary)}</p>
+          ${item.description ? `<p class="description">${esc(item.description)}</p>` : ""}
+          ${renderVariants(item)}
+          ${renderRelated(item)}
+          ${renderSources(item)}
+        </article>`;
+      }
+
+      function render() {
+        renderCertaintyChips();
+        const filtered = ordered.filter((item) => matches(item));
+        document.getElementById("hit-count").textContent = `${filtered.length}件を表示`;
+
+        const groups = new Map();
+        filtered.forEach((item) => {
+          if (!groups.has(item.era)) groups.set(item.era, []);
+          groups.get(item.era).push(item);
+        });
+
+        const html = eras.filter((era) => groups.has(era.id)).map((era) => {
+          const group = groups.get(era.id);
+          const note = era.note ? `<span class="era-note">${esc(era.note)}</span>` : "";
+          return `<details class="era" open>
+            <summary>
+              <span class="era-title">${esc(era.label)}${note}</span>
+              <span class="count">${group.length}件</span>
+              <span class="toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="era-body">${group.map(renderEvent).join("")}</div>
+          </details>`;
+        }).join("");
+
+        document.getElementById("list").innerHTML = html ||
+          '<div class="empty">条件に一致するできごとはありません。条件をリセットしてお試しください。</div>';
+        openHash();
+      }
+
+      // 共有されたURL（#ev-…）で来たときは、その項目を含む時代を開いて表示する。
+      function openHash() {
+        if (!location.hash) return;
+        const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (!target) return;
+        const parent = target.closest("details");
+        if (parent) parent.open = true;
+        requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+      }
+
+      let timer;
+      query.addEventListener("input", () => {
+        clearTimeout(timer);
+        timer = setTimeout(render, 150);
+      });
+      [eraSelect, areaSelect, categorySelect].forEach((element) =>
+        element.addEventListener("change", render));
+      certaintyBox.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-certainty]");
+        if (!button) return;
+        certaintyFilter = button.getAttribute("data-certainty") || "";
+        render();
+      });
+      document.getElementById("filters").addEventListener("reset", () => {
+        certaintyFilter = "";
+        setTimeout(render, 0);
+      });
+      window.addEventListener("hashchange", openHash);
+
+      render();
+      document.getElementById("footer-root").textContent =
+        `品川区議会DB — ${META.disclaimer || ""}`;
+    }
+  </script>
+  <script src="site-nav.js"></script>
+  <script src="site-a11y.js"></script>
+</body>
+</html>
