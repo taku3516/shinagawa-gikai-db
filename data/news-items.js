@@ -1,7 +1,28 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-19T02:41:49.429369Z",
+  "generatedAt": "2026-11-19T11:57:25.941524Z",
   "items": [
+    {
+      "id": "efe27d75f3ee41715376",
+      "title": "【イベントレポート】 「縁線図鑑」開設２周年「１１月５日(木) いいご縁の日 縁線図鑑の奢りデー」 学芸大学駅、武蔵小山駅、三軒茶屋駅など東急線沿線の２６店舗で開催！ ～「縁線図鑑の奢りで」のひと声から生まれた、新たな“ご縁”～",
+      "summary": "",
+      "source": "東急からのお知らせ",
+      "sourceId": "tokyu-information",
+      "sourceType": "rss",
+      "url": "https://www.tokyu.co.jp/company/information/detail/62556.html",
+      "publishedAt": "2026-11-19T05:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T11:57:05.480008Z",
+      "tags": [
+        "交通",
+        "地域イベント"
+      ],
+      "locations": [
+        "小山",
+        "武蔵小山駅"
+      ],
+      "relevanceScore": 8
+    },
     {
       "id": "7f41174e82c26654c88e",
       "title": "「宿題やったの!?」はもう言わない！ 元小学校教員・二児の母アキ初の著書『小学生のためのはじめての家庭学習ガイド』発売",
@@ -32,6 +53,79 @@ window.SHINAGAWA_NEWS = {
       "collectedAt": "2026-11-19T02:41:33.223826Z",
       "tags": [
         "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "a170b630618b2bfd7d1e",
+      "title": "しながわクルーズ 12・1月「光の桜並木を水面から楽しむ 目黒川みんなのイルミネーション特別便」",
+      "summary": "品川区と（一社）天王洲・キャナルサイド活性化協会では、「しながわクルーズ」を年間を通じて運航しています。 12月から1月の週末は、「光の桜並木を水面から楽しむ 目黒川みんなのイルミネーション特別便」が運航されます。 「 目黒川みんなのイルミネーション 」のシーズンに桜色のイルミネーションに包まれた目黒川を船で観覧します。約41万球の桜色の光が目黒川沿い約2.2kmを彩り、街全体が美しいピンク色の光に包まれます。",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/shinagawacruise202611",
+      "publishedAt": "2026-11-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T11:57:05.480008Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "天王洲"
+      ],
+      "relevanceScore": 12
+    },
+    {
+      "id": "5a17a4ab6f50ef3bae25",
+      "title": "令和8年度第1回障害者差別解消支援地域協議会（令和8年9月4日開催）",
+      "summary": "当日の配付資料および議事要旨は、以下のとおりです。 ※参考資料2「障害者差別解消法ハンドブック改訂案」については、現在検討中の資料であり、 掲載内容等が今後変更となる可能性があるほか、使用素材の権利関係について調整中であるため、 ホームページへの掲載は行いません。",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002946/1011519.html",
+      "publishedAt": "2026-11-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T11:57:05.480008Z",
+      "tags": [
+        "福祉",
+        "地域イベント"
+      ],
+      "locations": [],
+      "relevanceScore": 0
+    },
+    {
+      "id": "3e5d529a655db5d13d43",
+      "title": "きゅりあん「ウェイウェイ・ウー来日35周年記念コンサート ウェイウェイズ シアター」",
+      "summary": "2026年12月12日（土）、きゅりあん8階大ホールにてウェイウェイ・ウー来日35周年記念コンサート「ウェイウェイズ シアター」 が開催されます。 品川文化振興事業団40周年記念ともなる当コンサートでは、現代二胡を切り拓いた第一人者”ウェイウェイ・ウー”が、映画・ミュージカル・ドラマの楽曲を奏でます。バックミュージシャンも一流の布陣で臨む珠玉のラインアップ。来日35周年を迎え、さらに円熟味を増した演奏の「JIN-仁-メインタイトル」や映画音楽（レ・ミゼラブルやオペラ座の怪人…",
+      "source": "しながわ観光協会",
+      "sourceId": "shinagawa-tourism",
+      "sourceType": "html",
+      "url": "https://shinagawa-kanko.or.jp/event/weiweitheatre",
+      "publishedAt": "2026-11-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T11:57:05.480008Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "きゅりあん"
+      ],
+      "relevanceScore": 4
+    },
+    {
+      "id": "9ccb01102549c05e674c",
+      "title": "学校と家庭・地域とのより良好な関係づくりに係るガイドライン(品川区版)",
+      "summary": "",
+      "source": "品川区 新着情報",
+      "sourceId": "shinagawa-city-new",
+      "sourceType": "html",
+      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1002177/kankei.html",
+      "publishedAt": "2026-11-19T00:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-17T16:18:53.602642Z",
+      "tags": [
+        "子育て教育"
       ],
       "locations": [],
       "relevanceScore": 10
@@ -651,23 +745,6 @@ window.SHINAGAWA_NEWS = {
       ],
       "locations": [],
       "relevanceScore": 0
-    },
-    {
-      "id": "9ccb01102549c05e674c",
-      "title": "学校と家庭・地域とのより良好な関係づくりに係るガイドライン(品川区版)",
-      "summary": "",
-      "source": "品川区 新着情報",
-      "sourceId": "shinagawa-city-new",
-      "sourceType": "html",
-      "url": "https://www.city.shinagawa.tokyo.jp/kodomo/gakkokyoiku/1002177/kankei.html",
-      "publishedAt": "2026-11-15T00:00:00Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-17T16:18:53.602642Z",
-      "tags": [
-        "子育て教育"
-      ],
-      "locations": [],
-      "relevanceScore": 10
     },
     {
       "id": "82a87bffb71bb6a7c875",
@@ -13802,7 +13879,7 @@ window.SHINAGAWA_NEWS = {
       "source": "品川経済新聞",
       "status": "ok",
       "scanned": 10,
-      "accepted": 7
+      "accepted": 6
     },
     {
       "source": "警視庁",
@@ -13825,7 +13902,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "status": "ok",
-      "scanned": 571,
+      "scanned": 584,
       "accepted": 0
     },
     {
@@ -13850,7 +13927,7 @@ window.SHINAGAWA_NEWS = {
       "source": "PR TIMES",
       "status": "ok",
       "scanned": 200,
-      "accepted": 2
+      "accepted": 0
     },
     {
       "source": "東急ニュースリリース",
@@ -13862,7 +13939,7 @@ window.SHINAGAWA_NEWS = {
       "source": "東急からのお知らせ",
       "status": "ok",
       "scanned": 10,
-      "accepted": 0
+      "accepted": 1
     },
     {
       "source": "東京都下水道局 報道発表",
