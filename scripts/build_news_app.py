@@ -7,17 +7,32 @@ iPhone・iPad で完了できないため（docs/firebase-sync-setup.md）。
 
 会議録全文をはじめとする残りのサイトは GitHub Pages に置いたままにする。
 Firebase Hosting の無料枠は転送量 360MB/日で、サイト全体を移すと届いてしまう。
-ここで配るのは記事とイベントのデータが大半で、1回の閲覧あたり
-ニュースで約0.65MB（うち data/news-items.js が0.6MB）、
-カレンダーで約0.4MB（うち data/events.js が0.34MB）。
-1日あたり数百回の閲覧までは無料枠に収まる計算になる。
 
-FILES に足すとこの数字がそのまま増える。足す前に、本当にこの配信元から
-配る必要があるかを確かめること。購読用の .ics を exports/ に置いて
+転送量は「圧縮後」で数えること。Firebase Hosting は text/javascript などを
+brotli（対応していない相手にはgzip）で配る。実測（2026-11-19、記事816件）:
+
+    data/news-items.js   ディスク 0.70MB → 配信 0.10MB
+    data/events.js       ディスク 0.33MB → 0.05MB
+    1回の閲覧あたり      ニュース 約0.13MB / カレンダー 約0.07MB
+
+ディスク上の大きさで数えると7倍ほど多く見積もってしまい、
+記事の保存件数を削るといった要らない判断につながる。本番のヘッダで
+content-encoding と content-length を見れば、いつでも確かめられる:
+
+    curl -sI -H 'Accept-Encoding: br' \
+      https://shinagawakugiakidb.firebaseapp.com/data/news-items.js
+
+0.13MB/閲覧なら無料枠で1日およそ2700閲覧。記事を上限の2500件まで
+ためても1日1000閲覧ほどは収まる。
+
+FILES に足すとこの数字が増える。足す前に、本当にこの配信元から
+配る必要があるかを確かめること。ビルド時に配信量を表示するので、
+増え方はそこで追える。購読用の .ics を exports/ に置いて
 GitHub Pages から配っているのは、Googleが定期的に取りに来るため。
 """
 
 from argparse import ArgumentParser
+import gzip
 import json
 import os
 from pathlib import Path
@@ -202,6 +217,41 @@ def build(output: Path, api_key: str) -> None:
     )
 
 
+def compressed_size(data: bytes) -> int:
+    """配信されるおおよその大きさ。
+
+    Firebase Hosting は brotli で配るが、標準ライブラリに brotli が無いので
+    gzip で測る。brotli はこれより2〜3割小さくなるため、多めの見積もりになる。
+    """
+    return len(gzip.compress(data, 9))
+
+
+def transfer_report(output: Path) -> list[tuple[str, int, int]]:
+    """ページごとの配信量（ページ本体＋読み込むファイル）を返す。"""
+    rows: list[tuple[str, int, int]] = []
+    for name in PAGES:
+        page = output / name
+        if not page.exists():
+            continue
+        paths = [page]
+        for relative in referenced_assets(page.read_text(encoding="utf-8")):
+            if relative.endswith(".html"):
+                continue
+            asset = output / relative
+            if asset.exists():
+                paths.append(asset)
+        payloads = [path.read_bytes() for path in paths]
+        rows.append((name, sum(len(p) for p in payloads), sum(compressed_size(p) for p in payloads)))
+    return rows
+
+
+def print_transfer_report(output: Path) -> None:
+    print("配信量（gzip換算の多め見積もり。実際のbrotliはこれより2〜3割小さい）:")
+    for name, raw, sent in transfer_report(output):
+        print(f"  {name}: ディスク {raw / 1048576:.2f}MB → 配信 {sent / 1048576:.2f}MB/閲覧"
+              f"（無料枠360MB/日で約{int(360 * 1048576 / sent):,}閲覧以上）")
+
+
 def main() -> int:
     parser = ArgumentParser()
     parser.add_argument("--output", type=Path, default=ROOT / "_news-app")
@@ -211,6 +261,7 @@ def main() -> int:
         parser.error("FIREBASE_API_KEYが設定されていません")
     build(args.output.resolve(), api_key)
     print(f"Firebase Hosting用ファイルを生成しました: {args.output}")
+    print_transfer_report(args.output.resolve())
     return 0
 
 

@@ -14,7 +14,9 @@ from build_news_app import (
     FILES,
     build,
     check_referenced_assets,
+    compressed_size,
     referenced_assets,
+    transfer_report,
 )
 
 
@@ -77,6 +79,43 @@ class BuildNewsAppTest(unittest.TestCase):
             page = (output / "news.html").read_text(encoding="utf-8")
             self.assertIn('href="site-theme.css"', page)
             self.assertIn("SHINAGAWA_SITE_BASE", page)
+
+
+class TransferReportTest(unittest.TestCase):
+    """配信量はディスク上の大きさではなく圧縮後で数える。
+
+    Firebase Hosting は brotli（またはgzip）で配る。ディスク上の大きさで
+    見積もると7倍ほど多く見え、記事の保存件数を削るといった要らない判断につながる。
+    """
+
+    def test_圧縮後の大きさで数える(self) -> None:
+        payload = ("window.X = " + "{\"title\":\"品川区のニュース\"}," * 500).encode("utf-8")
+        self.assertLess(compressed_size(payload), len(payload) / 4)
+
+    def test_ページごとに配信量を出す(self) -> None:
+        api_key = "AIza" + "A" * 35
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "news-app"
+            build(output, api_key)
+            rows = transfer_report(output)
+
+            names = [name for name, _, _ in rows]
+            self.assertIn("news.html", names)
+            for name, raw, sent in rows:
+                with self.subTest(page=name):
+                    self.assertGreater(sent, 0)
+                    self.assertLess(sent, raw)
+
+    def test_読み込むファイルを合算する(self) -> None:
+        api_key = "AIza" + "A" * 35
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "news-app"
+            build(output, api_key)
+            rows = dict((name, sent) for name, _, sent in transfer_report(output))
+
+            page_only = compressed_size((output / "news.html").read_bytes())
+            # ページ単体より大きいこと＝記事データなどを足して数えている。
+            self.assertGreater(rows["news.html"], page_only)
 
 
 if __name__ == "__main__":
