@@ -95,6 +95,47 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "relatedEvents": ["ev-1909-ito-death"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第19号「伊藤博文墓」" }],
       "verifiedAt": "2026-11-19"
+    },
+    {
+      "id": "pe-yuri-kimimasa",
+      "name": "由利公正",
+      "kana": "ゆりきみまさ",
+      "summary": "福井藩士から明治政府の参与となり、五箇条の誓文の原案を起草した。安政元年に品川台場の築造に従事している。",
+      "description": "文政12年に越前国福井藩士・三岡義和の子として生まれ、はじめ三岡八郎と称した。維新後に祖先の旧姓へ復して由利公正と名乗っている。弘化4年に横井小楠に学ぶなどして頭角をあらわし、藩札の発行と専売制を結びつけた殖産興業政策で幕末の福井藩財政を立て直した。嘉永6年に家督を継ぎ、翌安政元年には黒船来航により急務とされた品川台場の築造に従事した。藩内の兵制改革では橋本佐内とともに活躍している。明治元年に参与へ任じられ、五箇条の誓文の原案を起草するとともに、会計基立金の募集や太政官札の発行に関わり、新政府財政の基礎をつくった。明治4年に東京府知事となり、首都となった東京の整備に実績を上げ、のちに元老院議官、貴族院議員を務めた。",
+      "birthYear": 1829,
+      "deathYear": 1909,
+      "yearText": "文政12年（1829年）〜明治42年（1909年）4月28日",
+      "era": "meiji",
+      "areas": ["shinagawa"],
+      "shinagawaRelation": "安政元年に品川台場の築造に従事した。墓は南品川の海晏寺後丘にあり、区の指定史跡となっている。",
+      "certainty": "fact",
+      "relatedEvents": ["ev-1854-daiba", "ev-1909-yuri-death"],
+      "variants": [
+        {
+          "claim": "墓碑銘の翻刻は没年を「明治十二年」、生年を「文政十五年」と記しており、解説本文と合わない。",
+          "ref": "sgw-bunkazai",
+          "locator": "品川地区の指定文化財 史跡第10号「由利公正墓」の銘文"
+        }
+      ],
+      "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第10号「由利公正墓」" }],
+      "verifiedAt": "2026-11-19"
+    },
+    {
+      "id": "pe-momochuken-kumoemon",
+      "name": "桃中軒雲右衛門",
+      "kana": "とうちゅうけんくもえもん",
+      "summary": "明治・大正期の浪花節の名手で、浪花節中興の祖といわれる。墓は南品川の天妙国寺にある。",
+      "description": "得意の演題は赤穂浪士の事跡を語る「義士銘々伝」。寄席から劇場へ進出するなどして浪曲界の黄金時代を築き、浪曲史に大きな足跡を残した。",
+      "birthYear": 1873,
+      "deathYear": 1916,
+      "yearText": "1873年〜1916年",
+      "era": "meiji",
+      "areas": ["shinagawa"],
+      "shinagawaRelation": "墓が南品川の天妙国寺にあり、平成19年に区の指定史跡となった。",
+      "certainty": "fact",
+      "relatedEvents": ["ev-2007-momochuken-designation"],
+      "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第24号「桃中軒雲右衛門の墓」" }],
+      "verifiedAt": "2026-11-19"
     }
   ]
 };

@@ -178,6 +178,55 @@ class CheckerTest(unittest.TestCase):
         self.assertTrue(any("variants[0] に ref" in p for p in problems), problems)
 
 
+class PlacesTest(unittest.TestCase):
+    """地点に固有の決まりを確かめる。"""
+
+    META = dict(MINIMAL_META, files={"places": "data/rekishi-places.js"})
+    PLACE = {
+        "id": "pl-sample",
+        "name": "見本の地点",
+        "summary": "見本です。",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "lat": 35.62,
+        "lng": 139.74,
+        "locationKind": "current",
+        "certainty": "fact",
+        "sources": [{"ref": "src-a"}],
+        "verifiedAt": "2026-11-19",
+    }
+
+    def run_with(self, place: dict) -> list:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = root / "data"
+            data.mkdir(parents=True)
+            (data / "rekishi.js").write_text(
+                "window.SHINAGAWA_DB.rekishi = "
+                + json.dumps(self.META, ensure_ascii=False)
+                + ";\n",
+                encoding="utf-8",
+            )
+            (data / "rekishi-places.js").write_text(
+                "window.SHINAGAWA_DB.rekishiPlaces = "
+                + json.dumps({"items": [place]}, ensure_ascii=False)
+                + ";\n",
+                encoding="utf-8",
+            )
+            return Checker(root).check()
+
+    def test_place_without_era_passes(self) -> None:
+        # 神社や寺は1つの時代に収まらないので、時代は空のままでよい。
+        self.assertEqual(self.run_with(self.PLACE), [])
+
+    def test_place_without_coordinates_is_reported(self) -> None:
+        place = dict(self.PLACE)
+        place.pop("lat")
+        place.pop("lng")
+        problems = self.run_with(place)
+        self.assertTrue(any("lat と lng が必要" in p for p in problems), problems)
+
+
 class RepositoryDataTest(unittest.TestCase):
     def test_actual_data_passes(self) -> None:
         self.assertEqual(Checker().check(), [])

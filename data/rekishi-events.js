@@ -408,6 +408,64 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "relatedPeople": ["pe-yamauchi-toyoshige"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第11号「山内豊信（容堂）墓」" }],
       "verifiedAt": "2026-11-19"
+    },
+    {
+      "id": "ev-1854-daiba",
+      "name": "品川台場の築造に由利公正が従事する",
+      "summary": "安政元年、黒船来航により急務とされた品川台場の築造に、福井藩士の三岡八郎（のちの由利公正）が従事した。",
+      "description": "三岡八郎は前年の嘉永6年に家督を継いでおり、藩内の兵制改革にも橋本佐内とともに取り組んだ。維新後に祖先の旧姓へ復し、由利公正と名乗った。",
+      "year": 1854,
+      "yearEnd": null,
+      "yearText": "安政元年（1854年）",
+      "era": "kinsei",
+      "areas": ["shinagawa"],
+      "categories": ["war", "admin"],
+      "certainty": "fact",
+      "relatedEvents": [],
+      "relatedPeople": ["pe-yuri-kimimasa"],
+      "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第10号「由利公正墓」" }],
+      "verifiedAt": "2026-11-19"
+    },
+    {
+      "id": "ev-1909-yuri-death",
+      "name": "由利公正が没し、海晏寺の後丘に葬られる",
+      "summary": "明治42年4月28日、81歳で由利公正が没した。墓は南品川の海晏寺後丘にあり、区の指定史跡となっている。",
+      "description": "墓碑は石造の隅丸角型で、高さ約95.0センチメートル、幅約96.0センチメートル、奥行き約48.0センチメートル。台石は幅約213.0センチメートルと大きく、どっしりとした造りである。",
+      "year": 1909,
+      "yearEnd": null,
+      "yearText": "明治42年（1909年）4月28日",
+      "era": "meiji",
+      "areas": ["shinagawa"],
+      "categories": ["admin"],
+      "certainty": "fact",
+      "relatedEvents": ["ev-1854-daiba", "ev-1890-shungaku-death"],
+      "relatedPeople": ["pe-yuri-kimimasa"],
+      "variants": [
+        {
+          "claim": "墓碑銘の翻刻は「明治十二年四月廿八日没」と記しており、解説本文の明治42年と合わない。生年の翻刻も「文政十五年」とあるが、文政は13年までで15年は存在しない。",
+          "ref": "sgw-bunkazai",
+          "locator": "品川地区の指定文化財 史跡第10号「由利公正墓」の銘文"
+        }
+      ],
+      "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第10号「由利公正墓」" }],
+      "verifiedAt": "2026-11-19"
+    },
+    {
+      "id": "ev-2007-momochuken-designation",
+      "name": "桃中軒雲右衛門の墓が区指定史跡となる",
+      "summary": "平成19年12月25日、天妙国寺にある浪曲師・桃中軒雲右衛門の墓が品川区の指定史跡（史跡第24号）となった。",
+      "description": "墓は南品川の天妙国寺にあり、見学できる。",
+      "year": 2007,
+      "yearEnd": null,
+      "yearText": "平成19年（2007年）12月25日",
+      "era": "heisei-reiwa",
+      "areas": ["shinagawa"],
+      "categories": ["culture"],
+      "certainty": "fact",
+      "relatedEvents": [],
+      "relatedPeople": ["pe-momochuken-kumoemon"],
+      "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第24号「桃中軒雲右衛門の墓」" }],
+      "verifiedAt": "2026-11-19"
     }
   ]
 };

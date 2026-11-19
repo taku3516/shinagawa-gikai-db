@@ -217,7 +217,10 @@ class Checker:
         era = item.get("era")
         if era and era not in eras:
             self.fail(where, f"era の {era} は data/rekishi.js にありません")
-        if key in {"events", "places"} and not era:
+        # 時代はできごとにだけ必ず持たせる。神社や寺のように、ある時代に
+        # 収まらず現在まで続いている地点は era を空のままにできる。
+        # 無理に1つの時代を割り当てると、年表と地図で同じものが別の時代に見える。
+        if key == "events" and not era:
             self.fail(where, "era がありません")
 
         for area in item.get("areas") or []:

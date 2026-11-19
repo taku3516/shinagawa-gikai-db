@@ -33,6 +33,7 @@
     .card--soon { border-left-color:var(--c-border-strong); background:var(--c-surface-sub); }
     .card h3 { margin:0 0 8px; font-size:calc(17px * var(--fs)); line-height:1.5; }
     .card p { margin:0; color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); line-height:1.8; }
+    .card .ready { margin-top:8px; color:var(--c-main-dark); font-size:calc(13px * var(--fs)); font-weight:700; }
     .card .soon { display:inline-block; margin-bottom:8px; border:1px dashed var(--c-border-strong); border-radius:999px; padding:2px 10px; color:var(--c-ink-soft); font-size:calc(11px * var(--fs)); font-weight:700; }
 
     .recent { display:grid; gap:10px; }
@@ -95,6 +96,7 @@
   <script src="data/rekishi.js"></script>
   <script src="data/rekishi-events.js"></script>
   <script src="data/rekishi-people.js"></script>
+  <script src="data/rekishi-places.js"></script>
   <script>
     "use strict";
 
@@ -102,6 +104,7 @@
     const META = DB.rekishi || null;
     const EVENTS = (DB.rekishiEvents && DB.rekishiEvents.items) || [];
     const PEOPLE = (DB.rekishiPeople && DB.rekishiPeople.items) || [];
+    const PLACES = (DB.rekishiPlaces && DB.rekishiPlaces.items) || [];
 
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => (
       { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
@@ -111,7 +114,7 @@
     // リンクに見せないことで、押しても何も起きないという事故を防ぐ。
     const FEATURES = [
       { url: "rekishi-nenpyo.html", title: "歴史年表", text: "原始から現代までのできごとを年代順に並べ、時代・地域・カテゴリー・キーワードで絞り込めます。" },
-      { url: "", title: "歴史マップ", text: "史跡、神社仏閣、旧街道、坂や川、産業遺産などを地図から探せるようにします。現在は無い施設は、当時の位置であることを明示します。" },
+      { url: "", title: "歴史マップ", text: "史跡、神社仏閣、旧街道、坂や川、産業遺産などを地図から探せるようにします。現在は無い施設は、当時の位置であることを明示します。", ready: () => PLACES.length && `地点${PLACES.length}件を収録済みです。地図の画面を作っています。` },
       { url: "", title: "地域別の歴史", text: "品川・大崎・大井・荏原・八潮の5地区と、旧町村・旧町名の単位で歴史をまとめます。" },
       { url: "", title: "歴史人物事典", text: "品川区にゆかりのある人物の略歴と、区内のどこと結びつくのかを整理します。" },
       { url: "", title: "地名の由来事典", text: "現在の町名のほか、旧町名・旧村名・坂・川・橋の由来を集めます。説が分かれるものは説ごとに示します。" },
@@ -125,11 +128,12 @@
     }
 
     function renderStats() {
-      const eras = new Set(EVENTS.map((x) => x.era).filter(Boolean));
+      const heritage = PLACES.reduce((total, place) => total + ((place.heritage || []).length), 0);
       document.getElementById("stats").innerHTML = [
         { value: EVENTS.length, label: "できごと" },
+        { value: PLACES.length, label: "地点" },
+        { value: heritage, label: "指定文化財" },
         { value: PEOPLE.length, label: "人物" },
-        { value: eras.size, label: "時代区分" },
         { value: (META.sources || []).length, label: "出典資料" }
       ].map((x) => `<div class="stat"><strong>${x.value}</strong><span>${esc(x.label)}</span></div>`).join("");
     }
@@ -137,10 +141,14 @@
     function renderCards() {
       document.getElementById("cards").innerHTML = FEATURES.map((item) => {
         if (!item.url) {
+          // データだけ先にそろっている機能は、その旨を添える。
+          // 「準備中」とだけ書かれていると、何も無いように見えるため。
+          const ready = typeof item.ready === "function" ? item.ready() : "";
           return `<article class="card card--soon">
             <span class="soon">準備中</span>
             <h3>${esc(item.title)}</h3>
             <p>${esc(item.text)}</p>
+            ${ready ? `<p class="ready">${esc(ready)}</p>` : ""}
           </article>`;
         }
         return `<article class="card">
