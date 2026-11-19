@@ -1,7 +1,41 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-18T12:00:19.251084Z",
+  "generatedAt": "2026-11-19T02:41:49.429369Z",
   "items": [
+    {
+      "id": "7f41174e82c26654c88e",
+      "title": "「宿題やったの!?」はもう言わない！ 元小学校教員・二児の母アキ初の著書『小学生のためのはじめての家庭学習ガイド』発売",
+      "summary": "[株式会社 学研ホールディングス] 株式会社 学研ホールディングス（東京都品川区／代表取締役社長：宮原博昭）のグループ会社、株式会社 Gakken（東京都品川区／代表取締役社長：南條達也）は、2026年11月19日（木）に『小学生のためのはじめての...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000009588.000002535.html",
+      "publishedAt": "2026-11-19T01:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T02:41:33.223826Z",
+      "tags": [
+        "子育て教育"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
+    {
+      "id": "33969ee6d9336e84ee6f",
+      "title": "センシンロボティクス、『SENSYN CORE Datastore』にサーマル画像の温度分布確認・評価機能を追加",
+      "summary": "[株式会社センシンロボティクス] 社会インフラDXのリーディングカンパニーである株式会社センシンロボティクス（本社：東京都品川区、代表取締役社長 CEO：北村 卓也 、以下「センシンロボティクス」）は、ソリューション開発プラットフォーム『S...",
+      "source": "PR TIMES",
+      "sourceId": "pr-times",
+      "sourceType": "rss",
+      "url": "https://prtimes.jp/main/html/rd/p/000000160.000028447.html",
+      "publishedAt": "2026-11-19T01:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T02:41:33.223826Z",
+      "tags": [
+        "都市開発"
+      ],
+      "locations": [],
+      "relevanceScore": 10
+    },
     {
       "id": "ab6d2afd87a624b369d3",
       "title": "【事後レポート】製造業243社へのアンケート調査の公開と、明らかになった課題を解決する新サービス「スマートSDSコネクト」発表会",
@@ -13790,9 +13824,9 @@ window.SHINAGAWA_NEWS = {
     },
     {
       "source": "日テレNEWS NNN",
-      "status": "error",
-      "accepted": 0,
-      "message": "not well-formed (invalid token): line 2895, column 18"
+      "status": "ok",
+      "scanned": 571,
+      "accepted": 0
     },
     {
       "source": "朝日新聞",
@@ -13839,7 +13873,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "status": "ok",
-      "scanned": 41,
+      "scanned": 42,
       "accepted": 0
     },
     {
