@@ -1,42 +1,263 @@
 {
-  "baseTerms": ["品川区", "品川区役所"],
+  "baseTerms": [
+    "品川区",
+    "品川区役所"
+  ],
   "areas": [
-    "東五反田", "上大崎", "北品川", "東品川", "南品川", "西品川", "広町", "大崎", "西五反田",
-    "豊町", "二葉", "中延", "東中延", "西中延", "旗の台", "荏原", "小山", "小山台", "平塚",
-    "大井", "東大井", "南大井", "西大井", "勝島", "八潮", "東八潮", "戸越", "東中延", "西中延"
+    "東五反田",
+    "上大崎",
+    "北品川",
+    "東品川",
+    "南品川",
+    "西品川",
+    "西五反田",
+    "東中延",
+    "西中延",
+    "旗の台",
+    "荏原",
+    "小山台",
+    "東大井",
+    "南大井",
+    "西大井",
+    "勝島",
+    "八潮",
+    "東八潮",
+    "戸越",
+    "武蔵小山",
+    "天王洲"
   ],
   "stations": [
-    "目黒駅", "五反田駅", "大崎駅", "西大井駅", "不動前駅", "武蔵小山駅", "西小山駅", "大崎広小路駅",
-    "戸越銀座駅", "荏原中延駅", "旗の台駅", "大井町駅", "下神明駅", "戸越公園駅", "中延駅", "荏原町駅",
-    "北品川駅", "新馬場駅", "青物横丁駅", "鮫洲駅", "立会川駅", "大森海岸駅", "戸越駅",
-    "天王洲アイル駅", "品川シーサイド駅", "大井競馬場前駅"
+    "目黒駅",
+    "五反田駅",
+    "大崎駅",
+    "西大井駅",
+    "不動前駅",
+    "武蔵小山駅",
+    "西小山駅",
+    "大崎広小路駅",
+    "戸越銀座駅",
+    "荏原中延駅",
+    "旗の台駅",
+    "大井町駅",
+    "下神明駅",
+    "戸越公園駅",
+    "中延駅",
+    "荏原町駅",
+    "北品川駅",
+    "新馬場駅",
+    "青物横丁駅",
+    "鮫洲駅",
+    "立会川駅",
+    "大森海岸駅",
+    "戸越駅",
+    "天王洲アイル駅",
+    "品川シーサイド駅",
+    "大井競馬場前駅"
   ],
   "landmarks": [
-    "天王洲アイル", "大井競馬場", "しながわ水族館", "戸越銀座商店街", "武蔵小山商店街",
-    "パルム商店街", "品川区役所", "品川区議会", "大井ふ頭中央海浜公園", "しながわ中央公園",
-    "戸越公園", "林試の森公園", "品川歴史館", "きゅりあん", "スクエア荏原", "エコルとごし",
-    "品川シーサイド", "天王洲", "大崎ニューシティ", "ゲートシティ大崎"
+    "天王洲アイル",
+    "大井競馬場",
+    "しながわ水族館",
+    "戸越銀座商店街",
+    "武蔵小山商店街",
+    "パルム商店街",
+    "品川区役所",
+    "品川区議会",
+    "大井ふ頭中央海浜公園",
+    "しながわ中央公園",
+    "戸越公園",
+    "林試の森公園",
+    "品川歴史館",
+    "きゅりあん",
+    "スクエア荏原",
+    "エコルとごし",
+    "品川シーサイド",
+    "天王洲",
+    "大崎ニューシティ",
+    "ゲートシティ大崎"
   ],
   "relatedTerms": [
-    "再開発", "事故", "火災", "事件", "選挙", "区議会", "都議会", "予算", "保育園", "学校",
-    "高齢者", "災害", "マンション", "工事", "開店", "閉店", "行政", "補助金", "条例", "陳情",
-    "請願", "公共施設", "子ども", "防災", "防犯", "避難所", "給付", "物価高", "インフラ", "道路",
-    "公園", "医療", "介護", "福祉", "不登校", "待機児童", "観光", "地域イベント", "運休", "通行止め",
-    "募集", "講座", "祭り", "まちづくり", "都市計画", "浸水", "停電", "断水"
+    "再開発",
+    "事故",
+    "火災",
+    "事件",
+    "選挙",
+    "区議会",
+    "都議会",
+    "予算",
+    "保育園",
+    "学校",
+    "高齢者",
+    "災害",
+    "マンション",
+    "工事",
+    "開店",
+    "閉店",
+    "行政",
+    "補助金",
+    "条例",
+    "陳情",
+    "請願",
+    "公共施設",
+    "子ども",
+    "防災",
+    "防犯",
+    "避難所",
+    "給付",
+    "物価高",
+    "インフラ",
+    "道路",
+    "公園",
+    "医療",
+    "介護",
+    "福祉",
+    "不登校",
+    "待機児童",
+    "観光",
+    "地域イベント",
+    "運休",
+    "通行止め",
+    "募集",
+    "講座",
+    "祭り",
+    "まちづくり",
+    "都市計画",
+    "浸水",
+    "停電",
+    "断水"
   ],
   "tagRules": {
-    "事件事故": ["事故", "火災", "事件", "逮捕", "死亡", "負傷", "災害", "避難", "救急"],
-    "行政": ["品川区役所", "行政", "条例", "発表", "手続き", "補助金", "区長", "区政"],
-    "子育て教育": ["保育園", "幼稚園", "学校", "児童", "教育", "待機児童", "子ども", "子育て"],
-    "福祉": ["高齢者", "障害", "介護", "福祉", "医療", "支援", "生活困窮"],
-    "都市開発": ["再開発", "マンション", "工事", "建設", "都市計画", "インフラ", "まちづくり"],
-    "交通": ["駅", "路線", "バス", "道路", "渋滞", "運休", "通行止め", "鉄道"],
-    "選挙政治": ["選挙", "区議会", "都議会", "議員", "予算", "請願", "陳情", "議案"],
-    "地域イベント": ["祭り", "イベント", "商店街", "開催", "催し", "講座", "展示"],
-    "経済": ["企業", "雇用", "景気", "物価", "助成", "事業者", "商業"],
-    "店舗開店閉店": ["開店", "閉店", "オープン", "新店舗", "撤退", "リニューアル"]
+    "事件事故": [
+      "事故",
+      "火災",
+      "事件",
+      "逮捕",
+      "死亡",
+      "負傷",
+      "災害",
+      "避難",
+      "救急"
+    ],
+    "行政": [
+      "品川区役所",
+      "行政",
+      "条例",
+      "発表",
+      "手続き",
+      "補助金",
+      "区長",
+      "区政"
+    ],
+    "子育て教育": [
+      "保育園",
+      "幼稚園",
+      "学校",
+      "児童",
+      "教育",
+      "待機児童",
+      "子ども",
+      "子育て"
+    ],
+    "福祉": [
+      "高齢者",
+      "障害",
+      "介護",
+      "福祉",
+      "医療",
+      "支援",
+      "生活困窮"
+    ],
+    "都市開発": [
+      "再開発",
+      "マンション",
+      "工事",
+      "建設",
+      "都市計画",
+      "インフラ",
+      "まちづくり"
+    ],
+    "交通": [
+      "駅",
+      "路線",
+      "バス",
+      "道路",
+      "渋滞",
+      "運休",
+      "通行止め",
+      "鉄道"
+    ],
+    "選挙政治": [
+      "選挙",
+      "区議会",
+      "都議会",
+      "議員",
+      "予算",
+      "請願",
+      "陳情",
+      "議案"
+    ],
+    "地域イベント": [
+      "祭り",
+      "イベント",
+      "商店街",
+      "開催",
+      "催し",
+      "講座",
+      "展示"
+    ],
+    "経済": [
+      "企業",
+      "雇用",
+      "景気",
+      "物価",
+      "助成",
+      "事業者",
+      "商業"
+    ],
+    "店舗開店閉店": [
+      "開店",
+      "閉店",
+      "オープン",
+      "新店舗",
+      "撤退",
+      "リニューアル"
+    ],
+    "環境": [
+      "環境",
+      "ごみ",
+      "リサイクル",
+      "脱炭素",
+      "緑化",
+      "省エネ",
+      "清掃",
+      "廃棄物",
+      "温暖化"
+    ],
+    "文化歴史": [
+      "文化",
+      "歴史",
+      "文化財",
+      "美術",
+      "博物館",
+      "図書館",
+      "伝統",
+      "史跡",
+      "郷土"
+    ]
   },
   "rssFeeds": [
+    {
+      "id": "shinagawa-city-new",
+      "name": "品川区 新着情報",
+      "url": "https://www.city.shinagawa.tokyo.jp/news.rss",
+      "enabled": true,
+      "trustedLocal": true,
+      "priority": 100,
+      "maxItems": 80,
+      "fetchDetails": true,
+      "detailMaxItems": 12,
+      "note": "区が公式に案内しているRSS。本文要約は記事ページから補う"
+    },
     {
       "id": "shinagawa-council",
       "name": "品川区議会",
@@ -44,7 +265,8 @@
       "scope": "local",
       "minScore": 0,
       "trustedLocal": true,
-      "enabled": true
+      "enabled": true,
+      "priority": 100
     },
     {
       "id": "shinagawa-keizai",
@@ -52,7 +274,8 @@
       "url": "https://shinagawa.keizai.biz/rss.xml",
       "scope": "regional",
       "minScore": 4,
-      "enabled": true
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "keishicho",
@@ -60,8 +283,14 @@
       "url": "https://www.keishicho.metro.tokyo.lg.jp/rss_news.xml",
       "scope": "tokyo",
       "minScore": 8,
-      "extraTerms": ["品川警察署", "大井警察署", "大崎警察署", "荏原警察署"],
-      "enabled": true
+      "extraTerms": [
+        "品川警察署",
+        "大井警察署",
+        "大崎警察署",
+        "荏原警察署"
+      ],
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "tokyo-fire",
@@ -69,8 +298,13 @@
       "url": "https://www.tfd.metro.tokyo.lg.jp/inf/rss/tfd.xml",
       "scope": "tokyo",
       "minScore": 8,
-      "extraTerms": ["品川消防署", "大井消防署", "荏原消防署"],
-      "enabled": true
+      "extraTerms": [
+        "品川消防署",
+        "大井消防署",
+        "荏原消防署"
+      ],
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "nhk",
@@ -78,7 +312,8 @@
       "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
       "scope": "national",
       "minScore": 10,
-      "enabled": true
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "ntv-news",
@@ -86,7 +321,8 @@
       "url": "https://news.ntv.co.jp/rss/index.rdf",
       "scope": "national",
       "minScore": 8,
-      "enabled": true
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "asahi-news",
@@ -94,7 +330,8 @@
       "url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf",
       "scope": "national",
       "minScore": 8,
-      "enabled": true
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "fnn-news",
@@ -102,7 +339,8 @@
       "url": "https://www.fnn.jp/list/feed/rss?station=FNN",
       "scope": "national",
       "minScore": 8,
-      "enabled": true
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "jiji-ranking",
@@ -110,7 +348,8 @@
       "url": "https://www.jiji.com/rss/ranking.rdf",
       "scope": "national",
       "minScore": 8,
-      "enabled": true
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "pr-times",
@@ -118,7 +357,8 @@
       "url": "https://prtimes.jp/index.rdf",
       "scope": "national",
       "minScore": 10,
-      "enabled": true
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "tokyu-news",
@@ -126,7 +366,8 @@
       "url": "https://www.tokyu.co.jp/rss_news.xml",
       "scope": "regional",
       "minScore": 8,
-      "enabled": true
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "tokyu-information",
@@ -134,7 +375,8 @@
       "url": "https://www.tokyu.co.jp/rss_infomation.xml",
       "scope": "regional",
       "minScore": 8,
-      "enabled": true
+      "enabled": true,
+      "priority": 50
     },
     {
       "id": "gesui-press",
@@ -142,7 +384,9 @@
       "url": "https://www.gesui.metro.tokyo.lg.jp/index.html/-/asset_publisher/iiqu/rss",
       "scope": "tokyo",
       "minScore": 8,
-      "enabled": true
+      "enabled": true,
+      "priority": 50,
+      "note": "局独自のRSS案内（gesui.metro.tokyo.lg.jp/policy/rss）に再配布・申請の条項が無いため有効。都庁総合の申請条項は同サイトのRSSに向けたもので、ここには及ばない"
     },
     {
       "id": "gesui-topics",
@@ -150,7 +394,9 @@
       "url": "https://www.gesui.metro.tokyo.lg.jp/index.html/-/asset_publisher/amez/rss",
       "scope": "tokyo",
       "minScore": 8,
-      "enabled": true
+      "enabled": true,
+      "priority": 50,
+      "note": "局独自のRSS案内（gesui.metro.tokyo.lg.jp/policy/rss）に再配布・申請の条項が無いため有効。都庁総合の申請条項は同サイトのRSSに向けたもので、ここには及ばない"
     },
     {
       "id": "gesui-events",
@@ -158,7 +404,9 @@
       "url": "https://www.gesui.metro.tokyo.lg.jp/index.html/-/asset_publisher/uuse/rss",
       "scope": "tokyo",
       "minScore": 8,
-      "enabled": true
+      "enabled": true,
+      "priority": 50,
+      "note": "局独自のRSS案内（gesui.metro.tokyo.lg.jp/policy/rss）に再配布・申請の条項が無いため有効。都庁総合の申請条項は同サイトのRSSに向けたもので、ここには及ばない"
     },
     {
       "id": "tokyo-metropolitan",
@@ -168,24 +416,130 @@
       "minScore": 8,
       "requiresApproval": true,
       "enabled": false,
-      "note": "再配信を伴う利用は東京都への事前申請が必要なため、承認取得後に有効化する"
+      "note": "都庁総合ホームページのRSS。利用条件（metro.tokyo.lg.jp/policy/rss）が「RSSを利用したサイトの構築は必ず事前に申請」と定めているため無効。承認取得後に有効化する",
+      "priority": 50
+    },
+    {
+      "id": "shinagawa-goguynet",
+      "name": "号外NET 品川区",
+      "url": "https://shinagawa.goguynet.jp/feed/",
+      "enabled": true,
+      "minScore": 0,
+      "trustedLocal": true,
+      "priority": 60,
+      "maxItems": 30,
+      "note": "品川区専用の地域ニュース。サイトのフィード自動検出で確認した公式RSS"
+    },
+    {
+      "id": "toshiseibi-press",
+      "name": "東京都都市整備局 報道発表",
+      "url": "https://www.toshiseibi.metro.tokyo.lg.jp/index.html/-/asset_publisher/hyrh/rss",
+      "enabled": false,
+      "minScore": 8,
+      "priority": 50,
+      "requiresApproval": true,
+      "note": "局独自のRSS案内ページが無く（/policy/rss は404）、どの利用条件が及ぶか確認できないため無効。2026-11-19時点では品川区関連の記事も0件で、有効化の実益が無い。都に適用範囲を確認できたら有効化する"
+    },
+    {
+      "id": "toshiseibi-topics",
+      "name": "東京都都市整備局 お知らせ",
+      "url": "https://www.toshiseibi.metro.tokyo.lg.jp/index.html/-/asset_publisher/bbol/rss",
+      "enabled": false,
+      "minScore": 8,
+      "priority": 50,
+      "requiresApproval": true,
+      "note": "局独自のRSS案内ページが無く（/policy/rss は404）、どの利用条件が及ぶか確認できないため無効。2026-11-19時点では品川区関連の記事も0件で、有効化の実益が無い。都に適用範囲を確認できたら有効化する"
+    },
+    {
+      "id": "google-shinagawa",
+      "name": "Googleニュース（品川区）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA&hl=ja&gl=JP&ceid=JP:ja",
+      "enabled": true,
+      "minScore": 8,
+      "priority": 10,
+      "format": "googleNews",
+      "maxItems": 40,
+      "note": "Googleニュース検索「品川区」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-kusei",
+      "name": "Googleニュース（議会・区政・区長）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E8%AD%B0%E4%BC%9A%20OR%20%E5%8C%BA%E6%94%BF%20OR%20%E5%8C%BA%E9%95%B7&hl=ja&gl=JP&ceid=JP:ja",
+      "enabled": true,
+      "minScore": 8,
+      "priority": 10,
+      "format": "googleNews",
+      "maxItems": 40,
+      "note": "Googleニュース検索「品川区 議会 OR 区政 OR 区長」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-machi",
+      "name": "Googleニュース（再開発・都市計画・道路）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E5%86%8D%E9%96%8B%E7%99%BA%20OR%20%E9%83%BD%E5%B8%82%E8%A8%88%E7%94%BB%20OR%20%E9%81%93%E8%B7%AF%E6%95%B4%E5%82%99&hl=ja&gl=JP&ceid=JP:ja",
+      "enabled": true,
+      "minScore": 8,
+      "priority": 10,
+      "format": "googleNews",
+      "maxItems": 40,
+      "note": "Googleニュース検索「品川区 再開発 OR 都市計画 OR 道路整備」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-kurashi",
+      "name": "Googleニュース（福祉・保育・学校・教育）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E7%A6%8F%E7%A5%89%20OR%20%E4%BF%9D%E8%82%B2%20OR%20%E5%AD%A6%E6%A0%A1%20OR%20%E6%95%99%E8%82%B2&hl=ja&gl=JP&ceid=JP:ja",
+      "enabled": true,
+      "minScore": 8,
+      "priority": 10,
+      "format": "googleNews",
+      "maxItems": 40,
+      "note": "Googleニュース検索「品川区 福祉 OR 保育 OR 学校 OR 教育」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-bosai",
+      "name": "Googleニュース（防災・浸水・交通・事故）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E9%98%B2%E7%81%BD%20OR%20%E6%B5%B8%E6%B0%B4%20OR%20%E4%BA%A4%E9%80%9A%20OR%20%E4%BA%8B%E6%95%85&hl=ja&gl=JP&ceid=JP:ja",
+      "enabled": true,
+      "minScore": 8,
+      "priority": 10,
+      "format": "googleNews",
+      "maxItems": 40,
+      "note": "Googleニュース検索「品川区 防災 OR 浸水 OR 交通 OR 事故」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-chiiki",
+      "name": "Googleニュース（商店街・祭り・イベント）",
+      "url": "https://news.google.com/rss/search?q=%E5%93%81%E5%B7%9D%E5%8C%BA%20%E5%95%86%E5%BA%97%E8%A1%97%20OR%20%E7%A5%AD%E3%82%8A%20OR%20%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88&hl=ja&gl=JP&ceid=JP:ja",
+      "enabled": true,
+      "minScore": 8,
+      "priority": 10,
+      "format": "googleNews",
+      "maxItems": 40,
+      "note": "Googleニュース検索「品川区 商店街 OR 祭り OR イベント」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-area-oi",
+      "name": "Googleニュース（西大井・大井町・二葉・豊町）",
+      "url": "https://news.google.com/rss/search?q=%E8%A5%BF%E5%A4%A7%E4%BA%95%20OR%20%E5%A4%A7%E4%BA%95%E7%94%BA%20OR%20%E4%BA%8C%E8%91%89%20OR%20%E8%B1%8A%E7%94%BA&hl=ja&gl=JP&ceid=JP:ja",
+      "enabled": true,
+      "minScore": 8,
+      "priority": 10,
+      "format": "googleNews",
+      "maxItems": 40,
+      "note": "Googleニュース検索「西大井 OR 大井町 OR 二葉 OR 豊町」。元記事へはGoogleの転送URL経由で開く"
+    },
+    {
+      "id": "google-area-togoshi",
+      "name": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "url": "https://news.google.com/rss/search?q=%E6%88%B8%E8%B6%8A%20OR%20%E4%B8%AD%E5%BB%B6%20OR%20%E6%97%97%E3%81%AE%E5%8F%B0%20OR%20%E6%AD%A6%E8%94%B5%E5%B0%8F%E5%B1%B1&hl=ja&gl=JP&ceid=JP:ja",
+      "enabled": true,
+      "minScore": 8,
+      "priority": 10,
+      "format": "googleNews",
+      "maxItems": 40,
+      "note": "Googleニュース検索「戸越 OR 中延 OR 旗の台 OR 武蔵小山」。元記事へはGoogleの転送URL経由で開く"
     }
   ],
   "htmlSources": [
-    {
-      "id": "shinagawa-city-new",
-      "name": "品川区 新着情報",
-      "url": "https://www.city.shinagawa.tokyo.jp/news/newslist.html",
-      "scope": "local",
-      "trustedLocal": true,
-      "minScore": 0,
-      "sameHostOnly": true,
-      "requiredAncestorClass": "newsli",
-      "dateAncestorClass": "date",
-      "maxItems": 40,
-      "detailMaxItems": 12,
-      "enabled": true
-    },
     {
       "id": "shinagawa-city-community",
       "name": "品川区 地域センター新着情報",
@@ -197,7 +551,8 @@
       "requiredAncestorClass": "objectlink",
       "maxItems": 30,
       "detailMaxItems": 10,
-      "enabled": true
+      "enabled": true,
+      "priority": 100
     },
     {
       "id": "shinagawa-shakyo",
@@ -210,7 +565,8 @@
       "includeUrlRegex": "/news/[0-9]{4}/[0-9]{2}/post-[0-9]+\\.html$",
       "maxItems": 30,
       "detailMaxItems": 10,
-      "enabled": true
+      "enabled": true,
+      "priority": 100
     },
     {
       "id": "shinagawa-tourism",
@@ -223,7 +579,49 @@
       "includeUrlRegex": "/event/[^/?#]+$",
       "maxItems": 30,
       "detailMaxItems": 10,
-      "enabled": true
+      "enabled": true,
+      "priority": 100
     }
+  ],
+  "ambiguousAreas": [
+    "大井",
+    "平塚",
+    "小山",
+    "目黒",
+    "大崎",
+    "二葉",
+    "豊町",
+    "広町",
+    "中延",
+    "大井町"
+  ],
+  "negativeTerms": [
+    "品川駅",
+    "品川ナンバー",
+    "品川インターシティ",
+    "品川シーズンテラス",
+    "品川プリンスホテル",
+    "グランドプリンスホテル",
+    "アクアパーク品川",
+    "品川イーストワンタワー",
+    "品川グランドセントラルタワー",
+    "港南口",
+    "港区港南",
+    "高輪ゲートウェイ",
+    "平塚市",
+    "小山市",
+    "大崎市",
+    "足柄上郡大井町",
+    "大井川",
+    "目黒区"
+  ],
+  "maxConcurrentFetches": 4,
+  "aggregatorExcludedHosts": [
+    "city.shinagawa.tokyo.jp",
+    "gikai.city.shinagawa.tokyo.jp",
+    "shinagawa.keizai.biz",
+    "shinagawa.goguynet.jp",
+    "shinagawa-kanko.or.jp",
+    "shinashakyo.jp"
   ]
 }
