@@ -24,6 +24,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["shinagawa"],
       "shinagawaRelation": "墓が北品川の東海寺大山墓地にあり、区の指定史跡となっている。",
       "certainty": "fact",
+      "relatedPlaces": ["pl-a4e970452b"],
       "relatedEvents": ["ev-1684-jokyo-calendar", "ev-1963-shibukawa-grave-moved"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第6号「渋川春海墓（追贈記念塔を含む）」" }],
       "verifiedAt": "2026-11-19"
@@ -41,6 +42,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["oi"],
       "shinagawaRelation": "大井村の下屋敷に蟄居し、没後は大井村下総山（現在の立会小学校の校庭付近）に葬られた。墓は昭和29年に現在地へ移された。",
       "certainty": "fact",
+      "relatedPlaces": ["pl-85ffa8153f"],
       "relatedEvents": ["ev-1858-yodo-confinement", "ev-1872-yodo-death", "ev-1954-yodo-grave-moved"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第11号「山内豊信（容堂）墓」" }],
       "verifiedAt": "2026-11-19"
@@ -58,6 +60,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["shinagawa"],
       "shinagawaRelation": "墓が南品川の海晏寺後丘にあり、区の指定史跡となっている。",
       "certainty": "fact",
+      "relatedPlaces": ["pl-16a69cbab7"],
       "relatedEvents": ["ev-1890-shungaku-death"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第9号「松平慶永（春嶽）墓」" }],
       "verifiedAt": "2026-11-19"
@@ -75,6 +78,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["shinagawa"],
       "shinagawaRelation": "墓が品川神社の裏手にある。もとは東海寺の塔頭・高源院の墓地の一部で、高源院の移転後も板垣家の墓域だけが残された。",
       "certainty": "fact",
+      "relatedPlaces": ["pl-8d095e31ad"],
       "relatedEvents": ["ev-1919-itagaki-death"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第4号「板垣退助墓」" }],
       "verifiedAt": "2026-11-19"
@@ -92,6 +96,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["oi"],
       "shinagawaRelation": "自宅が大井にあったことから、当時の大井村谷垂（現在の西大井）に葬られた。墓は区の指定史跡となっている。",
       "certainty": "fact",
+      "relatedPlaces": ["pl-45b14d4676"],
       "relatedEvents": ["ev-1909-ito-death"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第19号「伊藤博文墓」" }],
       "verifiedAt": "2026-11-19"
@@ -109,6 +114,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["shinagawa"],
       "shinagawaRelation": "安政元年に品川台場の築造に従事した。墓は南品川の海晏寺後丘にあり、区の指定史跡となっている。",
       "certainty": "fact",
+      "relatedPlaces": ["pl-729d15df9e"],
       "relatedEvents": ["ev-1854-daiba", "ev-1909-yuri-death"],
       "variants": [
         {
@@ -133,6 +139,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["shinagawa"],
       "shinagawaRelation": "墓が南品川の天妙国寺にあり、平成19年に区の指定史跡となった。",
       "certainty": "fact",
+      "relatedPlaces": ["pl-1e1564b7a2"],
       "relatedEvents": ["ev-2007-momochuken-designation"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第24号「桃中軒雲右衛門の墓」" }],
       "verifiedAt": "2026-11-19"

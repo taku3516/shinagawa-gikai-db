@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0017c1" />
+  <title>地域別の歴史 | 品川区議会DB</title>
+  <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
+  <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-controls.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
+  <link rel="stylesheet" href="site-a11y.css" />
+  <style>
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
+    .notice { margin-top:18px; border:1px solid var(--c-border); border-left:4px solid var(--c-main); border-radius:3px; background:var(--c-accent-pale); padding:13px 15px; font-size:calc(13px * var(--fs)); line-height:1.8; }
+    main section { padding:28px 0 44px; }
+    .intro { max-width:780px; margin:0 0 22px; font-size:calc(15px * var(--fs)); line-height:1.95; }
+    .intro-source { margin:6px 0 0; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); }
+
+    .areas { display:grid; gap:16px; }
+    .area { border:1px solid var(--c-border); border-left:4px solid var(--c-main); border-radius:3px; background:var(--c-card); padding:18px 20px; scroll-margin-top:16px; }
+    .area h2 { margin:0 0 6px; font-size:calc(21px * var(--fs)); }
+    .area .summary { margin:0 0 9px; font-size:calc(15px * var(--fs)); line-height:1.9; }
+    .area .description { margin:0; color:var(--c-ink-soft); font-size:calc(14px * var(--fs)); line-height:1.9; }
+
+    .counts { display:flex; flex-wrap:wrap; gap:8px; margin:13px 0 0; }
+    .counts span { display:inline-flex; align-items:baseline; gap:5px; border:1px solid var(--c-border); border-radius:3px; background:#fff; padding:6px 11px; font-size:calc(12px * var(--fs)); font-weight:700; }
+    .counts strong { color:var(--c-accent); font-size:calc(17px * var(--fs)); font-variant-numeric:tabular-nums; }
+    .counts span[data-zero="true"] strong { color:var(--c-ink-soft); }
+
+    .block { margin-top:14px; border-top:1px dashed var(--c-border); padding-top:12px; }
+    .block h3 { margin:0 0 6px; color:var(--c-ink-mute); font-size:calc(12px * var(--fs)); font-weight:700; }
+    .block ul { margin:0; padding-left:20px; font-size:calc(13px * var(--fs)); line-height:1.95; }
+    .block p { margin:0; font-size:calc(13px * var(--fs)); line-height:1.9; }
+    .block .more { margin-top:6px; }
+    .none { color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); }
+    .source-pill { display:inline-block; border:1px dashed var(--c-border-strong); border-radius:999px; padding:2px 10px; font-size:calc(13px * var(--fs)); }
+    .locator { color:var(--c-ink-soft); }
+
+    @media (max-width:640px) {
+      .area h2 { font-size:calc(19px * var(--fs)); }
+      .counts span { flex:1 1 calc(50% - 8px); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero"><div class="container">
+      <p class="breadcrumb"><a href="rekishi.html">← 品川の歴史へ</a></p>
+      <h1>地域別の歴史</h1>
+      <p class="lead">品川区の5地区ごとに、地区の特徴と、その地区に収録している歴史の情報をまとめています。</p>
+      <div class="notice"><strong>地区の区分は品川区公式「区の紹介」に合わせています。</strong> 町丁目・旧町村・旧町名の単位は今後追加します。件数は収録済みのデータを数えたもので、その地区の歴史の多さを表すものではありません。</div>
+      <nav data-site-nav></nav>
+    </div></header>
+
+    <section><div class="container">
+      <div id="intro"></div>
+      <div class="areas" id="list"></div>
+    </div></section>
+  </main>
+
+  <footer><div class="container" id="footer-root"></div></footer>
+
+  <script src="data/site.js"></script>
+  <script src="data/rekishi.js"></script>
+  <script src="data/rekishi-events.js"></script>
+  <script src="data/rekishi-people.js"></script>
+  <script src="data/rekishi-places.js"></script>
+  <script src="data/rekishi-areas.js"></script>
+  <script>
+    "use strict";
+
+    const DB = window.SHINAGAWA_DB || {};
+    const META = DB.rekishi || null;
+    const AREAS = (DB.rekishiAreas && DB.rekishiAreas.items) || [];
+    const AREA_META = DB.rekishiAreas || {};
+    const EVENTS = (DB.rekishiEvents && DB.rekishiEvents.items) || [];
+    const PEOPLE = (DB.rekishiPeople && DB.rekishiPeople.items) || [];
+    const PLACES = (DB.rekishiPlaces && DB.rekishiPlaces.items) || [];
+
+    const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => (
+      { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+    ));
+
+    function showError(message) {
+      document.getElementById("list").innerHTML =
+        `<div class="load-error"><strong>地域データを読み込めませんでした。</strong><br />${esc(message)}</div>`;
+    }
+
+    if (!META || !AREAS.length) {
+      showError(!META ? "data/rekishi.js が読み込まれていません" : "data/rekishi-areas.js に地区がありません");
+    } else {
+      start();
+    }
+
+    function start() {
+      const sourceById = new Map((META.sources || []).map((x) => [x.id, x]));
+
+      function sourceHtml(entries) {
+        return (entries || []).map((entry) => {
+          const source = sourceById.get(entry.ref);
+          if (!source) return "";
+          const name = source.url
+            ? `<a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.label)}</a>`
+            : `<span class="source-pill">${esc(source.label)}</span>`;
+          return `${name}${entry.locator ? ` <span class="locator">${esc(entry.locator)}</span>` : ""}`;
+        }).filter(Boolean).join(" ／ ");
+      }
+
+      if (AREA_META.intro) {
+        const source = sourceHtml(AREA_META.introSources);
+        document.getElementById("intro").innerHTML =
+          `<p class="intro">${esc(AREA_META.intro)}</p>` +
+          (source ? `<p class="intro-source">出典：${source}</p>` : "");
+      }
+
+      // 各地区に属するものは、できごと・地点・人物の側が持っている地区IDから
+      // 集める。地区の側に一覧を持たせると、両方を直さないと食い違うため。
+      function inArea(items, areaId) {
+        return items.filter((item) => (item.areas || []).includes(areaId));
+      }
+
+      function renderPlaces(places) {
+        if (!places.length) {
+          return '<div class="block"><h3>主な地点</h3><p class="none">この地区の地点はまだ収録していません。</p></div>';
+        }
+        // 指定文化財を多く持つ地点から出す。その地区の手がかりになりやすいため。
+        const top = places.slice().sort((a, b) =>
+          (b.heritage || []).length - (a.heritage || []).length).slice(0, 6);
+        const rows = top.map((place) => {
+          const count = (place.heritage || []).length;
+          return `<li><a href="rekishi-map.html?place=${encodeURIComponent(place.id)}">${esc(place.name)}</a>（${esc(place.address)}${count ? `／指定文化財${count}件` : ""}）</li>`;
+        }).join("");
+        const more = places.length > top.length
+          ? `<p class="more"><a href="rekishi-map.html">地図でこの地区の${places.length}件すべてを見る</a></p>`
+          : "";
+        return `<div class="block"><h3>主な地点（${places.length}件中）</h3><ul>${rows}</ul>${more}</div>`;
+      }
+
+      function renderEvents(events) {
+        if (!events.length) {
+          return '<div class="block"><h3>この地区のできごと</h3><p class="none">この地区のできごとはまだ収録していません。</p></div>';
+        }
+        const ordered = events.slice().sort((a, b) => (a.year ?? 0) - (b.year ?? 0));
+        const rows = ordered.slice(0, 6).map((event) =>
+          `<li><a href="rekishi-nenpyo.html#${esc(event.id)}">${esc(event.name)}</a>${event.yearText ? `（${esc(event.yearText)}）` : ""}</li>`
+        ).join("");
+        const more = ordered.length > 6
+          ? `<p class="more"><a href="rekishi-nenpyo.html">年表でこの地区の${ordered.length}件すべてを見る</a></p>`
+          : "";
+        return `<div class="block"><h3>この地区のできごと（${ordered.length}件）</h3><ul>${rows}</ul>${more}</div>`;
+      }
+
+      function renderPeople(people) {
+        if (!people.length) return "";
+        const rows = people.map((person) =>
+          `<li><a href="rekishi-jinbutsu.html#${esc(person.id)}">${esc(person.name)}</a>${person.yearText ? `（${esc(person.yearText)}）` : ""}</li>`
+        ).join("");
+        return `<div class="block"><h3>この地区にゆかりのある人物（${people.length}人）</h3><ul>${rows}</ul></div>`;
+      }
+
+      function renderArea(area) {
+        const areaId = (area.areas || [])[0];
+        const places = inArea(PLACES, areaId);
+        const events = inArea(EVENTS, areaId);
+        const people = inArea(PEOPLE, areaId);
+        const heritage = places.reduce((total, place) => total + ((place.heritage || []).length), 0);
+        const counts = [
+          { value: places.length, label: "地点" },
+          { value: heritage, label: "指定文化財" },
+          { value: events.length, label: "できごと" },
+          { value: people.length, label: "人物" }
+        ].map((x) =>
+          `<span data-zero="${x.value === 0}"><strong>${x.value}</strong>${esc(x.label)}</span>`
+        ).join("");
+        const source = sourceHtml(area.sources);
+        return `<article class="area" id="${esc(area.id)}">
+          <h2>${esc(area.name)}</h2>
+          <p class="summary">${esc(area.summary)}</p>
+          ${area.description ? `<p class="description">${esc(area.description)}</p>` : ""}
+          <p class="counts">${counts}</p>
+          ${renderPlaces(places)}
+          ${renderEvents(events)}
+          ${renderPeople(people)}
+          ${source ? `<div class="block"><h3>出典</h3><p>${source}</p></div>` : ""}
+        </article>`;
+      }
+
+      document.getElementById("list").innerHTML = AREAS.map(renderArea).join("");
+
+      function openHash() {
+        if (!location.hash) return;
+        const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+        if (target) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+      }
+      window.addEventListener("hashchange", openHash);
+      openHash();
+
+      document.getElementById("footer-root").textContent =
+        `品川区議会DB — ${META.disclaimer || ""}`;
+    }
+  </script>
+  <script src="site-nav.js"></script>
+  <script src="site-a11y.js"></script>
+</body>
+</html>

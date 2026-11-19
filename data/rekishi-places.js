@@ -8,7 +8,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
   "note": "品川区公式「指定文化財」から、史跡・旧跡・建造物・天然記念物は1件を1地点とし、絵画・古文書などの動産は置かれている場所ごとにまとめています。解説は転載せず、公式の詳細ページへ案内しています。緯度経度は国土地理院の住所検索APIによるもので、建物の正確な位置ではなく住所の代表点です。",
   "items": [
     {
-      "id": "pl-000",
+      "id": "pl-4c9cb3c9e5",
       "name": "品川神社石造鳥居並水盤",
       "summary": "北品川3-7-15にある建造物です。",
       "address": "北品川3-7-15",
@@ -44,7 +44,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-001",
+      "id": "pl-85a192b2c3",
       "name": "品川神社石造燈籠",
       "summary": "北品川3-7-15にある建造物です。",
       "address": "北品川3-7-15",
@@ -80,7 +80,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-002",
+      "id": "pl-2de8c135d9",
       "name": "法禅寺",
       "summary": "北品川2-2-14。指定文化財6件（彫刻・有形民俗・絵画・考古資料）があります。",
       "address": "北品川2-2-14",
@@ -171,7 +171,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1981-02-12"
     },
     {
-      "id": "pl-003",
+      "id": "pl-9751f82c34",
       "name": "大龍寺",
       "summary": "南品川4-2-16。指定文化財5件（彫刻・絵画）があります。",
       "address": "南品川4-2-16",
@@ -252,7 +252,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1984-02-16"
     },
     {
-      "id": "pl-010",
+      "id": "pl-895966c0f5",
       "name": "養願寺",
       "summary": "北品川2-3-12。指定文化財2件（彫刻）があります。",
       "address": "北品川2-3-12",
@@ -300,7 +300,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1989-03-14"
     },
     {
-      "id": "pl-012",
+      "id": "pl-114fca2745",
       "name": "心海寺",
       "summary": "南品川2-9-5。指定文化財2件（古文書・彫刻）があります。",
       "address": "南品川2-9-5",
@@ -346,7 +346,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1992-03-10"
     },
     {
-      "id": "pl-013",
+      "id": "pl-699c7ad510",
       "name": "本光寺",
       "summary": "南品川4-2-8にある彫刻です。",
       "address": "南品川4-2-8",
@@ -382,7 +382,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2006-04-25"
     },
     {
-      "id": "pl-014",
+      "id": "pl-d482d53825",
       "name": "海蔵寺",
       "summary": "南品川4-4-2にある彫刻です。",
       "address": "南品川4-4-2",
@@ -418,7 +418,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2019-03-28"
     },
     {
-      "id": "pl-015",
+      "id": "pl-f0dec3262a",
       "name": "東海寺",
       "summary": "北品川3-11-9。指定文化財7件（典籍・古文書・工芸品・絵画）があります。",
       "address": "北品川3-11-9",
@@ -500,7 +500,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-016",
+      "id": "pl-bdeb7c9ebc",
       "name": "寄木神社",
       "summary": "東品川1-35-8。指定文化財2件（工芸品・歴史資料）があります。",
       "address": "東品川1-35-8",
@@ -547,7 +547,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1982-02-10"
     },
     {
-      "id": "pl-017",
+      "id": "pl-548dab732d",
       "name": "品川神社",
       "summary": "北品川3-7-15。指定文化財7件（古文書・工芸品・有形民俗・民俗芸能・重要無形民俗文化財・風俗慣習）があります。",
       "address": "北品川3-7-15",
@@ -639,7 +639,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-018",
+      "id": "pl-6b12d55eea",
       "name": "品川歴史館",
       "summary": "大井6-11-1。指定文化財22件（典籍・古文書・工芸品・有形民俗・歴史資料・絵画・考古資料）があります。",
       "address": "大井6-11-1",
@@ -880,7 +880,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1981-02-12"
     },
     {
-      "id": "pl-019",
+      "id": "pl-11e5d5f153",
       "name": "天妙国寺",
       "summary": "南品川2-8-23。指定文化財4件（書跡・歴史資料）があります。",
       "address": "南品川2-8-23",
@@ -949,7 +949,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1983-03-12"
     },
     {
-      "id": "pl-022",
+      "id": "pl-20728da0c5",
       "name": "妙蓮寺",
       "summary": "南品川1-1-1にある典籍です。",
       "address": "南品川1-1-1",
@@ -985,7 +985,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1992-03-10"
     },
     {
-      "id": "pl-025",
+      "id": "pl-cd976dd9ea",
       "name": "清徳寺",
       "summary": "北品川3-7-22にある古文書です。",
       "address": "北品川3-7-22",
@@ -1021,7 +1021,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1990-03-13"
     },
     {
-      "id": "pl-031",
+      "id": "pl-d2ec933e85",
       "name": "願行寺",
       "summary": "南品川2-1-12にある古文書です。",
       "address": "南品川2-1-12",
@@ -1058,7 +1058,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2004-08-24"
     },
     {
-      "id": "pl-035",
+      "id": "pl-086da1e672",
       "name": "利田神社",
       "summary": "東品川1-7-17にある歴史資料です。",
       "address": "東品川1-7-17",
@@ -1094,7 +1094,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2006-11-28"
     },
     {
-      "id": "pl-038",
+      "id": "pl-26ec6dd1d6",
       "name": "善福寺",
       "summary": "北品川1-28-9にある有形民俗です。",
       "address": "北品川1-28-9",
@@ -1131,7 +1131,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-039",
+      "id": "pl-5771f69832",
       "name": "本覚寺",
       "summary": "南品川1-10-11にある有形民俗です。",
       "address": "南品川1-10-11",
@@ -1168,7 +1168,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-041",
+      "id": "pl-154677e281",
       "name": "海徳寺",
       "summary": "北品川1-2-10にある有形民俗です。",
       "address": "北品川1-2-10",
@@ -1205,7 +1205,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1981-02-12"
     },
     {
-      "id": "pl-042",
+      "id": "pl-1b47f5332c",
       "name": "海雲寺",
       "summary": "南品川3-5-21にある有形民俗です。",
       "address": "南品川3-5-21",
@@ -1242,7 +1242,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1985-03-14"
     },
     {
-      "id": "pl-043",
+      "id": "pl-76fe732985",
       "name": "長徳寺",
       "summary": "南品川2-8-16にある有形民俗です。",
       "address": "南品川2-8-16",
@@ -1279,7 +1279,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2002-07-25"
     },
     {
-      "id": "pl-045",
+      "id": "pl-aa7b6879c9",
       "name": "享保二十一年銘道標",
       "summary": "南品川4-1-15にある史跡です。",
       "address": "南品川4-1-15",
@@ -1315,7 +1315,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-046",
+      "id": "pl-8d095e31ad",
       "name": "板垣退助墓",
       "summary": "北品川3-7-15にある史跡です。",
       "address": "北品川3-7-15",
@@ -1351,7 +1351,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-047",
+      "id": "pl-9a9feb2e7d",
       "name": "奥平家墓域",
       "summary": "南品川4-2-35にある史跡です。",
       "address": "南品川4-2-35",
@@ -1387,7 +1387,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-048",
+      "id": "pl-a4e970452b",
       "name": "渋川春海墓（追贈記念塔を含む）",
       "summary": "北品川4-11-8にある史跡です。",
       "address": "北品川4-11-8",
@@ -1423,7 +1423,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-049",
+      "id": "pl-550cbf7e0e",
       "name": "東海道品川宿本陣跡",
       "summary": "北品川2-7-21にある史跡です。",
       "address": "北品川2-7-21",
@@ -1459,7 +1459,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-050",
+      "id": "pl-5f8482f680",
       "name": "官営品川硝子製造所跡",
       "summary": "北品川4-11-5にある史跡です。",
       "address": "北品川4-11-5",
@@ -1495,7 +1495,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-051",
+      "id": "pl-16a69cbab7",
       "name": "松平慶永（春嶽）墓",
       "summary": "南品川5-16にある史跡です。",
       "address": "南品川5-16",
@@ -1531,7 +1531,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-052",
+      "id": "pl-729d15df9e",
       "name": "由利公正墓",
       "summary": "南品川5-16にある史跡です。",
       "address": "南品川5-16",
@@ -1567,7 +1567,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-053",
+      "id": "pl-f1068fbcbb",
       "name": "海蔵寺無縁塔群",
       "summary": "南品川4-4-2にある史跡です。",
       "address": "南品川4-4-2",
@@ -1603,7 +1603,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-054",
+      "id": "pl-2aa05f97a0",
       "name": "流民叢塚碑 附 南無阿彌陀佛碑萬霊納骨堂碑",
       "summary": "北品川2-2-14にある史跡です。",
       "address": "北品川2-2-14",
@@ -1640,7 +1640,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1986-03-14"
     },
     {
-      "id": "pl-055",
+      "id": "pl-1e1564b7a2",
       "name": "桃中軒雲右衛門の墓",
       "summary": "南品川2-8-23にある史跡です。",
       "address": "南品川2-8-23",
@@ -1676,7 +1676,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2007-12-25"
     },
     {
-      "id": "pl-056",
+      "id": "pl-69870da77d",
       "name": "東海道品川宿石積護岸",
       "summary": "南品川2-14-10にある史跡です。",
       "address": "南品川2-14-10",
@@ -1712,7 +1712,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2023-03-29"
     },
     {
-      "id": "pl-057",
+      "id": "pl-105d959ba0",
       "name": "品川寺のイチョウ",
       "summary": "南品川3-5-17にある天然記念物です。",
       "address": "南品川3-5-17",
@@ -1748,7 +1748,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-058",
+      "id": "pl-73dd638f02",
       "name": "稼穡稲荷のイチョウ",
       "summary": "北品川2-32-3にある天然記念物です。",
       "address": "北品川2-32-3",
@@ -1784,7 +1784,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-059",
+      "id": "pl-2906c9cb9f",
       "name": "法禅寺のイチョウ",
       "summary": "北品川2-2-14にある天然記念物です。",
       "address": "北品川2-2-14",
@@ -1820,7 +1820,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-060",
+      "id": "pl-ab08e8aa84",
       "name": "大龍寺のシイ",
       "summary": "南品川4-2-16にある天然記念物です。",
       "address": "南品川4-2-16",
@@ -1856,7 +1856,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-065",
+      "id": "pl-8862991aef",
       "name": "居木神社末社厳島神社",
       "summary": "大崎3-8-20にある建造物です。",
       "address": "大崎3-8-20",
@@ -1893,7 +1893,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2004-08-24"
     },
     {
-      "id": "pl-066",
+      "id": "pl-90816b720e",
       "name": "宝塔寺",
       "summary": "東五反田1-2-29。指定文化財6件（彫刻・有形民俗・絵画）があります。",
       "address": "東五反田1-2-29",
@@ -1983,7 +1983,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-069",
+      "id": "pl-9aaa87e538",
       "name": "雉子神社",
       "summary": "東五反田1-2-33。指定文化財2件（古文書・有形民俗）があります。",
       "address": "東五反田1-2-33",
@@ -2031,7 +2031,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1990-03-13"
     },
     {
-      "id": "pl-073",
+      "id": "pl-8c7bfa8312",
       "name": "－",
       "summary": "西品川1-6-23にある歴史資料です。",
       "address": "西品川1-6-23",
@@ -2068,7 +2068,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2004-03-23"
     },
     {
-      "id": "pl-075",
+      "id": "pl-77e6b7ccf6",
       "name": "徳蔵寺",
       "summary": "西五反田3-5-15。指定文化財3件（有形民俗）があります。",
       "address": "西五反田3-5-15",
@@ -2127,7 +2127,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-077",
+      "id": "pl-ff5af64894",
       "name": "安楽寺",
       "summary": "西五反田5-6-8にある有形民俗です。",
       "address": "西五反田5-6-8",
@@ -2164,7 +2164,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-078",
+      "id": "pl-ffc3a17a80",
       "name": "安養院",
       "summary": "西五反田4-12-1にある有形民俗です。",
       "address": "西五反田4-12-1",
@@ -2201,7 +2201,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-082",
+      "id": "pl-699b788dc6",
       "name": "町会管理",
       "summary": "西品川3-11にある有形民俗です。",
       "address": "西品川3-11",
@@ -2238,7 +2238,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2005-04-26"
     },
     {
-      "id": "pl-083",
+      "id": "pl-30124a3793",
       "name": "文政十一年銘道標",
       "summary": "西品川3-16-31にある史跡です。",
       "address": "西品川3-16-31",
@@ -2275,7 +2275,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-084",
+      "id": "pl-4aefec729f",
       "name": "大正六年銘道標",
       "summary": "西品川3-16にある史跡です。",
       "address": "西品川3-16",
@@ -2311,7 +2311,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-085",
+      "id": "pl-2226dc34ea",
       "name": "雉子神社のイチョウ",
       "summary": "東五反田1-2-33にある天然記念物です。",
       "address": "東五反田1-2-33",
@@ -2348,7 +2348,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-086",
+      "id": "pl-b7e8056977",
       "name": "清泉女子大学のフウ",
       "summary": "東五反田3-16-21にある天然記念物です。",
       "address": "東五反田3-16-21",
@@ -2385,7 +2385,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-087",
+      "id": "pl-f79390bf7c",
       "name": "清岸寺のサクラ",
       "summary": "上大崎1-5-15にある天然記念物です。",
       "address": "上大崎1-5-15",
@@ -2422,7 +2422,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-088",
+      "id": "pl-4e8fbde73a",
       "name": "誕生八幡神社のイチョウ(1)",
       "summary": "上大崎2-13-36にある天然記念物です。",
       "address": "上大崎2-13-36",
@@ -2459,7 +2459,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-089",
+      "id": "pl-84abe86d27",
       "name": "養玉院",
       "summary": "西大井5-22-25。指定文化財10件（古文書・彫刻・絵画）があります。",
       "address": "西大井5-22-25",
@@ -2586,7 +2586,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1982-02-10"
     },
     {
-      "id": "pl-094",
+      "id": "pl-9250914617",
       "name": "泊船寺",
       "summary": "東大井4-5-2。指定文化財4件（彫刻）があります。",
       "address": "東大井4-5-2",
@@ -2656,7 +2656,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1985-03-14"
     },
     {
-      "id": "pl-102",
+      "id": "pl-1571b5feff",
       "name": "来迎院",
       "summary": "大井6-18-8にある古文書です。",
       "address": "大井6-18-8",
@@ -2693,7 +2693,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2009-07-14"
     },
     {
-      "id": "pl-105",
+      "id": "pl-b6be9a0b55",
       "name": "来福寺",
       "summary": "東大井3-13-1にある歴史資料です。",
       "address": "東大井3-13-1",
@@ -2730,7 +2730,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "2010-07-13"
     },
     {
-      "id": "pl-106",
+      "id": "pl-6840966074",
       "name": "西光寺",
       "summary": "大井4-22-16。指定文化財2件（工芸品・有形民俗）があります。",
       "address": "大井4-22-16",
@@ -2774,7 +2774,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-107",
+      "id": "pl-0a2ebfd341",
       "name": "来迎院門前",
       "summary": "大井6-15-22にある有形民俗です。",
       "address": "大井6-15-22",
@@ -2811,7 +2811,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-109",
+      "id": "pl-a9efe8f17c",
       "name": "土地所有者管理",
       "summary": "大井1-24にある有形民俗です。",
       "address": "大井1-24",
@@ -2848,7 +2848,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1990-03-13"
     },
     {
-      "id": "pl-111",
+      "id": "pl-85ffa8153f",
       "name": "山内豊信（容堂）墓",
       "summary": "東大井4-8にある史跡です。",
       "address": "東大井4-8",
@@ -2885,7 +2885,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-112",
+      "id": "pl-3963af8d45",
       "name": "大井の井",
       "summary": "大井6-9-17にある史跡です。",
       "address": "大井6-9-17",
@@ -2921,7 +2921,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-113",
+      "id": "pl-7c41971c1d",
       "name": "大井の水神",
       "summary": "南大井5-14-9にある史跡です。",
       "address": "南大井5-14-9",
@@ -2957,7 +2957,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-114",
+      "id": "pl-27e6dd0bca",
       "name": "元禄八年銘道標",
       "summary": "西大井1-6-3にある史跡です。",
       "address": "西大井1-6-3",
@@ -2994,7 +2994,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-115",
+      "id": "pl-45b14d4676",
       "name": "伊藤博文墓",
       "summary": "西大井6-10-18にある史跡です。",
       "address": "西大井6-10-18",
@@ -3031,7 +3031,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-116",
+      "id": "pl-0c31382c1b",
       "name": "大井・原の水神池",
       "summary": "西大井3-1にある史跡です。",
       "address": "西大井3-1",
@@ -3067,7 +3067,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1982-02-10"
     },
     {
-      "id": "pl-117",
+      "id": "pl-77b2162c3a",
       "name": "光福寺のイチョウ",
       "summary": "大井6-9-17にある天然記念物です。",
       "address": "大井6-9-17",
@@ -3104,7 +3104,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-118",
+      "id": "pl-58625eef7a",
       "name": "仙台坂団地のタブノキ",
       "summary": "東大井4-3-1にある天然記念物です。",
       "address": "東大井4-3-1",
@@ -3141,7 +3141,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-119",
+      "id": "pl-833ecb1477",
       "name": "鹿島神社のタブノキ（1）",
       "summary": "大井6-18-36にある天然記念物です。",
       "address": "大井6-18-36",
@@ -3178,7 +3178,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-120",
+      "id": "pl-8e618fa58d",
       "name": "鹿島神社のアカガシ",
       "summary": "大井6-18-36にある天然記念物です。",
       "address": "大井6-18-36",
@@ -3215,7 +3215,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-121",
+      "id": "pl-f8d25878c7",
       "name": "大井囃子保存会",
       "summary": "大井6-18-36にある民俗芸能です。",
       "address": "大井6-18-36",
@@ -3251,7 +3251,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1985-03-14"
     },
     {
-      "id": "pl-122",
+      "id": "pl-aea9363b40",
       "name": "旗岡八幡神社",
       "summary": "旗の台3-6-12にある絵画です。",
       "address": "旗の台3-6-12",
@@ -3288,7 +3288,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-123",
+      "id": "pl-7d7cbe40c4",
       "name": "摩耶寺",
       "summary": "荏原7-6-9にある彫刻です。",
       "address": "荏原7-6-9",
@@ -3325,7 +3325,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1986-03-14"
     },
     {
-      "id": "pl-124",
+      "id": "pl-b4e737cf21",
       "name": "行慶寺",
       "summary": "戸越2-6-31にある彫刻です。",
       "address": "戸越2-6-31",
@@ -3362,7 +3362,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1991-03-26"
     },
     {
-      "id": "pl-125",
+      "id": "pl-95b1e17688",
       "name": "専修寺",
       "summary": "荏原1-1-3にある彫刻です。",
       "address": "荏原1-1-3",
@@ -3399,7 +3399,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1991-03-26"
     },
     {
-      "id": "pl-126",
+      "id": "pl-9f3cab87af",
       "name": "戸越八幡神社",
       "summary": "戸越2-6-23。指定文化財2件（有形民俗）があります。",
       "address": "戸越2-6-23",
@@ -3447,7 +3447,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-11-22"
     },
     {
-      "id": "pl-128",
+      "id": "pl-e0aa5f7237",
       "name": "町会管理",
       "summary": "旗の台1-1にある有形民俗です。",
       "address": "旗の台1-1",
@@ -3484,7 +3484,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1986-03-14"
     },
     {
-      "id": "pl-129",
+      "id": "pl-8dae3a7ff7",
       "name": "桐ヶ谷地蔵尊管理",
       "summary": "荏原1-15-10にある有形民俗です。",
       "address": "荏原1-15-10",
@@ -3521,7 +3521,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1988-03-22"
     },
     {
-      "id": "pl-130",
+      "id": "pl-55483e2b2a",
       "name": "戸越地蔵尊保存会管理",
       "summary": "荏原2-9-18にある有形民俗です。",
       "address": "荏原2-9-18",
@@ -3558,7 +3558,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1988-03-22"
     },
     {
-      "id": "pl-131",
+      "id": "pl-dfb6fe403c",
       "name": "お猿橋庚申堂内",
       "summary": "小山台1-21-17にある有形民俗です。",
       "address": "小山台1-21-17",
@@ -3595,7 +3595,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1989-03-14"
     },
     {
-      "id": "pl-132",
+      "id": "pl-48292015f6",
       "name": "大原不動尊管理",
       "summary": "豊町5-1-15にある有形民俗です。",
       "address": "豊町5-1-15",
@@ -3632,7 +3632,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1990-03-13"
     },
     {
-      "id": "pl-133",
+      "id": "pl-e825833784",
       "name": "天保二年銘道標",
       "summary": "中延5-12-8にある史跡です。",
       "address": "中延5-12-8",
@@ -3669,7 +3669,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-134",
+      "id": "pl-dafea215f8",
       "name": "柳亭種彦墓",
       "summary": "荏原1-1-19にある史跡です。",
       "address": "荏原1-1-19",
@@ -3706,7 +3706,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-135",
+      "id": "pl-bf6495f367",
       "name": "孟宗筍栽培記念碑",
       "summary": "小山1-5-14にある史跡です。",
       "address": "小山1-5-14",
@@ -3743,7 +3743,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1980-03-11"
     },
     {
-      "id": "pl-136",
+      "id": "pl-09be9d336d",
       "name": "天明三年銘石造道標",
       "summary": "中延5-11-16にある史跡です。",
       "address": "中延5-11-16",
@@ -3780,7 +3780,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1986-03-14"
     },
     {
-      "id": "pl-137",
+      "id": "pl-df2421f3bb",
       "name": "寛政元年銘石造道標",
       "summary": "小山2-7にある史跡です。",
       "address": "小山2-7",
@@ -3817,7 +3817,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1986-03-14"
     },
     {
-      "id": "pl-138",
+      "id": "pl-3fd22a61e8",
       "name": "葛原神社のボダイジュ",
       "summary": "荏原6-2-13にある天然記念物です。",
       "address": "荏原6-2-13",
@@ -3854,7 +3854,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-139",
+      "id": "pl-cb6102ffed",
       "name": "小山八幡神社のシイ（1）・小山八幡神社のシイ（2）",
       "summary": "荏原7-5-14にある天然記念物です。",
       "address": "荏原7-5-14",
@@ -3891,7 +3891,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-140",
+      "id": "pl-a883875187",
       "name": "戸越八幡神社のケンポナシ",
       "summary": "戸越2-6-23にある天然記念物です。",
       "address": "戸越2-6-23",
@@ -3928,7 +3928,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-141",
+      "id": "pl-e80b92934a",
       "name": "金子家のカキ",
       "summary": "豊町4にある天然記念物です。",
       "address": "豊町4",
@@ -3965,7 +3965,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "designatedFrom": "1978-02-14"
     },
     {
-      "id": "pl-150",
+      "id": "pl-7ee2886587",
       "name": "品川寺",
       "summary": "南品川3-5-17。指定文化財2件（彫刻・絵画）があります。",
       "address": "南品川3-5-17",
@@ -4004,7 +4004,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-151",
+      "id": "pl-0eb88578f1",
       "name": "海晏寺",
       "summary": "南品川5-16-22にある工芸品です。",
       "address": "南品川5-16-22",
@@ -4036,7 +4036,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-161",
+      "id": "pl-cb1f6699e6",
       "name": "熊本藩主細川家墓所",
       "summary": "北品川3-11-17にある史跡です。",
       "address": "北品川3-11-17",
@@ -4068,7 +4068,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-162",
+      "id": "pl-8a95cef577",
       "name": "春秋庵白雄墓",
       "summary": "南品川5-16-22にある旧跡です。",
       "address": "南品川5-16-22",
@@ -4100,7 +4100,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-163",
+      "id": "pl-fdbb23509c",
       "name": "白井鳥酔墓",
       "summary": "南品川5-16-22にある旧跡です。",
       "address": "南品川5-16-22",
@@ -4132,7 +4132,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-164",
+      "id": "pl-daac383d0f",
       "name": "岩倉具視墓",
       "summary": "南品川5-16-22にある旧跡です。",
       "address": "南品川5-16-22",
@@ -4164,7 +4164,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-165",
+      "id": "pl-436b7b608c",
       "name": "鈴ヶ森遺跡（南大井2丁目）",
       "summary": "南大井2-5-6にある旧跡です。",
       "address": "南大井2-5-6",
@@ -4196,7 +4196,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-166",
+      "id": "pl-a6c7b29cf9",
       "name": "旧島津家本邸",
       "summary": "東五反田3-16-21にある建造物です。",
       "address": "東五反田3-16-21",
@@ -4228,7 +4228,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-169",
+      "id": "pl-ef0990e965",
       "name": "沢庵墓",
       "summary": "北品川4-11-8にある史跡です。",
       "address": "北品川4-11-8",
@@ -4260,7 +4260,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-170",
+      "id": "pl-1a93e184b8",
       "name": "賀茂真淵墓",
       "summary": "北品川4-11-8にある史跡です。",
       "address": "北品川4-11-8",
@@ -4292,7 +4292,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-171",
+      "id": "pl-be2e1fa0fd",
       "name": "大森貝塚",
       "summary": "大井6-21にある史跡です。",
       "address": "大井6-21",
@@ -4324,7 +4324,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-19"
     },
     {
-      "id": "pl-172",
+      "id": "pl-8d56e0f633",
       "name": "旧白金御料地",
       "summary": "上大崎2にある天然記念物および史跡です。",
       "address": "上大崎2",

@@ -27,6 +27,7 @@ scripts/cache/rekishi/ に残し、2回目以降は取りに行かない。
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -429,12 +430,18 @@ def parse_detail(source: str, url: str, area: str, label: str) -> Entry | None:
 
 
 def place_id_for(seed: str, used: set[str]) -> str:
-    """地点IDを作る。日本語はIDに使えないので、通し番号で安定させる。"""
-    base = "pl-" + re.sub(r"[^0-9a-z]+", "-", seed.lower()).strip("-")
-    candidate = base
+    """地点IDを作る。
+
+    通し番号にはしない。公式ページに1行足されただけで、それより後ろの
+    IDがすべてずれてしまい、人物や年表から張ったリンクが黙って別の地点を
+    指すようになるため。住所と名前から決めれば、並び順が変わっても動かない。
+    日本語はIDに使えないので短いハッシュにする。
+    """
+    digest = hashlib.sha1(seed.encode("utf-8")).hexdigest()[:10]
+    candidate = f"pl-{digest}"
     suffix = 2
     while candidate in used:
-        candidate = f"{base}-{suffix}"
+        candidate = f"pl-{digest}-{suffix}"
         suffix += 1
     used.add(candidate)
     return candidate
@@ -482,14 +489,14 @@ def build_places(entries: list[Entry]) -> list[Place]:
     used_ids: set[str] = set()
     movable: dict[str, Place] = {}
 
-    for index, entry in enumerate(entries):
+    for entry in entries:
         address, facility, tail = split_address(entry.address)
         area = area_of(address, entry.area)
         categories = classify(entry.kind)
 
         if categories:
             place = Place(
-                place_id=place_id_for(f"{index:03d}", used_ids),
+                place_id=place_id_for(f"{address}|{entry.name}", used_ids),
                 name=entry.name,
                 address=address,
                 area=area,
@@ -506,7 +513,7 @@ def build_places(entries: list[Entry]) -> list[Place]:
         place = movable.get(address)
         if place is None:
             place = Place(
-                place_id=place_id_for(f"{index:03d}", used_ids),
+                place_id=place_id_for(address, used_ids),
                 name=holder or entry.name,
                 address=address,
                 area=area,
