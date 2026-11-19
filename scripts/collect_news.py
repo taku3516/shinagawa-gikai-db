@@ -561,6 +561,10 @@ class Classifier:
         self.tag_rules = config["tagRules"]
         self.ambiguous = config.get("ambiguousAreas", [])
         self.negative = config.get("negativeTerms", [])
+        # 区外語を探す前に伏せる語。長いものから当てる。
+        self._local_terms = sorted(
+            set(self.areas + self.stations + self.landmarks), key=len, reverse=True
+        )
 
     def score(self, text: str, extra_terms: list[str] | None = None) -> int:
         base_hits = sum(term in text for term in self.base)
@@ -577,8 +581,22 @@ class Classifier:
         score += 2 * min(3, sum(term in text for term in self.related))
         if not base_hits:
             # 「品川区」と明記されていれば、品川駅などの語があっても区の話として扱う。
-            score -= 4 * min(3, sum(term in text for term in self.negative))
+            score -= 4 * min(3, sum(term in self.without_local_terms(text) for term in self.negative))
         return max(0, score)
+
+    def without_local_terms(self, text: str) -> str:
+        """区内の地名・駅名を伏せた文を返す。区外語の部分一致を防ぐ。
+
+        「北品川駅」には区外を指す「品川駅」が含まれる。そのまま探すと
+        区内の駅を巻き添えにして減点してしまう（北品川駅の人身事故が落ちた）。
+        長い語から先に伏せて、短い区外語が中に残らないようにする。
+        紛らわしい地名（大井町など）は伏せない。「足柄上郡大井町」のような
+        区外語を打ち消してしまうため。
+        """
+        for term in self._local_terms:
+            if term in text:
+                text = text.replace(term, "\u3000")
+        return text
 
     def tags(self, text: str) -> list[str]:
         tags = [tag for tag, terms in self.tag_rules.items() if any(term in text for term in terms)]
@@ -763,8 +781,10 @@ def collect(config: dict, existing: list[dict]) -> tuple[list[dict], list[dict]]
                         duplicates += 1
                         continue
                     # 配信元として確かな側（公式RSSなど）に入れ替える。
+                    # IDは元の記事のものを引き継ぐ。★と非表示がID単位のため。
                     drop_from_index(replaced, seen_urls, seen_titles)
                     items_by_id.pop(replaced.get("id", ""), None)
+                    inherit_identity(item, replaced)
                     duplicates += 1
             if previous:
                 item["collectedAt"] = previous.get("collectedAt", item["collectedAt"])
@@ -854,6 +874,22 @@ def index_title(item: dict, seen_titles: dict[str, list[dict]]) -> None:
         return
     for variant in {key, key[:AGGREGATOR_TITLE_PREFIX]}:
         seen_titles.setdefault(variant, []).append(item)
+
+
+def inherit_identity(item: dict, replaced: dict) -> dict:
+    """入れ替え先の記事に、元の記事のIDと初出日時を引き継ぐ。
+
+    ★（お気に入り）と非表示は端末内とFirestoreに記事ID単位で保存されている
+    （news.html の state.favorites.has(item.id)）。まとめサイト経由で先に入った
+    記事を公式RSSの記事へ差し替えるときにIDを振り直すと、利用者の★が外れる。
+    id ≠ sha256(url) になるが、公式サイトのURL張り替えで既にそうなっており、
+    収集側はURLでも突き合わせる（reuse_existing_id）。
+    """
+    if replaced.get("id"):
+        item["id"] = replaced["id"]
+    if replaced.get("collectedAt"):
+        item["collectedAt"] = replaced["collectedAt"]
+    return item
 
 
 def drop_from_index(item: dict, seen_urls: dict[str, dict], seen_titles: dict[str, list[dict]]) -> None:

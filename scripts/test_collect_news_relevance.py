@@ -71,6 +71,15 @@ class RelevanceTest(unittest.TestCase):
         self.assertGreaterEqual(self.classifier.score("イトーヨーカドー大井町店が改装　東京都品川区"), 8)
         self.assertGreaterEqual(self.classifier.score("大井町駅前の再開発が進む"), 4)
 
+    def test_区内の駅名に区外の駅名が含まれていても減点しない(self) -> None:
+        # 「北品川駅」には「品川駅」が含まれる。部分一致で区内の駅を巻き添えにしない。
+        self.assertGreaterEqual(self.classifier.score("北品川駅で人身事故"), 8)
+        self.assertGreaterEqual(self.classifier.score("新馬場駅と北品川駅の間で工事"), 8)
+
+    def test_区内の駅名を巻き込んでも区外の駅は減点したまま(self) -> None:
+        self.assertLess(self.classifier.score("大崎駅から品川駅へ向かう利用者が増えた"), 8)
+        self.assertLess(self.classifier.score("品川駅の港南口で再開発ビルが開業"), 8)
+
     def test_区外を指す語が並ぶ記事は落とす(self) -> None:
         # 大崎駅という区内の手がかりはあるが、記事の中心は港区側。
         score = self.classifier.score(
@@ -167,6 +176,32 @@ class DedupeTest(unittest.TestCase):
         kept, dropped = collect_news.deduplicate([a, b])
         self.assertEqual(len(kept), 2)
         self.assertEqual(dropped, 0)
+
+
+    def test_配信元を入れ替えても記事IDを引き継ぐ(self) -> None:
+        # ★（お気に入り）と非表示はID単位で保存されている。
+        # Googleニュース経由で先に入った記事を公式RSSの記事に差し替えるとき、
+        # IDを振り直すと利用者の★が外れる。
+        archived = {"id": "0123456789abcdef0123", "title": "戸越銀座でイベント",
+                    "url": "https://news.google.com/rss/articles/XYZ",
+                    "collectedAt": "2026-11-01T00:00:00Z", "sourcePriority": 10,
+                    "viaAggregator": "Googleニュース"}
+        replacement = {"id": collect_news.item_id("https://shinagawa.keizai.biz/headline/1/"),
+                       "title": "戸越銀座でイベント",
+                       "url": "https://shinagawa.keizai.biz/headline/1/",
+                       "collectedAt": "2026-11-19T00:00:00Z", "sourcePriority": 50}
+
+        collect_news.inherit_identity(replacement, archived)
+
+        self.assertEqual(replacement["id"], "0123456789abcdef0123")
+        self.assertEqual(replacement["collectedAt"], "2026-11-01T00:00:00Z")
+        self.assertEqual(replacement["url"], "https://shinagawa.keizai.biz/headline/1/")
+
+    def test_引き継ぐIDが無ければそのまま(self) -> None:
+        replacement = {"id": "abc", "collectedAt": "2026-11-19T00:00:00Z"}
+        collect_news.inherit_identity(replacement, {})
+        self.assertEqual(replacement["id"], "abc")
+        self.assertEqual(replacement["collectedAt"], "2026-11-19T00:00:00Z")
 
 
 class GoogleNewsTest(unittest.TestCase):
