@@ -34,7 +34,7 @@ jobs:
         run: python3 -m unittest scripts.test_build_pages
       - name: 歴史データを検査
         run: |
-          python3 -m unittest scripts.test_rekishi_data
+          python3 -m unittest scripts.test_rekishi_data scripts.test_rekishi_links
           python3 scripts/check_rekishi_data.py
       - name: 公開ファイルを生成
         env:
