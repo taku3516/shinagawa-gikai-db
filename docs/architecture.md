@@ -25,6 +25,7 @@
 | `rekishi-map.html` | 品川歴史マップ（町会区域マップとは独立した歴史専用の地図） |
 | `rekishi-chiiki.html` | 地域別の歴史（5地区） |
 | `rekishi-jinbutsu.html` | 歴史人物事典 |
+| `rekishi-chimei.html` | 地名の由来事典 |
 | `rekishi-kochizu.html` | 古地図・今昔比較（地理院タイルの年代別空中写真を重ねる） |
 
 歴史のページは `history/` ではなくリポジトリ直下に `rekishi-` を付けて置いています。
@@ -94,6 +95,7 @@
 - `data/rekishi-events.js` — 年表のできごとです。
 - `data/rekishi-people.js` — 人物です。
 - `data/rekishi-areas.js` — 5地区の解説です。各地区に属するできごと・地点・人物の一覧は持たせず、画面側で数え上げます。
+- `data/rekishi-names.js` — 地名の由来です。由来が確認できたものだけ `origin` に書き、確認できていないものは `null` のままにします。画面では「この資料では確認できていません」と明示します。地名の種類（現町名・旧村名・旧宿名・古道など）は `nameKind` で区別します。
 - `data/rekishi-places.js` — 地図に載せる地点です。`scripts/prepare_rekishi_places.py` が品川区公式「指定文化財」から自動生成します。史跡・旧跡・建造物・天然記念物は1件を1地点にし、絵画・古文書などの動産は置かれている住所ごとにまとめて、その地点の `heritage` に並べます（1つの寺社に何本もピンが立たないようにするため）。
 
 守っている約束は4つです。

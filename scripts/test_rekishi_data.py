@@ -30,6 +30,10 @@ MINIMAL_META = {
         {"id": "current", "label": "現在地"},
         {"id": "former", "label": "かつての所在地"},
     ],
+    "nameKinds": [
+        {"id": "current-town", "label": "現町名"},
+        {"id": "old-village", "label": "旧村名"},
+    ],
     "sources": [{"id": "src-a", "label": "出典A", "url": "https://example.test/"}],
     "files": {"events": "data/rekishi-events.js"},
 }
@@ -293,6 +297,54 @@ class HeritageAndDateTest(unittest.TestCase):
             "designatedOn": "1978-02-14",
         }]
         self.assertEqual(self.run_with(self.place(heritage=heritage)), [])
+
+
+class NameKindTest(unittest.TestCase):
+    """地名の種類の決まりを確かめる。"""
+
+    META = dict(MINIMAL_META, files={"names": "data/rekishi-names.js"})
+    NAME = {
+        "id": "nm-sample",
+        "name": "見本",
+        "summary": "見本です。",
+        "nameKind": "old-village",
+        "certainty": "fact",
+        "sources": [{"ref": "src-a"}],
+        "verifiedAt": "2026-11-19",
+    }
+
+    def run_with(self, name: dict) -> list:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = root / "data"
+            data.mkdir(parents=True)
+            (data / "rekishi.js").write_text(
+                "window.SHINAGAWA_DB.rekishi = " + json.dumps(self.META, ensure_ascii=False) + ";\n",
+                encoding="utf-8",
+            )
+            (data / "rekishi-names.js").write_text(
+                "window.SHINAGAWA_DB.rekishiNames = "
+                + json.dumps({"items": [name]}, ensure_ascii=False) + ";\n",
+                encoding="utf-8",
+            )
+            return Checker(root).check()
+
+    def test_valid_name_passes(self) -> None:
+        self.assertEqual(self.run_with(self.NAME), [])
+
+    def test_missing_name_kind_is_reported(self) -> None:
+        item = dict(self.NAME)
+        item.pop("nameKind")
+        problems = self.run_with(item)
+        self.assertTrue(any("nameKind がありません" in p for p in problems), problems)
+
+    def test_unknown_name_kind_is_reported(self) -> None:
+        problems = self.run_with(dict(self.NAME, nameKind="old-castle"))
+        self.assertTrue(any("nameKind の old-castle" in p for p in problems), problems)
+
+    def test_origin_may_be_null(self) -> None:
+        # 由来が分からない地名も、公式資料に現れるなら載せられる。
+        self.assertEqual(self.run_with(dict(self.NAME, origin=None)), [])
 
 
 class RepositoryDataTest(unittest.TestCase):

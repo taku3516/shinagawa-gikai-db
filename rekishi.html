@@ -97,6 +97,7 @@
   <script src="data/rekishi-events.js"></script>
   <script src="data/rekishi-people.js"></script>
   <script src="data/rekishi-places.js"></script>
+  <script src="data/rekishi-names.js"></script>
   <script>
     "use strict";
 
@@ -105,6 +106,7 @@
     const EVENTS = (DB.rekishiEvents && DB.rekishiEvents.items) || [];
     const PEOPLE = (DB.rekishiPeople && DB.rekishiPeople.items) || [];
     const PLACES = (DB.rekishiPlaces && DB.rekishiPlaces.items) || [];
+    const NAMES = (DB.rekishiNames && DB.rekishiNames.items) || [];
 
     const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => (
       { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
@@ -117,7 +119,7 @@
       { url: "rekishi-map.html", title: "歴史マップ", text: "史跡、神社仏閣、天然記念物などを地図から探せます。同じ住所の地点はまとめて1つのピンにし、現在は無い施設は当時の位置であることを明示します。" },
       { url: "rekishi-chiiki.html", title: "地域別の歴史", text: "品川・大崎・大井・荏原・八潮の5地区ごとに、地区の特徴と収録している地点・できごと・人物をまとめています。" },
       { url: "rekishi-jinbutsu.html", title: "歴史人物事典", text: "品川区にゆかりのある人物の略歴と、区内のどこと結びつくのかを整理しています。関連するできごとは年表のデータから組み立てています。" },
-      { url: "", title: "地名の由来事典", text: "現在の町名のほか、旧町名・旧村名・坂・川・橋の由来を集めます。説が分かれるものは説ごとに示します。" },
+      { url: "rekishi-chimei.html", title: "地名の由来事典", text: "出典で確認できた地名の由来と、公式資料に現れる旧村名・旧宿名・古道を集めています。由来が分からないものは、その旨を明示しています。" },
       { url: "rekishi-kochizu.html", title: "古地図・今昔比較", text: "国土地理院の年代別の空中写真7つを現在の地図に重ね、透明度を変えながら見比べられます。1945〜1950年の米軍撮影まで遡れます。" }
     ];
 
@@ -134,6 +136,7 @@
         { value: PLACES.length, label: "地点" },
         { value: heritage, label: "指定文化財" },
         { value: PEOPLE.length, label: "人物" },
+        { value: NAMES.length, label: "地名" },
         { value: (META.sources || []).length, label: "出典資料" }
       ].map((x) => `<div class="stat"><strong>${x.value}</strong><span>${esc(x.label)}</span></div>`).join("");
     }

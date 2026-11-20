@@ -109,6 +109,10 @@ window.SHINAGAWA_DB.site = {
           "url": "rekishi-jinbutsu.html"
         },
         {
+          "label": "地名の由来",
+          "url": "rekishi-chimei.html"
+        },
+        {
           "label": "古地図・今昔",
           "url": "rekishi-kochizu.html"
         }

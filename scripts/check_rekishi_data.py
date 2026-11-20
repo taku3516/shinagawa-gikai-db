@@ -132,6 +132,7 @@ class Checker:
         categories = ids_of(meta.get("categories", []))
         certainty = ids_of(meta.get("certainty", []))
         location_kinds = ids_of(meta.get("locationKinds", []))
+        name_kinds = ids_of(meta.get("nameKinds", []))
         sources = ids_of(meta.get("sources", []))
 
         for name, label in (
@@ -140,6 +141,7 @@ class Checker:
             ("categories", "カテゴリー"),
             ("certainty", "確実性"),
             ("locationKinds", "位置の種類"),
+            ("nameKinds", "地名の種類"),
             ("sources", "出典"),
         ):
             if not meta.get(name):
@@ -184,7 +186,10 @@ class Checker:
                     all_ids[item_id] = key
                 if prefix and not str(item_id).startswith(prefix):
                     self.fail(where, f"id は {prefix} で始めてください")
-                self.check_item(where, key, item, eras, areas, categories, certainty, location_kinds, sources)
+                self.check_item(
+                    where, key, item, eras, areas, categories,
+                    certainty, location_kinds, name_kinds, sources,
+                )
 
         # 相互リンクの行き先が実在するかは、全IDがそろってから確かめる。
         for key, items in collections.items():
@@ -211,6 +216,7 @@ class Checker:
         categories: set[str],
         certainty: set[str],
         location_kinds: set[str],
+        name_kinds: set[str],
         sources: set[str],
     ) -> None:
         """1件のレコードを検査する。"""
@@ -258,6 +264,14 @@ class Checker:
                 self.fail(where, "yearEnd は整数か null にしてください")
             elif isinstance(year, int) and year_end < year:
                 self.fail(where, f"yearEnd（{year_end}）が year（{year}）より前です")
+
+        # 地名は、現町名と旧村名などを取り違えないよう種類を必ず持たせる。
+        if key == "names":
+            kind = item.get("nameKind")
+            if not kind:
+                self.fail(where, "nameKind がありません")
+            elif kind not in name_kinds:
+                self.fail(where, f"nameKind の {kind} は data/rekishi.js にありません")
 
         self.check_location(where, key, item, location_kinds)
         self.check_sources(where, item, sources)
