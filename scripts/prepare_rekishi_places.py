@@ -692,11 +692,37 @@ def render(records: list[dict[str, Any]], verified_at: str) -> str:
     )
 
 
+def existing_count() -> int | None:
+    """いま公開しているデータの件数を読む。初回は None。"""
+    if not OUTPUT.exists():
+        return None
+    match = re.findall(r'"id":\s*"pl-', OUTPUT.read_text(encoding="utf-8"))
+    return len(match) or None
+
+
+# 公式ページの作りが変わると、解析が半分だけ失敗して件数が静かに減ることがある。
+# 全滅なら気づけるが、「174件のうち20件しか取れない」は気づきにくい。
+# 前回より大きく減ったら書き出さずに止める。
+SHRINK_LIMIT = 0.9
+
+
+def shrank_too_much(previous: int | None, current: int) -> bool:
+    """前回より大きく減っていないかを判定する。初回（previous が None）は通す。"""
+    if not previous:
+        return False
+    return current < previous * SHRINK_LIMIT
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--refresh", action="store_true", help="キャッシュを無視して取得し直す")
     parser.add_argument("--dry-run", action="store_true", help="書き出さずに内訳だけ表示する")
     parser.add_argument("--verified-at", default=time.strftime("%Y-%m-%d"), help="確認日")
+    parser.add_argument(
+        "--allow-shrink",
+        action="store_true",
+        help="件数が前回より大きく減っても書き出す（区が指定を取り消した場合など）",
+    )
     args = parser.parse_args()
 
     entries = collect_entries(args.refresh)
@@ -740,6 +766,17 @@ def main() -> int:
     print(f"公開できるのは{len(records)}件、保留は{len(pending)}件です。")
     for item in pending:
         print(f"  保留: {item['name']}（{item['address']}）— {item['reason']}")
+
+    previous = existing_count()
+    if shrank_too_much(previous, len(records)) and not args.allow_shrink:
+        print(
+            f"\n件数が前回より大きく減りました（{previous}件 → {len(records)}件）。"
+            "\n公式ページの作りが変わって、解析が途中までしかできていない可能性があります。"
+            "\n中身を確かめてから、意図した減少であれば --allow-shrink を付けて実行してください。"
+            f"\n書き出しは行いませんでした: {OUTPUT}",
+            file=sys.stderr,
+        )
+        return 1
 
     if args.dry_run:
         return 0

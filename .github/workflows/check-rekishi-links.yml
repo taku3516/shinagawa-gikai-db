@@ -1,0 +1,48 @@
+name: 歴史の出典リンクを確認
+
+# 歴史コンテンツは「出典で確認できたことだけを載せる」という約束で
+# 成り立っている。出典のURLが死ぬと、その約束を確かめる手段がなくなる。
+# 実際に2026年10月20日の品川区公式サイトのリニューアルで、広報しながわの
+# PDFが転送も無く消えた。定期的に見に行って、気づけるようにする。
+#
+# push や pull_request では動かさない。140件ほどに順番にアクセスするので
+# 数分かかるうえ、相手のサーバーの機嫌で落ちることがあり、
+# 変更と関係のないところで赤くなってしまうため。
+
+on:
+  schedule:
+    # 日本時間の毎月16日 4時30分。文化財の指定は年に数回なので月1回で足りる。
+    # 毎時00分はGitHub全体で予約が集中して実行が飛ぶことがあるため避けている。
+    - cron: "30 19 15 * *"
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: "確かめる件数（0＝すべて）"
+        default: "0"
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-rekishi-links
+  cancel-in-progress: false
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    # 1件ずつ間を空けて叩くので、全件で5分ほどかかる。
+    # 実行待ちの時間も含まれるので長めにとる。
+    timeout-minutes: 30
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: 出典リンクを確認
+        run: |
+          python scripts/check_rekishi_links.py --sample "${{ inputs.sample || 0 }}"
