@@ -90,6 +90,60 @@ IMMOVABLE_CATEGORIES: list[tuple[str, str]] = [
     ("天然記念物", "nature"),
 ]
 
+# 種別だけでは拾えない分類を、公式解説の記述を根拠に足す。
+#
+# 語句の一致で自動的に付けてはいけない。「品川」の「川」で水辺と判定され、
+# 「殖産興業」で由利公正の墓が産業遺産になる（実際に試して73件の誤判定が出た）。
+# 1件ずつ公式ページの解説を読み、根拠を添えて手で書く。
+#
+# 鍵は公式ページに載っている文化財の名称。値は (足す分類, 根拠)。
+CATEGORY_HINTS: dict[str, tuple[tuple[str, ...], str]] = {
+    "官営品川硝子製造所跡": (
+        ("industry", "lost"),
+        "政府の殖産興業政策による官営工場で、京浜工業地帯成立の第一歩の地。"
+        "明治25年に解散し、建物は昭和43年に博物館明治村へ移築された",
+    ),
+    "東海道品川宿本陣跡": (
+        ("road", "lost"),
+        "東海道品川宿の本陣。明治5年の宿駅制度廃止後に役割を終え、"
+        "昭和13年に公園となって建物は残っていない",
+    ),
+    "東海道品川宿石積護岸": (
+        ("road", "water"),
+        "東海道と品川宿の家並みを波から守るために築かれた護岸",
+    ),
+    "流民叢塚碑 附 南無阿彌陀佛碑萬霊納骨堂碑": (
+        ("war",),
+        "天保の大飢饉で亡くなった人たちを祀る供養塔",
+    ),
+    "海蔵寺無縁塔群": (
+        ("war",),
+        "天保の大飢饉の犠牲者215人を祀る塚や、津波溺死者供養塔を含む",
+    ),
+    "大井の井": (("water",), "横穴式の井戸で、いまも水が湧いている"),
+    "大井の水神": (("water",), "湧水に感謝して祀られた水神。湧水は柳の清水と呼ばれた"),
+    "大井・原の水神池": (("water",), "農家が野菜を洗った湧水池"),
+    "天妙国寺五重塔礎石": (
+        ("lost",),
+        "五重塔は慶長19年に倒壊し、再建後も元禄15年に焼失した。残るのは礎石のみ",
+    ),
+    # 道標は街道の標識。どれも旧街道・古道をたどる手がかりになる。
+    "享保二十一年銘道標": (("road",), "東海道から目黒に至る道が碑文谷道に分かれる地点に建っていた"),
+    "文政十一年銘道標": (("road",), "街道の分かれ道に建てられた道標"),
+    "文政十一年銘道標（2）": (("road",), "品川宿から居木橋村に入ってすぐの分かれ道に建っていたと推定される"),
+    "大正六年銘道標": (("road",), "街道の分かれ道に建てられた道標"),
+    "元禄八年銘道標": (("road",), "区内の道標のうち最古のもの"),
+    "天保二年銘道標": (("road",), "街道の分かれ道に建てられた道標"),
+    "天明三年銘石造道標": (("road",), "街道の分かれ道に建てられた道標"),
+    "寛政元年銘石造道標": (("road",), "街道の分かれ道に建てられた道標"),
+    "大原不動堂内石造供養塔群": (
+        ("road",),
+        "旧上蛇窪村から品川道・洗足道・池上道が分かれる地点にあり、"
+        "六十六部廻国供養塔を兼ねた道標を含む",
+    ),
+}
+
+
 # 種別の頭に付く指定の区分。種別そのものではないので落とす。
 DESIGNATION_PREFIXES = re.compile(
     r"^(重要無形民俗文化財|無形民俗文化財|重要有形民俗文化財|重要文化財|有形文化財)\s*[（(]?\s*"
@@ -155,6 +209,8 @@ class Place:
     # 地点名が「その場所の名前」から付いたのか、たまたま最初の所蔵品の名前を
     # 借りただけなのかを覚えておく。後から場所の名前が分かったら差し替える。
     name_from_holder: bool = False
+    # 分類を足した根拠。画面で「なぜこの分類なのか」を示せるようにする。
+    category_notes: list[str] = field(default_factory=list)
 
 
 def clean(value: str) -> str:
@@ -450,6 +506,10 @@ def place_id_for(seed: str, used: set[str]) -> str:
 # 所有者の欄に入るが、場所の名前にはならないもの。
 GOVERNMENT = re.compile(r"^(品川区|東京都|国|文化庁)$")
 
+# 所有者が決まっていない行は「－」などが入る。これを地点名にすると、
+# 地図に「－」という名前のピンが立つ（文政十一年銘道標（2）で実際に起きた）。
+PLACEHOLDER = re.compile(r"^[－\-—ー‐–~〜\s]*$|^(なし|不明|未定)$")
+
 
 def category_for_holder(holder: str) -> str:
     """地点の名前から、カテゴリーを決める。
@@ -474,9 +534,22 @@ def pick_holder(facility: str, tail: str, owner: str) -> str:
     自治体名は場所の名前にならないので使わない。
     """
     for candidate in (facility, tail, owner):
-        if candidate and not GOVERNMENT.match(candidate):
-            return candidate
+        if not candidate or PLACEHOLDER.match(candidate):
+            continue
+        if GOVERNMENT.match(candidate):
+            continue
+        return candidate
     return ""
+
+
+def apply_hints(place: Place, entry: Entry) -> None:
+    """公式解説を根拠に、種別だけでは拾えない分類を足す。"""
+    extra, reason = CATEGORY_HINTS.get(entry.name, ((), ""))
+    for category in extra:
+        if category not in place.categories:
+            place.categories.append(category)
+    if reason and reason not in place.category_notes:
+        place.category_notes.append(reason)
 
 
 def build_places(entries: list[Entry]) -> list[Place]:
@@ -502,6 +575,7 @@ def build_places(entries: list[Entry]) -> list[Place]:
                 area=area,
                 categories=categories,
             )
+            apply_hints(place, entry)
             place.entries.append(entry)
             places.append(place)
             continue
@@ -527,6 +601,7 @@ def build_places(entries: list[Entry]) -> list[Place]:
             place.name = holder
             place.categories = [category_for_holder(holder)]
             place.name_from_holder = True
+        apply_hints(place, entry)
         place.entries.append(entry)
 
     return places
@@ -661,6 +736,9 @@ def to_record(place: Place, verified_at: str) -> dict[str, Any]:
         ],
         "verifiedAt": verified_at,
     }
+    if place.category_notes:
+        record["categoryNote"] = "／".join(place.category_notes)
+
     # 指定年月日が分かるものは、いちばん古い指定の年を時代の目安にする。
     # 指定された年は文化財そのものの年代ではないので、era には使わない。
     if designated:
