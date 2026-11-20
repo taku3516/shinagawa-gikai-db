@@ -94,6 +94,7 @@ python3 -m http.server 8000
 - [発言者と議員の名寄せ](docs/data-maintenance.md#発言者と議員の名寄せ) — 対応表の作り方、上書き表、検査
 - [実装準備・監査手順](docs/history-expansion.md) — 過去年データの拡張手順
 - [「品川の歴史」実装計画](docs/rekishi-plan.md) — 地域史コンテンツのページ構成、データ設計、出典の扱い
+- [「品川の歴史」品質点検の記録](docs/rekishi-quality-check.md) — 全22ページの実測結果、直した点、既存ページの未修正事項
 - [請願・陳情データの収録状況](docs/petition-inventory.md) — 年別件数、未確定案件、残作業
 - [ニュース保存の任意ログイン・同期設定](docs/firebase-sync-setup.md) — Firebaseを利用する場合の所有者向け手順
 

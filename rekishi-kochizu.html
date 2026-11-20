@@ -41,7 +41,9 @@
     .fade-ends { display:flex; justify-content:space-between; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); }
 
     .overlay-toggle { display:inline-flex; align-items:center; gap:8px; min-height:44px; font-size:calc(13px * var(--fs)); font-weight:700; }
-    .overlay-toggle input { width:20px; height:20px; }
+    /* チェックボックス自体も押せる大きさにする。囲みのラベル全体が
+       押せるようにはしてあるが、四角だけを狙う人もいるため。 */
+    .overlay-toggle input[type="checkbox"] { width:24px; height:24px; accent-color:var(--c-main); }
 
     .map-panel { overflow:hidden; }
     #kochizu-map { width:100%; min-height:620px; background:var(--c-map-bg); }
@@ -55,7 +57,7 @@
     .pin--nature { background:#1b6e3c; }
     .pin--building { background:#8a4b00; }
     .leaflet-popup-content { margin:11px 13px; line-height:1.7; font-size:calc(13px * var(--fs)); }
-    .leaflet-popup-content h3 { margin:0 0 4px; font-size:calc(14px * var(--fs)); line-height:1.5; }
+    .leaflet-popup-content h2 { margin:0 0 4px; font-size:calc(14px * var(--fs)); line-height:1.5; }
     .leaflet-popup-content p { margin:0 0 5px; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); }
 
     @media (max-width:640px) {
@@ -311,7 +313,7 @@
             alt: group.map((x) => x.name).join("、")
           });
           marker.bindPopup(group.map((place) => `
-            <h3>${esc(place.name)}</h3>
+            <h2>${esc(place.name)}</h2>
             <p>${esc(place.address)}</p>
             <a href="rekishi-map.html?place=${encodeURIComponent(place.id)}">歴史マップで見る</a>
           `).join("<hr />"));

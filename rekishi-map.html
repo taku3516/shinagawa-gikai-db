@@ -59,8 +59,8 @@
     .pin-wrap { position:relative; }
 
     .leaflet-popup-content { margin:12px 14px; line-height:1.7; font-size:calc(13px * var(--fs)); }
-    .leaflet-popup-content h3 { margin:0 0 4px; font-size:calc(15px * var(--fs)); line-height:1.5; }
-    .leaflet-popup-content h3 + .pop-meta { margin-top:0; }
+    .leaflet-popup-content h2 { margin:0 0 4px; font-size:calc(15px * var(--fs)); line-height:1.5; }
+    .leaflet-popup-content h2 + .pop-meta { margin-top:0; }
     .pop-place + .pop-place { margin-top:14px; border-top:1px solid var(--c-border); padding-top:12px; }
     .pop-meta { margin:0 0 6px; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); }
     .pop-note { margin:0 0 6px; border-left:3px solid var(--c-warning-border); padding-left:8px; color:var(--c-ink); font-size:calc(12px * var(--fs)); }
@@ -252,7 +252,7 @@
         }).filter(Boolean).join("／");
         const categoryText = (place.categories || []).map((id) => categoryLabel.get(id) || id).join("・");
         return `<div class="pop-place">
-          <h3>${esc(place.name)}</h3>
+          <h2>${esc(place.name)}</h2>
           <p class="pop-meta">${esc(place.address)}／${esc(categoryText)}</p>
           ${note}
           ${heritage ? `<ul class="pop-list">${heritage}</ul>` : ""}

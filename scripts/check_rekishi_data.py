@@ -16,6 +16,7 @@ data/rekishi-*.js の各レコードがその語彙だけを使っているか�
 from __future__ import annotations
 
 import argparse
+import datetime
 import json
 import re
 import sys
@@ -33,6 +34,10 @@ LNG_RANGE = (139.66, 139.82)
 
 # 日付は YYYY-MM-DD 形式でそろえる。
 DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+# 文化財の出典は品川区公式サイトに限る。別のサイトが紛れ込むと、
+# 「公式で確認した」という前提が静かに崩れる。
+OFFICIAL_PREFIX = "https://www.city.shinagawa.tokyo.jp/"
 
 # ID は種別の接頭辞＋英数字。種別が分かると、相互リンクの誤りに気づきやすい。
 ID_PREFIXES = {
@@ -257,11 +262,43 @@ class Checker:
         self.check_location(where, key, item, location_kinds)
         self.check_sources(where, item, sources)
 
+        today = datetime.date.today().isoformat()
         verified = item.get("verifiedAt")
         if not verified:
             self.fail(where, "verifiedAt がありません")
         elif not DATE_PATTERN.match(str(verified)):
             self.fail(where, f"verifiedAt は YYYY-MM-DD 形式にしてください: {verified}")
+        elif str(verified) > today:
+            # 未来の日付は、まだしていない確認を済んだことにしてしまう。
+            self.fail(where, f"verifiedAt が未来の日付です: {verified}")
+
+        for field in ("year", "yearEnd", "birthYear", "deathYear"):
+            value = item.get(field)
+            if isinstance(value, int) and value > datetime.date.today().year:
+                self.fail(where, f"{field} が未来の年です: {value}")
+
+        self.check_heritage(where, item, today)
+
+    def check_heritage(self, where: str, item: dict[str, Any], today: str) -> None:
+        """地点が持つ指定文化財を検査する。"""
+        for index, entry in enumerate(item.get("heritage") or []):
+            spot = f"{where}/heritage[{index}]"
+            if not str(entry.get("name") or "").strip():
+                self.fail(spot, "name が空です")
+            if not str(entry.get("kind") or "").strip():
+                self.fail(spot, "kind が空です")
+            url = str(entry.get("url") or "")
+            if not url:
+                self.fail(spot, "url がありません")
+            elif not url.startswith(OFFICIAL_PREFIX):
+                self.fail(spot, f"url が品川区公式サイトではありません: {url}")
+            designated = entry.get("designatedOn")
+            if designated is None:
+                continue
+            if not DATE_PATTERN.match(str(designated)):
+                self.fail(spot, f"designatedOn は YYYY-MM-DD 形式にしてください: {designated}")
+            elif str(designated) > today:
+                self.fail(spot, f"designatedOn が未来の日付です: {designated}")
 
     def check_location(
         self, where: str, key: str, item: dict[str, Any], location_kinds: set[str]

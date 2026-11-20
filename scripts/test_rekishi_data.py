@@ -227,6 +227,74 @@ class PlacesTest(unittest.TestCase):
         self.assertTrue(any("lat と lng が必要" in p for p in problems), problems)
 
 
+class HeritageAndDateTest(unittest.TestCase):
+    """指定文化財と日付の決まりを確かめる。"""
+
+    def run_with(self, place: dict) -> list:
+        meta = dict(MINIMAL_META, files={"places": "data/rekishi-places.js"})
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = root / "data"
+            data.mkdir(parents=True)
+            (data / "rekishi.js").write_text(
+                "window.SHINAGAWA_DB.rekishi = " + json.dumps(meta, ensure_ascii=False) + ";\n",
+                encoding="utf-8",
+            )
+            (data / "rekishi-places.js").write_text(
+                "window.SHINAGAWA_DB.rekishiPlaces = "
+                + json.dumps({"items": [place]}, ensure_ascii=False) + ";\n",
+                encoding="utf-8",
+            )
+            return Checker(root).check()
+
+    def place(self, **overrides) -> dict:
+        base = {
+            "id": "pl-sample",
+            "name": "見本の地点",
+            "summary": "見本です。",
+            "areas": ["shinagawa"],
+            "categories": ["site"],
+            "lat": 35.62,
+            "lng": 139.74,
+            "locationKind": "current",
+            "certainty": "fact",
+            "sources": [{"ref": "src-a"}],
+            "verifiedAt": "2026-11-19",
+        }
+        base.update(overrides)
+        return base
+
+    def test_future_verified_at_is_reported(self) -> None:
+        problems = self.run_with(self.place(verifiedAt="2099-01-01"))
+        self.assertTrue(any("verifiedAt が未来" in p for p in problems), problems)
+
+    def test_future_year_is_reported(self) -> None:
+        problems = self.run_with(self.place(year=2999))
+        self.assertTrue(any("year が未来の年" in p for p in problems), problems)
+
+    def test_heritage_url_must_be_official(self) -> None:
+        heritage = [{"name": "見本", "kind": "史跡", "url": "https://example.test/a.html"}]
+        problems = self.run_with(self.place(heritage=heritage))
+        self.assertTrue(any("品川区公式サイトではありません" in p for p in problems), problems)
+
+    def test_future_designation_is_reported(self) -> None:
+        heritage = [{
+            "name": "見本", "kind": "史跡",
+            "url": "https://www.city.shinagawa.tokyo.jp/a.html",
+            "designatedOn": "2099-03-01",
+        }]
+        problems = self.run_with(self.place(heritage=heritage))
+        self.assertTrue(any("designatedOn が未来" in p for p in problems), problems)
+
+    def test_valid_heritage_passes(self) -> None:
+        heritage = [{
+            "name": "見本", "kind": "史跡",
+            "url": "https://www.city.shinagawa.tokyo.jp/a.html",
+            "designatedOn": "1978-02-14",
+        }]
+        self.assertEqual(self.run_with(self.place(heritage=heritage)), [])
+
+
 class RepositoryDataTest(unittest.TestCase):
     def test_actual_data_passes(self) -> None:
         self.assertEqual(Checker().check(), [])
