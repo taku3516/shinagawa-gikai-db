@@ -107,6 +107,10 @@ window.SHINAGAWA_DB.site = {
         {
           "label": "人物事典",
           "url": "rekishi-jinbutsu.html"
+        },
+        {
+          "label": "古地図・今昔",
+          "url": "rekishi-kochizu.html"
         }
       ]
     },

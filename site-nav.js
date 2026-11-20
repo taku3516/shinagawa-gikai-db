@@ -56,7 +56,8 @@
         { label: "年表", url: "rekishi-nenpyo.html" },
         { label: "歴史マップ", url: "rekishi-map.html" },
         { label: "地域別", url: "rekishi-chiiki.html" },
-        { label: "人物事典", url: "rekishi-jinbutsu.html" }
+        { label: "人物事典", url: "rekishi-jinbutsu.html" },
+        { label: "古地図・今昔", url: "rekishi-kochizu.html" }
       ]
     },
     {
