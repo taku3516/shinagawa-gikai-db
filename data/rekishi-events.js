@@ -667,6 +667,9 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "relatedEvents": [
           "ev-1648-shinagawa-jinja-torii"
         ],
+        "relatedPeople": [
+          "pe-takuan-soho"
+        ],
         "relatedPlaces": [
           "pl-f0dec3262a",
           "pl-548dab732d"
@@ -1002,6 +1005,9 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "relatedEvents": [
           "ev-1806-takenoko-hi"
         ],
+        "relatedPeople": [
+          "pe-yamaji-jirobe"
+        ],
         "relatedPlaces": [
           "pl-bf6495f367"
         ],
@@ -1064,6 +1070,9 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [
           "ev-1789-mosochiku"
+        ],
+        "relatedPeople": [
+          "pe-yamaji-jirobe"
         ],
         "relatedPlaces": [
           "pl-bf6495f367"
@@ -1279,6 +1288,9 @@ window.SHINAGAWA_DB.rekishiEvents = {
         ],
         "certainty": "fact",
         "relatedEvents": [],
+        "relatedPeople": [
+          "pe-tenkai"
+        ],
         "relatedPlaces": [],
         "sources": [
           {
@@ -1306,6 +1318,13 @@ window.SHINAGAWA_DB.rekishiEvents = {
         ],
         "certainty": "fact",
         "relatedEvents": [],
+        "relatedPeople": [
+          "pe-hakugyu-zenji",
+          "pe-ono-keizan",
+          "pe-matsuo-basho",
+          "pe-hattori-ransetsu",
+          "pe-takarai-kikaku"
+        ],
         "relatedPlaces": [
           "pl-9250914617"
         ],

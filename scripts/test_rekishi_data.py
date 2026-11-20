@@ -347,6 +347,77 @@ class NameKindTest(unittest.TestCase):
         self.assertEqual(self.run_with(dict(self.NAME, origin=None)), [])
 
 
+class PersonRelationTest(unittest.TestCase):
+    """人物と出来事の関係が、画面が読む側に書かれているかを確かめる。
+
+    rekishi-jinbutsu.html は event.relatedPeople だけから逆引きの索引を組み立て、
+    年表も同じ event.relatedPeople を読む。人物側の relatedEvents はどのページも
+    読まないため、そこに書くと検査は通るのに画面には何も出ない。
+    実際に出来事28件・人物8人を足したとき、人物側にだけ書いて8人全員が
+    不可視になった。参照整合性では捕まらないので、置き場所そのものを検査する。
+    """
+
+    META = dict(
+        MINIMAL_META,
+        files={"people": "data/rekishi-people.js", "events": "data/rekishi-events.js"},
+    )
+    PERSON = {
+        "id": "pe-sample",
+        "name": "見本の人物",
+        "summary": "見本です。",
+        "deathYear": 1700,
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "shinagawaRelation": "見本の関係。",
+        "certainty": "fact",
+        "sources": [{"ref": "src-a", "locator": "1ページ"}],
+        "verifiedAt": "2026-11-19",
+    }
+
+    def run_with(self, person: dict, event: dict) -> list:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = root / "data"
+            data.mkdir(parents=True)
+            (data / "rekishi.js").write_text(
+                "window.SHINAGAWA_DB.rekishi = "
+                + json.dumps(self.META, ensure_ascii=False) + ";\n",
+                encoding="utf-8",
+            )
+            (data / "rekishi-people.js").write_text(
+                "window.SHINAGAWA_DB.rekishiPeople = "
+                + json.dumps({"items": [person]}, ensure_ascii=False) + ";\n",
+                encoding="utf-8",
+            )
+            (data / "rekishi-events.js").write_text(
+                "window.SHINAGAWA_DB.rekishiEvents = "
+                + json.dumps({"items": [event]}, ensure_ascii=False) + ";\n",
+                encoding="utf-8",
+            )
+            return Checker(root).check()
+
+    def test_person_side_relation_is_reported(self) -> None:
+        # IDは実在するので参照整合性は通る。それでも落ちること。
+        person = dict(self.PERSON, relatedEvents=["ev-sample"])
+        problems = self.run_with(person, VALID_EVENT)
+        self.assertTrue(
+            any("relatedEvents" in p and "出来事の側" in p for p in problems), problems
+        )
+
+    def test_event_side_relation_passes(self) -> None:
+        # 正しい置き場所。画面もここを読む。
+        event = dict(VALID_EVENT, relatedPeople=["pe-sample"])
+        self.assertEqual(self.run_with(self.PERSON, event), [])
+
+    def test_person_without_relation_passes(self) -> None:
+        self.assertEqual(self.run_with(self.PERSON, VALID_EVENT), [])
+
+    def test_empty_person_side_relation_is_still_reported(self) -> None:
+        # 空の配列を残すと、書き足す場所を間違えたままになる。
+        problems = self.run_with(dict(self.PERSON, relatedEvents=[]), VALID_EVENT)
+        self.assertTrue(any("relatedEvents" in p for p in problems), problems)
+
+
 class RepositoryDataTest(unittest.TestCase):
     def test_actual_data_passes(self) -> None:
         self.assertEqual(Checker().check(), [])

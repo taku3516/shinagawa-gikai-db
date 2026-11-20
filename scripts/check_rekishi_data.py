@@ -48,6 +48,15 @@ ID_PREFIXES = {
     "areas": "ar-",
 }
 
+# 画面が読まない側に書いてはいけない関係。
+# rekishi-jinbutsu.html は event.relatedPeople だけから人物→出来事の索引を
+# 組み立て、年表も同じ event.relatedPeople を読む。人物側の relatedEvents は
+# どのページも読まないので、そこに書くと検査は通るのに画面に出ない。
+# 同じ関係を2か所に持たせない方針（rekishi-jinbutsu.html のコメント）でもある。
+FORBIDDEN_RELATION_SIDES = {
+    ("people", "relatedEvents"): "出来事の側の relatedPeople に書いてください",
+}
+
 # 相互リンクの項目名と、その行き先のコレクション。
 RELATION_TARGETS = {
     "relatedEvents": "events",
@@ -195,6 +204,10 @@ class Checker:
         for key, items in collections.items():
             for item in items:
                 where = f"{key}/{item.get('id')}"
+                # 画面が読まない側に書かれていないか。参照整合性では捕まらない。
+                for (coll, field), hint in FORBIDDEN_RELATION_SIDES.items():
+                    if key == coll and field in item:
+                        self.fail(where, f"{field} はこのコレクションに持たせません。{hint}")
                 for field, target in RELATION_TARGETS.items():
                     for ref in item.get(field) or []:
                         if ref not in all_ids:

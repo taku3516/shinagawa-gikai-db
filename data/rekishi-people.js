@@ -25,7 +25,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "shinagawaRelation": "墓が北品川の東海寺大山墓地にあり、区の指定史跡となっている。",
       "certainty": "fact",
       "relatedPlaces": ["pl-a4e970452b"],
-      "relatedEvents": ["ev-1684-jokyo-calendar", "ev-1963-shibukawa-grave-moved"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第6号「渋川春海墓（追贈記念塔を含む）」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -43,7 +42,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "shinagawaRelation": "大井村の下屋敷に蟄居し、没後は大井村下総山（現在の立会小学校の校庭付近）に葬られた。墓は昭和29年に現在地へ移された。",
       "certainty": "fact",
       "relatedPlaces": ["pl-85ffa8153f"],
-      "relatedEvents": ["ev-1858-yodo-confinement", "ev-1872-yodo-death", "ev-1954-yodo-grave-moved"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第11号「山内豊信（容堂）墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -61,7 +59,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "shinagawaRelation": "墓が南品川の海晏寺後丘にあり、区の指定史跡となっている。",
       "certainty": "fact",
       "relatedPlaces": ["pl-16a69cbab7"],
-      "relatedEvents": ["ev-1890-shungaku-death"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第9号「松平慶永（春嶽）墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -79,7 +76,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "shinagawaRelation": "墓が品川神社の裏手にある。もとは東海寺の塔頭・高源院の墓地の一部で、高源院の移転後も板垣家の墓域だけが残された。",
       "certainty": "fact",
       "relatedPlaces": ["pl-8d095e31ad"],
-      "relatedEvents": ["ev-1919-itagaki-death"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第4号「板垣退助墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -97,7 +93,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "shinagawaRelation": "自宅が大井にあったことから、当時の大井村谷垂（現在の西大井）に葬られた。墓は区の指定史跡となっている。",
       "certainty": "fact",
       "relatedPlaces": ["pl-45b14d4676"],
-      "relatedEvents": ["ev-1909-ito-death"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第19号「伊藤博文墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -115,7 +110,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "shinagawaRelation": "安政元年に品川台場の築造に従事した。墓は南品川の海晏寺後丘にあり、区の指定史跡となっている。",
       "certainty": "fact",
       "relatedPlaces": ["pl-729d15df9e"],
-      "relatedEvents": ["ev-1854-daiba", "ev-1909-yuri-death"],
       "variants": [
         {
           "claim": "墓碑銘の翻刻は没年を「明治十二年」、生年を「文政十五年」と記しており、解説本文と合わない。",
@@ -140,7 +134,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "shinagawaRelation": "墓が南品川の天妙国寺にあり、平成19年に区の指定史跡となった。",
       "certainty": "fact",
       "relatedPlaces": ["pl-1e1564b7a2"],
-      "relatedEvents": ["ev-2007-momochuken-designation"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第24号「桃中軒雲右衛門の墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -160,9 +153,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
         ],
         "shinagawaRelation": "家光が沢庵のために建てた東海寺が北品川にあり、墓は東海寺大山墓地にあって東京都の指定史跡となっている。",
         "certainty": "fact",
-        "relatedEvents": [
-          "ev-1638-tokaiji"
-        ],
         "relatedPlaces": [
           "pl-f0dec3262a"
         ],
@@ -189,9 +179,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
         ],
         "shinagawaRelation": "西大井の養玉院の開山。同院には寛永21年造立の木造天海僧正坐像が伝わる。",
         "certainty": "fact",
-        "relatedEvents": [
-          "ev-1926-yogyokuin"
-        ],
         "relatedPlaces": [
           "pl-84abe86d27"
         ],
@@ -218,9 +205,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
         ],
         "shinagawaRelation": "東大井の泊船寺に芭蕉堂があり、寛政5年の百回忌に俳人の石河積翠が境内の柳の木で刻んだと伝えられる木造松尾芭蕉坐像が伝わる。",
         "certainty": "fact",
-        "relatedEvents": [
-          "ev-1820-hakugyu"
-        ],
         "relatedPlaces": [
           "pl-9250914617"
         ],
@@ -306,9 +290,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
         ],
         "shinagawaRelation": "東大井の泊船寺の芭蕉堂に寓居し、同寺に句碑と木造白牛禅師坐像が伝わる。",
         "certainty": "fact",
-        "relatedEvents": [
-          "ev-1820-hakugyu"
-        ],
         "relatedPlaces": [
           "pl-9250914617"
         ],
@@ -335,10 +316,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
         ],
         "shinagawaRelation": "大井村の名主。泊船寺を舞台に俳諧を指導し、大井の水神の石祠の寄進にも名が残る。",
         "certainty": "fact",
-        "relatedEvents": [
-          "ev-1820-hakugyu",
-          "ev-1685-suijin"
-        ],
         "relatedPlaces": [
           "pl-9250914617",
           "pl-7c41971c1d"
@@ -366,10 +343,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
         ],
         "shinagawaRelation": "戸越村の別邸に孟宗竹を植え、周辺の村々へ筍栽培を広めた。小山に孟宗筍栽培記念碑がある。",
         "certainty": "fact",
-        "relatedEvents": [
-          "ev-1789-mosochiku",
-          "ev-1806-takenoko-hi"
-        ],
         "relatedPlaces": [
           "pl-bf6495f367"
         ],
