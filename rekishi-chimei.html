@@ -256,11 +256,31 @@
         </article>`;
       }
 
+      // 絞り込みで隠れている項目へのリンクをたどったときは、条件を外してから出す。
+      // そのままだと、押しても何も起きず、リンクが壊れているように見える。
+      let reopening = false;
+      let noticeFor = "";
+
+      function hasActiveFilter() {
+        return Boolean(query.value || kindSelect.value || areaSelect.value || originSelect.value);
+      }
+
+      function clearFilters() {
+        query.value = "";
+        kindSelect.value = "";
+        areaSelect.value = "";
+        originSelect.value = "";
+      }
+
       function render() {
         const filtered = NAMES.filter(matches);
         const known = filtered.filter((x) => x.origin).length;
+        // 条件を外したことは必ず伝える。黙って外すと、戻したはずの条件が
+        // 消えている理由が分からなくなる。
+        const notice = noticeFor ? `　「${noticeFor}」を表示するため、絞り込みを解除しました。` : "";
+        noticeFor = "";
         document.getElementById("hit-count").textContent =
-          `${filtered.length}件を表示（うち由来が分かっているもの ${known}件）`;
+          `${filtered.length}件を表示（うち由来が分かっているもの ${known}件）${notice}`;
 
         const groups = new Map();
         filtered.forEach((item) => {
@@ -287,8 +307,18 @@
 
       function openHash() {
         if (!location.hash) return;
-        const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-        if (!target) return;
+        const id = decodeURIComponent(location.hash.slice(1));
+        const target = document.getElementById(id);
+        if (!target) {
+          if (!reopening && nameById.has(id) && hasActiveFilter()) {
+            reopening = true;
+            clearFilters();
+            noticeFor = nameById.get(id).name;
+            render();
+            reopening = false;
+          }
+          return;
+        }
         const parent = target.closest("details");
         if (parent) parent.open = true;
         requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));

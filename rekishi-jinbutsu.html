@@ -234,9 +234,27 @@
         </article>`;
       }
 
+      // 絞り込みで隠れている人物へのリンク（他のページからの #pe-… を含む）を
+      // たどったときは、条件を外してから出す。
+      const personById = new Map(ordered.map((x) => [x.id, x]));
+      let reopening = false;
+      let noticeFor = "";
+
+      function hasActiveFilter() {
+        return Boolean(query.value || eraSelect.value || areaSelect.value);
+      }
+
+      function clearFilters() {
+        query.value = "";
+        eraSelect.value = "";
+        areaSelect.value = "";
+      }
+
       function render() {
         const filtered = ordered.filter(matches);
-        document.getElementById("hit-count").textContent = `${filtered.length}人を表示`;
+        const notice = noticeFor ? `　「${noticeFor}」を表示するため、絞り込みを解除しました。` : "";
+        noticeFor = "";
+        document.getElementById("hit-count").textContent = `${filtered.length}人を表示${notice}`;
         document.getElementById("list").innerHTML = filtered.length
           ? filtered.map(renderPerson).join("")
           : '<div class="empty">条件に一致する人物はいません。条件をリセットしてお試しください。</div>';
@@ -245,8 +263,18 @@
 
       function openHash() {
         if (!location.hash) return;
-        const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-        if (!target) return;
+        const id = decodeURIComponent(location.hash.slice(1));
+        const target = document.getElementById(id);
+        if (!target) {
+          if (!reopening && personById.has(id) && hasActiveFilter()) {
+            reopening = true;
+            clearFilters();
+            noticeFor = personById.get(id).name;
+            render();
+            reopening = false;
+          }
+          return;
+        }
         requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
       }
 
