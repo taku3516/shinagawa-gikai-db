@@ -70,6 +70,18 @@ window.SHINAGAWA_DB.rekishi = {
     { "id": "estimate", "label": "推定", "description": "資料から推定されたもので、確定していません。" }
   ],
 
+  // 地名の種類。現在の町名と、もう無い村や宿の名前を取り違えないために分ける。
+  "nameKinds": [
+    { "id": "current-town", "label": "現町名", "order": 1 },
+    { "id": "old-town", "label": "旧町名", "order": 2 },
+    { "id": "old-village", "label": "旧村名", "order": 3 },
+    { "id": "old-post", "label": "旧宿名", "order": 4 },
+    { "id": "road", "label": "古道・旧街道", "order": 5 },
+    { "id": "slope", "label": "坂", "order": 6 },
+    { "id": "water", "label": "川・橋・池", "order": 7 },
+    { "id": "other", "label": "その他", "order": 8 }
+  ],
+
   // 地点の位置の種類。過去に存在した施設の位置を、現在地と混同させないために分ける。
   "locationKinds": [
     { "id": "current", "label": "現在地", "description": "いまもこの場所にあります。" },

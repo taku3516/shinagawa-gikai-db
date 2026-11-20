@@ -297,10 +297,31 @@
         </article>`;
       }
 
+      // 絞り込みで隠れているできごとへのリンクをたどったときは、条件を外してから出す。
+      // そのままだと、押しても何も起きず、リンクが壊れているように見える。
+      let reopening = false;
+      let noticeFor = "";
+
+      function hasActiveFilter() {
+        return Boolean(query.value || eraSelect.value || areaSelect.value
+          || categorySelect.value || certaintyFilter);
+      }
+
+      function clearFilters() {
+        query.value = "";
+        eraSelect.value = "";
+        areaSelect.value = "";
+        categorySelect.value = "";
+        certaintyFilter = "";
+      }
+
       function render() {
         renderCertaintyChips();
         const filtered = ordered.filter((item) => matches(item));
-        document.getElementById("hit-count").textContent = `${filtered.length}件を表示`;
+        // 条件を外したことは必ず伝える。黙って外すと理由が分からなくなる。
+        const notice = noticeFor ? `　「${noticeFor}」を表示するため、絞り込みを解除しました。` : "";
+        noticeFor = "";
+        document.getElementById("hit-count").textContent = `${filtered.length}件を表示${notice}`;
 
         const groups = new Map();
         filtered.forEach((item) => {
@@ -329,8 +350,18 @@
       // 共有されたURL（#ev-…）で来たときは、その項目を含む時代を開いて表示する。
       function openHash() {
         if (!location.hash) return;
-        const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-        if (!target) return;
+        const id = decodeURIComponent(location.hash.slice(1));
+        const target = document.getElementById(id);
+        if (!target) {
+          if (!reopening && eventById.has(id) && hasActiveFilter()) {
+            reopening = true;
+            clearFilters();
+            noticeFor = eventById.get(id).name;
+            render();
+            reopening = false;
+          }
+          return;
+        }
         const parent = target.closest("details");
         if (parent) parent.open = true;
         requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
