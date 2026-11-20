@@ -63,6 +63,7 @@
     .leaflet-popup-content h2 + .pop-meta { margin-top:0; }
     .pop-place + .pop-place { margin-top:14px; border-top:1px solid var(--c-border); padding-top:12px; }
     .pop-meta { margin:0 0 6px; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); }
+    .pop-why { margin:0 0 6px; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); line-height:1.7; }
     .pop-note { margin:0 0 6px; border-left:3px solid var(--c-warning-border); padding-left:8px; color:var(--c-ink); font-size:calc(12px * var(--fs)); }
     .pop-list { margin:6px 0 0; padding-left:18px; }
     .pop-list li { margin-bottom:4px; }
@@ -251,9 +252,14 @@
             : esc(found.label);
         }).filter(Boolean).join("／");
         const categoryText = (place.categories || []).map((id) => categoryLabel.get(id) || id).join("・");
+        // なぜこの分類なのかを添える。史跡と産業遺産を兼ねる地点などは、
+        // 分類名だけでは「なぜ？」が分からない。
+        const why = place.categoryNote
+          ? `<p class="pop-why">${esc(place.categoryNote)}</p>` : "";
         return `<div class="pop-place">
           <h2>${esc(place.name)}</h2>
           <p class="pop-meta">${esc(place.address)}／${esc(categoryText)}</p>
+          ${why}
           ${note}
           ${heritage ? `<ul class="pop-list">${heritage}</ul>` : ""}
           ${source ? `<p class="pop-source">出典：${source}</p>` : ""}

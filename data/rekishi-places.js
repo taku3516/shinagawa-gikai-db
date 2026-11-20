@@ -4,7 +4,7 @@
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.rekishiPlaces = {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-20",
   "note": "品川区公式「指定文化財」から、史跡・旧跡・建造物・天然記念物は1件を1地点とし、絵画・古文書などの動産は置かれている場所ごとにまとめています。解説は転載せず、公式の詳細ページへ案内しています。緯度経度は国土地理院の住所検索APIによるもので、建物の正確な位置ではなく住所の代表点です。",
   "items": [
     {
@@ -40,7 +40,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 品川神社石造鳥居並水盤"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -76,7 +76,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 品川神社石造燈籠"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -167,7 +167,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 紙本着色釈尊誕生変相図"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1981-02-12"
     },
     {
@@ -248,7 +248,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 紙本墨画淡彩蘆葉達磨図"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1984-02-16"
     },
     {
@@ -296,7 +296,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 銅造阿弥陀如来立像"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1989-03-14"
     },
     {
@@ -342,7 +342,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 木造阿弥陀如来立像"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1992-03-10"
     },
     {
@@ -378,7 +378,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 木造日蓮聖人坐像 附 像内納入造像願文 像内納入法華経"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2006-04-25"
     },
     {
@@ -414,7 +414,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 木造菩薩形坐像"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2019-03-28"
     },
     {
@@ -496,7 +496,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 東海寺梵鐘"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -543,7 +543,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 鏝絵天鈿女命功績図"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1982-02-10"
     },
     {
@@ -635,7 +635,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 神輿"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -876,7 +876,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 金赤色被桜文ガラス花瓶"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1981-02-12"
     },
     {
@@ -888,7 +888,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "shinagawa"
       ],
       "categories": [
-        "temple"
+        "temple",
+        "lost"
       ],
       "lat": 35.612041,
       "lng": 139.74411,
@@ -945,7 +946,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 日什筆曼荼羅"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "五重塔は慶長19年に倒壊し、再建後も元禄15年に焼失した。残るのは礎石のみ",
       "designatedFrom": "1983-03-12"
     },
     {
@@ -981,7 +983,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 妙蓮寺典籍"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1992-03-10"
     },
     {
@@ -1017,7 +1019,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 清徳寺文書"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1990-03-13"
     },
     {
@@ -1054,7 +1056,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 願行寺文書"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2004-08-24"
     },
     {
@@ -1090,7 +1092,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 鯨碑"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2006-11-28"
     },
     {
@@ -1127,7 +1129,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 善福寺石造念仏講供養塔"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1164,7 +1166,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 本覚寺石造庚申供養塔"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -1201,7 +1203,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 海徳寺板木"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1981-02-12"
     },
     {
@@ -1238,7 +1240,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 海雲寺千躰荒神堂奉納扁額"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1985-03-14"
     },
     {
@@ -1275,7 +1277,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 紙本着色六道絵"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2002-07-25"
     },
     {
@@ -1287,7 +1289,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "shinagawa"
       ],
       "categories": [
-        "site"
+        "site",
+        "road"
       ],
       "lat": 35.614273,
       "lng": 139.73761,
@@ -1311,7 +1314,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 享保二十一年銘道標"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "東海道から目黒に至る道が碑文谷道に分かれる地点に建っていた",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1347,7 +1351,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 板垣退助墓"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1383,7 +1387,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 奥平家墓域"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1419,7 +1423,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 渋川春海墓（追贈記念塔を含む）"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1431,7 +1435,9 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "shinagawa"
       ],
       "categories": [
-        "site"
+        "site",
+        "road",
+        "lost"
       ],
       "lat": 35.618542,
       "lng": 139.743713,
@@ -1455,7 +1461,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 東海道品川宿本陣跡"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "東海道品川宿の本陣。明治5年の宿駅制度廃止後に役割を終え、昭和13年に公園となって建物は残っていない",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1467,7 +1474,9 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "shinagawa"
       ],
       "categories": [
-        "site"
+        "site",
+        "industry",
+        "lost"
       ],
       "lat": 35.616478,
       "lng": 139.735718,
@@ -1491,7 +1500,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 官営品川硝子製造所跡"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "政府の殖産興業政策による官営工場で、京浜工業地帯成立の第一歩の地。明治25年に解散し、建物は昭和43年に博物館明治村へ移築された",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1527,7 +1537,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 松平慶永（春嶽）墓"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1563,7 +1573,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 由利公正墓"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1575,7 +1585,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "shinagawa"
       ],
       "categories": [
-        "site"
+        "site",
+        "war"
       ],
       "lat": 35.61425,
       "lng": 139.740662,
@@ -1599,7 +1610,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 海蔵寺無縁塔群"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "天保の大飢饉の犠牲者215人を祀る塚や、津波溺死者供養塔を含む",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -1611,7 +1623,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "shinagawa"
       ],
       "categories": [
-        "site"
+        "site",
+        "war"
       ],
       "lat": 35.619637,
       "lng": 139.741959,
@@ -1636,7 +1649,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 流民叢塚碑 附 南無阿彌陀佛碑萬霊納骨堂碑"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "天保の大飢饉で亡くなった人たちを祀る供養塔",
       "designatedFrom": "1986-03-14"
     },
     {
@@ -1672,7 +1686,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 桃中軒雲右衛門の墓"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2007-12-25"
     },
     {
@@ -1684,7 +1698,9 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "shinagawa"
       ],
       "categories": [
-        "site"
+        "site",
+        "road",
+        "water"
       ],
       "lat": 35.613274,
       "lng": 139.744324,
@@ -1708,7 +1724,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 東海道品川宿石積護岸"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "東海道と品川宿の家並みを波から守るために築かれた護岸",
       "designatedFrom": "2023-03-29"
     },
     {
@@ -1744,7 +1761,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 品川寺のイチョウ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -1780,7 +1797,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 稼穡稲荷のイチョウ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -1816,7 +1833,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 法禅寺のイチョウ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -1852,7 +1869,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 大龍寺のシイ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -1889,7 +1906,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 居木神社末社厳島神社"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2004-08-24"
     },
     {
@@ -1979,7 +1996,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 紙本着色元三大師像"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -2027,19 +2044,20 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 雉子神社文書"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1990-03-13"
     },
     {
       "id": "pl-8c7bfa8312",
-      "name": "－",
+      "name": "文政十一年銘道標（2）",
       "summary": "西品川1-6-23にある歴史資料です。",
       "address": "西品川1-6-23",
       "areas": [
         "osaki"
       ],
       "categories": [
-        "site"
+        "site",
+        "road"
       ],
       "lat": 35.613148,
       "lng": 139.730988,
@@ -2064,7 +2082,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 文政十一年銘道標（2）"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "品川宿から居木橋村に入ってすぐの分かれ道に建っていたと推定される",
       "designatedFrom": "2004-03-23"
     },
     {
@@ -2123,7 +2142,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 徳蔵寺石造庚申供養塔群"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -2160,7 +2179,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 安楽寺供養塔群"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -2197,7 +2216,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 安養院石造念仏供養塔"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -2234,7 +2253,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 西品川三丁目石造庚申供養塔"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2005-04-26"
     },
     {
@@ -2246,7 +2265,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "osaki"
       ],
       "categories": [
-        "site"
+        "site",
+        "road"
       ],
       "lat": 35.614845,
       "lng": 139.726486,
@@ -2271,7 +2291,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 文政十一年銘道標"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "街道の分かれ道に建てられた道標",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -2283,7 +2304,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "osaki"
       ],
       "categories": [
-        "site"
+        "site",
+        "road"
       ],
       "lat": 35.615051,
       "lng": 139.726166,
@@ -2307,7 +2329,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 大正六年銘道標"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "街道の分かれ道に建てられた道標",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -2344,7 +2367,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 雉子神社のイチョウ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -2381,7 +2404,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 清泉女子大学のフウ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -2418,7 +2441,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 清岸寺のサクラ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -2455,7 +2478,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大崎地区の指定文化財 誕生八幡神社のイチョウ(1)"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -2582,7 +2605,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 絹本着色阿弥陀三尊来迎図"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1982-02-10"
     },
     {
@@ -2652,7 +2675,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 木造白牛禅師坐像"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1985-03-14"
     },
     {
@@ -2689,7 +2712,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 来迎院文書 附 来迎院棟札"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2009-07-14"
     },
     {
@@ -2726,7 +2749,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 阿波藍商人墓標群"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "2010-07-13"
     },
     {
@@ -2770,7 +2793,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 西光寺石造供養塔"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -2807,7 +2830,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 来迎院石造念仏講供養塔"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -2844,7 +2867,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 天保九年銘題目供養塔"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1990-03-13"
     },
     {
@@ -2881,7 +2904,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 山内豊信（容堂）墓"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -2893,7 +2916,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "oi"
       ],
       "categories": [
-        "site"
+        "site",
+        "water"
       ],
       "lat": 35.597282,
       "lng": 139.732285,
@@ -2917,7 +2941,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 大井の井"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "横穴式の井戸で、いまも水が湧いている",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -2929,7 +2954,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "oi"
       ],
       "categories": [
-        "site"
+        "site",
+        "water"
       ],
       "lat": 35.595535,
       "lng": 139.733231,
@@ -2953,7 +2979,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 大井の水神"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "湧水に感謝して祀られた水神。湧水は柳の清水と呼ばれた",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -2965,7 +2992,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "oi"
       ],
       "categories": [
-        "site"
+        "site",
+        "road"
       ],
       "lat": 35.602276,
       "lng": 139.725311,
@@ -2990,7 +3018,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 元禄八年銘道標"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "区内の道標のうち最古のもの",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -3027,7 +3056,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 伊藤博文墓"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -3039,7 +3068,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "oi"
       ],
       "categories": [
-        "site"
+        "site",
+        "water"
       ],
       "lat": 35.597771,
       "lng": 139.72319,
@@ -3063,7 +3093,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 大井・原の水神池"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "農家が野菜を洗った湧水池",
       "designatedFrom": "1982-02-10"
     },
     {
@@ -3100,7 +3131,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 光福寺のイチョウ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -3137,7 +3168,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 仙台坂団地のタブノキ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -3174,7 +3205,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 鹿島神社のタブノキ（1）"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -3211,7 +3242,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 鹿島神社のアカガシ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -3247,7 +3278,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "大井地区の指定文化財 大井囃子"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1985-03-14"
     },
     {
@@ -3284,7 +3315,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 旗岡八幡神社大絵馬"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -3321,7 +3352,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 木造摩耶夫人立像"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1986-03-14"
     },
     {
@@ -3358,7 +3389,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 木造阿弥陀如来坐像"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1991-03-26"
     },
     {
@@ -3395,7 +3426,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 木造阿弥陀三尊像"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1991-03-26"
     },
     {
@@ -3443,7 +3474,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 戸越八幡神社石造狛犬"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-11-22"
     },
     {
@@ -3480,7 +3511,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 旗の台一丁目石造庚申供養塔"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1986-03-14"
     },
     {
@@ -3517,7 +3548,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 旧中原街道供養塔群（一）"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1988-03-22"
     },
     {
@@ -3554,7 +3585,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 旧中原街道供養塔群（二）"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1988-03-22"
     },
     {
@@ -3591,7 +3622,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 小山台一丁目石造庚申供養塔"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1989-03-14"
     },
     {
@@ -3603,7 +3634,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "ebara"
       ],
       "categories": [
-        "site"
+        "site",
+        "road"
       ],
       "lat": 35.606434,
       "lng": 139.718079,
@@ -3628,7 +3660,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 大原不動堂内石造供養塔群"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "旧上蛇窪村から品川道・洗足道・池上道が分かれる地点にあり、六十六部廻国供養塔を兼ねた道標を含む",
       "designatedFrom": "1990-03-13"
     },
     {
@@ -3640,7 +3673,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "ebara"
       ],
       "categories": [
-        "site"
+        "site",
+        "road"
       ],
       "lat": 35.601105,
       "lng": 139.708771,
@@ -3665,7 +3699,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 天保二年銘道標"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "街道の分かれ道に建てられた道標",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -3702,7 +3737,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 柳亭種彦墓"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -3739,7 +3774,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 孟宗筍栽培記念碑"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1980-03-11"
     },
     {
@@ -3751,7 +3786,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "ebara"
       ],
       "categories": [
-        "site"
+        "site",
+        "road"
       ],
       "lat": 35.602154,
       "lng": 139.708221,
@@ -3776,7 +3812,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 天明三年銘石造道標"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "街道の分かれ道に建てられた道標",
       "designatedFrom": "1986-03-14"
     },
     {
@@ -3788,7 +3825,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         "ebara"
       ],
       "categories": [
-        "site"
+        "site",
+        "road"
       ],
       "lat": 35.621185,
       "lng": 139.707748,
@@ -3813,7 +3851,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 寛政元年銘石造道標"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
+      "categoryNote": "街道の分かれ道に建てられた道標",
       "designatedFrom": "1986-03-14"
     },
     {
@@ -3850,7 +3889,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 葛原神社のボダイジュ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -3887,7 +3926,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 小山八幡神社のシイ（1）・小山八幡神社のシイ（2）"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -3924,7 +3963,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 戸越八幡神社のケンポナシ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -3961,7 +4000,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "荏原地区の指定文化財 金子家のカキ"
         }
       ],
-      "verifiedAt": "2026-11-19",
+      "verifiedAt": "2026-11-20",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -4001,7 +4040,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 銅造地蔵菩薩坐像（江戸六地蔵の一）"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-0eb88578f1",
@@ -4033,7 +4072,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 銅製雲板"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-cb1f6699e6",
@@ -4065,7 +4104,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 熊本藩主細川家墓所"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-8a95cef577",
@@ -4097,7 +4136,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 春秋庵白雄墓"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-fdbb23509c",
@@ -4129,7 +4168,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 白井鳥酔墓"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-daac383d0f",
@@ -4161,7 +4200,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 岩倉具視墓"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-436b7b608c",
@@ -4193,7 +4232,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 鈴ヶ森遺跡（南大井2丁目）"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-a6c7b29cf9",
@@ -4225,7 +4264,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 旧島津家本邸"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-ef0990e965",
@@ -4257,7 +4296,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 沢庵墓"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-1a93e184b8",
@@ -4289,7 +4328,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 賀茂真淵墓"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-be2e1fa0fd",
@@ -4321,7 +4360,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 大森貝塚"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     },
     {
       "id": "pl-8d56e0f633",
@@ -4354,7 +4393,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 旧白金御料地"
         }
       ],
-      "verifiedAt": "2026-11-19"
+      "verifiedAt": "2026-11-20"
     }
   ]
 };
