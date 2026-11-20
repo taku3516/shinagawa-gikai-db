@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0017c1" />
+  <title>品川歴史マップ | 品川区議会DB</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230017c1'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="site-theme.css" />
+  <link rel="stylesheet" href="site-base.css" />
+  <link rel="stylesheet" href="site-nav.css" />
+  <link rel="stylesheet" href="site-controls.css" />
+  <link rel="stylesheet" href="site-mobile.css" />
+  <link rel="stylesheet" href="site-a11y.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <style>
+    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
+       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
+    button, select { cursor: pointer; }
+    .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .notice { margin-top:18px; border:1px solid var(--c-border); border-left:4px solid var(--c-main); border-radius:3px; background:var(--c-accent-pale); padding:13px 15px; font-size:calc(13px * var(--fs)); line-height:1.8; }
+    main section { padding:26px 0 44px; }
+
+    .panel { border:1px solid var(--c-border); border-radius:3px; background:var(--c-card); }
+    .map-layout { display:grid; grid-template-columns:minmax(0, 1.45fr) minmax(320px, 0.8fr); gap:18px; align-items:start; }
+    .map-panel { overflow:hidden; }
+    #rekishi-map { width:100%; min-height:590px; background:var(--c-map-bg); }
+    .map-fallback { display:grid; place-items:center; min-height:590px; padding:24px; text-align:center; line-height:1.8; }
+    .map-caption { border-top:1px solid var(--c-border); padding:10px 14px; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); line-height:1.65; }
+    .sidebar { position:sticky; top:12px; overflow:hidden; }
+    .controls { display:grid; gap:12px; padding:16px; border-bottom:1px solid var(--c-border); }
+    .chips-label { display:block; margin-bottom:6px; color:var(--c-ink-mute); font-size:calc(12px * var(--fs)); font-weight:700; }
+    .result-status { margin:0; padding:10px 16px; border-bottom:1px solid var(--c-border); color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); font-weight:700; }
+    .results { max-height:560px; overflow-y:auto; }
+
+    /* 一覧は地図の代わりにもなる。地図が読み込めない環境や、
+       キーボードだけで使う人でも、同じ情報にたどり着けるようにするため。 */
+    .result { display:block; width:100%; border:0; border-bottom:1px solid var(--c-rule); background:none; padding:12px 16px; text-align:left; font:inherit; }
+    .result:hover, .result:focus-visible { background:var(--c-main-pale); }
+    .result[aria-current="true"] { background:var(--c-main-pale); box-shadow:inset 4px 0 0 var(--c-main); }
+    .result-name { display:block; font-size:calc(14px * var(--fs)); font-weight:700; line-height:1.6; }
+    .result-meta { display:block; margin-top:3px; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); }
+    .empty { padding:24px 16px; color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); }
+
+    /* 地点の種類は、色だけでなく文字でも示す。色の見分けがつきにくい人や、
+       白黒で印刷したときにも区別できるようにするため（WCAG 1.4.1）。 */
+    .pin { display:grid; place-items:center; width:30px; height:30px; border:2px solid #fff; border-radius:50%; background:var(--c-main); box-shadow:0 1px 4px rgba(0,0,0,.4); color:#fff; font-size:13px; font-weight:700; }
+    .pin--temple { background:var(--c-accent); }
+    .pin--nature { background:#1b6e3c; }
+    .pin--building { background:#8a4b00; }
+    /* 現存しない施設は、現在地と取り違えないよう枠を破線にして文字も変える。 */
+    .pin--former { border-style:dashed; }
+    .pin__count { position:absolute; right:-4px; top:-4px; display:grid; place-items:center; min-width:17px; height:17px; border:1px solid var(--c-main-dark); border-radius:999px; background:#fff; color:var(--c-main-dark); font-size:11px; font-weight:700; }
+    .pin-wrap { position:relative; }
+
+    .leaflet-popup-content { margin:12px 14px; line-height:1.7; font-size:calc(13px * var(--fs)); }
+    .leaflet-popup-content h2 { margin:0 0 4px; font-size:calc(15px * var(--fs)); line-height:1.5; }
+    .leaflet-popup-content h2 + .pop-meta { margin-top:0; }
+    .pop-place + .pop-place { margin-top:14px; border-top:1px solid var(--c-border); padding-top:12px; }
+    .pop-meta { margin:0 0 6px; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); }
+    .pop-note { margin:0 0 6px; border-left:3px solid var(--c-warning-border); padding-left:8px; color:var(--c-ink); font-size:calc(12px * var(--fs)); }
+    .pop-list { margin:6px 0 0; padding-left:18px; }
+    .pop-list li { margin-bottom:4px; }
+    .pop-kind { color:var(--c-ink-soft); }
+    .pop-source { margin:8px 0 0; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); }
+    .legend { display:flex; flex-wrap:wrap; gap:10px; padding:12px 16px; border-top:1px solid var(--c-border); font-size:calc(12px * var(--fs)); }
+    .legend span { display:inline-flex; align-items:center; gap:5px; }
+    .legend .pin { width:22px; height:22px; font-size:11px; }
+
+    @media (max-width:980px) {
+      .map-layout { grid-template-columns:1fr; }
+      .sidebar { position:static; }
+      #rekishi-map, .map-fallback { min-height:430px; }
+      .results { max-height:none; }
+    }
+    @media (max-width:560px) {
+      .container { width:min(100% - 20px, 1180px); }
+      #rekishi-map, .map-fallback { min-height:360px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero"><div class="container">
+      <p class="breadcrumb"><a href="rekishi.html">← 品川の歴史へ</a></p>
+      <h1>品川歴史マップ</h1>
+      <p class="lead">史跡、神社仏閣、天然記念物、歴史的建造物を地図から探せます。町会区域マップとは別の、歴史専用の地図です。</p>
+      <div class="notice"><strong>ピンの位置は住所の代表点です。</strong> 建物や碑そのものの正確な位置ではありません。現在は存在しない施設は、ピンの枠を破線にして「かつての所在地」と明示します。</div>
+      <nav data-site-nav></nav>
+    </div></header>
+
+    <section><div class="container">
+      <div class="map-layout">
+        <section class="panel map-panel" aria-label="品川歴史マップ">
+          <div id="rekishi-map"><div class="map-fallback">地図を読み込んでいます。</div></div>
+          <div class="legend" id="legend" aria-label="ピンの見方"></div>
+          <div class="map-caption" id="map-caption">背景地図を読み込んでいます。</div>
+        </section>
+
+        <aside class="panel sidebar" aria-label="地点の絞り込みと一覧">
+          <form class="controls" id="controls">
+            <div class="control-field">
+              <label for="query">キーワード</label>
+              <input id="query" type="search" placeholder="例：東海道、イチョウ、寺" />
+            </div>
+            <div class="control-field">
+              <label for="area">地域</label>
+              <select id="area"><option value="">すべて</option></select>
+            </div>
+            <div>
+              <span class="chips-label" id="category-label">種類</span>
+              <div class="chips" id="category" role="group" aria-labelledby="category-label"></div>
+            </div>
+          </form>
+          <p class="result-status" id="result-status" aria-live="polite">データを読み込んでいます。</p>
+          <div class="results" id="results"></div>
+        </aside>
+      </div>
+    </div></section>
+  </main>
+
+  <footer><div class="container" id="footer-root"></div></footer>
+
+  <script src="data/site.js"></script>
+  <script src="data/rekishi.js"></script>
+  <script src="data/rekishi-places.js"></script>
+  <script src="site-nav.js"></script>
+  <script src="site-a11y.js"></script>
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const DB = window.SHINAGAWA_DB || {};
+      const META = DB.rekishi || null;
+      const PLACES = (DB.rekishiPlaces && DB.rekishiPlaces.items) || [];
+
+      const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => (
+        { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+      ));
+      const normalize = (v) => String(v ?? "").normalize("NFKC").toLocaleLowerCase("ja").replace(/\s+/g, "");
+
+      // ピンの中に出す1文字。色だけに頼らないための印。
+      const PIN_LETTERS = { site: "史", temple: "社", nature: "木", building: "建", road: "道", water: "川", industry: "産", lost: "跡" };
+
+      const mapRoot = document.getElementById("rekishi-map");
+      const statusBox = document.getElementById("result-status");
+
+      function fail(message) {
+        statusBox.textContent = message;
+        mapRoot.innerHTML = `<div class="map-fallback">${esc(message)}</div>`;
+      }
+
+      if (!META) {
+        fail("data/rekishi.js を読み込めませんでした。");
+        return;
+      }
+      if (!PLACES.length) {
+        fail("地点データがありません。data/rekishi-places.js を確認してください。");
+        return;
+      }
+
+      const areas = (META.areas || []).slice().sort((a, b) => (a.order || 0) - (b.order || 0));
+      const categories = (META.categories || []).slice().sort((a, b) => (a.order || 0) - (b.order || 0));
+      const areaLabel = new Map(areas.map((x) => [x.id, x.label]));
+      const categoryLabel = new Map(categories.map((x) => [x.id, x.label]));
+      const locationKind = new Map((META.locationKinds || []).map((x) => [x.id, x]));
+      const sourceById = new Map((META.sources || []).map((x) => [x.id, x]));
+
+      // 同じ住所の地点は同じ座標になる。ピンを重ねて置くと、下のピンは
+      // 押せなくなるので、座標ごとに1本にまとめ、吹き出しで全部を出す。
+      const spots = new Map();
+      PLACES.forEach((place) => {
+        const key = `${place.lat.toFixed(6)},${place.lng.toFixed(6)}`;
+        if (!spots.has(key)) spots.set(key, { lat: place.lat, lng: place.lng, places: [] });
+        spots.get(key).places.push(place);
+      });
+
+      const haystack = new Map(PLACES.map((place) => [place.id, normalize([
+        place.name, place.summary, place.address,
+        (place.categories || []).map((id) => categoryLabel.get(id)).join(" "),
+        (place.heritage || []).map((h) => `${h.name} ${h.kind} ${h.owner || ""}`).join(" ")
+      ].join(" "))]));
+
+      const query = document.getElementById("query");
+      const areaSelect = document.getElementById("area");
+      const categoryBox = document.getElementById("category");
+      let categoryFilter = "";
+
+      const usedAreas = new Set(PLACES.flatMap((x) => x.areas || []));
+      const usedCategories = new Set(PLACES.flatMap((x) => x.categories || []));
+      areaSelect.innerHTML += areas.filter((x) => usedAreas.has(x.id))
+        .map((x) => `<option value="${esc(x.id)}">${esc(x.label)}</option>`).join("");
+
+      function matches(place, ignore) {
+        if (areaSelect.value && !(place.areas || []).includes(areaSelect.value)) return false;
+        if (ignore !== "category" && categoryFilter && !(place.categories || []).includes(categoryFilter)) return false;
+        const key = normalize(query.value);
+        if (key && !(haystack.get(place.id) || "").includes(key)) return false;
+        return true;
+      }
+
+      function renderCategoryChips() {
+        const base = PLACES.filter((place) => matches(place, "category"));
+        const options = [{ id: "", label: "すべて" }].concat(
+          categories.filter((x) => usedCategories.has(x.id))
+        );
+        categoryBox.innerHTML = options.map((option) => {
+          const count = option.id
+            ? base.filter((x) => (x.categories || []).includes(option.id)).length
+            : base.length;
+          return `<button type="button" data-category="${esc(option.id)}" aria-pressed="${categoryFilter === option.id}">${esc(option.label)}<span class="chips__count">${count}</span></button>`;
+        }).join("");
+      }
+
+      function renderLegend() {
+        const shown = categories.filter((x) => usedCategories.has(x.id));
+        document.getElementById("legend").innerHTML = shown.map((category) =>
+          `<span><span class="pin pin--${esc(category.id)}" aria-hidden="true">${esc(PIN_LETTERS[category.id] || category.label.slice(0, 1))}</span>${esc(category.label)}</span>`
+        ).join("");
+      }
+
+      function placeHtml(place) {
+        const kind = locationKind.get(place.locationKind);
+        const note = place.locationNote
+          ? `<p class="pop-note">${esc(kind ? kind.label + "：" : "")}${esc(place.locationNote)}</p>`
+          : "";
+        const heritage = (place.heritage || []).map((item) => {
+          const label = `${esc(item.name)}${item.extra ? "（" + esc(item.extra) + "）" : ""}`;
+          const link = item.url
+            ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${label}</a>`
+            : label;
+          const designator = item.designator && item.designator !== "区" ? `${esc(item.designator)}指定・` : "";
+          const visit = item.visit ? `／${esc(item.visit)}` : "";
+          return `<li>${link}<br /><span class="pop-kind">${designator}${esc(item.kind)}${visit}</span></li>`;
+        }).join("");
+        const source = (place.sources || []).map((entry) => {
+          const found = sourceById.get(entry.ref);
+          if (!found) return "";
+          return found.url
+            ? `<a href="${esc(found.url)}" target="_blank" rel="noopener">${esc(found.label)}</a>`
+            : esc(found.label);
+        }).filter(Boolean).join("／");
+        const categoryText = (place.categories || []).map((id) => categoryLabel.get(id) || id).join("・");
+        return `<div class="pop-place">
+          <h2>${esc(place.name)}</h2>
+          <p class="pop-meta">${esc(place.address)}／${esc(categoryText)}</p>
+          ${note}
+          ${heritage ? `<ul class="pop-list">${heritage}</ul>` : ""}
+          ${source ? `<p class="pop-source">出典：${source}</p>` : ""}
+        </div>`;
+      }
+
+      // ---- ここから地図。Leafletが読み込めなくても一覧だけで使えるようにする ----
+      const hasLeaflet = typeof window.L !== "undefined";
+      let map = null;
+      let markerLayer = null;
+      const markerBySpot = new Map();
+
+      function buildMap() {
+        map = L.map(mapRoot, { scrollWheelZoom: false }).setView([35.6095, 139.7305], 13);
+        const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        });
+        // 地理院の淡色地図。史跡の位置を読むときは、こちらのほうが地名が読みやすい。
+        const pale = L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png", {
+          maxZoom: 18,
+          attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>'
+        });
+        osm.addTo(map);
+        L.control.layers({ "OpenStreetMap": osm, "地理院 淡色地図": pale }, null, { position: "topright" }).addTo(map);
+        markerLayer = L.layerGroup().addTo(map);
+        document.getElementById("map-caption").innerHTML =
+          '背景地図は OpenStreetMap と<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>（国土地理院）を切り替えられます。地点は品川区「指定文化財」によるもので、位置は住所の代表点です。';
+      }
+
+      function iconFor(spot) {
+        const first = spot.places[0];
+        const category = (first.categories || [])[0] || "site";
+        const letter = PIN_LETTERS[category] || (categoryLabel.get(category) || "地").slice(0, 1);
+        const former = spot.places.some((x) => x.locationKind === "former");
+        const count = spot.places.length > 1
+          ? `<span class="pin__count">${spot.places.length}</span>` : "";
+        return L.divIcon({
+          className: "",
+          html: `<span class="pin-wrap"><span class="pin pin--${category}${former ? " pin--former" : ""}">${letter}</span>${count}</span>`,
+          iconSize: [30, 30],
+          iconAnchor: [15, 15],
+          popupAnchor: [0, -14]
+        });
+      }
+
+      function drawMarkers(visibleIds) {
+        if (!markerLayer) return;
+        markerLayer.clearLayers();
+        markerBySpot.clear();
+        const bounds = [];
+        spots.forEach((spot, key) => {
+          const shown = spot.places.filter((place) => visibleIds.has(place.id));
+          if (!shown.length) return;
+          const marker = L.marker([spot.lat, spot.lng], {
+            icon: iconFor({ places: shown }),
+            // 一覧から選んだときに読み上げと同じ名前が出るようにする
+            alt: shown.map((x) => x.name).join("、"),
+            keyboard: true
+          });
+          marker.bindPopup(shown.map(placeHtml).join(""), { maxWidth: 320 });
+          marker.addTo(markerLayer);
+          markerBySpot.set(key, marker);
+          shown.forEach((place) => markerBySpot.set(place.id, marker));
+          bounds.push([spot.lat, spot.lng]);
+        });
+        if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 16 });
+      }
+
+      function renderResults(visible) {
+        const box = document.getElementById("results");
+        if (!visible.length) {
+          box.innerHTML = '<p class="empty">条件に一致する地点はありません。条件を変えてお試しください。</p>';
+          return;
+        }
+        box.innerHTML = visible.map((place) => {
+          const count = (place.heritage || []).length;
+          const categoryText = (place.categories || []).map((id) => categoryLabel.get(id) || id).join("・");
+          return `<button type="button" class="result" data-place="${esc(place.id)}">
+            <span class="result-name">${esc(place.name)}</span>
+            <span class="result-meta">${esc(place.address)}／${esc(areaLabel.get((place.areas || [])[0]) || "")}／${esc(categoryText)}${count ? `／指定文化財${count}件` : ""}</span>
+          </button>`;
+        }).join("");
+      }
+
+      function render() {
+        renderCategoryChips();
+        const visible = PLACES.filter((place) => matches(place));
+        const visibleIds = new Set(visible.map((x) => x.id));
+        statusBox.textContent = `${visible.length}件の地点を表示しています（全${PLACES.length}件）。`;
+        renderResults(visible);
+        if (hasLeaflet) drawMarkers(visibleIds);
+      }
+
+      document.getElementById("results").addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-place]");
+        if (!button) return;
+        document.querySelectorAll(".result[aria-current]").forEach((x) => x.removeAttribute("aria-current"));
+        button.setAttribute("aria-current", "true");
+        const marker = markerBySpot.get(button.getAttribute("data-place"));
+        if (!marker || !map) return;
+        map.setView(marker.getLatLng(), Math.max(map.getZoom(), 16));
+        marker.openPopup();
+      });
+
+      let timer;
+      query.addEventListener("input", () => {
+        clearTimeout(timer);
+        timer = setTimeout(render, 150);
+      });
+      areaSelect.addEventListener("change", render);
+      categoryBox.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-category]");
+        if (!button) return;
+        categoryFilter = button.getAttribute("data-category") || "";
+        render();
+      });
+      document.getElementById("controls").addEventListener("submit", (event) => event.preventDefault());
+
+      // 他のページ（人物事典など）から ?place=<地点ID> で名指しで開かれたときは、
+      // その地点を選んだ状態にして開く。地点どうしを行き来できるようにするため。
+      function openRequestedPlace() {
+        const wanted = new URLSearchParams(location.search).get("place");
+        if (!wanted) return;
+        const button = document.querySelector(`.result[data-place="${CSS.escape(wanted)}"]`);
+        if (!button) {
+          statusBox.textContent = "指定された地点は見つかりませんでした。一覧から探してください。";
+          return;
+        }
+        button.click();
+        button.scrollIntoView({ block: "center" });
+      }
+
+      renderLegend();
+      if (hasLeaflet) {
+        try {
+          buildMap();
+        } catch (error) {
+          // 地図が作れなくても一覧は使える。黙って失敗させない。
+          mapRoot.innerHTML = `<div class="map-fallback">地図を表示できませんでした（${esc(error && error.message ? error.message : error)}）。<br />右の一覧からは、これまでどおり地点を探せます。</div>`;
+        }
+      } else {
+        mapRoot.innerHTML = '<div class="map-fallback">地図の読み込みに失敗しました。<br />通信環境によっては地図ライブラリを取得できないことがあります。<br />一覧からは、これまでどおり地点を探せます。</div>';
+        document.getElementById("map-caption").textContent = "地点は品川区「指定文化財」によるものです。";
+      }
+      render();
+      openRequestedPlace();
+
+      document.getElementById("footer-root").textContent =
+        `品川区議会DB — ${META.disclaimer || ""}`;
+    })();
+  </script>
+</body>
+</html>

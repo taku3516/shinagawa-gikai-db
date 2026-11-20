@@ -86,6 +86,35 @@ window.SHINAGAWA_DB.site = {
       ]
     },
     {
+      "label": "品川の歴史",
+      "items": [
+        {
+          "label": "歴史トップ",
+          "url": "rekishi.html"
+        },
+        {
+          "label": "年表",
+          "url": "rekishi-nenpyo.html"
+        },
+        {
+          "label": "歴史マップ",
+          "url": "rekishi-map.html"
+        },
+        {
+          "label": "地域別",
+          "url": "rekishi-chiiki.html"
+        },
+        {
+          "label": "人物事典",
+          "url": "rekishi-jinbutsu.html"
+        },
+        {
+          "label": "古地図・今昔",
+          "url": "rekishi-kochizu.html"
+        }
+      ]
+    },
+    {
       "label": "公式サイト",
       "items": [
         {
