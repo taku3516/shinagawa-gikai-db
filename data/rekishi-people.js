@@ -143,6 +143,243 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "relatedEvents": ["ev-2007-momochuken-designation"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第24号「桃中軒雲右衛門の墓」" }],
       "verifiedAt": "2026-11-19"
-    }
+    },
+
+      {
+        "id": "pe-takuan-soho",
+        "name": "沢庵宗彭",
+        "kana": "たくあんそうほう",
+        "summary": "三代将軍徳川家光が帰依した僧。家光は沢庵のために北品川に東海寺を建立した。",
+        "description": "寛永15年、家光は沢庵のために東海寺を建てました。寺地に隣接する品川神社は境内の一部が東海寺の用地となり、幕府は替地を下付して品川神社を東海寺の鬼門除けの鎮守としています。",
+        "birthYear": null,
+        "deathYear": null,
+        "yearText": "生没年はこの資料では確認できていません",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "shinagawaRelation": "家光が沢庵のために建てた東海寺が北品川にあり、墓は東海寺大山墓地にあって東京都の指定史跡となっている。",
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1638-tokaiji"
+        ],
+        "relatedPlaces": [
+          "pl-f0dec3262a"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 建造物第1号「品川神社石造鳥居並水盤」、区内にある都および国の指定文化財「沢庵墓」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "pe-tenkai",
+        "name": "天海僧正",
+        "kana": "てんかいそうじょう",
+        "summary": "徳川家康の信任が厚く、江戸上野の寛永寺や養玉院の開山となった僧。",
+        "description": "寛永21年に大仏師慶雄が造った木造天海僧正坐像が養玉院に伝わります。像が造られる前年に108歳の高齢で没し、慈眼大師と諡されました。",
+        "birthYear": 1536,
+        "deathYear": 1643,
+        "yearText": "天文5年（1536年）〜寛永20年（1643年）",
+        "era": "kinsei",
+        "areas": [
+          "oi"
+        ],
+        "shinagawaRelation": "西大井の養玉院の開山。同院には寛永21年造立の木造天海僧正坐像が伝わる。",
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1926-yogyokuin"
+        ],
+        "relatedPlaces": [
+          "pl-84abe86d27"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 彫刻「木造天海僧正坐像」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "pe-matsuo-basho",
+        "name": "松尾芭蕉",
+        "kana": "まつおばしょう",
+        "summary": "江戸時代の俳人。泊船寺には芭蕉堂があり、百回忌に境内の柳の木で刻まれたと伝えられる肖像彫刻が伝わる。",
+        "description": "正保元年に伊賀上野で生まれ、幼くして貞門や談林に俳諧を学びました。のち江戸に出て深川に泊船堂（のちの芭蕉庵）を建てて俳諧に精進し、旅に明け暮れて多くの名句を残すとともに、服部嵐雪・宝井其角・向井去来など多数の門人を育てました。元禄7年の辞世の句は「旅に病んで夢は枯れ野をかけめぐる」です。",
+        "birthYear": 1644,
+        "deathYear": 1694,
+        "yearText": "正保元年（1644年）〜元禄7年（1694年）",
+        "era": "kinsei",
+        "areas": [
+          "oi"
+        ],
+        "shinagawaRelation": "東大井の泊船寺に芭蕉堂があり、寛政5年の百回忌に俳人の石河積翠が境内の柳の木で刻んだと伝えられる木造松尾芭蕉坐像が伝わる。",
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1820-hakugyu"
+        ],
+        "relatedPlaces": [
+          "pl-9250914617"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 彫刻「木造松尾芭蕉坐像」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "pe-hattori-ransetsu",
+        "name": "服部嵐雪",
+        "kana": "はっとりらんせつ",
+        "summary": "芭蕉の高弟で、其角とともに蕉門の双璧と称された俳人。泊船寺に肖像彫刻が伝わる。",
+        "description": "承応3年に淡路国で生まれたと伝えられます。幼いころ父に従って江戸で諸大名に仕え、武士の生活を送りました。延宝年間に芭蕉の門に入って俳諧師となり、芭蕉から「草庵に桃桜あり、門人に其角・嵐雪あり」と賞されています。",
+        "birthYear": 1654,
+        "deathYear": 1707,
+        "yearText": "承応3年（1654年）〜宝永4年（1707年）10月",
+        "era": "kinsei",
+        "areas": [
+          "oi"
+        ],
+        "shinagawaRelation": "東大井の泊船寺に木造服部嵐雪坐像が伝わる。",
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "生地は淡路国と伝えられるが、江戸の生まれとする説もあると出典に併記されている。",
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 彫刻「木造服部嵐雪坐像」"
+          }
+        ],
+        "relatedPlaces": [
+          "pl-9250914617"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 彫刻「木造服部嵐雪坐像」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "pe-takarai-kikaku",
+        "name": "宝井其角",
+        "kana": "たからいきかく",
+        "summary": "芭蕉の高弟で、嵐雪とともに蕉門の双璧と称された俳人。泊船寺に肖像彫刻が伝わる。",
+        "description": "寛文元年に江戸下町の町医師・竹下東順の子として生まれ、医学のほか儒学・詩・易・禅・書・画を学ぶ博学でした。延宝5年、17歳のころに芭蕉の門をたたいて頭角をあらわします。大酒豪であることが災いし、宝永4年に47歳で没しました。与謝蕪村は孫弟子にあたります。",
+        "birthYear": 1661,
+        "deathYear": 1707,
+        "yearText": "寛文元年（1661年）〜宝永4年（1707年）",
+        "era": "kinsei",
+        "areas": [
+          "oi"
+        ],
+        "shinagawaRelation": "東大井の泊船寺に、文化5年に造られた木造宝井其角坐像が伝わる。",
+        "certainty": "fact",
+        "relatedPlaces": [
+          "pl-9250914617"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 彫刻「木造宝井其角坐像」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "pe-hakugyu-zenji",
+        "name": "白牛禅師（山奴）",
+        "kana": "はくぎゅうぜんじ",
+        "summary": "下総国出身の俳人。文化年間に泊船寺の芭蕉堂に寓居して俳諧に没頭し、出家して白牛禅師と称した。",
+        "description": "のちに二世杜格斎を名乗り、大井村の名主・大野五蔵惟図（俳号は景山）を弟子としました。文政3年に没し、その翌年、景山の発起で境内に句碑「漁火に鳥の飛行霜夜かな」が建てられています。天保15年には品川妙国寺門前の仏師・大場祐造が肖像彫刻を刻みました。",
+        "birthYear": null,
+        "deathYear": 1820,
+        "yearText": "文政3年（1820年）に没",
+        "era": "kinsei",
+        "areas": [
+          "oi"
+        ],
+        "shinagawaRelation": "東大井の泊船寺の芭蕉堂に寓居し、同寺に句碑と木造白牛禅師坐像が伝わる。",
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1820-hakugyu"
+        ],
+        "relatedPlaces": [
+          "pl-9250914617"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 彫刻第10号「木造白牛禅師坐像」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "pe-ono-keizan",
+        "name": "大野景山（大野五蔵惟図）",
+        "kana": "おおのけいざん",
+        "summary": "大井村の名主で俳人。白牛禅師の弟子となり、三世杜格斎として一時は数百人の弟子を指導したという。",
+        "description": "師の白牛禅師が没した翌年、その句碑を泊船寺の境内に建てる発起人となりました。大井の水神の石祠は文化5年に大井村の村民が寄進したもので、その願主として時の名主・大野貫蔵惟一とその子である惟図（のちの名主、俳人景山）の名が刻まれています。",
+        "birthYear": null,
+        "deathYear": null,
+        "yearText": "生没年はこの資料では確認できていません",
+        "era": "kinsei",
+        "areas": [
+          "oi"
+        ],
+        "shinagawaRelation": "大井村の名主。泊船寺を舞台に俳諧を指導し、大井の水神の石祠の寄進にも名が残る。",
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1820-hakugyu",
+          "ev-1685-suijin"
+        ],
+        "relatedPlaces": [
+          "pl-9250914617",
+          "pl-7c41971c1d"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 彫刻第10号「木造白牛禅師坐像」、史跡「大井の水神」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "pe-yamaji-jirobe",
+        "name": "山路治郎兵衛（竹翁）",
+        "kana": "やまじじろべえ",
+        "summary": "戸越村に孟宗竹を植え、品川の筍栽培の始まりをつくった商人。",
+        "description": "名を勝孝といい、名字帯刀を許された商人でした。江戸鉄砲州で廻船問屋を営みながら家業を店の者に任せ、戸越村の別邸に移っています。元文元年に薩摩藩島津家が琉球から孟宗竹を入手したことから竹の栽培に興味を持ち、寛政元年に芝の薩摩屋敷から数株を入手して宅地付近に植え付けました。改良を加えて数年後には庭一面に繁殖させ、付近の農家にも勧めたため、戸越村から目黒にかけて竹林が広がり、竹と筍は関東大震災のころまでこの地域の特産品となりました。",
+        "birthYear": null,
+        "deathYear": 1805,
+        "yearText": "文化2年（1805年）ごろ没",
+        "era": "kinsei",
+        "areas": [
+          "ebara"
+        ],
+        "shinagawaRelation": "戸越村の別邸に孟宗竹を植え、周辺の村々へ筍栽培を広めた。小山に孟宗筍栽培記念碑がある。",
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1789-mosochiku",
+          "ev-1806-takenoko-hi"
+        ],
+        "relatedPlaces": [
+          "pl-bf6495f367"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "荏原地区の指定文化財 史跡「孟宗筍栽培記念碑」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      }
   ]
 };

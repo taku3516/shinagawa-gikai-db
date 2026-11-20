@@ -466,6 +466,856 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "relatedPeople": ["pe-momochuken-kumoemon"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第24号「桃中軒雲右衛門の墓」" }],
       "verifiedAt": "2026-11-19"
-    }
+    },
+
+      {
+        "id": "ev-1308-itabi",
+        "name": "御殿山の一帯で板碑が造立されはじめる",
+        "summary": "法禅寺に納められた板碑のうち最も古いものは徳治3年銘で、14世紀初頭から15世紀後半にかけて造立が続いた。",
+        "description": "板碑は仏像や仏の種子を刻んだ卒塔婆で、13世紀から15世紀にかけて関東地方を中心に作られました。法禅寺に伝わる板碑116点は紀年銘が確認できる範囲で14世紀初頭から15世紀後半のもので、主尊は1基を除きすべて阿弥陀です。あわせて宝篋印塔の部材52点（14世紀末〜15世紀前半）と五輪塔の部材104点（15世紀初頭〜16世紀初頭）が残り、中世の御殿山が霊場としての性格を持っていたことを示しています。",
+        "year": 1308,
+        "yearEnd": 1500,
+        "yearText": "徳治3年（1308年）ごろ〜15世紀後半",
+        "era": "chusei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "site",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1854-gotenyama"
+        ],
+        "relatedPlaces": [
+          "pl-2de8c135d9"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 考古資料「法禅寺板碑・宝篋印塔・五輪塔 附 遺墳碑・萬霊塔・枯骨之墳」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1463-dairyuji",
+        "name": "大龍寺が時宗東光寺として開創される",
+        "summary": "寛正4年、のちの大龍寺にあたる時宗東光寺が南品川に開かれた。",
+        "description": "元禄16年には隠元禅師の弟子である中国人僧の慧林性機を開山として黄檗宗に改宗し、大龍寺となりました。",
+        "year": 1463,
+        "yearEnd": null,
+        "yearText": "寛正4年（1463年）",
+        "era": "chusei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "temple"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1703-dairyuji-obaku"
+        ],
+        "relatedPlaces": [
+          "pl-9751f82c34"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 絵画第6号「紙本墨画淡彩蘆葉達磨図」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1469-kijijinja",
+        "name": "雉子神社と誕生八幡神社が創建されたと伝えられる",
+        "summary": "どちらも文明年間の創建と伝えられる。誕生八幡神社は太田道灌が勧請したという。",
+        "description": "雉子神社は江戸時代の初めまで「大鳥大明神」と呼ばれていました。誕生八幡神社は江戸時代には誕生八幡と称しています。いずれも伝承で、史料による裏付けがあるものではありません。",
+        "year": null,
+        "yearEnd": 1487,
+        "yearText": "文明年間（1469〜1487年）",
+        "era": "chusei",
+        "areas": [
+          "osaki"
+        ],
+        "categories": [
+          "temple"
+        ],
+        "certainty": "tradition",
+        "relatedEvents": [],
+        "relatedPlaces": [
+          "pl-9aaa87e538",
+          "pl-4e8fbde73a"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大崎地区の指定文化財 古文書「雉子神社文書」、天然記念物「誕生八幡神社のイチョウ(1)」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1601-tenma",
+        "name": "徳川家康が東海道に伝馬の制度を定め、品川宿が伝馬宿となる",
+        "summary": "慶長6年正月の制度化により、品川宿は東海道の伝馬宿となった。当時は北品川宿と南品川宿の二宿だった。",
+        "description": "伝馬の提供は両宿で負担していました。のちに歩行新宿が加宿として加わり、品川三宿になります。",
+        "year": 1601,
+        "yearEnd": null,
+        "yearText": "慶長6年（1601年）正月",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "road",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1635-honjin",
+          "ev-1722-kachishinshuku"
+        ],
+        "relatedPlaces": [
+          "pl-6b12d55eea"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 古文書第6号「品川歩行新宿加宿裁許状」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1614-gojunoto-fall",
+        "name": "天妙国寺の五重塔が大風で倒壊する",
+        "summary": "室町時代中ごろに建てられた五重塔が、慶長19年の大風で倒壊した。",
+        "description": "その後、江戸時代初期に再建されましたが、元禄15年に焼失しました。現在残るのは礎石だけで、「妙国寺絵図」などに塔の姿が描かれています。",
+        "year": 1614,
+        "yearEnd": null,
+        "yearText": "慶長19年（1614年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "temple",
+          "war"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1702-gojunoto-fire"
+        ],
+        "relatedPlaces": [
+          "pl-11e5d5f153"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財「天妙国寺五重塔礎石」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1635-koshinto",
+        "name": "徳蔵寺に区内で最も古い庚申塔が造立される",
+        "summary": "寛永12年の銘を持つ板碑型の庚申塔で、品川区に残る庚申塔のうち最古の紀年銘。",
+        "description": "高さ160.0センチメートルで、12名の施主名が刻まれ、そのなかに大峯行者教善院の名が見えます。",
+        "year": 1635,
+        "yearEnd": null,
+        "yearText": "寛永12年（1635年）",
+        "era": "kinsei",
+        "areas": [
+          "osaki"
+        ],
+        "categories": [
+          "temple",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPlaces": [],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大崎地区の指定文化財「徳蔵寺石造庚申供養塔群」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1638-tokaiji",
+        "name": "三代将軍徳川家光が沢庵のために東海寺を建立する",
+        "summary": "寛永15年、家光は帰依する沢庵宗彭のために東海寺を建てた。隣接する品川神社は境内の一部が東海寺の用地となった。",
+        "description": "このとき幕府は替地を下付し、品川神社を東海寺の鬼門除けの鎮守として社殿から神主の居宅までを新築整備しました。",
+        "year": 1638,
+        "yearEnd": null,
+        "yearText": "寛永15年（1638年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "temple"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1648-shinagawa-jinja-torii"
+        ],
+        "relatedPlaces": [
+          "pl-f0dec3262a",
+          "pl-548dab732d"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 建造物第1号「品川神社石造鳥居並水盤」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1655-ryoshimachi",
+        "name": "南品川猟師町が開かれる",
+        "summary": "明暦元年、伝馬の役を辞退した漁師たちが、目黒川河口の寄州「兜島」へ移されて新しい町が開かれた。",
+        "description": "移されたのは南品川三丁目（現在の南品川二丁目）に住んでいた漁師たちで、兜島と呼ばれていた人家のない寄州が町の始まりです。のちに多くの漁民が住み、幕府へ魚介類を献上する御菜肴八ヶ浦のひとつとして、江戸湾の漁業の中心となりました。",
+        "year": 1655,
+        "yearEnd": null,
+        "yearText": "明暦元年（1655年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "life",
+          "placename"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1884-ryoshimachi-fire"
+        ],
+        "relatedPlaces": [
+          "pl-6b12d55eea"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大崎地区の指定文化財 古文書「大島家文書」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1685-suijin",
+        "name": "大井村の村民が水神を祀る",
+        "summary": "貞享2年、台地下から湧く地下水の恵みに感謝し、村民が九頭龍権現を祀った。",
+        "description": "願主は大井村の桜井伊兵衛と大野忠左衛門と伝えられます。境内には熔岩を高さ約2メートルに積み上げた人工の石窟が造られ、木造の小祠に水葉乃女命が祀られました。文化5年の石祠には、この湧水が「柳の清水」と呼ばれ、日照りのときに村が雨乞いをしたと刻まれています。",
+        "year": 1685,
+        "yearEnd": null,
+        "yearText": "貞享2年（1685年）",
+        "era": "kinsei",
+        "areas": [
+          "oi"
+        ],
+        "categories": [
+          "water",
+          "temple",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPlaces": [
+          "pl-7c41971c1d"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 史跡「大井の水神」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1691-tamerou",
+        "name": "品川の溜牢で死亡した人々が海蔵寺に埋葬される",
+        "summary": "元禄4年から明和2年までの間に、品川の溜牢で死亡した人の遺体が海蔵寺へ運ばれ、その数は700人を超えると伝えられる。",
+        "description": "宝永5年には土地の有力者がこれを改葬し、遺骨を集めて墳墓を築いて観音像を安置しました。この塚は「頭痛塚」と呼ばれています。",
+        "year": 1691,
+        "yearEnd": 1765,
+        "yearText": "元禄4年（1691年）〜明和2年（1765年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "war",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1865-tsunami-kuyoto"
+        ],
+        "relatedPlaces": [
+          "pl-f1068fbcbb"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 史跡「海蔵寺無縁塔群」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1695-ishibashi",
+        "name": "大井村の念仏講が品川用水路に石橋を架ける",
+        "summary": "元禄8年、大井村の寂証を中心とする58人の念仏講中が石橋を架け、橋の安泰と通行者の安全を願って道標を建てた。",
+        "description": "この道標は区内に十数基ある道標のうち最古のもので、元禄期に大井村へ念仏講があり、講が架橋を行っていたことを示します。",
+        "year": 1695,
+        "yearEnd": null,
+        "yearText": "元禄8年（1695年）",
+        "era": "kinsei",
+        "areas": [
+          "oi"
+        ],
+        "categories": [
+          "water",
+          "road",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPlaces": [
+          "pl-27e6dd0bca"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 史跡「元禄八年銘道標」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1702-gojunoto-fire",
+        "name": "天妙国寺の五重塔が焼失する",
+        "summary": "倒壊後に再建された五重塔が、元禄15年に焼失した。",
+        "description": "以後は再建されず、礎石だけが残りました。",
+        "year": 1702,
+        "yearEnd": null,
+        "yearText": "元禄15年（1702年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "temple",
+          "war"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1614-gojunoto-fall"
+        ],
+        "relatedPlaces": [
+          "pl-11e5d5f153"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財「天妙国寺五重塔礎石」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1703-dairyuji-obaku",
+        "name": "大龍寺が黄檗宗に改宗する",
+        "summary": "元禄16年、隠元禅師の弟子である中国人僧の慧林性機を開山として、時宗から黄檗宗に改められた。",
+        "description": "このとき京都宇治万福寺の本尊の体内仏が施入されたと伝えられ、典型的な黄檗仏である木造釈迦如来及両脇侍像が伝わっています。",
+        "year": 1703,
+        "yearEnd": null,
+        "yearText": "元禄16年（1703年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "temple"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1463-dairyuji"
+        ],
+        "relatedPlaces": [
+          "pl-9751f82c34"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 絵画第6号「紙本墨画淡彩蘆葉達磨図」、彫刻「木造釈迦如来及両脇侍像」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1708-zutsuka",
+        "name": "海蔵寺で改葬が行われ、頭痛塚が築かれる",
+        "summary": "宝永5年、土地の有力者が溜牢で亡くなった人々を改葬し、遺骨を集めた墳墓の上に観音像を安置した。",
+        "description": "この塚は「頭痛塚」と呼ばれ、のちに天保の大飢饉の犠牲者215人を祀る「二一五人塚」も合葬されました。",
+        "year": 1708,
+        "yearEnd": null,
+        "yearText": "宝永5年（1708年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "war",
+          "temple"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1691-tamerou"
+        ],
+        "relatedPlaces": [
+          "pl-f1068fbcbb"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 史跡「海蔵寺無縁塔群」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1711-urakousatsu",
+        "name": "幕府が全国の浦々に「正徳の浦高札」を建てる",
+        "summary": "正徳元年、海難事故が続出したため、幕府は対策として全国の浦々に触書の高札を建てた。",
+        "description": "品川浦に高札場がいつ設けられたかは分かっていませんが、目黒川河口の新品川橋南岸付近と推定されています。寄木神社には正徳2年の銘を持つ添高札が伝わり、御城米船が破船した際の処置の心得を定めた二か条からなります。明治政府の発足とともに大方の浦高札が撤去されたため、現存するものは非常に少ないものです。",
+        "year": 1711,
+        "yearEnd": null,
+        "yearText": "正徳元年（1711年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "admin",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPlaces": [
+          "pl-bdeb7c9ebc"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 歴史資料第1号「添浦高札」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1722-kachishinshuku",
+        "name": "歩行新宿の加宿が認められ、品川三宿となる",
+        "summary": "享保7年12月に下付された裁許状により、北品川宿の北側に生まれた新しい町並が加宿として認められ、歩行新宿と名づけられた。",
+        "description": "伝馬の人足を負担していた北品川の法禅寺・善福寺の両門前町屋と新町が、宿内と変わらないとして道中奉行に訴え出たものです。江戸に近い地の利のある新町らに客を取られるとして南北両品川宿は反対しましたが、加宿が認められました。裁許状は歩行新宿の名主・飯田家に伝わり、のちに品川区へ寄贈されています。",
+        "year": 1722,
+        "yearEnd": null,
+        "yearText": "享保7年（1722年）12月",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "road",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1601-tenma"
+        ],
+        "relatedPlaces": [
+          "pl-6b12d55eea"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 古文書第6号「品川歩行新宿加宿裁許状」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1746-togoshi-komainu",
+        "name": "戸越村の村民が戸越八幡神社に狛犬を奉納する",
+        "summary": "延享3年、戸越村の村民が一対の石造狛犬を奉納した。社殿の手前、参道敷石の両側に建てられている。",
+        "description": "同社の奉納絵馬も、奉納者の多くは戸越村の村民です。",
+        "year": 1746,
+        "yearEnd": null,
+        "yearText": "延享3年（1746年）",
+        "era": "kinsei",
+        "areas": [
+          "ebara"
+        ],
+        "categories": [
+          "temple",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPlaces": [
+          "pl-9f3cab87af"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "荏原地区の指定文化財 有形民俗第5号「戸越八幡神社石造狛犬」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1789-mosochiku",
+        "name": "山路治郎兵衛が戸越村に孟宗竹を植える",
+        "summary": "寛政元年、廻船問屋の山路治郎兵衛が芝の薩摩屋敷から孟宗竹数株を入手し、戸越村の別邸付近に植えた。これが品川の筍栽培の始まりとされる。",
+        "description": "治郎兵衛は名字帯刀を許された商人で、江戸鉄砲州で廻船問屋を営みながら戸越村の別邸に移っていました。改良を加えて数年後には庭一面に繁殖させ、この栽培を付近の農家に勧めたため、戸越村から目黒にかけての村々へ竹林が広がりました。竹と筍は関東大震災のころまで、この地域の特産品でした。元文元年に薩摩藩島津家が琉球から孟宗竹を入手したことが、竹に興味を持つきっかけだったとされます。",
+        "year": 1789,
+        "yearEnd": null,
+        "yearText": "寛政元年（1789年）",
+        "era": "kinsei",
+        "areas": [
+          "ebara"
+        ],
+        "categories": [
+          "life",
+          "industry"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1806-takenoko-hi"
+        ],
+        "relatedPlaces": [
+          "pl-bf6495f367"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "荏原地区の指定文化財 史跡「孟宗筍栽培記念碑」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1798-kujira",
+        "name": "品川沖で大鯨が捕らえられる",
+        "summary": "寛政10年、品川沖で見つかった大鯨を品川猟師町の猟師たちが捕らえた。十一代将軍徳川家斉の上覧のあと、鯨を弔う碑が建てられた。",
+        "description": "この碑が利田神社にある鯨碑で、できごとを後世に伝えるために建立されました。",
+        "year": 1798,
+        "yearEnd": null,
+        "yearText": "寛政10年（1798年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "life",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1655-ryoshimachi"
+        ],
+        "relatedPlaces": [
+          "pl-086da1e672"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 史跡「鯨碑」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1806-takenoko-hi",
+        "name": "孟宗筍栽培記念碑が建てられる",
+        "summary": "文化3年、山路治郎兵衛の一周忌に、子の三郎兵衛が歯骨を埋めてその上に碑を建てた。",
+        "description": "高さ125.0センチメートル、幅65.0センチメートルの自然石型の碑で、正面に治郎兵衛の辞世「櫓も揖も弥陀にまかせて雪見哉 釋竹翁」が刻まれています。筍の碑として知られ、殖産興業の記念碑であるとともに、筍栽培の発祥地と最初の栽培者の功績を伝えるものです。",
+        "year": 1806,
+        "yearEnd": null,
+        "yearText": "文化3年（1806年）",
+        "era": "kinsei",
+        "areas": [
+          "ebara"
+        ],
+        "categories": [
+          "life",
+          "industry",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1789-mosochiku"
+        ],
+        "relatedPlaces": [
+          "pl-bf6495f367"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "荏原地区の指定文化財 史跡「孟宗筍栽培記念碑」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1854-gotenyama",
+        "name": "品川台場の築造で御殿山を掘り、中世の板碑などが出土する",
+        "summary": "安政元年、品川台場を築くための土取り作業中に、御殿山の土取場から人骨・五輪塔・宝篋印塔とともに多数の板碑が出土した。",
+        "description": "掛役人の大竹昌言は出土した石造物を法禅寺に納め、人骨は寺内に埋葬しました。のちに昌言の子の昌蔵が、一連の経緯を記した「法禅寺遺墳碑」を建てています。板碑116点、宝篋印塔の部材52点、五輪塔の部材104点が区の指定を受けており、中世の御殿山が霊場としての性格を持っていたことを示す資料群です。",
+        "year": 1854,
+        "yearEnd": null,
+        "yearText": "安政元年（1854年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "site",
+          "war"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1308-itabi",
+          "ev-1854-daiba"
+        ],
+        "relatedPlaces": [
+          "pl-2de8c135d9"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 考古資料「法禅寺板碑・宝篋印塔・五輪塔 附 遺墳碑・萬霊塔・枯骨之墳」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1865-tsunami-kuyoto",
+        "name": "品川惣町が津波溺死者供養塔を建てる",
+        "summary": "慶応元年、品川惣町によって海蔵寺に津波溺死者供養塔が建立された。同じ年には元禄以降の獄死者を葬った無縁塔も建てられている。",
+        "description": "明治6年には無縁1,268人の霊を祀る無縁供養塔が建てられ、明治9年には品川宿の娼妓たち400人の無縁仏も埋葬されて、大井楼主から大位牌一基が奉納されました。",
+        "year": 1865,
+        "yearEnd": null,
+        "yearText": "慶応元年（1865年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "war",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1691-tamerou",
+          "ev-1915-jiko-kuyoto"
+        ],
+        "relatedPlaces": [
+          "pl-f1068fbcbb"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 史跡「海蔵寺無縁塔群」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1869-fujizuka",
+        "name": "品川神社に富士塚が築かれる",
+        "summary": "明治2年、北品川宿の北浜の人々を中心に結成された品川丸嘉講社の講中300余人の力で富士塚が築造された。",
+        "description": "富士塚は、富士講の人々が富士山を遥拝する場として、また富士山に登れない人に山肌を触れさせる場として築いた人工の山です。神仏分離政策のなかで一度壊され、明治5年に再築されました。正徳寺所蔵の平松南園日記によれば、明治2年5月29日の築造完成の山開きには、赤坂や青山あたりの近郷各地の富士講の人々が幟旗を持って集まり、盛大な式典が行われたと記されています。大正から昭和初期の第一京浜国道の建設で東側が削られ、現在に至ります。",
+        "year": 1869,
+        "yearEnd": null,
+        "yearText": "明治2年（1869年）5月29日",
+        "era": "meiji",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "temple",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPlaces": [
+          "pl-548dab732d"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 有形民俗「品川神社富士塚（品川富士）」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1884-ryoshimachi-fire",
+        "name": "南品川猟師町が大火に遭う",
+        "summary": "明治17年の大火で、世襲名主だった大島家に伝わる古文書が焼失した。",
+        "description": "現在残っているのは近世文書13点と近代文書134点の計147点で、昭和13年に大島家によってまとめられたものです。少ないながら海苔養殖など水産業に関わる文書を含み、猟師町の歴史を伝えています。",
+        "year": 1884,
+        "yearEnd": null,
+        "yearText": "明治17年（1884年）",
+        "era": "meiji",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "war",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1655-ryoshimachi"
+        ],
+        "relatedPlaces": [
+          "pl-6b12d55eea"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大崎地区の指定文化財 古文書「大島家文書」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1915-jiko-kuyoto",
+        "name": "鉄道轢死・海岸溺死者供養塔が建てられる",
+        "summary": "明治から大正にかけて品川で鉄道事故や海岸での溺死が多発したため、大正4年に山添万吉のきもいりで供養塔が建てられた。",
+        "description": "海蔵寺の無縁塔群のひとつです。",
+        "year": 1915,
+        "yearEnd": null,
+        "yearText": "大正4年（1915年）",
+        "era": "taisho",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "war",
+          "transport"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1865-tsunami-kuyoto",
+          "ev-1923-shinsai"
+        ],
+        "relatedPlaces": [
+          "pl-f1068fbcbb"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 史跡「海蔵寺無縁塔群」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1923-shinsai",
+        "name": "関東大震災で亡くなった人が品川海岸に漂着する",
+        "summary": "大正12年の関東大震災で死亡し品川海岸に漂着した人々を祀るため、昭和7年に震災横死者供養塔が建てられた。",
+        "description": "海蔵寺の無縁塔群のひとつで、区内における震災の記憶を伝えています。",
+        "year": 1923,
+        "yearEnd": 1932,
+        "yearText": "大正12年（1923年）の震災、供養塔は昭和7年（1932年）",
+        "era": "taisho",
+        "areas": [
+          "shinagawa"
+        ],
+        "categories": [
+          "war"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1915-jiko-kuyoto"
+        ],
+        "relatedPlaces": [
+          "pl-f1068fbcbb"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "品川地区の指定文化財 史跡「海蔵寺無縁塔群」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "id": "ev-1926-yogyokuin",
+        "name": "如来寺が養玉院と合併する",
+        "summary": "大正15年、明治30年代に大井村へ移っていた如来寺が養玉院と合併した。",
+        "description": "如来寺は寛永13年に江戸芝高輪に建てられ、木食但唱が弟子とともに信濃国で造立した五智如来を安置していました。養玉院は寛永年間に上野の寺の屏風坂門内に天海僧正を開山として創建され、元禄11年に下谷坂本へ、大正12年に現在地へ移っています。",
+        "year": 1926,
+        "yearEnd": null,
+        "yearText": "大正15年（1926年）",
+        "era": "taisho",
+        "areas": [
+          "oi"
+        ],
+        "categories": [
+          "temple"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPlaces": [],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 彫刻「木造五智如来坐像」、彫刻「木造念海和尚像」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      },
+
+      {
+        "id": "ev-1820-hakugyu",
+        "name": "泊船寺に俳人が集い、白牛禅師の句碑が建てられる",
+        "summary": "文政3年に白牛禅師が没し、その翌年、弟子の大野景山の発起で境内に句碑が建てられた。",
+        "description": "文化年間、下総国出身の俳人・山奴が泊船寺の芭蕉堂に寓居して俳諧に没頭し、出家して白牛禅師となりました。大井村の名主・大野五蔵惟図（俳号は景山）がその弟子となり、山奴は二世杜格斎、景山は三世杜格斎として俳諧を指導し、一時は弟子が数百人もいたといいます。句碑は「漁火に鳥の飛行霜夜かな」。同寺には芭蕉・嵐雪・其角の肖像彫刻も伝わり、江戸時代後期にこの寺が俳人の集まる場となっていたことがうかがえます。",
+        "year": 1821,
+        "yearEnd": null,
+        "yearText": "文政4年（1821年）",
+        "era": "kinsei",
+        "areas": [
+          "oi"
+        ],
+        "categories": [
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPlaces": [
+          "pl-9250914617"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-bunkazai",
+            "locator": "大井地区の指定文化財 彫刻第10号「木造白牛禅師坐像」、彫刻「木造松尾芭蕉坐像」"
+          }
+        ],
+        "verifiedAt": "2026-11-20"
+      }
   ]
 };
