@@ -1340,7 +1340,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "id": "ev-jomon-gongendai",
         "name": "大井権現台貝塚に縄文時代の土器や土偶が残る",
         "summary": "広町の大井鉄道工場内にあった大井権現台貝塚を出土地として、深鉢形土器・みみずく土偶残片・土版残欠・貝器・弭形角器が伝わる。いずれも縄文時代後期から晩期のもの。",
-        "description": "文化遺産オンラインには、大井権現台貝塚を出土地とする資料が7件登録されている。出土地は「東京都品川区広町2丁目大井鉄道工場内」と記され、時代は縄文時代の後期（前2000〜前1000年）または後期から晩期（前2000〜前400年）とされる。土版残欠は長さ8.2センチメートル、幅5.9センチメートル、厚さ2.3センチメートル。東大井を出土地とする鉢形土器も1件あり、いずれも東京国立博物館が所蔵している。ここに示した年代は出土品そのものの年代であって、発掘された時期ではありません。いつ誰が発掘したのかは、この出典からは分かりません。年表の原始の項目は、この出土資料によるものです。",
+        "description": "文化遺産オンラインには、大井権現台貝塚を出土地とする資料が7件登録されている。出土地は「東京都品川区広町2丁目大井鉄道工場内」と記され、時代は縄文時代の後期（前2000〜前1000年）または後期から晩期（前2000〜前400年）とされる。土版残欠は長さ8.2センチメートル、幅5.9センチメートル、厚さ2.3センチメートル。東大井を出土地とする鉢形土器も1件あり、いずれも東京国立博物館が所蔵している。ここに示した年代は出土品そのものの年代であって、発掘された時期ではありません。発掘については、品川に住んだ小説家の江見水蔭がこの貝塚の発掘を行ったことが品川区立図書館の資料に記されていますが、その時期は分かりません。年表の原始の項目は、この出土資料によるものです。",
         "year": null,
         "yearEnd": null,
         "yearText": "縄文時代後期〜晩期（前2000年〜前400年ごろ）",
@@ -1349,8 +1349,8 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["site", "life"],
         "certainty": "fact",
         "relatedEvents": [],
-        "relatedPeople": [],
-        "sources": [{ "ref": "bunka-online", "locator": "「土版残欠」（448667）、「深鉢形土器」（493574）、「みみずく土偶残片」（490440・490868・459183）、「貝器」（518071）、「弭形角器」（522539）、「鉢形土器」（578890）" }],
+        "relatedPeople": ["pe-emi-suiin"],
+        "sources": [{ "ref": "bunka-online", "locator": "「土版残欠」（448667）、「深鉢形土器」（493574）、「みみずく土偶残片」（490440・490868・459183）、「貝器」（518071）、「弭形角器」（522539）、「鉢形土器」（578890）" }, { "ref": "sgw-library", "locator": "品川ゆかりの人物「江見水蔭」" }],
         "verifiedAt": "2026-11-21"
       },
       {
@@ -1383,7 +1383,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["building"],
         "certainty": "fact",
         "relatedEvents": ["ev-2019-shimazu-juubun"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-josiah-conder"],
         "sources": [{ "ref": "bunka-online", "locator": "「旧島津家本邸 本館」（411775）、「旧島津家本邸 事務所」（441386）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1434,7 +1434,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["admin", "site"],
         "certainty": "fact",
         "relatedEvents": [],
-        "relatedPeople": ["pe-takuan-soho"],
+        "relatedPeople": ["pe-takuan-soho", "pe-kamo-mabuchi"],
         "sources": [{ "ref": "bunka-online", "locator": "「沢庵墓」（138014）、「加茂真淵墓」（171745）" }, { "ref": "sgw-bunkazai", "locator": "区内にある都および国の指定文化財" }],
         "verifiedAt": "2026-11-21"
       },
