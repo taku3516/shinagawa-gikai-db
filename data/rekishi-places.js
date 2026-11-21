@@ -3981,7 +3981,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       ],
       "lat": 35.606094,
       "lng": 139.721832,
-      "locationKind": "current",
+      "locationKind": "approximate",
       "certainty": "fact",
       "heritage": [
         {
@@ -4003,6 +4003,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         }
       ],
       "verifiedAt": "2026-11-20",
+      "locationNote": "出典の住所が丁目までのため、丁目のおおよその位置を指しています。",
       "designatedFrom": "1978-02-14"
     },
     {
@@ -4386,7 +4387,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       ],
       "lat": 35.636364,
       "lng": 139.715668,
-      "locationKind": "current",
+      "locationKind": "approximate",
       "certainty": "fact",
       "heritage": [
         {
@@ -4405,6 +4406,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         }
       ],
       "verifiedAt": "2026-11-20",
+      "locationNote": "出典の住所が丁目までのため、丁目のおおよその位置を指しています。",
       "designatedFrom": "1949-04-12"
     },
     {

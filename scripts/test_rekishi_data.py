@@ -420,6 +420,41 @@ class RegisteredOnTest(unittest.TestCase):
             any("registeredOn" in p and "designatedOn" in p for p in problems), problems)
 
 
+class AcceptGeocodeTest(unittest.TestCase):
+    """住所検索の答えを受け入れてよいかの判定。
+
+    国土地理院は番地まで見つからないと、近い単位の代表点を返す。
+    町の代表点（「東京都品川区荏原」）は弾けていたが、丁目の代表点
+    （「東京都品川区上大崎四丁目」）は漢数字の「四」を含むため通ってしまう。
+    地番の住所（「平塚一丁目584」など）を聞くとこれが返るので、
+    丁目の中心に黙ってピンが立つ。番地まで引けたものだけを通す。
+    """
+
+    def setUp(self) -> None:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from prepare_rekishi_places import accept_geocode
+        self.accept = accept_geocode
+
+    def test_banchi_is_accepted(self) -> None:
+        # 既存101件はこの形。番地まで引けている。
+        self.assertTrue(self.accept("北品川3-7-15", "東京都品川区北品川三丁目７番１５号"))
+        self.assertTrue(self.accept("西五反田4-12-1", "東京都品川区西五反田四丁目１２番"))
+
+    def test_chome_centroid_is_rejected(self) -> None:
+        # 丁目で終わる答えは代表点。ここが通っていた。
+        self.assertFalse(self.accept("上大崎4-245-1", "東京都品川区上大崎四丁目"))
+        self.assertFalse(self.accept("平塚1-584", "東京都品川区平塚一丁目"))
+
+    def test_town_centroid_is_rejected(self) -> None:
+        # もともと弾けていたもの。壊していないこと。
+        self.assertFalse(self.accept("荏原神社周辺", "東京都品川区荏原"))
+        self.assertFalse(self.accept("利田神社周辺", "東京都品川区"))
+
+    def test_other_town_is_rejected(self) -> None:
+        # 町名が違う答えは使わない。
+        self.assertFalse(self.accept("北品川3-7-15", "東京都品川区荏原三丁目７番"))
+
+
 class NameKindTest(unittest.TestCase):
     """地名の種類の決まりを確かめる。"""
 

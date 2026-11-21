@@ -206,6 +206,8 @@ class Place:
     entries: list[Entry] = field(default_factory=list)
     lat: float | None = None
     lng: float | None = None
+    # 丁目までしか引けなかったか。True なら「おおよその位置」と明示する。
+    approximate: bool = False
     # 地点名が「その場所の名前」から付いたのか、たまたま最初の所蔵品の名前を
     # 借りただけなのかを覚えておく。後から場所の名前が分かったら差し替える。
     name_from_holder: bool = False
@@ -691,29 +693,63 @@ def accept_geocode(address: str, title: str) -> bool:
     「荏原神社周辺」と聞くと町の代表点「東京都品川区荏原」が返る。
     荏原神社は北品川にあるので、これをそのまま使うと地図に嘘を置くことになる。
 
-    そこで2つ確かめる。
+    丁目の代表点も同じように返る。「平塚一丁目584」のような地番の住所を聞くと
+    「東京都品川区平塚一丁目」が返り、丁目の中心に黙ってピンが立つ。
+    数字が含まれるかだけを見ると、漢数字の「一」を数字と数えて通ってしまう。
+
+    そこで3つ確かめる。
       1. 聞いた住所に番地の数字があること（数字が無ければ代表点しか返らない）
-      2. 返ってきた住所にも数字が含まれ、町名が一致すること
-    どちらかを満たさないものは保留に回す。
+      2. 返ってきた住所が「…丁目」で終わっていないこと（終わっていれば丁目の代表点）
+      3. 返ってきた住所に番・号の数字があり、町名が一致すること
+    どれかを満たさないものは保留に回す。
     """
     if not re.search(r"\d", address):
         return False
     normalized = unicodedata.normalize("NFKC", title)
-    if not re.search(r"[0-9０-９一二三四五六七八九十]", normalized.replace("東京都品川区", "")):
+    # 「東京都品川区上大崎四丁目」のように丁目で終わるのは、丁目の代表点。
+    if re.search(r"丁目$", normalized):
+        return False
+    rest = normalized.replace("東京都品川区", "")
+    # 丁目より細かい単位（番・号）まで引けていること。
+    if not re.search(r"[0-9０-９]+\s*(番|号|-)", rest):
         return False
     town = town_of(address)
     return bool(town) and town in normalized
 
 
-def geocode(address: str, cache: dict[str, Any]) -> tuple[float, float] | None:
-    """国土地理院の住所検索APIで緯度経度を引く。結果はキャッシュする。"""
+def is_chome_centroid(address: str, title: str) -> bool:
+    """丁目の代表点かどうか。
+
+    番地まで引けていれば accept_geocode が True を返す。そうでなくても、
+    丁目までは合っているなら、地図から消すより「おおよその位置」として
+    出したほうが親切。町や区の代表点（荏原神社の事故）はここでも落とす。
+    """
+    if not re.search(r"\d", address):
+        return False
+    normalized = unicodedata.normalize("NFKC", title)
+    if not re.search(r"丁目$", normalized):
+        return False
+    town = town_of(address)
+    return bool(town) and town in normalized
+
+
+def geocode(address: str, cache: dict[str, Any]) -> tuple[float, float, bool] | None:
+    """国土地理院の住所検索APIで緯度経度を引く。結果はキャッシュする。
+
+    返すのは (緯度, 経度, おおよその位置か)。丁目までしか引けなかったものは
+    第3要素を True にして、呼び出し側で「おおよその位置」と明示させる。
+    """
+    def judge(hit: dict[str, Any]) -> tuple[float, float, bool] | None:
+        title = hit.get("title", "")
+        if accept_geocode(address, title):
+            return hit["lat"], hit["lng"], False
+        if is_chome_centroid(address, title):
+            return hit["lat"], hit["lng"], True
+        return None
+
     if address in cache:
         hit = cache[address]
-        if not hit:
-            return None
-        if not accept_geocode(address, hit.get("title", "")):
-            return None
-        return hit["lat"], hit["lng"]
+        return judge(hit) if hit else None
 
     query = urllib.parse.quote(f"東京都品川区{address}")
     request = urllib.request.Request(
@@ -737,9 +773,7 @@ def geocode(address: str, cache: dict[str, Any]) -> tuple[float, float] | None:
     lng, lat = float(coordinates[0]), float(coordinates[1])
     title = payload[0].get("properties", {}).get("title", "")
     cache[address] = {"lat": lat, "lng": lng, "title": title}
-    if not accept_geocode(address, title):
-        return None
-    return lat, lng
+    return judge(cache[address])
 
 
 # 国指定分の指定年月日を手で補う表。
@@ -889,7 +923,7 @@ def to_record(place: Place, verified_at: str) -> dict[str, Any]:
         "categories": place.categories,
         "lat": place.lat,
         "lng": place.lng,
-        "locationKind": "current",
+        "locationKind": "approximate" if place.approximate else "current",
         "certainty": "fact",
         "heritage": heritage,
         "sources": [
@@ -897,6 +931,9 @@ def to_record(place: Place, verified_at: str) -> dict[str, Any]:
         ],
         "verifiedAt": verified_at,
     }
+    if place.approximate:
+        # 公式の住所が丁目までしか無いもの。丁目の中心を指している。
+        record["locationNote"] = "出典の住所が丁目までのため、丁目のおおよその位置を指しています。"
     if place.category_notes:
         record["categoryNote"] = "／".join(place.category_notes)
 
@@ -989,7 +1026,7 @@ def main() -> int:
                     "entries": [x.name for x in place.entries],
                 })
                 continue
-            place.lat, place.lng = found
+            place.lat, place.lng, place.approximate = found
             if place.area == "unknown":
                 pending.append({
                     "id": place.place_id,
