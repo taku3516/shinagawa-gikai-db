@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-20T23:20:17.018779Z",
+  "generatedAt": "2026-11-21T13:41:57.749137Z",
   "events": [
     {
       "id": "8c8e2e66944f32bfab29",
@@ -3363,27 +3363,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-17"
     },
     {
-      "id": "cf1efd3decd7a31af440",
-      "title": "【終了】鹿嶋神社 大祭 2026",
-      "summary": "2026年10月17日(土)、18日(日) 11:00~21:00 開催場所 鹿嶋神社 品川区大井6-18-36 交通アクセス JR 大森駅 徒歩11分 URL 備考 ※自転車置き場はありません。自転車での来場はお控え下さい。 マップ イベントカレンダー",
-      "url": "https://shinagawa-kanko.or.jp/event/kashimajinja-reitaisai2026/",
-      "sourceId": "kanko",
-      "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-10-17"
-      ],
-      "startTime": "11:00",
-      "endTime": "21:00",
-      "timeText": "2026年10月17日(土)、18日(日) 11:00~21:00 開催場所 鹿嶋神社 品川区大井6-18-36 交通アクセス JR 大森駅 徒歩11分 URL",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "published",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17"
-    },
-    {
       "id": "738594db6f21af4cffed",
       "title": "ユニバーサルスポーツフェスタ【10月17日(土曜日)開催】",
       "summary": "令和8年度第2回ユニバーサルスポーツフェスタを10月17日(土曜日)に開催いたします。広報しながわ10月1日号にも掲載しておりますので併せてご確認ください。",
@@ -4269,7 +4248,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "0fdf4a53173e91f6b621",
       "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 金井寿司 2025年7月1日 大井町で1950年創業、街に愛されるお寿司屋",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット SCHAFT(シャフト) 2023年7月7日 まろやかな口どけ、飽きのこな",
       "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5052,7 +5031,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット gallery 2",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット T.Y.HARBO",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5199,7 +5178,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "02cb779466e040ca1e46",
       "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
-      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット しながわ花海道 2018年3月9日 春は菜の花",
+      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 大井の水神社 2018年4月14日 大井の村人た",
       "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5838,30 +5817,8 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-21"
     },
     {
-      "id": "bf045d896e642ba19c64",
-      "title": "品川歴史館の特別展・常設展の見どころポイントをご紹介！～展示解説ボランティアによるガイドツアー～",
-      "summary": "展示解説ボランティアが品川歴史館の特別展と常設展の展示資料の見どころポイントを解説します。",
-      "url": "https://www.city.shinagawa.tokyo.jp/historyhp/event/moyoshi/1011994.html",
-      "sourceId": "city-calendar",
-      "source": "品川区 イベントカレンダー",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-11-21"
-      ],
-      "startTime": "11:00",
-      "endTime": "",
-      "timeText": "午前11時00分から正午まで",
-      "place": "品川歴史館 特別展示室、常設展示室※当日は11時までに1階受付へお越しください。",
-      "application": "不要",
-      "deadline": "",
-      "periods": [],
-      "confidence": "official",
-      "startDate": "2026-11-21",
-      "endDate": "2026-11-21"
-    },
-    {
-      "id": "f2c1d6c791174782e5a6",
-      "title": "大商業まつり2026",
+      "id": "66f420f2298a945bcd08",
+      "title": "品川区商店街連合会「大商業まつり2026」",
       "summary": "2026年11月21日(土)10:00~16:00 開催場所 しながわ中央公園(多目的広場・西側多目的広場) 品川区西品川1-27-14 品川区立中小企業センター(スポーツ室 他センター内) 品川区西品川1-28-3 交通アクセス 東急大井町線 下神明駅下車 徒歩2分 JR・りんかい線・東急線 大井町駅 徒歩12分",
       "url": "https://shinagawa-kanko.or.jp/event/dsmatsuri2026/",
       "sourceId": "kanko",
@@ -5889,36 +5846,57 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-21"
     },
     {
-      "id": "61bd51d5ccd1a6b8a24c",
-      "title": "星薬科大学公開講座 秋の薬草見学会（11月21日 土曜日開催）",
-      "summary": "あらゆる世代に多彩な生涯学習講座を提供する「しながわ学びの杜」品川区内および近隣区の学校と連携して、各学校の特色や強みをいかした講座です。様々な分野における、専門的でより深い学習の機会を創出します。星薬科大学 秋の薬草見学会を実施します。講義・薬用植物園見学会・学生によるアトラクションを行います。",
-      "url": "https://www.city.shinagawa.tokyo.jp/bunka/shogaigakushu/1003706/1003708/1011765.html",
+      "id": "bf045d896e642ba19c64",
+      "title": "品川歴史館の特別展・常設展の見どころポイントをご紹介！～展示解説ボランティアによるガイドツアー～",
+      "summary": "展示解説ボランティアが品川歴史館の特別展と常設展の展示資料の見どころポイントを解説します。",
+      "url": "https://www.city.shinagawa.tokyo.jp/historyhp/event/moyoshi/1011994.html",
       "sourceId": "city-calendar",
       "source": "品川区 イベントカレンダー",
       "category": "文化・観光・スポーツ",
       "dates": [
         "2026-11-21"
       ],
-      "startTime": "13:00",
-      "endTime": "15:30",
-      "timeText": "午後1時00分から午後3時30分まで",
-      "place": "星薬科大学 （品川区荏原2－4－41）※ご来場の際は公共交通機関をご利用ください。",
+      "startTime": "11:00",
+      "endTime": "",
+      "timeText": "午前11時00分から正午まで",
+      "place": "品川歴史館 特別展示室、常設展示室※当日は11時までに1階受付へお越しください。",
       "application": "不要",
       "deadline": "",
       "periods": [],
       "confidence": "official",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21"
+    },
+    {
+      "id": "3ab2d4613f40a7575e3f",
+      "title": "星薬科大学公開講座「秋の薬草見学会」",
+      "summary": "2026年11月21日(土) 13:00~15:50 開催場所 星薬科大学 品川区荏原2-4-41 交通アクセス 東急池上線 戸越銀座駅 徒歩8分 都営浅草線 戸越駅 徒歩10分 東急目黒線 武蔵小山駅 徒歩12分 料金 無料 電話番号 03-5742-6837(品川区文化観光戦略課 生涯学習係 直通) 03-378",
+      "url": "https://shinagawa-kanko.or.jp/event/hoshi-univ-yakuso2026/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-11-21"
+      ],
+      "startTime": "13:00",
+      "endTime": "15:50",
+      "timeText": "2026年11月21日(土) 13:00~15:50 開催場所 星薬科大学 品川区荏原2-4-41 交通アクセス 東急池上線 戸越銀座駅 徒歩8分 都営浅草線 ",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
       "alsoSeenIn": [
-        {
-          "sourceId": "kanko",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/hoshi-univ-yakuso2026/",
-          "title": "星薬科大学公開講座「秋の薬草見学会」"
-        },
         {
           "sourceId": "news",
           "source": "しながわ観光協会",
           "url": "https://shinagawa-kanko.or.jp/event/hoshi-univ-yakuso2026",
           "title": "星薬科大学公開講座「秋の薬草見学会」"
+        },
+        {
+          "sourceId": "news",
+          "source": "品川区 新着情報",
+          "url": "https://www.city.shinagawa.tokyo.jp/bunka/shogaigakushu/1003706/1003708/1011765.html",
+          "title": "星薬科大学公開講座 秋の薬草見学会（11月21日 土曜日開催）"
         }
       ],
       "startDate": "2026-11-21",
@@ -5979,7 +5957,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "ba8c03a4a04d4cf75005",
       "title": "小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
-      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット つたや一粋庵",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 【移転】Pas",
       "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -7209,6 +7187,35 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2027-03-25"
     },
     {
+      "id": "f689c975b0e20cb27f29",
+      "title": "ガイドしながわ 新春企画「ガイドと歩く 東海七福神」",
+      "summary": "2027年1月9日(土) 9:30~12:00頃(終了・解散予定) ※受付開始 9:15 開催場所 集合:京急新馬場駅「北口」(階段下) 解散:磐井神社(大田区大森北2-20-8 最寄り 京浜急行 大森海岸駅) 料金 500円 ※お支払いは当日現地にて(現金のみ) URL",
+      "url": "https://shinagawa-kanko.or.jp/event/guide-tokai7/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2027-01-09"
+      ],
+      "startTime": "09:30",
+      "endTime": "12:00",
+      "timeText": "2027年1月9日(土) 9:30~12:00頃(終了・解散予定) ※受付開始 9:15 開催場所 集合:京急新馬場駅「北口」(階段下) 解散:磐井神社(大田区",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/guide-tokai7",
+          "title": "ガイドしながわ 新春企画「ガイドと歩く 東海七福神」"
+        }
+      ],
+      "startDate": "2027-01-09",
+      "endDate": "2027-01-09"
+    },
+    {
       "id": "b13d46a299a2d49605fe",
       "title": "ペアレント・トレーニング実施のお知らせ",
       "summary": "プログラムの概要 回数 日付 テーマ 第1回 1月9日 大切なことは3つ 第2回 1月23日 ほめることを習慣にしよう 第3回 2月6日 小さなよい変化を見つけよう 第4回 2月20日 指示を上手に与えよう 第5回 3月6日 上手な手助けを工夫しよう 第6回 3月20日 まとめとふりかえり",
@@ -7347,28 +7354,6 @@ window.SHINAGAWA_EVENTS = {
       "alsoSeenIn": [],
       "startDate": "2027-01-31",
       "endDate": "2027-01-31"
-    },
-    {
-      "id": "ffdb2d1abe8c85794bbb",
-      "title": "【令和９年４月１日採用】応募者説明会を実施します",
-      "summary": "品川社協では現在、令和９年４月１日付採用職員を募集しています。 応募をお考えの方に、少しでも品川社協を知っていただく機会として、以下の３日間で説明会を開催いたします。",
-      "url": "https://shinashakyo.jp/news/2026/09/post-63162.html",
-      "sourceId": "news",
-      "source": "品川区社会福祉協議会",
-      "category": "地域イベント",
-      "dates": [
-        "2027-04-01"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "0bc9b2728ece8dc845e3",
-      "startDate": "2027-04-01",
-      "endDate": "2027-04-01"
     }
   ],
   "holidays": [
@@ -7711,7 +7696,7 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "city-calendar",
       "source": "品川区 イベントカレンダー",
       "status": "ok",
-      "accepted": 93
+      "accepted": 92
     },
     {
       "sourceId": "gikai-committee",
