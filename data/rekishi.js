@@ -127,6 +127,13 @@ window.SHINAGAWA_DB.rekishi = {
       "note": "常設展示・企画展・調査報告。"
     },
     {
+      "id": "bunka-online",
+      "label": "文化遺産オンライン",
+      "publisher": "文化庁",
+      "url": "https://online.bunka.go.jp/",
+      "note": "国が指定・登録した文化財の個別ページ。品川区は21件（prefecture_cd=13&city_code=13109）。利用条件で本文の転用が禁じられているため、解説は転載せず、指定年月日・所在地・時代・法量などの事実だけを使っている。robots.txt の Crawl-Delay は10秒。"
+    },
+    {
       "id": "gsi-tile",
       "label": "地理院タイル",
       "publisher": "国土地理院",
