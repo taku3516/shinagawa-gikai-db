@@ -626,6 +626,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "重要無形民俗文化財",
           "designator": "国・都",
           "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1003893.html",
+          "designatedOn": "1994-12-13",
           "owner": "間宮社中"
         }
       ],
@@ -2784,6 +2785,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "工芸品",
           "designator": "国・都",
           "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1003893.html",
+          "designatedOn": "1976-06-05",
           "owner": "西光寺"
         }
       ],
@@ -2794,7 +2796,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         }
       ],
       "verifiedAt": "2026-11-20",
-      "designatedFrom": "1978-11-22"
+      "designatedFrom": "1976-06-05"
     },
     {
       "id": "pl-0a2ebfd341",
@@ -4255,6 +4257,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "建造物",
           "designator": "国・都",
           "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1003893.html",
+          "designatedOn": "2019-12-27",
           "owner": "清泉女子大学"
         }
       ],
@@ -4264,7 +4267,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 旧島津家本邸"
         }
       ],
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "2019-12-27"
     },
     {
       "id": "pl-ef0990e965",
@@ -4287,6 +4291,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "史跡",
           "designator": "国・都",
           "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1003893.html",
+          "designatedOn": "1926-10-20",
           "owner": "東海寺大山墓地"
         }
       ],
@@ -4296,7 +4301,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 沢庵墓"
         }
       ],
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "1926-10-20"
     },
     {
       "id": "pl-1a93e184b8",
@@ -4319,6 +4325,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "史跡",
           "designator": "国・都",
           "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1003893.html",
+          "designatedOn": "1926-10-20",
           "owner": "東海寺大山墓地"
         }
       ],
@@ -4328,7 +4335,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 賀茂真淵墓"
         }
       ],
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "1926-10-20"
     },
     {
       "id": "pl-be2e1fa0fd",
@@ -4351,6 +4359,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "史跡",
           "designator": "国・都",
           "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1003893.html",
+          "designatedOn": "1955-03-24",
           "owner": "（空欄）"
         }
       ],
@@ -4360,7 +4369,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 大森貝塚"
         }
       ],
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "1955-03-24"
     },
     {
       "id": "pl-8d56e0f633",
@@ -4384,6 +4394,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "天然記念物および史跡",
           "designator": "国・都",
           "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1003893.html",
+          "designatedOn": "1949-04-12",
           "owner": "（空欄）"
         }
       ],
@@ -4393,7 +4404,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "区内にある都および国の指定文化財 旧白金御料地"
         }
       ],
-      "verifiedAt": "2026-11-20"
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "1949-04-12"
     }
   ]
 };

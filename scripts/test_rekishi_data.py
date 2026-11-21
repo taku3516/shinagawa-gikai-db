@@ -418,6 +418,52 @@ class PersonRelationTest(unittest.TestCase):
         self.assertTrue(any("relatedEvents" in p for p in problems), problems)
 
 
+class KuniDesignationTest(unittest.TestCase):
+    """国指定分の指定年月日を手で補う表が、取り違えを起こさないか。
+
+    区公式の「区内にある都および国の指定文化財」のページには指定年月日の欄が
+    無く、30件すべてが空のままだった。国指定文化財等データベースで埋まるのは
+    国指定分だけで、都指定は載っていない。しかも同名の別物がある
+    （銅造地蔵菩薩坐像は品川寺のものと観福寺のものがある）ため、
+    名称だけで突き合わせると静かに他区の文化財の日付が入る。所有者まで一致を見る。
+    """
+
+    def setUp(self) -> None:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from prepare_rekishi_places import KUNI_DESIGNATED, kuni_designated_on
+        self.table = KUNI_DESIGNATED
+        self.lookup = kuni_designated_on
+
+    def test_matches_on_name_and_owner(self) -> None:
+        self.assertEqual(self.lookup("金小札色々威胴丸", "西光寺"), "1976-06-05")
+
+    def test_same_name_different_owner_is_not_matched(self) -> None:
+        # 観福寺の銅造地蔵菩薩坐像（鎌倉・1309年）を品川寺のものと取り違えない。
+        self.assertIsNone(self.lookup("銅造地蔵菩薩坐像", "品川寺"))
+
+    def test_unknown_item_returns_none(self) -> None:
+        self.assertIsNone(self.lookup("存在しない文化財", "どこかの寺"))
+
+    def test_every_entry_has_iso_date_and_source(self) -> None:
+        for key, value in self.table.items():
+            with self.subTest(key=key):
+                self.assertRegex(value["designatedOn"], r"^\d{4}-\d{2}-\d{2}$")
+                self.assertTrue(value["source"].strip(), "照合の根拠を書くこと")
+
+    def test_owner_is_part_of_the_key(self) -> None:
+        # 鍵が名称だけだと取り違えが起きる。所有者を鍵に含めていること。
+        for key in self.table:
+            self.assertIsInstance(key, tuple)
+            self.assertEqual(len(key), 2)
+
+    def test_name_only_entries_match_whatever_the_owner_is(self) -> None:
+        # 区側の所有者欄は「（空欄）」という文字列で、あとで記入されることがある。
+        # 名称が全国で一意な国の史跡は、所有者が変わっても引けること。
+        self.assertEqual(self.lookup("大森貝塚", "（空欄）"), "1955-03-24")
+        self.assertEqual(self.lookup("大森貝塚", "品川区"), "1955-03-24")
+        self.assertEqual(self.lookup("旧白金御料地", ""), "1949-04-12")
+
+
 class RepositoryDataTest(unittest.TestCase):
     def test_actual_data_passes(self) -> None:
         self.assertEqual(Checker().check(), [])

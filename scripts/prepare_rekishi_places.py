@@ -683,6 +683,68 @@ def geocode(address: str, cache: dict[str, Any]) -> tuple[float, float] | None:
     return lat, lng
 
 
+# 国指定分の指定年月日を手で補う表。
+#
+# 区公式の「区内にある都および国の指定文化財」のページには指定年月日の欄が無く、
+# 30件すべて空のままだった。国指定文化財等データベース
+# （https://kunishitei.bunka.go.jp/bsys/maindetails/<種別>/<id>）には載っているが、
+# 載るのは国指定だけで、都指定（妙国寺文書・岩倉具視墓・鈴ヶ森遺跡など）は出てこない。
+#
+# 鍵を名称だけにしない。同名の別物があり、静かに他所の文化財の日付が入る。
+# 実際に「銅造地蔵菩薩坐像」で検索すると観福寺のもの（鎌倉・延慶2年＝1309年）が出る。
+# 品川寺のものは江戸六地蔵の一で別物なので、この表には入れていない。
+# 熊本藩主細川家墓所も、DB側の所在地が熊本県で品川区分を確認できないため入れていない。
+#
+# 値の source は、品川区のものだと判断した根拠。1件ずつページを開いて確かめた。
+KUNI_DESIGNATED: dict[tuple[str, str | None], dict[str, str]] = {
+    ("沢庵墓", "東海寺大山墓地"): {
+        "designatedOn": "1926-10-20",
+        "source": "国指定文化財等データベース 401/689。所在地「品川区北品川三丁目」",
+    },
+    ("賀茂真淵墓", "東海寺大山墓地"): {
+        "designatedOn": "1926-10-20",
+        "source": "国指定文化財等データベース 401/690「加茂真淵墓」。所在地「品川区北品川三丁目」",
+    },
+    # 所有者を None にしてあるのは、国の史跡として名称が全国で一意で、
+    # 取り違えようが無いもの。区側の所有者欄は「（空欄）」という文字列で、
+    # あとで記入されると鍵が一致しなくなるため、所有者を見ない。
+    ("旧白金御料地", None): {
+        "designatedOn": "1949-04-12",
+        "source": "国指定文化財等データベース 401/713。所在地「品川区上大崎二丁目」",
+    },
+    ("大森貝塚", None): {
+        "designatedOn": "1955-03-24",
+        "source": "国指定文化財等データベース 401/721。所在地「大田区山王一丁目、品川区大井六丁目」",
+    },
+    ("金小札色々威胴丸", "西光寺"): {
+        "designatedOn": "1976-06-05",
+        "source": "国指定文化財等データベース 201/7142。所有者「西光寺」",
+    },
+    ("江戸の里神楽（品川神社）", "間宮社中"): {
+        "designatedOn": "1994-12-13",
+        "source": "国指定文化財等データベース 302/44（重要無形民俗文化財）。保持者に間宮社中（品川区東大井）を含む",
+    },
+    ("旧島津家本邸", "清泉女子大学"): {
+        "designatedOn": "2019-12-27",
+        "source": "文化遺産オンライン 411775・441386。所在地「東京都品川区東五反田三丁目191番地39」",
+    },
+}
+
+
+def kuni_designated_on(name: str, owner: str | None) -> str | None:
+    """手で確かめた指定年月日を返す。見つからなければ None。
+
+    鍵は（名称, 所有者）。名称だけで引くと同名の別物を拾うため、原則として
+    所有者まで一致を見る。所有者を None にした項目だけは名称だけで引く。
+    これは国の史跡として名称が全国で一意なものに限っており、表の側に理由を書いてある。
+    """
+    key = name.strip()
+    found = KUNI_DESIGNATED.get((key, (owner or "").strip()))
+    if found is None:
+        found = KUNI_DESIGNATED.get((key, None))
+    return found["designatedOn"] if found else None
+
+
 def heritage_of(place: Place) -> list[dict[str, Any]]:
     """地点が持つ指定文化財を、事実だけの形にする。"""
     items: list[dict[str, Any]] = []
@@ -699,6 +761,11 @@ def heritage_of(place: Place) -> list[dict[str, Any]]:
             item["number"] = entry.number
         if entry.designated:
             item["designatedOn"] = entry.designated
+        else:
+            # 区公式に欄が無い国指定分だけ、手で確かめた日付で補う。
+            supplied = kuni_designated_on(entry.name, entry.owner)
+            if supplied:
+                item["designatedOn"] = supplied
         if entry.owner:
             item["owner"] = entry.owner
         if entry.visit:

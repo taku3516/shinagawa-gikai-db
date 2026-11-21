@@ -134,6 +134,13 @@ window.SHINAGAWA_DB.rekishi = {
       "note": "国が指定・登録した文化財の個別ページ。品川区は21件（prefecture_cd=13&city_code=13109）。利用条件で本文の転用が禁じられているため、解説は転載せず、指定年月日・所在地・時代・法量などの事実だけを使っている。robots.txt の Crawl-Delay は10秒。"
     },
     {
+      "id": "kunishitei",
+      "label": "国指定文化財等データベース",
+      "publisher": "文化庁",
+      "url": "https://kunishitei.bunka.go.jp/bsys/index",
+      "note": "国が指定・登録・選定した文化財の一元検索。区公式の「区内にある都および国の指定文化財」には指定年月日の欄が無いため、国指定分の日付をここで確かめた。都指定は載っていない。同名の別物があるので、所在地か所有者まで照合している。"
+    },
+    {
       "id": "gsi-tile",
       "label": "地理院タイル",
       "publisher": "国土地理院",
