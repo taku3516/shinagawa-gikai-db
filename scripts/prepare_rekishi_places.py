@@ -552,6 +552,65 @@ def apply_hints(place: Place, entry: Entry) -> None:
         place.category_notes.append(reason)
 
 
+# 区の「指定文化財」ページに載らない、区内の国の文化財。
+#
+# 登録有形文化財と、区のページが個別に用意されていない重要文化財。
+# 区の一覧から機械的に集められないので、文化遺産オンラインの個別ページを
+# 1件ずつ読んで手で書いた。
+#
+# 緯度経度は文化遺産オンラインのページに埋まっている値をそのまま使う。
+# ここの住所は住居表示ではなく地番（「平塚一丁目584」など）で、
+# 国土地理院の住所検索にかけると丁目の代表点しか返らない。
+# このプロジェクトは代表点を使わない方針なので、出典側の座標を使う。
+EXTRA_PLACES: list[dict[str, Any]] = [
+    {"name": "十四世喜多六平太記念能楽堂", "kind": "建造物", "address": "上大崎4-245-1",
+     "lat": 35.633629, "lng": 139.714778, "area": "osaki",
+     "categories": ["building", "culture"], "registeredOn": "2026-02-10",
+     "url": "https://online.bunka.go.jp/heritages/detail/664869",
+     "note": "昭和48年の建築。鉄骨鉄筋コンクリート造地上2階地下2階建、舞台及び橋掛付。"},
+    {"name": "旧三井文庫第二書庫", "kind": "建造物", "address": "豊町1-1131-1",
+     "lat": 35.612283, "lng": 139.720536, "area": "ebara",
+     "categories": ["building", "culture"], "registeredOn": "2020-04-03",
+     "url": "https://online.bunka.go.jp/heritages/detail/445143",
+     "note": "大正11年の建築。鉄筋コンクリート造3階建、金属板葺。現在の所有は品川区。"},
+    {"name": "長濱家住宅主屋", "kind": "建造物", "address": "平塚1-584",
+     "lat": 35.616225, "lng": 139.716044, "area": "ebara",
+     "categories": ["building", "life"], "registeredOn": "2020-04-03",
+     "url": "https://online.bunka.go.jp/heritages/detail/402501",
+     "note": "大正10年の建築。木造2階建、瓦葺、床下倉庫付。"},
+    {"name": "長濱家住宅門", "kind": "建造物", "address": "平塚1-584",
+     "lat": 35.616225, "lng": 139.716044, "area": "ebara",
+     "categories": ["building", "life"], "registeredOn": "2020-04-03",
+     "url": "https://online.bunka.go.jp/heritages/detail/430542",
+     "note": "大正10年の建築。主屋と同じ敷地にある。"},
+    {"name": "小池家住宅主屋", "kind": "建造物", "address": "北品川5-740-10",
+     "lat": 35.620742, "lng": 139.734910, "area": "shinagawa",
+     "categories": ["building", "life"], "registeredOn": "2011-01-26",
+     "url": "https://online.bunka.go.jp/heritages/detail/146704",
+     "note": "昭和13年の建築。木造2階建、瓦葺。"},
+    {"name": "旧品川警察署品川橋交通待機所", "kind": "建造物", "address": "南品川1-223-5",
+     "lat": 35.616597, "lng": 139.744361, "area": "shinagawa",
+     "categories": ["building", "transport"], "registeredOn": "2023-08-07",
+     "url": "https://online.bunka.go.jp/heritages/detail/560735",
+     "note": "昭和4年の建築。木造平屋建、建築面積13平方メートル。"},
+    {"name": "旗岡八幡神社絵馬殿", "kind": "建造物", "address": "旗の台3-852-1",
+     "lat": 35.604522, "lng": 139.708343, "area": "ebara",
+     "categories": ["building", "temple"], "registeredOn": "2013-06-21",
+     "url": "https://online.bunka.go.jp/heritages/detail/229368",
+     "note": "昭和3年ごろの建築。木造平屋建、銅板葺。のちに2度移築されている。"},
+    {"name": "宝篋印塔（１）", "kind": "建造物", "address": "西五反田4-12-1",
+     "lat": 35.626408, "lng": 139.710022, "area": "osaki",
+     "categories": ["temple", "site"], "designatedOn": "1953-08-29",
+     "url": "https://online.bunka.go.jp/heritages/detail/199549",
+     "note": "鎌倉時代後期・1317年の石造宝篋印塔。安養院に伝わる。重要文化財。"},
+    {"name": "宝篋印塔（２）", "kind": "建造物", "address": "西五反田4-12-1",
+     "lat": 35.626408, "lng": 139.710022, "area": "osaki",
+     "categories": ["temple", "site"], "designatedOn": "1953-08-29",
+     "url": "https://online.bunka.go.jp/heritages/detail/193280",
+     "note": "鎌倉時代後期・1317年の石造宝篋印塔。安養院に伝わる。重要文化財。"},
+]
+
+
 def build_places(entries: list[Entry]) -> list[Place]:
     """指定文化財を地点にまとめる。
 
@@ -774,6 +833,41 @@ def heritage_of(place: Place) -> list[dict[str, Any]]:
     return items
 
 
+def extra_records(verified_at: str, used: set[str]) -> list[dict[str, Any]]:
+    """EXTRA_PLACES を公開データの形にする。
+
+    区の一覧から来ないので、出典は文化遺産オンライン。緯度経度も出典側の値。
+    IDの作り方は区の地点と同じ（住所と名前のハッシュ）なので、
+    並び順が変わってもリンクは動かない。
+    """
+    records: list[dict[str, Any]] = []
+    for item in EXTRA_PLACES:
+        place_id = place_id_for(f"{item['address']}|{item['name']}", used)
+        records.append({
+            "id": place_id,
+            "name": item["name"],
+            "summary": f"{item['address']}にある{item['kind']}です。{item['note']}",
+            "address": item["address"],
+            "areas": [item["area"]],
+            "categories": item["categories"],
+            "lat": item["lat"],
+            "lng": item["lng"],
+            "locationKind": "current",
+            "certainty": "fact",
+            "heritage": [dict({
+                "name": item["name"],
+                "kind": item["kind"],
+                "designator": "国",
+                "url": item["url"],
+            }, **({"registeredOn": item["registeredOn"]} if "registeredOn" in item
+                  else {"designatedOn": item["designatedOn"]}))],
+            "sources": [{"ref": "bunka-online", "locator": f"文化遺産オンライン「{item['name']}」"}],
+            "verifiedAt": verified_at,
+            "designatedFrom": item.get("designatedOn") or item["registeredOn"],
+        })
+    return records
+
+
 def to_record(place: Place, verified_at: str) -> dict[str, Any]:
     """公開するデータの1件を組み立てる。"""
     heritage = heritage_of(place)
@@ -878,6 +972,7 @@ def main() -> int:
 
     places = build_places(entries)
     print(f"地点に{len(places)}件まとめました。")
+    print(f"区の一覧に載らない国の文化財を{len(EXTRA_PLACES)}件足します。")
 
     cache = load_geocode_cache()
     pending: list[dict[str, Any]] = []
@@ -907,6 +1002,10 @@ def main() -> int:
             records.append(to_record(place, args.verified_at))
     finally:
         save_geocode_cache(cache)
+
+    # 区の一覧に載らない国の文化財を足す。IDの衝突を避けるため既存のIDを渡す。
+    used_ids = {x["id"] for x in records}
+    records.extend(extra_records(args.verified_at, used_ids))
 
     print(f"公開できるのは{len(records)}件、保留は{len(pending)}件です。")
     for item in pending:
