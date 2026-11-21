@@ -35,9 +35,26 @@ LNG_RANGE = (139.66, 139.82)
 # 日付は YYYY-MM-DD 形式でそろえる。
 DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
-# 文化財の出典は品川区公式サイトに限る。別のサイトが紛れ込むと、
+# 文化財の出典は官公庁のページに限る。別のサイトが紛れ込むと、
 # 「公式で確認した」という前提が静かに崩れる。
-OFFICIAL_PREFIX = "https://www.city.shinagawa.tokyo.jp/"
+#
+# もともと品川区公式だけだった。区の「指定文化財」ページだけを出典にしていたため。
+# 登録有形文化財など区のページに載らないものを足すときに文化庁のページが要るので、
+# 文化庁の2つを足した。足すのは官公庁だけ。似せたドメインを通さないよう、
+# 前方一致ではなくホスト名そのものを見る。
+OFFICIAL_HOSTS = (
+    "www.city.shinagawa.tokyo.jp",   # 品川区「指定文化財」
+    "online.bunka.go.jp",            # 文化庁「文化遺産オンライン」
+    "kunishitei.bunka.go.jp",        # 文化庁「国指定文化財等データベース」
+)
+
+
+def is_official_url(url: str) -> bool:
+    """官公庁のページかどうか。ホスト名が一致するものだけを通す。"""
+    from urllib.parse import urlparse
+
+    parsed = urlparse(url)
+    return parsed.scheme == "https" and parsed.hostname in OFFICIAL_HOSTS
 
 # ID は種別の接頭辞＋英数字。種別が分かると、相互リンクの誤りに気づきやすい。
 ID_PREFIXES = {
@@ -317,8 +334,8 @@ class Checker:
             url = str(entry.get("url") or "")
             if not url:
                 self.fail(spot, "url がありません")
-            elif not url.startswith(OFFICIAL_PREFIX):
-                self.fail(spot, f"url が品川区公式サイトではありません: {url}")
+            elif not is_official_url(url):
+                self.fail(spot, f"url が公式（品川区・文化庁）のページではありません: {url}")
             designated = entry.get("designatedOn")
             if designated is None:
                 continue

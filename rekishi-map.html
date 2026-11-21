@@ -91,7 +91,7 @@
       <p class="breadcrumb"><a href="rekishi.html">← 品川の歴史へ</a></p>
       <h1>品川歴史マップ</h1>
       <p class="lead">史跡、神社仏閣、天然記念物、歴史的建造物を地図から探せます。町会区域マップとは別の、歴史専用の地図です。</p>
-      <div class="notice"><strong>ピンの位置は住所の代表点です。</strong> 建物や碑そのものの正確な位置ではありません。現在は存在しない施設は、ピンの枠を破線にして「かつての所在地」と明示します。</div>
+      <div class="notice"><strong>ピンの位置はおおむね住所の代表点です。</strong> 建物や碑そのものの正確な位置ではありません（国の登録有形文化財など一部は、出典に記載された座標を使っています）。現在は存在しない施設は、ピンの枠を破線にして「かつての所在地」と明示します。</div>
       <nav data-site-nav></nav>
     </div></header>
 
@@ -295,7 +295,7 @@
         L.control.layers({ "OpenStreetMap": osm, "地理院 淡色地図": pale }, null, { position: "topright" }).addTo(map);
         markerLayer = L.layerGroup().addTo(map);
         document.getElementById("map-caption").innerHTML =
-          '背景地図は OpenStreetMap と<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>（国土地理院）を切り替えられます。地点は品川区「指定文化財」によるもので、位置は住所の代表点です。';
+          '背景地図は OpenStreetMap と<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>（国土地理院）を切り替えられます。地点は品川区「指定文化財」と文化庁「文化遺産オンライン」によるもので、位置はおおむね住所の代表点です。';
       }
 
       function iconFor(spot) {

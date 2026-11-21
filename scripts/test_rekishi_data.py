@@ -279,7 +279,7 @@ class HeritageAndDateTest(unittest.TestCase):
     def test_heritage_url_must_be_official(self) -> None:
         heritage = [{"name": "見本", "kind": "史跡", "url": "https://example.test/a.html"}]
         problems = self.run_with(self.place(heritage=heritage))
-        self.assertTrue(any("品川区公式サイトではありません" in p for p in problems), problems)
+        self.assertTrue(any("公式（品川区・文化庁）のページではありません" in p for p in problems), problems)
 
     def test_future_designation_is_reported(self) -> None:
         heritage = [{
@@ -297,6 +297,74 @@ class HeritageAndDateTest(unittest.TestCase):
             "designatedOn": "1978-02-14",
         }]
         self.assertEqual(self.run_with(self.place(heritage=heritage)), [])
+
+
+class HeritageUrlTest(unittest.TestCase):
+    """文化財のURLを、どの範囲まで許すか。
+
+    もともと品川区公式に限っていた。区の「指定文化財」ページだけを出典にしていたため。
+    登録有形文化財など、区のページに載らないものを足すときに文化庁のページが要るが、
+    ここを野放しにすると「公式で確認した」という前提が静かに崩れる。
+    官公庁だけの許可制にして、それ以外は今までどおり落とす。
+    """
+
+    META = dict(MINIMAL_META, files={"places": "data/rekishi-places.js"})
+    PLACE = {
+        "id": "pl-sample",
+        "name": "見本の地点",
+        "summary": "見本です。",
+        "address": "北品川1-1-1",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "lat": 35.62,
+        "lng": 139.74,
+        "locationKind": "current",
+        "certainty": "fact",
+        "heritage": [],
+        "sources": [{"ref": "src-a", "locator": "1ページ"}],
+        "verifiedAt": "2026-11-19",
+    }
+
+    def run_with(self, url: str) -> list:
+        item = dict(self.PLACE)
+        item["heritage"] = [{"name": "見本の文化財", "kind": "史跡", "url": url}]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = root / "data"
+            data.mkdir(parents=True)
+            (data / "rekishi.js").write_text(
+                "window.SHINAGAWA_DB.rekishi = " + json.dumps(self.META, ensure_ascii=False) + ";\n",
+                encoding="utf-8",
+            )
+            (data / "rekishi-places.js").write_text(
+                "window.SHINAGAWA_DB.rekishiPlaces = "
+                + json.dumps({"items": [item]}, ensure_ascii=False) + ";\n",
+                encoding="utf-8",
+            )
+            return Checker(root).check()
+
+    def test_ward_url_passes(self) -> None:
+        self.assertEqual(
+            self.run_with("https://www.city.shinagawa.tokyo.jp/bunka/1.html"), [])
+
+    def test_bunka_online_passes(self) -> None:
+        # 区のページが無い登録有形文化財などは、文化庁のページを指す。
+        self.assertEqual(
+            self.run_with("https://online.bunka.go.jp/heritages/detail/664869"), [])
+
+    def test_kunishitei_passes(self) -> None:
+        self.assertEqual(
+            self.run_with("https://kunishitei.bunka.go.jp/bsys/maindetails/401/689"), [])
+
+    def test_other_site_is_still_reported(self) -> None:
+        # ここが緩むと「公式で確認した」という前提が崩れる。
+        problems = self.run_with("https://ja.wikipedia.org/wiki/見本")
+        self.assertTrue(any("公式" in p for p in problems), problems)
+
+    def test_lookalike_domain_is_reported(self) -> None:
+        # 似せたドメインを通さない。
+        problems = self.run_with("https://online.bunka.go.jp.example.com/heritages/detail/1")
+        self.assertTrue(any("公式" in p for p in problems), problems)
 
 
 class NameKindTest(unittest.TestCase):

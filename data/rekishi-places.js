@@ -4406,6 +4406,312 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       ],
       "verifiedAt": "2026-11-20",
       "designatedFrom": "1949-04-12"
+    },
+    {
+      "id": "pl-2c7165409b",
+      "name": "十四世喜多六平太記念能楽堂",
+      "summary": "上大崎4-245-1にある建造物です。昭和48年の建築。鉄骨鉄筋コンクリート造地上2階地下2階建、舞台及び橋掛付。",
+      "address": "上大崎4-245-1",
+      "areas": [
+        "osaki"
+      ],
+      "categories": [
+        "building",
+        "culture"
+      ],
+      "lat": 35.633629,
+      "lng": 139.714778,
+      "locationKind": "current",
+      "certainty": "fact",
+      "heritage": [
+        {
+          "name": "十四世喜多六平太記念能楽堂",
+          "kind": "建造物",
+          "designator": "国",
+          "url": "https://online.bunka.go.jp/heritages/detail/664869",
+          "designatedOn": "2026-02-10"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "bunka-online",
+          "locator": "文化遺産オンライン「十四世喜多六平太記念能楽堂」"
+        }
+      ],
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "2026-02-10"
+    },
+    {
+      "id": "pl-e32536679b",
+      "name": "旧三井文庫第二書庫",
+      "summary": "豊町1-1131-1にある建造物です。大正11年の建築。鉄筋コンクリート造3階建、金属板葺。現在の所有は品川区。",
+      "address": "豊町1-1131-1",
+      "areas": [
+        "ebara"
+      ],
+      "categories": [
+        "building",
+        "culture"
+      ],
+      "lat": 35.612283,
+      "lng": 139.720536,
+      "locationKind": "current",
+      "certainty": "fact",
+      "heritage": [
+        {
+          "name": "旧三井文庫第二書庫",
+          "kind": "建造物",
+          "designator": "国",
+          "url": "https://online.bunka.go.jp/heritages/detail/445143",
+          "designatedOn": "2020-04-03"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "bunka-online",
+          "locator": "文化遺産オンライン「旧三井文庫第二書庫」"
+        }
+      ],
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "2020-04-03"
+    },
+    {
+      "id": "pl-47ff3f19a7",
+      "name": "長濱家住宅主屋",
+      "summary": "平塚1-584にある建造物です。大正10年の建築。木造2階建、瓦葺、床下倉庫付。",
+      "address": "平塚1-584",
+      "areas": [
+        "ebara"
+      ],
+      "categories": [
+        "building",
+        "life"
+      ],
+      "lat": 35.616225,
+      "lng": 139.716044,
+      "locationKind": "current",
+      "certainty": "fact",
+      "heritage": [
+        {
+          "name": "長濱家住宅主屋",
+          "kind": "建造物",
+          "designator": "国",
+          "url": "https://online.bunka.go.jp/heritages/detail/402501",
+          "designatedOn": "2020-04-03"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "bunka-online",
+          "locator": "文化遺産オンライン「長濱家住宅主屋」"
+        }
+      ],
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "2020-04-03"
+    },
+    {
+      "id": "pl-b123093d5c",
+      "name": "長濱家住宅門",
+      "summary": "平塚1-584にある建造物です。大正10年の建築。主屋と同じ敷地にある。",
+      "address": "平塚1-584",
+      "areas": [
+        "ebara"
+      ],
+      "categories": [
+        "building",
+        "life"
+      ],
+      "lat": 35.616225,
+      "lng": 139.716044,
+      "locationKind": "current",
+      "certainty": "fact",
+      "heritage": [
+        {
+          "name": "長濱家住宅門",
+          "kind": "建造物",
+          "designator": "国",
+          "url": "https://online.bunka.go.jp/heritages/detail/430542",
+          "designatedOn": "2020-04-03"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "bunka-online",
+          "locator": "文化遺産オンライン「長濱家住宅門」"
+        }
+      ],
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "2020-04-03"
+    },
+    {
+      "id": "pl-0c81c36a89",
+      "name": "小池家住宅主屋",
+      "summary": "北品川5-740-10にある建造物です。昭和13年の建築。木造2階建、瓦葺。",
+      "address": "北品川5-740-10",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "building",
+        "life"
+      ],
+      "lat": 35.620742,
+      "lng": 139.73491,
+      "locationKind": "current",
+      "certainty": "fact",
+      "heritage": [
+        {
+          "name": "小池家住宅主屋",
+          "kind": "建造物",
+          "designator": "国",
+          "url": "https://online.bunka.go.jp/heritages/detail/146704",
+          "designatedOn": "2011-01-26"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "bunka-online",
+          "locator": "文化遺産オンライン「小池家住宅主屋」"
+        }
+      ],
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "2011-01-26"
+    },
+    {
+      "id": "pl-9c203a4728",
+      "name": "旧品川警察署品川橋交通待機所",
+      "summary": "南品川1-223-5にある建造物です。昭和4年の建築。木造平屋建、建築面積13平方メートル。",
+      "address": "南品川1-223-5",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "building",
+        "transport"
+      ],
+      "lat": 35.616597,
+      "lng": 139.744361,
+      "locationKind": "current",
+      "certainty": "fact",
+      "heritage": [
+        {
+          "name": "旧品川警察署品川橋交通待機所",
+          "kind": "建造物",
+          "designator": "国",
+          "url": "https://online.bunka.go.jp/heritages/detail/560735",
+          "designatedOn": "2023-08-07"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "bunka-online",
+          "locator": "文化遺産オンライン「旧品川警察署品川橋交通待機所」"
+        }
+      ],
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "2023-08-07"
+    },
+    {
+      "id": "pl-85aaa422e3",
+      "name": "旗岡八幡神社絵馬殿",
+      "summary": "旗の台3-852-1にある建造物です。昭和3年ごろの建築。木造平屋建、銅板葺。のちに2度移築されている。",
+      "address": "旗の台3-852-1",
+      "areas": [
+        "ebara"
+      ],
+      "categories": [
+        "building",
+        "temple"
+      ],
+      "lat": 35.604522,
+      "lng": 139.708343,
+      "locationKind": "current",
+      "certainty": "fact",
+      "heritage": [
+        {
+          "name": "旗岡八幡神社絵馬殿",
+          "kind": "建造物",
+          "designator": "国",
+          "url": "https://online.bunka.go.jp/heritages/detail/229368",
+          "designatedOn": "2013-06-21"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "bunka-online",
+          "locator": "文化遺産オンライン「旗岡八幡神社絵馬殿」"
+        }
+      ],
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "2013-06-21"
+    },
+    {
+      "id": "pl-f11e74239c",
+      "name": "宝篋印塔（１）",
+      "summary": "西五反田4-12-1にある建造物です。鎌倉時代後期・1317年の石造宝篋印塔。安養院に伝わる。重要文化財。",
+      "address": "西五反田4-12-1",
+      "areas": [
+        "osaki"
+      ],
+      "categories": [
+        "temple",
+        "site"
+      ],
+      "lat": 35.626408,
+      "lng": 139.710022,
+      "locationKind": "current",
+      "certainty": "fact",
+      "heritage": [
+        {
+          "name": "宝篋印塔（１）",
+          "kind": "建造物",
+          "designator": "国",
+          "url": "https://online.bunka.go.jp/heritages/detail/199549",
+          "designatedOn": "1953-08-29"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "bunka-online",
+          "locator": "文化遺産オンライン「宝篋印塔（１）」"
+        }
+      ],
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "1953-08-29"
+    },
+    {
+      "id": "pl-c75991a87f",
+      "name": "宝篋印塔（２）",
+      "summary": "西五反田4-12-1にある建造物です。鎌倉時代後期・1317年の石造宝篋印塔。安養院に伝わる。重要文化財。",
+      "address": "西五反田4-12-1",
+      "areas": [
+        "osaki"
+      ],
+      "categories": [
+        "temple",
+        "site"
+      ],
+      "lat": 35.626408,
+      "lng": 139.710022,
+      "locationKind": "current",
+      "certainty": "fact",
+      "heritage": [
+        {
+          "name": "宝篋印塔（２）",
+          "kind": "建造物",
+          "designator": "国",
+          "url": "https://online.bunka.go.jp/heritages/detail/193280",
+          "designatedOn": "1953-08-29"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "bunka-online",
+          "locator": "文化遺産オンライン「宝篋印塔（２）」"
+        }
+      ],
+      "verifiedAt": "2026-11-20",
+      "designatedFrom": "1953-08-29"
     }
   ]
 };
