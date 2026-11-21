@@ -246,10 +246,14 @@
           const link = item.url
             ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${label}</a>`
             : label;
-          const designator = item.designator && item.designator !== "区" ? `${esc(item.designator)}指定・` : "";
+          // 登録有形文化財（登録）と重要文化財など（指定）は別の制度。言葉を取り違えない。
+          const act = item.registeredOn ? "登録" : "指定";
+          const when = item.registeredOn || item.designatedOn;
+          const designator = item.designator && item.designator !== "区"
+            ? `${esc(item.designator)}${act}・` : "";
           const visit = item.visit ? `／${esc(item.visit)}` : "";
-          // いつ指定されたかはデータに入っているのに、これまで画面に出していなかった。
-          const on = item.designatedOn ? `／${esc(japaneseDate(item.designatedOn))}指定` : "";
+          // いつ指定・登録されたかはデータに入っているのに、これまで画面に出していなかった。
+          const on = when ? `／${esc(japaneseDate(when))}${act}` : "";
           return `<li>${link}<br /><span class="pop-kind">${designator}${esc(item.kind)}${visit}${on}</span></li>`;
         }).join("");
         const source = (place.sources || []).map((entry) => {

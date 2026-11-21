@@ -336,13 +336,18 @@ class Checker:
                 self.fail(spot, "url がありません")
             elif not is_official_url(url):
                 self.fail(spot, f"url が公式（品川区・文化庁）のページではありません: {url}")
-            designated = entry.get("designatedOn")
-            if designated is None:
-                continue
-            if not DATE_PATTERN.match(str(designated)):
-                self.fail(spot, f"designatedOn は YYYY-MM-DD 形式にしてください: {designated}")
-            elif str(designated) > today:
-                self.fail(spot, f"designatedOn が未来の日付です: {designated}")
+            # 登録有形文化財（登録）と重要文化財など（指定）は別の制度。
+            # 取り違えると事実が違うので、日付の欄も分け、両方持つことを許さない。
+            if entry.get("registeredOn") is not None and entry.get("designatedOn") is not None:
+                self.fail(spot, "registeredOn と designatedOn の両方は持てません（登録と指定は別の制度です）")
+            for field in ("designatedOn", "registeredOn"):
+                value = entry.get(field)
+                if value is None:
+                    continue
+                if not DATE_PATTERN.match(str(value)):
+                    self.fail(spot, f"{field} は YYYY-MM-DD 形式にしてください: {value}")
+                elif str(value) > today:
+                    self.fail(spot, f"{field} が未来の日付です: {value}")
 
     def check_location(
         self, where: str, key: str, item: dict[str, Any], location_kinds: set[str]

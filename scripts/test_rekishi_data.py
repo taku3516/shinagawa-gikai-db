@@ -367,6 +367,59 @@ class HeritageUrlTest(unittest.TestCase):
         self.assertTrue(any("公式" in p for p in problems), problems)
 
 
+class RegisteredOnTest(unittest.TestCase):
+    """「登録」と「指定」を取り違えないこと。
+
+    文化財保護法では、登録有形文化財（登録）と重要文化財など（指定）は別の制度。
+    登録のものに「指定」と書くと事実が違う。日付の欄も registeredOn と
+    designatedOn で分け、画面の文言もそれに従う。
+    """
+
+    META = dict(MINIMAL_META, files={"places": "data/rekishi-places.js"})
+    PLACE = {
+        "id": "pl-sample", "name": "見本の地点", "summary": "見本です。",
+        "address": "北品川1-1-1", "areas": ["shinagawa"], "categories": ["site"],
+        "lat": 35.62, "lng": 139.74, "locationKind": "current", "certainty": "fact",
+        "heritage": [], "sources": [{"ref": "src-a", "locator": "1ページ"}],
+        "verifiedAt": "2026-11-19",
+    }
+
+    def run_with(self, heritage: dict) -> list:
+        item = dict(self.PLACE)
+        item["heritage"] = [dict({
+            "name": "見本", "kind": "建造物",
+            "url": "https://online.bunka.go.jp/heritages/detail/1",
+        }, **heritage)]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = root / "data"
+            data.mkdir(parents=True)
+            (data / "rekishi.js").write_text(
+                "window.SHINAGAWA_DB.rekishi = " + json.dumps(self.META, ensure_ascii=False) + ";\n",
+                encoding="utf-8")
+            (data / "rekishi-places.js").write_text(
+                "window.SHINAGAWA_DB.rekishiPlaces = "
+                + json.dumps({"items": [item]}, ensure_ascii=False) + ";\n", encoding="utf-8")
+            return Checker(root).check()
+
+    def test_registered_on_passes(self) -> None:
+        self.assertEqual(self.run_with({"registeredOn": "2020-04-03"}), [])
+
+    def test_registered_on_must_be_iso(self) -> None:
+        problems = self.run_with({"registeredOn": "2020/04/03"})
+        self.assertTrue(any("registeredOn" in p for p in problems), problems)
+
+    def test_future_registered_on_is_reported(self) -> None:
+        problems = self.run_with({"registeredOn": "2099-01-01"})
+        self.assertTrue(any("未来" in p for p in problems), problems)
+
+    def test_both_dates_is_reported(self) -> None:
+        # 登録と指定は別の制度。両方持つことはない。
+        problems = self.run_with({"registeredOn": "2020-04-03", "designatedOn": "1953-08-29"})
+        self.assertTrue(
+            any("registeredOn" in p and "designatedOn" in p for p in problems), problems)
+
+
 class NameKindTest(unittest.TestCase):
     """地名の種類の決まりを確かめる。"""
 

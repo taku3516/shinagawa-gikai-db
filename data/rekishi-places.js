@@ -4429,7 +4429,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "建造物",
           "designator": "国",
           "url": "https://online.bunka.go.jp/heritages/detail/664869",
-          "designatedOn": "2026-02-10"
+          "registeredOn": "2026-02-10"
         }
       ],
       "sources": [
@@ -4463,7 +4463,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "建造物",
           "designator": "国",
           "url": "https://online.bunka.go.jp/heritages/detail/445143",
-          "designatedOn": "2020-04-03"
+          "registeredOn": "2020-04-03"
         }
       ],
       "sources": [
@@ -4497,7 +4497,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "建造物",
           "designator": "国",
           "url": "https://online.bunka.go.jp/heritages/detail/402501",
-          "designatedOn": "2020-04-03"
+          "registeredOn": "2020-04-03"
         }
       ],
       "sources": [
@@ -4531,7 +4531,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "建造物",
           "designator": "国",
           "url": "https://online.bunka.go.jp/heritages/detail/430542",
-          "designatedOn": "2020-04-03"
+          "registeredOn": "2020-04-03"
         }
       ],
       "sources": [
@@ -4565,7 +4565,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "建造物",
           "designator": "国",
           "url": "https://online.bunka.go.jp/heritages/detail/146704",
-          "designatedOn": "2011-01-26"
+          "registeredOn": "2011-01-26"
         }
       ],
       "sources": [
@@ -4599,7 +4599,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "建造物",
           "designator": "国",
           "url": "https://online.bunka.go.jp/heritages/detail/560735",
-          "designatedOn": "2023-08-07"
+          "registeredOn": "2023-08-07"
         }
       ],
       "sources": [
@@ -4633,7 +4633,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "kind": "建造物",
           "designator": "国",
           "url": "https://online.bunka.go.jp/heritages/detail/229368",
-          "designatedOn": "2013-06-21"
+          "registeredOn": "2013-06-21"
         }
       ],
       "sources": [
