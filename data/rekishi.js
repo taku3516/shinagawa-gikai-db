@@ -120,6 +120,13 @@ window.SHINAGAWA_DB.rekishi = {
       "note": "品川区史（通史編上巻・下巻）、品川の歴史、旧町村史、古文書・古地図、住居表示新旧対照表。本文は転載せず、事実の確認にのみ利用している。"
     },
     {
+      "id": "sgw-kushi-tsushi-jo",
+      "label": "品川区史 通史編 上巻",
+      "publisher": "品川区",
+      "url": "https://adeac.jp/shinagawa-city/table-of-contents/mp000010/d000010",
+      "note": "1973年（昭和48）3月刊。原始時代から近世末期までの品川区の歴史。自然編・原始古代編・中世編・近世編からなる。しながわデジタルアーカイブで全文が公開されている。本文は転載せず、事実の確認にのみ利用している。出典の locator には節の見出しと底本のページを書く。"
+    },
+    {
       "id": "sgw-kushi-tsushi-ge",
       "label": "品川区史 通史編 下巻",
       "publisher": "品川区",
