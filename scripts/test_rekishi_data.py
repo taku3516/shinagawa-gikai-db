@@ -620,6 +620,67 @@ class KuniDesignationTest(unittest.TestCase):
         self.assertEqual(self.lookup("旧白金御料地", ""), "1949-04-12")
 
 
+class EraYearTest(unittest.TestCase):
+    """yearText の和暦と year が食い違っていないかを見る。
+
+    1つの出典から多数の項目を起こすときの検算用。元号の換算を1件ずつ
+    手でやると取り違えが混ざるため、機械で当てられるようにしている。
+    """
+
+    def run_with(self, events: list[dict]) -> list[str]:
+        # 近代の元号を使うので、時代区分を足した台帳で試す。
+        meta = dict(MINIMAL_META)
+        meta["eras"] = [
+            {"id": "kinsei", "label": "近世"},
+            {"id": "meiji", "label": "明治"},
+            {"id": "taisho", "label": "大正"},
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            write_fixture(root, meta, events)
+            return Checker(root).check()
+
+    def test_matching_era_year_passes(self) -> None:
+        # 明治41年 = 1868 + 41 - 1 = 1908
+        event = dict(VALID_EVENT, year=1908, era="meiji",
+                     yearText="明治41年（1908年）")
+        self.assertEqual(self.run_with([event]), [])
+
+    def test_mismatched_era_year_is_reported(self) -> None:
+        # 明治41年は1908年なので、1909 と書いてあれば取り違え。
+        event = dict(VALID_EVENT, year=1909, era="meiji",
+                     yearText="明治41年（1909年）")
+        problems = self.run_with([event])
+        self.assertTrue(any("和暦" in p for p in problems), problems)
+
+    def test_first_year_of_era_passes(self) -> None:
+        # 「元年」は改元の年。明治元年 = 1868。
+        event = dict(VALID_EVENT, year=1868, era="meiji",
+                     yearText="明治元年（1868年）")
+        self.assertEqual(self.run_with([event]), [])
+
+    def test_era_boundary_year_passes_either_way(self) -> None:
+        # 改元の年は2つの元号が同じ西暦を指す。どちらでも通ること。
+        # 明治45年7月30日に改元したので、明治45年も大正元年も1912年。
+        for text in ("明治45年（1912年）", "大正元年（1912年）"):
+            with self.subTest(text=text):
+                event = dict(VALID_EVENT, year=1912, era="taisho",
+                             yearText=text)
+                self.assertEqual(self.run_with([event]), [])
+
+    def test_year_range_matches_the_first_era(self) -> None:
+        # 範囲で書いたときは、最初の和暦が year と合っていればよい。
+        event = dict(VALID_EVENT, year=1906, yearEnd=1909, era="meiji",
+                     yearText="明治39年から42年にかけて")
+        self.assertEqual(self.run_with([event]), [])
+
+    def test_text_without_era_is_skipped(self) -> None:
+        # 和暦が書かれていないものは、この検算の対象外。
+        event = dict(VALID_EVENT, year=None, era="kinsei",
+                     yearText="江戸時代初期")
+        self.assertEqual(self.run_with([event]), [])
+
+
 class RepositoryDataTest(unittest.TestCase):
     def test_actual_data_passes(self) -> None:
         self.assertEqual(Checker().check(), [])
