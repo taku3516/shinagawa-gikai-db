@@ -21,6 +21,11 @@ GOOGLE_API_KEY = re.compile(r"AIza[0-9A-Za-z_-]{35}")
 # ここに足すときは、画面のリンク先になっていないことを必ず確かめる。
 PRIVATE_DIRECTORIES = {"docs", "scripts"}
 
+# 公開しないファイル。リポジトリ直下に置いたものは、ディレクトリと違って
+# そのまま配信されてしまうため、名前で除く。
+# `AGENTS.md` は AI エージェント向けの作業規約で、画面からは参照していない。
+PRIVATE_FILES = {"AGENTS.md"}
+
 
 def tracked_files() -> list[Path]:
     output = subprocess.check_output(
@@ -67,6 +72,8 @@ def build(output: Path, api_key: str) -> None:
         if relative.parts[0].startswith("."):
             continue
         if relative.parts[0] in PRIVATE_DIRECTORIES:
+            continue
+        if len(relative.parts) == 1 and relative.name in PRIVATE_FILES:
             continue
         source = ROOT / relative
         destination = output / relative

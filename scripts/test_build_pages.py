@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import tempfile
 import unittest
 
-from build_pages import GOOGLE_API_KEY, PRIVATE_DIRECTORIES, build
+from build_pages import GOOGLE_API_KEY, PRIVATE_DIRECTORIES, PRIVATE_FILES, build
 
 
 class BuildPagesTest(unittest.TestCase):
@@ -30,6 +30,18 @@ class BuildPagesTest(unittest.TestCase):
             )
             self.assertTrue((output / "kaigiroku.html").exists())
             self.assertTrue((output / "data" / "site.js").exists())
+
+    def test_excludes_private_files(self) -> None:
+        # AGENTS.md はエージェント向けの作業規約で、画面からは参照していない。
+        # リポジトリ直下に置くとそのまま公開されてしまうので除く。
+        api_key = "AIza" + "A" * 35
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "site"
+            build(output, api_key)
+            for name in PRIVATE_FILES:
+                self.assertFalse((output / name).exists(), f"{name} を公開しています")
+            # README.md は従来どおり公開する。
+            self.assertTrue((output / "README.md").exists())
 
     def test_rejects_invalid_key(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
