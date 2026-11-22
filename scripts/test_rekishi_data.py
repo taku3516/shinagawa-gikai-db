@@ -636,6 +636,7 @@ class EraYearTest(unittest.TestCase):
             {"id": "taisho", "label": "大正"},
             {"id": "showa-pre", "label": "昭和戦前・戦中"},
             {"id": "showa-post", "label": "昭和戦後"},
+            {"id": "chusei", "label": "中世"},
         ]
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -698,6 +699,63 @@ class EraYearTest(unittest.TestCase):
                 event = dict(VALID_EVENT, year=1930, era=era,
                              yearText="昭和5年（1930年）")
                 self.assertEqual(self.run_with([event]), [])
+
+    def test_premodern_era_is_converted(self) -> None:
+        # 近世以前の元号も換算する。慶長6年 = 1596 + 6 - 1 = 1601。
+        event = dict(VALID_EVENT, year=1601, era="kinsei",
+                     yearText="慶長6年（1601年）正月")
+        self.assertEqual(self.run_with([event]), [])
+
+    def test_premodern_mismatch_is_reported(self) -> None:
+        event = dict(VALID_EVENT, year=1602, era="kinsei",
+                     yearText="慶長6年（1602年）")
+        problems = self.run_with([event])
+        self.assertTrue(any("和暦" in p for p in problems), problems)
+
+    def test_unknown_era_name_is_reported(self) -> None:
+        # 表に無い元号を黙って飛ばすと、検算の穴が見えないまま残る。
+        event = dict(VALID_EVENT, year=1601, era="kinsei",
+                     yearText="架空5年（1601年）")
+        problems = self.run_with([event])
+        self.assertTrue(any("元号" in p and "表にありません" in p
+                            for p in problems), problems)
+
+    def test_period_name_is_not_treated_as_an_era(self) -> None:
+        # 「縄文時代後期〜晩期」「鎌倉時代後期」は元号ではない。
+        # 西暦が括弧で続く形になっていないので、未知の元号とはしない。
+        for text in ("縄文時代後期〜晩期（前2000年〜前400年ごろ）",
+                     "鎌倉時代後期（13世紀末〜14世紀初め）",
+                     "文明年間（1469〜1487年）"):
+            with self.subTest(text=text):
+                event = dict(VALID_EVENT, year=None, era="kinsei",
+                             yearText=text)
+                self.assertEqual(self.run_with([event]), [])
+
+    def test_premodern_era_name_does_not_constrain_the_era_field(self) -> None:
+        # 近世以前の元号は時代区分との対応が一対一でないため、
+        # 西暦だけを突き合わせ、era の値は縛らない。
+        event = dict(VALID_EVENT, year=1601, era="chusei",
+                     yearText="慶長6年（1601年）")
+        self.assertEqual(self.run_with([event]), [])
+
+    def test_kanji_year_numerals_are_accepted(self) -> None:
+        # 「明治四十一年」のように年を漢数字で書いても、元号は「明治」。
+        # 漢字の並びから元号を推測すると「明治四十」まで食い込むので、
+        # 既知の元号名を先に当てる。
+        for text, year, era in (("明治四十一年（1908年）", 1908, "meiji"),
+                                ("昭和二十年（1945年）", 1945, "showa-pre"),
+                                ("元禄十六年（1703年）", 1703, "kinsei")):
+            with self.subTest(text=text):
+                event = dict(VALID_EVENT, year=year, era=era, yearText=text)
+                self.assertEqual(self.run_with([event]), [])
+
+    def test_unknown_era_with_kanji_numerals_is_reported(self) -> None:
+        # 表に無い元号は、年が漢数字でも報告されること。
+        event = dict(VALID_EVENT, year=1601, era="kinsei",
+                     yearText="架空五年（1601年）")
+        problems = self.run_with([event])
+        self.assertTrue(any("元号" in p and "表にありません" in p
+                            for p in problems), problems)
 
     def test_text_without_era_is_skipped(self) -> None:
         # 和暦が書かれていないものは、この検算の対象外。
