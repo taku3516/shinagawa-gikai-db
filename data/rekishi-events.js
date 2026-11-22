@@ -97,6 +97,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "estimate",
       "relatedEvents": ["ev-2023-gogan-designation"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-69870da77d"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第25号「東海道品川宿石積護岸」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -372,6 +373,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-19c-ishizumi-gogan"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-69870da77d"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第25号「東海道品川宿石積護岸」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -686,7 +688,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "id": "ev-1655-ryoshimachi",
         "name": "南品川猟師町が開かれる",
         "summary": "明暦元年、伝馬の役を辞退した漁師たちが、目黒川河口の寄州「兜島」へ移されて新しい町が開かれた。",
-        "description": "移されたのは南品川三丁目（現在の南品川二丁目）に住んでいた漁師たちで、兜島と呼ばれていた人家のない寄州が町の始まりです。のちに多くの漁民が住み、幕府へ魚介類を献上する御菜肴八ヶ浦のひとつとして、江戸湾の漁業の中心となりました。",
+        "description": "移されたのは南品川三丁目（現在の南品川二丁目）に住んでいた漁師たちで、兜島と呼ばれていた人家のない寄州が町の始まりです。区史によると、元禄期には約40戸があり、漁師が共同で使う網干場もありました。品川浦は幕府へ魚介類を献上する御菜肴八ヶ浦のひとつでした。関連地点の品川歴史館は、この町を伝える大島家文書の所蔵先です。町は南品川宿一丁目から川に沿って突き出す細長い土地にあり、洲崎とも呼ばれました。",
         "year": 1655,
         "yearEnd": null,
         "yearText": "明暦元年（1655年）",
@@ -700,6 +702,8 @@ window.SHINAGAWA_DB.rekishiEvents = {
         ],
         "certainty": "fact",
         "relatedEvents": [
+          "ev-1695-ryoshimachi-kenchi",
+          "ev-1722-osakana-resumed",
           "ev-1884-ryoshimachi-fire"
         ],
         "relatedPlaces": [
@@ -709,9 +713,17 @@ window.SHINAGAWA_DB.rekishiEvents = {
           {
             "ref": "sgw-bunkazai",
             "locator": "大崎地区の指定文化財 古文書「大島家文書」"
+          },
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「品川浦の成立」830〜831頁、「猟師町の構造」833〜835頁"
+          },
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「南品川猟師町」398頁"
           }
         ],
-        "verifiedAt": "2026-11-20"
+        "verifiedAt": "2026-11-22"
       },
       {
         "id": "ev-1685-suijin",
@@ -4071,6 +4083,270 @@ window.SHINAGAWA_DB.rekishiEvents = {
           {
             "ref": "sgw-kushi-tsushi-jo",
             "locator": "四 近世編（六）生活と文化「小自在庵南園」1084〜1086頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1695-ryoshimachi-kenchi",
+        "name": "南品川猟師町の屋敷地が検地帳に記される",
+        "summary": "12月の検地帳には、南品川猟師町の屋敷地が76筆記されている。",
+        "description": "区史は、屋敷地を名請人ごとに整理して41戸と数えている。屋敷地とは別に、漁師が共同で使う網干場があった。検地帳は大島家文書に含まれる。",
+        "year": 1695,
+        "yearEnd": null,
+        "yearText": "元禄8年（1695年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1655-ryoshimachi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「猟師町の構造」833〜835頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1722-osakana-resumed",
+        "name": "品川浦などで幕府への鮮魚献上が再開される",
+        "summary": "3月に幕府が献上の停止を命じたが、品川浦を含む漁村側が願い出て8月に再開が認められた。",
+        "description": "停止の対象には品川浦・大井御林浦が属した御菜肴八ヵ浦のほか、葛西領の浦方と深川猟師町も含まれた。漁村側は4月に代官所へ願書を提出した。",
+        "year": 1722,
+        "yearEnd": null,
+        "yearText": "享保7年（1722年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1655-ryoshimachi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「御菜肴献上」836〜839頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1732-tsukuri-mo-dispute",
+        "name": "品川猟師町などのイカ漁をめぐり近隣の浦が訴える",
+        "summary": "大井御林町などが、品川猟師町と大森村で行われていたイカ漁は網漁を妨げると訴えた。",
+        "description": "問題となったのは、土をむしろなどで包み、箒と竹を組み合わせた仕掛けを海に入れる「作り藻」という漁法だった。大井御林町とともに金杉・本芝・羽田猟師町が訴えたと区史は記している。",
+        "year": 1732,
+        "yearEnd": null,
+        "yearText": "享保17年（1732年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1655-ryoshimachi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「四十四ヵ浦の議定」850頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1734-osakana-extra-duty",
+        "name": "品川浦などが臨時の鮮魚献上の負担を訴える",
+        "summary": "11月、品川・金杉・本芝の三浦が、不漁のなか急な献上を求められる負担を訴えた。",
+        "description": "翌年の願いには、夜中に翌朝の献上を求める知らせが届く例が記されている。急な漁は品川猟師町・御林町を含む四浦が引き受け、船賃などを残りの四浦が負担する案が示された。",
+        "year": 1734,
+        "yearEnd": null,
+        "yearText": "享保19年（1734年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1722-osakana-resumed"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「御菜肴献上」839〜840頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1845-ryoshimachi-kenchi",
+        "name": "新田検地で南品川猟師町の屋敷地が増える",
+        "summary": "新田検地の結果、帳簿上の屋敷地は4畝24歩増えて9反8畝14歩となった。",
+        "description": "猟師町は南品川宿に属し、年貢の割り付けも宿の行政の中で扱われていた。区史によると、検地によって猟師町の石高も4斗8升増えた。",
+        "year": 1845,
+        "yearEnd": null,
+        "yearText": "弘化2年（1845年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1695-ryoshimachi-kenchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「猟師町の構造」833頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1811-gozennori-dispute",
+        "name": "品川・大井の村々が御膳海苔の産地をめぐって争う",
+        "summary": "将軍家への献上海苔を大森産に限ろうとする申し立てに、品川・大井の村々が異議を唱えた。",
+        "description": "献上用の海苔には天王洲・鮫洲・水車洲で採れたものが使われ、大井村浜川町で加工して浅草の店に送っていた。翌年、勘定奉行所が産地を調べ、従来どおりに納めるよう命じた。",
+        "year": 1811,
+        "yearEnd": null,
+        "yearText": "文化8年（1811年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1813-nori-survey"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「御膳海苔の献上」867〜868頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1813-nori-survey",
+        "name": "幕府が品川・大井などの海苔養殖場を測る",
+        "summary": "幕府は海苔養殖にかける税を増やすため、養殖場の区画を測った。",
+        "description": "区史の第50表によると、南品川宿・海晏寺門前・大井村を含む九ヵ村の区画の合計は、宝暦7年（1757年）の約5.9倍に達した。",
+        "year": 1813,
+        "yearEnd": null,
+        "yearText": "文化10年（1813年）",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1811-gozennori-dispute"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「海苔養殖業の発展」861〜862頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1838-gozennori-petition",
+        "name": "南品川宿と猟師町が献上海苔の負担を訴える",
+        "summary": "凶作が続き、南品川宿と猟師町は、一部の養殖場に割り当てられた献上分を他の村や町に回すよう願い出た。",
+        "description": "願書には、不作による損失で新たに海苔の付着用の枝を立てることも難しいとある。その後に献上の負担が免除されたかどうかは区史でも明らかにされていない。",
+        "year": 1838,
+        "yearEnd": null,
+        "yearText": "天保9年（1838年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1811-gozennori-dispute"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「御膳海苔の献上」868〜869頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1862-kogeta-dispute",
+        "name": "品川猟師町が漁具「小桁」を届け出ようとする",
+        "summary": "12月、品川猟師町は小桁を従来の漁具として届け出ようとしたが、ほかの浦は新しい漁具だとして認めなかった。",
+        "description": "区史は、品川台場の建設後に漁場の浅瀬化や潮流の変化があり、品川の漁師たちが漁具を改良して対応したと記す。小桁はその時期に使用をめぐって対立した漁具で、エビ桁もその一種だった。",
+        "year": 1862,
+        "yearEnd": null,
+        "yearText": "文久2年（1862年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1732-tsukuri-mo-dispute"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「幕末の漁業」855〜856頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1792-osakana-cash",
+        "name": "品川浦の定例の鮮魚献上が金納に切り替わる",
+        "summary": "月に3回行われていた定例の鮮魚献上が中断され、代金を納めるようになった。",
+        "description": "区史は南品川宿の年貢皆済目録にこの年の御菜肴代が記録されているとする。文化7年（1810年）には、代金の納付に加えて月1回、漁の初物を献上することが認められた。",
+        "year": 1792,
+        "yearEnd": null,
+        "yearText": "寛政4年（1792年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1722-osakana-resumed"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（五）産業「御菜肴献上」839〜840頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1834-kagata-shinchi",
+        "name": "利田新地が検地を受け、石高に組み入れられる",
+        "summary": "目黒川河口近くの寄洲を利用して開発された利田新地は、天保5年4月に検地を受けて石高に組み入れられた。",
+        "description": "区史によると、開発は天明年間に始まった。利田新地は猟師町の網干場の北にできた寄洲を利用したもので、新地の先端には弁天社と鯨塚があった。地図のピンは、弁天社と鯨塚のゆかりの場所である利田神社を示す。",
+        "year": 1834,
+        "yearEnd": null,
+        "yearText": "天保5年（1834年）4月",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "life",
+          "placename"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1655-ryoshimachi",
+          "ev-1798-kujira"
+        ],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-086da1e672"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「南品川新開場（利田新地）」399〜400頁、「利田新地の開発」408〜409頁"
           }
         ],
         "verifiedAt": "2026-11-22"

@@ -124,6 +124,7 @@
   <script src="data/rekishi.js"></script>
   <script src="data/rekishi-events.js"></script>
   <script src="data/rekishi-people.js"></script>
+  <script src="data/rekishi-places.js"></script>
   <script>
     "use strict";
 
@@ -163,6 +164,7 @@
       const certaintyById = new Map(certainties.map((x) => [x.id, x]));
       const sourceById = new Map((META.sources || []).map((x) => [x.id, x]));
       const personById = new Map(PEOPLE.map((x) => [x.id, x]));
+      const placeById = new Map((DB.rekishiPlaces?.items || []).map((x) => [x.id, x]));
       const eventById = new Map(EVENTS.map((x) => [x.id, x]));
 
       // 年が無いできごとは、その時代の先頭あたりに置く。
@@ -254,7 +256,12 @@
       function renderRelated(item) {
         const people = (item.relatedPeople || []).map((id) => personById.get(id)).filter(Boolean);
         const events = (item.relatedEvents || []).map((id) => eventById.get(id)).filter(Boolean);
-        if (!people.length && !events.length) return "";
+        const places = (item.relatedPlaces || []).map((id) => placeById.get(id)).filter(Boolean);
+        if (!people.length && !events.length && !places.length) return "";
+        const placesHtml = places.length
+          ? `<h4>関連する場所</h4><ul>${places.map((place) =>
+              `<li><a href="rekishi-map.html?place=${encodeURIComponent(place.id)}">${esc(place.name)}</a></li>`).join("")}</ul>`
+          : "";
 
         // 人物事典のページはまだ無いので、ここで開いて読めるようにする。
         // 人物の情報そのものは data/rekishi-people.js の1か所にしかなく、
@@ -273,7 +280,7 @@
               `<li><a href="#${esc(x.id)}">${esc(x.name)}</a>${x.yearText ? `（${esc(x.yearText)}）` : ""}</li>`).join("")}</ul>`
           : "";
 
-        return `<div class="related">${people.length ? "<h4>関連する人物</h4>" + peopleHtml : ""}${eventsHtml}</div>`;
+        return `<div class="related">${people.length ? "<h4>関連する人物</h4>" + peopleHtml : ""}${eventsHtml}${placesHtml}</div>`;
       }
 
       function renderEvent(item) {

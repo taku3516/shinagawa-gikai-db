@@ -89,6 +89,13 @@
     </div></header>
 
     <section><div class="container">
+      <aside class="panel controls" id="comparison-example" aria-label="ここを見比べる" hidden>
+        <div><strong>ここを見比べる</strong><br />
+          <a id="shore-example" href="?">東海道品川宿石積護岸周辺</a><br />
+          左の明治の地形図で海岸線を探し、境界を動かして右の空中写真の街路と見比べてください。
+          <a href="rekishi-nenpyo.html#ev-19c-ishizumi-gogan">護岸の歴史を読む</a>
+        </div>
+      </aside>
       <form class="panel controls" id="controls">
         <div class="control-row">
           <!-- 年代は値が多く、ラベルも長いので <select> にしている
@@ -143,6 +150,7 @@
   <footer><div class="container" id="footer-root"></div></footer>
 
   <script src="kochizu-state.js"></script>
+  <script src="rekishi-map-links.js"></script>
   <script src="data/site.js"></script>
   <script src="data/rekishi.js"></script>
   <script src="data/rekishi-places.js"></script>
@@ -204,6 +212,12 @@
       ];
 
       const PIN_LETTERS = { site: "史", temple: "社", nature: "木", building: "建" };
+
+      const seawall = PLACES.find((place) => place.id === "pl-69870da77d");
+      if (seawall && window.RekishiMapLinks) {
+        document.getElementById("shore-example").href = RekishiMapLinks.comparisonHref(seawall);
+        document.getElementById("comparison-example").hidden = false;
+      }
 
       const mapRoot = document.getElementById("kochizu-map");
       const captionBox = document.getElementById("map-caption");
