@@ -175,6 +175,65 @@ class VolumeTest(unittest.TestCase):
         self.assertGreaterEqual(adeac_sections.CRAWL_DELAY_SECONDS, 10)
 
 
+class CrawlDelayTest(unittest.TestCase):
+    """取得の間隔は、コマンドやプロセスをまたいでも空けること。
+
+    `toc` の直後に `fetch` を走らせる、単一節の `fetch` を続けて走らせる、
+    といった手順でも robots.txt の Crawl-Delay を下回らないようにする。
+    """
+
+    def setUp(self) -> None:
+        self._directory = tempfile.TemporaryDirectory()
+        self._original = adeac_sections.LAST_REQUEST_FILE
+        adeac_sections.LAST_REQUEST_FILE = Path(self._directory.name) / ".last-request"
+
+    def tearDown(self) -> None:
+        adeac_sections.LAST_REQUEST_FILE = self._original
+        self._directory.cleanup()
+
+    def test_waits_when_the_previous_request_was_recent(self) -> None:
+        adeac_sections.remember_request(now=1_000.0)
+        slept: list[float] = []
+        waited = adeac_sections.wait_for_crawl_delay(
+            now=1_002.0, sleep=slept.append
+        )
+        self.assertAlmostEqual(waited, adeac_sections.CRAWL_DELAY_SECONDS - 2.0)
+        self.assertEqual(len(slept), 1)
+
+    def test_does_not_wait_when_enough_time_has_passed(self) -> None:
+        adeac_sections.remember_request(now=1_000.0)
+        slept: list[float] = []
+        waited = adeac_sections.wait_for_crawl_delay(
+            now=1_000.0 + adeac_sections.CRAWL_DELAY_SECONDS + 1, sleep=slept.append
+        )
+        self.assertEqual(waited, 0.0)
+        self.assertEqual(slept, [])
+
+    def test_first_request_does_not_wait(self) -> None:
+        slept: list[float] = []
+        self.assertEqual(
+            adeac_sections.wait_for_crawl_delay(now=1_000.0, sleep=slept.append), 0.0
+        )
+        self.assertEqual(slept, [])
+
+    def test_broken_record_waits_the_full_delay(self) -> None:
+        # 記録が壊れていたら、取らない側ではなく待つ側に倒す。
+        adeac_sections.LAST_REQUEST_FILE.parent.mkdir(parents=True, exist_ok=True)
+        adeac_sections.LAST_REQUEST_FILE.write_text("こわれた", encoding="utf-8")
+        slept: list[float] = []
+        waited = adeac_sections.wait_for_crawl_delay(now=1_000.0, sleep=slept.append)
+        self.assertEqual(waited, float(adeac_sections.CRAWL_DELAY_SECONDS))
+        self.assertEqual(len(slept), 1)
+
+    def test_a_clock_moved_backwards_waits_the_full_delay(self) -> None:
+        # 記録が未来になっていても、負の秒数で寝かさない。
+        adeac_sections.remember_request(now=2_000.0)
+        slept: list[float] = []
+        waited = adeac_sections.wait_for_crawl_delay(now=1_000.0, sleep=slept.append)
+        self.assertEqual(waited, float(adeac_sections.CRAWL_DELAY_SECONDS))
+        self.assertEqual(len(slept), 1)
+
+
 class SourceLedgerTest(unittest.TestCase):
     def test_volume_source_refs_exist_in_the_ledger(self) -> None:
         # 巻に書いた出典IDが台帳に無いと、起こした出来事が検査で落ちる。

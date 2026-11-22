@@ -70,6 +70,12 @@ VOLUMES: dict[str, dict[str, str]] = {
 # robots.txt の Crawl-Delay: 10 に従う。1秒の余裕をみる。
 CRAWL_DELAY_SECONDS = 11
 
+# 最後に取得した時刻を残しておくファイル。
+# 間隔をプロセス内のループだけで空けると、`toc` の直後に `fetch` を走らせたり、
+# 単一節の `fetch` を続けて走らせたりしたときに間隔が空かない。
+# 時刻をファイルに残して、コマンドをまたいでも空くようにする。
+LAST_REQUEST_FILE = OUT / ".last-request"
+
 USER_AGENT = "Mozilla/5.0 (compatible; shinagawa-gikai-db/1.0)"
 
 
@@ -93,8 +99,56 @@ def out_dir(name: str) -> Path:
     return directory
 
 
+def last_request_time() -> float | None:
+    """最後に取得した時刻。記録が無いか読めなければ None。"""
+    try:
+        return float(LAST_REQUEST_FILE.read_text(encoding="utf-8").strip())
+    except FileNotFoundError:
+        return None
+    except (OSError, ValueError):
+        # 壊れた記録は「直前に取った」とみなし、待つ側に倒す。
+        return float("nan")
+
+
+def remember_request(now: float | None = None) -> None:
+    """取得した時刻を残す。残せなくても取得そのものは止めない。"""
+    try:
+        LAST_REQUEST_FILE.parent.mkdir(parents=True, exist_ok=True)
+        LAST_REQUEST_FILE.write_text(str(time.time() if now is None else now), encoding="utf-8")
+    except OSError as error:
+        print(f"注意: 取得時刻を残せませんでした（{error}）", file=sys.stderr)
+
+
+def wait_for_crawl_delay(now: float | None = None, sleep=time.sleep) -> float:
+    """前回の取得から CRAWL_DELAY_SECONDS 経つまで待つ。待った秒数を返す。
+
+    コマンドをまたいでも間隔が空くように、時刻はファイルから読む。
+    記録が壊れている、あるいは未来を指しているときは、全量を待つ。
+    """
+    previous = last_request_time()
+    if previous is None:
+        return 0.0
+    moment = time.time() if now is None else now
+    elapsed = moment - previous
+    # NaN との比較は常に False になるので、まず異常な値を弾く。
+    if not (elapsed == elapsed) or elapsed < 0:
+        remaining = float(CRAWL_DELAY_SECONDS)
+    else:
+        remaining = CRAWL_DELAY_SECONDS - elapsed
+    if remaining <= 0:
+        return 0.0
+    sleep(remaining)
+    return remaining
+
+
 def get(url: str) -> str:
-    """1ページ取る。HTTPのエラーはそのまま伝える。"""
+    """1ページ取る。HTTPのエラーはそのまま伝える。
+
+    呼ぶたびに前回からの間隔を空ける。待ちは `fetch` のループだけでなく
+    すべての取得に掛かるので、`toc` の直後に `fetch` を走らせても空く。
+    """
+    wait_for_crawl_delay()
+    remember_request()
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     try:
         with urllib.request.urlopen(request, timeout=60) as response:
@@ -225,9 +279,7 @@ def command_fetch(args: argparse.Namespace) -> int:
         except AdeacError as error:
             failed.append(section_id)
             print(f"[{index}/{len(targets)}] {section_id} 失敗: {error}", file=sys.stderr)
-        # 最後の1件のあとは待たない。
-        if index < len(targets):
-            time.sleep(CRAWL_DELAY_SECONDS)
+        # 間隔は get() が空けるので、ここでは待たない。
 
     print(f"取得完了: 成功 {done} / 失敗 {len(failed)} / 合計 {len(targets)}")
     return 1 if failed else 0
