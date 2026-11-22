@@ -72,8 +72,12 @@ ERA_FIRST_YEAR: dict[str, int] = {
 # 「○○N年（NNNN年）」の形。元号は漢字2〜4字で、すぐ後ろに年数と
 # 括弧書きの西暦が続くものだけを拾う。「縄文時代後期〜晩期（前2000年…」
 # のような時代の呼び名を元号と取り違えないための絞り込み。
+#
+# 元号の側を最短一致、年数の側を最長一致にしている。そうしないと
+# 「明治四十一年」で元号を「明治四十」まで食い込んで読んでしまい、
+# 正しい記述を未知の元号として弾いてしまう。
 ERA_LIKE_PATTERN = re.compile(
-    r"^([\u4e00-\u9fff]{2,4})(元|[0-9０-９一二三四五六七八九十]{1,2})年\s*[（(]\s*(\d{4})\s*年"
+    r"^([\u4e00-\u9fff]{2,4}?)([元0-9０-９一二三四五六七八九十]+)年\s*[（(]\s*(\d{4})\s*年"
 )
 
 # 元号から時代区分IDへの対応。改元の年は西暦が重なるため、年だけでは
@@ -412,7 +416,12 @@ class Checker:
 
         # 「○○N年（NNNN年）」の形なのに表に無い元号は、黙って飛ばさず
         # 報告する。飛ばしてしまうと検算が効いていないことに気づけない。
-        era_like = ERA_LIKE_PATTERN.match(year_text.strip())
+        # 判定は、まず元号名の一覧から組んだ ERA_YEAR_PATTERN を当て、
+        # それが先頭で一致しないときだけ漢字の並びから推測する。
+        # 推測を先にすると、年の漢数字を元号の一部と読み違える。
+        stripped = year_text.strip()
+        era_like = (None if ERA_YEAR_PATTERN.match(stripped)
+                    else ERA_LIKE_PATTERN.match(stripped))
         if era_like and era_like.group(1) not in ERA_FIRST_YEAR:
             self.fail(
                 where,

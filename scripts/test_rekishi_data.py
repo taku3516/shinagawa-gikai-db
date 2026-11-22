@@ -738,6 +738,25 @@ class EraYearTest(unittest.TestCase):
                      yearText="慶長6年（1601年）")
         self.assertEqual(self.run_with([event]), [])
 
+    def test_kanji_year_numerals_are_accepted(self) -> None:
+        # 「明治四十一年」のように年を漢数字で書いても、元号は「明治」。
+        # 漢字の並びから元号を推測すると「明治四十」まで食い込むので、
+        # 既知の元号名を先に当てる。
+        for text, year, era in (("明治四十一年（1908年）", 1908, "meiji"),
+                                ("昭和二十年（1945年）", 1945, "showa-pre"),
+                                ("元禄十六年（1703年）", 1703, "kinsei")):
+            with self.subTest(text=text):
+                event = dict(VALID_EVENT, year=year, era=era, yearText=text)
+                self.assertEqual(self.run_with([event]), [])
+
+    def test_unknown_era_with_kanji_numerals_is_reported(self) -> None:
+        # 表に無い元号は、年が漢数字でも報告されること。
+        event = dict(VALID_EVENT, year=1601, era="kinsei",
+                     yearText="架空五年（1601年）")
+        problems = self.run_with([event])
+        self.assertTrue(any("元号" in p and "表にありません" in p
+                            for p in problems), problems)
+
     def test_text_without_era_is_skipped(self) -> None:
         # 和暦が書かれていないものは、この検算の対象外。
         event = dict(VALID_EVENT, year=None, era="kinsei",
