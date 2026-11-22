@@ -186,9 +186,11 @@ class CrawlDelayTest(unittest.TestCase):
         self._directory = tempfile.TemporaryDirectory()
         self._original = adeac_sections.LAST_REQUEST_FILE
         adeac_sections.LAST_REQUEST_FILE = Path(self._directory.name) / ".last-request"
+        adeac_sections.forget_request()
 
     def tearDown(self) -> None:
         adeac_sections.LAST_REQUEST_FILE = self._original
+        adeac_sections.forget_request()
         self._directory.cleanup()
 
     def test_waits_when_the_previous_request_was_recent(self) -> None:
@@ -224,6 +226,40 @@ class CrawlDelayTest(unittest.TestCase):
         waited = adeac_sections.wait_for_crawl_delay(now=1_000.0, sleep=slept.append)
         self.assertEqual(waited, float(adeac_sections.CRAWL_DELAY_SECONDS))
         self.assertEqual(len(slept), 1)
+
+    def test_keeps_waiting_when_the_file_cannot_be_written(self) -> None:
+        # 時刻ファイルが書けないときも、プロセス内の記録で間隔を保つ。
+        # ここが抜けると、ファイルに古い時刻が残ったまま待機が消える。
+        path = adeac_sections.LAST_REQUEST_FILE
+        path.write_text("1000.0", encoding="utf-8")
+        path.chmod(0o400)
+        # 後片づけは一時フォルダが消える前に済ませる。
+        self.addCleanup(lambda: path.exists() and path.chmod(0o600))
+
+        slept: list[float] = []
+        # 実際の get() と同じ順（待ってから記録する）で3回ぶんを模す。
+        for index in range(3):
+            waited = adeac_sections.wait_for_crawl_delay(
+                now=2_000.0 + index, sleep=slept.append
+            )
+            adeac_sections.remember_request(now=2_000.0 + index)
+            if index == 0:
+                # 1回目はファイルの古い時刻しか無いので待たなくてよい。
+                self.assertEqual(waited, 0.0)
+            else:
+                self.assertGreater(waited, 0.0, "書き込みに失敗すると待機が消える")
+        self.assertEqual(len(slept), 2)
+        # ファイルは書けていないこと（＝プロセス内の記録で待てていること）。
+        self.assertEqual(path.read_text(encoding="utf-8"), "1000.0")
+
+    def test_in_process_record_wins_over_an_older_file(self) -> None:
+        # ファイルが古くても、プロセス内の記録が新しければそちらで計る。
+        adeac_sections.LAST_REQUEST_FILE.write_text("1000.0", encoding="utf-8")
+        adeac_sections.remember_request(now=2_000.0)
+        adeac_sections.LAST_REQUEST_FILE.write_text("1000.0", encoding="utf-8")
+        slept: list[float] = []
+        waited = adeac_sections.wait_for_crawl_delay(now=2_001.0, sleep=slept.append)
+        self.assertAlmostEqual(waited, adeac_sections.CRAWL_DELAY_SECONDS - 1.0)
 
     def test_a_clock_moved_backwards_waits_the_full_delay(self) -> None:
         # 記録が未来になっていても、負の秒数で寝かさない。
