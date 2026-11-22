@@ -130,6 +130,8 @@
   <script src="data/site.js"></script>
   <script src="data/rekishi.js"></script>
   <script src="data/rekishi-places.js"></script>
+  <script src="data/rekishi-events.js"></script>
+  <script src="rekishi-map-links.js"></script>
   <script src="site-nav.js"></script>
   <script src="site-a11y.js"></script>
   <script
@@ -176,6 +178,9 @@
       const categoryLabel = new Map(categories.map((x) => [x.id, x.label]));
       const locationKind = new Map((META.locationKinds || []).map((x) => [x.id, x]));
       const sourceById = new Map((META.sources || []).map((x) => [x.id, x]));
+
+      const eventsAtPlace = RekishiMapLinks.eventsByPlace(DB.rekishiEvents?.items || [],
+        (META.eras || []).slice().sort((a, b) => a.order - b.order).map((era) => era.id));
 
       // 同じ住所の地点は同じ座標になる。ピンを重ねて置くと、下のピンは
       // 押せなくなるので、座標ごとに1本にまとめ、吹き出しで全部を出す。
@@ -268,12 +273,17 @@
         // 分類名だけでは「なぜ？」が分からない。
         const why = place.categoryNote
           ? `<p class="pop-why">${esc(place.categoryNote)}</p>` : "";
+        const related = eventsAtPlace.get(place.id) || [];
+        const history = related.map((event) =>
+          `<li>${esc(event.yearText)} <a href="rekishi-nenpyo.html#${encodeURIComponent(event.id)}">${esc(event.name)}</a></li>`).join("");
         return `<div class="pop-place">
           <h2>${esc(place.name)}</h2>
           <p class="pop-meta">${esc(place.address)}／${esc(categoryText)}</p>
           ${why}
           ${note}
           ${heritage ? `<ul class="pop-list">${heritage}</ul>` : ""}
+          ${history ? `<h3>この場所に関係するできごと</h3><ul class="pop-list">${history}</ul>` : ""}
+          <p><a href="${esc(RekishiMapLinks.comparisonHref(place))}">この場所を古地図で見る</a></p>
           ${source ? `<p class="pop-source">出典：${source}</p>` : ""}
         </div>`;
       }
@@ -402,7 +412,8 @@
           return;
         }
         button.click();
-        button.scrollIntoView({ block: "center" });
+        const target = map && markerBySpot.has(wanted) ? mapRoot : button;
+        target.scrollIntoView({ block: "center" });
       }
 
       renderLegend();
