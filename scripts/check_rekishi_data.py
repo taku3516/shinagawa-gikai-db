@@ -25,6 +25,73 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# 和暦の換算表。値は元年にあたる西暦。
+# 改元の年は2つの元号が同じ西暦を指すため、どちらの書き方も通す。
+ERA_FIRST_YEAR: dict[str, int] = {
+    "明治": 1868,
+    "大正": 1912,
+    "昭和": 1926,
+    "平成": 1989,
+    "令和": 2019,
+}
+
+# 元号から時代区分IDへの対応。改元の年は西暦が重なるため、年だけでは
+# どちらの時代か決まらない。元号そのものを突き合わせる必要がある。
+# 昭和は戦前・戦中と戦後に分かれているので、どちらも許す。
+ERA_TO_IDS: dict[str, set[str]] = {
+    "明治": {"meiji"},
+    "大正": {"taisho"},
+    "昭和": {"showa-pre", "showa-post"},
+    "平成": {"heisei-reiwa"},
+    "令和": {"heisei-reiwa"},
+}
+
+# 「明治四十一年」のような漢数字も読めるようにする。
+KANJI_DIGITS: dict[str, int] = {
+    "〇": 0, "一": 1, "二": 2, "三": 3, "四": 4,
+    "五": 5, "六": 6, "七": 7, "八": 8, "九": 9,
+}
+
+ERA_YEAR_PATTERN = re.compile(
+    r"(" + "|".join(ERA_FIRST_YEAR) + r")\s*(元|[0-9０-９一二三四五六七八九十]+)\s*年"
+)
+
+
+def kanji_to_int(text: str) -> int | None:
+    """漢数字または算用数字の年を整数にする。読めなければ None。"""
+    text = text.strip()
+    if not text:
+        return None
+    # 算用数字（全角を含む）
+    normalized = text.translate(str.maketrans("０１２３４５６７８９", "0123456789"))
+    if normalized.isdigit():
+        return int(normalized)
+    # 漢数字（十の位まで。元号の年は最大64なので足りる）
+    if "十" in text:
+        head, _, tail = text.partition("十")
+        tens = KANJI_DIGITS.get(head, 1) if head else 1
+        ones = KANJI_DIGITS.get(tail, 0) if tail else 0
+        return tens * 10 + ones
+    return KANJI_DIGITS.get(text)
+
+
+def first_era_name(text: str) -> str | None:
+    """文中に最初に現れる元号名を返す。無ければ None。"""
+    match = ERA_YEAR_PATTERN.search(text or "")
+    return match.group(1) if match else None
+
+
+def western_years_in(text: str) -> list[int]:
+    """文中の和暦をすべて西暦に直して返す。和暦が無ければ空。"""
+    years: list[int] = []
+    for era, number in ERA_YEAR_PATTERN.findall(text or ""):
+        count = 1 if number == "元" else kanji_to_int(number)
+        if count is None or count < 1:
+            continue
+        years.append(ERA_FIRST_YEAR[era] + count - 1)
+    return years
+
 DATA = ROOT / "data"
 
 # 品川区とその周辺を含む範囲。区外にある墓所なども扱うため少し広めに取る。
@@ -287,6 +354,35 @@ class Checker:
             self.fail(where, "year は整数か null にしてください")
         if year is None and not str(item.get("yearText") or "").strip() and key in {"events"}:
             self.fail(where, "year が無い場合は yearText を書いてください")
+
+        # 和暦と西暦の食い違いを見る。1つの出典から多数の項目を起こすとき、
+        # 元号の換算は手でやると取り違えが混ざる。機械で当てておく。
+        # 改元の年は2つの元号が同じ西暦を指すので、どれか1つに合えばよい。
+        year_text = str(item.get("yearText") or "")
+        if isinstance(year, int):
+            candidates = western_years_in(year_text)
+            if candidates and year not in candidates:
+                self.fail(
+                    where,
+                    f"yearText の和暦（{'・'.join(str(c) + '年' for c in candidates)}）と "
+                    f"year（{year}）が合いません",
+                )
+
+        # 元号と時代区分の食い違いを見る。改元の年は2つの元号が同じ西暦を
+        # 指すので、西暦が合っていても時代区分がずれていることがある。
+        # 年表は item.era で並べ替えと絞り込みをするため、ずれると
+        # 表示される日付と出てくる区分が食い違ってしまう。
+        # 人物の era は「その人が属する時代」で、生没年の元号とは別物
+        # （明治生まれで昭和に活躍した人など）。出来事だけを見る。
+        era_name = first_era_name(year_text) if key == "events" else None
+        if era_name and item.get("era"):
+            allowed = ERA_TO_IDS[era_name]
+            if item["era"] not in allowed:
+                self.fail(
+                    where,
+                    f"yearText の元号「{era_name}」と era（{item['era']}）が合いません。"
+                    f"{'・'.join(sorted(allowed))} のいずれかにしてください",
+                )
 
         year_end = item.get("yearEnd")
         if year_end is not None:
