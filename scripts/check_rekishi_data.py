@@ -36,6 +36,17 @@ ERA_FIRST_YEAR: dict[str, int] = {
     "令和": 2019,
 }
 
+# 元号から時代区分IDへの対応。改元の年は西暦が重なるため、年だけでは
+# どちらの時代か決まらない。元号そのものを突き合わせる必要がある。
+# 昭和は戦前・戦中と戦後に分かれているので、どちらも許す。
+ERA_TO_IDS: dict[str, set[str]] = {
+    "明治": {"meiji"},
+    "大正": {"taisho"},
+    "昭和": {"showa-pre", "showa-post"},
+    "平成": {"heisei-reiwa"},
+    "令和": {"heisei-reiwa"},
+}
+
 # 「明治四十一年」のような漢数字も読めるようにする。
 KANJI_DIGITS: dict[str, int] = {
     "〇": 0, "一": 1, "二": 2, "三": 3, "四": 4,
@@ -63,6 +74,12 @@ def kanji_to_int(text: str) -> int | None:
         ones = KANJI_DIGITS.get(tail, 0) if tail else 0
         return tens * 10 + ones
     return KANJI_DIGITS.get(text)
+
+
+def first_era_name(text: str) -> str | None:
+    """文中に最初に現れる元号名を返す。無ければ None。"""
+    match = ERA_YEAR_PATTERN.search(text or "")
+    return match.group(1) if match else None
 
 
 def western_years_in(text: str) -> list[int]:
@@ -349,6 +366,22 @@ class Checker:
                     where,
                     f"yearText の和暦（{'・'.join(str(c) + '年' for c in candidates)}）と "
                     f"year（{year}）が合いません",
+                )
+
+        # 元号と時代区分の食い違いを見る。改元の年は2つの元号が同じ西暦を
+        # 指すので、西暦が合っていても時代区分がずれていることがある。
+        # 年表は item.era で並べ替えと絞り込みをするため、ずれると
+        # 表示される日付と出てくる区分が食い違ってしまう。
+        # 人物の era は「その人が属する時代」で、生没年の元号とは別物
+        # （明治生まれで昭和に活躍した人など）。出来事だけを見る。
+        era_name = first_era_name(year_text) if key == "events" else None
+        if era_name and item.get("era"):
+            allowed = ERA_TO_IDS[era_name]
+            if item["era"] not in allowed:
+                self.fail(
+                    where,
+                    f"yearText の元号「{era_name}」と era（{item['era']}）が合いません。"
+                    f"{'・'.join(sorted(allowed))} のいずれかにしてください",
                 )
 
         year_end = item.get("yearEnd")

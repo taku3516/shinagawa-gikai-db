@@ -1919,7 +1919,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "year": 1912,
         "yearEnd": null,
         "yearText": "明治45年（1912年）2月",
-        "era": "taisho",
+        "era": "meiji",
         "areas": ["oi"],
         "categories": ["industry"],
         "certainty": "fact",
@@ -2230,7 +2230,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "year": 1912,
         "yearEnd": 1918,
         "yearText": "明治45年（1912年）",
-        "era": "taisho",
+        "era": "meiji",
         "areas": [
           "shinagawa",
           "oi",

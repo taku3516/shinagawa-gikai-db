@@ -634,6 +634,8 @@ class EraYearTest(unittest.TestCase):
             {"id": "kinsei", "label": "近世"},
             {"id": "meiji", "label": "明治"},
             {"id": "taisho", "label": "大正"},
+            {"id": "showa-pre", "label": "昭和戦前・戦中"},
+            {"id": "showa-post", "label": "昭和戦後"},
         ]
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -660,12 +662,13 @@ class EraYearTest(unittest.TestCase):
         self.assertEqual(self.run_with([event]), [])
 
     def test_era_boundary_year_passes_either_way(self) -> None:
-        # 改元の年は2つの元号が同じ西暦を指す。どちらでも通ること。
-        # 明治45年7月30日に改元したので、明治45年も大正元年も1912年。
-        for text in ("明治45年（1912年）", "大正元年（1912年）"):
+        # 改元の年は2つの元号が同じ西暦を指す。明治45年7月30日に改元した
+        # ので、明治45年も大正元年も1912年。西暦はどちらでも通るが、
+        # 時代区分はそれぞれの元号に合わせること。
+        for text, era in (("明治45年（1912年）", "meiji"),
+                          ("大正元年（1912年）", "taisho")):
             with self.subTest(text=text):
-                event = dict(VALID_EVENT, year=1912, era="taisho",
-                             yearText=text)
+                event = dict(VALID_EVENT, year=1912, era=era, yearText=text)
                 self.assertEqual(self.run_with([event]), [])
 
     def test_year_range_matches_the_first_era(self) -> None:
@@ -673,6 +676,28 @@ class EraYearTest(unittest.TestCase):
         event = dict(VALID_EVENT, year=1906, yearEnd=1909, era="meiji",
                      yearText="明治39年から42年にかけて")
         self.assertEqual(self.run_with([event]), [])
+
+    def test_era_name_must_match_the_era_field(self) -> None:
+        # 明治45年2月は改元（7月30日）より前なので明治。年だけ見ると
+        # 1912年で合ってしまうため、元号そのものも突き合わせる。
+        event = dict(VALID_EVENT, year=1912, era="taisho",
+                     yearText="明治45年（1912年）2月")
+        problems = self.run_with([event])
+        self.assertTrue(any("元号" in p for p in problems), problems)
+
+    def test_era_name_matching_the_era_field_passes(self) -> None:
+        event = dict(VALID_EVENT, year=1912, era="meiji",
+                     yearText="明治45年（1912年）2月")
+        self.assertEqual(self.run_with([event]), [])
+
+    def test_showa_accepts_both_halves(self) -> None:
+        # 昭和は戦前・戦中と戦後の2つに分かれているので、どちらも通す。
+        meta_eras = ["showa-pre", "showa-post"]
+        for era in meta_eras:
+            with self.subTest(era=era):
+                event = dict(VALID_EVENT, year=1930, era=era,
+                             yearText="昭和5年（1930年）")
+                self.assertEqual(self.run_with([event]), [])
 
     def test_text_without_era_is_skipped(self) -> None:
         # 和暦が書かれていないものは、この検算の対象外。
