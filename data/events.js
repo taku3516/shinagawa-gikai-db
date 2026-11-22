@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-22T13:35:10.398015Z",
+  "generatedAt": "2026-11-22T22:46:06.717415Z",
   "events": [
     {
       "id": "8c8e2e66944f32bfab29",
@@ -1721,37 +1721,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-14"
     },
     {
-      "id": "0fdf4a53173e91f6b621",
-      "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット そば道 OIMACHI TRACKS店 2026年9月9日 北海道産そば粉",
-      "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
-      "sourceId": "kanko",
-      "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-09-09",
-        "2026-10-31",
-        "2027-01-11"
-      ],
-      "startTime": "17:00",
-      "endTime": "23:00",
-      "timeText": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026",
-          "title": "大井町イルミネーション 2026"
-        }
-      ],
-      "startDate": "2026-09-09",
-      "endDate": "2027-01-11"
-    },
-    {
       "id": "c68d7e3101cae7eb8647",
       "title": "認知症サポーター企画会議",
       "summary": "認知症啓発イベント「しながわオレンジフェスタ」の企画・運営を通して、認知症サポーターとして、認知症を含む誰もが自分らしく暮らし続けられるまちづくりを考える場です。初めての方、認知症サポーターでない方もどなたでもご参加いただけます。4期「しながわオレンジフェスタ」のサポーターも募集中です。",
@@ -3394,6 +3363,27 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-17"
     },
     {
+      "id": "cf1efd3decd7a31af440",
+      "title": "【終了】鹿嶋神社 大祭 2026",
+      "summary": "2026年10月17日(土)、18日(日) 11:00~21:00 開催場所 鹿嶋神社 品川区大井6-18-36 交通アクセス JR 大森駅 徒歩11分 URL 備考 ※自転車置き場はありません。自転車での来場はお控え下さい。 マップ イベントカレンダー",
+      "url": "https://shinagawa-kanko.or.jp/event/kashimajinja-reitaisai2026/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-10-17"
+      ],
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "timeText": "2026年10月17日(土)、18日(日) 11:00~21:00 開催場所 鹿嶋神社 品川区大井6-18-36 交通アクセス JR 大森駅 徒歩11分 URL",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17"
+    },
+    {
       "id": "738594db6f21af4cffed",
       "title": "ユニバーサルスポーツフェスタ【10月17日(土曜日)開催】",
       "summary": "令和8年度第2回ユニバーサルスポーツフェスタを10月17日(土曜日)に開催いたします。広報しながわ10月1日号にも掲載しておりますので併せてご確認ください。",
@@ -4277,6 +4267,36 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-31"
     },
     {
+      "id": "0fdf4a53173e91f6b621",
+      "title": "大井町イルミネーション 2026",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 品川歴史館 2024年4月16日 2024年4月リニューアルオープン 観る",
+      "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-10-31",
+        "2027-01-11"
+      ],
+      "startTime": "17:00",
+      "endTime": "23:00",
+      "timeText": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026",
+          "title": "大井町イルミネーション 2026"
+        }
+      ],
+      "startDate": "2026-10-31",
+      "endDate": "2027-01-11"
+    },
+    {
       "id": "39d7a5ef70e419ed4e36",
       "title": "大井競馬場再整備で最後の「東京メガイルミ」 近隣在住、在勤学者に特典も",
       "summary": "イルミネーションイベント「東京メガイルミ2026-2027」が10月31日、東京シティ競馬（大井競馬場、品川区勝島2）で始まった。 #品川経済新聞",
@@ -5032,7 +5052,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット gallery 2",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 物流博物館 201",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5636,31 +5656,24 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-21"
     },
     {
-      "id": "04e5cc18a710bc295408",
+      "id": "532dd22ec019852c2333",
       "title": "TOKYO周穫祭2026",
-      "summary": "2026年11月21日(土)10:00~18:00※観光協会PRブース・被災地応援ブースは17:00まで、22日(日)10:00~17:00 開催場所 東京国際フォーラム 東京都千代田区丸の内3-5-1 交通アクセス JR有楽町駅より徒歩1分、JR東京駅より徒歩5分(京葉線東京駅と地下1階コンコースにて連絡) 料金",
-      "url": "https://shinagawa-kanko.or.jp/event/syuukaku2026/",
-      "sourceId": "kanko",
+      "summary": "2026年11月21日（土）・22日（日）、東京国際フォーラムにて「TOKYO周穫祭2026」が開催されます。 東京の各地域をもっと皆さんに知ってほしい！という想いから、各地の観光情報・特産品をぎゅっと集めたイベントが開催！ 食べて触れて・・・まるで旅をしているかのような気分があじわえる、そんなイベントです。",
+      "url": "https://shinagawa-kanko.or.jp/event/syuukaku2026",
+      "sourceId": "news",
       "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
+      "category": "地域イベント",
       "dates": [
         "2026-11-21"
       ],
-      "startTime": "10:00",
-      "endTime": "18:00",
-      "timeText": "2026年11月21日(土)10:00~18:00※観光協会PRブース・被災地応援ブースは17:00まで、22日(日)10:00~17:00 開催場所 東京国際",
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
       "place": "",
       "application": "",
       "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/syuukaku2026",
-          "title": "TOKYO周穫祭2026"
-        }
-      ],
+      "confidence": "estimated",
+      "newsId": "32c1ed8d4244d4cce1e5",
       "startDate": "2026-11-21",
       "endDate": "2026-11-21"
     },
@@ -5958,7 +5971,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "ba8c03a4a04d4cf75005",
       "title": "小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
-      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット same ga",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 荏原南(えばら",
       "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
