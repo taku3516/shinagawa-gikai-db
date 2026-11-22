@@ -45,6 +45,18 @@
        押せるようにはしてあるが、四角だけを狙う人もいるため。 */
     .overlay-toggle input[type="checkbox"] { width:24px; height:24px; accent-color:var(--c-main); }
 
+    [hidden] { display:none !important; }
+    .map-frame { position:relative; }
+    .divider { position:absolute; inset:0; z-index:450; pointer-events:none; overflow:hidden; }
+    .divider::before { content:""; position:absolute; top:0; bottom:0; left:var(--split,50%); border-left:3px solid white; box-shadow:0 0 3px #222; }
+    .divider input { position:absolute; top:calc(50% - 22px); left:-22px; margin:0; width:calc(100% + 44px); height:44px; appearance:none; background:transparent; pointer-events:auto; cursor:ew-resize; }
+    .divider input::-webkit-slider-thumb { appearance:none; width:44px; height:44px; border:3px solid white; border-radius:50%; background:var(--c-main); }
+    .divider input::-moz-range-thumb { width:38px; height:38px; border:3px solid white; border-radius:50%; background:var(--c-main); }
+
+    .divider::after { content:"↔"; position:absolute; left:var(--split,50%); top:50%; transform:translate(-50%,-50%); color:white; font:bold 20px sans-serif; pointer-events:none; }
+    #copy { min-height:44px; margin-inline:8px; }
+    .divider input:focus-visible { outline-offset:-4px; }
+    .share-link { overflow-wrap:anywhere; }
     .map-panel { overflow:hidden; }
     #kochizu-map { width:100%; min-height:620px; background:var(--c-map-bg); }
     .map-fallback { display:grid; place-items:center; min-height:620px; padding:24px; text-align:center; line-height:1.8; }
@@ -71,8 +83,8 @@
     <header class="hero"><div class="container">
       <p class="breadcrumb"><a href="rekishi.html">← 品川の歴史へ</a></p>
       <h1>古地図・今昔比較</h1>
-      <p class="lead">国土地理院が公開している年代別の空中写真を現在の地図に重ね、透明度を変えながら同じ場所の移り変わりを見比べられます。</p>
-      <div class="notice"><strong>写真はすべて国土地理院の地理院タイルです。</strong> このサイトに画像を置いてはおらず、表示のたびに国土地理院から読み込んでいます。撮影年は幅のある期間で、区内すべてが同じ日に撮られたものではありません。</div>
+      <p class="lead">明治・大正の地形図と戦前からの空中写真で、品川の移り変わりをたどれます。２つの資料を重ねたり、左右に並べたりして見比べてください。</p>
+      <div class="notice">空中写真は国土地理院、旧版地形図は「今昔マップ on the web」から読み込みます。年代は資料全体の期間で、撮影・測量の時期は場所によって異なります。</div>
       <nav data-site-nav></nav>
     </div></header>
 
@@ -84,11 +96,11 @@
                .seg にすると狭い画面で2行以上に折り返し、どれか1つを選ぶ
                という形に見えなくなる。 -->
           <div class="control-field">
-            <label for="era">重ねる年代</label>
+            <label for="era">比較する資料（左・上）</label>
             <select id="era"></select>
           </div>
           <div class="control-field">
-            <label for="base">下に敷く地図</label>
+            <label for="base">比較する資料（右・下）</label>
             <select id="base"></select>
           </div>
           <div class="control-field">
@@ -97,24 +109,31 @@
           </div>
         </div>
 
-        <div class="fade">
+        <div class="control-field"><label for="mode">見比べ方</label>
+          <select id="mode"><option value="fade">重ね合わせ</option><option value="split">左右比較</option></select>
+        </div>
+        <div class="fade" id="fade-controls">
           <div class="fade-head">
-            <label for="opacity">重ねた写真の濃さ</label>
+            <label for="opacity">重ねた資料の濃さ</label>
             <span class="fade-value" id="opacity-value">70%</span>
           </div>
           <input id="opacity" type="range" min="0" max="100" step="5" value="70"
                  aria-describedby="opacity-hint" />
-          <div class="fade-ends" id="opacity-hint"><span>0％＝現在の地図だけ</span><span>100％＝写真だけ</span></div>
+          <div class="fade-ends" id="opacity-hint"><span>0％＝下の資料だけ</span><span>100％＝上の資料だけ</span></div>
         </div>
 
         <label class="overlay-toggle">
           <input type="checkbox" id="show-places" />
           史跡・寺社の位置を重ねる（選んだ地域だけ）
         </label>
+        <div><a id="share" class="share-link">この表示の共有リンク</a> <button id="copy" type="button">URLをコピー</button> <span id="share-status" role="status"></span></div>
       </form>
 
       <section class="panel map-panel" aria-label="古地図・今昔比較の地図">
-        <div id="kochizu-map"><div class="map-fallback">地図を読み込んでいます。</div></div>
+        <div class="map-frame">
+          <div id="kochizu-map"><div class="map-fallback">地図を読み込んでいます。</div></div>
+          <div id="divider" class="divider" hidden><input id="split" type="range" min="0" max="100" value="50" aria-label="左右の境界位置" /></div>
+        </div>
         <p class="era-note" id="era-note"></p>
         <div class="map-caption" id="map-caption"></div>
       </section>
@@ -123,6 +142,7 @@
 
   <footer><div class="container" id="footer-root"></div></footer>
 
+  <script src="kochizu-state.js"></script>
   <script src="data/site.js"></script>
   <script src="data/rekishi.js"></script>
   <script src="data/rekishi-places.js"></script>
@@ -153,20 +173,28 @@
       // maxNativeZoom は、その年代の写真が用意されている一番細かい段階。
       // これを超えて拡大したときは、最後の写真を引き伸ばして表示する
       // （指定しないと、拡大したとたんに写真が消えてしまう）。
+      if (!window.KochizuState) {
+        document.querySelector(".map-fallback").textContent = "古地図の設定を読み込めませんでした。ページを再読み込みしてください。";
+        document.getElementById("controls").hidden = true;
+        return;
+      }
       const ERAS = [
+        ...KochizuState.historical,
+        { id: "ort_riku10", label: "1936〜1942年頃 空中写真", ext: "png", minNativeZoom: 13, maxNativeZoom: 18,
+          note: "国土地理院が公開している、東京の戦前の空中写真です。" },
         {
           id: "ort_USA10", label: "1945〜1950年（米軍撮影）", ext: "png", maxNativeZoom: 17,
           note: "第二次世界大戦の直後に米軍が撮影した写真です。戦災を受けた市街地のようすや、埋め立て前の海岸線が分かります。"
         },
         {
-          id: "ort_old10", label: "1961〜1964年", ext: "png", maxNativeZoom: 17,
-          note: "東京オリンピック（1964年）の前後です。首都高速や新幹線の工事が進んでいた時期にあたります。"
+          id: "ort_old10", label: "1961〜1969年", ext: "png", maxNativeZoom: 17,
+          note: "東京オリンピック（1964年）を含む年代の写真です。"
         },
         { id: "gazo1", label: "1974〜1978年", ext: "jpg", maxNativeZoom: 17, note: "高度経済成長が終わったころのようすです。" },
         { id: "gazo2", label: "1979〜1983年", ext: "jpg", maxNativeZoom: 17, note: "" },
         { id: "gazo3", label: "1984〜1986年", ext: "jpg", maxNativeZoom: 17, note: "" },
-        { id: "gazo4", label: "1988〜1990年", ext: "jpg", maxNativeZoom: 17, note: "" },
-        { id: "seamlessphoto", label: "2007年ごろ〜現在", ext: "jpg", maxNativeZoom: 18, note: "もっとも新しい空中写真です。撮影時期は場所によって異なります。" }
+        { id: "gazo4", label: "1987〜1990年", ext: "jpg", maxNativeZoom: 17, note: "" },
+        { id: "seamlessphoto", label: "全国最新写真（シームレス）", ext: "jpg", maxNativeZoom: 18, note: "もっとも新しい空中写真です。撮影時期は場所によって異なります。" }
       ];
 
       const BASES = [
@@ -204,8 +232,8 @@
 
       eraSelect.innerHTML = ERAS.map((x, index) =>
         `<option value="${esc(x.id)}"${index === 0 ? " selected" : ""}>${esc(x.label)}</option>`).join("");
-      baseSelect.innerHTML = BASES.map((x) =>
-        `<option value="${esc(x.id)}">${esc(x.label)}</option>`).join("");
+      const options = (items) => items.map((x) => `<option value="${esc(x.id)}">${esc(x.label)}</option>`).join("");
+      baseSelect.innerHTML = `<optgroup label="現在の地図">${options(BASES)}</optgroup><optgroup label="地形図・空中写真">${options(ERAS)}</optgroup>`;
 
       // 地域の選択肢は、その地区の地点から範囲を作れるものだけ出す。
       // 地点が1件も無い地区（八潮）は、寄せる先を決められないので選べなくする。
@@ -235,51 +263,68 @@
         return `${GSI}/${id}/{z}/{x}/{y}.${ext}`;
       }
 
-      function buildBase(id) {
-        const found = BASES.find((x) => x.id === id) || BASES[0];
-        if (found.id === "osm") {
-          return L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            maxZoom: 19, attribution: found.credit
-          });
-        }
-        return L.tileLayer(tileUrl(found.id, found.ext), {
-          maxZoom: 19, maxNativeZoom: found.maxNativeZoom, attribution: found.credit
+      const mode = document.getElementById("mode");
+      const split = document.getElementById("split");
+      const divider = document.getElementById("divider");
+      const share = document.getElementById("share");
+      const status = document.getElementById("share-status");
+      const sources = [...BASES, ...ERAS];
+      const initial = KochizuState.readView(location.search, ERAS.map(x => x.id), sources.map(x => x.id),
+        Array.from(areaSelect.options).filter(x => !x.disabled).map(x => x.value));
+      eraSelect.value = initial.era;
+      baseSelect.value = initial.base;
+      areaSelect.value = initial.area;
+      opacityInput.value = initial.opacity;
+      showPlaces.checked = initial.places;
+      mode.value = initial.mode;
+      split.value = initial.split;
+
+      /** @param {object} source @param {string} pane */
+      function layer(source, pane) {
+        const url = source.id === "osm" ? "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          : source.url || tileUrl(source.id, source.ext);
+        return L.tileLayer(url, { pane, maxZoom:19, maxNativeZoom:source.maxNativeZoom ?? 19,
+          attribution:source.credit || GSI_CREDIT });
+      }
+
+      function updateShare() {
+        const center = map.getCenter().wrap();
+        share.href = KochizuState.shareUrl(location.href, {
+          lat:center.lat.toFixed(6), lng:center.lng.toFixed(6), zoom:map.getZoom(),
+          era:eraSelect.value, base:baseSelect.value, area:areaSelect.value, places:showPlaces.checked,
+          mode:mode.value, split:split.value, opacity:opacityInput.value
         });
+        status.textContent = "";
       }
 
-      function currentEra() {
-        return ERAS.find((x) => x.id === eraSelect.value) || ERAS[0];
+      function updateClip() {
+        map.getPane("historical").style.clipPath = mode.value === "split"
+          ? KochizuState.clip(map.containerPointToLayerPoint([0, 0]), map.getSize(), Number(split.value)) : "";
+        divider.style.setProperty("--split", split.value + "%");
+        split.setAttribute("aria-valuetext", "左の資料 " + split.value + "％");
       }
 
-      function applyOpacity() {
-        const value = Number(opacityInput.value);
-        opacityValue.textContent = `${value}%`;
-        if (eraLayer) eraLayer.setOpacity(value / 100);
+      function display() {
+        const side = mode.value === "split";
+        divider.hidden = !side;
+        document.getElementById("fade-controls").hidden = side;
+        opacityValue.textContent = opacityInput.value + "%";
+        eraLayer.setOpacity(side ? 1 : Number(opacityInput.value) / 100);
+        updateClip();
+        updateShare();
       }
 
-      function setEra() {
-        const era = currentEra();
+      function setLayers() {
+        const upper = ERAS.find(x => x.id === eraSelect.value);
+        const lower = sources.find(x => x.id === baseSelect.value);
         if (eraLayer) map.removeLayer(eraLayer);
-        eraLayer = L.tileLayer(tileUrl(era.id, era.ext), {
-          maxZoom: 19,
-          maxNativeZoom: era.maxNativeZoom,
-          opacity: Number(opacityInput.value) / 100,
-          attribution: GSI_CREDIT
-        });
-        eraLayer.addTo(map);
-        // 重ねた写真が、史跡のピンより下に来るようにする
-        if (eraLayer.bringToFront) eraLayer.bringToFront();
-        document.getElementById("era-note").innerHTML =
-          `<strong>${esc(era.label)}</strong>${era.note ? "　" + esc(era.note) : ""}`;
-        captionBox.innerHTML =
-          `重ねている写真：${esc(era.label)}（出典：${GSI_CREDIT}）。下に敷いている地図の出典は地図の右下に表示しています。`;
-      }
-
-      function setBase() {
         if (baseLayer) map.removeLayer(baseLayer);
-        baseLayer = buildBase(baseSelect.value);
-        baseLayer.addTo(map);
-        if (baseLayer.bringToBack) baseLayer.bringToBack();
+        map.setMinZoom(Math.max(10, upper.minNativeZoom || 10, lower.minNativeZoom || 10));
+        baseLayer = layer(lower, "tilePane").addTo(map);
+        eraLayer = layer(upper, "historical").addTo(map);
+        document.getElementById("era-note").textContent = [upper.label, upper.note].filter(Boolean).join("　");
+        captionBox.innerHTML = `左・上：${esc(upper.label)}（${upper.credit || GSI_CREDIT}）　右・下：${esc(lower.label)}（${lower.credit || GSI_CREDIT}）`;
+        display();
       }
 
       function drawPlaces() {
@@ -336,20 +381,33 @@
       }
 
       try {
-        map = L.map(mapRoot, { scrollWheelZoom: false }).setView([35.6095, 139.7305], 13);
-        setBase();
-        setEra();
-        applyOpacity();
+        map = L.map(mapRoot, { scrollWheelZoom:false, maxZoom:19 }).setView([initial.lat, initial.lng], initial.zoom);
+        map.createPane("historical").style.zIndex = 250;
+        setLayers();
+        drawPlaces();
+        map.on("move zoom resize", updateClip);
+        map.on("moveend", updateShare);
       } catch (error) {
         fail(`地図を表示できませんでした（${error && error.message ? error.message : error}）。`);
         return;
       }
 
-      eraSelect.addEventListener("change", setEra);
-      baseSelect.addEventListener("change", setBase);
-      areaSelect.addEventListener("change", moveToArea);
-      opacityInput.addEventListener("input", applyOpacity);
-      showPlaces.addEventListener("change", drawPlaces);
+      eraSelect.addEventListener("change", setLayers);
+      baseSelect.addEventListener("change", setLayers);
+      areaSelect.addEventListener("change", () => { moveToArea(); updateShare(); });
+      opacityInput.addEventListener("input", display);
+      showPlaces.addEventListener("change", () => { drawPlaces(); updateShare(); });
+      mode.addEventListener("change", display);
+      split.addEventListener("input", display);
+      document.getElementById("copy").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(share.href);
+          status.textContent = "コピーしました。";
+        } catch {
+          status.textContent = "コピーできませんでした。「この表示の共有リンク」からリンクをコピーしてください。";
+          share.focus();
+        }
+      });
       document.getElementById("controls").addEventListener("submit", (event) => event.preventDefault());
 
       document.getElementById("footer-root").textContent =
