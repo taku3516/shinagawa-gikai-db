@@ -99,8 +99,14 @@ def out_dir(name: str) -> Path:
     return directory
 
 
-def last_request_time() -> float | None:
-    """最後に取得した時刻。記録が無いか読めなければ None。"""
+# このプロセスで最後に取得した時刻。ファイルに残せなかったときの備え。
+# ファイルだけに頼ると、書き込みに失敗したまま古い時刻が残り続けて、
+# 待機がまるごと消える（取得は続くのに間隔が空かない）。
+_last_request_in_process: float | None = None
+
+
+def stored_request_time() -> float | None:
+    """ファイルに残っている最後の取得時刻。無ければ None。"""
     try:
         return float(LAST_REQUEST_FILE.read_text(encoding="utf-8").strip())
     except FileNotFoundError:
@@ -110,13 +116,38 @@ def last_request_time() -> float | None:
         return float("nan")
 
 
+def last_request_time() -> float | None:
+    """最後に取得した時刻。プロセス内の記録とファイルの新しい方を返す。"""
+    known = [t for t in (_last_request_in_process, stored_request_time()) if t is not None]
+    if not known:
+        return None
+    # NaN（壊れた記録）が混ざっていたら、待つ側に倒す。
+    if any(t != t for t in known):
+        return float("nan")
+    return max(known)
+
+
 def remember_request(now: float | None = None) -> None:
-    """取得した時刻を残す。残せなくても取得そのものは止めない。"""
+    """取得した時刻を残す。残せなくても取得そのものは止めない。
+
+    まずプロセス内に覚えてからファイルに書く。ファイルに書けなくても、
+    同じプロセスの中では間隔が保たれる。
+    """
+    global _last_request_in_process
+    moment = time.time() if now is None else now
+    _last_request_in_process = moment
     try:
         LAST_REQUEST_FILE.parent.mkdir(parents=True, exist_ok=True)
-        LAST_REQUEST_FILE.write_text(str(time.time() if now is None else now), encoding="utf-8")
+        LAST_REQUEST_FILE.write_text(str(moment), encoding="utf-8")
     except OSError as error:
-        print(f"注意: 取得時刻を残せませんでした（{error}）", file=sys.stderr)
+        print(f"注意: 取得時刻を残せませんでした（{error}）。"
+              "このプロセスの中では間隔を保ちます", file=sys.stderr)
+
+
+def forget_request() -> None:
+    """プロセス内の記録を消す。検査用。"""
+    global _last_request_in_process
+    _last_request_in_process = None
 
 
 def wait_for_crawl_delay(now: float | None = None, sleep=time.sleep) -> float:
