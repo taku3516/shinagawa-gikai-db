@@ -175,8 +175,11 @@ ADDRESS_HINTS: dict[str, str] = {
     # 「東品川1-7-17」と書かれている。同じページの別の行なので読み替えてよい。
     "利田神社": "東品川1-7-17",
     "利田神社周辺": "東品川1-7-17",
-    # 荏原神社の住所は、この公式ページのどこにも書かれていない。
-    # 推測で埋めずに保留へ回す（scripts/out/rekishi/pending.json）。
+    # 荏原神社の住所は、この公式ページのどこにも書かれていない。ただし町会の
+    # 区域データ（data/chokai.js）に「北品川2丁目 30番（28号・荏原神社）」と
+    # あり、国土地理院の住所検索でも番地まで引ける。推測ではなく別の出典での確認。
+    "荏原神社": "北品川2-30-28",
+    "荏原神社周辺": "北品川2-30-28",
 }
 
 
@@ -345,6 +348,10 @@ def split_address(value: str) -> tuple[str, str, str]:
     found = re.search(r"([^\s]*?[一-龥ぁ-んァ-ヶ]+\s*\d+(?:-\d+)*)", text)
     if not found:
         address = text.replace(" ", "")
+        # 「荏原神社周辺」のように施設名だけの所在地は、住所に読み替えたうえで
+        # 施設名を残す。落とすと所有者名が地点の名前になってしまう。
+        if address in ADDRESS_HINTS and not parenthetical and address.endswith("周辺"):
+            return ADDRESS_HINTS[address], address[: -len("周辺")], ""
         return ADDRESS_HINTS.get(address, address), parenthetical, ""
 
     address = found.group(1).replace(" ", "")
