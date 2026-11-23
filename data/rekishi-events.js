@@ -4910,6 +4910,379 @@ window.SHINAGAWA_DB.rekishiEvents = {
           }
         ],
         "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1620-myokokuji-onari",
+        "name": "将軍が妙国寺に44度も御成りになる",
+        "summary": "元和6年から寛永12年までの約16年に、将軍が南品川の妙国寺を44度訪れたと、同寺の記録に残る。",
+        "description": "区史は妙国寺の記録から、将軍の御成りの日付を44回分挙げる。最後は寛永12年10月2日で、以後の御成りは無い。この年は武家諸法度で大名の参勤交代が制度になった年にあたり、それまで将軍が西国大名の参勤を品川のはずれまで送迎し、そのついでに寺へ立ち寄っていたが、制度化とともにやめたことを記録が示すのだろうと、区史は解釈している（これは区史の見方で、記録自体が理由を述べているわけではない）。",
+        "year": 1620,
+        "yearEnd": 1635,
+        "yearText": "元和6年（1620年）3月13日〜寛永12年（1635年）10月2日",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "temple",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-11e5d5f153"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「御殿山」401〜407頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1640-gotenyama-chakai",
+        "name": "将軍家光が御殿山で大茶会を開き、沢庵も招かれる",
+        "summary": "寛永17年9月16日、三代将軍徳川家光が毛利秀元に命じて御殿山で大規模な茶会を開いた。東海寺の沢庵も召された。",
+        "description": "区史は『徳川実紀』をもとに、この茶会に家光をはじめ御三家・老中らが連なり、茶室などを新築して、金銀をあしらった膳具だけでも500人分を用意したと紹介する。東海寺にいた沢庵は酒を賜り、将軍に望まれて一首を詠んだ。区史は、参勤交代が確立して将軍が大名の送迎をしなくなった後も、御殿山の御殿は将軍家の行事に使われたらしいと述べる。",
+        "year": 1640,
+        "yearEnd": null,
+        "yearText": "寛永17年（1640年）9月16日",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "culture",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": ["pe-takuan-soho"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「御殿山」401〜407頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1651-suzugamori-keijo",
+        "name": "鈴ヶ森の刑場が設けられる",
+        "summary": "慶安4年、大井村浜川町の南、東海道の西側の田畑5反歩が召し上げられ、江戸の南の刑場として鈴ヶ森刑場がつくられた。",
+        "description": "区史によれば、北の浅草小塚原に対する江戸の南の刑場が鈴ヶ森で、幕府の公文書では小塚原・鈴ヶ森とは呼ばず、単に「浅草」「品川」と書くことが多い。寛文11年（1671年）6月には一部を百姓地へ戻し、元禄10年の検地帳には「獄門場 1反2畝歩 村持」と出てくる。",
+        "year": 1651,
+        "yearEnd": null,
+        "yearText": "慶安4年（1651年）",
+        "era": "kinsei",
+        "areas": ["oi"],
+        "categories": [
+          "site",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-436b7b608c"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「鈴ヶ森の刑場」449〜450頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1772-kagata-ganbun",
+        "name": "寄洲を新地にしたいと、猟師町の年寄らが願い出る",
+        "summary": "明和9年9月、南品川猟師町の年寄と百姓が、目黒川河口の寄洲約5,000坪を新地にしたいと奉行所に願い出た。利田新地の始まり。",
+        "description": "願書によれば、寄洲を耕地ではなく家作地として築き、猟師や小商人を置くこと、河口に溜まった土砂で築きながら川浚えも行うことが狙いだった。区史は、普通の新田開発と違い、はじめから町地をつくることをねらっていたとみる。幕府は翌安永2年閏3月、艀下船の差配役を条件とする案は認めないと申し渡し、年寄は願人から離れた。",
+        "year": 1772,
+        "yearEnd": null,
+        "yearText": "明和9年（1772年）9月",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "life",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1834-kagata-shinchi"],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-086da1e672"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「利田新地の開発」408〜413（開発願書）頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1774-kagata-ninka",
+        "name": "利田新地の築立てが認可される",
+        "summary": "安永3年5月13日、願人の治兵衛に、約1町歩の新地を築くことが認可された。地代金は10両、鍬下年季は3年。",
+        "description": "区史によれば、金主は江戸中橋の兵助、証人は多摩郡中野村の万右衛門で、完成の保証として万右衛門の持地8町歩を質地に入れた。新地から北品川宿へ架ける橋は長さ20間余・幅2間と定められた。この認可のとおり、4年目に検地を受けて高入れとなるはずだったが、波に洗われて工事が進まず、検地は何度も延期された。",
+        "year": 1774,
+        "yearEnd": null,
+        "yearText": "安永3年（1774年）5月13日",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "life",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1772-kagata-ganbun",
+          "ev-1834-kagata-shinchi"
+        ],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-086da1e672"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「利田新地の開発」413〜415（幕府の認可と実施計画）頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1803-kyowa-tsunami",
+        "name": "享和3年の津波で、猟師町との証文が流される",
+        "summary": "享和3年の津波で、利田新地の願人と南品川猟師町が取り交わしていた証文が流失した。",
+        "description": "区史は、文化5年に利田新地の願人が猟師町あてに出した一札の中で、先の願人が約束していた証文が享和3年の津波で流失していることを理由に挙げていると記す。津波の規模や被害の詳細は、区史は述べていない。",
+        "year": 1803,
+        "yearEnd": null,
+        "yearText": "享和3年（1803年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1774-kagata-ninka"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「治兵衛の死亡と願人の交替」416〜417頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1856-kagata-saikenchi",
+        "name": "台場の築造で、利田新地が再び検地される",
+        "summary": "安政3年12月、品川台場の工事で利田新地の一部が土置場や通路になったため再び検地が行われ、新地は2反4畝9歩に減った。",
+        "description": "天保5年の検地で3反8畝余だった利田新地は、安政元年に始まる台場の築造で、堀をつくるための土置場と兵員の通行道が地内に設けられた。再検地ではそれらを除いた11筆が新地として改められた。明治の地券交付願では19筆5反9畝余となっており、区史は、このあたりが案外正確な実面積だったのではないかとみている。",
+        "year": 1856,
+        "yearEnd": null,
+        "yearText": "安政3年（1856年）12月",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "life",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1834-kagata-shinchi",
+          "ev-1853-daiba-start"
+        ],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-086da1e672"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「検地」417〜418頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1792-gundai-kaieki",
+        "name": "関東郡代の伊奈氏が改易され、品川は大貫次右衛門の支配となる",
+        "summary": "寛政4年3月、関東郡代の伊奈忠尊が家事不取締りで改易され、約200年続いた伊奈氏の郡代時代が終わった。品川地方の担当は代官の大貫次右衛門になった。",
+        "description": "関東の天領は天正18年の家康の関東入部以来、伊奈氏が代々支配してきた。改易後は勘定奉行が郡代を兼ね、その下に5人の代官が土地を分けて支配する形になった。品川地方は大貫次右衛門が寛政4年4月から受け持ち、のち中村八太夫らが続く。区史が引く歴代代官の表は『品川町史』による。",
+        "year": 1792,
+        "yearEnd": null,
+        "yearText": "寛政4年（1792年）3月",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「関東郡代」459〜463頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1805-kanto-torishimari",
+        "name": "関東取締出役（八州廻り）が置かれる",
+        "summary": "文化2年6月、関東の治安を強めるため、関東取締出役、俗にいう八州廻りが設けられた。",
+        "description": "郡代の伊奈家が改易されてから、関東農村の治安はいっそう不安定になっていた。幕府は代官の手付のうち10年以上勤めた有能な8人を選び、手代や足軽をつけて、天領・私領の別なく月に1回、1か所7日ほどの日程で巡視させ、無宿者や博徒の取り締まりと農民の不穏な動きの監視にあたらせた。",
+        "year": 1805,
+        "yearEnd": null,
+        "yearText": "文化2年（1805年）6月",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1792-gundai-kaieki"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「関東取締出役の設置」483〜484頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1855-ansei-jishin",
+        "name": "安政の大地震で、品川宿の家々が大破し、台場の建物も崩れる",
+        "summary": "安政2年10月2日の夜の大地震で、品川宿は家数1,691軒のうち1,422軒が大破するなど大きな被害を受けた。人の被害は少なかった。",
+        "description": "区史が引く三宿名主の報告では、品川宿は半潰14軒・大破1,422軒・小破160軒などで、怪我人は多いが命にかかわる者はいなかった。ただし寺社の門前地では4人の死者が出たらしい。品川台場では建物が崩れて地中に沈み、火災が4日間続き、守備の会津藩士に50人の死者が出た。台場の火薬には燃え移らなかった。周辺の村々は、東大森・馬込・小山など低地や河川下流の地帯で被害が目立ち、大井・戸越・上大崎・下大崎・居木橋などの台地上の村は被害が無かった。",
+        "year": 1855,
+        "yearEnd": null,
+        "yearText": "安政2年（1855年）10月2日",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「安政の地震と品川地区」498〜506頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1863-kumiai-saikyoka",
+        "name": "関東取締出役が、組合村の取り締まりを再び強める",
+        "summary": "文久3年4月10日、幕府は関東取締出役を通じて組合村の取り締まりを再強化する触を出した。7月にはより具体的な指示を出した。",
+        "description": "触は、文政の改革で組合村をつくった趣意に戻れと求め、朽ちた杭を建て直すこと、江戸の者が近郊の田畑をつぶして家を建てることを戒めることを定めた。桐ヶ谷村・谷山村などは連印帳の提出が遅れて督促を受けた。区史は、時期が幕末に近く世情が騒然としていたため効果は薄く、7月に取出役が品川宿へ出張して改めて強い触を出したと述べる。",
+        "year": 1863,
+        "yearEnd": null,
+        "yearText": "文久3年（1863年）4月10日",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "osaki",
+          "oi"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1805-kanto-torishimari"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「取締りの強化」506〜508頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1866-bushu-ikki",
+        "name": "武州一揆が起き、品川方面の村々にも急ぎの廻状が回る",
+        "summary": "慶応2年6月14日、武州の山間部で大一揆が起こり、武州7郡・上州2郡に広がった。品川方面の村々にも関東取締出役から廻状が回された。",
+        "description": "物価高と長州征伐で困窮した山あいの人々が、飯能宿の米屋などを打ちこわしたのが発端で、参加者は10万人を超えるともいわれる。区史は、江戸周辺の大一揆で幕府の受けた衝撃も大きく、取締出役が「容易ならざる事件」として、一刻も遅らせず時刻を書き入れて順に回すよう廻状を出したと紹介する（下蛇窪村の伊藤家文書）。区内での打ちこわしがあったとは述べていない。",
+        "year": 1866,
+        "yearEnd": null,
+        "yearText": "慶応2年（1866年）6月14日",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「武州一揆」512〜513頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1867-satsuma-yakiuchi",
+        "name": "薩摩藩邸焼討ち事件が起き、脱出した浪士が品川沖へ向かう",
+        "summary": "慶応3年12月25日の明け方、江戸の三田にある薩摩藩邸などが幕府方に焼き討ちされた。逃れた浪士約30人は品川沖の薩摩藩の汽船で脱出した。",
+        "description": "討幕派が関東の浪士を藩邸にかくまって江戸の治安を乱し、幕府を挑発したため、庄内藩を中心とする約2,000人が藩邸を囲んだ。区史は、これが大坂の会津・桑名藩兵を激昂させて鳥羽・伏見の戦いにつながり、薩長が幕府武力討伐の口実をつかむことになったと整理する。品川宿は三田に近く、浪士の海上からの脱出路にもあたり、人ごとではない事件だった。",
+        "year": 1867,
+        "yearEnd": null,
+        "yearText": "慶応3年（1867年）12月25日",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「薩摩藩邸焼討事件」515〜517頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1867-satsuma-kaji",
+        "name": "浪士隊が品川宿を通り、南品川で「薩摩火事」が起きる",
+        "summary": "薩摩藩邸焼討ちの当日、逃れた浪士約50人が東海道を品川宿へ進み、空砲を撃ち込み、南品川で火事を起こした。品川では「薩摩火事」と呼ばれる。",
+        "description": "下蛇窪村の名主見習の報告書によれば、浪士隊は歩行新宿の遊女宿で放火を思いとどまり、北品川宿の旅籠屋では関東取締出役の服部桂之助らと鉢合わせして双方が散り散りになった。南品川宿では旅籠屋と隣の煮売屋に空砲を撃ち込み、火薬を仕掛けた草箒を屋根へ投げ上げたところ、折からの烈風で燃え広がった。続いて問屋場の役人から刀を取り上げ、大井村御林町の家へ上がり込んで飯を食べたという。",
+        "year": 1867,
+        "yearEnd": null,
+        "yearText": "慶応3年（1867年）12月25日",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1867-satsuma-yakiuchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「品川における薩摩浪士」517〜520頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
       }
   ]
 };
