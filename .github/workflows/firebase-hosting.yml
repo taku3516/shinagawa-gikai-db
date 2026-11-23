@@ -31,6 +31,10 @@ on:
       - data/site.js
       - data/news-items.js
       - data/events.js
+      - apple-touch-icon.png
+      - manifest.webmanifest
+      - icon-192.png
+      - icon-512.png
       - firebase.json
       - .firebaserc
       - scripts/build_news_app.py
