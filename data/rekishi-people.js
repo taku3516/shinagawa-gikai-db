@@ -24,7 +24,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["shinagawa"],
       "shinagawaRelation": "墓が北品川の東海寺大山墓地にあり、区の指定史跡となっている。",
       "certainty": "fact",
-      "relatedPlaces": ["pl-a4e970452b", "pl-f0dec3262a"],
+      "relatedPlaces": ["pl-a4e970452b"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第6号「渋川春海墓（追贈記念塔を含む）」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -367,7 +367,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
         "areas": ["shinagawa"],
         "shinagawaRelation": "墓が北品川4丁目の東海寺大山墓地にあり、国の指定史跡となっている。",
         "certainty": "fact",
-        "relatedPlaces": ["pl-1a93e184b8", "pl-f0dec3262a"],
+        "relatedPlaces": ["pl-1a93e184b8"],
         "sources": [{ "ref": "sgw-library", "locator": "品川ゆかりの人物" }],
         "verifiedAt": "2026-11-21"
       },
@@ -467,7 +467,6 @@ window.SHINAGAWA_DB.rekishiPeople = {
         "areas": ["shinagawa"],
         "shinagawaRelation": "墓が北品川の東海寺大山墓地にあり、東海道線と山手線に挟まれた場所にある。",
         "certainty": "fact",
-        "relatedPlaces": ["pl-f0dec3262a"],
         "sources": [{ "ref": "sgw-library", "locator": "品川ゆかりの人物" }],
         "verifiedAt": "2026-11-21"
       },

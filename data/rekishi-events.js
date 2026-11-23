@@ -329,7 +329,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1684-jokyo-calendar"],
       "relatedPeople": ["pe-shibukawa-shunkai"],
-      "relatedPlaces": ["pl-a4e970452b", "pl-f0dec3262a"],
+      "relatedPlaces": ["pl-a4e970452b"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第6号「渋川春海墓（追贈記念塔を含む）」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -1461,7 +1461,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": ["pe-takuan-soho", "pe-kamo-mabuchi"],
-        "relatedPlaces": ["pl-ef0990e965", "pl-1a93e184b8", "pl-f0dec3262a"],
+        "relatedPlaces": ["pl-ef0990e965", "pl-1a93e184b8"],
         "sources": [{ "ref": "bunka-online", "locator": "「沢庵墓」（138014）、「加茂真淵墓」（171745）" }, { "ref": "sgw-bunkazai", "locator": "区内にある都および国の指定文化財" }],
         "verifiedAt": "2026-11-21"
       },
