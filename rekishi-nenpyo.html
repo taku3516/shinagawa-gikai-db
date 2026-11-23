@@ -265,14 +265,13 @@
               `<li><a href="rekishi-map.html?place=${encodeURIComponent(place.id)}">${esc(place.name)}</a></li>`).join("")}</ul>`
           : "";
 
-        // 人物事典のページはまだ無いので、ここで開いて読めるようにする。
-        // 人物の情報そのものは data/rekishi-people.js の1か所にしかなく、
-        // ここでは参照しているだけ。
+        // 概要を年表で読めるようにし、人物事典の項目へ案内する。
         const peopleHtml = people.map((person) => `
           <details class="person">
             <summary>${esc(person.name)}${person.yearText ? `（${esc(person.yearText)}）` : ""}</summary>
             <div class="person-body">
               <p>${esc(person.summary)}</p>
+              <p><a href="rekishi-jinbutsu.html#${encodeURIComponent(person.id)}">人物事典で読む</a></p>
               ${person.shinagawaRelation ? `<p><span class="label">品川区との関係</span><br />${esc(person.shinagawaRelation)}</p>` : ""}
             </div>
           </details>`).join("");

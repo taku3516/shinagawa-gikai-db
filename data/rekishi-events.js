@@ -3978,7 +3978,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "id": "ev-1840-terakoya",
         "name": "区内に寺子屋が開かれる",
         "summary": "明治5年の時点で江戸期から続く家塾が7つあり、最も古い清香堂は天保11年の開業。最大の成隣堂は児童116名を預かっていた。",
-        "description": "区史によれば、幕府は武士以外の教育に積極的な施策をとらなかったが、商人には読み・書き・そろばんが欠かせないため、子弟に幼少から手習いを受けさせる家庭が次第に増え、私設の教育機関である寺子屋が増えていった。区内の寺子屋の数や分布は明らかでないが、『品川町史』は幕末に南北品川だけで約8、9軒あったと記す。明治6年に東京府へ提出された家塾明細届書によれば、明治5年の時点で江戸期から開業していた者は7名で、うち5名が品川宿、1名が下大崎村、1名が桐ケ谷村で開いていた。最も古いのは北品川宿の清香堂で天保11年に高田義宣が開業し、明治5年には児童79名。南品川宿の成隣堂は弘化4年の開業で児童116名と最大、同じく南品川宿の泉行堂は安政5年で64名だった。下大崎村の太雅堂を開いた貫名氏は本立寺の住職で、寺子屋の師匠には浪人・神官・僧侶があたっていたという。",
+        "description": "区史によれば、幕府は武士以外の教育に積極的な施策をとらなかったが、商人には読み・書き・そろばんが欠かせないため、子弟に幼少から手習いを受けさせる家庭が次第に増え、私設の教育機関である寺子屋が増えていった。区内の寺子屋の数や分布は明らかでないが、『品川町史』は幕末に南北品川だけで約8、9軒あったと記す。明治6年に東京府へ提出された家塾明細届書によれば、明治5年の時点で江戸期から開業していた者は7名で、うち5名が品川宿、1名が下大崎村、1名が桐ケ谷村で開いていた。最も古いのは北品川宿の清香堂で天保11年に高田義宣が開業し、明治5年には児童79名。南品川宿の成隣堂は弘化4年の開業で児童116名と最大、同じく南品川宿の泉行堂は安政5年で64名だった。下大崎村の太雅堂を開いた貫名氏は本立寺の住職で、寺子屋の師匠には浪人・神官・僧侶があたっていたという。 区史の第75表では、北品川宿の梅林堂と玉泉堂がそれぞれ49人と27人、桐ケ谷村の竜昇堂が35人を預かっていた。届書には、学習に使った本として、手紙や商いの文例を集めた往来物のほか、『実語教』などが挙がる。",
         "year": 1840,
         "yearEnd": 1872,
         "yearText": "天保11年（1840年）〜明治5年（1872年）",
@@ -4052,7 +4052,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "ev-1820-hakugyu",
           "ev-kinsei-jisei-bohi"
         ],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-ono-keizan"],
         "relatedPlaces": ["pl-9250914617"],
         "sources": [
           {
@@ -4081,7 +4081,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "ev-1808-keizan-nanushi",
           "ev-1840-terakoya"
         ],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-ito-keiko"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -5286,6 +5286,84 @@ window.SHINAGAWA_DB.rekishiEvents = {
           }
         ],
         "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1853-keiko-daiba-diary",
+        "name": "伊藤景湖が品川台場の築造事務を記録する",
+        "summary": "下蛇窪村の名主だった伊藤景湖は、品川台場の築造事務に携わり、工事の様子を日記に残した。",
+        "description": "景湖は当時の芝高輪にあった如来寺境内の事務所に詰めた。区史が紹介する日記は嘉永6年8月20日から安政元年12月23日までを収め、台場の配置や船の姿を描いた彩色図も含む。",
+        "year": 1853,
+        "yearEnd": 1854,
+        "yearText": "嘉永6年（1853年）〜安政元年（1854年）",
+        "era": "kinsei",
+        "areas": [
+          "ebara",
+          "shinagawa"
+        ],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1853-daiba-start"],
+        "relatedPeople": ["pe-ito-keiko"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（六）生活と文化「杜松斎景湖」1082〜1083頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1863-keiko-manuscripts",
+        "name": "伊藤景湖が大野景山の地誌を書き写す",
+        "summary": "下蛇窪村の伊藤景湖は、大井村の大野景山が編んだ『南浦地名考』と『大井邑地名録再校』を書き写した。",
+        "description": "『南浦地名考』は大井を中心に品川・大崎・荏原などの地名を扱う。区史編さんの際、伊藤家に伝わる写本の表紙の記載から、著者が景山であることが確認された。",
+        "year": 1863,
+        "yearEnd": null,
+        "yearText": "文久3年（1863年）4月",
+        "era": "kinsei",
+        "areas": [
+          "oi",
+          "ebara"
+        ],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1808-keizan-nanushi",
+          "ev-1812-keiko"
+        ],
+        "relatedPeople": [
+          "pe-ono-keizan",
+          "pe-ito-keiko"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（六）生活と文化「杜格斎景山」1078〜1079頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1865-keizan-kuhi",
+        "name": "大井の鹿島神社に大野景山の句碑が建てられる",
+        "summary": "大井村の名主を務めた俳人、大野景山をしのび、後任の大野永綏が句碑を建てた。",
+        "description": "区史によると、碑の裏には永綏が書いた鹿島神社と来迎院の由来や、来迎院にあった柳の清水についての文章が刻まれた。永綏も俳人で、乙雨と号し、のちに五世杜格斎を継いだ。",
+        "year": 1865,
+        "yearEnd": null,
+        "yearText": "元治2年（1865年）",
+        "era": "kinsei",
+        "areas": ["oi"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1808-keizan-nanushi"],
+        "relatedPeople": ["pe-ono-keizan"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（六）生活と文化「杜格斎景山」1080頁"
+          }
+        ],
+        "verifiedAt": "2026-11-22"
       }
   ]
 };
