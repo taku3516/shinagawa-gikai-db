@@ -167,7 +167,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1876-glass-nationalized", "ev-1885-glass-sold", "ev-1892-glass-dissolved"],
       "relatedPeople": [],
-      "relatedPlaces": ["pl-f0dec3262a"],
+      "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -185,6 +185,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1873-kogyosha", "ev-1885-glass-sold"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -202,6 +203,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1876-glass-nationalized", "ev-1892-glass-dissolved"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -237,6 +239,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1885-glass-sold", "ev-1968-meijimura"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
