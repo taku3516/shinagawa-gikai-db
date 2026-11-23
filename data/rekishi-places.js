@@ -1914,6 +1914,10 @@ window.SHINAGAWA_DB.rekishiPlaces = {
         {
           "ref": "sgw-bunkazai",
           "locator": "品川地区の指定文化財 品川拍子（荏原神社中心の地域）"
+        },
+        {
+          "ref": "sgw-chokai-area",
+          "locator": "櫻心会町会の区域「北品川2丁目30番（28号・荏原神社）」"
         }
       ],
       "verifiedAt": "2026-11-23",

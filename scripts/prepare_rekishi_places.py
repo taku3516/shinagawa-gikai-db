@@ -565,6 +565,16 @@ def apply_hints(place: Place, entry: Entry) -> None:
         place.category_notes.append(reason)
 
 
+# 住所を指定文化財ページ以外で確かめたもの。公開データの出典にも残す。
+# 住所の読み替え（ADDRESS_HINTS）を足したら、ここにも根拠を足すこと。
+ADDRESS_SOURCES: dict[str, dict[str, str]] = {
+    "北品川2-30-28": {
+        "ref": "sgw-chokai-area",
+        "locator": "櫻心会町会の区域「北品川2丁目30番（28号・荏原神社）」",
+    },
+}
+
+
 # 区の「指定文化財」ページに載らない、区内の国の文化財。
 #
 # 登録有形文化財と、区のページが個別に用意されていない重要文化財。
@@ -942,6 +952,9 @@ def to_record(place: Place, verified_at: str) -> dict[str, Any]:
         ],
         "verifiedAt": verified_at,
     }
+    extra_source = ADDRESS_SOURCES.get(place.address)
+    if extra_source:
+        record["sources"].append(dict(extra_source))
     if place.approximate:
         # 公式の住所が丁目までしか無いもの。丁目の中心を指している。
         record["locationNote"] = "出典の住所が丁目までのため、丁目のおおよその位置を指しています。"

@@ -91,7 +91,7 @@ AGENTS.md と docs/rekishi-plan.md を読んでから始めてください。
 時代の内訳: 原始6 / 古代4 / 中世11 / 近世92 / 明治41 / 大正21 /
 昭和戦前13 / 昭和戦後19 / 平成令和3。
 
-出典台帳は13件。区史は上巻（`sgw-kushi-tsushi-jo`）・下巻
+出典台帳は14件。区史は上巻（`sgw-kushi-tsushi-jo`）・下巻
 （`sgw-kushi-tsushi-ge`）の両方が入っている。
 
 ## まだ手をつけていないもの

@@ -99,6 +99,13 @@ window.SHINAGAWA_DB.rekishi = {
       "note": "品川・大崎・大井・荏原・その他の5地区別と、区内にある都・国の指定文化財。項目ごとに詳細ページがある。"
     },
     {
+      "id": "sgw-chokai-area",
+      "label": "品川区「町会・自治会の区域（品川第一地域センター）」",
+      "publisher": "品川区",
+      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/community/1004639/1004641.html",
+      "note": "町会ごとの住所区域。指定文化財ページに住所が無い荏原神社の番地を、町会の区域（北品川2丁目30番28号）で確かめるのに使った。"
+    },
+    {
       "id": "sgw-kugaiyo",
       "label": "品川区「区の紹介」",
       "publisher": "品川区",
