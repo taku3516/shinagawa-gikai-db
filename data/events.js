@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-22T22:46:06.717415Z",
+  "generatedAt": "2026-11-23T16:26:34.489025Z",
   "events": [
     {
       "id": "8c8e2e66944f32bfab29",
@@ -1978,28 +1978,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-18"
     },
     {
-      "id": "4c1c5a39babf51a112da",
-      "title": "9月24日開催の委員会の結果を掲載。",
-      "summary": "9月24日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20882.html",
-      "sourceId": "news",
-      "source": "品川区議会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-24"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "品川区議会",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "1e5e9be0c46488d95297",
-      "startDate": "2026-09-24",
-      "endDate": "2026-09-24"
-    },
-    {
       "id": "8731c211b5cc077e4253",
       "title": "区民委員会",
       "summary": "○第８５号議案 品川区印鑑条例の一部を改正する条例 ○第９６号議案 品川区の特定の事務を取り扱う郵便局の指定について ○「エシカル消費イベント㏌しながわ shinagawa ETHICAL 2026」の開催について ○東京都ファーストカスタマー・アライアンス事業への参画について ○令和７年度指定管理者による管理に対するモニタリング・評価の結果について",
@@ -3266,28 +3244,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-25"
     },
     {
-      "id": "7a5d1ed15cfa6fa87062",
-      "title": "三井住友カード、トピー工業が「primeNumber DATA SUMMIT 2026」に登壇決定",
-      "summary": "[株式会社primeNumber] データとAIを企業の成長エンジンへと進化させるデータテクノロジーカンパニーの株式会社primeNumber（本社：東京都品川区、代表取締役CEO 田邊 雄樹）は、2026年10月15日（木）に天王洲 キャナルイーストで開催す...",
-      "url": "https://prtimes.jp/main/html/rd/p/000000143.000039164.html",
-      "sourceId": "news",
-      "source": "PR TIMES",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-15"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "天王洲",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "cf3186129b3518f1ccce",
-      "startDate": "2026-10-15",
-      "endDate": "2026-10-15"
-    },
-    {
       "id": "110056d4cd1d0a9a48fa",
       "title": "品川×大田 旧東海道でつながるまち WAKU☆WAKU ラリー",
       "summary": "2026年10月15日(木)~11月29日(日) 開催場所 大森、大井、青物横丁、立会川、平和島エリア 料金 無料 電話番号 03-5743-7642(しながわ観光協会) 03-3734-0202(大田観光協会) 備考 ※イベントは予告なく中止、または内容を変更する場合がございます。 ※直接関与しない理由による、天災",
@@ -3446,28 +3402,6 @@ window.SHINAGAWA_EVENTS = {
       "deadline": "",
       "confidence": "estimated",
       "newsId": "0e476494f521a31d312d",
-      "startDate": "2026-10-18",
-      "endDate": "2026-10-18"
-    },
-    {
-      "id": "9ba426d9f4f559427879",
-      "title": "【3人制バスケ】品川CC ワイルドキャッツ、10月18日に東品川海上公園でPLCO 3XSホームゲームを開催",
-      "summary": "[品川CC] 「天王洲をホームコートに」3人制バスケットボールの熱戦を観戦無料で開催 [画像1:",
-      "url": "https://prtimes.jp/main/html/rd/p/000000121.000077565.html",
-      "sourceId": "news",
-      "source": "PR TIMES",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-18"
-      ],
-      "startTime": "01:00",
-      "endTime": "",
-      "timeText": "",
-      "place": "東品川 天王洲",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "054685ff9fad96a26c3c",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18"
     },
@@ -4021,29 +3955,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-23"
     },
     {
-      "id": "f503b66decd446685dae",
-      "title": "天王洲キャナルフェス 2026 秋冬",
-      "summary": "2026年10月30日（金）～11月1日（日）、「天王洲キャナルフェス2026秋冬」が開催されます。 今回の「天王洲キャナルフェス2026秋冬」では、神輿や太鼓の伝統を守り続ける「 宮本卯之助商店 」との特別コラボが実現。 “祭×現代アート”が出会うことで、職人の技とアーティストの感性が交差する3日間が天王洲に生まれます。アートと水辺の街ならではの熱気あふれる体験を楽しんでみてはいかがでしょうか。",
-      "url": "https://shinagawa-kanko.or.jp/event/canalfes26aw",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-30",
-        "2026-11-01"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "天王洲",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "4d0630e995eba9756ef5",
-      "startDate": "2026-10-30",
-      "endDate": "2026-11-01"
-    },
-    {
       "id": "fae463f8324daa3ea2d1",
       "title": "2026大井町ハロウィン",
       "summary": "2026年10月31日（土）、「大井町ハロウィン」が開催されます。 ハロウィンこどもマルシェやフォトスポットラリー、 ステージでは、ハロウィンダンスやファッションショー、ミュージックステージが予定されています。",
@@ -4269,7 +4180,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "0fdf4a53173e91f6b621",
       "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 品川歴史館 2024年4月16日 2024年4月リニューアルオープン 観る",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット o-i STUDIO(オーイ スタジオ) 2025年3月1日 三菱鉛筆初の",
       "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4563,6 +4474,28 @@ window.SHINAGAWA_EVENTS = {
       "deadline": "",
       "confidence": "estimated",
       "newsId": "cd7b93c9a64780bdb74a",
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-04"
+    },
+    {
+      "id": "c7e573f42179b30a75ff",
+      "title": "【速報】戸越銀座商店街で火事 中華料理店から出火 現在も延焼中（2026年11月4日掲載）",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBtOU1jMGxocFF4MUJNZGFIeG5CT3ZtNEowOWZaYmRrbjBJNE02aTNyZ2RYNlhfRFVFMDd6MzNMRGNKM3FEVkxieXpiWWQ0SEdUVmdpSFMyaE1rYThxU0hpa09qUXVqRGQ4emZiTTA1WFhFXzFrRTZDMDgwQlI?oc=5",
+      "sourceId": "news",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "category": "地域イベント",
+      "dates": [
+        "2026-11-04"
+      ],
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "戸越 戸越銀座商店街",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "3411aaa2bae9d5ed6fc5",
       "startDate": "2026-11-04",
       "endDate": "2026-11-04"
     },
@@ -4868,6 +4801,29 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-06"
     },
     {
+      "id": "b5016017f741496bd833",
+      "title": "ミガロホールディングス[5535]：DXYZとTIEROが戸越銀座商店街で顔認証決済「FreeiD Pay」での 「顔ダケで、買い物。」とAIによるまち歩き提案の実証事業を11月21日から3日間実施 2026年11月6日(適時開示) ：日経会社情報DIGITAL",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBJN3E3MGFSbnN4eGpfRGN4RDhYVGZWZUNGc2premQ3OUpSUWdfMzRIc0k0czR4Rmo3WUxfSWh6UnVGMWpCU1FiUmd6b3hLNWRiaUk5NGlLSFM5NWZfLWo0R21vYlFqNWZhR3c?oc=5",
+      "sourceId": "news",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "category": "地域イベント",
+      "dates": [
+        "2026-11-06",
+        "2026-11-21"
+      ],
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "戸越 戸越銀座商店街",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "c9b88c50d6f8562598be",
+      "startDate": "2026-11-06",
+      "endDate": "2026-11-21"
+    },
+    {
       "id": "d1bd332cb5fe7ecfd814",
       "title": "令和8年度「歯の健康ポスター展」",
       "summary": "品川区立の小・中・義務教育学校や保育園・幼稚園から寄せられた、歯・口の健康に関する図画・ポスターコンクール応募作品から選ばれた作品を展示します。子どもたちの感性豊かな力作をぜひご覧ください。",
@@ -5052,7 +5008,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 物流博物館 201",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 尾張屋呉服店 20",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5199,7 +5155,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "02cb779466e040ca1e46",
       "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
-      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 大井の水神社 2018年4月14日 大井の村人た",
+      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 天祖・諏訪神社 2018年3月12日 漁師町の気",
       "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5882,6 +5838,28 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-21"
     },
     {
+      "id": "2fd65263cfc9c69a55bb",
+      "title": "戸越銀座商店街で「顔ダケで、買い物。」顔認証IDプラットフォーム「FreeiD」の顔認証決済と、AIによるまち歩き提案の実証を11月21日から3日間実施",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5xckpLeFBuekdxV0xqOEhyUmUySlpndU5PdC05dmFCOFl2WkJXNFJEMGlmTlBPZ1lXLXdPRmlYMHJob0xWVW5CMGJKR1B2dGZCYlRoRmVsUjNTandScDdiZV8tOEJTVm5sREhz?oc=5",
+      "sourceId": "news",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "category": "地域イベント",
+      "dates": [
+        "2026-11-21"
+      ],
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "戸越 戸越銀座商店街",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "56d34e00e8b0a47a9333",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-21"
+    },
+    {
       "id": "3ab2d4613f40a7575e3f",
       "title": "星薬科大学公開講座「秋の薬草見学会」",
       "summary": "2026年11月21日(土) 13:00~15:50 開催場所 星薬科大学 品川区荏原2-4-41 交通アクセス 東急池上線 戸越銀座駅 徒歩8分 都営浅草線 戸越駅 徒歩10分 東急目黒線 武蔵小山駅 徒歩12分 料金 無料 電話番号 03-5742-6837(品川区文化観光戦略課 生涯学習係 直通) 03-378",
@@ -5971,7 +5949,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "ba8c03a4a04d4cf75005",
       "title": "小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
-      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 荏原南(えばら",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット Parque(",
       "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -6231,24 +6209,31 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-28"
     },
     {
-      "id": "98470598085b5ee83403",
+      "id": "d2118a0b81d8dedefbd3",
       "title": "立正大学「仏教オールスター寄席」",
-      "summary": "2026年11月28日（土）、立正大学ロータスホールにて、「仏教オールスター寄席」が開催されます。 仏教・和の伝統文化・エンタメなど、各界から6人のスーパースターがロータスホールに集います。学生の方から、お子様、ご年配の方まで、楽しめるイベントです。",
-      "url": "https://shinagawa-kanko.or.jp/event/ris-rakugo",
-      "sourceId": "news",
+      "summary": "2026年11月28日(土) 開演:14:00 入場:事前予約の方 13:30より 当日参加の方 13:45より 開催場所 ロータスホール 品川区大崎4-2-16 立正大学品川キャンパス13号館 地下1階 交通アクセス JR・りんかい線 大崎駅 徒歩5分 JR・都営浅草線・東急池上線 五反田駅 徒歩5分 東急池上線",
+      "url": "https://shinagawa-kanko.or.jp/event/ris-rakugo/",
+      "sourceId": "kanko",
       "source": "しながわ観光協会",
-      "category": "地域イベント",
+      "category": "文化・観光・スポーツ",
       "dates": [
         "2026-11-28"
       ],
-      "startTime": "",
+      "startTime": "14:00",
       "endTime": "",
-      "timeText": "",
+      "timeText": "2026年11月28日(土) 開演:14:00 入場:事前予約の方 13:30より 当日参加の方 13:45より 開催場所 ロータスホール 品川区大崎4-2-1",
       "place": "",
       "application": "",
       "deadline": "",
-      "confidence": "estimated",
-      "newsId": "bb7f61734085de39d24b",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/ris-rakugo",
+          "title": "立正大学「仏教オールスター寄席」"
+        }
+      ],
       "startDate": "2026-11-28",
       "endDate": "2026-11-28"
     },
@@ -7723,14 +7708,14 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "kanko",
       "source": "しながわ観光協会",
       "status": "ok",
-      "accepted": 33,
+      "accepted": 34,
       "scanned": 39
     },
     {
       "sourceId": "news",
       "source": "区のニュース",
       "status": "ok",
-      "accepted": 125
+      "accepted": 124
     }
   ]
 };
