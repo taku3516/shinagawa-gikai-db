@@ -7,7 +7,7 @@
 
 下書きは「出来事の配列」そのままのJSON。1件の形は data/rekishi-events.js
 の既存項目と同じにする（id・name・summary・description・year・yearEnd・
-yearText・era・areas・categories・certainty・relatedEvents・relatedPeople・
+yearText・era・areas・categories・certainty・relatedEvents・relatedPeople・（必要なら relatedPlaces・）
 sources・verifiedAt、必要なら variants）。
 
 足したあとは必ず検査と画面の確認をすること:
@@ -37,7 +37,7 @@ TARGET = ROOT / "data" / "rekishi-events.js"
 FIELD_ORDER = [
     "id", "name", "summary", "description", "year", "yearEnd", "yearText",
     "era", "areas", "categories", "certainty", "variants",
-    "relatedEvents", "relatedPeople", "sources", "verifiedAt",
+    "relatedEvents", "relatedPeople", "relatedPlaces", "sources", "verifiedAt",
 ]
 
 # 末尾の閉じ方。ここを目印に差し込む。
