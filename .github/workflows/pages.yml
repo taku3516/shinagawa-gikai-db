@@ -36,6 +36,7 @@ jobs:
         run: |
           python3 -m unittest scripts.test_rekishi_data scripts.test_rekishi_links
           python3 scripts/check_rekishi_data.py
+          node --test scripts/kochizu.test.mjs scripts/rekishi-map-links.test.mjs
       - name: 公開ファイルを生成
         env:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
