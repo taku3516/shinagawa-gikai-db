@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_news.py で更新する。
 window.SHINAGAWA_NEWS = {
-  "generatedAt": "2026-11-23T01:52:33.009012Z",
+  "generatedAt": "2026-11-23T13:23:03.849138Z",
   "items": [
     {
       "id": "33969ee6d9336e84ee6f",
@@ -10,7 +10,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "pr-times",
       "sourceType": "rss",
       "url": "https://prtimes.jp/main/html/rd/p/000000160.000028447.html",
-      "publishedAt": "2026-11-22T23:40:02Z",
+      "publishedAt": "2026-11-23T11:40:02Z",
       "dateKind": "published",
       "collectedAt": "2026-11-19T02:41:33.223826Z",
       "tags": [
@@ -19,6 +19,68 @@ window.SHINAGAWA_NEWS = {
       "locations": [],
       "relevanceScore": 10,
       "sourcePriority": 50
+    },
+    {
+      "id": "a4a23b60d6b380ef38ff",
+      "title": "【品川区】五反田TOCビルB1Fにリラクゼーション＆エステサロン「Chelsea」が11/11オープン",
+      "summary": "五反田TOCビルのB1Fに、リラクゼーション＆エステサロン「Chelsea」が2026年11月11日（水）にオープンしました。場所はB1F3号です。 Chelseaのメニューは、ボディケア・アイケア・フットケア・フェイシ […]",
+      "source": "号外NET 品川区",
+      "sourceId": "shinagawa-goguynet",
+      "sourceType": "rss",
+      "url": "https://shinagawa.goguynet.jp/2026/11/23/chelsea-gotanda-toc",
+      "publishedAt": "2026-11-23T09:29:18Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-23T13:22:55.444963Z",
+      "tags": [
+        "店舗開店閉店"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 60
+    },
+    {
+      "id": "6f6a1733d3df158dfbe4",
+      "title": "【品川区】人気の目黒線「不動前」・独立洗面台【#2809】",
+      "summary": "",
+      "source": "Googleニュース（品川区）",
+      "sourceId": "google-shinagawa",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNdzhxbTBwVWg0TEp4MEVLUTJvSTM1QjNzbDhfUjBMbmVzQmcteklOSUZackxMMzBtOEFmTGgxendZU3B2dGQycWUwSVpGR1ltMGJSY1dUazVaM3RmU2pNSXhYT0lxcTZsbkJmUXNMeTNYVWVHY2dBM2ktcm8wemplVDBR?oc=5",
+      "publishedAt": "2026-11-23T09:08:34Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-23T13:22:55.444963Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [
+        "目黒"
+      ],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "www.rakumachi.jp",
+      "outletUrl": "https://www.rakumachi.jp"
+    },
+    {
+      "id": "080bb8babd5f4b34aef6",
+      "title": "東京都品川区 RC造4階建て 利回り3.84％",
+      "summary": "",
+      "source": "Googleニュース（品川区）",
+      "sourceId": "google-shinagawa",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOYnZNWml3VnBrSlZ1S2Q1b3V5cFRkYVc1X1UtWlpjdlBYN0JOS2d3cnUzQU03ODNnZnk4c2tHT3REMjY2TnhjbS01dVBxN20wa0hhUThWcjViNDVqbDAzVHpIdzlwYUFYdXluVG54ZDRIWXVJQkdKTkp4VmhZTzBhUjNB?oc=5",
+      "publishedAt": "2026-11-23T09:04:38Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-23T13:22:55.444963Z",
+      "tags": [
+        "その他"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "www.rakumachi.jp",
+      "outletUrl": "https://www.rakumachi.jp"
     },
     {
       "id": "bf7ca28cef4026bffb0f",
@@ -1498,49 +1560,6 @@ window.SHINAGAWA_NEWS = {
       "outletUrl": "https://www.nishinippon.co.jp"
     },
     {
-      "id": "579b184b79e1164903e0",
-      "title": "【結果】品川区長選挙、現職の森沢恭子氏が再選…新人との一騎打ち制す",
-      "summary": "",
-      "source": "Googleニュース（品川区）",
-      "sourceId": "google-shinagawa",
-      "sourceType": "rss",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5pMUt5c1dmQUdEQUd2eFdEbFdrOGdvcVRnejE2TGdiaGxfUHJ3a1lxZWNGYjAtSXBfcEt3NE1HdVVPc1plbFJkeG9Ia2VrYUpEeXZsTnlXYnFrdVpqWFFIanhHR3dNUQ?oc=5",
-      "publishedAt": "2026-11-15T16:07:22Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-20T02:27:13.203650Z",
-      "tags": [
-        "行政",
-        "選挙政治"
-      ],
-      "locations": [],
-      "relevanceScore": 10,
-      "sourcePriority": 10,
-      "viaAggregator": "Googleニュース",
-      "outlet": "読売新聞",
-      "outletUrl": "https://www.yomiuri.co.jp"
-    },
-    {
-      "id": "263fa5dd246a02067c05",
-      "title": "新宿区長選・品川区長選・小金井市長選の結果 東京トリプル首長選 [東京都]",
-      "summary": "",
-      "source": "Googleニュース（議会・区政・区長）",
-      "sourceId": "google-kusei",
-      "sourceType": "rss",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE56LXRnaHR0MWhhTGV4SjJJZHpTeVd5bkQwSS04TnNEN0FTSkdiN2NZZ2ZDOXVGb2ttMnBweklTeGwzTjA0S3diSFVGY2VKbjc5M1hKZGtkd2JYaVpyelF5WTg3MHBvX2s?oc=5",
-      "publishedAt": "2026-11-15T14:55:42Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-19T12:03:37.516426Z",
-      "tags": [
-        "行政"
-      ],
-      "locations": [],
-      "relevanceScore": 8,
-      "sourcePriority": 10,
-      "viaAggregator": "Googleニュース",
-      "outlet": "朝日新聞",
-      "outletUrl": "https://www.asahi.com"
-    },
-    {
       "id": "2ac29d7a9ebbd17a2203",
       "title": "東京 品川区長選挙 現職の森澤恭子氏が再選",
       "summary": "",
@@ -1607,28 +1626,6 @@ window.SHINAGAWA_NEWS = {
       "outletUrl": "https://www.yomiuri.co.jp"
     },
     {
-      "id": "712001da2da9238e9686",
-      "title": "品川区長選挙、現職の森沢恭子さんが再選決める 「政策実行率97％」を押し出し、新人の浜田健太郎さんを破る",
-      "summary": "",
-      "source": "Googleニュース（議会・区政・区長）",
-      "sourceId": "google-kusei",
-      "sourceType": "rss",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54NXgwQWpwRzVKX1NONTRuTW9FX19oM29VTV9QLVlqSGl2VEtUaktzOXdCLWZTWm11VFpfZG1reVE1ZTRzX19uSmk5Q1I3Vl9yS2Qw?oc=5",
-      "publishedAt": "2026-11-15T12:49:53Z",
-      "dateKind": "published",
-      "collectedAt": "2026-11-19T12:03:37.516426Z",
-      "tags": [
-        "行政",
-        "選挙政治"
-      ],
-      "locations": [],
-      "relevanceScore": 10,
-      "sourcePriority": 10,
-      "viaAggregator": "Googleニュース",
-      "outlet": "東京新聞",
-      "outletUrl": "https://www.tokyo-np.co.jp"
-    },
-    {
       "id": "bb961da7fef1e4dcd688",
       "title": "品川区長選、現職の森沢恭子氏が当選 前回は異例の再選挙（朝日新聞）",
       "summary": "",
@@ -1681,6 +1678,71 @@ window.SHINAGAWA_NEWS = {
       "sourceType": "rss",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1jaFJJVU1mT0FCN1RfNVlUZmRhN1JjSXRKMEJmRmpPbHVNeV9FUWl1UzVOeDhObXJ0NXhTcmJvTVR6bl9YUU5sRVNJM19qODJBWGxBdUNxV1FZVVJoMUtyWThFTDUyaFE?oc=5",
       "publishedAt": "2026-11-15T11:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "朝日新聞",
+      "outletUrl": "https://www.asahi.com"
+    },
+    {
+      "id": "579b184b79e1164903e0",
+      "title": "【結果】品川区長選挙、現職の森沢恭子氏が再選…新人との一騎打ち制す",
+      "summary": "",
+      "source": "Googleニュース（品川区）",
+      "sourceId": "google-shinagawa",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5pMUt5c1dmQUdEQUd2eFdEbFdrOGdvcVRnejE2TGdiaGxfUHJ3a1lxZWNGYjAtSXBfcEt3NE1HdVVPc1plbFJkeG9Ia2VrYUpEeXZsTnlXYnFrdVpqWFFIanhHR3dNUQ?oc=5",
+      "publishedAt": "2026-11-15T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-20T02:27:13.203650Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "読売新聞",
+      "outletUrl": "https://www.yomiuri.co.jp"
+    },
+    {
+      "id": "712001da2da9238e9686",
+      "title": "品川区長選挙、現職の森沢恭子さんが再選決める 「政策実行率97％」を押し出し、新人の浜田健太郎さんを破る",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54NXgwQWpwRzVKX1NONTRuTW9FX19oM29VTV9QLVlqSGl2VEtUaktzOXdCLWZTWm11VFpfZG1reVE1ZTRzX19uSmk5Q1I3Vl9yS2Qw?oc=5",
+      "publishedAt": "2026-11-15T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-19T12:03:37.516426Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東京新聞",
+      "outletUrl": "https://www.tokyo-np.co.jp"
+    },
+    {
+      "id": "263fa5dd246a02067c05",
+      "title": "新宿区長選・品川区長選・小金井市長選の結果 東京トリプル首長選 [東京都]",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE56LXRnaHR0MWhhTGV4SjJJZHpTeVd5bkQwSS04TnNEN0FTSkdiN2NZZ2ZDOXVGb2ttMnBweklTeGwzTjA0S3diSFVGY2VKbjc5M1hKZGtkd2JYaVpyelF5WTg3MHBvX2s?oc=5",
+      "publishedAt": "2026-11-15T08:00:00Z",
       "dateKind": "published",
       "collectedAt": "2026-11-19T12:03:37.516426Z",
       "tags": [
@@ -1947,6 +2009,28 @@ window.SHINAGAWA_NEWS = {
       "sourcePriority": 50
     },
     {
+      "id": "f29e386d35c9d61d52df",
+      "title": "【品川区長選挙】浜田健太郎さんの経歴と主張…家賃更新費用の負担軽減を",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5NVUJoVWMwYlV0RDV3dXltbUgteHpxYmZCYVJLWnB5cFU1cUhYN2M2OGhWOUdsSWFMZXB0U0JURmJZaVo1dzJZYUZ3ZktpWnlPV3lWVURZUFA5enpVaDRyYlpvLUlGZw?oc=5",
+      "publishedAt": "2026-11-13T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-23T13:22:55.444963Z",
+      "tags": [
+        "行政",
+        "選挙政治"
+      ],
+      "locations": [],
+      "relevanceScore": 10,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "読売新聞",
+      "outletUrl": "https://www.yomiuri.co.jp"
+    },
+    {
       "id": "696fe72b03d50240a71c",
       "title": "品川区長選挙は現職と新人の戦い！11月15日投票 東京都",
       "summary": "",
@@ -2118,6 +2202,27 @@ window.SHINAGAWA_NEWS = {
       "locations": [],
       "relevanceScore": 0,
       "sourcePriority": 100
+    },
+    {
+      "id": "61c0ea14c682548a37b7",
+      "title": "遠隔ロボが投票立ち会い 品川区長選「期日前」9、10日 「オリヒメ」活用し実証実験",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB6T21TZzF5Y3BsZzBXRWotS0dqM2VlZkZ0bE1FWTZEbGd0bVUzUzZ0Um1mNEtwS2hPTURRQ1ZhZm92UzBtRGwyVjFlQWZuSndzX0cw?oc=5",
+      "publishedAt": "2026-11-12T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-23T13:22:55.444963Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "東京新聞",
+      "outletUrl": "https://www.tokyo-np.co.jp"
     },
     {
       "id": "ddc91ad7b2ba7ec3d1b1",
@@ -2732,6 +2837,27 @@ window.SHINAGAWA_NEWS = {
       "relevanceScore": 10
     },
     {
+      "id": "86334380e9c2fa1b2bf2",
+      "title": "東京・品川区長選が告示、現新の一騎打ちに（産経新聞）",
+      "summary": "",
+      "source": "Googleニュース（議会・区政・区長）",
+      "sourceId": "google-kusei",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBXdUc1R014dElOT1ZRcllkcXhITy1PWGNPVWVQdU81MWZHTTVRMGJQMnZsb1hjRHk4UG5hS0llbHpyQzluUWJFOHVyODFhdjFPUHVvWGxEak00bGgwVTU1emo1Y0hFaHRDNFpBejhNdkt6dC1aRWlQZTIwTHJjdU0?oc=5",
+      "publishedAt": "2026-11-08T08:00:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-23T13:22:55.444963Z",
+      "tags": [
+        "行政"
+      ],
+      "locations": [],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "Yahoo!ニュース",
+      "outletUrl": "https://news.yahoo.co.jp"
+    },
+    {
       "id": "8cc5ee983ea54584301d",
       "title": "品川区長選挙がスタート 現職と新人の一騎打ち、物価高対策などで論戦 11月15日投開票",
       "summary": "",
@@ -2896,6 +3022,30 @@ window.SHINAGAWA_NEWS = {
       "viaAggregator": "Googleニュース",
       "outlet": "日本経済新聞",
       "outletUrl": "https://www.nikkei.com"
+    },
+    {
+      "id": "56d34e00e8b0a47a9333",
+      "title": "戸越銀座商店街で「顔ダケで、買い物。」顔認証IDプラットフォーム「FreeiD」の顔認証決済と、AIによるまち歩き提案の実証を11月21日から3日間実施",
+      "summary": "",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
+      "sourceType": "rss",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5xckpLeFBuekdxV0xqOEhyUmUySlpndU5PdC05dmFCOFl2WkJXNFJEMGlmTlBPZ1lXLXdPRmlYMHJob0xWVW5CMGJKR1B2dGZCYlRoRmVsUjNTandScDdiZV8tOEJTVm5sREhz?oc=5",
+      "publishedAt": "2026-11-06T07:16:00Z",
+      "dateKind": "published",
+      "collectedAt": "2026-11-23T13:22:55.444963Z",
+      "tags": [
+        "地域イベント"
+      ],
+      "locations": [
+        "戸越",
+        "戸越銀座商店街"
+      ],
+      "relevanceScore": 8,
+      "sourcePriority": 10,
+      "viaAggregator": "Googleニュース",
+      "outlet": "時事ドットコム",
+      "outletUrl": "https://www.jiji.com"
     },
     {
       "id": "f06ad88ad465012340e2",
@@ -16352,8 +16502,8 @@ window.SHINAGAWA_NEWS = {
       "id": "4f3a76e1f1dbe6dc9376",
       "title": "「戸越と戸越」のあいだは商店街天国。戸越公園〜戸越銀座、徒歩20分の旅",
       "summary": "",
-      "source": "Googleニュース（商店街・祭り・イベント）",
-      "sourceId": "google-chiiki",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "sourceId": "google-area-togoshi",
       "sourceType": "rss",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONXFvRmVCTzdfUmFValJDbU5Pem1MNzFrOEs3N0hKU3U0Nl82aEtnV2g2SE9NdG1PZ0dRcFVuZ1dNbnN2SktsVXVBZXNfdFB0NkN6RFFMS3ZQbDlpQ196aHVmNU5ESklINWFhX18xR2h4bkJhbjFEMDA0VHhsYVNUelNWRXJxemNmYTJv?oc=5",
       "publishedAt": "2025-12-04T08:00:00Z",
@@ -17029,8 +17179,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "品川区 新着情報",
       "sourceId": "shinagawa-city-new",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 846,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 979,
       "status": "ok",
       "scanned": 63,
       "accepted": 63,
@@ -17039,8 +17189,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "品川区議会",
       "sourceId": "shinagawa-council",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 893,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 936,
       "status": "ok",
       "scanned": 10,
       "accepted": 10,
@@ -17049,8 +17199,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "品川経済新聞",
       "sourceId": "shinagawa-keizai",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 395,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 520,
       "status": "ok",
       "scanned": 10,
       "accepted": 6,
@@ -17059,8 +17209,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "警視庁",
       "sourceId": "keishicho",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 2124,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 1247,
       "status": "ok",
       "scanned": 3,
       "accepted": 0,
@@ -17069,8 +17219,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京消防庁",
       "sourceId": "tokyo-fire",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 1313,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 1997,
       "status": "ok",
       "scanned": 143,
       "accepted": 0,
@@ -17079,8 +17229,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "NHK NEWS",
       "sourceId": "nhk",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 287,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 196,
       "status": "ok",
       "scanned": 7,
       "accepted": 0,
@@ -17089,8 +17239,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "日テレNEWS NNN",
       "sourceId": "ntv-news",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 1239,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 1182,
       "status": "ok",
       "scanned": 200,
       "accepted": 0,
@@ -17099,8 +17249,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "朝日新聞",
       "sourceId": "asahi-news",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 121,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 85,
       "status": "ok",
       "scanned": 40,
       "accepted": 0,
@@ -17109,8 +17259,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "FNNプライムオンライン",
       "sourceId": "fnn-news",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 799,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 1155,
       "status": "ok",
       "scanned": 50,
       "accepted": 0,
@@ -17119,8 +17269,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "時事ドットコム アクセスランキング",
       "sourceId": "jiji-ranking",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 273,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 89,
       "status": "ok",
       "scanned": 10,
       "accepted": 0,
@@ -17129,8 +17279,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "PR TIMES",
       "sourceId": "pr-times",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 210,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 588,
       "status": "ok",
       "scanned": 200,
       "accepted": 1,
@@ -17139,8 +17289,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東急ニュースリリース",
       "sourceId": "tokyu-news",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 732,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 694,
       "status": "ok",
       "scanned": 10,
       "accepted": 0,
@@ -17149,8 +17299,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東急からのお知らせ",
       "sourceId": "tokyu-information",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 848,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 212,
       "status": "ok",
       "scanned": 10,
       "accepted": 1,
@@ -17159,7 +17309,7 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 報道発表",
       "sourceId": "gesui-press",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
       "durationMs": 1776,
       "status": "ok",
       "scanned": 11,
@@ -17169,8 +17319,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 トピックス",
       "sourceId": "gesui-topics",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 1830,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 2453,
       "status": "ok",
       "scanned": 42,
       "accepted": 0,
@@ -17179,8 +17329,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "東京都下水道局 イベント",
       "sourceId": "gesui-events",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 513,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 347,
       "status": "ok",
       "scanned": 2,
       "accepted": 0,
@@ -17195,8 +17345,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "号外NET 品川区",
       "sourceId": "shinagawa-goguynet",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 1024,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 1729,
       "status": "ok",
       "scanned": 10,
       "accepted": 10,
@@ -17217,28 +17367,28 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "Googleニュース（品川区）",
       "sourceId": "google-shinagawa",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 467,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 744,
       "status": "ok",
       "scanned": 40,
-      "accepted": 2,
+      "accepted": 4,
       "duplicates": 0
     },
     {
       "source": "Googleニュース（議会・区政・区長）",
       "sourceId": "google-kusei",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 623,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 442,
       "status": "ok",
       "scanned": 40,
-      "accepted": 12,
-      "duplicates": 0
+      "accepted": 16,
+      "duplicates": 1
     },
     {
       "source": "Googleニュース（再開発・都市計画・道路）",
       "sourceId": "google-machi",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 336,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 308,
       "status": "ok",
       "scanned": 40,
       "accepted": 1,
@@ -17247,8 +17397,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "Googleニュース（福祉・保育・学校・教育）",
       "sourceId": "google-kurashi",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 2747,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 303,
       "status": "ok",
       "scanned": 40,
       "accepted": 0,
@@ -17257,28 +17407,28 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "Googleニュース（防災・浸水・交通・事故）",
       "sourceId": "google-bosai",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 314,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 310,
       "status": "ok",
       "scanned": 40,
       "accepted": 0,
-      "duplicates": 2
+      "duplicates": 1
     },
     {
       "source": "Googleニュース（商店街・祭り・イベント）",
       "sourceId": "google-chiiki",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 373,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 295,
       "status": "ok",
-      "scanned": 40,
+      "scanned": 37,
       "accepted": 17,
       "duplicates": 1
     },
     {
       "source": "Googleニュース（西大井・大井町・二葉・豊町）",
       "sourceId": "google-area-oi",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 400,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 314,
       "status": "ok",
       "scanned": 40,
       "accepted": 2,
@@ -17287,18 +17437,18 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
       "sourceId": "google-area-togoshi",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 432,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 341,
       "status": "ok",
       "scanned": 40,
-      "accepted": 13,
-      "duplicates": 3
+      "accepted": 14,
+      "duplicates": 1
     },
     {
       "source": "品川区 地域センター新着情報",
       "sourceId": "shinagawa-city-community",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 648,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 902,
       "status": "ok",
       "scanned": 30,
       "accepted": 30,
@@ -17307,8 +17457,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "品川区社会福祉協議会",
       "sourceId": "shinagawa-shakyo",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 3250,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 3480,
       "status": "ok",
       "scanned": 30,
       "accepted": 30,
@@ -17317,8 +17467,8 @@ window.SHINAGAWA_NEWS = {
     {
       "source": "しながわ観光協会",
       "sourceId": "shinagawa-tourism",
-      "fetchedAt": "2026-11-23T01:52:24.937284Z",
-      "durationMs": 1491,
+      "fetchedAt": "2026-11-23T13:22:55.444963Z",
+      "durationMs": 1707,
       "status": "ok",
       "scanned": 14,
       "accepted": 14,
@@ -17329,7 +17479,7 @@ window.SHINAGAWA_NEWS = {
       "sourceId": "_dedupe",
       "status": "ok",
       "accepted": 0,
-      "duplicates": 6
+      "duplicates": 4
     }
   ]
 };
