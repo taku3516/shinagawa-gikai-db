@@ -72,6 +72,11 @@ FILES = [
     "data/site.js",
     "data/news-items.js",
     "data/events.js",
+    # ホーム画面に追加したときのアイコン（scripts/make_home_icon.py で作る）
+    "apple-touch-icon.png",
+    "manifest.webmanifest",
+    "icon-192.png",
+    "icon-512.png",
 ]
 
 # 基準URLの差し込みが要るページ。site-url.js より前に window.SHINAGAWA_SITE_BASE を
