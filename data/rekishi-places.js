@@ -4,7 +4,7 @@
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.rekishiPlaces = {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-23",
   "note": "品川区公式「指定文化財」から、史跡・旧跡・建造物・天然記念物は1件を1地点とし、絵画・古文書などの動産は置かれている場所ごとにまとめています。解説は転載せず、公式の詳細ページへ案内しています。緯度経度は国土地理院の住所検索APIによるもので、建物の正確な位置ではなく住所の代表点です。",
   "items": [
     {
@@ -1063,7 +1063,7 @@ window.SHINAGAWA_DB.rekishiPlaces = {
     {
       "id": "pl-086da1e672",
       "name": "利田神社",
-      "summary": "東品川1-7-17にある歴史資料です。",
+      "summary": "東品川1-7-17。指定文化財2件（歴史資料・風俗慣習）があります。",
       "address": "東品川1-7-17",
       "areas": [
         "shinagawa"
@@ -1085,6 +1085,16 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "designatedOn": "2006-11-28",
           "owner": "利田神社",
           "visit": "見学可"
+        },
+        {
+          "name": "品川拍子（利田神社中心の地域）",
+          "kind": "風俗慣習",
+          "designator": "区",
+          "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkazaikanko/1003758/1003759/1003817.html",
+          "number": "第2号",
+          "designatedOn": "2002-10-16",
+          "owner": "東品川一・三笛睦会",
+          "visit": "利田神社の祭礼"
         }
       ],
       "sources": [
@@ -1093,8 +1103,8 @@ window.SHINAGAWA_DB.rekishiPlaces = {
           "locator": "品川地区の指定文化財 鯨碑"
         }
       ],
-      "verifiedAt": "2026-11-20",
-      "designatedFrom": "2006-11-28"
+      "verifiedAt": "2026-11-23",
+      "designatedFrom": "2002-10-16"
     },
     {
       "id": "pl-26ec6dd1d6",

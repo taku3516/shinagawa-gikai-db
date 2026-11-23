@@ -63,6 +63,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1978-first-designation"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-4c9cb3c9e5"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 建造物第1号・第2号" }],
       "verifiedAt": "2026-11-19"
     },
@@ -166,6 +167,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1876-glass-nationalized", "ev-1885-glass-sold", "ev-1892-glass-dissolved"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-f0dec3262a"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -217,6 +219,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": [],
       "relatedPeople": ["pe-matsudaira-yoshinaga"],
+      "relatedPlaces": ["pl-16a69cbab7", "pl-0eb88578f1"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第9号「松平慶永（春嶽）墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -268,6 +271,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": [],
       "relatedPeople": ["pe-itagaki-taisuke"],
+      "relatedPlaces": ["pl-8d095e31ad", "pl-548dab732d"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第4号「板垣退助墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -322,6 +326,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1684-jokyo-calendar"],
       "relatedPeople": ["pe-shibukawa-shunkai"],
+      "relatedPlaces": ["pl-a4e970452b", "pl-f0dec3262a"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第6号「渋川春海墓（追贈記念塔を含む）」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -391,6 +396,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1858-yodo-confinement", "ev-1954-yodo-grave-moved"],
       "relatedPeople": ["pe-yamauchi-toyoshige"],
+      "relatedPlaces": ["pl-85ffa8153f"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第11号「山内豊信（容堂）墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -408,6 +414,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1872-yodo-death"],
       "relatedPeople": ["pe-yamauchi-toyoshige"],
+      "relatedPlaces": ["pl-85ffa8153f"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第11号「山内豊信（容堂）墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -449,6 +456,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "locator": "品川地区の指定文化財 史跡第10号「由利公正墓」の銘文"
         }
       ],
+      "relatedPlaces": ["pl-729d15df9e", "pl-0eb88578f1"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第10号「由利公正墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -466,6 +474,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": [],
       "relatedPeople": ["pe-momochuken-kumoemon"],
+      "relatedPlaces": ["pl-1e1564b7a2", "pl-11e5d5f153"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第24号「桃中軒雲右衛門の墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -1379,6 +1388,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-ffc3a17a80", "pl-f11e74239c", "pl-c75991a87f"],
         "sources": [{ "ref": "bunka-online", "locator": "「宝篋印塔 （１）」（199549）、「宝篋印塔 （２）」（193280）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1396,6 +1406,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-2019-shimazu-juubun"],
         "relatedPeople": ["pe-josiah-conder"],
+        "relatedPlaces": ["pl-a6c7b29cf9"],
         "sources": [{ "ref": "bunka-online", "locator": "「旧島津家本邸 本館」（411775）、「旧島津家本邸 事務所」（441386）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1447,6 +1458,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": ["pe-takuan-soho", "pe-kamo-mabuchi"],
+        "relatedPlaces": ["pl-ef0990e965", "pl-1a93e184b8", "pl-f0dec3262a"],
         "sources": [{ "ref": "bunka-online", "locator": "「沢庵墓」（138014）、「加茂真淵墓」（171745）" }, { "ref": "sgw-bunkazai", "locator": "区内にある都および国の指定文化財" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1464,6 +1476,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "estimate",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-85aaa422e3", "pl-aea9363b40"],
         "sources": [{ "ref": "bunka-online", "locator": "「旗岡八幡神社絵馬殿」（229368）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1498,6 +1511,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-0c81c36a89"],
         "sources": [{ "ref": "bunka-online", "locator": "「小池家住宅主屋」（146704）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1515,6 +1529,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-2c7165409b"],
         "sources": [{ "ref": "bunka-online", "locator": "「十四世喜多六平太記念能楽堂」（664869）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1532,6 +1547,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1917-shimazu-tei"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-a6c7b29cf9"],
         "sources": [{ "ref": "bunka-online", "locator": "「旧島津家本邸 本館」（411775）、「旧島津家本邸 事務所」（441386）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -2671,6 +2687,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": ["pe-morse"],
+        "relatedPlaces": ["pl-be2e1fa0fd"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -2696,6 +2713,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1877-omori-kaizuka"],
         "relatedPeople": ["pe-morse"],
+        "relatedPlaces": ["pl-be2e1fa0fd"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -2749,6 +2767,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-jomon-tachiaigawa-kaizuka"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-6840966074"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3060,6 +3079,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         ],
         "relatedEvents": ["ev-1638-tokaiji"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-f0dec3262a"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3085,6 +3105,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1702-gojunoto-fire"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-11e5d5f153"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3160,6 +3181,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1638-tokaiji"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-f0dec3262a"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3860,6 +3882,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-1b47f5332c"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3939,6 +3962,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1828-kitano-tenno-sai"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-548dab732d"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -4026,6 +4050,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "ev-kinsei-jisei-bohi"
         ],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-9250914617"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
