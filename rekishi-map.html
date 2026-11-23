@@ -394,7 +394,7 @@
         });
       }
 
-      function drawMarkers(visibleIds) {
+      function drawMarkers(visibleIds, fit = true) {
         if (!markerLayer) return;
         markerLayer.clearLayers();
         markerBySpot.clear();
@@ -415,7 +415,7 @@
           shown.forEach((place) => markerBySpot.set(place.id, marker));
           bounds.push([spot.lat, spot.lng]);
         });
-        if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 16 });
+        if (fit && bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 16 });
       }
 
       // 現在地から近い順に並べるときの、地点ごとの距離（メートル）
@@ -441,7 +441,8 @@
         }).join("");
       }
 
-      function render() {
+      // fit=false のときは地図の表示範囲を動かさない（並べ替えだけのとき）
+      function render(fit = true) {
         renderCategoryChips();
         let visible = PLACES.filter((place) => matches(place));
         distances.clear();
@@ -453,7 +454,7 @@
         const visibleIds = new Set(visible.map((x) => x.id));
         statusBox.textContent = `${visible.length}件の地点を表示しています（全${PLACES.length}件）${origin ? "。現在地から近い順です" : ""}。`;
         renderResults(visible);
-        if (hasLeaflet) drawMarkers(visibleIds);
+        if (hasLeaflet) drawMarkers(visibleIds, fit);
       }
 
       document.getElementById("results").addEventListener("click", (event) => {
@@ -526,7 +527,7 @@
         locateButton.textContent = "現在地から近い順に並べる";
         locateButton.setAttribute("aria-pressed", "false");
         locateStatus.textContent = "現在地は、押したときだけこの端末の中で使い、どこにも送りません。";
-        render();
+        render(false);
       }
       locateButton.addEventListener("click", () => {
         if (origin) { stopNearest(); return; }
@@ -541,7 +542,7 @@
           origin = { lat: position.coords.latitude, lng: position.coords.longitude };
           locateButton.textContent = "近い順をやめる";
           locateButton.setAttribute("aria-pressed", "true");
-          render();
+          render(false);
           const away = RekishiMapLinks.distanceMeters(WARD_CENTER, origin);
           if (map) {
             hereLayer = L.layerGroup([
