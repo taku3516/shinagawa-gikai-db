@@ -450,6 +450,35 @@ class AcceptGeocodeTest(unittest.TestCase):
         self.assertFalse(self.accept("荏原神社周辺", "東京都品川区荏原"))
         self.assertFalse(self.accept("利田神社周辺", "東京都品川区"))
 
+    def test_ebara_shrine_resolves_to_registered_address(self) -> None:
+        # 荏原神社の住所は町会の区域データ（北品川2丁目 30番28号）で確かめられる。
+        # 「荏原神社周辺」を住所に読み替えれば、代表点ではなく番地まで引ける。
+        from prepare_rekishi_places import ADDRESS_HINTS
+        self.assertEqual("北品川2-30-28", ADDRESS_HINTS.get("荏原神社周辺"))
+        self.assertEqual("北品川2-30-28", ADDRESS_HINTS.get("荏原神社"))
+        self.assertTrue(self.accept("北品川2-30-28", "東京都品川区北品川二丁目３０番２８号"))
+
+    def test_shrine_vicinity_keeps_shrine_as_facility(self) -> None:
+        # 「荏原神社周辺」は住所に読み替えるが、地点の名前は神社名にしたい。
+        # 施設名を落とすと、所有者名（ゆきわ会）が地点名になってしまう。
+        from prepare_rekishi_places import split_address
+        self.assertEqual(("北品川2-30-28", "荏原神社", ""), split_address("荏原神社周辺"))
+
+    def test_ebara_shrine_address_source_is_recorded(self) -> None:
+        # 住所の根拠は指定文化財ページではなく町会の区域ページ。公開データにも
+        # その出典と該当箇所（町会名・区域）が残っていること。
+        import re
+        root = Path(__file__).resolve().parent.parent
+        places = (root / "data" / "rekishi-places.js").read_text(encoding="utf-8")
+        start = places.index('"id": "pl-4c2e4bd0c7"')
+        end = places.index('"verifiedAt"', start)
+        block = places[start:end]
+        self.assertIn('"ref": "sgw-chokai-area"', block)
+        self.assertIn("櫻心会町会", block)
+        self.assertIn("北品川2丁目30番", block)
+        ledger = (root / "data" / "rekishi.js").read_text(encoding="utf-8")
+        self.assertIsNotNone(re.search(r'"id": "sgw-chokai-area"', ledger))
+
     def test_other_town_is_rejected(self) -> None:
         # 町名が違う答えは使わない。
         self.assertFalse(self.accept("北品川3-7-15", "東京都品川区荏原三丁目７番"))
