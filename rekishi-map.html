@@ -33,10 +33,16 @@
     .map-fallback { display:grid; place-items:center; min-height:590px; padding:24px; text-align:center; line-height:1.8; }
     .map-caption { border-top:1px solid var(--c-border); padding:10px 14px; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); line-height:1.65; }
     .sidebar { position:sticky; top:12px; overflow:hidden; }
-    .controls { display:grid; gap:12px; padding:16px; border-bottom:1px solid var(--c-border); }
+    /* minmax(0,1fr) にしないと、ボタンの並びが列の幅を押し広げてサイドバーからはみ出す */
+    .controls { display:grid; grid-template-columns:minmax(0, 1fr); gap:12px; padding:16px; border-bottom:1px solid var(--c-border); }
     .chips-label { display:block; margin-bottom:6px; color:var(--c-ink-mute); font-size:calc(12px * var(--fs)); font-weight:700; }
     .result-status { margin:0; padding:10px 16px; border-bottom:1px solid var(--c-border); color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); font-weight:700; }
     .results { max-height:560px; overflow-y:auto; }
+    .hint { margin:6px 0 0; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); line-height:1.7; }
+    .tools { display:flex; flex-wrap:wrap; gap:8px; }
+    .tools button { min-height:44px; padding:0 14px; border:1px solid var(--c-main); border-radius:3px; background:var(--c-card); color:var(--c-main-dark); font:inherit; font-size:calc(13px * var(--fs)); font-weight:700; }
+    .tools button:hover, .tools button:focus-visible, .tools button[aria-pressed="true"] { background:var(--c-main-pale); }
+    .result-distance { margin-left:6px; color:var(--c-main-dark); font-weight:700; }
 
     /* 一覧は地図の代わりにもなる。地図が読み込めない環境や、
        キーボードだけで使う人でも、同じ情報にたどり着けるようにするため。 */
@@ -67,6 +73,7 @@
     .pop-note { margin:0 0 6px; border-left:3px solid var(--c-warning-border); padding-left:8px; color:var(--c-ink); font-size:calc(12px * var(--fs)); }
     .pop-list { margin:6px 0 0; padding-left:18px; }
     .pop-list li { margin-bottom:4px; }
+    .leaflet-popup-content h3 { margin:10px 0 2px; font-size:calc(12px * var(--fs)); color:var(--c-ink-mute); }
     .pop-kind { color:var(--c-ink-soft); }
     .pop-source { margin:8px 0 0; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); }
     .legend { display:flex; flex-wrap:wrap; gap:10px; padding:12px 16px; border-top:1px solid var(--c-border); font-size:calc(12px * var(--fs)); }
@@ -113,10 +120,20 @@
               <label for="area">地域</label>
               <select id="area"><option value="">すべて</option></select>
             </div>
+            <div class="control-field">
+              <label for="era">関係するできごとの時代</label>
+              <select id="era"><option value="">すべて</option></select>
+              <p class="hint" id="era-hint">年表と結びついている地点だけが対象です。</p>
+            </div>
             <div>
               <span class="chips-label" id="category-label">種類</span>
               <div class="chips" id="category" role="group" aria-labelledby="category-label"></div>
             </div>
+            <div class="tools">
+              <button type="button" id="locate" aria-describedby="locate-status">現在地から近い順に並べる</button>
+              <button type="button" id="copy-link">この絞り込みのURLをコピー</button>
+            </div>
+            <p class="hint" id="locate-status" role="status">現在地は、押したときだけこの端末の中で使い、どこにも送りません。</p>
           </form>
           <p class="result-status" id="result-status" aria-live="polite">データを読み込んでいます。</p>
           <div class="results" id="results"></div>
@@ -131,6 +148,9 @@
   <script src="data/rekishi.js"></script>
   <script src="data/rekishi-places.js"></script>
   <script src="data/rekishi-events.js"></script>
+  <script src="data/rekishi-people.js"></script>
+  <script src="data/rekishi-names.js"></script>
+  <script src="kochizu-state.js"></script>
   <script src="rekishi-map-links.js"></script>
   <script src="site-nav.js"></script>
   <script src="site-a11y.js"></script>
@@ -154,6 +174,9 @@
 
       // ピンの中に出す1文字。色だけに頼らないための印。
       const PIN_LETTERS = { site: "史", temple: "社", nature: "木", building: "建", road: "道", water: "川", industry: "産", lost: "跡" };
+
+      // 他ページからの ?place= は、URLを書き換える前に控えておく
+      const requestedPlace = new URLSearchParams(location.search).get("place");
 
       const mapRoot = document.getElementById("rekishi-map");
       const statusBox = document.getElementById("result-status");
@@ -179,8 +202,13 @@
       const locationKind = new Map((META.locationKinds || []).map((x) => [x.id, x]));
       const sourceById = new Map((META.sources || []).map((x) => [x.id, x]));
 
-      const eventsAtPlace = RekishiMapLinks.eventsByPlace(DB.rekishiEvents?.items || [],
-        (META.eras || []).slice().sort((a, b) => a.order - b.order).map((era) => era.id));
+      const eraDefs = (META.eras || []).slice().sort((a, b) => a.order - b.order);
+      const eventsAtPlace = RekishiMapLinks.eventsByPlace(DB.rekishiEvents?.items || [], eraDefs.map((era) => era.id));
+      const peopleAtPlace = RekishiMapLinks.groupByPlace(DB.rekishiPeople?.items || []);
+      const namesAtPlace = RekishiMapLinks.groupByPlace(DB.rekishiNames?.items || []);
+      // 地点ごとの「関係するできごとの時代」。年表に結びついていない地点には時代を付けない。
+      const erasAtPlace = new Map(PLACES.map((place) => [place.id, RekishiMapLinks.placeEras(eventsAtPlace.get(place.id) || [])]));
+      const usedEras = eraDefs.filter((era) => PLACES.some((place) => erasAtPlace.get(place.id).includes(era.id)));
 
       // 同じ住所の地点は同じ座標になる。ピンを重ねて置くと、下のピンは
       // 押せなくなるので、座標ごとに1本にまとめ、吹き出しで全部を出す。
@@ -200,16 +228,35 @@
       const query = document.getElementById("query");
       const areaSelect = document.getElementById("area");
       const categoryBox = document.getElementById("category");
+      const eraSelect = document.getElementById("era");
+      const locateButton = document.getElementById("locate");
+      const locateStatus = document.getElementById("locate-status");
       let categoryFilter = "";
+      // 現在地から近い順に並べているときだけ入る（この端末の中だけで使う）
+      let origin = null;
 
       const usedAreas = new Set(PLACES.flatMap((x) => x.areas || []));
       const usedCategories = new Set(PLACES.flatMap((x) => x.categories || []));
       areaSelect.innerHTML += areas.filter((x) => usedAreas.has(x.id))
         .map((x) => `<option value="${esc(x.id)}">${esc(x.label)}</option>`).join("");
+      eraSelect.innerHTML += usedEras.map((era) => {
+        const count = PLACES.filter((place) => erasAtPlace.get(place.id).includes(era.id)).length;
+        return `<option value="${esc(era.id)}">${esc(era.label)}${era.note ? "（" + esc(era.note) + "）" : ""}　${count}件</option>`;
+      }).join("");
+
+      // 前回の絞り込みをURLから戻す。知らない値は「すべて」に戻る。
+      const initial = RekishiMapLinks.readFilters(location.search, {
+        areas: [...usedAreas], categories: [...usedCategories], eras: usedEras.map((era) => era.id)
+      });
+      query.value = initial.q;
+      areaSelect.value = initial.area;
+      eraSelect.value = initial.era;
+      categoryFilter = initial.category;
 
       function matches(place, ignore) {
         if (areaSelect.value && !(place.areas || []).includes(areaSelect.value)) return false;
         if (ignore !== "category" && categoryFilter && !(place.categories || []).includes(categoryFilter)) return false;
+        if (eraSelect.value && !erasAtPlace.get(place.id).includes(eraSelect.value)) return false;
         const key = normalize(query.value);
         if (key && !(haystack.get(place.id) || "").includes(key)) return false;
         return true;
@@ -273,16 +320,18 @@
         // 分類名だけでは「なぜ？」が分からない。
         const why = place.categoryNote
           ? `<p class="pop-why">${esc(place.categoryNote)}</p>` : "";
-        const related = eventsAtPlace.get(place.id) || [];
-        const history = related.map((event) =>
-          `<li>${esc(event.yearText)} <a href="rekishi-nenpyo.html#${encodeURIComponent(event.id)}">${esc(event.name)}</a></li>`).join("");
+        const history = RekishiMapLinks.relationHtml({
+          events: eventsAtPlace.get(place.id) || [],
+          people: peopleAtPlace.get(place.id) || [],
+          names: namesAtPlace.get(place.id) || []
+        }, esc);
         return `<div class="pop-place">
           <h2>${esc(place.name)}</h2>
           <p class="pop-meta">${esc(place.address)}／${esc(categoryText)}</p>
           ${why}
           ${note}
           ${heritage ? `<ul class="pop-list">${heritage}</ul>` : ""}
-          ${history ? `<h3>この場所に関係するできごと</h3><ul class="pop-list">${history}</ul>` : ""}
+          ${history}
           <p><a href="${esc(RekishiMapLinks.comparisonHref(place))}">この場所を古地図で見る</a></p>
           ${source ? `<p class="pop-source">出典：${source}</p>` : ""}
         </div>`;
@@ -295,21 +344,38 @@
       const markerBySpot = new Map();
 
       function buildMap() {
-        map = L.map(mapRoot, { scrollWheelZoom: false }).setView([35.6095, 139.7305], 13);
+        map = L.map(mapRoot, { scrollWheelZoom: false, maxZoom: 19 }).setView([35.6095, 139.7305], 13);
         const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
           maxZoom: 19,
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
         });
         // 地理院の淡色地図。史跡の位置を読むときは、こちらのほうが地名が読みやすい。
         const pale = L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png", {
-          maxZoom: 18,
+          maxZoom: 19, maxNativeZoom: 18,
           attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>'
         });
+        const bases = { "OpenStreetMap": osm, "地理院 淡色地図": pale };
+        const overlays = {};
+        // 古い地形図と空中写真も背景に選べる。資料の定義は古地図ページと共通（kochizu-state.js）。
+        // 年代の細かい写真と左右比較は、古地図ページで使う。
+        const tile = (source, extra) => L.tileLayer(source.url, Object.assign({
+          maxZoom: 19, maxNativeZoom: source.maxNativeZoom, minNativeZoom: source.minNativeZoom || 0,
+          attribution: source.credit
+        }, extra));
+        if (window.KochizuState) {
+          const keep = new Set(["ort_riku10", "ort_USA10", "seamlessphoto"]);
+          KochizuState.historical.concat(KochizuState.photos.filter((x) => keep.has(x.id)))
+            .forEach((source) => { bases[source.label] = tile(source); });
+          // 地形は透明な重ね合わせ。背景を切り替えても下に隠れないよう、前面に置く。
+          KochizuState.terrains.forEach((source) => {
+            overlays[source.label] = tile(source, { opacity: source.opacity, zIndex: 10 });
+          });
+        }
         osm.addTo(map);
-        L.control.layers({ "OpenStreetMap": osm, "地理院 淡色地図": pale }, null, { position: "topright" }).addTo(map);
+        L.control.layers(bases, overlays, { position: "topright", collapsed: true }).addTo(map);
         markerLayer = L.layerGroup().addTo(map);
         document.getElementById("map-caption").innerHTML =
-          '背景地図は OpenStreetMap と<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>（国土地理院）を切り替えられます。地点は品川区「指定文化財」と文化庁「文化遺産オンライン」によるもので、位置はおおむね住所の代表点です。';
+          '背景地図は、現在の地図（OpenStreetMap、<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>）と、古い地形図・空中写真（<a href="https://ktgis.net/kjmapw/tilemapservice.html" target="_blank" rel="noopener">今昔マップ on the web</a>、地理院タイル）を、右上のボタンで切り替えられます。古地図の上に地点を重ねて見られます。年代の細かい写真や左右の見比べは<a href="rekishi-kochizu.html">古地図・今昔比較</a>へ。地点は品川区「指定文化財」と文化庁「文化遺産オンライン」によるもので、位置はおおむね住所の代表点です。';
       }
 
       function iconFor(spot) {
@@ -328,7 +394,7 @@
         });
       }
 
-      function drawMarkers(visibleIds) {
+      function drawMarkers(visibleIds, fit = true) {
         if (!markerLayer) return;
         markerLayer.clearLayers();
         markerBySpot.clear();
@@ -342,14 +408,18 @@
             alt: shown.map((x) => x.name).join("、"),
             keyboard: true
           });
-          marker.bindPopup(shown.map(placeHtml).join(""), { maxWidth: 320 });
+          // 指定文化財の多い寺社は吹き出しが縦に長くなるので、地図の高さに収めてスクロールさせる
+          marker.bindPopup(shown.map(placeHtml).join(""), { maxWidth: 320, maxHeight: 340 });
           marker.addTo(markerLayer);
           markerBySpot.set(key, marker);
           shown.forEach((place) => markerBySpot.set(place.id, marker));
           bounds.push([spot.lat, spot.lng]);
         });
-        if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 16 });
+        if (fit && bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 16 });
       }
+
+      // 現在地から近い順に並べるときの、地点ごとの距離（メートル）
+      const distances = new Map();
 
       function renderResults(visible) {
         const box = document.getElementById("results");
@@ -360,20 +430,31 @@
         box.innerHTML = visible.map((place) => {
           const count = (place.heritage || []).length;
           const categoryText = (place.categories || []).map((id) => categoryLabel.get(id) || id).join("・");
+          const links = [["できごと", eventsAtPlace], ["人物", peopleAtPlace], ["地名", namesAtPlace]]
+            .map(([label, index]) => ((index.get(place.id) || []).length ? `${label}${index.get(place.id).length}` : ""))
+            .filter(Boolean).join("・");
+          const away = distances.get(place.id);
           return `<button type="button" class="result" data-place="${esc(place.id)}">
-            <span class="result-name">${esc(place.name)}</span>
-            <span class="result-meta">${esc(place.address)}／${esc(areaLabel.get((place.areas || [])[0]) || "")}／${esc(categoryText)}${count ? `／指定文化財${count}件` : ""}</span>
+            <span class="result-name">${esc(place.name)}${away == null ? "" : `<span class="result-distance">／${esc(RekishiMapLinks.formatDistance(away))}</span>`}</span>
+            <span class="result-meta">${esc(place.address)}／${esc(areaLabel.get((place.areas || [])[0]) || "")}／${esc(categoryText)}${count ? `／指定文化財${count}件` : ""}${links ? `／年表などとの結びつき：${esc(links)}` : ""}</span>
           </button>`;
         }).join("");
       }
 
-      function render() {
+      // fit=false のときは地図の表示範囲を動かさない（並べ替えだけのとき）
+      function render(fit = true) {
         renderCategoryChips();
-        const visible = PLACES.filter((place) => matches(place));
+        let visible = PLACES.filter((place) => matches(place));
+        distances.clear();
+        if (origin) {
+          const ranked = RekishiMapLinks.sortByDistance(visible, origin);
+          ranked.forEach((entry) => distances.set(entry.place.id, entry.meters));
+          visible = ranked.map((entry) => entry.place);
+        }
         const visibleIds = new Set(visible.map((x) => x.id));
-        statusBox.textContent = `${visible.length}件の地点を表示しています（全${PLACES.length}件）。`;
+        statusBox.textContent = `${visible.length}件の地点を表示しています（全${PLACES.length}件）${origin ? "。現在地から近い順です" : ""}。`;
         renderResults(visible);
-        if (hasLeaflet) drawMarkers(visibleIds);
+        if (hasLeaflet) drawMarkers(visibleIds, fit);
       }
 
       document.getElementById("results").addEventListener("click", (event) => {
@@ -387,24 +468,105 @@
         marker.openPopup();
       });
 
+      // 絞り込みの現在の条件。URLに書き出して、そのまま共有できるようにする。
+      const SITE_PAGE = "https://taku3516.github.io/shinagawa-gikai-db/rekishi-map.html";
+      const currentFilters = () => ({
+        q: query.value.trim(), area: areaSelect.value, category: categoryFilter, era: eraSelect.value
+      });
+      function shareHref() {
+        const base = location.protocol === "file:" ? SITE_PAGE : location.origin + location.pathname;
+        return base + RekishiMapLinks.filterSearch(currentFilters());
+      }
+      function syncUrl() {
+        try {
+          history.replaceState(null, "", location.pathname + RekishiMapLinks.filterSearch(currentFilters()));
+        } catch (error) {
+          // file:// などで書き換えを拒まれても、絞り込み自体は使える。共有はボタンから。
+        }
+      }
+      function update() {
+        render();
+        syncUrl();
+      }
+
       let timer;
       query.addEventListener("input", () => {
         clearTimeout(timer);
-        timer = setTimeout(render, 150);
+        timer = setTimeout(update, 150);
       });
-      areaSelect.addEventListener("change", render);
+      areaSelect.addEventListener("change", update);
+      eraSelect.addEventListener("change", update);
       categoryBox.addEventListener("click", (event) => {
         const button = event.target.closest("button[data-category]");
         if (!button) return;
         categoryFilter = button.getAttribute("data-category") || "";
-        render();
+        update();
+      });
+
+      document.getElementById("copy-link").addEventListener("click", async () => {
+        const button = document.getElementById("copy-link");
+        try {
+          await navigator.clipboard.writeText(shareHref());
+          button.textContent = "コピーしました";
+        } catch (error) {
+          button.textContent = "コピーできませんでした";
+          locateStatus.textContent = `このURLをコピーしてください：${shareHref()}`;
+        }
+        setTimeout(() => { button.textContent = "この絞り込みのURLをコピー"; }, 2500);
+      });
+
+      // 現在地から近い順。位置はこの端末の中だけで使い、どこにも送らない。
+      // 品川区役所のあたりから遠い場所では、地図を動かさない（距離の並べ替えだけ行う）。
+      const WARD_CENTER = { lat: 35.6095, lng: 139.7305 };
+      const NEAR_METERS = 10000;
+      let hereLayer = null;
+      function stopNearest() {
+        origin = null;
+        if (hereLayer && map) map.removeLayer(hereLayer);
+        hereLayer = null;
+        locateButton.textContent = "現在地から近い順に並べる";
+        locateButton.setAttribute("aria-pressed", "false");
+        locateStatus.textContent = "現在地は、押したときだけこの端末の中で使い、どこにも送りません。";
+        render(false);
+      }
+      locateButton.addEventListener("click", () => {
+        if (origin) { stopNearest(); return; }
+        if (!navigator.geolocation) {
+          locateStatus.textContent = "このブラウザでは現在地を取得できません。";
+          return;
+        }
+        locateStatus.textContent = "現在地を確認しています…";
+        locateButton.disabled = true;
+        navigator.geolocation.getCurrentPosition((position) => {
+          locateButton.disabled = false;
+          origin = { lat: position.coords.latitude, lng: position.coords.longitude };
+          locateButton.textContent = "近い順をやめる";
+          locateButton.setAttribute("aria-pressed", "true");
+          render(false);
+          const away = RekishiMapLinks.distanceMeters(WARD_CENTER, origin);
+          if (map) {
+            hereLayer = L.layerGroup([
+              L.circleMarker([origin.lat, origin.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#0017c1", fillOpacity: 1 })
+                .bindTooltip("現在地")
+            ]).addTo(map);
+            if (away <= NEAR_METERS) map.setView([origin.lat, origin.lng], 15);
+          }
+          locateStatus.textContent = away <= NEAR_METERS
+            ? `現在地から近い順に並べました（誤差 ${RekishiMapLinks.formatDistance(position.coords.accuracy || 0)}）。`
+            : `現在地は品川区から${RekishiMapLinks.formatDistance(away)}離れています。距離の順には並べましたが、地図は動かしていません。`;
+        }, (error) => {
+          locateButton.disabled = false;
+          locateStatus.textContent = error.code === 1
+            ? "現在地の使用が許可されていません。ブラウザの設定で許可すると使えます。"
+            : "現在地を取得できませんでした。電波の良い場所で、もう一度お試しください。";
+        }, { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 });
       });
       document.getElementById("controls").addEventListener("submit", (event) => event.preventDefault());
 
       // 他のページ（人物事典など）から ?place=<地点ID> で名指しで開かれたときは、
       // その地点を選んだ状態にして開く。地点どうしを行き来できるようにするため。
       function openRequestedPlace() {
-        const wanted = new URLSearchParams(location.search).get("place");
+        const wanted = requestedPlace;
         if (!wanted) return;
         const button = document.querySelector(`.result[data-place="${CSS.escape(wanted)}"]`);
         if (!button) {
