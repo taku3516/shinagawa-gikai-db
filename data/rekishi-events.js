@@ -63,6 +63,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1978-first-designation"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-4c9cb3c9e5"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 建造物第1号・第2号" }],
       "verifiedAt": "2026-11-19"
     },
@@ -166,6 +167,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1876-glass-nationalized", "ev-1885-glass-sold", "ev-1892-glass-dissolved"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -183,6 +185,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1873-kogyosha", "ev-1885-glass-sold"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -200,6 +203,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1876-glass-nationalized", "ev-1892-glass-dissolved"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -217,6 +221,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": [],
       "relatedPeople": ["pe-matsudaira-yoshinaga"],
+      "relatedPlaces": ["pl-16a69cbab7", "pl-0eb88578f1"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第9号「松平慶永（春嶽）墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -234,6 +239,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1885-glass-sold", "ev-1968-meijimura"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -268,6 +274,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": [],
       "relatedPeople": ["pe-itagaki-taisuke"],
+      "relatedPlaces": ["pl-8d095e31ad", "pl-548dab732d"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第4号「板垣退助墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -322,6 +329,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1684-jokyo-calendar"],
       "relatedPeople": ["pe-shibukawa-shunkai"],
+      "relatedPlaces": ["pl-a4e970452b"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第6号「渋川春海墓（追贈記念塔を含む）」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -391,6 +399,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1858-yodo-confinement", "ev-1954-yodo-grave-moved"],
       "relatedPeople": ["pe-yamauchi-toyoshige"],
+      "relatedPlaces": ["pl-85ffa8153f"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第11号「山内豊信（容堂）墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -408,6 +417,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1872-yodo-death"],
       "relatedPeople": ["pe-yamauchi-toyoshige"],
+      "relatedPlaces": ["pl-85ffa8153f"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第11号「山内豊信（容堂）墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -449,6 +459,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "locator": "品川地区の指定文化財 史跡第10号「由利公正墓」の銘文"
         }
       ],
+      "relatedPlaces": ["pl-729d15df9e", "pl-0eb88578f1"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第10号「由利公正墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -466,6 +477,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": [],
       "relatedPeople": ["pe-momochuken-kumoemon"],
+      "relatedPlaces": ["pl-1e1564b7a2", "pl-11e5d5f153"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第24号「桃中軒雲右衛門の墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -1379,6 +1391,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-ffc3a17a80", "pl-f11e74239c", "pl-c75991a87f"],
         "sources": [{ "ref": "bunka-online", "locator": "「宝篋印塔 （１）」（199549）、「宝篋印塔 （２）」（193280）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1396,6 +1409,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-2019-shimazu-juubun"],
         "relatedPeople": ["pe-josiah-conder"],
+        "relatedPlaces": ["pl-a6c7b29cf9"],
         "sources": [{ "ref": "bunka-online", "locator": "「旧島津家本邸 本館」（411775）、「旧島津家本邸 事務所」（441386）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1447,6 +1461,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": ["pe-takuan-soho", "pe-kamo-mabuchi"],
+        "relatedPlaces": ["pl-ef0990e965", "pl-1a93e184b8"],
         "sources": [{ "ref": "bunka-online", "locator": "「沢庵墓」（138014）、「加茂真淵墓」（171745）" }, { "ref": "sgw-bunkazai", "locator": "区内にある都および国の指定文化財" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1464,6 +1479,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "estimate",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-85aaa422e3", "pl-aea9363b40"],
         "sources": [{ "ref": "bunka-online", "locator": "「旗岡八幡神社絵馬殿」（229368）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1498,6 +1514,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-0c81c36a89"],
         "sources": [{ "ref": "bunka-online", "locator": "「小池家住宅主屋」（146704）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1515,6 +1532,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-2c7165409b"],
         "sources": [{ "ref": "bunka-online", "locator": "「十四世喜多六平太記念能楽堂」（664869）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1532,6 +1550,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1917-shimazu-tei"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-a6c7b29cf9"],
         "sources": [{ "ref": "bunka-online", "locator": "「旧島津家本邸 本館」（411775）、「旧島津家本邸 事務所」（441386）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -2671,6 +2690,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": ["pe-morse"],
+        "relatedPlaces": ["pl-be2e1fa0fd"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -2696,6 +2716,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1877-omori-kaizuka"],
         "relatedPeople": ["pe-morse"],
+        "relatedPlaces": ["pl-be2e1fa0fd"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -2749,6 +2770,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-jomon-tachiaigawa-kaizuka"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-6840966074"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3060,6 +3082,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         ],
         "relatedEvents": ["ev-1638-tokaiji"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-f0dec3262a"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3085,6 +3108,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1702-gojunoto-fire"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-11e5d5f153"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3160,6 +3184,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1638-tokaiji"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-f0dec3262a"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3860,6 +3885,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-1b47f5332c"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -3939,6 +3965,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1828-kitano-tenno-sai"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-548dab732d"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -4026,6 +4053,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "ev-kinsei-jisei-bohi"
         ],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-9250914617"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -4350,6 +4378,914 @@ window.SHINAGAWA_DB.rekishiEvents = {
           }
         ],
         "verifiedAt": "2026-11-22"
+      },
+      {
+        "id": "ev-1742-takashio-kanpo",
+        "name": "高潮の水害が品川宿を襲う（寛保2年）",
+        "summary": "寛保2年、高潮による水害が品川宿で起きたと記録に残る。被害の詳しい中身は伝わっていない。",
+        "description": "区史は、江戸時代の品川で高潮の水害が記録されている年として寛保2年を挙げる。市街地といえるのは品川宿の周辺だけだったため、被害が目立つのもこの一帯で、ほかの場所では農作物の被害が中心だったと説明する。記録は年が分かる程度で、詳細は不明としている。",
+        "year": 1742,
+        "yearEnd": null,
+        "yearText": "寛保2年（1742年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「江戸時代の水害」81〜82頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1823-takashio-bunsei",
+        "name": "高潮の水害が品川宿を襲う（文政6年）",
+        "summary": "文政6年にも、高潮による水害が品川宿で起きたと記録されている。詳細は伝わっていない。",
+        "description": "区史が品川宿の高潮として挙げる3つの年の2つめにあたる。ほかの2つ（寛保2年・安政3年）と同じく、年が記録に残るだけで被害の詳細は不明とされる。区史はさらに、江戸に大きな被害を出した延宝8年や寛政3年の高潮でも、品川に被害があったと考えてまちがいないだろうと、筆者の推定を述べている。",
+        "year": 1823,
+        "yearEnd": null,
+        "yearText": "文政6年（1823年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「江戸時代の水害」81〜82頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1856-takashio-ansei",
+        "name": "高潮の水害が品川宿を襲う（安政3年）",
+        "summary": "安政3年、高潮による水害が品川宿で起きたと記録されている。詳細は伝わっていない。",
+        "description": "区史が品川宿の高潮の記録として挙げる3つの年の最後。寛保2年・文政6年と同じく、被害の中身は分からないとされる。区史は、江戸時代の品川で水害が大きくなるのは市街地のある品川宿の周辺に限られ、目黒川と立会川の氾濫や内水氾濫はほとんど記録が無いものの、毎年のように起きていただろうと見ている。",
+        "year": 1856,
+        "yearEnd": null,
+        "yearText": "安政3年（1856年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「江戸時代の水害」81〜82頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1885-meguro-flood",
+        "name": "連日の雨と台風で目黒川が増水し、下目黒村まで冠水する",
+        "summary": "明治18年7月1日、梅雨の長雨に台風の豪雨が重なって目黒川が増水し、河口の品川宿から下目黒村まで谷底の低地が水につかった。",
+        "description": "区史が『品川町史』の記録から抄録した明治・大正期の水害の最初。目黒川河口の北品川宿・南品川宿から、谷底低地に沿って居木橋、上大崎・下大崎村、谷山村、桐ヶ谷村が冠水し、冠水は下目黒村にまで達した。目黒川の谷底低地が一続きの水害地になることが分かる事例である。",
+        "year": 1885,
+        "yearEnd": null,
+        "yearText": "明治18年（1885年）7月1日",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "osaki"
+        ],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「明治・大正期の水害」82〜84頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1898-meguro-flood",
+        "name": "熱帯性低気圧の雨で目黒川が出水し、北品川で40戸が浸水する",
+        "summary": "明治31年6月4日夜から5日にかけて、熱帯性低気圧の雨で目黒川が出水した。北品川では浸水家屋が40戸、浸水の深さは六尺と記録されている。",
+        "description": "区史は『品川町史』をもとに、この出水を明治期の目黒川の水害の一つとして抄録する。六尺はおよそ1.8メートルにあたる。河口に近い北品川が最も被害を受けた地域として挙げられている。",
+        "year": 1898,
+        "yearEnd": null,
+        "yearText": "明治31年（1898年）6月4〜5日",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「明治・大正期の水害」82〜84頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1908-meguro-flood",
+        "name": "豪雨で目黒川が氾濫し、東海寺付近から荏原神社付近まで52戸が浸水する",
+        "summary": "明治41年9月30日の豪雨で目黒川が氾濫した。北品川の東海寺付近から南品川の荏原神社付近にかけて52戸、大崎町の居木橋付近で37戸が浸水した。",
+        "description": "区史が『品川町史』から抄録する明治の水害の一つ。被害が出た区間は目黒川の下流部で、現在の東海道本線から下流、荏原神社付近までの地域でしばしば氾濫が起きたという区史のまとめと重なる。区史は、被害が家屋の浸水で数えられているため、実際の氾濫はこれより広かった可能性があるとも注意している。",
+        "year": 1908,
+        "yearEnd": null,
+        "yearText": "明治41年（1908年）9月30日",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "osaki"
+        ],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-f0dec3262a"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「明治・大正期の水害」82〜84頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1910-meguro-flood",
+        "name": "連続した雨で目黒川が氾濫し、448戸が被害を受ける",
+        "summary": "明治43年8月、8日から降り続いた雨で目黒川が氾濫し、被害家屋は448戸に上った。南北の天王付近や東海寺付近などで床上2尺余の浸水となった。",
+        "description": "区史によれば、明治43年8月10日にかけて雨が連続したため被害が大きくなった。目黒川の氾濫による出水は、南北天王付近、東海寺付近、長者町・南馬場・北馬場で床上2尺余に達した。河口近くの砂洲の上にあって普段は目黒川の氾濫の被害が少ない猟師町にも被害が出た。",
+        "year": 1910,
+        "yearEnd": null,
+        "yearText": "明治43年（1910年）8月10日",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-f0dec3262a"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「明治・大正期の水害」82〜84頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1911-takashio-ryoshimachi",
+        "name": "台風の高潮で、猟師町から南品川の沿岸の482戸が浸水する",
+        "summary": "明治44年7月26日、台風による高潮が起き、猟師町から南品川の沿岸部にかけて浸水家屋は482戸に上った。",
+        "description": "区史が『品川町史』から抄録する明治期の高潮の被害。高潮は目黒川河口の砂洲に位置する猟師町から南品川の海沿いを襲った。同じ年の8月10日にも台風の豪雨で目黒川が氾濫している。",
+        "year": 1911,
+        "yearEnd": null,
+        "yearText": "明治44年（1911年）7月26日",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「明治・大正期の水害」82〜84頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1911-tennozan-cliff",
+        "name": "豪雨で品川神社天王山の南斜面が崩れ、下の家2軒が半壊する",
+        "summary": "明治44年8月10日の雨で、品川神社のある天王山の南側斜面が崩れ、斜面の下の家2軒が半壊した。",
+        "description": "区史が品川区の崖崩れの例として最初に挙げる災害。区史は、区内の崖崩れが目黒川左岸や立会川右岸で荏原台と低地の境をなす谷壁や、海食崖の地域に多いとまとめる。明治27年と明治43年にも崖崩れの記録があるが、詳細は不明とされている。",
+        "year": 1911,
+        "yearEnd": null,
+        "yearText": "明治44年（1911年）8月10日",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-548dab732d"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「品川区の崖崩れ」91〜93頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1917-takashio-taisho6",
+        "name": "大型台風の高潮が猟師町などを襲い、区内でも死者が出る",
+        "summary": "大正6年9月30日、大型台風による高潮が品川から千葉にかけての沿岸を襲った。品川区では猟師町から真浦・大井浜川・鈴ヶ森の沿岸の被害が大きかった。",
+        "description": "区史によれば、高潮は午前2時と3時の2回起き、3時の高潮では猟師町で十数戸が流され4人が溺死した。潮位は品川信号所で3.2メートルに達した。品川町役場の報告では、町内の被害は死者4人、負傷者39人、流失23戸、全壊51戸、半壊66戸、床上浸水722戸にのぼる。この水害の被害総数は沿岸全体で死者504人、行方不明58人などとされる。",
+        "year": 1917,
+        "yearEnd": null,
+        "yearText": "大正6年（1917年）9月30日",
+        "era": "taisho",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「明治・大正期の水害」82〜84頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1925-tachiai-flood",
+        "name": "立会川が3度氾濫し、大井町・平塚村が河川の編入を求める",
+        "summary": "大正14年の8月5日、8月26日、10月1日に立会川が氾濫した。11月、大井町会議長と平塚村会議長は、立会川を東京府の費用で管理する河川に加えるよう府知事に意見書を出した。",
+        "description": "区史は、この意見書の記述から立会川の氾濫が小規模なものも含め頻発していたと読み取る。目黒川で氾濫が起きたときは立会川も同様だったと考えるべきだとも述べる。区史が引く資料は『大井町史』。",
+        "year": 1925,
+        "yearEnd": null,
+        "yearText": "大正14年（1925年）8月〜11月",
+        "era": "taisho",
+        "areas": [
+          "oi",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「明治・大正期の水害」82〜84頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1929-sewage-flood",
+        "name": "台風の豪雨で下水用水があふれ、品川町で910戸が浸水する",
+        "summary": "昭和4年5月23日、台風の豪雨で品川町では下水用水があふれ、床下浸水770戸、床上浸水140戸の被害が出た。浸水の深さは路上で2〜4尺だった。",
+        "description": "大正期までの水害は東海道本線より下流側の目黒川沿岸で目黒川の氾濫によるものが多かったが、この水害は線より上流側の3か所に分かれて起き、原因も目黒川ではなく下水用水の氾濫だった。区史は、目黒川の改修と新しい放水路の完成で下流の氾濫が無くなる一方、下水道など排水の不備による内水氾濫が現れたことの表れと見る。",
+        "year": 1929,
+        "yearEnd": null,
+        "yearText": "昭和4年（1929年）5月23日",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "osaki"
+        ],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "『品川町史』は発生日を6月23日と記している。区史は、台風による豪雨が起きたのは5月23日だとして、こちらを採っている。",
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「昭和期前半の水害」84〜85頁"
+          }
+        ],
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「昭和期前半の水害」84〜85頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1931-tachiai-flood",
+        "name": "立会川の氾濫で1,789戸が浸水し、改修工事の促進が請願される",
+        "summary": "昭和6年5月16日の降雨で立会川が氾濫し、床上・床下合わせて1,789戸が浸水した。翌6月、大井町長は東京府知事に立会川の改修工事の促進を請願した。",
+        "description": "区史が引く請願書は、被害が広がった理由の一つに、改修工事が区間ごとに分けて行われているため、未改修の区間での被害が増したことを挙げ、改修は下流から順に上流へ進めてほしいと求めている。区史は、河川の改修で一部の地域の水害は減ったが、被害の程度が大きくなった地域が現れたり、水害の起きる場所が移ったりしたと整理する。",
+        "year": 1931,
+        "yearEnd": null,
+        "yearText": "昭和6年（1931年）5月16日",
+        "era": "showa-pre",
+        "areas": [
+          "oi",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「昭和期前半の水害」84〜85頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1947-kathleen-typhoon",
+        "name": "カスリーン台風で立会川が氾濫し、荏原・小山などが浸水する",
+        "summary": "昭和22年9月13〜15日のカスリーン台風で、区内では立会川が氾濫し、小山・荏原・旗の台の各丁が浸水した。目黒川の本流は氾濫しなかった。",
+        "description": "東京全体では利根川が決壊して荒川放水路より東の下町に大きな被害が出た水害だが、区史は品川区について、小山5・6丁目、荏原5・6・7丁目、旗の台1・2丁目の浸水を挙げる。このほか、西品川1丁目から平塚方面へ延びる目黒川の支谷や西大井4・5丁目の小さな谷、南大井でも内水氾濫による浸水があった。町丁目の名は区史が現行のものとして書いている。",
+        "year": 1947,
+        "yearEnd": null,
+        "yearText": "昭和22年（1947年）9月13〜15日",
+        "era": "showa-post",
+        "areas": [
+          "ebara",
+          "oi"
+        ],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「戦後の水害」85〜89頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1958-kanogawa-flood",
+        "name": "狩野川台風で、戦後最大の浸水被害が区内に出る",
+        "summary": "昭和33年9月26日の狩野川台風で、目黒川・立会川の氾濫と内水氾濫により、区内の浸水面積は約30万平方メートル、床上浸水1,295戸、床下浸水940戸に及んだ。",
+        "description": "区史は、この水害が大河川の氾濫ではなく小河川の氾濫と内水氾濫によるものだった点を特徴に挙げる。浸水は東京の下町や多摩川下流のほぼ全域から、山の手台地の谷底低地まで広がった。区内の表では、西五反田・上大崎・東大井・西大井・戸越・平塚・中延・荏原・小山など広い範囲が被害地区に並び、これ以後の水害と比べても飛び抜けて大きいとされる。",
+        "year": 1958,
+        "yearEnd": null,
+        "yearText": "昭和33年（1958年）9月26日",
+        "era": "showa-post",
+        "areas": [
+          "shinagawa",
+          "osaki",
+          "oi",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "同じ区史の「品川区の崖崩れ」の節は、この台風の日付を昭和32年9月26日と書いている。狩野川台風は昭和33年の災害で、戦後の水害の節と一覧表は33年としているため、そちらを採った。",
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「品川区の崖崩れ」91〜93頁"
+          },
+          {
+            "claim": "戦後の水害の節の本文は、家屋の被害を「床上浸水1,295戸、床上浸水940戸」と書く。一覧表は床上1,295戸・床下940戸なので、後者は床下の誤りとして表に合わせた。",
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「戦後の水害」85〜89頁"
+          }
+        ],
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「戦後の水害」85〜89頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1958-kanogawa-cliff",
+        "name": "狩野川台風の豪雨で、区内24か所の崖や擁壁が被害を受ける",
+        "summary": "昭和33年9月26日の狩野川台風の大雨で、区内では崖や擁壁など24か所に被害が出た。被害は目黒川の左岸に集中している。",
+        "description": "区史によれば、この日は日雨量が392.5ミリと気象庁の観測史上の記録で、最大の時間雨量は17〜18時の76ミリだった。区内の被害は、切土の崖で擁壁の無いもの7か所、擁壁のあるもの7か所、一部を盛土した崖10か所の計24か所。区史は、崖崩れが荏原台などの古い台地面を刻む谷の壁に集中する都内の傾向と一致すると述べ、立会川の流域に被害が無かったのは谷壁の高さや傾き、人の手の加わり方の違いが原因として考えられるとする。",
+        "year": 1958,
+        "yearEnd": null,
+        "yearText": "昭和33年（1958年）9月26日",
+        "era": "showa-post",
+        "areas": [
+          "shinagawa",
+          "osaki"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "この節は日付を昭和32年9月26日と書いている。狩野川台風は昭和33年なので33年とした。",
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「品川区の崖崩れ」91〜93頁"
+          }
+        ],
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「品川区の崖崩れ」91〜93頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1966-typhoon4-cliff",
+        "name": "台風4号で、区内7か所で崖崩れが起きる",
+        "summary": "昭和41年6月28日の台風4号で、区内の7か所で崖崩れが起きた。被害が出たのは狩野川台風のときと同じような地域だった。",
+        "description": "区史は、この台風による崖崩れを狩野川台風以降の例として挙げる。同じ日の浸水被害は、区の調査の一覧表では西大井・南大井・南品川・北品川・西五反田などで、床上4戸・床下105戸とされている。",
+        "year": 1966,
+        "yearEnd": null,
+        "yearText": "昭和41年（1966年）6月28日",
+        "era": "showa-post",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「品川区の崖崩れ」91〜93頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1969-cliff-survey",
+        "name": "東京都が崖と擁壁を調べ、区内で60か所が危険度大とされる",
+        "summary": "昭和44年度、東京都首都整備局が都区内の崖・擁壁を調べ、品川区では1,657か所のうち60か所の危険度が大きいと指摘した。",
+        "description": "危険度の大きい崖は、目黒川左岸の北品川と東五反田、目黒川右岸の西品川、そして西大井に集まっている。区史は、この調査を区内の崖崩れの記述の締めくくりに載せている。",
+        "year": 1969,
+        "yearEnd": null,
+        "yearText": "昭和44年度（1969年度）",
+        "era": "showa-post",
+        "areas": [
+          "shinagawa",
+          "osaki",
+          "oi"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「品川区の崖崩れ」91〜93頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1970-thunderstorm-tachiai",
+        "name": "雷雨で立会川があふれ、床下浸水が529戸に及ぶ",
+        "summary": "昭和45年9月3日の雷雨で、立会川が東大井3丁目付近であふれ、東大井で270戸、西大井4・5丁目で237戸などの床下浸水が出た。",
+        "description": "羽田航空気象台の観測では雨量は35.5ミリだったが、2時間足らずに集中して降ったため、流れ下るのが速い区内の川と下水があふれた。区史はこれを、弱い雨が長く降るなら水害は起きにくく、短時間に強く降ると浸水するという性質の典型例として挙げる。昭和33年以降の水害一覧では、立会川が溢れたのは狩野川台風を除くとこの回だけで、ほかはすべて内水氾濫だった。",
+        "year": 1970,
+        "yearEnd": null,
+        "yearText": "昭和45年（1970年）9月3日",
+        "era": "showa-post",
+        "areas": ["oi"],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "本文は被害を「計259戸」と書くが、内訳（270戸＋237戸＋22戸）を足すと529戸で、一覧表の床下浸水529戸と合う。本文の合計は誤りとみて、529戸とした。",
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「戦後の水害」85〜89頁"
+          }
+        ],
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "一 自然編（三）人為による自然の変化と災害「戦後の水害」85〜89頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1620-myokokuji-onari",
+        "name": "将軍が妙国寺に44度も御成りになる",
+        "summary": "元和6年から寛永12年までの約16年に、将軍が南品川の妙国寺を44度訪れたと、同寺の記録に残る。",
+        "description": "区史は妙国寺の記録から、将軍の御成りの日付を44回分挙げる。最後は寛永12年10月2日で、以後の御成りは無い。この年は武家諸法度で大名の参勤交代が制度になった年にあたり、それまで将軍が西国大名の参勤を品川のはずれまで送迎し、そのついでに寺へ立ち寄っていたが、制度化とともにやめたことを記録が示すのだろうと、区史は解釈している（これは区史の見方で、記録自体が理由を述べているわけではない）。",
+        "year": 1620,
+        "yearEnd": 1635,
+        "yearText": "元和6年（1620年）3月13日〜寛永12年（1635年）10月2日",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "temple",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-11e5d5f153"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「御殿山」401〜407頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1640-gotenyama-chakai",
+        "name": "将軍家光が御殿山で大茶会を開き、沢庵も招かれる",
+        "summary": "寛永17年9月16日、三代将軍徳川家光が毛利秀元に命じて御殿山で大規模な茶会を開いた。東海寺の沢庵も召された。",
+        "description": "区史は『徳川実紀』をもとに、この茶会に家光をはじめ御三家・老中らが連なり、茶室などを新築して、金銀をあしらった膳具だけでも500人分を用意したと紹介する。東海寺にいた沢庵は酒を賜り、将軍に望まれて一首を詠んだ。区史は、参勤交代が確立して将軍が大名の送迎をしなくなった後も、御殿山の御殿は将軍家の行事に使われたらしいと述べる。",
+        "year": 1640,
+        "yearEnd": null,
+        "yearText": "寛永17年（1640年）9月16日",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "culture",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": ["pe-takuan-soho"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「御殿山」401〜407頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1651-suzugamori-keijo",
+        "name": "鈴ヶ森の刑場が設けられる",
+        "summary": "慶安4年、大井村浜川町の南、東海道の西側の田畑5反歩が召し上げられ、江戸の南の刑場として鈴ヶ森刑場がつくられた。",
+        "description": "区史によれば、北の浅草小塚原に対する江戸の南の刑場が鈴ヶ森で、幕府の公文書では小塚原・鈴ヶ森とは呼ばず、単に「浅草」「品川」と書くことが多い。寛文11年（1671年）6月には一部を百姓地へ戻し、元禄10年の検地帳には「獄門場 1反2畝歩 村持」と出てくる。",
+        "year": 1651,
+        "yearEnd": null,
+        "yearText": "慶安4年（1651年）",
+        "era": "kinsei",
+        "areas": ["oi"],
+        "categories": [
+          "site",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-436b7b608c"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「鈴ヶ森の刑場」449〜450頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1772-kagata-ganbun",
+        "name": "寄洲を新地にしたいと、猟師町の年寄らが願い出る",
+        "summary": "明和9年9月、南品川猟師町の年寄と百姓が、目黒川河口の寄洲約5,000坪を新地にしたいと奉行所に願い出た。利田新地の始まり。",
+        "description": "願書によれば、寄洲を耕地ではなく家作地として築き、猟師や小商人を置くこと、河口に溜まった土砂で築きながら川浚えも行うことが狙いだった。区史は、普通の新田開発と違い、はじめから町地をつくることをねらっていたとみる。幕府は翌安永2年閏3月、艀下船の差配役を条件とする案は認めないと申し渡し、年寄は願人から離れた。",
+        "year": 1772,
+        "yearEnd": null,
+        "yearText": "明和9年（1772年）9月",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "life",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1834-kagata-shinchi"],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-086da1e672"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「利田新地の開発」408〜413（開発願書）頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1774-kagata-ninka",
+        "name": "利田新地の築立てが認可される",
+        "summary": "安永3年5月13日、願人の治兵衛に、約1町歩の新地を築くことが認可された。地代金は10両、鍬下年季は3年。",
+        "description": "区史によれば、金主は江戸中橋の兵助、証人は多摩郡中野村の万右衛門で、完成の保証として万右衛門の持地8町歩を質地に入れた。新地から北品川宿へ架ける橋は長さ20間余・幅2間と定められた。この認可のとおり、4年目に検地を受けて高入れとなるはずだったが、波に洗われて工事が進まず、検地は何度も延期された。",
+        "year": 1774,
+        "yearEnd": null,
+        "yearText": "安永3年（1774年）5月13日",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "life",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1772-kagata-ganbun",
+          "ev-1834-kagata-shinchi"
+        ],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-086da1e672"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「利田新地の開発」413〜415（幕府の認可と実施計画）頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1803-kyowa-tsunami",
+        "name": "享和3年の津波で、猟師町との証文が流される",
+        "summary": "享和3年の津波で、利田新地の願人と南品川猟師町が取り交わしていた証文が流失した。",
+        "description": "区史は、文化5年に利田新地の願人が猟師町あてに出した一札の中で、先の願人が約束していた証文が享和3年の津波で流失していることを理由に挙げていると記す。津波の規模や被害の詳細は、区史は述べていない。",
+        "year": 1803,
+        "yearEnd": null,
+        "yearText": "享和3年（1803年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1774-kagata-ninka"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「治兵衛の死亡と願人の交替」416〜417頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1856-kagata-saikenchi",
+        "name": "台場の築造で、利田新地が再び検地される",
+        "summary": "安政3年12月、品川台場の工事で利田新地の一部が土置場や通路になったため再び検地が行われ、新地は2反4畝9歩に減った。",
+        "description": "天保5年の検地で3反8畝余だった利田新地は、安政元年に始まる台場の築造で、堀をつくるための土置場と兵員の通行道が地内に設けられた。再検地ではそれらを除いた11筆が新地として改められた。明治の地券交付願では19筆5反9畝余となっており、区史は、このあたりが案外正確な実面積だったのではないかとみている。",
+        "year": 1856,
+        "yearEnd": null,
+        "yearText": "安政3年（1856年）12月",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "life",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1834-kagata-shinchi",
+          "ev-1853-daiba-start"
+        ],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-086da1e672"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（一）品川区地域の町と村「検地」417〜418頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1792-gundai-kaieki",
+        "name": "関東郡代の伊奈氏が改易され、品川は大貫次右衛門の支配となる",
+        "summary": "寛政4年3月、関東郡代の伊奈忠尊が家事不取締りで改易され、約200年続いた伊奈氏の郡代時代が終わった。品川地方の担当は代官の大貫次右衛門になった。",
+        "description": "関東の天領は天正18年の家康の関東入部以来、伊奈氏が代々支配してきた。改易後は勘定奉行が郡代を兼ね、その下に5人の代官が土地を分けて支配する形になった。品川地方は大貫次右衛門が寛政4年4月から受け持ち、のち中村八太夫らが続く。区史が引く歴代代官の表は『品川町史』による。",
+        "year": 1792,
+        "yearEnd": null,
+        "yearText": "寛政4年（1792年）3月",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「関東郡代」459〜463頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1805-kanto-torishimari",
+        "name": "関東取締出役（八州廻り）が置かれる",
+        "summary": "文化2年6月、関東の治安を強めるため、関東取締出役、俗にいう八州廻りが設けられた。",
+        "description": "郡代の伊奈家が改易されてから、関東農村の治安はいっそう不安定になっていた。幕府は代官の手付のうち10年以上勤めた有能な8人を選び、手代や足軽をつけて、天領・私領の別なく月に1回、1か所7日ほどの日程で巡視させ、無宿者や博徒の取り締まりと農民の不穏な動きの監視にあたらせた。",
+        "year": 1805,
+        "yearEnd": null,
+        "yearText": "文化2年（1805年）6月",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1792-gundai-kaieki"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「関東取締出役の設置」483〜484頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1855-ansei-jishin",
+        "name": "安政の大地震で、品川宿の家々が大破し、台場の建物も崩れる",
+        "summary": "安政2年10月2日の夜の大地震で、品川宿は家数1,691軒のうち1,422軒が大破するなど大きな被害を受けた。人の被害は少なかった。",
+        "description": "区史が引く三宿名主の報告では、品川宿は半潰14軒・大破1,422軒・小破160軒などで、怪我人は多いが命にかかわる者はいなかった。ただし寺社の門前地では4人の死者が出たらしい。品川台場では建物が崩れて地中に沈み、火災が4日間続き、守備の会津藩士に50人の死者が出た。台場の火薬には燃え移らなかった。周辺の村々は、東大森・馬込・小山など低地や河川下流の地帯で被害が目立ち、大井・戸越・上大崎・下大崎・居木橋などの台地上の村は被害が無かった。",
+        "year": 1855,
+        "yearEnd": null,
+        "yearText": "安政2年（1855年）10月2日",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「安政の地震と品川地区」498〜506頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1863-kumiai-saikyoka",
+        "name": "関東取締出役が、組合村の取り締まりを再び強める",
+        "summary": "文久3年4月10日、幕府は関東取締出役を通じて組合村の取り締まりを再強化する触を出した。7月にはより具体的な指示を出した。",
+        "description": "触は、文政の改革で組合村をつくった趣意に戻れと求め、朽ちた杭を建て直すこと、江戸の者が近郊の田畑をつぶして家を建てることを戒めることを定めた。桐ヶ谷村・谷山村などは連印帳の提出が遅れて督促を受けた。区史は、時期が幕末に近く世情が騒然としていたため効果は薄く、7月に取出役が品川宿へ出張して改めて強い触を出したと述べる。",
+        "year": 1863,
+        "yearEnd": null,
+        "yearText": "文久3年（1863年）4月10日",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "osaki",
+          "oi"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1805-kanto-torishimari"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「取締りの強化」506〜508頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1866-bushu-ikki",
+        "name": "武州一揆が起き、品川方面の村々にも急ぎの廻状が回る",
+        "summary": "慶応2年6月14日、武州の山間部で大一揆が起こり、武州7郡・上州2郡に広がった。品川方面の村々にも関東取締出役から廻状が回された。",
+        "description": "物価高と長州征伐で困窮した山あいの人々が、飯能宿の米屋などを打ちこわしたのが発端で、参加者は10万人を超えるともいわれる。区史は、江戸周辺の大一揆で幕府の受けた衝撃も大きく、取締出役が「容易ならざる事件」として、一刻も遅らせず時刻を書き入れて順に回すよう廻状を出したと紹介する（下蛇窪村の伊藤家文書）。区内での打ちこわしがあったとは述べていない。",
+        "year": 1866,
+        "yearEnd": null,
+        "yearText": "慶応2年（1866年）6月14日",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「武州一揆」512〜513頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1867-satsuma-yakiuchi",
+        "name": "薩摩藩邸焼討ち事件が起き、脱出した浪士が品川沖へ向かう",
+        "summary": "慶応3年12月25日の明け方、江戸の三田にある薩摩藩邸などが幕府方に焼き討ちされた。逃れた浪士約30人は品川沖の薩摩藩の汽船で脱出した。",
+        "description": "討幕派が関東の浪士を藩邸にかくまって江戸の治安を乱し、幕府を挑発したため、庄内藩を中心とする約2,000人が藩邸を囲んだ。区史は、これが大坂の会津・桑名藩兵を激昂させて鳥羽・伏見の戦いにつながり、薩長が幕府武力討伐の口実をつかむことになったと整理する。品川宿は三田に近く、浪士の海上からの脱出路にもあたり、人ごとではない事件だった。",
+        "year": 1867,
+        "yearEnd": null,
+        "yearText": "慶応3年（1867年）12月25日",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": [
+          "war",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「薩摩藩邸焼討事件」515〜517頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1867-satsuma-kaji",
+        "name": "浪士隊が品川宿を通り、南品川で「薩摩火事」が起きる",
+        "summary": "薩摩藩邸焼討ちの当日、逃れた浪士約50人が東海道を品川宿へ進み、空砲を撃ち込み、南品川で火事を起こした。品川では「薩摩火事」と呼ばれる。",
+        "description": "下蛇窪村の名主見習の報告書によれば、浪士隊は歩行新宿の遊女宿で放火を思いとどまり、北品川宿の旅籠屋では関東取締出役の服部桂之助らと鉢合わせして双方が散り散りになった。南品川宿では旅籠屋と隣の煮売屋に空砲を撃ち込み、火薬を仕掛けた草箒を屋根へ投げ上げたところ、折からの烈風で燃え広がった。続いて問屋場の役人から刀を取り上げ、大井村御林町の家へ上がり込んで飯を食べたという。",
+        "year": 1867,
+        "yearEnd": null,
+        "yearText": "慶応3年（1867年）12月25日",
+        "era": "kinsei",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1867-satsuma-yakiuchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-jo",
+            "locator": "四 近世編（二）行政組織「品川における薩摩浪士」517〜520頁"
+          }
+        ],
+        "verifiedAt": "2026-11-23"
       }
   ]
 };

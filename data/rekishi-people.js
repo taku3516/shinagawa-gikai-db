@@ -58,7 +58,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["shinagawa"],
       "shinagawaRelation": "墓が南品川の海晏寺後丘にあり、区の指定史跡となっている。",
       "certainty": "fact",
-      "relatedPlaces": ["pl-16a69cbab7"],
+      "relatedPlaces": ["pl-16a69cbab7", "pl-0eb88578f1"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第9号「松平慶永（春嶽）墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -75,7 +75,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["shinagawa"],
       "shinagawaRelation": "墓が品川神社の裏手にある。もとは東海寺の塔頭・高源院の墓地の一部で、高源院の移転後も板垣家の墓域だけが残された。",
       "certainty": "fact",
-      "relatedPlaces": ["pl-8d095e31ad"],
+      "relatedPlaces": ["pl-8d095e31ad", "pl-548dab732d"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第4号「板垣退助墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -133,7 +133,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "areas": ["shinagawa"],
       "shinagawaRelation": "墓が南品川の天妙国寺にあり、平成19年に区の指定史跡となった。",
       "certainty": "fact",
-      "relatedPlaces": ["pl-1e1564b7a2"],
+      "relatedPlaces": ["pl-1e1564b7a2", "pl-11e5d5f153"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第24号「桃中軒雲右衛門の墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -384,6 +384,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
         "areas": ["shinagawa"],
         "shinagawaRelation": "寄木神社に鏝絵「天細女命功績図」（品川区指定文化財）、善福寺本堂の軒下に竜の細工が残る。",
         "certainty": "fact",
+        "relatedPlaces": ["pl-bdeb7c9ebc", "pl-26ec6dd1d6"],
         "sources": [{ "ref": "sgw-library", "locator": "品川ゆかりの人物" }],
         "verifiedAt": "2026-11-21"
       },
@@ -416,6 +417,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
         "areas": ["oi"],
         "shinagawaRelation": "大井6丁目に邸宅を構え、墓は南品川の海晏寺にある。",
         "certainty": "fact",
+        "relatedPlaces": ["pl-0eb88578f1"],
         "sources": [{ "ref": "sgw-library", "locator": "品川ゆかりの人物" }],
         "verifiedAt": "2026-11-21"
       },
@@ -432,6 +434,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
         "areas": ["oi"],
         "shinagawaRelation": "明治10年に大森貝塚を発見した。大森貝塚は大井6丁目にあり、国の史跡に指定されている。",
         "certainty": "fact",
+        "relatedPlaces": ["pl-be2e1fa0fd"],
         "sources": [{ "ref": "sgw-library", "locator": "品川ゆかりの人物" }],
         "verifiedAt": "2026-11-21"
       },
@@ -496,6 +499,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
         "areas": ["osaki"],
         "shinagawaRelation": "東五反田の旧島津家本邸（清泉女子大学本館）を設計した。同邸は令和元年に国の重要文化財に指定されている。",
         "certainty": "fact",
+        "relatedPlaces": ["pl-a6c7b29cf9"],
         "sources": [{ "ref": "sgw-library", "locator": "品川ゆかりの人物" }],
         "verifiedAt": "2026-11-21"
       },
@@ -512,6 +516,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
         "areas": ["shinagawa"],
         "shinagawaRelation": "南品川の生まれ。墓は南品川1丁目の妙蓮寺にあり、境内に胸像が建つ。",
         "certainty": "fact",
+        "relatedPlaces": ["pl-20728da0c5"],
         "sources": [{ "ref": "sgw-library", "locator": "品川ゆかりの人物" }],
         "verifiedAt": "2026-11-21"
       },
@@ -592,6 +597,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
         "areas": ["shinagawa"],
         "shinagawaRelation": "南品川の天妙国寺境内に住み、寄木神社の「江戸漁業根元之碑」の撰文を書いた。",
         "certainty": "fact",
+        "relatedPlaces": ["pl-bdeb7c9ebc", "pl-11e5d5f153"],
         "sources": [{ "ref": "sgw-library", "locator": "品川ゆかりの人物" }],
         "verifiedAt": "2026-11-21"
       },
