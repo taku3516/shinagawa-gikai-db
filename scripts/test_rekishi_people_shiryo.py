@@ -69,5 +69,30 @@ class PeopleFromShiryoTest(unittest.TestCase):
             self.assertTrue(self.people[pid].get("variants"), pid)
 
 
+class SupplementedPeopleTest(unittest.TestCase):
+    """資料編で生没年などを補った既存の人物は、資料編を出典に持つ（根拠をたどれるように）。"""
+
+    SUPPLEMENTED = [
+        "pe-hirabayashi-kyubei", "pe-hayashi-kosyu", "pe-kaburaki-tadamasa", "pe-tateishi-tomomitsu",
+        "pe-tsuchiya-ko", "pe-ito-butshichiro", "pe-urushi-shogan", "pe-ebisawa-keizaburo",
+        "pe-takahashi-katsuzo",
+    ]
+
+    def test_sources_include_shiryo(self) -> None:
+        import check_rekishi_data as c
+        src = (Path(__file__).resolve().parent.parent / "data" / "rekishi-people.js").read_text(encoding="utf-8")
+        people = {i["id"]: i for i in c.extract_object(src, "window.SHINAGAWA_DB.rekishiPeople")["items"]}
+        for pid in self.SUPPLEMENTED:
+            refs = [s["ref"] for s in people[pid]["sources"]]
+            self.assertIn("sgw-kushi-shiryo", refs, pid)
+
+    def test_honda_nissho_tenure_discrepancy_is_recorded(self) -> None:
+        import check_rekishi_data as c
+        src = (Path(__file__).resolve().parent.parent / "data" / "rekishi-people.js").read_text(encoding="utf-8")
+        item = {i["id"]: i for i in c.extract_object(src, "window.SHINAGAWA_DB.rekishiPeople")["items"]}["pe-honda-nissho"]
+        self.assertNotIn("27年間、管長", item["description"])
+        self.assertTrue(item.get("variants"))
+
+
 if __name__ == "__main__":
     unittest.main()

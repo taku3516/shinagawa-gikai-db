@@ -892,7 +892,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "六 大正編 5 大正期の民衆運動と地方政界「地方政界の変貌と高木正年・漆昌巌」381〜384頁"
         }
-      ],
+      , {"ref": "sgw-kushi-shiryo", "locator": "人物略伝「漆昌巖」26〜27頁"}],
       "verifiedAt": "2026-11-24"
     },
     {
@@ -915,7 +915,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "六 大正編 5 大正期の民衆運動と地方政界「地方政界の変貌と高木正年・漆昌巌」381〜384頁"
         }
-      ],
+      , {"ref": "sgw-kushi-shiryo", "locator": "人物略伝「平林九兵衛」19〜20頁"}],
       "verifiedAt": "2026-11-24"
     },
     {
@@ -942,7 +942,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "五 近代編（一）明治前期の品川 3 明治政府の諸政策と地方制度「郡制の実施と連合戸長役場の設置」48〜54頁"
         }
-      ],
+      , {"ref": "sgw-kushi-shiryo", "locator": "人物略伝「林交周」15頁"}],
       "verifiedAt": "2026-11-24"
     },
     {
@@ -1018,7 +1018,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「新しい町村役場と町村長」189〜191頁"
         }
-      ],
+      , {"ref": "sgw-kushi-shiryo", "locator": "人物略伝「海老沢啓三郎」27頁"}],
       "verifiedAt": "2026-11-24"
     },
     {
@@ -1048,7 +1048,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「新しい町村役場と町村長」189〜191頁"
         }
-      ],
+      , {"ref": "sgw-kushi-shiryo", "locator": "人物略伝「高橋勝蔵」28頁"}],
       "verifiedAt": "2026-11-24"
     },
     {
@@ -1141,7 +1141,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "八 現代編「新品川区の成立」818〜821頁、七 昭和編「昭和医学専門学校」585〜586頁、「立正学園女学校（現 立正学園女学校）」585頁"
         }
-      ],
+      , {"ref": "sgw-kushi-shiryo", "locator": "人物略伝「鏑木忠正」48頁"}],
       "verifiedAt": "2026-11-24"
     },
     {
@@ -1303,7 +1303,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "七 昭和編「（ハ） 下水道」605〜607頁"
         }
-      ],
+      , {"ref": "sgw-kushi-shiryo", "locator": "人物略伝「立石知満」43頁"}],
       "verifiedAt": "2026-11-24"
     },
     {
@@ -1326,7 +1326,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "六 大正編 5 大正期の民衆運動と地方政界「荏原郡下における政党化の波」386〜389頁"
         }
-      ],
+      , {"ref": "sgw-kushi-shiryo", "locator": "人物略伝「土屋興」46頁"}],
       "verifiedAt": "2026-11-24"
     },
     {
@@ -1349,7 +1349,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "六 大正編 5 大正期の民衆運動と地方政界「荏原郡下における政党化の波」386〜389頁"
         }
-      ],
+      , {"ref": "sgw-kushi-shiryo", "locator": "人物略伝「伊藤武七郎」39頁"}],
       "verifiedAt": "2026-11-24"
     },
     {
@@ -2136,7 +2136,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "name": "本多日生",
       "kana": "ほんだにっしょう",
       "summary": "南品川の妙国寺の住職を務めた仏教学者で、顕本法華宗の管長。",
-      "description": "慶応3年（1867年）3月13日に姫路で生まれ、12歳で得度し、18歳で堺の妙満寺の住職になった。明治30年（1897年）5月21日に南品川の妙国寺の住職となり、翌年宗務総監を兼ねた。妙満寺派が顕本法華宗と公称することを認められ、明治38年に公選で管長に当選して、大正15年まで27年間、管長として宗政と教学の責を果たした。日蓮宗各派の統一を唱え、多くの会を組織して大衆への布教に力を注ぎ、昭和3年にその功で天杯を賜った。",
+      "description": "慶応3年（1867年）3月13日に姫路で生まれ、12歳で得度し、18歳で堺の妙満寺の住職になった。明治30年（1897年）5月21日に南品川の妙国寺の住職となり、翌年宗務総監を兼ねた。妙満寺派が顕本法華宗と公称することを認められ、明治38年に公選で管長に当選して、大正15年まで管長として宗政と教学の責を果たした（区史は在職を「27年間」と記すが、年数が合わない。variants を参照）。日蓮宗各派の統一を唱え、多くの会を組織して大衆への布教に力を注ぎ、昭和3年にその功で天杯を賜った。",
       "birthYear": 1867,
       "deathYear": null,
       "yearText": "慶応3年（1867年）〜",
@@ -2149,6 +2149,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "relatedPlaces": [
         "pl-11e5d5f153"
       ],
+      "variants": [{"claim": "区史 資料編の人物略伝は、明治38年（1905年）に管長に当選し「以来大正十五年まで、二十七年間管長として」務めたと記す。しかし明治38年から大正15年（1926年）までは21年（両端を含めても22年）で、27年とは合わない。開始年・終了年・年数のどれが誤りかは、この資料だけでは判断できない。", "ref": "sgw-kushi-shiryo", "locator": "人物略伝「本多日生」37〜38頁"}],
       "sources": [
         {
           "ref": "sgw-kushi-shiryo",
@@ -2347,7 +2348,7 @@ window.SHINAGAWA_DB.rekishiPeople = {
       "name": "原邦造",
       "kana": "はらくにぞう",
       "summary": "実業家で、原六郎の養子。北品川の御殿山の大邸宅を継いだ。",
-      "description": "明治15年（1882年）6月に大阪に生まれ、実業家の原六郎の養子となって昭和8年に家督を継いだ。京都大学を卒業して満鉄に入り、のち実業界に入って、帝都高速度交通営団総裁のほか多数の一流会社の重役・会長を務めた。北品川4丁目（御殿山）の大邸宅は先代の六郎が営んだもので、立派な林泉と亭樹が今に残っている。昭和33年（1958年）に76歳で没した。",
+      "description": "明治15年（1882年）6月に大阪に生まれ、実業家の原六郎の養子となって昭和8年に家督を継いだ。京都大学を卒業して満鉄に入り、のち実業界に入って、帝都高速度交通営団総裁のほか多数の一流会社の重役・会長を務めた。北品川4丁目（御殿山）の大邸宅は先代の六郎が営んだもので、立派な林泉と亭樹が残っていると、1973年刊の区史 資料編は記している（刊行時点の記述で、現在の状態は確認していない）。昭和33年（1958年）に76歳で没した。",
       "birthYear": 1882,
       "deathYear": 1958,
       "yearText": "明治15年（1882年）〜昭和33年（1958年）",
