@@ -6139,6 +6139,2674 @@ window.SHINAGAWA_DB.rekishiEvents = {
           }
         ],
         "verifiedAt": "2026-11-23"
+      },
+      {
+        "id": "ev-1923-shinsai-higai-kyuugo",
+        "name": "関東大震災で品川区域の家屋が倒れ、避難民の救護が翌年1月まで続く",
+        "summary": "大正12年9月1日の関東大震災で、品川町と大井町は家屋の全半壊や死者を出した。大崎では陸軍の衛生材料廠から出た火が民家26棟に延びたが、区域の被害は市内より軽く、東京の被災者を受け入れる側になった。",
+        "description": "区史によれば、品川町では家屋の全壊45戸・半潰502戸、被害者は1,783人に及び6人が圧死した。大井町では全壊38戸・半潰115戸で、圧死20人、傷死5人のほか、区外で亡くなった町民が14人いた。火災は大井・平塚にはほとんど起きず、大崎で陸軍衛生材料廠の薬品が自然発火して周辺の民家26棟に延びたのが最大で、三共製薬品川工場も半棟を焼いて鎮火した。一方、東京市内や横浜・川崎で被災した人びとが区域に流れ込み、品川町は避難所を7か所、大井町は4か所設けて炊き出しを行った。親戚や知人を頼って身を寄せた人は、品川町・大井町あわせて一時3万人以上、大崎町で2万5000人に及んだ。救護活動は翌年1月まで続いた。",
+        "year": 1923,
+        "yearText": "大正12年（1923年）9月1日",
+        "era": "taisho",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki"
+        ],
+        "categories": [
+          "nature",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1923-shinsai"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「未曽有の大震災」「罹災者の救助活動」442〜446頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1923-kaigenrei-ryugen",
+        "name": "戒厳令下で流言が広まり、品川区域で朝鮮人が襲われる",
+        "summary": "関東大震災の翌日、「朝鮮人が暴動を起こす」という根拠のない流言が区域にも広まった。自警団を組んだ住民が、大井町・大崎町・平塚村・品川町で朝鮮人らに暴行を加え、死者も出た。",
+        "description": "区史によれば、震災翌日の大正12年9月2日、政府は東京市と荏原郡などに戒厳令を施行し、荏原郡は南警備隊の管轄になった。品川駅に検問所が置かれ、陸路でも大井の八ツ山下と大崎の五反田に検問所が設けられた。この日の午後、横浜方面から来た避難者によって流言が区域に伝わり、夕方には日本刀や鳶口を持った町民が自警団を組んだ。大井町の八ツ山下では、爆弾を持っているとして一人の朝鮮人が重傷を負わされたが、爆弾とされたのは缶詰とビールだった。大崎町桐ケ谷では朝鮮人5人が、平塚村下蛇窪でも2日間で2人が重傷を負わされ、品川町では朝鮮人と見誤られた町民が亡くなった。区史は、震災後の調査で朝鮮人の放火や暴行の事実は全く無かったと述べ、流言の根は朝鮮人への蔑視にあったと記している。",
+        "year": 1923,
+        "yearText": "大正12年（1923年）9月2日〜",
+        "era": "taisho",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1923-shinsai",
+          "ev-1923-shinsai-higai-kyuugo"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戒厳令下の品川区域」446〜449頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1923-meguro-kamata-line",
+        "name": "目蒲線の蒲田〜目黒間が開通し、小山駅ができる",
+        "summary": "大正12年、目黒蒲田電鉄の蒲田〜目黒間が開通した。区域では小山駅（翌年に武蔵小山と改称）などが開業し、農村だった荏原の都市化の足がかりになった。",
+        "description": "区史によれば、田園都市の開発を進めた田園土地会社が荏原電気鉄道の創立事務所を設け、大正9年に大井町・調布間、翌10年に大岡山〜目黒間の路線が認可された。大正11年9月には目蒲電鉄が創立され、蒲田〜目黒間が大正12年に開通した。小山駅はその年の3月に開業し、大正13年に武蔵小山と改称した。開通の半年後に関東大震災が起き、東京市内の被災者が目蒲線沿線の住宅地を求めて押し寄せた。",
+        "year": 1923,
+        "yearText": "大正12年（1923年）",
+        "era": "taisho",
+        "areas": [
+          "ebara",
+          "osaki"
+        ],
+        "categories": ["transport"],
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "同じ区史の別の節（「大震災後の近郊町村の急変貌」）は、この開通を「大正11年（1922年）の目蒲線」と記している。大正11年は目蒲電鉄の創立年にあたり、開通は大正12年とする本節の記述に従った。",
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「大震災後の近郊町村の急変貌」449〜450頁"
+          }
+        ],
+        "relatedEvents": ["ev-1923-shinsai"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「目蒲・大井町線の設立」492〜493頁、「武蔵小山商店街住宅街の成立」551〜554頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1921-ikegami-line-opens",
+        "name": "池上線が蒲田から大崎広小路まで順次開通する",
+        "summary": "池上電気鉄道が大正10年に蒲田〜池上間を開き、大正12年に雪ケ谷、昭和2年に大崎広小路まで延ばした。区域の北西部と都心をつなぐ郊外電車の一つになった。",
+        "description": "区史によれば、池上電鉄は大正元年に目黒駅付近から大森駅付近までの路線を申請し、大正3年に認可、大正6年に会社が設立された。路線は蒲田〜池上間が大正10年、池上〜雪ケ谷間が大正12年5月4日、雪ケ谷〜大崎広小路間が昭和2年に開通し、難工事だった五反田の高架駅は昭和3年6月17日に開通した。",
+        "year": 1921,
+        "yearEnd": 1927,
+        "yearText": "大正10年（1921年）〜昭和2年（1927年）",
+        "era": "taisho",
+        "areas": [
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["transport"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1928-ikegami-gotanda"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「池上線の設立」493〜494頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1928-oimachi-line-opens",
+        "name": "大井町線の大岡山〜大井町間が開通する",
+        "summary": "目蒲電鉄が大岡山〜大井町間を昭和3年に開通させた。荏原の西部から大井町駅へ出られるようになり、沿線の住宅地化が進んだ。",
+        "description": "区史によれば、大井町線（現在の田園都市線の前身）は目蒲線と同じ会社が建設し、大岡山〜大井町間が昭和3年に開通した。この開通で、大正末から昭和初めにかけて目蒲線・大井町線・池上線が出そろい、区内のどこからでも歩いて15〜16分で電車に乗れるようになった。大井町駅は大正3年に開業していた。",
+        "year": 1928,
+        "yearText": "昭和3年（1928年）",
+        "era": "showa-pre",
+        "areas": [
+          "oi",
+          "ebara"
+        ],
+        "categories": ["transport"],
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "区史の別の節は、大井町線の大岡山〜大井町間が昭和2年の秋までに開通していたとし（「昭和初期における各信用組合の動き」）、さらに別の節も「昭和2年の大井町線」と書く（「大震災後の近郊町村の急変貌」）。「目蒲・大井町線の設立」の節は昭和3年とする。年が食い違うため、設立の節の昭和3年を採ったが、確かめられていない。",
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「昭和初期における各信用組合の動き」546〜550頁、「大震災後の近郊町村の急変貌」449〜450頁"
+          }
+        ],
+        "relatedEvents": ["ev-1923-meguro-kamata-line"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「目蒲・大井町線の設立」「旅客量の増大」492〜497頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1919-bus-first-route",
+        "name": "区域で最初のバス路線が八ツ山を中心に開かれる",
+        "summary": "大正8年、旧品川町に八ツ山を中心に品川駅や六郷町（多摩川河口）などを結ぶバス路線が開かれた。区域で最初のバスで、昭和に入ると五反田・目黒・大井町を起点に路線が増えた。",
+        "description": "区史によれば、昭和2年には池上電鉄が五反田〜中延間のバスを開業し、五反田〜田町、五反田〜目黒〜大橋、目黒駅〜東京駅、大井町〜碑衾町などの路線もでき、市営バスをはじめ各社のバスが電車とともに利用された。",
+        "year": 1919,
+        "yearText": "大正8年（1919年）",
+        "era": "taisho",
+        "areas": ["shinagawa"],
+        "categories": ["transport"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「バス路線の発達」495頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1926-hiratsuka-machi-seiko",
+        "name": "平塚村が町制を施行して平塚町になる",
+        "summary": "人口が急増した平塚村は、大正14年11月に町制施行を村会で決め、東京府知事の許可を得て大正15年4月1日に平塚町となった。当時の戸数は1万7872戸、人口は7万2256人で、荏原郡で最も多かった。",
+        "description": "区史によれば、村会の議決をうけた村長が大正15年2月15日付で町制施行を申請し、東京府知事は3月23日に許可した。申請書は、耕地整理で住宅地が開け、震災後に移住者が急に増え、目蒲電鉄の開通で交通が便利になって村が市街地に変わったことを理由に挙げている。",
+        "year": 1926,
+        "yearText": "大正15年（1926年）4月1日",
+        "era": "taisho",
+        "areas": ["ebara"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1923-meguro-kamata-line"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「平塚村の町制施行」450〜452頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1927-ebara-machi-kaisho",
+        "name": "平塚町が荏原町に改称される",
+        "summary": "同名の地が各地にあり郵便が遠回りするなどの不便が出たため、平塚町は昭和2年3月に町会で改称を決め、荏原郡の名にちなんで荏原町と改め、7月1日から実施した。",
+        "description": "区史によれば、平塚の名は東京府の北豊島のほか神奈川・千葉・群馬の各県にもあり、郵便物が各県を一巡する恐れさえあった。昭和2年3月20日の町会が改称を決議し、古くからゆかりがあり郡名にもなっていた「荏原」を採って荏原町とすることにした。5月に東京府の許可指令が出て、7月1日に実施された。",
+        "year": 1927,
+        "yearText": "昭和2年（1927年）7月1日",
+        "era": "showa-pre",
+        "areas": ["ebara"],
+        "categories": [
+          "admin",
+          "placename"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1926-hiratsuka-machi-seiko"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「平塚村の町制施行」450〜452頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1925-gokosha-moves-osaki",
+        "name": "攻玉社が震災で焼けた芝から大崎の桐ケ谷へ移る",
+        "summary": "大正14年9月、海軍の将官らを多く送り出した名門校の攻玉社が、震災で芝の校舎を失ったのを機に、大崎町桐ケ谷の不動ケ丘へ移転してきた。昭和6年には商業学校も開かれた。",
+        "description": "区史によれば、移転当時の攻玉社は中学校・工学校・高等工学校を持っていた。",
+        "year": 1925,
+        "yearText": "大正14年（1925年）9月",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1923-shinsai"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「攻玉社の転入」584頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1926-ebara-jogakko",
+        "name": "荏原婦人会が荏原女学校を開き、のち品川高等女学校ができる",
+        "summary": "荏原郡の婦人会が大正14年に品川町権現山公園内に会館と女子授芸伝習所を建て、翌15年にそれを校舎として荏原女学校が発足した。昭和4年には旧品川小学校の跡地に正規の品川高等女学校が生まれた。",
+        "description": "区史によれば、荏原婦人会は大正8年に荏原郡の婦人有志が結成した。授芸伝習所では裁縫・手芸・生花・茶の湯・料理を教えた。荏原女学校は普通科2年・高等科2年で、昭和4年に婦人会の創立10周年と御大礼の記念事業として、修業年限4年の品川高等女学校が設けられた（昭和12年に5年に延長）。現在の品川高等学校につながる。",
+        "year": 1926,
+        "yearEnd": 1929,
+        "yearText": "大正15年（1926年）〜昭和4年（1929年）",
+        "era": "taisho",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「品川高等女学校（現 品川高等学校）」583〜584頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1927-rissho-gakuen-founded",
+        "name": "立正裁縫女学校が西大崎で開かれ、のち中延へ移る",
+        "summary": "昭和2年、立正大学の関係者らが立正婦人会の協力で西大崎桐ケ谷に裁縫塾と幼稚園を開き、立正裁縫女学校となった。昭和4年に荏原町中延へ移り、立正学園女学校と改称した。",
+        "description": "区史によれば、昭和3年に実業学校令による立正女子職業学校の名で認可されたが、定員200名に対して西大崎の校地が狭く、昭和4年に法蓮寺と地主の所有地約1,300坪に移り、約500坪の校舎を建てた。昭和7年には職業家庭科中心の学校のほかに5年制の普通科の高等女学校が新設され、従来の学校は高等家政女学校と改称された。",
+        "year": 1927,
+        "yearEnd": 1929,
+        "yearText": "昭和2年（1927年）〜昭和4年（1929年）",
+        "era": "showa-pre",
+        "areas": [
+          "osaki",
+          "ebara"
+        ],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「立正学園女学校（現 立正学園女学校）」585頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1928-showa-ika-opens",
+        "name": "昭和医学専門学校が中延に開校する",
+        "summary": "昭和3年、東京大学の医局員らの企画した早期臨床医の養成校が、中延の農地約1万坪を校地に開校した。現在の昭和大学の前身で、住宅地化が進みながら医療施設の乏しかった荏原に付属の総合病院ができた。",
+        "description": "区史によれば、大正14年に医学専門学校の設立が企画され、中延の鏑木忠正氏所有の農地約1万坪を敷地に準備が進められた。昭和3年に東京大学の名誉教授を初代校長に迎えて開校し、区史は、住民にとって「福音」だったと評している。",
+        "year": 1928,
+        "yearText": "昭和3年（1928年）",
+        "era": "showa-pre",
+        "areas": ["ebara"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「昭和医学専門学校」585〜586頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1926-dressmaker-gakuin-osaki",
+        "name": "ドレスメーカー女学院が上大崎へ移る",
+        "summary": "大正15年3月に芝で洋裁の学校を開いた杉野芳子は、その年の11月、目蒲線目黒駅に接する上大崎に敷地を求めて移転した。",
+        "description": "区史は、ドレスメーカー女学院の始まりとして、この移転を記している。",
+        "year": 1926,
+        "yearText": "大正15年（1926年）11月",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「ドレスメーカー女学院」586頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1926-seinen-kunrensho",
+        "name": "区域の各町村に青年訓練所が置かれる",
+        "summary": "大正15年、陸軍省と文部省の協力で勤労青少年に軍事教練・修身・公民・普通学科を教える青年訓練所が各町村に設けられた。区域でも小学校内などに置かれ、昭和10年に実業補習学校と合併して青年学校になった。",
+        "description": "区史によれば、品川町は東海小学校内、大井は大井小学校内、鮫浜は鮫浜小学校内などに訓練所を置いた。各町の当局は訓練所と実業補習学校の二重運営に悩み、昭和10年に両者が合併して青年学校が生まれた。",
+        "year": 1926,
+        "yearEnd": 1935,
+        "yearText": "大正15年（1926年）〜昭和10年（1935年）",
+        "era": "taisho",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「青年訓練所の設置」586頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1926-ebara-shogakko-zosetsu",
+        "name": "荏原町で小学校が相次いで増設される",
+        "summary": "震災後の人口急増で、荏原町は大正15年に大原・宮前・小山の3校、昭和3年に第二延山・後地・源氏前・大間窪の4校を創立した。明治に建てた3校の倍以上を短い間に増やしても、昭和6年にはなお二部授業が続いた。",
+        "description": "区史によれば、昭和6年の調査では荏原町の小学校10校のうち9校が二部授業で、対象は約3,000人にのぼった。品川町・大崎町・大井町ではこの時点で二部授業は大崎・大井の各1校だけで、荏原町の学校増設の遅れが際立った。",
+        "year": 1926,
+        "yearEnd": 1928,
+        "yearText": "大正15年（1926年）〜昭和3年（1928年）",
+        "era": "taisho",
+        "areas": ["ebara"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1926-hiratsuka-machi-seiko"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「荏原町」582〜583頁、「社会的・文化的諸施設の貧困」459〜461頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1925-hino-shogakko",
+        "name": "大崎町に第四・第五日野小学校ができる",
+        "summary": "目蒲線の開通と震災で花ケ谷・谷山・谷戸付近に住宅が立ち並んだため、大崎町は大正14年に不動前駅の近くへ第四日野小学校を、翌15年9月に下大崎へ第五日野小学校を開いた。",
+        "description": "区史によれば、第五日野小学校は第二日野・芳水小学校の生徒の一部を移して開校した。",
+        "year": 1925,
+        "yearEnd": 1926,
+        "yearText": "大正14年（1925年）〜大正15年（1926年）",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「大崎町」581〜582頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1926-tachiai-shogakko",
+        "name": "日本毛織の旧工場跡に立会尋常高等小学校ができる",
+        "summary": "大井町は大正15年、京浜電鉄鮫洲駅の近くにあった日本毛織の旧工場跡約2,400坪を買い取り、立会尋常高等小学校を設けた。",
+        "description": "区史は、大井町の都市化に伴う学校新設の例として挙げている。",
+        "year": 1926,
+        "yearText": "大正15年（1926年）",
+        "era": "taisho",
+        "areas": ["oi"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1912-nippon-keori-oi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「大井町」581頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1929-gotenyama-shogakko",
+        "name": "御殿山尋常小学校が品川・東海小学校から290人を移して開校する",
+        "summary": "人口がすでに飽和していた品川町では、小学校の新設は昭和4年6月に大崎町との境に開いた御殿山小学校だけだった。品川・東海の両小学校から290人を移し、490人・9学級で授業が始まった。",
+        "description": "区史によれば、敷地は約2,500坪だった。",
+        "year": 1929,
+        "yearText": "昭和4年（1929年）6月",
+        "era": "showa-pre",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「品川町」581頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1923-nanko-kyodosha",
+        "name": "南郊共働社が設立される",
+        "summary": "大正12年2月に設立された南郊共働社は、区域で最初の消費組合とみられている。",
+        "description": "区史は、現在の品川区域での消費組合のはじまりを、この組合に置いている。",
+        "year": 1923,
+        "yearText": "大正12年（1923年）2月",
+        "era": "taisho",
+        "areas": ["ward"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「南郊共働社と大崎消費組合」526〜529頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1925-osaki-shohi-kumiai",
+        "name": "大崎消費組合が東京鉄工大崎支部を基盤に設立される",
+        "summary": "大正14年8月20日、日本労働総同盟系の拠点だった東京鉄工大崎支部を基盤に、大崎消費組合が設立された。事務所は北品川に置かれ、翌年6月の組合員は118人だった。",
+        "description": "区史によれば、組合は評議会系と対立する総同盟系の組合員で独立の生計を営む者を組合員とし、東京鉄工組合大崎第六支部の購買部の事業を引き継いだ。",
+        "year": 1925,
+        "yearText": "大正14年（1925年）8月20日",
+        "era": "taisho",
+        "areas": [
+          "osaki",
+          "shinagawa"
+        ],
+        "categories": [
+          "life",
+          "industry"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1923-nanko-kyodosha"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「南郊共働社と大崎消費組合」526〜529頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1927-godo-keori-merger",
+        "name": "東京毛織と毛斯綸紡織が合併して合同毛織になる",
+        "summary": "金融恐慌の昭和2年3月、東京毛織と毛斯綸紡織が双方とも1250万円に減資して合併し、合同毛織株式会社となった。区史は、大正9年の反動恐慌と関東大震災の被害に続く合併として記している。",
+        "description": "区史によれば、毛織物工業は大正9年の反動恐慌と関東大震災で二重の打撃を受けた。震災で東京毛織の大井工場は大破し、全滅した王子工場と合わせた被害額は全社で約900万円にのぼったという。昭和4年12月には、合同毛織の救済のため日本毛織が賃借経営を試みた。",
+        "year": 1927,
+        "yearText": "昭和2年（1927年）3月",
+        "era": "showa-pre",
+        "areas": ["oi"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1912-nippon-keori-oi",
+          "ev-1923-shinsai"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「昭和初期における毛織物工業の苦況」534〜536頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1929-goto-keori-hatan",
+        "name": "大井町発展の原動力だった後藤毛織が破綻する",
+        "summary": "大正7年10月に創立された後藤毛織は、関東大震災で東京工場が全滅して約600万円の損失を出し、昭和4年秋に破綻した。",
+        "description": "区史によれば、後藤毛織は大井町の発展の原動力ともいわれた会社で、岐阜工場は200万円の社債の担保として日本興業銀行の手に移り、昭和4年12月に新設された共同毛織株式会社に引き継がれた。",
+        "year": 1929,
+        "yearText": "昭和4年（1929年）秋",
+        "era": "showa-pre",
+        "areas": ["oi"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1927-godo-keori-merger"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「昭和初期における毛織物工業の苦況」534〜536頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1927-masaki-pencil-sogi",
+        "name": "真崎大和鉛筆で金融恐慌下に2か月の争議が起きる",
+        "summary": "昭和2年3月から4月にかけて、金融恐慌のさなかに、真崎大和鉛筆で2か月にわたる争議が起きた。社長が進めた経営の合理化と人員整理への反発とみられている。",
+        "description": "区史は、争議は社長個人の排斥ではなく、合理化と人員整理に対する反発とみるべきだとしている。この厳しい合理化の中で、軸板用材の開発や油芯の改良、ラッカー塗装の開始など技術の改良が進み、昭和8年には特約代理店制度が導入された。",
+        "year": 1927,
+        "yearText": "昭和2年（1927年）3月〜4月",
+        "era": "showa-pre",
+        "areas": ["shinagawa"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「昭和初期の真崎大和鉛筆」545頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1930-hoshi-seiyaku-sogi",
+        "name": "星製薬で69日間、422人が参加する争議が起きる",
+        "summary": "昭和5年5月29日から8月6日までの69日間、赤字経営が続いた星製薬で、男女計422人が参加する争議が起きた。",
+        "description": "区史は内務省の労働運動年報を引き、同じ時期に三共製薬が利益を減らしながらも品川工場に細菌部門を設けるなど多角化を進めたのと対照的だったと述べている。",
+        "year": 1930,
+        "yearText": "昭和5年（1930年）5月29日〜8月6日",
+        "era": "showa-pre",
+        "areas": ["osaki"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「昭和期における化学工業」544〜545頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1931-shigun-gappei-sokushinkai",
+        "name": "隣接町村合併促進会が結成され、東京市への編入運動が動き出す",
+        "summary": "昭和6年4月、市政評論誌が開いた近接36町村の議長らの座談会がきっかけとなり、6月に都市計画区域の全町村による「隣接町村合併促進会」が日比谷で発会式を開いた。昭和7年1月には五郡82町村が東京市郡併合期成同盟会を結成した。",
+        "description": "区史によれば、東京市は明治期から首都にふさわしい自治体の制度を探り、郊外町村の編入のため大正8年に調査課を設け、昭和4年には市会が調査委員会の設置を決議していた。町村側の運動はこの座談会を機に高まった。",
+        "year": 1931,
+        "yearEnd": 1932,
+        "yearText": "昭和6年（1931年）〜昭和7年（1932年）1月",
+        "era": "showa-pre",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「併合問題の発端」「合併にたいする挙郡一致の運動」「各町会の合併決議と東京市会・区会の動向」556〜566頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1932-shigun-gappei-kettei",
+        "name": "東京府が五郡82町村の東京市への編入を内務大臣に上申する",
+        "summary": "昭和7年5月5日、東京府知事は荏原・豊多摩・北豊島・南足立・南葛飾の五郡82町村を廃して東京市に編入し、10月1日から施行したいと内務大臣に上申した。23日には許可を申請した。",
+        "description": "区史によれば、実施日の10月1日は、明治31年に東京市の特別市制が撤廃されて自治体として独立した自治記念日にあわせたものだった。知事は昭和7年1月の就任後、この問題を自分の使命として取り組んだ。上申書には市域拡張を必要とする理由が10項目にわたって添えられた。",
+        "year": 1932,
+        "yearText": "昭和7年（1932年）5月5日",
+        "era": "showa-pre",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1931-shigun-gappei-sokushinkai"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「東京府の積極的姿勢と併合の確定」566〜574頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1932-shinagawa-ebara-ku-setchi",
+        "name": "品川町・大崎町・大井町が品川区に、荏原町が荏原区になる",
+        "summary": "昭和7年10月1日の市郡併合で、品川・大崎・大井の3町が合わせて品川区に、荏原町が単独で荏原区になり、東京35区の一員になった。荏原区は、東京市の原案にあった馬込町が大森区に回されて荏原1町となった。",
+        "description": "区史によれば、府知事は10項目の新区設定基準（人口14万〜20万人ほど、町村界の踏襲など）で編成案を作り、昭和7年5月11日に市会へ諮問した。品川町・大崎町・大井町は区の構成や区役所の位置で意見が分かれたが、市・府の原案どおりに決まった。荏原区は、荏原町が馬込町との一区編成を望み、馬込町が大森区への編入を望んで対立し、東京市参事会が原案から馬込町を削って決着した。",
+        "year": 1932,
+        "yearText": "昭和7年（1932年）10月1日",
+        "era": "showa-pre",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1932-shigun-gappei-kettei",
+          "ev-1947-ward-founded"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「新区の編成と品川・荏原区の設置」574〜578頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1915-kiji-horen-togyo",
+        "name": "雉子神社が即位記念に鳳輦渡御を始める",
+        "summary": "下大崎の雉子神社は、大正4年に大正天皇の即位を記念して鳳輦渡御を始め、以来、氏子の各地区で神輿や山車をつくるようになった。区域の神輿や山車は、大正期以降に農村部へ広がった。",
+        "description": "区史によれば、農村部の神社で神輿や山車をつくるようになったのは大正期以降で、とくに昭和に入って町会ができてから広まった。戸越では町会ごとに神輿が先、山車があとにつくられたという。",
+        "year": 1915,
+        "yearText": "大正4年（1915年）",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「祭礼の変化」515〜516頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1932-first-kukai-senkyo",
+        "name": "品川区・荏原区で初めての区会議員選挙が行われる",
+        "summary": "区制施行から約2か月後の昭和7年11月23日、品川・荏原を含む新設20区で初めての区会議員選挙が行われた。同じ月には東京市会議員選挙も行われた。",
+        "description": "区史によれば、東京市の区は自治区として法人格を持ち、区会は区の自治の議決機関だった。市郡併合の直前の昭和7年6月には、荏原郡時代で最後の東京府会議員選挙が行われている。",
+        "year": 1932,
+        "yearText": "昭和7年（1932年）11月23日",
+        "era": "showa-pre",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1932-shinagawa-ebara-ku-setchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「区会の成立」594〜595頁、「区政の施行と地方選挙」614〜616頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1934-shinagawa-kuyakusho-completed",
+        "name": "品川区役所の新庁舎が北品川に完成する",
+        "summary": "旧品川町が大正14年から積み立てて計画した庁舎は、区制施行後に東京市が設計を直して昭和8年11月に着工し、昭和9年12月に完成した。鉄筋コンクリート造り5階建てで、昭和43年5月に総合庁舎へ移るまで区行政の中心になった。",
+        "description": "区史によれば、区役所は旧品川町に置かれ、はじめは目黒川改修工事のため東海小学校内に設けられた仮庁舎を使った。新庁舎の敷地は北品川3丁目244・245番地で、旧目黒川の廃川敷を東京府から払い下げてもらって広げた。旧品川町が昭和7年に着工した鉄骨の一部は未完成のまま残り、東京市土木局建築課が設計の不備を直して工事を引き継いだ。区会は、仮庁舎が東海小学校の運動場をふさいで二部授業の一因になっているとして、工事促進の意見書を市に出した。完成した庁舎は敷地493坪、庁舎面積863坪だった。",
+        "year": 1934,
+        "yearText": "昭和9年（1934年）12月",
+        "era": "showa-pre",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1932-shinagawa-ebara-ku-setchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「品川区役所庁舎の新築」595〜597頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1938-ebara-kuyakusho-completed",
+        "name": "荏原区役所の新庁舎が中延に完成する",
+        "summary": "荏原区は合併のとき旧町役場を増築して庁舎にしたが、事務量の増加で手狭になり、昭和12年9月に着工して昭和13年6月に新庁舎が完成した。7月に移って事務を始め、昭和22年に品川区と統合するまでの荏原区役所になった。",
+        "description": "区史によれば、昭和9年3月の区会が庁舎建築促進委員を設けて市に陳情を重ね、昭和10年に敷地が決まった。場所は中延町23番地で、敷地917坪、建坪956坪だった。",
+        "year": 1938,
+        "yearText": "昭和13年（1938年）6月",
+        "era": "showa-pre",
+        "areas": ["ebara"],
+        "categories": [
+          "admin",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1932-shinagawa-ebara-ku-setchi",
+          "ev-1947-ward-founded"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「品川区役所庁舎の新築」595〜597頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1933-tamagawa-suido-enbun",
+        "name": "玉川水道が塩分を含む水を送り、市営化を求める運動が起こる",
+        "summary": "昭和8年6月、民営の玉川水道が多量の塩分を含む水を供給して住民の怒りが爆発した。料金の免除や値下げの要求は、営業許可が満了する昭和9年7月22日を機に、水道を東京市営に移す運動へ広がった。",
+        "description": "区史によれば、玉川水道は大正7年に入新井・大森・羽田・蒲田の4町の荏原水道組合を基に創立され、翌年から品川・大井・大崎方面にも給水を始め、大正12年には平塚村へも施設を広げていた。荏原町は合併のとき約8,000栓で、合併後の昭和9年でも水道を使う家は1万2614戸にとどまり、井戸だけの家が1万8832戸あった。六区水連委員会は、悪水供給中の料金の全免と、水質が回復した後は市営水道と同じ料金にすることを会社に求めた。昭和9年5月、品川区会は営業許可の延長を認めず市で経営するよう求める意見書を出した。",
+        "year": 1933,
+        "yearEnd": 1934,
+        "yearText": "昭和8年（1933年）6月〜昭和9年（1934年）7月",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara",
+          "oi",
+          "osaki"
+        ],
+        "categories": [
+          "water",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「上水道―玉川水道の市営化―」602〜605頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1932-togoshi-koen-kifu",
+        "name": "三井家が戸越農園の一部を寄付し、戸越公園がつくられる",
+        "summary": "昭和7年、三井家は戸越農園3万1000坪のうち8,650坪を大東京市制実施記念として寄付した。うち5,000坪あまりが公園に整えられ、工事は昭和9年2月から昭和10年3月20日まで続いた。",
+        "description": "区史によれば、公園工事の費用1万7000円あまりは三井家の寄付金でまかなわれた。築山には樹齢百年に及ぶ老木が茂り、公園のなかった荏原区民の憩いの場として報じられた。",
+        "year": 1932,
+        "yearEnd": 1935,
+        "yearText": "昭和7年（1932年）〜昭和10年（1935年）3月20日",
+        "era": "showa-pre",
+        "areas": ["ebara"],
+        "categories": [
+          "site",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「三井家から戸越公園の寄付」649〜650頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1923-osaki-shokugyo-shokaijo",
+        "name": "大崎町が震災で失業した人のために職業紹介所を開く",
+        "summary": "大正12年9月15日、大崎町は第二日野小学校の校舎を借りて、関東大震災で失業した人びとを救う職業紹介所を開いた。求職者は創立時の164人から、金融恐慌の昭和2年に8,581人、昭和7年に1万61人へふくれ上がった。",
+        "description": "区史によれば、芝には明治44年に東京市が全国にさきがけて職業紹介所を設けていたが、品川区域ではこの大崎町のものが先で、のちに品川・荏原・大井の各町にも町立の職業紹介所ができた。女性の求職者も、当初の139人から昭和12年には約18倍の2,530人に増えた。",
+        "year": 1923,
+        "yearText": "大正12年（1923年）9月15日",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1923-shinsai-higai-kyuugo"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「大崎・品川・大井・荏原の各町立職業紹介所」636〜637頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1928-chotsuri-shokugyo-shokaijo",
+        "name": "品川・荏原・大井の各町が町立の職業紹介所を設ける",
+        "summary": "品川町は昭和3年7月に旧品川小学校の跡に仮事務所を設けて職業紹介所を始め、荏原町は昭和5年6月、大井町は昭和6年10月に町立の職業紹介所を設けた。恐慌で失業者が増えたことへの対応だった。",
+        "description": "区史によれば、荏原町立の紹介所は中延33番地に置かれ、昭和6年4月に中延22番地へ移った。大井町立の紹介所は関ケ原町に置かれた。",
+        "year": 1928,
+        "yearEnd": 1931,
+        "yearText": "昭和3年（1928年）7月〜昭和6年（1931年）10月",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara",
+          "oi"
+        ],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1923-osaki-shokugyo-shokaijo"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「大崎・品川・大井・荏原の各町立職業紹介所」636〜637頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1931-oimachi-shichiya-opens",
+        "name": "大井町質屋が大井町駅の近くに開店する",
+        "summary": "公益質屋の大井町質屋が、昭和6年12月15日、省線電車大井町駅の近くに開店した。",
+        "description": "区史は、区域の社会事業のうち公益質屋の例として挙げている。",
+        "year": 1931,
+        "yearText": "昭和6年（1931年）12月15日",
+        "era": "showa-pre",
+        "areas": ["oi"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「公益質屋」651〜653頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1932-miki-shinryojo",
+        "name": "済生会の三木診療所が品川診療所の出張所として開かれる",
+        "summary": "品川・荏原地域には済生会の診療所が品川・三木・大崎・大井の4か所にあった。品川・大崎・大井は大正11〜12年に設立され、三木診療所は昭和7年10月に品川診療所の出張所として設けられた。",
+        "description": "区史は、健康保険の対象が大正13年の制定後もごく一部の労働者に限られ、貧しい人にとって病気が家計を重く圧迫していた時代に、済生会診療所が主要な社会事業施設の一つだったと述べている。昭和6年度までの8年間の施療患者は延べ8万3730人にのぼった。",
+        "year": 1932,
+        "yearText": "昭和7年（1932年）10月",
+        "era": "showa-pre",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「済生会診療所」653〜655頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1936-shinagawa-takujijo",
+        "name": "品川寺の境内に品川託児場が新築される",
+        "summary": "昭和11年12月、品川寺の境内に品川託児場が新築された。三井慈善団の寄付金を基金に婦人会が運営し、工場で働く女性の多いこの地域で初めての託児場になった。",
+        "description": "区史によれば、それまで子どもを持つ女性労働者の多くは、祖父母や兄姉に乳幼児を預けたり、工場へ連れていったりするしかなかった。",
+        "year": 1936,
+        "yearText": "昭和11年（1936年）12月",
+        "era": "showa-pre",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「隣保館」655〜658頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1932-homen-iin-setchi",
+        "name": "品川区・荏原区に方面委員が置かれる",
+        "summary": "東京で方面委員の制度が始まったのは大正9年12月で、品川区・荏原区には昭和7年10月の市郡併合を機に置かれた。名誉職ながら、昭和7年1月に施行された救護法の救護委員も兼ね、職務は広かった。",
+        "description": "区史は、昭和9年3月に荏原区方面委員会の不正事件が新聞で報じられたことにも触れている。",
+        "year": 1932,
+        "yearText": "昭和7年（1932年）10月",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara"
+        ],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1932-shinagawa-ebara-ku-setchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「方面委員制度」659〜661頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1928-first-futsu-senkyo",
+        "name": "第1回普通選挙で、平塚町役場の投票所に早朝から行列ができる",
+        "summary": "昭和3年2月20日、普通選挙法による最初の総選挙が行われた。荏原郡では平塚町役場の投票所に午前6時半から有権者の列ができたと新聞が伝えている。",
+        "description": "区史によれば、普通選挙法は大正14年に成立したが、労働組合が総同盟と評議会に分かれ、無産政党は昭和3年2月の第1回普選の前には左派・右派・中間派の三つに分かれていた。昭和4年の荏原郡町村会議員選挙では、19町村で20人の無産派議員が当選した。",
+        "year": 1928,
+        "yearText": "昭和3年（1928年）2月20日",
+        "era": "showa-pre",
+        "areas": ["ebara"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「普選の実施と総選挙」609〜614頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1928-nikon-senkyobi-sogi",
+        "name": "総選挙の投票日をめぐって日本光学の豊岡・大井両工場で争議が起こる",
+        "summary": "昭和3年2月20日の総選挙が月曜日に行われたことをめぐり、労働組合は投票日の有給休暇を求めた。日本光学の豊岡・大井の両工場では組合幹部の出勤停止から争議になり、労働時間の短縮などを求めるストライキが選挙の後も続いた。",
+        "description": "区史によれば、労働組合側は投票日を日曜日にしなかったのは労働者の投票を妨げるためだと主張した。ストライキは労働時間短縮、退職手当の増額、解雇手当の制定、健康保険法の改正などを要求した。日本光学が軍需品も生産するとして共産党もこの争議を重視し、昭和3年3月15日未明には争議の指導者の家に刑事が踏み込んでいる。",
+        "year": 1928,
+        "yearText": "昭和3年（1928年）2月20日〜",
+        "era": "showa-pre",
+        "areas": [
+          "oi",
+          "ebara"
+        ],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1928-first-futsu-senkyo",
+          "ev-1918-nikon-oi"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「産業合理化と労働争議の激発」671〜674頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1934-tosei-sokushin-renmei",
+        "name": "旧市域15区と新市域20区が東京都制促進全市三五区連盟を結成する",
+        "summary": "昭和7年の市郡併合は都制の早期施行をねらったものだったが、昭和8年3月に政府が提出した都制案は成立しなかった。昭和9年1月、別々に運動してきた旧市域15区と新市域20区は合流して連盟をつくり、区長の公選などの自治権拡充を求めた。",
+        "description": "区史によれば、品川区会は昭和8年3月2日の意見書で、都制の実現を区の自治権拡充の要求と結びつけて訴えた。昭和10年1月の意見書では、区長の公選と課税・起債権を求める一方、都長は官選とするよう主張した。昭和13年初めの地租付加税の市移管問題で自治権擁護の運動は再び高まったが、昭和12年7月の日中戦争の開始以後は自治権への圧迫が強まっていった。",
+        "year": 1934,
+        "yearText": "昭和9年（1934年）1月",
+        "era": "showa-pre",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1932-shinagawa-ebara-ku-setchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「都制の促進と区自治権の拡充」597〜599頁、「都制要求運動とその挫折」693〜697頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1940-ku-kazeiken-ushinau",
+        "name": "地方税制の改正で区が課税権を失う",
+        "summary": "昭和15年の地方税制の全国的な改正で、区は従来の「区に属する市税」の課税権を失った。町会の整備とあわせて、戦時体制のなかで区の自治権は縮められていった。",
+        "description": "区史によれば、荏原区は昭和13年12月末には7課編成だったが、昭和15年に保健課と社会課が合併して厚生課ができ、経済課が新設された。昭和17年9月2日の東京市訓令で課の編成はさらに戦時色の濃いものに変わった。昭和7年の区制施行以来、一貫して存在し続けた課は戸籍兵事課だけだった。",
+        "year": 1940,
+        "yearText": "昭和15年（1940年）",
+        "era": "showa-pre",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戦時体制の強化と区自治権の縮小」697〜698頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1943-tosei-shiko",
+        "name": "東京都制が施行される",
+        "summary": "昭和18年9月、東京都制が施行された。区史は、都長を官選とするという国家統制の強い形での実現で、区の自治権の拡充とひきかえに都長の官選を受け入れようとした区議会の動きを、内務省が巧みに取り込んだものだったと記している。",
+        "description": "区史によれば、区行政や区会は戦時のなかで変質しており、そのなかで都制が施行された。",
+        "year": 1943,
+        "yearText": "昭和18年（1943年）9月",
+        "era": "showa-pre",
+        "areas": ["ward"],
+        "categories": [
+          "admin",
+          "war"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1934-tosei-sokushin-renmei"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「都制の施行」698〜699頁、「都制の促進と区自治権の拡充」597〜599頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1942-doolittle-raid",
+        "name": "東京初空襲で品川区の大井・東品川・西品川に爆弾が落ちる",
+        "summary": "昭和17年4月18日、空母から発進した米軍のB25が東京を初めて空襲し、品川区では大井関ヶ原町・大井滝王子町・東品川5丁目・西品川4丁目に爆弾と焼夷弾が落ちた。死者26人、重傷31人、軽傷188人を出した。",
+        "description": "区史が引く警視庁の資料によれば、全壊家屋は20戸、半壊・半焼・小破は84戸だった。国鉄大井工場の記録は、大崎の被服工場と大井の東京電気に爆弾が落ち多くの死傷者が出たこと、工場内にも焼夷弾が36発落ちたが職員が消し止めたことを伝えている。区史は、被害は軽微だったが、軍部は簡単に東京上空への侵入を許したことに大きな衝撃を受けたと記す。",
+        "year": 1942,
+        "yearText": "昭和17年（1942年）4月18日",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戦災」748〜761頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1943-bokuu-kuchi-chiku",
+        "name": "防空空地地区が指定され、品川区で13か所・荏原区で1か所が建築制限を受ける",
+        "summary": "昭和18年3月、内務省告示で防空空地地区が指定され、指定地区内では新しい建築が禁止または制限された。品川区では13か所約4万2300坪、荏原区では1か所4,800坪が指定された。",
+        "description": "区史は、この消極的な空地の指定だけでは火災の拡大を防げず、もっと積極的に空地を造り出す必要があったと記す。その後、昭和18年10月に防空法が改正されて疎開や退去命令の項目が加わり、同年12月に都市疎開実施要綱が閣議決定された。",
+        "year": 1943,
+        "yearText": "昭和18年（1943年）3月",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「建物疎開」742〜745頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1944-kyosei-tatemono-sokai",
+        "name": "強制建物疎開が始まり、品川区・荏原区で線路沿いや駅前の家が取り壊される",
+        "summary": "昭和19年1月26日に内務省が東京で初めて強制建物疎開の第一次指定を行い、第四次(5月)までに品川区・荏原区でも大井町線、立会川線、東海道沿線、品鶴線、品川目黒線の沿線などが疎開空地帯になった。",
+        "description": "区史によれば、疎開空地帯は大井町線(南品川3丁目〜大井立会町)、立会川線(大井浜川町〜大井山中町)、東海道沿線(南品川4丁目〜蒲田区仲六郷4丁目)、品鶴線(東大崎1丁目〜大井森前町)、品川目黒線(東大崎2丁目〜大崎本町3丁目)で、重要施設の周辺や、五反田駅東口の交通疎開空地、家屋の密集した小地帯の疎開小空地も指定された。昭和20年に入ると、密集地の一部の建物を都が買い取って小空地をつくる間引疎開も行われた。",
+        "year": 1944,
+        "yearText": "昭和19年（1944年）1月26日〜5月",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara",
+          "oi",
+          "osaki"
+        ],
+        "categories": [
+          "war",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1943-bokuu-kuchi-chiku"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「建物疎開」742〜745頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1944-gakudo-shudan-sokai",
+        "name": "国民学校の児童が集団疎開に出発する",
+        "summary": "昭和19年6月30日の閣議決定で、東京の国民学校3〜6年生は申請により集団疎開することになった。8月4日、品川区の城南第二国民学校が西多摩郡瑞穂町へ疎開し、東京の学童疎開の第一陣になった。品川区は三多摩、荏原区は静岡が疎開先とされた。",
+        "description": "区史によれば、品川区の対象児童は1万3647人で疎開児童は概数8,500人、荏原区の対象は1万4140人で疎開児童は概数6,700人だった。縁故疎開は昭和19年4月1日の時点で品川区3,460人、荏原区2,268人だった。疎開先は寺院や社務所、公会堂が多かったという。昭和20年10月10日の調べでは、集団疎開から戻った学童は品川区2,930人、荏原区2,767人だった。",
+        "year": 1944,
+        "yearText": "昭和19年（1944年）8月4日",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1944-kyosei-tatemono-sokai"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「学童疎開」745〜748頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1944-b29-hatsu-bakugeki",
+        "name": "B29が東京を初めて爆撃し、荏原区・品川区にも爆弾が落ちる",
+        "summary": "昭和19年11月1日にB29が東京上空に初めて現れ、24日に88機で最初の爆撃が行われた。目標は武蔵野町の中島飛行機だったが、雲のため一部は荏原・品川などにも投弾された。",
+        "description": "区史によれば、区内では荏原区西戸越1丁目・平塚1丁目・東戸越3丁目・豊町1丁目、品川区西大崎1丁目・五反田1丁目・6丁目などに被害が出た。12月11日にはB29が2機来襲して大井滝王子町・庚塚町・出石町・森前町・坂下町・水神町に被害が出た。この日から東京は本格的な空襲にさらされるようになった。",
+        "year": 1944,
+        "yearText": "昭和19年（1944年）11月24日",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara",
+          "oi",
+          "osaki"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1942-doolittle-raid"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戦災」748〜761頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1945-0404-bakugeki",
+        "name": "爆弾が大井坂下町や品川区役所付近に落ち、多くの人が亡くなる",
+        "summary": "昭和20年4月4日、中島飛行機などを狙う爆撃のさなか、品川区大井坂下町に爆弾8個が落ちて死者13人、重傷11人、全壊12戸を出した。品川区役所付近でも明治護謨、区役所税務課、清見寺に落ちて死者19人、重傷4人の犠牲が出た。",
+        "description": "区史によれば、荏原区では二葉町2・6丁目に爆弾が落ち、東中延4丁目の東京食糧倉庫事務所には250キロ爆弾が直撃して負傷者が出た。3月10日の東京大空襲では、品川区の被害は高射砲の破片による死者2人にとどまっていた。",
+        "year": 1945,
+        "yearText": "昭和20年（1945年）4月4日",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "ebara"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1944-b29-hatsu-bakugeki"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戦災」748〜761頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1945-0415-kushu",
+        "name": "4月15・16日の空襲で、品川区・荏原区が初めて大きな被害を受ける",
+        "summary": "昭和20年4月15日夜から16日にかけてB29約300機が東京・川崎・横浜を焼夷弾爆撃し、これまで大きな空襲を免れてきた品川区・荏原区にも火災が広がった。品川区は死者12人・全焼1,634戸、荏原区は死者1人・全焼1,766戸だった。",
+        "description": "区史によれば、品川区では上大崎・大崎本町・五反田5丁目・大井水神町・鈴ヶ森町・倉田町・元芝町・関ヶ原町・坂下町・山中町・南浜川町・北浜川町・海岸町、荏原区では小山2〜6丁目・中延5丁目・東中延4丁目・荏原4丁目で火災が起きた。罹災者は品川区8,113人、荏原区6,797人にのぼった。4月19日には、荏原区の疎開跡地にP51が1機墜落し、搭乗員1人が捕虜になった。",
+        "year": 1945,
+        "yearText": "昭和20年（1945年）4月15日〜16日",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1945-0404-bakugeki"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戦災」748〜761頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1945-0524-kushu",
+        "name": "5月24日の空襲で品川区・荏原区のほとんどが焼かれる",
+        "summary": "昭和20年5月24日、B29が東京を空襲し(525機・3,687トン)、品川区・荏原区は最大の被害を受けた。品川区は死者68人・全焼9,540戸・罹災者3万4459人、荏原区は死者184人・全焼約1万5000戸・罹災者約6万人にのぼり、両区のほとんどの区域が火に包まれた。",
+        "description": "区史によれば、品川区では南品川・西品川・東品川・北品川・五反田・大崎・大井の広い範囲が、荏原区では平塚・荏原・小山・二葉町・東中延などが罹災した。国鉄大井工場でも養成所の二階にエレクトロン焼夷弾が落ちて炎が広がり、職員更衣所・浴場・調理場・事務所・診療所を全焼したが、死傷者は出なかった。同工場の昭和19年11月から敗戦までの戦災職員は1,412人、死亡職員は10人だった。体験記を寄せた上大崎の住民は、近くの池田山や二本榎の山に逃れて夜を明かした。",
+        "year": 1945,
+        "yearText": "昭和20年（1945年）5月24日",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1945-0415-kushu"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戦災」748〜761頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1945-0525-kushu",
+        "name": "翌5月25日の空襲で、荏原区の人びとが立会川に飛び込んで逃れる",
+        "summary": "昭和20年5月25日夜、前夜に続いてB29約470機が東京を空襲した。品川区は死者9人・全焼750戸、荏原区は死者1人・負傷者268人・全焼467戸だった。",
+        "description": "区史に載る西中延の住民の体験記によれば、焼夷弾の落下音のなかで人びとが立会川に飛び込み、川の水はお湯のように熱くなった。川に入って助かった人は数知れなかったが、焼夷弾の直撃で亡くなった人もいた。罹災したのは品川区の上大崎・長者丸・南品川など、荏原区の荏原・小山・平塚の一部だった。区史は、3月10日から5月25・26日までの5回の夜間焼夷弾攻撃で、東京は完全に焼け野原になったと記している。",
+        "year": 1945,
+        "yearText": "昭和20年（1945年）5月25日",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1945-0524-kushu"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戦災」748〜761頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1945-0813-last-kushu",
+        "name": "8月13日の機銃掃射が品川区への最後の空襲になる",
+        "summary": "昭和20年8月13日、艦上機約50機が品川・荏原などを機銃掃射し、品川区では東品川と大井の北浜川町・鹿島町・倉田町・出石町・滝王子町・関ヶ原町に被害が出て、死者14人、負傷者15人を出した。この日が品川区の最後の空襲になった。",
+        "description": "区史によれば、5月29日にもB29とP51が来襲し、品川区の北品川・西大崎・東大崎・大井海岸町などで死者2人、全焼455戸の被害があった。",
+        "year": 1945,
+        "yearText": "昭和20年（1945年）8月13日",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1945-0525-kushu"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戦災」748〜761頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1945-sensai-hisai-ritsu",
+        "name": "戦災で荏原区の95.78%が罹災し、両区の人口が大きく減る",
+        "summary": "昭和20年6月21日の東京都の調べでは、品川区は10.16平方キロメートルのうち3.90平方キロメートルが罹災し(罹災率38.39%)、荏原区は3.8平方キロメートルのうち3.68平方キロメートルが罹災した(95.78%、35区で最高)。",
+        "description": "区史によれば、品川区の人口は戦前の23万5215人から昭和20年4月に12万6937人、6月10日に9万6677人へ減り、荏原区は19万6720人から11万4877人、3万5313人へ減った。6月15日現在の罹災者は品川区4万8664人、荏原区7万399人だった。昭和19年2月から20年6月までの疎開による人口の減り方も、区史が記録している(品川区21万4274人→9万8064人、荏原区18万1497人→5万9673人)。",
+        "year": 1945,
+        "yearText": "昭和20年（1945年）6月",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara"
+        ],
+        "categories": [
+          "war",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1945-0524-kushu"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「戦災」748〜761頁、「建物疎開」742〜745頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1943-kokumin-choyorei-kaisei",
+        "name": "改正国民徴用令で「不急不要」の職業が男子に禁じられ、区内の人びとが工場に徴用される",
+        "summary": "昭和18年8月に改正国民徴用令が実施され、事務補助者・店員・行商・電話交換手・理髪師など「不急不要」とされた多くの職業で男子の就労が禁じられた。それまでそれらの仕事をしていた人びとは、工場の職工として徴用された。",
+        "description": "区史によれば、昭和18年1月の閣議で国民皆働体制がうたわれ、7月には労務調整法の改正で男子の就業制限が可能になった。12月には軍需会社徴用規則が実施され、国民登録の男子の適用範囲も満45歳未満まで広げられた。区史は、荏原区で町会議員や区長を務めたことのある住民が、無職として徴用されて工場で機械加工の仕事をした例を載せている。",
+        "year": 1943,
+        "yearText": "昭和18年（1943年）8月",
+        "era": "showa-pre",
+        "areas": ["ward"],
+        "categories": [
+          "war",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「徴用・勤労動員」733〜742頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1940-haikyu-seido-hajimaru",
+        "name": "砂糖とマッチの切符制配給が始まり、区民の暮らしに配給制が広がる",
+        "summary": "昭和15年6月、東京市で砂糖(1か月半斤)とマッチ(1日5本)の切符制配給が始まった。昭和17年2月の衣料品の点数切符制までに35品目が切符制になり、昭和16年4月からは米の通帳割当配給制も実施された。",
+        "description": "区史によれば、配給が広がるにつれて買いだめが流行したが、多くの区民は石けん1個を手に入れるために長い列に並んだ。昭和17年10月に東京府食糧営団が設立され、主食の配給機構が整えられた。昭和18年1月からは玄米の配給が始まったが、食糧難は進み、闇への依存は高まった。",
+        "year": 1940,
+        "yearText": "昭和15年（1940年）6月",
+        "era": "showa-pre",
+        "areas": ["ward"],
+        "categories": [
+          "war",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「切符制配給」724〜726頁、「米の通帳割当制」727頁、「食糧難」728〜729頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1944-oi-koujo-sakura-kirare",
+        "name": "国鉄大井工場の名物だった桜が切り倒される",
+        "summary": "昭和19年春、長く大井工場の名物だった桜の木が、つぼみがふくらんだ時期に全部切り倒された。「この重大時に花見をしているとは何ごとか」という投書がしきりに届いたためで、区史は当時の象徴的な出来事と記している。",
+        "description": "区史は、工場長も結局は投書に迎合し、人びとの心がそれほどすさんでいたと述べている。",
+        "year": 1944,
+        "yearText": "昭和19年（1944年）春",
+        "era": "showa-pre",
+        "areas": ["oi"],
+        "categories": [
+          "war",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「切り倒された桜の木」732頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1935-chonaikai-sotsu",
+        "name": "品川・荏原の両区から町会のない町がなくなる",
+        "summary": "昭和7年の区制施行後、区役所や警察署が町会づくりを勧め、昭和10年6月には両区に町会のない町はなくなった。品川区は103町会と2つの部分的な連合会、荏原区は72町会と1つの連合会を持つようになった。",
+        "description": "区史によれば、町会が各地にできたのは関東大震災後の人口の急増による面が大きく、大正12年から昭和7年の市郡併合までに42の町会がつくられた。自警団から町会になったものもあった。昭和12年の日中戦争の開始後、町会は戦時体制の末端に組み込まれ、昭和15年9月の内務省訓令でその整備が全国に指示された。品川区の隣組は昭和14年初めに3,156、昭和15年5月に4,223へ増えた。",
+        "year": 1935,
+        "yearText": "昭和10年（1935年）6月",
+        "era": "showa-pre",
+        "areas": [
+          "shinagawa",
+          "ebara"
+        ],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1940-ku-kazeiken-ushinau"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「品川・荏原両区における町会の沿革」711〜713頁、「町会の戦時体制化と内務省の町会整備」719〜722頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1935-fu-denki-kogyo-gakko",
+        "name": "東京府立電機工業学校が鮫洲先の埋立地に創立される",
+        "summary": "昭和10年、鮫洲の先の新しい埋立地約1万坪に東京府立電機工業学校が創立された。軍需産業の興隆で電機の技術者養成が急がれていた時期で、昭和15年には府立高等工業学校も設けられた。",
+        "description": "区史によれば、この学校は戦後、都立大学工学部・都立工科短期大学・都立工業高等専門学校の母体になった。昭和9年には、第八高女が埋立地の新校舎に移った跡の南品川浅間台の旧校舎に府立聾唖学校が設立され、これが都立品川ろう学校の前身になった。",
+        "year": 1935,
+        "yearText": "昭和10年（1935年）",
+        "era": "showa-pre",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「公立学校」764頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1934-shogakko-shinsetsu-showa",
+        "name": "荏原区南部で小学校が相次いで新設され、三井別邸や研究所の跡地が校地になる",
+        "summary": "昭和9年に戸越・中延・旗の台の3校、昭和12年に中原小学校、昭和15年に上神明校が荏原地区で新設された。校地を得るのが難しくなり、三井別邸の一画の寄付を受けた戸越小学校や、徳川生物学研究所の跡地を譲り受けた平塚小学校ができた。",
+        "description": "区史によれば、大井地区では昭和9年に浜川小学校、11年に伊藤小学校が設けられ、品川地区では昭和13年に城南第二小学校が埋立地に設けられた。城南第二小学校は、廃校になった東海小学校の土地を売って約2.5倍の面積の校地を求めたもので、当時は荒野の中の孤塁のようだったという。昭和16年の国民学校令で義務教育が8年になり、大崎国民学校(昭和16年4月)と南功国民学校(昭和17年4月)が高等科の児童だけを収容する学校として生まれた。",
+        "year": 1934,
+        "yearEnd": 1942,
+        "yearText": "昭和9年（1934年）〜昭和17年（1942年）",
+        "era": "showa-pre",
+        "areas": [
+          "ebara",
+          "oi",
+          "shinagawa",
+          "osaki"
+        ],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1932-togoshi-koen-kifu",
+          "ev-1926-ebara-shogakko-zosetsu"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「小学校の新設」762〜763頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1941-korankan-moves-hatanodai",
+        "name": "香蘭女学校が白金から旗の台へ移転する",
+        "summary": "昭和16年、明治21年開校のミッション系の香蘭女学校が、校舎が狭くなった芝区白金から、荏原区旗の台の約4,300坪の敷地に移ってきた。",
+        "description": "区史は、昭和期に区内に多くの私立女学校ができた例の一つとして挙げている。同じ時期には京南家政女学校(昭和8年、大井寺下町)、町田報徳学舎(昭和9年、南品川)、青蘭女子商業学校(昭和12年、二葉1丁目)も創設された。",
+        "year": 1941,
+        "yearText": "昭和16年（1941年）",
+        "era": "showa-pre",
+        "areas": ["ebara"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「香蘭女学校の転入」765頁、「京南家政女学校」765頁、「町田報徳学舎と青蘭学院」765頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1868-enomoto-escape",
+        "name": "榎本武揚が旧幕府の軍艦8隻を率いて品川沖を脱出する",
+        "summary": "慶応4年(明治元年)8月19日、品川沖に停泊していた旧幕府の開陽丸など軍艦8隻が、榎本武揚に率いられて江戸湾を出て北へ向かった。品川の人びとにも東京市民にも大きな事件だった。",
+        "description": "区史によれば、艦隊は房総沖で嵐にあって2隻を失い、6隻が松島湾に入った。のちに会津落城のあと北海道の五稜郭を占拠することになる。政府側はこの事件もあって、明治天皇の東幸を急ぐ声が高まった。",
+        "year": 1868,
+        "yearText": "慶応4年（1868年）8月19日",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["war"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1868-anzaisho"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 2 明治維新と品川「榎本の品川沖脱出」11頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1869-shinagawa-ken-setchi",
+        "name": "品川県が設置される",
+        "summary": "明治2年2月9日、品川県が設置された。旧幕府の代官がもつ土地をもとに、小菅県・大宮県とあわせて三つの県がつくられたうちの一つで、荏原郡の品川宿とその周辺の村々もこの県に属した。",
+        "description": "区史によれば、代官は維新後まず武蔵知県事と呼ばれ、品川県は明治2年2月9日、小菅県(1月13日)と大宮県(1月28日)に遅れて設置された。4日前の2月5日に出された「府県施政順序」には、租税、戸籍、凶荒の予防、窮民の救済、小学校の設置などが挙げられていた。県政が具体的に動き出したのは、6月の版籍奉還のあとだった。区史は、品川県がどのような政策を行ったかは詳しくは分からない、期間が短すぎたためと述べている。",
+        "year": 1869,
+        "yearText": "明治2年（1869年）2月9日",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1869-shinagawa-beer"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 2 明治維新と品川「品川県の設置」15〜17頁、「品川県門訴事件」20〜22頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1871-shinagawa-ken-kaisho",
+        "name": "品川県が解消され、荏原郡などの村々が東京府に編入される",
+        "summary": "廃藩置県のあと、明治4年12月5日に品川県の荏原郡85か村・豊島郡26か村・多摩郡55か村が東京府に編入された。品川宿とその周辺の村々は、抵抗なくすっきりと東京府に入った。",
+        "description": "区史によれば、編入された荏原郡の村には南品川宿・北品川宿・戸越村・大井村・上下大崎村などが含まれる。編入後に一部の村は神奈川県へ管轄替えになり、中野村など39か村は府庁まで2〜3里なのに県庁が10里ほど先になって不便だとして反対陳情を続け、32か村が明治5年9月10日に東京府へ戻った。",
+        "year": 1871,
+        "yearText": "明治4年（1871年）12月5日",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1869-shinagawa-ken-setchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 2 明治維新と品川「品川県の解消」25〜26頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1873-daiku-shoku-seido",
+        "name": "朱引外に五つの大区が置かれ、品川区域は第七大区に入る",
+        "summary": "明治6年3月18日、東京の市中の六大区に続いて、朱引の外の郷村部にも七〜十一の五大区が置かれた。品川区域の村々は第七大区(二・三・五小区)に入り、明治11年の荏原郡の設置まで、この区画が続いた。",
+        "description": "区史によれば、明治4年11月28日に布告された大区小区制は市中を六大区に分けたもので、廃藩置県後は旧品川県の地域を「品川口」としてこれに付属させる変則的な形だった。明治6年に郷村部を含む形に改められ、七大区二小区には北品川宿・品川歩行新宿・南品川宿・南品川猟師町など、三小区には大井村・上下蛇窪村、五小区には上下大崎村・居木橋村・桐ケ谷村・戸越村・小山村・谷山村・中延村が属した。",
+        "year": 1873,
+        "yearText": "明治6年（1873年）3月18日",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1871-shinagawa-ken-kaisho"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 2 明治維新と品川「大区小区」40〜44頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1878-ebara-gun-setchi",
+        "name": "荏原郡が置かれ、郡役所が品川に設けられる",
+        "summary": "明治11年11月2日、郡区町村編制法に基づいて東京府が大小区を廃し、15区と6郡を設けた。荏原郡は第七大区の村々90宿町村をすべて管轄し、郡役所は品川に置かれた。",
+        "description": "区史によれば、初代の郡長には桐ケ谷村の名主で第七大区の副区長を務めた林交周が任命され、明治28年まで18年間在職した。区域の宿町村は、数か町村で一人の戸長を置く連合戸長役場の形をとった。品川では、南品川宿・南品川猟師町・南品川利田新地・二日五日市村が南の戸長役場、北品川宿・品川歩行新宿が北の戸長役場にまとまった。",
+        "year": 1878,
+        "yearText": "明治11年（1878年）11月2日",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1873-daiku-shoku-seido"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 3 明治政府の諸政策と地方制度「郡制の実施と連合戸長役場の設置」48〜54頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1878-fukai-chosonkai-kaisetsu",
+        "name": "東京府会が開かれ、郡部に町村会が置かれる",
+        "summary": "明治11年12月に府県会規則で東京府会が開かれ、明治12年2月には市内の15区に区会、郡部の6郡に町村会を置くことが決まった。明治13年4月に区町村会法が公布され、各連合町村が町村会規則をつくった。",
+        "description": "区史によれば、府会議員の定数は当初49人で、明治13年に75人に増えた。荏原郡の最初の選挙は、町村長が寄合って候補を決める形で行われたという。明治17年の区町村会法の改正で戸長が官選になり、町村は独立した自治団体としての性格を失った。",
+        "year": 1878,
+        "yearEnd": 1880,
+        "yearText": "明治11年（1878年）12月〜明治13年（1880年）4月",
+        "era": "meiji",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1878-ebara-gun-setchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 3 明治政府の諸政策と地方制度「府会の設置と荏原郡の代表」54〜59頁、「町村会の開設」59〜61頁、「区町村会の改正と戸長の官選」61〜63頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1889-chosonsei-shiko-ebara",
+        "name": "町村制の施行で品川町・大井村・大崎村・平塚村が成立する",
+        "summary": "明治22年5月、町村制の施行にあわせて町村合併が行われ、区域には品川町(6宿町村の合併)、大井村(単独)、大崎村(5か村と白金猿町の一部)、平塚村(5か村)の四つの自治体ができた。",
+        "description": "区史によれば、品川町は府と郡が北品川宿などを芝区に編入する案を出したが、南品川と北品川の住民がそれぞれ独立を請願したものの認められず、6宿町村すべてで品川町になった(戸数3,601、人口16,530)。大崎村は旧連合戸長役場の5か村に白金猿町の一部が加わった。平塚村は戸越・上下蛇窪の3村と中延・小山の2村を合わせたもので、村名が戸越側の「竹旭村」案と中延側の「平塚村」案で紛糾し、平塚村に決まった。大井村は戸数・人口とも基準に達していたのでそのまま移行した。初代の村長は大井村が田中肇、大崎村が海老沢重治、平塚村が高橋勝蔵(同年6月選出)で、品川町は山本重興だった。",
+        "year": 1889,
+        "yearText": "明治22年（1889年）5月",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1878-ebara-gun-setchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「市制町村制の施行」180〜181頁、「品川区域の町村合併」183〜187頁、「新しい町村役場と町村長」189〜191頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1890-first-shugiin-senkyo",
+        "name": "第1回衆議院議員選挙で、荏原郡は第12区として1人を選ぶ",
+        "summary": "明治23年7月1日の第1回衆議院議員選挙は、直接国税15円以上を納める人に選挙権があり、有権者は全人口の1.24%だった。品川区域の属する荏原郡は伊豆七島とともに東京の第12区で、定員は1人、選挙人は597人だった。",
+        "description": "区史によれば、この選挙から明治31年の第6回総選挙まで、品川宿出身の高木正年と大井村の平林九兵衛が議席をめぐって争った。高木は明治30年に失明したが、昭和9年に没するまで衆議院議員として活動し、区史は「唯一人の盲人代議士」と記している。",
+        "year": 1890,
+        "yearText": "明治23年（1890年）7月1日",
+        "era": "meiji",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "区史の別の節は、高木正年が当選した第1回総選挙の施行を「明治22年7月」と書いている。「憲法発布と帝国議会の開設」の節が「翌23年7月1日」とするため、そちらに従った。",
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 5 大正期の民衆運動と地方政界「地方政界の変貌と高木正年・漆昌巌」381〜384頁"
+          }
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「憲法発布と帝国議会の開設」197〜200頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1908-oi-osaki-chosei",
+        "name": "大井村・大崎村が町制を施行して大井町・大崎町になる",
+        "summary": "人口の増加にともない、明治41年8月1日に大井村と大崎村がそろって町制を施行し、大井町・大崎町になった。",
+        "description": "区史によれば、大井村の田中肇は明治22年に村長となり、町制施行で初代の町長になって大正5年に没するまで32年間その職にあった。大崎村の海老沢啓三郎は父重治のあとを継いで村長となり、町長として大正6年に没するまで26年間その職にあった。",
+        "year": 1908,
+        "yearText": "明治41年（1908年）8月1日",
+        "era": "meiji",
+        "areas": [
+          "oi",
+          "osaki"
+        ],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1889-chosonsei-shiko-ebara"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「町村の発展と財政膨脹」191〜197頁、「新しい町村役場と町村長」189〜191頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1913-ebara-gunmin-taikai",
+        "name": "憲政擁護の荏原郡民大会が清華園で開かれる",
+        "summary": "大正2年2月1日、第一次護憲運動のなかで、閥族打破・憲政擁護を掲げた荏原郡民大会が清華園で開かれた。大正元年10月には、品川御殿山に隣接する海軍用水地の問題も起きていた。",
+        "description": "区史は、日露戦争後の東京で民衆の運動が相次いだ流れのなかにこの大会を位置づけている。電車賃値上げ反対(明治39年)、増税反対(明治41年)、三悪税廃止運動(大正3年)を経て、民衆運動の最大の爆発が大正7年の米騒動だった。",
+        "year": 1913,
+        "yearText": "大正2年（1913年）2月1日",
+        "era": "taisho",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 5 大正期の民衆運動と地方政界「都市の民衆騒擾と品川区域」377〜381頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1913-yuaikai-bunkai",
+        "name": "友愛会の大井分会・品川分会・大崎支部・荏原支部が発足する",
+        "summary": "大正元年に東京で生まれた友愛会は、大正2年12月ごろに大井分会、大正3年1月3日に品川分会ができ、11月には大井分会が荏原支部に、大崎でも支部が発足した。鉄道院大井工場の労働者を中心にした中央第二支部も大正6年にできた。",
+        "description": "区史によれば、大正3年11月1日に大井分会が荏原支部となり、翌4年1月3日に品川町の城南尋常高等小学校で発会式を開いた。大崎支部の発会式はそれより先の大正3年11月22日に大崎町立日野小学校で行われた。荏原支部は同4年7月には東京電気・日本毛織・三共製薬・後藤毛織・明治護謨・鉄道院工場などの分会を持つまで拡大した。大正5年9月の東京府は支部26、分会4で、全国の支部・分会の4割を占めた。",
+        "year": 1913,
+        "yearEnd": 1917,
+        "yearText": "大正2年（1913年）12月ごろ〜大正6年（1917年）",
+        "era": "taisho",
+        "areas": [
+          "oi",
+          "shinagawa",
+          "osaki"
+        ],
+        "categories": [
+          "industry",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 5 大正期の民衆運動と地方政界「友愛会大井・品川分会の発足と城南支部第四十八部会」390〜392頁、「大井分会から荏原支部へ」392〜396頁、「荏原支部の発展」396〜400頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1920-sonoike-sogi-18days",
+        "name": "園池製作所の労働者が八時間労働などを求めて18日間のストライキを行う",
+        "summary": "大正9年正月、園池製作所の労働者は八時間労働制・賃金1割増・解雇手当・退職手当・職制の任免の5項目を求めて、18日間のストライキに入った。3月には明電舎でも争議があった。",
+        "description": "区史によれば、区域の労働争議は大正7年から15年の間に機械・金属工業を中心に起こり、全国の件数が大正6〜8年にピークを迎えて以後急減するのに対し、区域では大正8年前後は賃上げ要求、その後は労働時間の短縮や八時間労働、大正9年の反動恐慌後は解雇手当の増額の要求へと重点が移った。",
+        "year": 1920,
+        "yearText": "大正9年（1920年）正月",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1919-sonoike-sogi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 5 大正期の民衆運動と地方政界「現品川区域の労働争議状況」401〜404頁、「「産業民主」の要求」407〜409頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1924-nihon-hokko-kumiai",
+        "name": "日本縫工組合が結成され、のち北品川に縫工会館を建てる",
+        "summary": "大正13年3月29日、大井鉄道被服工場内の東京洋服技工組合と裁縫同盟会・軍人親和会の3団体が合同して日本縫工組合を結成した。昭和4年1月には品川町北品川に縫工会館を建てた。",
+        "description": "区史によれば、総同盟の方向転換のあと労働組合の合同が進み、総同盟の全盛期となった時期の動きだった。組合は昭和2年の岡谷争議に応援にかけつけるなど地道な活動を続けた。",
+        "year": 1924,
+        "yearText": "大正13年（1924年）3月29日",
+        "era": "taisho",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 5 大正期の民衆運動と地方政界「日本縫工組合」410〜412頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1923-kanto-tekko-osaki-shibu",
+        "name": "関東鉄工組合の大崎支部が相次いで結成される",
+        "summary": "大正12年1月に関東鉄工組合が生まれ、関東大震災後の11月9日に大崎支部が承認された。大正13年3月には第三支部などが結成され、同月1日に第一〜第四支部が承認された。",
+        "description": "区史によれば、大崎の第一支部は東京衡器製作所、第二支部は日本鉄工所、第三支部は沖電気分工場に置かれた。大正13年4月の同組合第二回大会で左派の幹部が当選して右派が激怒し、総同盟の左右分裂の導火線になった。",
+        "year": 1923,
+        "yearEnd": 1924,
+        "yearText": "大正12年（1923年）11月〜大正13年（1924年）3月",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 5 大正期の民衆運動と地方政界「関東鉄工組合大崎支部連合」412〜416頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1924-nanbu-godo-rodo-kumiai",
+        "name": "南部合同労働組合が発会式を開く",
+        "summary": "大正13年8月3日、目黒互楽亭で南部合同労働組合の発会式が開かれ、大崎・大井・平塚の工場の支部が加わった。大正14年6月には東洋製菓の従業員が品川製菓工支部を、翌年8月には品川の白煉瓦工場の労働者が煉瓦工支部を結成した。",
+        "description": "区史によれば、品川製菓工支部は婦人労働者が多数を占め、当時の製菓工場の労働条件は非人道的だった。",
+        "year": 1924,
+        "yearText": "大正13年（1924年）8月3日",
+        "era": "taisho",
+        "areas": [
+          "osaki",
+          "oi",
+          "ebara",
+          "shinagawa"
+        ],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 5 大正期の民衆運動と地方政界「南部合同労働組合」416〜417頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1920-asamadai-shogakko",
+        "name": "品川町に浅間台小学校が開かれ、品川小学校は権現山に移る",
+        "summary": "品川町は人口増で教室が足りず、大正8年9月に浅間台で1,700坪を購入して起工し、15万円の予算の多くを寄付でまかなって、大正9年9月に浅間台小学校が完成した。品川小学校は大正13年に権現山の新校舎に移った。",
+        "description": "区史によれば、大正元年に660人だった品川小学校をはじめ城南・東海小学校は900人を超え、大正5年には城南小学校が1,521人になった。西品川では大正10年に現在の三木小学校の地に敷地を求めて学校建設が始まった。",
+        "year": 1920,
+        "yearText": "大正9年（1920年）9月",
+        "era": "taisho",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 7 近郊地域としての教育機関の整備「品川町」418〜421頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1918-osaki-shogakko-zosetsu",
+        "name": "大崎町で芳水小学校・第三日野小学校が新設される",
+        "summary": "大崎町は第一次大戦後に市内から工場が移り、工場数が明治44年の8から大正10年の131に増えた。児童数も大正元年の1,331人から大正10年の3,745人に増え、大正7年に東大崎の芳水小学校、大正11年4月に第三日野小学校が開校した。",
+        "description": "区史によれば、第三日野小学校は上大崎の1,733坪の敷地に開かれ、約800人が第二日野小学校から転校した。",
+        "year": 1918,
+        "yearEnd": 1922,
+        "yearText": "大正7年（1918年）〜大正11年（1922年）",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1925-hino-shogakko"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 7 近郊地域としての教育機関の整備「大崎町」421〜423頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1916-oi-shogakko-zosetsu",
+        "name": "大井町で大井第二・鈴ケ森・原小学校が新設される",
+        "summary": "国電の大井町駅ができて商家と小住宅が増えた大井町では、大正5年10月に大井第二小学校、大正9年4月に鈴ケ森小学校(児童217人・職員3人)、大正12年7月に原小学校が開校した。",
+        "description": "区史によれば、鈴ケ森小学校は鮫浜小学校からの転校生で始まった小規模校だったが、すぐに生徒が増えて大正11年に大増築を行った。",
+        "year": 1916,
+        "yearEnd": 1923,
+        "yearText": "大正5年（1916年）〜大正12年（1923年）",
+        "era": "taisho",
+        "areas": ["oi"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 7 近郊地域としての教育機関の整備「大井町」423〜424頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1918-ebara-gunritsu-jikka-jogakko",
+        "name": "荏原郡立実科高等女学校ができ、のち東京府立品川女学校になる",
+        "summary": "大正7年、荏原郡長らの企画で荏原郡立実科高等女学校が急きょ生まれた。大正8年1月に南品川宿の浅間台に移り、大正10年に高等女学校になり、大正12年の郡制廃止で東京府立品川女学校と改称して昭和2年に第八高女となった。",
+        "description": "区史によれば、校舎が決まるまでは、お台場の赤レンガの精粉工場跡を教室にして授業を続けた。大正8年4月に修業年限を4年、定員400人としたが、その年の入学志願者は62人で全員が合格した。",
+        "year": 1918,
+        "yearText": "大正7年（1918年）",
+        "era": "taisho",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 7 近郊地域としての教育機関の整備「荏原郡立実科高等女学校の誕生」427〜428頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1923-fu-dai8-chugakko",
+        "name": "府立第八中学校が平塚村小山に創立される",
+        "summary": "東京の膨張にともなって府立中学が増やされ、大正10年に府立六中、11年に七中に続いて、大正12年に荏原郡平塚村小山に府立第八中学校が設立された。校舎ができるまでは三木小学校の一部を借りて授業を行い、翌13年4月から小山の校舎で授業を始めた。",
+        "description": "区史によれば、府立の中学は大正9年まで5校しかなかった。初代校長は昭和12年まで十数年在職し、校風はその教育方針によるところが強いという。現在の小山台高等学校につながる。",
+        "year": 1923,
+        "yearText": "大正12年（1923年）",
+        "era": "taisho",
+        "areas": ["ebara"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 7 近郊地域としての教育機関の整備「府立第八中学校の創立」428〜432頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1921-hoshi-shogyo-gakko",
+        "name": "星商業学校が平塚村戸越に設立される",
+        "summary": "大正10年、平塚村戸越(現在の星薬科大学の地)に星商業学校が設立された。大正13年には鉄筋4階建ての円形の講堂が完成し、これが現在の薬科大学の本館になっている。",
+        "description": "区史は、荏原地区の教育機関の整備の一例として、この学校の創立を挙げている。",
+        "year": 1921,
+        "yearText": "大正10年（1921年）",
+        "era": "taisho",
+        "areas": ["ebara"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 7 近郊地域としての教育機関の整備「星商業学校の誕生」434〜435頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1918-jitsugyo-hoshu-yagakko",
+        "name": "区域に実業補習学校や尋常夜学校が開かれる",
+        "summary": "小学校を出てすぐ働く人のための実業補習学校が、大正7年に鮫浜・大井の両小学校内、大正8年に品川小学校内(品川商業補習夜学校)などで開かれた。大正7年からは品川・城南の両校に、12歳以上が3年で義務教育を終える尋常夜学校も置かれた。",
+        "description": "区史によれば、城南夜学校は大正7年に約50人、東海夜学校は40人が入学した。荏原郡立工業補習学校は大正8年に荏原郡立実科女学校内に設けられ、大正12年に東京府立品川工業補習学校と改称された。",
+        "year": 1918,
+        "yearEnd": 1919,
+        "yearText": "大正7年（1918年）〜大正8年（1919年）",
+        "era": "taisho",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 7 近郊地域としての教育機関の整備「実業補習学校と尋常夜学校の開設」432〜434頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1945-shokuryo-kiki",
+        "name": "戦後の食糧危機が深まり、区民はヤミと買出しで食いつなぐ",
+        "summary": "敗戦前後から主食の配給が減り、昭和20年10月ごろから栄養失調による死者が出始めた。昭和21年にかけて食糧事情は最悪になり、区民は買出しとヤミ物資に頼らなければ生きていけなかった。統制が解けたのは昭和23〜25年だった。",
+        "description": "区史によれば、昭和20年5月に主食の配給基準が変わり、7月からは1割削減された。昭和21年2月から遅配が再び起こり、3月には手持ちの米が7日分から5日分に減った。民衆の怒りは5月1日の戦後初のメーデー、5月19日の食糧メーデーで頂点に達した。昭和21年から限界価格制度でヤミ売りの取り締まりが行われたが、警視庁の役人や警察官にも6月に「買い出し休暇」が認められるほどだった。配給統制は、昭和23年10月に果物類、24年4月に野菜・水産物、25年10月に砂糖などと順に解除された。",
+        "year": 1945,
+        "yearEnd": 1950,
+        "yearText": "昭和20年（1945年）〜昭和25年（1950年）",
+        "era": "showa-post",
+        "areas": ["ward"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1940-haikyu-seido-hajimaru"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「食糧危機のはじまり」774〜775頁、「食糧危機の本格化」775〜779頁、「ヤミと買出し」782〜787頁、「配給統制の解除」788〜790頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1946-shinen-kirikae",
+        "name": "新円切換えで、預金の引き出しが制限される",
+        "summary": "昭和21年2月17日、政府は日本銀行券預入令と金融緊急措置令を公布した。社会不安から銀行の取り付けが起こりかねない情勢のなかでの措置で、区民の暮らしは「500円生活」の枠に縛られた。",
+        "description": "区史によれば、昭和24年ごろの実質賃金は戦前の昭和9〜11年の48%にも達しなかった。民間産業はこの500円の枠を破って賃上げを実現していったが、公務員や教員はせいぜい100円ほどしか上がらず、昭和22年2月1日に計画されたゼネラル・ストライキは、公務員の賃上げを出発点にしていた(不発に終わった)。",
+        "year": 1946,
+        "yearText": "昭和21年（1946年）2月17日",
+        "era": "showa-post",
+        "areas": ["ward"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1945-shokuryo-kiki"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「新円切換え」779〜782頁、「二・一スト不発」883〜886頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1946-kome-yokose-ebara",
+        "name": "荏原区の主婦たちが区役所に米よこせの陳情に押しかける",
+        "summary": "昭和21年4月ごろ、近所の主婦ら64人が連れ立って荏原区役所に米の配給を求める陳情に出かけた。当時の給料は、1か月の食費の4分の1ほどしかない状態だった。",
+        "description": "区史に載る体験談による。区史によれば、実質賃金は昭和12年を100とすると昭和20年12月に14.2に下がり、7分の1以下になっていた。",
+        "year": 1946,
+        "yearText": "昭和21年（1946年）4月ごろ",
+        "era": "showa-post",
+        "areas": ["ebara"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1945-shokuryo-kiki"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「米よこせ運動」873〜876頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1946-oi-kojo-rodokumiai",
+        "name": "国鉄大井工場でも労働組合が結成される",
+        "summary": "昭和21年1月30日、国鉄大井工場でも労働組合が結成された。2月8日には国鉄労働組合の東京地方で最初の地域組織が生まれ、大井工場の組合は待遇の改善や民主化、生活危機の突破に取り組んだ。",
+        "description": "区史によれば、戦災で荒れた国電は、戦前の1,564両のうち昭和21年4月に稼働できるのは978両ほどで、残りは休車や不良車だった。大井工場は修理作業の一部を昭和21年6月から24年4月まで府中刑務所の受刑者に委託したこともあった。昭和21年には省電中央労働組合が国電安全運転闘争を行った。",
+        "year": 1946,
+        "yearText": "昭和21年（1946年）1月30日",
+        "era": "showa-post",
+        "areas": ["oi"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1946-oi-kojo-postwar"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「国鉄大井工場の苦闘」870〜872頁、「大井工機部労働組合の結成」872〜873頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1947-ward-togo-process",
+        "name": "品川・荏原両区の統合が決まり、初の区長公選と区会議員選挙が行われる",
+        "summary": "東京都は昭和21年9月に区域整理委員会を設け、11月27日に22区案が承認されて品川・荏原両区の統合の方向が決まった。昭和22年2月6日に荏原区会が統合を可決し、4月5日に初めての区長直接公選、4月30日に区会議員選挙が行われた。",
+        "description": "区史によれば、城南六区の正副議長は昭和21年12月17日に、統合は区民の福祉につながらず自治権の拡充にもならないと不満を示した。品川区会は11月20日に22区案への賛成をあげていたが、荏原区会は自治権拡充への不満から決定が遅れ、荏原区の財政難から統合に向かった。区長選挙では自由党の鏑木忠正が約3万7000票で、社会党・共産党の候補を抑えて初代の公選区長になった。区会議員選挙は定員45人に123人が立候補し、自由党23・社会党7・民主党3・国民協同党1・共産党1・無所属10の議席となり、女性の区議も生まれた。戦前の区会議員で選ばれたのは7人にとどまった。統合の余韻で、昭和24年8月になっても区民・税務・民生などの課は一課と二課に分かれ、品川・荏原を分担していた。",
+        "year": 1947,
+        "yearText": "昭和22年（1947年）2月〜4月",
+        "era": "showa-post",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "区史は、荏原区会が新区名を品川と決めたのを昭和22年3月25日と記し、これを受けて両区が新たに品川区として発足したと続ける。区は3月15日を区制の起点としており、区史の記述の順序とは合わない。年表の統合の日は区の公式の3月15日を採り、区史の3月25日は区名決定の日として記録した。",
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「新品川区の成立」818〜821頁"
+          }
+        ],
+        "relatedEvents": [
+          "ev-1947-ward-founded",
+          "ev-1932-shinagawa-ebara-ku-setchi"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「新品川区の成立」818〜821頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1945-gakko-doukyo",
+        "name": "戦災で校舎を失った国民学校が、残った校舎に同居して授業を続ける",
+        "summary": "昭和20年の戦災で校舎を焼かれた学校が多く、芳水国民学校には第一〜第四日野国民学校など7校が、延山国民学校には上神明・源氏前・大原の3校が同居するなど、一つの校舎を複数校で使った。二部授業が解消されたのは昭和30年代に入ってからだった。",
+        "description": "区史によれば、浜川国民学校には昭和23年8月まで大井第一国民学校が、中延国民学校には大間窪・宮前の2校が、後地国民学校には小山・平塚・南功・中原の4校が同居した。第二延山国民学校には旗の台国民学校が、半焼した原国民学校には山中・伊藤の2校が同居した。",
+        "year": 1945,
+        "yearText": "昭和20年（1945年）〜",
+        "era": "showa-post",
+        "areas": ["ward"],
+        "categories": [
+          "life",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1945-0524-kushu"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「教室不足と二部授業」836〜838頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1948-gakko-kyushoku-hajimaru",
+        "name": "荏原の学校で学校給食が始まる",
+        "summary": "戦後の食糧難のなか、中延校を借りていた京陽小学校では、昭和23年1月21日に学校給食が始まった。昭和25年ごろからは調理室が建ち、栄養士が献立をたてて、パンとミルクにおかずのそろった完全給食へ順に切り替わった。",
+        "description": "区史によれば、学校給食は昭和19年4月に六大都市の学校で始められた。米の収穫は敗戦の年に平年作の半分だった。区史が刊行されたころ(昭和47年度)、東京都の小学校で完全給食は99.3%で行われていた。",
+        "year": 1948,
+        "yearText": "昭和23年（1948年）1月21日",
+        "era": "showa-post",
+        "areas": ["ebara"],
+        "categories": ["life"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「食糧難と学校給食」838〜842頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1947-shinsei-chugaku-hossoku",
+        "name": "六・三制が始まり、校舎のない新制中学が間借りで発足する",
+        "summary": "昭和22年4月に新制中学が生まれた。伊藤中学は校舎がなく、原小学校の一部を借りて5月1日に授業を始めた。荏原第五中学も第二延山小学校に間借りして発足した。伊藤中学が独立校舎に移れたのは昭和26年2月だった。",
+        "description": "区史によれば、伊藤中学の独立校舎は昭和24年に計画されたが、他の中学との敷地問題がこじれて昭和25年にようやく場所が決まり、工事に入ったところキティ台風の災害を受けて、昭和26年2月に移った。",
+        "year": 1947,
+        "yearText": "昭和22年（1947年）4月",
+        "era": "showa-post",
+        "areas": [
+          "oi",
+          "ebara"
+        ],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1945-gakko-doukyo"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「苦難のなかでの新制中学の発足」858〜862頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1946-daijokyo-kaisho",
+        "name": "大乗教が旗の台を拠点に一派を立て、荏原地区に信者が広がる",
+        "summary": "大乗教は、小坂井啓陽が大正10年ごろ五反田に教会を置いたのが始まりで、昭和9年に平塚(旗の台2丁目)へ移った。戦後、宗教団体への規制が解かれた昭和21年に大乗教と改称して一派を立て、品川区内、とくに荏原地区に多くの信者を得た。",
+        "description": "区史によれば、本部は名古屋市にあったが、管長は品川区内で布教を続けた。区史は、戦後品川区内に本拠を置いて多くの信徒を擁した宗教団体として、この教団を挙げている。",
+        "year": 1946,
+        "yearText": "昭和21年（1946年）",
+        "era": "showa-post",
+        "areas": ["ebara"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「大乗教」810〜811頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1949-meidensha-kaiko-moshiire",
+        "name": "明電舎が組合の指導者16人の懲戒解雇を申し入れる",
+        "summary": "昭和24年1月17日、明電舎は組合の指導者・活動家16人(本社4人・大崎4人・品川8人)の懲戒解雇を申し入れた。賃金が遅れ、2か月遅れで1か月分を9回に分けて払うほどの窮状のなか、労働組合は守勢に立たされていた。",
+        "description": "区史によれば、昭和24年の定員法によるパージが組合にさらに追い打ちをかけた。昭和25年ごろを境に、区内の労働組合の指導権は共産党から社会党に移っていった。",
+        "year": 1949,
+        "yearText": "昭和24年（1949年）1月17日",
+        "era": "showa-post",
+        "areas": [
+          "osaki",
+          "shinagawa"
+        ],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「労働組合の後退とレッドパージ」886〜891頁、「新しい区労協の発足」891〜894頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1956-trolleybus-shinagawa-ikebukuro",
+        "name": "品川駅前と池袋駅を結ぶトロリーバスが開業する",
+        "summary": "昭和31年9月21日、品川駅前〜池袋駅間のトロリーバスが工費4億9000万円で開業した。道路の混雑で速度が落ち乗客も減り、昭和42年12月に品川駅前〜渋谷間が廃止され、昭和43年に全廃された。",
+        "description": "区史によれば、トロリーバスは昭和26年4月に特許が下りて工事が始まり、上野公園前・今井間に続く第二期工事として品川駅前・池袋駅間が着手された。路面を走るため、昭和32年ごろから都電と同じ運命をたどり、昭和37年からは乗客数が減る一方になった。区史は、時代の脚光を浴びて登場しながらわずか十数年で消えたと記している。",
+        "year": 1956,
+        "yearEnd": 1968,
+        "yearText": "昭和31年（1956年）9月21日〜昭和43年（1968年）",
+        "era": "showa-post",
+        "areas": ["shinagawa"],
+        "categories": [
+          "transport",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「トロリーバスの廃止」970〜972頁、「都電の撤去」969〜970頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1963-shin-yatsuyama-bashi",
+        "name": "新八ッ山橋が完成し、放射一号線が開通する",
+        "summary": "昭和38年5月、区内で指折りの渋滞地点だった八ッ山橋陸橋の約100メートル南側に幅20メートルの新八ッ山橋が完成した。12月には旧大崎ロータリーから環状六号線へ抜ける放射一号線が開通した。",
+        "description": "区史によれば、区内の自動車は昭和30年前後から急増し、昭和35年の2万163台が昭和40年に4万4361台、昭和45年に6万1566台に増えた。道路の舗装率は昭和30年の47.9%から昭和45年には98.6%になったが、増え続ける自動車には追いつかなかった。昭和43年には目黒駅付近の目黒通りのバイパスも開通した。",
+        "year": 1963,
+        "yearText": "昭和38年（1963年）5月・12月",
+        "era": "showa-post",
+        "areas": [
+          "shinagawa",
+          "osaki"
+        ],
+        "categories": [
+          "transport",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「一般道路の拡充とモータリゼーション」967〜969頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1964-monorail-kaigyo",
+        "name": "東京モノレールが開業し、大井競馬場駅もできる",
+        "summary": "浜松町と羽田空港を結ぶ東京モノレールが、オリンピックにあわせて昭和39年9月17日に開業した。昭和40年5月には大井競馬の客をねらって大井競馬場駅が開業し、昭和41年11月には運賃を250円から150円に大幅に引き下げた。",
+        "description": "区史によれば、モノレールは昭和34年8月に創立された日本高架電鉄にはじまり、昭和39年5月に東京モノレールと社名を変えた。日立製作所のグループの支援で設立され、昭和42年には日立運輸などと合併して日立運輸東京モノレールになった。",
+        "year": 1964,
+        "yearText": "昭和39年（1964年）9月17日",
+        "era": "showa-post",
+        "areas": ["oi"],
+        "categories": ["transport"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「モノレールの開通」978〜980頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1968-toei-chikatetsu-shinagawa",
+        "name": "都営地下鉄1号線の泉岳寺〜品川間が開通する",
+        "summary": "昭和43年6月21日に都営地下鉄(東京都市計画高速鉄道一号線)の大門〜泉岳寺、泉岳寺〜品川間が開通した。西馬込〜押上間の建設は昭和33年に押上側から始まっていた。",
+        "description": "区史によれば、地下鉄が本格的に計画的に建設されるようになったのは昭和30年以降で、都市交通審議会の第一次答申(昭和31年8月)を受けて、昭和32年6月に営団以外の者にも建設が認められた。",
+        "year": 1968,
+        "yearText": "昭和43年（1968年）6月21日",
+        "era": "showa-post",
+        "areas": ["shinagawa"],
+        "categories": ["transport"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「都営地下鉄の開通と京浜急行電鉄の都心乗り入れ」972〜974頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1968-shinagawa-denshaku-new",
+        "name": "山手線の新しい品川電車区が完成する",
+        "summary": "山手線の電車を収容する品川・池袋の両電車区は、昭和42年には収容能力を倍も上回った。昭和39年8月に着工した新しい品川電車区は、約80億円の工事費で昭和43年に完成して全面使用を始めた。昭和43年10月からは山手線の10両編成運転が予定されていた。",
+        "description": "区史は、戦後の相次ぐ車両の増備に対応した工事だったと記している。",
+        "year": 1968,
+        "yearText": "昭和43年（1968年）",
+        "era": "showa-post",
+        "areas": ["shinagawa"],
+        "categories": [
+          "transport",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「新「品川電車区」の誕生」977頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1954-tetsudo-tairitsu-kosa",
+        "name": "鉄道の高架・立体交差の工事が相次ぎ、踏切が除かれる",
+        "summary": "昭和29〜32年に中延駅付近(第二京浜国道)で立体交差工事が行われ、昭和38〜39年には旗の台駅付近が高架になった。昭和40〜43年には長原駅付近で環七通りとの立体交差のため線路が半地下になり、昭和47〜48年には京浜急行の立会川〜大森町間が高架化されて踏切8か所が除かれた。",
+        "description": "区史によれば、昭和30年代に入ると自動車の増加と列車の増発で踏切が交通渋滞の大きな原因になり、鉄道と道路の立体交差工事が急がれた。昭和49年2月の時点では、京浜急行の北品川〜青物横丁間の高架工事も進行中で、線路すれすれに人家が密集し約100メートルごとに踏切のある危険な区間が解消されることになっていた。",
+        "year": 1954,
+        "yearEnd": 1973,
+        "yearText": "昭和29年（1954年）〜昭和48年（1973年）",
+        "era": "showa-post",
+        "areas": [
+          "ebara",
+          "oi",
+          "shinagawa"
+        ],
+        "categories": [
+          "transport",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1963-hatanodai-koka"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「進展する鉄道の高架工事」977〜978頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1962-gyogyo-hosho-kyotei",
+        "name": "品川の漁業者が補償額330億円で協定に調印する",
+        "summary": "昭和37年12月3日、都議会議長のあっせんで、都と内湾の漁協が補償額330億円で漁業補償協定を結んだ。都は同年3月に270億円を提示し、漁業者側は1,290億円から790億円、360億円へと要求を下げて交渉した。品川浦漁協の組合員は138人、品川東部漁協は42人だった。",
+        "description": "区史によれば、昭和34年10月に東京都内湾漁業対策審議会が設置され、36年9月に補償交渉の機関が設けられた。昭和36年6月17日には、品川浦漁協などの中部七か浦組合が、大井埠頭の埋立てに関する補償を受けて都有地の譲渡を受ける契約を結んでいた。品川浦漁協の海苔の生産は、昭和30年度の約9,500万枚が昭和33年度には約620万枚に急減していた。当時の新聞は「消えゆくノリ舟」と報じた。",
+        "year": 1962,
+        "yearText": "昭和37年（1962年）12月3日",
+        "era": "showa-post",
+        "areas": [
+          "shinagawa",
+          "oi"
+        ],
+        "categories": [
+          "industry",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1962-gyogyoken-hoki",
+          "ev-1883-nori-ishoku"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「漁業権の全面的放棄」987〜990頁、「埠頭の建設」985〜987頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1964-shinagawa-futo-kansei",
+        "name": "品川埠頭が完成し、帰属は港区と品川区で半分ずつに決まる",
+        "summary": "昭和26年3月に用地の造成が始まった品川埠頭は、約40億円をかけて昭和39年に完成した(78万平方メートル)。外貿・内貿・コンテナ埠頭からなり、昭和42年に帰属は港区と品川区でほぼ半分ずつと決まった。",
+        "description": "区史によれば、品川区はこの埠頭は品川浦が発展したものだとして品川区への所属を主張してきた。昭和33年には一部の埋立権が東京電力に移され、昭和36年12月に同社の火力発電所が完成した。",
+        "year": 1964,
+        "yearText": "昭和39年（1964年）",
+        "era": "showa-post",
+        "areas": ["shinagawa"],
+        "categories": [
+          "building",
+          "transport"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1962-gyogyo-hosho-kyotei"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「埠頭の建設」985〜987頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1968-suzugamori-chu-bonon",
+        "name": "鈴ケ森中学に二重窓の防音校舎「品川方式」が完成する",
+        "summary": "昭和43年、鈴ケ森中学校の騒音と悪臭を防ぐため、鉄筋コンクリート4階建ての校舎を二重窓で密閉し、換気と冷暖房の装置を備えた防音校舎が完成した。「品川方式」と呼ばれた。",
+        "description": "区史によれば、昭和39年に着任した校長は、100ホンを超える騒音の校舎で耳鳴りが治らなかった。昭和46年4月には、羽田空港を離着陸する飛行機が指定のコースをはずれて陸寄りを飛んでいることが都公害研究所の調べで明らかになり、昭和45年12月には環境庁が深夜の離着陸規制を勧告した。",
+        "year": 1968,
+        "yearText": "昭和43年（1968年）",
+        "era": "showa-post",
+        "areas": ["oi"],
+        "categories": [
+          "building",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「交通騒音」1014〜1018頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1970-photochemical-smog",
+        "name": "光化学スモッグや高濃度の亜硫酸ガスが区内にも及び、大気汚染の測定が始まる",
+        "summary": "昭和45年7月、都内の空が光化学スモッグと亜硫酸ガスで二重に汚染されたと報じられた。品川区は昭和45年10月に区庁舎へ大気汚染自動測定記録装置を設け、同年以降昭和47年6月までに区内の光化学スモッグ被害の届出は330人だった。",
+        "description": "区史によれば、夏には川崎の重化学工業地帯から高濃度の亜硫酸ガスが大田区を経て品川区へ流れてくる。昭和44年8月の区公害課の調査では、清水台小学校の亜硫酸ガスの最高着地濃度が国の環境基準の8倍以上だった。昭和47年11月30日現在の公害病の認定患者は、乳幼児22人・小学生20人・中学生2人の計44人だった。",
+        "year": 1970,
+        "yearText": "昭和45年（1970年）7月",
+        "era": "showa-post",
+        "areas": ["ward"],
+        "categories": [
+          "life",
+          "nature"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1970-soon-higaisha-no-kai"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「大気汚染」1021〜1026頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1973-oi-auto-race-haishi",
+        "name": "大井オートレースが廃止される",
+        "summary": "美濃部都知事就任以来の懸案だった都営ギャンブルの全廃が昭和45年3月15日の都議会で決まり、大井オートレースは昭和48年3月22日のレースを最後に完全に廃止された。昭和47年3月5日にはオートレース場で300人が投石・放火する、開設(昭和29年11月)以来最大の事件が起きていた。",
+        "description": "区史によれば、昭和41年夏には区議会公害特別調査委員会が競馬開催日の不法駐車を調査し、区は昭和43年の補正予算から競馬場周辺環境整備費を計上した。区史は、ギャンブル場の周辺住民が受けた騒音や迷惑を「公害」として取り上げている。",
+        "year": 1973,
+        "yearText": "昭和48年（1973年）3月22日",
+        "era": "showa-post",
+        "areas": ["oi"],
+        "categories": [
+          "lost",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「ギャンブル公害」1027〜1030頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1971-togoshi-koen-mansion-hantai",
+        "name": "戸越公園一帯のマンション計画に、住民が3,000人の署名で用地の買い上げを請願する",
+        "summary": "昭和46年秋、ある商社が豊町1丁目の戸越公園一帯の屋敷跡約1,400平方メートルに7階建て(一部9階)のマンションを計画した。11月、町ぐるみの応援で集めた3,000人の署名で、住民は区に用地を買い上げて福祉施設をつくるよう請願した。",
+        "description": "区史によれば、同じころ区立荏原文化会館(中延1丁目、昭和45年秋完成)は日照を求める住民の反対で設計変更をし、旗の台5丁目の児童福祉・社会教育施設の計画も住民の反対を受けた。区史は、住民の姿勢が昭和46年にはいっそう強くなったと記している。",
+        "year": 1971,
+        "yearText": "昭和46年（1971年）11月",
+        "era": "showa-post",
+        "areas": ["ebara"],
+        "categories": [
+          "life",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1932-togoshi-koen-kifu"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「住民の反対」1030〜1034頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1969-shinkakusen-mondai",
+        "name": "品鶴線への客車乗り入れをめぐり、区議会が対策特別委員会を設ける",
+        "summary": "昭和44年5月16日、国鉄が区に品鶴線への横須賀線の客車乗り入れを説明した。区議会は踏切の立体交差や区内に駅を一つ置くことなどを求め、昭和46年9月28日の本会議で品鶴線対策特別委員会の設置を全員一致で決めた。",
+        "description": "区史によれば、区は昭和23年3月31日にすでに品鶴線の旅客電車の運転を請願しており、昭和35〜36年には品川・大田・横浜・川崎の二区二市が協議体をつくって促進を図っていた。乗り入れが具体化すると、騒音・振動・電波障害の緩和が求められた。昭和45年12月には区が国鉄に、区内5か所の踏切の立体交差、品川区南部への駅舎の設置、振動と騒音の緩和などを打ち合わせた。",
+        "year": 1969,
+        "yearEnd": 1971,
+        "yearText": "昭和44年（1969年）5月16日〜昭和46年（1971年）9月28日",
+        "era": "showa-post",
+        "areas": [
+          "ebara",
+          "oi"
+        ],
+        "categories": [
+          "transport",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「品鶴線問題」1034〜1039頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1972-kucho-junkosen-jorei",
+        "name": "区議会が「区長準公選条例」を可決し、区民投票が行われる",
+        "summary": "住民の直接請求による「品川区長候補者決定に関する条例」(区長準公選条例)を、品川区議会は昭和47年7月31日に全会一致で修正可決した。区民投票は11月12日に行われた。",
+        "description": "区史によれば、区長公選は昭和27年の地方自治法の改正で廃止され、区長は区議会が都知事の同意を得て選ぶようになっていた。区側は条例を違法として再議に付し、都知事に審査を申し立てたが、都知事は8月9日にこれを棄却し、区民が区長を自分の手で選べなかった20年間を挙げて準公選を当然の要求と評価した。品川区では昭和42年12月25日から翌年7月25日まで区長が空席だった時期がある。準公選運動は昭和42年に練馬区の住民が始め、23区のうち17区に広がった。",
+        "year": 1972,
+        "yearText": "昭和47年（1972年）7月31日",
+        "era": "showa-post",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1947-ward-togo-process"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「「区長準公選条例」の制定」1039〜1045頁、「区民投票」1045〜1050頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1966-shinagawa-saikaihatsu-kenkyukai",
+        "name": "民間の「品川再開発研究会」が発足する",
+        "summary": "昭和41年10月6日、さびれつつあった品川宿の市街地の再開発を考える民間の研究会が発足した。研究会は北品川1丁目の商店主らと話し合いを重ね、成果は昭和45年9月号の雑誌で特集された。",
+        "description": "区史によれば、品川地区が停滞の時期を経て再生の手掛かりをつかみ、周辺に変化を及ぼし始めるのは1975年以後とされ、区史はこの研究会を、昭和40年代の初めに区内の再開発問題に先鞭をつけたものと評価している。",
+        "year": 1966,
+        "yearText": "昭和41年（1966年）10月6日",
+        "era": "showa-post",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「品川再開発研究会」1055〜1059頁、「再開発の設計プラン」1059〜1063頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1972-chouki-kihon-kosou",
+        "name": "品川区長期計画審議会が昭和60年を目途にした基本構想を答申する",
+        "summary": "区は昭和46年8月に品川区長期計画審議会を発足させて昭和60年を目途とする長期計画を諮問し、昭和47年9月に基本構想の答申を受けた。広報『しながわ』は昭和48年3月20日号を特集号にして区民の意見を求めた。",
+        "description": "区史は、再開発や住宅・公害の問題を抱えた区が、区民の意見を取り入れて構想を立てようとした動きとして記している。",
+        "year": 1972,
+        "yearText": "昭和47年（1972年）9月",
+        "era": "showa-post",
+        "areas": ["ward"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "八 現代編「「長期基本構想」」1066〜1070頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
       }
   ]
 };
