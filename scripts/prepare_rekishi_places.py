@@ -1024,6 +1024,14 @@ def old_address_records(verified_at: str, used: set[str], cache: dict[str, Any])
 
 
 OLD_TOWN_PLACES = ROOT / "scripts" / "rekishi-old-town-places.json"
+SITE_PLACES = ROOT / "scripts" / "rekishi-site-places.json"
+
+
+def site_place_records() -> list[dict[str, Any]]:
+    """遺跡の地点を読む。ファイルが無ければ0件。"""
+    if not SITE_PLACES.exists():
+        return []
+    return json.loads(SITE_PLACES.read_text(encoding="utf-8"))
 
 
 def old_town_records() -> list[dict[str, Any]]:
@@ -1186,6 +1194,15 @@ def main() -> int:
         return 1
     records.extend(old_towns)
     print(f"旧町名の地点を{len(old_towns)}件足します。")
+
+    # 全国文化財総覧の遺跡抄録から起こした遺跡の地点（scripts/prepare_rekishi_site_places.py）を足す。
+    site_places = site_place_records()
+    taken = {x["id"] for x in records}
+    if any(x["id"] in taken for x in site_places):
+        print("遺跡の地点のIDが衝突しています", file=sys.stderr)
+        return 1
+    records.extend(site_places)
+    print(f"遺跡の地点を{len(site_places)}件足します。")
 
     # 区史の旧番地を現住所に直した地点を足す。
     cache_for_old = load_geocode_cache()

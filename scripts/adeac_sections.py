@@ -65,6 +65,26 @@ VOLUMES: dict[str, dict[str, str]] = {
         "label": "品川区史 通史編 下巻",
         "source_ref": "sgw-kushi-tsushi-ge",
     },
+    # 区史の普及版（品川区教育委員会、1979年3月刊）。通史編を手軽にまとめたもの
+    "rekishi": {
+        "doc": "d000030",
+        "book": "mp000070",
+        "label": "品川の歴史",
+        "source_ref": "sgw-shinagawa-no-rekishi",
+    },
+    # 区史に収めた原資料（古文書など）。区史本文が「資一五三号」のように引くもの
+    "shiryo": {
+        "doc": "d000040",
+        "book": "mp000030",
+        "label": "品川区史 資料編",
+        "source_ref": "sgw-kushi-shiryo",
+    },
+    "zoku1": {
+        "doc": "d000050",
+        "book": "mp000040",
+        "label": "品川区史 続資料編（一）",
+        "source_ref": "sgw-kushi-zokushiryo-1",
+    },
 }
 
 # robots.txt の Crawl-Delay: 10 に従う。1秒の余裕をみる。
@@ -380,7 +400,7 @@ def command_dated(args: argparse.Namespace) -> int:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--volume", choices=sorted(VOLUMES), default="jo", help="巻（jo=上巻 / ge=下巻）")
+    parser.add_argument("--volume", choices=sorted(VOLUMES), default="jo", help="巻（jo=上巻 / ge=下巻 / rekishi=品川の歴史 / shiryo=資料編 / zoku1=続資料編（一））")
     sub = parser.add_subparsers(dest="command", required=True)
 
     toc = sub.add_parser("toc", help="目次を取って節の一覧を出す")

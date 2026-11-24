@@ -141,6 +141,27 @@ window.SHINAGAWA_DB.rekishi = {
       "note": "1974年（昭和49）8月刊。近代から現代までの品川区の歴史。しながわデジタルアーカイブで全文が公開されている。本文は転載せず、事実の確認にのみ利用している。出典の locator には節の見出しと底本のページを書く。"
     },
     {
+      "id": "sgw-shinagawa-no-rekishi",
+      "label": "品川の歴史",
+      "publisher": "品川区教育委員会",
+      "url": "https://adeac.jp/shinagawa-city/table-of-contents/mp000070/d000030",
+      "note": "1979年（昭和54）3月刊。区史を手軽にまとめた普及版で、原始から現代までの概要。しながわデジタルアーカイブで全文が公開されている（利用条件はCC BY-ND）。本文は転載せず、事実の確認にのみ利用している。出典の locator には節の見出しと底本のページを書く。"
+    },
+    {
+      "id": "sgw-kushi-shiryo",
+      "label": "品川区史 資料編",
+      "publisher": "品川区",
+      "url": "https://adeac.jp/shinagawa-city/table-of-contents/mp000030/d000040",
+      "note": "1973年（昭和48）刊。品川の歴史的資料（古文書など）を中世・近世・近代・現代に分けてまとめたもの。しながわデジタルアーカイブで全文が公開されている（利用条件はCC BY-ND）。史料の本文は転載せず、年月日と事実の確認にのみ利用している。出典の locator には資料の見出しと底本のページを書く。"
+    },
+    {
+      "id": "sgw-kushi-zokushiryo-1",
+      "label": "品川区史 続資料編（一）",
+      "publisher": "品川区",
+      "url": "https://adeac.jp/shinagawa-city/table-of-contents/mp000040/d000050",
+      "note": "1976年（昭和51）2月刊。「品川区史 資料編」などに収められなかった資料をまとめたもの。しながわデジタルアーカイブで全文が公開されている（利用条件はCC BY-ND）。史料の本文は転載せず、年月日と事実の確認にのみ利用している。出典の locator には資料の見出しと底本のページを書く。"
+    },
+    {
       "id": "sgw-rekishikan",
       "label": "品川歴史館",
       "publisher": "品川区",
@@ -153,6 +174,13 @@ window.SHINAGAWA_DB.rekishi = {
       "publisher": "文化庁",
       "url": "https://online.bunka.go.jp/",
       "note": "国が指定・登録した文化財の個別ページ。品川区は21件（prefecture_cd=13&city_code=13109）。利用条件で本文の転用が禁じられているため、解説は転載せず、指定年月日・所在地・時代・法量などの事実だけを使っている。robots.txt の Crawl-Delay は10秒。"
+    },
+    {
+      "id": "nabunken-sitereports",
+      "label": "全国文化財総覧（遺跡抄録）",
+      "publisher": "奈良文化財研究所・島根大学附属図書館",
+      "url": "https://sitereports.nabunken.go.jp/ja/list/13/13109",
+      "note": "発掘調査報告書の書誌と遺跡抄録。品川区は発行機関一覧（東京都 → 品川区）から開く報告書の個別ページだけを使う（robots.txt が禁じる /ja/search* には触れない）。著作権は発行元の自治体等にあるため、報告書の本文は転載せず、遺跡名・調査期間・調査原因・時代・主な遺構と遺物・緯度経度という事実だけを使っている。取得は11秒間隔。"
     },
     {
       "id": "kunishitei",
