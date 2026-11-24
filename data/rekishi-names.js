@@ -352,6 +352,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["osaki"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-c0cd8573fe"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「五反田」" }, { "ref": "sgw-kushi-tsushi-jo", "locator": "一 自然編（一）品川区の土地のなりたち「台地と低地」4〜5頁" }],
         "verifiedAt": "2026-11-24"
       },
@@ -365,6 +366,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-7c675da673"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「二葉町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -378,6 +380,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["osaki"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-21bb239d04"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「西大崎」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -391,6 +394,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["ebara"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-31f34154e9"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「東戸越」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -404,6 +408,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["osaki"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-9ef7570882"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「東大崎」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -417,6 +422,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["ebara"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-2425eebdab"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「西戸越」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -430,6 +436,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-cdc88a79cb"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井伊藤町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -443,6 +450,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-691bc7bcb4"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井南浜川町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -456,6 +464,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-50a8e7d350"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井倉田町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -469,6 +478,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-860d5b1917"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井滝王子町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -482,6 +492,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["osaki"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-d572e4a27e"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大崎本町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -495,6 +506,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-22fe38fbc4"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井山中町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -508,6 +520,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-830e4803ce"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井森下町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -528,6 +541,7 @@ window.SHINAGAWA_DB.rekishiNames = {
             "locator": "四 近世編（一）品川区地域の町と村「鮫洲」443〜445頁"
           }
         ],
+        "relatedPlaces": ["pl-ff22a693bf"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井鮫洲町」" }, { "ref": "sgw-kushi-tsushi-jo", "locator": "一 自然編（一）品川区の土地のなりたち「台地と低地」4〜5頁" }],
         "verifiedAt": "2026-11-24"
       },
@@ -541,6 +555,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-6b9fb672fd"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井北浜川町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -554,6 +569,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-5d844b28a0"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井鎧町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -567,6 +583,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-02f2c74daf"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井原町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -580,6 +597,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-715b452981"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井金子町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -593,6 +611,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-55a1f682dc"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井立会町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -606,6 +625,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-d3eab4fe30"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井庚塚町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -619,6 +639,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-b827da4ece"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井水神町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -632,6 +653,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-7226f0e9b1"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井元芝町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -645,6 +667,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-2f35a03b4f"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井鹿島町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -658,6 +681,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-fdb77e854a"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井出石町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -671,6 +695,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-fb23570d36"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井関ヶ原町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -684,6 +709,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-52b42794fd"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井森前町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -697,6 +723,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["osaki"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-6ad5865d17"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「下大崎」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -710,6 +737,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-edc8ef41e5"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井権現町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -730,6 +758,7 @@ window.SHINAGAWA_DB.rekishiNames = {
             "locator": "四 近世編（一）品川区地域の町と村「地名の由来」450〜451頁"
           }
         ],
+        "relatedPlaces": ["pl-395e5e06c0"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井鈴ヶ森町」" }, { "ref": "sgw-kushi-tsushi-jo", "locator": "四 近世編（一）品川区地域の町と村「地名の由来」450〜451頁" }],
         "verifiedAt": "2026-11-24"
       },
@@ -743,6 +772,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-408a7dc439"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井海岸町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -756,6 +786,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-c5c2ba9cf9"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井林町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -769,6 +800,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["osaki"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-e995707036"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「上大崎長者丸」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -782,6 +814,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-ebebb99521"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井寺下町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -795,6 +828,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["osaki"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-a4973d63d4"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「上大崎中丸」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -808,6 +842,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-2f9fa3048a"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井坂下町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -821,6 +856,7 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["oi"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-3d627de238"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「勝島町」" }],
         "verifiedAt": "2026-11-22"
       },
@@ -834,8 +870,241 @@ window.SHINAGAWA_DB.rekishiNames = {
         "areas": ["shinagawa"],
         "categories": ["placename"],
         "certainty": "fact",
+        "relatedPlaces": ["pl-efa473bf6e"],
         "sources": [{ "ref": "adeac-shinagawa", "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「天王洲町」" }],
         "verifiedAt": "2026-11-22"
-      }
+      },
+    {
+      "id": "nm-yatsuyama",
+      "name": "八ッ山",
+      "kana": "やつやま",
+      "nameKind": "other",
+      "summary": "品川宿の最北端にある丘陵の名です。大日山ともいいました。『江戸砂子』は、昔そこに出洲が八つあったからだと説明します。",
+      "origin": "区史は、なぜ八ッ山という地名が生まれたかはわからないとしたうえで、『江戸砂子』が、昔この場所に出洲が八つあったところからの名だと説明していることを紹介しています。",
+      "description": "品川宿の最北端、江戸に接するところにある丘陵で、昔は高さ二丈あまりのがけがありました。がけが次第に崩れ、普請用の土に使われて、一部が平地になったといわれます。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "tradition",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-jo",
+          "locator": "四 近世編（一）品川区地域の町と村「八ッ山」408頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-samezu",
+      "name": "鮫洲",
+      "kana": "さめず",
+      "nameKind": "other",
+      "summary": "京急の駅名にも残る地名です。区史は、海岸に沿う砂洲に由来すると説明し、鮫から観音像が出たという地名伝説も記しています。",
+      "origin": "区史 自然編は、鮫洲の地名は海岸に沿う砂洲に由来することが明らかだとしています。",
+      "description": "区史は、このあたり一帯を漠然と鮫洲と呼ぶと述べ、駅名として一番目立つ地名なので取り上げたとしています。",
+      "areas": [
+        "oi"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "estimate",
+      "variants": [
+        {
+          "claim": "建長3年（1251年）に品川沖へ漂う大きな鮫を漁師が引き上げて腹を裂くと木像の観音が出てきた。人々がこれを祀った土地を鮫洲と呼んだ、という地名伝説がある。北条時頼がこの観音を安置する寺として海晏寺を建てたという話が『新編武蔵風土記稿』にのる。区史は真偽は分からないとし、大井村側の書上は鮫洲を鮫に結びつけていないと記している。",
+          "ref": "sgw-kushi-tsushi-jo",
+          "locator": "四 近世編（一）品川区地域の町と村「鮫洲」443〜445頁"
+        }
+      ],
+      "relatedNames": [
+        "nm-b7d90ffb"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-jo",
+          "locator": "一 自然編（一）品川区の土地のなりたち「台地と低地」4〜5頁"
+        },
+        {
+          "ref": "sgw-kushi-tsushi-jo",
+          "locator": "四 近世編（一）品川区地域の町と村「鮫洲」443〜445頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-suzugamori",
+      "name": "鈴ケ森",
+      "kana": "すずがもり",
+      "nameKind": "other",
+      "summary": "かつての品川の仕置場（刑場）の呼び名です。区史は、隣の村の鎮守の鈴ケ森八幡に由来する説と、遊女町の鈴に由来する説を紹介しています。",
+      "origin": "弘化2年（1845年）の書上にある説として、区史は、本来は一本松と呼ぶべき土地だが、地続きの不入斗村の鎮守に鈴ケ森八幡があったことから、品川の仕置場を鈴ケ森と呼ぶようになったと紹介しています。",
+      "description": "区史は、のちにこの地に三十軒屋と呼ぶ遊女町ができたのは確かで、明暦元年（1655年）に創立され、延宝8年（1680年）には321軒に栄えたが、同年閏8月6日の夜の大暴風雨で104軒が丸潰れ、27軒が大破したと記しています。",
+      "areas": [
+        "oi"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "tradition",
+      "variants": [
+        {
+          "claim": "『落穂集』には、江戸開府のころこの地にあった遊女町に関わって生まれた地名だとする説がある。慶長の初めに駿河国吉原宿から江戸へ下った者たちが新井宿の海辺で遊女屋を開き、店先ののれんの端につけた鈴を客が来る合図にしたので鈴ケ森と呼ぶようになった、という。区史は真実味を判定しがたいとしている。",
+          "ref": "sgw-kushi-tsushi-jo",
+          "locator": "四 近世編（一）品川区地域の町と村「地名の由来」450〜451頁"
+        }
+      ],
+      "relatedNames": [
+        "nm-e6243bbc"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-jo",
+          "locator": "四 近世編（一）品川区地域の町と村「地名の由来」450〜451頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-kujirazuka",
+      "name": "鯨塚",
+      "kana": "くじらづか",
+      "nameKind": "other",
+      "summary": "御林町（大井）の八幡神社の境内にあった、漂着した鯨の頭骨を供養した塚です。区史が刊行されたときには、すでにありませんでした。",
+      "origin": "嘉永4年（1851年）4月11日の朝、御林町の海岸に一頭の鯨が漂ってきて、漁師たちが全員で引きあげた。代官所の見分のうえ入札で売られ、深川の商人から浅草で見せ物にされたが、腐り始めたので油を絞った。残った頭骨を、鯨があがった土地の八幡神社に埋めて供養したのが鯨塚だと、区史は記しています。",
+      "description": "区史は、この鯨塚は現在はなく、鯨ではなく鮫だったとの説もあって、真偽は判然としないと述べています。利田新地にももう一つの鯨塚があり、こちらは寛政年間（1789〜1801年）にとれた鯨のものです。江戸時代には、鯨を突いて捕る「突鯨」、沖を漂う鯨を引く「流鯨」、傷ついて流れ着いた「寄鯨」の別があり、税の割合が違いました。御林町の鯨は傷があり死んでいたので寄鯨、利田新地は突鯨にあたるようだと区史は書いています。",
+      "areas": [
+        "oi",
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "tradition",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-jo",
+          "locator": "四 近世編（一）品川区地域の町と村「鯨塚」445〜447頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-suzaki",
+      "name": "洲崎",
+      "kana": "すさき",
+      "nameKind": "other",
+      "summary": "目黒川の河口付近の古い地名です。区史は、川が運んだ土砂がたまって三角洲が突き出したことを示す名だと説明しています。",
+      "origin": "区史 自然編は、洲崎というこの付近の古い地名は、目黒川から運び出された土砂の堆積で、突き出した三角洲ができたことを示していると説明しています。",
+      "description": "目黒川は河口部で南北の品川宿を分け、大きく北に迂回して歩行新宿で海に注いでいました。この大迂回は、南からの沿岸の漂砂で河口がしばしばふさがったためだと区史は述べています。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "estimate",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-jo",
+          "locator": "一 自然編（一）品川区の土地のなりたち「谷の地形」15〜17頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-ebara",
+      "name": "荏原",
+      "kana": "えばら",
+      "nameKind": "other",
+      "summary": "郡名・地区名にもなった地名です。区史は、小山・平塚と並べて、平らな台地の面にもとづく地名と説明しています。",
+      "origin": "区史 自然編は、区内の古い地名には地形をよく表すものが多いとして、小山・平塚、それに荏原そのものも、平坦な台地面にもとづいた地名だと説明しています。",
+      "description": "区史は同じ箇所で、五反田・百反・辻田（のちの大崎1丁目）を水田が広がる沖積低地を示す地名、桐ヶ谷・幡ヶ谷・池ヶ谷を目黒川右岸の谷の地名、蛇窪を立会川に合流する支谷の地名の例に挙げています。",
+      "areas": [
+        "ebara"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "estimate",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-jo",
+          "locator": "一 自然編（一）品川区の土地のなりたち「台地と低地」4〜5頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-hiratsuka-mura",
+      "name": "平塚村",
+      "kana": "ひらつかむら",
+      "nameKind": "old-village",
+      "summary": "明治22年の町村合併で、戸越・上下蛇窪・中延・小山の5か村を合わせてできた村です。村名は、戸越側と中延側で意見が分かれて紛糾しました。",
+      "origin": "中延側は、小山・中延・戸越の境界近くに平塚と呼ばれる約20坪の塚があり、大きな松が2本植えられて頂上に稲荷が祀られていて、5か村のほぼ中央にあたるので、これを村名にしたいと主張しました。",
+      "description": "戸越側は、この地の名産となった孟宗竹を移植した人の功績を村名にとどめるため、「竹旭村」にしたいと主張しました。各村の一字をとって「戸小中蛇村」にしてはという意見も出るなど長い間折り合わず、結局、平塚村に落ち着きました。区史は、このことが昭和2年に平塚町が荏原町に改められるまで尾を引いたようだと述べています。",
+      "areas": [
+        "ebara"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "fact",
+      "variants": [
+        {
+          "claim": "戸越側の村名案は「竹旭村」とした（明治21年の町村制実施録に収める戸越外2か村戸長の答申書による）。",
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「品川区域の町村合併」183〜187頁"
+        },
+        {
+          "claim": "『荏原区史』（昭和18年刊）は、古老の話として戸越側の村名案を「竹生村」としている。区史は一次史料の答申書に従って「竹旭村」とした。",
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「品川区域の町村合併」183〜187頁の注"
+        }
+      ],
+      "relatedNames": [
+        "nm-togoshi-mura",
+        "nm-ebara-machi"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「品川区域の町村合併」183〜187頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-ebara-machi",
+      "name": "荏原町",
+      "kana": "えばらまち",
+      "nameKind": "old-village",
+      "summary": "昭和2年7月から昭和7年の区制施行まで、現在の荏原地区の中心にあった町です。同名の地が各地にあった平塚町が、郡名の荏原を採って改称しました。",
+      "origin": "平塚の名は東京府の北豊島のほか神奈川・千葉・群馬の各県にもあり、郵便物が各県を一巡する恐れさえありました。そこで平塚町会は昭和2年3月20日に改称を決議し、古くからゆかりがあり郡名にもなっていた「荏原」を採って荏原町としました。",
+      "description": "東京府の許可は昭和2年5月に出され、7月1日から実施されました。荏原町は昭和7年10月の市郡併合で荏原区になりました。",
+      "areas": [
+        "ebara"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "fact",
+      "relatedEvents": [
+        "ev-1927-ebara-machi-kaisho"
+      ],
+      "relatedNames": [
+        "nm-hiratsuka-mura",
+        "nm-ebara"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "七 昭和編「平塚村の町制施行」450〜452頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    }
   ]
 };

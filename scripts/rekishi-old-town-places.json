@@ -1,0 +1,927 @@
+[
+  {
+    "id": "pl-a4973d63d4",
+    "name": "旧上大崎中丸",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「上大崎中丸」の区域です。現在の上大崎3丁目などにあたります。",
+    "address": "上大崎3丁目",
+    "areas": [
+      "osaki"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.631725,
+    "lng": 139.718445,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する上大崎3丁目の中心を指しています（72件／140件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「上大崎中丸」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-e995707036",
+    "name": "旧上大崎長者丸",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「上大崎長者丸」の区域です。現在の上大崎2丁目などにあたります。",
+    "address": "上大崎2丁目",
+    "areas": [
+      "osaki"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.636364,
+    "lng": 139.715668,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する上大崎2丁目の中心を指しています（152件／152件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「上大崎長者丸」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-6ad5865d17",
+    "name": "旧下大崎",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「下大崎」の区域です。現在の東五反田4丁目などにあたります。",
+    "address": "東五反田4丁目",
+    "areas": [
+      "osaki"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.630581,
+    "lng": 139.727615,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する東五反田4丁目の中心を指しています（152件／228件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「下大崎」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-7c675da673",
+    "name": "旧二葉町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「二葉町」の区域です。現在の二葉1丁目などにあたります。",
+    "address": "二葉1丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.606804,
+    "lng": 139.726715,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する二葉1丁目の中心を指しています（386件／1,379件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「二葉町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-c0cd8573fe",
+    "name": "旧五反田",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「五反田」の区域です。現在の東五反田1丁目などにあたります。",
+    "address": "東五反田1丁目",
+    "areas": [
+      "osaki"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.627762,
+    "lng": 139.726425,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する東五反田1丁目の中心を指しています（292件／1,389件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「五反田」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-3d627de238",
+    "name": "旧勝島町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「勝島町」の区域です。現在の勝島1丁目などにあたります。",
+    "address": "勝島1丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.599258,
+    "lng": 139.745209,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する勝島1丁目の中心を指しています（89件／99件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「勝島町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-cdc88a79cb",
+    "name": "旧大井伊藤町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井伊藤町」の区域です。現在の西大井5丁目などにあたります。",
+    "address": "西大井5丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.597923,
+    "lng": 139.717239,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する西大井5丁目の中心を指しています（393件／675件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井伊藤町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-50a8e7d350",
+    "name": "旧大井倉田町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井倉田町」の区域です。現在の大井4丁目などにあたります。",
+    "address": "大井4丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.601418,
+    "lng": 139.732651,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する大井4丁目の中心を指しています（466件／466件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井倉田町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-7226f0e9b1",
+    "name": "旧大井元芝町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井元芝町」の区域です。現在の東大井3丁目などにあたります。",
+    "address": "東大井3丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.601692,
+    "lng": 139.738098,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する東大井3丁目の中心を指しています（210件／275件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井元芝町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-fdb77e854a",
+    "name": "旧大井出石町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井出石町」の区域です。現在の西大井3丁目などにあたります。",
+    "address": "西大井3丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.596138,
+    "lng": 139.723404,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する西大井3丁目の中心を指しています（256件／265件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井出石町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-6b9fb672fd",
+    "name": "旧大井北浜川町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井北浜川町」の区域です。現在の東大井2丁目などにあたります。",
+    "address": "東大井2丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.600021,
+    "lng": 139.740677,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する東大井2丁目の中心を指しています（242件／394件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井北浜川町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-691bc7bcb4",
+    "name": "旧大井南浜川町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井南浜川町」の区域です。現在の南大井4丁目などにあたります。",
+    "address": "南大井4丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.596149,
+    "lng": 139.736038,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する南大井4丁目の中心を指しています（246件／489件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井南浜川町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-02f2c74daf",
+    "name": "旧大井原町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井原町」の区域です。現在の西大井2丁目などにあたります。",
+    "address": "西大井2丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.599144,
+    "lng": 139.722977,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する西大井2丁目の中心を指しています（368件／368件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井原町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-2f9fa3048a",
+    "name": "旧大井坂下町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井坂下町」の区域です。現在の南大井6丁目などにあたります。",
+    "address": "南大井6丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.590488,
+    "lng": 139.7314,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する南大井6丁目の中心を指しています（122件／122件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井坂下町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-ebebb99521",
+    "name": "旧大井寺下町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井寺下町」の区域です。現在の南大井5丁目などにあたります。",
+    "address": "南大井5丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.596874,
+    "lng": 139.734222,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する南大井5丁目の中心を指しています（144件／150件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井寺下町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-22fe38fbc4",
+    "name": "旧大井山中町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井山中町」の区域です。現在の大井3丁目などにあたります。",
+    "address": "大井3丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.601974,
+    "lng": 139.729202,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する大井3丁目の中心を指しています（435件／435件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井山中町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-d3eab4fe30",
+    "name": "旧大井庚塚町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井庚塚町」の区域です。現在の大井7丁目などにあたります。",
+    "address": "大井7丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.595203,
+    "lng": 139.72702,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する大井7丁目の中心を指しています（334件／334件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井庚塚町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-c5c2ba9cf9",
+    "name": "旧大井林町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井林町」の区域です。現在の東大井4丁目などにあたります。",
+    "address": "東大井4丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.605488,
+    "lng": 139.74028,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する東大井4丁目の中心を指しています（116件／163件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井林町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-830e4803ce",
+    "name": "旧大井森下町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井森下町」の区域です。現在の大井2丁目などにあたります。",
+    "address": "大井2丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.605042,
+    "lng": 139.729019,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する大井2丁目の中心を指しています（399件／411件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井森下町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-52b42794fd",
+    "name": "旧大井森前町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井森前町」の区域です。現在の西大井1丁目などにあたります。",
+    "address": "西大井1丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.602215,
+    "lng": 139.724579,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する西大井1丁目の中心を指しています（232件／233件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井森前町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-edc8ef41e5",
+    "name": "旧大井権現町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井権現町」の区域です。現在の大井1丁目などにあたります。",
+    "address": "大井1丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.605854,
+    "lng": 139.732559,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する大井1丁目の中心を指しています（217件／220件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井権現町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-b827da4ece",
+    "name": "旧大井水神町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井水神町」の区域です。現在の南大井6丁目などにあたります。",
+    "address": "南大井6丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.590488,
+    "lng": 139.7314,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する南大井6丁目の中心を指しています（164件／311件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井水神町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-408a7dc439",
+    "name": "旧大井海岸町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井海岸町」の区域です。現在の南大井3丁目などにあたります。",
+    "address": "南大井3丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.590126,
+    "lng": 139.734573,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する南大井3丁目の中心を指しています（195件／206件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井海岸町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-860d5b1917",
+    "name": "旧大井滝王子町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井滝王子町」の区域です。現在の大井5丁目などにあたります。",
+    "address": "大井5丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.598618,
+    "lng": 139.727997,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する大井5丁目の中心を指しています（459件／459件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井滝王子町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-55a1f682dc",
+    "name": "旧大井立会町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井立会町」の区域です。現在の東大井5丁目などにあたります。",
+    "address": "東大井5丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.606461,
+    "lng": 139.73703,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する東大井5丁目の中心を指しています（352件／363件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井立会町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-715b452981",
+    "name": "旧大井金子町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井金子町」の区域です。現在の西大井4丁目などにあたります。",
+    "address": "西大井4丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.59499,
+    "lng": 139.719528,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する西大井4丁目の中心を指しています（346件／367件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井金子町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-395e5e06c0",
+    "name": "旧大井鈴ヶ森町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井鈴ヶ森町」の区域です。現在の南大井3丁目などにあたります。",
+    "address": "南大井3丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.590126,
+    "lng": 139.734573,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する南大井3丁目の中心を指しています（158件／207件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井鈴ヶ森町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-5d844b28a0",
+    "name": "旧大井鎧町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井鎧町」の区域です。現在の大井1丁目などにあたります。",
+    "address": "大井1丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.605854,
+    "lng": 139.732559,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する大井1丁目の中心を指しています（384件／384件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井鎧町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-fb23570d36",
+    "name": "旧大井関ヶ原町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井関ヶ原町」の区域です。現在の東大井6丁目などにあたります。",
+    "address": "東大井6丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.602509,
+    "lng": 139.735565,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する東大井6丁目の中心を指しています（207件／239件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井関ヶ原町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-ff22a693bf",
+    "name": "旧大井鮫洲町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井鮫洲町」の区域です。現在の東大井1丁目などにあたります。",
+    "address": "東大井1丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.60482,
+    "lng": 139.746323,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する東大井1丁目の中心を指しています（276件／401件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井鮫洲町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-2f35a03b4f",
+    "name": "旧大井鹿島町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大井鹿島町」の区域です。現在の大井6丁目などにあたります。",
+    "address": "大井6丁目",
+    "areas": [
+      "oi"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.595707,
+    "lng": 139.731018,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する大井6丁目の中心を指しています（215件／269件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大井鹿島町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-d572e4a27e",
+    "name": "旧大崎本町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「大崎本町」の区域です。現在の西五反田3丁目などにあたります。",
+    "address": "西五反田3丁目",
+    "areas": [
+      "osaki"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.628101,
+    "lng": 139.717331,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する西五反田3丁目の中心を指しています（128件／455件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「大崎本町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-efa473bf6e",
+    "name": "旧天王洲町",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「天王洲町」の区域です。現在の東品川2丁目などにあたります。",
+    "address": "東品川2丁目",
+    "areas": [
+      "shinagawa"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.621628,
+    "lng": 139.749832,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する東品川2丁目の中心を指しています（32件／32件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「天王洲町」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-9ef7570882",
+    "name": "旧東大崎",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「東大崎」の区域です。現在の大崎3丁目などにあたります。",
+    "address": "大崎3丁目",
+    "areas": [
+      "osaki"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.619503,
+    "lng": 139.724518,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する大崎3丁目の中心を指しています（310件／972件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「東大崎」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-31f34154e9",
+    "name": "旧東戸越",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「東戸越」の区域です。現在の戸越1丁目などにあたります。",
+    "address": "戸越1丁目",
+    "areas": [
+      "ebara"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.616383,
+    "lng": 139.719681,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する戸越1丁目の中心を指しています（295件／1,234件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「東戸越」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-21bb239d04",
+    "name": "旧西大崎",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「西大崎」の区域です。現在の西五反田4丁目などにあたります。",
+    "address": "西五反田4丁目",
+    "areas": [
+      "osaki"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.626106,
+    "lng": 139.710831,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する西五反田4丁目の中心を指しています（364件／1,376件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「西大崎」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  },
+  {
+    "id": "pl-2425eebdab",
+    "name": "旧西戸越",
+    "summary": "昭和39年から42年の住居表示の実施まで使われていた旧町名「西戸越」の区域です。現在の平塚1丁目などにあたります。",
+    "address": "平塚1丁目",
+    "areas": [
+      "ebara"
+    ],
+    "categories": [
+      "placename",
+      "lost"
+    ],
+    "lat": 35.614887,
+    "lng": 139.715485,
+    "locationKind": "approximate",
+    "locationNote": "旧町名の区域の形は分かりません。住居表示新旧対照表で住所が最も多く対応する平塚1丁目の中心を指しています（321件／680件）。区域は他の丁目にもまたがります。",
+    "certainty": "fact",
+    "sources": [
+      {
+        "ref": "adeac-shinagawa",
+        "locator": "住居表示新旧対照表（平成23年11月時点）旧町名「西戸越」"
+      }
+    ],
+    "verifiedAt": "2026-11-24"
+  }
+]
