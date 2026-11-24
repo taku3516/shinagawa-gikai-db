@@ -5691,6 +5691,222 @@ window.SHINAGAWA_DB.rekishiPlaces = {
       "verifiedAt": "2026-11-24"
     },
     {
+      "id": "pl-5564831d38",
+      "name": "仙台坂遺跡",
+      "summary": "発掘調査が2回行われた遺跡です（1986年〜1991年）。出土した遺物や遺構の時代は縄文・近世にわたります。",
+      "address": "",
+      "areas": [
+        "oi"
+      ],
+      "categories": [
+        "site"
+      ],
+      "lat": 35.6071,
+      "lng": 139.7404,
+      "locationKind": "approximate",
+      "locationNote": "全国文化財総覧の遺跡抄録にある緯度経度（秒単位）です。調査地点ごとに座標が少しずつ違い、ここでは座標のある最新の調査（1991年）の値を使っています。遺跡の範囲そのものではありません。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "nabunken-sitereports",
+          "locator": "全国文化財総覧「仙台坂遺跡」ほか2件の遺跡抄録"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pl-9faa86944e",
+      "name": "大井鹿島遺跡",
+      "summary": "発掘調査が3回行われた遺跡です（1992年〜2022年）。出土した遺物や遺構の時代は縄文・古墳・奈良・近代にわたります。",
+      "address": "",
+      "areas": [
+        "oi"
+      ],
+      "categories": [
+        "site"
+      ],
+      "lat": 35.596388,
+      "lng": 139.73,
+      "locationKind": "approximate",
+      "locationNote": "全国文化財総覧の遺跡抄録にある緯度経度（秒単位）です。調査地点ごとに座標が少しずつ違い、ここでは座標のある最新の調査（2022年）の値を使っています。遺跡の範囲そのものではありません。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "nabunken-sitereports",
+          "locator": "全国文化財総覧「大井鹿島遺跡」ほか3件の遺跡抄録"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pl-c2ec4e4c9a",
+      "name": "妙国寺北遺跡",
+      "summary": "発掘調査が1回行われた遺跡です（2017年）。出土した遺物や遺構の時代は近世・近代にわたります。",
+      "address": "",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "site"
+      ],
+      "lat": 35.612333,
+      "lng": 139.743305,
+      "locationKind": "approximate",
+      "locationNote": "全国文化財総覧の遺跡抄録にある緯度経度（秒単位）です。調査地点ごとに座標が少しずつ違い、ここでは座標のある最新の調査（2017年）の値を使っています。遺跡の範囲そのものではありません。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "nabunken-sitereports",
+          "locator": "全国文化財総覧「妙国寺北遺跡」ほか1件の遺跡抄録"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pl-dc1ee96168",
+      "name": "寿昌寺遺跡",
+      "summary": "発掘調査が1回行われた遺跡です（2017年）。出土した遺物や遺構の時代は近世・近代にわたります。",
+      "address": "",
+      "areas": [
+        "osaki"
+      ],
+      "categories": [
+        "site"
+      ],
+      "lat": 35.628611,
+      "lng": 139.730277,
+      "locationKind": "approximate",
+      "locationNote": "全国文化財総覧の遺跡抄録にある緯度経度（秒単位）です。調査地点ごとに座標が少しずつ違い、ここでは座標のある最新の調査（2017年）の値を使っています。遺跡の範囲そのものではありません。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "nabunken-sitereports",
+          "locator": "全国文化財総覧「寿昌寺遺跡第１地点」ほか1件の遺跡抄録"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pl-a07e19c18a",
+      "name": "居木橋遺跡",
+      "summary": "発掘調査が15回行われた遺跡です（1987年〜2023年）。出土した遺物や遺構の時代は縄文・弥生・古墳・古代・中世・近世・近代にわたります。",
+      "address": "",
+      "areas": [
+        "osaki"
+      ],
+      "categories": [
+        "site"
+      ],
+      "lat": 35.619166,
+      "lng": 139.724166,
+      "locationKind": "approximate",
+      "locationNote": "全国文化財総覧の遺跡抄録にある緯度経度（秒単位）です。調査地点ごとに座標が少しずつ違い、ここでは座標のある最新の調査（2023年）の値を使っています。遺跡の範囲そのものではありません。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "nabunken-sitereports",
+          "locator": "全国文化財総覧「居木橋遺跡（D地区）」ほか15件の遺跡抄録"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pl-7a34951d9b",
+      "name": "御殿山遺跡",
+      "summary": "発掘調査が8回行われた遺跡です（1988年〜2024年）。出土した遺物や遺構の時代は縄文・弥生・古墳・平安・近世・近代にわたります。",
+      "address": "",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "site"
+      ],
+      "lat": 35.621111,
+      "lng": 139.734166,
+      "locationKind": "approximate",
+      "locationNote": "全国文化財総覧の遺跡抄録にある緯度経度（秒単位）です。調査地点ごとに座標が少しずつ違い、ここでは座標のある最新の調査（2024年）の値を使っています。遺跡の範囲そのものではありません。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "nabunken-sitereports",
+          "locator": "全国文化財総覧「御殿山遺跡」ほか8件の遺跡抄録"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pl-b51a4b4181",
+      "name": "播磨国三日月藩森家上屋敷跡遺跡",
+      "summary": "発掘調査が1回行われた遺跡です（2013年）。出土した遺物や遺構の時代は近世にわたります。",
+      "address": "",
+      "areas": [
+        "osaki"
+      ],
+      "categories": [
+        "site"
+      ],
+      "lat": 35.633055,
+      "lng": 139.716388,
+      "locationKind": "approximate",
+      "locationNote": "全国文化財総覧の遺跡抄録にある緯度経度（秒単位）です。調査地点ごとに座標が少しずつ違い、ここでは座標のある最新の調査（2013年）の値を使っています。遺跡の範囲そのものではありません。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "nabunken-sitereports",
+          "locator": "全国文化財総覧「播磨国三日月藩森家上屋敷跡遺跡」ほか1件の遺跡抄録"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pl-04a8c24316",
+      "name": "池田山北遺跡",
+      "summary": "発掘調査が5回行われた遺跡です（1988年〜2019年）。出土した遺物や遺構の時代は縄文・弥生・古墳・古代・近世にわたります。",
+      "address": "",
+      "areas": [
+        "osaki"
+      ],
+      "categories": [
+        "site"
+      ],
+      "lat": 35.630555,
+      "lng": 139.722222,
+      "locationKind": "approximate",
+      "locationNote": "全国文化財総覧の遺跡抄録にある緯度経度（秒単位）です。調査地点ごとに座標が少しずつ違い、ここでは座標のある最新の調査（2019年）の値を使っています。遺跡の範囲そのものではありません。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "nabunken-sitereports",
+          "locator": "全国文化財総覧「池田山北遺跡」ほか5件の遺跡抄録"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pl-b9d5afe16d",
+      "name": "池田山遺跡",
+      "summary": "発掘調査が1回行われた遺跡です（2018年）。出土した遺物や遺構の時代は近世にわたります。",
+      "address": "",
+      "areas": [
+        "osaki"
+      ],
+      "categories": [
+        "site"
+      ],
+      "lat": 35.629722,
+      "lng": 139.722777,
+      "locationKind": "approximate",
+      "locationNote": "全国文化財総覧の遺跡抄録にある緯度経度（秒単位）です。調査地点ごとに座標が少しずつ違い、ここでは座標のある最新の調査（2018年）の値を使っています。遺跡の範囲そのものではありません。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "nabunken-sitereports",
+          "locator": "全国文化財総覧「池田山遺跡１（品川区№28遺跡）」ほか1件の遺跡抄録"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
       "id": "pl-2af6916919",
       "name": "旧品川町役場・品川区役所庁舎",
       "summary": "旧品川町が大正14年から積み立てて計画し、昭和9年12月に品川区役所の庁舎として完成した建物の敷地です。昭和43年5月に総合庁舎へ移るまで区行政の中心でした。",

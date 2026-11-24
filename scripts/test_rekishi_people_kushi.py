@@ -55,9 +55,16 @@ class PeopleFromKushiTest(unittest.TestCase):
 
     def test_unknown_years_are_not_filled(self) -> None:
         # 生没年が出典に無い人物は null のまま（推測で埋めない）
-        for pid in ["pe-hirabayashi-kyubei", "pe-hayashi-kosyu", "pe-koga-ippei"]:
+        for pid in ["pe-koga-ippei"]:
             self.assertIsNone(self.people[pid]["birthYear"], pid)
             self.assertIsNone(self.people[pid]["deathYear"], pid)
+
+    def test_years_found_in_shiryo_are_filled(self) -> None:
+        # 区史 資料編（人物略伝）で生没年が分かった人物は、空欄のままにしない
+        self.assertEqual(self.people["pe-hayashi-kosyu"]["birthYear"], 1824)
+        self.assertEqual(self.people["pe-hayashi-kosyu"]["deathYear"], 1895)
+        self.assertEqual(self.people["pe-hirabayashi-kyubei"]["birthYear"], 1837)
+        self.assertEqual(self.people["pe-hirabayashi-kyubei"]["deathYear"], 1909)
 
 
 if __name__ == "__main__":

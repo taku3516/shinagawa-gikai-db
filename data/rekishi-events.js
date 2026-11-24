@@ -203,7 +203,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "categories": ["industry"],
       "certainty": "fact",
       "relatedEvents": ["ev-1876-glass-nationalized", "ev-1892-glass-dissolved"],
-      "relatedPeople": [],
+      "relatedPeople": ["pe-nishimura-katsuzo"],
       "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
@@ -293,7 +293,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "categories": ["admin", "culture"],
       "certainty": "fact",
       "relatedEvents": ["ev-1868-anzaisho", "ev-1872-shukueki-abolished"],
-      "relatedPeople": [],
+      "relatedPeople": ["pe-ohashi-seitaro"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第7号「東海道品川宿本陣跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -1721,7 +1721,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["industry"],
         "certainty": "fact",
         "relatedEvents": ["ev-1885-glass-sold"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-nishimura-katsuzo"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -3350,7 +3350,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "ev-1854-daiba",
           "ev-1854-gotenyama"
         ],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-egawa-tarozaemon"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -6445,7 +6445,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "culture"
         ],
         "certainty": "fact",
-        "relatedPeople": ["pe-kaburaki-tadamasa"],
+        "relatedPeople": ["pe-kaburaki-tadamasa", "pe-kamijo-hidesuke"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -7891,7 +7891,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["admin"],
         "certainty": "fact",
         "relatedEvents": ["ev-1889-chosonsei-shiko-ebara"],
-        "relatedPeople": ["pe-tanaka-hajime", "pe-ebisawa-keizaburo"],
+        "relatedPeople": ["pe-tanaka-hajime", "pe-ebisawa-keizaburo", "pe-sakurai-otaro"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -8077,7 +8077,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         ],
         "certainty": "fact",
         "relatedEvents": ["ev-1925-hino-shogakko"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-shigemune-hosui"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -9178,7 +9178,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "areas": ["shinagawa"],
         "categories": ["industry"],
         "certainty": "fact",
-        "relatedPeople": [],
+        "relatedPeople": ["pe-ogaki-kikusaburo"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -9966,6 +9966,1180 @@ window.SHINAGAWA_DB.rekishiEvents = {
           {
             "ref": "sgw-kushi-tsushi-jo",
             "locator": "四 近世編（四）宿駅制度「旅籠屋の取締り」754〜761頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1832-ukiyoe-gotenyama-hanami",
+        "name": "歌川広重が「東都名所 御殿山花見 品川全図」を描く",
+        "summary": "天保3年から13年（1832〜1842年）の間に、初代歌川広重が「東都名所 御殿山花見 品川全図」を描いた。品川歴史館が所蔵する。",
+        "description": "しながわデジタルアーカイブ「浮世絵」の目録による。作者は歌川広重（初代）、制作年は天保3年（1832年）〜天保13年（1842年）。品川歴史館が所蔵し、画像の使用には同館の承諾が要る。",
+        "year": 1832,
+        "yearEnd": 1842,
+        "yearText": "天保3年（1832年）〜天保13年（1842年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "adeac-shinagawa",
+            "locator": "浮世絵「東都名所 御殿山花見 品川全図」（目録 mp061020）"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1815-ukiyoe-kujira-takanawa",
+        "name": "勝川春亭が「品川沖之鯨高輪ヨリ見ル図」を描く",
+        "summary": "文化12年から文政3年（1815〜1820年）の間に、勝川春亭が「品川沖之鯨高輪ヨリ見ル図」を描いた。品川歴史館が所蔵する。",
+        "description": "しながわデジタルアーカイブ「浮世絵」の目録による。作者は勝川春亭、制作年は文化12年（1815年）〜文政3年（1820年）。品川歴史館が所蔵し、画像の使用には同館の承諾が要る。",
+        "year": 1815,
+        "yearEnd": 1820,
+        "yearText": "文化12年（1815年）〜文政3年（1820年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1798-kujira"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "adeac-shinagawa",
+            "locator": "浮世絵「品川沖之鯨高輪ヨリ見ル図」（目録 mp061080）"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1847-ukiyoe-kaikei-takara-no-kura",
+        "name": "歌川芳藤が「海景宝乃蔵入」を描く",
+        "summary": "弘化4年から嘉永5年（1847〜1852年）の間に、歌川芳藤が「海景宝乃蔵入」を描いた。品川歴史館が所蔵する。",
+        "description": "しながわデジタルアーカイブ「浮世絵」の目録による。作者は歌川芳藤、制作年は弘化4年（1847年）〜嘉永5年（1852年）。品川歴史館が所蔵し、画像の使用には同館の承諾が要る。",
+        "year": 1847,
+        "yearEnd": 1852,
+        "yearText": "弘化4年（1847年）〜嘉永5年（1852年）",
+        "era": "kinsei",
+        "areas": ["shinagawa"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "adeac-shinagawa",
+            "locator": "浮世絵「海景宝乃蔵入」（目録 mp061060）"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1857-ukiyoe-samezu-kaigan",
+        "name": "広重の「名所江戸百景」に南品川の鮫洲海岸が描かれる",
+        "summary": "安政4年（1857年）、初代歌川広重が「名所江戸百景」の一図として「南品川鮫洲海岸」を描いた。品川歴史館が所蔵し、同館の図録『浮世絵品川めぐり』（2006年）に収められている。",
+        "description": "しながわデジタルアーカイブ「浮世絵」の目録による。作者は歌川広重（初代）、制作年は安政4年（1857年）。品川歴史館が所蔵し、画像の使用には同館の承諾が要る。",
+        "year": 1857,
+        "yearText": "安政4年（1857年）",
+        "era": "kinsei",
+        "areas": ["oi"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "adeac-shinagawa",
+            "locator": "浮世絵「名所江戸百景 南品川鮫洲海岸」（目録 mp061050）"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1868-ukiyoe-shinagawa-takanawa-fukei",
+        "name": "歌川国輝が「東京江戸品川高輪風景」を描く",
+        "summary": "明治元年8月（1868年）、二代歌川国輝が「東京江戸品川高輪風景」を描いた。品川歴史館が所蔵する。",
+        "description": "しながわデジタルアーカイブ「浮世絵」の目録による。作者は歌川国輝（二代）、制作年は明治元年（1868年）8月。品川歴史館が所蔵し、画像の使用には同館の承諾が要る。",
+        "year": 1868,
+        "yearText": "明治元年（1868年）8月",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "adeac-shinagawa",
+            "locator": "浮世絵「東京江戸品川高輪風景」（目録 mp061070）"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1870-ukiyoe-shinagawaoki-joki",
+        "name": "広重（三代）が「東京三十六景 品川沖蒸気船」を描く",
+        "summary": "明治3年（1870年）、三代歌川広重が「東京三十六景」の一図として「品川沖蒸気船」を描いた。品川歴史館が所蔵する。",
+        "description": "しながわデジタルアーカイブ「浮世絵」の目録による。作者は歌川広重（三代）、制作年は明治3年（1870年）。品川歴史館が所蔵し、画像の使用には同館の承諾が要る。",
+        "year": 1870,
+        "yearText": "明治3年（1870年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "adeac-shinagawa",
+            "locator": "浮世絵「東京三十六景 品川沖蒸気船」（目録 mp061090）"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1873-ukiyoe-shinagawaoki-tetsudo-enbo",
+        "name": "歌川国輝が「東京各大区之内 品川沖蒸気船鉄道遠望」を描く",
+        "summary": "明治6年（1873年）、二代歌川国輝が「東京各大区之内」の一図として「品川沖蒸気船鉄道遠望」を描いた。品川歴史館が所蔵する。",
+        "description": "しながわデジタルアーカイブ「浮世絵」の目録による。作者は歌川国輝（二代）、制作年は明治6年（1873年）。品川歴史館が所蔵し、画像の使用には同館の承諾が要る。",
+        "year": 1873,
+        "yearText": "明治6年（1873年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1872-shinagawa-yokohama-rail"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "adeac-shinagawa",
+            "locator": "浮世絵「東京各大区之内 品川沖蒸気船鉄道遠望」（目録 mp061030）"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1899-ukiyoe-gotenyama-yori-shinagawa",
+        "name": "楊斎延一が「東京名所 御殿山より品川を望む」を描く",
+        "summary": "明治32年（1899年）、楊斎延一が「東京名所」の一図として「御殿山より品川を望む」を描いた。品川歴史館が所蔵する。",
+        "description": "しながわデジタルアーカイブ「浮世絵」の目録による。作者は楊斎延一、制作年は明治32年（1899年）。品川歴史館が所蔵し、画像の使用には同館の承諾が要る。",
+        "year": 1899,
+        "yearText": "明治32年（1899年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "adeac-shinagawa",
+            "locator": "浮世絵「東京名所 御殿山より品川を望む」（目録 mp061040）"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1987-irukibashi-chosa",
+        "name": "居木橋遺跡で個人住宅兼店舗の建設に伴い貝層が調査される",
+        "summary": "昭和62年12月21日から30日、居木橋遺跡で個人住宅兼店舗の建設に伴う発掘調査が行われ、縄文時代の貝層が調べられた。縄文土器のほか、石鏃3点・石皿2点などが出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。主な遺構は貝層で、主な遺物は縄文土器、土器片錘、石鏃、石皿だった。",
+        "year": 1987,
+        "yearText": "昭和62年（1987年）12月21日〜12月30日",
+        "era": "showa-post",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡」（1992年刊）所収の居木橋遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1988-irukibashi-chosa",
+        "name": "居木橋遺跡で貝塚と竪穴住居が調査され、縄文時代前期から後期までの土器が出土する",
+        "summary": "昭和63年4月から5月、居木橋遺跡で建物の新築に伴う発掘調査が行われ、貝塚と竪穴住居、溝状遺構が確認された。縄文土器は条痕文土器、関山式、黒浜式、諸磯式、称名寺式、堀之内式が出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文時代のほか、弥生・古墳・古代・中世・近世・近代の遺物も出土し、貝や貝製品、陶磁器、ガラスなども見つかった。",
+        "year": 1988,
+        "yearText": "昭和63年（1988年）4月1日〜5月25日",
+        "era": "showa-post",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡１（A地区）」（1989年刊）所収の居木橋遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1993-irukibashi-chosa",
+        "name": "居木橋遺跡で縄文前期の諸磯b式・関山式土器と前期後半の竪穴住居が確認される",
+        "summary": "平成5年1月から3月、居木橋遺跡で共同住宅の建設に伴う発掘調査が行われ、縄文時代前期の諸磯b式土器と関山式土器が出土した。前期後半の竪穴住居も確認された。",
+        "description": "全国文化財総覧の遺跡抄録による。主な遺構は貝塚と竪穴住居跡で、骨角器、貝、動物の遺体も出土した。",
+        "year": 1993,
+        "yearText": "平成5年（1993年）1月18日〜3月25日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡５（A地区）」（1994年刊）所収の居木橋遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1994-irukibashi-chosa",
+        "name": "居木橋遺跡で縄文前期（諸磯a式期）の竪穴住居と後期の土坑が確認される",
+        "summary": "平成6年4月から5月、居木橋遺跡で個人住宅（一部診療所兼用）の建設に伴う発掘調査が行われ、縄文時代前期（諸磯a式期）の竪穴住居と、後期（称名寺式期）の土坑が確認された。",
+        "description": "全国文化財総覧の遺跡抄録による。",
+        "year": 1994,
+        "yearText": "平成6年（1994年）4月15日〜5月2日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡７（B地区）」（1994年刊）所収の居木橋遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1995-irukibashi-chosa",
+        "name": "居木橋遺跡の土坑から玦状耳飾が出土する",
+        "summary": "平成7年5月から6月、居木橋遺跡で個人住宅の建築に伴う発掘調査が行われ、縄文時代の土坑から玦状耳飾が出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。",
+        "year": 1995,
+        "yearText": "平成7年（1995年）5月24日〜6月23日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡６（D地区）」（1996年刊）所収の居木橋遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2010-irukibashi-chosa",
+        "name": "居木橋遺跡で縄文時代の住居3軒と屋外炉などが調査される",
+        "summary": "平成22年5月から8月、居木橋遺跡で発掘調査が行われ、縄文時代の住居3軒、屋外炉5基、土坑4基、斜面貝層1か所、ピット18基などが確認された。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文土器、石器、土製品、石製品に加え、骨角製品や貝加工品も出土した。",
+        "year": 2010,
+        "yearText": "平成22年（2010年）5月17日〜8月12日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡(A地区)」（2011年刊）所収の居木橋遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2012-irukibashi-chosa",
+        "name": "居木橋遺跡で縄文時代の住居3軒と屋外炉が確認される",
+        "summary": "平成24年12月から翌25年1月、居木橋遺跡で発掘調査が行われ、縄文時代の住居3軒と屋外炉2基が確認された。縄文土器、石器、土製品、石製品が出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。同じ報告書には、古墳時代の埴輪が出土した調査と、弥生時代の土器が出た調査も載る。",
+        "year": 2012,
+        "yearText": "平成24年（2012年）12月5日〜平成25年（2013年）1月17日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡(C地区)」（2013年刊）所収の居木橋遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2020-irukibashi-chosa",
+        "name": "居木橋遺跡で明治前半の刻印煉瓦と品川白煉瓦製造所の耐火煉瓦が出土する",
+        "summary": "令和2年1月から3月、居木橋遺跡で個人住宅の建設に伴う発掘調査が行われ、縄文時代の貝層の続きが発見された。明治前半の刻印煉瓦や、近くにあった品川白煉瓦製造所の耐火煉瓦も出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。北側の隣地のA地区第2地点から続く貝層の範囲が見つかった。縄文土器、石器、貝、江戸時代の磁器・陶器、瓦も出土した。",
+        "year": 2020,
+        "yearText": "令和2年（2020年）1月29日〜3月6日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡（A地区）」（2021年刊）所収の居木橋遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2021-irukibashi-chosa",
+        "name": "居木橋遺跡の第14次調査で竪穴住居跡が検出される",
+        "summary": "令和3年11月から12月、居木橋遺跡の第14次調査（介護施設の建設に伴う）で、竪穴住居跡や埋甕が検出された。報告は、居木橋遺跡において初となる竪穴住居跡と記している。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文土器、石器、土師器、埴輪、瓦などが出土した。",
+        "year": 2021,
+        "yearText": "令和3年（2021年）11月29日〜12月28日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "variants": [
+          {
+            "claim": "報告は「居木橋遺跡において初となる竪穴住居跡」と記すが、同じ遺跡の昭和63年・平成5年・平成6年の調査でも、竪穴住居が確認されたと記録されている。「初」はこの調査地区（地区の区分）についての記述とみられるが、確かめられていない。",
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡」（2023年刊）所収の居木橋遺跡第14次ほか"
+          }
+        ],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡（B地区）」（2023年刊）所収の居木橋遺跡第14次"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2022-irukibashi-chosa",
+        "name": "居木橋遺跡の第15次調査でE地区の貝層範囲と土坑が確認される",
+        "summary": "令和4年2月、居木橋遺跡の第15次調査（住宅の建設に伴う）で、E地区の貝層の範囲、土坑、遺物包含層が確認された。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文土器、弥生土器、土師器、石器、貝、瓦、陶磁器が出土し、縄文から近代までの時代にわたる。",
+        "year": 2022,
+        "yearText": "令和4年（2022年）2月14日〜2月25日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡（E地区）」（2023年刊）所収の居木橋遺跡第15次"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2023-irukibashi-chosa",
+        "name": "居木橋遺跡で第4次調査の竪穴住居跡が再確認され、5か所の貝層が確認される",
+        "summary": "令和5年10月から12月、居木橋遺跡で共同住宅の建設に伴う発掘調査が行われ、竪穴住居跡はいずれも第4次調査の住居跡を確認したものだった。住居内の貝層のほか、単体の貝層の範囲が5か所で確認された。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文土器、土製品、貝、骨、須恵器、陶磁器、瓦などが出土した。",
+        "year": 2023,
+        "yearText": "令和5年（2023年）10月30日〜12月20日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-a07e19c18a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「居木橋遺跡（D地区）」（2025年刊）所収の居木橋遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1988-gotenyama-chosa",
+        "name": "御殿山遺跡で範囲確認調査が行われ、縄文前期の土器が出土する",
+        "summary": "昭和63年8月から9月、御殿山遺跡で範囲確認調査が行われ、包含層から貝殻条痕文土器と諸磯b式土器が出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文・弥生・古墳の時代にわたる遺構の存在が想定された。",
+        "year": 1988,
+        "yearText": "昭和63年（1988年）8月30日〜9月14日",
+        "era": "showa-post",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-7a34951d9b"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「池田山北遺跡 御殿山遺跡」（1990年刊）所収の御殿山遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1994-gotenyama-chosa",
+        "name": "御殿山遺跡で縄文と古墳時代の住居跡、炉穴、石製模造品が確認される",
+        "summary": "平成6年7月、御殿山遺跡で個人住宅の建築に伴う発掘調査が行われ、住居跡、土坑、炉穴が確認された。土師器、須恵器、石製模造品が出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文時代と古墳時代の遺跡である。",
+        "year": 1994,
+        "yearText": "平成6年（1994年）7月5日〜7月31日",
+        "era": "heisei-reiwa",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-7a34951d9b"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「御殿山遺跡」（1995年刊）所収の御殿山遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2020-gotenyama-chosa",
+        "name": "御殿山遺跡で近世の武家屋敷の土採坑や溝が検出される",
+        "summary": "令和2年1月から2月、御殿山遺跡で集合住宅の建築に伴う発掘調査が行われ、近世の武家屋敷の土採坑や溝が検出された。土採坑からは近世の陶磁器、土器、自然遺物が出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。人骨を含む自然遺物も出土した。",
+        "year": 2020,
+        "yearText": "令和2年（2020年）1月20日〜2月18日",
+        "era": "heisei-reiwa",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-7a34951d9b"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「御殿山遺跡」（2020年刊）所収の御殿山遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2021-gotenyama-9ji-chosa",
+        "name": "御殿山遺跡の第9次調査で、弥生末から古墳初頭の方形周溝墓が検出される",
+        "summary": "令和3年9月、御殿山遺跡の第9次調査（個人住宅兼集合住宅の建設に伴う）で、弥生時代末から古墳時代初頭の方形周溝墓が検出された。縄文時代早期後半から前期前半の土器も少数出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。井戸跡も確認された。同じ年の第8次調査（5月17日〜6月5日）では、縄文時代の土坑2基と、古墳時代の住居跡が確認された。",
+        "year": 2021,
+        "yearText": "令和3年（2021年）9月27日〜9月29日",
+        "era": "heisei-reiwa",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-7a34951d9b"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「御殿山遺跡」（2022年刊）所収の御殿山遺跡第９次"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2023-gotenyama-chosa",
+        "name": "御殿山遺跡の第10・11次調査で、縄文早期から前期の土器と古墳時代の住居跡が確認される",
+        "summary": "令和5年2月から5月、御殿山遺跡の第10次・第11次調査で、縄文時代早期後半から前期を主体とする土器が出土し、古墳時代の中期から後期の住居跡や土坑が検出された。",
+        "description": "全国文化財総覧の遺跡抄録による。江戸時代以降の溝や礎石、土坑も検出され、近代以降では、かつて御殿山地区にあった酒屋の屋号を記した徳利が出土した。",
+        "year": 2023,
+        "yearText": "令和5年（2023年）2月20日〜3月3日",
+        "era": "heisei-reiwa",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-7a34951d9b"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「御殿山遺跡」（2023年刊）所収の御殿山遺跡10次"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2024-gotenyama-12ji-chosa",
+        "name": "御殿山遺跡の第12次調査で、古墳時代の住居跡と江戸時代の地下室が検出される",
+        "summary": "令和6年7月から9月、御殿山遺跡の第12次調査（個人住宅の建設に伴う）で、古墳時代中期の住居跡と、江戸時代の地下室3基などが検出された。地下室は19世紀前葉と中葉に廃絶を迎えている。",
+        "description": "全国文化財総覧の遺跡抄録による。近代以降では、地下室を埋めたあとに礎石を据えた痕跡が確認され、戦時中の統制食器が出土した。",
+        "year": 2024,
+        "yearText": "令和6年（2024年）7月29日〜9月17日",
+        "era": "heisei-reiwa",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-7a34951d9b"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「御殿山遺跡」（2025年刊）所収の御殿山遺跡12次"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1988-ikeyamakita-chosa",
+        "name": "池田山北遺跡で縄文早期の炉跡41基と前期の住居内貝層が確認される",
+        "summary": "昭和63年7月から8月、池田山北遺跡で個人住宅の建設に伴う発掘調査が行われ、縄文時代早期（野島式〜鵜ガ島台式）の炉跡41基が確認された。前期の住居と、住居内の貝層も確認された。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文・弥生・古墳・近世の時代にわたる遺跡で、貝製品や骨角器も出土した。",
+        "year": 1988,
+        "yearText": "昭和63年（1988年）7月27日〜8月21日",
+        "era": "showa-post",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-04a8c24316"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「池田山北遺跡 御殿山遺跡」（1990年刊）所収の池田山北遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1990-ikeyamakita-chosa",
+        "name": "池田山北遺跡の第2・3次調査で、住居16軒と玦状耳飾が見つかる",
+        "summary": "平成2年12月から翌3年2月、池田山北遺跡の第2次・第3次調査で、住居16軒と土坑4基が確認され、縄文時代の土製と石製の玦状耳飾が1点ずつ出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。弥生時代の住居、竪穴、溝も確認された。",
+        "year": 1990,
+        "yearText": "平成2年（1990年）12月4日〜平成3年（1991年）2月25日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-04a8c24316"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「池田山北遺跡」（1992年刊）所収の池田山北遺跡 第2次・第3次"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2019-ikeyamakita-chosa",
+        "name": "池田山北遺跡で縄文前期の竪穴住居5軒と弥生時代の竪穴住居が確認される",
+        "summary": "令和元年9月から10月、池田山北遺跡で個人住宅の建設に伴う発掘調査が行われ、黒浜式期から諸磯a期の竪穴住居跡5件が確認された。うち1件は地点貝塚だった。弥生町式期から前野町式期の竪穴住居1軒も確認された。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文土器、石器、貝、弥生土器、土師器も出土した。",
+        "year": 2019,
+        "yearText": "令和元年（2019年）9月2日〜10月17日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-04a8c24316"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「池田山北遺跡」（2020年刊）所収の池田山北遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1992-oikashima-chosa",
+        "name": "大井鹿島遺跡で古墳〜奈良時代の竪穴建物が確認される",
+        "summary": "平成4年1月から2月、大井鹿島遺跡で個人住宅の建設に伴う発掘調査が行われ、竪穴建物2軒が確認された。土師器と須恵器の杯などが出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。奈良時代の集落の遺跡である。",
+        "year": 1992,
+        "yearText": "平成4年（1992年）1月20日〜2月2日",
+        "era": "heisei-reiwa",
+        "areas": ["oi"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-9faa86944e"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「大井鹿島遺跡」（1992年刊）所収の大井鹿島遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2002-oikashima-chosa",
+        "name": "大井鹿島遺跡で職員寮の建て替えに伴い竪穴建物3軒が確認される",
+        "summary": "平成14年7月、大井鹿島遺跡で職員寮の建て替えに伴う発掘調査が行われ、竪穴建物3軒が確認された。土師器、須恵器、土錘が出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。",
+        "year": 2002,
+        "yearText": "平成14年（2002年）7月12日〜7月28日",
+        "era": "heisei-reiwa",
+        "areas": ["oi"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-9faa86944e"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「大井鹿島遺跡」（2002年刊）所収の大井鹿島遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2022-oikashima-chosa",
+        "name": "大井鹿島遺跡の第10次調査で竪穴住居跡と鉄滓が見つかる",
+        "summary": "令和4年11月から12月、大井鹿島遺跡の第10次調査（松滴庵の改修工事に伴う）で、竪穴住居跡が確認され、鉄滓が出土した。松滴庵の基礎と、その直前の段階の整地層も確認された。",
+        "description": "全国文化財総覧の遺跡抄録による。縄文土器、石器、須恵器、土師器、陶磁器、ガラス製品も出土した。",
+        "year": 2022,
+        "yearText": "令和4年（2022年）11月24日〜12月27日",
+        "era": "heisei-reiwa",
+        "areas": ["oi"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-9faa86944e"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「大井鹿島遺跡」（2023年刊）所収の大井鹿島遺跡第10次"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1991-sendaizaka-chosa",
+        "name": "仙台坂遺跡で大名屋敷の土坑11基と遊びの品々が出土する",
+        "summary": "平成3年12月から翌4年3月、仙台坂遺跡で都市計画道路の拡幅工事に伴う発掘調査が行われ、大名屋敷の土坑11基が確認された。陶磁器、灯明具、焼塩壺、土面子、ミニチュア玩具、土人形などが出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。江戸時代の遺跡である。",
+        "year": 1991,
+        "yearText": "平成3年（1991年）12月16日〜平成4年（1992年）3月6日",
+        "era": "heisei-reiwa",
+        "areas": ["oi"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-5564831d38"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「仙台坂遺跡」（1992年刊）所収の仙台坂遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2018-ikeyama-chosa",
+        "name": "池田山遺跡で岡山藩池田家大崎下屋敷の一部が初めて調査される",
+        "summary": "平成30年2月から3月、池田山遺跡で住宅の建設に伴う発掘調査が行われ、岡山藩池田家の大崎下屋敷の一部が初めて調査された。屋敷内の水路が検出され、斜面地での大規模な造成の痕跡も認められた。",
+        "description": "全国文化財総覧の遺跡抄録による。国産陶磁器、土器、瓦が出土した。",
+        "year": 2018,
+        "yearText": "平成30年（2018年）2月5日〜3月12日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-b9d5afe16d"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「池田山遺跡１（品川区№28遺跡）」（2018年刊）所収の池田山遺跡１"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2017-jushoji-chosa",
+        "name": "寿昌寺遺跡で近世に創建された寿昌寺の裏手の境内墓が調査される",
+        "summary": "平成29年2月から4月、寿昌寺遺跡の発掘調査が行われた。武蔵野台地の東端の袖ヶ崎と称される舌状台地の西端に位置し、近世に創建された寿昌寺の裏手の境内墓と考えられている。",
+        "description": "全国文化財総覧の遺跡抄録による。墓と土坑が検出され、土器、陶磁器、金属製品、木製品、ガラス製品が出土した。",
+        "year": 2017,
+        "yearText": "平成29年（2017年）2月27日〜4月14日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-dc1ee96168"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「寿昌寺遺跡第１地点」（2018年刊）所収の寿昌寺遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2017-myokokujikita-chosa",
+        "name": "妙国寺北遺跡で大規模な砂利採掘坑と近代初頭の多量の陶磁器が見つかる",
+        "summary": "平成29年6月から11月、妙国寺北遺跡で学校の建設に伴う発掘調査が行われ、大規模な砂利採掘坑と、生活区域の小規模な地業跡が検出された。盛り土の中から近代初頭の多量の陶磁器が出土した。",
+        "description": "全国文化財総覧の遺跡抄録による。近世の陶磁器、中近世の中国陶磁なども出土し、石垣や井戸も確認された。",
+        "year": 2017,
+        "yearText": "平成29年（2017年）6月5日〜11月28日",
+        "era": "heisei-reiwa",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-c2ec4e4c9a"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「妙国寺北遺跡」（2019年刊）所収の妙国寺北遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2013-mori-kamiyashiki-chosa",
+        "name": "播磨国三日月藩森家上屋敷跡遺跡で地下室6基、井戸7基、上水施設10基が確認される",
+        "summary": "平成25年11月から翌26年1月、播磨国三日月藩の森家上屋敷跡で発掘調査が行われ、大名屋敷の地下室6基、土坑45基、井戸7基、上水施設10基などが確認された。",
+        "description": "全国文化財総覧の遺跡抄録による。江戸時代の遺跡である。",
+        "year": 2013,
+        "yearText": "平成25年（2013年）11月6日〜平成26年（2014年）1月31日",
+        "era": "heisei-reiwa",
+        "areas": ["osaki"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-b51a4b4181"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「播磨国三日月藩森家上屋敷跡遺跡」（2014年刊）所収の播磨国三日月藩森家上屋敷跡遺跡"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-2000-oikanekoyama-chosa",
+        "name": "大井金子山横穴墓群の調査で埋葬人骨が出土する",
+        "summary": "平成12年12月、大井金子山横穴墓群で共同住宅の建設工事に伴う緊急の発掘調査が行われ、横穴墓から埋葬された人骨が出土した。成人5個体、未成人1個体、小児2個体以上で、鉄製品は刀子1点と鉄鏃1点だった。",
+        "description": "全国文化財総覧の遺跡抄録による。古墳時代から奈良時代の横穴墓で、近世の遺物も出土した。",
+        "year": 2000,
+        "yearText": "平成12年（2000年）12月4日〜12月23日",
+        "era": "heisei-reiwa",
+        "areas": ["oi"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「大井金子山横穴墓群」（2001年刊）所収の大井金子山横穴墓群"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1993-omori-kaizuka-chosa",
+        "name": "大森貝塚で公園整備に伴う調査が行われ、竪穴住居が確認される",
+        "summary": "平成5年7月から8月、大森貝塚で公園西部の整備計画に伴う発掘調査が行われ、竪穴住居が確認された。これにより、縄文時代の集落が形成された地域が復元された。",
+        "description": "全国文化財総覧の遺跡抄録による。土器、土製品、骨角器、貝製品、自然遺物が出土した。",
+        "year": 1993,
+        "yearText": "平成5年（1993年）7月22日〜8月14日",
+        "era": "heisei-reiwa",
+        "areas": ["oi"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-be2e1fa0fd"],
+        "sources": [
+          {
+            "ref": "nabunken-sitereports",
+            "locator": "全国文化財総覧「大森貝塚」（1996年刊）所収の大森貝塚"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1444-suzuki-doin-myokokuji",
+        "name": "鈴木道胤が妙国寺の大檀那となり、伽藍の復興に取り組む",
+        "summary": "文安元年（1444年）、南品川の船主の鈴木道胤が妙国寺の大檀那となり、子とともに伽藍の復興を進めた。五重塔を建て、長禄3年（1459年）に七堂伽藍が完成した。",
+        "description": "区史 資料編の人物略伝による。文安3年（1446年）には梵鐘を寄進し、宝徳2年（1450年）の妙国寺文書には、関東管領が道胤に課した蔵役を免除したことが記されている。",
+        "year": 1444,
+        "yearEnd": 1459,
+        "yearText": "文安元年（1444年）〜長禄3年（1459年）",
+        "era": "chusei",
+        "areas": ["shinagawa"],
+        "categories": ["temple"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1438-myokokuji-kishin"],
+        "relatedPeople": ["pe-suzuki-doin"],
+        "relatedPlaces": ["pl-11e5d5f153"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「鈴木道胤」5頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1457-ota-dokan-shinagawaji",
+        "name": "太田道灌が江戸城に移り、品川の旧居が品川寺になったと伝わる",
+        "summary": "長禄元年（1457年）、太田道灌が江戸城に移った際に、品川の旧居を寺として品川寺とし、江戸城の鎮守にしたと『品川寺縁起』が伝える。",
+        "description": "区史 資料編の人物略伝による。『永享記』も、道灌が品川の館に住んだのち江戸の館に移ったと伝え、道灌が品川に居館をもっていたことを示すとしている。",
+        "year": 1457,
+        "yearText": "長禄元年（1457年）",
+        "era": "chusei",
+        "areas": ["shinagawa"],
+        "categories": ["temple"],
+        "certainty": "tradition",
+        "relatedPeople": ["pe-ota-dokan"],
+        "relatedPlaces": ["pl-7ee2886587"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「太田道灌」4〜5頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1457-udagawa-shinagawajo",
+        "name": "宇田川長清が品川郷に移り、三木村に城を築いたと伝わる",
+        "summary": "長禄元年（1457年）4月、太田道灌が江戸城に移って在地武士を再配置したとき、宇田川長清は品川郷に移されて初代品川城主となり、三木村に城を築いたと伝わる。",
+        "description": "区史 資料編の人物略伝による。長清は文明14年（1482年）9月17日に没した。",
+        "year": 1457,
+        "yearText": "長禄元年（1457年）4月",
+        "era": "chusei",
+        "areas": ["shinagawa"],
+        "categories": ["lost"],
+        "certainty": "tradition",
+        "relatedEvents": ["ev-1457-ota-dokan-shinagawaji"],
+        "relatedPeople": ["pe-udagawa-nagakiyo"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「宇田川長清」6頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1829-osakien-no-ki",
+        "name": "「大崎名園の記」が、松平不昧の大崎下屋敷の庭を伝える",
+        "summary": "文政12年（1829年）3月18日の「大崎名園の記」が、茶人松平不昧の大崎下屋敷の庭（大崎園）を伝えている。面積は2万1千余坪、建物は3千余坪、茶屋は11か所あった。",
+        "description": "区史 資料編の人物略伝による。庭は幕末の品川台場の築造の際に没収されて陣屋となり、庭石は運び去られて跡形もなくなった。",
+        "year": 1829,
+        "yearText": "文政12年（1829年）3月18日",
+        "era": "kinsei",
+        "areas": ["osaki"],
+        "categories": [
+          "lost",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1853-daiba-start"],
+        "relatedPeople": ["pe-matsudaira-fumai"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「松平不昧」11頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1895-myokaen-kaien",
+        "name": "南品川に私設公園の妙華園が開園する",
+        "summary": "明治28年（1895年）、河瀬秀治が南品川の西部の眺望のよい地に、面積5,000坪の私設公園「妙華園」を開いた。4棟の温室と2棟の陳列室があり、西洋の草花を集めて、東京の名所になった。",
+        "description": "区史 資料編の人物略伝による。池や築山、運動場、飲食店もあり、新しい種苗や園芸の技術の指導所でもあった。園の草花には、横文字だけの名称札がつけられて人目をひいた。",
+        "year": 1895,
+        "yearText": "明治28年（1895年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "site",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": ["pe-kawase-hideharu"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「河瀬秀治」23頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1875-ogino-shogakko",
+        "name": "北品川の家塾が文部省の認可を受けて荻野小学校になる",
+        "summary": "明治8年7月、北品川にあった家塾が、文部省の示達に基づいて荻野小学校と称する私立の小学校として許可を受けた。明治29年に高等小学を併置し、40年に幼稚園を併設したが、大正5年に閉鎖された。",
+        "description": "区史 資料編の人物略伝による。品川町における私立小学校として「荏原の慶応義塾」とたたえられ、品川の初等教育普及の先駆者だった。明治22年には品川町長と代用小学校の契約を結んだ。児童の定員は265人だった。",
+        "year": 1875,
+        "yearEnd": 1916,
+        "yearText": "明治8年（1875年）7月〜大正5年（1916年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "culture",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedPeople": ["pe-ogino-teijiro"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「荻野貞次郎」33頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1928-shinagawa-choshi-hensan",
+        "name": "『品川町史』上・中・下3巻の編纂が始まり、昭和7年に完成する",
+        "summary": "昭和3年4月に着手された『品川町史』の編纂は、昭和7年9月に上・中・下の3巻、2,900頁の大著として完成した。当時としては画期的な企てで、資料的価値が極めて高いと評されている。",
+        "description": "区史 資料編の人物略伝による。編纂委員・主査を務めた村林彦之は、六行会の品川図書館（現在の区立品川図書館の前身）を経営し、財団法人六行会の中興の祖と仰がれた。",
+        "year": 1928,
+        "yearEnd": 1932,
+        "yearText": "昭和3年（1928年）4月〜昭和7年（1932年）9月",
+        "era": "showa-pre",
+        "areas": ["shinagawa"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": ["pe-murabayashi-hikoyuki"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「村林彦之」35頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1932-oi-choshi-kanko",
+        "name": "市郡併合を記念して『大井町史』が刊行される",
+        "summary": "昭和7年、市郡併合を記念して、大井町長の西村菊次郎のもとで『大井町史』が刊行された。",
+        "description": "区史 資料編の人物略伝による。西村菊次郎は昭和7年4月に大井町長になった。",
+        "year": 1932,
+        "yearText": "昭和7年（1932年）",
+        "era": "showa-pre",
+        "areas": ["oi"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1932-shinagawa-ebara-ku-setchi"],
+        "relatedPeople": ["pe-nishimura-kikujiro"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「西村菊次郎」41頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1897-honda-nissho-myokokuji",
+        "name": "本多日生が妙国寺の住職になり、のち顕本法華宗の管長になる",
+        "summary": "明治30年5月21日、本多日生が南品川の妙国寺の住職になった。妙満寺派は翌31年に顕本法華宗と公称することが認められ、日生は明治38年に公選で管長に当選し、大正15年まで管長を務めた（区史は在職を「27年間」と記すが、年数が合わない。variants を参照）。",
+        "description": "区史 資料編の人物略伝による。日蓮宗各派の統一を唱え、月刊誌「統一」（明治30年）や「教」（大正15年）を発行した。",
+        "year": 1897,
+        "yearEnd": 1926,
+        "yearText": "明治30年（1897年）5月21日〜大正15年（1926年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["temple"],
+        "certainty": "fact",
+        "relatedPeople": ["pe-honda-nissho"],
+        "relatedPlaces": ["pl-11e5d5f153"],
+        "variants": [{"claim": "区史 資料編の人物略伝は、明治38年（1905年）に管長に当選し「以来大正十五年まで、二十七年間管長として」務めたと記す。しかし明治38年から大正15年（1926年）までは21年（両端を含めても22年）で、27年とは合わない。開始年・終了年・年数のどれが誤りかは、この資料だけでは判断できない。", "ref": "sgw-kushi-shiryo", "locator": "人物略伝「本多日生」37〜38頁"}],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「本多日生」37〜38頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1916-sakurai-otaro-oimachi-cho",
+        "name": "桜井翁太郎が大井町長に選ばれ、大正11年まで務める",
+        "summary": "大正5年2月23日の大井町会は、田中肇町長の死去を受けて助役の桜井翁太郎を町長に選んだ。桜井は道路の改修や学校の増築に努め、大正11年2月16日に病気で退いた。",
+        "description": "区史 資料編の人物略伝による。後任には名和長憲が就いた。",
+        "year": 1916,
+        "yearEnd": 1922,
+        "yearText": "大正5年（1916年）2月23日〜大正11年（1922年）2月16日",
+        "era": "taisho",
+        "areas": ["oi"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1908-oi-osaki-chosei"],
+        "relatedPeople": [
+          "pe-sakurai-otaro",
+          "pe-tanaka-hajime"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「桜井翁太郎」41頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1922-nawa-nagenori-oimachi-cho",
+        "name": "名和長憲が大井町長に就任し、昭和7年まで10年務める",
+        "summary": "大正11年、貴族院議員の名和長憲が大井町長に就任し、関東大震災後の市街地化に対応して、道路・下水・教育・衛生などの公共施設の充実を計画して実現し、昭和7年3月29日まで10年間務めた。",
+        "description": "区史 資料編の人物略伝による。",
+        "year": 1922,
+        "yearEnd": 1932,
+        "yearText": "大正11年（1922年）〜昭和7年（1932年）3月29日",
+        "era": "taisho",
+        "areas": ["oi"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1916-sakurai-otaro-oimachi-cho",
+          "ev-1923-shinsai"
+        ],
+        "relatedPeople": ["pe-nawa-nagenori"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「名和長憲」36頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1921-samejima-sokichi-osakicho",
+        "name": "鮫島宗吉が大崎町長に選ばれ、大正14年まで務める",
+        "summary": "大正10年4月、鮫島宗吉が大崎町長に選任され、4年間務めて大正14年4月に辞任した。",
+        "description": "区史 資料編の人物略伝による。鮫島は桐ケ谷村の村役人の家の出身で、荏原郡農会の幹事も務めた。",
+        "year": 1921,
+        "yearEnd": 1925,
+        "yearText": "大正10年（1921年）4月〜大正14年（1925年）4月",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": ["admin"],
+        "certainty": "fact",
+        "relatedPeople": ["pe-samejima-sokichi"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「鮫島宗吉」36頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1917-tateishi-tomomitsu-osakicho",
+        "name": "立石知満が大崎町長に就任し、目黒川の改修と耕地整理に尽力する",
+        "summary": "大正6年、立石知満が海老沢啓三郎の後の大崎町長になった。大崎目黒両町耕地整理組合長として、整地事業、とくに目黒川の改修事業に力を尽くした。",
+        "description": "区史 資料編の人物略伝による。昭和32年11月には東五反田の雉子神社の境内に頌徳碑が建てられた。",
+        "year": 1917,
+        "yearText": "大正6年（1917年）",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": [
+          "admin",
+          "water"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1924-osaki-gesuido-kairyo"],
+        "relatedPeople": [
+          "pe-tateishi-tomomitsu",
+          "pe-ebisawa-keizaburo"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「立石知満」43頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1925-showaika-shikichi-teikyo",
+        "name": "鏑木忠正が中延の土地1万余坪を提供し、昭和医学専門学校が昭和3年に開校する",
+        "summary": "大正14年5月、上条秀介は医学専門学校の敷地として、受持患者だった鏑木忠正から平塚村中延の1万余坪の提供を受けた。昭和2年7月に着工し、昭和3年3月17日に昭和医学専門学校の設立が認可され、4月1日に開校した。",
+        "description": "区史 資料編の人物略伝による。提供された土地は中延1,012番地から1,024番地にわたる。初代の校長兼理事長には東京帝大名誉教授が迎えられ、上条自身は付属医院長になり、鏑木は顧問兼監事に就いた。昭和13年に上条が校長に就任したとき、鏑木は理事長に選ばれた。昭和21年4月に昭和医科大学の設立が認可された。",
+        "year": 1925,
+        "yearEnd": 1928,
+        "yearText": "大正14年（1925年）5月〜昭和3年（1928年）4月1日",
+        "era": "taisho",
+        "areas": ["ebara"],
+        "categories": [
+          "culture",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1928-showa-ika-opens"],
+        "relatedPeople": [
+          "pe-kamijo-hidesuke",
+          "pe-kaburaki-tadamasa"
+        ],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「上条秀介」52〜53頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1936-meiji-tenno-seiseki-hozonkai",
+        "name": "明治天皇聖蹟保存会が設立され、北品川の行在所跡に記念公園ができる",
+        "summary": "昭和11年7月、大橋清太郎が会長となって明治天皇聖蹟保存会が設立された。会は昭和13年11月に北品川の行在所跡に記念公園を完成させた。",
+        "description": "区史 資料編の人物略伝による。",
+        "year": 1936,
+        "yearEnd": 1938,
+        "yearText": "昭和11年（1936年）7月〜昭和13年（1938年）11月",
+        "era": "showa-pre",
+        "areas": ["shinagawa"],
+        "categories": ["site"],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1938-seiseki-park",
+          "ev-1868-anzaisho"
+        ],
+        "relatedPeople": ["pe-ohashi-seitaro"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「大橋清太郎」46頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1928-origuchi-oi-ishide",
+        "name": "折口信夫が大井町出石の借家に移り、25年住む",
+        "summary": "昭和3年、慶應義塾大学の教授になった折口信夫は、大井町出石の借家に移り住んだ。この家は戦災をまぬがれ、折口は昭和28年に亡くなるまで、大井に25年住んだ。",
+        "description": "区史 資料編の人物略伝による。折口信夫は歌人の釈迢空としても知られ、大井に住んでいたころの作とみられる歌が二首、略伝に載る。",
+        "year": 1928,
+        "yearEnd": 1953,
+        "yearText": "昭和3年（1928年）〜昭和28年（1953年）",
+        "era": "showa-pre",
+        "areas": ["oi"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": ["pe-origuchi-shinobu"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-shiryo",
+            "locator": "人物略伝「折口信夫」49頁"
           }
         ],
         "verifiedAt": "2026-11-24"
