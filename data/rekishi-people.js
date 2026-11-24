@@ -1284,6 +1284,52 @@ window.SHINAGAWA_DB.rekishiPeople = {
         }
       ],
       "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-tsuchiya-ko",
+      "name": "土屋興",
+      "kana": "つちやこう",
+      "summary": "大崎在住の衆議院議員で、漆昌巌の地盤を継いで昭和3年の第1回普選の前まで議員を務めた。",
+      "description": "大正9年の第14回総選挙で、十数年の議員活動に終止符を打った漆昌巌から地盤を引き継いだ。昭和3年の第1回普通選挙の実施前まで議員として活動したが、早く亡くなった。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "大正9年（1920年）〜昭和3年（1928年）より前に議員",
+      "era": "taisho",
+      "areas": [
+        "osaki"
+      ],
+      "shinagawaRelation": "大崎に住み、荏原郡選出の衆議院議員を務めた。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "六 大正編 5 大正期の民衆運動と地方政界「荏原郡下における政党化の波」386〜389頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-ito-butshichiro",
+      "name": "伊藤武七郎",
+      "kana": "いとうぶしちろう",
+      "summary": "荏原区の人で、高木正年の没後に議席を継ぎ、昭和11年の選挙で当選した。",
+      "description": "昭和9年12月に高木正年が在職のまま没したあと、荏原区の伊藤武七郎があとを継ぎ、昭和11年の選挙で当選した。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "昭和11年（1936年）当選",
+      "era": "showa-pre",
+      "areas": [
+        "ebara"
+      ],
+      "shinagawaRelation": "荏原区の衆議院議員。高木正年の後継。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "六 大正編 5 大正期の民衆運動と地方政界「荏原郡下における政党化の波」386〜389頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
     }
   ]
 };
