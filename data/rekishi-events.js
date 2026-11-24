@@ -2337,7 +2337,6 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1918-nikon-oi"],
         "relatedPeople": [],
-        "relatedPlaces": ["pl-bf388bf3d2"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",

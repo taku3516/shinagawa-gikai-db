@@ -81,7 +81,6 @@ class OldAddressPlacesTest(unittest.TestCase):
         "ev-1934-shinagawa-kuyakusho-completed": "旧品川町役場・品川区役所庁舎",
         "ev-1889-chosonsei-shiko-ebara": "旧大井村役場",
         "ev-1923-osaki-shokugyo-shokaijo": "旧大崎町役場",
-        "ev-1928-mitsubishi-oi": "旧三菱航空機東京製作所",
     }
 
     @classmethod
@@ -109,6 +108,12 @@ class OldAddressPlacesTest(unittest.TestCase):
         for event_id, name in self.LINKS.items():
             place_id = self.by_name[name]["id"]
             self.assertIn(place_id, self.events[event_id].get("relatedPlaces", []), event_id)
+
+    def test_unconfirmed_address_is_held_back(self) -> None:
+        # 区史の「高森前」は対照表の「大井森前町」と同じ土地だと確かめられていない。
+        # 番地が同じというだけで読み替えず、別の資料で裏付けるまで地点にしない
+        self.assertNotIn("旧三菱航空機東京製作所", self.by_name)
+        self.assertEqual(self.events["ev-1928-mitsubishi-oi"].get("relatedPlaces", []), [])
 
     def test_addresses_are_at_go_level(self) -> None:
         # 丁目の代表点ではなく、番・号まで引けていること
