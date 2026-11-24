@@ -8,7 +8,7 @@
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.rekishiPeople = {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-24",
   "note": "品川区にゆかりのある人物です。出典を確認できたものだけを掲載しています。",
   "items": [
     {
@@ -861,6 +861,429 @@ window.SHINAGAWA_DB.rekishiPeople = {
         "certainty": "fact",
         "sources": [{ "ref": "sgw-library", "locator": "品川ゆかりの人物" }],
         "verifiedAt": "2026-11-21"
-      }
+      },
+    {
+      "id": "pe-urushi-shogan",
+      "name": "漆昌巌",
+      "kana": "うるししょうがん",
+      "summary": "北品川宿の法禅寺の住職から実業家・政治家になり、衆議院議員を6回務めた。",
+      "description": "嘉永3年（1850年）に岐阜県の大江村に生まれ、11歳で僧侶となった。明治6年に北品川宿の法禅寺に入って翌年住職を嗣ぎ、明治22年に品川馬車株式会社を創立して社長になった。26年には馬車鉄道株式会社の社長、30年には機械製氷会社の取締役にもなった。明治30年に還俗し、翌年品川町会議員、32年に荏原郡会議員となって郡会議長を務め、35年の第7回総選挙で政友会から当選した。以後、大正9年まで15年間、当選6回で中央政界で活躍した。区史は、品川町長の多くが旧宿役人層の出身だったなかで、漆昌巌だけが例外だったと記している。",
+      "birthYear": 1850,
+      "deathYear": null,
+      "yearText": "嘉永3年（1850年）生まれ",
+      "era": "meiji",
+      "areas": [
+        "shinagawa"
+      ],
+      "shinagawaRelation": "北品川宿の法禅寺の住職を務め、品川馬車会社の創立など区内の実業にも関わった。",
+      "certainty": "fact",
+      "relatedPlaces": [
+        "pl-2de8c135d9"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "六 大正編 5 大正期の民衆運動と地方政界「地方政界の変貌と高木正年・漆昌巌」381〜384頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-hirabayashi-kyubei",
+      "name": "平林九兵衛",
+      "kana": "ひらばやしきゅうべえ",
+      "summary": "大井村の有力者で、第1回総選挙以来、高木正年と衆議院の議席を争った。",
+      "description": "高木正年の伯父にあたる大井村の人。荏原郡が1議席だった時代、明治31年の第6回総選挙まで高木と議席をめぐって争い、第2回と第5回の総選挙で当選した。明治21年の町村合併の答申では、荏原郡を代表して高木とともに、郡部の財産を市に編入することに反対する意見書を連署した。第7回総選挙からは立候補を取りやめ、その地盤は漆昌巌に引き継がれたといわれる。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "生没年は区史に載っていない",
+      "era": "meiji",
+      "areas": [
+        "oi"
+      ],
+      "shinagawaRelation": "大井村の人で、荏原郡選出の衆議院議員を務めた。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "六 大正編 5 大正期の民衆運動と地方政界「地方政界の変貌と高木正年・漆昌巌」381〜384頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-hayashi-kosyu",
+      "name": "林交周",
+      "kana": "はやしこうしゅう",
+      "summary": "桐ケ谷村の名主から荏原郡の初代郡長になり、18年間在職した。",
+      "description": "桐ケ谷村の名主で、明治の初めには第七大区の副区長を務めた。明治11年に郡区町村編制法で荏原郡が置かれると初代の郡長に任命され、明治28年まで18年間その職にあった。学問は十分でなかったが頭の回転が早く豪傑肌の人柄で、郡長会議でも率直に意見を述べ、伊藤博文からも目をかけられたという。品川神社には、伊藤博文が碑文を書いた林の石碑が立っている。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "明治11年（1878年）〜明治28年（1895年）荏原郡長",
+      "era": "meiji",
+      "areas": [
+        "osaki",
+        "shinagawa"
+      ],
+      "shinagawaRelation": "荏原郡の初代郡長で、郡役所は品川に置かれた。碑が品川神社に立つ。",
+      "certainty": "fact",
+      "relatedPlaces": [
+        "pl-548dab732d"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（一）明治前期の品川 3 明治政府の諸政策と地方制度「郡制の実施と連合戸長役場の設置」48〜54頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-tanaka-hajime",
+      "name": "田中肇",
+      "kana": "たなかはじめ",
+      "summary": "大井村の戸長から村長となり、町制施行後は初代の大井町長を務めて32年間、村政・町政を担った。",
+      "description": "明治18年に大井村の戸長に就き、明治22年5月に村会で村長に選ばれた。明治41年8月の町制施行では初代の町長になり、大正5年に没するまで、戸長から数えて32年間その職にあった。役場は鮫洲に置かれ、書記1人という少人数で始まった。区史は、町村長の多くが旧幕時代の名主や宿役人だったことを、この時期の名望家支配のあらわれとして記している。",
+      "birthYear": null,
+      "deathYear": 1916,
+      "yearText": "明治18年（1885年）戸長〜大正5年（1916年）没",
+      "era": "meiji",
+      "areas": [
+        "oi"
+      ],
+      "shinagawaRelation": "大井村の村長、のち大井町の初代町長。大正5年に没した。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「新しい町村役場と町村長」189〜191頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-ebisawa-shigeharu",
+      "name": "海老沢重治",
+      "kana": "えびさわしげはる",
+      "summary": "大崎の連合戸長役場の戸長から、町村制施行後の初代の大崎村長になった。",
+      "description": "大崎の上下大崎・谷山・居木橋・桐ケ谷の5か村の連合戸長役場で戸長を務め、明治22年の町村制の施行で、その区域がそのまま大崎村になると村長に選ばれた。明治24年に没した。町村合併のとき、白金村・三田村・白金猿町を加えた合併を望んだが、白金猿町の一部が加わるだけに終わった。",
+      "birthYear": null,
+      "deathYear": 1891,
+      "yearText": "明治24年（1891年）没",
+      "era": "meiji",
+      "areas": [
+        "osaki"
+      ],
+      "shinagawaRelation": "大崎村の初代村長。子の啓三郎があとを継いだ。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「品川区域の町村合併」183〜187頁、「新しい町村役場と町村長」189〜191頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-ebisawa-keizaburo",
+      "name": "海老沢啓三郎",
+      "kana": "えびさわけいざぶろう",
+      "summary": "父のあとを継いで大崎村長となり、町制施行後は大崎町長を大正6年まで26年間務めた。",
+      "description": "海老沢重治の没後、嗣子として村長に推され、明治41年の町制施行で町長になって、大正6年に没するまで26年間その職にあった。区史は、父の戸長就任から数えると父子二代で半世紀にわたって大崎の民政を取りしきったと記している。",
+      "birthYear": null,
+      "deathYear": 1917,
+      "yearText": "明治24年（1891年）〜大正6年（1917年）",
+      "era": "meiji",
+      "areas": [
+        "osaki"
+      ],
+      "shinagawaRelation": "大崎村長、のち大崎町長。大正6年に没した。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「新しい町村役場と町村長」189〜191頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-takahashi-katsuzo",
+      "name": "高橋勝蔵",
+      "kana": "たかはしかつぞう",
+      "summary": "平塚村の初代村長で、のち平塚町長として通算25年務めた。",
+      "description": "代々芝の御霊屋敷の名主を務めた家の中延の生まれで、明治22年6月、36歳で平塚村の村長に選ばれた。明治30年まで在職し、13年の間をおいて明治43年に再任され、昭和2年まで通算25年その職にあった。大正15年の町制施行の申請書は、村長として高橋が提出している。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "明治22年（1889年）〜昭和2年（1927年）村長・町長",
+      "era": "meiji",
+      "areas": [
+        "ebara"
+      ],
+      "shinagawaRelation": "平塚村・平塚町（のち荏原町）の村長・町長。中延の出身。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「新しい町村役場と町村長」189〜191頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-yamamoto-shigeoki",
+      "name": "山本重興",
+      "kana": "やまもとしげおき",
+      "summary": "宿役人・副戸長を経て、初代の品川町長に選ばれた。",
+      "description": "明治22年の町村制の施行で、南北の戸長役場が統合されて品川町役場ができると、町会の選挙で初代町長に選ばれた。宿役人や副戸長の経験があり、一時期鳥山藤次郎に代わったものの、明治40年までその職にあった。区史は、品川町長が漆昌巌を除いてすべて旧宿役人層の出身だったと記している。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "明治22年（1889年）〜明治40年（1907年）ごろ町長",
+      "era": "meiji",
+      "areas": [
+        "shinagawa"
+      ],
+      "shinagawaRelation": "品川町の初代町長。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（二）明治後期の品川 2 市制・町村制の施行と町村合併「新しい町村役場と町村長」189〜191頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-koga-ippei",
+      "name": "古賀一平",
+      "kana": "こがいっぺい",
+      "summary": "品川県の知事として、備荒貯蓄の割り当てをめぐる武蔵野新田の門訴事件を処理した。",
+      "description": "旧幕府の代官のあとの武蔵知県事で、明治2年8月に松村長為に代わって就任した。品川県が設置された明治2年2月9日の時点では前任者の時代で、古賀は自ら出張して門訴事件の取り調べにあたった。区史は、品川県の期間が短すぎて、その特色を示さないまま終わったと述べている。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "明治2年（1869年）8月就任",
+      "era": "meiji",
+      "areas": [
+        "ward"
+      ],
+      "shinagawaRelation": "品川県の知事。県庁は日本橋の浜町に置かれた。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（一）明治前期の品川 2 明治維新と品川「品川県の設置」15〜17頁、「品川県門訴事件」20〜22頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-rida-kunitaka",
+      "name": "利田邦高",
+      "kana": "りだくにたか",
+      "summary": "南品川の連合戸長役場の戸長を務めた。",
+      "description": "明治11年に荏原郡が置かれたとき、南品川宿・南品川猟師町・南品川利田新地・二日五日市村の3宿1村を合わせた南の戸長役場の戸長だった。役場ははじめ南品川宿238番地に置かれ、のち問屋場の跡、さらに長徳寺の庫裡へと3度移った。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "明治11年（1878年）ごろ戸長",
+      "era": "meiji",
+      "areas": [
+        "shinagawa"
+      ],
+      "shinagawaRelation": "南品川宿などを合わせた連合戸長役場の戸長。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（一）明治前期の品川 3 明治政府の諸政策と地方制度「郡制の実施と連合戸長役場の設置」48〜54頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-kaburaki-tadamasa",
+      "name": "鏑木忠正",
+      "kana": "かぶらぎただまさ",
+      "summary": "戦後最初の公選の品川区長になり、また中延の土地を学校の敷地に提供した。",
+      "description": "昭和22年4月5日、昭和7年の区制施行以来はじめての品川区長直接公選で、自由党から出て約3万7000票を獲得し、初代の公選区長になった。中延の旧家の人として、約1万坪の農地を昭和医学専門学校の敷地に提供して理事長となり、立正学園女学校の校地（約1,300坪）の所有者でもあった。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "昭和22年（1947年）区長当選",
+      "era": "showa-post",
+      "areas": [
+        "ebara",
+        "ward"
+      ],
+      "shinagawaRelation": "初代の公選区長。中延の土地所有者として昭和医専や立正学園の校地に関わった。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "八 現代編「新品川区の成立」818〜821頁、七 昭和編「昭和医学専門学校」585〜586頁、「立正学園女学校（現 立正学園女学校）」585頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-kosakai-keiyo",
+      "name": "小坂井啓陽",
+      "kana": "こさかいけいよう",
+      "summary": "大乗教を関東で広め、戦後は旗の台を拠点に管長を務めた。",
+      "description": "大正10年ごろ五反田に教会を設けて布教し、昭和7年に小山、のち戸越、昭和9年に平塚（旗の台2丁目）へ教会を移した。戦後の昭和21年、宗教団体への規制が解かれると大乗教と改称して一派を立て、管長に就いた。本部は名古屋市にあったが、管長は品川区内にあって布教を続けた。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "大正10年（1921年）ごろ〜",
+      "era": "showa-pre",
+      "areas": [
+        "ebara"
+      ],
+      "shinagawaRelation": "旗の台2丁目に関東教会を置いた大乗教の管長。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "八 現代編「大乗教」810〜811頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-goto-joasaku",
+      "name": "後藤恕作",
+      "kana": "ごとうじょさく",
+      "summary": "後藤毛織を創立し、大井町の発展の原動力になったといわれる。",
+      "description": "大正7年10月に後藤毛織を創立した。区史は、後藤毛織を大井町発展の原動力のひとつと記している。工場は関東大震災で全滅し、昭和4年秋に会社は破綻した。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "大正7年（1918年）後藤毛織創立",
+      "era": "taisho",
+      "areas": [
+        "oi"
+      ],
+      "shinagawaRelation": "大井町で毛織物工場を営んだ実業家。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "七 昭和編「昭和初期における毛織物工業の苦況」534〜536頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-okada-tojuro",
+      "name": "岡田藤十郎",
+      "kana": "おかだとうじゅうろう",
+      "summary": "府立第八中学校の初代校長を、昭和12年まで務めた。",
+      "description": "青山師範学校の教頭から府立第八中学校の初代校長に任命された。校舎の完成前、大正12年には三木小学校の一部を借りて授業を行い、翌13年4月から小山の校舎で授業を始めた。昭和12年に退官するまで十数年在職し、区史は、八中の校風は創立当初からの校長の教育方針によるところが強いと記している。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "大正12年（1923年）〜昭和12年（1937年）校長",
+      "era": "taisho",
+      "areas": [
+        "ebara"
+      ],
+      "shinagawaRelation": "平塚村小山に創立された府立八中（現在の小山台高校につながる）の初代校長。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "六 大正編 7 近郊地域としての教育機関の整備「府立第八中学校の創立」428〜432頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-enomoto-takeaki",
+      "name": "榎本武揚",
+      "kana": "えのもとたけあき",
+      "summary": "旧幕府の軍艦8隻を率いて品川沖から脱出した。",
+      "description": "慶応4年（明治元年）8月19日、品川沖に碇泊していた旧幕府の開陽丸など軍艦8隻を率いて江戸湾を脱出し、北海道方面へ向かった。艦隊は房総沖の嵐で2隻を失い、6隻が松島湾に入った。のちに北海道の五稜郭を占拠することになる。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "慶応4年（1868年）8月19日の脱出",
+      "era": "meiji",
+      "areas": [
+        "shinagawa"
+      ],
+      "shinagawaRelation": "品川沖に碇泊していた旧幕府の艦隊を率いて脱出した。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "五 近代編（一）明治前期の品川 2 明治維新と品川「榎本の品川沖脱出」11頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-takaishi-hideyuki",
+      "name": "高石秀行",
+      "kana": "たかいしひでゆき",
+      "summary": "品川浦漁協の組合長として、漁業権の放棄にいたる補償交渉にあたった。",
+      "description": "品川浦漁協の組合長で、東京都内湾漁業対策審議会の委員の一人になった。大井埠頭をめぐる都港湾局との折衝に、大森漁協とともにあたった。品川浦漁協は昭和37年当時、高石ほか137人の組合員を持っていた。昭和37年12月3日、補償額330億円の漁業補償協定が結ばれた。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "昭和36年（1961年）〜昭和37年（1962年）",
+      "era": "showa-post",
+      "areas": [
+        "shinagawa"
+      ],
+      "shinagawaRelation": "品川浦漁協の組合長。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "八 現代編「漁業権の全面的放棄」987〜990頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-suzuki-bunji",
+      "name": "鈴木文治",
+      "kana": "すずきぶんじ",
+      "summary": "友愛会を創立した会長で、大井・品川の分会の発足にも顔を出した。",
+      "description": "明治45年8月1日、明治天皇の崩御から3日目、大正と改元された最初の夜に、三田で15人が集まって友愛会が生まれたときの中心人物で、会長を務めた。区域では、大正2年12月31日に大井町の大井倶楽部で開かれた大井分会の茶話会で講演し、大正3年1月3日の品川分会の新年宴会にも出席した。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "明治45年（1912年）友愛会創立",
+      "era": "taisho",
+      "areas": [
+        "oi",
+        "shinagawa"
+      ],
+      "shinagawaRelation": "友愛会の会長。大井分会・品川分会の発足の会合で講演した。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "六 大正編 5 大正期の民衆運動と地方政界「友愛会大井・品川分会の発足と城南支部第四十八部会」390〜392頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "pe-tateishi-tomomitsu",
+      "name": "立石知満",
+      "kana": "たていしともみつ",
+      "summary": "大崎町長として、町の下水道改良事業に早くから取り組んだ。",
+      "description": "大正9年、大崎町長として下水道改良事業の調査に着手し、東京府の技師の設計で、大正10年8月に町会に付議した。関東大震災などもあって内務省の許可が出るのは遅れ、工事は大正13年4月に始まった。",
+      "birthYear": null,
+      "deathYear": null,
+      "yearText": "大正9年（1920年）ごろ町長",
+      "era": "taisho",
+      "areas": [
+        "osaki"
+      ],
+      "shinagawaRelation": "大崎町の町長。",
+      "certainty": "fact",
+      "sources": [
+        {
+          "ref": "sgw-kushi-tsushi-ge",
+          "locator": "七 昭和編「（ハ） 下水道」605〜607頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    }
   ]
 };

@@ -923,6 +923,116 @@ def extra_records(verified_at: str, used: set[str]) -> list[dict[str, Any]]:
     return records
 
 
+# 区史が旧番地で書く施設を、住居表示新旧対照表で現在の住所に直したもの。
+#
+# 区史は「北品川三丁目二四四番地」のように住居表示の前の番地で書く。対照表
+# （しながわデジタルアーカイブ address.json）で旧住所を引くと、現在の番・号まで分かる。
+# 番・号まで引けるので、丁目の代表点（おおよその位置）ではなく、その番地の位置を指す。
+# ここに挙げるのは、施設そのものが現存しない（または当時の位置のまま現存するか
+# 確かめていない）ものなので、位置の種類は「かつての所在地」にして注記を付ける。
+#
+# 旧住所と現住所の対応は、対照表を1件ずつ引いて確かめた。複数の号に分かれるときは
+# 若い号を使う。
+OLD_ADDRESS_PLACES: list[dict[str, Any]] = [
+    {
+        "name": "旧品川町役場・品川区役所庁舎",
+        "area": "shinagawa",
+        "categories": ["admin", "building", "lost"],
+        "old_address": "北品川3丁目244番地",
+        "new_address": "北品川3-11-22",
+        "summary": "旧品川町が大正14年から積み立てて計画し、昭和9年12月に品川区役所の庁舎として完成した建物の敷地です。昭和43年5月に総合庁舎へ移るまで区行政の中心でした。",
+        "kushi": "七 昭和編「品川区役所庁舎の新築」595〜597頁、「新しい町村役場と町村長」189〜191頁",
+    },
+    {
+        "name": "旧大井村役場",
+        "area": "oi",
+        "categories": ["admin", "lost"],
+        "old_address": "大井鮫洲町94番地",
+        "new_address": "東大井2-8-8",
+        "summary": "明治22年の町村制の施行で成立した大井村の役場があった場所です。村長・助役・収入役のほか書記1人という小さな役場で始まりました。",
+        "kushi": "五 近代編（二）明治後期の品川「新しい町村役場と町村長」189〜191頁",
+    },
+    {
+        "name": "旧大崎町役場",
+        "area": "osaki",
+        "categories": ["admin", "lost"],
+        "old_address": "下大崎1丁目107番地",
+        "new_address": "東五反田3-1-1",
+        "summary": "大崎町役場があった場所です。大正12年9月25日、関東大震災で失業した人を救う大崎町立職業紹介所が、この役場の構内で正式に始まりました。",
+        "kushi": "七 昭和編「大崎・品川・大井・荏原の各町立職業紹介所」636〜637頁",
+    },
+    # 旧三菱航空機東京製作所は保留。区史の「大井町高森前五六〇〇番地」は、対照表の
+    # 「大井森前町5600番地」と番地が同じだが、同じ土地だと確かめられていない
+    # （「高森前」は対照表に無い）。別の資料で裏付けるまで地図に載せない。
+    {
+        "name": "旧日本酸素 大崎工場",
+        "area": "osaki",
+        "categories": ["industry", "lost"],
+        "old_address": "桐ケ谷字谷戸窪499番地",
+        "new_address": "西五反田5-25-2",
+        "new_address_from": "kushi",
+        "summary": "明治43年に日本酸素合資会社が敷地358坪を買い、明治44年5月に日本で最初の酸素の工業化に成功した工場があった場所です。大正5年から「大崎工場」と呼ばれました。",
+        "kushi": "六 大正編 2 近代工業の展開「日本酸素と東洋酸素」307〜312頁",
+    },
+]
+
+
+def old_address_records(verified_at: str, used: set[str], cache: dict[str, Any]) -> list[dict[str, Any]]:
+    """OLD_ADDRESS_PLACES を公開データの形にする。番・号まで引けなければ止める。"""
+    records: list[dict[str, Any]] = []
+    for item in OLD_ADDRESS_PLACES:
+        found = geocode(item["new_address"], cache)
+        if found is None or found[2]:
+            raise SystemExit(
+                f"旧番地の地点の位置を番・号まで引けませんでした: {item['name']}（{item['new_address']}）"
+            )
+        lat, lng, _ = found
+        if item.get("new_address_from") == "kushi":
+            # 区史自身が現在の住所を併記しているもの。対照表では引いていない。
+            note = (
+                f"区史が旧住所「{item['old_address']}」とともに書く現在の住所「{item['new_address']}」の位置です。"
+                "施設は現存しないか、当時のものではありません。"
+            )
+        else:
+            note = (
+                f"区史が書く旧住所「{item['old_address']}」を、住居表示新旧対照表で現在の住所"
+                f"「{item['new_address']}」に直した位置です。施設は現存しないか、当時のものではありません。"
+            )
+        if item.get("note"):
+            note += item["note"]
+        records.append({
+            "id": place_id_for(f"{item['new_address']}|{item['name']}", used),
+            "name": item["name"],
+            "summary": item["summary"],
+            "address": item["new_address"],
+            "areas": [item["area"]],
+            "categories": item["categories"],
+            "lat": lat,
+            "lng": lng,
+            "locationKind": "former",
+            "locationNote": note,
+            "certainty": "fact",
+            "sources": [{"ref": "sgw-kushi-tsushi-ge", "locator": item["kushi"]}] + (
+                [] if item.get("new_address_from") == "kushi" else [
+                    {"ref": "adeac-shinagawa",
+                     "locator": f"住居表示新旧対照表（平成23年11月時点）旧住所「{item['old_address']}」"},
+                ]
+            ),
+            "verifiedAt": verified_at,
+        })
+    return records
+
+
+OLD_TOWN_PLACES = ROOT / "scripts" / "rekishi-old-town-places.json"
+
+
+def old_town_records() -> list[dict[str, Any]]:
+    """旧町名の地点を読む。ファイルが無ければ0件（旧町名を載せない構成でも動く）。"""
+    if not OLD_TOWN_PLACES.exists():
+        return []
+    return json.loads(OLD_TOWN_PLACES.read_text(encoding="utf-8"))
+
+
 def to_record(place: Place, verified_at: str) -> dict[str, Any]:
     """公開するデータの1件を組み立てる。"""
     heritage = heritage_of(place)
@@ -1067,6 +1177,22 @@ def main() -> int:
     # 区の一覧に載らない国の文化財を足す。IDの衝突を避けるため既存のIDを渡す。
     used_ids = {x["id"] for x in records}
     records.extend(extra_records(args.verified_at, used_ids))
+
+    # 旧町名の地点（scripts/prepare_rekishi_old_town_places.py が作る）を足す。
+    old_towns = old_town_records()
+    clash = [x["id"] for x in old_towns if x["id"] in {y["id"] for y in records}]
+    if clash:
+        print(f"旧町名の地点のIDが衝突しています: {clash}", file=sys.stderr)
+        return 1
+    records.extend(old_towns)
+    print(f"旧町名の地点を{len(old_towns)}件足します。")
+
+    # 区史の旧番地を現住所に直した地点を足す。
+    cache_for_old = load_geocode_cache()
+    old_addresses = old_address_records(time.strftime("%Y-%m-%d"), {x["id"] for x in records}, cache_for_old)
+    records.extend(old_addresses)
+    save_geocode_cache(cache_for_old)
+    print(f"旧番地の地点を{len(old_addresses)}件足します。")
 
     print(f"公開できるのは{len(records)}件、保留は{len(pending)}件です。")
     for item in pending:

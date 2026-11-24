@@ -96,5 +96,39 @@ class NameOriginTest(unittest.TestCase):
         self.assertIn(KUSHI_JO, refs)
 
 
+# 区史から新しく起こした地名（原則として origin を持つ。由来の説が分かれるものは variants に並べる）
+NEW_NAMES: dict[str, int] = {
+    "nm-yatsuyama": 0,
+    "nm-samezu": 1,  # 砂洲説を origin に、鮫と観音の地名伝説を variants に
+    "nm-suzugamori": 1,
+    "nm-kujirazuka": 0,
+    "nm-suzaki": 0,
+    "nm-ebara": 0,
+    "nm-hiratsuka-mura": 2,  # 戸越側の竹旭村案と、荏原区史の別表記
+    "nm-ebara-machi": 0,
+}
+
+
+class NewNamesFromKushiTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.names = load_names()
+
+    def test_new_names_exist_with_origin(self) -> None:
+        for name_id in NEW_NAMES:
+            self.assertIn(name_id, self.names, name_id)
+            self.assertTrue(self.names[name_id].get("origin"), f"{name_id} の origin が空")
+
+    def test_new_names_cite_kushi_with_page(self) -> None:
+        for name_id in NEW_NAMES:
+            sources = [s for s in self.names[name_id]["sources"] if s["ref"].startswith("sgw-kushi")]
+            self.assertTrue(sources, name_id)
+            self.assertRegex(sources[0]["locator"], r"\d+(〜\d+)?頁", name_id)
+
+    def test_divided_theories_are_in_variants(self) -> None:
+        for name_id, minimum in NEW_NAMES.items():
+            self.assertGreaterEqual(len(self.names[name_id].get("variants", [])), minimum, name_id)
+
+
 if __name__ == "__main__":
     unittest.main()

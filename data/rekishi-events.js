@@ -29,6 +29,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "tradition",
       "relatedEvents": [],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-3963af8d45"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第12号「大井の井」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -257,6 +258,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": [],
       "relatedPeople": ["pe-ito-hirobumi"],
+      "relatedPlaces": ["pl-45b14d4676"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "大井地区の指定文化財 史跡第19号「伊藤博文墓」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -347,6 +349,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
       "certainty": "fact",
       "relatedEvents": ["ev-1892-glass-dissolved"],
       "relatedPeople": [],
+      "relatedPlaces": ["pl-5f8482f680"],
       "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 史跡第8号「官営品川硝子製造所跡」" }],
       "verifiedAt": "2026-11-19"
     },
@@ -1036,9 +1039,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
             "locator": "四 近世編（五）産業「品川の農業」807〜811頁"
           }
         ],
-        "relatedPeople": [
-          "pe-yamaji-jirobe"
-        ],
+        "relatedPeople": ["pe-yamaji-jirobe"],
         "relatedPlaces": [
           "pl-bf6495f367"
         ],
@@ -1508,6 +1509,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": [],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-9c203a4728"],
         "sources": [{ "ref": "bunka-online", "locator": "「旧品川警察署品川橋交通待機所」（560735）" }],
         "verifiedAt": "2026-11-21"
       },
@@ -1821,7 +1823,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["transport"],
         "certainty": "fact",
         "relatedEvents": [],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-urushi-shogan"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -1871,7 +1873,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["transport"],
         "certainty": "fact",
         "relatedEvents": ["ev-1895-basha-tetsudo"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-urushi-shogan"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -5368,6 +5370,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1808-keizan-nanushi"],
         "relatedPeople": ["pe-ono-keizan"],
+        "relatedPlaces": ["pl-1571b5feff"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -5619,6 +5622,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1638-tokaiji"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-f0dec3262a"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-jo",
@@ -6319,7 +6323,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["admin"],
         "certainty": "fact",
         "relatedEvents": ["ev-1923-meguro-kamata-line"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-takahashi-katsuzo"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -6441,7 +6445,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "culture"
         ],
         "certainty": "fact",
-        "relatedPeople": [],
+        "relatedPeople": ["pe-kaburaki-tadamasa"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -6464,7 +6468,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "culture"
         ],
         "certainty": "fact",
-        "relatedPeople": [],
+        "relatedPeople": ["pe-sugino-yoshiko"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -6681,7 +6685,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["industry"],
         "certainty": "fact",
         "relatedEvents": ["ev-1927-godo-keori-merger"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-goto-joasaku"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -6808,6 +6812,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["culture"],
         "certainty": "fact",
         "relatedPeople": [],
+        "relatedPlaces": ["pl-9aaa87e538"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -6853,6 +6858,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1932-shinagawa-ebara-ku-setchi"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-2af6916919"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -6957,6 +6963,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "certainty": "fact",
         "relatedEvents": ["ev-1923-shinsai-higai-kyuugo"],
         "relatedPeople": [],
+        "relatedPlaces": ["pl-8944ec36af"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -7055,6 +7062,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         ],
         "certainty": "fact",
         "relatedPeople": [],
+        "relatedPlaces": ["pl-7ee2886587"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -7679,7 +7687,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["war"],
         "certainty": "fact",
         "relatedEvents": ["ev-1868-anzaisho"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-enomoto-takeaki"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -7705,7 +7713,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["admin"],
         "certainty": "fact",
         "relatedEvents": ["ev-1869-shinagawa-beer"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-koga-ippei"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -7783,7 +7791,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["admin"],
         "certainty": "fact",
         "relatedEvents": ["ev-1873-daiku-shoku-seido"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-hayashi-kosyu", "pe-rida-kunitaka"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -7831,7 +7839,8 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["admin"],
         "certainty": "fact",
         "relatedEvents": ["ev-1878-ebara-gun-setchi"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-tanaka-hajime", "pe-ebisawa-shigeharu", "pe-takahashi-katsuzo", "pe-yamamoto-shigeoki"],
+        "relatedPlaces": ["pl-5e31017ee8"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -7858,7 +7867,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
             "locator": "六 大正編 5 大正期の民衆運動と地方政界「地方政界の変貌と高木正年・漆昌巌」381〜384頁"
           }
         ],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-hirabayashi-kyubei", "pe-takagi-masatoshi"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -7882,7 +7891,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "categories": ["admin"],
         "certainty": "fact",
         "relatedEvents": ["ev-1889-chosonsei-shiko-ebara"],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-tanaka-hajime", "pe-ebisawa-keizaburo"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -7930,7 +7939,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "admin"
         ],
         "certainty": "fact",
-        "relatedPeople": [],
+        "relatedPeople": ["pe-suzuki-bunji"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -8138,7 +8147,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "culture"
         ],
         "certainty": "fact",
-        "relatedPeople": [],
+        "relatedPeople": ["pe-okada-tojuro"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -8304,7 +8313,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "ev-1947-ward-founded",
           "ev-1932-shinagawa-ebara-ku-setchi"
         ],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-kaburaki-tadamasa"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -8395,7 +8404,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
         "areas": ["ebara"],
         "categories": ["culture"],
         "certainty": "fact",
-        "relatedPeople": [],
+        "relatedPeople": ["pe-kosakai-keiyo"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -8590,7 +8599,7 @@ window.SHINAGAWA_DB.rekishiEvents = {
           "ev-1962-gyogyoken-hoki",
           "ev-1883-nori-ishoku"
         ],
-        "relatedPeople": [],
+        "relatedPeople": ["pe-takaishi-hideyuki"],
         "sources": [
           {
             "ref": "sgw-kushi-tsushi-ge",
@@ -8804,6 +8813,692 @@ window.SHINAGAWA_DB.rekishiEvents = {
           {
             "ref": "sgw-kushi-tsushi-ge",
             "locator": "八 現代編「「長期基本構想」」1066〜1070頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1924-osaki-gesuido-kairyo",
+        "name": "大崎町が下水道の改良工事に着手する",
+        "summary": "大崎町は大正9年に町長のもとで下水道改良の調査を始め、東京府の技師の設計で大正10年8月に町会に付議した。関東大震災などで遅れ、内務省の許可を得て工事に着手したのは大正13年4月だった。",
+        "description": "区史によれば、品川区域では大正15年になって、道路幅を有効に使うため、従来の土留めの溝から鉄筋コンクリート管を埋める方式に改める方針が立てられた。大井町会は昭和7年2月に下水道の調査費の年期と支出方法を決め、昭和8年5月には品川区会が下水道事業の促進を求める意見書を市に出した。",
+        "year": 1924,
+        "yearText": "大正13年（1924年）4月",
+        "era": "taisho",
+        "areas": ["osaki"],
+        "categories": [
+          "admin",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedPeople": ["pe-tateishi-tomomitsu"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「（ハ） 下水道」605〜607頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1924-osaki-jinkai-shokyakujo",
+        "name": "大崎町が目黒川沿いに町営の塵芥焼却場をつくる",
+        "summary": "大崎町は大正13年に目黒川沿岸に町営の塵芥焼却場を建設し、昭和元年から町全体のごみを焼却処理する作業を始めた。区域のなかで早い取り組みだった。",
+        "description": "区史によれば、昭和5年に汚物掃除法が改正され、ごみは原則として焼却処分とすることが義務づけられた。大井町は大正14年に大井の坂下にあった塵芥焼却場を買って町営にし、大正15年には焼却処理を目的に三陽株式会社が設立され、昭和7年8月に町が起債してこの会社を買収し、町の直営にした。",
+        "year": 1924,
+        "yearEnd": 1926,
+        "yearText": "大正13年（1924年）〜昭和元年（1926年）",
+        "era": "taisho",
+        "areas": [
+          "osaki",
+          "oi"
+        ],
+        "categories": [
+          "admin",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1924-osaki-gesuido-kairyo"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "七 昭和編「（ニ） 糞尿・塵芥処理」607〜609頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1870-shinagawa-todai",
+        "name": "品川沖のお台場に「仮燈明台」の品川燈台が点火される",
+        "summary": "明治3年3月5日(西暦1870年4月5日)、東京湾に入る船のために、二番台場(第四砲台)に煉瓦造りの円筒形の燈台が完成し、点火された。石油を燃やして不動の赤い光を放ち、約9里先まで届いたという。",
+        "description": "区史によれば、横浜・築地間の海上交通が盛んになったため、品川県と神奈川県が明治2年12月に交渉して設置が決まった。計画・設計・施工はすべてお雇い外国人が行い、横須賀製鉄所の技師らが職人を連れて来て、工事のあいだは品川宿の旅館に泊まった。燈台は「東京開化名所」に必ず入る名所になり、区史は、明治の文明開化の恩恵はまず品川燈台から始まったと記している。明治7年4月には品川・鳥羽間の航路も開かれた。",
+        "year": 1870,
+        "yearText": "明治3年（1870年）3月5日",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "building",
+          "transport"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1869-shinagawa-ken-setchi"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 7 文明開化と生活風俗の変化「品川燈台」124〜125頁、「港湾としての品川沖」123頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1869-shakura-fucho",
+        "name": "品川県が管下の村々に備荒貯蓄の社倉をつくるよう布達する",
+        "summary": "明治2年11月、品川県は凶荒に備えるため、管下の村々に石高に応じて米を出させる社倉の設置を布達した。県庁がまとめて管理する方式で、大凶作の年だったため、農民には税の上の税と受けとられた。",
+        "description": "区史によれば、石高5石以上の農民は1石につき米2升、5石以下は暮らし向きで上・中・下に分け、1軒につき4升・3升・1升5合を出す割合だった。県庁は独断で米穀の売買を民間人に委託し、一部は有力者に貸し付けていた。明治4年7月に品川県が廃止されたあと、残った貯穀は明治8年以降、各村の学校設立の資金に回された。",
+        "year": 1869,
+        "yearText": "明治2年（1869年）11月",
+        "era": "meiji",
+        "areas": ["ward"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1869-shinagawa-ken-setchi",
+          "ev-1871-shinagawa-ken-kaisho"
+        ],
+        "relatedPeople": ["pe-koga-ippei"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 4 明治前期の農業「品川県の社倉問題」70〜73頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1871-shinagawa-yubin",
+        "name": "南品川宿に品川郵便取扱所が置かれ、翌年品川郵便局になる",
+        "summary": "区域の郵便の始まりとして、明治4年に問屋場や貫目改所のあった南品川宿3丁目に品川郵便取扱所が設置された。翌明治5年から品川郵便局と改称された。",
+        "description": "区史によれば、維新後も当初は在来の飛脚制度のままで、明治6年7月には公用状の無賃の逓送が禁じられ、各地の飛脚賃銭が定められた。東京・京都間の官庁文書の飛脚便の運送賃が月に1,500両もかかったといわれ、これが郵便制度の導入につながった。",
+        "year": 1871,
+        "yearText": "明治4年（1871年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "transport"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1872-shukueki-abolished"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 6 交通・通信制度の発達と宿場「郵便制度の導入」100〜101頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1870-tetsudo-tsutsumi-kirotori",
+        "name": "鉄道の築堤のため、八ッ山と御殿山が切り崩される",
+        "summary": "東京・横浜間の鉄道は、築堤に使う土砂を八ッ山と御殿山の切り取り場所から馬車で運んで、明治5年5月4日に築堤が完成した。明治3年から地元では、漁民の補償や川幅の拡張などの要求も出た。",
+        "description": "区史によれば、橋梁工事は明治3年6月に始まり、六郷川橋梁は明治4年10月15日に完成した。明治4年8月には試運転が始まり、明治5年1月20日に品川停車場の本屋(現在より南寄りの芝高輪南町)が落成した。明治5年5月7日、鉄道が横浜まで初めて開通した日を、区史は品川にとって忘れてはならない日と記している。",
+        "year": 1870,
+        "yearEnd": 1872,
+        "yearText": "明治3年（1870年）〜明治5年（1872年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "transport",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1872-shinagawa-yokohama-rail",
+          "ev-1872-station-to-takanawa"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 6 交通・通信制度の発達と宿場「東京・横浜間の鉄道敷設」101〜103頁、「鉄道開通と品川宿の変化」110〜111頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1876-shinbashi-shinagawa-fukusen",
+        "name": "新橋・品川間の複線化が完成する",
+        "summary": "明治9年12月1日に新橋・品川間の複線化が完成し、中間に田町仮駅ができた。新橋・横浜間の列車の合間に、新橋と品川を結ぶ運転が1日10往復で始まった。品川・大森間の複線化は明治13年11月14日に完成した。",
+        "description": "区史によれば、翌明治14年10月に池上本門寺で日蓮上人の六百年忌が行われた際には、新橋・大森間に1日11往復の臨時列車が走り、下等旅客には割引があった。",
+        "year": 1876,
+        "yearText": "明治9年（1876年）12月1日",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["transport"],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1872-shinagawa-yokohama-rail",
+          "ev-1884-shinagawa-sen"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 6 交通・通信制度の発達と宿場「日本鉄道会社と品川線の建設」103〜107頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1873-kashizashiki-kisoku",
+        "name": "貸座敷渡世規則と娼芸妓規則が制定され、品川宿の遊廓が貸座敷として続く",
+        "summary": "明治5年の娼妓解放令のあと、東京府は明治6年12月10日に貸座敷渡世規則と娼芸妓規則を新たに制定し、娼妓が自分の希望で渡世したい場合は鑑札を受けて営業できることにした。品川宿の一時的な衰退や悲観論も、これで解消に向かった。",
+        "description": "区史によれば、解放令は突然だったため、解放された女性たちの生活のあてがなく、私娼や密売が横行して府は対策を迫られた。表向きの解放令は、実際には旧に変わらない姿になったと区史は述べている。",
+        "year": 1873,
+        "yearText": "明治6年（1873年）12月10日",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "admin",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1872-shukueki-abolished"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 7 文明開化と生活風俗の変化「貸座敷制度」114〜117頁、「娼妓解放令」112〜113頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1873-kirishitan-kosatsu-tekkyo",
+        "name": "品川橋のたもとの高札場から、キリスト教禁制の高札が撤去される",
+        "summary": "明治6年2月の末、品川橋の北西のたもとにあった品川宿の高札場から、キリスト教を禁じる高札が取り除かれた。区域でのキリスト教の布教は、この後に始まる。",
+        "description": "区史によれば、日本最初のプロテスタント教会として明治5年3月に横浜に日本基督公会ができ、明治6年9月20日には東京で最初のプロテスタント教会である東京基督公会が設立された。",
+        "year": 1873,
+        "yearText": "明治6年（1873年）2月末",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "culture",
+          "lost"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 8 新しい宗教事情「教会形成への胎動」144〜145頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1877-shinagawa-kyokai",
+        "name": "品川教会が創設される",
+        "summary": "明治10年4月11日、信徒の家で品川教会が創設された。アメリカ長老派の宣教師が仮牧師を務め、明治11年6月に牧師が就任した。教会員は明治18年の60人から減り続け、明治21年には26人になった。",
+        "description": "区史によれば、創立から1年足らずで礼拝の出席者が増え、六畳ほどの一室では手狭になって教会堂の建設が課題になった。この建物は明治20年以降は「武蔵屋」という旅館になり、第二次大戦末期まで残った。初代長老には南品川宿生まれの薪炭・油類の商人もいた。",
+        "year": 1877,
+        "yearText": "明治10年（1877年）4月11日",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "culture",
+          "building"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1873-kirishitan-kosatsu-tekkyo"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 8 新しい宗教事情「品川教会の設立」146〜147頁、「創立当初の教会の人びと」147〜151頁、「品川教会の移転」151〜152頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1908-tenrikyo-tonan",
+        "name": "区内最古の天理教会となる都南布教所が南品川に設けられる",
+        "summary": "明治41年、南品川6丁目に都南布教所が設立された。品川区内で最も古い天理教会で、現在の都南分教会にあたる。",
+        "description": "区史によれば、この布教所は、明治39年10月に京橋区木挽町から品川町二日五日市(現在の南品川6丁目)に移り住んだ信者が、近くの薬店の経営者の入信を得て始めたものだった。天理教が東京に伝わったのは明治12年ごろとされ、史料で確かめられる最初は明治18年の布教だった。",
+        "year": 1908,
+        "yearText": "明治41年（1908年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["culture"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 8 新しい宗教事情「教派神道の成立とその発展」136〜142頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1868-shinagawa-jinja-shinbutsu-bunri",
+        "name": "品川神社の神主が神仏分離をめぐって新政府に働きかける",
+        "summary": "慶応4年4月、品川神社の神主は、荏原郡の鎮守の別当や社僧の扱いについて新政府に願書を出した。明治元年11月7日には東京府社寺局から神祇官への出頭を通達され、翌明治2年には神祇官が市中の神社の神仏分離の実情調査を10人の神主に命じた。",
+        "description": "区史によれば、品川神社の神主は、東京でも神職が新政府に働きかけるなかでその推進役の一人だったようで、願書は、別当や社僧が復飾を命じられたことを受けて、荏原郡中の村々の鎮守の扱いについて述べたものだった。神仏分離は、品川の寺社の関係にも大きな影響を及ぼした。",
+        "year": 1868,
+        "yearText": "慶応4年（1868年）4月〜明治2年（1869年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "temple",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-548dab732d"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 8 新しい宗教事情「神仏分離の実施」127〜135頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1881-ebara-gun-nodankai",
+        "name": "荏原郡農談会が北品川宿の玄性院で開かれ始める",
+        "summary": "荏原郡の農談会は、明治14年ごろに第1回が開かれ、以後、毎年2回ほど老農が集まって農業技術や経営について意見を交わした。会場はいずれも北品川宿の玄性院だった。",
+        "description": "区史によれば、品川区域からの出席者は、第4回(明治16年5月)・第5回(同年11月)・第6回(明治17年4月)のいずれも、北品川宿・南品川宿・桐ケ谷・戸越・小山・大井などの老農で、合計21人・19人・23人だった。稲作の虫害の予防、特産物の実況、作物と農具の改良などが報告された。",
+        "year": 1881,
+        "yearText": "明治14年（1881年）ごろ",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": [
+          "industry",
+          "life"
+        ],
+        "certainty": "estimate",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 4 明治前期の農業「荏原郡農談会」83〜87頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1880-yosui-kumiai-rengo",
+        "name": "品川養水組合町村聯合会議が開かれ、用水の費用と管理の規約が定まる",
+        "summary": "明治13年2月6日、品川小学校で「品川養(用)水組合町村聯合会議」が開かれ、毎年の費用の分担や、各村に養水担当掛を1人ずつ置くことが決められた。規約は明治14年3月23日に東京府知事に裁定され、明治19年4月の聯合会では用水の管理人を郡長にした。",
+        "description": "区史によれば、明治10年11月の協議会では、養水受持人の給料や修繕費などを組合の灌漑水田の反別に応じて賦課することを定めていた。明治18年12月14日の会議では、用水担当人を2人とし、聯合町村会議員で選ぶことになった。",
+        "year": 1880,
+        "yearEnd": 1886,
+        "yearText": "明治13年（1880年）2月6日〜明治19年（1886年）4月",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "ebara"
+        ],
+        "categories": [
+          "water",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1667-shinagawa-yosui-kaisetsu"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（一）明治前期の品川 4 明治前期の農業「品川用水」88〜89頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1883-ogaki-zosensho",
+        "name": "緒明造船所が品川沖の第四砲台跡に造船工場を設ける",
+        "summary": "明治16年、京橋で洋式造船所を営んでいた緒明造船所が、火災のあと、陸軍省の所管だった品川沖第四砲台の跡を利用して造船工場を設けた。明治20年代はじめから日本の造船業が急速に展開した時期にあたる。",
+        "description": "区史によれば、造船所は明治12年に京橋区湊町に洋式の造船所として創設され、副業として隅田川で小蒸気船を運航し、のちの「一銭蒸汽」の端緒にもなったという。品川の工場の職工数は明治17年に43人、売り上げは7万7,685円だった。",
+        "year": 1883,
+        "yearText": "明治16年（1883年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 5 近代工業の形成「緒明造船所の創始」244〜245頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1892-goto-keori-oimura",
+        "name": "後藤毛織製造所が大井村に工場を移す",
+        "summary": "民間の毛織物工業を創始し、大井町の開発者ともいわれる後藤恕作の工場が、明治25年夏、当時の大井村580番地に移転した。以後、工場の棟数と職工数は年々増えた。",
+        "description": "区史によれば、後藤は明治初年に外国商館に勤め、のち中国に留学して毛織物業を視察し、明治11年に帰国して官営千住製絨所を視察した。駒込に事業を起こしたが続かず、明治14年に後藤毛織製造所を起こした。日清戦争が起こると、東京毛布の軍需との結びつきで事業が伸びた。",
+        "year": 1892,
+        "yearText": "明治25年（1892年）夏",
+        "era": "meiji",
+        "areas": ["oi"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1929-goto-keori-hatan"],
+        "relatedPeople": ["pe-goto-joasaku"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 5 近代工業の形成「後藤毛織の創始」238〜241頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1896-komeisha-minamishinagawa",
+        "name": "光明社が南品川に工場を移し、日本ペイントの前身がそろう",
+        "summary": "芝区の光明社は、明治28年10月に資本金6万円の光明合資会社に改組し、翌29年3月、10万円への増資を機に荏原郡品川町の大字南品川に工場を移して新設した。日本ペイントの前身にあたる。",
+        "description": "区史によれば、光明社は、明治14年の第2回内国勧業博覧会で油性塗料(調合ペイント)を出品して入賞した製造者の事業で、明治17年には売上金が2万円にのぼった。翌18年の工場焼失にもめげず、明治19年には皇居の造営に白ペイントを献上した。",
+        "year": 1896,
+        "yearText": "明治29年（1896年）3月",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 5 近代工業の形成「日本ペイントの展開」259〜262頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1896-shinagawa-ginko",
+        "name": "品川銀行が設立され、北品川宿に本店を置く",
+        "summary": "日清戦争後の明治29年4月に「品川銀行設立趣意副申書」が東京府知事に出された。資本金1万円で、品川馬車の専務取締役らが発起人に名を連ね、本店は北品川宿本宿60番地に置かれた。",
+        "description": "区史によれば、申請書は、水陸の便がよく工場が増えているのに、金融の便を欠いていると述べている。品川銀行は関東大震災後の大正14年6月に森村銀行に合併され、昭和4年5月に森村銀行が三菱銀行に買収されて、同行の品川支店になった。",
+        "year": 1896,
+        "yearText": "明治29年（1896年）4月",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "industry",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedPeople": ["pe-urushi-shogan"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 5 近代工業の形成「品川銀行・大井銀行の創設」266〜267頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1900-oi-ginko",
+        "name": "大井銀行が大井町に創立される",
+        "summary": "明治33年8月10日、大井銀行が大井町473番地に本店を創立した。明治41年5月には取り付け騒ぎがあり、関東大震災後の大正13年12月15日に麹町銀行に合併され、のち三菱銀行大井支店になった。",
+        "description": "区史によれば、発起人も資本金も分かっていない。麹町銀行は昭和2年12月、金融恐慌の直後に川崎第百銀行に吸収され、三菱銀行大井支店として続いた。",
+        "year": 1900,
+        "yearText": "明治33年（1900年）8月10日",
+        "era": "meiji",
+        "areas": ["oi"],
+        "categories": [
+          "industry",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1896-shinagawa-ginko"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 5 近代工業の形成「品川銀行・大井銀行の創設」266〜267頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1904-nippon-taiso-gakko-oi",
+        "name": "日本体操学校が大井の北浜川の海岸に移ってくる",
+        "summary": "明治37年9月、日本体育会と体操学校が麹町区の飯田町から当時の大井村北浜川の海岸沿いに移転した。翌38年4月には付属の荏原中学校が設立され、学校前の海岸に水泳場も開かれた。",
+        "description": "区史によれば、水泳場はそれまで隅田川に設けられていたもので、明治38年から大正3年まで毎夏開設され、市内や周辺の小中学生が多く集まった。明治・大正期には体操学校にふさわしい環境だった大井も、のちの都市化や道路拡張で昭和期には手狭になった。",
+        "year": 1904,
+        "yearText": "明治37年（1904年）9月",
+        "era": "meiji",
+        "areas": ["oi"],
+        "categories": [
+          "admin",
+          "culture"
+        ],
+        "certainty": "fact",
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 7 明治後期の教育「日本体操学校」284〜285頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1898-ebara-gun-nokai",
+        "name": "荏原郡農会が設立され、品川大崎連合農会がその前にできる",
+        "summary": "明治31年2月に品川大崎連合農会が設立され、同年10月には荏原郡農会が成立した。明治19年に農業会に組織を変えた郡の農談会が、品評会との統合を経て系統化したものと考えられる。",
+        "description": "区史によれば、荏原郡農談会は明治18年5月までに5回の会を開き、明治19年3月12日に農業会に組織変更した。明治23年には私立農談会となって郡内で120人ほどの会員を集めたという。法制度の裏付けは明治32年に公布された農会法で、会員資格は地租2円以上を納めるか田畑4反歩以上を持つ者とされた。",
+        "year": 1898,
+        "yearText": "明治31年（1898年）10月",
+        "era": "meiji",
+        "areas": [
+          "shinagawa",
+          "oi",
+          "osaki",
+          "ebara"
+        ],
+        "categories": [
+          "industry",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1881-ebara-gun-nodankai"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 3 農漁業生産の変貌「農会と用水問題」207〜209頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1881-susaki-shogakko-gakkoba",
+        "name": "洲崎小学校が海苔の柵場「学校場」で運営費をまかなう",
+        "summary": "明治14年に開校した品川の洲崎小学校は、共同で新しいひび柵場を開いて小作に出し、その小作料を学校の費用にあてた。このような柵場を「学校場」といい、年間予算183円余りのほとんどが学校場からの収入だったという。",
+        "description": "区史によれば、明治20年以前の品川では、海苔養殖が経済のなかで占める比重は小さくなく、小学校その他の費用の資金繰りのために、共同で新しいひび柵場を開くことが行われた。",
+        "year": 1881,
+        "yearText": "明治14年（1881年）",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": [
+          "industry",
+          "life"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1883-nori-ishoku"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "五 近代編（二）明治後期の品川 3 農漁業生産の変貌「明治後期の発展とその後の動向」222〜225頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1910-nippon-sanso-osaki",
+        "name": "日本酸素が桐ケ谷に工場を設け、日本で最初の酸素の工業化に成功する",
+        "summary": "日本酸素合資会社は明治43年10月10日に資本金5万円で創立され、大崎町桐ケ谷の谷戸窪に358坪の敷地を買って工場を建てた。明治44年5月3日の総合運転で、日本で最初の酸素の工業化に成功した。",
+        "description": "区史によれば、工場の敷地は現在の西五反田5丁目にあたり、はじめは「合資会社日本酸素工場」、大正2年9月に広島の工場ができると「東京工場」、大正5年からは「大崎工場」と改称された。酸素の製造部と溶接・切断の工業部があったが、工業部は大正5年以降、本所押上の専門工場に移った。",
+        "year": 1910,
+        "yearEnd": 1911,
+        "yearText": "明治43年（1910年）10月10日〜明治44年（1911年）5月3日",
+        "era": "meiji",
+        "areas": ["osaki"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1934-nippon-sanso-closed"],
+        "relatedPeople": [],
+        "relatedPlaces": ["pl-2893d3ed1c"],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 2 近代工業の展開「日本酸素と東洋酸素」307〜312頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1915-keihin-line-densha-saikai",
+        "name": "京浜線の省線電車の運転が再開され、品川・大崎間に電車専用線ができる",
+        "summary": "電化された京浜線の電車は、故障が続いて運転が止まり、大正4年5月10日に再開された。同年2月には品川・大崎間に電車専用線ができ、大正7年12月20日には大崎・恵比寿間にも専用線が通った。",
+        "description": "区史によれば、大正3年12月に東京駅が新築落成して東京駅の開業に伴い新橋は汐留と改称され、山手線は同月27日に旅客列車を廃止して電車と貨物列車専用になった。大正8年1月からは中央線・山手線の直通で「の」の字型の運転が行われ、大正14年11月1日に山手線の循環運転が実現して廃止された。省線電車の再開は、私鉄の京浜電鉄に打撃を与えた。",
+        "year": 1915,
+        "yearText": "大正4年（1915年）5月10日",
+        "era": "taisho",
+        "areas": [
+          "shinagawa",
+          "osaki"
+        ],
+        "categories": ["transport"],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1909-yamanote-denka",
+          "ev-1925-keihin-takanawa"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 3 鉄道の発展と陸上輸送の変化「東京周辺における院線電車の運転」347〜349頁、「「の」の字型運転の廃止」349〜353頁、「京浜電気鉄道の展開」356〜358頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1918-denen-toshi-kaisha",
+        "name": "田園都市株式会社が設立され、荏原・大岡山一帯の住宅開発が動き出す",
+        "summary": "のちの東急の生みの親にあたる田園都市株式会社は、米騒動が収まった大正7年9月2日に設立された。大正12年に田園調布の整地工事に着手し、大正13年には大岡山への東京高等工業学校の移転などが進んだ。",
+        "description": "区史によれば、関東大震災のとき、都心の大火災はかえって郊外が安住の地であることを証明した。目黒蒲田電鉄は大正11年9月2日に創立され、荏原電気鉄道の敷設権は、大正11年9月2日の目蒲電鉄の創立と同時に同社へ譲渡された。昭和2年10月3日、田園都市株式会社は目黒蒲田電鉄に合併された。",
+        "year": 1918,
+        "yearText": "大正7年（1918年）9月2日",
+        "era": "taisho",
+        "areas": ["ebara"],
+        "categories": [
+          "transport",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1923-meguro-kamata-line"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 3 鉄道の発展と陸上輸送の変化「田園都市株式会社の設立」358〜359頁、「目蒲電鉄の創立と荏原電鉄の経営譲渡」359頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1920-norriai-jidosha",
+        "name": "区域に関係する乗合自動車の営業が始まる",
+        "summary": "区域に関係する乗合自動車業は大正9年に始まった。区史が引く調査では、大正8年に東京乗合自動車が開通し、翌9年に八ツ山から六郷町に至る京浜乗合自動車が走った。昭和4年からは京浜電鉄・目蒲電鉄も乗合自動車業を始めた。",
+        "description": "区史によれば、大正9年1月1日に都市計画法が六大都市に適用され、東京市と近郊町村を結ぶ道路網の整備が始まった時期にあたる。電鉄会社にとっては、自動車の研究が必要になった。",
+        "year": 1920,
+        "yearText": "大正9年（1920年）",
+        "era": "taisho",
+        "areas": [
+          "shinagawa",
+          "osaki",
+          "oi"
+        ],
+        "categories": ["transport"],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1919-bus-first-route"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 3 鉄道の発展と陸上輸送の変化「乗合自動車の創始」363〜367頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1917-shigaichi-shinyo-kumiai",
+        "name": "市街地信用組合の制度が創設され、品川に産業組合中央会の荏原郡部会ができる",
+        "summary": "大正6年7月21日に市街地信用組合制度が創設され、大正7年12月には品川町に産業組合中央会東京支会荏原郡部会が創立された。区域では、のちに品川・大井・大崎・荏原の各信用組合がつくられた。",
+        "description": "区史によれば、信用組合は明治33年3月7日公布の産業組合法で発達した。大崎信用組合は大正11年夏に独自の事務所を持ったが、当時の五反田付近には広部銀行しかなく、貯金の勧誘も「お賽銭みたいに軒並み10銭」だったという。最も遅い大井信用組合は大正14年6月に設立された。",
+        "year": 1917,
+        "yearEnd": 1918,
+        "yearText": "大正6年（1917年）7月〜大正7年（1918年）12月",
+        "era": "taisho",
+        "areas": [
+          "shinagawa",
+          "osaki",
+          "oi"
+        ],
+        "categories": [
+          "industry",
+          "admin"
+        ],
+        "certainty": "fact",
+        "relatedEvents": ["ev-1896-shinagawa-ginko"],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 4 商業金融機関の展開「市街地信用組合の生成と発展」369〜371頁、「大正期における大崎信用組合」373〜375頁"
+          }
+        ],
+        "verifiedAt": "2026-11-24"
+      },
+      {
+        "id": "ev-1900-toyo-seika-shinagawa",
+        "name": "品川町に本店を置く東洋製菓株式会社が創立される",
+        "summary": "明治33年6月、品川町に本店をおき、ビスケットやドロップスなどの菓子製造にのり出す東洋製菓株式会社が、「喜楽煎餅」の店主を中心に創立された。大正14年には東洋製菓の従業員が南部合同労働組合の品川製菓工支部を結成した。",
+        "description": "区史によれば、同じころ森永太一郎が明治32年に赤坂の溜池で西洋菓子の製造所を始めており、品川の製菓業は、のち森永の大崎工場(大正4年)などの進出につながる。",
+        "year": 1900,
+        "yearText": "明治33年（1900年）6月",
+        "era": "meiji",
+        "areas": ["shinagawa"],
+        "categories": ["industry"],
+        "certainty": "fact",
+        "relatedEvents": [
+          "ev-1915-morinaga-osaki",
+          "ev-1924-nanbu-godo-rodo-kumiai"
+        ],
+        "relatedPeople": [],
+        "sources": [
+          {
+            "ref": "sgw-kushi-tsushi-ge",
+            "locator": "六 大正編 2 近代工業の展開「森永工場の進出」341〜344頁"
           }
         ],
         "verifiedAt": "2026-11-24"
