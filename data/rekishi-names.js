@@ -85,14 +85,14 @@ window.SHINAGAWA_DB.rekishiNames = {
       "kana": "かちしんしゅく",
       "nameKind": "old-post",
       "summary": "品川宿に新しく加わった宿で、加宿が認められた際にこの名が定められました。品川三宿のひとつです。",
-      "origin": "品川宿の発展とともに北品川宿の北側、高輪寄りに新しい町並が形成され、伝馬の人足を負担するようになりました。これを担っていた北品川の法禅寺・善福寺の両門前町屋と新町が、宿内と変わらないとして宿場に加えてほしいと道中奉行に訴え出ます。江戸に近い地の利のある新町らに客を取られるとして南北両品川宿は反対しましたが、結局は加宿が許され、その名称を「歩行新宿」と定めました。",
+      "origin": "品川宿の発展とともに北品川宿の北側、高輪寄りに新しい町並が形成され、伝馬の人足を負担するようになりました。これを担っていた北品川の法禅寺・善福寺の両門前町屋と新町が、宿内と変わらないとして宿場に加えてほしいと道中奉行に訴え出ます。江戸に近い地の利のある新町らに客を取られるとして南北両品川宿は反対しましたが、結局は加宿が許され、その名称を「歩行新宿」と定めました。宿場が本来負担する伝馬と歩行人足のうち、歩行人足だけを負担する新しい宿場、という意味の名です。",
       "description": "この経過は、享保7年（1722年）12月に下付された「品川歩行新宿加宿裁許状」に書かれています。裁許状は歩行新宿の名主・飯田家に所蔵されていたものが品川区に寄贈され、品川歴史館に保管されています。",
       "areas": ["shinagawa"],
       "categories": ["placename", "road"],
       "certainty": "fact",
       "relatedPlaces": ["pl-6b12d55eea", "pl-550cbf7e0e"],
       "relatedNames": ["nm-shinagawa-shuku", "nm-kita-shinagawa-shuku", "nm-minami-shinagawa-shuku"],
-      "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 古文書第6号「品川歩行新宿加宿裁許状」" }],
+      "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 古文書第6号「品川歩行新宿加宿裁許状」" }, {"ref": "sgw-kushi-zokushiryo-1", "locator": "品川の地名「品川地区の地名」「品川歩行新宿」18頁"}],
       "verifiedAt": "2026-11-20"
     },
     {
@@ -120,14 +120,14 @@ window.SHINAGAWA_DB.rekishiNames = {
       "name": "北品川宿",
       "kana": "きたしながわしゅく",
       "nameKind": "old-post",
-      "summary": "品川宿を構成した宿のひとつ。南品川宿とともに伝馬を負担していました。由来は確認できていません。",
-      "origin": null,
+      "summary": "品川宿を構成した宿のひとつ。南品川宿とともに伝馬を負担していました。目黒川の北側の宿で、南品川宿に対して北と呼ばれました。",
+      "origin": "品川は、江戸時代の初め（正保年中の改定図）には一つの「品川町」でしたが、元禄年中の改定図では「南品川町」「北品川町」に分かれています。室町時代の妙国寺文書に「南品川」の名が見えるため、それ以前から南北に分かれていたと推定されますが、正式に分かれた時期は明らかではありません。北品川宿は、目黒川に架かる境橋（現在の品川橋）から北、歩行新宿までの東海道沿いの町並みです。",
       "description": "江戸時代中期には、品川宿の本陣は北品川宿のものだけになりました。明治2年（1869年）には、北品川宿の北浜の人々を中心に品川丸嘉講社が結成され、品川神社に富士塚が築かれています。",
       "areas": ["shinagawa"],
       "categories": ["placename", "road"],
       "certainty": "fact",
       "relatedNames": ["nm-shinagawa-shuku"],
-      "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 古文書第6号「品川歩行新宿加宿裁許状」、有形民俗「品川神社富士塚（品川富士）」" }],
+      "sources": [{ "ref": "sgw-bunkazai", "locator": "品川地区の指定文化財 古文書第6号「品川歩行新宿加宿裁許状」、有形民俗「品川神社富士塚（品川富士）」" }, {"ref": "sgw-kushi-zokushiryo-1", "locator": "品川の地名「品川地区の地名」「北品川宿」21頁"}],
       "verifiedAt": "2026-11-20"
     },
     {
@@ -1102,6 +1102,459 @@ window.SHINAGAWA_DB.rekishiNames = {
         {
           "ref": "sgw-kushi-tsushi-ge",
           "locator": "七 昭和編「平塚村の町制施行」450〜452頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-kuromon-yokocho",
+      "name": "黒門横町",
+      "kana": "くろもんよこちょう",
+      "nameKind": "road",
+      "summary": "北品川一丁目と二丁目の境で、東海道から西へ入って東海寺へ向かった横町です。東海寺の大門が黒く塗られていたことから、この名で呼ばれました。",
+      "origin": "寛政12年（1800年）の「東海寺絵図」では、東海道から東海寺へ入る通りを「東海寺大門通り」と呼んでいました。この大門が黒塗りだったため、横町は黒門横町、大門前の付近は黒門前と呼ばれるようになりました。",
+      "description": "法禅寺の北側にあたる横町です。『新編武蔵風土記稿』にも、歩行新宿の一町目の内で東海寺の大門前を黒門前と呼ぶと記されています。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename",
+        "road"
+      ],
+      "certainty": "fact",
+      "relatedNames": [
+        "nm-kachishinshuku",
+        "nm-kachishinshuku-chome"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「黒門横町」19頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-oyokocho",
+      "name": "大横町",
+      "kana": "おおよこちょう",
+      "nameKind": "road",
+      "summary": "北品川の東海道から御殿山へ登る横町で、歩行新宿の一町目と二町目の境でした。現在の御殿山通りにあたります。",
+      "origin": "他の横町より道幅が広かったことから付けられた名か、と区史は推測しています。確かな由来の記録は挙げられていません。",
+      "description": "現在の北品川一丁目24・25番と28番の間の道が、これにあたります。『新編武蔵風土記稿』は、ここから西へ行くと御殿山の麓に着くと記しています。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename",
+        "road"
+      ],
+      "certainty": "estimate",
+      "relatedNames": [
+        "nm-kachishinshuku-chome",
+        "nm-mondo-gashi"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「大横町」20頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-toriya-yokocho",
+      "name": "鳥屋横町",
+      "kana": "とりやよこちょう",
+      "nameKind": "road",
+      "summary": "北品川の東海道から二本榎へ向かう「二本榎道」に付けられた名です。後には、清水が湧く井戸があったことから清水横丁とも呼ばれました。",
+      "origin": "『新編武蔵風土記稿』によると、享保年間（1716〜1736年）のころまで鳥屋文七という者が住んでいたため、この名が付いたといいます。",
+      "description": "歩行新宿の二町目と三町目の境にあたり、現在の北品川一丁目2番と24番の間の横町です。御殿山の麓の井戸は「磯の清水」として『江戸名所図会』にも出てきます。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename",
+        "road"
+      ],
+      "certainty": "tradition",
+      "relatedNames": [
+        "nm-kachishinshuku-chome"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「鳥屋横町」「清水横町」20頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-jinya-yokocho",
+      "name": "陣屋横町",
+      "kana": "じんやよこちょう",
+      "nameKind": "road",
+      "summary": "北品川宿の一町目と二町目の境から、東の海岸へ出る横町です。かつて北側に宿場の役所にあたる建物があったことから、この名が付いたと伝わります。",
+      "origin": "区史は、宝永から正徳のころ（1704〜1715年）にこの横町の北に本陣などがあったことによる名と説明します。『新編武蔵風土記稿』は同じ時期に駅の官署（宿場の役所）が建っていたからだと記し、書き方が少し違います。",
+      "description": "天保14年（1843年）の宿方明細書上帳には、横町の北側にあった陣屋敷が、寛文11年（1671年）の検地で除地とされ、延宝3年（1675年）から年貢地となり、元禄8年（1695年）の検地では宿並の伝馬屋敷になったとあります。横町は陣屋敷横町と呼ばれてきたと記されています。現在の北品川二丁目25番と26番の間にあたります。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename",
+        "road"
+      ],
+      "certainty": "tradition",
+      "relatedNames": [
+        "nm-kita-shinagawa-chome",
+        "nm-kita-shinagawa-shuku"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「陣屋横町」22頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-mondo-gashi",
+      "name": "問答河岸",
+      "kana": "もんどうがし",
+      "nameKind": "water",
+      "summary": "歩行新宿の一町目と二町目の境にあった河岸（物揚場）の呼び名です。徳川家光が沢庵和尚と問答を交わした場所だという伝えに由来します。",
+      "origin": "三代将軍徳川家光が鷹狩りの際に船をこの河岸に付け、出迎えた沢庵和尚とここで問答を交わしたことから、この名で呼ばれるといいます。",
+      "description": "『新編武蔵風土記稿』は、長さ二十五間・幅二間五尺の物揚場で、昔は御放鷹の際の上り場だったと記します。文政11年（1828年）の「品川図」には、大横町の向かい側にあたる現在の北品川一丁目23番と29番の間の通路付近に「問答河岸」と書かれています。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "tradition",
+      "relatedNames": [
+        "nm-oyokocho",
+        "nm-kachishinshuku-chome"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「問答河岸」19頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-dainichiyama",
+      "name": "大日山",
+      "kana": "だいにちざん",
+      "nameKind": "other",
+      "summary": "八ッ山の別名です。昔ここに大日如来が祀られていたことによる名といわれます。",
+      "origin": "かつてこの地に石像の大日如来が祀られていたためだといいます。『江戸名所図会』によれば、のちに堂が壊れた際に像は谷山稲荷の地へ移され、さらに品川北馬場の光厳寺へ収められたと言われますが、今はその石像の所在が分からないとされています。",
+      "description": "幕末の宇田川家所蔵の「品川・大崎図」などに「字大日山」の記載があります。八ッ山そのものの由来は別項（八ッ山）にまとめています。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "tradition",
+      "relatedNames": [
+        "nm-yatsuyama"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「大日山」20頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-kita-shinagawa-honshuku",
+      "name": "本宿（北品川宿）",
+      "kana": "ほんしゅく",
+      "nameKind": "other",
+      "summary": "目黒川の北側、東海道の両側に広がっていた北品川宿の中心部の呼び名です。歩行新宿が加わったとき、新しい宿に対して本宿と呼ばれるようになりました。",
+      "origin": "享保7年（1722年）に歩行新宿が品川宿に加わることが認められたため、それ以前からあった北品川宿を、新しい宿（新宿）に対して「本宿」と呼ぶようになりました。",
+      "description": "江戸時代には目黒川を起点に一丁目から三丁目までに分かれていました。明治8年（1875年）の番地設定のあとは、東側が北品川宿9番地から54番地まで、西側が55番地から79番地までの地域で、53・54番地は目黒川の改修で川敷になりました。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "fact",
+      "relatedNames": [
+        "nm-kita-shinagawa-shuku",
+        "nm-kachishinshuku",
+        "nm-kita-shinagawa-chome"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「本宿」21頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-kachishinshuku-uramachi",
+      "name": "裏町（歩行新宿）",
+      "kana": "うらまち",
+      "nameKind": "other",
+      "summary": "歩行新宿のうち、善福寺の門前と境内だった一帯につけられた町名です。東海道の裏側にあたるので、この名が付きました。",
+      "origin": "明治8年（1875年）の地租改正で付けられた名で、東海道（表）の裏側にある町という意味です。",
+      "description": "もとは善福寺の門前と境内でした。明治3年（1870年）に門前地の称号が廃止されたとき、いったん元一丁目に合併されましたが、明治8年1月に一丁目から分離して裏町と呼ばれました。歩行新宿65番地から71番地までと79番地にあたり、現在の善福寺付近です。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "fact",
+      "relatedNames": [
+        "nm-kachishinshuku",
+        "nm-kita-shinagawa-uramachi"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「裏町」20頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-kita-shinagawa-uramachi",
+      "name": "裏町（北品川宿）",
+      "kana": "うらまち",
+      "nameKind": "other",
+      "summary": "北品川宿のうち、東海道に面した本宿の裏側にあたる一帯につけられた町名です。現在の品川神社の周辺などがあたります。",
+      "origin": "東海道に面した本宿の裏側という意味で、明治8年（1875年）の地租改正のときから用いられた名です。",
+      "description": "歩行新宿の法禅寺、北品川の養願寺・正徳寺とそれぞれの門前の一部、品川神社の境内を囲む一帯で、北品川宿の80番地から99番地までと156番地から171番地までの地域です。現在は北品川二丁目の法禅寺・正徳寺の一角と、北品川三丁目の品川神社の周辺にあたります。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "fact",
+      "relatedNames": [
+        "nm-kita-shinagawa-honshuku",
+        "nm-kachishinshuku-uramachi"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「裏町」22頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-kita-baba-machi",
+      "name": "北馬場町",
+      "kana": "きたばんばまち",
+      "nameKind": "other",
+      "summary": "北品川宿の一丁目と二丁目の境から、鎮守の品川神社へ向かう道を挟んだ一帯の地名です。宿場の馬を飼う馬小屋があったことによる名といわれます。",
+      "origin": "品川宿は、幕府の公用旅行者のために一日百匹の馬と百人の人足を出す役を負っていました。この宿役の馬を飼う馬小屋があったための名で、南品川宿にも馬場町があるため、北品川宿の側を北馬場町と呼んだと考えられる、と区史は述べます。",
+      "description": "『新編武蔵風土記稿』も、昔、駅馬の厩があったと言い、あるいは南品川の馬場町に対する名だとも言うと記しています。明治3年（1870年）12月に元北馬場と正徳寺門前などが合併して北品川馬場町一〜三丁目となり、現在は北品川宿100番地から155番地までにあたります。京浜急行の北馬場駅があったころの商店街の通り周辺が、かつての北馬場町でした。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "tradition",
+      "relatedNames": [
+        "nm-kita-shinagawa-shuku",
+        "nm-kita-shinagawa-uramachi"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「北馬場町」22〜23頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-takeya-yokocho",
+      "name": "竹屋横町",
+      "kana": "たけやよこちょう",
+      "nameKind": "road",
+      "summary": "北品川宿の二町目と三町目の境から、東の海岸へ出る路地の名です。由来は不明とされています。",
+      "origin": null,
+      "description": "現在の北品川二丁目6番と7番の間の道にあたります。『新編武蔵風土記稿』は、二町目と三町目の界から東の海浜に至る所と記すのみで、名の由来は示していません。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename",
+        "road"
+      ],
+      "certainty": "fact",
+      "relatedNames": [
+        "nm-kita-shinagawa-chome",
+        "nm-jinya-yokocho"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「竹屋横町」23頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-kachishinshuku-chome",
+      "name": "歩行新宿の町目（一〜三丁目）",
+      "kana": "かちしんしゅくのちょうめ",
+      "nameKind": "other",
+      "summary": "歩行新宿は、江戸時代には北品川宿に続けて北から一町目・二町目・三町目と数えました。明治8年（1875年）からは、江戸に近い側を一丁目とする数え方に変わりました。",
+      "origin": "江戸時代の町目の呼び方は北品川宿にならって付けられ、一町目が北品川宿に近い側でした。明治になって皇居（宮城）に近い側を一丁目と呼ぶようになり、明治8年からは江戸時代の一町目が三丁目、三町目が一丁目となりました。",
+      "description": "江戸時代の範囲は、一町目が溜屋横町から大横町まで（現在の北品川一丁目28〜30番と二丁目2番の一部）、二町目が大横町から鳥屋横町まで（同23・24番と22番の一部）、三町目が鳥屋横町から八ッ山まで（同2番と22番の一部）です。『新編武蔵風土記稿』は長さをそれぞれ九十間余、八十七間余、百十二間余と記します。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "fact",
+      "relatedNames": [
+        "nm-kachishinshuku",
+        "nm-kuromon-yokocho",
+        "nm-oyokocho",
+        "nm-toriya-yokocho",
+        "nm-mondo-gashi",
+        "nm-kachishinshuku-uramachi"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「一町目」「二町目」「三町目」18〜19頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-kita-shinagawa-chome",
+      "name": "北品川宿の町目（一〜三丁目）",
+      "kana": "きたしながわしゅくのちょうめ",
+      "nameKind": "other",
+      "summary": "北品川宿の本宿は、江戸時代には目黒川から北へ向かって一町目・二町目・三町目と数えました。明治8年（1875年）1月から数え方が逆になりました。",
+      "origin": "江戸時代は現在の品川橋あたりの境を起点に、北へ一丁目、二丁目と数えました。『品川町史』によると、明治8年1月からは北を起点に、北から南へ数えるようになりました。丁目の境は横町で区切られていました。",
+      "description": "江戸時代の呼び方では、一町目が目黒川から陣屋横町まで（現在の北品川二丁目26〜28番ほか）、二町目が陣屋横町から竹屋横町まで（同7・8番ほか）、三町目が竹屋横町から溜屋横町まで（同3・9番ほか）です。『新編武蔵風土記稿』は長さをそれぞれ六十二間余、五十八間余、六十一間余と記します。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "fact",
+      "relatedNames": [
+        "nm-kita-shinagawa-honshuku",
+        "nm-jinya-yokocho",
+        "nm-takeya-yokocho"
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「品川地区の地名」「本宿」「一町目」「二町目」「三町目」21〜22頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-shinagawa",
+      "name": "品川",
+      "kana": "しながわ",
+      "nameKind": "other",
+      "summary": "地名の由来には五つの説があります。『新編武蔵風土記稿』が最も穏当とする、目黒川の古名が品川だったという説が、区史では中心に紹介されています。",
+      "origin": "目黒川の古名を品川といったことから地名になったという説です。『新編武蔵風土記稿』は、文明8年（1476年）に僧の得幺が詠んだ詩に「南顧則品川之流」とあることから、この品川は目黒川を指すのだろうとして、地名起源の説として一番妥当だと紹介しています。『江戸名所図会』にも、東海寺の南に沿い貴船の社の側を流れる川が、品川と称する水流だという説が出ています。",
+      "description": "区史は、品川の地名の起源を五説に整理しています。目黒川は、『南浦地名考』が昔は荏原川と称したと推測し、明治11年の「東京府村誌」にも大崎地区の村々で荏原川の呼び名が使われているといいます。",
+      "areas": [
+        "shinagawa"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "estimate",
+      "relatedNames": [
+        "nm-shinagawa-shuku",
+        "nm-ebara"
+      ],
+      "variants": [
+        {
+          "claim": "隣の村の高輪に対して、地形が良い（品よき）ことから「品ヶ輪」と書き、のちに今の字に改めたという説。『新編武蔵風土記稿』は、高輪が高縄手の転化で、高縄は海岸沿いの高台を通る街道の意だとして、この説には否定的である。",
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「三 品川の地名の由来」5〜6頁"
+        },
+        {
+          "claim": "鎧の威に用いる品革を染め出した所だったため地名になったという説。『新編武蔵風土記稿』はこじつけにすぎないとする。『南浦地名考』は、品革を染めていたのは大井の「立会」という所だとして、検討の余地ありとしている。",
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「三 品川の地名の由来」5〜6頁"
+        },
+        {
+          "claim": "この地を支配した品川氏の姓を採って地名にしたという説。『続日本紀』養老元年（717年）の条に、居住地にもとづいて氏の名をつけるのは従来の恒例とあるように、奈良時代には地名を氏にするのが一般的だった。『新編武蔵風土記稿』は、品川氏はこの土地の名を氏としたものだろうとして、この説を明確に否定している。",
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「三 品川の地名の由来」5〜6頁"
+        },
+        {
+          "claim": "目黒川は、神奈川の上無川に対する下無川で、それが品川に転じたという説。『新編武蔵風土記稿』は、品革説と同じくこじつけにすぎないとしている。",
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「三 品川の地名の由来」5〜6頁"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「三 品川の地名の由来」5〜6頁"
+        }
+      ],
+      "verifiedAt": "2026-11-24"
+    },
+    {
+      "id": "nm-osaki",
+      "name": "大崎",
+      "kana": "おおさき",
+      "nameKind": "other",
+      "summary": "地名の由来には三つの説がありますが、区史はどれにも問題があるとし、確証はないとしています。",
+      "origin": "由来は三説に分かれ、区史はいずれも決め手を欠くとしています。大崎の地形を見ると、台地に多くの谷が入り込んでおり、崎の多い地形から「多い崎」が「大崎」に転じたと考えることもできるが、確証はない、と区史は述べます。",
+      "description": "『江戸名所図会』は、昔は海浜だったこの地から東の品川までの間が袖の形に似ているため、袖が崎とも呼んだと記しています。",
+      "areas": [
+        "osaki"
+      ],
+      "categories": [
+        "placename"
+      ],
+      "certainty": "estimate",
+      "relatedNames": [
+        "nm-kamiosaki-mura",
+        "nm-shimoosaki-mura"
+      ],
+      "variants": [
+        {
+          "claim": "秩父山地から続く台地の外れにあたるので尾崎といい、のちに大崎と書き改めたという説（『南浦地名考』）。区史は、台地の外れ（尾）はむしろ海岸に面した高輪の台地や北品川地区で、大崎地区はその内側にあたるため、そのまま受け入れるのは難しいとする。",
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「三 大崎の地名の由来」8頁"
+        },
+        {
+          "claim": "目黒川は東京湾の入海になっていて、そこに張り出した大きな岬の意で大崎と称したという説。区史は、目黒川の流域まで海が入り込んでいたのは縄文時代までさかのぼるため、名付けのときにそれが認識されていたかは疑問だとする。",
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「三 大崎の地名の由来」8頁"
+        },
+        {
+          "claim": "東京湾の入海に七つの岬があり、その一番大きな岬を大崎と称したという説。区史は、大崎地区の地形に際立った岬を見いだすのは難しいとする。",
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「三 大崎の地名の由来」8頁"
+        }
+      ],
+      "sources": [
+        {
+          "ref": "sgw-kushi-zokushiryo-1",
+          "locator": "品川の地名「三 大崎の地名の由来」8頁"
         }
       ],
       "verifiedAt": "2026-11-24"
