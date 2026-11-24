@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-24T03:28:42.311643Z",
+  "generatedAt": "2026-11-24T16:20:12.453644Z",
   "events": [
     {
       "id": "8c8e2e66944f32bfab29",
@@ -2614,29 +2614,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-31"
     },
     {
-      "id": "31d9fc33e97443332685",
-      "title": "しながわ水辺の観光フェスタ 2026",
-      "summary": "2026年10月9日（金）～11月8日（日）の週末、品川区内の水辺エリア各所で「しながわ水辺の観光フェスタ」が開催されます。 品川区には、目黒川や品川浦、京浜運河、天王洲アイルなど、季節や時間によって多彩な表情を見せる豊かな水辺空間が広がっています。",
-      "url": "https://shinagawa-kanko.or.jp/event/mizubenokankoufesta2026",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-09",
-        "2026-11-08"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "天王洲アイル 天王洲",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "20817480a2e93ea82a8d",
-      "startDate": "2026-10-09",
-      "endDate": "2026-11-08"
-    },
-    {
       "id": "019ae2fd38ae62c3197b",
       "title": "ARTE TOKYO （東京国際文化芸術祭）・国際美術展「TOKYO ATLAS」",
       "summary": "",
@@ -4031,7 +4008,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "0fdf4a53173e91f6b621",
       "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 泊まれるサウナ屋さん 品川サウナ 2025年4月6日 泊まれる、ととのう",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 【一時休業中】BRASSERIE POISSON ROUGE(ブラッスリー",
       "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4859,7 +4836,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット SKY ART J",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット ジヴェ クラフトビ",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5029,7 +5006,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "02cb779466e040ca1e46",
       "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
-      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 天祖・諏訪神社 2018年3月12日 漁師町の気",
+      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 大井の水神社 2018年4月14日 大井の村人た",
       "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5403,34 +5380,25 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-20"
     },
     {
-      "id": "027a7b5a3a5020a50006",
+      "id": "7810d4cdc01af50e5db0",
       "title": "令和8年度品川区障害者作品展",
-      "summary": "区内在住の障害のある方や、区内にある障害者福祉施設をご利用の方が制作した作品を展示します。",
+      "summary": "障害者作品展は障害のある方への理解を深めるために開催される作品展です。 障害のある方が作成した、書道・絵画・手工芸の力作をぜひご覧ください。 2026年11月20日（金曜日）から2026年11月24日（火曜日）まで",
       "url": "https://www.city.shinagawa.tokyo.jp/kenko/shogai/1002758/1011763.html",
-      "sourceId": "city-calendar",
-      "source": "品川区 イベントカレンダー",
-      "category": "健康・福祉",
+      "sourceId": "news",
+      "source": "品川区 新着情報",
+      "category": "地域イベント",
       "dates": [
         "2026-11-20",
-        "2026-11-21",
-        "2026-11-22",
-        "2026-11-23",
         "2026-11-24"
       ],
-      "startTime": "09:00",
-      "endTime": "17:00",
-      "timeText": "午前9時00分から午後5時00分まで",
-      "place": "スクエア荏原 イベントホール（品川区荏原4-5-28）※駐車場(有料)・駐輪場には限りがあります。※ご来場の際は、公共交通機関でお越しください。【電車でのアクセス】京急目黒線 武蔵小山駅 徒歩10分都営浅草線 戸越駅 徒歩12分東急池上線 戸越銀座駅・荏原中延駅 徒歩10分【バスでのアクセス】東急バス（反11/反12）・（井50/井51）「平塚橋」下車 徒歩5分",
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "",
       "application": "",
       "deadline": "",
-      "periods": [
-        {
-          "from": "2026-11-20",
-          "to": "2026-11-24"
-        }
-      ],
-      "confidence": "official",
-      "alsoSeenIn": [],
+      "confidence": "estimated",
+      "newsId": "688547586e9886be3689",
       "startDate": "2026-11-20",
       "endDate": "2026-11-24"
     },
@@ -5818,7 +5786,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "3bdf0afa6cf4dad8469c",
       "title": "【終了】小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
-      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 一汁おにぎり",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット S/S/A/W",
       "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5838,7 +5806,7 @@ window.SHINAGAWA_EVENTS = {
           "sourceId": "news",
           "source": "しながわ観光協会",
           "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026",
-          "title": "小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」"
+          "title": "【終了】小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」"
         }
       ],
       "startDate": "2026-11-22",
@@ -7564,7 +7532,7 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "city-calendar",
       "source": "品川区 イベントカレンダー",
       "status": "ok",
-      "accepted": 92
+      "accepted": 91
     },
     {
       "sourceId": "gikai-committee",
@@ -7584,7 +7552,7 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "news",
       "source": "区のニュース",
       "status": "ok",
-      "accepted": 118
+      "accepted": 117
     }
   ]
 };
