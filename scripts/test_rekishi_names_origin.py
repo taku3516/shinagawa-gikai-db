@@ -81,6 +81,13 @@ class NameOriginTest(unittest.TestCase):
             for note in STALE_NOTES:
                 self.assertNotIn(note, text, f"{name_id} に古い注記が残っている")
 
+    def test_samesu_legend_year_matches_timeline(self) -> None:
+        # 建長元年は1249年なので建長3年は1251年。年表の出来事と食い違わないこと。
+        # 和暦検査は variants の claim 内の換算を見ないため、ここで固定する
+        claims = " ".join(v["claim"] for v in self.names["nm-b7d90ffb"]["variants"])
+        self.assertIn("建長3年（1251年）", claims)
+        self.assertNotIn("1252", claims)
+
     def test_oi_keeps_temple_origin_and_gains_kushi_variants(self) -> None:
         # 大井は指定文化財の寺伝を origin に持つ。区史の別説は variants に足す
         item = self.names["nm-oi"]
