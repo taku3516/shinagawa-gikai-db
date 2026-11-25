@@ -114,6 +114,12 @@
     return new Set(indexes.flatMap((index) => [...index.keys()]));
   }
 
-  globalThis.RekishiMapLinks = {eventsByPlace, comparisonHref, groupByPlace, placeEras, distanceMeters,
+  /** @param {string} placeId @param {object[]} events @param {object[]} people @returns {object[]} */
+  function peopleForPlace(placeId, events, people) {
+    const linked = new Set(events.flatMap((event) => event.relatedPeople || []));
+    return people.filter((person) => linked.has(person.id) || person.relatedPlaces?.includes(placeId));
+  }
+
+  globalThis.RekishiMapLinks = {peopleForPlace, eventsByPlace, comparisonHref, groupByPlace, placeEras, distanceMeters,
     sortByDistance, formatDistance, readFilters, filterSearch, relationHtml, linkedPlaceIds};
 })();
