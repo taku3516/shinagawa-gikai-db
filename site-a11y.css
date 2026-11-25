@@ -64,6 +64,15 @@
   border: 3px solid var(--c-main); background: var(--c-main-pale); padding: 5px;
 }
 .a11y-options input { position: absolute; opacity: 0; pointer-events: none; }
+.a11y-options--palette { grid-template-columns: 1fr; }
+.a11y-options--palette label {
+  display: flex; justify-content: flex-start; gap: 10px; text-align: left;
+  background: var(--c-card);
+}
+.a11y-options--palette input {
+  position: static; opacity: 1; pointer-events: auto; margin: 0;
+  width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--c-main);
+}
 .a11y-options label:focus-within {
   outline: 3px solid var(--c-focus); outline-offset: 1px;
   box-shadow: 0 0 0 6px var(--c-focus-outer);
