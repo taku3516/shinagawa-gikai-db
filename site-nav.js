@@ -24,6 +24,7 @@
       items: [
         { label: "会議のまとめ", url: "kaigi.html" },
         { label: "会議録・録画", url: "kaigiroku.html" },
+        { label: "議案トラッカー", url: "gian.html" },
         { label: "請願・陳情", url: "seigan.html" },
         { label: "意見書・決議", url: "ikensho.html" },
         { label: "予算・決算", url: "yosan-kessan.html" },
@@ -46,6 +47,8 @@
         { label: "区のニュース", url: "news.html" },
         { label: "イベントカレンダー", url: "events.html" },
         { label: "町会区域", url: "chokai-map.html" },
+        { label: "わたしの地域", url: "watashi-no-chiiki.html" },
+        { label: "データを活用する", url: "katsuyo.html" },
         { label: "横断検索", url: "kensaku.html" }
       ]
     },
