@@ -1,7 +1,7 @@
 // 品川区議会DB データファイル（年度ごとの予算・決算。議会の暦年データとは別軸）
 window.SHINAGAWA_DB = window.SHINAGAWA_DB || { site: null, years: {} };
 window.SHINAGAWA_DB.fiscalData = {
-  "updatedAt": "2026-07-25",
+  "updatedAt": "2026-11-25",
   "note": "予算・決算は「年度」（4月〜翌年3月）の情報です。議会の情報（暦年）と対象期間が異なります。金額・内容は品川区公式サイトからの転記で、正確な情報は必ずリンク先の公式資料を確認してください。　決算額（歳入・歳出総額と実質収支）は品川区監査委員の決算審査意見書によります。　平成年度の決算額は総務省の決算カード（普通会計）によるもので、令和元年度以降の一般会計の数値とは会計の範囲が異なります。",
   "fiscalYears": [
     {
@@ -71,7 +71,7 @@ window.SHINAGAWA_DB.fiscalData = {
       "id": "fy-r07",
       "label": "令和7年度",
       "period": "2025年4月〜2026年3月",
-      "status": "決算待ち",
+      "status": "決算認定済み",
       "initial": {
         "amount": "2,347億6,300万円",
         "change": "前年度比 +15.3％",
@@ -164,8 +164,23 @@ window.SHINAGAWA_DB.fiscalData = {
         ]
       },
       "settlement": {
-        "status": "令和8年第3回定例会（2026年9月〜）の決算特別委員会で審査予定",
-        "links": [],
+        "status": "認定済み（令和8年第3回定例会）",
+        "revenue": "2,479億7,350万円",
+        "expenditure": "2,392億8,912万円",
+        "realBalance": "76億8,733万円の黒字",
+        "revenueYen": 247973497670,
+        "expenditureYen": 239289123054,
+        "budgetCurrentYen": 252363961660,
+        "amountSource": {
+          "label": "令和7年度各会計決算審査意見書",
+          "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/007/081/hpg00002415001_19.pdf",
+          "note": "第2表（10頁）・第4表（12頁）"
+        },
+        "links": [{
+          "type": "official",
+          "label": "令和8年第3回定例会 提出議案等（決算認定）",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        }],
         "council": [
           {
             "label": "令和8年第3回定例会",
@@ -305,6 +320,9 @@ window.SHINAGAWA_DB.fiscalData = {
             "url": "https://gikaichukei.city.shinagawa.tokyo.jp/?tpl=gikai_days_list&gikai_id=161"
           }
         ],
+        "revenueYen": 216444880703,
+        "expenditureYen": 209700311574,
+        "budgetCurrentYen": 221976361950,
         "revenue": "2,164億4,488万円",
         "expenditure": "2,097億31万円",
         "realBalance": "66億646万円の黒字",
