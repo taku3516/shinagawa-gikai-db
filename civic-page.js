@@ -15,14 +15,10 @@
     funding: element => finance.funding(element),
     members: element => community.members(element),
     areas: element => community.areas(element),
-    tools: element => services.tools(element),
-    glossary: element => services.dictionary(element),
     exports: element => services.exportsPage(element),
     status: element => services.statusPage(element),
     follow: element => services.follow(element),
-    reporting: element => services.reporting(element),
-    voice: element => services.voice(element),
-    questions: element => services.questions(element)
+    voice: element => services.voice(element)
   };
   Promise.resolve().then(() => renderers[root.dataset.civicPage](root)).catch(error => {
     window.SHINAGAWA_CIVIC_UI.showError(root, error);

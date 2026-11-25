@@ -95,7 +95,7 @@
           <h3>表決の履歴</h3>${list(voteRows)}
           ${voteRows.length ? sources([votes.voteSource]) : ""}
           <h3>請願・関連ニュース</h3><p>確認済みの関連データは未収録です。</p><p>${link("氏名で横断検索", lookup)}</p>
-          ${review(member.id)}</article>`;
+          ${review()}</article>`;
       } catch (error) {
         if (current === request) showError(content, error);
       }

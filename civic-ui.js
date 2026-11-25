@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const { glossary } = window.SHINAGAWA_CIVIC_CONTENT;
+  const { readings } = window.SHINAGAWA_CIVIC_CONTENT;
   const { normalize } = window.SHINAGAWA_CIVIC;
   const missing = "未収録";
 
@@ -55,25 +55,23 @@
     return String(query ?? "").trim().split(/\s+/).every(word => target.includes(normalize(word)));
   }
 
+  const dictionary = new Map(readings);
+  const pattern = new RegExp("(" + [...dictionary.keys()].sort((a, b) => b.length - a.length).join("|") + ")", "g");
+
   /** @param {string} text @returns {string} */
   function annotate(text) {
-    const dictionary = new Map(glossary.map(entry => [entry[0], entry[1]]));
-    const pattern = new RegExp("(" + [...dictionary.keys()].sort((a, b) => b.length - a.length).join("|") + ")", "g");
     return String(text ?? "").split(pattern).map(part => dictionary.has(part)
-      ? `<a href="yogo.html?q=${encodeURIComponent(part)}"><ruby>${esc(part)}<rt>${esc(dictionary.get(part))}</rt></ruby></a>`
+      ? `<ruby>${esc(part)}<rt>${esc(dictionary.get(part))}</rt></ruby>`
       : esc(part)).join("");
   }
 
-  /** @param {string} [id] @param {object} [record] @returns {string} */
-  function review(id, record = {}) {
-    const page = location.protocol === "file:" ? location.pathname.split("/").pop() + location.search + location.hash : location.href;
-    const params = new URLSearchParams({ page });
-    if (id) params.set("id", id);
+  /** @param {object} [record] @returns {string} */
+  function review(record = {}) {
     return `<details><summary>出典と確認状況</summary>${terms([
       ["AIによる要約", esc(record.ai === true ? "あり" : record.ai === false ? "なし" : "記録なし")],
       ["人による確認", esc(record.checkedAt ? "確認済み（" + record.checkedAt + "）" : "確認記録なし")],
       ["訂正履歴", esc(record.corrections?.join("／") || "登録なし")]
-    ])}<p>${link("誤りを報告", "report.html?" + params)}</p></details>`;
+    ])}</details>`;
   }
 
   /** @param {HTMLElement} element @param {unknown} error @returns {void} */

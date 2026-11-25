@@ -11,13 +11,7 @@
 
   const currentFile = (decodeURIComponent(window.location.pathname).split("/").pop() || "index.html").toLowerCase();
 
-  // ------------------------------------------------------------------
-  // ナビの中身。data/site.js の navGroups が正で、ここは同じ内容の控え
-  // （data/site.js が古いまま配信されても表示が壊れないようにするため）。
-  //
-  // 群の分け方と並び順を変えたいときは、まず data/site.js の navGroups を
-  // 直すこと。ラベルは名詞にする（「会議録を見る」ではなく「会議録・録画」）。
-  // ------------------------------------------------------------------
+  // データ未読込時や旧メニューがキャッシュされている場合の控え。
   const DEFAULT_NAV_GROUPS = [
     {
       label: "議会",
@@ -25,31 +19,40 @@
         { label: "会議のまとめ", url: "kaigi.html" },
         { label: "会議録・録画", url: "kaigiroku.html" },
         { label: "議案トラッカー", url: "gian.html" },
+        { label: "会派別・議員別の賛否", url: "sanpi.html" },
         { label: "請願・陳情", url: "seigan.html" },
-        { label: "意見書・決議", url: "ikensho.html" },
+        { label: "意見書・決議", url: "ikensho.html" }
+      ]
+    },
+    {
+      label: "議員・選挙",
+      items: [
+        { label: "政治家名簿", url: "giin.html" },
+        { label: "議員ダッシュボード", url: "giin-katsudo.html" },
+        { label: "選挙", url: "senkyo.html" },
+        { label: "選挙収支", url: "senkyo-shushi.html" },
+        { label: "政務活動費", url: "seimu.html" },
+        { label: "政治資金", url: "seijishikin.html" },
+        { label: "政務活動費・政治資金の資料", url: "shikin-shiryo.html" }
+      ]
+    },
+    {
+      label: "区政・財政",
+      items: [
+        { label: "事業カルテ", url: "jigyo.html" },
         { label: "予算・決算", url: "yosan-kessan.html" },
+        { label: "お金の見える化", url: "yosan-kessan.html#fiscal-comparison" },
         { label: "行政評価", url: "gyosei.html" }
       ]
     },
     {
-      label: "人とお金",
+      label: "地域・参加",
       items: [
-        { label: "政治家名簿", url: "giin.html" },
-        { label: "選挙", url: "senkyo.html" },
-        { label: "政務活動費", url: "seimu.html" },
-        { label: "政治資金", url: "seijishikin.html" },
-        { label: "選挙収支", url: "senkyo-shushi.html" }
-      ]
-    },
-    {
-      label: "地域・検索",
-      items: [
+        { label: "わたしの地域", url: "watashi-no-chiiki.html" },
         { label: "区のニュース", url: "news.html" },
         { label: "イベントカレンダー", url: "events.html" },
         { label: "町会区域", url: "chokai-map.html" },
-        { label: "わたしの地域", url: "watashi-no-chiiki.html" },
-        { label: "データを活用する", url: "katsuyo.html" },
-        { label: "横断検索", url: "kensaku.html" }
+        { label: "区民の声", url: "kumin-no-koe.html" }
       ]
     },
     {
@@ -65,6 +68,15 @@
       ]
     },
     {
+      label: "検索・データ",
+      items: [
+        { label: "横断検索", url: "kensaku.html" },
+        { label: "フォロー・新着", url: "follow.html" },
+        { label: "CSV・JSONダウンロード", url: "open-data.html" },
+        { label: "データ収録状況", url: "data-status.html" }
+      ]
+    },
+    {
       label: "公式サイト",
       items: [
         { type: "minutes", label: "会議録検索システム", url: "https://gikai.city.shinagawa.tokyo.jp/search" },
@@ -75,9 +87,11 @@
     }
   ];
 
-  const navGroups = (site && Array.isArray(site.navGroups) && site.navGroups.length)
-    ? site.navGroups
-    : DEFAULT_NAV_GROUPS;
+  const configuredGroups = site?.navGroups;
+  const navGroups = Array.isArray(configuredGroups) && configuredGroups.length
+    && !configuredGroups.some(group => group.items?.some(item => item.url === "katsuyo.html"))
+    ? configuredGroups : DEFAULT_NAV_GROUPS;
+  const navItems = navGroups.flatMap(group => group.items || []);
 
   // ニュースページだけは Firebase Hosting から配信している。Googleログインは
   // 配信元と authDomain のドメインが一致していないと iPhone・iPad で完了できないため
@@ -102,23 +116,21 @@
     return u;
   }
 
-  // 現在地の判定はファイル名の一致だけで足りる。navGroups の url は
-  // すべてページのファイル名そのものなので、ラベルごとの対応表は要らない。
-  // news.html は Firebase Hosting でもファイル名が news.html のままなので
-  // 同じ判定で当たる。
-  function isCurrent(rawUrl) {
-    const cleanUrl = (String(rawUrl || "").split(/[?#]/)[0] || "").toLowerCase();
-    return Boolean(cleanUrl) && cleanUrl === currentFile && cleanUrl !== "index.html";
+  /** @returns {object|undefined} */
+  function currentItem() {
+    const hash = window.location.hash || "";
+    return navItems.find(item => item.url === currentFile + hash)
+      || navItems.find(item => item.url === currentFile);
   }
 
   function renderLink(item) {
     const url = resolveUrl(item.url);
     // 外部かどうかは、書かれたURL（item.url）で判定する。resolveUrl の結果で
     // 判定すると、別ドメインから配信している news.html を開いたときに
-    // サイト内のリンク14本が絶対URLになり、すべて外部リンクの見た目になって
+    // サイト内のリンクが絶対URLになり、すべて外部リンクの見た目になって
     // 新しいタブで開いてしまう。行き先が同じサイトかどうかはデータ側が持っている。
     const isExternal = /^https?:/i.test(String(item.url || ""));
-    const active = isCurrent(item.url);
+    const active = item === currentItem();
 
     const classNames = ["site-nav__link"];
     if (isExternal) classNames.push("site-nav__link--external");
@@ -127,7 +139,7 @@
     const target = isExternal ? ' target="_blank" rel="noopener"' : "";
     const currentAttr = active ? ' aria-current="page"' : "";
 
-    return `<li><a class="${classNames.join(" ")}" href="${escapeHtml(url)}"${target}${currentAttr}>${escapeHtml(item.label)}</a></li>`;
+    return `<li><a class="${classNames.join(" ")}" data-nav-url="${escapeHtml(item.url)}" href="${escapeHtml(url)}"${target}${currentAttr}>${escapeHtml(item.label)}</a></li>`;
   }
 
   function renderGroup(group, panelId, index) {
@@ -143,11 +155,7 @@
   // スマートフォンでは折りたたみメニューにするため、現在地の短い名前を用意する
   function currentPageLabel() {
     if (currentFile === "index.html") return "トップ";
-    for (const group of navGroups) {
-      const hit = (group.items || []).find(item => isCurrent(item.url));
-      if (hit) return hit.label;
-    }
-    return "";
+    return currentItem()?.label || "";
   }
 
   const currentLabel = currentPageLabel();
@@ -190,6 +198,16 @@
       if (wrapper.getAttribute("data-nav-open") !== "true") return;
       setOpen(false);
       toggle.focus();
+    });
+
+    window.addEventListener("hashchange", () => {
+      const currentUrl = currentItem()?.url;
+      wrapper.querySelectorAll("[data-nav-url]").forEach(link => {
+        if (link.dataset.navUrl === currentUrl) link.setAttribute("aria-current", "page");
+        else link.removeAttribute("aria-current");
+      });
+      const label = toggle.querySelector(".site-nav-toggle__current");
+      if (label) label.textContent = `表示中：${currentPageLabel()}`;
     });
   });
 })();

@@ -123,17 +123,6 @@
         <p class="a11y-note a11y-storage-note" role="status"></p>
       </section>`;
     document.body.appendChild(wrapper);
-    const footer = document.querySelector("footer .container");
-    if (footer && !location.pathname.endsWith("/report.html")) {
-      const report = document.createElement("a");
-      report.href = (window.SHINAGAWA_SITE_BASE || "") + "report.html";
-      report.textContent = "誤りを報告";
-      report.addEventListener("click", () => {
-        const page = location.protocol === "file:" ? location.pathname.split("/").pop() + location.search + location.hash : location.href;
-        report.search = new URLSearchParams({ page }).toString();
-      });
-      footer.append(" ／ ", report);
-    }
     storageNote = wrapper.querySelector(".a11y-storage-note");
 
     const launcher = wrapper.querySelector(".a11y-launcher");

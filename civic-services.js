@@ -4,31 +4,8 @@
   const civic = window.SHINAGAWA_CIVIC;
   const data = window.SHINAGAWA_CIVIC_SOURCES;
   const { datasets, dataset, load } = window.SHINAGAWA_CATALOG;
-  const { esc, link, list, sources, terms, select, input, filters, matches, showError } = window.SHINAGAWA_CIVIC_UI;
-  const { glossary, pages } = window.SHINAGAWA_CIVIC_CONTENT;
+  const { esc, link, list, terms, select, input, filters, matches, showError } = window.SHINAGAWA_CIVIC_UI;
   const params = new URLSearchParams(location.search);
-
-  /** @param {HTMLElement} root @returns {void} */
-  function tools(root) {
-    root.innerHTML = '<div class="civic-grid">' + pages.map(([title, url, description]) =>
-      `<article class="civic-card"><h2>${link(title, url)}</h2><p>${esc(description)}</p></article>`).join("") + "</div>";
-  }
-
-  /** @param {HTMLElement} root @returns {void} */
-  function dictionary(root) {
-    root.innerHTML = `<form class="civic-controls">${input("q", "用語・読み方・説明", params.get("q") || "")}<button>検索</button></form><div data-definitions></div>`;
-    const form = root.querySelector("form");
-    const result = root.querySelector("[data-definitions]");
-    const render = () => {
-      const entries = glossary.filter(item => matches(item, form.elements.q.value));
-      result.innerHTML = entries.map(([word, reading, description, related]) => `<article class="civic-card">
-        <h2><ruby>${esc(word)}<rt>${esc(reading)}</rt></ruby></h2><p>${esc(reading)} ／ ${esc(description)}</p>
-        <p>関連用語 ${link(related, "yogo.html?q=" + encodeURIComponent(related))}</p></article>`).join("") || "<p>該当する用語はありません。</p>";
-    };
-    form.addEventListener("submit", event => { event.preventDefault(); render(); });
-    form.addEventListener("input", render);
-    render();
-  }
 
   /** @param {HTMLElement} root @returns {void} */
   function exportsPage(root) {
@@ -204,23 +181,6 @@
   }
 
   /** @param {HTMLElement} root @returns {void} */
-  function reporting(root) {
-    const url = params.get("page") || "";
-    const id = params.get("id") || "";
-    root.innerHTML = `<p>サイトの情報について訂正箇所と根拠を整理できます。報告先は未登録です。入力内容はブラウザでファイルに保存できます。</p>
-      <form><div class="civic-controls"><label>対象ページ <input name="page" value="${esc(url)}" maxlength="500"></label>
-      <label>対象データID <input name="id" value="${esc(id)}" maxlength="240"></label></div>
-      <label>誤りの内容・訂正の根拠 <textarea name="description" rows="6" required maxlength="2000"></textarea></label>
-      <p><button>報告内容をテキストに保存</button></p></form>`;
-    const form = root.querySelector("form");
-    form.addEventListener("submit", event => {
-      event.preventDefault();
-      const fields = filters(form);
-      civic.download("shinagawa-report.txt", ["対象ページ " + fields.get("page"), "対象データID " + fields.get("id"), "", fields.get("description")].join("\n"), "text/plain;charset=utf-8");
-    });
-  }
-
-  /** @param {HTMLElement} root @returns {void} */
   function voice(root) {
     const date = civic.today();
     root.innerHTML = `<p>区が公表した意見募集の案内です。意見の提出方法と個人情報の取扱いは品川区の募集ページで確認できます。</p>
@@ -244,48 +204,5 @@
     });
   }
 
-  /** @param {HTMLElement} root @returns {void} */
-  function questions(root) {
-    const endpoint = window.SHINAGAWA_CIVIC_ANSWER_URL;
-    const connected = typeof endpoint === "string" && /^https:\/\/[^\s]+$/.test(endpoint) && location.protocol === "https:";
-    root.innerHTML = `<p>${connected ? "AIは質問に関連する収録資料を選びます。個人情報は入力しないでください。"
-      : "AI回答は接続準備中です。質問に含まれる地名・議案番号・制度名などを入力すると、収録資料を探せます。"}</p>
-      <form class="civic-controls">${input("q", connected ? "質問" : "地名・議案番号・制度名", params.get("q") || "")}
-      <button name="mode" value="search">収録資料を探す</button>${connected ? '<button name="mode" value="ai">AIに質問する</button>' : ""}</form><div data-answer aria-live="polite"></div>`;
-    const form = root.querySelector("form");
-    const answer = root.querySelector("[data-answer]");
-    form.elements.q.maxLength = 500;
-    let request = 0;
-    form.addEventListener("submit", async event => {
-      event.preventDefault();
-      const q = String(filters(form).get("q") || "").trim();
-      if (!q) return;
-      const current = ++request;
-      answer.textContent = "収録資料を検索しています。";
-      try {
-        if (connected && event.submitter?.value === "ai") {
-          const response = await fetch(endpoint, {
-            method: "POST", headers: { "Content-Type": "application/json" }, credentials: "omit",
-            body: JSON.stringify({ question: q }), signal: AbortSignal.timeout(12000)
-          });
-          if (!response.ok) throw new Error(response.status === 429 ? "質問の利用上限に達しました。" : "AI回答を取得できませんでした。");
-          const result = await response.json();
-          if (current !== request) return;
-          if (!Array.isArray(result.evidence) || typeof result.summary !== "string") throw new Error("回答の形式を確認できませんでした。");
-          answer.innerHTML = `<h2>出典付き回答</h2><p>${esc(result.summary)}</p>
-            ${list(result.evidence.slice(0, 3).map(item => `${link(item.title, item.url)}（${esc(item.period)}、${esc(item.locator)}）<br>${esc(item.excerpt)}`), "根拠として示せる資料はありません。")}`;
-          return;
-        }
-        const all = (await Promise.all(["bills", "petitions", "projects", "finance", "meetings"].map(dataset))).flat();
-        if (current !== request) return;
-        const found = all.filter(item => matches([item.title, item.period, item.id, item.result], q)).slice(0, 15);
-        answer.innerHTML = list(found.map(item => `${link(item.title, item.url)} ${esc(item.period)} ${item.source ? link("出典", item.source) : "出典URL未収録"}`), "収録資料からは確認できません。");
-        answer.insertAdjacentHTML("beforeend", `<p>${link("質問・答弁も横断検索で探す", "kensaku.html?" + new URLSearchParams({ q }))}</p>`);
-      } catch (error) {
-        if (current === request) showError(answer, error);
-      }
-    });
-  }
-
-  window.SHINAGAWA_SERVICES = { tools, dictionary, exportsPage, statusPage, follow, reporting, voice, questions };
+  window.SHINAGAWA_SERVICES = { exportsPage, statusPage, follow, voice };
 })();
