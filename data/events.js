@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-24T16:20:12.453644Z",
+  "generatedAt": "2026-11-25T01:34:56.424348Z",
   "events": [
     {
       "id": "8c8e2e66944f32bfab29",
@@ -2330,28 +2330,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2027-03-15"
     },
     {
-      "id": "8e7443bd132c925fa2f3",
-      "title": "9月29日開催の委員会の結果を掲載。",
-      "summary": "9月29日開催の委員会の結果を掲載。 は 品川区議会 で公開された投稿です。",
-      "url": "https://gikai.city.shinagawa.tokyo.jp/info/20872.html",
-      "sourceId": "news",
-      "source": "品川区議会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-29"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "品川区議会",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "4787ca9a9c8b8039797f",
-      "startDate": "2026-09-29",
-      "endDate": "2026-09-29"
-    },
-    {
       "id": "914b437bc7f1912fa487",
       "title": "公共施設等整備特別委員会",
       "summary": "○地域公共交通に関すること ○しなるん（大崎地区）の運行開始について（ .pdf.422KB / .docx.1,241KB ）",
@@ -2566,51 +2544,6 @@ window.SHINAGAWA_EVENTS = {
       "periods": [],
       "confidence": "official",
       "startDate": "2026-10-03",
-      "endDate": "2026-10-31"
-    },
-    {
-      "id": "3f05f89a699d1f43d239",
-      "title": "【終了】大井蔵王権現神社 福禄寿祭",
-      "summary": "2026年10月4日（日）、大井蔵王権現神社にて「福禄寿祭」が開催されます。 大井蔵王権現神社には、荏原七福神の福禄寿が祀られており、財産・出世・長寿にご利益があると言われています。",
-      "url": "https://shinagawa-kanko.or.jp/event/fukurokuzyusai2026",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-04"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "荏原 大井",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "90451c32d4e1446aff1f",
-      "startDate": "2026-10-04",
-      "endDate": "2026-10-04"
-    },
-    {
-      "id": "a3c2ccb9cc8e9d5691e6",
-      "title": "大井競馬場フリーマーケット -Tokyo City Flea Market- 10月",
-      "summary": "「Tokyo City Flea Market」は毎週土曜日・日曜日に大井競馬場第一駐車場で開催される都内最大級のフリーマーケットです。 （※10月4日(日)、10日(土）、11日(日)、17日(土）、18日(日)の開催はありません。また、10月31日（土）は, 東京メガイルミ初日のため、8：45〜12：00の時短開催となります。） 専門的なお店も多数出店。バラエティ豊かな品揃えで、地元客だけでなく海外からの観光客も訪れます。週末は、大井競馬場でお宝探しはいかがでしょう。",
-      "url": "https://shinagawa-kanko.or.jp/event/tokyo-city-flea-market-202610",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-04",
-        "2026-10-31"
-      ],
-      "startTime": "08:45",
-      "endTime": "",
-      "timeText": "",
-      "place": "大井 大井競馬場",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "a8fd6e30265693165961",
-      "startDate": "2026-10-04",
       "endDate": "2026-10-31"
     },
     {
@@ -3096,8 +3029,7 @@ window.SHINAGAWA_EVENTS = {
       "source": "しながわ観光協会",
       "category": "文化・観光・スポーツ",
       "dates": [
-        "2026-10-15",
-        "2026-11-29"
+        "2026-10-15"
       ],
       "startTime": "",
       "endTime": "",
@@ -3106,16 +3038,8 @@ window.SHINAGAWA_EVENTS = {
       "application": "",
       "deadline": "",
       "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/wakuwaku2026",
-          "title": "品川×大田 旧東海道でつながるまち WAKU☆WAKU ラリー"
-        }
-      ],
       "startDate": "2026-10-15",
-      "endDate": "2026-11-29"
+      "endDate": "2026-10-15"
     },
     {
       "id": "64ea010f04316ae93f92",
@@ -4008,7 +3932,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "0fdf4a53173e91f6b621",
       "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 【一時休業中】BRASSERIE POISSON ROUGE(ブラッスリー",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット ザ・ホルモンクラブ・トウキョウ 2021年10月31日 「ホルモン×ガスト",
       "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4836,7 +4760,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット ジヴェ クラフトビ",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット SHINAGAWA",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5006,7 +4930,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "02cb779466e040ca1e46",
       "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
-      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 大井の水神社 2018年4月14日 大井の村人た",
+      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 来福寺 2018年3月9日 饅頭の祖 林浄因の碑",
       "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5786,7 +5710,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "3bdf0afa6cf4dad8469c",
       "title": "【終了】小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
-      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット S/S/A/W",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット Parque(",
       "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -7552,7 +7476,7 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "news",
       "source": "区のニュース",
       "status": "ok",
-      "accepted": 117
+      "accepted": 113
     }
   ]
 };
