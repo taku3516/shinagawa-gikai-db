@@ -2,7 +2,7 @@
    サイト共通カラーテーマ
 
    デジタル庁「ダッシュボード作成ガイドブック」およびデザインシステムの
-   考え方に合わせた配色。カラーコードは公式のデザイントークン
+   考え方に合わせた標準配色。標準のカラーコードは公式のデザイントークン
    （@digital-go-jp/design-tokens v2.0.1）の値をそのまま使っている。
 
    守っている原則は3つ。
@@ -283,6 +283,45 @@
 
    デジタル庁パレットの中で最も濃い段階に置き換える。
    ========================================================================== */
+
+/* 選択式の配色。標準の :root は変更しない。
+   文字・リンク4.5:1以上、入力境界3:1以上をテストで検算する。
+   高コントラストを後に置き、同時に選んだ場合はこちらより優先する。 */
+html[data-color-theme="warm"] {
+  --c-bg: #f3eddf;
+  --c-card: #fff9ed;
+  --c-surface-sub: #f3eddf;
+  --c-ink: #29251f;
+  --c-ink-soft: #494237;
+  --c-ink-mute: #595044;
+  --c-border: #827768;
+  --c-border-strong: #776c5d;
+  --c-rule: #c7bdad;
+  --c-main: #61451f;
+  --c-main-dark: #503817;
+  --c-main-deep: #35250f;
+  --c-main-pale: #f1e6d0;
+  --c-main-pale-2: #e9dcc1;
+  --c-main-border: #82704f;
+}
+
+html[data-color-theme="cool"] {
+  --c-bg: #e7eef2;
+  --c-card: #f3f7fa;
+  --c-surface-sub: #e7eef2;
+  --c-ink: #202c35;
+  --c-ink-soft: #354956;
+  --c-ink-mute: #465b69;
+  --c-border: #728591;
+  --c-border-strong: #657b89;
+  --c-rule: #bacbd5;
+  --c-main: #264f66;
+  --c-main-dark: #1c4056;
+  --c-main-deep: #152f40;
+  --c-main-pale: #dfeaf0;
+  --c-main-pale-2: #d3e2eb;
+  --c-main-border: #657b89;
+}
 
 html[data-contrast="high"] {
   --c-bg: #ffffff;
