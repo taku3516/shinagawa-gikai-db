@@ -7,6 +7,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <title>横断検索 | 品川区議会DB</title>
+  <script src="site-a11y.js"></script>
   <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
@@ -55,7 +56,7 @@
     #q {
       width: 100%;
       min-height: 48px;
-      border: 1px solid var(--c-border);
+      border: 1px solid var(--c-input-border, var(--c-border));
       border-radius: 3px;
       background: var(--c-card);
       padding: 11px 48px 11px 14px;
@@ -79,7 +80,7 @@
     .clear-query[hidden] { display: none; }
     #sort-order {
       min-height: 48px;
-      border: 1px solid var(--c-border);
+      border: 1px solid var(--c-input-border, var(--c-border));
       border-radius: 3px;
       background: var(--c-card);
       padding: 9px 34px 9px 12px;
@@ -1324,6 +1325,5 @@
       render();
     }
   </script>
-  <script src="site-a11y.js"></script>
 </body>
 </html>

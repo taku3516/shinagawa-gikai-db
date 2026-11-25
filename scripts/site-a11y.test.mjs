@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
 
-/** @param {string|null} saved @param {boolean} blocked @returns {object} */
-function load(saved = null, blocked = false) {
+/** @param {string|null} saved @param {boolean} blocked @param {string} readyState @returns {object} */
+function load(saved = null, blocked = false, readyState = 'complete') {
   const handlers = {};
   const inputs = [];
   const note = {};
@@ -22,9 +22,10 @@ function load(saved = null, blocked = false) {
     addEventListener: (type, fn) => { handlers[type] = fn; }
   };
   const document = {
-    documentElement: { dataset: {} }, readyState: 'complete',
+    documentElement: { dataset: {} }, readyState,
     querySelector: () => null, querySelectorAll: () => inputs,
-    createElement: () => wrapper, body: { appendChild() {} }, addEventListener() {}
+    createElement: () => wrapper, body: { appendChild() {} },
+    addEventListener: (type, fn) => { handlers[type] = fn; }
   };
   const warnings = [];
   runInNewContext(readFileSync(new URL('../site-a11y.js', import.meta.url), 'utf8'), {
@@ -47,7 +48,7 @@ test('初期状態と旧設定では標準配色を維持する', () => {
 });
 
 test('配色の変更・再読込・リセットと他の設定の併用', () => {
-  for (const value of ['warm', 'cool', 'teal']) {
+  for (const value of ['warm', 'cool', 'teal', 'public-blue']) {
     const app = load('{"fontSize":"large","contrast":"high","motion":"reduced"}');
     const input = app.inputs.find(i => i.value === value && i.dataset.a11ySetting === 'colorTheme');
     assert.ok(input);
@@ -58,10 +59,26 @@ test('配色の変更・再読込・リセットと他の設定の併用', () =>
     assert.equal(restored.document.documentElement.dataset.fontSize, 'large');
     assert.equal(restored.document.documentElement.dataset.contrast, 'high');
     assert.equal(restored.document.documentElement.dataset.motion, 'reduced');
+    const contrast = restored.inputs.find(i => i.dataset.a11ySetting === 'contrast' && i.value === 'normal');
+    restored.handlers.change({ target: { closest: () => contrast } });
+    assert.equal(restored.document.documentElement.dataset.colorTheme, value);
     restored.handlers['.a11y-resetclick']();
     assert.equal(restored.document.documentElement.dataset.colorTheme, 'normal');
     assert.equal(restored.document.documentElement.dataset.contrast, 'normal');
   }
+});
+
+test('本文の描画前に保存済み配色を反映し、配色の末尾に新しい選択肢を表示する', () => {
+  const saved = '{"colorTheme":"public-blue","contrast":"high"}';
+  const app = load(saved, false, 'loading');
+  assert.equal(app.document.documentElement.dataset.colorTheme, 'public-blue');
+  assert.equal(app.document.documentElement.dataset.contrast, 'high');
+  assert.equal(app.saved(), saved);
+  assert.equal(app.inputs.length, 0);
+  app.handlers.DOMContentLoaded();
+  const themes = app.inputs.filter(i => i.dataset.a11ySetting === 'colorTheme');
+  assert.deepEqual(themes.map(i => i.value), ['normal', 'warm', 'cool', 'teal', 'public-blue']);
+  assert.ok(themes.at(-1).checked);
 });
 
 test('不正な保存値でも標準で開ける', () => {
@@ -78,4 +95,26 @@ test('保存禁止でも変更でき、保存できない旨を表示する', ()
   assert.equal(app.document.documentElement.dataset.colorTheme, 'warm');
   assert.match(app.note.textContent, /保存できません/);
   assert.ok(app.warnings.length > 0);
+});
+
+test('公共デザイン・ブルーと詳しさ・ふりがなを初回描画から併用できる', () => {
+  const saved = '{"colorTheme":"public-blue","reading":"easy","furigana":"on"}';
+  const app = load(saved, false, 'loading');
+  const { dataset } = app.document.documentElement;
+  assert.equal(dataset.colorTheme, 'public-blue');
+  assert.equal(dataset.reading, 'easy');
+  assert.equal(dataset.furigana, 'on');
+  assert.equal(app.saved(), saved);
+  app.handlers.DOMContentLoaded();
+  const detail = app.inputs.find(i => i.dataset.a11ySetting === 'reading' && i.value === 'detail');
+  app.handlers.change({ target: { closest: () => detail } });
+  assert.equal(dataset.colorTheme, 'public-blue');
+  assert.equal(dataset.reading, 'detail');
+  assert.equal(dataset.furigana, 'on');
+  const restored = load(app.saved());
+  assert.equal(restored.document.documentElement.dataset.reading, 'detail');
+  assert.equal(restored.document.documentElement.dataset.furigana, 'on');
+  restored.handlers['.a11y-resetclick']();
+  assert.equal(restored.document.documentElement.dataset.reading, 'standard');
+  assert.equal(restored.document.documentElement.dataset.furigana, 'off');
 });
