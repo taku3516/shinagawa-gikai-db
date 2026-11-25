@@ -73,10 +73,10 @@
       ${review(bill.id, data.reviews[bill.id])}</article>`;
   }
 
-  /** @param {HTMLFormElement} form @param {string} name @param {string[]} values @param {string} heading @returns {void} */
-  function makeOptions(form, name, values, heading) {
+  /** @param {HTMLFormElement} form @param {string} name @param {string[]} values @param {string} heading @param {string|null} [initial] @returns {void} */
+  function makeOptions(form, name, values, heading, initial) {
     const field = form.elements[name];
-    const value = field.value || params.get(name) || "";
+    const value = initial ?? field.value;
     field.innerHTML = `<option value="">${esc(heading)}</option>` + [...new Set(values.filter(Boolean))]
       .map(item => `<option value="${esc(item)}">${esc(item)}</option>`).join("");
     field.value = [...field.options].some(option => option.value === value) ? value : "";
@@ -104,7 +104,7 @@
       ${select("meeting", "会議", [""])}
       ${select("tag", "種別", [""])}
       ${select("policy", "政策分野", [""])}
-      ${select("result", matrix ? "賛否" : "議決結果", matrix ? [["", "すべて"], ["split", "賛否が割れた"], ["unanimous", "全会一致（表決参加者）"]] : [""])}
+      ${select("result", matrix ? "賛否" : "議決結果", matrix ? [["", "すべて"], ["split", "賛否が割れた"], ["unanimous", "全会一致（表決参加者）"]] : [""], params.get("result") || "")}
       ${input("q", "件名・議案番号", params.get("q") || "")}
       <button>絞り込む</button></form><p role="status"></p><div class="civic-stack" data-results></div>
       <button type="button" data-more hidden>さらに表示</button>`;
@@ -114,6 +114,7 @@
     const more = root.querySelector("[data-more]");
     let limit = 30;
     let currentRequest = 0;
+    let initialFilters = params;
     const render = async () => {
       const request = ++currentRequest;
       const selection = form.elements.year.value;
@@ -122,13 +123,14 @@
         await civic.loadYears(selection === "all" ? undefined : [selection]);
         if (request !== currentRequest) return;
         const rows = civic.bills().filter(item => selection === "all" || item.yearId === selection);
-        makeOptions(form, "meeting", rows.map(item => item.meetingId), "すべての会議");
+        makeOptions(form, "meeting", rows.map(item => item.meetingId), "すべての会議", initialFilters?.get("meeting"));
         for (const option of form.elements.meeting.options) {
           option.textContent = rows.find(item => item.meetingId === option.value)?.meeting?.name || option.textContent;
         }
-        makeOptions(form, "tag", rows.flatMap(item => item.tags || []), "すべての種別");
-        makeOptions(form, "policy", rows.map(item => data.billDetails[item.id]?.policy || "分野未収録"), "すべての分野");
-        if (!matrix) makeOptions(form, "result", rows.map(item => item.result), "すべての議決結果");
+        makeOptions(form, "tag", rows.flatMap(item => item.tags || []), "すべての種別", initialFilters?.get("tag"));
+        makeOptions(form, "policy", rows.map(item => data.billDetails[item.id]?.policy || "分野未収録"), "すべての分野", initialFilters?.get("policy"));
+        if (!matrix) makeOptions(form, "result", rows.map(item => item.result), "すべての議決結果", initialFilters?.get("result"));
+        initialFilters = null;
         const filter = filters(form);
         const filtered = rows.filter(item => (!filter.get("meeting") || item.meetingId === filter.get("meeting"))
           && (!filter.get("tag") || item.tags?.includes(filter.get("tag")))

@@ -26,9 +26,12 @@
     const roster = [...db.membersData.members, ...db.formerMembersData.members];
     const names = nameIndex(db.peopleData.people);
     const years = db.site.years.filter(year => year.available);
-    const active = roster.find(member => member.id === query.get("id"));
-    const selectedYear = years.some(year => year.id === query.get("year")) ? query.get("year") : years[0].id;
-    if (query.has("id") && !active) {
+    const requestedMember = query.get("id");
+    const requestedYear = query.get("year");
+    const active = roster.find(member => member.id === requestedMember);
+    const selectedYear = requestedYear === "all" || years.some(year => year.id === requestedYear)
+      ? requestedYear : years[0].id;
+    if (requestedMember && !active) {
       root.innerHTML = `<p>指定された議員は未収録です。</p><p>${link("議員の一覧", "giin-katsudo.html")}</p>`;
       return;
     }
