@@ -435,6 +435,7 @@
 
   <!-- データ読み込み（script形式なので file:// のダブルクリックでも動く） -->
   <script src="data/site.js"></script>
+  <script src="civic-data.js"></script>
   <script src="data/people.js"></script>
   <script src="data/speaker-members.js"></script>
   <script src="data/r08.js"></script>
@@ -699,7 +700,7 @@
       return `
         <article class="card">
           ${tagsHtml(bill.tags, bill.result)}
-          <h3>${esc(bill.title)}</h3>
+          <h3><a href="${esc(window.SHINAGAWA_CIVIC.billUrl(bill))}">${esc(bill.title)}</a></h3>
           <p>${esc(bill.summary)}</p>
           ${pillsHtml(bill.links, site)}
         </article>`;

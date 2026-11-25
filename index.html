@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
+  <link rel="stylesheet" href="civic.css" />
   <style>
     /* ===== 基調カラー：深い青と生成りを使った、公文書・資料庫を思わせる配色 ===== */
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
@@ -59,6 +60,12 @@
     <div class="hero">
       <div class="container" id="hero-root"></div>
     </div>
+
+    <section class="container civic" id="civic-session" aria-label="議会の会期">
+      <div class="civic-card" data-civic-page="session"><p>日程を読み込んでいます。</p></div>
+      <p id="civic-home-counts"></p>
+      <p><a href="data-status.html">データ収録状況</a> ／ <a href="katsuyo.html">データを活用する</a></p>
+    </section>
 
     <!-- 参照元 -->
     <section class="sources">
@@ -153,6 +160,26 @@
     init();
   </script>
   <script src="site-nav.js"></script>
+  <script src="civic-data.js"></script>
+  <script src="civic-content.js"></script>
+  <script src="data/civic-sources.js"></script>
+  <script src="civic-ui.js"></script>
+  <script src="civic-legislation.js"></script>
+  <script>
+    (() => {
+      const counts = document.getElementById("civic-home-counts");
+      if (location.protocol === "file:") return;
+      const script = document.createElement("script");
+      script.src = "data/civic-counts.js";
+      script.onload = () => {
+        const data = window.SHINAGAWA_CIVIC_COUNTS;
+        if (data) counts.textContent = `${data.year}の議案 ${data.bills}件 ／ 請願・陳情 ${data.petitions}件（収録件数）`;
+      };
+      script.onerror = () => { counts.textContent = "収録件数はデータ収録状況から確認できます。"; };
+      document.head.append(script);
+    })();
+  </script>
+  <script src="civic-page.js"></script>
   <script src="site-a11y.js"></script>
 </body>
 </html>

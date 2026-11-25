@@ -1,0 +1,170 @@
+/* 公式資料と突き合わせた事実。確認日は資料の閲覧日。 */
+window.SHINAGAWA_CIVIC_SOURCES = {
+  sessions: [{
+    id: "r08-4t", name: "令和8年第4回定例会", start: "2026-12-03", end: "2026-12-17",
+    source: { label: "令和8年第4回定例会の日程", url: "https://gikai.city.shinagawa.tokyo.jp/schedule/20843.html", locator: "会期および日程表", checkedAt: "2026-11-25" },
+    events: [
+      ["2026-12-02", "議会運営委員会（開会前）"], ["2026-12-03", "一般質問"],
+      ["2026-12-04", "一般質問・議案上程"], ["2026-12-07", "常任委員会"],
+      ["2026-12-08", "常任委員会"], ["2026-12-09", "特別委員会"],
+      ["2026-12-10", "特別委員会"], ["2026-12-16", "議会運営委員会"],
+      ["2026-12-17", "委員長報告・表決"]
+    ]
+  }],
+  votes: {},
+  voteSource: { label: "令和7年第1回定例会 議案と各議員の賛否の状況", url: "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r07_01t_s.pdf#page=1", checkedAt: "2026-11-25" },
+  budgets: {
+    source: { label: "令和8年度当初予算", url: "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005654.html", locator: "一般会計 歳入・歳出", checkedAt: "2026-11-25" },
+    population: {
+      "fy-r08": { count: 417833, date: "2026-04-01", url: "https://www.city.shinagawa.tokyo.jp/contentshozon2026/202604a.pdf" },
+      "fy-r06": { count: 410260, date: "2024-04-01", url: "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2025.06.09kou02.pdf" },
+      "fy-r07": { count: 414581, date: "2025-04-01", url: "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1005753/1005894/1006269/1006320/1006326.html" }
+    },
+    income: [
+      ["特別区税",65592120000,59319835000], ["地方譲与税",537300000,547300000],
+      ["利子割交付金",300000000,300000000], ["配当割交付金",1200000000,1200000000],
+      ["株式等譲渡所得割交付金",1500000000,900000000], ["地方消費税交付金",13900000000,12500000000],
+      ["環境性能割交付金",1000,140000000], ["地方特例交付金",368000000,200000000],
+      ["特別区交付金",52000000000,48000000000], ["交通安全対策特別交付金",31000000,31000000],
+      ["分担金及び負担金",745630000,1424910000], ["使用料及び手数料",4676738000,4694430000],
+      ["国庫支出金",38486163000,42285199000], ["都支出金",26159266000,26033242000],
+      ["財産収入",1052883000,825058000], ["寄附金",631001000,128001000],
+      ["繰入金",19577139000,18423620000], ["繰越金",4000000000,4000000000],
+      ["諸収入",6156759000,7360405000], ["特別区債",0,6450000000]
+    ],
+    spending: [
+      ["議会費",832747000,828057000], ["総務費",27086768000,36060317000], ["民生費",120081607000,114315076000],
+      ["衛生費",19063814000,16917459000], ["産業経済費",3876763000,3750334000], ["土木費",31139944000,32550034000],
+      ["教育費",33184450000,28671916000], ["公債費",1347907000,1369807000], ["予備費",300000000,300000000]
+    ]
+  },
+  projects: [],
+  petitionFollowup: {},
+  reviews: {},
+  surveys: [{
+    id: "shinagawa-2026-005", title: "品川区福祉オンブズマン制度（素案）",
+    start: "2026-11-15", end: "2026-12-15",
+    url: "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006651/1006652/1012243.html",
+    resultNote: "区による結果公表は令和9年3月中旬ごろの予定"
+  }]
+};
+
+(() => {
+  const civic = window.SHINAGAWA_CIVIC_SOURCES;
+  // 公式表の列順。議長は9列目。無所属議員は会派の票として合算しない。
+  civic.voteRoster = [
+    ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo nobuaki_takahashi naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
+    ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+    ["未来", "takahiro_okura kengo_kimura x-higashi-yuki yoshihiro_matsunaga yasuyuki_yamamoto yumiko_yoshida"],
+    ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+    ["品改", "yukihiro_sugai tsutsui_yosuke masanori_fujiwara"],
+    ["維新", "mao_seraku tokihiro_matsumoto"],
+    ["無所属", "x-ishida-shingo ayaka_ogino shinji_takahashi takeshi_tanaka ryo_nakatsuka takako_nishimoto satoshi_yanagisawa yukari_yokoyama"]
+  ].flatMap(([group, members]) => members.split(" ").map(memberId => ({ group, memberId })));
+  const common = "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇";
+  const split = {
+    10: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇××××〇〇〇〇欠〇〇〇〇×〇×〇",
+    12: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇××××〇〇〇〇欠〇〇〇〇×〇×〇",
+    30: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇××××〇〇〇〇欠〇〇〇〇×〇〇〇"
+  };
+  for (let number = 10; number <= 30; number += 1) {
+    const symbols = split[number] || common;
+    civic.votes[`r07-1t:第${number}号議案`] = {
+      type: split[number] ? "split" : "unanimous",
+      locator: `1頁 第${number}号議案`, symbols
+    };
+  }
+  const ordinance = { label: "第80号議案 品川区児童相談所設置条例", url: "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r05_04t_04.pdf", locator: "提出文および条例第1条・附則" };
+  const implementation = { label: "広報しながわ 2025年11月11日号", url: "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1005753/1005894/1006269/1006403/1006406.html", locator: "児童相談所開設1年" };
+  const evaluation = { label: "令和7年度事務事業評価結果", url: "https://www.city.shinagawa.tokyo.jp/kusei/shisakukeikaku/1005171/1005172/1005173.html", locator: "行政評価シート（品川区児童相談所）。令和6年度実施事業が対象" };
+  const evaluationPdf = "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/005/173/20240222105532_42.pdf";
+  const billId = "r05-4t:第80号議案";
+  civic.projects.push({
+    id: "child-guidance-center", name: "品川区児童相談所の設置・運営",
+    purpose: "子どもに関する相談を受け、子どもと家庭を支援する。",
+    office: "子ども未来部（組織条例の分掌事務）", startYear: "令和6年度",
+    audience: "原則として18歳未満の子どもとその家庭",
+    legal: "児童福祉法第12条第1項・第59条の4第1項、品川区児童相談所設置条例",
+    bills: [billId],
+    finance: [
+      { id: "transfer", label: "児童相談所移管推進事業", budgetYen: 83460000, settledYen: 78844000, rate: 94.5, evaluation: "D 完了・廃止する事業", page: 1 },
+      { id: "operations", label: "児童相談所運営費", budgetYen: 172439000, settledYen: 149439000, rate: 86.7, evaluation: "A 拡大する事業", page: 2 },
+      { id: "temporary-care", label: "一時保護所運営費", budgetYen: 49434000, settledYen: 40106000, rate: 81.1, evaluation: "B 継続する事業", page: 3 },
+      { id: "maintenance", label: "児童相談所維持管理経費", budgetYen: 82501000, settledYen: 76933000, rate: 93.3, evaluation: "B 継続する事業", page: 4 }
+    ].map(account => ({
+      ...account, year: "令和6年度", evaluationYear: "令和7年度",
+      source: { label: "令和7年度事務事業評価シート（品川区児童相談所）", url: evaluationPdf + "#page=" + account.page,
+        locator: account.page + "頁「4 予算・決算（概要）」「6 評価」" }
+    })),
+    indicators: [{
+      label: "虐待相談対応件数", target: 913, actual: 602, unit: "件",
+      year: "令和6年度", source: { label: "児童相談所運営費の評価シート", url: evaluationPdf + "#page=2", locator: "2頁「3 事業の実績・課題」" }
+    }, {
+      label: "外部専門研修参加人数", target: 228, actual: 178, unit: "人（延べ）",
+      year: "令和6年度", source: { label: "児童相談所運営費の評価シート", url: evaluationPdf + "#page=2", locator: "2頁「3 事業の実績・課題」" }
+    }],
+    changes: ["令和6年度に移管推進事業を完了。開設後は運営・維持管理の各事業を開始（公式評価シート1頁）"],
+    timeline: [
+      { date: "2023-11-22", label: "設置条例案を提出", source: ordinance },
+      { date: "2024-10-01", label: "区が東京都から相談事務の移管を受け、児童相談所を開設", source: implementation },
+      { date: "令和7年度", label: "令和6年度実施の4小事業を事務事業評価", source: evaluation }
+    ],
+    sources: [ordinance, implementation, evaluation, {
+      label: "令和5年第4回定例会 提出議案等",
+      url: "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r05_04t/r05_04t1-2",
+      locator: "第77号・第80号議案"
+    }]
+  });
+  civic.billDetails = {
+    [billId]: {
+      policy: "子ども・子育て",
+      easy: "品川区が、子どもと家族のための相談所を設ける案です。2024年10月1日から施行されます。",
+      detail: "児童福祉法に基づいて品川区児童相談所を設置し、名称・位置・所管区域を定めます。",
+      points: "品川区の全域を所管する児童相談所を北品川三丁目に設置する。",
+      impact: "東京都から相談事務が移管され、品川区児童相談所が子どもに関する相談を受け付ける。",
+      affected: "原則として18歳未満の子どもとその家庭。",
+      timeline: [{ date: "2023-11-22", label: "区長が議案を提出", url: ordinance.url }],
+      related: [{ label: "児童相談所の事業カルテ", url: "jigyo.html?id=child-guidance-center" }, implementation]
+    }
+  };
+  const taxPetitionOutcome = [{
+    stage: "議会からの意見書", date: "2025-10-23",
+    text: "品川区議会は東京都に対し、令和8年度以降も固定資産税・都市計画税の軽減措置を継続するよう求める意見書を議決した。",
+    source: {
+      label: "令和7年10月23日 固定資産税・都市計画税の軽減措置の継続を求める意見書",
+      url: "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r07_03t_04.pdf",
+      locator: "本文・日付"
+    },
+    relation: {
+      label: "令和7年10月22日 議会運営委員会会議録（請願第12号・第17号との対応）",
+      url: "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/2025.10.22gu.pdf"
+    }
+  }];
+  for (const id of ["p-r07-s12", "p-r07-s17"]) civic.petitionFollowup[id] = taxPetitionOutcome;
+  const newsletter = {
+    label: "品川区議会だより第292号",
+    url: "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/tayori/292/292_p6-7.pdf",
+    locator: "7頁 採択した請願・陳情に対する区の対応について"
+  };
+  civic.petitionFollowup["p-r03-s12"] = [
+    { stage: "行政による対応", date: "2022-04-26", text: "区は、隣地に集合住宅を計画した事業者に現状変更届の提出を求めたと公表した。", source: newsletter },
+    { stage: "継続的な課題", date: "2022-04-26", text: "教育委員会は、神社と事業者の見解が異なり、調整を続ける方針だと公表した。", source: newsletter }
+  ];
+  civic.petitionFollowup["p-r03-c56"] = [
+    { stage: "行政による対応", date: "2022-04-26", text: "区は、大崎駅東口の閉鎖中の喫煙所を密閉型に改めて再開する計画と、事業所への助言・啓発を公表した。", source: newsletter }
+  ];
+  civic.reviews[billId] = { ai: true };
+  civic.reviewedSources = { [billId]: [ordinance, implementation] };
+  civic.seimuSummary = {
+    year: "令和7年度", source: { label: "令和7年度 政務活動費収支一覧", url: "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/state-affairs_r07_1.pdf", locator: "1頁 会派別収支および支出内訳" },
+    categories: ["調査研究費", "研修費", "会議費", "資料費", "広報・広聴活動費", "事務費", "人件費"],
+    rows: [
+      ["r07-01", 18810000, 18737343, [2869887,166145,0,133657,7801601,4809053,2957000]],
+      ["r07-02", 16530000, 13406043, [991307,1220,0,173267,6617410,2850339,2772500]],
+      ["r07-03", 15960000, 9324958, [8600,124174,12950,742083,3947056,3710969,779126]],
+      ["r07-04", 9120000, 9122794, [1204955,151310,29080,257870,3863722,1443337,2172520]],
+      ["r07-05", 1710000, 655505, [0,0,0,25300,38040,112165,480000]],
+      ["r07-06", 4560000, 2631830, [132000,34542,0,78764,2337445,49079,0]]
+    ]
+  };
+})();

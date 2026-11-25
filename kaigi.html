@@ -99,6 +99,7 @@
   <footer><div class="container">品川区議会DB — 一次情報は品川区議会公式サイトで確認してください。</div></footer>
 
   <script src="data/site.js"></script>
+  <script src="civic-data.js"></script>
   <script src="data/r08.js"></script>
   <script src="data/r08-complete.js"></script>
   <script>
@@ -219,7 +220,7 @@
       ].join("");
       let sections="";
       if ((meeting.events||[]).length) sections+=block(`timeline-${meeting.id}`,"日程・タイムライン",`${meeting.events.length}件`,timelineHtml(meeting.events),true);
-      if (related.bills.length) sections+=block(`bills-${meeting.id}`,"議案",`${related.bills.length}件`,`<div class="cards">${related.bills.map((x)=>`<article class="card"><h3>${esc(x.title)}</h3><p>${esc(x.summary||"")}</p>${pills(x.links)}</article>`).join("")}</div>`);
+      if (related.bills.length) sections+=block(`bills-${meeting.id}`,"議案",`${related.bills.length}件`,`<div class="cards">${related.bills.map((x)=>`<article class="card"><h3><a href="${esc(window.SHINAGAWA_CIVIC.billUrl(x))}">${esc(x.title)}</a></h3><p>${esc(x.summary||"")}</p>${pills(x.links)}</article>`).join("")}</div>`);
       if (related.petitions.length) sections+=block(`petitions-${meeting.id}`,"請願・陳情",`${related.petitions.length}件`,`<div class="cards">${related.petitions.map((x)=>`<article class="card"><h3>${esc([x.number,x.title].filter(Boolean).join(" "))}</h3><p>${esc(x.summary||x.result||"")}</p><div class="pills"><a class="pill" href="${esc(petitionDetailUrl(x))}">この請願・陳情の経過を見る</a></div>${pills(x.links)}</article>`).join("")}</div>`);
       if (related.questions.length) sections+=block(`questions-${meeting.id}`,"代表質問・一般質問",`${related.questions.length}名`,questionsHtml(related.questions,meeting),true);
       if (related.sessions.length||related.pending.length) sections+=block(`committees-${meeting.id}`,"委員会の質問・答弁",`${related.sessions.length}会議・${committeeCount}件`,sessionsHtml(related.sessions,related.pending));
