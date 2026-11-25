@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-25T01:34:56.424348Z",
+  "generatedAt": "2026-11-25T16:00:30.862965Z",
   "events": [
     {
       "id": "8c8e2e66944f32bfab29",
@@ -1721,31 +1721,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-14"
     },
     {
-      "id": "c68d7e3101cae7eb8647",
-      "title": "認知症サポーター企画会議",
-      "summary": "認知症啓発イベント「しながわオレンジフェスタ」の企画・運営を通して、認知症サポーターとして、認知症を含む誰もが自分らしく暮らし続けられるまちづくりを考える場です。初めての方、認知症サポーターでない方もどなたでもご参加いただけます。4期「しながわオレンジフェスタ」のサポーターも募集中です。",
-      "url": "https://www.city.shinagawa.tokyo.jp/kenko/ninchisho/1009477/1008857.html",
-      "sourceId": "city-calendar",
-      "source": "品川区 イベントカレンダー",
-      "category": "健康・福祉",
-      "dates": [
-        "2026-09-10",
-        "2026-11-12",
-        "2027-01-14",
-        "2027-03-11"
-      ],
-      "startTime": "14:00",
-      "endTime": "16:00",
-      "timeText": "午後2時00分から午後4時00分まで",
-      "place": "荏原第五区民集会 第1集会室荏原第五区民集会 第3集会室",
-      "application": "",
-      "deadline": "",
-      "periods": [],
-      "confidence": "official",
-      "startDate": "2026-09-10",
-      "endDate": "2027-03-11"
-    },
-    {
       "id": "204c4123b9566b851ade",
       "title": "難病療養支援教室のご案内（大井保健センター）",
       "summary": "各保健センターにて、難病で在宅療養をされている方向けにリハビリ教室や音楽療法、交流会を開催しております。リハビリ教室ではパーキンソン病や脊髄小脳変性症などの神経難病の患者さんとそのご家族が参加できます。音楽療法やつどいでは難病患者さんやそのご家族が参加できます。療養生活における情報交換や悩みなどを話し合い、生きがいや楽しみを見つける場として開催しています。お気軽にご参加ください。事業内容やお申し込みなどについては、各保健センターへお問い合わせください。",
@@ -2349,28 +2324,6 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "published",
       "startDate": "2026-09-29",
       "endDate": "2026-09-29"
-    },
-    {
-      "id": "98883e8df2c05dbd95b6",
-      "title": "体験型謎解きイベント「広域品川圏の歩き方」始まる JR東日本が主催",
-      "summary": "体験型謎解きイベント「広域品川圏の歩き方～5つの駅とあなたに届いた謎の紙片～」が9月30日、浜松町・田町・高輪ゲートウェイ・品川・大井町の5駅周辺エリアで始まった。 #品川経済新聞",
-      "url": "http://shinagawa.keizai.biz/headline/5086",
-      "sourceId": "news",
-      "source": "品川経済新聞",
-      "category": "地域イベント",
-      "dates": [
-        "2026-09-30"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "大井",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "9b07c1873aa9db05ed5f",
-      "startDate": "2026-09-30",
-      "endDate": "2026-09-30"
     },
     {
       "id": "b053debd796d24ee7aec",
@@ -3174,35 +3127,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-18"
     },
     {
-      "id": "eb4d6296ae1057323053",
-      "title": "【終了】旗の台稲荷通り商店会「子どもが楽しむ 盆踊り & ハロウィン」",
-      "summary": "2026年10月18日(日) 15:00 ~ 19:00 盆踊りは18:00~19:00 開催場所 旗の台稲荷通り商店会 三軒通り周辺 交通アクセス 東急大井町線・池上線 旗の台駅 すぐ 料金 無料 URL マップ イ",
-      "url": "https://shinagawa-kanko.or.jp/event/bonrock2026/",
-      "sourceId": "kanko",
-      "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-10-18"
-      ],
-      "startTime": "15:00",
-      "endTime": "19:00",
-      "timeText": "2026年10月18日(日) 15:00 ~ 19:00 盆踊りは18:00~19:00 開催場所 旗の台稲荷通り商店会 三軒通り周辺 交通アクセス 東急大井町",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/bonrock2026",
-          "title": "旗の台稲荷通り商店会「子どもが楽しむ 盆踊り & ハロウィン」"
-        }
-      ],
-      "startDate": "2026-10-18",
-      "endDate": "2026-10-18"
-    },
-    {
       "id": "442b4d4be2fdfd206451",
       "title": "エコルとごし「エコルフェス -2026 AUTUMN-」",
       "summary": "2026年10月18日（日）、 エコルとごし にて「エコルフェス -2026 AUTUMN-」が開催されます。 エコルとごしは、戸越公園内にある品川区立環境学習交流施設。秋の一大イベントとして、館内と戸越公園内で環境を楽しく学ぶ講座・ワークショップなどが楽しめます。",
@@ -3243,6 +3167,28 @@ window.SHINAGAWA_EVENTS = {
       "deadline": "",
       "periods": [],
       "confidence": "official",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18"
+    },
+    {
+      "id": "85aa8ee88778fd0268ce",
+      "title": "旗の台稲荷通り商店会「子どもが楽しむ 盆踊り & ハロウィン」",
+      "summary": "2026年10月18日（日）、 旗の台稲荷通り商店会 にて「子どもが楽しむ 盆踊り & ハロウィン」が開催されます。 秋の夜を彩る、旗の台ならではのユニークなイベント。地元のダンススタジオによるキッズダンスや生バンドの演奏、18:00からは、「旗の台音頭」やロックのリズムに合わせて踊る「盆ROCK（盆踊り）」をお楽しみいただけます。盆踊りに参加した小学生以下のお子様には、お菓子のプレゼントも（先着200名、無くなり次第終了）。ハロウィンの仮装での参加も大歓迎です。",
+      "url": "https://shinagawa-kanko.or.jp/event/bonrock2026",
+      "sourceId": "news",
+      "source": "しながわ観光協会",
+      "category": "地域イベント",
+      "dates": [
+        "2026-10-18"
+      ],
+      "startTime": "18:00",
+      "endTime": "",
+      "timeText": "",
+      "place": "旗の台",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "0d15cdf9d9a311b0c5b4",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18"
     },
@@ -3297,29 +3243,6 @@ window.SHINAGAWA_EVENTS = {
       ],
       "startDate": "2026-10-20",
       "endDate": "2026-12-20"
-    },
-    {
-      "id": "6ab63413e5b86ac2362e",
-      "title": "秋季品川区将棋大会（11月8日開催）【参加者募集締切：10月20日（火）消印有効】",
-      "summary": "※参加費用は、無料です。 秋季品川区将棋大会チラシ(PDF : 530KB) 電子申請はこちら（別ウィンドウ表示） 【往復はがき記入例】 （往信側）",
-      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkageijutsu/1003658/1011325.html",
-      "sourceId": "news",
-      "source": "品川区 新着情報",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-20",
-        "2026-11-08"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "81189a3852ad8ec3e54b",
-      "startDate": "2026-10-20",
-      "endDate": "2026-11-08"
     },
     {
       "id": "112eb13ea36d833fd0af",
@@ -3706,30 +3629,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-29"
     },
     {
-      "id": "d6ebd5b44e7ddddb612f",
-      "title": "品川区麻雀大会(11月23日開催)【参加者募集締切：10月30日(金曜日)】",
-      "summary": "",
-      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkageijutsu/1003658/1011324.html",
-      "sourceId": "city-calendar",
-      "source": "品川区 イベントカレンダー",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-10-30",
-        "2026-11-23"
-      ],
-      "startTime": "11:30",
-      "endTime": "16:30",
-      "timeText": "午前11時30分から午後4時30分まで (受付：午前10時50分～11時25分時間厳守)",
-      "place": "きゅりあん(大井町駅前)(品川区東大井5-18-1)7階イベントホール",
-      "application": "必要",
-      "deadline": "2026-10-30",
-      "periods": [],
-      "confidence": "official",
-      "alsoSeenIn": [],
-      "startDate": "2026-10-30",
-      "endDate": "2026-11-23"
-    },
-    {
       "id": "fae463f8324daa3ea2d1",
       "title": "2026大井町ハロウィン",
       "summary": "2026年10月31日（土）、「大井町ハロウィン」が開催されます。 ハロウィンこどもマルシェやフォトスポットラリー、 ステージでは、ハロウィンダンスやファッションショー、ミュージックステージが予定されています。",
@@ -3932,7 +3831,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "0fdf4a53173e91f6b621",
       "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット ザ・ホルモンクラブ・トウキョウ 2021年10月31日 「ホルモン×ガスト",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 東光寺 2018年3月12日 トイレの神様「鳥瑟沙摩大明」を祀る東司 観る",
       "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4760,7 +4659,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット SHINAGAWA",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット NORTH STA",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4930,7 +4829,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "02cb779466e040ca1e46",
       "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
-      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 来福寺 2018年3月9日 饅頭の祖 林浄因の碑",
+      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット そば会席 立会川 吉田家 2018年3月9日 旧",
       "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5710,7 +5609,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "3bdf0afa6cf4dad8469c",
       "title": "【終了】小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
-      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット Parque(",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット nerisa(",
       "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5780,6 +5679,28 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-23"
     },
     {
+      "id": "d6ebd5b44e7ddddb612f",
+      "title": "品川区麻雀大会(11月23日開催)【参加者募集締切：10月30日(金曜日)】",
+      "summary": "",
+      "url": "https://www.city.shinagawa.tokyo.jp/bunka/bunkageijutsu/1003658/1011324.html",
+      "sourceId": "city-calendar",
+      "source": "品川区 イベントカレンダー",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-11-23"
+      ],
+      "startTime": "11:30",
+      "endTime": "16:30",
+      "timeText": "午前11時30分から午後4時30分まで (受付：午前10時50分～11時25分時間厳守)",
+      "place": "きゅりあん(大井町駅前)(品川区東大井5-18-1)7階イベントホール",
+      "application": "必要",
+      "deadline": "2026-10-30",
+      "periods": [],
+      "confidence": "official",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23"
+    },
+    {
       "id": "4ce3943d512faf70ba9e",
       "title": "「第8期障害福祉計画および第4期障害児福祉計画」素案説明会開催のお知らせ（令和8年11月25日開催）",
       "summary": "「第7期品川区障害福祉計画・第3期品川区障害児福祉計画」（令和6年度～令和8年度）が令和8年度をもって期間満了となるため、新たに令和9年度を始期とする「第8期品川区障害福祉計画・第4期品川区障害児福祉計画」の策定を進めています。 このたび、品川区障害福祉計画等策定委員会における協議・検討を経て、計画の素案を作成いたしました。",
@@ -5800,6 +5721,27 @@ window.SHINAGAWA_EVENTS = {
       "newsId": "4e7f4537dacc711c447d",
       "startDate": "2026-11-25",
       "endDate": "2026-11-25"
+    },
+    {
+      "id": "6fa6ecb5d31292081b2e",
+      "title": "海雲寺「千躰荒神秋季大祭」",
+      "summary": "2026年11月27日(金)、28日(土) 開催場所 海雲寺 品川区南品川3-5-21 交通アクセス 京急線 青物横丁駅 徒歩2分 りんかい線 品川シーサイド駅 徒歩10分 電話番号 03-3471-0418(9:00~17:00) URL マップ イベントカレンダー",
+      "url": "https://shinagawa-kanko.or.jp/event/sentaikoujinaki2026/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-11-27"
+      ],
+      "startTime": "09:00",
+      "endTime": "17:00",
+      "timeText": "2026年11月27日(金)、28日(土) 開催場所 海雲寺 品川区南品川3-5-21 交通アクセス 京急線 青物横丁駅 徒歩2分 りんかい線 品川シーサイド駅",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "startDate": "2026-11-27",
+      "endDate": "2026-11-27"
     },
     {
       "id": "086a0a47f54d55eda9a2",
@@ -6019,6 +5961,28 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "official",
       "startDate": "2026-11-28",
       "endDate": "2026-11-28"
+    },
+    {
+      "id": "6cbbe301623a3225f992",
+      "title": "【品川区】住宅相談や包丁研ぎも「第44回品川区住宅まつり」西大井広場公園で11/29開催",
+      "summary": "西大井駅前の西大井広場公園で、2026年11月29日（日）に「第44回品川区住宅まつり」が開かれます。住宅相談や包丁研ぎ、工作広場などが行われ、小雨決行とのことです。 〇日時：2026年11月29日（日）午前10時～午後 […]",
+      "url": "https://shinagawa.goguynet.jp/2026/11/25/shinagawa-jutaku-matsuri",
+      "sourceId": "news",
+      "source": "号外NET 品川区",
+      "category": "地域イベント",
+      "dates": [
+        "2026-11-29"
+      ],
+      "startTime": "10:00",
+      "endTime": "",
+      "timeText": "",
+      "place": "西大井 大井 西大井駅",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "b664dde9f1863dda018c",
+      "startDate": "2026-11-29",
+      "endDate": "2026-11-29"
     },
     {
       "id": "db00b6cea1c59c851c2a",
@@ -7025,6 +6989,29 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2027-01-11"
     },
     {
+      "id": "c68d7e3101cae7eb8647",
+      "title": "認知症サポーター企画会議",
+      "summary": "",
+      "url": "https://www.city.shinagawa.tokyo.jp/kenko/ninchisho/1009477/1008857.html",
+      "sourceId": "city-calendar",
+      "source": "品川区 イベントカレンダー",
+      "category": "健康・福祉",
+      "dates": [
+        "2027-01-14",
+        "2027-03-11"
+      ],
+      "startTime": "14:00",
+      "endTime": "16:00",
+      "timeText": "午後2時00分から午後4時00分まで",
+      "place": "荏原第五区民集会 第1集会室 （品川区二葉1-1-2）",
+      "application": "必要",
+      "deadline": "",
+      "periods": [],
+      "confidence": "official",
+      "startDate": "2027-01-14",
+      "endDate": "2027-03-11"
+    },
+    {
       "id": "275fbe59ca6ea03e1622",
       "title": "令和8年度 区民向け講演会のご案内",
       "summary": "外食で食べきれなかった料理をそのまま残していませんか？「食べ残し持ち帰り促進ガイドライン」をもとに、安全な持ち帰りのポイントと、持ち帰り促進の取組事例をお話しいただきます。",
@@ -7114,6 +7101,28 @@ window.SHINAGAWA_EVENTS = {
       "alsoSeenIn": [],
       "startDate": "2027-01-31",
       "endDate": "2027-01-31"
+    },
+    {
+      "id": "97b8229fbece650c9f00",
+      "title": "『VIVANT』監修者・清水建二氏がドラマを題材に教える「”人の気持ち”の読み解き方と伝え方―交渉に活かす表情・しぐさコミュニケーション―」研修、2027年2月6日（土）東京で開催",
+      "summary": "[NPO法人日本交渉協会] 特定非営利活動法人日本交渉協会（東京都目黒区、代表理事：安藤 雅旺）は、2027年2月6日（土）、東京・大井町のきゅりあん（品川区立総合区民会館）にて、交渉に興味関心のある方を対象に、実践研修、『VIVANT』...",
+      "url": "https://prtimes.jp/main/html/rd/p/000000001.000195323.html",
+      "sourceId": "news",
+      "source": "PR TIMES",
+      "category": "地域イベント",
+      "dates": [
+        "2027-02-06"
+      ],
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "大井 目黒 大井町 きゅりあん",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "97cc051574c4633d8ccb",
+      "startDate": "2027-02-06",
+      "endDate": "2027-02-06"
     }
   ],
   "holidays": [
@@ -7476,7 +7485,7 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "news",
       "source": "区のニュース",
       "status": "ok",
-      "accepted": 113
+      "accepted": 112
     }
   ]
 };
