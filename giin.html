@@ -348,6 +348,8 @@
           ${extraSlotHtml("SNS", m.sns)}
           ${speechSlotHtml(m)}
           ${questionSlotHtml(m)}
+          ${(window.SHINAGAWA_DB.membersData?.members.includes(m) || window.SHINAGAWA_DB.formerMembersData?.members.includes(m))
+            ? `<p><a href="giin-katsudo.html?id=${encodeURIComponent(m.id)}">議員ダッシュボード</a></p>` : ""}
           ${electionSlotHtml(m)}
           ${electionFinanceSlotHtml(m)}
           ${politicalFundSlotHtml(m)}

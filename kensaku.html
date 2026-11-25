@@ -363,6 +363,9 @@
   <script src="data/senkyo-shushi.js"></script>
   <script src="data/news-items.js"></script>
   <script src="data/resolutions.js"></script>
+  <script src="civic-content.js"></script>
+  <script src="civic-data.js"></script>
+  <script src="data/civic-sources.js"></script>
 
   <script>
     "use strict";
@@ -376,7 +379,8 @@
       { id: "expenses", label: "政務活動費" },
       { id: "political-funds", label: "政治資金" },
       { id: "resolutions", label: "意見書・決議等" },
-      { id: "news", label: "ニュース" }
+      { id: "news", label: "ニュース" },
+      { id: "services", label: "使い方・事業・用語" }
     ];
     const CATEGORY_LABELS = Object.fromEntries(CATEGORY_DEFS.map((item) => [item.id, item.label]));
     const PAGE_SIZE = 30;
@@ -523,7 +527,7 @@
 
       for (const bill of yearData.bills || []) {
         addItem({
-          id: `bill-${yearId}-${bill.meetingId}-${bill.number || INDEX.length}`,
+          id: `bill-${window.SHINAGAWA_CIVIC.billId(bill)}`,
           category: "council",
           type: "議案",
           year,
@@ -533,7 +537,8 @@
           result: bill.result || "",
           primary: [bill.number, bill.proposer, meetingNames[bill.meetingId]],
           tags: bill.tags || [],
-          links: [{ type: "internal", label: "DB内で議案を開く", url: `kaigiroku.html#bills-${bill.meetingId}` }].concat(bill.links || [])
+          links: [{ type: "internal", label: "議案の詳細・経過", url: window.SHINAGAWA_CIVIC.billUrl(bill) },
+            { type: "internal", label: "会議録の議案一覧", url: `kaigiroku.html#bills-${bill.meetingId}` }].concat(bill.links || [])
         });
       }
 
@@ -751,6 +756,25 @@
       for (const member of roster.members || []) {
         addPerson(member, rosterLabels[rosterId] || member.statusLabel || "政治家", { rosterUrl: `giin.html?view=${rosterId}` });
       }
+    }
+
+    for (const [title, url, body] of window.SHINAGAWA_CIVIC_CONTENT.pages) {
+      addItem({ category: "services", type: "機能", title, body, links: [{ type: "internal", label: title, url }] });
+    }
+    for (const session of window.SHINAGAWA_CIVIC_SOURCES.sessions) {
+      addItem({ category: "services", type: "会期日程", title: session.name, date: session.start,
+        primary: ["会期", "プログレス", "定例会の日程"],
+        body: session.start + " 〜 " + session.end + "（公式予定）",
+        links: [{ type: "internal", label: "トップの会期表示", url: "index.html#civic-session" },
+          { type: "official", label: session.source.label, url: session.source.url }] });
+    }
+    for (const [title, reading, body] of window.SHINAGAWA_CIVIC_CONTENT.glossary) {
+      addItem({ category: "services", type: "用語", title, body, primary: [reading],
+        links: [{ type: "internal", label: "用語辞典", url: `yogo.html?q=${encodeURIComponent(title)}` }] });
+    }
+    for (const item of window.SHINAGAWA_CIVIC_SOURCES.projects) {
+      addItem({ category: "services", type: "事業", title: item.name, body: item.purpose,
+        links: [{ type: "internal", label: "事業カルテ", url: `jigyo.html?id=${encodeURIComponent(item.id)}` }] });
     }
 
     const electionTypeLabels = Object.fromEntries(

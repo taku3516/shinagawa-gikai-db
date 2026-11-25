@@ -2,12 +2,14 @@
   "use strict";
 
   const STORAGE_KEY = "shinagawa-db-a11y-v1";
-  const DEFAULTS = { fontSize: "normal", colorTheme: "normal", contrast: "normal", motion: "normal" };
+  const DEFAULTS = { fontSize: "normal", colorTheme: "normal", contrast: "normal", motion: "normal", reading: "standard", furigana: "off" };
   const allowed = {
     fontSize: new Set(["normal", "large", "xlarge"]),
     colorTheme: new Set(["normal", "warm", "cool", "teal", "public-blue"]),
     contrast: new Set(["normal", "high"]),
-    motion: new Set(["normal", "reduced"])
+    motion: new Set(["normal", "reduced"]),
+    reading: new Set(["easy", "standard", "detail"]),
+    furigana: new Set(["on", "off"])
   };
   let settings = { ...DEFAULTS };
   let storageNote = null;
@@ -28,6 +30,8 @@
     root.dataset.colorTheme = settings.colorTheme;
     root.dataset.contrast = settings.contrast;
     root.dataset.motion = settings.motion;
+    root.dataset.reading = settings.reading;
+    root.dataset.furigana = settings.furigana;
   }
 
   /** @returns {void} */
@@ -99,10 +103,37 @@
             <label><input type="radio" name="a11y-motion" value="reduced" data-a11y-setting="motion">動きを減らす</label>
           </div>
         </fieldset>
+        <fieldset class="a11y-group">
+          <legend>説明の詳しさ</legend>
+          <div class="a11y-options">
+            <label><input type="radio" name="a11y-reading" value="easy" data-a11y-setting="reading">やさしい</label>
+            <label><input type="radio" name="a11y-reading" value="standard" data-a11y-setting="reading">標準</label>
+            <label><input type="radio" name="a11y-reading" value="detail" data-a11y-setting="reading">詳しい</label>
+          </div>
+          <p class="a11y-note">説明文が用意されている箇所に適用します。</p>
+        </fieldset>
+        <fieldset class="a11y-group">
+          <legend>ふりがな</legend>
+          <div class="a11y-options">
+            <label><input type="radio" name="a11y-ruby" value="off" data-a11y-setting="furigana">表示しない</label>
+            <label><input type="radio" name="a11y-ruby" value="on" data-a11y-setting="furigana">表示する</label>
+          </div>
+        </fieldset>
         <button class="a11y-reset" type="button">設定を初期状態に戻す</button>
         <p class="a11y-note a11y-storage-note" role="status"></p>
       </section>`;
     document.body.appendChild(wrapper);
+    const footer = document.querySelector("footer .container");
+    if (footer && !location.pathname.endsWith("/report.html")) {
+      const report = document.createElement("a");
+      report.href = (window.SHINAGAWA_SITE_BASE || "") + "report.html";
+      report.textContent = "誤りを報告";
+      report.addEventListener("click", () => {
+        const page = location.protocol === "file:" ? location.pathname.split("/").pop() + location.search + location.hash : location.href;
+        report.search = new URLSearchParams({ page }).toString();
+      });
+      footer.append(" ／ ", report);
+    }
     storageNote = wrapper.querySelector(".a11y-storage-note");
 
     const launcher = wrapper.querySelector(".a11y-launcher");

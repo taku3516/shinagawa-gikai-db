@@ -96,3 +96,25 @@ test('保存禁止でも変更でき、保存できない旨を表示する', ()
   assert.match(app.note.textContent, /保存できません/);
   assert.ok(app.warnings.length > 0);
 });
+
+test('公共デザイン・ブルーと詳しさ・ふりがなを初回描画から併用できる', () => {
+  const saved = '{"colorTheme":"public-blue","reading":"easy","furigana":"on"}';
+  const app = load(saved, false, 'loading');
+  const { dataset } = app.document.documentElement;
+  assert.equal(dataset.colorTheme, 'public-blue');
+  assert.equal(dataset.reading, 'easy');
+  assert.equal(dataset.furigana, 'on');
+  assert.equal(app.saved(), saved);
+  app.handlers.DOMContentLoaded();
+  const detail = app.inputs.find(i => i.dataset.a11ySetting === 'reading' && i.value === 'detail');
+  app.handlers.change({ target: { closest: () => detail } });
+  assert.equal(dataset.colorTheme, 'public-blue');
+  assert.equal(dataset.reading, 'detail');
+  assert.equal(dataset.furigana, 'on');
+  const restored = load(app.saved());
+  assert.equal(restored.document.documentElement.dataset.reading, 'detail');
+  assert.equal(restored.document.documentElement.dataset.furigana, 'on');
+  restored.handlers['.a11y-resetclick']();
+  assert.equal(restored.document.documentElement.dataset.reading, 'standard');
+  assert.equal(restored.document.documentElement.dataset.furigana, 'off');
+});

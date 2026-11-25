@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
+  <link rel="stylesheet" href="civic.css" />
   <style>
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
@@ -100,6 +101,7 @@
         <div id="fy-root"></div>
       </div>
     </section>
+    <section class="container civic" id="fiscal-comparison" data-civic-page="fiscal" aria-label="お金の見える化"></section>
   </main>
   <footer><div class="container">品川区議会DB — 予算・決算の一次情報は品川区公式サイトです。</div></footer>
 
@@ -250,5 +252,11 @@
       });
     })();
   </script>
+  <script src="civic-data.js"></script>
+  <script src="civic-content.js"></script>
+  <script src="data/civic-sources.js"></script>
+  <script src="civic-ui.js"></script>
+  <script src="civic-finance.js"></script>
+  <script src="civic-page.js"></script>
 </body>
 </html>

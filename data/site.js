@@ -22,6 +22,10 @@ window.SHINAGAWA_DB.site = {
           "url": "kaigiroku.html"
         },
         {
+          "label": "議案トラッカー",
+          "url": "gian.html"
+        },
+        {
           "label": "請願・陳情",
           "url": "seigan.html"
         },
@@ -78,6 +82,14 @@ window.SHINAGAWA_DB.site = {
         {
           "label": "町会区域",
           "url": "chokai-map.html"
+        },
+        {
+          "label": "わたしの地域",
+          "url": "watashi-no-chiiki.html"
+        },
+        {
+          "label": "データを活用する",
+          "url": "katsuyo.html"
         },
         {
           "label": "横断検索",

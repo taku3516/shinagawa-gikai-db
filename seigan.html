@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="site-controls.css" />
   <link rel="stylesheet" href="site-mobile.css" />
   <link rel="stylesheet" href="site-a11y.css" />
+  <link rel="stylesheet" href="civic.css" />
   <style>
     /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
        一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
@@ -145,6 +146,11 @@
   <script src="data/site.js"></script>
   <script src="site-nav.js"></script>
   <script src="data/petitions.js"></script>
+  <script src="civic-data.js"></script>
+  <script src="civic-content.js"></script>
+  <script src="data/civic-sources.js"></script>
+  <script src="civic-ui.js"></script>
+  <script src="civic-legislation.js"></script>
   <script>
     "use strict";
 
@@ -467,6 +473,8 @@
 
           <h3>委員会での審査</h3>
           ${committeesHtml(item)}
+
+          ${window.SHINAGAWA_LEGISLATION.petition(item)}
 
           <h3>公式資料</h3>
           <div>${officialLinks.map((link) => linkPill(link, "pill--seigan")).join("")}
