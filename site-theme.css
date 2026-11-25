@@ -323,6 +323,29 @@ html[data-color-theme="cool"] {
   --c-main-border: #657b89;
 }
 
+html[data-color-theme="teal"] {
+  --c-bg: #edf2f0;
+  --c-card: #ffffff;
+  --c-surface-sub: #e6efec;
+  --c-ink: #1c2422;
+  --c-ink-soft: #3d4a46;
+  --c-ink-mute: #54635e;
+  --c-border: #93a49d;
+  --c-border-strong: #75857e;
+  --c-rule: #d3ded9;
+  --c-main: #0e4f4a; /* デモのキーカラー */
+  --c-main-dark: #0a3f3b;
+  --c-main-deep: #07302d;
+  --c-main-pale: #e0edea;
+  --c-main-pale-2: #cfe3de;
+  --c-main-border: #7fa8a1;
+}
+
+/* 縦スクロールバーが幅を取る場合も、設定パネルを表示領域に収める。 */
+@media (max-width: 520px) {
+  .a11y-panel { max-width: calc(100% - 16px); }
+}
+
 html[data-contrast="high"] {
   --c-bg: #ffffff;
   --c-card: #ffffff;

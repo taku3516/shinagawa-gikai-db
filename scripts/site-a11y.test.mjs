@@ -47,7 +47,7 @@ test('初期状態と旧設定では標準配色を維持する', () => {
 });
 
 test('配色の変更・再読込・リセットと他の設定の併用', () => {
-  for (const value of ['warm', 'cool']) {
+  for (const value of ['warm', 'cool', 'teal']) {
     const app = load('{"fontSize":"large","contrast":"high","motion":"reduced"}');
     const input = app.inputs.find(i => i.value === value && i.dataset.a11ySetting === 'colorTheme');
     assert.ok(input);

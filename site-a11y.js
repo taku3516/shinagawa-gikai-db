@@ -5,7 +5,7 @@
   const DEFAULTS = { fontSize: "normal", colorTheme: "normal", contrast: "normal", motion: "normal" };
   const allowed = {
     fontSize: new Set(["normal", "large", "xlarge"]),
-    colorTheme: new Set(["normal", "warm", "cool"]),
+    colorTheme: new Set(["normal", "warm", "cool", "teal"]),
     contrast: new Set(["normal", "high"]),
     motion: new Set(["normal", "reduced"])
   };
@@ -76,8 +76,9 @@
             <label><input type="radio" name="a11y-theme" value="normal" data-a11y-setting="colorTheme">標準（今の配色）</label>
             <label><input type="radio" name="a11y-theme" value="warm" data-a11y-setting="colorTheme">生成り</label>
             <label><input type="radio" name="a11y-theme" value="cool" data-a11y-setting="colorTheme">青みグレー</label>
+            <label><input type="radio" name="a11y-theme" value="teal" data-a11y-setting="colorTheme">デモ配色</label>
           </div>
-          <p class="a11y-note">見やすい配色を選んでください。生成りは淡いクリーム色、青みグレーは淡い青灰色の背景です。</p>
+          <p class="a11y-note">見やすい配色を選んでください。生成りは淡いクリーム色、青みグレーは淡い青灰色の背景です。デモ配色は深い緑を基調としています。</p>
         </fieldset>
         <fieldset class="a11y-group">
           <legend>色の見やすさ</legend>
