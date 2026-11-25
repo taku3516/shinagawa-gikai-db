@@ -341,6 +341,129 @@ html[data-color-theme="teal"] {
   --c-main-border: #7fa8a1;
 }
 
+html[data-color-theme="public-blue"] {
+  /* 土台と状態色は標準と同じトークンを使い、操作部品の境界だけ濃くする。 */
+  --c-border-strong: var(--dads-gray-536);
+}
+
+/* 高コントラストでは要素ごとの色指定も解除し、共通の表示を優先する。 */
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) {
+  --c-input-border: var(--c-border-strong);
+  --c-public-blue-shadow: 0 4px 20px rgb(0 0 0 / 8%);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  h1, .about h2, .year-heading h2, .info-section h3, .origin h4,
+  .committee-topic h4, .committee-fulltext h4
+) {
+  color: var(--c-ink);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) footer {
+  background: var(--c-card);
+  color: var(--c-ink-soft);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(.stat dd, .fade-value) {
+  color: var(--c-main);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  input[type="search"], input[type="text"], select, textarea, .seg,
+  .site-nav__link--external:not([aria-current="page"]), .a11y-panel__close, .source-filter-button,
+  .estimate-toggle, .filter-actions button, .star-button, .hide-button, .member-panel__bar button
+) {
+  border-color: var(--c-border-strong);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) input::placeholder {
+  color: var(--c-ink-mute);
+  opacity: 1;
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  input[type="checkbox"], input[type="radio"], input[type="range"]
+) {
+  accent-color: var(--c-main);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  .tag, .chips > :is(button, a):not([aria-pressed="true"], [aria-current="true"])
+) {
+  background: var(--c-surface-sub);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) .chips >
+  :is(button, a):not([aria-pressed="true"], [aria-current="true"]) {
+  border-color: var(--c-border-strong);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  .chips > :is(button, a):not([aria-pressed="true"], [aria-current="true"]),
+  .a11y-options label:not(:has(input:checked)), .a11y-panel__close, .a11y-reset,
+  .leaflet-bar a:not(.leaflet-disabled), .leaflet-control-layers-toggle, .leaflet-popup-close-button
+):hover {
+  background-color: var(--c-main-pale);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  .a11y-options label:has(input:checked), .result[aria-current="true"], .tools button[aria-pressed="true"],
+  .star-button[aria-pressed="true"]
+) {
+  background-color: var(--c-main-pale-2);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) .star-button[aria-pressed="true"] {
+  border-color: var(--c-main);
+  color: var(--c-main);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  .source-link--primary, .doc-link--primary, .action-button.primary,
+  .source-links > .source-link:first-child, .member-panel__bar button.is-primary,
+  .sync-button:not(.secondary, .danger), .button-row .button:not(.button--secondary)
+):hover {
+  background-color: var(--c-main-deep);
+  border-color: var(--c-main-deep);
+}
+
+/* Leaflet の操作部品と吹き出しを着色する。地図の描画レイヤーは触らない。 */
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  .leaflet-bar, .leaflet-touch .leaflet-bar, .leaflet-control-layers
+) {
+  border-color: var(--c-border-strong);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  .leaflet-bar a, .leaflet-control-layers, .leaflet-popup-content-wrapper,
+  .leaflet-popup-tip, .leaflet-control-attribution, .map-legend
+) {
+  background-color: var(--c-card);
+  color: var(--c-ink);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  .leaflet-bar a:not(.leaflet-disabled), .leaflet-popup-close-button,
+  .leaflet-popup-content a, .leaflet-control-attribution a
+) {
+  color: var(--c-main-dark);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  .leaflet-bar a, .leaflet-control-layers-toggle, .leaflet-popup-close-button, .chip
+):focus-visible {
+  outline: 3px solid var(--c-focus);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 6px var(--c-focus-outer);
+}
+
+html[data-color-theme="public-blue"]:not([data-contrast="high"]) :is(
+  .a11y-panel, .a11y-launcher, .source-filter-panel, .map-legend,
+  .leaflet-control-layers, .leaflet-popup-content-wrapper, .leaflet-popup-tip
+) {
+  box-shadow: var(--c-public-blue-shadow);
+}
+
 /* 縦スクロールバーが幅を取る場合も、設定パネルを表示領域に収める。 */
 @media (max-width: 520px) {
   .a11y-panel { max-width: calc(100% - 16px); }
