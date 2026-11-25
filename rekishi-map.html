@@ -40,6 +40,14 @@
     .chips-label { display:block; margin-bottom:6px; color:var(--c-ink-mute); font-size:calc(12px * var(--fs)); font-weight:700; }
     .result-status { margin:0; padding:10px 16px; border-bottom:1px solid var(--c-border); color:var(--c-ink-soft); font-size:calc(13px * var(--fs)); font-weight:700; }
     .results { max-height:560px; overflow-y:auto; }
+    .map-topics { margin:0 0 14px; padding:12px 16px; }
+    .map-topics ul { display:flex; gap:6px 24px; flex-wrap:wrap; margin:6px 0 0; padding-left:20px; }
+    main section.place-detail { padding:14px 16px; border-bottom:1px solid var(--c-border); overflow-wrap:anywhere; }
+    .place-detail h2 { margin:0 0 6px; font-size:calc(20px * var(--fs)); }
+    .place-detail h3 { margin:12px 0 4px; font-size:calc(14px * var(--fs)); }
+    .place-detail summary { cursor:pointer; min-height:32px; font-weight:700; }
+    .place-choices { padding:0; margin:0; list-style:none; }
+    .place-choices button { min-height:44px; width:100%; text-align:left; }
     .hint { margin:6px 0 0; color:var(--c-ink-soft); font-size:calc(12px * var(--fs)); line-height:1.7; }
     .tools { display:flex; flex-wrap:wrap; gap:8px; }
     .tools button { min-height:44px; padding:0 14px; border:1px solid var(--c-main); border-radius:3px; background:var(--c-card); color:var(--c-main-dark); font:inherit; font-size:calc(13px * var(--fs)); font-weight:700; }
@@ -83,7 +91,7 @@
     .legend .pin { width:22px; height:22px; font-size:11px; }
 
     @media (max-width:980px) {
-      .map-layout { grid-template-columns:1fr; }
+      .map-layout { grid-template-columns:minmax(0, 1fr); }
       .sidebar { position:static; }
       #rekishi-map, .map-fallback { min-height:430px; }
       .results { max-height:none; }
@@ -105,6 +113,14 @@
     </div></header>
 
     <section><div class="container">
+      <div class="panel map-topics">
+        <strong>ゆかりの場所を訪ねる</strong>
+        <ul>
+          <li><a href="?place=pl-69870da77d">品川宿の海岸線と石積護岸</a></li>
+          <li><a href="?place=pl-086da1e672">利田新地と鯨の碑（利田神社）</a></li>
+          <li><a href="?place=pl-9250914617">大井の俳人が集った泊船寺</a></li>
+        </ul>
+      </div>
       <div class="map-layout">
         <section class="panel map-panel" aria-label="品川歴史マップ">
           <div id="rekishi-map"><div class="map-fallback">地図を読み込んでいます。</div></div>
@@ -115,8 +131,8 @@
         <aside class="panel sidebar" aria-label="地点の絞り込みと一覧">
           <form class="controls" id="controls">
             <div class="control-field">
-              <label for="query">キーワード</label>
-              <input id="query" type="search" placeholder="例：東海道、イチョウ、寺" />
+              <label for="query">地点・人物・できごとを探す</label>
+              <input id="query" type="search" placeholder="例：泊船寺、大野景山、護岸" />
             </div>
             <div class="control-field">
               <label for="area">地域</label>
@@ -137,6 +153,7 @@
             </div>
             <p class="hint" id="locate-status" role="status">現在地は、押したときだけこの端末の中で使い、どこにも送りません。</p>
           </form>
+          <section id="place-detail" class="place-detail" aria-label="選んだ地点の詳細" hidden></section>
           <p class="result-status" id="result-status" aria-live="polite">データを読み込んでいます。</p>
           <div class="results" id="results"></div>
         </aside>
@@ -192,6 +209,10 @@
         fail("data/rekishi.js を読み込めませんでした。");
         return;
       }
+      if (!window.RekishiMapLinks) {
+        fail("地点の検索機能を読み込めませんでした。ページを再読み込みしてください。");
+        return;
+      }
       if (!PLACES.length) {
         fail("地点データがありません。data/rekishi-places.js を確認してください。");
         return;
@@ -206,7 +227,15 @@
 
       const eraDefs = (META.eras || []).slice().sort((a, b) => a.order - b.order);
       const eventsAtPlace = RekishiMapLinks.eventsByPlace(DB.rekishiEvents?.items || [], eraDefs.map((era) => era.id));
-      const peopleAtPlace = RekishiMapLinks.groupByPlace(DB.rekishiPeople?.items || []);
+      const people = DB.rekishiPeople?.items || [];
+      const peopleAtPlace = new Map();
+      for (const place of PLACES) {
+        const related = RekishiMapLinks.peopleForPlace(place.id, eventsAtPlace.get(place.id) || [], people);
+        if (related.length) peopleAtPlace.set(place.id, related);
+      }
+      const placesById = new Map(PLACES.map((place) => [place.id, place]));
+      const detail = document.getElementById("place-detail");
+      let selectedId = "";
       const namesAtPlace = RekishiMapLinks.groupByPlace(DB.rekishiNames?.items || []);
       // 地点ごとの「関係するできごとの時代」。年表に結びついていない地点には時代を付けない。
       const erasAtPlace = new Map(PLACES.map((place) => [place.id, RekishiMapLinks.placeEras(eventsAtPlace.get(place.id) || [])]));
@@ -223,6 +252,9 @@
 
       const haystack = new Map(PLACES.map((place) => [place.id, normalize([
         place.name, place.summary, place.address,
+        ...(eventsAtPlace.get(place.id) || []).flatMap((event) => [event.name, event.summary]),
+        ...(peopleAtPlace.get(place.id) || []).flatMap((person) => [person.name, person.kana]),
+        ...(namesAtPlace.get(place.id) || []).flatMap((name) => [name.name, name.kana]),
         (place.categories || []).map((id) => categoryLabel.get(id)).join(" "),
         (place.heritage || []).map((h) => `${h.name} ${h.kind} ${h.owner || ""}`).join(" ")
       ].join(" "))]));
@@ -310,13 +342,14 @@
           const on = when ? `／${esc(japaneseDate(when))}${act}` : "";
           return `<li>${link}<br /><span class="pop-kind">${designator}${esc(item.kind)}${visit}${on}</span></li>`;
         }).join("");
-        const source = (place.sources || []).map((entry) => {
+        const sources = (place.sources || []).map((entry) => {
           const found = sourceById.get(entry.ref);
           if (!found) return "";
-          return found.url
+          const label = found.url
             ? `<a href="${esc(found.url)}" target="_blank" rel="noopener">${esc(found.label)}</a>`
             : esc(found.label);
-        }).filter(Boolean).join("／");
+          return `<li>${label}${entry.locator ? `<br /><span class="pop-kind">${esc(entry.locator)}</span>` : ""}</li>`;
+        }).join("");
         const categoryText = (place.categories || []).map((id) => categoryLabel.get(id) || id).join("・");
         // なぜこの分類なのかを添える。史跡と産業遺産を兼ねる地点などは、
         // 分類名だけでは「なぜ？」が分からない。
@@ -328,14 +361,15 @@
           names: namesAtPlace.get(place.id) || []
         }, esc);
         return `<div class="pop-place">
-          <h2>${esc(place.name)}</h2>
+          <h2 tabindex="-1">${esc(place.name)}</h2>
           <p class="pop-meta">${esc(place.address)}／${esc(categoryText)}</p>
           ${why}
           ${note}
-          ${heritage ? `<ul class="pop-list">${heritage}</ul>` : ""}
+          ${heritage ? `<details><summary>文化財（${place.heritage.length}件）</summary><ul class="pop-list">${heritage}</ul></details>` : ""}
           ${history}
           <p><a href="${esc(RekishiMapLinks.comparisonHref(place))}">この場所を古地図で見る</a></p>
-          ${source ? `<p class="pop-source">出典：${source}</p>` : ""}
+          <p><a href="?place=${encodeURIComponent(place.id)}">この地点の共有リンク</a></p>
+          ${sources ? `<details><summary>出典</summary><ul class="pop-list">${sources}</ul></details>` : ""}
         </div>`;
       }
 
@@ -410,9 +444,14 @@
             alt: shown.map((x) => x.name).join("、"),
             keyboard: true
           });
-          // 指定文化財の多い寺社は吹き出しが縦に長くなるので、地図の高さに収めてスクロールさせる
-          marker.bindPopup(shown.map(placeHtml).join(""), { maxWidth: 320, maxHeight: 340 });
+          const choices = shown.map((place) =>
+            `<li><button type="button" data-read-place="${esc(place.id)}">${esc(place.name)}の詳細を読む</button></li>`).join("");
+          marker.bindPopup(`<ul class="place-choices">${choices}</ul>`, { maxWidth: 300, maxHeight: 270 });
+          marker.on("popupopen", () => {
+            if (shown.length === 1 && selectedId !== shown[0].id) openPlace(shown[0].id);
+          });
           marker.addTo(markerLayer);
+          marker.getElement()?.setAttribute("aria-label", shown.map((place) => place.name).join("、"));
           markerBySpot.set(key, marker);
           shown.forEach((place) => markerBySpot.set(place.id, marker));
           bounds.push([spot.lat, spot.lng]);
@@ -436,7 +475,7 @@
             .map(([label, index]) => ((index.get(place.id) || []).length ? `${label}${index.get(place.id).length}` : ""))
             .filter(Boolean).join("・");
           const away = distances.get(place.id);
-          return `<button type="button" class="result" data-place="${esc(place.id)}">
+          return `<button type="button" class="result" data-place="${esc(place.id)}"${place.id === selectedId ? ' aria-current="true"' : ""}>
             <span class="result-name">${esc(place.name)}${away == null ? "" : `<span class="result-distance">／${esc(RekishiMapLinks.formatDistance(away))}</span>`}</span>
             <span class="result-meta">${esc(place.address)}／${esc(areaLabel.get((place.areas || [])[0]) || "")}／${esc(categoryText)}${count ? `／指定文化財${count}件` : ""}${links ? `／年表などとの結びつき：${esc(links)}` : ""}</span>
           </button>`;
@@ -455,19 +494,40 @@
         }
         const visibleIds = new Set(visible.map((x) => x.id));
         statusBox.textContent = `${visible.length}件の地点を表示しています（全${PLACES.length}件）${origin ? "。現在地から近い順です" : ""}。`;
+        if (selectedId && !visibleIds.has(selectedId)) {
+          selectedId = "";
+          detail.hidden = true;
+          detail.replaceChildren();
+        }
         renderResults(visible);
         if (hasLeaflet) drawMarkers(visibleIds, fit);
+      }
+
+      /** @param {string} id @param {{move?:boolean, focus?:boolean}} [options] */
+      function openPlace(id, {move = false, focus = false} = {}) {
+        const place = placesById.get(id);
+        if (!place) return;
+        selectedId = id;
+        detail.innerHTML = placeHtml(place);
+        detail.hidden = false;
+        document.querySelector(".result[aria-current]")?.removeAttribute("aria-current");
+        document.querySelector(`.result[data-place="${CSS.escape(id)}"]`)?.setAttribute("aria-current", "true");
+        const marker = markerBySpot.get(id);
+        if (move && marker && map) map.setView(marker.getLatLng(), Math.max(map.getZoom(), 16));
+        if (focus) detail.querySelector("h2").focus();
       }
 
       document.getElementById("results").addEventListener("click", (event) => {
         const button = event.target.closest("button[data-place]");
         if (!button) return;
-        document.querySelectorAll(".result[aria-current]").forEach((x) => x.removeAttribute("aria-current"));
-        button.setAttribute("aria-current", "true");
-        const marker = markerBySpot.get(button.getAttribute("data-place"));
-        if (!marker || !map) return;
-        map.setView(marker.getLatLng(), Math.max(map.getZoom(), 16));
-        marker.openPopup();
+        map?.closePopup();
+        openPlace(button.dataset.place, {move:true, focus:true});
+      });
+      mapRoot.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-read-place]");
+        if (!button) return;
+        map?.closePopup();
+        openPlace(button.dataset.readPlace, {focus:true});
       });
 
       // 絞り込みの現在の条件。URLに書き出して、そのまま共有できるようにする。
@@ -576,8 +636,6 @@
           return;
         }
         button.click();
-        const target = map && markerBySpot.has(wanted) ? mapRoot : button;
-        target.scrollIntoView({ block: "center" });
       }
 
       renderLegend();

@@ -82,3 +82,14 @@ test("関連づけのある地点の ID を、種類をまたいで集める", (
   const ids = linkedPlaceIds(new Map([["a", [1]]]), new Map([["b", [1]], ["a", [1]]]), new Map());
   assert.deepEqual([...ids].sort(), ["a", "b"]);
 });
+
+test("年表を通じて地点に関係する人物を、直接の関係と重複なく探せる", () => {
+  const { peopleForPlace } = globalThis.RekishiMapLinks;
+  const people = [
+    {id:"pe-a", relatedPlaces:["temple"]},
+    {id:"pe-b", relatedPlaces:[]},
+    {id:"pe-c", relatedPlaces:["elsewhere"]}
+  ];
+  const events = [{relatedPeople:["pe-b","pe-a"]}, {relatedPeople:["pe-b","missing"]}];
+  assert.deepEqual(peopleForPlace("temple", events, people).map(x => x.id), ["pe-a","pe-b"]);
+});
