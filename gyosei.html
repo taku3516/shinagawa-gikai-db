@@ -7,6 +7,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <title>行政評価（事務事業評価） | 品川区議会DB</title>
+  <script src="site-a11y.js"></script>
   <link rel="stylesheet" href="site-theme.css" />
   <link rel="stylesheet" href="site-base.css" />
   <link rel="stylesheet" href="site-nav.css" />
@@ -40,7 +41,7 @@
     .fy-select-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 24px; }
     .fy-select-row label { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); font-weight: 700; white-space: nowrap; }
     #fy-select {
-      width: min(100%, 340px); border: 1px solid var(--c-border); border-radius: 3px;
+      width: min(100%, 340px); border: 1px solid var(--c-input-border, var(--c-border)); border-radius: 3px;
       background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: calc(16px * var(--fs)); font-weight: 700;
     }
     .fy-card {
@@ -227,6 +228,5 @@
 
     init();
   </script>
-  <script src="site-a11y.js"></script>
 </body>
 </html>

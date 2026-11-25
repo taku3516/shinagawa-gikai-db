@@ -5,7 +5,7 @@
   const DEFAULTS = { fontSize: "normal", colorTheme: "normal", contrast: "normal", motion: "normal" };
   const allowed = {
     fontSize: new Set(["normal", "large", "xlarge"]),
-    colorTheme: new Set(["normal", "warm", "cool", "teal"]),
+    colorTheme: new Set(["normal", "warm", "cool", "teal", "public-blue"]),
     contrast: new Set(["normal", "high"]),
     motion: new Set(["normal", "reduced"])
   };
@@ -22,12 +22,17 @@
   }
 
   /** @returns {void} */
-  function applySettings() {
+  function reflectSettings() {
     const root = document.documentElement;
     root.dataset.fontSize = settings.fontSize;
     root.dataset.colorTheme = settings.colorTheme;
     root.dataset.contrast = settings.contrast;
     root.dataset.motion = settings.motion;
+  }
+
+  /** @returns {void} */
+  function applySettings() {
+    reflectSettings();
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
       if (storageNote) storageNote.textContent = "設定はこの端末のブラウザに保存され、同じ配信元のほかのページにも引き継がれます。";
@@ -42,8 +47,6 @@
 
   /** @returns {void} */
   function init() {
-    applySettings();
-
     const main = document.querySelector("main");
     if (main && !main.id) main.id = "main-content";
     if (main && !document.querySelector(".skip-link")) {
@@ -77,8 +80,9 @@
             <label><input type="radio" name="a11y-theme" value="warm" data-a11y-setting="colorTheme">生成り</label>
             <label><input type="radio" name="a11y-theme" value="cool" data-a11y-setting="colorTheme">青みグレー</label>
             <label><input type="radio" name="a11y-theme" value="teal" data-a11y-setting="colorTheme">デモ配色</label>
+            <label><input type="radio" name="a11y-theme" value="public-blue" data-a11y-setting="colorTheme">公共デザイン・ブルー</label>
           </div>
-          <p class="a11y-note">見やすい配色を選んでください。生成りは淡いクリーム色、青みグレーは淡い青灰色の背景です。デモ配色は深い緑を基調としています。</p>
+          <p class="a11y-note">見やすい配色を選んでください。生成りは淡いクリーム色、青みグレーは淡い青灰色の背景です。デモ配色は深い緑、公共デザイン・ブルーは深い青と白・ライトグレーを基調としています。</p>
         </fieldset>
         <fieldset class="a11y-group">
           <legend>色の見やすさ</legend>
@@ -132,6 +136,8 @@
     applySettings();
   }
 
+  // head で属性を設定し、本文の初回描画から保存済みの配色を使う。
+  reflectSettings();
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
   else init();
 })();
