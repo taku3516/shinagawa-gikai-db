@@ -108,16 +108,19 @@ test("事業評価シートの予算現額・決算額から公式の執行率�
 
 test("機能は所属する共通メニューから直接開ける", () => {
   const expected = {
-    "sanpi.html": "議会",
+    "sanpi.html": "議会の動き",
     "giin-katsudo.html": "議員・選挙",
-    "jigyo.html": "区政・財政",
-    "yosan-kessan.html#fiscal-comparison": "区政・財政",
+    "jigyo.html": "予算・事業",
+    "yosan-kessan.html#fiscal-comparison": "予算・事業",
     "shikin-shiryo.html": "議員・選挙",
-    "follow.html": "検索・データ",
-    "open-data.html": "検索・データ",
+    "open-data.html": "データ資料",
     "kumin-no-koe.html": "地域・参加",
-    "data-status.html": "検索・データ"
+    "data-status.html": "データ資料"
   };
+  assert.deepEqual(Array.from(db.site.navGroups.filter(group => group.section === "primary"), group => group.label),
+    ["議会の動き", "議員・選挙", "予算・事業", "地域・参加", "品川の歴史"]);
+  assert.deepEqual(Array.from(db.site.navGroups.find(group => group.section === "utility").items, item => item.url),
+    ["kensaku.html", "follow.html"]);
   const groups = new Map(db.site.navGroups.flatMap(group => group.items.map(item => [item.url, group.label])));
   for (const [href, group] of Object.entries(expected)) {
     assert.equal(groups.get(href), group, href);
@@ -132,12 +135,27 @@ test("財政ページの現在地はURLの表示箇所に対応する", () => {
     const root = { innerHTML: "", querySelector: () => null };
     const context = createContext({
       window: { SHINAGAWA_DB: db, location: { pathname: "/yosan-kessan.html", hash } },
-      document: { querySelectorAll: () => [root] }
+      document: { querySelectorAll: selector => selector === "[data-site-nav]" ? [root] : [] }
     });
     runInContext(readFileSync(new URL("../site-nav.js", import.meta.url), "utf8"), context);
     const current = [...root.innerHTML.matchAll(/href="([^"]+)" aria-current="page"/g)].map(match => match[1]);
     assert.deepEqual(current, [hash === "#fiscal-comparison" ? "yosan-kessan.html#fiscal-comparison" : "yosan-kessan.html"]);
   }
+});
+
+test("トップの目次は折りたたまず機能に直接リンクする", () => {
+  const root = { innerHTML: "" };
+  const context = createContext({
+    window: { SHINAGAWA_DB: db, location: { pathname: "/index.html", hash: "" } },
+    document: { querySelectorAll: selector => selector === "[data-site-index]" ? [root] : [] }
+  });
+  runInContext(readFileSync(new URL("../site-nav.js", import.meta.url), "utf8"), context);
+  assert.match(root.innerHTML, /id="index-council"/);
+  assert.match(root.innerHTML, /id="index-data"/);
+  for (const path of ["gian.html", "sanpi.html", "giin-katsudo.html", "open-data.html", "data-status.html"]) {
+    assert.ok(root.innerHTML.includes('href="' + path + '"'), path);
+  }
+  assert.doesNotMatch(root.innerHTML, /aria-expanded| hidden|katsuyo.html/);
 });
 
 test("廃止した機能と旧ハブを検索結果に出さず、ふりがなを表示できる", () => {

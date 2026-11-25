@@ -16,55 +16,49 @@
   <link rel="stylesheet" href="site-a11y.css" />
   <link rel="stylesheet" href="civic.css" />
   <style>
-    /* ===== 基調カラー：深い青と生成りを使った、公文書・資料庫を思わせる配色 ===== */
-    /* 配色はサイト共通の site-theme.css（デジタル庁デザインシステム準拠）で
-       一元管理している。ここで :root を再定義すると上書きしてしまうので置かない */
-
-    /* ===== ヒーロー ===== */
-    .disclaimer {
-      margin-top: 24px; max-width: none; padding: 14px 16px;
-      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
-      background: var(--c-card); font-size: calc(clamp(11px, 1.25vw, 14px) * var(--fs)); line-height: 1.7;
-      white-space: nowrap;
+    .disclaimer { margin: 10px 0 0; color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); }
+    .home-section { padding-block: 24px; }
+    .home-section + .home-section { padding-top: 0; }
+    .home-section h2, .sources h2 { margin: 0 0 12px; font-size: calc(22px * var(--fs)); }
+    .home-meetings { list-style: none; margin: 0 0 12px; padding: 0; border-bottom: 1px solid var(--c-rule); }
+    .home-meetings li {
+      display: grid; grid-template-columns: 7rem minmax(0, 1fr) minmax(0, 11rem);
+      gap: 4px 16px; align-items: baseline; padding: 9px 0; border-top: 1px solid var(--c-rule);
     }
-    /* 狭い画面では1行に収まらないため折り返す */
-    @media (max-width: 860px) {
-      .disclaimer { white-space: normal; }
-    }
-
-    /* ===== セクション共通 ===== */
-    h2 { margin: 0 0 20px; font-size: calc(24px * var(--fs)); }
-    h2.sub { margin-top: 36px; }
-    h3.group-title { margin: 32px 0 12px; }
-    .section-lead { max-width: 760px; margin: -8px 0 24px; color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; }
-
-    /* ===== 注意書き・補足 ===== */
-
-    /* ===== 参照元・フッター ===== */
-    .sources { border-top: 1px solid var(--c-border); background: var(--c-card); }
+    .home-meetings__period, .home-meetings__resources { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); }
+    .home-meetings__resources { display: flex; flex-wrap: wrap; gap: 0 14px; }
+    .home-meetings__title { font-weight: 700; }
+    .home-session { margin: 14px 0 0; }
+    .home-session h2 { font-size: calc(17px * var(--fs)); }
+    .sources { border-top: 1px solid var(--c-rule); background: var(--c-card); }
     .sources ul { margin: 0; padding-left: 20px; line-height: 1.9; }
-
-    /* ===== エラー表示 ===== */
-
-    /* ===== スマホ向け調整 ===== */
     @media (max-width: 640px) {
-      .disclaimer { font-size: calc(13px * var(--fs)); white-space: normal; }
-      h2 { font-size: calc(21px * var(--fs)); }
-      .record-section { margin-top: 22px; }
+      .home-meetings li { grid-template-columns: minmax(0, 1fr); }
+      .home-meetings a { display: inline-flex; align-items: center; min-height: 28px; }
     }
-
   </style>
 </head>
 <body>
   <main>
-    <!-- ヒーロー：サイト名・説明・免責・統計（JSで描画） -->
+    <!-- サイト名・説明・共通メニュー（JSで描画） -->
     <div class="hero">
       <div class="container" id="hero-root"></div>
     </div>
 
-    <section class="container civic" id="civic-session" aria-label="議会の会期">
-      <div class="civic-card" data-civic-page="session"><p>日程を読み込んでいます。</p></div>
-      <p id="civic-home-counts"></p>
+    <section class="container home-section" aria-labelledby="recent-meetings-title">
+      <h2 id="recent-meetings-title">直近の議会</h2>
+      <div id="home-meetings"><p role="status">会議を読み込んでいます。</p></div>
+      <p><a href="kaigi.html">会議のまとめを見る</a></p>
+      <details class="home-session">
+        <summary>会期・公式日程</summary>
+        <div data-civic-page="session"><p>日程を読み込んでいます。</p></div>
+      </details>
+    </section>
+
+    <section class="container home-section" aria-labelledby="function-index-title">
+      <h2 id="function-index-title">機能を探す</h2>
+      <div data-site-index></div>
+      <p id="civic-home-counts" class="fine-print"></p>
     </section>
 
     <!-- 参照元 -->
@@ -100,8 +94,8 @@
       document.getElementById("hero-root").innerHTML = `
         <h1>${esc(site.siteName)}</h1>
         <p class="lead">${esc(site.lead)}</p>
-        <div class="disclaimer">${esc(site.disclaimer)}</div>
-        <nav data-site-nav></nav>`;
+        <p class="disclaimer">${esc(site.disclaimer)}</p>
+        <nav data-site-nav aria-label="サイトメニュー"></nav>`;
     }
 
     // 参照元
@@ -117,7 +111,7 @@
 
     // 読み込み失敗時の案内
     function showLoadError(err) {
-      document.getElementById("detail-root").innerHTML = `
+      document.getElementById("hero-root").innerHTML = `
         <div class="load-error container">
           <strong>データを読み込めませんでした。</strong><br />
           ${esc(err.message)}<br /><br />
@@ -180,5 +174,41 @@
     })();
   </script>
   <script src="civic-page.js"></script>
+  <script>
+    /** @returns {Promise<void>} */
+    async function renderRecentMeetings() {
+      const outlet = document.getElementById("home-meetings");
+      const db = window.SHINAGAWA_DB;
+      const { loadYears } = window.SHINAGAWA_CIVIC;
+      const rows = [];
+      try {
+        for (const year of db.site.years.filter(item => item.available)) {
+          await loadYears([year.id]);
+          const meetings = db.years[year.id].meetings || [];
+          rows.push(...meetings.slice(-3).reverse().map(meeting => ({ ...meeting, year: year.id })));
+          if (rows.length >= 3) break;
+        }
+        outlet.innerHTML = rows.length ? `<ul class="home-meetings">${rows.slice(0, 3).map(row => {
+          const recap = "kaigi.html?" + new URLSearchParams({ year: row.year, meeting: row.id });
+          const minutes = row.links?.find(item => item.type === "minutes");
+          const video = row.links?.find(item => item.type === "video");
+          const dailyLinks = (row.events || []).flatMap(event => event.links || []);
+          const timeline = recap + "#timeline-" + row.id;
+          const minutesUrl = minutes?.url || (dailyLinks.some(item => item.type === "minutes") ? timeline : "");
+          const videoUrl = video?.url || (dailyLinks.some(item => item.type === "video") ? timeline : "");
+          const resources = [
+            minutesUrl && `<a href="${esc(minutesUrl)}" aria-label="${esc(row.name)}の会議録">会議録</a>`,
+            videoUrl && `<a href="${esc(videoUrl)}" aria-label="${esc(row.name)}の録画">録画</a>`
+          ].filter(Boolean);
+          return `<li><span class="home-meetings__period">${esc(row.monthLabel)}</span>
+            <a class="home-meetings__title" href="${esc(recap)}">${esc(row.name)}</a>
+            <span class="home-meetings__resources">${resources.join("") || "会議録・録画リンク未収録"}</span></li>`;
+        }).join("")}</ul>` : "<p>会議情報は未収録です。</p>";
+      } catch (error) {
+        window.SHINAGAWA_CIVIC_UI.showError(outlet, error);
+      }
+    }
+    renderRecentMeetings();
+  </script>
 </body>
 </html>

@@ -58,12 +58,18 @@
           })));
         const committees = person => Object.entries(db.memberQuestionIndex[person.id] || {}).filter(([id]) => year === "all" || id === year);
         if (!member) {
-          content.innerHTML = '<h2>収録された活動の比較</h2><div class="civic-grid">' + roster.map(person => {
+          const entries = roster.map(person => {
             const plenary = rows.filter(item => item.person === person.id).length;
             const committee = committees(person);
-            return `<article class="civic-card"><h3>${link(person.name, "giin-katsudo.html?" + new URLSearchParams({ id: person.id, year }))}</h3>
-              <p>代表・一般質問 ${plenary || "収録記録なし"} ／ 委員会質疑 ${committee.length ? committee.reduce((sum, [, count]) => sum + count, 0) : "収録記録なし"}</p></article>`;
-          }).join("") + "</div>";
+            const count = committee.reduce((sum, [, value]) => sum + value, 0);
+            return `<tr><th scope="row">${link(person.name, "giin-katsudo.html?" + new URLSearchParams({ id: person.id, year }))}</th>
+              <td>${plenary || "収録記録なし"}</td><td>${committee.length ? count : "収録記録なし"}</td></tr>`;
+          }).join("");
+          content.innerHTML = `<h2 id="member-comparison">収録された活動の比較</h2>
+            <table class="civic-table" aria-labelledby="member-comparison">
+              <thead><tr><th scope="col">議員</th><th scope="col">代表・一般質問</th><th scope="col">委員会質疑</th></tr></thead>
+              <tbody>${entries}</tbody>
+            </table>`;
           return;
         }
         const activities = rows.filter(item => item.person === member.id);
@@ -78,7 +84,7 @@
         const parties = [...new Set(activities.map(item => [item.year, item.party].filter(Boolean).join(" ")))];
         const rosterUrl = (db.formerMembersData.members.includes(member) ? "giin.html?view=former-ward" : "giin.html") + "#member-" + member.id;
         const lookup = "kensaku.html?" + new URLSearchParams({ q: member.name });
-        content.innerHTML = `<article class="civic-card"><h2>${esc(member.name)}</h2>
+        content.innerHTML = `<article><h2>${esc(member.name)}</h2>
           ${terms([["名簿記載の会派", esc(member.party)], ["常任委員会", esc(member.standingCommittee)],
             ["特別委員会", esc(member.specialCommittee)], ["当選回数", esc(member.elections)]])}
           <p>${link("政治家名簿の詳細", rosterUrl)} ／ ${link("この議員をフォロー", "follow.html?" + new URLSearchParams({ kind: "議員", value: member.name }))}

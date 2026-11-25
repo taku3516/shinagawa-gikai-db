@@ -32,8 +32,8 @@
       background: var(--c-card); padding: 10px 12px; color: var(--c-ink); font-size: calc(16px * var(--fs)); font-weight: 700;
     }
     .fy-card {
-      margin-bottom: 26px; border: 1px solid var(--c-border); border-top: 4px solid var(--c-fiscal);
-      border-radius: 3px; background: var(--c-card); padding: 22px; scroll-margin-top: 16px;
+      margin-bottom: 26px; border-top: 1px solid var(--c-rule);
+      padding: 16px 0 0; scroll-margin-top: 16px;
     }
     .fy-head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; margin-bottom: 4px; }
     .fy-card h2 { margin: 0; font-size: calc(24px * var(--fs)); }
@@ -70,7 +70,6 @@
     .status-note { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; margin: 6px 0 0; }
     @media (max-width: 700px) {
       .two-col { grid-template-columns: 1fr; }
-      .fy-card { padding: 16px; }
     }
   </style>
 </head>
@@ -94,6 +93,13 @@
     </div>
     <section>
       <div class="container">
+        <nav class="site-views" aria-label="予算・事業の資料">
+          <a href="#fy-root">年度別の予算・決算</a>
+          <a href="#fiscal-comparison">お金の見える化</a>
+          <a href="jigyo.html">事業カルテ</a>
+          <a href="gyosei.html">行政評価</a>
+        </nav>
+        <p><a href="open-data.html?dataset=finance">予算・決算のデータを保存</a></p>
         <div class="fy-select-row">
           <label for="fy-select">表示する年度</label>
           <select id="fy-select" aria-label="表示する年度を選択"></select>

@@ -7,7 +7,9 @@ window.SHINAGAWA_DB.site = {
   // 共通メニューに用途別のグループと機能への直接リンクを定義する。
   "navGroups": [
     {
-      "label": "議会",
+      "id": "council",
+      "section": "primary",
+      "label": "議会の動き",
       "items": [
         {
           "label": "会議のまとめ",
@@ -36,14 +38,16 @@ window.SHINAGAWA_DB.site = {
       ]
     },
     {
+      "id": "members",
+      "section": "primary",
       "label": "議員・選挙",
       "items": [
         {
-          "label": "政治家名簿",
+          "label": "議員名簿",
           "url": "giin.html"
         },
         {
-          "label": "議員ダッシュボード",
+          "label": "議員の活動を比較",
           "url": "giin-katsudo.html"
         },
         {
@@ -69,7 +73,9 @@ window.SHINAGAWA_DB.site = {
       ]
     },
     {
-      "label": "区政・財政",
+      "id": "budget",
+      "section": "primary",
+      "label": "予算・事業",
       "items": [
         {
           "label": "事業カルテ",
@@ -90,6 +96,8 @@ window.SHINAGAWA_DB.site = {
       ]
     },
     {
+      "id": "community",
+      "section": "primary",
       "label": "地域・参加",
       "items": [
         {
@@ -109,12 +117,14 @@ window.SHINAGAWA_DB.site = {
           "url": "chokai-map.html"
         },
         {
-          "label": "区民の声",
+          "label": "区の意見募集・結果",
           "url": "kumin-no-koe.html"
         }
       ]
     },
     {
+      "id": "history",
+      "section": "primary",
       "label": "品川の歴史",
       "items": [
         {
@@ -148,16 +158,25 @@ window.SHINAGAWA_DB.site = {
       ]
     },
     {
-      "label": "検索・データ",
+      "id": "utility",
+      "section": "utility",
+      "label": "サイト内の機能",
       "items": [
         {
-          "label": "横断検索",
+          "label": "サイト内検索",
           "url": "kensaku.html"
         },
         {
           "label": "フォロー・新着",
           "url": "follow.html"
-        },
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "section": "reference",
+      "label": "データ資料",
+      "items": [
         {
           "label": "CSV・JSONダウンロード",
           "url": "open-data.html"
@@ -169,7 +188,9 @@ window.SHINAGAWA_DB.site = {
       ]
     },
     {
-      "label": "公式サイト",
+      "id": "official",
+      "section": "reference",
+      "label": "議会の公式サイト",
       "items": [
         {
           "type": "minutes",

@@ -68,7 +68,7 @@
     if (!project) {
       root.innerHTML = `<p>${query.has("id") ? "指定された事業は未収録です。" : "公式資料で対応を確認できた事業を掲載します。"}</p>
         ${list(data.projects.map(item => link(item.name, "jigyo.html?id=" + encodeURIComponent(item.id))))}
-        <p>${link("年度別行政評価", "gyosei.html")} ／ ${link("年度別予算・決算", "yosan-kessan.html")}</p>`;
+        <p>${link("年度別行政評価", "gyosei.html")} ／ ${link("年度別予算・決算", "yosan-kessan.html")} ／ ${link("事業カルテのデータを保存", "open-data.html?dataset=projects")}</p>`;
       return;
     }
     const amounts = project.finance || [];
@@ -79,7 +79,7 @@
       ["行政評価", "最終評価を参照"], ["次年度予算", ""]
     ];
     root.innerHTML = `<p>${link("事業一覧", "jigyo.html")} ／ ${link("事業をフォロー", "follow.html?" + new URLSearchParams({ kind: "事業", value: project.name }))}</p>
-      <article class="civic-card"><h2>${esc(project.name)}</h2>
+      <article><h2>${esc(project.name)}</h2>
         ${terms([["目的", annotate(project.purpose)], ["所管", esc(project.office)], ["対象者", annotate(project.audience)],
           ["根拠法令・条例", annotate(project.legal)], ["開始年度", esc(project.startYear)],
           ["財源構成", missing],
@@ -89,7 +89,7 @@
         <ol class="civic-timeline">${project.timeline.map(step => `<li>${esc(step.date)} ${annotate(step.label)}（${link(step.source.label, step.source.url)}）</li>`).join("")}</ol>
         <h3>小事業の予算現額・決算・評価</h3>
         <p>令和6年度実施分。予算額は決算審査時の予算現額、評価は令和7年度事務事業評価の最終評価です。</p>
-        <div class="civic-grid">${amounts.map(item => `<section class="civic-card"><h4>${esc(item.label)}</h4>
+        <div class="civic-results">${amounts.map(item => `<section class="civic-project-row"><h4>${esc(item.label)}</h4>
           <p>予算現額 ${money(item.budgetYen)}</p><progress max="${scale}" value="${item.budgetYen}" aria-label="${esc(item.label)}の予算現額"></progress>
           <p>決算額 ${money(item.settledYen)}</p><progress max="${scale}" value="${item.settledYen}" aria-label="${esc(item.label)}の決算額"></progress>
           ${terms([["執行率", esc(item.rate + "%")], ["最終評価", esc(item.evaluation)]])}${sources([item.source])}</section>`).join("")}</div>
