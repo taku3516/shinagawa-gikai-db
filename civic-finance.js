@@ -98,7 +98,7 @@
         <p>${link("同年度の区全体の予算・決算", "yosan-kessan.html#fy-r06")}</p>
         <h3>関連議案</h3>${list(project.bills.map(id => link("議案 " + id.split(":")[1], "gian.html?" + new URLSearchParams({ id }))))}
         <h3>公式資料・行政評価</h3>${sources(project.sources)}
-        ${review(project.id)}</article>`;
+        ${review()}</article>`;
   }
 
   /** @param {HTMLElement} root @returns {Promise<void>} */

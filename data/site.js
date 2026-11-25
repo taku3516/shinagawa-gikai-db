@@ -4,11 +4,7 @@ window.SHINAGAWA_DB.site = {
   "siteName": "品川区議会DB",
   "lead": "品川区議会の公式情報を基に、住民が読みやすい形に整理したページです。",
   "disclaimer": "これは品川区が運営しているものではありません。正確な議決結果・日程・資料は必ず品川区議会公式サイトを確認してください。",
-  // 共通ナビの中身。役割で4群に分け、群ごとに見出しを出す（site-nav.js）。
-  // ラベルは名詞にする。「〜を見る」を付けると分類名が動詞に埋もれ、
-  // どのリンクも同じ長さの帯に見えてしまう。
-  // url はページのファイル名そのままにすること。現在地の判定に使っている。
-  // type は "video"（録画・中継）のときだけ指定する。
+  // 共通メニューに用途別のグループと機能への直接リンクを定義する。
   "navGroups": [
     {
       "label": "議会",
@@ -26,33 +22,37 @@ window.SHINAGAWA_DB.site = {
           "url": "gian.html"
         },
         {
+          "label": "会派別・議員別の賛否",
+          "url": "sanpi.html"
+        },
+        {
           "label": "請願・陳情",
           "url": "seigan.html"
         },
         {
           "label": "意見書・決議",
           "url": "ikensho.html"
-        },
-        {
-          "label": "予算・決算",
-          "url": "yosan-kessan.html"
-        },
-        {
-          "label": "行政評価",
-          "url": "gyosei.html"
         }
       ]
     },
     {
-      "label": "人とお金",
+      "label": "議員・選挙",
       "items": [
         {
           "label": "政治家名簿",
           "url": "giin.html"
         },
         {
+          "label": "議員ダッシュボード",
+          "url": "giin-katsudo.html"
+        },
+        {
           "label": "選挙",
           "url": "senkyo.html"
+        },
+        {
+          "label": "選挙収支",
+          "url": "senkyo-shushi.html"
         },
         {
           "label": "政務活動費",
@@ -63,14 +63,39 @@ window.SHINAGAWA_DB.site = {
           "url": "seijishikin.html"
         },
         {
-          "label": "選挙収支",
-          "url": "senkyo-shushi.html"
+          "label": "政務活動費・政治資金の資料",
+          "url": "shikin-shiryo.html"
         }
       ]
     },
     {
-      "label": "地域・検索",
+      "label": "区政・財政",
       "items": [
+        {
+          "label": "事業カルテ",
+          "url": "jigyo.html"
+        },
+        {
+          "label": "予算・決算",
+          "url": "yosan-kessan.html"
+        },
+        {
+          "label": "お金の見える化",
+          "url": "yosan-kessan.html#fiscal-comparison"
+        },
+        {
+          "label": "行政評価",
+          "url": "gyosei.html"
+        }
+      ]
+    },
+    {
+      "label": "地域・参加",
+      "items": [
+        {
+          "label": "わたしの地域",
+          "url": "watashi-no-chiiki.html"
+        },
         {
           "label": "区のニュース",
           "url": "news.html"
@@ -84,16 +109,8 @@ window.SHINAGAWA_DB.site = {
           "url": "chokai-map.html"
         },
         {
-          "label": "わたしの地域",
-          "url": "watashi-no-chiiki.html"
-        },
-        {
-          "label": "データを活用する",
-          "url": "katsuyo.html"
-        },
-        {
-          "label": "横断検索",
-          "url": "kensaku.html"
+          "label": "区民の声",
+          "url": "kumin-no-koe.html"
         }
       ]
     },
@@ -127,6 +144,27 @@ window.SHINAGAWA_DB.site = {
         {
           "label": "古地図・今昔",
           "url": "rekishi-kochizu.html"
+        }
+      ]
+    },
+    {
+      "label": "検索・データ",
+      "items": [
+        {
+          "label": "横断検索",
+          "url": "kensaku.html"
+        },
+        {
+          "label": "フォロー・新着",
+          "url": "follow.html"
+        },
+        {
+          "label": "CSV・JSONダウンロード",
+          "url": "open-data.html"
+        },
+        {
+          "label": "データ収録状況",
+          "url": "data-status.html"
         }
       ]
     },

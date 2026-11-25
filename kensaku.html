@@ -380,7 +380,7 @@
       { id: "political-funds", label: "政治資金" },
       { id: "resolutions", label: "意見書・決議等" },
       { id: "news", label: "ニュース" },
-      { id: "services", label: "使い方・事業・用語" }
+      { id: "services", label: "サイトの機能・事業" }
     ];
     const CATEGORY_LABELS = Object.fromEntries(CATEGORY_DEFS.map((item) => [item.id, item.label]));
     const PAGE_SIZE = 30;
@@ -767,10 +767,6 @@
         body: session.start + " 〜 " + session.end + "（公式予定）",
         links: [{ type: "internal", label: "トップの会期表示", url: "index.html#civic-session" },
           { type: "official", label: session.source.label, url: session.source.url }] });
-    }
-    for (const [title, reading, body] of window.SHINAGAWA_CIVIC_CONTENT.glossary) {
-      addItem({ category: "services", type: "用語", title, body, primary: [reading],
-        links: [{ type: "internal", label: "用語辞典", url: `yogo.html?q=${encodeURIComponent(title)}` }] });
     }
     for (const item of window.SHINAGAWA_CIVIC_SOURCES.projects) {
       addItem({ category: "services", type: "事業", title: item.name, body: item.purpose,

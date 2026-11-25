@@ -105,3 +105,53 @@ test("事業評価シートの予算現額・決算額から公式の執行率�
     }
   }
 });
+
+test("機能は所属する共通メニューから直接開ける", () => {
+  const expected = {
+    "sanpi.html": "議会",
+    "giin-katsudo.html": "議員・選挙",
+    "jigyo.html": "区政・財政",
+    "yosan-kessan.html#fiscal-comparison": "区政・財政",
+    "shikin-shiryo.html": "議員・選挙",
+    "follow.html": "検索・データ",
+    "open-data.html": "検索・データ",
+    "kumin-no-koe.html": "地域・参加",
+    "data-status.html": "検索・データ"
+  };
+  const groups = new Map(db.site.navGroups.flatMap(group => group.items.map(item => [item.url, group.label])));
+  for (const [href, group] of Object.entries(expected)) {
+    assert.equal(groups.get(href), group, href);
+  }
+  for (const href of ["katsuyo.html", "yogo.html", "report.html", "shitsumon.html"]) {
+    assert.ok(!groups.has(href), href);
+  }
+});
+
+test("財政ページの現在地はURLの表示箇所に対応する", () => {
+  for (const hash of ["", "#fy-r07", "#fiscal-comparison"]) {
+    const root = { innerHTML: "", querySelector: () => null };
+    const context = createContext({
+      window: { SHINAGAWA_DB: db, location: { pathname: "/yosan-kessan.html", hash } },
+      document: { querySelectorAll: () => [root] }
+    });
+    runInContext(readFileSync(new URL("../site-nav.js", import.meta.url), "utf8"), context);
+    const current = [...root.innerHTML.matchAll(/href="([^"]+)" aria-current="page"/g)].map(match => match[1]);
+    assert.deepEqual(current, [hash === "#fiscal-comparison" ? "yosan-kessan.html#fiscal-comparison" : "yosan-kessan.html"]);
+  }
+});
+
+test("廃止した機能と旧ハブを検索結果に出さず、ふりがなを表示できる", () => {
+  const paths = ["yogo.html", "report.html", "shitsumon.html"];
+  for (const path of paths) {
+    assert.ok(!existsSync(new URL(`../${path}`, import.meta.url)), path);
+  }
+  load("civic-content.js");
+  load("civic-ui.js");
+  assert.equal(context.window.SHINAGAWA_CIVIC_UI.annotate("議案"), "<ruby>議案<rt>ぎあん</rt></ruby>");
+  for (const [, href] of context.window.SHINAGAWA_CIVIC_CONTENT.pages) {
+    assert.ok(![...paths, "katsuyo.html"].includes(href), href);
+  }
+  const search = readFileSync(new URL("../kensaku.html", import.meta.url), "utf8");
+  assert.ok(paths.every(path => !search.includes(path)));
+  assert.ok(!readFileSync(new URL("../site-a11y.js", import.meta.url), "utf8").includes("report.html"));
+});

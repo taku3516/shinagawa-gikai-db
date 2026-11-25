@@ -70,7 +70,7 @@
       <p>${link("表決資料を探す", "sanpi.html?" + new URLSearchParams({ year: bill.yearId, meeting: bill.meetingId, q: bill.number }))}</p>
       <details><summary>同じ会議の議案（${sameSession.length}件）</summary>${list(sameSession.map(item => link(item.title, civic.billUrl(item))))}</details>
       <h3>公式資料・出典</h3>${sources([...proof, ...data.reviewedSources?.[bill.id] || []])}
-      ${review(bill.id, data.reviews[bill.id])}</article>`;
+      ${review(data.reviews[bill.id])}</article>`;
   }
 
   /** @param {HTMLFormElement} form @param {string} name @param {string[]} values @param {string} heading @param {string|null} [initial] @returns {void} */
@@ -187,7 +187,7 @@
       <p>議会の議決結果は上の審査経過、要望の実施状況は下の行政資料で確認できます。</p>
       ${terms(stages.map(stage => [stage, followup.filter(entry => entry.stage === stage)
         .map(entry => `${esc(entry.date)} ${annotate(entry.text)} ${link(entry.source.label, entry.source.url)}${entry.relation ? " ／ " + link(entry.relation.label, entry.relation.url) : ""}`).join("<br>")]))}
-      ${review(item.id, data.reviews[item.id])}</section>`;
+      ${review(data.reviews[item.id])}</section>`;
   }
   window.SHINAGAWA_LEGISLATION = { legislation, session, petition, voteNames };
 })();
