@@ -24,7 +24,7 @@ class DisplaySettingsTests(unittest.TestCase):
         css = (ROOT / 'site-theme.css').read_text()
         base = css.split(':root {', 1)[1].split('\n}', 1)[0]
         high = css.split('html[data-contrast="high"] {', 1)[1].split('}', 1)[0]
-        for theme in ('warm', 'cool'):
+        for theme in ('warm', 'cool', 'teal'):
             selector = f'html[data-color-theme="{theme}"]'
             self.assertIn(selector, css)
             block = css.split(selector + ' {', 1)[1].split('}', 1)[0]
