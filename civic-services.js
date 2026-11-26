@@ -12,7 +12,7 @@
     root.innerHTML = `<p>出力対象は件名・出典等のメタデータと集計済みの事実です。資料本文・画像・連絡先は含みません。再配布の際は各出典の利用条件をご確認ください。</p>
       <p>${link("品川区議会の著作権案内", "https://gikai.city.shinagawa.tokyo.jp/copyright")}</p>
       <form class="civic-controls">
-      ${select("dataset", "データセット", Object.entries(datasets).map(([key, value]) => [key, value.label]))}
+      ${select("dataset", "データセット", Object.entries(datasets).map(([key, value]) => [key, value.label]), params.get("dataset"))}
       ${input("q", "件名・対象期間・結果")}
       ${select("format", "形式", [["csv", "CSV（BOM付きUTF-8）"], ["json", "JSON"]])}
       <button>絞り込みを保存</button><button type="button" data-all>選んだデータセットの全件を保存</button>

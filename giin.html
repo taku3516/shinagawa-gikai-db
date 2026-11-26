@@ -44,20 +44,15 @@
     #party-select { font-weight: 700; }
     #hit-count { color: var(--c-ink-soft); font-size: calc(13px * var(--fs)); font-weight: 700; }
 
-    /* ===== 議員カード ===== */
-    .member-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 16px; margin-top: 20px;
+    /* 人物の基本情報を行でそろえ、資料は必要に応じて開く */
+    .member-grid { margin-top: 20px; border-bottom: 1px solid var(--c-rule); }
+    .member-card { padding-block: 12px; border-top: 1px solid var(--c-rule); overflow-wrap: anywhere; }
+    .member-card.is-focused { background: var(--c-main-pale); outline: 2px solid var(--c-main); outline-offset: 2px; }
+    .member-row {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
+      gap: 4px 16px; align-items: baseline;
     }
-    .member-card {
-      border: 1px solid var(--c-border); border-left: 4px solid var(--c-main); border-radius: 3px;
-      background: var(--c-card); padding: 20px;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    /* 選挙アーカイブなど他ページから #member-<id> で指定された人物を目立たせる */
-    .member-card.is-focused {
-      border-left-color: var(--c-main); box-shadow: 0 0 0 3px var(--c-main-pale-2);
-    }
+    .member-card details { margin-top: 4px; }
     .member-card h2 { margin: 0; font-size: calc(20px * var(--fs)); line-height: 1.4; }
     .member-card .kana { color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); font-weight: 700; }
 
@@ -118,7 +113,7 @@
     .empty-state p { margin: 0; color: var(--c-ink-soft); }
 
     @media (max-width: 640px) {
-      .member-grid { grid-template-columns: 1fr; }
+      .member-row { grid-template-columns: minmax(0, 1fr); }
       /* iOSで入力・選択時に画面が自動で拡大しないよう16pxにする */
       #search-box, #party-select { width: 100%; font-size: calc(16px * var(--fs)); }
       .controls { flex-direction: column; align-items: stretch; }
@@ -156,6 +151,11 @@
 
     <section>
       <div class="container">
+        <nav class="site-views" aria-label="議員情報の表示">
+          <a href="giin.html" aria-current="page">議員を探す</a>
+          <a href="giin-katsudo.html">活動を比較</a>
+        </nav>
+        <p><a href="open-data.html?dataset=members">区議会議員名簿のデータを保存</a></p>
         <div class="controls">
           <label for="search-box">検索</label>
           <input id="search-box" type="search" placeholder="名前・ふりがな・会派・役職など" />
@@ -335,6 +335,7 @@
 
       return `
         <article class="member-card" id="member-${esc(m.id)}" data-party="${esc(partyName(m))}">
+          <div class="member-row">
           <div>
             <h2>${esc(m.name)}</h2>
             ${m.kana ? `<span class="kana">${esc(m.kana)}</span>` : ""}
@@ -344,18 +345,19 @@
             ${m.elections ? `<span class="chip">当選${esc(m.elections)}</span>` : ""}
           </div>
           ${committees.length ? `<p class="committee">${committees.join("<br />")}</p>` : ""}
+          </div>
+          ${(window.SHINAGAWA_DB.membersData?.members.includes(m) || window.SHINAGAWA_DB.formerMembersData?.members.includes(m))
+            ? `<p><a href="giin-katsudo.html?id=${encodeURIComponent(m.id)}">この議員の活動を見る</a></p>` : ""}
+          <details>
+            <summary>詳しい情報・資料を見る</summary>
           ${links ? `<div>${links}</div>` : ""}
           ${extraSlotHtml("SNS", m.sns)}
           ${speechSlotHtml(m)}
           ${questionSlotHtml(m)}
-          ${(window.SHINAGAWA_DB.membersData?.members.includes(m) || window.SHINAGAWA_DB.formerMembersData?.members.includes(m))
-            ? `<p><a href="giin-katsudo.html?id=${encodeURIComponent(m.id)}">議員ダッシュボード</a></p>` : ""}
           ${electionSlotHtml(m)}
           ${electionFinanceSlotHtml(m)}
           ${politicalFundSlotHtml(m)}
           ${activityExpenseSlotHtml(m)}
-          <details>
-            <summary>詳しい情報を見る</summary>
             <table class="detail-table">
               ${detailRow("役職", m.office)}
               ${detailRow("選挙区", m.electoralDistrict)}

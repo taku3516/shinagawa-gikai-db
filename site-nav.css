@@ -1,72 +1,104 @@
-/* ==========================================================================
-   共通ナビゲーション
-
-   site-nav.js が用途別に描画するリンクを、折り返せるピルで表示する。
-   現在地は塗りと aria-current で示す。
-   ========================================================================== */
-
+/* 共通ヘッダーとトップページの機能目次 */
 .site-nav {
-  margin-top: 16px;
+  margin-top: 20px;
+  border-block: 1px solid var(--c-rule);
 }
 
-.site-nav__panel {
-  border-top: 1px solid var(--c-rule);
-  border-bottom: 1px solid var(--c-rule);
-}
-
-/* --------------------------------------------------------------------------
-   群（見出し＋リンクの行）
-   -------------------------------------------------------------------------- */
-
-.site-nav__group {
-  display: grid;
-  grid-template-columns: calc(94px * var(--fs)) minmax(0, 1fr);
-  gap: 6px 14px;
-  align-items: start;
-  padding: 8px 0;
-}
-
-.site-nav__group + .site-nav__group {
-  border-top: 1px solid var(--c-rule);
-}
-
-.site-nav__group-label {
+.site-nav__bar {
   display: flex;
-  align-items: center;
-  min-height: 38px;
-  color: var(--c-ink-soft);
-  font-size: calc(13px * var(--fs));
-  font-weight: 700;
-  line-height: 1.4;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  column-gap: 18px;
 }
 
+.site-nav__categories,
+.site-nav__utility,
 .site-nav__list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 8px;
+  gap: 4px 8px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.site-nav__list li {
-  max-width: 100%;
-  overflow-wrap: anywhere;
+.site-nav__categories,
+.site-nav__utility {
+  gap: 0 12px;
 }
 
-/* --------------------------------------------------------------------------
-   機能へのリンク
-   -------------------------------------------------------------------------- */
+.site-nav__categories button,
+.site-nav__utility .site-nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 2px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--c-main-dark);
+  font: inherit;
+  font-size: calc(14px * var(--fs));
+  font-weight: 700;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.site-nav__categories button { gap: 6px; cursor: pointer; }
+.site-nav__categories button span {
+  width: 6px;
+  height: 6px;
+  border: solid currentColor;
+  border-width: 0 1px 1px 0;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.site-nav__categories button[aria-expanded="true"] span {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.site-nav__categories button:hover,
+.site-nav__categories button[aria-expanded="true"],
+.site-nav__categories button[data-current-group],
+.site-nav__utility .site-nav__link:hover,
+.site-nav__utility .site-nav__link[aria-current="page"] {
+  text-decoration: underline;
+}
+
+.site-nav__panel {
+  padding-block: 10px;
+  border-top: 1px solid var(--c-rule);
+}
+
+.site-nav__group {
+  display: grid;
+  grid-template-columns: minmax(0, calc(150px * var(--fs))) minmax(0, 1fr);
+  gap: 6px 16px;
+  align-items: start;
+  padding-block: 12px;
+  border-top: 1px solid var(--c-rule);
+  scroll-margin-top: 1rem;
+}
+
+.site-nav__group:last-child { border-bottom: 1px solid var(--c-rule); }
+
+.site-nav__group .site-nav__group-label {
+  margin: 0;
+  padding-top: 6px;
+  font-size: calc(15px * var(--fs));
+}
+
+.site-nav__list li { max-width: 100%; overflow-wrap: anywhere; }
 
 .site-nav__link {
   display: inline-flex;
   align-items: center;
-  min-height: 38px;
+  min-height: 36px;
   max-width: 100%;
-  padding: 5px 12px;
+  padding: 4px 9px;
   border: 1px solid var(--c-border-strong);
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--c-card);
   color: var(--c-main-dark);
   font-size: calc(14px * var(--fs));
@@ -76,23 +108,12 @@
   text-underline-offset: 3px;
 }
 
-.site-nav__link:hover {
+.site-nav__list .site-nav__link:hover,
+.site-nav__list .site-nav__link[aria-current="page"] {
   border-color: var(--c-main);
   background: var(--c-main-pale);
   text-decoration: underline;
 }
-
-.site-nav__link[aria-current="page"] {
-  border-color: var(--c-main);
-  background: var(--c-main);
-  color: #ffffff;
-}
-
-/* --------------------------------------------------------------------------
-   リンク（外部＝品川区議会の公式サイト）
-
-   矢印で外部サイトへの移動を示す。
-   -------------------------------------------------------------------------- */
 
 .site-nav__link--external::after {
   content: "↗";
@@ -100,108 +121,34 @@
   font-size: 0.9em;
 }
 
-/* 録画・中継。赤は「否決」などの状態に使う色なので、ここでは使わない。
-   キーカラーと同系のライトブルーで「映像」であることだけを示す
-   （site-theme.css の方針） */
-.site-nav__link--video {
-  border-color: var(--c-video-border);
-  background: var(--c-video-bg);
-  color: var(--c-video-text);
-}
-
-.site-nav__link--video:hover {
-  background: var(--c-video-hover);
-}
-
-/* --------------------------------------------------------------------------
-   スマートフォン用の開閉メニュー（640px以下でのみ表示）
-   -------------------------------------------------------------------------- */
-
-.site-nav-toggle {
-  display: none;
-}
-
 @media (max-width: 640px) {
-  .site-nav-toggle {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    width: 100%;
-    min-height: 48px;
-    padding: 8px 12px;
-    border: 1px solid var(--c-main-dark);
-    border-radius: 3px;
-    background: var(--c-main-dark);
-    color: #ffffff;
-    font: inherit;
-    font-size: calc(15px * var(--fs));
-    font-weight: 700;
-    text-align: left;
-    cursor: pointer;
-  }
+  .site-nav__categories, .site-nav__utility { column-gap: 12px; }
+  .site-nav__group { grid-template-columns: minmax(0, 1fr); }
+  .site-nav__group .site-nav__group-label { padding-top: 0; }
+  .site-nav__link { min-height: 44px; }
+}
 
-  .site-nav-toggle__bars {
-    position: relative;
-    flex: 0 0 auto;
-    width: 17px;
-    height: 2px;
-    background: currentColor;
-    box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
-  }
+/* 関連資料を同じ案内から切り替える */
+.site-views {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 18px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--c-rule);
+}
 
-  .site-nav-toggle__current {
-    margin-left: auto;
-    border-radius: 3px;
-    background: rgba(255, 255, 255, 0.22);
-    padding: 3px 8px;
-    font-size: calc(12px * var(--fs));
-    font-weight: 700;
-  }
+.site-views a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 3px 2px;
+  border-bottom: 2px solid transparent;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
 
-  .site-nav-toggle__chevron {
-    flex: 0 0 auto;
-    margin-left: 2px;
-    border-top: 6px solid currentColor;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    transition: transform 0.15s ease;
-  }
-
-  /* 現在地の名前が無いページ（トップ）では矢印を右端に寄せる */
-  .site-nav-toggle__text + .site-nav-toggle__chevron {
-    margin-left: auto;
-  }
-
-  .site-nav-toggle[aria-expanded="true"] .site-nav-toggle__chevron {
-    transform: rotate(180deg);
-  }
-
-  .site-nav[data-nav-open="false"] .site-nav__panel {
-    display: none;
-  }
-
-  .site-nav[data-nav-open="true"] .site-nav__panel {
-    margin-top: 10px;
-    border: 1px solid var(--c-border);
-    border-radius: 3px;
-    padding: 4px 12px;
-    background: var(--c-card);
-  }
-
-  /* スマートフォンでは見出しを上に置き、リンクは画面幅で折り返す。 */
-  .site-nav__group {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 6px;
-    padding: 10px 0;
-  }
-
-  .site-nav__group-label {
-    min-height: 0;
-  }
-
-  .site-nav__link {
-    min-height: 44px;
-    font-size: calc(15px * var(--fs));
-  }
-
+.site-views a[aria-current="page"] {
+  border-bottom-color: var(--c-main);
+  color: var(--c-ink);
+  text-decoration: none;
 }

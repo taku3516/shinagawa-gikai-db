@@ -33,6 +33,15 @@
   }
 
   /** @param {object} bill @returns {string} */
+  function voteDetails(bill) {
+    const vote = data.votes[bill.id];
+    const voteLinks = (bill.meeting?.links || []).filter(source => source.label.includes("賛否"));
+    if (!vote) return voteLinks.length ? sources(voteLinks) : "";
+    const label = vote.type === "split" ? "賛成・反対の票を確認" : "表決参加者が全員賛成";
+    return `<p>${label}</p>${sources([{ ...data.voteSource, locator: vote.locator }])}${voteBreakdown(vote)}`;
+  }
+
+  /** @param {object} bill @returns {string} */
   function billDetail(bill) {
     const configured = data.billDetails?.[bill.id] || {};
     const steps = [
@@ -51,7 +60,7 @@
       ["財政的な影響", configured.cost], ["よくある質問", configured.faq]
     ];
     return `<p>${link("議案一覧", "gian.html?year=" + bill.yearId)} ／ ${link(bill.meeting?.name || "会議のまとめ", "kaigi.html?year=" + bill.yearId + "&meeting=" + bill.meetingId)}</p>
-      <article class="civic-card">
+      <article>
       <h2>${esc(bill.title)}</h2>
       ${terms([["議案番号", esc(bill.number)], ["提出者", esc(bill.proposer)], ["提出日", esc(configured.timeline?.find(item => item.label.includes("提出"))?.date || bill.submittedOn)], ["議決結果", annotate(bill.result || missing)]])}
       <p>${link("この議案をフォロー", "follow.html?" + new URLSearchParams({ kind: "議案", value: bill.id }))}</p>
@@ -64,10 +73,15 @@
       ${fields.map(([title, value]) => `<h3>${esc(title)}</h3><p>${annotate(value || missing)}</p>`).join("")}
       <h3>審議経過・議決結果</h3>
       <ol class="civic-steps">${steps.map(([label, value]) => `<li${value ? " data-confirmed" : ""}>${annotate(label)}<br>${annotate(value || missing)}</li>`).join("")}</ol>
+      <section id="bill-votes" aria-labelledby="bill-votes-title">
+        <h3 id="bill-votes-title">会派別・議員別の賛否</h3>
+        ${data.votes[bill.id] ? "" : '<p>会派・議員別の票の内訳は未収録です。</p>'}
+        ${voteDetails(bill)}
+        <p>${link("この会議の議案の賛否を比較", "sanpi.html?" + new URLSearchParams({ year: bill.yearId, meeting: bill.meetingId }))}</p>
+      </section>
       <h3>案件別の時系列</h3>
       ${list((configured.timeline || []).map(item => `${esc(item.date)} ${esc(item.planned ? "予定" : "実績")} ${link(item.label, item.url)}`), "案件別の日付は未収録")}
       <h3>関連資料</h3>${sources(configured.related)}
-      <p>${link("表決資料を探す", "sanpi.html?" + new URLSearchParams({ year: bill.yearId, meeting: bill.meetingId, q: bill.number }))}</p>
       <details><summary>同じ会議の議案（${sameSession.length}件）</summary>${list(sameSession.map(item => link(item.title, civic.billUrl(item))))}</details>
       <h3>公式資料・出典</h3>${sources([...proof, ...data.reviewedSources?.[bill.id] || []])}
       ${review(data.reviews[bill.id])}</article>`;
@@ -93,8 +107,12 @@
     await Promise.all([civic.loadYears([yearId]), matrix ? civic.loadScript("data/people.js") : Promise.resolve()]);
     if (directId) {
       const bill = civic.bills().find(item => item.id === directId);
+      if (bill && data.votes[bill.id]) await civic.loadScript("data/people.js");
       root.innerHTML = bill ? billDetail(bill) : `<p>指定された議案は収録されていません。</p><p>${link("議案一覧", "gian.html")}</p>`;
-      if (bill) document.title = bill.title + " | 品川区議会DB";
+      if (bill) {
+        document.title = bill.title + " | 品川区議会DB";
+        if (location.hash === "#bill-votes") root.querySelector("#bill-votes").scrollIntoView();
+      }
       return;
     }
     const initial = params.get("year") === "all" ? "all" : yearId;
@@ -106,9 +124,10 @@
       ${select("policy", "政策分野", [""])}
       ${select("result", matrix ? "賛否" : "議決結果", matrix ? [["", "すべて"], ["split", "賛否が割れた"], ["unanimous", "全会一致（表決参加者）"]] : [""], params.get("result") || "")}
       ${input("q", "件名・議案番号", params.get("q") || "")}
-      <button>絞り込む</button></form><p role="status"></p><div class="civic-stack" data-results></div>
+      <button>絞り込む</button></form><p role="status"></p><div class="civic-results" data-results></div>
       <button type="button" data-more hidden>さらに表示</button>`;
     const form = root.querySelector("form");
+    const switchView = document.querySelector("[data-legislative-switch]");
     const status = root.querySelector("[role=status]");
     const result = root.querySelector("[data-results]");
     const more = root.querySelector("[data-more]");
@@ -132,6 +151,14 @@
         if (!matrix) makeOptions(form, "result", rows.map(item => item.result), "すべての議決結果", initialFilters?.get("result"));
         initialFilters = null;
         const filter = filters(form);
+        if (switchView) {
+          const shared = new URLSearchParams([...filter].filter(([key, value]) => key !== "result" && value));
+          // 賛否の標準表示は表決資料の収録年に合わせる。
+          if (!matrix && request === 1 && [...params].length === 0) {
+            shared.delete("year");
+          }
+          switchView.href = (matrix ? "gian.html" : "sanpi.html") + (shared.size ? "?" + shared : "");
+        }
         const filtered = rows.filter(item => (!filter.get("meeting") || item.meetingId === filter.get("meeting"))
           && (!filter.get("tag") || item.tags?.includes(filter.get("tag")))
           && (!filter.get("policy") || (data.billDetails[item.id]?.policy || "分野未収録") === filter.get("policy"))
@@ -140,10 +167,17 @@
         const text = matrix && filter.get("result") === "unanimous" ? "全会一致を確認できた案件は未収録です。" : "条件に一致する収録データがありません。";
         result.innerHTML = filtered.slice(0, limit).map(item => {
           const vote = data.votes[item.id];
-          const voteLinks = (item.meeting?.links || []).filter(source => source.label.includes("賛否"));
-          return `<article class="civic-card"><h2>${link(item.title, civic.billUrl(item))}</h2>
-            <p>${esc([item.meeting?.name, item.number, item.result || "議決結果未収録"].filter(Boolean).join(" ／ "))}</p>
-            ${matrix ? `<p>${vote ? (vote.type === "split" ? "賛成・反対の票を確認" : "表決参加者が全員賛成") : "賛否の内訳未収録"}</p>${sources(vote ? [{ ...data.voteSource, locator: vote.locator }] : voteLinks)}${vote ? voteBreakdown(vote) : ""}` : ""}</article>`;
+          const evidence = matrix ? voteDetails(item) : "";
+          const detailsUrl = civic.billUrl(item);
+          return `<article class="civic-result-row">
+            <h2>${link(item.title, detailsUrl)}</h2>
+            <p>${esc([item.meeting?.name, item.number].filter(Boolean).join(" ／ "))}</p>
+            <p class="civic-result-row__result">${esc(item.result || "議決結果未収録")}</p>
+            ${matrix ? `<div class="civic-result-row__extra">${evidence
+              ? `<details><summary>${vote ? "会派別・議員別の賛否" : "公式の表決資料"}</summary>${evidence}</details>`
+              : '<p class="civic-note">賛否の内訳未収録</p>'}</div>`
+              : vote ? `<div class="civic-result-row__extra">${link("会派別・議員別の賛否", detailsUrl + "#bill-votes")}</div>` : ""}
+          </article>`;
         }).join("") || `<p>${esc(text)}</p>`;
         status.textContent = `${filtered.length.toLocaleString("ja-JP")}件中 ${Math.min(limit, filtered.length)}件を表示`;
         more.hidden = filtered.length <= limit;

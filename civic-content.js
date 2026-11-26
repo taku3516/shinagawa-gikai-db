@@ -28,7 +28,7 @@
     ["フォロー・新着", "follow.html", "端末内のフォロー、未読・既読、RSS"],
     ["CSV・JSONダウンロード", "open-data.html", "公開データの出典・メタデータの保存"],
     ["データ収録状況", "data-status.html", "件数、対象期間、更新日、取得日"],
-    ["区民の声", "kumin-no-koe.html", "意見募集と結果"]
+    ["区の意見募集・結果", "kumin-no-koe.html", "意見募集と結果"]
   ];
   window.SHINAGAWA_CIVIC_CONTENT = { readings, pages };
 })();

@@ -3,7 +3,8 @@
 
   const site = window.SHINAGAWA_DB && window.SHINAGAWA_DB.site;
   const roots = document.querySelectorAll("[data-site-nav]");
-  if (!roots.length) return;
+  const indexes = document.querySelectorAll("[data-site-index]");
+  if (!roots.length && !indexes.length) return;
 
   const escapeHtml = value => String(value ?? "").replace(/[&<>'"]/g, char => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
@@ -14,7 +15,7 @@
   // データ未読込時や旧メニューがキャッシュされている場合の控え。
   const DEFAULT_NAV_GROUPS = [
     {
-      label: "議会",
+      id: "council", section: "primary", label: "議会の動き",
       items: [
         { label: "会議のまとめ", url: "kaigi.html" },
         { label: "会議録・録画", url: "kaigiroku.html" },
@@ -25,10 +26,10 @@
       ]
     },
     {
-      label: "議員・選挙",
+      id: "members", section: "primary", label: "議員・選挙",
       items: [
-        { label: "政治家名簿", url: "giin.html" },
-        { label: "議員ダッシュボード", url: "giin-katsudo.html" },
+        { label: "議員名簿", url: "giin.html" },
+        { label: "議員の活動を比較", url: "giin-katsudo.html" },
         { label: "選挙", url: "senkyo.html" },
         { label: "選挙収支", url: "senkyo-shushi.html" },
         { label: "政務活動費", url: "seimu.html" },
@@ -37,7 +38,7 @@
       ]
     },
     {
-      label: "区政・財政",
+      id: "budget", section: "primary", label: "予算・事業",
       items: [
         { label: "事業カルテ", url: "jigyo.html" },
         { label: "予算・決算", url: "yosan-kessan.html" },
@@ -46,17 +47,17 @@
       ]
     },
     {
-      label: "地域・参加",
+      id: "community", section: "primary", label: "地域・参加",
       items: [
         { label: "わたしの地域", url: "watashi-no-chiiki.html" },
         { label: "区のニュース", url: "news.html" },
         { label: "イベントカレンダー", url: "events.html" },
         { label: "町会区域", url: "chokai-map.html" },
-        { label: "区民の声", url: "kumin-no-koe.html" }
+        { label: "区の意見募集・結果", url: "kumin-no-koe.html" }
       ]
     },
     {
-      label: "品川の歴史",
+      id: "history", section: "primary", label: "品川の歴史",
       items: [
         { label: "歴史トップ", url: "rekishi.html" },
         { label: "年表", url: "rekishi-nenpyo.html" },
@@ -68,16 +69,21 @@
       ]
     },
     {
-      label: "検索・データ",
+      id: "utility", section: "utility", label: "サイト内の機能",
       items: [
-        { label: "横断検索", url: "kensaku.html" },
-        { label: "フォロー・新着", url: "follow.html" },
+        { label: "サイト内検索", url: "kensaku.html" },
+        { label: "フォロー・新着", url: "follow.html" }
+      ]
+    },
+    {
+      id: "data", section: "reference", label: "データ資料",
+      items: [
         { label: "CSV・JSONダウンロード", url: "open-data.html" },
         { label: "データ収録状況", url: "data-status.html" }
       ]
     },
     {
-      label: "公式サイト",
+      id: "official", section: "reference", label: "議会の公式サイト",
       items: [
         { type: "minutes", label: "会議録検索システム", url: "https://gikai.city.shinagawa.tokyo.jp/search" },
         { type: "video", label: "インターネット中継", url: "https://gikaichukei.city.shinagawa.tokyo.jp/" },
@@ -88,9 +94,10 @@
   ];
 
   const configuredGroups = site?.navGroups;
-  const navGroups = Array.isArray(configuredGroups) && configuredGroups.length
-    && !configuredGroups.some(group => group.items?.some(item => item.url === "katsuyo.html"))
+  const navGroups = Array.isArray(configuredGroups) && configuredGroups.some(group => group.section === "primary")
     ? configuredGroups : DEFAULT_NAV_GROUPS;
+  const mainGroups = navGroups.filter(group => group.section === "primary");
+  const utility = navGroups.find(group => group.section === "utility").items;
   const navItems = navGroups.flatMap(group => group.items || []);
 
   // ニュースページだけは Firebase Hosting から配信している。Googleログインは
@@ -142,62 +149,70 @@
     return `<li><a class="${classNames.join(" ")}" data-nav-url="${escapeHtml(item.url)}" href="${escapeHtml(url)}"${target}${currentAttr}>${escapeHtml(item.label)}</a></li>`;
   }
 
-  function renderGroup(group, panelId, index) {
-    const labelId = `${panelId}-label-${index + 1}`;
-    const items = (group.items || []).map(renderLink).join("");
-    return `
-      <div class="site-nav__group">
-        <span class="site-nav__group-label" id="${labelId}">${escapeHtml(group.label)}</span>
-        <ul class="site-nav__list" aria-labelledby="${labelId}">${items}</ul>
-      </div>`;
+  /** @param {object} group @param {string} prefix @returns {string} */
+  function renderGroup(group, prefix) {
+    const id = `${prefix}-${group.id}`;
+    return `<section class="site-nav__group" id="${id}">
+      <h3 class="site-nav__group-label" id="${id}-label">${escapeHtml(group.label)}</h3>
+      <ul class="site-nav__list" aria-labelledby="${id}-label">${group.items.map(renderLink).join("")}</ul>
+    </section>`;
   }
 
-  // スマートフォンでは折りたたみメニューにするため、現在地の短い名前を用意する
-  function currentPageLabel() {
-    if (currentFile === "index.html") return "トップ";
-    return currentItem()?.label || "";
-  }
+  indexes.forEach(root => {
+    root.innerHTML = navGroups.filter(group => group.section !== "utility")
+      .map(group => renderGroup(group, "index")).join("");
+    const anchor = window.location.hash ? document.getElementById(window.location.hash.slice(1)) : null;
+    if (anchor && root.contains(anchor)) anchor.scrollIntoView();
+  });
 
-  const currentLabel = currentPageLabel();
-  const currentHtml = currentLabel
-    ? `<span class="site-nav-toggle__current">表示中：${escapeHtml(currentLabel)}</span>`
-    : "";
-
-  function navHtml(panelId) {
-    const groups = navGroups.map((group, index) => renderGroup(group, panelId, index)).join("");
-    return `
-    <div class="site-nav" data-nav-open="false">
-      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="${panelId}">
-        <span class="site-nav-toggle__bars" aria-hidden="true"></span>
-        <span class="site-nav-toggle__text">メニュー</span>
-        ${currentHtml}
-        <span class="site-nav-toggle__chevron" aria-hidden="true"></span>
-      </button>
-      <div class="site-nav__panel" id="${panelId}">${groups}</div>
+  /** @param {string} prefix @returns {string} */
+  function navHtml(prefix) {
+    const activeGroup = mainGroups.find(group => group.items.includes(currentItem()));
+    return `<div class="site-nav">
+      <div class="site-nav__bar">
+        <ul class="site-nav__categories">${mainGroups.map(group => `<li>
+          <button type="button" aria-expanded="false" aria-controls="${prefix}-${group.id}-panel"${group === activeGroup ? ' data-current-group' : ""}>
+          ${escapeHtml(group.label)}<span aria-hidden="true"></span></button></li>`).join("")}</ul>
+        <ul class="site-nav__utility">${utility.map(renderLink).join("")}</ul>
+      </div>
+      ${mainGroups.map(group => `<div class="site-nav__panel" id="${prefix}-${group.id}-panel" hidden>
+        <ul class="site-nav__list" aria-label="${escapeHtml(group.label)}">${group.items.map(renderLink).join("")}</ul>
+      </div>`).join("")}
     </div>`;
   }
 
   roots.forEach((root, index) => {
-    root.innerHTML = navHtml(`site-nav-panel-${index + 1}`);
-
+    root.innerHTML = navHtml(`site-nav-${index + 1}`);
     const wrapper = root.querySelector(".site-nav");
-    const toggle = root.querySelector(".site-nav-toggle");
-    if (!wrapper || !toggle) return;
+    if (!wrapper) return;
+    const buttons = [...wrapper.querySelectorAll(".site-nav__categories button")];
+    let openButton = null;
 
-    function setOpen(open) {
-      wrapper.setAttribute("data-nav-open", open ? "true" : "false");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    /** @param {HTMLButtonElement|null} next @returns {void} */
+    function setOpen(next) {
+      for (const button of buttons) {
+        const open = button === next;
+        button.setAttribute("aria-expanded", String(open));
+        document.getElementById(button.getAttribute("aria-controls")).hidden = !open;
+      }
+      openButton = next;
     }
 
-    toggle.addEventListener("click", () => {
-      setOpen(wrapper.getAttribute("data-nav-open") !== "true");
+    buttons.forEach(button => {
+      button.addEventListener("click", event => {
+        setOpen(openButton === button ? null : button);
+        if (openButton && event.detail === 0) {
+          document.getElementById(button.getAttribute("aria-controls")).querySelector("a")?.focus();
+        }
+      });
     });
-
     wrapper.addEventListener("keydown", event => {
-      if (event.key !== "Escape") return;
-      if (wrapper.getAttribute("data-nav-open") !== "true") return;
-      setOpen(false);
-      toggle.focus();
+      if (event.key !== "Escape" || !openButton) return;
+      openButton.focus();
+      setOpen(null);
+    });
+    document.addEventListener("click", event => {
+      if (openButton && !wrapper.contains(event.target)) setOpen(null);
     });
 
     window.addEventListener("hashchange", () => {
@@ -206,8 +221,6 @@
         if (link.dataset.navUrl === currentUrl) link.setAttribute("aria-current", "page");
         else link.removeAttribute("aria-current");
       });
-      const label = toggle.querySelector(".site-nav-toggle__current");
-      if (label) label.textContent = `表示中：${currentPageLabel()}`;
     });
   });
 })();
