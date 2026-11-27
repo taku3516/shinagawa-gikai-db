@@ -3,14 +3,12 @@
 対象は直近1年分（令和7年度評価＝令和6年度実施事業）。評価シートは1頁＝1小事業で、
 部署ごとのPDFに分かれて品川区公式サイトで公開されている（data/gyosei.js の sheets）。
 
-表の文字を上から順に取り出すと列が混ざるため、pdfminer で各行の座標を取り、
-「ラベルと同じ高さにある値」「見出し列の真下にある値」という形で読む。
+表の文字を上から順に取り出すと列が混ざるため、各行の座標を取り（scripts/pdf_text.py、
+標準ライブラリのみ）、「ラベルと同じ高さにある値」「見出し列の真下にある値」という形で読む。
 
 使い方:
   python scripts/prepare_jimujigyo.py --fetch   # PDFを scripts/cache/jimujigyo-r07/ に取得
   python scripts/prepare_jimujigyo.py           # data/jimujigyo-r07.js を書き出す
-
-必要: pdfminer.six（scripts/requirements-jimujigyo.txt）
 """
 
 from __future__ import annotations
@@ -24,6 +22,9 @@ import unicodedata
 import urllib.request
 from pathlib import Path
 from typing import Any, Optional
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import pdf_text  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = Path(__file__).resolve().parent / "cache" / "jimujigyo-r07"
@@ -168,18 +169,22 @@ def indicators(lines: list[Line]) -> list[dict[str, str]]:
     area = [ln for ln in lines if header[0] < ln[0] < stop[0] and ln[1] < RIGHT_HALF_X]
     year_x = column_center(area, "(2024年度)", 312)
     goal_x = column_center(area, "（達成年度）", 406)
-    targets = sorted(ln for ln in area if ln[3] == "目標" and 165 < ln[1] < 195)
-    actuals = sorted(ln for ln in area if ln[3] == "実績" and 165 < ln[1] < 195)
+    # 「実績 2,536,656」のように、すぐ右の値と1行にくっつくことがあるので先頭一致で見る
+    targets = sorted(ln for ln in area if ln[3].startswith("目標") and 165 < ln[1] < 195)
+    actuals = sorted(ln for ln in area if ln[3].startswith("実績") and 165 < ln[1] < 195)
     result: list[dict[str, str]] = []
-    for target_row in targets:
+    for index, target_row in enumerate(targets):
         actual_row = next((a for a in actuals if a[0] > target_row[0]), None)
         if not actual_row:
             continue
         top, bottom = target_row[0] - 14, actual_row[0] + 6
+        if index + 1 < len(targets):
+            # 次の指標の欄に食い込まないよう、次の「目標」行の手前で止める
+            bottom = min(bottom, targets[index + 1][0] - 14 - 0.1)
         name = "".join(ln[3] for ln in sorted(area) if top <= ln[0] <= bottom and ln[2] < 148)
         if not name:
             continue
-        unit = "".join(ln[3] for ln in area if top <= ln[0] <= bottom and 148 <= ln[1] < 170)
+        unit = "".join(ln[3] for ln in sorted(area) if top <= ln[0] <= bottom and 148 <= ln[1] < 170)
         definition = "".join(ln[3] for ln in sorted(area) if top <= ln[0] <= bottom and ln[1] >= 428)
 
         def cell(row: Line, center: float) -> str:
@@ -230,21 +235,14 @@ def read_page(lines: list[Line]) -> dict[str, Any]:
 
 
 def page_lines(pdf: Path) -> list[list[Line]]:
-    """PDFの各頁から、文字の行を座標つきで取り出す。"""
-    from pdfminer.high_level import extract_pages
-    from pdfminer.layout import LAParams, LTTextContainer, LTTextLine
-
-    pages: list[list[Line]] = []
-    for page in extract_pages(str(pdf), laparams=LAParams(line_margin=0.1, char_margin=1.0)):
-        lines: list[Line] = []
-        for element in page:
-            if not isinstance(element, LTTextContainer):
-                continue
-            for line in element:
-                if isinstance(line, LTTextLine) and line.get_text().strip():
-                    lines.append((round(page.height - line.y1, 1), round(line.x0, 1), round(line.x1, 1), line.get_text().strip()))
-        pages.append(lines)
-    return pages
+    """PDFの各頁から、文字の行を座標つきで取り出す（上端からの距離に直す）。"""
+    try:
+        pages = pdf_text.pdf_lines(pdf)
+    except pdf_text.PdfError as error:
+        raise SystemExit(f"{pdf.name} を読めませんでした: {error}") from error
+    return [[(round(height - y1, 1), round(x0, 1), round(x1, 1), text.strip())
+             for x0, _y0, x1, y1, text in lines if text.strip()]
+            for height, lines in pages]
 
 
 def read_pdf(pdf: Path, department: str) -> list[dict[str, Any]]:
