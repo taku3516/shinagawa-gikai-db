@@ -116,5 +116,27 @@
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
-  window.SHINAGAWA_CIVIC = { billId, billUrl, bills, csv, download, loadScript, loadYears, normalize, sessionProgress, today };
+  /**
+   * 表決1件を、その会期の公式表の列順で議員ごとに展開する。
+   * @param {{session: string, symbols: string}} vote
+   * @returns {{group: string, memberId: string, symbol: string}[]}
+   */
+  function voteEntries(vote) {
+    const session = window.SHINAGAWA_CIVIC_SOURCES?.voteSessions?.[vote?.session];
+    if (!session) throw new Error(`表決の会期 ${vote?.session} の並び順が未登録です`);
+    if (session.roster.length !== vote.symbols.length) {
+      throw new Error(`表決の会期 ${vote.session} は ${session.roster.length} 列ですが、記号が ${vote.symbols.length} 個です`);
+    }
+    return session.roster.map(({ group, memberId }, index) => ({ group, memberId, symbol: vote.symbols[index] }));
+  }
+
+  /**
+   * 議員1人の記号を返す。その会期の表に載っていない議員は null。
+   * @param {{session: string, symbols: string}} vote @param {string} memberId @returns {string | null}
+   */
+  function memberVote(vote, memberId) {
+    return voteEntries(vote).find(entry => entry.memberId === memberId)?.symbol ?? null;
+  }
+
+  window.SHINAGAWA_CIVIC = { billId, billUrl, bills, csv, download, loadScript, loadYears, memberVote, normalize, sessionProgress, today, voteEntries };
 })();

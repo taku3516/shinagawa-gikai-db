@@ -2543,5 +2543,677 @@ firstQuestions.push(
     secondRegular.stats = (secondRegular.stats || []).filter((item) => item.label !== "議員提出議案");
   }
 
-  year.updatedAt = "2026-07-16";
+  // 令和8年第3回定例会：公式の提出議案ページ（2026-11-27 閲覧）の全24件。
+  // 決算の認定は番号が無く、各議員の賛否の表にも載らないため、他の会期と同じく掲載しない。
+  const thirdRegularBills = [
+    {
+      "meetingId": "r08-3t",
+      "number": "第85号 議案",
+      "proposer": "区長提出",
+      "title": "第85号 議案 品川区印鑑条例の一部を改正する条例",
+      "summary": "「出入国管理及び難民認定法等の一部を改正する法律」が施行されたことを踏まえ、特定在留カードまたは特定特別永住者証明書と印鑑登録証の一元化を図るとともに、特定在留カードまたは特定特別永住者証明書を用いた多機能端末機による印鑑登録証明書の交付を可能とするほか、印鑑の登録に係る本人確認における保証人の範囲を拡大する。 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_85.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_85.doc"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第86号 議案",
+      "proposer": "区長提出",
+      "title": "第86号 議案 品川区一時保護委託者の登録等の基準に関する条例",
+      "summary": "一時保護委託者の登録等の基準を定める。 施行期日 公布の日の翌日（児童福祉法等の一部を改正する法律附則第５条第４項の条例で定める日に係る規定は公布の日）",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_86.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_86.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第87号 議案",
+      "proposer": "区長提出",
+      "title": "第87号 議案 品川区家庭的保育事業等の設備および運営の基準に関する条例の一部を改正する条例",
+      "summary": "「家庭的保育事業等の設備及び運営に関する基準」が改正されたことに伴い、満３歳以上限定小規模保育事業に係る設備および運営の基準ならびに児童対象性暴力等の防止に係る基準を定める。 施行期日 公布の日の翌日（児童福祉法等の一部を改正する法律附則第３条第４項の条例で定める日に係る規定は公布の日、児童対象性暴力等の防止に係る改正規定は令和８年１２月２５日）",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_87.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_87.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第88号 議案",
+      "proposer": "区長提出",
+      "title": "第88号 議案 品川区乳児等通園支援事業の設備および運営の基準に関する条例の一部を改正する条例",
+      "summary": "「乳児等通園支援事業の設備及び運営に関する基準」が改正されたことに伴い、児童対象性暴力等の防止に係る基準を定める。 施行期日 令和８年１２月２５日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_88.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_88.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第89号 議案",
+      "proposer": "区長提出",
+      "title": "第89号 議案 品川区特定教育・保育施設および特定地域型保育事業の運営の基準に関する条例の一部を改正する条例",
+      "summary": "「特定教育・保育施設及び特定地域型保育事業並びに特定子ども・子育て支援施設等の運営に関する基準」が改正されたことに伴い、満３歳以上限定小規模保育事業に係る運営の基準を定める。 施行期日 公布の日の翌日（児童福祉法等の一部を改正する法律附則第６条第３項の条例で定める日に係る規定は公布の日）",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_89.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_89.doc"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第90号 議案",
+      "proposer": "区長提出",
+      "title": "第90号 議案 品川区幼保連携型認定こども園以外の認定こども園の認定の要件に関する条例の一部を改正する条例",
+      "summary": "「就学前の子どもに関する教育、保育等の総合的な提供の推進に関する法律」が改正されたことに伴い、児童対象性暴力等の防止に係る要件を定めるほか、規定を整備する。 施行期日 令和８年１２月２５日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_90.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_90.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第91号 議案",
+      "proposer": "区長提出",
+      "title": "第91号 議案 品川区立学校の学校医、学校歯科医および学校薬剤師の公務災害補償に関する条例の一部を改正する条例",
+      "summary": "「公立学校の学校医、学校歯科医及び学校薬剤師の公務災害補償の基準を定める政令」が改正されたことに伴い、介護補償および葬祭補償の額を改める。 施行期日 公布の日",
+      "tags": [
+        "条例議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_91.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_91.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第92号 議案",
+      "proposer": "区長提出",
+      "title": "第92号 議案 荏原文化センター外壁改修その他工事請負契約",
+      "summary": "○契約の方法 制限付き一般競争入札による契約 ○契約金額 ２億２，２２０万円 ○契約の相手方 圓山建設株式会社 ○工期 契約締結の日の翌日～令和９年５月３１日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_92.pdf"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第93号 議案",
+      "proposer": "区長提出",
+      "title": "第93号 議案 （仮称）子ども・若者活動拠点および南品川児童センター等整備工事請負契約",
+      "summary": "○契約の方法 制限付き一般競争入札による契約 ○契約金額 ２０億１，４１０万円 ○契約の相手方 山田・まつもと建設共同企業体 ○工期 契約締結の日の翌日～令和１１年１０月３１日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_93.pdf"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第94号 議案",
+      "proposer": "区長提出",
+      "title": "第94号 議案 （仮称）子ども・若者活動拠点および南品川児童センター等整備電気設備工事請負契約",
+      "summary": "○契約の方法 制限付き一般競争入札による契約 ○契約金額 ３億８，５００万円 ○契約の相手方 雄電・コスモ建設共同企業体 ○工期 契約締結の日の翌日～令和１１年１０月３１日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_94.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_94.doc"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第95号 議案",
+      "proposer": "区長提出",
+      "title": "第95号 議案 鈴ケ森小学校校舎改築機械設備工事請負契約",
+      "summary": "○契約の方法 制限付き一般競争入札による契約 ○契約金額 １８億９，９７０万円 ○契約の相手方 太洋・ライフバル・塩谷建設共同企業体 ○工期 契約締結の日の翌日～令和１２年１月１８日",
+      "tags": [
+        "契約議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_95.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_95.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第96号 議案",
+      "proposer": "区長提出",
+      "title": "第96号 議案 品川区の特定の事務を取り扱う郵便局の指定について",
+      "summary": "○郵便局の名称 荏原郵便局 ○取り扱う事務 個人番号カードのカード記録事項の変更の届出の受付等に関する事務 ○指定期間 令和８年１１月１日～令和９年３月３１日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_96.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_96.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第97号 議案",
+      "proposer": "区長提出",
+      "title": "第97号 議案 食器洗浄機他の買入れについて",
+      "summary": "○種類および数量 特別養護老人ホーム厨房機器一式 ○買入価格 ２億９，０３０万４，４１０円 ○契約の方法 制限付き一般競争入札による契約 ○契約の相手方 大蔵商事株式会社品川営業所 ○納期 令和９年６月３０日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_97.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_97.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第98号 議案",
+      "proposer": "区長提出",
+      "title": "第98号 議案 指定管理者の指定について",
+      "summary": "公の施設の管理を行わせるため、指定管理者を指定する。 ○施設の名称 品川区立小山台福祉園 ○指定管理者 社会福祉法人長岡福祉協会 ○指定期間 令和１０年４月１日～令和１５年３月３１日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_98.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_98.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第99号 議案",
+      "proposer": "区長提出",
+      "title": "第99号 議案 指定管理者の指定について",
+      "summary": "公の施設の管理を行わせるため、指定管理者を指定する。 ○施設の名称 品川区立小山台児童発達支援センター ○指定管理者 社会福祉法人長岡福祉協会 ○指定期間 令和１０年４月１日～令和１５年３月３１日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_99.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_99.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第100号 議案",
+      "proposer": "区長提出",
+      "title": "第100号 議案 指定管理者の指定について",
+      "summary": "公の施設の管理を行わせるため、指定管理者を指定する。 ○施設の名称 品川区立小山地域密着型多機能ホーム ○指定管理者 社会福祉法人新生寿会 ○指定期間 令和９年３月１日～令和１４年２月２９日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_100.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_100.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第101号 議案",
+      "proposer": "区長提出",
+      "title": "第101号 議案 指定管理者の指定について",
+      "summary": "公の施設の管理を行わせるため、指定管理者を指定する。 ○施設の名称 品川区立大井林町地域密着型多機能ホーム ○指定管理者 社会福祉法人さくら会 ○指定期間 令和９年６月１日～令和１４年５月３１日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_101.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_101.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第102号 議案",
+      "proposer": "区長提出",
+      "title": "第102号 議案 指定管理者の指定について",
+      "summary": "公の施設の管理を行わせるため、指定管理者を指定する。 ○施設の名称 品川区立東五反田地域密着型多機能ホーム ○指定管理者 社会福祉法人新生寿会 ○指定期間 令和９年５月１日～令和１４年４月３０日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_102.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_102.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第103号 議案",
+      "proposer": "区長提出",
+      "title": "第103号 議案 指定管理者の指定について",
+      "summary": "公の施設の管理を行わせるため、指定管理者を指定する。 ○施設の名称 品川区立上大崎特別養護老人ホーム ○指定管理者 社会福祉法人愛生福祉会 ○指定期間 令和９年６月１日～令和１４年５月３１日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_103.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_103.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第104号 議案",
+      "proposer": "区長提出",
+      "title": "第104号 議案 指定管理者の指定について",
+      "summary": "公の施設の管理を行わせるため、指定管理者を指定する。 ○施設の名称 品川区立大崎高齢者多世代交流支援施設 ○指定管理者 生活協同組合・東京高齢協 ○指定期間 令和９年４月１日～令和１４年３月３１日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_104.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_104.doc"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第105号 議案",
+      "proposer": "区長提出",
+      "title": "第105号 議案 指定管理者の指定について",
+      "summary": "公の施設の管理を行わせるため、指定管理者を指定する。 ○施設の名称 品川区立大井林町高齢者住宅 ○指定管理者 社会福祉法人さくら会 ○指定期間 令和９年６月１日～令和１４年５月３１日",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_105.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_105.docx"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第106号 議案",
+      "proposer": "区長提出",
+      "title": "第106号 議案 戸越五丁目および六丁目地内特別区道路線の認定について",
+      "summary": "戸越五丁目および六丁目地内において特別区道路線を認定する。 特別区道路線（その１） 位 置 品川区戸越五丁目地内 延 長 １１５．７６ｍ 幅 員 １５．００ｍから４７．９４ｍまで 面 積 ３，０７３．６１㎡ 特別区道路線（その２） 位 置 品川区戸越五丁目地内 延 長 ４２．８９ｍ 幅 員 ６．００ｍから７．７１ｍまで 面 積 ２６１．１９㎡ 特別区道路線（その３） 位 置 品川区戸越五丁目および六丁目地内 延 長 ２６９．５４ｍ 幅 員 ６．００ｍから７．８７ｍまで 面 積 １，６４９．９１㎡",
+      "tags": [
+        "事件議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_106.pdf"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "第84号 議案",
+      "proposer": "区長提出",
+      "title": "第84号 議案 令和８年度品川区一般会計補正予算",
+      "summary": "⑴歳入歳出予算補正額 ２９６，６５３千円追加 （補正後の歳入歳出予算額 ２３９，５３５，１８４千円） ⑵ 債務負担行為補正件数追加 ２件",
+      "tags": [
+        "予算議案"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_84.pdf"
+        }
+      ]
+    },
+    {
+      "meetingId": "r08-3t",
+      "number": "議員提出 第3号 議案",
+      "proposer": "議員提出",
+      "title": "議員提出 第3号 議案 固定資産税・都市計画税の軽減措置の継続を求める意見書",
+      "tags": [
+        "意見書・決議"
+      ],
+      "result": "原案可決",
+      "links": [
+        {
+          "type": "official",
+          "label": "公式の議案一覧を見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/katsudou/honkaigi-schedule/r08_03t/r08_03t1"
+        },
+        {
+          "type": "official",
+          "label": "議案資料PDFを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r08_03t_g03.pdf"
+        },
+        {
+          "type": "official",
+          "label": "議案資料Wordを見る",
+          "url": "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/document/r08_03t_g03.docx"
+        }
+      ]
+    }
+  ];
+  year.bills = year.bills.filter((bill) => bill.meetingId !== "r08-3t").concat(thirdRegularBills);
+
+  const thirdRegular = year.meetings.find((meeting) => meeting.id === "r08-3t");
+  if (thirdRegular) {
+    thirdRegular.summary = "9月17日から10月23日までの37日間で開催。議案を議決結果と各議員の賛否つきで掲載しています。";
+    thirdRegular.detailLead = "公式の提出議案ページと各議員の賛否の状況（PDF）から、議案と議決結果を整理しています。";
+    thirdRegular.billsSection = {
+      title: "提出議案（全件）",
+      lead: "公式の提出議案ページに掲載された区長提出23件・議員提出1件を、省略せず掲載しています。決算の認定は掲載していません。"
+    };
+    thirdRegular.stats = [
+      { value: "37日間", label: "会期 2026/9/17〜10/23" },
+      { value: "23件", label: "区長提出議案（第84号〜第106号）" },
+      { value: "1件", label: "議員提出議案" }
+    ];
+  }
+
+  year.updatedAt = "2026-11-27";
 })();

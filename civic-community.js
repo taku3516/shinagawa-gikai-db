@@ -74,13 +74,15 @@
         }
         const activities = rows.filter(item => item.person === member.id);
         const votes = window.SHINAGAWA_CIVIC_SOURCES;
-        const voteColumn = votes.voteRoster.findIndex(item => item.memberId === member.id);
-        const voteRows = voteColumn < 0 || (year !== "r07" && year !== "all") ? [] : civic.bills()
-          .filter(item => votes.votes[item.id])
-          .map(item => {
-            const code = votes.votes[item.id].symbols[voteColumn];
-            return link(item.title, civic.billUrl(item)) + "　" + (window.SHINAGAWA_LEGISLATION.voteNames[code] || "不明");
-          });
+        // 会期ごとに列順が違うので、表決1件ずつその会期の並び順で引く。表に載っていない会期は出さない
+        const voteHistory = civic.bills()
+          .filter(item => votes.votes[item.id] && (year === "all" || item.yearId === year))
+          .map(item => ({ item, vote: votes.votes[item.id], code: civic.memberVote(votes.votes[item.id], member.id) }))
+          .filter(entry => entry.code !== null);
+        const voteRows = voteHistory.map(({ item, code }) =>
+          link(item.title, civic.billUrl(item)) + "　" + (window.SHINAGAWA_LEGISLATION.voteNames[code] || "不明"));
+        const voteSourceList = [...new Set(voteHistory.map(entry => entry.vote.session))]
+          .map(id => votes.voteSessions[id].source);
         const parties = [...new Set(activities.map(item => [item.year, item.party].filter(Boolean).join(" ")))];
         const rosterUrl = (db.formerMembersData.members.includes(member) ? "giin.html?view=former-ward" : "giin.html") + "#member-" + member.id;
         const lookup = "kensaku.html?" + new URLSearchParams({ q: member.name });
@@ -99,7 +101,7 @@
           <h3>政務活動費</h3>${sources(member.activityExpenses)}
           <h3>政治資金</h3>${sources(member.fundReports)}
           <h3>表決の履歴</h3>${list(voteRows)}
-          ${voteRows.length ? sources([votes.voteSource]) : ""}
+          ${voteRows.length ? sources(voteSourceList) : ""}
           <h3>請願・関連ニュース</h3><p>確認済みの関連データは未収録です。</p><p>${link("氏名で横断検索", lookup)}</p>
           ${review()}</article>`;
       } catch (error) {
