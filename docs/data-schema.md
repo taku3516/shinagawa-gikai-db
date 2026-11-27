@@ -6,7 +6,7 @@
 | 会議・会期 | 年別データの `meetingId`。公表済み会期で会議台帳が未作成の場合は会期の予定を先行掲載 | 年別データ、`data/civic-sources.js` の `sessions` |
 | 請願・陳情 | `data/petitions.js` の `id` | `petitionFollowup[id]` に議会・行政の動きと出典、公式資料の対応を追加 |
 | 議員 | 既存人物台帳・名簿の `id`。既存IDがない質問は、同名の区別がつく場合に限り人物台帳の別表記を参照 | `people.js`、議員名簿、年別質問、`speaker-members.js` |
-| 会派・表決 | 当時の会派と議員IDを表決資料の列順で記録。表決1件は議案IDと同じ | `voteRoster` と `votes`。議長の不参加、欠席、退席、除斥、棄権、賛否は別値 |
+| 会派・表決 | 当時の会派と議員IDを表決資料の列順で、会期ごとに記録。表決1件は議案IDと同じで、`session` に会議IDを持つ | `voteSessions[会議ID]`（`roster`・`chairColumn`・出典）と `votes`。列数・並び順は会期で変わるため、議員の記号は `civic.memberVote` で引く。議長の不参加、欠席、退席、除斥、棄権、賛否は別値 |
 | 事業 | 事業に付与した `id` | `projects`。出典で確認した経過・議案ID・関係資料を登録。名称・所管等の履歴を追加できる |
 | 予算・決算 | `fy-r07` 等の既存年度ID | `data/fiscal.js` と `budgets` を参照。金額は円、人口は人、基準日はISO日付 |
 | 政務活動費 | 正規化済みの年度・期間・報告主体ID | `data/seimu.js` と `seimuSummary` の会派IDを結合。政治資金は団体IDと対象年で別管理 |

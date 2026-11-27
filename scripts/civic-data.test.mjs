@@ -74,19 +74,56 @@ test("公式資料と結び付けた議案・事業IDが台帳に存在する", 
   }
 });
 
-test("表決の39列が既存議員IDに対応し、議長の扱いと賛否の分類が一致する", () => {
+test("表決の列は会期ごとの並び順で既存議員IDに対応し、議長の扱いと賛否の分類が一致する", () => {
   load("data/people.js");
-  const { votes, voteRoster } = context.window.SHINAGAWA_CIVIC_SOURCES;
-  assert.equal(voteRoster.length, 39);
+  const { votes, voteSessions } = context.window.SHINAGAWA_CIVIC_SOURCES;
   const members = new Set(db.peopleData.people.map(item => item.id));
-  assert.equal(new Set(voteRoster.map(item => item.memberId)).size, voteRoster.length);
-  for (const person of voteRoster) assert.ok(members.has(person.memberId), person.memberId);
-  for (const vote of Object.values(votes)) {
-    assert.equal(vote.symbols.length, voteRoster.length);
-    assert.equal(vote.symbols[8], "長");
-    assert.ok(/^[〇×欠除－棄長]+$/.test(vote.symbols));
-    assert.equal(vote.type, vote.symbols.includes("×") ? "split" : "unanimous");
+  // 会期ごとに列数・議長の列が違う。公式PDFの列順をそのまま持つ
+  const expected = { "r07-1t": [39, "yuichi_watanabe"], "r08-3t": [37, "yuichi_watanabe"] };
+  for (const [sessionId, [columns, chair]] of Object.entries(expected)) {
+    const session = voteSessions[sessionId];
+    assert.ok(session, sessionId);
+    assert.equal(session.roster.length, columns, sessionId);
+    assert.equal(new Set(session.roster.map(item => item.memberId)).size, columns, sessionId);
+    for (const person of session.roster) assert.ok(members.has(person.memberId), person.memberId);
+    assert.equal(session.roster[session.chairColumn].memberId, chair, sessionId);
+    assert.match(session.source.url, /^https:\/\/gikai\.city\.shinagawa\.tokyo\.jp\//);
   }
+  for (const [billId, vote] of Object.entries(votes)) {
+    const session = voteSessions[vote.session];
+    assert.ok(session, billId);
+    assert.ok(billId.startsWith(vote.session + ":"), billId);
+    assert.equal(vote.symbols.length, session.roster.length, billId);
+    assert.equal(vote.symbols.indexOf("長"), session.chairColumn, billId);
+    assert.equal(vote.symbols.lastIndexOf("長"), session.chairColumn, billId);
+    assert.ok(/^[〇×欠除－棄長]+$/.test(vote.symbols), billId);
+    assert.equal(vote.type, vote.symbols.includes("×") ? "split" : "unanimous", billId);
+  }
+});
+
+test("令和8年第3回定例会の表決24件を公式PDFの記号どおりに収録する", () => {
+  const { votes } = context.window.SHINAGAWA_CIVIC_SOURCES;
+  const session = Object.keys(votes).filter(id => id.startsWith("r08-3t:"));
+  assert.equal(session.length, 24);
+  // 第106号議案（区道の認定）だけ賛否が割れた。共産4人と無所属3人が反対
+  const split = session.filter(id => votes[id].type === "split");
+  assert.deepEqual(split, ["r08-3t:第106号議案"]);
+  assert.equal(votes["r08-3t:第106号議案"].symbols, "〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×");
+  assert.ok(votes["r08-3t:議員提出第3号議案"]);
+});
+
+test("議員ごとの賛否は会期の並び順から引き、会期をまたいでも列がずれない", () => {
+  const { votes } = context.window.SHINAGAWA_CIVIC_SOURCES;
+  // 吉田ゆみこ議員は令和7年第1回で22列目、令和8年第3回で37列目
+  assert.equal(civic.memberVote(votes["r07-1t:第10号議案"], "yumiko_yoshida"), "〇");
+  assert.equal(civic.memberVote(votes["r08-3t:第106号議案"], "yumiko_yoshida"), "×");
+  assert.equal(civic.memberVote(votes["r08-3t:第106号議案"], "yuichi_watanabe"), "長");
+  // 令和8年第3回の表に無い議員は記録なし
+  assert.equal(civic.memberVote(votes["r08-3t:第106号議案"], "x-higashi-yuki"), null);
+  const entries = civic.voteEntries(votes["r08-3t:第106号議案"]);
+  assert.equal(entries.length, 37);
+  // vm の別領域で作られたオブジェクトなので、こちらの領域に写してから比べる
+  assert.deepEqual({ ...entries[36] }, { group: "無所属", memberId: "yumiko_yoshida", symbol: "×" });
 });
 
 test("請願の事後対応は既存台帳の案件だけを参照する", () => {

@@ -12,7 +12,7 @@ window.SHINAGAWA_CIVIC_SOURCES = {
     ]
   }],
   votes: {},
-  voteSource: { label: "令和7年第1回定例会 議案と各議員の賛否の状況", url: "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r07_01t_s.pdf#page=1", checkedAt: "2026-11-25" },
+  voteSessions: {},
   budgets: {
     source: { label: "令和8年度当初予算", url: "https://www.city.shinagawa.tokyo.jp/kusei/zaisei/1005653/1005654.html", locator: "一般会計 歳入・歳出", checkedAt: "2026-11-25" },
     population: {
@@ -51,29 +51,76 @@ window.SHINAGAWA_CIVIC_SOURCES = {
 
 (() => {
   const civic = window.SHINAGAWA_CIVIC_SOURCES;
-  // 公式表の列順。議長は9列目。無所属議員は会派の票として合算しない。
-  civic.voteRoster = [
-    ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo nobuaki_takahashi naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
-    ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
-    ["未来", "takahiro_okura kengo_kimura x-higashi-yuki yoshihiro_matsunaga yasuyuki_yamamoto yumiko_yoshida"],
-    ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
-    ["品改", "yukihiro_sugai tsutsui_yosuke masanori_fujiwara"],
-    ["維新", "mao_seraku tokihiro_matsumoto"],
-    ["無所属", "x-ishida-shingo ayaka_ogino shinji_takahashi takeshi_tanaka ryo_nakatsuka takako_nishimoto satoshi_yanagisawa yukari_yokoyama"]
-  ].flatMap(([group, members]) => members.split(" ").map(memberId => ({ group, memberId })));
-  const common = "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇";
-  const split = {
-    10: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇××××〇〇〇〇欠〇〇〇〇×〇×〇",
-    12: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇××××〇〇〇〇欠〇〇〇〇×〇×〇",
-    30: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇××××〇〇〇〇欠〇〇〇〇×〇〇〇"
-  };
-  for (let number = 10; number <= 30; number += 1) {
-    const symbols = split[number] || common;
-    civic.votes[`r07-1t:第${number}号議案`] = {
-      type: split[number] ? "split" : "unanimous",
-      locator: `1頁 第${number}号議案`, symbols
+  const votePdf = "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/";
+
+  /**
+   * 1会期分の表決を登録する。列順・会派は会期ごとの公式表のまま持つ。
+   * 議長の列は記号の代わりに「長」。無所属議員は会派の票として合算しない。
+   * @param {string} sessionId 会議ID（例 "r08-3t"）
+   * @param {{name: string, file: string, checkedAt: string, groups: [string, string][], common: string, rows: [string, number, string?][]}} table
+   * @returns {void}
+   */
+  function addVoteSession(sessionId, { name, file, checkedAt, groups, common, rows }) {
+    const roster = groups.flatMap(([group, members]) => members.split(" ").map(memberId => ({ group, memberId })));
+    const chairColumn = common.indexOf("長");
+    if (chairColumn < 0 || common.length !== roster.length) throw new Error(`${sessionId} の表決の列数が名簿と一致しません`);
+    civic.voteSessions[sessionId] = {
+      name, roster, chairColumn,
+      source: { label: `${name} 議案と各議員の賛否の状況`, url: votePdf + file, checkedAt }
     };
+    for (const [number, page, symbols = common] of rows) {
+      civic.votes[`${sessionId}:${number}`] = {
+        session: sessionId, page, symbols,
+        type: symbols.includes("×") ? "split" : "unanimous",
+        locator: `${page}頁 ${number}`
+      };
+    }
   }
+
+  addVoteSession("r07-1t", {
+    name: "令和7年第1回定例会", file: "r07_01t_s.pdf", checkedAt: "2026-11-25",
+    groups: [
+      ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo nobuaki_takahashi naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
+      ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+      ["未来", "takahiro_okura kengo_kimura x-higashi-yuki yoshihiro_matsunaga yasuyuki_yamamoto yumiko_yoshida"],
+      ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+      ["品改", "yukihiro_sugai tsutsui_yosuke masanori_fujiwara"],
+      ["維新", "mao_seraku tokihiro_matsumoto"],
+      ["無所属", "x-ishida-shingo ayaka_ogino shinji_takahashi takeshi_tanaka ryo_nakatsuka takako_nishimoto satoshi_yanagisawa yukari_yokoyama"]
+    ],
+    common: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇",
+    rows: Array.from({ length: 21 }, (_, index) => {
+      const number = 10 + index;
+      const split = {
+        10: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇××××〇〇〇〇欠〇〇〇〇×〇×〇",
+        12: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇××××〇〇〇〇欠〇〇〇〇×〇×〇",
+        30: "〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇欠〇〇〇〇××××〇〇〇〇欠〇〇〇〇×〇〇〇"
+      };
+      return [`第${number}号議案`, 1, split[number]];
+    })
+  });
+
+  // 令和8年第3回：会派構成が変わり37列。議長（渡辺ゆういち）は16列目。決算の認定は表に載っていない
+  addVoteSession("r08-3t", {
+    name: "令和8年第3回定例会", file: "r08_03t_s.pdf", checkedAt: "2026-11-27",
+    groups: [
+      ["未来", "takahiro_okura ayaka_ogino kengo_kimura takeshi_tanaka tsutsui_yosuke takako_nishimoto masanori_fujiwara yoshihiro_matsunaga yasuyuki_yamamoto"],
+      ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo kazumasa_matsuzawa yuichi_watanabe"],
+      ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+      ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+      ["維新", "mao_seraku tokihiro_matsumoto"],
+      ["無所属", "yukihiro_sugai shinji_takahashi nobuaki_takahashi ryo_nakatsuka naoko_nishimura satoshi_yanagisawa yukari_yokoyama yumiko_yoshida"]
+    ],
+    common: "〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇",
+    // 公式表の行順：第85号〜第106号、第84号（補正予算）、議員提出第3号
+    rows: [
+      ...Array.from({ length: 22 }, (_, index) => [`第${85 + index}号議案`, 1]),
+      ["第84号議案", 1],
+      ["議員提出第3号議案", 1]
+    ].map(([number, page]) => number === "第106号議案"
+      ? [number, page, "〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×"]
+      : [number, page])
+  });
   const ordinance = { label: "第80号議案 品川区児童相談所設置条例", url: "https://gikai.city.shinagawa.tokyo.jp/wp-content/themes/shinagawakugikai/pdf/r05_04t_04.pdf", locator: "提出文および条例第1条・附則" };
   const implementation = { label: "広報しながわ 2025年11月11日号", url: "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1005753/1005894/1006269/1006403/1006406.html", locator: "児童相談所開設1年" };
   const evaluation = { label: "令和7年度事務事業評価結果", url: "https://www.city.shinagawa.tokyo.jp/kusei/shisakukeikaku/1005171/1005172/1005173.html", locator: "行政評価シート（品川区児童相談所）。令和6年度実施事業が対象" };

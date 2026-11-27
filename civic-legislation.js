@@ -17,8 +17,10 @@
   function voteBreakdown(vote) {
     const people = new Map(db.peopleData.people.map(person => [person.id, person.name]));
     const groups = new Map();
-    data.voteRoster.forEach(({ group, memberId }, index) => {
-      const result = voteNames[vote.symbols[index]] || "不明";
+    // 議員の活動ページは表決のあった年で開く
+    const yearId = vote.session.split("-")[0];
+    civic.voteEntries(vote).forEach(({ group, memberId, symbol }) => {
+      const result = voteNames[symbol] || "不明";
       const groupVotes = groups.get(group) || [];
       groupVotes.push({ name: people.get(memberId) || memberId, memberId, result });
       groups.set(group, groupVotes);
@@ -28,7 +30,7 @@
       entries.forEach(entry => totals.set(entry.result, (totals.get(entry.result) || 0) + 1));
       const counts = [...totals].map(([label, count]) => label + count + "人").join("・");
       const label = group === "無所属" ? "無所属議員の個人票" : groupNames[group] + "の所属議員";
-      return `<details><summary>${esc(label)}${group === "無所属" ? "" : " 　" + esc(counts)}</summary>${list(entries.map(entry => link(entry.name, "giin-katsudo.html?" + new URLSearchParams({ id: entry.memberId, year: "r07" })) + "　" + esc(entry.result)))}</details>`;
+      return `<details><summary>${esc(label)}${group === "無所属" ? "" : " 　" + esc(counts)}</summary>${list(entries.map(entry => link(entry.name, "giin-katsudo.html?" + new URLSearchParams({ id: entry.memberId, year: yearId })) + "　" + esc(entry.result)))}</details>`;
     }).join("");
   }
 
@@ -38,7 +40,8 @@
     const voteLinks = (bill.meeting?.links || []).filter(source => source.label.includes("賛否"));
     if (!vote) return voteLinks.length ? sources(voteLinks) : "";
     const label = vote.type === "split" ? "賛成・反対の票を確認" : "表決参加者が全員賛成";
-    return `<p>${label}</p>${sources([{ ...data.voteSource, locator: vote.locator }])}${voteBreakdown(vote)}`;
+    const source = data.voteSessions[vote.session].source;
+    return `<p>${label}</p>${sources([{ ...source, url: source.url + "#page=" + vote.page, locator: vote.locator }])}${voteBreakdown(vote)}`;
   }
 
   /** @param {object} bill @returns {string} */
@@ -101,8 +104,10 @@
     const directId = matrix ? "" : params.get("id");
     const available = db.site.years.filter(year => year.available);
     const requested = directId ? directId.split(":")[0]?.split("-")[0] : params.get("year");
-    const firstVoteYear = Object.keys(data.votes)[0]?.split("-")[0];
-    const defaultYear = matrix && available.some(year => year.id === firstVoteYear) ? firstVoteYear : available[0].id;
+    // 賛否の一覧は、表決を収録した最新の年を最初に開く
+    const voteSessionIds = Object.keys(data.voteSessions).sort();
+    const latestVoteYear = voteSessionIds.at(-1)?.split("-")[0];
+    const defaultYear = matrix && available.some(year => year.id === latestVoteYear) ? latestVoteYear : available[0].id;
     const yearId = available.some(year => year.id === requested) ? requested : defaultYear;
     await Promise.all([civic.loadYears([yearId]), matrix ? civic.loadScript("data/people.js") : Promise.resolve()]);
     if (directId) {
@@ -116,7 +121,7 @@
       return;
     }
     const initial = params.get("year") === "all" ? "all" : yearId;
-    root.innerHTML = `<p>${matrix ? "令和7年第1回定例会の公式表決資料1頁を収録しています。会派別の数値は表決時に所属していた議員の票の内訳です。全会一致の絞り込みは表決した全員が賛成の議案を表示します。" : "会期ごとの議案、議決結果、公式資料を確認できます。"}</p>
+    root.innerHTML = `<p>${matrix ? esc(voteSessionIds.map(id => data.voteSessions[id].name).join("・")) + "の公式表決資料を収録しています（令和7年第1回は1頁のみ）。会派別の数値は表決時に所属していた議員の票の内訳です。全会一致の絞り込みは表決した全員が賛成の議案を表示します。" : "会期ごとの議案、議決結果、公式資料を確認できます。"}</p>
       <form class="civic-controls">
       ${select("year", "暦年", [["all", "全収録年"], ...available.map(year => [year.id, year.label])], initial)}
       ${select("meeting", "会議", [""])}
