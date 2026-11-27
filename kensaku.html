@@ -375,7 +375,7 @@
       { id: "council", label: "議会" },
       { id: "people", label: "人物" },
       { id: "elections", label: "選挙" },
-      { id: "gyosei", label: "行政評価" },
+      { id: "gyosei", label: "事務事業評価" },
       { id: "expenses", label: "政務活動費" },
       { id: "political-funds", label: "政治資金" },
       { id: "resolutions", label: "意見書・決議等" },
@@ -770,7 +770,7 @@
     }
     for (const item of window.SHINAGAWA_CIVIC_SOURCES.projects) {
       addItem({ category: "services", type: "事業", title: item.name, body: item.purpose,
-        links: [{ type: "internal", label: "事業カルテ", url: `jigyo.html?id=${encodeURIComponent(item.id)}` }] });
+        links: [{ type: "internal", label: "事業ごとの記録", url: `jigyo.html?id=${encodeURIComponent(item.id)}` }] });
     }
 
     const electionTypeLabels = Object.fromEntries(
@@ -835,7 +835,7 @@
       });
     }
 
-    // 行政評価（事務事業評価・政策評価）。年度ごとに1件、評価シート等の資料は links にまとめる
+    // 事務事業評価（政策評価の資料も含む）。年度ごとに1件、評価シート等の資料は links にまとめる
     const gyoseiData = window.SHINAGAWA_GYOSEI || { fiscalYears: [] };
     for (const fiscalYear of gyoseiData.fiscalYears || []) {
       const era = String(fiscalYear.label).match(/(令和|平成)\s*(元|\d+)/);
@@ -853,9 +853,9 @@
       addItem({
         id: `gyosei-${fiscalYear.id}`,
         category: "gyosei",
-        type: "行政評価",
+        type: "事務事業評価",
         year,
-        title: `${fiscalYear.label} 行政評価（事務事業評価・政策評価）`,
+        title: `${fiscalYear.label} 事務事業評価`,
         meta: [fiscalYear.label, fiscalYear.status,
                fiscalYear.projects ? `${fiscalYear.projects}事業` : "",
                `資料${documents.length}件`].filter(Boolean).join("／"),
@@ -864,8 +864,8 @@
         primary: ["行政評価", "事務事業評価", "政策評価", fiscalYear.label,
                   fiscalYear.targetFiscalYear].filter(Boolean)
           .concat(documents.map((document) => document.label)),
-        tags: ["行政評価", fiscalYear.status].filter(Boolean),
-        links: [{ type: "internal", label: "行政評価ページで見る", url: `gyosei.html?fy=${fiscalYear.id}` }]
+        tags: ["事務事業評価", fiscalYear.status].filter(Boolean),
+        links: [{ type: "internal", label: "事務事業評価のページで見る", url: `gyosei.html?fy=${fiscalYear.id}` }]
           .concat(documents.map((document) => ({ type: "official", label: document.label, url: document.url })))
       });
     }

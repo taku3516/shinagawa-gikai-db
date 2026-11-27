@@ -15,7 +15,8 @@
 | `giin.html` | 議員・政治家名簿 |
 | `senkyo.html` | 選挙アーカイブ |
 | `yosan-kessan.html` | 予算・決算 |
-| `gyosei.html` | 行政評価 |
+| `gyosei.html` | 事務事業評価（年度別の公式資料） |
+| `jigyo.html` | 事業ごとの記録（小事業単位） |
 | `seimu.html` | 政務活動費 |
 | `seijishikin.html` | 政治資金収支報告書 |
 | `news.html` | 品川区ニュース |
@@ -85,7 +86,8 @@
 - `data/seimu.js` — 政務活動費の年度・会派・議員別公式資料です。
 - `data/seijishikin.js` — 政治団体の収支報告書データです。
 - `data/fiscal.js` — 予算・決算の年度別公式資料です。
-- `data/gyosei.js` — 行政評価（事務事業評価・政策評価）の年度別公式資料です。
+- `data/gyosei.js` — 事務事業評価（政策評価の資料も含む）の年度別公式資料です。
+- `data/jimujigyo-r07.js` — 令和7年度事務事業評価シートから読み取った652小事業。`scripts/prepare_jimujigyo.py` が生成し、手で編集しない。件数と評価区分の内訳を公式集計と突き合わせる。
 
 ### 品川の歴史
 

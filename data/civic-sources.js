@@ -171,7 +171,7 @@ window.SHINAGAWA_CIVIC_SOURCES = {
       impact: "東京都から相談事務が移管され、品川区児童相談所が子どもに関する相談を受け付ける。",
       affected: "原則として18歳未満の子どもとその家庭。",
       timeline: [{ date: "2023-11-22", label: "区長が議案を提出", url: ordinance.url }],
-      related: [{ label: "児童相談所の事業カルテ", url: "jigyo.html?id=child-guidance-center" }, implementation]
+      related: [{ label: "児童相談所の事業ごとの記録", url: "jigyo.html?id=child-guidance-center" }, implementation]
     }
   };
   const taxPetitionOutcome = [{
