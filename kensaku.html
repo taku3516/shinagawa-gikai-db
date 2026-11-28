@@ -723,7 +723,7 @@
       return needsCouncilData ? yearMetas : [];
     }
 
-    // 事務事業評価シートから読み取った小事業（約1.3MB）。検索語があるときか、
+    // 事務事業評価シートから読み取った小事業（1年度あたり約1.3MB、令和5〜7年度評価の3年度分）。検索語があるときか、
     // 事務事業評価の分類を開いたときだけ読み込む。失敗したら次の検索で読み直す。
     let jimujigyoState = "idle";
 
@@ -756,9 +756,13 @@
     function requestJimujigyo() {
       if (jimujigyoState !== "idle" || !needsJimujigyo()) return Promise.resolve();
       jimujigyoState = "loading";
-      return loadScript("data/jimujigyo-r07.js").then(() => {
-        for (const item of window.SHINAGAWA_JIMUJIGYO_SEARCH.items(window.SHINAGAWA_JIMUJIGYO_R07)) addItem(item);
-        delete window.SHINAGAWA_JIMUJIGYO_R07;
+      const sheetYears = ["r07", "r06", "r05"];
+      return Promise.all(sheetYears.map((key) => loadScript(`data/jimujigyo-${key}.js`))).then(() => {
+        for (const key of sheetYears) {
+          const name = `SHINAGAWA_JIMUJIGYO_${key.toUpperCase()}`;
+          for (const item of window.SHINAGAWA_JIMUJIGYO_SEARCH.items(window[name])) addItem(item);
+          delete window[name];
+        }
         jimujigyoState = "loaded";
         refreshFilterOptions();
         applyPendingFilters();
@@ -1279,7 +1283,7 @@
       renderCategoryTabs();
 
       if (!browseMode) {
-        elements.hit.textContent = `人物・選挙・政務活動費・政治資金・ニュースの${INDEX.length.toLocaleString("ja-JP")}件と、平成13年〜令和8年の議会情報、事務事業評価の652事業から検索`;
+        elements.hit.textContent = `人物・選挙・政務活動費・政治資金・ニュースの${INDEX.length.toLocaleString("ja-JP")}件と、平成13年〜令和8年の議会情報、令和5〜7年度の事務事業評価（延べ1,986事業）から検索`;
         elements.results.innerHTML = "";
         elements.guide.hidden = false;
         elements.guide.innerHTML = `<h2>検索する内容を入力してください</h2>

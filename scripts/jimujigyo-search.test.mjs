@@ -6,7 +6,7 @@ import test from "node:test";
 // 横断検索に載せる「事業ごとの記録」の項目づくり。評価シート全件が、
 // 事業ごとの記録の詳細と評価シートの該当頁へ案内できる形で並ぶことを確かめる。
 const context = createContext({ window: {} });
-for (const path of ["data/jimujigyo-r07.js", "kensaku-jimujigyo.js"]) {
+for (const path of ["data/jimujigyo-r07.js", "data/jimujigyo-r06.js", "data/jimujigyo-r05.js", "kensaku-jimujigyo.js"]) {
   runInContext(readFileSync(new URL(`../${path}`, import.meta.url), "utf8"), context, { filename: path });
 }
 const { SHINAGAWA_JIMUJIGYO_R07: data, SHINAGAWA_JIMUJIGYO_SEARCH: vmSearch } = context.window;
@@ -22,6 +22,24 @@ test("評価シートの全事業を1件ずつ検索項目にする", () => {
     assert.equal(item.type, "事業ごとの記録");
     assert.equal(item.year, 2024, "令和6年度に実施した事業");
   }
+});
+
+test("3年度分を、実施年度で分けて重ならない項目にする", () => {
+  const years = [["R07", 2024, 652], ["R06", 2023, 669], ["R05", 2022, 665]];
+  const ids = new Set();
+  for (const [key, year, count] of years) {
+    const items = search.items(context.window[`SHINAGAWA_JIMUJIGYO_${key}`]);
+    assert.equal(items.length, count);
+    for (const item of items) {
+      assert.equal(item.year, year);
+      assert.ok(!ids.has(item.id), item.id);
+      ids.add(item.id);
+    }
+  }
+  // 同じ名前の事業も年度ごとに別の項目になり、評価年度が見出しの補足に出る
+  const older = search.items(context.window.SHINAGAWA_JIMUJIGYO_R06).find(item => item.title === "全庁共通プロジェクト推進経費");
+  assert.match(older.meta, /令和6年度評価/);
+  assert.match(older.links[0].url, /^jigyo\.html\?id=r06-/);
 });
 
 test("事業名・部署・最終評価で引け、詳細と評価シートの頁へ案内する", () => {
