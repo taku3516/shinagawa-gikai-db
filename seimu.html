@@ -111,7 +111,7 @@
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
         <h1>政務活動費</h1>
         <p class="lead">品川区議会が公開している政務活動費の収支一覧と、会派・議員ごとの活動概要・収支報告書を年度別にまとめています。</p>
-        <div class="notice">これは品川区が運営しているものではありません。活動内容は転記せず、品川区議会が公開する公式PDFへ直接案内しています。金額は、令和7年度の会派・議員ごとの収支額と費目別の支出額のみ公式の収支一覧から転記しています。正確な内容は必ずリンク先の原資料をご確認ください。</div>
+        <div class="notice">これは品川区が運営しているものではありません。活動内容は転記せず、品川区議会が公開する公式PDFへ直接案内しています。金額は、会派・議員ごとの収支額と費目別の支出額のみ、各年度の公式の収支一覧から転記しています。正確な内容は必ずリンク先の原資料をご確認ください。</div>
         <nav data-site-nav></nav>
       </div>
     </header>
@@ -155,7 +155,8 @@
       const data = window.SHINAGAWA_SEIMU;
       // 会派・議員ごとの収支と費目別支出。読み込めなかった場合は資料の案内だけを表示する
       const summary = window.SHINAGAWA_SEIMU_SUMMARY || null;
-      const summaryRows = new Map((summary?.rows || []).map(([id, income, expenditure, categories]) => [id, { income, expenditure, categories }]));
+      // 交付先IDは期間ごとに別（r05_1-01 と r05_2-01 など）なので、全期間をまとめて引ける
+      const summaryRows = new Map(Object.values(summary?.periods || {}).flatMap(entry => entry.rows.map(([id, income, expenditure, categories]) => [id, { income, expenditure, categories, source: entry.source }])));
       const elements = {
         overview: document.getElementById("overview-root"),
         rules: document.getElementById("rules-root"),
@@ -213,10 +214,10 @@
           <td class="yen">${esc(yen(row.categories[index]))}</td>
           <td class="bar"><progress max="${row.expenditure}" value="${row.categories[index]}" aria-label="${esc(label)}が支出に占める割合"></progress></td></tr>`).join("");
         return `<div class="recipient-amounts">
-          <p>${esc(summary.year)}　収入 ${esc(yen(row.income))}／支出 ${esc(yen(row.expenditure))}</p>
+          <p>収入 ${esc(yen(row.income))}／支出 ${esc(yen(row.expenditure))}</p>
           <details><summary>費目別の支出</summary>
             <table class="expense-table" aria-label="${esc(recipient.name)}の費目別支出"><tbody>${items}</tbody></table>
-            <p class="source">出典：<a href="${esc(summary.source.url)}" target="_blank" rel="noopener">${esc(summary.source.label)} ↗</a>（${esc(summary.source.locator)}）</p>
+            <p class="source">出典：<a href="${esc(row.source.url)}" target="_blank" rel="noopener">${esc(row.source.label)} ↗</a>（${esc(row.source.locator)}）</p>
           </details>
         </div>`;
       }

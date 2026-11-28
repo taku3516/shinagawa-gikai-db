@@ -55,22 +55,27 @@ test("政務活動費の費目別支出は公式資料の支出額に一致し�
   load("data/seimu.js");
   load("data/seimu-summary.js");
   const summary = context.window.SHINAGAWA_SEIMU_SUMMARY;
-  const year = context.window.SHINAGAWA_SEIMU.fiscalYears.find(item => item.label === summary.year);
-  const recipients = new Set(year.periods.flatMap(period => period.recipients.map(recipient => recipient.id)));
-  // 会派だけでなく無所属議員も含め、その年度の交付先すべてに集計がある
-  assert.deepEqual(Array.from(summary.rows, row => row[0]).sort(), [...recipients].sort());
-  for (const [id, , expenditure, categories] of summary.rows) {
-    assert.ok(recipients.has(id), id);
-    assert.equal(categories.length, summary.categories.length, id);
-    assert.equal(categories.reduce((sum, value) => sum + value, 0), expenditure, id);
+  const periods = context.window.SHINAGAWA_SEIMU.fiscalYears.flatMap(year => year.periods);
+  // 公開している年度・期間すべてに集計がある（令和3〜7年度、令和5年度は4月と5月〜翌3月の2本）
+  assert.deepEqual(Object.keys(summary.periods).sort(), Array.from(periods, period => period.id).sort());
+  for (const period of periods) {
+    const entry = summary.periods[period.id];
+    // 出典は政務活動費ページが案内している収支一覧PDFそのもの
+    assert.equal(entry.source.url, period.summaryDocument.url, period.id);
+    // 会派だけでなく無所属議員も含め、その期間の交付先すべてに集計がある
+    assert.deepEqual(Array.from(entry.rows, row => row[0]).sort(), Array.from(period.recipients, recipient => recipient.id).sort(), period.id);
+    for (const [id, , expenditure, categories] of entry.rows) {
+      assert.equal(categories.length, summary.categories.length, id);
+      assert.equal(categories.reduce((sum, value) => sum + value, 0), expenditure, id);
+    }
+    // 収支一覧の「合計」行と、収入・支出・費目ごとの縦の合計が一致する
+    const column = index => entry.rows.reduce((sum, row) => sum + row[index], 0);
+    assert.equal(column(1), entry.total.income, period.id);
+    assert.equal(column(2), entry.total.expenditure, period.id);
+    summary.categories.forEach((label, index) => {
+      assert.equal(entry.rows.reduce((sum, row) => sum + row[3][index], 0), entry.total.categories[index], `${period.id} ${label}`);
+    });
   }
-  // 収支一覧の「合計」行と、収入・支出・費目ごとの縦の合計が一致する
-  const column = index => summary.rows.reduce((sum, row) => sum + row[index], 0);
-  assert.equal(column(1), summary.total.income);
-  assert.equal(column(2), summary.total.expenditure);
-  summary.categories.forEach((label, index) => {
-    assert.equal(summary.rows.reduce((sum, row) => sum + row[3][index], 0), summary.total.categories[index], label);
-  });
   assert.equal(context.window.SHINAGAWA_CIVIC_SOURCES.seimuSummary, undefined);
   assert.match(readFileSync(new URL("../seimu.html", import.meta.url), "utf8"), /<script src="data\/seimu-summary\.js"><\/script>/);
 });
