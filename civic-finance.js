@@ -98,6 +98,20 @@
       </tbody></table>`;
   }
 
+  /** この事業が属する年度・会計の予算議案（当初予算と補正予算）。 @param {object} sheets @param {object} item @returns {string} */
+  function budgetBillsHtml(sheets, item) {
+    const bills = sheets.budgetBills?.[item.kaikei] || [];
+    const initial = bills.filter(bill => bill.kind === "当初予算");
+    const revisions = bills.filter(bill => bill.kind === "補正予算");
+    const row = bill => `${link(bill.title, "gian.html?" + new URLSearchParams({ id: bill.id }))}${bill.result ? "（" + esc(bill.result) + "）" : ""}`;
+    if (!initial.length) return `<p class="civic-note">この年度・会計の予算議案は未収録です。</p>`;
+    return `<p>この事業の予算は、${esc(sheets.fiscalYear)}の${esc(item.kaikei)}の予算として議会で議決されています。</p>
+      ${terms([["当初予算", initial.map(row).join("<br>")]])}
+      ${revisions.length ? `<details><summary>同じ年度・会計の補正予算（${revisions.length}件）</summary>
+        <p class="civic-note">この事業の予算を補正したとは限りません。補正の内容は各議案の資料で確認してください。</p>${list(revisions.map(row))}</details>` : ""}
+      <p class="civic-note">決算の認定は議案とは別に審査されるため、ここには載せていません。</p>`;
+  }
+
   /** 評価対象の事業を実施した年度の予算・決算ページ（評価年度の前年度）。 @param {string} key @returns {string} */
   function fiscalPage(key) {
     return `yosan-kessan.html#fy-r${String(Number(key.slice(1)) - 1).padStart(2, "0")}`;
@@ -142,6 +156,7 @@
     const years = sheetYears.map(([key, label]) => key === sheets.key
       ? `<strong aria-current="page">${esc(label)}</strong>` : link(label, "jigyo.html?year=" + key));
     const departments = [...new Set(sheets.projects.map(item => item.department))];
+    const accounts = [...new Set(sheets.projects.map(item => item.kaikei).filter(Boolean))];
     const codes = Object.entries({ A: "A 拡大", B: "B 継続", C: "C 改善・見直し", D: "D 完了・廃止" });
     const pageSize = 50;
     root.innerHTML = `<p>品川区の${esc(sheets.evaluationYear)}事務事業評価で評価された、${esc(sheets.fiscalYear)}実施の${sheets.count}事業（小事業）を、事業ごとに見られます。
@@ -154,6 +169,7 @@
       <form class="civic-controls">${input("q", "事業名・目的", query.get("q") || "")}
         ${select("department", "部署", [["", "すべて"], ...departments], query.get("department") || "")}
         ${select("evaluation", "最終評価", [["", "すべて"], ...codes], query.get("evaluation") || "")}
+        ${select("kaikei", "会計", [["", "すべて"], ...accounts], query.get("kaikei") || "")}
         ${select("sort", "並び順", [["sheet", "評価シートの順"], ["budget", "予算現額の多い順"], ["rate", "執行率の低い順"]], query.get("sort") || "sheet")}</form>
       <p role="status" data-count></p><div class="civic-results" data-results></div>
       <p><button type="button" data-more hidden>さらに表示</button></p>
@@ -177,6 +193,7 @@
       rows = sheets.projects.filter(item =>
         (!settings.get("department") || item.department === settings.get("department")) &&
         (!settings.get("evaluation") || item.evaluation?.code === settings.get("evaluation")) &&
+        (!settings.get("kaikei") || item.kaikei === settings.get("kaikei")) &&
         matches([item.name, item.jigyo, item.purpose, item.overview, item.section], settings.get("q")));
       if (sort === "budget") rows = [...rows].sort((a, b) => (b.budgetYen ?? -1) - (a.budgetYen ?? -1));
       const before = rows.length;
@@ -217,6 +234,8 @@
           ${terms([["執行率", esc(rateText(item.rate))], ["翌年度繰越額", money(item.carryYen)], ["不用額", money(item.unusedYen)]])}</section>
         <h3>年度ごとの推移</h3>
         ${historyTable(sheets, item)}
+        <h3>議会で議決した予算</h3>
+        ${budgetBillsHtml(sheets, item)}
         <h3>成果指標（${esc(sheets.fiscalYear)}）</h3>
         ${item.indicators.length ? `<table class="civic-table"><thead><tr><th scope="col">指標</th><th scope="col">目標</th><th scope="col">実績</th><th scope="col">最終目標</th></tr></thead><tbody>
           ${item.indicators.map(row => `<tr><th scope="row">${esc(row.label)}${row.definition ? `<br><small>${esc(row.definition)}</small>` : ""}</th>

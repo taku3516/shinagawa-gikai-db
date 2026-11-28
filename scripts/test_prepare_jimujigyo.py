@@ -182,6 +182,43 @@ class SummaryTest(unittest.TestCase):
         self.assertEqual((got["total"], got["budgetYen"], got["missingAmounts"]), (1, 0, 1))
 
 
+class BudgetBillsTest(unittest.TestCase):
+    """事業が属する年度・会計の予算議案（当初予算と補正予算）を、議案の件名から拾う。"""
+
+    BILLS = [
+        {"meetingId": "r06-1t", "number": "第5号 議案", "title": "第5号 議案 令和６年度品川区一般会計予算", "result": "原案可決"},
+        {"meetingId": "r06-1t", "number": "第6号 議案", "title": "第6号 議案 令和６年度品川区国民健康保険事業会計予算", "result": "原案可決"},
+        {"meetingId": "r06-1t", "number": "第1号 議案", "title": "第1号 議案 令和５年度品川区一般会計補正予算", "result": "原案可決"},
+        {"meetingId": "r06-2t", "number": "第45号 議案", "title": "第45号 議案 令和６年度品川区一般会計補正予算", "result": "原案可決"},
+        {"meetingId": "r06-1t", "number": "第22号 議案", "title": "第22号 議案 品川区立大原児童発達支援センター条例", "result": "原案可決"},
+    ]
+
+    def test_議案のIDは画面と同じ作り方(self) -> None:
+        self.assertEqual(pj.bill_id({"meetingId": "r05-4t", "number": "第80号 議案"}), "r05-4t:第80号議案")
+        self.assertEqual(pj.bill_id({"meetingId": "r08-1r", "number": "第５６号"}), "r08-1r:第56号")
+
+    def test_年度と会計ごとに当初予算と補正予算を分ける(self) -> None:
+        got = pj.budget_bills(self.BILLS, reiwa=6)
+        self.assertEqual(sorted(got), ["一般会計", "国民健康保険事業会計"])
+        self.assertEqual([(b["id"], b["kind"]) for b in got["一般会計"]],
+                         [("r06-1t:第5号議案", "当初予算"), ("r06-2t:第45号議案", "補正予算")])
+        self.assertEqual(got["一般会計"][0]["title"], "令和６年度品川区一般会計予算")
+
+    def test_補正予算は暦年と議案番号の順(self) -> None:
+        bills = [{"meetingId": m, "number": f"第{n}号 議案", "title": f"第{n}号 議案 令和６年度品川区一般会計補正予算"}
+                 for m, n in [("r07-1t", 1), ("r06-3r", 108), ("r06-3t", 75), ("r06-4t", 87)]]
+        self.assertEqual([b["id"] for b in pj.budget_bills(bills, reiwa=6)["一般会計"]],
+                         ["r06-3t:第75号議案", "r06-4t:第87号議案", "r06-3r:第108号議案", "r07-1t:第1号議案"])
+
+    def test_品川区の付かない件名も拾う(self) -> None:
+        bills = [{"meetingId": "r08-1r", "number": "第56号", "title": "第56号 令和8年度一般会計補正予算", "result": "原案可決"}]
+        self.assertEqual([b["id"] for b in pj.budget_bills(bills, reiwa=8)["一般会計"]], ["r08-1r:第56号"])
+
+    def test_年別データの全件ファイルから議案を読む(self) -> None:
+        source = """/* 補足 */\n(() => {\n  year.bills = [\n  {"meetingId": "r06-1t", "number": "第5号 議案", "title": "x"}\n];\n  year.other = [];\n})();\n"""
+        self.assertEqual(pj.bills_from_supplement(source), [{"meetingId": "r06-1t", "number": "第5号 議案", "title": "x"}])
+
+
 class PurposeBlockTest(unittest.TestCase):
     """目的・概要欄の切り出し（【概要】の小見出しが無いシートで実際に起きた崩れ）。"""
 

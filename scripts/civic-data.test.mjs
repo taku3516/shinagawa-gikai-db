@@ -210,3 +210,18 @@ test("廃止した機能と旧ハブを検索結果に出さず、ふりがな�
   assert.ok(paths.every(path => !search.includes(path)));
   assert.ok(!readFileSync(new URL("../site-a11y.js", import.meta.url), "utf8").includes("report.html"));
 });
+
+test("事業ごとの記録が指す予算議案は、議案ページに実在する", () => {
+  // 年別データ（全件）は先頭の検査で読み込み済み
+  const ids = new Set(civic.bills().map(bill => bill.id));
+  for (const key of ["r07", "r06", "r05"]) {
+    load(`data/jimujigyo-${key}.js`);
+    const sheets = context.window[`SHINAGAWA_JIMUJIGYO_${key.toUpperCase()}`];
+    const kaikei = new Set(sheets.projects.map(project => project.kaikei).filter(Boolean));
+    for (const name of kaikei) {
+      const bills = sheets.budgetBills[name] || [];
+      assert.equal(bills.filter(bill => bill.kind === "当初予算").length, 1, `${key} ${name} の当初予算`);
+      for (const bill of bills) assert.ok(ids.has(bill.id), `${key} ${name} ${bill.id}`);
+    }
+  }
+});

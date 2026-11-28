@@ -44,6 +44,21 @@
     return `<p>${label}</p>${sources([{ ...source, url: source.url + "#page=" + vote.page, locator: vote.locator }])}${voteBreakdown(vote)}`;
   }
 
+  /** 予算議案なら、その年度・会計の事業（事業ごとの記録）への案内。評価シートを収録した年度だけ。
+   * @param {object} bill @returns {string} */
+  function budgetProjects(bill) {
+    const match = String(bill.title || "").normalize("NFKC").replace(/\s+/g, "").match(/令和(元|\d+)年度(?:品川区)?(.+?)(補正)?予算$/);
+    if (!match) return "";
+    const reiwa = match[1] === "元" ? 1 : Number(match[1]);
+    // 実施年度 令和N年度の事業は、令和N+1年度の事務事業評価で評価される
+    const key = "r" + String(reiwa + 1).padStart(2, "0");
+    if (!["r05", "r06", "r07"].includes(key)) return "";
+    const label = `令和${reiwa}年度の${match[2]}の事業（事業ごとの記録）`;
+    return `<h3>この予算の事業</h3>
+      <p>${link(label, "jigyo.html?" + new URLSearchParams({ year: key, kaikei: match[2] }))}</p>
+      ${match[3] ? `<p class="civic-note">補正予算は一部の事業の予算だけを変更します。どの事業を補正したかは議案の資料で確認してください。</p>` : ""}`;
+  }
+
   /** @param {object} bill @returns {string} */
   function billDetail(bill) {
     const configured = data.billDetails?.[bill.id] || {};
@@ -72,6 +87,7 @@
         ? Object.entries({ easy: configured.easy, standard: bill.summary, detail: configured.detail }).map(([level, value]) =>
           `<p data-reading-copy="${level}">${annotate(value || bill.summary || missing)}</p>`).join("")
         : `<p>${annotate(bill.summary || missing)}</p>`}
+      ${budgetProjects(bill)}
       <details><summary>原資料を確認する</summary><p>${original ? link(original.label, original.url) : missing}</p></details>
       ${fields.map(([title, value]) => `<h3>${esc(title)}</h3><p>${annotate(value || missing)}</p>`).join("")}
       <h3>審議経過・議決結果</h3>
