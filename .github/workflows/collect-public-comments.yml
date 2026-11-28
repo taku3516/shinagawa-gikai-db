@@ -2,7 +2,8 @@ name: 区の意見募集・結果を収集
 
 # 品川区公式サイトのパブリックコメント（年度別の実施状況と各案件ページ）から、
 # 募集期間・応募者数・意見件数・資料リンクを取り出して data/public-comments.js を更新し、
-# 委員会で区が報告した議題との対応を data/public-comment-council.js に書き出す。
+# 委員会で区が報告した議題との対応を data/public-comment-council.js に、
+# 計画を挙げる事業との対応を data/public-comment-jigyo.js に書き出す。
 # 区サイトへの負荷を避けるため、取得は2秒間隔・週1回にとどめる。
 
 on:
@@ -41,10 +42,14 @@ jobs:
 
       # 委員会の議題（素案・パブコメ結果・策定の報告）との対応は、委員会データの更新も拾うよう毎週作り直す
       - name: 照合処理のテスト
-        run: node --test scripts/public-comment-council.test.mjs
+        run: node --test scripts/public-comment-council.test.mjs scripts/public-comment-jigyo.test.mjs
 
       - name: 委員会の議題と照合する
         run: node scripts/public-comment-council.mjs --write
 
+      # 計画名を根拠法令・目的・概要に挙げる事業（事務事業評価シート）と照合する
+      - name: 事業ごとの記録と照合する
+        run: node scripts/public-comment-jigyo.mjs --write
+
       - name: 取得結果に更新があれば保存
-        run: scripts/commit_data_update.sh "区の意見募集・結果を自動更新" data/public-comments.js data/public-comment-council.js
+        run: scripts/commit_data_update.sh "区の意見募集・結果を自動更新" data/public-comments.js data/public-comment-council.js data/public-comment-jigyo.js

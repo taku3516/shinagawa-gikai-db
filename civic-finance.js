@@ -68,6 +68,23 @@
     return window.SHINAGAWA_JIMUJIGYO_R07;
   }
 
+  /**
+   * この事業が根拠・目的に挙げる計画の意見募集（パブリックコメント）。照合データを読めなければ null を返し、欄ごと出さない。
+   * @param {string} id 事業ごとの記録のID @returns {Promise<{item: object, field: string}[]|null>}
+   */
+  async function commentsFor(id) {
+    const [comments, links] = await Promise.allSettled([civic.loadScript("data/public-comments.js"), civic.loadScript("data/public-comment-jigyo.js")]);
+    if (comments.status === "rejected" || links.status === "rejected") {
+      console.warn("意見募集との照合データを読み込めませんでした", comments.reason || links.reason);
+      return null;
+    }
+    const items = new Map((window.SHINAGAWA_PUBLIC_COMMENTS?.items || []).map(item => [item.id, item]));
+    return Object.entries(window.SHINAGAWA_PUBLIC_COMMENT_JIGYO?.items || {})
+      .flatMap(([commentId, projects]) => projects.filter(entry => entry.id === id).map(entry => ({ item: items.get(commentId), field: entry.field })))
+      .filter(entry => entry.item)
+      .sort((a, b) => b.item.id.localeCompare(a.item.id));
+  }
+
   /** 手でつないだ記録のうち、この小事業（評価シートの頁）を含むもの。 @param {object} sheet @returns {object|undefined} */
   function curatedFor(sheet) {
     return data.projects.find(project => (project.finance || []).some(item => item.source?.url === sheet.source.url));
@@ -135,8 +152,12 @@
     render();
   }
 
-  /** 評価シート1頁分（小事業）の記録。 @param {HTMLElement} root @param {object} sheets @param {object} item @returns {void} */
-  function sheetProject(root, sheets, item) {
+  /** 評価シート1頁分（小事業）の記録。 @param {HTMLElement} root @param {object} sheets @param {object} item @param {{item: object, field: string}[]|null} comments @returns {void} */
+  function sheetProject(root, sheets, item, comments) {
+    // 意見募集とつながる事業は652件中20件ほど。該当のない頁に「見つかりません」を並べないよう、あるときだけ出す
+    const commentSection = !comments?.length ? "" : `<h3>この事業が挙げる計画の意見募集</h3>
+        ${list(comments.map(entry => `${link(entry.item.title, "kumin-no-koe.html?nendo=" + entry.item.fiscalYear + "#pc-" + entry.item.id)}（案件番号${esc(entry.item.id)}・評価シートの${esc(entry.field)}に記載）`))}
+        <p class="civic-note">評価シートの根拠法令等・目的・概要に計画名が書かれているものを自動で照合しています。</p>`;
     const curated = curatedFor(item);
     const scale = Math.max(1, item.budgetYen || 0, item.settledYen || 0);
     const evaluation = item.evaluation;
@@ -160,6 +181,7 @@
           : `<p class="civic-note">評価シートに指標の記載がありません。</p>`}
         <h3>最終評価（${esc(sheets.evaluationYear)}）</h3>
         ${terms([["評価結果", esc(evaluationText(evaluation))], ["今後の方向性", esc(evaluation?.direction)]])}
+        ${commentSection}
         <h3>出典</h3>${sources([item.source, { label: `${sheets.evaluationYear}事務事業評価結果（品川区）`, url: sheets.resultUrl }])}
         <p>${link("同年度の区全体の予算・決算", "yosan-kessan.html#fy-r06")} ／ ${link("年度別の事務事業評価", "gyosei.html")}</p>
         ${review({ ai: false })}</article>`;
@@ -172,7 +194,7 @@
     if (!project) {
       const sheets = await sheetData();
       const sheet = id ? sheets.projects.find(item => item.id === id) : null;
-      if (sheet) return sheetProject(root, sheets, sheet);
+      if (sheet) return sheetProject(root, sheets, sheet, await commentsFor(sheet.id));
       projectList(root, sheets);
       if (id) root.insertAdjacentHTML("afterbegin", `<p role="alert">指定された事業は未収録です。</p>`);
       return;
