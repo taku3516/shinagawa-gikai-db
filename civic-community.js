@@ -128,17 +128,29 @@
       ${select("town", "町丁目", [["", "すべての町丁目"]])}<button>表示する</button></form><div data-area></div>`;
     const form = root.querySelector("form");
     const content = root.querySelector("[data-area]");
+    // URLの町丁目は最初の表示にだけ使う（以後は「すべての町丁目」を選べるように）
+    let initialTown = query.get("town");
     const render = () => {
       const id = form.elements.area.value;
       const district = districts.find(([entry]) => entry === id)[1];
       const areaRegions = regions.filter(region => region.name.startsWith(district));
-      const towns = [...new Set(areaRegions.flatMap(region => region.associations.flatMap(association => association.areas.map(area => area.town))))].sort((a, b) => a.localeCompare(b, "ja", { numeric: true }));
-      const previous = form.elements.town.value || query.get("town");
+      // 地区をまたぐ町丁目は主な地区にだけ通常表示し、ほかの地区では「一部」として分けて示す
+      const { towns, partial } = civic.districtTowns(regions, district, window.SHINAGAWA_CIVIC_SOURCES?.areas?.townDistricts || {});
+      const previous = initialTown ?? form.elements.town.value;
+      initialTown = null;
       form.elements.town.replaceWith(Object.assign(document.createElement("select"), { name: "town" }));
       const townSelect = form.elements.town;
       for (const town of ["", ...towns]) townSelect.append(new Option(town || "すべての町丁目", town));
-      townSelect.value = towns.includes(previous) ? previous : "";
+      if (partial.length) {
+        const group = Object.assign(document.createElement("optgroup"), { label: "一部の番地だけこの地区" });
+        for (const entry of partial) group.append(new Option(entry.town + "（一部）", entry.town));
+        townSelect.append(group);
+      }
+      townSelect.value = [...towns, ...partial.map(entry => entry.town)].includes(previous) ? previous : "";
       const town = townSelect.value;
+      const part = partial.find(entry => entry.town === town);
+      const splitNote = part ? `<p class="civic-note">${esc(town)}の大部分は${esc(part.primary)}地区です。${esc(district)}地区に入るのは、町会の区域でいう ${esc(part.ranges.join("、"))} です。
+        ${link(part.primary + "地区の" + town + "を見る", "watashi-no-chiiki.html?" + new URLSearchParams({ area: districts.find(([, name]) => name === part.primary)[0], town }))}</p>` : "";
       const keyword = town || district;
       const townName = town.replace(/[0-9０-９]+丁目$/, "");
       const historical = db.rekishiPlaces.items.filter(item => item.areas.includes(id) && (!town || civic.normalize(item.address).includes(civic.normalize(townName + town.match(/[0-9０-９]+/)?.[0]))));
@@ -147,10 +159,12 @@
       const upcoming = window.SHINAGAWA_EVENTS.events.filter(item => item.endDate >= civic.today()
         && (town ? matches([item.place, item.title], town) : towns.some(name => matches([item.place, item.title], name.replace(/[0-9０-９]+丁目$/, "")))));
       const textSearch = category => "kensaku.html?" + new URLSearchParams({ q: keyword, category });
-      content.innerHTML = `<h2>${esc(town || district + "地区")}</h2><p>${link("地域をフォロー", "follow.html?" + new URLSearchParams({ kind: "地域", value: keyword }))}
+      content.innerHTML = `<h2>${esc(town ? town + (part ? "（一部）" : "") : district + "地区")}</h2>${splitNote}<p>${link("地域をフォロー", "follow.html?" + new URLSearchParams({ kind: "地域", value: keyword }))}
         ／ ${link("町会区域マップ", "chokai-map.html")} ／ ${link("地区の歴史", "rekishi-chiiki.html#ar-" + id)}</p>
         <div class="civic-grid"><section class="civic-card"><h3>地域センター・町会</h3>
-        ${areaRegions.map(region => `<h4>${link(region.name, region.sourceUrl)}</h4>${list(region.associations.filter(association => !town || association.areas.some(area => area.town === town)).map(association => esc(association.name))) }`).join("")}</section>
+        ${areaRegions.map(region => [region, region.associations.filter(association => !town || association.areas.some(area => area.town === town))])
+          .filter(([, associations]) => !town || associations.length)
+          .map(([region, associations]) => `<h4>${link(region.name, region.sourceUrl)}</h4>${list(associations.map(association => esc(association.name)))}`).join("")}</section>
         <section class="civic-card"><h3>史跡・文化財</h3>${list(historical.map(item => esc(item.name) + (item.address ? "（" + esc(item.address) + "）" : "")))}<p>${link("歴史マップで探す", "rekishi-map.html")}</p></section>
         <section class="civic-card"><h3>地域ニュース（収録地名で照合）</h3>${list(articles.slice(0, 15).map(item => link(item.title, item.url)), "該当する収録ニュースはありません。")}<p>${link("区のニュース一覧", "https://shinagawakugiakidb.firebaseapp.com/news.html")}</p></section>
         <section class="civic-card"><h3>催し（件名・会場の地名による候補）</h3>${list(upcoming.slice(0, 15).map(item => link(item.title, item.url)), "該当する収録イベントはありません。")}<p>${link("カレンダーで探す", "events.html")}</p></section>

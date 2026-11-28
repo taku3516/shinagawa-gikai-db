@@ -249,3 +249,37 @@ test("事業ごとの記録が指す予算議案は、議案ページに実在�
     }
   }
 });
+
+test("わたしの地域は、地区をまたぐ町丁目を主な地区だけに通常表示する", () => {
+  load("data/civic-sources.js");
+  load("data/chokai.js");
+  const { regions } = context.window.SHINAGAWA_DB.chokai;
+  const { townDistricts } = context.window.SHINAGAWA_CIVIC_SOURCES.areas;
+  const names = ["品川", "大崎", "大井", "荏原", "八潮"];
+  // 町会データで2地区以上に出る町丁目は、すべて主な地区が条例に基づいて決まっている
+  const seen = {};
+  for (const district of names) {
+    for (const town of civic.districtTowns(regions, district, {}).towns) (seen[town] ??= []).push(district);
+  }
+  const split = Object.entries(seen).filter(([, list]) => list.length > 1);
+  assert.ok(split.length >= 12);
+  for (const [town, list] of split) assert.ok(list.includes(townDistricts[town]), town);
+  // 主な地区の表から外れた町丁目がない（データ更新で消えた町丁目を残さない）
+  for (const town of Object.keys(townDistricts)) assert.ok(seen[town]?.length > 1, town);
+
+  const osaki = civic.districtTowns(regions, "大崎", townDistricts);
+  for (const town of ["荏原1丁目", "小山1丁目", "小山台1丁目", "戸越1丁目", "豊町1丁目"]) {
+    assert.ok(!osaki.towns.includes(town), town);
+    const part = osaki.partial.find(entry => entry.town === town);
+    assert.equal(part.primary, "荏原", town);
+    assert.ok(part.ranges.length > 0, town);
+  }
+  assert.ok(osaki.towns.includes("東五反田2丁目") && osaki.towns.includes("西品川1丁目"));
+  const shinagawa = civic.districtTowns(regions, "品川", townDistricts);
+  assert.ok(!shinagawa.towns.includes("東五反田2丁目"));
+  assert.deepEqual([...shinagawa.partial.find(entry => entry.town === "東五反田2丁目").ranges], ["16番～22番"]);
+  // どの町丁目も、主な地区としてはちょうど1つの地区に出る
+  const primary = names.flatMap(district => civic.districtTowns(regions, district, townDistricts).towns);
+  assert.equal(new Set(primary).size, primary.length);
+  assert.equal(new Set(primary).size, Object.keys(seen).length);
+});
