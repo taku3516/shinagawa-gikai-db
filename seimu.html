@@ -81,6 +81,16 @@
     .recipient-name { margin: 0; font-size: calc(14px * var(--fs)); line-height: 1.6; }
     .recipient-name span { display: inline-flex; margin-right: 7px; color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); }
     .recipient-docs { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+    /* 会派別の収支と費目別支出（data/seimu-summary.js） */
+    .recipient-amounts { grid-column: 1 / -1; font-size: calc(13px * var(--fs)); line-height: 1.7; }
+    .recipient-amounts p { margin: 0; }
+    .recipient-amounts summary { margin-top: 4px; color: var(--c-main-dark); font-weight: 700; cursor: pointer; }
+    .expense-table { width: 100%; max-width: 640px; margin-top: 8px; border-collapse: collapse; }
+    .expense-table th, .expense-table td { border-top: 1px solid var(--c-rule); padding: 6px 8px 6px 0; text-align: left; font-weight: 400; vertical-align: middle; }
+    .expense-table td.yen { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .expense-table td.bar { width: 40%; }
+    .expense-table progress { width: 100%; }
+    .recipient-amounts .source { margin-top: 6px; color: var(--c-ink-soft); font-size: calc(12px * var(--fs)); }
     .empty {
       border: 1px dashed var(--c-border); border-radius: 3px; background: var(--c-card);
       padding: 34px 18px; color: var(--c-ink-soft); text-align: center; line-height: 1.8;
@@ -101,7 +111,7 @@
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
         <h1>政務活動費</h1>
         <p class="lead">品川区議会が公開している政務活動費の収支一覧と、会派・議員ごとの活動概要・収支報告書を年度別にまとめています。</p>
-        <div class="notice">これは品川区が運営しているものではありません。金額や活動内容は転記せず、品川区議会が公開する公式PDFへ直接案内しています。正確な内容は必ずリンク先の原資料をご確認ください。</div>
+        <div class="notice">これは品川区が運営しているものではありません。活動内容は転記せず、品川区議会が公開する公式PDFへ直接案内しています。金額は、令和7年度の会派別の収支額と費目別の支出額のみ公式の収支一覧から転記しています。正確な内容は必ずリンク先の原資料をご確認ください。</div>
         <nav data-site-nav></nav>
       </div>
     </header>
@@ -130,7 +140,6 @@
         <p class="fine-print">「政務活動のあらまし」「収支報告書」は、各会派・議員から提出された原文を品川区議会が掲載したものです。令和5年度は議員改選に伴い、4月分と5月〜翌3月分に分かれています。</p>
       </div>
     </section>
-    <p class="container"><a href="shikin-shiryo.html?system=seimu">収支・費目別の集計と資料を探す</a></p>
   </main>
 
   <footer><div class="container">品川区議会DB — 政務活動費の一次情報は品川区議会公式サイトです。</div></footer>
@@ -138,11 +147,15 @@
   <script src="data/site.js"></script>
   <script src="site-nav.js"></script>
   <script src="data/seimu.js"></script>
+  <script src="data/seimu-summary.js"></script>
   <script>
     (() => {
       "use strict";
 
       const data = window.SHINAGAWA_SEIMU;
+      // 会派別の収支と費目別支出。読み込めなかった場合は資料の案内だけを表示する
+      const summary = window.SHINAGAWA_SEIMU_SUMMARY || null;
+      const summaryRows = new Map((summary?.rows || []).map(([id, income, expenditure, categories]) => [id, { income, expenditure, categories }]));
       const elements = {
         overview: document.getElementById("overview-root"),
         rules: document.getElementById("rules-root"),
@@ -187,10 +200,32 @@
       elements.year.innerHTML = data.fiscalYears.map(year => `<option value="${esc(year.id)}">${esc(year.label)}</option>`).join("") + '<option value="all">すべての年度</option>';
       elements.year.value = selectedYear;
 
+      /** @param {number} value @returns {string} */
+      function yen(value) {
+        return `${Number(value).toLocaleString("ja-JP")}円`;
+      }
+
+      /** 会派別の収支額と、費目別の支出内訳を返す。集計が無い交付先は空文字 */
+      function renderAmounts(recipient) {
+        const row = summaryRows.get(recipient.id);
+        if (!row) return "";
+        const items = summary.categories.map((label, index) => `<tr><th scope="row">${esc(label)}</th>
+          <td class="yen">${esc(yen(row.categories[index]))}</td>
+          <td class="bar"><progress max="${row.expenditure}" value="${row.categories[index]}" aria-label="${esc(label)}が支出に占める割合"></progress></td></tr>`).join("");
+        return `<div class="recipient-amounts">
+          <p>${esc(summary.year)}　収入 ${esc(yen(row.income))}／支出 ${esc(yen(row.expenditure))}</p>
+          <details><summary>費目別の支出</summary>
+            <table class="expense-table" aria-label="${esc(recipient.name)}の費目別支出"><tbody>${items}</tbody></table>
+            <p class="source">出典：<a href="${esc(summary.source.url)}" target="_blank" rel="noopener">${esc(summary.source.label)} ↗</a>（${esc(summary.source.locator)}）</p>
+          </details>
+        </div>`;
+      }
+
       function renderRecipient(recipient) {
         return `<article class="recipient" id="seimu-${esc(recipient.id)}">
           <h3 class="recipient-name"><span>${esc(recipient.kind)}</span>${esc(recipient.name)}</h3>
           <div class="recipient-docs">${recipient.documents.map(document => externalLink(document)).join("")}</div>
+          ${renderAmounts(recipient)}
         </article>`;
       }
 

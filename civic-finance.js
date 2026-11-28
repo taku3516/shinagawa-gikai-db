@@ -55,7 +55,7 @@
         ])}
         ${column ? `<div class="civic-grid"><section><h3>当初予算・歳入</h3>${list(charts(income))}</section><section><h3>当初予算・歳出</h3>${list(charts(spending))}</section></div>${sources([source])}` : "<p>この年度の款別比較は未収録です。</p>"}
         ${sources([...(year.initial?.links || []), ...(settlement?.links || []), ...settlement?.amountSource ? [settlement.amountSource] : []])}
-        <p>${link("事業別に資料を探す", "jigyo.html")} ／ ${link("政務活動費と政治資金の資料を探す", "shikin-shiryo.html")}</p>`;
+        <p>${link("事業別に資料を探す", "jigyo.html")}</p>`;
     };
     form.addEventListener("change", render);
     form.addEventListener("submit", event => event.preventDefault());
@@ -297,60 +297,5 @@
         ${review()}</article>`;
   }
 
-  /** @param {HTMLElement} root @returns {Promise<void>} */
-  async function funding(root) {
-    await Promise.all(["seimu", "seijishikin"].map(name => civic.loadScript("data/" + name + ".js")));
-    const seimu = window.SHINAGAWA_SEIMU;
-    const politics = window.SHINAGAWA_SEIJISHIKIN;
-    const summary = data.seimuSummary;
-    const activity = seimu.fiscalYears.flatMap(year => year.periods.flatMap(period => period.recipients.map(recipient => ({
-      id: recipient.id, name: recipient.name, year: year.label, kind: recipient.kind, source: period.sourceUrl, links: recipient.documents
-    }))));
-    const reports = politics.organizations.flatMap(org => (org.reports || []).filter(report => report.url).map(report => ({
-      id: org.id, name: org.name, year: report.year, kind: politics.categories.find(category => category.id === org.category)?.label || "政治団体",
-      links: [{ label: "収支報告書", url: report.url }]
-    })));
-    root.innerHTML = `<p>収録されている報告書を探せます。令和7年度の政務活動費は会派別・費目別の集計額も確認できます。個別取引の構造化明細は未収録です。</p>
-      <form class="civic-controls">${select("system", "制度", [["seimu", "政務活動費"], ["politics", "政治資金"]], query.get("system") || "seimu")}
-      ${select("year", "期間", [["", "すべて"]])}${input("q", "会派・議員・政治団体")}${select("category", "費目集計", [["", "全費目"], ...summary.categories])}${select("cost", "表示順", [["year", "期間の新しい順"], ["amount", "収録支出額の多い順"]])}
-      <button>絞り込む</button><button type="button" data-csv>絞り込み結果をCSVに保存</button></form>
-      <p role="status"></p><div class="civic-grid" data-funding></div>`;
-    const form = root.querySelector("form");
-    const outlet = root.querySelector("[data-funding]");
-    let rows = [];
-    const render = () => {
-      const system = form.elements.system.value;
-      const source = system === "politics" ? reports : activity;
-      const years = [...new Set(source.map(row => row.year))].sort((a, b) => b.localeCompare(a, "ja", { numeric: true }));
-      const old = form.elements.year.value;
-      form.elements.year.replaceChildren(new Option("すべて", ""), ...years.map(year => new Option(year, year)));
-      form.elements.year.value = years.includes(old) ? old : "";
-      form.elements.category.disabled = system === "politics";
-      if (system === "politics") form.elements.category.value = "";
-      const filter = filters(form);
-      const categoryIndex = summary.categories.indexOf(filter.get("category"));
-      const totals = new Map(summary.rows.map(row => [row[0], row.slice(1)]));
-      rows = source.filter(row => (!filter.get("year") || row.year === filter.get("year")) && matches([row.name, row.kind], filter.get("q")))
-        .map(row => ({ ...row, amounts: system === "seimu" ? totals.get(row.id) : null }))
-        .filter(row => categoryIndex < 0 || row.amounts)
-        .map(row => ({ ...row, category: categoryIndex < 0 ? null : summary.categories[categoryIndex], categoryAmount: row.amounts?.[2][categoryIndex] ?? null }))
-        .sort((a, b) => filter.get("cost") === "amount" ? (b.categoryAmount ?? b.amounts?.[1] ?? -1) - (a.categoryAmount ?? a.amounts?.[1] ?? -1)
-          : years.indexOf(a.year) - years.indexOf(b.year));
-      root.querySelector("[role=status]").textContent = `該当する報告主体・期間 ${rows.length}件（画面は先頭60件を表示）`;
-      outlet.innerHTML = rows.slice(0, 60).map(row => `<article class="civic-card"><h2>${esc(row.name)}</h2><p>${esc(row.year)} ／ ${esc(row.kind)}</p>
-        ${row.amounts ? `<p>収入 ${money(row.amounts[0])} ／ 支出 ${money(row.amounts[1])}</p>${row.category ? `<p>${esc(row.category)} ${money(row.categoryAmount)}</p>` : ""}
-          <details><summary>支出の内訳</summary>${list(row.amounts[2].map((amount, index) => `${esc(summary.categories[index])} ${money(amount)}
-            <progress aria-label="${esc(summary.categories[index])}の支出割合" max="${row.amounts[1]}" value="${amount}"></progress>`))}${sources([summary.source])}</details>` : "<p>収支額の集計は未収録</p>"}
-        ${sources(row.links)}</article>`).join("") || "<p>条件に一致する報告書はありません。</p>";
-    };
-    form.addEventListener("change", render);
-    form.addEventListener("submit", event => { event.preventDefault(); render(); });
-    root.querySelector("[data-csv]").addEventListener("click", () => {
-      const items = rows.map(row => ({ 主体: row.name, 期間: row.year, 区分: row.kind, 収入円: row.amounts?.[0] ?? null, 支出円: row.amounts?.[1] ?? null, 費目: row.category, 費目集計円: row.categoryAmount, 資料: row.links.map(item => item.url).join(" "), 集計出典: row.amounts ? summary.source.url : null }));
-      civic.download("shinagawa-funding.csv", civic.csv(items, ["主体", "期間", "区分", "収入円", "支出円", "費目", "費目集計円", "資料", "集計出典"]), "text/csv;charset=utf-8");
-    });
-    render();
-  }
-
-  window.SHINAGAWA_FINANCE = { fiscal, projects, funding };
+  window.SHINAGAWA_FINANCE = { fiscal, projects };
 })();
