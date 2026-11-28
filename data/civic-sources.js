@@ -119,6 +119,28 @@ window.SHINAGAWA_CIVIC_SOURCES = {
     })
   });
 
+  // 令和8年第2回：37列。西村直子は自民（品川区議会自民党・無所属の会）の15列目で全件欠席、議長（渡辺ゆういち）は17列目
+  addVoteSession("r08-2t", {
+    name: "令和8年第2回定例会", file: "r08_02t_s.pdf", checkedAt: "2026-11-28",
+    groups: [
+      ["未来", "takahiro_okura ayaka_ogino kengo_kimura takeshi_tanaka tsutsui_yosuke takako_nishimoto masanori_fujiwara yoshihiro_matsunaga yasuyuki_yamamoto"],
+      ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
+      ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+      ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+      ["維新", "mao_seraku tokihiro_matsumoto"],
+      ["無所属", "yukihiro_sugai shinji_takahashi nobuaki_takahashi ryo_nakatsuka satoshi_yanagisawa yukari_yokoyama yumiko_yoshida"]
+    ],
+    common: "〇〇〇〇〇〇〇〇〇〇〇〇〇〇欠〇長〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇",
+    // 公式表の行順：第60号〜第82号、第59号（補正予算）、第83号（人権擁護委員の推薦）
+    rows: [
+      ...Array.from({ length: 23 }, (_, index) => `第${60 + index}号議案`),
+      "第59号議案",
+      "第83号議案"
+    ].map(number => ["第60号議案", "第66号議案"].includes(number)
+      ? [number, 1, "〇〇〇〇〇〇〇〇〇〇〇〇〇〇欠〇長〇〇〇〇〇〇〇××××〇〇〇〇〇××〇×"]
+      : [number, 1])
+  });
+
   // 令和8年第3回：会派構成が変わり37列。議長（渡辺ゆういち）は16列目。決算の認定は表に載っていない
   addVoteSession("r08-3t", {
     name: "令和8年第3回定例会", file: "r08_03t_s.pdf", checkedAt: "2026-11-27",
