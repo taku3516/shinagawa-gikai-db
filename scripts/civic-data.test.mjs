@@ -101,7 +101,10 @@ test("表決の列は会期ごとの並び順で既存議員IDに対応し、議
   const { votes, voteSessions } = context.window.SHINAGAWA_CIVIC_SOURCES;
   const members = new Set(db.peopleData.people.map(item => item.id));
   // 会期ごとに列数・議長の列が違う。公式PDFの列順をそのまま持つ
-  const expected = { "r07-1t": [39, "yuichi_watanabe"], "r08-2t": [37, "yuichi_watanabe"], "r08-3t": [37, "yuichi_watanabe"] };
+  const expected = {
+    "r07-1t": [39, "yuichi_watanabe"], "r08-1t": [37, "yuichi_watanabe"],
+    "r08-2t": [37, "yuichi_watanabe"], "r08-3t": [37, "yuichi_watanabe"]
+  };
   for (const [sessionId, [columns, chair]] of Object.entries(expected)) {
     const session = voteSessions[sessionId];
     assert.ok(session, sessionId);
@@ -132,6 +135,29 @@ test("令和8年第3回定例会の表決24件を公式PDFの記号どおりに�
   assert.deepEqual(split, ["r08-3t:第106号議案"]);
   assert.equal(votes["r08-3t:第106号議案"].symbols, "〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×");
   assert.ok(votes["r08-3t:議員提出第3号議案"]);
+});
+
+test("令和8年第1回定例会の表決57件を公式PDFの3頁の記号どおりに収録する", () => {
+  const { votes, voteSessions } = context.window.SHINAGAWA_CIVIC_SOURCES;
+  const session = Object.keys(votes).filter(id => id.startsWith("r08-1t:"));
+  assert.equal(session.length, 57);
+  // 区長提出の第1号・第2号（補正予算）と議員提出の第1号・第2号は別の表決
+  assert.notEqual(votes["r08-1t:第2号議案"].symbols, votes["r08-1t:議員提出第2号議案"].symbols);
+  assert.equal(votes["r08-1t:第2号議案"].locator, "3頁 第2号議案");
+  assert.equal(votes["r08-1t:第10号議案"].page, 1);
+  assert.equal(votes["r08-1t:第49号議案"].page, 2);
+  assert.equal(session.filter(id => votes[id].type === "split").length, 22);
+  // 西本たか子議員はこの会期では無所属の34列目。木村健悟議員は全件欠席
+  const roster = voteSessions["r08-1t"].roster;
+  assert.deepEqual({ ...roster[33] }, { group: "無所属", memberId: "takako_nishimoto" });
+  for (const id of session) assert.equal(civic.memberVote(votes[id], "kengo_kimura"), "欠", id);
+  // 第17号は須貝議員だけが反対。第5号（令和8年度一般会計予算）は西本議員だけが反対
+  assert.equal(civic.memberVote(votes["r08-1t:第17号議案"], "yukihiro_sugai"), "×");
+  assert.equal([...votes["r08-1t:第17号議案"].symbols].filter(symbol => symbol === "×").length, 1);
+  assert.equal(civic.memberVote(votes["r08-1t:第5号議案"], "takako_nishimoto"), "×");
+  assert.equal([...votes["r08-1t:第5号議案"].symbols].filter(symbol => symbol === "×").length, 1);
+  // 否決された議員提出第2号は、共産4人などが賛成し、多数が反対
+  assert.equal(votes["r08-1t:議員提出第2号議案"].symbols, "×××××××長××欠××××××××××××〇〇〇〇××〇××〇×〇×〇");
 });
 
 test("令和8年第2回定例会の表決25件を公式PDFの記号どおりに収録する", () => {
