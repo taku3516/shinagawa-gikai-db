@@ -138,5 +138,31 @@
     return voteEntries(vote).find(entry => entry.memberId === memberId)?.symbol ?? null;
   }
 
-  window.SHINAGAWA_CIVIC = { billId, billUrl, bills, csv, download, loadScript, loadYears, memberVote, normalize, sessionProgress, today, voteEntries };
+  /**
+   * 地区（地域センター名の先頭）に属する町丁目を、主な地区のものと一部だけのものに分ける。
+   * @param {{name: string, associations: {areas: {town: string, range: string}[]}[]}[]} regions 町会データの地域センター
+   * @param {string} district 地区名（「大崎」など）
+   * @param {Record<string, string>} townDistricts 地区をまたぐ町丁目の主な地区
+   * @returns {{towns: string[], partial: {town: string, primary: string, ranges: string[]}[]}}
+   */
+  function districtTowns(regions, district, townDistricts) {
+    const ranges = new Map();
+    for (const region of regions.filter(entry => entry.name.startsWith(district))) {
+      for (const association of region.associations) {
+        for (const area of association.areas) {
+          if (!ranges.has(area.town)) ranges.set(area.town, []);
+          if (!ranges.get(area.town).includes(area.range)) ranges.get(area.town).push(area.range);
+        }
+      }
+    }
+    const order = (a, b) => a.localeCompare(b, "ja", { numeric: true });
+    const all = [...ranges.keys()].sort(order);
+    const isPrimary = town => !townDistricts[town] || townDistricts[town] === district;
+    return {
+      towns: all.filter(isPrimary),
+      partial: all.filter(town => !isPrimary(town)).map(town => ({ town, primary: townDistricts[town], ranges: ranges.get(town).sort(order) }))
+    };
+  }
+
+  window.SHINAGAWA_CIVIC = { billId, billUrl, bills, csv, districtTowns, download, loadScript, loadYears, memberVote, normalize, sessionProgress, today, voteEntries };
 })();
