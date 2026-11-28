@@ -89,6 +89,16 @@
     .share-legend li::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
     .trend-row { display: grid; grid-template-columns: 9em 1fr; gap: 4px 12px; align-items: center; margin: 6px 0; }
     .trend-row .share-bar { margin: 0; }
+    /* 予算現額と決算額の比較。予算は淡い面＋枠、決算は塗りで、決算が予算の内側に収まる関係を形で示す */
+    .money-row { display: grid; grid-template-columns: 9em 1fr; gap: 2px 12px; align-items: center; margin: 10px 0; }
+    .money-bars { display: grid; gap: 3px; }
+    .money-bar { display: flex; align-items: center; gap: 8px; font-size: calc(12px * var(--fs)); color: var(--c-ink-soft); }
+    .money-bar { white-space: nowrap; }
+    .money-bar span { display: block; flex: none; height: 12px; border-radius: 0 4px 4px 0; }
+    .money-bar[data-kind="budget"] span { background: var(--c-main-pale); border: 1px solid var(--c-main); }
+    .money-bar[data-kind="settled"] span { background: var(--c-main); }
+    .money-legend [data-kind="budget"]::before { background: var(--c-main-pale); outline: 1px solid var(--c-main); }
+    .money-legend [data-kind="settled"]::before { background: var(--c-main); }
     .table-scroll { overflow-x: auto; }
     .summary-table { width: 100%; border-collapse: collapse; font-size: calc(13px * var(--fs)); }
     .summary-table :is(th, td) { border-bottom: 1px solid var(--c-border); padding: 6px 8px; text-align: right; white-space: nowrap; }
@@ -98,7 +108,7 @@
     .summary-table tfoot th, .summary-table tfoot td { font-weight: 700; }
     @media (max-width: 700px) {
       .two-col { grid-template-columns: 1fr; }
-      .trend-row { grid-template-columns: 1fr; }
+      .trend-row, .money-row { grid-template-columns: 1fr; }
       .fy-card { padding: 16px; }
     }
   </style>
@@ -214,6 +224,49 @@
           title="${code} ${CODE_SHORT[code]} ${evaluations[code]}件（${percent(evaluations[code], total)}）"></span>`).join("")}</div>`;
     }
 
+    // 前年度比（例「+5.2%」）。前年度が無ければ空
+    function change(current, previous) {
+      if (!Number.isFinite(previous) || !previous) return "－";
+      const rate = (current - previous) / previous * 100;
+      return `${rate >= 0 ? "+" : "−"}${Math.abs(rate).toFixed(1)}%`;
+    }
+
+    // 予算現額と決算額の年度比較（評価した事業の合計）と、部署別の予算現額の比較
+    function budgetTrendHtml() {
+      const max = Math.max(...SUMMARY.map((y) => y.budgetYen));
+      const bars = SUMMARY.map((y) => `<div class="money-row">
+          <span>${esc(y.fiscalYear)}実施</span>
+          <div class="money-bars">
+            <div class="money-bar" data-kind="budget"><span style="width: ${(y.budgetYen / max * 60).toFixed(1)}%" title="予算現額 ${yen(y.budgetYen)}"></span>${yen(y.budgetYen)}</div>
+            <div class="money-bar" data-kind="settled"><span style="width: ${(y.settledYen / max * 60).toFixed(1)}%" title="決算額 ${yen(y.settledYen)}"></span>${yen(y.settledYen)}</div>
+          </div></div>`).join("");
+      // 古い年度が後ろに並ぶので、前年度は配列の次の要素
+      const table = `<p class="status-note">評価した事業の予算現額・決算額の合計（前年度比は、ひとつ前の実施年度との比較）</p>
+        <div class="table-scroll"><table class="summary-table" aria-label="予算現額と決算額の推移">
+        <thead><tr><th scope="col">実施年度</th><th scope="col">予算現額</th><th scope="col">前年度比</th><th scope="col">決算額</th><th scope="col">前年度比</th><th scope="col">執行率</th></tr></thead>
+        <tbody>${SUMMARY.map((y, i) => `<tr><th scope="row">${esc(y.fiscalYear)}（${esc(y.evaluationYear)}評価）</th>
+          <td>${yen(y.budgetYen)}</td><td>${change(y.budgetYen, SUMMARY[i + 1]?.budgetYen)}</td>
+          <td>${yen(y.settledYen)}</td><td>${change(y.settledYen, SUMMARY[i + 1]?.settledYen)}</td>
+          <td>${percent(y.settledYen, y.budgetYen)}</td></tr>`).join("")}</tbody></table></div>`;
+      // 部署別。令和6年4月の組織改正で部の名称が変わったので、名前が違う部署は別の行になる
+      const names = [...new Set(SUMMARY.flatMap((y) => y.departments.map((d) => d.name)))];
+      const cell = (y, name) => y.departments.find((d) => d.name === name);
+      const departments = `<details><summary>部署別の予算現額を年度で比べる</summary>
+        <p class="status-note">令和6年4月の組織改正で部の名称が変わったため、名称が違う部署は別の行になります（例：企画部と企画経営部）。「－」はその年度に無い部署です。</p>
+        <div class="table-scroll"><table class="summary-table" aria-label="部署別の予算現額の推移">
+        <thead><tr><th scope="col">部署</th>${SUMMARY.map((y) => `<th scope="col">${esc(y.fiscalYear)}</th>`).join("")}<th scope="col">前年度比（${esc(SUMMARY[0].fiscalYear)}）</th></tr></thead>
+        <tbody>${names.map((name) => `<tr><th scope="row">${esc(name)}</th>
+          ${SUMMARY.map((y) => `<td>${cell(y, name) ? yen(cell(y, name).budgetYen) : "－"}</td>`).join("")}
+          <td>${cell(SUMMARY[0], name) && cell(SUMMARY[1], name) ? change(cell(SUMMARY[0], name).budgetYen, cell(SUMMARY[1], name).budgetYen) : "－"}</td></tr>`).join("")}
+        </tbody></table></div></details>`;
+      return `<h3 style="margin-top:24px">予算現額と決算額の推移</h3>
+        ${bars}
+        <ul class="share-legend money-legend"><li data-kind="budget">予算現額</li><li data-kind="settled">決算額</li></ul>
+        ${table}
+        <p class="status-note">職員給与費は評価の対象外のため、区の予算・決算の総額とは一致しません。</p>
+        ${departments}`;
+    }
+
     // 年度ごとの評価区分の推移（評価シートから集計した年度だけ）
     function trendHtml() {
       if (!SUMMARY.length) return "";
@@ -234,6 +287,7 @@
           ${rows}
           <ul class="share-legend">${CODES.map((c) => `<li data-code="${c}">${c} ${CODE_SHORT[c]}</li>`).join("")}</ul>
           ${table}
+          ${budgetTrendHtml()}
         </div>`;
     }
 
