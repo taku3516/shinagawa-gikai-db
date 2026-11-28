@@ -1,7 +1,37 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-28T00:41:27.013201Z",
+  "generatedAt": "2026-11-28T14:29:31.262661Z",
   "events": [
+    {
+      "id": "9555414c914c3ee69e01",
+      "title": "第10回 大井蔵王権現神社「ごんげん市」",
+      "summary": "2026年11月29日(日) 12:00~18:00 開催場所 大井蔵王権現神社前 東京都品川区大井1-14-8 交通アクセス JR・東急大井町線・りんかい線 大井町駅西口 徒歩5分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット OIMACHI TRACKS(大井町トラックス) 2026年3月24日",
+      "url": "https://shinagawa-kanko.or.jp/event/gongenichi10/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-03-24",
+        "2026-11-29"
+      ],
+      "startTime": "12:00",
+      "endTime": "18:00",
+      "timeText": "2026年11月29日(日) 12:00~18:00 開催場所 大井蔵王権現神社前 東京都品川区大井1-14-8 交通アクセス JR・東急大井町線・りんかい線 ",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "しながわ観光協会",
+          "url": "https://shinagawa-kanko.or.jp/event/gongenichi10",
+          "title": "第10回 大井蔵王権現神社「ごんげん市」"
+        }
+      ],
+      "startDate": "2026-03-24",
+      "endDate": "2026-11-29"
+    },
     {
       "id": "8c8e2e66944f32bfab29",
       "title": "しながわ出会いの湯",
@@ -2333,29 +2363,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-25"
     },
     {
-      "id": "eb29a4ff44068d351cfe",
-      "title": "しながわ観光大使 ”見習い” ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー",
-      "summary": "2026年10月1日（木）～11月15日（日）、「しながわ観光大使 ”見習い” ハタチの龍馬×坂井市公式キャラクター 坂井ほや丸 スタンプラリー」が開催されます。 品川区内で行われる期間限定のイベント会場や、品川区と連携協定を結んでいる福井県坂井市のアンテナショップなどを巡りながらスタンプを集め、品川区・坂井市の魅力を感じられるスタンプラリー。3個以上のスタンプを集め、専用はがきで応募すると、坂井市の特産品グルメ10,000円相当などが当たる抽選に参加できます。",
-      "url": "https://shinagawa-kanko.or.jp/event/ryoma-hoyamaru",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-01",
-        "2026-11-15"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "eda97869c79126a6f680",
-      "startDate": "2026-10-01",
-      "endDate": "2026-11-15"
-    },
-    {
       "id": "9ff41498addb4f6262e7",
       "title": "品プリが野外スポーツ「ロゲイニング」開催へ 「広域品川圏」を歩いて得点競う",
       "summary": "品川プリンスホテル（港区高輪4）は10月1日、高輪ゲートウェイ駅、品川駅、大井町駅などを含む「広域品川圏」で、野外スポーツ「シナプリ ロゲイニング」を開始した。 #品川経済新聞",
@@ -2631,28 +2638,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-10-10"
     },
     {
-      "id": "d3b0fa6bfedda0536d26",
-      "title": "【終了】「秋の運河花火まつり2026」 in しながわ水辺の観光フェスタ 2026",
-      "summary": "2026年10月10日（土）、11日（日）、東品川海上公園および天王洲公園にて「秋の運河花火まつり」in しながわ水辺の観光フェスタ 2026 が開催されます。 飲食ブース、屋台、ステージパフォーマンス、移動動物園など楽しい企画が盛りだくさんです。",
-      "url": "https://shinagawa-kanko.or.jp/event/ungahanabi2026",
-      "sourceId": "news",
-      "source": "しながわ観光協会",
-      "category": "地域イベント",
-      "dates": [
-        "2026-10-10"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "東品川 天王洲",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "3f19438d60abb837ae54",
-      "startDate": "2026-10-10",
-      "endDate": "2026-10-10"
-    },
-    {
       "id": "13a7d0aa423ddee5f3e9",
       "title": "【終了】品川ハロウィン（シナハロ） 2026",
       "summary": "2026年10月10日（土）～18日（日）、品川シーズンテラスおよび近隣エリアにて「品川ハロウィン2026」が開催されます。品川港南エリアの住民・企業が連携し、楽しいお祭りを、みんなが出会い交流できる場をつくろう！と始まった「品川ハロウィン」。子どもが安心できるまちづくりを目指し開催される楽しいイベントです。 【公式】しながわ観光協会 SHINAGAWA TOURISM ASSOCIATION [OFFICIAL](@shinagawonder)がシェアした投稿",
@@ -2832,56 +2817,27 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-12-20"
     },
     {
-      "id": "e4b4f645c3b9efd24af6",
+      "id": "da21c658c4ccf9cc6526",
       "title": "国際美術展 TOKYO ATLAS (東京アトラス）",
-      "summary": ": 2026年10月10日(土)~12月20日(日)10:00~17:00 月曜休(但し、10月12日(祝)、11月23日(祝)は開場、翌火曜休)(最終入場16時30分) 会場: アイルしながわ(品川区東品川2-3-2) WHAT MUSEUM(品川区東品川2-6-10 寺田倉庫 G号) 料金: 入場無料 (WHAT",
-      "url": "https://shinagawa-kanko.or.jp/event/tokyo-atlas/",
-      "sourceId": "kanko",
-      "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-10-10",
-        "2026-12-20"
-      ],
-      "startTime": "10:00",
-      "endTime": "17:00",
-      "timeText": ": 2026年10月10日(土)~12月20日(日)10:00~17:00 月曜休(但し、10月12日(祝)、11月23日(祝)は開場、翌火曜休)(最終入場16",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/tokyo-atlas",
-          "title": "国際美術展 TOKYO ATLAS (東京アトラス）"
-        }
-      ],
-      "startDate": "2026-10-10",
-      "endDate": "2026-12-20"
-    },
-    {
-      "id": "ae06877a617a9aa504e8",
-      "title": "目黒川 オータムプロムナード",
-      "summary": "2026年10月10日（土）～31日（土）、目黒川の大崎・五反田間（御成橋～山本橋）にて、「目黒川 オータムプロムナード」が開催されます。 多様な街の魅力を表現した約3,000本のリボンが目黒川を彩ります。飾りつけには、地域のみなさんも参加しました。色とりどりのリボンが風に揺れる景色をお楽しみください。",
-      "url": "https://shinagawa-kanko.or.jp/event/autumnpromunade2026",
+      "summary": "2026年10月10日（土）～12月20日（日）、天王洲・台場・青海エリアで「国際美術展 TOKYO ATLAS」 が開催中です。 本イベントでは、東京の臨海エリアに国内外のアーティストが集い、都市と水辺が響き合うダイナミックな空間で“新しい東京の風景”をアートとして描き出します。",
+      "url": "https://shinagawa-kanko.or.jp/event/tokyo-atlas",
       "sourceId": "news",
       "source": "しながわ観光協会",
       "category": "地域イベント",
       "dates": [
-        "2026-10-10"
+        "2026-10-10",
+        "2026-12-20"
       ],
       "startTime": "",
       "endTime": "",
       "timeText": "",
-      "place": "大崎",
+      "place": "天王洲",
       "application": "",
       "deadline": "",
       "confidence": "estimated",
-      "newsId": "fffcac8a0d5cb83bf28c",
+      "newsId": "6c3a27597d0453b17adc",
       "startDate": "2026-10-10",
-      "endDate": "2026-10-10"
+      "endDate": "2026-12-20"
     },
     {
       "id": "1a5c9dbc657b792b2bdc",
@@ -3766,7 +3722,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "0fdf4a53173e91f6b621",
       "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 金井寿司 2025年7月1日 大井町で1950年創業、街に愛されるお寿司屋",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 味の磯平 2018年8月17日 地元に寄り添う、せんべろ居酒屋 食べる 大",
       "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4546,9 +4502,31 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-09"
     },
     {
+      "id": "daa707e2ae6357d4dad5",
+      "title": "品川インターシティ イルミネーション",
+      "summary": "2026年11月9日(月)~ 2027年2月12日(金)(予定) 16:30~22:00頃 開催場所 品川インターシティ 港区港南2-15-4 交通アクセス JR 品川駅 港南口 徒歩5分 料金 無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポ",
+      "url": "https://shinagawa-kanko.or.jp/event/intercityillm2026/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-11-09",
+        "2027-02-12"
+      ],
+      "startTime": "16:30",
+      "endTime": "22:00",
+      "timeText": "2026年11月9日(月)~ 2027年2月12日(金)(予定) 16:30~22:00頃 開催場所 品川インターシティ 港区港南2-15-4 交通アクセス J",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "startDate": "2026-11-09",
+      "endDate": "2027-02-12"
+    },
+    {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 翡翠原石館 201",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 尾張屋呉服店 20",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4718,7 +4696,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "02cb779466e040ca1e46",
       "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
-      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット Yummy Bakery(ヤミーベーカリー) 2",
+      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット プレミアム日本酒バー INANAKI(イナナキ)",
       "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5446,7 +5424,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "3bdf0afa6cf4dad8469c",
       "title": "【終了】小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
-      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット AND ONE",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 摩耶寺 201",
       "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5625,28 +5603,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-28"
     },
     {
-      "id": "0ad34e791796ac505261",
-      "title": "エシカルカフェ第4回「アラスカ写真家 松本紀生さんライブシアター」",
-      "summary": "アラスカではほかの地域と比べて約3倍の速さで温暖化が進んでいるといわれます。NHK BS スペシャル等で知られる写真家、松本紀生さんは、毎年1年の半分をアラスカで過ごし、豊かな自然や動植物の生態系を取り続けています。自然の尊さと素晴らしさを松本さんのトークとフォトライブを通して感じると共に気候変動について知り、美しい自然を守るために私たちができることを考えてみませんか？ 当日、アンケートご回答者には特製ポストカードをプレゼントします。",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/sumai/1003539/1011762.html",
-      "sourceId": "city-calendar",
-      "source": "品川区 イベントカレンダー",
-      "category": "くらし",
-      "dates": [
-        "2026-11-28"
-      ],
-      "startTime": "13:00",
-      "endTime": "15:00",
-      "timeText": "午後1時00分から午後3時00分まで",
-      "place": "エコルとごし 多目的スペース（東京都品川区豊町2-1-30）",
-      "application": "必要",
-      "deadline": "2026-11-17",
-      "periods": [],
-      "confidence": "official",
-      "startDate": "2026-11-28",
-      "endDate": "2026-11-28"
-    },
-    {
       "id": "3290fbebe3005058feac",
       "title": "下神明天祖神社「しんめい縁日」",
       "summary": "2026年11月28日(土)、29日(日) 11:00~15:00 開催場所 下神明天祖神社 品川区二葉1-3-24 交通アクセス 東急大井町線 下神明駅 徒歩5分 JR京浜東北線 大井町駅 徒歩15分 JR横須賀線 西大井駅 徒歩10分 URL 備考 ※雨天決行(内容の変",
@@ -5749,28 +5705,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-11-28"
     },
     {
-      "id": "6c0a2be08c36eeb9bb26",
-      "title": "地域猫活動学びの会",
-      "summary": "",
-      "url": "https://www.city.shinagawa.tokyo.jp/kurashi/pet/1003219/1011741.html",
-      "sourceId": "city-calendar",
-      "source": "品川区 イベントカレンダー",
-      "category": "環境・まちづくり",
-      "dates": [
-        "2026-11-28"
-      ],
-      "startTime": "14:00",
-      "endTime": "16:00",
-      "timeText": "午後2時00分から午後4時00分まで ※受け付けは、午後1時40分からになります。",
-      "place": "大井第3地域センター第2集会室（品川区西大井2-10-3）",
-      "application": "必要",
-      "deadline": "",
-      "periods": [],
-      "confidence": "official",
-      "startDate": "2026-11-28",
-      "endDate": "2026-11-28"
-    },
-    {
       "id": "98470598085b5ee83403",
       "title": "立正大学「仏教オールスター寄席」",
       "summary": "2026年11月28日（土）、立正大学ロータスホールにて、「仏教オールスター寄席」が開催されます。 仏教・和の伝統文化・エンタメなど、各界から6人のスーパースターがロータスホールに集います。学生の方から、お子様、ご年配の方まで、楽しめるイベントです。",
@@ -5833,35 +5767,6 @@ window.SHINAGAWA_EVENTS = {
       "deadline": "",
       "confidence": "estimated",
       "newsId": "b664dde9f1863dda018c",
-      "startDate": "2026-11-29",
-      "endDate": "2026-11-29"
-    },
-    {
-      "id": "9555414c914c3ee69e01",
-      "title": "第10回 大井蔵王権現神社「ごんげん市」",
-      "summary": "2026年11月29日(日) 12:00~18:00 開催場所 大井蔵王権現神社前 東京都品川区大井1-14-8 交通アクセス JR・東急大井町線・りんかい線 大井町駅西口 徒歩5分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット ニコンミュージアム 2025年1月8日 「伝統と革新」の歴史をエピソード",
-      "url": "https://shinagawa-kanko.or.jp/event/gongenichi10/",
-      "sourceId": "kanko",
-      "source": "しながわ観光協会",
-      "category": "文化・観光・スポーツ",
-      "dates": [
-        "2026-11-29"
-      ],
-      "startTime": "12:00",
-      "endTime": "18:00",
-      "timeText": "2026年11月29日(日) 12:00~18:00 開催場所 大井蔵王権現神社前 東京都品川区大井1-14-8 交通アクセス JR・東急大井町線・りんかい線 ",
-      "place": "",
-      "application": "",
-      "deadline": "",
-      "confidence": "published",
-      "alsoSeenIn": [
-        {
-          "sourceId": "news",
-          "source": "しながわ観光協会",
-          "url": "https://shinagawa-kanko.or.jp/event/gongenichi10",
-          "title": "第10回 大井蔵王権現神社「ごんげん市」"
-        }
-      ],
       "startDate": "2026-11-29",
       "endDate": "2026-11-29"
     },
@@ -6107,29 +6012,6 @@ window.SHINAGAWA_EVENTS = {
       "endDate": "2026-12-04"
     },
     {
-      "id": "09aa2f0f6def4e785545",
-      "title": "【品川区】大崎〜五反田の目黒川沿いを約41万球で照らす「目黒川みんなのイルミネーション2026」が12/4から",
-      "summary": "目黒川みんなのイルミネーション2026が、2026年12月4日（金）から2027年1月31日（日）までの59日間、品川区立五反田ふれあい水辺広場と目黒川沿道で開催されます。大崎〜五反田間の目黒川沿い約2.2km（両岸合計 […]",
-      "url": "https://shinagawa.goguynet.jp/2026/11/18/megurogawa-minna-illumi",
-      "sourceId": "news",
-      "source": "号外NET 品川区",
-      "category": "地域イベント",
-      "dates": [
-        "2026-12-04",
-        "2027-01-31"
-      ],
-      "startTime": "",
-      "endTime": "",
-      "timeText": "",
-      "place": "目黒 大崎",
-      "application": "",
-      "deadline": "",
-      "confidence": "estimated",
-      "newsId": "ba8c1ba8107f14f81d03",
-      "startDate": "2026-12-04",
-      "endDate": "2027-01-31"
-    },
-    {
       "id": "4f7129635012b2a062f0",
       "title": "品川区居住支援セミナーの開催",
       "summary": "（1）基調講演 「住宅確保要配慮者の受け入れにおける退去後の対応の事前準備と課題について」 残置物処理や家財整理の実態、準備方法等をご紹介します。 講師：一般社団法人家財整理相談窓口 代表理事 大邑 政勝 氏 事務局 大和田 昭治 氏 （2）情報提供 品川区の居住支援施策について（品川区 都市環境部 住宅課）",
@@ -6150,6 +6032,36 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "official",
       "startDate": "2026-12-04",
       "endDate": "2026-12-04"
+    },
+    {
+      "id": "32769a2732811e015c75",
+      "title": "目黒川みんなのイルミネーション 2026",
+      "summary": ":2026年12月4日(金)10:00〜18:00 会場:品川区立五反田ふれあい水辺広場 ※ 定員50名程度 ●みんなのアップサイクルスポット 品川区立五反田ふれあい水辺広場に「みんなのアップサイクルスポット」を12月4日の初日限定で設置。ご家庭で使い終わった食用油を自らの手で持ち込んでいただくことができる回収拠点を作",
+      "url": "https://shinagawa-kanko.or.jp/event/minna-no-illumi2026/",
+      "sourceId": "kanko",
+      "source": "しながわ観光協会",
+      "category": "文化・観光・スポーツ",
+      "dates": [
+        "2026-12-04",
+        "2027-01-31"
+      ],
+      "startTime": "10:00",
+      "endTime": "",
+      "timeText": ":2026年12月4日(金)10:00〜18:00 会場:品川区立五反田ふれあい水辺広場 ※ 定員50名程度 ●みんなのアップサイクルスポット 品川区立五反田ふ",
+      "place": "",
+      "application": "",
+      "deadline": "",
+      "confidence": "published",
+      "alsoSeenIn": [
+        {
+          "sourceId": "news",
+          "source": "号外NET 品川区",
+          "url": "https://shinagawa.goguynet.jp/2026/11/18/megurogawa-minna-illumi",
+          "title": "【品川区】大崎〜五反田の目黒川沿いを約41万球で照らす「目黒川みんなのイルミネーション2026」が12/4から"
+        }
+      ],
+      "startDate": "2026-12-04",
+      "endDate": "2027-01-31"
     },
     {
       "id": "87267f1a2a636247fbb5",
@@ -7559,7 +7471,7 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "city-calendar",
       "source": "品川区 イベントカレンダー",
       "status": "ok",
-      "accepted": 94
+      "accepted": 92
     },
     {
       "sourceId": "gikai-committee",
@@ -7572,14 +7484,14 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "kanko",
       "source": "しながわ観光協会",
       "status": "ok",
-      "accepted": 34,
+      "accepted": 35,
       "scanned": 39
     },
     {
       "sourceId": "news",
       "source": "区のニュース",
       "status": "ok",
-      "accepted": 113
+      "accepted": 110
     }
   ]
 };
