@@ -1,5 +1,5 @@
 /* 横断検索（kensaku.html）に載せる「事業ごとの記録」の項目づくり。
-   評価シートから機械的に読み取った小事業（data/jimujigyo-r07.js）を、
+   評価シートから機械的に読み取った小事業（data/jimujigyo-<評価年度>.js、1年度分ずつ）を、
    検索の addItem にそのまま渡せる形へ変える。DOM には触れない。 */
 (function () {
   "use strict";

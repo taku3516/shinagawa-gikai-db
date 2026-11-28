@@ -62,10 +62,25 @@
     render();
   }
 
-  /** 評価シートから読み取った小事業（令和7年度評価）を読み込む。 @returns {Promise<object>} */
-  async function sheetData() {
-    if (!window.SHINAGAWA_JIMUJIGYO_R07) await civic.loadScript("data/jimujigyo-r07.js");
-    return window.SHINAGAWA_JIMUJIGYO_R07;
+  // 評価シートを収録している評価年度（新しい順）。データは data/jimujigyo-<key>.js
+  const sheetYears = [["r07", "令和7年度評価"], ["r06", "令和6年度評価"], ["r05", "令和5年度評価"]];
+
+  /** 小事業のID（例 r06-20-2）から評価年度のキーを取る。読めなければ最新年度。 @param {string|null} id @returns {string} */
+  function sheetYearOf(id) {
+    const key = String(id || "").split("-")[0];
+    return sheetYears.some(([year]) => year === key) ? key : sheetYears[0][0];
+  }
+
+  /** 評価シートから読み取った小事業（1評価年度分）を読み込む。 @param {string} key @returns {Promise<object>} */
+  async function sheetData(key) {
+    const name = "SHINAGAWA_JIMUJIGYO_" + key.toUpperCase();
+    if (!window[name]) await civic.loadScript(`data/jimujigyo-${key}.js`);
+    return window[name];
+  }
+
+  /** 評価対象の事業を実施した年度の予算・決算ページ（評価年度の前年度）。 @param {string} key @returns {string} */
+  function fiscalPage(key) {
+    return `yosan-kessan.html#fy-r${String(Number(key.slice(1)) - 1).padStart(2, "0")}`;
   }
 
   /**
@@ -80,7 +95,7 @@
     }
     const items = new Map((window.SHINAGAWA_PUBLIC_COMMENTS?.items || []).map(item => [item.id, item]));
     return Object.entries(window.SHINAGAWA_PUBLIC_COMMENT_JIGYO?.items || {})
-      .flatMap(([commentId, projects]) => projects.filter(entry => entry.id === id).map(entry => ({ item: items.get(commentId), field: entry.field })))
+      .flatMap(([commentId, projects]) => projects.filter(entry => (entry.ids || [entry.id]).includes(id)).map(entry => ({ item: items.get(commentId), field: entry.field })))
       .filter(entry => entry.item)
       .sort((a, b) => b.item.id.localeCompare(a.item.id));
   }
@@ -102,6 +117,8 @@
 
   /** 事業ごとの記録の一覧（評価シート全件＋手でつないだ記録）。 @param {HTMLElement} root @param {object} sheets @returns {void} */
   function projectList(root, sheets) {
+    const years = sheetYears.map(([key, label]) => key === sheets.key
+      ? `<strong aria-current="page">${esc(label)}</strong>` : link(label, "jigyo.html?year=" + key));
     const departments = [...new Set(sheets.projects.map(item => item.department))];
     const codes = Object.entries({ A: "A 拡大", B: "B 継続", C: "C 改善・見直し", D: "D 完了・廃止" });
     const pageSize = 50;
@@ -111,6 +128,7 @@
       <h2>議案などとつないだ記録</h2>
       ${list(data.projects.map(item => link(item.name, "jigyo.html?id=" + encodeURIComponent(item.id))))}
       <h2>${esc(sheets.evaluationYear)}評価の全事業</h2>
+      <nav aria-label="評価年度"><p>評価年度：${years.join(" ／ ")}</p></nav>
       <form class="civic-controls">${input("q", "事業名・目的", query.get("q") || "")}
         ${select("department", "部署", [["", "すべて"], ...departments], query.get("department") || "")}
         ${select("evaluation", "最終評価", [["", "すべて"], ...codes], query.get("evaluation") || "")}
@@ -163,7 +181,7 @@
     const evaluation = item.evaluation;
     root.innerHTML = `<p>${link("事業一覧", "jigyo.html")} ／ ${link("事業をフォロー", "follow.html?" + new URLSearchParams({ kind: "事業", value: item.name }))}</p>
       <article><h2>${esc(item.name)}</h2>
-        <p class="civic-note">${esc(sheets.evaluationYear)}事務事業評価シート（${esc(sheets.fiscalYear)}実施事業）から機械的に読み取った内容です。正確な内容は${link("評価シートの該当頁", item.source.url)}で確認してください。</p>
+        <p class="civic-note">${esc(item.source.label.replace(/（.*$/, ""))}（${esc(sheets.fiscalYear)}実施事業）から機械的に読み取った内容です。正確な内容は${link("評価シートの該当頁", item.source.url)}で確認してください。</p>
         ${curated ? `<p>${link(curated.name + "の記録（議案・経過とつないだもの）", "jigyo.html?id=" + encodeURIComponent(curated.id))}</p>` : ""}
         ${terms([["目的", annotate(item.purpose)], ["概要", annotate(item.overview)],
           ["所管", esc([item.department, item.section, item.unit].filter(Boolean).join(" "))],
@@ -180,10 +198,12 @@
             <td>${esc(row.target ? row.target + row.unit : "－")}</td><td>${esc(row.actual ? row.actual + row.unit : "－")}</td><td>${esc(row.goal ? row.goal + row.unit : "－")}</td></tr>`).join("")}</tbody></table>`
           : `<p class="civic-note">評価シートに指標の記載がありません。</p>`}
         <h3>最終評価（${esc(sheets.evaluationYear)}）</h3>
-        ${terms([["評価結果", esc(evaluationText(evaluation))], ["今後の方向性", esc(evaluation?.direction)]])}
+        ${terms([["評価結果", esc(evaluationText(evaluation))],
+          // 令和5年度評価の様式には「今後の取組の方向性」の欄が無い
+          ["今後の方向性", esc(evaluation?.direction || (evaluation ? "評価シートに記載欄なし" : ""))]])}
         ${commentSection}
         <h3>出典</h3>${sources([item.source, { label: `${sheets.evaluationYear}事務事業評価結果（品川区）`, url: sheets.resultUrl }])}
-        <p>${link("同年度の区全体の予算・決算", "yosan-kessan.html#fy-r06")} ／ ${link("年度別の事務事業評価", "gyosei.html")}</p>
+        <p>${link(sheets.fiscalYear + "の区全体の予算・決算", fiscalPage(sheets.key))} ／ ${link(sheets.evaluationYear + "評価の全事業", "jigyo.html?year=" + sheets.key)} ／ ${link("年度別の事務事業評価", "gyosei.html")}</p>
         ${review({ ai: false })}</article>`;
   }
 
@@ -192,7 +212,7 @@
     const id = query.get("id");
     const project = data.projects.find(item => item.id === id);
     if (!project) {
-      const sheets = await sheetData();
+      const sheets = await sheetData(id ? sheetYearOf(id) : sheetYearOf(query.get("year")));
       const sheet = id ? sheets.projects.find(item => item.id === id) : null;
       if (sheet) return sheetProject(root, sheets, sheet, await commentsFor(sheet.id));
       projectList(root, sheets);

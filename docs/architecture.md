@@ -87,7 +87,7 @@
 - `data/seijishikin.js` — 政治団体の収支報告書データです。
 - `data/fiscal.js` — 予算・決算の年度別公式資料です。
 - `data/gyosei.js` — 事務事業評価（政策評価の資料も含む）の年度別公式資料です。
-- `data/jimujigyo-r07.js` — 令和7年度事務事業評価シートから読み取った652小事業。`scripts/prepare_jimujigyo.py` が生成し、手で編集しない。件数と評価区分の内訳を公式集計と突き合わせる。横断検索（`kensaku.html`）は検索語があるときだけこれを読み込み、`kensaku-jimujigyo.js` で検索項目に変える。
+- `data/jimujigyo-r07.js`・`-r06.js`・`-r05.js` — 令和7・6・5年度事務事業評価シートから読み取った小事業（652・669・665件）。`scripts/prepare_jimujigyo.py` が年度ごとに生成し、手で編集しない。件数と評価区分の内訳を各年度の公式集計と突き合わせる。様式（用紙の向き・列の位置）が年度で違うので、列の境目は頁の見出しから決める。横断検索（`kensaku.html`）は検索語があるときだけ3年度分を読み込み、`kensaku-jimujigyo.js` で検索項目に変える。
 
 ### 品川の歴史
 

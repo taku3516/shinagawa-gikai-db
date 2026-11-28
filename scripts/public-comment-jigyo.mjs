@@ -59,6 +59,30 @@ export function matchProjects(item, projects) {
     .map(({ rank, ...entry }) => entry);
 }
 
+/**
+ * 複数年度の評価シートに出る同じ事業（事業名と所管課が同じもの）を1件にまとめる。
+ * リンクは最新年度の頁へ、記載欄も最新年度のものを使い、どの年度に記載があったかを years に残す。
+ * @param {{id: string, name: string, section: string, field: string, evaluationYear: string}[]} entries 新しい年度が先
+ * @returns {{id: string, ids: string[], name: string, section: string, field: string, years: string[]}[]}
+ */
+export function groupByProject(entries) {
+  const groups = new Map();
+  for (const entry of entries) {
+    const key = entry.name + "|" + entry.section;
+    const group = groups.get(key);
+    if (group) {
+      group.ids.push(entry.id);
+      group.years.push(entry.evaluationYear);
+    } else {
+      groups.set(key, { id: entry.id, ids: [entry.id], name: entry.name, section: entry.section, field: entry.field, years: [entry.evaluationYear] });
+    }
+  }
+  const rank = field => FIELDS.findIndex(entry => entry[1] === field);
+  return [...groups.values()]
+    .map(group => ({ ...group, years: [...new Set(group.years)].sort((a, b) => a.localeCompare(b, "ja", { numeric: true })) }))
+    .sort((a, b) => rank(a.field) - rank(b.field) || a.name.localeCompare(b.name, "ja"));
+}
+
 /** @param {object} context @param {string} path @returns {void} */
 function load(context, path) {
   const url = new URL(path, ROOT);
@@ -70,7 +94,8 @@ function load(context, path) {
 function collect() {
   const context = createContext({ window: {} });
   load(context, "data/public-comments.js");
-  const files = readdirSync(new URL("data/", ROOT)).filter(name => /^jimujigyo-r\d{2}\.js$/.test(name)).sort();
+  // 新しい年度を先に並べる（同じ事業は最新年度の頁へつなぐため）
+  const files = readdirSync(new URL("data/", ROOT)).filter(name => /^jimujigyo-r\d{2}\.js$/.test(name)).sort().reverse();
   if (!files.length) throw new Error("事業ごとの記録（data/jimujigyo-r??.js）が見つかりません");
   const sheets = files.map(file => {
     load(context, `data/${file}`);
@@ -93,7 +118,7 @@ function main() {
   const { items, sheets } = collect();
   const links = {};
   for (const item of items) {
-    const matched = sheets.flatMap(sheet => matchProjects(item, sheet.projects).map(entry => ({ ...entry, evaluationYear: sheet.year })));
+    const matched = groupByProject(sheets.flatMap(sheet => matchProjects(item, sheet.projects).map(entry => ({ ...entry, evaluationYear: sheet.year }))));
     console.error(`${item.id} ${matched.length}件 ${item.title}${matched.length ? "：" + matched.map(entry => `${entry.name}（${entry.field}）`).join("、") : ""}`);
     if (matched.length) links[item.id] = matched;
   }

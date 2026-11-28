@@ -224,7 +224,7 @@
         <p class="civic-note">件名と時期から自動で照合しています。リンク先は会議録のうち、その議題の質疑の始まりです（全文が未掲載の回は会議ページ）。</p>`;
     // この計画を根拠・目的に挙げる事業（事務事業評価シート）。照合データを読めなかったときは欄ごと出さない
     const projects = jigyo ? (jigyo[item.id] || []).map(entry =>
-      `${link(entry.name, "jigyo.html?id=" + encodeURIComponent(entry.id))}（${esc(entry.section)}・${esc(entry.evaluationYear)}評価シートの${esc(entry.field)}に記載）`) : null;
+      `${link(entry.name, "jigyo.html?id=" + encodeURIComponent(entry.id))}（${esc(entry.section)}・評価シートの${esc(entry.field)}に記載／${esc(entry.years.join("・"))}評価）`) : null;
     const jigyoSection = projects === null ? "" : `<h4>この計画を挙げている事業</h4>${list(projects, "事務事業評価シートに、この計画名を挙げた事業は見つかっていません")}`;
     return `<article class="civic-result-row" id="pc-${esc(item.id)}">
       <h3>${link(item.title, item.url)}</h3>

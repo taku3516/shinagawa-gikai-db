@@ -1,7 +1,7 @@
 // 区の意見募集（パブリックコメント）の計画と、その計画を根拠・目的に挙げる事業（事務事業評価シート）との照合を確かめる。
 import assert from "node:assert/strict";
 import test from "node:test";
-import { citeKeys, matchProjects } from "./public-comment-jigyo.mjs";
+import { citeKeys, matchProjects, groupByProject } from "./public-comment-jigyo.mjs";
 
 const project = (id, name, fields = {}) => ({ id, name, section: "子ども育成課", legal: "", purpose: "", overview: "", ...fields });
 
@@ -35,4 +35,18 @@ test("【】の括弧書きも（）と同じに扱う", () => {
   const item = { id: "2024-007", title: "しながわ健康プラン21（第二次）" };
   const found = matchProjects(item, [project("r07-1", "健やか親子学習", { legal: "母子保健法、しながわ健康プラン21【第二次】" })]);
   assert.equal(found.length, 1);
+});
+
+test("同じ事業が複数年度の評価シートに出るときは1件にまとめ、最新年度へつなぐ", () => {
+  const grouped = groupByProject([
+    { id: "r07-44-1", name: "健康センター事業費", section: "健康課", field: "目的", evaluationYear: "令和7年度" },
+    { id: "r06-44-1", name: "健康センター事業費", section: "健康課", field: "目的", evaluationYear: "令和6年度" },
+    { id: "r05-44-1", name: "健康センター事業費", section: "健康課", field: "概要", evaluationYear: "令和5年度" },
+    { id: "r07-44-9", name: "健康学習費", section: "大井保健センター", field: "根拠法令等", evaluationYear: "令和7年度" }
+  ]);
+  assert.deepEqual(grouped, [
+    { id: "r07-44-9", ids: ["r07-44-9"], name: "健康学習費", section: "大井保健センター", field: "根拠法令等", years: ["令和7年度"] },
+    // 古い年度の事業ページからも逆引きできるよう、全年度のIDを持つ
+    { id: "r07-44-1", ids: ["r07-44-1", "r06-44-1", "r05-44-1"], name: "健康センター事業費", section: "健康課", field: "目的", years: ["令和5年度", "令和6年度", "令和7年度"] }
+  ]);
 });
