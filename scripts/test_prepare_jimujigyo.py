@@ -158,6 +158,30 @@ class LinkYearsTest(unittest.TestCase):
             "id": "r06-1-1", "year": "r06", "budgetYen": 2000, "settledYen": 1000, "rate": 50.0, "evaluation": "B"}])
 
 
+class SummaryTest(unittest.TestCase):
+    """事務事業評価ページに出す集計（評価区分別・部署別の件数と予算・決算の合計）。"""
+
+    def test_部署ごとと全体の件数と金額を足し上げる(self) -> None:
+        rows = [
+            dict(sheet("r06-1-1", "甲", budget=1000), department="企画経営部"),
+            dict(sheet("r06-1-2", "乙", budget=3000), department="企画経営部", evaluation={"code": "A"}),
+            dict(sheet("r06-2-1", "丙", budget=500), department="区長室", evaluation={"code": "D"}),
+        ]
+        got = pj.summarize(R06, rows)
+        self.assertEqual((got["key"], got["evaluationYear"], got["fiscalYear"], got["total"]), ("r06", "令和6年度", "令和5年度", 3))
+        self.assertEqual(got["evaluations"], {"A": 1, "B": 1, "C": 0, "D": 1})
+        self.assertEqual((got["budgetYen"], got["settledYen"]), (4500, 2250))
+        # 部署は評価シートの並び順（区の部局順）
+        self.assertEqual([d["name"] for d in got["departments"]], ["企画経営部", "区長室"])
+        self.assertEqual(got["departments"][0], {"name": "企画経営部", "count": 2, "evaluations": {"A": 1, "B": 1, "C": 0, "D": 0},
+                                                 "budgetYen": 4000, "settledYen": 2000})
+
+    def test_読めなかった金額は合計から除き_件数に数える(self) -> None:
+        rows = [dict(sheet("r06-1-1", "甲"), department="企画経営部", budgetYen=None, settledYen=None)]
+        got = pj.summarize(R06, rows)
+        self.assertEqual((got["total"], got["budgetYen"], got["missingAmounts"]), (1, 0, 1))
+
+
 class PurposeBlockTest(unittest.TestCase):
     """目的・概要欄の切り出し（【概要】の小見出しが無いシートで実際に起きた崩れ）。"""
 

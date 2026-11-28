@@ -466,6 +466,51 @@ def link_years(by_year: dict[str, list[dict[str, Any]]]) -> None:
             } for other in members if other != id_]
 
 
+# ── 事務事業評価ページ用の集計 ─────────────────────
+
+SUMMARY_OUT = ROOT / "data" / "jimujigyo-summary.js"
+
+
+def summarize(year: EvaluationYear, projects: list[dict[str, Any]]) -> dict[str, Any]:
+    """1年度分の評価区分別・部署別の件数と、予算現額・決算額の合計。部署は評価シートの並び順。"""
+    codes = ("A", "B", "C", "D")
+
+    def tally(rows: list[dict[str, Any]]) -> dict[str, Any]:
+        found = [(r.get("evaluation") or {}).get("code") for r in rows]
+        return {
+            "count": len(rows),
+            "evaluations": {code: found.count(code) for code in codes},
+            "budgetYen": sum(r["budgetYen"] for r in rows if r.get("budgetYen") is not None),
+            "settledYen": sum(r["settledYen"] for r in rows if r.get("settledYen") is not None),
+        }
+
+    order = [name for _number, name in year.sheets]
+    by_department: dict[str, list[dict[str, Any]]] = {}
+    for row in projects:
+        by_department.setdefault(row.get("department", ""), []).append(row)
+    departments = sorted(by_department, key=lambda name: order.index(name) if name in order else len(order))
+    whole = tally(projects)
+    return {
+        "key": year.key, "evaluationYear": year.evaluation_year, "fiscalYear": year.fiscal_year,
+        "total": whole["count"], "evaluations": whole["evaluations"],
+        "budgetYen": whole["budgetYen"], "settledYen": whole["settledYen"],
+        # 予算現額か決算額を読めなかった事業の数（合計には入っていない）
+        "missingAmounts": sum(1 for r in projects if r.get("budgetYen") is None or r.get("settledYen") is None),
+        "departments": [{"name": name, **tally(by_department[name])} for name in departments],
+    }
+
+
+def write_summary(summaries: list[dict[str, Any]]) -> None:
+    """data/jimujigyo-summary.js に書き出す（事務事業評価ページは各年度の大きなデータを読まずに済む）。"""
+    body = json.dumps({"years": summaries}, ensure_ascii=False, separators=(",", ":"))
+    SUMMARY_OUT.write_text(
+        "// 品川区議会DB データファイル（事務事業評価の集計：評価区分別・部署別の件数と予算・決算の合計）\n"
+        "// scripts/prepare_jimujigyo.py が評価シートPDFから生成。手で編集しない。\n"
+        f"window.SHINAGAWA_JIMUJIGYO_SUMMARY = {body};\n",
+        encoding="utf-8",
+    )
+
+
 def write(year: EvaluationYear, data: dict[str, Any]) -> None:
     """data/jimujigyo-<年度>.js に書き出す。"""
     payload = {
@@ -498,6 +543,7 @@ def main() -> int:
     # 年度をまたいで同じ事業をつなぐので、書き出しは常に全年度まとめて行う
     built = {key: build(year) for key, year in YEARS.items()}
     link_years({key: data["projects"] for key, data in built.items()})
+    write_summary([summarize(YEARS[key], data["projects"]) for key, data in built.items()])
     failed = False
     for key, data in built.items():
         year = YEARS[key]
