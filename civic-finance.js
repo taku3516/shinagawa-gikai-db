@@ -78,6 +78,26 @@
     return window[name];
   }
 
+  /** 評価年度のキー（r07）から実施年度の表記（令和6年度）。 @param {string} key @returns {string} */
+  function fiscalLabel(key) {
+    return `令和${Number(key.slice(1)) - 1}年度`;
+  }
+
+  /** 同じ事業の年度ごとの推移（評価シートの生成時に、名前と会計が一意に対応した年度だけ）。
+   * @param {object} sheets @param {object} item @returns {string} */
+  function historyTable(sheets, item) {
+    if (!item.history?.length) {
+      return `<p class="civic-note">ほかの年度の評価シートに、同じ名前・会計の事業は見つかりませんでした（新しい事業か、名称が変わった可能性があります）。</p>`;
+    }
+    const current = { id: item.id, year: sheets.key, budgetYen: item.budgetYen, settledYen: item.settledYen, rate: item.rate, evaluation: item.evaluation?.code };
+    const rows = [current, ...item.history].sort((a, b) => b.year.localeCompare(a.year));
+    return `<table class="civic-table"><caption>評価シートの小事業名と会計が一致したものを並べています。</caption>
+      <thead><tr><th scope="col">実施年度</th><th scope="col">予算現額</th><th scope="col">決算額</th><th scope="col">執行率</th><th scope="col">最終評価</th></tr></thead><tbody>
+      ${rows.map(row => `<tr><th scope="row">${row.id === item.id ? `${esc(fiscalLabel(row.year))}（この頁）` : link(fiscalLabel(row.year), "jigyo.html?id=" + encodeURIComponent(row.id))}</th>
+        <td>${money(row.budgetYen)}</td><td>${money(row.settledYen)}</td><td>${esc(rateText(row.rate))}</td><td>${esc(row.evaluation || missing)}</td></tr>`).join("")}
+      </tbody></table>`;
+  }
+
   /** 評価対象の事業を実施した年度の予算・決算ページ（評価年度の前年度）。 @param {string} key @returns {string} */
   function fiscalPage(key) {
     return `yosan-kessan.html#fy-r${String(Number(key.slice(1)) - 1).padStart(2, "0")}`;
@@ -164,6 +184,7 @@
         ${curated ? `<p>${link(curated.name + "の記録（議案・経過とつないだもの）", "jigyo.html?id=" + encodeURIComponent(curated.id))}</p>` : ""}
         ${terms([["目的", annotate(item.purpose)], ["概要", annotate(item.overview)],
           ["所管", esc([item.department, item.section, item.unit].filter(Boolean).join(" "))],
+          ["会計", esc(item.kaikei)],
           ["予算科目", esc([item.account?.kan, item.account?.kou, item.account?.moku, item.jigyo].filter(Boolean).join(" ＞ "))],
           ["政策の柱", esc(item.pillar)], ["事業期間", esc(item.period)], ["根拠法令・要綱", annotate(item.legal)]])}
         <h3>${esc(sheets.fiscalYear)}の予算と決算</h3>
@@ -171,6 +192,8 @@
           <p>予算現額 ${money(item.budgetYen)}</p><progress max="${scale}" value="${item.budgetYen || 0}" aria-label="予算現額"></progress>
           <p>決算額 ${money(item.settledYen)}</p><progress max="${scale}" value="${item.settledYen || 0}" aria-label="決算額"></progress>
           ${terms([["執行率", esc(rateText(item.rate))], ["翌年度繰越額", money(item.carryYen)], ["不用額", money(item.unusedYen)]])}</section>
+        <h3>年度ごとの推移</h3>
+        ${historyTable(sheets, item)}
         <h3>成果指標（${esc(sheets.fiscalYear)}）</h3>
         ${item.indicators.length ? `<table class="civic-table"><thead><tr><th scope="col">指標</th><th scope="col">目標</th><th scope="col">実績</th><th scope="col">最終目標</th></tr></thead><tbody>
           ${item.indicators.map(row => `<tr><th scope="row">${esc(row.label)}${row.definition ? `<br><small>${esc(row.definition)}</small>` : ""}</th>
