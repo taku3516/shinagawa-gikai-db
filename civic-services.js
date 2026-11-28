@@ -70,7 +70,7 @@
       ["請願・陳情", petitions.items.length, "seigan.html", "受理年は案件ごとに確認できます", null, null],
       ["現職区議名簿", db.membersData.members.length, "giin.html", null, db.membersData.updatedAt, null],
       ["財政資料", db.fiscalData.fiscalYears.length, "yosan-kessan.html", "年度数", db.fiscalData.updatedAt, null],
-      ["行政評価", window.SHINAGAWA_GYOSEI.fiscalYears.length, "gyosei.html", "年度数", window.SHINAGAWA_GYOSEI.updatedAt, null],
+      ["事務事業評価", window.SHINAGAWA_GYOSEI.fiscalYears.length, "gyosei.html", "年度数", window.SHINAGAWA_GYOSEI.updatedAt, null],
       ["政務活動費", seimu.fiscalYears.length, "seimu.html", "年度数", null, seimu.checkedAt],
       ["政治資金", funding.organizations.length, "seijishikin.html", "団体数", null, funding.checkedAt],
       ["区の意見募集・結果", window.SHINAGAWA_PUBLIC_COMMENTS.items.length, "kumin-no-koe.html", "案件数（" + fiscalLabel(Math.min(...window.SHINAGAWA_PUBLIC_COMMENTS.items.map(item => item.fiscalYear))) + "以降）", null, window.SHINAGAWA_PUBLIC_COMMENTS.fetchedAt],
