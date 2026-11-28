@@ -365,6 +365,7 @@
   <script src="data/resolutions.js"></script>
   <script src="data/public-comments.js"></script>
   <script src="data/public-comment-council.js"></script>
+  <script src="kensaku-public-comments.js"></script>
   <script src="civic-content.js"></script>
   <script src="civic-data.js"></script>
   <script src="kensaku-jimujigyo.js"></script>
@@ -476,6 +477,8 @@
         category: item.category,
         type: item.type,
         year: item.year || null,
+        // 年度で数えるデータ（意見募集など）は表示用の見出しを持つ。絞り込みは数値の year で行う
+        yearLabel: item.yearLabel || "",
         date: item.date || "",
         sortDate: item.sortDate || (item.date ? Date.parse(item.date) || 0 : (item.year ? Date.UTC(item.year, 0, 1) : 0)),
         title: item.title || "名称未設定",
@@ -1010,36 +1013,9 @@
       });
     }
 
-    // 区の意見募集（パブリックコメント）。委員会での報告の議題名も検索語に含め、
-    // 「こども計画」と探したときに募集・結果・策定の流れがまとめて見つかるようにする
-    const publicComments = window.SHINAGAWA_PUBLIC_COMMENTS || { items: [] };
-    const publicCommentCouncil = (window.SHINAGAWA_PUBLIC_COMMENT_COUNCIL && window.SHINAGAWA_PUBLIC_COMMENT_COUNCIL.items) || {};
-    for (const comment of publicComments.items || []) {
-      const reports = publicCommentCouncil[comment.id] || [];
-      const fiscal = comment.fiscalYear - 2018;
-      const result = comment.status === "result";
-      addItem({
-        id: `public-comment-${comment.id}`,
-        category: "public-comments",
-        type: result ? "意見募集の結果" : "意見募集",
-        year: comment.fiscalYear,
-        date: comment.end || comment.start || "",
-        title: comment.title,
-        meta: [`令和${fiscal === 1 ? "元" : fiscal}年度`, `案件番号${comment.id}`, comment.department].filter(Boolean).join("／"),
-        body: [
-          comment.start && comment.end ? `募集期間 ${comment.start}〜${comment.end}` : comment.end ? `募集期限 ${comment.end}` : "",
-          result && Number.isFinite(comment.opinions) ? `応募者${comment.applicants}人・意見${comment.opinions}件` : "",
-          reports.length ? `委員会での報告${reports.length}件` : ""
-        ].filter(Boolean).join("。"),
-        source: "品川区",
-        // 議題名は32字を超えるものが多くタグに入らないので、検索語（primary）に含める
-        primary: ["パブリックコメント", "意見募集", comment.department].concat(reports.flatMap((report) => [report.committee, report.title])),
-        tags: [result ? "結果公表済み" : "意見募集"],
-        links: [
-          { type: "internal", label: "区の意見募集・結果で見る", url: `kumin-no-koe.html?nendo=${comment.fiscalYear}#pc-${comment.id}` },
-          { type: "official", label: "品川区の案件ページ", url: comment.url }
-        ].concat(reports.slice(-1).map((report) => ({ type: "internal", label: `委員会での報告（${report.committee}）`, url: report.url })))
-      });
+    // 区の意見募集（パブリックコメント）。項目づくりは kensaku-public-comments.js（scripts/public-comment-search.test.mjs で確認）
+    for (const item of window.SHINAGAWA_PUBLIC_COMMENT_SEARCH.items(window.SHINAGAWA_PUBLIC_COMMENTS, window.SHINAGAWA_PUBLIC_COMMENT_COUNCIL || null)) {
+      addItem(item);
     }
 
     const newsData = window.SHINAGAWA_NEWS || { items: [] };
@@ -1143,7 +1119,7 @@
       const categoryLabel = CATEGORY_LABELS[item.category] || item.category;
       const visibleTags = item.tags.filter((tag) => tag !== item.type && tag !== item.result);
       const badges = [
-        item.year ? `<span class="badge badge--year">${esc(eraLabel(item.year))}</span>` : "",
+        item.year ? `<span class="badge badge--year">${esc(item.yearLabel || eraLabel(item.year))}</span>` : "",
         `<span class="badge${item.category === "news" ? " badge--news" : item.category === "elections" ? " badge--election" : item.category === "expenses" ? " badge--expense" : item.category === "political-funds" ? " badge--fund" : ""}">${esc(categoryLabel)}</span>`,
         `<span class="badge">${esc(item.type)}</span>`,
         item.result ? `<span class="badge badge--result">${esc(item.result)}</span>` : ""

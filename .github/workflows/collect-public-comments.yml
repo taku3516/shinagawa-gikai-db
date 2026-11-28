@@ -51,5 +51,9 @@ jobs:
       - name: 事業ごとの記録と照合する
         run: node scripts/public-comment-jigyo.mjs --write
 
+      # 書き出した照合結果に、過去のレビューで見つかった誤りが戻っていないかを確かめてから保存する
+      - name: 照合結果を実データで検査
+        run: node --test scripts/public-comment-links.test.mjs
+
       - name: 取得結果に更新があれば保存
         run: scripts/commit_data_update.sh "区の意見募集・結果を自動更新" data/public-comments.js data/public-comment-council.js data/public-comment-jigyo.js
