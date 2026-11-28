@@ -25,7 +25,7 @@
 
 ## 変更箇所
 
-- 新規ページは `gian.html`、`sanpi.html`、`giin-katsudo.html`、`watashi-no-chiiki.html`、`jigyo.html`、`shikin-shiryo.html`、`follow.html`、`open-data.html`、`data-status.html`、`kumin-no-koe.html`。
+- 新規ページは `gian.html`、`sanpi.html`、`giin-katsudo.html`、`watashi-no-chiiki.html`、`jigyo.html`、`follow.html`、`open-data.html`、`data-status.html`、`kumin-no-koe.html`。
 - トップ、横断検索、年次会議録、会議のまとめ、議員名簿、請願・陳情、予算・決算、行政評価、政務活動費、政治資金を拡張。共通ナビと表示設定を更新した。
 - 共通実装は `civic-*.js` と `civic.css`。公表資料から追加したデータと既存台帳の結合定義は `data/civic-sources.js`、最新の決算額は `data/fiscal.js`。
 - 公開処理は `.github/workflows/pages.yml` と `scripts/build_civic_feeds.mjs`。収録範囲や出典は[データ形式](data-schema.md)と[公式資料](data-sources.md)、外部接続・公開の前提は[残作業](remaining-tasks.md)を参照。

@@ -51,11 +51,20 @@ test("出典付き財政データの歳入・歳出は同じ年度の当初予�
   assert.equal(budgets.income.find(row => row[0] === "特別区債")[1], 0);
 });
 
-test("政務活動費の費目別支出は公式資料の支出額に一致する", () => {
-  const { seimuSummary } = context.window.SHINAGAWA_CIVIC_SOURCES;
-  for (const [id, , expenditure, categories] of seimuSummary.rows) {
+test("政務活動費の費目別支出は公式資料の支出額に一致し、政務活動費ページの交付先に結び付く", () => {
+  load("data/seimu.js");
+  load("data/seimu-summary.js");
+  const summary = context.window.SHINAGAWA_SEIMU_SUMMARY;
+  const year = context.window.SHINAGAWA_SEIMU.fiscalYears.find(item => item.label === summary.year);
+  const recipients = new Set(year.periods.flatMap(period => period.recipients.map(recipient => recipient.id)));
+  assert.equal(summary.rows.length, 6);
+  for (const [id, , expenditure, categories] of summary.rows) {
+    assert.ok(recipients.has(id), id);
+    assert.equal(categories.length, summary.categories.length, id);
     assert.equal(categories.reduce((sum, value) => sum + value, 0), expenditure, id);
   }
+  assert.equal(context.window.SHINAGAWA_CIVIC_SOURCES.seimuSummary, undefined);
+  assert.match(readFileSync(new URL("../seimu.html", import.meta.url), "utf8"), /<script src="data\/seimu-summary\.js"><\/script>/);
 });
 
 test("公式資料と結び付けた議案・事業IDが台帳に存在する", () => {
@@ -149,7 +158,6 @@ test("機能は所属する共通メニューから直接開ける", () => {
     "giin-katsudo.html": "議員・選挙",
     "jigyo.html": "予算・事業",
     "yosan-kessan.html#fiscal-comparison": "予算・事業",
-    "shikin-shiryo.html": "議員・選挙",
     "open-data.html": "データ資料",
     "kumin-no-koe.html": "地域・参加",
     "data-status.html": "データ資料"
@@ -162,9 +170,25 @@ test("機能は所属する共通メニューから直接開ける", () => {
   for (const [href, group] of Object.entries(expected)) {
     assert.equal(groups.get(href), group, href);
   }
-  for (const href of ["katsuyo.html", "yogo.html", "report.html", "shitsumon.html"]) {
+  for (const href of ["katsuyo.html", "yogo.html", "report.html", "shitsumon.html", "shikin-shiryo.html"]) {
     assert.ok(!groups.has(href), href);
   }
+});
+
+test("政務活動費・政治資金の資料ページは各制度のページと重複するため、旧URLを転送するだけにする", () => {
+  const nav = readFileSync(new URL("../site-nav.js", import.meta.url), "utf8");
+  assert.ok(!nav.includes("shikin-shiryo.html"));
+  load("civic-content.js");
+  assert.ok(!context.window.SHINAGAWA_CIVIC_CONTENT.pages.some(([, href]) => href === "shikin-shiryo.html"));
+  for (const path of ["civic-finance.js", "civic-page.js", "seimu.html", "seijishikin.html"]) {
+    const text = readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
+    assert.ok(!text.includes("shikin-shiryo.html") && !/funding/.test(text), path);
+  }
+  const stub = readFileSync(new URL("../shikin-shiryo.html", import.meta.url), "utf8");
+  assert.match(stub, /noindex/);
+  assert.match(stub, /seijishikin\.html/);
+  assert.match(stub, /seimu\.html/);
+  assert.doesNotMatch(stub, /data-civic-page|data-site-nav/);
 });
 
 test("財政ページの現在地はURLの表示箇所に対応する", () => {

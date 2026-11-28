@@ -12,7 +12,6 @@
     session: element => legislature.session(element),
     fiscal: element => finance.fiscal(element),
     projects: element => finance.projects(element),
-    funding: element => finance.funding(element),
     members: element => community.members(element),
     areas: element => community.areas(element),
     exports: element => services.exportsPage(element),

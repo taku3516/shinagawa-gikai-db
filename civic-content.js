@@ -23,7 +23,6 @@
     ["議員ダッシュボード", "giin-katsudo.html", "代表質問・一般質問の履歴・比較"],
     ["事業ごとの記録", "jigyo.html", "事業ごとの予算・決算・事務事業評価"],
     ["お金の見える化", "yosan-kessan.html#fiscal-comparison", "予算・決算、歳入・歳出と区民一人あたり"],
-    ["政務活動費・政治資金の資料", "shikin-shiryo.html", "収支報告書や領収書の資料索引"],
     ["わたしの地域", "watashi-no-chiiki.html", "町会、地域センター、歴史、ニュース、議会情報"],
     ["フォロー・新着", "follow.html", "端末内のフォロー、未読・既読、RSS"],
     ["CSV・JSONダウンロード", "open-data.html", "公開データの出典・メタデータの保存"],

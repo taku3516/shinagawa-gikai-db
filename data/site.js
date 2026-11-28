@@ -65,10 +65,6 @@ window.SHINAGAWA_DB.site = {
         {
           "label": "政治資金",
           "url": "seijishikin.html"
-        },
-        {
-          "label": "政務活動費・政治資金の資料",
-          "url": "shikin-shiryo.html"
         }
       ]
     },

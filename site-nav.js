@@ -33,8 +33,7 @@
         { label: "選挙", url: "senkyo.html" },
         { label: "選挙収支", url: "senkyo-shushi.html" },
         { label: "政務活動費", url: "seimu.html" },
-        { label: "政治資金", url: "seijishikin.html" },
-        { label: "政務活動費・政治資金の資料", url: "shikin-shiryo.html" }
+        { label: "政治資金", url: "seijishikin.html" }
       ]
     },
     {
