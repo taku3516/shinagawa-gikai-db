@@ -1,6 +1,6 @@
 // 自動生成ファイル。scripts/collect_events.py で更新する。
 window.SHINAGAWA_EVENTS = {
-  "generatedAt": "2026-11-27T15:32:33.249128Z",
+  "generatedAt": "2026-11-28T00:41:27.013201Z",
   "events": [
     {
       "id": "8c8e2e66944f32bfab29",
@@ -3766,7 +3766,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "0fdf4a53173e91f6b621",
       "title": "大井町イルミネーション 2026",
-      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 仙台味噌醸造所 2018年5月18日 寛永2年からの歴史を受け継ぐ 老舗の",
+      "summary": "2026年10月31日(土)~2027年1月11日(月・祝) 17:00~23:00 開催場所 大井町駅前中央通り 交通アクセス JR・りんかい線・東急大井町線 大井町駅 徒歩1分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット 金井寿司 2025年7月1日 大井町で1950年創業、街に愛されるお寿司屋",
       "url": "https://shinagawa-kanko.or.jp/event/ooiillumi2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4548,7 +4548,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "7fa1c23a6e1845a37603",
       "title": "第8回 品川国際映画祭 2026",
-      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 東京海洋大学 マリ",
+      "summary": "2026年11月9日(月)~14日(土) 開催場所 品川インターシティ 東京都港区港南2-15-2 交通アクセス JR 品川駅 港南口 徒歩5分 料金 入場無料 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 翡翠原石館 201",
       "url": "https://shinagawa-kanko.or.jp/event/international-cinema-fes2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -4718,7 +4718,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "02cb779466e040ca1e46",
       "title": "【終了】立会川龍馬通り繁栄会「龍馬祭」",
-      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット 鈴ヶ森刑場跡・題目供養塔 2018年3月9日 八",
+      "summary": "2026年11月14日(土) 11:00~16:00 開催場所 立会川駅周辺 交通アクセス 京急線 立会川駅 徒歩1分 URL マップ イベントカレンダー一覧に戻る 周辺スポット スポット Yummy Bakery(ヤミーベーカリー) 2",
       "url": "https://shinagawa-kanko.or.jp/event/ryoumasai2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5446,7 +5446,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "3bdf0afa6cf4dad8469c",
       "title": "【終了】小山八幡神社 「新嘗祭」・「ご飯に合うおかずフェス」",
-      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット Parque(",
+      "summary": "2026年11月22日(日) 開催場所 小山八幡神社 東京都品川区荏原7-5-14 交通アクセス 東急目黒線 西小山駅 徒歩7分 URL 備考 ※状況により内容が変更される場合があります。 マップ イベントカレンダー一覧に戻る 周辺スポット スポット AND ONE",
       "url": "https://shinagawa-kanko.or.jp/event/koyama-niname2026/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -5536,6 +5536,28 @@ window.SHINAGAWA_EVENTS = {
       "confidence": "official",
       "startDate": "2026-11-23",
       "endDate": "2026-11-23"
+    },
+    {
+      "id": "7b8f6210fecea2a0c7ae",
+      "title": "１１月２４日（火）のヒルナンデス！は…★ランキングツアー in 武蔵小山商店街パルム＆羽田空港に密着＆これ１１０円？目利きバトル★（日テレTOPICS）",
+      "summary": "",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORzZyUEZSY0ZibEJYSFkzNWJVbDdyeDdlWGdyN0NvdWI1bFY1VW82VktmQnFYanBVU2VrZ3U3MXZzaWwyRXpMMDFRZUZMM2VmWGh1X1JhekpOSklsRjVyajVoU3RURDF6MFh1VVpINy1vN2tLSFBORTlMc0VwUkhNck84WWk5Z2MzLV9WX3RHbHZRVUpUT3hXdzBCdV9uWEdkVHZBYTV6bURYMDNGbkZyUVlDYmxXRkxCTUMtXzZB?oc=5",
+      "sourceId": "news",
+      "source": "Googleニュース（戸越・中延・旗の台・武蔵小山）",
+      "category": "地域イベント",
+      "dates": [
+        "2026-11-24"
+      ],
+      "startTime": "",
+      "endTime": "",
+      "timeText": "",
+      "place": "武蔵小山 小山 武蔵小山商店街",
+      "application": "",
+      "deadline": "",
+      "confidence": "estimated",
+      "newsId": "9381a53b35be4b40de0b",
+      "startDate": "2026-11-24",
+      "endDate": "2026-11-24"
     },
     {
       "id": "4ce3943d512faf70ba9e",
@@ -5817,7 +5839,7 @@ window.SHINAGAWA_EVENTS = {
     {
       "id": "9555414c914c3ee69e01",
       "title": "第10回 大井蔵王権現神社「ごんげん市」",
-      "summary": "2026年11月29日(日) 12:00~18:00 開催場所 大井蔵王権現神社前 東京都品川区大井1-14-8 交通アクセス JR・東急大井町線・りんかい線 大井町駅西口 徒歩5分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット とんかつ 丸八本店 2018年3月9日 昭和30年創業 人気の秘密はひと",
+      "summary": "2026年11月29日(日) 12:00~18:00 開催場所 大井蔵王権現神社前 東京都品川区大井1-14-8 交通アクセス JR・東急大井町線・りんかい線 大井町駅西口 徒歩5分 マップ イベントカレンダー一覧に戻る 周辺スポット スポット ニコンミュージアム 2025年1月8日 「伝統と革新」の歴史をエピソード",
       "url": "https://shinagawa-kanko.or.jp/event/gongenichi10/",
       "sourceId": "kanko",
       "source": "しながわ観光協会",
@@ -7557,7 +7579,7 @@ window.SHINAGAWA_EVENTS = {
       "sourceId": "news",
       "source": "区のニュース",
       "status": "ok",
-      "accepted": 112
+      "accepted": 113
     }
   ]
 };
