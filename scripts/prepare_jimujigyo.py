@@ -466,6 +466,71 @@ def link_years(by_year: dict[str, list[dict[str, Any]]]) -> None:
             } for other in members if other != id_]
 
 
+# ── 予算議案との紐付け ───────────────────────────
+# 事業はその年度・会計の予算に含まれるので、同じ年度・会計の当初予算と補正予算の議案に結ぶ。
+# 議案名に事業名が含まれるかどうかでは結ばない（別の施設の議案に当たる取り違えが出るため）。
+
+BUDGET_TITLE = re.compile(r"令和(元|\d+)年度(?:品川区)?(.+?)(補正)?予算$")
+
+
+def bill_id(bill: dict[str, Any]) -> str:
+    """画面（civic-data.js の billId）と同じ議案ID。番号を NFKC にして空白を除き、小文字にする。"""
+    number = re.sub(r"\s+", "", nfkc(str(bill.get("number", "")))).lower()
+    return f"{bill['meetingId']}:{number}"
+
+
+def bills_from_supplement(source: str) -> list[dict[str, Any]]:
+    """年別データの全件ファイル（data/rNN-complete.js）にある year.bills の配列を読む。"""
+    start = source.find("year.bills = ")
+    if start < 0:
+        return []
+    value, _end = json.JSONDecoder().raw_decode(source, start + len("year.bills = "))
+    return value
+
+
+def budget_bills(bills: list[dict[str, Any]], reiwa: int) -> dict[str, list[dict[str, Any]]]:
+    """令和 reiwa 年度の予算議案を会計ごとに。当初予算を先に、補正予算は会議順に並べる。"""
+    found: dict[str, list[dict[str, Any]]] = {}
+    for bill in bills:
+        title = re.sub(r"\s*\(\s*\.pdf.*$", "", str(bill.get("title", "")))
+        title = re.sub(r"^第\S+号\s*(?:議案\s*)?", "", title).strip()
+        match = BUDGET_TITLE.search(nfkc(title).replace(" ", ""))
+        if not match:
+            continue
+        year = 1 if match.group(1) == "元" else int(match.group(1))
+        if year != reiwa:
+            continue
+        found.setdefault(match.group(2), []).append({
+            "id": bill_id(bill), "meetingId": bill["meetingId"], "title": title,
+            "kind": "補正予算" if match.group(3) else "当初予算", "result": bill.get("result", ""),
+        })
+
+    def order(item: dict[str, Any]) -> tuple[bool, str, int]:
+        # 議案番号は暦年ごとの提出順の連番。会議ID（r06-3r など）の文字列順では臨時会が前後するので使わない
+        number = re.search(r"\d+", item["id"].split(":", 1)[1])
+        return (item["kind"] != "当初予算", item["meetingId"][:3], int(number.group()) if number else 0)
+
+    return {kaikei: sorted(items, key=order) for kaikei, items in found.items()}
+
+
+def load_bills() -> list[dict[str, Any]]:
+    """令和の年別データ（全件ファイル）から議案をすべて読む。"""
+    bills: list[dict[str, Any]] = []
+    for path in sorted((ROOT / "data").glob("r[0-9][0-9]-complete.js")):
+        bills.extend(bills_from_supplement(path.read_text(encoding="utf-8")))
+    return bills
+
+
+def attach_budget_bills(year: EvaluationYear, data: dict[str, Any], bills: list[dict[str, Any]]) -> None:
+    """この年度の事業が属する会計の予算議案を data["budgetBills"] に入れる。当初予算が無い会計は要確認にする。"""
+    found = budget_bills(bills, reiwa=year.fiscal_western - 2018)
+    kaikei_in_use = sorted({row.get("kaikei") for row in data["projects"] if row.get("kaikei")})
+    data["budgetBills"] = {kaikei: found.get(kaikei, []) for kaikei in kaikei_in_use}
+    for kaikei, items in data["budgetBills"].items():
+        if not any(item["kind"] == "当初予算" for item in items):
+            data["issues"].append(f"{year.fiscal_year}{kaikei}の当初予算の議案が見つかりません")
+
+
 # ── 事務事業評価ページ用の集計 ─────────────────────
 
 SUMMARY_OUT = ROOT / "data" / "jimujigyo-summary.js"
@@ -520,6 +585,8 @@ def write(year: EvaluationYear, data: dict[str, Any]) -> None:
         "resultUrl": year.result_page,
         "note": "品川区の事務事業評価シート（PDF）から機械的に読み取った値です。正確な内容は各シートの該当頁で確認してください。",
         "count": len(data["projects"]),
+        # 事業が属する会計ごとの、同じ年度の予算議案（当初予算・補正予算）。ID は議案ページ（gian.html?id=）と同じ
+        "budgetBills": data.get("budgetBills", {}),
         "projects": data["projects"],
     }
     body = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
@@ -543,6 +610,9 @@ def main() -> int:
     # 年度をまたいで同じ事業をつなぐので、書き出しは常に全年度まとめて行う
     built = {key: build(year) for key, year in YEARS.items()}
     link_years({key: data["projects"] for key, data in built.items()})
+    bills = load_bills()
+    for key, data in built.items():
+        attach_budget_bills(YEARS[key], data, bills)
     write_summary([summarize(YEARS[key], data["projects"]) for key, data in built.items()])
     failed = False
     for key, data in built.items():
