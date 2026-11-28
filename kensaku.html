@@ -365,6 +365,7 @@
   <script src="data/resolutions.js"></script>
   <script src="civic-content.js"></script>
   <script src="civic-data.js"></script>
+  <script src="kensaku-jimujigyo.js"></script>
   <script src="data/civic-sources.js"></script>
 
   <script>
@@ -375,7 +376,7 @@
       { id: "council", label: "議会" },
       { id: "people", label: "人物" },
       { id: "elections", label: "選挙" },
-      { id: "gyosei", label: "行政評価" },
+      { id: "gyosei", label: "事務事業評価" },
       { id: "expenses", label: "政務活動費" },
       { id: "political-funds", label: "政治資金" },
       { id: "resolutions", label: "意見書・決議等" },
@@ -681,6 +682,7 @@
           console.error(error);
         }
         refreshFilterOptions();
+        applyPendingFilters();
         render();
         await nextFrame();
       }
@@ -705,24 +707,71 @@
 
     function requestedYearMetas() {
       if (state.category !== "all" && state.category !== "council") return [];
-      if (elements.source.value) return [];
-      if (elements.type.value && !councilTypes.includes(elements.type.value)) return [];
-      const selectedYear = elements.year.value;
+      if (filterValue("source")) return [];
+      if (filterValue("type") && !councilTypes.includes(filterValue("type"))) return [];
+      const selectedYear = filterValue("year");
       if (selectedYear) {
         const meta = yearMetaByCalendarYear.get(selectedYear);
         return meta ? [meta] : [];
       }
       const needsCouncilData = state.category === "council"
         || Boolean(elements.query.value.trim())
-        || Boolean(elements.type.value || elements.result.value || elements.tag.value);
+        || Boolean(filterValue("type") || filterValue("result") || filterValue("tag"));
       return needsCouncilData ? yearMetas : [];
     }
 
+    // 事務事業評価シートから読み取った小事業（約1.3MB）。検索語があるときか、
+    // 事務事業評価の分類を開いたときだけ読み込む。失敗したら次の検索で読み直す。
+    let jimujigyoState = "idle";
+
+    // URLで指定された絞り込みのうち、遅延読み込みのデータが揃うまで選択肢に無いもの。
+    // 読み込み後に選択肢へ現れたら適用する。それまでも絞り込みとURLには効かせる。
+    const pendingFilters = {};
+    function filterValue(key) {
+      return elements[key].value || pendingFilters[key] || "";
+    }
+
+    function applyPendingFilters() {
+      for (const [key, value] of Object.entries(pendingFilters)) {
+        if ([...elements[key].options].some((option) => option.value === value)) {
+          elements[key].value = value;
+          delete pendingFilters[key];
+        }
+      }
+    }
+    function needsJimujigyo() {
+      if (state.category !== "all" && state.category !== "gyosei") return false;
+      if (filterValue("source")) return false;
+      if (filterValue("type") && filterValue("type") !== "事業ごとの記録") return false;
+      // 事業には「結果」が無いので、結果で絞るときは読まなくても結果は変わらない
+      if (filterValue("result")) return false;
+      return state.category === "gyosei"
+        || Boolean(elements.query.value.trim())
+        || Boolean(filterValue("type") || filterValue("tag") || filterValue("year"));
+    }
+
+    function requestJimujigyo() {
+      if (jimujigyoState !== "idle" || !needsJimujigyo()) return Promise.resolve();
+      jimujigyoState = "loading";
+      return loadScript("data/jimujigyo-r07.js").then(() => {
+        for (const item of window.SHINAGAWA_JIMUJIGYO_SEARCH.items(window.SHINAGAWA_JIMUJIGYO_R07)) addItem(item);
+        delete window.SHINAGAWA_JIMUJIGYO_R07;
+        jimujigyoState = "loaded";
+        refreshFilterOptions();
+        applyPendingFilters();
+        render();
+      }).catch((error) => {
+        jimujigyoState = "idle";
+        console.error(error);
+      });
+    }
+
     function requestCouncilData() {
+      const sheets = requestJimujigyo();
       const metas = requestedYearMetas();
-      if (!metas.length) return Promise.resolve();
+      if (!metas.length) return sheets;
       loadQueue = loadQueue.then(() => loadYearList(metas));
-      return loadQueue;
+      return Promise.all([sheets, loadQueue]);
     }
 
     function addPerson(person, type, extra = {}) {
@@ -770,7 +819,7 @@
     }
     for (const item of window.SHINAGAWA_CIVIC_SOURCES.projects) {
       addItem({ category: "services", type: "事業", title: item.name, body: item.purpose,
-        links: [{ type: "internal", label: "事業カルテ", url: `jigyo.html?id=${encodeURIComponent(item.id)}` }] });
+        links: [{ type: "internal", label: "事業ごとの記録", url: `jigyo.html?id=${encodeURIComponent(item.id)}` }] });
     }
 
     const electionTypeLabels = Object.fromEntries(
@@ -835,7 +884,7 @@
       });
     }
 
-    // 行政評価（事務事業評価・政策評価）。年度ごとに1件、評価シート等の資料は links にまとめる
+    // 事務事業評価（政策評価の資料も含む）。年度ごとに1件、評価シート等の資料は links にまとめる
     const gyoseiData = window.SHINAGAWA_GYOSEI || { fiscalYears: [] };
     for (const fiscalYear of gyoseiData.fiscalYears || []) {
       const era = String(fiscalYear.label).match(/(令和|平成)\s*(元|\d+)/);
@@ -853,9 +902,9 @@
       addItem({
         id: `gyosei-${fiscalYear.id}`,
         category: "gyosei",
-        type: "行政評価",
+        type: "事務事業評価",
         year,
-        title: `${fiscalYear.label} 行政評価（事務事業評価・政策評価）`,
+        title: `${fiscalYear.label} 事務事業評価`,
         meta: [fiscalYear.label, fiscalYear.status,
                fiscalYear.projects ? `${fiscalYear.projects}事業` : "",
                `資料${documents.length}件`].filter(Boolean).join("／"),
@@ -864,8 +913,8 @@
         primary: ["行政評価", "事務事業評価", "政策評価", fiscalYear.label,
                   fiscalYear.targetFiscalYear].filter(Boolean)
           .concat(documents.map((document) => document.label)),
-        tags: ["行政評価", fiscalYear.status].filter(Boolean),
-        links: [{ type: "internal", label: "行政評価ページで見る", url: `gyosei.html?fy=${fiscalYear.id}` }]
+        tags: ["事務事業評価", fiscalYear.status].filter(Boolean),
+        links: [{ type: "internal", label: "事務事業評価のページで見る", url: `gyosei.html?fy=${fiscalYear.id}` }]
           .concat(documents.map((document) => ({ type: "official", label: document.label, url: document.url })))
       });
     }
@@ -1153,18 +1202,18 @@
     }
 
     function hasDetailedFilter() {
-      return Boolean(elements.type.value || elements.year.value || elements.result.value || elements.source.value || elements.tag.value);
+      return Boolean(filterValue("type") || filterValue("year") || filterValue("result") || filterValue("source") || filterValue("tag"));
     }
 
     function updateUrl() {
       const params = new URLSearchParams();
       if (elements.query.value.trim()) params.set("q", elements.query.value.trim());
       if (state.category !== "all") params.set("category", state.category);
-      if (elements.type.value) params.set("type", elements.type.value);
-      if (elements.year.value) params.set("year", elements.year.value);
-      if (elements.result.value) params.set("result", elements.result.value);
-      if (elements.source.value) params.set("source", elements.source.value);
-      if (elements.tag.value) params.set("tag", elements.tag.value);
+      if (filterValue("type")) params.set("type", filterValue("type"));
+      if (filterValue("year")) params.set("year", filterValue("year"));
+      if (filterValue("result")) params.set("result", filterValue("result"));
+      if (filterValue("source")) params.set("source", filterValue("source"));
+      if (filterValue("tag")) params.set("tag", filterValue("tag"));
       if (elements.sort.value !== "relevance") params.set("sort", elements.sort.value);
       if (state.page > 1) params.set("page", String(state.page));
       const query = params.toString();
@@ -1194,7 +1243,7 @@
       renderCategoryTabs();
 
       if (!browseMode) {
-        elements.hit.textContent = `人物・選挙・政務活動費・政治資金・ニュースの${INDEX.length.toLocaleString("ja-JP")}件と、平成13年〜令和8年の議会情報から検索`;
+        elements.hit.textContent = `人物・選挙・政務活動費・政治資金・ニュースの${INDEX.length.toLocaleString("ja-JP")}件と、平成13年〜令和8年の議会情報、事務事業評価の652事業から検索`;
         elements.results.innerHTML = "";
         elements.guide.hidden = false;
         elements.guide.innerHTML = `<h2>検索する内容を入力してください</h2>
@@ -1207,11 +1256,11 @@
       elements.guide.hidden = true;
       let hits = INDEX.filter((item) => {
         if (state.category !== "all" && item.category !== state.category) return false;
-        if (elements.type.value && item.type !== elements.type.value) return false;
-        if (elements.year.value && String(item.year) !== elements.year.value) return false;
-        if (elements.result.value && item.result !== elements.result.value) return false;
-        if (elements.source.value && item.source !== elements.source.value) return false;
-        if (elements.tag.value && !item.tags.includes(elements.tag.value)) return false;
+        if (filterValue("type") && item.type !== filterValue("type")) return false;
+        if (filterValue("year") && String(item.year) !== filterValue("year")) return false;
+        if (filterValue("result") && item.result !== filterValue("result")) return false;
+        if (filterValue("source") && item.source !== filterValue("source")) return false;
+        if (filterValue("tag") && !item.tags.includes(filterValue("tag"))) return false;
         return itemMatchesTerms(item, terms);
       }).map((item) => ({ item, score: scoreItem(item, terms, normalizedQuery) }));
 
@@ -1245,6 +1294,7 @@
     }
 
     function resetSearch() {
+      for (const key of Object.keys(pendingFilters)) delete pendingFilters[key];
       elements.query.value = "";
       elements.type.value = "";
       elements.year.value = "";
@@ -1273,6 +1323,7 @@
     };
     for (const [key, value] of Object.entries(initialValues)) {
       if ([...elements[key].options].some((option) => option.value === value)) elements[key].value = value;
+      else if (value) pendingFilters[key] = value;
     }
     const initialPage = Math.max(1, Number(params.get("page")) || 1);
     state.page = 1;
@@ -1297,6 +1348,9 @@
     });
     [elements.type, elements.year, elements.result, elements.source, elements.tag, elements.sort]
       .forEach((element) => element.addEventListener("change", () => {
+        for (const key of ["type", "year", "result", "source", "tag"]) {
+          if (elements[key] === element) delete pendingFilters[key];
+        }
         render(true);
         requestCouncilData();
       }));
@@ -1311,7 +1365,7 @@
 
     render();
     const initialTargets = requestedYearMetas();
-    if (initialTargets.length) {
+    if (initialTargets.length || needsJimujigyo()) {
       requestCouncilData().then(() => {
         state.page = initialPage;
         render();

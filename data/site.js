@@ -78,7 +78,7 @@ window.SHINAGAWA_DB.site = {
       "label": "予算・事業",
       "items": [
         {
-          "label": "事業カルテ",
+          "label": "事業ごとの記録",
           "url": "jigyo.html"
         },
         {
@@ -90,7 +90,7 @@ window.SHINAGAWA_DB.site = {
           "url": "yosan-kessan.html#fiscal-comparison"
         },
         {
-          "label": "行政評価",
+          "label": "事務事業評価",
           "url": "gyosei.html"
         }
       ]

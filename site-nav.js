@@ -40,10 +40,10 @@
     {
       id: "budget", section: "primary", label: "予算・事業",
       items: [
-        { label: "事業カルテ", url: "jigyo.html" },
+        { label: "事業ごとの記録", url: "jigyo.html" },
         { label: "予算・決算", url: "yosan-kessan.html" },
         { label: "お金の見える化", url: "yosan-kessan.html#fiscal-comparison" },
-        { label: "行政評価", url: "gyosei.html" }
+        { label: "事務事業評価", url: "gyosei.html" }
       ]
     },
     {
