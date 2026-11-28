@@ -83,17 +83,20 @@
     return `令和${Number(key.slice(1)) - 1}年度`;
   }
 
-  /** 同じ事業の年度ごとの推移（評価シートの生成時に、名前と会計が一意に対応した年度だけ）。
+  /** 同じ事業の年度ごとの推移（評価シートの生成時に、名前と会計が一意に対応した年度と、
+   * 名称が変わっても目的・概要の文章がほぼ同じ年度だけ）。
    * @param {object} sheets @param {object} item @returns {string} */
   function historyTable(sheets, item) {
     if (!item.history?.length) {
-      return `<p class="civic-note">ほかの年度の評価シートに、同じ名前・会計の事業は見つかりませんでした（新しい事業か、名称が変わった可能性があります）。</p>`;
+      return `<p class="civic-note">ほかの年度の評価シートに、同じ事業は見つかりませんでした（新しい事業か、統合・分割などで対応が決められなかった可能性があります）。</p>`;
     }
-    const current = { id: item.id, year: sheets.key, budgetYen: item.budgetYen, settledYen: item.settledYen, rate: item.rate, evaluation: item.evaluation?.code };
+    const current = { id: item.id, year: sheets.key, name: item.name, budgetYen: item.budgetYen, settledYen: item.settledYen, rate: item.rate, evaluation: item.evaluation?.code };
+    const renamed = item.history.some(row => row.renamed);
     const rows = [current, ...item.history].sort((a, b) => b.year.localeCompare(a.year));
-    return `<table class="civic-table"><caption>評価シートの小事業名と会計が一致したものを並べています。</caption>
+    return `<table class="civic-table"><caption>評価シートの小事業名と会計が一致したものを並べています。${renamed
+      ? "名称が違う年度は、会計と担当課（または予算科目）が同じで、目的・概要の文章がほぼ同じことから同じ事業とみなしたものです。" : ""}</caption>
       <thead><tr><th scope="col">実施年度</th><th scope="col">予算現額</th><th scope="col">決算額</th><th scope="col">執行率</th><th scope="col">最終評価</th></tr></thead><tbody>
-      ${rows.map(row => `<tr><th scope="row">${row.id === item.id ? `${esc(fiscalLabel(row.year))}（この頁）` : link(fiscalLabel(row.year), "jigyo.html?id=" + encodeURIComponent(row.id))}</th>
+      ${rows.map(row => `<tr><th scope="row">${row.id === item.id ? `${esc(fiscalLabel(row.year))}（この頁）` : link(fiscalLabel(row.year), "jigyo.html?id=" + encodeURIComponent(row.id))}${row.renamed ? `<br><small>名称：${esc(row.name)}</small>` : ""}</th>
         <td>${money(row.budgetYen)}</td><td>${money(row.settledYen)}</td><td>${esc(rateText(row.rate))}</td><td>${esc(row.evaluation || missing)}</td></tr>`).join("")}
       </tbody></table>`;
   }

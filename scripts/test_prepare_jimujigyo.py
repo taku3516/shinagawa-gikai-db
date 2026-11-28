@@ -111,10 +111,15 @@ class LayoutTest(unittest.TestCase):
         self.assertEqual(pj.right_edge([]), pj.RIGHT_HALF_X)
 
 
-def sheet(id_: str, name: str, kaikei: str = "一般会計", section: str = "企画課", budget: int = 1000) -> dict:
+def sheet(id_: str, name: str, kaikei: str = "一般会計", section: str = "企画課", budget: int = 1000,
+          purpose: str = "", account: str = "企画費") -> dict:
     """年度をまたぐ対応づけの検査用に、評価シート1頁分の記録を最小限の項目で作る。"""
     return {"id": id_, "name": name, "kaikei": kaikei, "section": section, "budgetYen": budget, "settledYen": budget // 2,
-            "rate": 50.0, "evaluation": {"code": "B", "label": "継続する事業", "direction": ""}}
+            "rate": 50.0, "evaluation": {"code": "B", "label": "継続する事業", "direction": ""},
+            "purpose": purpose, "overview": "", "account": {"kan": "総務費", "kou": "総務管理費", "moku": account}, "jigyo": account}
+
+
+CEREMONY = "◆新たに大人の仲間入りをした区民を祝い励ますため、式典を開催する。会場で記念品を配付する。"
 
 
 class LinkYearsTest(unittest.TestCase):
@@ -155,7 +160,32 @@ class LinkYearsTest(unittest.TestCase):
         by_year = {"r07": [sheet("r07-1-1", "計画策定経費", budget=3000)], "r06": [sheet("r06-1-1", "計画策定経費", budget=2000)]}
         pj.link_years(by_year)
         self.assertEqual(by_year["r07"][0]["history"], [{
-            "id": "r06-1-1", "year": "r06", "budgetYen": 2000, "settledYen": 1000, "rate": 50.0, "evaluation": "B"}])
+            "id": "r06-1-1", "year": "r06", "name": "計画策定経費", "budgetYen": 2000, "settledYen": 1000, "rate": 50.0,
+            "evaluation": "B"}])
+
+    def test_名前が変わっても目的と概要がほぼ同じで候補が1件ならつなぎ_根拠を残す(self) -> None:
+        by_year = {"r06": [sheet("r06-1-1", "二十歳の集い式典経費", purpose=CEREMONY)],
+                   "r05": [sheet("r05-1-1", "成人式経費", purpose=CEREMONY)]}
+        pj.link_years(by_year)
+        self.assertEqual([(h["id"], h["name"], h.get("renamed")) for h in by_year["r06"][0]["history"]],
+                         [("r05-1-1", "成人式経費", True)])
+
+    def test_文章が似ていても候補が2件あればつながない(self) -> None:
+        # 国保の「一般被保険者〜」と「退職被保険者等〜」が1つにまとまった場合など
+        got = self.link({"r07": [sheet("r07-1-1", "高額療養費", purpose=CEREMONY)],
+                         "r06": [sheet("r06-1-1", "一般被保険者高額療養費", purpose=CEREMONY),
+                                 sheet("r06-1-2", "退職被保険者等高額療養費", purpose=CEREMONY + "退職")]})
+        self.assertEqual(got["r07-1-1"], [])
+
+    def test_担当課も予算科目も違えば文章が同じでもつながない(self) -> None:
+        got = self.link({"r07": [sheet("r07-1-1", "式典経費", section="総務課", account="総務費", purpose=CEREMONY)],
+                         "r06": [sheet("r06-1-1", "成人式経費", section="文化振興課", account="文化費", purpose=CEREMONY)]})
+        self.assertEqual(got["r07-1-1"], [])
+
+    def test_文章が違えば同じ課でもつながない(self) -> None:
+        got = self.link({"r07": [sheet("r07-1-1", "住宅・土地統計調査", purpose="◆住宅と土地の保有状況を調べる統計調査を実施する。")],
+                         "r06": [sheet("r06-1-1", "就業構造基本調査", purpose="◆国民の就業と不就業の状態を調べる統計調査を実施する。")]})
+        self.assertEqual(got["r07-1-1"], [])
 
 
 class SummaryTest(unittest.TestCase):
