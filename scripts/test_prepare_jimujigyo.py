@@ -111,6 +111,53 @@ class LayoutTest(unittest.TestCase):
         self.assertEqual(pj.right_edge([]), pj.RIGHT_HALF_X)
 
 
+def sheet(id_: str, name: str, kaikei: str = "一般会計", section: str = "企画課", budget: int = 1000) -> dict:
+    """年度をまたぐ対応づけの検査用に、評価シート1頁分の記録を最小限の項目で作る。"""
+    return {"id": id_, "name": name, "kaikei": kaikei, "section": section, "budgetYen": budget, "settledYen": budget // 2,
+            "rate": 50.0, "evaluation": {"code": "B", "label": "継続する事業", "direction": ""}}
+
+
+class LinkYearsTest(unittest.TestCase):
+    """同じ事業を年度間でつなぐ。根拠が一意に定まるものだけを結ぶ。"""
+
+    def link(self, by_year: dict) -> dict:
+        pj.link_years(by_year)
+        return {row["id"]: [h["id"] for h in row.get("history", [])] for rows in by_year.values() for row in rows}
+
+    def test_名前と会計が一意なら3年度をつなぐ(self) -> None:
+        got = self.link({"r07": [sheet("r07-1-1", "計画策定経費")], "r06": [sheet("r06-1-1", "計画策定経費")],
+                         "r05": [sheet("r05-1-1", "計画策定経費")]})
+        self.assertEqual(got["r07-1-1"], ["r06-1-1", "r05-1-1"])
+        self.assertEqual(got["r05-1-1"], ["r07-1-1", "r06-1-1"])
+
+    def test_同じ名前は会計で見分ける(self) -> None:
+        got = self.link({
+            "r07": [sheet("r07-1-1", "葬祭費"), sheet("r07-2-1", "葬祭費", kaikei="国民健康保険事業会計")],
+            "r06": [sheet("r06-2-1", "葬祭費", kaikei="国民健康保険事業会計"), sheet("r06-1-1", "葬祭費")],
+        })
+        self.assertEqual((got["r07-1-1"], got["r07-2-1"]), (["r06-1-1"], ["r06-2-1"]))
+
+    def test_会計でも重なれば担当課で見分け_それでも重なればつながない(self) -> None:
+        got = self.link({
+            "r07": [sheet("r07-1-1", "審査支払手数料", section="高齢者福祉課"), sheet("r07-1-2", "審査支払手数料", section="国保医療年金課"),
+                    sheet("r07-1-3", "事務費"), sheet("r07-1-4", "事務費")],
+            "r06": [sheet("r06-1-1", "審査支払手数料", section="国保医療年金課"), sheet("r06-1-2", "審査支払手数料", section="高齢者福祉課"),
+                    sheet("r06-1-3", "事務費"), sheet("r06-1-4", "事務費")],
+        })
+        self.assertEqual((got["r07-1-1"], got["r07-1-2"]), (["r06-1-2"], ["r06-1-1"]))
+        self.assertEqual((got["r07-1-3"], got["r07-1-4"]), ([], []))
+
+    def test_名前が変わった事業はつながない(self) -> None:
+        got = self.link({"r07": [sheet("r07-1-1", "区政モニター経費")], "r06": [sheet("r06-1-1", "広聴経費")]})
+        self.assertEqual(got["r07-1-1"], [])
+
+    def test_他年度の要約は予算と評価だけを持つ(self) -> None:
+        by_year = {"r07": [sheet("r07-1-1", "計画策定経費", budget=3000)], "r06": [sheet("r06-1-1", "計画策定経費", budget=2000)]}
+        pj.link_years(by_year)
+        self.assertEqual(by_year["r07"][0]["history"], [{
+            "id": "r06-1-1", "year": "r06", "budgetYen": 2000, "settledYen": 1000, "rate": 50.0, "evaluation": "B"}])
+
+
 class PurposeBlockTest(unittest.TestCase):
     """目的・概要欄の切り出し（【概要】の小見出しが無いシートで実際に起きた崩れ）。"""
 

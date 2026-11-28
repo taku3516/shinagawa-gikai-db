@@ -9,8 +9,8 @@
 
 使い方:
   python scripts/prepare_jimujigyo.py --fetch            # PDFを scripts/cache/jimujigyo-<年度>/ に取得
-  python scripts/prepare_jimujigyo.py                    # data/jimujigyo-<年度>.js を全年度書き出す
-  python scripts/prepare_jimujigyo.py --year r06         # 1年度だけ
+  python scripts/prepare_jimujigyo.py --fetch --year r06 # 1年度だけ取得
+  python scripts/prepare_jimujigyo.py                    # data/jimujigyo-<年度>.js を全年度書き出す（年度間の対応づけも）
 """
 
 from __future__ import annotations
@@ -22,6 +22,7 @@ import sys
 import time
 import unicodedata
 import urllib.request
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Optional
@@ -310,6 +311,8 @@ def read_page(lines: list[Line], fiscal_year: int) -> dict[str, Any]:
         purpose = block_text(lines, "目的・概要", [overview_end], right_x)
     record: dict[str, Any] = {
         "name": right_of(lines, "小事業名", right_x),
+        # 会計（一般会計・国民健康保険事業会計など）。同じ名前の事業を見分けるのに使う。空欄なら次の「款」で止める
+        "kaikei": right_of(lines, "会計", right_x, stop_at="款"),
         "section": right_of(lines, "担当課", right_x),
         "unit": right_of(lines, "担当係", right_x),
         "account": {"kan": right_of(lines, "款", right_x), "kou": right_of(lines, "項", right_x),
@@ -406,6 +409,63 @@ def build(year: EvaluationYear) -> dict[str, Any]:
     return {"projects": projects, "issues": issues}
 
 
+# ── 年度をまたぐ対応づけ ───────────────────────────
+
+def pair_links(newer: list[dict[str, Any]], older: list[dict[str, Any]]) -> dict[str, str]:
+    """隣り合う2年度で同じ事業を対応づける（新しい年度のID → 古い年度のID）。
+
+    小事業名と会計の組が両年度で1件ずつなら結ぶ。同じ組が複数あるときは担当課まで含めて
+    1件ずつになったものだけ結ぶ。それでも決まらないもの、名前が変わったものは結ばない。
+    """
+    links: dict[str, str] = {}
+    used: set[str] = set()
+    keys = (lambda r: (r.get("name"), r.get("kaikei")),
+            lambda r: (r.get("name"), r.get("kaikei"), r.get("section")))
+    for key in keys:
+        newer_count = Counter(key(r) for r in newer)
+        older_count = Counter(key(r) for r in older)
+        older_by_key = {key(r): r for r in older}
+        for row in newer:
+            k = key(row)
+            if row["id"] in links or not row.get("name") or newer_count[k] != 1 or older_count[k] != 1:
+                continue
+            match = older_by_key[k]["id"]
+            if match not in used:
+                links[row["id"]] = match
+                used.add(match)
+    return links
+
+
+def link_years(by_year: dict[str, list[dict[str, Any]]]) -> None:
+    """各事業に、対応づいた他年度の要約（予算・決算・執行率・評価）を history として付ける。
+
+    by_year は評価年度のキー（r07 など）→ その年度の事業。隣り合う年度どうしで結び、鎖にする。
+    """
+    order = sorted(by_year, reverse=True)
+    parent: dict[str, str] = {}
+
+    def root(id_: str) -> str:
+        while parent.get(id_, id_) != id_:
+            id_ = parent[id_]
+        return id_
+
+    for newer, older in zip(order, order[1:]):
+        for a, b in pair_links(by_year[newer], by_year[older]).items():
+            parent[root(b)] = root(a)
+    rows = {row["id"]: (year, row) for year in order for row in by_year[year]}
+    chains: dict[str, list[str]] = {}
+    for year in order:
+        for row in by_year[year]:
+            chains.setdefault(root(row["id"]), []).append(row["id"])
+    for members in chains.values():
+        for id_ in members:
+            rows[id_][1]["history"] = [{
+                "id": other, "year": rows[other][0],
+                "budgetYen": rows[other][1].get("budgetYen"), "settledYen": rows[other][1].get("settledYen"),
+                "rate": rows[other][1].get("rate"), "evaluation": (rows[other][1].get("evaluation") or {}).get("code"),
+            } for other in members if other != id_]
+
+
 def write(year: EvaluationYear, data: dict[str, Any]) -> None:
     """data/jimujigyo-<年度>.js に書き出す。"""
     payload = {
@@ -429,17 +489,22 @@ def write(year: EvaluationYear, data: dict[str, Any]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--fetch", action="store_true", help="評価シートPDFを取得する")
-    parser.add_argument("--year", choices=sorted(YEARS), help="1年度だけ処理する（省略時は全年度）")
+    parser.add_argument("--year", choices=sorted(YEARS), help="--fetch で1年度だけ取得する（省略時は全年度）")
     args = parser.parse_args()
-    years = [YEARS[args.year]] if args.year else list(YEARS.values())
-    failed = False
-    for year in years:
-        if args.fetch:
+    if args.fetch:
+        for year in [YEARS[args.year]] if args.year else YEARS.values():
             fetch(year)
-            continue
-        data = build(year)
+        return 0
+    # 年度をまたいで同じ事業をつなぐので、書き出しは常に全年度まとめて行う
+    built = {key: build(year) for key, year in YEARS.items()}
+    link_years({key: data["projects"] for key, data in built.items()})
+    failed = False
+    for key, data in built.items():
+        year = YEARS[key]
         write(year, data)
-        print(f"{year.evaluation_year}: {len(data['projects'])}件を書き出しました: {year.out.relative_to(ROOT)}")
+        linked = sum(1 for row in data["projects"] if row.get("history"))
+        print(f"{year.evaluation_year}: {len(data['projects'])}件（他年度とつながった{linked}件）を書き出しました: "
+              f"{year.out.relative_to(ROOT)}")
         for issue in data["issues"]:
             print("要確認:", issue, file=sys.stderr)
             failed = failed or issue.startswith("公式集計と不一致")
