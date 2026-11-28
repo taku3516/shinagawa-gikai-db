@@ -296,3 +296,40 @@ test("わたしの地域は、地区をまたぐ町丁目を主な地区だけ�
   assert.equal(new Set(primary).size, primary.length);
   assert.equal(new Set(primary).size, Object.keys(seen).length);
 });
+
+test("データ状況ページに、しなトークの件数・最も早い開始月・取得日・リンク先をパブコメとは別のカードで出す", async () => {
+  // 画面に関係する台帳だけを最小の形で置き、statusPage を実際に描画させる
+  const requested = [];
+  const talkContext = createContext({
+    URLSearchParams, location: { search: "", hostname: "localhost" },
+    window: {
+      SHINAGAWA_DB: { site: { years: [] }, years: {}, membersData: { members: [], updatedAt: null }, fiscalData: { fiscalYears: [], updatedAt: null } },
+      SHINAGAWA_CIVIC: { ...civic, loadYears: async () => {}, bills: () => [] },
+      SHINAGAWA_CIVIC_SOURCES: {},
+      SHINAGAWA_CATALOG: { datasets: {}, dataset: () => null, load: async files => { requested.push(...files); } },
+      SHINAGAWA_NEWS: { items: [], reports: [] }, SHINAGAWA_PETITIONS: { items: [] }, SHINAGAWA_GYOSEI: { fiscalYears: [] },
+      SHINAGAWA_SEIMU: { fiscalYears: [] }, SHINAGAWA_SEIJISHIKIN: { organizations: [] }, SHINAGAWA_EVENTS: { events: [] },
+      SHINAGAWA_PUBLIC_COMMENTS: { items: [{ fiscalYear: 2019 }, { fiscalYear: 2026 }], fetchedAt: "2026-11-28" },
+      SHINAGAWA_SHINATALK: { fetchedAt: "2026-11-27", items: [{ start: "2026-10-21" }, { start: "2025-09-01" }, { start: null }] }
+    }
+  });
+  for (const path of ["civic-content.js", "civic-ui.js", "civic-services.js"]) {
+    runInContext(readFileSync(new URL(`../${path}`, import.meta.url), "utf8"), talkContext, { filename: path });
+  }
+  const root = { innerHTML: "" };
+  await talkContext.window.SHINAGAWA_SERVICES.statusPage(root);
+  assert.ok(requested.includes("shinatalk"), "data/shinatalk.js を読み込む");
+  const cards = root.innerHTML.split('<article class="civic-card">').slice(1);
+  const talk = cards.find(card => card.includes("しなトーク"));
+  assert.ok(talk, "しなトークのカードがある");
+  assert.ok(!talk.includes("区の意見募集・結果"), "パブコメとは別のカード");
+  assert.match(talk, /<a href="kumin-no-koe\.html#shinatalk">しなトーク（区のオンライン意見交換）<\/a>/);
+  assert.match(talk, /収録数 3</, "開始日の無い取り組みも件数には数える");
+  assert.match(talk, /取り組み数（2025年9月以降に始まったもの）。パブリックコメントとは別に数える/, "最も早い開始月（並び順によらない）");
+  assert.match(talk, /2026-11-27/, "しなトークの取得日（パブコメの取得日ではない）");
+
+  // 開始日が1件も無ければ、対象範囲の月は書かない
+  talkContext.window.SHINAGAWA_SHINATALK = { fetchedAt: "2026-11-27", items: [{ start: null }] };
+  await talkContext.window.SHINAGAWA_SERVICES.statusPage(root);
+  assert.match(root.innerHTML, /取り組み数。パブリックコメントとは別に数える/);
+});
