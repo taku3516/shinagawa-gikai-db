@@ -363,6 +363,8 @@
   <script src="data/senkyo-shushi.js"></script>
   <script src="data/news-items.js"></script>
   <script src="data/resolutions.js"></script>
+  <script src="data/public-comments.js"></script>
+  <script src="data/public-comment-council.js"></script>
   <script src="civic-content.js"></script>
   <script src="civic-data.js"></script>
   <script src="kensaku-jimujigyo.js"></script>
@@ -380,6 +382,7 @@
       { id: "expenses", label: "政務活動費" },
       { id: "political-funds", label: "政治資金" },
       { id: "resolutions", label: "意見書・決議等" },
+      { id: "public-comments", label: "区の意見募集" },
       { id: "news", label: "ニュース" },
       { id: "services", label: "サイトの機能・事業" }
     ];
@@ -1003,6 +1006,38 @@
       });
     }
 
+    // 区の意見募集（パブリックコメント）。委員会での報告の議題名も検索語に含め、
+    // 「こども計画」と探したときに募集・結果・策定の流れがまとめて見つかるようにする
+    const publicComments = window.SHINAGAWA_PUBLIC_COMMENTS || { items: [] };
+    const publicCommentCouncil = (window.SHINAGAWA_PUBLIC_COMMENT_COUNCIL && window.SHINAGAWA_PUBLIC_COMMENT_COUNCIL.items) || {};
+    for (const comment of publicComments.items || []) {
+      const reports = publicCommentCouncil[comment.id] || [];
+      const fiscal = comment.fiscalYear - 2018;
+      const result = comment.status === "result";
+      addItem({
+        id: `public-comment-${comment.id}`,
+        category: "public-comments",
+        type: result ? "意見募集の結果" : "意見募集",
+        year: comment.fiscalYear,
+        date: comment.end || comment.start || "",
+        title: comment.title,
+        meta: [`令和${fiscal === 1 ? "元" : fiscal}年度`, `案件番号${comment.id}`, comment.department].filter(Boolean).join("／"),
+        body: [
+          comment.start && comment.end ? `募集期間 ${comment.start}〜${comment.end}` : comment.end ? `募集期限 ${comment.end}` : "",
+          result && Number.isFinite(comment.opinions) ? `応募者${comment.applicants}人・意見${comment.opinions}件` : "",
+          reports.length ? `委員会での報告${reports.length}件` : ""
+        ].filter(Boolean).join("。"),
+        source: "品川区",
+        // 議題名は32字を超えるものが多くタグに入らないので、検索語（primary）に含める
+        primary: ["パブリックコメント", "意見募集", comment.department].concat(reports.flatMap((report) => [report.committee, report.title])),
+        tags: [result ? "結果公表済み" : "意見募集"],
+        links: [
+          { type: "internal", label: "区の意見募集・結果で見る", url: `kumin-no-koe.html?nendo=${comment.fiscalYear}#pc-${comment.id}` },
+          { type: "official", label: "品川区の案件ページ", url: comment.url }
+        ].concat(reports.slice(-1).map((report) => ({ type: "internal", label: `委員会での報告（${report.committee}）`, url: report.url })))
+      });
+    }
+
     const newsData = window.SHINAGAWA_NEWS || { items: [] };
     for (const news of newsData.items || []) {
       const year = dateYear(news.publishedAt || news.collectedAt);
@@ -1036,7 +1071,8 @@
       ["政治資金", "政治資金収支報告書", "収支報告書", "政治団体", "資金管理団体"],
       ["ごみ", "廃棄物", "リサイクル"],
       ["学校", "教育"],
-      ["商店", "店舗", "商店街"]
+      ["商店", "店舗", "商店街"],
+      ["パブコメ", "パブリックコメント", "意見募集", "意見公募"]
     ].map((group) => group.map(normalizeText));
 
     function variantsForTerm(term) {
