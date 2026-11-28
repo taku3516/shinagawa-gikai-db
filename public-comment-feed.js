@@ -66,7 +66,8 @@
       const result = item.status === "result";
       const until = item.end ? item.end.slice(5).replace(/^0?(\d+)-0?(\d+)$/, "$1月$2日") : "";
       return {
-        id: `pc:${item.id}`,
+        // 募集開始と結果公表は別の新着。同じIDだと、募集を既読にした人に結果公表が未読で届かない
+        id: result ? `pc-result:${item.id}` : `pc:${item.id}`,
         title: result ? `意見募集の結果：${item.title}` : `意見募集：${item.title}${until ? `（${until}まで）` : ""}`,
         url: pagePath(item),
         date: (result ? item.resultSeenAt : item.start || item.end) || "",

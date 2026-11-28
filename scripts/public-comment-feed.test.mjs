@@ -48,12 +48,19 @@ test("新着には募集開始は掲載日、結果公表は当サイトが見�
   const items = feed.feedItems([open, seen]);
   assert.deepEqual(items.map(item => [item.id, item.date, item.note]), [
     ["pc:2026-005", "2026-11-15", "意見募集の開始日"],
-    ["pc:2024-012", "2026-12-20", "結果の公表を確認した日"]
+    ["pc-result:2024-012", "2026-12-20", "結果の公表を確認した日"]
   ]);
   assert.equal(items[0].title, "意見募集：品川区福祉オンブズマン制度(素案)（12月15日まで）");
   assert.equal(items[1].title, "意見募集の結果：品川区こども計画");
   assert.equal(items[0].url, "kumin-no-koe.html?nendo=2026#pc-2026-005");
   assert.equal(items[0].type, "意見募集");
+});
+
+test("募集開始と結果公表は別の新着として扱う（募集を既読にしても結果は未読で届く）", () => {
+  const opened = feed.feedItems([open])[0];
+  const published = feed.feedItems([{ ...open, status: "result", resultSeenAt: "2027-03-20" }])[0];
+  assert.notEqual(opened.id, published.id);
+  assert.equal(opened.id, "pc:2026-005", "募集開始のIDは変えない（既読の記録を引き継ぐ）");
 });
 
 test("公表日の分からない結果は新着に載せない（区のページの更新日はサイト改修でそろって書き換わる）", () => {
