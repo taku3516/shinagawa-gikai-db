@@ -365,6 +365,7 @@
   <script src="data/resolutions.js"></script>
   <script src="civic-content.js"></script>
   <script src="civic-data.js"></script>
+  <script src="kensaku-jimujigyo.js"></script>
   <script src="data/civic-sources.js"></script>
 
   <script>
@@ -718,11 +719,39 @@
       return needsCouncilData ? yearMetas : [];
     }
 
+    // 事務事業評価シートから読み取った小事業（約1.3MB）。検索語があるときか、
+    // 事務事業評価の分類を開いたときだけ読み込む。失敗したら次の検索で読み直す。
+    let jimujigyoState = "idle";
+    function needsJimujigyo() {
+      if (state.category !== "all" && state.category !== "gyosei") return false;
+      if (elements.source.value) return false;
+      if (elements.type.value && elements.type.value !== "事業ごとの記録") return false;
+      return state.category === "gyosei"
+        || Boolean(elements.query.value.trim())
+        || Boolean(elements.type.value || elements.tag.value);
+    }
+
+    function requestJimujigyo() {
+      if (jimujigyoState !== "idle" || !needsJimujigyo()) return Promise.resolve();
+      jimujigyoState = "loading";
+      return loadScript("data/jimujigyo-r07.js").then(() => {
+        for (const item of window.SHINAGAWA_JIMUJIGYO_SEARCH.items(window.SHINAGAWA_JIMUJIGYO_R07)) addItem(item);
+        delete window.SHINAGAWA_JIMUJIGYO_R07;
+        jimujigyoState = "loaded";
+        refreshFilterOptions();
+        render();
+      }).catch((error) => {
+        jimujigyoState = "idle";
+        console.error(error);
+      });
+    }
+
     function requestCouncilData() {
+      const sheets = requestJimujigyo();
       const metas = requestedYearMetas();
-      if (!metas.length) return Promise.resolve();
+      if (!metas.length) return sheets;
       loadQueue = loadQueue.then(() => loadYearList(metas));
-      return loadQueue;
+      return Promise.all([sheets, loadQueue]);
     }
 
     function addPerson(person, type, extra = {}) {
@@ -1194,7 +1223,7 @@
       renderCategoryTabs();
 
       if (!browseMode) {
-        elements.hit.textContent = `人物・選挙・政務活動費・政治資金・ニュースの${INDEX.length.toLocaleString("ja-JP")}件と、平成13年〜令和8年の議会情報から検索`;
+        elements.hit.textContent = `人物・選挙・政務活動費・政治資金・ニュースの${INDEX.length.toLocaleString("ja-JP")}件と、平成13年〜令和8年の議会情報、事務事業評価の652事業から検索`;
         elements.results.innerHTML = "";
         elements.guide.hidden = false;
         elements.guide.innerHTML = `<h2>検索する内容を入力してください</h2>
@@ -1311,7 +1340,7 @@
 
     render();
     const initialTargets = requestedYearMetas();
-    if (initialTargets.length) {
+    if (initialTargets.length || needsJimujigyo()) {
       requestCouncilData().then(() => {
         state.page = initialPage;
         render();
