@@ -79,6 +79,23 @@ class ChildGuidanceSheetTest(unittest.TestCase):
         self.assertEqual((abuse["target"], abuse["actual"]), ("913", "602"))
 
 
+class PurposeBlockTest(unittest.TestCase):
+    """目的・概要欄の切り出し（【概要】の小見出しが無いシートで実際に起きた崩れ）。"""
+
+    def test_概要が無ければ目的は次の節の手前で止まる(self) -> None:
+        lines = [
+            (60.0, 46.0, 140.0, "２　目的・概要"),
+            (72.0, 46.0, 80.0, "【目的】"),
+            (84.0, 46.0, 400.0, "◆計画を策定する。"),
+            (110.0, 46.0, 158.0, "３　事業の実績・課題"),
+            (130.0, 172.7, 189.5, "目標"),
+            (130.0, 290.0, 330.0, "20"),
+        ]
+        record = pj.read_page(lines)
+        self.assertEqual(record["purpose"], "◆計画を策定する。")
+        self.assertEqual(record["overview"], "")
+
+
 class IndicatorRowsTest(unittest.TestCase):
     """指標表の行の切り分け（評価シートで実際に出た崩れ方を再現）。"""
 

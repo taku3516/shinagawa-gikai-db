@@ -117,13 +117,16 @@ def right_of(lines: list[Line], label: str, stop_at: Optional[str] = None) -> st
     return values[0] if values and not stop_at else " ".join(values)
 
 
-def block_text(lines: list[Line], start: str, end: str, x_max: float = RIGHT_HALF_X) -> str:
-    """見出し start の下から見出し end の手前まで（左半分）の文章をつなげる。"""
+def block_text(lines: list[Line], start: str, ends: list[str], x_max: float = RIGHT_HALF_X) -> str:
+    """見出し start の下から、ends のうち最も近い見出しの手前まで（左半分）の文章をつなげる。
+
+    小見出しが欠けるシートがあるので、終端は候補を並べて渡す（例：【概要】が無ければ次の節で止める）。
+    """
     head = find(lines, start, x_max)
-    tail = find(lines, end, x_max)
     if not head:
         return ""
-    bottom = tail[0] if tail and tail[0] > head[0] else head[0] + 200
+    tails = [tail[0] for tail in (find(lines, end, x_max) for end in ends if end) if tail and tail[0] > head[0]]
+    bottom = min(tails) if tails else head[0] + 200
     body = [ln for ln in sorted(lines) if head[0] < ln[0] < bottom and ln[1] < x_max]
     return "".join(ln[3] for ln in body).strip()
 
@@ -211,11 +214,11 @@ def read_page(lines: list[Line]) -> dict[str, Any]:
                         if period_row[0] + 4 < ln[0] < purpose_head[0] and 100 <= ln[1] < RIGHT_HALF_X
                         and ln is not legal_label)
     overview_end = next((ln[3] for ln in lines if ln[3].startswith("３") and "実績・課題" in ln[3]), "")
-    purpose = block_text(lines, "【目的】", "【概要】")
-    overview = block_text(lines, "【概要】", overview_end) if overview_end else ""
+    purpose = block_text(lines, "【目的】", ["【概要】", overview_end])
+    overview = block_text(lines, "【概要】", [overview_end]) if overview_end else ""
     if not purpose and overview_end:
         # 【目的】【概要】の小見出しが無いシートは、「目的・概要」欄全体を目的として持つ
-        purpose = block_text(lines, "目的・概要", overview_end)
+        purpose = block_text(lines, "目的・概要", [overview_end])
     record: dict[str, Any] = {
         "name": right_of(lines, "小事業名"),
         "section": right_of(lines, "担当課"),
