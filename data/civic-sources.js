@@ -119,6 +119,41 @@ window.SHINAGAWA_CIVIC_SOURCES = {
     })
   });
 
+  // 令和7年第4回：2頁・37列。列の並びは令和8年第1回と同じ。こんの孝子は全件欠席。
+  // 公式PDFは反対を「✕」（U+2715）で表しているが、他の会期と同じ「×」で持つ
+  addVoteSession("r07-4t", {
+    name: "令和7年第4回定例会", file: "r07_04t_s.pdf", checkedAt: "2026-11-28",
+    groups: [
+      ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
+      ["未来", "takahiro_okura ayaka_ogino kengo_kimura takeshi_tanaka tsutsui_yosuke masanori_fujiwara yoshihiro_matsunaga yasuyuki_yamamoto"],
+      ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+      ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+      ["維新", "mao_seraku tokihiro_matsumoto"],
+      ["無所属", "yukihiro_sugai shinji_takahashi nobuaki_takahashi ryo_nakatsuka takako_nishimoto satoshi_yanagisawa yukari_yokoyama yumiko_yoshida"]
+    ],
+    common: "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇",
+    // 公式表の行順。1頁：第122〜124号、第134〜142号、2頁：第143号、第125〜133号、第121号（補正予算）、議員提出第5号
+    rows: (() => {
+      const salary = "〇〇〇〇〇〇〇長〇〇欠〇〇×〇〇〇欠〇〇〇〇〇〇〇〇〇〇〇×〇欠〇〇〇〇〇";
+      const special = "〇〇〇〇〇〇〇長〇〇欠〇〇×〇〇〇欠〇〇〇〇〇××××〇〇×〇欠×〇〇〇〇";
+      const split = {
+        "第122号議案": "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇××××〇〇〇〇〇×〇×〇〇",
+        "第134号議案": "〇〇〇〇〇〇〇長〇×欠〇××〇〇〇欠〇〇〇〇〇×××××××〇欠×〇×〇×",
+        "第135号議案": special, "第136号議案": special, "第137号議案": special,
+        "第138号議案": salary, "第139号議案": salary, "第140号議案": salary,
+        "第141号議案": salary, "第142号議案": salary, "第143号議案": salary,
+        "第121号議案": "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇×〇〇〇〇",
+        "議員提出第5号議案": "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇×××××××〇〇×〇×〇×"
+      };
+      const numbers = values => values.map(value => `第${value}号議案`);
+      const pages = [
+        numbers([122, 123, 124, 134, 135, 136, 137, 138, 139, 140, 141, 142]),
+        [...numbers([143, 125, 126, 127, 128, 129, 130, 131, 132, 133, 121]), "議員提出第5号議案"]
+      ];
+      return pages.flatMap((page, index) => page.map(number => [number, index + 1, split[number]]));
+    })()
+  });
+
   // 令和8年第1回：3頁・37列。自民が先頭で議長（渡辺ゆういち）は8列目。西本たか子は無所属の34列目、木村健悟は全件欠席
   addVoteSession("r08-1t", {
     name: "令和8年第1回定例会", file: "r08_01t_s.pdf", checkedAt: "2026-11-28",
