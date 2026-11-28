@@ -119,6 +119,140 @@ window.SHINAGAWA_CIVIC_SOURCES = {
     })
   });
 
+  // 令和7年第3回：1頁・37列。列の並びは令和7年第4回と同じ。公式PDFは反対を「✕」で表しているが「×」で持つ
+  addVoteSession("r07-3t", {
+    name: "令和7年第3回定例会", file: "r07_03t_s.pdf", checkedAt: "2026-11-28",
+    groups: [
+      ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
+      ["未来", "takahiro_okura ayaka_ogino kengo_kimura takeshi_tanaka tsutsui_yosuke masanori_fujiwara yoshihiro_matsunaga yasuyuki_yamamoto"],
+      ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+      ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+      ["維新", "mao_seraku tokihiro_matsumoto"],
+      ["無所属", "yukihiro_sugai shinji_takahashi nobuaki_takahashi ryo_nakatsuka takako_nishimoto satoshi_yanagisawa yukari_yokoyama yumiko_yoshida"]
+    ],
+    common: "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇",
+    // 公式表の行順：第102〜120号、第101号（補正予算）、議員提出第4号。決算の認定は表に載っていない
+    rows: (() => {
+      // 新総合庁舎の工事契約3件は、木村健悟が欠席し、共産4人と無所属3人が反対
+      const office = "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×";
+      const split = {
+        "第105号議案": "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×",
+        "第110号議案": office, "第111号議案": office, "第112号議案": office
+      };
+      return [
+        ...Array.from({ length: 19 }, (_, index) => `第${102 + index}号議案`),
+        "第101号議案",
+        "議員提出第4号議案"
+      ].map(number => [number, 1, split[number]]);
+    })()
+  });
+
+  // 令和7年第4回：2頁・37列。列の並びは令和8年第1回と同じ。こんの孝子は全件欠席。
+  // 公式PDFは反対を「✕」（U+2715）で表しているが、他の会期と同じ「×」で持つ
+  addVoteSession("r07-4t", {
+    name: "令和7年第4回定例会", file: "r07_04t_s.pdf", checkedAt: "2026-11-28",
+    groups: [
+      ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
+      ["未来", "takahiro_okura ayaka_ogino kengo_kimura takeshi_tanaka tsutsui_yosuke masanori_fujiwara yoshihiro_matsunaga yasuyuki_yamamoto"],
+      ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+      ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+      ["維新", "mao_seraku tokihiro_matsumoto"],
+      ["無所属", "yukihiro_sugai shinji_takahashi nobuaki_takahashi ryo_nakatsuka takako_nishimoto satoshi_yanagisawa yukari_yokoyama yumiko_yoshida"]
+    ],
+    common: "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇",
+    // 公式表の行順。1頁：第122〜124号、第134〜142号、2頁：第143号、第125〜133号、第121号（補正予算）、議員提出第5号
+    rows: (() => {
+      const salary = "〇〇〇〇〇〇〇長〇〇欠〇〇×〇〇〇欠〇〇〇〇〇〇〇〇〇〇〇×〇欠〇〇〇〇〇";
+      const special = "〇〇〇〇〇〇〇長〇〇欠〇〇×〇〇〇欠〇〇〇〇〇××××〇〇×〇欠×〇〇〇〇";
+      const split = {
+        "第122号議案": "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇××××〇〇〇〇〇×〇×〇〇",
+        "第134号議案": "〇〇〇〇〇〇〇長〇×欠〇××〇〇〇欠〇〇〇〇〇×××××××〇欠×〇×〇×",
+        "第135号議案": special, "第136号議案": special, "第137号議案": special,
+        "第138号議案": salary, "第139号議案": salary, "第140号議案": salary,
+        "第141号議案": salary, "第142号議案": salary, "第143号議案": salary,
+        "第121号議案": "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇×〇〇〇〇",
+        "議員提出第5号議案": "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇欠〇〇〇〇〇×××××××〇〇×〇×〇×"
+      };
+      const numbers = values => values.map(value => `第${value}号議案`);
+      const pages = [
+        numbers([122, 123, 124, 134, 135, 136, 137, 138, 139, 140, 141, 142]),
+        [...numbers([143, 125, 126, 127, 128, 129, 130, 131, 132, 133, 121]), "議員提出第5号議案"]
+      ];
+      return pages.flatMap((page, index) => page.map(number => [number, index + 1, split[number]]));
+    })()
+  });
+
+  // 令和8年第1回：3頁・37列。自民が先頭で議長（渡辺ゆういち）は8列目。西本たか子は無所属の34列目、木村健悟は全件欠席
+  addVoteSession("r08-1t", {
+    name: "令和8年第1回定例会", file: "r08_01t_s.pdf", checkedAt: "2026-11-28",
+    groups: [
+      ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
+      ["未来", "takahiro_okura ayaka_ogino kengo_kimura takeshi_tanaka tsutsui_yosuke masanori_fujiwara yoshihiro_matsunaga yasuyuki_yamamoto"],
+      ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+      ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+      ["維新", "mao_seraku tokihiro_matsumoto"],
+      ["無所属", "yukihiro_sugai shinji_takahashi nobuaki_takahashi ryo_nakatsuka takako_nishimoto satoshi_yanagisawa yukari_yokoyama yumiko_yoshida"]
+    ],
+    common: "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇",
+    // 公式表の行順。1頁：第10〜29号、2頁：第30〜39号・第51号・第40〜49号、3頁：第50・52号、予算（第1〜9号）、人事（第53〜55号）、議員提出
+    rows: (() => {
+      const split = {
+        "第11号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇〇",
+        "第14号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇〇〇×",
+        "第17号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇×〇〇〇〇〇〇〇",
+        "第18号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇〇〇〇",
+        "第21号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇〇〇〇",
+        "第31号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇〇",
+        "第33号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇〇",
+        "第34号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×",
+        "第37号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇〇〇〇",
+        "第51号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×",
+        "第41号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇〇",
+        "第44号議案": "〇〇〇〇〇〇〇長欠〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇",
+        "第1号議案": "〇〇〇〇〇〇〇長欠〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇×〇〇〇",
+        "第2号議案": "〇〇〇〇〇〇〇長欠〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇×〇〇〇〇",
+        "第3号議案": "〇〇〇〇〇〇〇長欠〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇〇〇〇",
+        "第4号議案": "〇〇〇〇〇〇〇長欠〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇〇〇〇",
+        "第5号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇×〇〇〇",
+        "第6号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×",
+        "第7号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇〇〇〇",
+        "第8号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇×〇〇〇〇",
+        "第53号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇××〇〇〇",
+        "第54号議案": "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇〇〇〇",
+        "議員提出第2号議案": "×××××××長××欠××××××××××××〇〇〇〇××〇××〇×〇×〇"
+      };
+      const numbers = n => n.map(value => `第${value}号議案`);
+      const pages = [
+        numbers(Array.from({ length: 20 }, (_, index) => 10 + index)),
+        numbers([30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 51, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]),
+        [...numbers([50, 52, 1, 2, 3, 4, 5, 6, 7, 8, 9, 53, 54, 55]), "議員提出第1号議案", "議員提出第2号議案"]
+      ];
+      return pages.flatMap((page, index) => page.map(number => [number, index + 1, split[number]]));
+    })()
+  });
+
+  // 令和8年第2回：37列。西村直子は自民（品川区議会自民党・無所属の会）の15列目で全件欠席、議長（渡辺ゆういち）は17列目
+  addVoteSession("r08-2t", {
+    name: "令和8年第2回定例会", file: "r08_02t_s.pdf", checkedAt: "2026-11-28",
+    groups: [
+      ["未来", "takahiro_okura ayaka_ogino kengo_kimura takeshi_tanaka tsutsui_yosuke takako_nishimoto masanori_fujiwara yoshihiro_matsunaga yasuyuki_yamamoto"],
+      ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
+      ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+      ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+      ["維新", "mao_seraku tokihiro_matsumoto"],
+      ["無所属", "yukihiro_sugai shinji_takahashi nobuaki_takahashi ryo_nakatsuka satoshi_yanagisawa yukari_yokoyama yumiko_yoshida"]
+    ],
+    common: "〇〇〇〇〇〇〇〇〇〇〇〇〇〇欠〇長〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇",
+    // 公式表の行順：第60号〜第82号、第59号（補正予算）、第83号（人権擁護委員の推薦）
+    rows: [
+      ...Array.from({ length: 23 }, (_, index) => `第${60 + index}号議案`),
+      "第59号議案",
+      "第83号議案"
+    ].map(number => ["第60号議案", "第66号議案"].includes(number)
+      ? [number, 1, "〇〇〇〇〇〇〇〇〇〇〇〇〇〇欠〇長〇〇〇〇〇〇〇××××〇〇〇〇〇××〇×"]
+      : [number, 1])
+  });
+
   // 令和8年第3回：会派構成が変わり37列。議長（渡辺ゆういち）は16列目。決算の認定は表に載っていない
   addVoteSession("r08-3t", {
     name: "令和8年第3回定例会", file: "r08_03t_s.pdf", checkedAt: "2026-11-27",
