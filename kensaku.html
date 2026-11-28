@@ -743,9 +743,11 @@
       if (state.category !== "all" && state.category !== "gyosei") return false;
       if (filterValue("source")) return false;
       if (filterValue("type") && filterValue("type") !== "事業ごとの記録") return false;
+      // 事業には「結果」が無いので、結果で絞るときは読まなくても結果は変わらない
+      if (filterValue("result")) return false;
       return state.category === "gyosei"
         || Boolean(elements.query.value.trim())
-        || Boolean(filterValue("type") || filterValue("tag"));
+        || Boolean(filterValue("type") || filterValue("tag") || filterValue("year"));
     }
 
     function requestJimujigyo() {
