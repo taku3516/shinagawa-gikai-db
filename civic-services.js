@@ -250,14 +250,50 @@
         <p>${link("品川区の案件ページ", item.url)}</p></details></div></article>`;
   }
 
+  /**
+   * しなトークの取り組みの実施状況。期間だけで決め、意見を受け付けているかは推測しない
+   * （区は受付の締切をプロセスの期間ではなく段階の日程で示すため）。
+   * @param {{start: string|null, end: string|null}} item @param {string} date @returns {string}
+   */
+  function talkState(item, date) {
+    if (item.start && date < item.start) return "開始前";
+    if (item.end && date > item.end) return "終了";
+    return "実施中";
+  }
+
+  /** しなトークの取り組み1件。 @param {object} item @param {string} date @returns {string} */
+  function talkRow(item, date) {
+    const period = (from, to) => from || to ? `${jaDate(from) || "未定"} 〜 ${jaDate(to) || "未定"}` : "日程未定";
+    const current = item.steps.find(step => step.active);
+    const steps = item.steps.map(step => `${step.active ? "<strong>" : ""}${esc(step.title)}${step.active ? "（現在）</strong>" : ""}　<span class="civic-note">${esc(period(step.start, step.end))}</span>`);
+    return `<article class="civic-result-row" id="talk-${esc(item.id)}">
+      <h3>${link(item.title, item.url)}</h3>
+      <p><span class="civic-talk__badge">しなトーク</span> <span class="civic-result-row__result">${esc(talkState(item, date))}</span><br><span class="civic-note">${esc(period(item.start, item.end))}</span></p>
+      <p>${current ? `区が示している段階：${esc(current.title)}${current.end ? `（${esc(jaDate(current.end))}まで）` : ""}` : ""}${item.ways.length ? `<br><span class="civic-note">参加の方法：${esc(item.ways.join("・"))}</span>` : ""}</p>
+      <div class="civic-result-row__extra"><details><summary>段階と日程（${steps.length}段階）</summary>
+        ${item.subtitle ? `<p>${esc(item.subtitle)}</p>` : ""}${list(steps, "段階の掲載はありません")}
+        <p>${link("しなトークの取り組みページ", item.url)}</p></details></div></article>`;
+  }
+
+  /** しなトークの別枠。データが無ければ何も出さない。 @param {string} date @returns {string} */
+  function talkSection(date) {
+    const talk = window.SHINAGAWA_SHINATALK;
+    if (!talk?.items?.length) return "";
+    return `<section class="civic-card civic-talk" aria-labelledby="shinatalk"><h2 id="shinatalk">しなトーク（区のオンライン意見交換）</h2>
+      <p>「しながわオープントーク（しなトーク）」は、品川区がテーマごとにアンケートや意見の投稿を募るオンラインの場です。<strong>上のパブリックコメント（意見公募手続）とは別の取り組み</strong>で、年度別の件数や応募者数の集計には含めていません。結果の公表の仕方は取り組みごとに異なります。</p>
+      <p class="civic-note">${talk.items.length}件を収録（${esc(jaDate(talk.fetchedAt))}取得）。段階の名前と日程は、しなトークに区が掲載したものです。出典：${link(talk.source.label, talk.source.url)}</p>
+      <div class="civic-results">${talk.items.map(item => talkRow(item, date)).join("")}</div></section>`;
+  }
+
   /** @param {HTMLElement} root @returns {Promise<void>} */
   async function voice(root) {
-    // 委員会との照合は補助の情報なので、読めなくても一覧は出す
-    const [, councilLoad, jigyoLoad] = await Promise.allSettled([civic.loadScript("data/public-comments.js"),
-      civic.loadScript("data/public-comment-council.js"), civic.loadScript("data/public-comment-jigyo.js")]);
+    // 委員会との照合・しなトークは補助の情報なので、読めなくても一覧は出す
+    const [, councilLoad, jigyoLoad, talkLoad] = await Promise.allSettled([civic.loadScript("data/public-comments.js"),
+      civic.loadScript("data/public-comment-council.js"), civic.loadScript("data/public-comment-jigyo.js"), civic.loadScript("data/shinatalk.js")]);
     if (!window.SHINAGAWA_PUBLIC_COMMENTS) throw new Error("区の意見募集のデータを読み込めませんでした。");
     if (councilLoad.status === "rejected") console.warn("委員会との照合データを読み込めませんでした", councilLoad.reason);
     if (jigyoLoad.status === "rejected") console.warn("事業ごとの記録との照合データを読み込めませんでした", jigyoLoad.reason);
+    if (talkLoad.status === "rejected") console.warn("しなトークのデータを読み込めませんでした", talkLoad.reason);
     const council = window.SHINAGAWA_PUBLIC_COMMENT_COUNCIL?.items || null;
     const jigyo = window.SHINAGAWA_PUBLIC_COMMENT_JIGYO?.items || null;
     const pc = window.SHINAGAWA_PUBLIC_COMMENTS;
@@ -289,7 +325,9 @@
     const subscribe = location.hostname === "taku3516.github.io"
       ? `<p>${link("すべての締切をカレンダーで購読する（.ics）", "exports/shinagawa-public-comments.ics")}　<span class="civic-note">新しい意見募集が始まると自動で予定に加わります。</span></p>` : "";
 
+    const talk = talkSection(date);
     root.innerHTML = `<p>品川区が実施したパブリックコメント（意見公募手続）を年度ごとにまとめています。意見の提出方法と個人情報の取扱いは品川区の募集ページで確認できます。</p>
+      ${talk ? `<p>区のオンライン意見交換の場「しなトーク」の取り組みは、パブリックコメントとは分けて<a href="#shinatalk">ページ後半の別枠</a>にまとめています。</p>` : ""}
       <p>意見募集は任意参加です。区民全体の世論を代表する調査とは性質が異なります。ご意見の要旨と区の考え方は、各案件の資料（区が公表したPDF）でご覧ください。</p>
       ${openNow.length ? `<section class="civic-card" aria-labelledby="pc-open"><h2 id="pc-open">いま意見を出せる案件</h2>
         ${list(openNow.map(item => `${link(item.title, item.url)}　<strong>${esc(jaDate(item.end))}まで</strong>${calendarLink(item) ? `<br>${calendarLink(item)}` : ""}`))}
@@ -301,6 +339,7 @@
       </div>
       <form class="civic-controls" role="search">${select("state", "状態", states, query.get("state") || "")}${input("q", "件名・担当課で探す", query.get("q") || "")}<button>絞り込む</button></form>
       <p role="status" data-summary></p><div data-list></div>
+      ${talk}
       <h2>サイト独自の意見募集</h2><p>受付サービスの接続待ちです。</p>`;
 
     const form = root.querySelector("form");
@@ -350,7 +389,8 @@
     });
     render();
     // 描画が非同期のため、#pc-案件番号 へのリンクは描画後に移動して詳細を開く
-    const target = location.hash.startsWith("#pc-") ? document.getElementById(location.hash.slice(1)) : null;
+    // しなトークの別枠（#shinatalk・#talk-識別子）も同じ理由で描画後に移動する
+    const target = /^#(pc-|talk-|shinatalk$)/.test(location.hash) ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
     if (target) {
       target.querySelector("details")?.setAttribute("open", "");
       target.scrollIntoView();
