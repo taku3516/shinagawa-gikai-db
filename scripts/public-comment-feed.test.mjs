@@ -11,7 +11,8 @@ for (const path of ["events-ics.js", "public-comment-feed.js"]) {
 const { SHINAGAWA_EVENTS_ICS: ics, SHINAGAWA_PUBLIC_COMMENT_FEED: vmFeed } = context.window;
 // vm の中で作った値は別の realm なので、比べる前に JSON で通常の値へ直す
 const plain = value => JSON.parse(JSON.stringify(value));
-const feed = { deadlineEvents: (...args) => plain(vmFeed.deadlineEvents(...args)), feedItems: (...args) => plain(vmFeed.feedItems(...args)) };
+const feed = { deadlineEvents: (...args) => plain(vmFeed.deadlineEvents(...args)), feedItems: (...args) => plain(vmFeed.feedItems(...args)),
+  talkDeadlineEvents: (...args) => plain(vmFeed.talkDeadlineEvents(...args)), talkFeedItems: (...args) => plain(vmFeed.talkFeedItems(...args)) };
 const BASE = "https://taku3516.github.io/shinagawa-gikai-db/";
 
 const open = { id: "2026-005", fiscalYear: 2026, title: "品川区福祉オンブズマン制度(素案)", status: "open", url: "https://www.city.shinagawa.tokyo.jp/a.html",
@@ -66,4 +67,49 @@ test("募集開始と結果公表は別の新着として扱う（募集を既�
 test("公表日の分からない結果は新着に載せない（区のページの更新日はサイト改修でそろって書き換わる）", () => {
   // result には resultSeenAt が無い（初めて取得したときにはもう公表済みだった）
   assert.deepEqual(feed.feedItems([result, { ...result, id: "x", resultSeenAt: null }]), []);
+});
+
+// しなトーク（区のオンライン意見交換）。パブリックコメントとは別の取り組みと分かる形で同じカレンダー・新着に載せる
+const gomi = { id: "gomi", title: "ごみの減量を考えよう", subtitle: null, url: "https://shinagawa.makeour.city/ja/processes/gomi",
+  start: "2026-10-21", end: "2027-03-31", ways: ["アンケート", "意見の投稿"], steps: [
+    { title: "知る・答える", start: "2026-10-21", end: "2026-11-30", active: true },
+    { title: "集計・整理", start: "2026-12-01", end: "2026-12-31", active: false },
+    { title: "効果を確かめる", start: null, end: null, active: false }] };
+const charter = { ...gomi, id: "charter", title: "しながわ防災区民憲章をつくろう", start: "2025-09-01", end: "2026-03-31",
+  steps: [{ title: "しながわ防災区民憲章の制定", start: "2025-09-01", end: "2026-03-11", active: true }] };
+
+test("しなトークは最初の段階の終了日を、締切とは書かずに段階名で載せる", () => {
+  const events = feed.talkDeadlineEvents([gomi], "2026-11-28", BASE);
+  assert.equal(events.length, 1, "2つ目以降の段階は載せない");
+  const [event] = events;
+  assert.equal(event.id, "shinatalk-gomi");
+  assert.deepEqual(event.dates, ["2026-11-30"]);
+  assert.equal(event.title, "【しなトーク】ごみの減量を考えよう：「知る・答える」の終了日");
+  assert.doesNotMatch(event.title, /締切/);
+  assert.equal(event.url, gomi.url);
+  assert.equal(event.category, "しなトーク");
+  assert.match(event.summary, /パブリックコメント（意見公募手続）とは別/);
+  assert.match(event.summary, /kumin-no-koe\.html#talk-gomi/);
+});
+
+test("しなトークも終了日が1年以上前のもの・最初の段階に終了日が無いものは載せない", () => {
+  assert.deepEqual(feed.talkDeadlineEvents([charter], "2027-03-12", BASE).map(event => event.id), [], "2026-03-11から1年以上");
+  assert.equal(feed.talkDeadlineEvents([charter], "2027-03-11", BASE).length, 1);
+  const undated = { ...gomi, steps: [{ title: "知る・答える", start: null, end: null, active: true }] };
+  assert.deepEqual(feed.talkDeadlineEvents([undated, { ...gomi, id: "x", steps: [] }], "2026-11-28", BASE), []);
+});
+
+test("しなトークのUIDはパブコメの予定と重ならない", () => {
+  const text = ics.buildCalendar(vmFeed.talkDeadlineEvents([gomi], "2026-11-28", BASE), "品川区の意見募集（締切）", "説明", BASE, new Date("2026-11-28T00:00:00Z"));
+  assert.match(text, /UID:shinatalk-gomi-20261130@shinagawa-gikai-db/);
+  assert.match(text, /CATEGORIES:しなトーク/);
+});
+
+test("しなトークの新着は取り組みの開始日で載せ、パブコメと見分けられる", () => {
+  const [item] = feed.talkFeedItems([gomi]);
+  assert.deepEqual([item.id, item.date, item.note, item.type], ["talk:gomi", "2026-10-21", "しなトークの取り組みの開始日", "しなトーク"]);
+  assert.equal(item.title, "しなトーク：ごみの減量を考えよう");
+  assert.equal(item.url, "kumin-no-koe.html#talk-gomi");
+  assert.ok(item.body.join(" ").includes("しなトーク"), "「しなトーク」でフォローできる");
+  assert.deepEqual(feed.talkFeedItems([{ ...gomi, start: null }]), [], "開始日の無いものは新着に出さない");
 });

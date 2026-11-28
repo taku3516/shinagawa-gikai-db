@@ -38,10 +38,10 @@
       note: "委員会の予定・結果だけを集めたものです。"
     },
     {
-      // こちらは公開時に scripts/build_civic_feeds.mjs が作る（data/public-comments.js から）
+      // こちらは公開時に scripts/build_civic_feeds.mjs が作る（data/public-comments.js と data/shinatalk.js から）
       file: "exports/shinagawa-public-comments.ics",
       name: "区の意見募集（締切）",
-      note: "品川区のパブリックコメントの締切日です。意見の出しそびれを防ぎたいときに。"
+      note: "品川区のパブリックコメントの締切日と、しなトーク（区のオンライン意見交換）の最初の段階の終了日です。意見の出しそびれを防ぎたいときに。"
     }
   ];
 

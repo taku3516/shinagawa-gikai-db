@@ -1,4 +1,4 @@
-/* 区の意見募集（パブリックコメント）を、締切のカレンダーと新着に載せる形へ変える。DOM には触れない。
+/* 区の意見募集（パブリックコメント）としなトークを、締切のカレンダーと新着に載せる形へ変える。DOM には触れない。
    - deadlineEvents: events-ics.js の buildCalendar・googleCalendarUrl にそのまま渡せる予定（締切日の終日予定）
    - feedItems: フォロー・新着（civic-services.js）とサイト全体のRSS（scripts/build_civic_feeds.mjs）の項目
    ブラウザと公開時のビルドの両方で使う（scripts/public-comment-feed.test.mjs で確認）。 */
@@ -78,5 +78,52 @@
     });
   }
 
-  window.SHINAGAWA_PUBLIC_COMMENT_FEED = { deadlineEvents, feedItems, KEEP_DAYS };
+  /**
+   * しなトーク（区のオンライン意見交換。data/shinatalk.js）の予定。しなトークには締切の項目が無いので、
+   * 区が付けた最初の段階（「知る・答える」など、意見やアンケートを受け付けることが多い段階）の終了日を、
+   * 締切とは書かずに段階名のまま載せる。終了日が KEEP_DAYS より前のもの・日程の無いものは除く。
+   * @param {object[]} items しなトークの取り組み @param {string} today "YYYY-MM-DD" @param {string} siteBase
+   * @returns {object[]} 終日予定
+   */
+  function talkDeadlineEvents(items, today, siteBase) {
+    const since = addDays(today, -KEEP_DAYS);
+    return (items || [])
+      .map(item => ({ item, step: (item.steps || [])[0] }))
+      .filter(({ step }) => step?.end && step.end >= since)
+      .sort((a, b) => a.step.end.localeCompare(b.step.end) || a.item.id.localeCompare(b.item.id))
+      .map(({ item, step }) => ({
+        id: `shinatalk-${item.id}`,
+        title: `【しなトーク】${item.title}：「${step.title}」の終了日`,
+        dates: [step.end],
+        summary: [
+          `品川区のオンライン意見交換の場「しなトーク」で、取り組みの最初の段階「${step.title}」が終わる日です。`,
+          "パブリックコメント（意見公募手続）とは別の取り組みです。受付の締切は区がしなトークに掲載した案内で確認してください。",
+          step.start ? `段階の日程は${jaDate(step.start)}から${jaDate(step.end)}まで。` : `${jaDate(step.end)}まで。`,
+          item.ways?.length ? `参加の方法：${item.ways.join("・")}` : "",
+          `品川区議会DBの紹介：${siteBase}kumin-no-koe.html#talk-${item.id}`
+        ].filter(Boolean).join("\n"),
+        source: "品川区（しなトーク）",
+        url: item.url,
+        category: "しなトーク"
+      }));
+  }
+
+  /**
+   * しなトークの新着。取り組みの開始日で載せる（パブコメの「募集の開始日」と同じ考え方）。開始日の無いものは出さない。
+   * @param {object[]} items しなトークの取り組み
+   * @returns {{id: string, title: string, url: string, date: string, note: string, type: string, body: string[]}[]}
+   */
+  function talkFeedItems(items) {
+    return (items || []).filter(item => item.start).map(item => ({
+      id: `talk:${item.id}`,
+      title: `しなトーク：${item.title}`,
+      url: `kumin-no-koe.html#talk-${item.id}`,
+      date: item.start,
+      note: "しなトークの取り組みの開始日",
+      type: "しなトーク",
+      body: [item.subtitle || "", (item.ways || []).join(" "), "しなトーク オンライン意見交換"]
+    }));
+  }
+
+  window.SHINAGAWA_PUBLIC_COMMENT_FEED = { deadlineEvents, feedItems, talkDeadlineEvents, talkFeedItems, KEEP_DAYS };
 })();
