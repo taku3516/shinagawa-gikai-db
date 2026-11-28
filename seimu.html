@@ -81,7 +81,7 @@
     .recipient-name { margin: 0; font-size: calc(14px * var(--fs)); line-height: 1.6; }
     .recipient-name span { display: inline-flex; margin-right: 7px; color: var(--c-ink-soft); font-size: calc(11px * var(--fs)); }
     .recipient-docs { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
-    /* 会派別の収支と費目別支出（data/seimu-summary.js） */
+    /* 会派・議員ごとの収支と費目別支出（data/seimu-summary.js） */
     .recipient-amounts { grid-column: 1 / -1; font-size: calc(13px * var(--fs)); line-height: 1.7; }
     .recipient-amounts p { margin: 0; }
     .recipient-amounts summary { margin-top: 4px; color: var(--c-main-dark); font-weight: 700; cursor: pointer; }
@@ -111,7 +111,7 @@
         <p class="breadcrumb"><a href="index.html">← 品川区議会DB トップへ</a></p>
         <h1>政務活動費</h1>
         <p class="lead">品川区議会が公開している政務活動費の収支一覧と、会派・議員ごとの活動概要・収支報告書を年度別にまとめています。</p>
-        <div class="notice">これは品川区が運営しているものではありません。活動内容は転記せず、品川区議会が公開する公式PDFへ直接案内しています。金額は、令和7年度の会派別の収支額と費目別の支出額のみ公式の収支一覧から転記しています。正確な内容は必ずリンク先の原資料をご確認ください。</div>
+        <div class="notice">これは品川区が運営しているものではありません。活動内容は転記せず、品川区議会が公開する公式PDFへ直接案内しています。金額は、令和7年度の会派・議員ごとの収支額と費目別の支出額のみ公式の収支一覧から転記しています。正確な内容は必ずリンク先の原資料をご確認ください。</div>
         <nav data-site-nav></nav>
       </div>
     </header>
@@ -153,7 +153,7 @@
       "use strict";
 
       const data = window.SHINAGAWA_SEIMU;
-      // 会派別の収支と費目別支出。読み込めなかった場合は資料の案内だけを表示する
+      // 会派・議員ごとの収支と費目別支出。読み込めなかった場合は資料の案内だけを表示する
       const summary = window.SHINAGAWA_SEIMU_SUMMARY || null;
       const summaryRows = new Map((summary?.rows || []).map(([id, income, expenditure, categories]) => [id, { income, expenditure, categories }]));
       const elements = {
@@ -205,7 +205,7 @@
         return `${Number(value).toLocaleString("ja-JP")}円`;
       }
 
-      /** 会派別の収支額と、費目別の支出内訳を返す。集計が無い交付先は空文字 */
+      /** 会派・議員ごとの収支額と、費目別の支出内訳を返す。集計が無い交付先は空文字 */
       function renderAmounts(recipient) {
         const row = summaryRows.get(recipient.id);
         if (!row) return "";
