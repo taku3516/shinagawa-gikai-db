@@ -83,6 +83,25 @@
     return `yosan-kessan.html#fy-r${String(Number(key.slice(1)) - 1).padStart(2, "0")}`;
   }
 
+  /**
+   * この事業が根拠・目的に挙げる計画の意見募集（パブリックコメント）。照合データを読めなければ null を返し、欄ごと出さない。
+   * @param {string} id 事業ごとの記録のID @returns {Promise<{item: object, field: string}[]|null>}
+   */
+  async function commentsFor(id) {
+    const [comments, links] = await Promise.allSettled([civic.loadScript("data/public-comments.js"), civic.loadScript("data/public-comment-jigyo.js")]);
+    if (comments.status === "rejected" || links.status === "rejected") {
+      console.warn("意見募集との照合データを読み込めませんでした", comments.reason || links.reason);
+      return null;
+    }
+    const items = new Map((window.SHINAGAWA_PUBLIC_COMMENTS?.items || []).map(item => [item.id, item]));
+    return Object.entries(window.SHINAGAWA_PUBLIC_COMMENT_JIGYO?.items || {})
+      // 記載欄は年度で違うことがあるので、この頁（id）の評価シートで書かれていた欄を使う
+      .flatMap(([commentId, projects]) => projects.flatMap(entry => (entry.sheets || [{ id: entry.id, field: entry.field }])
+        .filter(sheet => sheet.id === id).map(sheet => ({ item: items.get(commentId), field: sheet.field }))))
+      .filter(entry => entry.item)
+      .sort((a, b) => b.item.id.localeCompare(a.item.id));
+  }
+
   /** 手でつないだ記録のうち、この小事業（評価シートの頁）を含むもの。 @param {object} sheet @returns {object|undefined} */
   function curatedFor(sheet) {
     return data.projects.find(project => (project.finance || []).some(item => item.source?.url === sheet.source.url));
@@ -153,8 +172,12 @@
     render();
   }
 
-  /** 評価シート1頁分（小事業）の記録。 @param {HTMLElement} root @param {object} sheets @param {object} item @returns {void} */
-  function sheetProject(root, sheets, item) {
+  /** 評価シート1頁分（小事業）の記録。 @param {HTMLElement} root @param {object} sheets @param {object} item @param {{item: object, field: string}[]|null} comments @returns {void} */
+  function sheetProject(root, sheets, item, comments) {
+    // 意見募集とつながる事業は652件中20件ほど。該当のない頁に「見つかりません」を並べないよう、あるときだけ出す
+    const commentSection = !comments?.length ? "" : `<h3>この事業が挙げる計画の意見募集</h3>
+        ${list(comments.map(entry => `${link(entry.item.title, "kumin-no-koe.html?nendo=" + entry.item.fiscalYear + "#pc-" + entry.item.id)}（案件番号${esc(entry.item.id)}・評価シートの${esc(entry.field)}に記載）`))}
+        <p class="civic-note">評価シートの根拠法令等・目的・概要に計画名が書かれているものを自動で照合しています。</p>`;
     const curated = curatedFor(item);
     const scale = Math.max(1, item.budgetYen || 0, item.settledYen || 0);
     const evaluation = item.evaluation;
@@ -180,6 +203,7 @@
         ${terms([["評価結果", esc(evaluationText(evaluation))],
           // 令和5年度評価の様式には「今後の取組の方向性」の欄が無い
           ["今後の方向性", esc(evaluation?.direction || (evaluation ? "評価シートに記載欄なし" : ""))]])}
+        ${commentSection}
         <h3>出典</h3>${sources([item.source, { label: `${sheets.evaluationYear}事務事業評価結果（品川区）`, url: sheets.resultUrl }])}
         <p>${link(sheets.fiscalYear + "の区全体の予算・決算", fiscalPage(sheets.key))} ／ ${link(sheets.evaluationYear + "評価の全事業", "jigyo.html?year=" + sheets.key)} ／ ${link("年度別の事務事業評価", "gyosei.html")}</p>
         ${review({ ai: false })}</article>`;
@@ -192,7 +216,7 @@
     if (!project) {
       const sheets = await sheetData(id ? sheetYearOf(id) : sheetYearOf(query.get("year")));
       const sheet = id ? sheets.projects.find(item => item.id === id) : null;
-      if (sheet) return sheetProject(root, sheets, sheet);
+      if (sheet) return sheetProject(root, sheets, sheet, await commentsFor(sheet.id));
       projectList(root, sheets);
       if (id) root.insertAdjacentHTML("afterbegin", `<p role="alert">指定された事業は未収録です。</p>`);
       return;

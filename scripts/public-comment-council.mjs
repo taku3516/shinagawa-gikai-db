@@ -21,7 +21,7 @@ const MONTHS_BEFORE = 18;
 const MONTHS_AFTER = 15;
 
 /** @param {string} text @returns {string} 全角・空白・区名の違いを吸収した照合用の文字列 */
-function normalize(text) {
+export function normalize(text) {
   return String(text || "").normalize("NFKC").replace(/\s/g, "").replace(/品川区/g, "")
     // 「第九期」と「第9期」を同じ鍵にする
     .replace(/第([一二三四五六七八九十]+)(次|期)/g, (whole, value, kind) => {
@@ -81,7 +81,7 @@ export function versionMarks(title) {
  * （例: 「令和5年度修正」の案件に「令和4年度…の修正」の議題）。片方にしか無い印は問わない。
  * @param {string} itemTitle @param {string} topicTitle @returns {boolean}
  */
-function sameVersion(itemTitle, topicTitle) {
+export function sameVersion(itemTitle, topicTitle) {
   const own = versionMarks(itemTitle);
   const other = versionMarks(topicTitle);
   return Object.keys(own).every(kind => !own[kind].size || !other[kind].size

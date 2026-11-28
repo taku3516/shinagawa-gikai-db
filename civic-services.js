@@ -212,8 +212,8 @@
     return Number.isFinite(value) ? value.toLocaleString("ja-JP") + unit : "";
   }
 
-  /** @param {object} item @param {{label: string}} state @param {Record<string, object[]>|null} council 委員会での報告（照合データ。読めなければ null） @returns {string} */
-  function commentRow(item, state, council) {
+  /** @param {object} item @param {{label: string}} state @param {Record<string, object[]>|null} council 委員会での報告（照合データ。読めなければ null） @param {Record<string, object[]>|null} jigyo この計画を挙げる事業（照合データ。読めなければ null） @returns {string} */
+  function commentRow(item, state, council, jigyo) {
     const period = item.start ? `${jaDate(item.start)} 〜 ${jaDate(item.end)}` : jaDate(item.end) + "まで";
     const outcome = state.key === "result" ? amount(item.opinions, "件の意見") : (item.resultPlanned ? item.resultPlanned + "に結果公表予定" : "");
     const docs = item.documents.map(doc => `${link(doc.label, doc.url)}（${esc(doc.kind)}）`);
@@ -222,6 +222,10 @@
       `${esc(jaDate(entry.date))} ${esc(entry.committee)}：${link(entry.title, entry.url)}`) : null;
     const councilSection = reports === null ? "" : `<h4>委員会での報告</h4>${list(reports, "対応する委員会の議題は見つかっていません")}
         <p class="civic-note">件名と時期から自動で照合しています。リンク先は会議録のうち、その議題の質疑の始まりです（全文が未掲載の回は会議ページ）。</p>`;
+    // この計画を根拠・目的に挙げる事業（事務事業評価シート）。照合データを読めなかったときは欄ごと出さない
+    const projects = jigyo ? (jigyo[item.id] || []).map(entry =>
+      `${link(entry.name, "jigyo.html?id=" + encodeURIComponent(entry.id))}（${esc(entry.section)}・評価シートの${esc(entry.field)}に記載／${esc(entry.years.join("・"))}評価）`) : null;
+    const jigyoSection = projects === null ? "" : `<h4>この計画を挙げている事業</h4>${list(projects, "事務事業評価シートに、この計画名を挙げた事業は見つかっていません")}`;
     return `<article class="civic-result-row" id="pc-${esc(item.id)}">
       <h3>${link(item.title, item.url)}</h3>
       <p><span class="civic-result-row__result">${esc(state.label)}</span><br><span class="civic-note">${esc(period)}</span></p>
@@ -236,16 +240,20 @@
         ])}
         <h4>区が公表した資料</h4>${list(docs, "資料の掲載はありません")}
         ${councilSection}
+        ${jigyoSection}
         <p>${link("品川区の案件ページ", item.url)}</p></details></div></article>`;
   }
 
   /** @param {HTMLElement} root @returns {Promise<void>} */
   async function voice(root) {
     // 委員会との照合は補助の情報なので、読めなくても一覧は出す
-    const [, councilLoad] = await Promise.allSettled([civic.loadScript("data/public-comments.js"), civic.loadScript("data/public-comment-council.js")]);
+    const [, councilLoad, jigyoLoad] = await Promise.allSettled([civic.loadScript("data/public-comments.js"),
+      civic.loadScript("data/public-comment-council.js"), civic.loadScript("data/public-comment-jigyo.js")]);
     if (!window.SHINAGAWA_PUBLIC_COMMENTS) throw new Error("区の意見募集のデータを読み込めませんでした。");
     if (councilLoad.status === "rejected") console.warn("委員会との照合データを読み込めませんでした", councilLoad.reason);
+    if (jigyoLoad.status === "rejected") console.warn("事業ごとの記録との照合データを読み込めませんでした", jigyoLoad.reason);
     const council = window.SHINAGAWA_PUBLIC_COMMENT_COUNCIL?.items || null;
+    const jigyo = window.SHINAGAWA_PUBLIC_COMMENT_JIGYO?.items || null;
     const pc = window.SHINAGAWA_PUBLIC_COMMENTS;
     const date = civic.today();
     const items = pc.items.map(item => ({ ...item, state: commentState(item, date) }));
@@ -291,7 +299,7 @@
         const group = shown.filter(item => item.fiscalYear === value);
         return `<section aria-labelledby="pc-year-${value}"><h2 id="pc-year-${value}">${esc(fiscalLabel(value))}（${group.length}件）</h2>
           ${totals(group) ? `<p class="civic-note">${esc(totals(group))}</p>` : ""}
-          <div class="civic-results">${group.map(item => commentRow(item, item.state, council)).join("")}</div></section>`;
+          <div class="civic-results">${group.map(item => commentRow(item, item.state, council, jigyo)).join("")}</div></section>`;
       }).join("") : '<p class="civic-note">条件に合う案件はありません。</p>';
     };
     const saveQuery = () => {
