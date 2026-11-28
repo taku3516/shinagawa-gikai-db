@@ -75,8 +75,30 @@
     .col-box { border: 1px solid var(--c-rule); border-radius: 3px; background: var(--c-surface-sub); padding: 12px 14px; }
     .col-box h4 { margin: 0 0 8px; font-size: calc(13px * var(--fs)); color: var(--c-ink-soft); }
     .status-note { color: var(--c-ink-soft); font-size: calc(14px * var(--fs)); line-height: 1.8; margin: 6px 0 0; }
+    /* 評価結果の集計（事業ごとの記録から）。A〜Dの色はサイト共通の --c-a〜--c-d を使い、
+       色だけに頼らないよう凡例と表に件数を文字でも出す */
+    .share-bar { display: flex; gap: 2px; height: 16px; margin: 8px 0; }
+    .share-bar span { min-width: 3px; }
+    .share-bar span:first-child { border-radius: 4px 0 0 4px; }
+    .share-bar span:last-child { border-radius: 0 4px 4px 0; }
+    .share-bar [data-code="A"], .share-legend [data-code="A"]::before { background: var(--c-a); }
+    .share-bar [data-code="B"], .share-legend [data-code="B"]::before { background: var(--c-b); }
+    .share-bar [data-code="C"], .share-legend [data-code="C"]::before { background: var(--c-c); }
+    .share-bar [data-code="D"], .share-legend [data-code="D"]::before { background: var(--c-d); }
+    .share-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0; padding: 0; list-style: none; font-size: calc(13px * var(--fs)); }
+    .share-legend li::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
+    .trend-row { display: grid; grid-template-columns: 9em 1fr; gap: 4px 12px; align-items: center; margin: 6px 0; }
+    .trend-row .share-bar { margin: 0; }
+    .table-scroll { overflow-x: auto; }
+    .summary-table { width: 100%; border-collapse: collapse; font-size: calc(13px * var(--fs)); }
+    .summary-table :is(th, td) { border-bottom: 1px solid var(--c-border); padding: 6px 8px; text-align: right; white-space: nowrap; }
+    .summary-table :is(th:first-child, td:first-child) { text-align: left; }
+    .summary-table thead th { background: var(--c-surface-sub); color: var(--c-ink); }
+    .summary-table td { font-variant-numeric: tabular-nums; }
+    .summary-table tfoot th, .summary-table tfoot td { font-weight: 700; }
     @media (max-width: 700px) {
       .two-col { grid-template-columns: 1fr; }
+      .trend-row { grid-template-columns: 1fr; }
       .fy-card { padding: 16px; }
     }
   </style>
@@ -104,6 +126,8 @@
         <h2 class="section-title">事務事業評価のしくみ</h2>
         <div class="about" id="about-root"></div>
 
+        <div id="trend-root"></div>
+
         <h2 class="section-title">年度ごとの評価結果</h2>
         <div class="fy-select-row">
           <label for="fy-select">表示する年度</label>
@@ -120,6 +144,7 @@
   <script src="data/site.js"></script>
   <script src="site-nav.js"></script>
   <script src="data/gyosei.js"></script>
+  <script src="data/jimujigyo-summary.js"></script>
   <script>
     "use strict";
 
@@ -161,6 +186,80 @@
         <div class="criteria">${criteria}</div>`;
     }
 
+    const CODES = ["A", "B", "C", "D"];
+    const CODE_SHORT = { A: "拡大", B: "継続", C: "改善・見直し", D: "完了・廃止" };
+    const SUMMARY = (window.SHINAGAWA_JIMUJIGYO_SUMMARY || { years: [] }).years;
+
+    // 円 → 「2,678.0億円」「1,234万円」
+    function yen(value) {
+      if (!Number.isFinite(value)) return "－";
+      return value >= 1e8
+        ? `${(value / 1e8).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}億円`
+        : `${Math.round(value / 1e4).toLocaleString("ja-JP")}万円`;
+    }
+
+    function percent(part, whole) {
+      return whole ? `${(part / whole * 100).toFixed(1)}%` : "－";
+    }
+
+    // 事業ごとの記録の一覧（絞り込み済み）へのURL
+    function listUrl(summary, extra) {
+      return `jigyo.html?${new URLSearchParams({ year: summary.key, ...extra })}`;
+    }
+
+    // A〜Dの割合を1本の帯で。各区間に件数と割合のツールチップを付ける
+    function shareBar(evaluations, total, label) {
+      return `<div class="share-bar" role="img" aria-label="${esc(label)}">${CODES.filter((code) => evaluations[code])
+        .map((code) => `<span data-code="${code}" style="flex: ${evaluations[code]}"
+          title="${code} ${CODE_SHORT[code]} ${evaluations[code]}件（${percent(evaluations[code], total)}）"></span>`).join("")}</div>`;
+    }
+
+    // 年度ごとの評価区分の推移（評価シートから集計した年度だけ）
+    function trendHtml() {
+      if (!SUMMARY.length) return "";
+      const rows = SUMMARY.map((y) => `<div class="trend-row">
+          <a href="?fy=gy-${esc(y.key)}">${esc(y.evaluationYear)}</a>
+          ${shareBar(y.evaluations, y.total, `${y.evaluationYear}の評価区分の割合`)}</div>`).join("");
+      // 表題は表の外に置く（横スクロールする表の中だと、狭い画面で表題まで見切れる）
+      const table = `<p class="status-note">評価区分ごとの事業数（括弧内は割合）</p>
+        <div class="table-scroll"><table class="summary-table" aria-label="評価区分ごとの事業数">
+        <thead><tr><th scope="col">評価年度</th><th scope="col">事業数</th>${CODES.map((c) => `<th scope="col">${c} ${CODE_SHORT[c]}</th>`).join("")}<th scope="col">執行率</th></tr></thead>
+        <tbody>${SUMMARY.map((y) => `<tr><th scope="row">${esc(y.evaluationYear)}（${esc(y.fiscalYear)}実施）</th>
+          <td>${y.total.toLocaleString()}</td>
+          ${CODES.map((c) => `<td><a href="${esc(listUrl(y, { evaluation: c }))}">${y.evaluations[c]}</a>（${percent(y.evaluations[c], y.total)}）</td>`).join("")}
+          <td>${percent(y.settledYen, y.budgetYen)}</td></tr>`).join("")}</tbody></table></div>`;
+      return `<h2 class="section-title">評価結果の推移</h2>
+        <div class="about">
+          <p class="status-note" style="margin-top:0">評価シートが部局別に公開されている${esc(SUMMARY[SUMMARY.length - 1].evaluationYear)}〜${esc(SUMMARY[0].evaluationYear)}の評価を、当サイトが評価シートから集計したものです。件数は各年度の区の公式集計と一致しています。</p>
+          ${rows}
+          <ul class="share-legend">${CODES.map((c) => `<li data-code="${c}">${c} ${CODE_SHORT[c]}</li>`).join("")}</ul>
+          ${table}
+        </div>`;
+    }
+
+    // 1年度分の集計（評価区分の割合と部署別の表）
+    function summaryHtml(fy) {
+      const summary = SUMMARY.find((y) => `gy-${y.key}` === fy.id);
+      if (!summary) return "";
+      const legend = CODES.map((c) => `<li data-code="${c}"><a href="${esc(listUrl(summary, { evaluation: c }))}">${c} ${CODE_SHORT[c]}</a>
+        ${summary.evaluations[c]}件（${percent(summary.evaluations[c], summary.total)}）</li>`).join("");
+      const row = (d, head) => `<${head ? "th" : "td"}${head ? ' scope="row"' : ""}>${head ? `<a href="${esc(listUrl(summary, { department: d.name }))}">${esc(d.name)}</a>` : esc(d.name)}</${head ? "th" : "td"}>
+          <td>${d.count}</td>${CODES.map((c) => `<td>${d.evaluations[c]}</td>`).join("")}
+          <td>${yen(d.budgetYen)}</td><td>${yen(d.settledYen)}</td><td>${percent(d.settledYen, d.budgetYen)}</td>`;
+      return `<h3>評価結果の集計（評価シートから）</h3>
+        ${shareBar(summary.evaluations, summary.total, `${summary.evaluationYear}の評価区分の割合`)}
+        <ul class="share-legend">${legend}</ul>
+        <p class="status-note">部署別（${esc(summary.fiscalYear)}実施の事業）。部署名から、その部署の事業の一覧へ移れます。</p>
+        <div class="table-scroll"><table class="summary-table" aria-label="${esc(summary.evaluationYear)}評価の部署別集計">
+          <thead><tr><th scope="col">部署</th><th scope="col">事業数</th>${CODES.map((c) => `<th scope="col">${c}</th>`).join("")}<th scope="col">予算現額</th><th scope="col">決算額</th><th scope="col">執行率</th></tr></thead>
+          <tbody>${summary.departments.map((d) => `<tr>${row(d, true)}</tr>`).join("")}</tbody>
+          <tfoot><tr>${row({ ...summary, name: "合計", count: summary.total }, false)}</tr></tfoot>
+        </table></div>
+        <p class="status-note">予算現額・決算額は小事業ごとの値の合計です。職員給与費は評価の対象外のため、区の予算・決算の総額とは一致しません。
+          ${summary.missingAmounts ? `金額を読み取れなかった${summary.missingAmounts}事業は合計に含めていません。` : ""}
+          <a href="${esc(listUrl(summary, {}))}">この年度の全事業を見る</a></p>`;
+    }
+
     // 年度カード。評価シートは部局別に分かれるため、結果ページの資料としてまとめて出す
     function fyHtml(fy) {
       const counts = [];
@@ -185,6 +284,7 @@
         <h3>公式ページ・資料</h3>
         <div>${linkPill({ label: `${fy.label}行政評価（公式ページ）`, url: fy.officialUrl, kind: "page" })}
              ${linksHtml(fy.links)}</div>
+        ${summaryHtml(fy)}
         ${sheets}
       </article>`;
     }
@@ -197,6 +297,7 @@
         return;
       }
       renderAbout(data);
+      document.getElementById("trend-root").innerHTML = trendHtml();
       document.getElementById("source-note").innerHTML =
         esc(data.note) + " "
         + (data.sources || []).map((s) => (s.url
