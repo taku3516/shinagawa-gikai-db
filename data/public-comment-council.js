@@ -363,12 +363,6 @@ window.SHINAGAWA_PUBLIC_COMMENT_COUNCIL = {
   ],
   "2023-003": [
    {
-    "date": "2023-01-25",
-    "committee": "災害・環境対策特別委員会",
-    "title": "令和４年度品川区地域防災計画の修正",
-    "url": "kaigiroku.html#committee-r05-20230125-19-v0079"
-   },
-   {
     "date": "2023-11-09",
     "committee": "災害・環境対策特別委員会",
     "title": "品川区地域防災計画の素案",

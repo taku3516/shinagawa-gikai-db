@@ -22,7 +22,12 @@ const MONTHS_AFTER = 15;
 
 /** @param {string} text @returns {string} 全角・空白・区名の違いを吸収した照合用の文字列 */
 function normalize(text) {
-  return String(text || "").normalize("NFKC").replace(/\s/g, "").replace(/品川区/g, "");
+  return String(text || "").normalize("NFKC").replace(/\s/g, "").replace(/品川区/g, "")
+    // 「第九期」と「第9期」を同じ鍵にする
+    .replace(/第([一二三四五六七八九十]+)(次|期)/g, (whole, value, kind) => {
+      const number = toNumber(value);
+      return number === null ? whole : `第${number}${kind}`;
+    });
 }
 
 /** @param {string} title @returns {string[]} 件名から作る照合用の鍵（複数の計画をまとめた案件は計画ごと） */
@@ -41,6 +46,46 @@ export function planKeys(title) {
  */
 export function cleanTitle(title) {
   return String(title || "").replace(/^[^「」]*[。、]\s*[(（]\d+[)）]\s*/, "").trim();
+}
+
+const KANJI_DIGITS = { 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9, 十: 10 };
+
+/** @param {string} text 「九」「十二」「12」など @returns {number|null} */
+function toNumber(text) {
+  if (/^\d+$/.test(text)) return Number(text);
+  const match = /^([一二三四五六七八九])?(十)?([一二三四五六七八九])?$/.exec(text);
+  if (!match || !text) return null;
+  if (!match[2]) return KANJI_DIGITS[match[1]] ?? null;
+  return (match[1] ? KANJI_DIGITS[match[1]] : 1) * 10 + (match[3] ? KANJI_DIGITS[match[3]] : 0);
+}
+
+/**
+ * 件名に明記された版の印（年度・第○次・第○期）を種類ごとに集める。
+ * @param {string} title @returns {Record<string, Set<number>>}
+ */
+export function versionMarks(title) {
+  const text = String(title || "").normalize("NFKC");
+  const marks = { year: new Set(), ji: new Set(), ki: new Set() };
+  for (const [, era, year] of text.matchAll(/(令和|平成)(元|\d+)年度/g)) {
+    marks.year.add((era === "令和" ? 2018 : 1988) + (year === "元" ? 1 : Number(year)));
+  }
+  for (const [, value, kind] of text.matchAll(/第([0-9一二三四五六七八九十]+)(次|期)/g)) {
+    const number = toNumber(value);
+    if (number !== null) marks[kind === "次" ? "ji" : "ki"].add(number);
+  }
+  return marks;
+}
+
+/**
+ * 両方に同じ種類の印があって値が1つも重ならなければ、同じ名前の別の版とみなす
+ * （例: 「令和5年度修正」の案件に「令和4年度…の修正」の議題）。片方にしか無い印は問わない。
+ * @param {string} itemTitle @param {string} topicTitle @returns {boolean}
+ */
+function sameVersion(itemTitle, topicTitle) {
+  const own = versionMarks(itemTitle);
+  const other = versionMarks(topicTitle);
+  return Object.keys(own).every(kind => !own[kind].size || !other[kind].size
+    || [...own[kind]].some(value => other[kind].has(value)));
 }
 
 /** @param {string} iso @param {number} months @returns {string} */
@@ -68,7 +113,8 @@ export function matchTopics(item, topics) {
   if (!keys.length) return [];
   const seen = new Set();
   return topics
-    .filter(topic => withinWindow(item, topic.dateIso) && keys.some(key => normalize(topic.title).includes(key)))
+    .filter(topic => withinWindow(item, topic.dateIso) && keys.some(key => normalize(topic.title).includes(key))
+      && sameVersion(item.title, topic.title))
     .filter(topic => {
       const id = topic.sessionId + "|" + topic.title;
       if (seen.has(id)) return false;
