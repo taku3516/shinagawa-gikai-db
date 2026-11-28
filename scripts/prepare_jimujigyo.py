@@ -436,10 +436,48 @@ def pair_links(newer: list[dict[str, Any]], older: list[dict[str, Any]]) -> dict
     return links
 
 
-def link_years(by_year: dict[str, list[dict[str, Any]]]) -> None:
-    """各事業に、対応づいた他年度の要約（予算・決算・執行率・評価）を history として付ける。
+# 名称が変わった事業とみなす、目的・概要の文章の似具合の下限（文字の2字組の一致率）
+RENAME_SIMILARITY = 0.9
 
-    by_year は評価年度のキー（r07 など）→ その年度の事業。隣り合う年度どうしで結び、鎖にする。
+
+def text_similarity(a: str, b: str) -> float:
+    """2つの文章の似具合（0〜1）。記号と空白を除いた2文字ずつの組の一致率（Dice係数）。"""
+    def grams(text: str) -> set[str]:
+        text = re.sub(r"[\s◆【】（）()、。・]", "", nfkc(text or ""))
+        return {text[i:i + 2] for i in range(len(text) - 1)}
+    left, right = grams(a), grams(b)
+    return 2 * len(left & right) / (len(left) + len(right)) if left or right else 0.0
+
+
+def rename_links(newer: list[dict[str, Any]], older: list[dict[str, Any]]) -> dict[str, str]:
+    """名前でつながらなかった事業のうち、名称が変わったとみなせるものを対応づける。
+
+    会計が同じで、担当課か予算科目（款・項・目・事業）が同じで、目的・概要の文章がほぼ同じ
+    （RENAME_SIMILARITY 以上）候補が、両年度で互いに1件だけのときに結ぶ。
+    候補が2件以上（統合・分割など）や、文章が違うものは結ばない。
+    """
+    def account(row: dict[str, Any]) -> tuple:
+        acc = row.get("account") or {}
+        return (acc.get("kan"), acc.get("kou"), acc.get("moku"), row.get("jigyo"))
+
+    def text(row: dict[str, Any]) -> str:
+        return (row.get("purpose") or "") + (row.get("overview") or "")
+
+    def close(a: dict[str, Any], b: dict[str, Any]) -> bool:
+        return (a.get("kaikei") == b.get("kaikei") and bool(text(a)) and bool(text(b))
+                and (a.get("section") == b.get("section") or account(a) == account(b))
+                and text_similarity(text(a), text(b)) >= RENAME_SIMILARITY)
+
+    forward = {a["id"]: [b["id"] for b in older if close(a, b)] for a in newer}
+    backward = {b["id"]: [a["id"] for a in newer if close(a, b)] for b in older}
+    return {a: found[0] for a, found in forward.items() if len(found) == 1 and backward[found[0]] == [a]}
+
+
+def link_years(by_year: dict[str, list[dict[str, Any]]]) -> None:
+    """各事業に、対応づいた他年度の要約（名前・予算・決算・執行率・評価）を history として付ける。
+
+    by_year は評価年度のキー（r07 など）→ その年度の事業。隣り合う年度どうしで、まず名前と会計で結び、
+    残りを名称変更（rename_links）で結んで、鎖にする。
     """
     order = sorted(by_year, reverse=True)
     parent: dict[str, str] = {}
@@ -450,7 +488,11 @@ def link_years(by_year: dict[str, list[dict[str, Any]]]) -> None:
         return id_
 
     for newer, older in zip(order, order[1:]):
-        for a, b in pair_links(by_year[newer], by_year[older]).items():
+        links = pair_links(by_year[newer], by_year[older])
+        linked_older = set(links.values())
+        links.update(rename_links([r for r in by_year[newer] if r["id"] not in links],
+                                  [r for r in by_year[older] if r["id"] not in linked_older]))
+        for a, b in links.items():
             parent[root(b)] = root(a)
     rows = {row["id"]: (year, row) for year in order for row in by_year[year]}
     chains: dict[str, list[str]] = {}
@@ -459,10 +501,13 @@ def link_years(by_year: dict[str, list[dict[str, Any]]]) -> None:
             chains.setdefault(root(row["id"]), []).append(row["id"])
     for members in chains.values():
         for id_ in members:
+            own_name = rows[id_][1].get("name")
             rows[id_][1]["history"] = [{
-                "id": other, "year": rows[other][0],
+                "id": other, "year": rows[other][0], "name": rows[other][1].get("name"),
                 "budgetYen": rows[other][1].get("budgetYen"), "settledYen": rows[other][1].get("settledYen"),
                 "rate": rows[other][1].get("rate"), "evaluation": (rows[other][1].get("evaluation") or {}).get("code"),
+                # 名前が違う年度は、目的・概要の文章で名称変更とみなしてつないだもの
+                **({"renamed": True} if rows[other][1].get("name") != own_name else {}),
             } for other in members if other != id_]
 
 
