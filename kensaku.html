@@ -682,6 +682,7 @@
           console.error(error);
         }
         refreshFilterOptions();
+        applyPendingFilters();
         render();
         await nextFrame();
       }
@@ -706,29 +707,45 @@
 
     function requestedYearMetas() {
       if (state.category !== "all" && state.category !== "council") return [];
-      if (elements.source.value) return [];
-      if (elements.type.value && !councilTypes.includes(elements.type.value)) return [];
-      const selectedYear = elements.year.value;
+      if (filterValue("source")) return [];
+      if (filterValue("type") && !councilTypes.includes(filterValue("type"))) return [];
+      const selectedYear = filterValue("year");
       if (selectedYear) {
         const meta = yearMetaByCalendarYear.get(selectedYear);
         return meta ? [meta] : [];
       }
       const needsCouncilData = state.category === "council"
         || Boolean(elements.query.value.trim())
-        || Boolean(elements.type.value || elements.result.value || elements.tag.value);
+        || Boolean(filterValue("type") || filterValue("result") || filterValue("tag"));
       return needsCouncilData ? yearMetas : [];
     }
 
     // 事務事業評価シートから読み取った小事業（約1.3MB）。検索語があるときか、
     // 事務事業評価の分類を開いたときだけ読み込む。失敗したら次の検索で読み直す。
     let jimujigyoState = "idle";
+
+    // URLで指定された絞り込みのうち、遅延読み込みのデータが揃うまで選択肢に無いもの。
+    // 読み込み後に選択肢へ現れたら適用する。それまでも絞り込みとURLには効かせる。
+    const pendingFilters = {};
+    function filterValue(key) {
+      return elements[key].value || pendingFilters[key] || "";
+    }
+
+    function applyPendingFilters() {
+      for (const [key, value] of Object.entries(pendingFilters)) {
+        if ([...elements[key].options].some((option) => option.value === value)) {
+          elements[key].value = value;
+          delete pendingFilters[key];
+        }
+      }
+    }
     function needsJimujigyo() {
       if (state.category !== "all" && state.category !== "gyosei") return false;
-      if (elements.source.value) return false;
-      if (elements.type.value && elements.type.value !== "事業ごとの記録") return false;
+      if (filterValue("source")) return false;
+      if (filterValue("type") && filterValue("type") !== "事業ごとの記録") return false;
       return state.category === "gyosei"
         || Boolean(elements.query.value.trim())
-        || Boolean(elements.type.value || elements.tag.value);
+        || Boolean(filterValue("type") || filterValue("tag"));
     }
 
     function requestJimujigyo() {
@@ -739,6 +756,7 @@
         delete window.SHINAGAWA_JIMUJIGYO_R07;
         jimujigyoState = "loaded";
         refreshFilterOptions();
+        applyPendingFilters();
         render();
       }).catch((error) => {
         jimujigyoState = "idle";
@@ -1182,18 +1200,18 @@
     }
 
     function hasDetailedFilter() {
-      return Boolean(elements.type.value || elements.year.value || elements.result.value || elements.source.value || elements.tag.value);
+      return Boolean(filterValue("type") || filterValue("year") || filterValue("result") || filterValue("source") || filterValue("tag"));
     }
 
     function updateUrl() {
       const params = new URLSearchParams();
       if (elements.query.value.trim()) params.set("q", elements.query.value.trim());
       if (state.category !== "all") params.set("category", state.category);
-      if (elements.type.value) params.set("type", elements.type.value);
-      if (elements.year.value) params.set("year", elements.year.value);
-      if (elements.result.value) params.set("result", elements.result.value);
-      if (elements.source.value) params.set("source", elements.source.value);
-      if (elements.tag.value) params.set("tag", elements.tag.value);
+      if (filterValue("type")) params.set("type", filterValue("type"));
+      if (filterValue("year")) params.set("year", filterValue("year"));
+      if (filterValue("result")) params.set("result", filterValue("result"));
+      if (filterValue("source")) params.set("source", filterValue("source"));
+      if (filterValue("tag")) params.set("tag", filterValue("tag"));
       if (elements.sort.value !== "relevance") params.set("sort", elements.sort.value);
       if (state.page > 1) params.set("page", String(state.page));
       const query = params.toString();
@@ -1236,11 +1254,11 @@
       elements.guide.hidden = true;
       let hits = INDEX.filter((item) => {
         if (state.category !== "all" && item.category !== state.category) return false;
-        if (elements.type.value && item.type !== elements.type.value) return false;
-        if (elements.year.value && String(item.year) !== elements.year.value) return false;
-        if (elements.result.value && item.result !== elements.result.value) return false;
-        if (elements.source.value && item.source !== elements.source.value) return false;
-        if (elements.tag.value && !item.tags.includes(elements.tag.value)) return false;
+        if (filterValue("type") && item.type !== filterValue("type")) return false;
+        if (filterValue("year") && String(item.year) !== filterValue("year")) return false;
+        if (filterValue("result") && item.result !== filterValue("result")) return false;
+        if (filterValue("source") && item.source !== filterValue("source")) return false;
+        if (filterValue("tag") && !item.tags.includes(filterValue("tag"))) return false;
         return itemMatchesTerms(item, terms);
       }).map((item) => ({ item, score: scoreItem(item, terms, normalizedQuery) }));
 
@@ -1274,6 +1292,7 @@
     }
 
     function resetSearch() {
+      for (const key of Object.keys(pendingFilters)) delete pendingFilters[key];
       elements.query.value = "";
       elements.type.value = "";
       elements.year.value = "";
@@ -1302,6 +1321,7 @@
     };
     for (const [key, value] of Object.entries(initialValues)) {
       if ([...elements[key].options].some((option) => option.value === value)) elements[key].value = value;
+      else if (value) pendingFilters[key] = value;
     }
     const initialPage = Math.max(1, Number(params.get("page")) || 1);
     state.page = 1;
@@ -1326,6 +1346,9 @@
     });
     [elements.type, elements.year, elements.result, elements.source, elements.tag, elements.sort]
       .forEach((element) => element.addEventListener("change", () => {
+        for (const key of ["type", "year", "result", "source", "tag"]) {
+          if (elements[key] === element) delete pendingFilters[key];
+        }
         render(true);
         requestCouncilData();
       }));
