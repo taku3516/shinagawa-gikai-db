@@ -95,7 +95,9 @@
     }
     const items = new Map((window.SHINAGAWA_PUBLIC_COMMENTS?.items || []).map(item => [item.id, item]));
     return Object.entries(window.SHINAGAWA_PUBLIC_COMMENT_JIGYO?.items || {})
-      .flatMap(([commentId, projects]) => projects.filter(entry => (entry.ids || [entry.id]).includes(id)).map(entry => ({ item: items.get(commentId), field: entry.field })))
+      // 記載欄は年度で違うことがあるので、この頁（id）の評価シートで書かれていた欄を使う
+      .flatMap(([commentId, projects]) => projects.flatMap(entry => (entry.sheets || [{ id: entry.id, field: entry.field }])
+        .filter(sheet => sheet.id === id).map(sheet => ({ item: items.get(commentId), field: sheet.field }))))
       .filter(entry => entry.item)
       .sort((a, b) => b.item.id.localeCompare(a.item.id));
   }

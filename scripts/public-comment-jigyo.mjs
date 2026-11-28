@@ -62,8 +62,10 @@ export function matchProjects(item, projects) {
 /**
  * 複数年度の評価シートに出る同じ事業（事業名と所管課が同じもの）を1件にまとめる。
  * リンクは最新年度の頁へ、記載欄も最新年度のものを使い、どの年度に記載があったかを years に残す。
+ * 年度によって記載欄が違う事業があるので、年度ごとのIDとその年度の記載欄を sheets に持たせ、
+ * 古い年度の事業ページではその頁の欄を示す。
  * @param {{id: string, name: string, section: string, field: string, evaluationYear: string}[]} entries 新しい年度が先
- * @returns {{id: string, ids: string[], name: string, section: string, field: string, years: string[]}[]}
+ * @returns {{id: string, name: string, section: string, field: string, years: string[], sheets: {id: string, field: string}[]}[]}
  */
 export function groupByProject(entries) {
   const groups = new Map();
@@ -71,10 +73,11 @@ export function groupByProject(entries) {
     const key = entry.name + "|" + entry.section;
     const group = groups.get(key);
     if (group) {
-      group.ids.push(entry.id);
+      group.sheets.push({ id: entry.id, field: entry.field });
       group.years.push(entry.evaluationYear);
     } else {
-      groups.set(key, { id: entry.id, ids: [entry.id], name: entry.name, section: entry.section, field: entry.field, years: [entry.evaluationYear] });
+      groups.set(key, { id: entry.id, name: entry.name, section: entry.section, field: entry.field, years: [entry.evaluationYear],
+        sheets: [{ id: entry.id, field: entry.field }] });
     }
   }
   const rank = field => FIELDS.findIndex(entry => entry[1] === field);
