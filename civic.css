@@ -71,3 +71,7 @@ html[data-reading="detail"] [data-reading-copy="standard"] { display: none; }
 /* 区の意見募集・結果（年度チップは site-controls.css の .chips。.civic button の角丸を戻す） */
 .civic .chips > button { border-radius: 999px; }
 .civic-result-row h3 { margin: 0; font-size: calc(16px * var(--fs)); }
+/* しなトーク：パブリックコメントとは別の取り組みと一目で分かるよう、枠の左に線を引き札を付ける */
+.civic-talk { border-inline-start: 6px solid var(--c-accent); margin-block: 1.4rem; }
+.civic-talk > h2 { margin-block-start: 0; }
+.civic-talk__badge { display: inline-block; padding: 0 .5em; border: 1px solid var(--c-accent-border); background: var(--c-accent-pale); color: var(--c-ink); border-radius: 999px; font-size: .875em; }

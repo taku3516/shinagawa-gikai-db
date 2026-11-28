@@ -5,6 +5,8 @@ name: 区の意見募集・結果を収集
 # 委員会で区が報告した議題との対応を data/public-comment-council.js に、
 # 計画を挙げる事業との対応を data/public-comment-jigyo.js に書き出す。
 # 区サイトへの負荷を避けるため、取得は2秒間隔・週1回にとどめる。
+# あわせて、区のオンライン意見交換の場「しなトーク」の取り組みを公開APIから1回の問い合わせで
+# 取得し、パブリックコメントとは別の data/shinatalk.js に書き出す。
 
 on:
   schedule:
@@ -35,10 +37,15 @@ jobs:
           python-version: "3.12"
 
       - name: 解析処理のテスト
-        run: python -m unittest scripts.test_public_comments
+        run: python -m unittest scripts.test_public_comments scripts.test_shinatalk
 
       - name: 意見募集・結果を取得する
         run: python scripts/public_comments.py --write
+
+      # しなトークはパブコメとは別のデータ。取得に失敗しても区サイトの意見募集の更新は止めない
+      - name: しなトークの取り組みを取得する
+        continue-on-error: true
+        run: python scripts/shinatalk.py --write
 
       # 委員会の議題（素案・パブコメ結果・策定の報告）との対応は、委員会データの更新も拾うよう毎週作り直す
       - name: 照合処理のテスト
@@ -56,4 +63,4 @@ jobs:
         run: node --test scripts/public-comment-links.test.mjs
 
       - name: 取得結果に更新があれば保存
-        run: scripts/commit_data_update.sh "区の意見募集・結果を自動更新" data/public-comments.js data/public-comment-council.js data/public-comment-jigyo.js
+        run: scripts/commit_data_update.sh "区の意見募集・結果を自動更新" data/public-comments.js data/public-comment-council.js data/public-comment-jigyo.js data/shinatalk.js
