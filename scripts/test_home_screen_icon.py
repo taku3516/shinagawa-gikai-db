@@ -21,9 +21,11 @@ DADS_BLUE = "#0017c1"
 DADS_BLUE_RGB = (0x00, 0x17, 0xC1)
 
 
-# 旧URLに置く「移転のお知らせ」。ホーム画面に追加させるページではなく、
-# 公開時は news.html として配られるだけなので、アイコンの対象にしない。
-EXCLUDED_PAGES = {"news-moved.html"}
+# 開いたらすぐ別のページへ転送するだけのページ。ホーム画面に追加させるページではないので、
+# アイコンの対象にしない（追加しようとしても、その時点で転送先のページが開いている）。
+# - news-moved.html: 旧URLに置く「移転のお知らせ」。公開時は news.html として配られる
+# - shikin-shiryo.html: 廃止した「政務活動費・政治資金の資料」の旧URL（#149）
+EXCLUDED_PAGES = {"news-moved.html", "shikin-shiryo.html"}
 
 
 def top_level_pages() -> list[Path]:
@@ -65,6 +67,18 @@ class HomeScreenIconTest(unittest.TestCase):
             self.assertEqual(image.getpixel((0, 0)), DADS_BLUE_RGB)
             sizes.add(icon["sizes"])
         self.assertTrue({"192x192", "512x512"} <= sizes, "192 と 512 の両方が要ります")
+
+    def test_excluded_pages_only_redirect(self) -> None:
+        # 対象外にしたページが、本当に転送するだけのページであること。
+        # 普通のページを誤って外すと、アイコンの宣言が抜けても気付けなくなる。
+        # 通常のページ（index.html など）にも条件付きの転送はあるので、サイトのナビを持たないことも見る
+        for name in sorted(EXCLUDED_PAGES):
+            with self.subTest(page=name):
+                path = ROOT / name
+                self.assertTrue(path.exists(), f"{name} がありません。対象外の一覧から外してください")
+                text = path.read_text(encoding="utf-8")
+                self.assertIn("location.replace(", text, f"{name} は転送していません")
+                self.assertNotIn("data-site-nav", text, f"{name} はサイトのナビを持つ通常のページです")
 
     def test_every_page_declares_icon_and_manifest(self) -> None:
         pages = top_level_pages()
