@@ -125,5 +125,29 @@ class DetailTest(unittest.TestCase):
         self.assertEqual(item["title"], "第二期品川区子ども・子育て支援事業計画(素案)")
 
 
+class ResultSeenTest(unittest.TestCase):
+    """区のページには結果を公表した日が無い（更新日はサイト改修でそろって書き換わる）。
+    当サイトが募集中から結果公表に変わったのを見つけた日を resultSeenAt として持つ。"""
+
+    def item(self, status: str, **extra: object) -> dict:
+        return {"id": "2026-005", "status": status, **extra}
+
+    def test_records_the_day_a_result_first_appears(self) -> None:
+        items = public_comments.carry_result_seen([self.item("result")], [self.item("open")], "2026-12-20")
+        self.assertEqual(items[0]["resultSeenAt"], "2026-12-20")
+
+    def test_keeps_the_first_day_on_later_runs(self) -> None:
+        items = public_comments.carry_result_seen([self.item("result")], [self.item("result", resultSeenAt="2026-12-20")], "2027-01-10")
+        self.assertEqual(items[0]["resultSeenAt"], "2026-12-20")
+
+    def test_unknown_when_already_published_at_first_sight(self) -> None:
+        # 初めて取得した時点で結果公表済みだった案件は、公表日が分からないので null のまま
+        self.assertIsNone(public_comments.carry_result_seen([self.item("result")], [], "2026-12-20")[0]["resultSeenAt"])
+        self.assertIsNone(public_comments.carry_result_seen([self.item("result")], None, "2026-12-20")[0]["resultSeenAt"])
+
+    def test_open_items_have_no_result_date(self) -> None:
+        self.assertIsNone(public_comments.carry_result_seen([self.item("open")], [self.item("open")], "2026-12-20")[0]["resultSeenAt"])
+
+
 if __name__ == "__main__":
     unittest.main()

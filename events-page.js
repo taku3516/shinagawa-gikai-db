@@ -36,6 +36,12 @@
       file: "exports/shinagawa-gikai.ics",
       name: "品川区議会の日程",
       note: "委員会の予定・結果だけを集めたものです。"
+    },
+    {
+      // こちらは公開時に scripts/build_civic_feeds.mjs が作る（data/public-comments.js から）
+      file: "exports/shinagawa-public-comments.ics",
+      name: "区の意見募集（締切）",
+      note: "品川区のパブリックコメントの締切日です。意見の出しそびれを防ぎたいときに。"
     }
   ];
 

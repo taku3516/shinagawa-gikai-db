@@ -24,7 +24,8 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import date
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
@@ -226,18 +227,40 @@ def previous_items() -> list[dict] | None:
         return None
 
 
+def carry_result_seen(items: list[dict], previous: list[dict] | None, today: str) -> list[dict]:
+    """結果公表を当サイトが見つけた日（resultSeenAt）を付ける。
+
+    区のページには結果を公表した日が無く、更新日はサイトの改修でそろって書き換わるため、
+    新着の日付には使えない。前回の取得で募集中（open）だった案件が結果公表（result）に
+    変わった日を記録し、以後の取得では最初の日を引き継ぐ。初めて見た時点で結果公表済みの
+    案件は公表日が分からないので None のままにする。
+    """
+    before = {item["id"]: item for item in previous or []}
+    carried = []
+    for item in items:
+        old = before.get(item["id"])
+        seen = None
+        if item["status"] == "result" and old is not None:
+            seen = old.get("resultSeenAt") or (today if old.get("status") != "result" else None)
+        carried.append({**item, "resultSeenAt": seen})
+    return carried
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--write", action="store_true", help="data/public-comments.js を書き出す")
     args = parser.parse_args()
-    items = collect()
+    previous = previous_items()
+    # 定期実行は UTC で動くので、日本の暦日で記録する（月曜朝5時半の実行が日曜の日付にならないように）
+    today = datetime.now(ZoneInfo("Asia/Tokyo")).date().isoformat()
+    items = carry_result_seen(collect(), previous, today)
     missing = [item["id"] for item in items if item["status"] == "result" and (item["start"] is None or item["opinions"] is None)]
     for item in items:
         print(item["id"], item["status"], item["start"], item["end"], item["applicants"], item["opinions"], item["title"], file=sys.stderr)
     if missing:
         print("期間または件数を読めなかった結果公表: " + ", ".join(missing), file=sys.stderr)
     if args.write:
-        if previous_items() == items:
+        if previous == items:
             print("内容に変更がないため書き換えません", file=sys.stderr)
             return 0
         OUT_PATH.write_text(render(items), encoding="utf-8")
