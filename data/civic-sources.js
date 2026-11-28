@@ -119,6 +119,34 @@ window.SHINAGAWA_CIVIC_SOURCES = {
     })
   });
 
+  // 令和7年第3回：1頁・37列。列の並びは令和7年第4回と同じ。公式PDFは反対を「✕」で表しているが「×」で持つ
+  addVoteSession("r07-3t", {
+    name: "令和7年第3回定例会", file: "r07_03t_s.pdf", checkedAt: "2026-11-28",
+    groups: [
+      ["自民", "hideo_ishida masato_enoshita arata_koshiba emiko_sawada mari_seo naoko_nishimura kazumasa_matsuzawa yuichi_watanabe"],
+      ["未来", "takahiro_okura ayaka_ogino kengo_kimura takeshi_tanaka tsutsui_yosuke masanori_fujiwara yoshihiro_matsunaga yasuyuki_yamamoto"],
+      ["公明", "hiroo_akutsu takako_konno yoshihiro_tsukamoto shinichiro_tsuru saeko_niizuma masaharu_yukita hiroki_wakabayashi"],
+      ["共産", "taisaku_ando chihiro_ishida hiroko_suzuki toshifumi_nodate"],
+      ["維新", "mao_seraku tokihiro_matsumoto"],
+      ["無所属", "yukihiro_sugai shinji_takahashi nobuaki_takahashi ryo_nakatsuka takako_nishimoto satoshi_yanagisawa yukari_yokoyama yumiko_yoshida"]
+    ],
+    common: "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇",
+    // 公式表の行順：第102〜120号、第101号（補正予算）、議員提出第4号。決算の認定は表に載っていない
+    rows: (() => {
+      // 新総合庁舎の工事契約3件は、木村健悟が欠席し、共産4人と無所属3人が反対
+      const office = "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×";
+      const split = {
+        "第105号議案": "〇〇〇〇〇〇〇長〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×",
+        "第110号議案": office, "第111号議案": office, "第112号議案": office
+      };
+      return [
+        ...Array.from({ length: 19 }, (_, index) => `第${102 + index}号議案`),
+        "第101号議案",
+        "議員提出第4号議案"
+      ].map(number => [number, 1, split[number]]);
+    })()
+  });
+
   // 令和7年第4回：2頁・37列。列の並びは令和8年第1回と同じ。こんの孝子は全件欠席。
   // 公式PDFは反対を「✕」（U+2715）で表しているが、他の会期と同じ「×」で持つ
   addVoteSession("r07-4t", {

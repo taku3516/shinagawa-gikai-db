@@ -102,7 +102,8 @@ test("表決の列は会期ごとの並び順で既存議員IDに対応し、議
   const members = new Set(db.peopleData.people.map(item => item.id));
   // 会期ごとに列数・議長の列が違う。公式PDFの列順をそのまま持つ
   const expected = {
-    "r07-1t": [39, "yuichi_watanabe"], "r07-4t": [37, "yuichi_watanabe"], "r08-1t": [37, "yuichi_watanabe"],
+    "r07-1t": [39, "yuichi_watanabe"], "r07-3t": [37, "yuichi_watanabe"], "r07-4t": [37, "yuichi_watanabe"],
+    "r08-1t": [37, "yuichi_watanabe"],
     "r08-2t": [37, "yuichi_watanabe"], "r08-3t": [37, "yuichi_watanabe"]
   };
   for (const [sessionId, [columns, chair]] of Object.entries(expected)) {
@@ -135,6 +136,23 @@ test("令和8年第3回定例会の表決24件を公式PDFの記号どおりに�
   assert.deepEqual(split, ["r08-3t:第106号議案"]);
   assert.equal(votes["r08-3t:第106号議案"].symbols, "〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇長〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×");
   assert.ok(votes["r08-3t:議員提出第3号議案"]);
+});
+
+test("令和7年第3回定例会の表決21件を公式PDFの記号どおりに収録する", () => {
+  const { votes } = context.window.SHINAGAWA_CIVIC_SOURCES;
+  const session = Object.keys(votes).filter(id => id.startsWith("r07-3t:"));
+  assert.equal(session.length, 21);
+  // 第105号（地区計画の建築物制限）と第110〜112号（新総合庁舎の工事契約）だけ賛否が割れた
+  const split = session.filter(id => votes[id].type === "split").sort();
+  assert.deepEqual(split, ["r07-3t:第105号議案", "r07-3t:第110号議案", "r07-3t:第111号議案", "r07-3t:第112号議案"]);
+  // この会期も公式PDFは反対を「✕」で表す。データでは「×」にそろえる
+  for (const id of session) assert.ok(!votes[id].symbols.includes("✕"), id);
+  assert.equal(votes["r07-3t:第110号議案"].symbols, "〇〇〇〇〇〇〇長〇〇欠〇〇〇〇〇〇〇〇〇〇〇〇××××〇〇〇〇〇×〇×〇×");
+  // 新総合庁舎の3件だけ木村健悟議員が欠席。ほかの18件は表決参加者全員が出席
+  assert.equal(civic.memberVote(votes["r07-3t:第112号議案"], "kengo_kimura"), "欠");
+  assert.equal(civic.memberVote(votes["r07-3t:第105号議案"], "kengo_kimura"), "〇");
+  assert.equal(session.filter(id => votes[id].symbols.includes("欠")).length, 3);
+  assert.equal(votes["r07-3t:議員提出第4号議案"].type, "unanimous");
 });
 
 test("令和7年第4回定例会の表決24件を公式PDFの2頁の記号どおりに収録する", () => {
