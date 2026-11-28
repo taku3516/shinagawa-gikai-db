@@ -102,17 +102,23 @@
     if (params.get("kind") === "議案") billFollows.push(initialKey);
     const billYears = billFollows.filter(value => typeof value === "string").map(value => value.match(/^([rh]\d{2})-[^:]+:/)?.[1]).filter(Boolean);
     await Promise.all([load(["news-items"]), civic.loadYears([...new Set([db.site.defaultYear, ...billYears])])]);
+    // 区の意見募集も新着に含める。読めなければ意見募集だけ除いて出す
+    const comments = await Promise.allSettled([load(["public-comments"]), civic.loadScript("public-comment-feed.js")]);
+    const commentFailure = comments.find(result => result.status === "rejected");
+    if (commentFailure) console.warn("区の意見募集を新着に読み込めませんでした", commentFailure.reason);
+    const commentItems = commentFailure ? [] : window.SHINAGAWA_PUBLIC_COMMENT_FEED.feedItems(window.SHINAGAWA_PUBLIC_COMMENTS.items);
     const bills = civic.bills();
     const feed = [
       ...window.SHINAGAWA_NEWS.items.map(item => ({
         id: "news:" + item.id, title: item.title, url: item.url, date: item.publishedAt?.slice(0, 10),
         body: [item.tags, item.locations, item.summary], note: item.dateKind === "collected" ? "取得日" : "公開日"
       })),
+      ...commentItems,
       ...bills.map(item => ({ id: item.id, title: item.title, url: civic.billUrl(item), date: item.updatedAt,
         body: [item.tags, item.proposer, item.summary], note: "年別台帳の更新日", type: "議案" }))
     ].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
     const initialTitle = bills.find(item => item.id === initialKey)?.title || initialKey;
-    root.innerHTML = `<p>フォローと既読はこのブラウザ内に保存します。新着は収録されたニュース、直近年の議案とフォローした議案から探します。</p>
+    root.innerHTML = `<p>フォローと既読はこのブラウザ内に保存します。新着は収録されたニュース、区の意見募集、直近年の議案とフォローした議案から探します。</p>
       <form class="civic-controls">${select("kind", "フォロー対象", kinds, params.get("kind") || "キーワード")}
       ${input("value", "対象・キーワード", initialTitle)}<button>フォローする</button></form>
       <p role="status">${esc(warning)}</p><div data-follows></div>
@@ -264,11 +270,30 @@
     let year = Number(query.get("nendo")) || 0;
     if (!count.has(year)) year = 0;
     const openNow = items.filter(item => item.state.key === "open");
+    // 締切をカレンダーに入れるリンク。部品を読めなければリンクだけ出さない（一覧は出す）
+    let calendarLink = () => "";
+    if (openNow.length) {
+      const loaded = await Promise.allSettled([civic.loadScript("events-ics.js"), civic.loadScript("public-comment-feed.js")]);
+      const failed = loaded.find(result => result.status === "rejected");
+      if (failed) console.warn("カレンダー用の部品を読み込めませんでした", failed.reason);
+      else {
+        const siteBase = new URL(".", location.href).href;
+        const events = new Map(window.SHINAGAWA_PUBLIC_COMMENT_FEED.deadlineEvents(openNow, date, siteBase).map(event => [event.id, event]));
+        calendarLink = item => {
+          const event = events.get("public-comment-" + item.id);
+          return event ? link("締切をGoogleカレンダーに追加", window.SHINAGAWA_EVENTS_ICS.googleCalendarUrl(event, null, siteBase)) : "";
+        };
+      }
+    }
+    // 購読用の .ics は公開時のビルドで作るので、公開サイトでだけ案内する
+    const subscribe = location.hostname === "taku3516.github.io"
+      ? `<p>${link("すべての締切をカレンダーで購読する（.ics）", "exports/shinagawa-public-comments.ics")}　<span class="civic-note">新しい意見募集が始まると自動で予定に加わります。</span></p>` : "";
 
     root.innerHTML = `<p>品川区が実施したパブリックコメント（意見公募手続）を年度ごとにまとめています。意見の提出方法と個人情報の取扱いは品川区の募集ページで確認できます。</p>
       <p>意見募集は任意参加です。区民全体の世論を代表する調査とは性質が異なります。ご意見の要旨と区の考え方は、各案件の資料（区が公表したPDF）でご覧ください。</p>
       ${openNow.length ? `<section class="civic-card" aria-labelledby="pc-open"><h2 id="pc-open">いま意見を出せる案件</h2>
-        ${list(openNow.map(item => `${link(item.title, item.url)}　<strong>${esc(jaDate(item.end))}まで</strong>`))}</section>` : ""}
+        ${list(openNow.map(item => `${link(item.title, item.url)}　<strong>${esc(jaDate(item.end))}まで</strong>${calendarLink(item) ? `<br>${calendarLink(item)}` : ""}`))}
+        ${subscribe}</section>` : ""}
       <h2>年度別の実施状況</h2>
       <p class="civic-note">${esc(fiscalLabel(years[years.length - 1]))}〜${esc(fiscalLabel(years[0]))}の${items.length}件を収録（${esc(jaDate(pc.fetchedAt))}取得）。出典：${link(pc.source.label, pc.source.url)}</p>
       <div class="chips" role="group" aria-label="表示する年度">

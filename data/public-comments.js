@@ -40,7 +40,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/012/243/publiccommet-2026-005-4.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2026-004",
@@ -61,7 +62,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/009/856/20260727122823_1.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2026-003",
@@ -87,7 +89,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/009/855/20260709162629_1.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2026-002",
@@ -113,7 +116,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/011/542/20260909152352_2.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2026-001",
@@ -144,7 +148,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/009/857/20260727164220_3.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2025-003",
@@ -175,7 +180,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/009/261/20260427193839_1.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2025-002",
@@ -206,7 +212,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/659/20260306092303_1.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2025-001",
@@ -237,7 +244,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/009/262/20260422121308_3.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-012",
@@ -268,7 +276,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/676/20250501160413_1.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-011",
@@ -294,7 +303,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/677/20250606085105_2.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-010",
@@ -325,7 +335,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/678/20250416141156_5.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-009",
@@ -351,7 +362,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/679/20250416120122_2.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-008",
@@ -392,7 +404,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/680/20250428093218_5.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-007",
@@ -433,7 +446,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/681/20250428084036_2.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-006",
@@ -459,7 +473,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/682/20250417092746_2.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-005",
@@ -490,7 +505,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/683/20250428090430_1.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-004",
@@ -511,7 +527,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/684/20250205085952_1.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-003",
@@ -567,7 +584,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/685/20250314144052_3.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-002",
@@ -598,7 +616,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/686/20250416112603_3.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2024-001",
@@ -624,7 +643,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/687/20241122112834_2.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-013",
@@ -665,7 +685,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/704/20240422104809_2.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-012",
@@ -691,7 +712,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/705/20240419120444_2.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-011",
@@ -747,7 +769,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/706/20240604140913_7.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-010",
@@ -778,7 +801,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/707/20240419105356_3.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-009",
@@ -819,7 +843,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/708/20240515091835_3.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-008",
@@ -850,7 +875,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/709/20240419095329_2.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-006",
@@ -906,7 +932,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/711/20240314162043_3.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-005",
@@ -937,7 +964,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/712/20240314141332_3.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-004",
@@ -963,7 +991,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/713/20240419084347_2.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-003",
@@ -994,7 +1023,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/714/20240325193334_3.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-002",
@@ -1025,7 +1055,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/715/20240111164303_3.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2023-001",
@@ -1071,7 +1102,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/716/20240207172238_2.docx",
      "kind": "Word"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2022-007",
@@ -1127,7 +1159,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/727/06.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2022-006",
@@ -1188,7 +1221,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/728/haikibutusyorikeikaku4_06.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2022-005",
@@ -1224,7 +1258,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/729/mannsyonnkannrisisinn.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2022-004",
@@ -1255,7 +1290,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/730/2023masterplan_gaiyou.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2022-003",
@@ -1356,7 +1392,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/731/13.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2022-002",
@@ -1392,7 +1429,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/732/sintyousyaseibikihonkeikaku_youyaku.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2022-001",
@@ -1418,7 +1456,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/733/yoboukisokoumoku.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   },
   {
    "id": "2019-007",
@@ -1449,7 +1488,8 @@ window.SHINAGAWA_PUBLIC_COMMENTS = {
      "url": "https://www.city.shinagawa.tokyo.jp/_res/projects/default_project/_page_/001/006/734/kodomohonnpenn.pdf",
      "kind": "PDF"
     }
-   ]
+   ],
+   "resultSeenAt": null
   }
  ]
 };

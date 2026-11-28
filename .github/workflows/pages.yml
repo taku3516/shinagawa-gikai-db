@@ -42,7 +42,7 @@ jobs:
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
         run: python3 scripts/build_pages.py
       - name: 議会・区政データの整合性を検査
-        run: node --test scripts/civic-data.test.mjs scripts/jimujigyo-search.test.mjs scripts/public-comment-council.test.mjs scripts/public-comment-jigyo.test.mjs scripts/public-comment-links.test.mjs scripts/public-comment-search.test.mjs
+        run: node --test scripts/civic-data.test.mjs scripts/jimujigyo-search.test.mjs scripts/public-comment-council.test.mjs scripts/public-comment-jigyo.test.mjs scripts/public-comment-links.test.mjs scripts/public-comment-search.test.mjs scripts/public-comment-feed.test.mjs
       - name: 新着RSSと収録件数を生成
         run: node scripts/build_civic_feeds.mjs _site
       - name: 公開ファイルをアップロード
