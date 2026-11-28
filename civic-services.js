@@ -56,7 +56,7 @@
 
   /** @param {HTMLElement} root @returns {Promise<void>} */
   async function statusPage(root) {
-    await Promise.all([civic.loadYears(), load(["members", "petitions", "fiscal", "gyosei", "seimu", "seijishikin", "events", "news-items"])]);
+    await Promise.all([civic.loadYears(), load(["members", "petitions", "fiscal", "gyosei", "seimu", "seijishikin", "events", "news-items", "public-comments"])]);
     const byYear = db.site.years.filter(meta => db.years[meta.id]).map(meta => db.years[meta.id]);
     const news = window.SHINAGAWA_NEWS;
     const petitions = window.SHINAGAWA_PETITIONS;
@@ -73,6 +73,7 @@
       ["行政評価", window.SHINAGAWA_GYOSEI.fiscalYears.length, "gyosei.html", "年度数", window.SHINAGAWA_GYOSEI.updatedAt, null],
       ["政務活動費", seimu.fiscalYears.length, "seimu.html", "年度数", null, seimu.checkedAt],
       ["政治資金", funding.organizations.length, "seijishikin.html", "団体数", null, funding.checkedAt],
+      ["区の意見募集・結果", window.SHINAGAWA_PUBLIC_COMMENTS.items.length, "kumin-no-koe.html", "案件数（" + fiscalLabel(Math.min(...window.SHINAGAWA_PUBLIC_COMMENTS.items.map(item => item.fiscalYear))) + "以降）", null, window.SHINAGAWA_PUBLIC_COMMENTS.fetchedAt],
       ["ニュース", news.items.length, "https://shinagawakugiakidb.firebaseapp.com/news.html", null, null, fetched],
       ["イベント", events.events.length, "https://shinagawakugiakidb.firebaseapp.com/events.html", null, null, null]
     ];
@@ -180,23 +181,149 @@
     render();
   }
 
-  /** @param {HTMLElement} root @returns {void} */
-  function voice(root) {
+  /** 西暦の年度を「令和6年度」の形にする。 @param {number} year @returns {string} */
+  function fiscalLabel(year) {
+    const [era, offset] = year >= 2019 ? ["令和", 2018] : ["平成", 1988];
+    const number = year - offset;
+    return `${era}${number === 1 ? "元" : number}年度`;
+  }
+
+  /** "2025-02-01" を「2025年2月1日」にする。 @param {string|null} iso @returns {string} */
+  function jaDate(iso) {
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || "");
+    return match ? `${match[1]}年${Number(match[2])}月${Number(match[3])}日` : "";
+  }
+
+  /**
+   * 案件の状態を決める。結果公表ページがあれば「結果公表済み」、
+   * 募集ページだけなら今日の日付と募集期間で「募集予定・募集中・結果公表待ち」に分ける。
+   * @param {{status: string, start: string|null, end: string|null}} item @param {string} date
+   * @returns {{key: string, label: string}}
+   */
+  function commentState(item, date) {
+    if (item.status === "result") return { key: "result", label: "結果公表済み" };
+    if (item.start && date < item.start) return { key: "upcoming", label: "募集予定" };
+    if (!item.end || date <= item.end) return { key: "open", label: "募集中" };
+    return { key: "waiting", label: "募集終了・結果公表待ち" };
+  }
+
+  /** @param {number|null} value @param {string} unit @returns {string} */
+  function amount(value, unit) {
+    return Number.isFinite(value) ? value.toLocaleString("ja-JP") + unit : "";
+  }
+
+  /** @param {object} item @param {{label: string}} state @returns {string} */
+  function commentRow(item, state) {
+    const period = item.start ? `${jaDate(item.start)} 〜 ${jaDate(item.end)}` : jaDate(item.end) + "まで";
+    const outcome = state.key === "result" ? amount(item.opinions, "件の意見") : (item.resultPlanned ? item.resultPlanned + "に結果公表予定" : "");
+    const docs = item.documents.map(doc => `${link(doc.label, doc.url)}（${esc(doc.kind)}）`);
+    return `<article class="civic-result-row" id="pc-${esc(item.id)}">
+      <h3>${link(item.title, item.url)}</h3>
+      <p><span class="civic-result-row__result">${esc(state.label)}</span><br><span class="civic-note">${esc(period)}</span></p>
+      <p>${esc(outcome)}</p>
+      <div class="civic-result-row__extra"><details><summary>案件番号${esc(item.id)}の詳細と資料（${docs.length}件）</summary>
+        ${terms([
+          ["募集期間", esc(period)],
+          ["応募者数", esc(state.key === "result" ? amount(item.applicants, "人") : "結果の公表時に区が公表")],
+          ["意見件数", esc(state.key === "result" ? amount(item.opinions, "件") : "結果の公表時に区が公表")],
+          ["結果の公表", esc(state.key === "result" ? "公表済み" : item.resultPlanned ? item.resultPlanned + "の予定" : "")],
+          ["担当課", esc(item.department)]
+        ])}
+        <h4>区が公表した資料</h4>${list(docs, "資料の掲載はありません")}
+        <p>${link("品川区の案件ページ", item.url)}</p></details></div></article>`;
+  }
+
+  /** @param {HTMLElement} root @returns {Promise<void>} */
+  async function voice(root) {
+    await civic.loadScript("data/public-comments.js");
+    const pc = window.SHINAGAWA_PUBLIC_COMMENTS;
     const date = civic.today();
-    root.innerHTML = `<p>区が公表した意見募集の案内です。意見の提出方法と個人情報の取扱いは品川区の募集ページで確認できます。</p>
-      <p>意見募集は任意参加です。区民全体の世論を代表する調査とは性質が異なります。</p>
-      ${data.surveys.map(item => `<article class="civic-card" id="${esc(item.id)}">
-        <h2>${esc(item.title)}</h2><p>${date < item.start ? "募集予定" : date <= item.end ? "募集期間内" : "募集期間終了"}　${esc(item.start)} 〜 ${esc(item.end)}</p>
-        <p>${link("品川区の募集要項・提出方法", item.url)}</p>
-        ${terms([["回答件数", esc(item.count)], ["集計結果", esc(item.resultNote)], ["主な意見", esc(item.summary)]])}</article>`).join("")}
-      <p>${link("品川区のパブリックコメント実施状況", "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006651/index.html")}</p>
-      <h2>サイト独自の意見募集</h2><p>受付サービスの接続待ちです。</p>
+    const items = pc.items.map(item => ({ ...item, state: commentState(item, date) }));
+    const years = [...new Set(items.map(item => item.fiscalYear))].sort((a, b) => b - a);
+    const count = new Map(years.map(year => [year, items.filter(item => item.fiscalYear === year).length]));
+    const states = [["", "すべて"], ["open", "募集中"], ["waiting", "募集終了・結果公表待ち"], ["result", "結果公表済み"]];
+    const query = new URLSearchParams(location.search);
+    let year = Number(query.get("nendo")) || 0;
+    if (!count.has(year)) year = 0;
+    const openNow = items.filter(item => item.state.key === "open");
+
+    root.innerHTML = `<p>品川区が実施したパブリックコメント（意見公募手続）を年度ごとにまとめています。意見の提出方法と個人情報の取扱いは品川区の募集ページで確認できます。</p>
+      <p>意見募集は任意参加です。区民全体の世論を代表する調査とは性質が異なります。ご意見の要旨と区の考え方は、各案件の資料（区が公表したPDF）でご覧ください。</p>
+      ${openNow.length ? `<section class="civic-card" aria-labelledby="pc-open"><h2 id="pc-open">いま意見を出せる案件</h2>
+        ${list(openNow.map(item => `${link(item.title, item.url)}　<strong>${esc(jaDate(item.end))}まで</strong>`))}</section>` : ""}
+      <h2>年度別の実施状況</h2>
+      <p class="civic-note">${esc(fiscalLabel(years[years.length - 1]))}〜${esc(fiscalLabel(years[0]))}の${items.length}件を収録（${esc(jaDate(pc.fetchedAt))}取得）。出典：${link(pc.source.label, pc.source.url)}</p>
+      <div class="chips" role="group" aria-label="表示する年度">
+        ${[0, ...years].map(value => `<button type="button" data-nendo="${value}" aria-pressed="${value === year}">${esc(value ? fiscalLabel(value) : "すべての年度")}<span class="chips__count">${value ? count.get(value) : items.length}件</span></button>`).join("")}
+      </div>
+      <form class="civic-controls" role="search">${select("state", "状態", states, query.get("state") || "")}${input("q", "件名・担当課で探す", query.get("q") || "")}<button>絞り込む</button></form>
+      <p role="status" data-summary></p><div data-list></div>
+      <h2>サイト独自の意見募集</h2><p>受付サービスの接続待ちです。</p>`;
+
+    const form = root.querySelector("form");
+    const outlet = root.querySelector("[data-list]");
+    const summary = root.querySelector("[data-summary]");
+    const render = () => {
+      const fields = filters(form);
+      const shown = items.filter(item => (!year || item.fiscalYear === year)
+        && (!fields.get("state") || item.state.key === fields.get("state"))
+        && matches([item.title, item.department, item.id], fields.get("q")));
+      // 合計は件数が公表された案件（結果公表済み）だけで出す。未公表を0件と読ませない
+      const totals = group => {
+        const counted = group.filter(item => Number.isFinite(item.opinions));
+        if (!counted.length) return "";
+        const sum = key => counted.reduce((total, item) => total + (item[key] || 0), 0);
+        return `結果公表済み${counted.length}件の応募者 計${amount(sum("applicants"), "人")}・意見 計${amount(sum("opinions"), "件")}`;
+      };
+      const overall = totals(shown);
+      summary.textContent = `${year ? fiscalLabel(year) : "すべての年度"}：${shown.length}件` + (overall ? `（${overall}）` : "");
+      outlet.innerHTML = shown.length ? years.filter(value => shown.some(item => item.fiscalYear === value)).map(value => {
+        const group = shown.filter(item => item.fiscalYear === value);
+        return `<section aria-labelledby="pc-year-${value}"><h2 id="pc-year-${value}">${esc(fiscalLabel(value))}（${group.length}件）</h2>
+          ${totals(group) ? `<p class="civic-note">${esc(totals(group))}</p>` : ""}
+          <div class="civic-results">${group.map(item => commentRow(item, item.state)).join("")}</div></section>`;
+      }).join("") : '<p class="civic-note">条件に合う案件はありません。</p>';
+    };
+    const saveQuery = () => {
+      const url = new URL(location.href);
+      const params = filters(form);
+      if (year) params.set("nendo", String(year));
+      [...params.keys()].filter(key => !params.get(key)).forEach(key => params.delete(key));
+      url.search = params.toString();
+      history.replaceState(null, "", url);
+    };
+    root.querySelector("[aria-label='表示する年度']").addEventListener("click", event => {
+      const button = event.target.closest("[data-nendo]");
+      if (!button) return;
+      year = Number(button.dataset.nendo);
+      root.querySelectorAll("[data-nendo]").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+      saveQuery();
+      render();
+    });
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      saveQuery();
+      render();
+    });
+    render();
+    // 描画が非同期のため、#pc-案件番号 へのリンクは描画後に移動して詳細を開く
+    const target = location.hash.startsWith("#pc-") ? document.getElementById(location.hash.slice(1)) : null;
+    if (target) {
+      target.querySelector("details")?.setAttribute("open", "");
+      target.scrollIntoView();
+    }
+    voiceDraft(root);
+  }
+
+  /** 端末内だけで使う意見の下書きフォーム。 @param {HTMLElement} root @returns {void} */
+  function voiceDraft(root) {
+    root.insertAdjacentHTML("beforeend", `
       <details><summary>意見を提出する前に端末で下書きを作る</summary>
-      <form><div class="civic-controls">${select("stance", "意見の分類", ["期待", "懸念", "その他", "判断できない"])}</div>
+      <form data-draft><div class="civic-controls">${select("stance", "意見の分類", ["期待", "懸念", "その他", "判断できない"])}</div>
         <label>意見 <textarea name="comment" rows="5" required maxlength="2000"></textarea></label>
         <p>氏名や連絡先は入力せずにお使いください。下書きは送信されません。</p>
-        <button>下書きをテキストに保存</button></form></details>`;
-    const form = root.querySelector("form");
+        <button>下書きをテキストに保存</button></form></details>`);
+    const form = root.querySelector("form[data-draft]");
     form.addEventListener("submit", event => {
       event.preventDefault();
       const fields = filters(form);

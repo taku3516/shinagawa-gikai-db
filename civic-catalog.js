@@ -74,6 +74,14 @@
       rows: () => db.chokai.regions.flatMap(item => item.associations.map(association =>
         record(item.name + ":" + association.name, association.name, null, "watashi-no-chiiki.html", item.sourceUrl, item.sourceUpdated, item.name)))
     },
+    publicComments: {
+      label: "区の意見募集・結果", sources: ["public-comments"],
+      rows: () => window.SHINAGAWA_PUBLIC_COMMENTS.items.map(item => ({
+        ...record(item.id, item.title, [item.start, item.end].filter(Boolean).join("〜"), "kumin-no-koe.html?nendo=" + item.fiscalYear + "#pc-" + item.id,
+          item.url, item.updatedAt, item.status === "result" ? "結果公表済み" : "意見募集"),
+        fiscalYear: item.fiscalYear, applicants: item.applicants, opinions: item.opinions, department: item.department || null,
+        documents: item.documents.map(doc => doc.url).join(" ") || null }))
+    },
     projects: {
       label: "事業カルテ",
       rows: () => data.projects.map(item => record(item.id, item.name, item.startYear, "jigyo.html?id=" + item.id, sourceUrl(item.sources), null, item.office))
