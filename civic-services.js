@@ -56,7 +56,7 @@
 
   /** @param {HTMLElement} root @returns {Promise<void>} */
   async function statusPage(root) {
-    await Promise.all([civic.loadYears(), load(["members", "petitions", "fiscal", "gyosei", "seimu", "seijishikin", "events", "news-items", "public-comments"])]);
+    await Promise.all([civic.loadYears(), load(["members", "petitions", "fiscal", "gyosei", "seimu", "seijishikin", "events", "news-items", "public-comments", "shinatalk"])]);
     const byYear = db.site.years.filter(meta => db.years[meta.id]).map(meta => db.years[meta.id]);
     const news = window.SHINAGAWA_NEWS;
     const petitions = window.SHINAGAWA_PETITIONS;
@@ -64,6 +64,9 @@
     const funding = window.SHINAGAWA_SEIJISHIKIN;
     const events = window.SHINAGAWA_EVENTS;
     const fetched = news.reports.filter(item => item.status === "ok" && item.fetchedAt).map(item => item.fetchedAt).sort().at(-1);
+    const talk = window.SHINAGAWA_SHINATALK;
+    // しなトークは年度で区切らないので、最も早い取り組みの開始月を対象範囲にする
+    const talkSince = talk.items.map(item => item.start).filter(Boolean).sort()[0]?.replace(/^(\d{4})-0?(\d+)-.*$/, "$1年$2月");
     const count = new Intl.NumberFormat("ja-JP");
     const cards = [
       ["議案", civic.bills().length, "gian.html", byYear.filter(item => item.bills?.length).map(item => item.label).reverse().join("、"), null, null],
@@ -74,6 +77,7 @@
       ["政務活動費", seimu.fiscalYears.length, "seimu.html", "年度数", null, seimu.checkedAt],
       ["政治資金", funding.organizations.length, "seijishikin.html", "団体数", null, funding.checkedAt],
       ["区の意見募集・結果", window.SHINAGAWA_PUBLIC_COMMENTS.items.length, "kumin-no-koe.html", "案件数（" + fiscalLabel(Math.min(...window.SHINAGAWA_PUBLIC_COMMENTS.items.map(item => item.fiscalYear))) + "以降）", null, window.SHINAGAWA_PUBLIC_COMMENTS.fetchedAt],
+      ["しなトーク（区のオンライン意見交換）", talk.items.length, "kumin-no-koe.html#shinatalk", "取り組み数" + (talkSince ? "（" + talkSince + "以降に始まったもの）" : "") + "。パブリックコメントとは別に数える", null, talk.fetchedAt],
       ["ニュース", news.items.length, "https://shinagawakugiakidb.firebaseapp.com/news.html", null, null, fetched],
       ["イベント", events.events.length, "https://shinagawakugiakidb.firebaseapp.com/events.html", null, null, null]
     ];
