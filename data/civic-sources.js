@@ -40,13 +40,7 @@ window.SHINAGAWA_CIVIC_SOURCES = {
   },
   projects: [],
   petitionFollowup: {},
-  reviews: {},
-  surveys: [{
-    id: "shinagawa-2026-005", title: "品川区福祉オンブズマン制度（素案）",
-    start: "2026-11-15", end: "2026-12-15",
-    url: "https://www.city.shinagawa.tokyo.jp/kusei/kohokocho/1006648/1006650/1006651/1006652/1012243.html",
-    resultNote: "区による結果公表は令和9年3月中旬ごろの予定"
-  }]
+  reviews: {}
 };
 
 (() => {

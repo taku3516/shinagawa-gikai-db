@@ -67,3 +67,7 @@ html[data-reading="detail"] [data-reading-copy="standard"] { display: none; }
 
 .civic-project-row { padding-block: 12px; border-top: 1px solid var(--c-rule); }
 .civic-project-row h4 { margin-top: 0; }
+
+/* 区の意見募集・結果（年度チップは site-controls.css の .chips。.civic button の角丸を戻す） */
+.civic .chips > button { border-radius: 999px; }
+.civic-result-row h3 { margin: 0; font-size: calc(16px * var(--fs)); }
